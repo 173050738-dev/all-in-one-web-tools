@@ -1,0 +1,91 @@
+import { useStore } from "@/store/useStore";
+import { createClient } from "@/lib/supabase/client";
+
+export interface QuotaCheckResult {
+  allowed: boolean;
+  reason?: string;
+  maxFiles: number;
+}
+
+/**
+ * 额度守卫 Hook
+ * 检查当前用户（或访客）是否有足够额度执行操作
+ * 返回值包含是否允许、原因、最大文件数限制
+ */
+export function useQuotaGuard() {
+  const { user, guestDailyUsed, incrementGuestUsage } = useStore();
+
+  const checkQuota = async (requestedFileCount: number): Promise<QuotaCheckResult> => {
+    // 登录用户
+    if (user) {
+      const today = new Date().toISOString().split("T")[0];
+
+      // 如果跨天了，重置额度（前端乐观重置，后端有trigger处理）
+      if (user.reset_at !== today) {
+        const supabase = createClient();
+        await supabase
+          .from("profiles")
+          .update({ daily_used: 0, reset_at: today })
+          .eq("id", user.id);
+        user.daily_used = 0;
+        user.reset_at = today;
+      }
+
+      if (user.daily_used >= user.daily_limit) {
+        return {
+          allowed: false,
+          reason: `今日额度已用完（${user.daily_limit}次），请升级Pro获取更多额度`,
+          maxFiles: user.max_files_per_request,
+        };
+      }
+
+      if (requestedFileCount > user.max_files_per_request) {
+        return {
+          allowed: false,
+          reason: `单次最多处理${user.max_files_per_request}个文件，当前选择了${requestedFileCount}个`,
+          maxFiles: user.max_files_per_request,
+        };
+      }
+
+      return { allowed: true, maxFiles: user.max_files_per_request };
+    }
+
+    // 访客模式（更严格）
+    if (guestDailyUsed >= 2) {
+      return {
+        allowed: false,
+        reason: "访客每日限2次，请登录或注册以获取更多额度",
+        maxFiles: 1,
+      };
+    }
+
+    if (requestedFileCount > 1) {
+      return {
+        allowed: false,
+        reason: "访客单次只能处理1个文件，请登录以处理更多",
+        maxFiles: 1,
+      };
+    }
+
+    return { allowed: true, maxFiles: 1 };
+  };
+
+  const consumeQuota = async (toolType: string, fileCount: number) => {
+    if (user) {
+      const supabase = createClient();
+      await supabase.rpc("increment_usage", {
+        user_id: user.id,
+        tool_type: toolType,
+        file_count: fileCount,
+      });
+      // 乐观更新本地状态
+      useStore.setState({
+        user: { ...user, daily_used: user.daily_used + 1 },
+      });
+    } else {
+      incrementGuestUsage();
+    }
+  };
+
+  return { checkQuota, consumeQuota };
+}

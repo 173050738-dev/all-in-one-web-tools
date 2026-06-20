@@ -1,0 +1,139 @@
+"use client";
+
+import { useState } from "react";
+import { Check, Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { useStore } from "@/store/useStore";
+
+
+const plans = [
+  {
+    name: "免费版",
+    price: "¥0",
+    period: "/月",
+    description: "适合偶尔使用的个人用户",
+    features: ["单次最多2个文件", "每日5次处理额度", "基础工具使用", "社区支持"],
+    cta: "免费开始",
+    href: "/register",
+    highlighted: false,
+  },
+  {
+    name: "Pro 月度",
+    price: "$9.99",
+    period: "/月",
+    description: "适合高频使用的专业人士",
+    features: ["单次最多50个文件", "每日500次处理额度", "全部工具无限制", "优先技术支持", "新功能抢先体验"],
+    cta: "立即订阅",
+    priceId: "price_pro_monthly",
+    mode: "subscription" as const,
+    highlighted: true,
+  },
+  {
+    name: "终身买断",
+    price: "$29",
+    period: "",
+    description: "一次付费，永久使用",
+    features: ["单次最多50个文件", "每日500次处理额度", "全部工具无限制", "终身免费更新", "专属技术支持"],
+    cta: "终身拥有",
+    priceId: "price_lifetime",
+    mode: "payment" as const,
+    highlighted: false,
+  },
+];
+
+export default function PricingPage() {
+  const { user } = useStore();
+  const [loading, setLoading] = useState<string | null>(null);
+
+  const handleCheckout = async (plan: (typeof plans)[number]) => {
+    if (!user) {
+      window.location.href = "/login?redirect=/pricing";
+      return;
+    }
+    if (!plan.priceId) return;
+
+    setLoading(plan.name);
+    try {
+      const res = await fetch("/api/stripe/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ priceId: plan.priceId, mode: plan.mode }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert("创建支付会话失败");
+      }
+    } catch {
+      alert("网络错误，请重试");
+    } finally {
+      setLoading(null);
+    }
+  };
+
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mb-12 text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900">选择适合您的方案</h1>
+        <p className="mt-4 text-lg text-muted-foreground">
+          灵活的付费方式，满足不同场景需求
+        </p>
+      </div>
+
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {plans.map((plan) => (
+          <Card
+            key={plan.name}
+            className={`relative flex flex-col ${
+              plan.highlighted ? "border-primary shadow-lg scale-105" : ""
+            }`}
+          >
+            {plan.highlighted && (
+              <Badge className="absolute -top-3 left-1/2 -translate-x-1/2">最受欢迎</Badge>
+            )}
+            <CardHeader className="text-center">
+              <CardTitle className="text-xl">{plan.name}</CardTitle>
+              <div className="mt-4 flex items-baseline justify-center">
+                <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
+                <span className="ml-1 text-muted-foreground">{plan.period}</span>
+              </div>
+              <CardDescription>{plan.description}</CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-1 flex-col">
+              <ul className="mb-8 space-y-3">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3 text-sm">
+                    <Check className="h-4 w-4 shrink-0 text-primary mt-0.5" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-auto">
+                {plan.priceId ? (
+                  <Button
+                    className="w-full"
+                    onClick={() => handleCheckout(plan)}
+                    disabled={loading === plan.name}
+                  >
+                    {loading === plan.name ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      plan.cta
+                    )}
+                  </Button>
+                ) : (
+                  <Button variant="outline" className="w-full" asChild>
+                    <a href={plan.href}>{plan.cta}</a>
+                  </Button>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,19 @@
+import Stripe from "stripe";
+
+/**
+ * Stripe 服务端实例
+ * 使用懒加载避免构建时因缺少环境变量而报错
+ */
+let stripeInstance: Stripe | null = null;
+
+export function getStripe(): Stripe {
+  if (!stripeInstance) {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      throw new Error("Missing STRIPE_SECRET_KEY environment variable");
+    }
+    stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      typescript: true,
+    });
+  }
+  return stripeInstance;
+}

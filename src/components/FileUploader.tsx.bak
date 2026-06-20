@@ -1,0 +1,129 @@
+"use client";
+
+import React, { useCallback, useState } from "react";
+import { Upload, X, File } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn, formatFileSize } from "@/lib/utils";
+
+interface FileUploaderProps {
+  accept?: string;
+  multiple?: boolean;
+  maxFiles?: number;
+  onFilesSelected: (files: File[]) => void;
+  files: File[];
+  onRemoveFile?: (index: number) => void;
+}
+
+export default function FileUploader({
+  accept = ".pdf",
+  multiple = false,
+  maxFiles = 1,
+  onFilesSelected,
+  files,
+  onRemoveFile,
+}: FileUploaderProps) {
+  const [isDragOver, setIsDragOver] = useState(false);
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(false);
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent) => {
+      e.preventDefault();
+      setIsDragOver(false);
+      const droppedFiles = Array.from(e.dataTransfer.files).filter((f) =>
+        f.name.toLowerCase().endsWith(".pdf")
+      );
+      if (droppedFiles.length === 0) return;
+      const selected = multiple ? droppedFiles.slice(0, maxFiles) : [droppedFiles[0]];
+      onFilesSelected(selected);
+    },
+    [multiple, maxFiles, onFilesSelected]
+  );
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files) return;
+    const selectedFiles = Array.from(e.target.files).filter((f) =>
+      f.name.toLowerCase().endsWith(".pdf")
+    );
+    if (selectedFiles.length === 0) return;
+    const selected = multiple ? selectedFiles.slice(0, maxFiles) : [selectedFiles[0]];
+    onFilesSelected(selected);
+    e.target.value = "";
+  };
+
+  return (
+    <div className="w-full space-y-4">
+      <div
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        className={cn(
+          "flex flex-col items-center justify-center rounded-lg border-2 border-dashed p-8 transition-colors",
+          isDragOver
+            ? "border-primary bg-primary/5"
+            : "border-gray-300 bg-gray-50 hover:bg-gray-100"
+        )}
+      >
+        <Upload className="h-10 w-10 text-muted-foreground mb-4" />
+        <p className="text-sm font-medium text-gray-900">
+          拖拽文件到此处，或{" "}
+          <label className="cursor-pointer text-primary hover:underline">
+            点击上传
+            <input
+              type="file"
+              accept={accept}
+              multiple={multiple}
+              className="hidden"
+              onChange={handleInputChange}
+            />
+          </label>
+        </p>
+        <p className="mt-2 text-xs text-muted-foreground">
+          仅支持 PDF 格式
+          {multiple && maxFiles > 1 ? `，最多 ${maxFiles} 个文件` : ""}
+        </p>
+      </div>
+
+      {files.length > 0 && (
+        <div className="space-y-2">
+          {files.map((file, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-between rounded-lg border bg-white p-3"
+            >
+              <div className="flex items-center gap-3 min-w-0">
+                <File className="h-5 w-5 shrink-0 text-primary" />
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-medium text-gray-900">
+                    {file.name}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {formatFileSize(file.size)}
+                  </p>
+                </div>
+              </div>
+              {onRemoveFile && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 shrink-0"
+                  onClick={() => onRemoveFile(index)}
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

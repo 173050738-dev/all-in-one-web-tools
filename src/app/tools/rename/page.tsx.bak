@@ -1,0 +1,275 @@
+"use client";
+
+import { useState } from "react";
+import { PDFDocument } from "pdf-lib";
+import { FileEdit, AlertCircle, FileArchive } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import FileUploader from "@/components/FileUploader";
+import { useQuotaGuard } from "@/hooks/useQuotaGuard";
+import { useStore } from "@/store/useStore";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
+
+type RenameMode = "prefix" | "suffix" | "regex" | "drawing";
+
+export default function RenamePage() {
+  const [files, setFiles] = useState<File[]>([]);
+  const [mode, setMode] = useState<RenameMode>("prefix");
+  const [prefix, setPrefix] = useState("");
+  const [suffix, setSuffix] = useState("");
+  const [regexPattern, setRegexPattern] = useState("");
+  const [regexReplace, setRegexReplace] = useState("");
+  const [drawingProject, setDrawingProject] = useState("");
+  const [drawingStartNum, setDrawingStartNum] = useState(1);
+  const [processing, setProcessing] = useState(false);
+  const [result, setResult] = useState<{ zipUrl: string; previews: { old: string; new: string }[] } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const { checkQuota, consumeQuota } = useQuotaGuard();
+  const { user } = useStore();
+
+  const maxFiles = user?.max_files_per_request || 2;
+
+  const handleFiles = (newFiles: File[]) => {
+    setFiles((prev) => [...prev, ...newFiles].slice(0, maxFiles));
+    setResult(null);
+    setError(null);
+  };
+
+  const handleRemove = (index: number) => {
+    setFiles((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const generateNewName = (original: string, index: number): string => {
+    const base = original.replace(/\.pdf$/i, "");
+    const ext = ".pdf";
+
+    switch (mode) {
+      case "prefix":
+        return `${prefix}${base}${ext}`;
+      case "suffix":
+        return `${base}${suffix}${ext}`;
+      case "regex": {
+        try {
+          const re = new RegExp(regexPattern, "g");
+          return `${base.replace(re, regexReplace)}${ext}`;
+        } catch {
+          return `${base}_error${ext}`;
+        }
+      }
+      case "drawing": {
+        const num = String(drawingStartNum + index).padStart(3, "0");
+        return `${drawingProject}_DWG-${num}${ext}`;
+      }
+      default:
+        return original;
+    }
+  };
+
+  const handleRename = async () => {
+    if (files.length === 0) return;
+    setError(null);
+
+    const quota = await checkQuota(files.length);
+    if (!quota.allowed) {
+      setError(quota.reason || "额度不足");
+      return;
+    }
+
+    setProcessing(true);
+    try {
+      const zip = new JSZip();
+      const previews: { old: string; new: string }[] = [];
+
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const newName = generateNewName(file.name, i);
+        previews.push({ old: file.name, new: newName });
+
+        // 使用 pdf-lib 重新保存以更新内部元数据（可选）
+        const bytes = await file.arrayBuffer();
+        const pdf = await PDFDocument.load(bytes);
+        // 可以在这里设置文档标题等元数据
+        pdf.setTitle(newName.replace(/\.pdf$/i, ""));
+        const saved = await pdf.save();
+        zip.file(newName, saved);
+      }
+
+      const zipBlob = await zip.generateAsync({ type: "blob" });
+      const zipUrl = URL.createObjectURL(zipBlob);
+      setResult({ zipUrl, previews });
+
+      await consumeQuota("rename", files.length);
+    } catch (e) {
+      setError("重命名失败：" + (e instanceof Error ? e.message : String(e)));
+    } finally {
+      setProcessing(false);
+    }
+  };
+
+  return (
+    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <div className="mb-8 text-center">
+        <h1 className="text-3xl font-bold text-gray-900">批量PDF图纸重命名</h1>
+        <p className="mt-2 text-muted-foreground">
+          支持前缀/后缀、正则替换、图纸编号规则批量重命名
+        </p>
+      </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-lg">
+            <FileEdit className="h-5 w-5 text-primary" />
+            上传与设置
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <FileUploader
+            files={files}
+            onFilesSelected={handleFiles}
+            onRemoveFile={handleRemove}
+            multiple
+            maxFiles={maxFiles}
+          />
+
+          {files.length > 0 && (
+            <div className="space-y-4">
+              <div>
+                <Label className="mb-2 block">重命名规则</Label>
+                <div className="flex flex-wrap gap-2">
+                  {([
+                    { key: "prefix", label: "加前缀" },
+                    { key: "suffix", label: "加后缀" },
+                    { key: "regex", label: "正则替换" },
+                    { key: "drawing", label: "图纸编号" },
+                  ] as { key: RenameMode; label: string }[]).map((m) => (
+                    <Button
+                      key={m.key}
+                      type="button"
+                      variant={mode === m.key ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setMode(m.key)}
+                    >
+                      {m.label}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {mode === "prefix" && (
+                <div>
+                  <Label htmlFor="prefix">前缀</Label>
+                  <Input
+                    id="prefix"
+                    placeholder="例如：ProjectA_"
+                    value={prefix}
+                    onChange={(e) => setPrefix(e.target.value)}
+                  />
+                </div>
+              )}
+
+              {mode === "suffix" && (
+                <div>
+                  <Label htmlFor="suffix">后缀</Label>
+                  <Input
+                    id="suffix"
+                    placeholder="例如：_final"
+                    value={suffix}
+                    onChange={(e) => setSuffix(e.target.value)}
+                  />
+                </div>
+              )}
+
+              {mode === "regex" && (
+                <div className="space-y-3">
+                  <div>
+                    <Label htmlFor="regexPattern">正则表达式</Label>
+                    <Input
+                      id="regexPattern"
+                      placeholder="例如：^old_"
+                      value={regexPattern}
+                      onChange={(e) => setRegexPattern(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="regexReplace">替换为</Label>
+                    <Input
+                      id="regexReplace"
+                      placeholder="例如：new_"
+                      value={regexReplace}
+                      onChange={(e) => setRegexReplace(e.target.value)}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {mode === "drawing" && (
+                <div className="space-y-3">
+                  <div>
+                    <Label htmlFor="drawingProject">项目名称</Label>
+                    <Input
+                      id="drawingProject"
+                      placeholder="例如：BuildingA"
+                      value={drawingProject}
+                      onChange={(e) => setDrawingProject(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="drawingStartNum">起始编号</Label>
+                    <Input
+                      id="drawingStartNum"
+                      type="number"
+                      min={1}
+                      value={drawingStartNum}
+                      onChange={(e) => setDrawingStartNum(parseInt(e.target.value) || 1)}
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    生成格式：项目名称_DWG-001.pdf
+                  </p>
+                </div>
+              )}
+
+              <Button onClick={handleRename} disabled={processing} className="w-full">
+                {processing ? "处理中..." : "开始重命名"}
+              </Button>
+            </div>
+          )}
+
+          {error && (
+            <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+              <AlertCircle className="h-4 w-4 shrink-0" />
+              {error}
+            </div>
+          )}
+
+          {result && (
+            <div className="rounded-lg border bg-green-50 p-4 space-y-3">
+              <p className="text-sm font-medium text-green-800">重命名预览</p>
+              <div className="space-y-2 max-h-48 overflow-auto">
+                {result.previews.map((p, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm">
+                    <span className="truncate text-muted-foreground line-through">{p.old}</span>
+                    <span className="text-muted-foreground">→</span>
+                    <span className="truncate font-medium text-green-700">{p.new}</span>
+                  </div>
+                ))}
+              </div>
+              <Button
+                className="w-full gap-2"
+                onClick={() => {
+                  saveAs(result.zipUrl, `renamed_pdfs_${Date.now()}.zip`);
+                }}
+              >
+                <FileArchive className="h-4 w-4" />
+                下载打包文件 (ZIP)
+              </Button>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+}

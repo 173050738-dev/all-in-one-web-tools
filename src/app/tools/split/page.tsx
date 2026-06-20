@@ -1,0 +1,194 @@
+"use client";
+
+import { useState } from "react";
+import { PDFDocument } from "pdf-lib";
+import { Download, Split, AlertCircle, FileArchive } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import FileUploader from "@/components/FileUploader";
+import { useQuotaGuard } from "@/hooks/useQuotaGuard";
+
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
+
+export default function SplitPage() {
+  const [files, setFiles] = useState<File[]>([]);
+  const [range, setRange] = useState("");
+  const [processing, setProcessing] = useState(false);
+  const [result, setResult] = useState<{ pages: number; zipUrl?: string; singleUrls?: { url: string; name: string }[] } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const { checkQuota, consumeQuota } = useQuotaGuard();
+
+  const handleFiles = (newFiles: File[]) => {
+    setFiles(newFiles);
+    setResult(null);
+    setError(null);
+  };
+
+  const handleRemove = (index: number) => {
+    setFiles((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const parseRange = (input: string, totalPages: number): number[] => {
+    if (!input.trim()) return Array.from({ length: totalPages }, (_, i) => i);
+    const pages = new Set<number>();
+    const parts = input.split(",");
+    for (const part of parts) {
+      const trimmed = part.trim();
+      if (trimmed.includes("-")) {
+        const [start, end] = trimmed.split("-").map((n) => parseInt(n, 10));
+        if (!isNaN(start) && !isNaN(end)) {
+          for (let i = start; i <= end && i <= totalPages; i++) {
+            if (i >= 1) pages.add(i - 1);
+          }
+        }
+      } else {
+        const n = parseInt(trimmed, 10);
+        if (!isNaN(n) && n >= 1 && n <= totalPages) pages.add(n - 1);
+      }
+    }
+    return Array.from(pages).sort((a, b) => a - b);
+  };
+
+  const handleSplit = async () => {
+    if (files.length === 0) return;
+    setError(null);
+
+    const quota = await checkQuota(files.length);
+    if (!quota.allowed) {
+      setError(quota.reason || "Insufficient quota");
+      return;
+    }
+
+    setProcessing(true);
+    try {
+      const file = files[0];
+      const bytes = await file.arrayBuffer();
+      const pdf = await PDFDocument.load(bytes);
+      const totalPages = pdf.getPageCount();
+      const targetPages = parseRange(range, totalPages);
+
+      if (targetPages.length === 0) {
+        setError("Invalid page range");
+        setProcessing(false);
+        return;
+      }
+
+      // Single page split mode：如果Rangecontains multiple pages，Generate one file per pagePDF
+      if (targetPages.length === 1) {
+        const newPdf = await PDFDocument.create();
+        const [copiedPage] = await newPdf.copyPages(pdf, targetPages);
+        newPdf.addPage(copiedPage);
+        const saved = await newPdf.save();
+        const blob = new Blob([saved as unknown as ArrayBuffer], { type: "application/pdf" });
+        const url = URL.createObjectURL(blob);
+        setResult({ pages: 1, singleUrls: [{ url, name: `page_${targetPages[0] + 1}.pdf` }] });
+      } else {
+        const zip = new JSZip();
+        for (let i = 0; i < targetPages.length; i++) {
+          const pageIndex = targetPages[i];
+          const newPdf = await PDFDocument.create();
+          const [copiedPage] = await newPdf.copyPages(pdf, [pageIndex]);
+          newPdf.addPage(copiedPage);
+          const saved = await newPdf.save();
+          zip.file(`page_${pageIndex + 1}.pdf`, saved);
+        }
+        const zipBlob = await zip.generateAsync({ type: "blob" });
+        const zipUrl = URL.createObjectURL(zipBlob);
+        setResult({ pages: targetPages.length, zipUrl });
+      }
+
+      await consumeQuota("split", files.length);
+    } catch (e) {
+      setError("Split failed: " + (e instanceof Error ? e.message : String(e)));
+    } finally {
+      setProcessing(false);
+    }
+  };
+
+  return (
+    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <div className="mb-8 text-center">
+        <h1 className="text-3xl font-bold text-gray-900">Split PDF</h1>
+        <p className="mt-2 text-muted-foreground">
+          Split PDF by page count or range, supports batch zip download
+        </p>
+      </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-lg">
+            <Split className="h-5 w-5 text-primary" />
+            Upload & Settings
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <FileUploader files={files} onFilesSelected={handleFiles} onRemoveFile={handleRemove} />
+
+          {files.length > 0 && (
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="range">Page Range (optional)</Label>
+                <Input
+                  id="range"
+                  placeholder="e.g. 1-3,5,7-9, leave empty for all pages"
+                  value={range}
+                  onChange={(e) => setRange(e.target.value)}
+                />
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Supported format：单页 1,3,5 或Range 1-5，comma separated
+                </p>
+              </div>
+
+              <Button onClick={handleSplit} disabled={processing} className="w-full">
+                {processing ? "Splitting..." : "Start Split"}
+              </Button>
+            </div>
+          )}
+
+          {error && (
+            <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+              <AlertCircle className="h-4 w-4 shrink-0" />
+              {error}
+            </div>
+          )}
+
+          {result && (
+            <div className="rounded-lg border bg-green-50 p-4 space-y-3">
+              <p className="text-sm text-green-800">Successfully split {result.pages} page(s)</p>
+              {result.zipUrl && (
+                <Button
+                  className="w-full gap-2"
+                  onClick={() => {
+                    saveAs(result.zipUrl!, `split_pages_${Date.now()}.zip`);
+                  }}
+                >
+                  <FileArchive className="h-4 w-4" />
+                  Downloadpackaged file (ZIP)
+                </Button>
+              )}
+              {result.singleUrls && result.singleUrls.map((item) => (
+                <Button
+                  key={item.name}
+                  variant="outline"
+                  className="w-full gap-2"
+                  onClick={() => {
+                    const a = document.createElement("a");
+                    a.href = item.url;
+                    a.download = item.name;
+                    a.click();
+                  }}
+                >
+                  <Download className="h-4 w-4" />
+                  Download {item.name}
+                </Button>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+}

@@ -1,0 +1,55 @@
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
+
+/**
+ * 用户角色类型
+ */
+export type UserRole = "free" | "pro" | "lifetime";
+
+/**
+ * 用户信息接口
+ */
+export interface User {
+  id: string;
+  email: string;
+  full_name: string | null;
+  role: UserRole;
+  daily_used: number;
+  daily_limit: number;
+  max_files_per_request: number;
+  reset_at: string;
+}
+
+/**
+ * 全局状态存储
+ * 包含用户认证状态、额度信息、处理结果等
+ */
+interface AppState {
+  user: User | null;
+  setUser: (user: User | null) => void;
+  isLoading: boolean;
+  setIsLoading: (loading: boolean) => void;
+  // 访客模式额度（无登录用户）
+  guestDailyUsed: number;
+  incrementGuestUsage: () => void;
+  resetGuestUsage: () => void;
+}
+
+export const useStore = create<AppState>()(
+  persist(
+    (set) => ({
+      user: null,
+      setUser: (user) => set({ user }),
+      isLoading: true,
+      setIsLoading: (loading) => set({ isLoading: loading }),
+      guestDailyUsed: 0,
+      incrementGuestUsage: () =>
+        set((state) => ({ guestDailyUsed: state.guestDailyUsed + 1 })),
+      resetGuestUsage: () => set({ guestDailyUsed: 0 }),
+    }),
+    {
+      name: "pdf-tools-storage",
+      partialize: (state) => ({ guestDailyUsed: state.guestDailyUsed }),
+    }
+  )
+);

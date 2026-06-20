@@ -1,0 +1,39 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+
+export const metadata: Metadata = {
+  title: "PDF轻工具 - 本地处理、隐私安全的在线PDF工具",
+  description:
+    "免费在线PDF压缩、合并、拆分、转Word、批量重命名工具。所有处理在浏览器本地完成，文件不上传服务器，保护您的隐私安全。",
+  keywords: [
+    "PDF工具",
+    "在线PDF压缩",
+    "PDF合并",
+    "PDF拆分",
+    "PDF转Word",
+    "批量重命名PDF",
+    "本地处理PDF",
+    "PDF图纸重命名",
+  ],
+  openGraph: {
+    title: "PDF轻工具 - 本地处理、隐私安全的在线PDF工具",
+    description: "免费在线PDF压缩、合并、拆分、转Word、批量重命名工具。",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="zh-CN">
+      <body className="min-h-screen bg-background antialiased">
+        <Navbar />
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
