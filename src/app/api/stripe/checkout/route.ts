@@ -7,6 +7,7 @@ import { createClient } from "@/lib/supabase/server";
  * Receive priceId and mode from frontend, return Stripe Checkout URL
  * Requires user to be logged in
  */
+export const runtime = 'nodejs';
 export async function POST(req: NextRequest) {
   try {
     const supabase = createClient();

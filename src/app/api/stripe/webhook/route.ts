@@ -8,6 +8,7 @@ import Stripe from "stripe";
  * Handle payment success events, update user role and subscription status
  * Configure this endpoint in Stripe Dashboard and set the signing secret
  */
+export const runtime = 'nodejs';
 export async function POST(req: NextRequest) {
   const payload = await req.text();
   const signature = req.headers.get("stripe-signature");
