@@ -31,6 +31,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+# temp scripts
+_*.js
+_*.ps1
+scan_chinese.js
+english-convert.js
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel

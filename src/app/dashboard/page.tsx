@@ -87,7 +87,7 @@ export default function DashboardPage() {
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">Today's Usage</CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">Today&apos;s Usage</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex items-center gap-2">
