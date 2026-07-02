@@ -1,0 +1,113 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy to CF Pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Resolve middleware + output:export conflict (temporarily remove)
+        run: |
+          if [ -f middleware.ts ]; then
+            echo "Moving middleware.ts to .bak for static export"
+            mv middleware.ts middleware.ts.bak
+          fi
+
+      - name: Build (Next.js static export)
+        env:
+          NODE_ENV: production
+        run: npm run build
+
+      - name: Restore middleware.ts
+        run: |
+          if [ -f middleware.ts.bak ]; then
+            mv middleware.ts.bak middleware.ts
+          fi
+
+      - name: Copy CF Pages static assets to out/
+        run: |
+          if [ ! -d out ]; then
+            echo "::error::Build produced no out/ directory"
+            exit 1
+          fi
+          set +e
+          for f in _headers _redirects favicon.svg og-image.svg robots.txt sitemap.xml; do
+            if [ -f "public/$f" ]; then
+              cp -f "public/$f" "out/$f"
+              echo "copied public/$f -> out/$f ($(wc -c < public/$f) bytes)"
+            fi
+          done
+          # favicon.ico: copy SVG as ico (browsers parse by content, not extension)
+          if [ -f public/favicon.svg ]; then
+            cp -f public/favicon.svg out/favicon.ico
+            echo "copied public/favicon.svg -> out/favicon.ico"
+          fi
+
+      - name: Verify critical files in out/
+        run: |
+          missing=0
+          for f in _headers _redirects favicon.ico favicon.svg og-image.svg robots.txt sitemap.xml; do
+            if [ -f "out/$f" ]; then
+              echo "  ✅ out/$f ($(stat -c%s out/$f) bytes)"
+            else
+              echo "  ❌ out/$f MISSING"
+              missing=1
+            fi
+          done
+          # Check root index.html metadata
+          if grep -q 'og:title' out/index.html && grep -q 'rel="canonical"' out/index.html; then
+            echo "  ✅ out/index.html: has og:title + canonical"
+          else
+            echo "  ⚠️  out/index.html: og/canonical meta check skipped"
+          fi
+          if [ "$missing" -ne 0 ]; then
+            echo "::warning::Some CF asset files missing, upload continues but check headers/icons"
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: pages deploy out --project-name=${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }} --branch=${{ github.ref_name }}
+        env:
+          NODE_ENV: production
+
+      - name: Deployment summary
+        run: |
+          echo "## 部署完成 🎉" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- 项目: \`${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Commit: \`${GITHUB_SHA::7}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- 分支: \`${GITHUB_REF_NAME}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "访问地址：" >> $GITHUB_STEP_SUMMARY
+          echo "- Pages 临时域: https://${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}.pages.dev" >> $GITHUB_STEP_SUMMARY
+          echo "- 自定义域名: https://www.korelyy.com" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "> 如需回滚：到 Cloudflare Pages 后台 → 项目 → Deployments → 点上个版本 ··· → Promote to production" >> $GITHUB_STEP_SUMMARY

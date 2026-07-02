@@ -1,0 +1,18 @@
+'use client';
+import { useParams } from 'next/navigation';
+import Sidebar from '@/components/Sidebar';
+import BatchFileProcessor from '@/components/BatchFileProcessor';
+
+export default function BatchToolPage() {
+  const params = useParams();
+  const locale = (params.locale as string) || 'es';
+
+  return (
+    <div className='max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8'>
+      <div className='flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8'>
+        <Sidebar locale={locale} activePage='home' />
+        <BatchFileProcessor locale={locale} />
+      </div>
+    </div>
+  );
+}

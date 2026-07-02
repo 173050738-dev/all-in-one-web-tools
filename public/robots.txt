@@ -1,0 +1,32 @@
+# Korelyy robots.txt
+# Generated automatically — do not edit by hand.
+# Rebuilt via scripts/build-sitemap-robots.mjs on every build.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Yandex
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://korelyy.com/sitemap.xml
+
+Host: https://korelyy.com

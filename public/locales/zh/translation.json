@@ -1,0 +1,4182 @@
+{
+  "header": {
+    "brand": "Korelyy",
+    "search": "搜索工具...",
+    "category": "分类",
+    "language": "语言",
+    "theme": "主题"
+  },
+  "nav": {
+    "toolbox": "我的工具箱",
+    "history": "使用历史",
+    "achievements": "成就",
+    "lightMode": "浅色模式",
+    "darkMode": "深色模式",
+    "accessibility": "无障碍设置",
+    "checkUpdate": "检查更新",
+    "bookmarkSite": "收藏本站",
+    "moreFeatures": "更多功能",
+    "bookmarked": "已收藏！",
+    "updateComplete": "更新完成！",
+    "bookmarkTip": "请按 Ctrl+D (Windows) 或 Cmd+D (Mac) 将本站添加到收藏夹",
+    "searchPlaceholder": "搜索工具..."
+  },
+  "nav2": {
+    "workflows": "工具工作流",
+    "templates": "发现模板",
+    "batchProcess": "批量文件处理",
+    "apiKeys": "API 密钥",
+    "ideas": "创意工坊",
+    "backHome": "返回首页",
+    "ideasBadge": "💡 创意工坊"
+  },
+  "toolcard": {
+    "easy": "简单",
+    "medium": "中等",
+    "advanced": "高级",
+    "verified": "安全认证",
+    "saveToToolbox": "收藏到工具箱",
+    "like": "点赞",
+    "showing": "显示",
+    "toolsCount": "个工具",
+    "noToolsInCategory": "该分类下没有工具",
+    "noResultsWithSearchAndCategory": "当前分类下没有找到匹配\"{query}\"的工具，是否切换到全部分类？",
+    "noResultsWithSearch": "没有找到匹配的工具，请尝试其他关键词",
+    "viewAllCategories": "查看全部分类",
+    "loadMore": "加载更多"
+  },
+  "sidebar": {
+    "all-tools": "全部工具",
+    "dev-tools": "开发工具",
+    "ai-tools": "AI工具",
+    "image-tools": "图片工具",
+    "pdf-tools": "PDF工具",
+    "media-tools": "媒体工具",
+    "productivity": "生产力工具",
+    "design-tools": "设计工具",
+    "ecommerce": "电商工具",
+    "content-tools": "内容创作",
+    "marketing": "营销工具",
+    "seo-tools": "SEO工具",
+    "social-media": "社交媒体",
+    "customer-service": "客服工具",
+    "finance-tools": "财务工具",
+    "hr-tools": "HR工具",
+    "education": "教育工具",
+    "health": "健康工具",
+    "lifestyle": "生活工具",
+    "video-editing": "视频编辑",
+    "audio-tools": "音频工具",
+    "3d-tools": "3D工具",
+    "data-viz": "数据可视化",
+    "security": "安全工具",
+    "collaboration": "协作工具",
+    "file-tools": "文件工具",
+    "api-tools": "API工具",
+    "compliance-filter": "合规筛选",
+    "all": "全部",
+    "verified": "已核查",
+    "pending": "待核查"
+  },
+  "dashboard": {
+    "title": "找工具，就上Korelyy",
+    "subtitle": "全球领先工具聚合平台",
+    "sort-newest": "最新",
+    "sort-popular": "最受欢迎",
+    "sort-free": "全部免费工具",
+    "free": "免费",
+    "paid": "付费",
+    "limited-free": "限次免费",
+    "hot-tools": "热门工具",
+    "difficulty-easy": "简单",
+    "difficulty-medium": "中等",
+    "difficulty-advanced": "高级"
+  },
+  "compliance": {
+    "title": "合规透明页",
+    "description": "公开每个工具的版权授权证明、数据隐私条款核查结果，确保全球用户安全使用",
+    "verified-tools": "已核查工具",
+    "pending-tools": "待核查工具",
+    "all-tools": "全部工具",
+    "verified": "已核查",
+    "pending": "待核查",
+    "compliance-details": "核查详情",
+    "copyright": "版权授权",
+    "privacy-policy": "隐私条款",
+    "verification-date": "核查日期",
+    "verified-status": "已验证",
+    "not-verified": "未验证",
+    "network-note": "访问提示",
+    "policy-title": "合规审核政策",
+    "policy-p1": "所有收录工具均经过人工审核，确保符合国际通用安全标准。",
+    "policy-p2": "工具需具备完整的版权授权证明和数据隐私保护措施。",
+    "policy-p3": "我们持续核查工具的合规状态，为全球用户提供安全可靠的工具导航服务。"
+  },
+  "footer": {
+    "about": "关于我们",
+    "about-desc": "了解 Korelyy 团队与使命",
+    "privacy": "隐私政策",
+    "privacy-desc": "我们的隐私承诺",
+    "disclaimer": "数据处理规则及免责声明",
+    "disclaimer-desc": "数据处理与免责说明",
+    "terms": "服务条款",
+    "terms-desc": "服务条款说明",
+    "cookies": "Cookie设置",
+    "cookies-desc": "管理Cookie偏好",
+    "contact": "广告合作和技术支持",
+    "contact-desc": "联系我们",
+    "compliance": "合规透明",
+    "compliance-desc": "工具合规核查",
+    "sitemap": "网站地图",
+    "github": "GitHub",
+    "github-desc": "查看源代码",
+    "copyright": "2026 Korelyy. 保留所有权利。"
+  },
+  "cookie-banner": {
+    "title": "Cookie同意",
+    "description": "我们使用Cookie来改善您的体验。接受即表示您同意我们的Cookie政策。",
+    "accept": "全部接受",
+    "reject": "拒绝非必要",
+    "settings": "Cookie设置"
+  },
+  "cookie-settings": {
+    "title": "Cookie设置",
+    "necessary": "必要Cookie",
+    "necessary-desc": "网站基本功能所需",
+    "analytics": "分析Cookie",
+    "analytics-desc": "帮助我们了解您如何使用网站",
+    "advertising": "广告Cookie",
+    "advertising-desc": "显示个性化广告",
+    "save": "保存偏好"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "intro": "您的隐私对我们很重要。本政策说明我们如何收集、使用和保护您的个人数据。",
+    "data-collection": "数据收集",
+    "data-use": "数据使用",
+    "data-protection": "数据保护",
+    "your-rights": "您的权利",
+    "contact": "联系我们"
+  },
+  "terms": {
+    "title": "服务条款",
+    "intro": "这些条款管理您对我们网站和服务的使用。",
+    "acceptance": "接受条款",
+    "use-policy": "使用政策",
+    "intellectual-property": "知识产权",
+    "disclaimer": "免责声明",
+    "changes": "条款变更"
+  },
+  "disclaimer": {
+    "title": "数据处理规则及免责声明"
+  },
+  "assistant": {
+    "title": "智能工具助手",
+    "subtitle": "描述你的需求，我来帮你找到合适的工具",
+    "placeholder": "描述你需要的工具...",
+    "recommended": "推荐工具",
+    "try-questions": "试试这些问题",
+    "no-results": "抱歉，没有找到相关工具。试试其他关键词吧！"
+  },
+  "toolbox": {
+    "title": "我的工具箱",
+    "subtitle": "{count} 个收藏工具",
+    "search": "搜索收藏的工具...",
+    "no-tools": "还没有收藏任何工具",
+    "no-tools-desc": "点击工具卡片上的星标按钮来收藏"
+  },
+  "history": {
+    "title": "使用历史",
+    "subtitle": "{count} 条记录",
+    "search": "搜索历史记录...",
+    "no-history": "还没有使用记录",
+    "no-history-desc": "使用工具后会自动记录在这里",
+    "clear": "清空历史"
+  },
+  "onboarding": {
+    "step1-title": "搜索工具",
+    "step1-desc": "通过搜索框或智能助手，用关键词或描述快速找到你需要的工具。",
+    "step2-title": "智能助手",
+    "step2-desc": "用自然语言描述你的需求，AI即刻为你推荐合适的工具。",
+    "step3-title": "我的工具箱",
+    "step3-desc": "将喜欢的工具收藏到工具箱，随时随地快速访问。",
+    "step4-title": "使用历史",
+    "step4-desc": "自动追踪你的工具使用历史，再也不会丢失常用工具。",
+    "step5-title": "点赞与分享",
+    "step5-desc": "给喜欢的工具点赞，通过社交媒体分享给朋友。"
+  },
+  "shortcuts": {
+    "title": "键盘快捷键",
+    "search": "聚焦搜索框",
+    "assistant": "打开助手",
+    "toolbox": "打开工具箱",
+    "history": "打开历史",
+    "theme": "切换主题",
+    "close": "关闭弹窗",
+    "help": "显示帮助"
+  },
+  "accessibility": {
+    "title": "无障碍设置",
+    "subtitle": "优化您的浏览体验",
+    "elder-mode": "老年友好模式",
+    "elder-desc": "放大字体，简化界面，更易阅读",
+    "high-contrast": "高对比度模式",
+    "high-contrast-desc": "增强文字与背景对比度，便于阅读"
+  },
+  "achievements": {
+    "first-like-name": "初次点赞",
+    "first-like-desc": "给第一个工具点赞",
+    "like-master-name": "点赞达人",
+    "like-master-desc": "点赞10个不同的工具",
+    "first-save-name": "初次收藏",
+    "first-save-desc": "将工具收藏到工具箱",
+    "collector-name": "收藏家",
+    "collector-desc": "收藏5个工具到工具箱",
+    "first-search-name": "初次搜索",
+    "first-search-desc": "搜索你的第一个工具",
+    "first-history-name": "探索者",
+    "explorer-desc": "使用10个不同的工具",
+    "explorer-name": "探索者",
+    "social-name": "社交达人",
+    "social-desc": "与朋友分享工具"
+  },
+  "tool": {
+    "back": "返回仪表板",
+    "related": "相关工具",
+    "guide": "使用指南",
+    "features": "功能特性"
+  },
+  "tools": {
+    "163": {
+      "name": "网易",
+      "description": "中国门户网站，邮箱新闻游戏。"
+    },
+    "avatar-decorator": {
+      "name": "头像装饰器",
+      "description": "一键给头像加V认证、渐变边框、可爱挂件，让你的头像脱颖而出，支持一键保存。"
+    },
+    "base64-tool": {
+      "name": "Base64编解码工具",
+      "description": "在线Base64编码与解码，支持文本、图片互转，本地处理安全可靠。"
+    },
+    "caption-generator": {
+      "name": "朋友圈文案",
+      "description": "拯救文案焦虑！旅行、美食、恋爱、工作等8大分类，上百条精选文案，一键复制。"
+    },
+    "case-converter": {
+      "name": "大小写转换",
+      "description": "文本大小写一键转换，支持大驼峰、小驼峰、蛇形、短横线、全大写/小写、标题格式、首字母大写。"
+    },
+    "color-picker": {
+      "name": "颜色选择器",
+      "description": "在线颜色拾取调色板，支持HEX、RGB、HSL、HSV互转，渐变生成，配色方案导出，设计师必备。"
+    },
+    "copy-cleaner": {
+      "name": "文案冗余清洗标注器",
+      "description": "本地纯前端解析，自动识别重复铺垫、无意义形容词、重复金句、凑字数废话；色块标注重复片段，一键精简压缩保留核心，带货干货剧情文案洗稿优化专用。"
+    },
+    "countdown": {
+      "name": "倒计时纪念日",
+      "description": "记录重要日子，实时倒计时精确到秒，生日、节日、纪念日一个都不错过，支持每年重复。"
+    },
+    "danmaku": {
+      "name": "弹幕手持",
+      "description": "手机秒变手持弹幕，演唱会/接机/应援必备神器，支持多种颜色和滚动速度。"
+    },
+    "decision-wheel": {
+      "name": "决定转盘",
+      "description": "纠结症患者的福音！让转盘帮你做决定，午餐吃什么、周末去哪玩，转一下就知道。"
+    },
+    "emoji-mixer": {
+      "name": "Emoji表情合成器",
+      "description": "两个emoji合成一个新表情！超好玩的表情工厂，创意无限，一键复制分享。"
+    },
+    "fortune-sticks": {
+      "name": "随机抽签筒",
+      "description": "求签问卜、是或否、自定义选项，纠结症救星！三种模式任你选，好玩又实用。"
+    },
+    "grid-cutter": {
+      "name": "九宫格切图",
+      "description": "一键把图片切成9张，发朋友圈神器！自动裁成正方形，高清输出，顺序保存。"
+    },
+    "image-compressor": {
+      "name": "在线图片压缩",
+      "description": "本地上传压缩图片，支持批量调节压缩质量，实时预览压缩效果，完全本地处理不上传服务器，保护隐私。"
+    },
+    "image-to-base64": {
+      "name": "图片转Base64",
+      "description": "本地拖拽上传图片立即转Base64编码，纯前端处理不上传服务器，支持JPG/PNG/WebP/SVG批量转换。"
+    },
+    "json-formatter": {
+      "name": "JSON格式化工具",
+      "description": "在线JSON格式化、校验、压缩，语法高亮显示，开发者必备。"
+    },
+    "keyword-spinoff-generator": {
+      "name": "谐音梗爆款关键词生成器",
+      "description": "内置美妆/美食/家居/数码/母婴5大行业词库，输入核心词批量产出谐音标题/反差标题/疑问标题/数字标题4类爆款标题；全部本地运算不上云AI接口，写小红书/抖音/文案博主专用。"
+    },
+    "markdown-platform-adapter": {
+      "name": "全平台Markdown适配转换器",
+      "description": "内置小红书/公众号/知乎/抖音图文/B站专栏5大语法规则，自动适配#标签排版、首尾空行、B站引用块、抖音图文换行；图片/表格/代码块降级兼容，一键复制对应平台纯文本，市面多数只转1-2家，咱独家5平台。"
+    },
+    "markdown-preview": {
+      "name": "Markdown预览",
+      "description": "在线Markdown实时预览编辑器，左右分栏对照，支持表格、代码高亮、任务列表，一键导出HTML。"
+    },
+    "mortgage-calculator": {
+      "name": "房贷计算器",
+      "description": "精准计算房贷月供，支持等额本息和等额本金两种还款方式，实时查看还款明细。"
+    },
+    "password-generator": {
+      "name": "密码生成器",
+      "description": "一键生成安全随机密码，支持自定义长度和字符类型，本地生成，隐私安全。"
+    },
+    "pdf-merger": {
+      "name": "PDF合并工具",
+      "description": "本地浏览器端合并PDF文件，支持多文件排序，不上传服务器，隐私安全。"
+    },
+    "pinyin-annotator": {
+      "name": "多音字拼音标注工具",
+      "description": "知识口播教辅博主刚需。批量给全文生僻字和多音字标注拼音，区分多读音场景(银行/行走/重复等)，导出带拼音上下排版的文案，解决口播读错字翻车事故专用。"
+    },
+    "qr-code-generator": {
+      "name": "二维码生成器",
+      "description": "在线生成二维码，支持自定义颜色、Logo、尺寸，一键下载高清PNG图片，适用于网址、文本、WiFi等多种场景。"
+    },
+    "random-number": {
+      "name": "随机数生成器",
+      "description": "自定义范围生成随机整数/小数，支持批量生成不重复号码，抽奖分组、摇号、密码数字直接用。"
+    },
+    "regex-tester": {
+      "name": "正则表达式测试器",
+      "description": "在线调试正则表达式，实时高亮匹配结果，支持g/i/m标志位，显示匹配分组和解释，常用正则模板一键套用。"
+    },
+    "script-splitter": {
+      "name": "口播脚本时长分割器",
+      "description": "区分旁白/对话/停顿字幕，自定义语速(180/220/260字/分)，自动拆分15s/30s/60s/3min分段脚本，同步生成逐句字幕文本+卡点停顿标注，适配短视频剪辑。"
+    },
+    "sentiment-analyzer": {
+      "name": "文案情绪可视化分析器",
+      "description": "本地内置情感词库(1500+常用情绪词)，拆分积极/种草/痛点/中立/负面5类词汇，生成饼图+条形图情绪占比；带货文案直观看种草力度和痛点浓度，辅助优化转化。"
+    },
+    "text-counter": {
+      "name": "字数统计",
+      "description": "实时统计文本字数、字符数（含/不含空格）、单词数、行数、段落数，中文分词精确统计，写论文写稿子神器。"
+    },
+    "text-to-speech": {
+      "name": "文字转语音",
+      "description": "输入文字即可朗读，支持调节语速、音调和音量，听小说、听新闻神器。"
+    },
+    "text-tools": {
+      "name": "文本工具箱",
+      "description": "文本处理工具集合，对比、转换、大小写、格式化等一站式处理。"
+    },
+    "timestamp-converter": {
+      "name": "时间戳转换",
+      "description": "在线时间戳转换工具，Unix时间戳与可读日期双向互转，支持毫秒/秒/ISO格式，多时区切换。"
+    },
+    "title-weight-checker": {
+      "name": "多平台标题权重检测器",
+      "description": "内置小红书/抖音/视频号/公众号4大平台流量词库，粘贴标题分平台打分，识别违禁词/字符上限/换行适配，输出加数字/痛点词/emoji搭配优化建议，区分短视频短标题和图文长标题。"
+    },
+    "url-encode-decode": {
+      "name": "URL编码解码",
+      "description": "URL encode/decode在线工具，标准Percent-Encoding，同时支持Base64编解码和HTML实体互转。"
+    },
+    "uuid-generator": {
+      "name": "UUID生成器",
+      "description": "在线生成UUID，支持v1/v4/v7多种版本，批量生成，一键复制，纯本地处理。"
+    },
+    "vertical-chinese-generator": {
+      "name": "竖排国风文案生成器",
+      "description": "传统从右至左竖排中文，自定义字间距/字号/花体装饰符号，小红书古风国潮图文封面配图专用，导出可复制纯文本+透明背景SVG矢量配图。"
+    },
+    "wallpaper-maker": {
+      "name": "手机壁纸工坊",
+      "description": "渐变+文字，打造专属手机壁纸！16种渐变配色，自定义文字、字体、大小，一键下载。"
+    },
+    "danmaku-handheld": {
+      "name": "弹幕手持",
+      "description": "手机秒变手持弹幕，演唱会/接机/应援必备神器，支持多种颜色和滚动速度。"
+    },
+    "countdown-timer": {
+      "name": "倒计时纪念日",
+      "description": "记录重要日子，实时倒计时精确到秒，生日、节日、纪念日一个都不错过，支持每年重复。"
+    },
+    "image-format-converter": {
+      "name": "图片在线格式转换工具",
+      "description": "在线转换图片格式，支持JPG、PNG、WebP、GIF等多种格式互转，快速免费无限制。"
+    },
+    "timezone-converter": {
+      "name": "在线时区转换工具",
+      "description": "快速转换全球时区，支持夏令时自动调整，轻松安排跨时区会议。"
+    },
+    "base64-encoder": {
+      "name": "Base64编解码工具",
+      "description": "在线Base64编码与解码，支持文本、图片互转，本地处理安全可靠。"
+    },
+    "url-encoder": {
+      "name": "二维码生成器",
+      "description": "在线生成二维码，支持自定义颜色、Logo、尺寸，一键下载高清PNG图片，适用于网址、文本、WiFi等多种场景。"
+    },
+    "photopea": {
+      "name": "在线图片编辑器",
+      "description": "专业级在线图片编辑工具，支持PSD、AI等多种格式，类似Photoshop的功能，完全免费。"
+    },
+    "cloudconvert": {
+      "name": "全能格式转换器",
+      "description": "支持200+格式互转，包括文档、图片、视频、音频等，云端处理，安全可靠。"
+    },
+    "vidshift": {
+      "name": "视频格式转换器",
+      "description": "免费在线视频转换工具，支持多种视频格式互转，本地处理保护隐私。"
+    },
+    "audio-converter": {
+      "name": "音频格式转换器",
+      "description": "免费在线音频转换，支持MP3、WAV、OGG等多种格式，快速便捷。"
+    },
+    "deepl": {
+      "name": "AI智能翻译",
+      "description": "基于AI的高精度翻译工具，支持100+语言，翻译质量业界领先。"
+    },
+    "coolors": {
+      "name": "配色方案生成器",
+      "description": "快速生成专业配色方案，支持从图片提取颜色、对比度检查，设计师必备工具。"
+    },
+    "remove-bg": {
+      "name": "AI智能抠图",
+      "description": "AI自动去除图片背景，5秒出图，支持批量处理，适合电商、设计等场景。"
+    },
+    "tinypng": {
+      "name": "智能图片压缩",
+      "description": "高效压缩PNG、JPEG、WebP图片，保持画质同时大幅减小文件体积，提升网站加载速度。"
+    },
+    "ilovepdf": {
+      "name": "PDF在线处理工具",
+      "description": "一站式PDF处理平台，支持合并、拆分、压缩、转换、编辑等20+功能，完全免费。"
+    },
+    "canva": {
+      "name": "在线设计平台",
+      "description": "海量模板一键套用，轻松制作海报、社交媒体图片、演示文稿等，AI辅助设计。"
+    },
+    "figma": {
+      "name": "UI设计协作平台",
+      "description": "在线UI/UX设计工具，支持实时协作，矢量图形编辑，原型设计，团队协作。"
+    },
+    "replit": {
+      "name": "在线代码编辑器",
+      "description": "云端代码编辑器，支持多种编程语言，AI辅助编程，一键部署。"
+    },
+    "codepen": {
+      "name": "前端代码分享",
+      "description": "前端开发者社区，在线编写和分享HTML/CSS/JS代码，实时预览效果。"
+    },
+    "grammarly": {
+      "name": "AI写作助手",
+      "description": "AI驱动的语法检查和写作助手，支持多语言，实时建议优化写作。"
+    },
+    "hemingway": {
+      "name": "写作风格分析",
+      "description": "分析文章可读性，简化复杂句子，提高写作清晰度。"
+    },
+    "notion": {
+      "name": "一体化协作平台",
+      "description": "集文档、笔记、项目管理于一体的协作平台，AI辅助工作流。"
+    },
+    "trello": {
+      "name": "看板项目管理",
+      "description": "可视化看板管理工具，灵活组织任务，团队协作效率提升。"
+    },
+    "slack": {
+      "name": "团队沟通平台",
+      "description": "企业级团队沟通工具，支持频道、消息、文件共享，集成众多应用。"
+    },
+    "github": {
+      "name": "代码托管平台",
+      "description": "全球最大的代码托管平台，版本控制，协作开发，开源社区。"
+    },
+    "stackblitz": {
+      "name": "云端IDE",
+      "description": "基于浏览器的云端IDE，支持TypeScript、React等，即时预览。"
+    },
+    "codesandbox": {
+      "name": "代码沙箱",
+      "description": "在线代码沙箱，快速创建和分享前端项目，支持多种框架。"
+    },
+    "dribbble": {
+      "name": "设计灵感社区",
+      "description": "设计师社区，展示和发现优秀设计作品，获取设计灵感。"
+    },
+    "behance": {
+      "name": "创意作品展示",
+      "description": "Adobe旗下创意作品展示平台，设计师作品集，项目案例。"
+    },
+    "unsplash": {
+      "name": "免费图片素材",
+      "description": "海量高质量免费图片库，可商用，无版权限制。"
+    },
+    "pixabay": {
+      "name": "免费图库",
+      "description": "免费图片和视频素材库，支持中文搜索，可商用。"
+    },
+    "pexels": {
+      "name": "免费摄影图库",
+      "description": "免费高质量摄影图片和视频，支持多语言搜索。"
+    },
+    "giphy": {
+      "name": "动图搜索",
+      "description": "全球最大的GIF动图库，搜索和分享有趣的动图。"
+    },
+    "tinify": {
+      "name": "智能图片压缩",
+      "description": "基于机器学习的图片压缩工具，支持PNG、JPEG、WebP。"
+    },
+    "squoosh": {
+      "name": "在线图片压缩",
+      "description": "本地上传压缩图片，支持批量调节压缩质量，实时预览压缩效果，完全本地处理不上传服务器，保护隐私。"
+    },
+    "background-remover": {
+      "name": "免费背景去除",
+      "description": "免费在线背景去除工具，AI驱动，简单易用。"
+    },
+    "convertio": {
+      "name": "在线格式转换",
+      "description": "支持300+格式转换，简单易用，文件大小无限制。"
+    },
+    "tinywow": {
+      "name": "免费在线工具",
+      "description": "100+免费在线工具，PDF转换、压缩、编辑等一站式服务。"
+    },
+    "alltoall": {
+      "name": "万能格式转换",
+      "description": "免费在线格式转换工具，支持文档、图片、视频、音频等。"
+    },
+    "google-translate": {
+      "name": "谷歌翻译",
+      "description": "Google官方翻译工具，支持100+语言互译，网页翻译。"
+    },
+    "baidu-translate": {
+      "name": "百度翻译",
+      "description": "百度官方翻译工具，支持多语言，文档翻译，语音翻译。"
+    },
+    "youdao-translate": {
+      "name": "有道翻译",
+      "description": "网易有道翻译，支持多语言，词典查询，例句解析。"
+    },
+    "linguee": {
+      "name": "例句翻译",
+      "description": "基于真实例句的翻译工具，帮助理解语境和用法。"
+    },
+    "text-compare": {
+      "name": "文本工具箱",
+      "description": "文本处理工具集合，对比、转换、大小写、格式化等一站式处理。"
+    },
+    "diff-checker": {
+      "name": "差异对比",
+      "description": "在线对比两段文本或代码的差异，高亮显示变化。"
+    },
+    "regex101": {
+      "name": "正则表达式测试",
+      "description": "在线正则表达式测试工具，实时匹配，详细解释。"
+    },
+    "jsonlint": {
+      "name": "JSON格式化工具",
+      "description": "在线JSON格式化、校验、压缩，语法高亮显示，开发者必备。"
+    },
+    "jqplay": {
+      "name": "jq在线测试",
+      "description": "在线jq工具测试，实时预览JSON数据处理结果。"
+    },
+    "base64encode": {
+      "name": "Base64编解码",
+      "description": "在线Base64编码和解码工具，支持文件编解码。"
+    },
+    "url-decode": {
+      "name": "URL编解码",
+      "description": "在线URL编码和解码工具，处理特殊字符。"
+    },
+    "random-generator": {
+      "name": "随机生成器",
+      "description": "在线生成随机密码、数字、颜色等，安全可靠。"
+    },
+    "qrcode-monke": {
+      "name": "二维码生成器",
+      "description": "免费二维码生成器，支持自定义颜色、Logo、多种格式。"
+    },
+    "font-awesome": {
+      "name": "图标库",
+      "description": "全球最流行的图标库，免费商用，支持多种格式。"
+    },
+    "flaticon": {
+      "name": "免费图标库",
+      "description": "海量免费图标资源，支持SVG、PNG下载，可商用。"
+    },
+    "icons8": {
+      "name": "图标和插图",
+      "description": "图标、插图、照片素材库，支持多种风格和格式。"
+    },
+    "fontspace": {
+      "name": "免费字体下载",
+      "description": "免费字体下载网站，数千款字体，可商用。"
+    },
+    "dafont": {
+      "name": "免费字体库",
+      "description": "免费字体分享网站，分类齐全，下载方便。"
+    },
+    "pdfescape": {
+      "name": "PDF在线编辑",
+      "description": "免费在线PDF编辑器，支持表单填写、添加文字、图像等。"
+    },
+    "smallpdf": {
+      "name": "PDF处理工具",
+      "description": "在线PDF工具集，压缩、转换、编辑，简单易用。"
+    },
+    "sejda": {
+      "name": "PDF在线处理",
+      "description": "专业PDF处理工具，支持合并、拆分、压缩、转换等。"
+    },
+    "pdf2go": {
+      "name": "PDF转换工具",
+      "description": "在线PDF转换工具，支持多种格式互转。"
+    },
+    "cuttly": {
+      "name": "短链接生成器",
+      "description": "免费短链接服务，自定义链接，追踪点击数据。"
+    },
+    "bitly": {
+      "name": "链接缩短服务",
+      "description": "专业短链接服务，点击分析，品牌链接。"
+    },
+    "tinyurl": {
+      "name": "免费短链接",
+      "description": "最简单的免费短链接服务，无需注册。"
+    },
+    "tldr-pages": {
+      "name": "命令行速查",
+      "description": "命令行工具速查手册，简洁明了，省去翻阅长篇文档。"
+    },
+    "devdocs": {
+      "name": "开发者文档",
+      "description": "集成多个技术文档，离线可用，搜索快速。"
+    },
+    "jsfiddle": {
+      "name": "JS代码测试",
+      "description": "在线JavaScript代码测试工具，实时预览，支持库加载。"
+    },
+    "css-tricks": {
+      "name": "CSS技巧",
+      "description": "CSS技巧和教程网站，解决前端样式问题。"
+    },
+    "cssgridgarden": {
+      "name": "CSS Grid游戏",
+      "description": "通过游戏学习CSS Grid布局，互动式学习。"
+    },
+    "flexboxfroggy": {
+      "name": "Flexbox游戏",
+      "description": "通过游戏学习Flexbox布局，有趣的编程学习。"
+    },
+    "typing-game": {
+      "name": "打字练习",
+      "description": "在线打字练习工具，提升打字速度和准确率。"
+    },
+    "google-docs": {
+      "name": "谷歌文档",
+      "description": "Google在线文档编辑，实时协作，云端存储。"
+    },
+    "google-sheets": {
+      "name": "谷歌表格",
+      "description": "Google在线电子表格，数据分析，图表制作。"
+    },
+    "google-slides": {
+      "name": "谷歌幻灯片",
+      "description": "Google在线演示文稿，协作创建，模板丰富。"
+    },
+    "dropbox": {
+      "name": "云端存储",
+      "description": "云存储服务，文件同步，共享协作。"
+    },
+    "onedrive": {
+      "name": "微软云盘",
+      "description": "Microsoft云存储，与Office深度集成，多设备同步。"
+    },
+    "we-transfer": {
+      "name": "文件传输",
+      "description": "免费大文件传输服务，无需注册，安全快捷。"
+    },
+    "send-anywhere": {
+      "name": "任意传输",
+      "description": "跨平台文件传输工具，无需注册，快速分享。"
+    },
+    "clideo": {
+      "name": "在线视频编辑",
+      "description": "在线视频编辑工具，裁剪、合并、添加字幕等。"
+    },
+    "kapwing": {
+      "name": "在线视频工具",
+      "description": "在线视频编辑和创作工具，支持多种格式。"
+    },
+    "audiojoiner": {
+      "name": "音频合并工具",
+      "description": "免费在线音频合并工具，支持多种格式。"
+    },
+    "mp3cut": {
+      "name": "音频剪辑工具",
+      "description": "免费在线音频剪辑工具，裁剪、合并、转换。"
+    },
+    "audiotrimmer": {
+      "name": "音频裁剪工具",
+      "description": "在线音频裁剪工具，简单易用，支持多种格式。"
+    },
+    "online-converter": {
+      "name": "在线转换器",
+      "description": "免费在线转换工具，支持文档、图片、音频、视频等。"
+    },
+    "image-converter": {
+      "name": "图片转换器",
+      "description": "在线图片格式转换，支持JPG、PNG、WebP等。"
+    },
+    "video-converter": {
+      "name": "视频转换器",
+      "description": "在线视频格式转换，支持多种视频格式。"
+    },
+    "evernote": {
+      "name": "印象笔记",
+      "description": "跨平台笔记应用，收集整理信息，多设备同步。"
+    },
+    "smashing-magazine": {
+      "name": "设计开发杂志",
+      "description": "Web设计和开发资源，文章、教程、案例研究。"
+    },
+    "learn-js": {
+      "name": "JavaScript学习",
+      "description": "在线JavaScript学习平台，交互式练习。"
+    },
+    "chatgpt": {
+      "name": "AI对话助手",
+      "description": "OpenAI开发的AI对话工具，支持多轮对话、代码编写、文章创作等。"
+    },
+    "claude": {
+      "name": "AI智能助手",
+      "description": "Anthropic开发的AI助手，擅长分析、写作、编程，支持超长上下文。"
+    },
+    "gemini": {
+      "name": "Google AI助手",
+      "description": "Google开发的AI助手，集成搜索能力，支持多模态交互。"
+    },
+    "midjourney": {
+      "name": "AI绘画工具",
+      "description": "通过文字描述生成艺术图像，支持多种风格，创意无限。"
+    },
+    "dalle": {
+      "name": "DALL-E绘画",
+      "description": "OpenAI开发的AI图像生成工具，根据文字描述创建图像。"
+    },
+    "stable-diffusion": {
+      "name": "开源AI绘画",
+      "description": "开源AI图像生成模型，本地部署，支持自定义模型。"
+    },
+    "copilot": {
+      "name": "GitHub Copilot",
+      "description": "AI编程助手，GitHub与OpenAI合作开发，代码补全和生成。"
+    },
+    "writesonic": {
+      "name": "AI写作工具",
+      "description": "AI写作助手，支持文章、博客、广告文案等多种内容创作。"
+    },
+    "jasper": {
+      "name": "企业AI写作",
+      "description": "企业级AI内容创作平台，支持多语言，团队协作。"
+    },
+    "copy-ai": {
+      "name": "AI文案生成",
+      "description": "AI驱动的内容创作工具，快速生成营销文案、社交媒体内容。"
+    },
+    "otter": {
+      "name": "会议转录助手",
+      "description": "AI会议记录和转录工具，自动生成会议纪要和摘要。"
+    },
+    "descript": {
+      "name": "视频编辑AI",
+      "description": "AI驱动的视频编辑工具，支持文字编辑视频、语音克隆等。"
+    },
+    "runway": {
+      "name": "AI视频生成",
+      "description": "AI视频生成和编辑平台，支持视频特效、绿幕等。"
+    },
+    "synthesia": {
+      "name": "AI数字人视频",
+      "description": "AI数字人视频生成平台，无需拍摄即可制作专业视频。"
+    },
+    "heygen": {
+      "name": "AI视频制作",
+      "description": "AI驱动的视频制作平台，支持数字人、翻译配音等。"
+    },
+    "whisper": {
+      "name": "语音转文字AI",
+      "description": "OpenAI开源的语音识别模型，支持多语言转录。"
+    },
+    "elevenlabs": {
+      "name": "AI语音合成",
+      "description": "AI语音生成工具，支持克隆声音，多语言配音。"
+    },
+    "murf": {
+      "name": "AI配音工具",
+      "description": "AI配音生成工具，专业音色，多语言支持。"
+    },
+    "remove-music": {
+      "name": "AI人声分离",
+      "description": "从音乐中提取人声或伴奏，AI智能分离音轨。"
+    },
+    "soundraw": {
+      "name": "AI音乐生成",
+      "description": "AI音乐生成平台，自定义风格，快速生成背景音乐。"
+    },
+    "fontpair": {
+      "name": "字体搭配推荐",
+      "description": "免费字体搭配工具，帮助选择协调的字体组合。"
+    },
+    "fontsquirrel": {
+      "name": "免费商用字体",
+      "description": "免费字体下载网站，所有字体均可商用。"
+    },
+    "google-fonts": {
+      "name": "Google字体库",
+      "description": "Google开源字体库，免费使用，支持网页嵌入。"
+    },
+    "brandfetch": {
+      "name": "品牌素材获取",
+      "description": "获取任意品牌的Logo、颜色、字体等品牌素材。"
+    },
+    "logoai": {
+      "name": "AI Logo设计",
+      "description": "AI驱动的Logo设计工具，快速生成品牌标识。"
+    },
+    "looka": {
+      "name": "品牌设计工具",
+      "description": "AI品牌设计平台，Logo、名片、信纸等一站式设计。"
+    },
+    "hatchful": {
+      "name": "Shopify Logo设计",
+      "description": "Shopify提供的免费Logo设计工具，简单易用。"
+    },
+    "freepik": {
+      "name": "设计素材下载",
+      "description": "海量设计素材，图片、矢量图、模板等。"
+    },
+    "vecteezy": {
+      "name": "免费矢量素材",
+      "description": "免费矢量素材库，商用许可，无需署名。"
+    },
+    "觅知网": {
+      "name": "PPT模板素材",
+      "description": "海量PPT模板、简历模板、设计素材下载。"
+    },
+    "processon": {
+      "name": "在线流程图",
+      "description": "免费在线流程图、思维导图工具，支持协作。"
+    },
+    "miro": {
+      "name": "在线白板",
+      "description": "在线协作白板工具，头脑风暴、项目规划、流程图。"
+    },
+    "figjam": {
+      "name": "Figma白板",
+      "description": "Figma推出的在线白板工具，实时协作，创意无限。"
+    },
+    "monday": {
+      "name": "项目管理平台",
+      "description": "可视化项目管理工具，任务跟踪，团队协作。"
+    },
+    "asana": {
+      "name": "团队任务管理",
+      "description": "团队任务管理工具，清晰的任务分配和进度跟踪。"
+    },
+    "clickup": {
+      "name": "一体化工作平台",
+      "description": "多功能工作管理平台，文档、任务、目标一体化。"
+    },
+    "linear": {
+      "name": "开发者项目管理",
+      "description": "专为开发团队设计的项目管理工具，简洁高效。"
+    },
+    "sentry": {
+      "name": "应用监控平台",
+      "description": "错误追踪和性能监控，支持前端、后端、移动端。"
+    },
+    "datadog": {
+      "name": "云监控平台",
+      "description": "云端监控和日志分析，基础设施、应用性能监控。"
+    },
+    "vercel": {
+      "name": "前端部署平台",
+      "description": "快速部署前端项目，Vercel官方平台，自动优化。"
+    },
+    "netlify": {
+      "name": "静态网站托管",
+      "description": "静态网站托管平台，CDN加速，自动化部署。"
+    },
+    "railway": {
+      "name": "现代部署平台",
+      "description": "现代应用部署平台，支持多种语言和数据库。"
+    },
+    "fly": {
+      "name": "边缘计算平台",
+      "description": "全球边缘计算平台，低延迟，应用快速部署。"
+    },
+    "supabase": {
+      "name": "开源Firebase替代",
+      "description": "开源后端即服务平台，数据库、认证、存储一体化。"
+    },
+    "firebase": {
+      "name": "Google后端平台",
+      "description": "Google后端即服务，数据库、认证、推送、托管。"
+    },
+    "prisma": {
+      "name": "Node ORM工具",
+      "description": "现代Node.js ORM，类型安全，简洁的数据库操作。"
+    },
+    "postman": {
+      "name": "API测试工具",
+      "description": "API开发和测试工具，支持团队协作和自动化测试。"
+    },
+    "insomnia": {
+      "name": "API调试工具",
+      "description": "开源API调试工具，设计、测试、文档一体化。"
+    },
+    "hoppscotch": {
+      "name": "开源API客户端",
+      "description": "开源API测试工具，轻量级，浏览器直接使用。"
+    },
+    "tableplus": {
+      "name": "数据库管理工具",
+      "description": "现代化数据库管理工具，支持多种数据库。"
+    },
+    "dbeaver": {
+      "name": "免费数据库工具",
+      "description": "免费开源数据库管理工具，功能强大。"
+    },
+    "adminer": {
+      "name": "轻量数据库管理",
+      "description": "轻量级数据库管理工具，单文件，支持多种数据库。"
+    },
+    "htop": {
+      "name": "系统监控工具",
+      "description": "交互式进程查看器，实时监控系统资源使用。"
+    },
+    "wireshark": {
+      "name": "网络协议分析",
+      "description": "网络抓包工具，分析网络流量，排查网络问题。"
+    },
+    "ngrok": {
+      "name": "开发调试隧道",
+      "description": "开发调试工具，将本地服务暴露为公共URL，便于测试和演示。"
+    },
+    "localtunnel": {
+      "name": "开发调试隧道",
+      "description": "免费开发调试工具，将本地端口暴露为公共URL，便于协作测试。"
+    },
+    "pipedream": {
+      "name": "API集成平台",
+      "description": "连接API和工作流，无需服务器，快速构建自动化。"
+    },
+    "zapier": {
+      "name": "工作流自动化",
+      "description": "自动化工作流工具，连接5000+应用，自动执行任务。"
+    },
+    "make": {
+      "name": "可视化自动化",
+      "description": "可视化工作流自动化平台，拖拽式构建自动化流程。"
+    },
+    "ifttt": {
+      "name": "智能自动化",
+      "description": "智能设备和工作流自动化，连接IoT设备和服务。"
+    },
+    "notion-api": {
+      "name": "Notion API",
+      "description": "Notion官方API，构建基于Notion的应用和集成。"
+    },
+    "cal-com": {
+      "name": "开源预约系统",
+      "description": "开源预约安排系统，类似Calendly，可自托管。"
+    },
+    "n8n": {
+      "name": "开源自动化平台",
+      "description": "开源工作流自动化工具，可自托管，数据隐私。"
+    },
+    "appsmith": {
+      "name": "开源低代码",
+      "description": "开源低代码平台，快速构建内部工具和仪表板。"
+    },
+    "tooljet": {
+      "name": "开源应用构建",
+      "description": "开源低代码平台，构建内部工具，支持多种数据源。"
+    },
+    "budibase": {
+      "name": "低代码平台",
+      "description": "开源低代码平台，快速构建业务应用。"
+    },
+    "metabase": {
+      "name": "开源数据可视化",
+      "description": "开源商务智能工具，数据查询和可视化。"
+    },
+    "grafana": {
+      "name": "监控可视化平台",
+      "description": "开源监控和可观测性平台，仪表板和告警。"
+    },
+    "uptime-kuma": {
+      "name": "自托管监控",
+      "description": "开源网站监控工具，自托管，实时告警。"
+    },
+    "portainer": {
+      "name": "Docker管理界面",
+      "description": "Docker容器管理界面，简化容器部署和管理。"
+    },
+    "photoprism": {
+      "name": "自托管相册",
+      "description": "开源私人相册应用，AI人脸识别，自托管。"
+    },
+    "immich": {
+      "name": "Google Photos替代",
+      "description": "开源照片备份应用，自托管，高性能。"
+    },
+    "squoosh-desktop": {
+      "name": "Squoosh桌面版",
+      "description": "Google图片压缩工具的桌面版本，离线使用。"
+    },
+    "excalidraw": {
+      "name": "手绘风格白板",
+      "description": "手绘风格在线白板，简洁美观，支持协作。"
+    },
+    "tldraw": {
+      "name": "无限画布白板",
+      "description": "无限画布在线白板，支持多人协作，实时同步。"
+    },
+    "umal": {
+      "name": "思维导图工具",
+      "description": "在线思维导图工具，简洁界面，导出多种格式。"
+    },
+    "whimsical": {
+      "name": "可视化协作工具",
+      "description": "思维导图、流程图、看板一体的可视化协作工具。"
+    },
+    "lucidchart": {
+      "name": "在线图表工具",
+      "description": "在线图表和流程图工具，强大的协作功能。"
+    },
+    "diagrams": {
+      "name": "架构图工具",
+      "description": "在线架构图绘制工具，支持多种云服务图标。"
+    },
+    "pdftotext": {
+      "name": "PDF转文本",
+      "description": "在线PDF转文本工具，提取PDF中的文字内容。"
+    },
+    "pdf编辑": {
+      "name": "在线PDF编辑器",
+      "description": "在线PDF编辑工具，添加文字、图像、签名。"
+    },
+    "foxit-reader": {
+      "name": "Foxit PDF阅读器",
+      "description": "轻量级PDF阅读器，快速打开大文件。"
+    },
+    "sumologic": {
+      "name": "日志分析平台",
+      "description": "云原生日志分析平台，智能搜索和可视化。"
+    },
+    "logstash": {
+      "name": "日志收集工具",
+      "description": "Elastic Stack日志收集和处理工具。"
+    },
+    "kibana": {
+      "name": "数据可视化",
+      "description": "Elastic Stack数据可视化仪表板。"
+    },
+    "pagerduty": {
+      "name": "告警管理平台",
+      "description": "告警和事件响应平台，确保服务可用性。"
+    },
+    "statuspage": {
+      "name": "状态页服务",
+      "description": "服务状态页托管，显示系统运行状态。"
+    },
+    "atlassian": {
+      "name": "Atlassian全家桶",
+      "description": "Jira、Confluence等团队协作工具套件。"
+    },
+    "confluence": {
+      "name": "团队知识库",
+      "description": "团队知识管理和文档协作平台。"
+    },
+    "notability": {
+      "name": "笔记应用",
+      "description": "手写笔记和PDF标注应用，支持录音。"
+    },
+    "goodnotes": {
+      "name": "数字笔记本",
+      "description": "数字笔记本应用，手写笔记，PDF批注。"
+    },
+    "onenote": {
+      "name": "微软笔记工具",
+      "description": "Microsoft笔记应用，免费，多设备同步。"
+    },
+    "bear": {
+      "name": "优雅笔记应用",
+      "description": "优雅的Markdown笔记应用，支持标签和导出。"
+    },
+    "obsidian": {
+      "name": "知识图谱笔记",
+      "description": "Markdown笔记应用，支持双向链接和知识图谱。"
+    },
+    "logseq": {
+      "name": "开源大纲笔记",
+      "description": "开源大纲笔记应用，双向链接，大纲视图。"
+    },
+    "craft": {
+      "name": "精美文档工具",
+      "description": "精美文档和笔记工具，模块化编辑，协作共享。"
+    },
+    "paper": {
+      "name": "专注笔记工具",
+      "description": "简单专注的笔记工具，优雅的界面设计。"
+    },
+    "shopify": {
+      "name": "电商建站平台",
+      "description": "全球领先的电商建站平台，轻松创建在线商店，支持支付、物流、营销。"
+    },
+    "woocommerce": {
+      "name": "WordPress电商插件",
+      "description": "WordPress电商插件，将WordPress网站变成功能完整的在线商店。"
+    },
+    "stripe": {
+      "name": "在线支付平台",
+      "description": "全球领先的在线支付处理平台，支持信用卡、数字钱包等多种支付方式。"
+    },
+    "paypal": {
+      "name": "贝宝支付",
+      "description": "全球知名的在线支付服务，安全快捷，支持跨境支付。"
+    },
+    "alibaba": {
+      "name": "阿里巴巴批发",
+      "description": "全球领先的B2B电商平台，连接全球供应商和采购商。"
+    },
+    "aliexpress": {
+      "name": "速卖通零售",
+      "description": "阿里巴巴旗下跨境零售平台，提供全球包邮服务。"
+    },
+    "amazon-seller": {
+      "name": "亚马逊卖家中心",
+      "description": "亚马逊卖家平台，全球最大的电商 marketplace 之一。"
+    },
+    "ebay": {
+      "name": "eBay拍卖平台",
+      "description": "全球知名的在线拍卖和购物网站，支持个人和企业开店。"
+    },
+    "etsy": {
+      "name": "手工艺品电商",
+      "description": "手工艺品和复古物品的在线市场，适合创意卖家。"
+    },
+    "bigcommerce": {
+      "name": "企业电商平台",
+      "description": "面向中大型企业的SaaS电商平台，支持全渠道销售。"
+    },
+    "mailchimp": {
+      "name": "邮件营销平台",
+      "description": "全球领先的邮件营销平台，支持自动化营销、客户分群。"
+    },
+    "sendgrid": {
+      "name": "邮件发送服务",
+      "description": "Twilio旗下的邮件发送API，高送达率，支持事务邮件。"
+    },
+    "hubspot": {
+      "name": "营销自动化平台",
+      "description": "一体化营销、销售、客服平台，CRM与营销自动化完美结合。"
+    },
+    "marketo": {
+      "name": "B2B营销平台",
+      "description": "Adobe旗下B2B营销自动化平台，精准营销Lead管理。"
+    },
+    "semrush": {
+      "name": "SEO分析工具",
+      "description": "全面的SEO和竞品分析工具，关键词研究、排名追踪。"
+    },
+    "ahrefs": {
+      "name": "外链分析工具",
+      "description": "专业的外链分析和SEO工具，帮助提升网站排名。"
+    },
+    "moz": {
+      "name": "Moz SEO工具",
+      "description": "老牌SEO工具，提供域名权重、关键词排名等分析。"
+    },
+    "google-analytics": {
+      "name": "Google分析",
+      "description": "Google免费网站分析工具，追踪用户行为、流量来源。"
+    },
+    "hotjar": {
+      "name": "用户行为分析",
+      "description": "热力图和用户行为分析工具，了解用户如何与网站交互。"
+    },
+    "mixpanel": {
+      "name": "产品数据分析",
+      "description": "产品分析平台，追踪用户行为，支持自定义事件。"
+    },
+    "buffer": {
+      "name": "社交媒体管理",
+      "description": "社交媒体内容排程和分析工具，支持多平台发布。"
+    },
+    "hootsuite": {
+      "name": "企业社交管理",
+      "description": "企业级社交媒体管理平台，团队协作，内容排程。"
+    },
+    "canva-social": {
+      "name": "社交图片设计",
+      "description": "Canva社交媒体图片设计，快速创建Instagram、Facebook帖子。"
+    },
+    "later": {
+      "name": "Instagram排程",
+      "description": "Instagram视觉化内容排程工具，标签建议和表现分析。"
+    },
+    "sproutsocial": {
+      "name": "社交媒体一体化",
+      "description": "一体化社交媒体管理、监听、分析和客户互动平台。"
+    },
+    "mention": {
+      "name": "品牌监听工具",
+      "description": "实时监听社交媒体和网络上关于品牌的讨论。"
+    },
+    "brandwatch": {
+      "name": "社交智能平台",
+      "description": "AI驱动的社交媒体监听和情感分析平台。"
+    },
+    "tweetdeck": {
+      "name": "Twitter管理工具",
+      "description": "Twitter官方多列管理工具，实时追踪和发布推文。"
+    },
+    "linkedin-manager": {
+      "name": "LinkedIn管理",
+      "description": "LinkedIn专业社交管理工具，企业主页和内容管理。"
+    },
+    "pinterest-business": {
+      "name": "Pinterest商业工具",
+      "description": "Pinterest企业营销平台，图片发现和流量引流。"
+    },
+    "intercom": {
+      "name": "客户沟通平台",
+      "description": "一体化客户沟通平台，实时聊天、机器人和客户管理。"
+    },
+    "zendesk": {
+      "name": "客服工单系统",
+      "description": "全球领先的客服软件，支持工单、聊天、电话全渠道服务。"
+    },
+    "freshdesk": {
+      "name": "轻量客服系统",
+      "description": "简单易用的客服软件，中小企业首选，支持多渠道。"
+    },
+    "salesforce-service": {
+      "name": "Salesforce客服云",
+      "description": "Salesforce客户服务云，AI驱动的智能客服解决方案。"
+    },
+    "livechat": {
+      "name": "在线客服系统",
+      "description": "实时在线客服系统，支持聊天、邮件和客户管理。"
+    },
+    "crisp": {
+      "name": "免费客服聊天",
+      "description": "免费实时客服聊天工具，支持多网站、邮件和机器人。"
+    },
+    "tidio": {
+      "name": "AI客服机器人",
+      "description": "AI驱动的客服平台，聊天机器人和实时客服结合。"
+    },
+    "helpScout": {
+      "name": "邮件客服平台",
+      "description": "基于邮件的客户服务平台，适合B2B客户服务。"
+    },
+    "olark": {
+      "name": "网站实时聊天",
+      "description": "简单易用的网站实时聊天工具，快速集成。"
+    },
+    "drift": {
+      "name": "对话式营销平台",
+      "description": "AI驱动的对话式营销和销售平台，提升客户参与度。"
+    },
+    "quickbooks": {
+      "name": "小企业会计",
+      "description": "Intuit旗下小企业会计软件，发票、报销、财务报表。"
+    },
+    "xero": {
+      "name": "云端会计软件",
+      "description": "新西兰云端会计软件，适合中小企业，集成众多应用。"
+    },
+    "freshbooks": {
+      "name": "简易会计工具",
+      "description": "为自由职业者和小企业设计的会计和发票软件。"
+    },
+    "wave": {
+      "name": "免费会计软件",
+      "description": "永久免费的会计软件，发票、记账、工资单（工资单付费）。"
+    },
+    "mint": {
+      "name": "个人财务管理",
+      "description": "个人理财应用，预算、账单追踪、信用评分。"
+    },
+    "ynab": {
+      "name": "预算管理工具",
+      "description": "基于零基预算理念的财务管理工具，帮你掌控每一分钱。"
+    },
+    "expensify": {
+      "name": "报销管理工具",
+      "description": "企业报销管理，自动扫描收据、智能报销流程。"
+    },
+    "concur": {
+      "name": "SAP差旅报销",
+      "description": "SAP旗下差旅和费用管理解决方案，大型企业首选。"
+    },
+    "stripe-dashboard": {
+      "name": "Stripe管理后台",
+      "description": "Stripe支付管理后台，查看交易、退款、结算。"
+    },
+    "paypal-business": {
+      "name": "PayPal企业版",
+      "description": "PayPal企业账户管理后台，批量付款、发票、退款。"
+    },
+    "bamboo-hr": {
+      "name": "HR管理系统",
+      "description": "面向中小企业的HR软件，招聘、入职、绩效管理。"
+    },
+    "workday": {
+      "name": "企业HR云平台",
+      "description": "大型企业HR云平台，财务管理、人力资本管理一体化。"
+    },
+    "linkedin-recruiter": {
+      "name": "LinkedIn招聘",
+      "description": "LinkedIn专业招聘工具，搜索候选人、发送InMail。"
+    },
+    "indeed-recruit": {
+      "name": "Indeed招聘平台",
+      "description": "全球最大招聘网站之一，职位发布、人才搜索。"
+    },
+    "greenhouse": {
+      "name": "招聘流程管理",
+      "description": "完整的招聘流程管理平台，从邀约到入职一体化。"
+    },
+    "lever": {
+      "name": "人才招募平台",
+      "description": "AI驱动的人才招募平台，CRM式候选人管理。"
+    },
+    "slack-hr": {
+      "name": "Slack团队沟通",
+      "description": "团队沟通协作平台，适合远程团队和内部沟通。"
+    },
+    "zoom-hr": {
+      "name": "Zoom视频会议",
+      "description": "视频会议平台，远程面试、团队会议、 webinars。"
+    },
+    "google-workspace": {
+      "name": "Google工作空间",
+      "description": "Google企业套件，Gmail、Drive、Meet、Docs一站式。"
+    },
+    "microsoft-365": {
+      "name": "Microsoft 365",
+      "description": "微软办公套件，Word、Excel、Teams、Outlook企业版。"
+    },
+    "coursera": {
+      "name": "在线课程平台",
+      "description": "全球领先的在线课程平台，与顶尖大学合作提供认证课程。"
+    },
+    "udemy": {
+      "name": "Udemy课程",
+      "description": "全球最大的在线课程市场，涵盖IT、设计、商业等各类课程。"
+    },
+    "edx": {
+      "name": "edX免费课程",
+      "description": "MIT和Harvard创立的免费在线课程平台，提供大学认证。"
+    },
+    "khan-academy": {
+      "name": "可汗学院",
+      "description": "非营利教育组织，提供从小学到大学的免费课程。"
+    },
+    "duolingo": {
+      "name": "多邻国语言学习",
+      "description": "游戏化语言学习应用，支持40+语言，免费学习。"
+    },
+    "quizlet": {
+      "name": "记忆卡片学习",
+      "description": "创建和使用记忆卡片的学习工具，支持多种学习模式。"
+    },
+    "notion-students": {
+      "name": "Notion学生版",
+      "description": "Notion学生模板，课程笔记、作业管理、读书笔记。"
+    },
+    "coursera-for-campus": {
+      "name": "Coursera校园版",
+      "description": "Coursera高校版，提供给大学的在线课程和证书。"
+    },
+    "udacity": {
+      "name": "优达学城",
+      "description": "专注于科技领域的在线教育，纳米学位项目。"
+    },
+    "skillshare": {
+      "name": "技能分享平台",
+      "description": "创意和商业技能分享平台，视频课程、创意社区。"
+    },
+    "myfitnesspal": {
+      "name": "卡路里追踪",
+      "description": "全球最受欢迎的食物和运动追踪应用，管理饮食和健康。"
+    },
+    "headspace": {
+      "name": "冥想应用",
+      "description": "正念冥想应用，帮助减压、改善睡眠、提升专注力。"
+    },
+    "calm": {
+      "name": "Calm放松应用",
+      "description": "冥想、睡眠和放松应用，助眠音乐和冥想课程。"
+    },
+    "strava": {
+      "name": "运动记录追踪",
+      "description": "跑步和骑行爱好者的运动记录社交平台。"
+    },
+    "sleep-cycle": {
+      "name": "睡眠周期追踪",
+      "description": "智能闹钟和睡眠分析，了解你的睡眠质量。"
+    },
+    "noom": {
+      "name": "Noom减肥指导",
+      "description": "心理学基础的减肥应用，行为改变和健康指导。"
+    },
+    "whoop": {
+      "name": "WHOOP运动手环",
+      "description": "专业运动表现追踪手环，睡眠分析和恢复建议。"
+    },
+    "aaptiv": {
+      "name": "Aaptiv健身课程",
+      "description": "AI教练驱动的健身应用，个性化训练计划。"
+    },
+    "fitbit": {
+      "name": "Fitbit智能手环",
+      "description": "智能手环和健康管理平台，计步、心率、睡眠追踪。"
+    },
+    "apple-health": {
+      "name": "Apple健康",
+      "description": "iPhone健康数据汇总，计步、运动、心率等综合健康。"
+    },
+    "airbnb": {
+      "name": "爱彼迎民宿",
+      "description": "全球民宿预订平台，短租房屋、民宿体验。"
+    },
+    "booking": {
+      "name": "Booking酒店预订",
+      "description": "全球酒店预订平台，酒店、公寓、民宿全覆盖。"
+    },
+    "tripadvisor": {
+      "name": "TripAdvisor旅行",
+      "description": "旅行规划和点评平台，餐厅、酒店、景点点评。"
+    },
+    "google-maps": {
+      "name": "Google地图",
+      "description": "全球地图和导航服务，实时路况、公交指引。"
+    },
+    "uber": {
+      "name": "Uber打车",
+      "description": "全球网约车平台，实时叫车、行程追踪。"
+    },
+    "grubhub": {
+      "name": "GrubHub外卖",
+      "description": "在线外卖订餐平台，餐厅外卖送到家。"
+    },
+    "doordash": {
+      "name": "DoorDash外卖",
+      "description": "美国外卖平台，餐厅外卖、便利店配送。"
+    },
+    "yelp": {
+      "name": "Yelp本地点评",
+      "description": "本地商家点评平台，餐厅、服务、商家评价。"
+    },
+    "tripit": {
+      "name": "TripIt行程管理",
+      "description": "自动整理旅行行程，机票、酒店、租车一站式管理。"
+    },
+    "google-travel": {
+      "name": "Google旅行",
+      "description": "Google旅行规划工具，航班、酒店、行程一站式。"
+    },
+    "premiere-pro": {
+      "name": "Premiere Pro",
+      "description": "Adobe专业视频编辑软件，支持4K/8K编辑、颜色校正。"
+    },
+    "final-cut-pro": {
+      "name": "Final Cut Pro",
+      "description": "Apple专业视频编辑软件，磁轨编辑，高性能。"
+    },
+    "davinci-resolve": {
+      "name": "DaVinci Resolve",
+      "description": "免费专业视频调色和编辑软件，支持多轨道编辑。"
+    },
+    "imovie": {
+      "name": "iMovie",
+      "description": "Apple免费视频编辑应用，简单易用，适合入门用户。"
+    },
+    "shotcut": {
+      "name": "Shotcut",
+      "description": "免费开源视频编辑软件，支持数百种格式，跨平台。"
+    },
+    "kdenlive": {
+      "name": "Kdenlive",
+      "description": "Linux免费开源视频编辑器，功能强大。"
+    },
+    "openshot": {
+      "name": "OpenShot",
+      "description": "简单易用的免费开源视频编辑器，支持多平台。"
+    },
+    "veed": {
+      "name": "VEED在线编辑",
+      "description": "浏览器在线视频编辑器，字幕、滤镜、特效一站式。"
+    },
+    "flexclip": {
+      "name": "FlexClip",
+      "description": "在线视频制作平台，模板丰富，快速制作宣传片。"
+    },
+    "audacity": {
+      "name": "Audacity",
+      "description": "免费开源音频编辑软件，录音、剪辑、降噪。"
+    },
+    "garageband": {
+      "name": "GarageBand",
+      "description": "Apple音乐创作应用，虚拟乐器，录音棚效果。"
+    },
+    "ableton": {
+      "name": "Ableton Live",
+      "description": "专业音乐制作软件，实时循环，DJ表演。"
+    },
+    "fl-studio": {
+      "name": "FL Studio",
+      "description": "音乐制作工作站，节拍制作，混音，MIDI支持。"
+    },
+    "soundtrap": {
+      "name": "Soundtrap",
+      "description": "在线音乐创作平台，虚拟乐器，云端协作。"
+    },
+    "bandlab": {
+      "name": "BandLab",
+      "description": "免费在线音乐制作平台，社交化音乐创作社区。"
+    },
+    "splice": {
+      "name": "Splice",
+      "description": "音乐制作采样库和协作平台，数千种音效和循环。"
+    },
+    "logic-pro": {
+      "name": "Logic Pro",
+      "description": "Apple专业音乐制作软件，强大合成器，录音棚效果。"
+    },
+    "podcastle": {
+      "name": "Podcastle",
+      "description": "AI播客制作平台，在线录音、编辑、托管一体化。"
+    },
+    "anchor": {
+      "name": "Spotify Anchor",
+      "description": "Spotify播客创建工具，免费托管和分发。"
+    },
+    "blender": {
+      "name": "Blender",
+      "description": "免费开源3D创作套件，建模、动画、渲染。"
+    },
+    "sketchup": {
+      "name": "SketchUp",
+      "description": "3D建筑和室内设计软件，简单易用，建筑可视化。"
+    },
+    "tinkercad": {
+      "name": "Tinkercad",
+      "description": "Autodesk免费3D设计工具，适合入门和打印。"
+    },
+    "fusion-360": {
+      "name": "Fusion 360",
+      "description": "Autodesk云端3D CAD/CAM工具，产品设计和制造。"
+    },
+    "cinema-4d": {
+      "name": "Cinema 4D",
+      "description": "Maxon专业3D软件， motion graphics和渲染。"
+    },
+    "threejs": {
+      "name": "Three.js",
+      "description": "JavaScript 3D库，WebGL 3D渲染，网页3D交互。"
+    },
+    "babylonjs": {
+      "name": "Babylon.js",
+      "description": "Microsoft开源3D引擎，网页和游戏3D开发。"
+    },
+    "meshroom": {
+      "name": "Meshroom",
+      "description": "免费开源3D扫描软件，照片重建3D模型。"
+    },
+    "substance": {
+      "name": "Substance 3D",
+      "description": "Adobe 3D材质和纹理工具，物理材质创建。"
+    },
+    "tableau": {
+      "name": "Tableau",
+      "description": "数据可视化分析平台，拖拽式仪表板创建。"
+    },
+    "power-bi": {
+      "name": "Power BI",
+      "description": "Microsoft商业智能工具，数据分析和可视化。"
+    },
+    "looker": {
+      "name": "Looker",
+      "description": "Google云商业智能平台，数据探索和分析。"
+    },
+    "chartjs": {
+      "name": "Chart.js",
+      "description": "开源JavaScript图表库，简单易用，响应式。"
+    },
+    "d3js": {
+      "name": "D3.js",
+      "description": "强大的数据可视化JavaScript库，高度自定义。"
+    },
+    "plotly": {
+      "name": "Plotly",
+      "description": "交互式图表库，Python/JavaScript/ R多语言支持。"
+    },
+    "infogram": {
+      "name": "Infogram",
+      "description": "在线信息图表工具，拖拽创建可视化内容。"
+    },
+    "venngage": {
+      "name": "Venngage",
+      "description": "在线信息图表和报告工具，非设计师友好。"
+    },
+    "flourish": {
+      "name": "Flourish",
+      "description": "数据故事可视化平台，交互式图表和动画。"
+    },
+    "observable": {
+      "name": "Observable",
+      "description": "数据探索和可视化笔记本，JavaScript实时编辑。"
+    },
+    "1password": {
+      "name": "1Password",
+      "description": "密码管理器，安全存储，跨设备同步。"
+    },
+    "lastpass": {
+      "name": "LastPass",
+      "description": "免费密码管理器，密码生成，双重验证。"
+    },
+    "bitwarden": {
+      "name": "Bitwarden",
+      "description": "开源密码管理器，可自托管，完全免费。"
+    },
+    "dashlane": {
+      "name": "Dashlane",
+      "description": "密码管理器和数字钱包， dark web监控。"
+    },
+    "keepass": {
+      "name": "KeePass",
+      "description": "免费开源密码管理器，本地存储，插件丰富。"
+    },
+    "nordpass": {
+      "name": "NordPass",
+      "description": "NordVPN密码管理器，简洁界面，无限密码存储。"
+    },
+    "have-i-been-pwned": {
+      "name": "Have I Been Pwned",
+      "description": "数据泄露检查工具，检查邮箱是否泄露。"
+    },
+    "virustotal": {
+      "name": "VirusTotal",
+      "description": "在线文件病毒检测，支持URL和文件扫描。"
+    },
+    "cryptomator": {
+      "name": "Cryptomator",
+      "description": "免费开源云加密工具，端到端加密保护文件。"
+    },
+    "google-drive": {
+      "name": "Google Drive",
+      "description": "Google云端存储，Docs/Sheets/Slides免费办公。"
+    },
+    "box": {
+      "name": "Box",
+      "description": "企业云内容管理，安全的文件共享和协作。"
+    },
+    "sharepoint": {
+      "name": "SharePoint",
+      "description": "Microsoft企业内容管理，内部网站和文档协作。"
+    },
+    "coggle": {
+      "name": "Coggle",
+      "description": "在线思维导图工具，协作分享，导出多种格式。"
+    },
+    "mindmeister": {
+      "name": "MindMeister",
+      "description": "在线思维导图工具，实时协作，演示模式。"
+    },
+    "wetransfer": {
+      "name": "WeTransfer",
+      "description": "免费大文件传输服务，无需注册，最大2GB。"
+    },
+    "filemail": {
+      "name": "FileMail",
+      "description": "大文件在线传输服务，文件夹批量传输。"
+    },
+    "sendanywhere": {
+      "name": "Send Anywhere",
+      "description": "点对点文件传输，生成六位码，跨平台。"
+    },
+    "pdf24": {
+      "name": "PDF24 Tools",
+      "description": "免费在线PDF工具集，18+工具，无需注册。"
+    },
+    "zamzar": {
+      "name": "Zamzar",
+      "description": "在线文件格式转换，邮件通知下载。"
+    },
+    "googledrive-files": {
+      "name": "Google Drive文件搜索",
+      "description": "快速搜索Google Drive文件内容，文件名和内容。"
+    },
+    "compress2go": {
+      "name": "文件压缩工具",
+      "description": "在线文件压缩工具，支持ZIP、RAR等格式。"
+    },
+    "stoplight": {
+      "name": "Stoplight",
+      "description": "API设计、文档和模拟平台，OpenAPI支持。"
+    },
+    "swagger": {
+      "name": "Swagger",
+      "description": "OpenAPI规范工具，API文档和测试。"
+    },
+    "readme": {
+      "name": "ReadMe",
+      "description": "API文档托管平台，交互式API文档。"
+    },
+    "runscope": {
+      "name": "RunScope",
+      "description": "API监控和测试平台，自动化测试。"
+    },
+    "mocky": {
+      "name": "Mocky",
+      "description": "免费在线API模拟工具，快速创建假数据。"
+    },
+    "ngrok-api": {
+      "name": "开发调试隧道",
+      "description": "开发调试工具，将本地服务暴露为公共URL，便于API测试和调试。"
+    },
+    "repl-it": {
+      "name": "Replit",
+      "description": "在线IDE和托管平台，50+语言，协作。"
+    },
+    "gitpod": {
+      "name": "Gitpod",
+      "description": "云端开发环境，GitHub直接打开，Docker支持。"
+    },
+    "perplexity": {
+      "name": "Perplexity",
+      "description": "AI搜索助手，实时网络答案，引用来源。"
+    },
+    "character-ai": {
+      "name": "Character.AI",
+      "description": "AI角色扮演和对话，创建虚拟角色互动。"
+    },
+    "poe": {
+      "name": "Poe",
+      "description": "Quora AI平台，聚合多个AI聊天机器人。"
+    },
+    "coze": {
+      "name": "Coze",
+      "description": "字节跳动AI应用平台，快速构建聊天机器人。"
+    },
+    "kimi": {
+      "name": "Kimi",
+      "description": "月之暗面AI助手，超长上下文，支持文件阅读。"
+    },
+    "通义千问": {
+      "name": "通义千问",
+      "description": "阿里云AI大模型，创意文案、代码编写、知识问答。"
+    },
+    "文心一言": {
+      "name": "文心一言",
+      "description": "百度AI大模型，文学创作、商业文案、中文理解。"
+    },
+    "讯飞星火": {
+      "name": "讯飞星火",
+      "description": "科大讯飞AI大模型，语音交互、知识问答。"
+    },
+    "通义万相": {
+      "name": "通义万相",
+      "description": "阿里云AI绘画工具，文生图、图生图。"
+    },
+    "讯飞智作": {
+      "name": "讯飞智作",
+      "description": "讯飞AI视频配音和创作平台，数字人视频。"
+    },
+    "grammarly-go": {
+      "name": "Grammarly Go",
+      "description": "Grammarly AI写作助手，实时语法检查和内容生成。"
+    },
+    "quillbot": {
+      "name": "QuillBot",
+      "description": "AI文章改写工具，智能改写、摘要、翻译一体化。"
+    },
+    "scribbr": {
+      "name": "Scribbr",
+      "description": "学术写作助手，论文润色、查重、格式检查。"
+    },
+    "frase": {
+      "name": "Frase",
+      "description": "AI内容优化工具，SEO分析、内容创作、问答系统。"
+    },
+    "invideo": {
+      "name": "InVideo",
+      "description": "AI视频创建平台，模板丰富，文本转视频。"
+    },
+    "veedio": {
+      "name": "Veedio",
+      "description": "在线视频编辑器，自动字幕、裁剪、添加音乐。"
+    },
+    "filmora": {
+      "name": "Filmora",
+      "description": "Wondershare视频编辑软件，简单易用，特效丰富。"
+    },
+    "wave-video": {
+      "name": "Wave.video",
+      "description": "在线视频制作平台，社交媒体视频、直播、托管。"
+    },
+    "subtitles": {
+      "name": "字幕生成器",
+      "description": "在线字幕生成和编辑工具，支持自动语音识别。"
+    },
+    "cloudflare": {
+      "name": "Cloudflare",
+      "description": "CDN和安全服务，加速网站，保护免受攻击。"
+    },
+    "netlify-cms": {
+      "name": "Netlify CMS",
+      "description": "开源内容管理系统，基于Git，无需服务器。"
+    },
+    "sanity": {
+      "name": "Sanity",
+      "description": "现代化内容平台，实时协作，API优先。"
+    },
+    "prismic": {
+      "name": "Prismic",
+      "description": "头部CMS平台，内容切片，多语言支持。"
+    },
+    "contentful": {
+      "name": "Contentful",
+      "description": "API优先的内容平台，全球CDN分发。"
+    },
+    "shields": {
+      "name": "Shields.io",
+      "description": "免费开源徽章服务，GitHub项目状态徽章。"
+    },
+    "gitlab": {
+      "name": "GitLab",
+      "description": "开源DevOps平台，代码托管、CI/CD、安全扫描。"
+    },
+    "bitbucket": {
+      "name": "Bitbucket",
+      "description": "Atlassian代码托管，与Jira深度集成。"
+    },
+    "vercel-functions": {
+      "name": "Vercel Functions",
+      "description": "无服务器函数，Edge网络，毫秒级响应。"
+    },
+    "cloudflare-workers": {
+      "name": "Cloudflare Workers",
+      "description": "边缘计算平台，全球部署，低延迟执行。"
+    },
+    "vite": {
+      "name": "Vite",
+      "description": "新一代前端构建工具，极速冷启动。"
+    },
+    "nextjs": {
+      "name": "Next.js",
+      "description": "React全栈框架，SSR、SSG、App Router。"
+    },
+    "remix": {
+      "name": "Remix",
+      "description": "React全栈框架，嵌套路由，数据加载。"
+    },
+    "astro": {
+      "name": "Astro",
+      "description": "多框架前端构建工具，零JS运行时。"
+    },
+    "solidjs": {
+      "name": "Solid.js",
+      "description": "声明式、高效的JavaScript库，细粒度响应式。"
+    },
+    "vuejs": {
+      "name": "Vue.js",
+      "description": "渐进式JavaScript框架，易学易用，生态丰富。"
+    },
+    "nuxtjs": {
+      "name": "Nuxt.js",
+      "description": "Vue全栈框架，SSR、SSG、自动路由。"
+    },
+    "svelte": {
+      "name": "Svelte",
+      "description": "编译型前端框架，无虚拟DOM，性能出色。"
+    },
+    "sveltekit": {
+      "name": "SvelteKit",
+      "description": "Svelte全栈框架，文件系统路由，SSR支持。"
+    },
+    "gatsby": {
+      "name": "Gatsby",
+      "description": "React静态站点生成器，GraphQL驱动，高性能。"
+    },
+    "chakra-ui": {
+      "name": "Chakra UI",
+      "description": "React组件库，可访问性优先，主题系统。"
+    },
+    "tailwindcss": {
+      "name": "Tailwind CSS",
+      "description": "实用优先的CSS框架，原子化类名，快速构建UI。"
+    },
+    "styled-components": {
+      "name": "Styled Components",
+      "description": "React样式方案，CSS-in-JS，组件级样式。"
+    },
+    "react-query": {
+      "name": "React Query",
+      "description": "React数据获取和缓存库，简化服务器状态管理。"
+    },
+    "axios": {
+      "name": "Axios",
+      "description": "Promise-based HTTP客户端，支持拦截器和取消请求。"
+    },
+    "lodash": {
+      "name": "Lodash",
+      "description": "JavaScript实用工具库，函数式编程，性能优化。"
+    },
+    "date-fns": {
+      "name": "date-fns",
+      "description": "现代JavaScript日期工具库，模块化，树摇友好。"
+    },
+    "react-hook-form": {
+      "name": "React Hook Form",
+      "description": "React表单库，性能优异，易于使用。"
+    },
+    "zod": {
+      "name": "Zod",
+      "description": "TypeScript优先的模式验证库，类型安全的数据验证。"
+    },
+    "react-router": {
+      "name": "React Router",
+      "description": "React路由库，声明式路由，嵌套路由。"
+    },
+    "framer-motion": {
+      "name": "Framer Motion",
+      "description": "React动画库，强大的动画能力，手势支持。"
+    },
+    "gsap": {
+      "name": "GSAP",
+      "description": "GreenSock动画平台，高性能动画，时间线控制。"
+    },
+    "playcanvas": {
+      "name": "PlayCanvas",
+      "description": "云端3D游戏引擎，WebGL，实时协作。"
+    },
+    "splines": {
+      "name": "Splines",
+      "description": "在线3D设计工具，创建3D模型和动画。"
+    },
+    "p5js": {
+      "name": "p5.js",
+      "description": "创意编程JavaScript库，可视化和交互艺术。"
+    },
+    "processing": {
+      "name": "Processing",
+      "description": "开源编程语言，创建视觉艺术和交互设计。"
+    },
+    "doodle": {
+      "name": "Google Doodle",
+      "description": "Google涂鸦创建工具，在线绘画创作。"
+    },
+    "scribbl": {
+      "name": "Scribbl",
+      "description": "在线白板绘图工具，简单涂鸦和协作。"
+    },
+    "gravit": {
+      "name": "Gravit Designer",
+      "description": "在线矢量图形设计工具，专业级设计。"
+    },
+    "wix": {
+      "name": "Wix",
+      "description": "在线网站构建平台，拖拽式建站，无需代码。"
+    },
+    "weebly": {
+      "name": "Weebly",
+      "description": "简单易用的网站构建器，电商功能齐全。"
+    },
+    "godaddy": {
+      "name": "GoDaddy",
+      "description": "全球最大域名注册商，提供域名和网站托管服务。"
+    },
+    "namecheap": {
+      "name": "Namecheap",
+      "description": "便宜可靠的域名注册和托管服务。"
+    },
+    "cloudflare-pages": {
+      "name": "Cloudflare Pages",
+      "description": "免费静态网站托管，全球CDN加速。"
+    },
+    "heroku": {
+      "name": "Heroku",
+      "description": "云平台即服务，部署和管理Web应用。"
+    },
+    "aws-amplify": {
+      "name": "AWS Amplify",
+      "description": "AWS全栈开发平台，快速构建云原生应用。"
+    },
+    "mongodb-atlas": {
+      "name": "MongoDB Atlas",
+      "description": "云原生MongoDB数据库服务，全球部署。"
+    },
+    "planetscale": {
+      "name": "PlanetScale",
+      "description": "MySQL兼容的云数据库，分支开发，零停机。"
+    },
+    "mailgun": {
+      "name": "Mailgun",
+      "description": "邮件发送API服务，高送达率，分析报告。"
+    },
+    "twilio": {
+      "name": "Twilio",
+      "description": "云通信平台，短信、语音、视频API。"
+    },
+    "pusher": {
+      "name": "Pusher",
+      "description": "实时通信API，WebSocket实时推送。"
+    },
+    "socket-io": {
+      "name": "Socket.io",
+      "description": "实时双向通信库，跨浏览器WebSocket。"
+    },
+    "auth0": {
+      "name": "Auth0",
+      "description": "身份认证平台，单点登录，OAuth2。"
+    },
+    "okta": {
+      "name": "Okta",
+      "description": "身份管理平台，企业级认证解决方案。"
+    },
+    "nextauth": {
+      "name": "NextAuth.js",
+      "description": "Next.js认证库，OAuth、Email、Credentials登录。"
+    },
+    "typeorm": {
+      "name": "TypeORM",
+      "description": "TypeScript ORM，支持多种数据库。"
+    },
+    "sequelize": {
+      "name": "Sequelize",
+      "description": "Node.js ORM，支持PostgreSQL、MySQL等数据库。"
+    },
+    "mongoose": {
+      "name": "Mongoose",
+      "description": "MongoDB对象建模工具，Schema定义，中间件。"
+    },
+    "graphql": {
+      "name": "GraphQL",
+      "description": "API查询语言，高效数据获取，类型系统。"
+    },
+    "apollo": {
+      "name": "Apollo GraphQL",
+      "description": "GraphQL客户端和服务器，完整生态系统。"
+    },
+    "create-react-app": {
+      "name": "Create React App",
+      "description": "React项目脚手架，零配置快速开发。"
+    },
+    "nodejs": {
+      "name": "Node.js",
+      "description": "基于Chrome V8引擎的JavaScript运行时。"
+    },
+    "deno": {
+      "name": "Deno",
+      "description": "安全的JavaScript/TypeScript运行时，内置工具。"
+    },
+    "bun": {
+      "name": "Bun",
+      "description": "极速JavaScript运行时，打包器和包管理器。"
+    },
+    "npm": {
+      "name": "npm",
+      "description": "Node.js包管理器，世界最大的软件注册表。"
+    },
+    "yarn": {
+      "name": "Yarn",
+      "description": "快速、可靠、安全的JavaScript包管理器。"
+    },
+    "pnpm": {
+      "name": "pnpm",
+      "description": "高效的Node.js包管理器，节省磁盘空间。"
+    },
+    "jest": {
+      "name": "Jest",
+      "description": "Facebook测试框架，单元测试、快照测试。"
+    },
+    "vitest": {
+      "name": "Vitest",
+      "description": "Vite原生测试框架，极速测试，Jest兼容。"
+    },
+    "cypress": {
+      "name": "Cypress",
+      "description": "端到端测试框架，实时重新加载，自动等待。"
+    },
+    "playwright": {
+      "name": "Playwright",
+      "description": "Microsoft端到端测试工具，跨浏览器自动化。"
+    },
+    "eslint": {
+      "name": "ESLint",
+      "description": "JavaScript代码检查工具，保持代码质量一致。"
+    },
+    "prettier": {
+      "name": "Prettier",
+      "description": "代码格式化工具，自动统一代码风格。"
+    },
+    "webpack": {
+      "name": "Webpack",
+      "description": "模块打包工具，代码分割，热更新。"
+    },
+    "rollup": {
+      "name": "Rollup",
+      "description": "JavaScript模块打包器，树摇优化，ESM优先。"
+    },
+    "parcel": {
+      "name": "Parcel",
+      "description": "零配置打包工具，极速构建，自动转换。"
+    },
+    "swc": {
+      "name": "SWC",
+      "description": "Rust编写的JavaScript编译器，极速编译。"
+    },
+    "babel": {
+      "name": "Babel",
+      "description": "JavaScript编译器，将ES6+转换为向后兼容代码。"
+    },
+    "tencent-translate": {
+      "name": "腾讯翻译",
+      "description": "腾讯在线翻译服务，支持多语言互译，API开放平台。"
+    },
+    "zhihu": {
+      "name": "知乎",
+      "description": "中文互联网问答社区，分享知识、经验和见解。"
+    },
+    "csdn": {
+      "name": "CSDN",
+      "description": "中国最大的程序员社区，技术博客、问答、教程。"
+    },
+    "segmentfault": {
+      "name": "思否",
+      "description": "开发者社区，技术问答、文章分享、开源项目。"
+    },
+    "gitee": {
+      "name": "Gitee",
+      "description": "开源中国代码托管平台，国内访问速度快，支持私有仓库。"
+    },
+    "aliyun": {
+      "name": "阿里云",
+      "description": "阿里巴巴云计算平台，云服务器、数据库、CDN等服务。"
+    },
+    "tencent-cloud": {
+      "name": "腾讯云",
+      "description": "腾讯云计算平台，云服务器、云数据库、AI服务。"
+    },
+    "huawei-cloud": {
+      "name": "华为云",
+      "description": "华为云计算平台，云服务器、AI开发平台、大数据服务。"
+    },
+    "upyun": {
+      "name": "又拍云",
+      "description": "国内云存储和CDN服务，图片处理、视频转码、加速分发。"
+    },
+    "dcloud": {
+      "name": "DCloud",
+      "description": "HBuilderX开发工具，UniApp跨平台开发框架。"
+    },
+    "uni-app": {
+      "name": "UniApp",
+      "description": "跨平台应用开发框架，一套代码发布到多端。"
+    },
+    "taro": {
+      "name": "Taro",
+      "description": "京东跨端开发框架，React语法，多端适配。"
+    },
+    "ant-design": {
+      "name": "Ant Design",
+      "description": "阿里巴巴企业级UI设计语言，React组件库。"
+    },
+    "element-ui": {
+      "name": "Element UI",
+      "description": "饿了么推出的Vue.js组件库，企业级后台系统。"
+    },
+    "vant": {
+      "name": "Vant",
+      "description": "有赞移动端Vue组件库，轻量高效。"
+    },
+    "nutui": {
+      "name": "NutUI",
+      "description": "京东移动端组件库，Vue3，高性能。"
+    },
+    "echarts": {
+      "name": "ECharts",
+      "description": "百度开源数据可视化库，丰富图表类型，移动端适配。"
+    },
+    "antv": {
+      "name": "AntV",
+      "description": "阿里巴巴数据可视化解决方案，图表、G6图可视化、L7地图。"
+    },
+    "alipay-devtools": {
+      "name": "支付宝开发者工具",
+      "description": "支付宝小程序开发工具，调试、模拟、发布。"
+    },
+    "soogif": {
+      "name": "SOOGIF",
+      "description": "国内最大的GIF动图网站，动图搜索、制作、下载。"
+    },
+    "tuotu": {
+      "name": "美图秀秀网页版",
+      "description": "美图秀秀在线图片编辑，美化、滤镜、拼图。"
+    },
+    "canva-cn": {
+      "name": "Canva中文版",
+      "description": "在线设计平台，海量模板，支持中文，轻松制作海报、PPT。"
+    },
+    "wps": {
+      "name": "WPS在线",
+      "description": "金山WPS在线办公，文档、表格、演示，多人协作。"
+    },
+    "feishu": {
+      "name": "飞书",
+      "description": "字节跳动企业协作平台，即时沟通、文档、日历、会议。"
+    },
+    "dingtalk": {
+      "name": "钉钉",
+      "description": "阿里巴巴企业级沟通协作平台，办公、审批、考勤。"
+    },
+    "weixin-work": {
+      "name": "企业微信",
+      "description": "腾讯企业微信，连接微信生态，企业沟通协作。"
+    },
+    "teambition": {
+      "name": "Teambition",
+      "description": "阿里巴巴团队协作工具，项目管理、任务分配、文件共享。"
+    },
+    "mindmaster": {
+      "name": "MindMaster",
+      "description": "亿图思维导图工具，在线绘制思维导图、流程图。"
+    },
+    "xmind": {
+      "name": "XMind",
+      "description": "知名思维导图软件，头脑风暴、项目规划。"
+    },
+    "baidu-map": {
+      "name": "百度地图",
+      "description": "百度在线地图服务，地图浏览、路线规划、POI搜索。"
+    },
+    "amap": {
+      "name": "高德地图",
+      "description": "高德在线地图服务，导航、天气、生活服务。"
+    },
+    "tencent-map": {
+      "name": "腾讯地图",
+      "description": "腾讯在线地图服务，地图、街景、导航。"
+    },
+    "meituan": {
+      "name": "美团",
+      "description": "美团生活服务平台，外卖、团购、电影票。"
+    },
+    "eleme": {
+      "name": "饿了么",
+      "description": "饿了么外卖平台，订餐、跑腿、生活服务。"
+    },
+    "netease-music": {
+      "name": "网易云音乐",
+      "description": "网易云音乐在线播放器，海量音乐库，歌单分享。"
+    },
+    "qq-music": {
+      "name": "QQ音乐",
+      "description": "腾讯QQ音乐在线播放器，热门歌曲、MV、演唱会。"
+    },
+    "kuwo-music": {
+      "name": "酷我音乐",
+      "description": "酷我音乐在线播放器，无损音质，歌词同步。"
+    },
+    "bilibili": {
+      "name": "哔哩哔哩",
+      "description": "B站视频平台，动漫、游戏、科技、生活类视频。"
+    },
+    "douyin": {
+      "name": "抖音",
+      "description": "抖音短视频平台，记录美好生活，创作分享。"
+    },
+    "kuaishou": {
+      "name": "快手",
+      "description": "快手短视频平台，记录生活，分享快乐。"
+    },
+    "iqiyi": {
+      "name": "爱奇艺",
+      "description": "爱奇艺视频平台，电影、电视剧、综艺、动漫。"
+    },
+    "tencent-video": {
+      "name": "腾讯视频",
+      "description": "腾讯视频平台，热门影视、综艺、动漫。"
+    },
+    "youku": {
+      "name": "优酷",
+      "description": "优酷视频平台，海量影视内容，高清播放。"
+    },
+    "rtl": {
+      "name": "React Testing Library",
+      "description": "React组件测试库，以用户视角测试组件。"
+    },
+    "storybook": {
+      "name": "Storybook",
+      "description": "UI组件开发环境，独立开发和测试组件。"
+    },
+    "esbuild": {
+      "name": "esbuild",
+      "description": "极速JavaScript构建工具，Go语言编写。"
+    },
+    "stylelint": {
+      "name": "Stylelint",
+      "description": "CSS代码检查工具，发现样式问题，统一规范。"
+    },
+    "husky": {
+      "name": "Husky",
+      "description": "Git钩子工具，在提交和推送时运行脚本。"
+    },
+    "lint-staged": {
+      "name": "lint-staged",
+      "description": "只对暂存文件运行lint，提高效率。"
+    },
+    "commitlint": {
+      "name": "Commitlint",
+      "description": "规范Git提交信息，保持团队提交风格一致。"
+    },
+    "sketch": {
+      "name": "Sketch",
+      "description": "Mac端UI设计工具，矢量绘图，原型设计。"
+    },
+    "principle": {
+      "name": "Principle",
+      "description": "Mac端交互设计工具，创建流畅的交互动画。"
+    },
+    "framer": {
+      "name": "Framer",
+      "description": "交互式设计工具，设计即开发，React组件导出。"
+    },
+    "adobe-xd": {
+      "name": "Adobe XD",
+      "description": "Adobe体验设计工具，UI/UX设计、原型、协作。"
+    },
+    "affinity-designer": {
+      "name": "Affinity Designer",
+      "description": "专业矢量绘图工具，替代Adobe Illustrator。"
+    },
+    "affinity-photo": {
+      "name": "Affinity Photo",
+      "description": "专业照片编辑工具，替代Adobe Photoshop。"
+    },
+    "procreate": {
+      "name": "Procreate",
+      "description": "iPad绘画应用，专业画笔，创意无限。"
+    },
+    "clip-studio": {
+      "name": "Clip Studio Paint",
+      "description": "专业漫画和插画创作软件，笔刷丰富。"
+    },
+    "calendly": {
+      "name": "Calendly",
+      "description": "智能预约系统，自动匹配时间，减少邮件往来。"
+    },
+    "acuity-scheduling": {
+      "name": "Acuity Scheduling",
+      "description": "专业预约管理工具，自动化提醒，在线支付。"
+    },
+    "slack-alternative": {
+      "name": "Discord",
+      "description": "团队沟通和社区平台，语音、视频、文字聊天。"
+    },
+    "mattermost": {
+      "name": "Mattermost",
+      "description": "开源企业级聊天平台，自托管，数据隐私。"
+    },
+    "rocketchat": {
+      "name": "Rocket.Chat",
+      "description": "开源团队协作平台，实时聊天，视频会议。"
+    },
+    "zoom": {
+      "name": "Zoom",
+      "description": "视频会议平台，高清视频，屏幕共享，虚拟背景。"
+    },
+    "teams": {
+      "name": "Microsoft Teams",
+      "description": "Microsoft团队协作平台，聊天、会议、文件共享。"
+    },
+    "jitsi": {
+      "name": "Jitsi Meet",
+      "description": "开源视频会议工具，无需注册，加密通信。"
+    },
+    "gotomeeting": {
+      "name": "GoToMeeting",
+      "description": "专业在线会议平台，屏幕共享，录制功能。"
+    },
+    "webex": {
+      "name": "Webex",
+      "description": "Cisco视频会议平台，企业级安全，协作功能。"
+    },
+    "masterclass": {
+      "name": "MasterClass",
+      "description": "大师级课程平台，名人授课，艺术、商业、科技。"
+    },
+    "lynda": {
+      "name": "LinkedIn Learning",
+      "description": "LinkedIn学习平台，商业、技术、创意课程。"
+    },
+    "codecademy": {
+      "name": "Codecademy",
+      "description": "交互式编程学习平台，边学边练，即时反馈。"
+    },
+    "freecodecamp": {
+      "name": "freeCodeCamp",
+      "description": "免费编程学习平台，项目实战，社区支持。"
+    },
+    "theodinproject": {
+      "name": "The Odin Project",
+      "description": "免费全栈开发课程，项目驱动，就业导向。"
+    },
+    "exercism": {
+      "name": "Exercism",
+      "description": "编程练习平台，导师指导，代码评审。"
+    },
+    "excel": {
+      "name": "Microsoft Excel",
+      "description": "电子表格软件，数据分析，图表制作，公式计算。"
+    },
+    "google-data-studio": {
+      "name": "Google Data Studio",
+      "description": "免费数据可视化工具，连接多种数据源，创建仪表板。"
+    },
+    "excel-online": {
+      "name": "Excel Online",
+      "description": "在线Excel，云端协作，实时编辑。"
+    },
+    "numbers": {
+      "name": "Apple Numbers",
+      "description": "Apple电子表格应用，精美模板，iCloud同步。"
+    },
+    "power-query": {
+      "name": "Power Query",
+      "description": "数据清洗和转换工具，连接多种数据源。"
+    },
+    "python": {
+      "name": "Python",
+      "description": "高级编程语言，数据分析、人工智能、Web开发。"
+    },
+    "jupyter": {
+      "name": "Jupyter Notebook",
+      "description": "交互式编程笔记本，数据分析、可视化、文档。"
+    },
+    "pandas": {
+      "name": "Pandas",
+      "description": "Python数据分析库，数据处理、清洗、分析。"
+    },
+    "numpy": {
+      "name": "NumPy",
+      "description": "Python数值计算库，矩阵运算，科学计算。"
+    },
+    "matplotlib": {
+      "name": "Matplotlib",
+      "description": "Python数据可视化库，创建专业图表。"
+    },
+    "aws": {
+      "name": "AWS",
+      "description": "Amazon云服务平台，计算、存储、数据库等。"
+    },
+    "azure": {
+      "name": "Microsoft Azure",
+      "description": "Microsoft云服务平台，AI、机器学习、云原生。"
+    },
+    "gcp": {
+      "name": "Google Cloud",
+      "description": "Google云服务平台，AI、大数据、云函数。"
+    },
+    "digitalocean": {
+      "name": "DigitalOcean",
+      "description": "简单易用的云主机平台，开发者友好。"
+    },
+    "linode": {
+      "name": "Linode",
+      "description": "VPS云主机平台，高性能，价格实惠。"
+    },
+    "duo": {
+      "name": "Duo Security",
+      "description": "多因素认证平台，保护账号安全。"
+    },
+    "snyk": {
+      "name": "Snyk",
+      "description": "开源安全平台，检测漏洞，修复建议。"
+    },
+    "sonarqube": {
+      "name": "SonarQube",
+      "description": "代码质量分析平台，检测Bug、安全漏洞、代码异味。"
+    },
+    "checkmarx": {
+      "name": "Checkmarx",
+      "description": "应用安全测试平台，静态分析、SAST、SCA。"
+    },
+    "weather": {
+      "name": "天气查询",
+      "description": "实时天气查询工具，全球天气、预报、空气质量。"
+    },
+    "calculator": {
+      "name": "在线计算器",
+      "description": "功能强大的在线计算器，支持科学计算、单位转换。"
+    },
+    "unit-converter": {
+      "name": "单位转换器",
+      "description": "在线单位转换工具，长度、重量、温度等多种单位。"
+    },
+    "dictionary": {
+      "name": "在线词典",
+      "description": "多语言在线词典，单词释义、例句、发音。"
+    },
+    "thesaurus": {
+      "name": "同义词词典",
+      "description": "在线同义词和反义词查询，丰富词汇。"
+    },
+    "timer": {
+      "name": "在线计时器",
+      "description": "多功能在线计时器，倒计时、正计时、番茄钟。"
+    },
+    "stopwatch": {
+      "name": "在线秒表",
+      "description": "精确的在线秒表，记录时间，分段计时。"
+    },
+    "calendar": {
+      "name": "在线日历",
+      "description": "在线日历工具，查看日期、节假日、周视图。"
+    },
+    "winrar": {
+      "name": "WinRAR",
+      "description": "文件压缩工具，支持RAR、ZIP等格式。"
+    },
+    "7zip": {
+      "name": "7-Zip",
+      "description": "免费开源压缩工具，支持多种格式，高压缩率。"
+    },
+    "bandizip": {
+      "name": "Bandizip",
+      "description": "免费压缩工具，支持多种格式，无广告。"
+    },
+    "ccleaner": {
+      "name": "CCleaner",
+      "description": "系统清理工具，清理垃圾文件，优化系统性能。"
+    },
+    "recuva": {
+      "name": "Recuva",
+      "description": "文件恢复工具，恢复误删除的文件。"
+    },
+    "markdown": {
+      "name": "Markdown编辑器",
+      "description": "在线Markdown编辑器，实时预览，导出多种格式。"
+    },
+    "drawio": {
+      "name": "Draw.io",
+      "description": "免费在线绘图工具，流程图、思维导图、UML图。"
+    },
+    "plantuml": {
+      "name": "PlantUML",
+      "description": "文本绘图工具，用代码创建UML图、流程图。"
+    },
+    "mermaid": {
+      "name": "Mermaid",
+      "description": "基于Markdown的图表工具，流程图、时序图、甘特图。"
+    },
+    "carbon": {
+      "name": "Carbon",
+      "description": "代码截图工具，生成精美的代码图片，分享代码。"
+    },
+    "ray-so": {
+      "name": "Ray.so",
+      "description": "代码分享工具，创建漂亮的代码片段图片。"
+    },
+    "wakatime": {
+      "name": "WakaTime",
+      "description": "代码时间追踪工具，统计编码时间，提高效率。"
+    },
+    "codecov": {
+      "name": "Codecov",
+      "description": "代码覆盖率工具，测试覆盖率报告，质量分析。"
+    },
+    "coveralls": {
+      "name": "Coveralls",
+      "description": "代码覆盖率服务，集成CI，实时报告。"
+    },
+    "codeclimate": {
+      "name": "Code Climate",
+      "description": "代码质量平台，静态分析，维护性评分。"
+    },
+    "xiachufang": {
+      "name": "下厨房",
+      "description": "中文菜谱分享平台，海量家常菜做法，图文视频教程。"
+    },
+    "meishijie": {
+      "name": "美食杰",
+      "description": "专业菜谱网站，详尽步骤，厨房技巧分享。"
+    },
+    "allrecipes": {
+      "name": "Allrecipes",
+      "description": "全球最大菜谱社区，百万菜谱，评分系统，购物清单。"
+    },
+    "seriouseats": {
+      "name": "Serious Eats",
+      "description": "专业美食网站，科学烹饪方法，深度测评。"
+    },
+    "epicurious": {
+      "name": "Epicurious",
+      "description": "专业美食杂志网站，高级菜谱，食材搭配。"
+    },
+    "foodnetwork": {
+      "name": "Food Network",
+      "description": "美食电视网络官方网，明星厨师视频，节目菜谱。"
+    },
+    "yummly": {
+      "name": "Yummly",
+      "description": "智能菜谱推荐平台，根据食材推荐个性化菜谱。"
+    },
+    "tasty": {
+      "name": "Tasty",
+      "description": "Buzzfeed美食频道，视频菜谱，步骤动画清晰。"
+    },
+    "keep": {
+      "name": "Keep",
+      "description": "国内知名健身App，课程丰富，AI智能训练计划。"
+    },
+    "nike-training": {
+      "name": "Nike Training Club",
+      "description": "Nike官方训练应用，专业教练课程，多种训练类型。"
+    },
+    "peloton": {
+      "name": "Peloton",
+      "description": "在线健身课程，跑步机单车，直播课程互动。"
+    },
+    "adidas-training": {
+      "name": "Adidas Training",
+      "description": "Adidas官方训练应用，体育锻炼课程，个性化推荐。"
+    },
+    "seven": {
+      "name": "Seven",
+      "description": "7分钟科学健身应用，每天7分钟高效锻炼。"
+    },
+    "workit": {
+      "name": "Workit",
+      "description": "在线健身课程，瑜伽、普拉提、有氧，专业教练。"
+    },
+    "down-dog": {
+      "name": "Down Dog",
+      "description": "瑜伽应用，AI生成不同课程，每次练习都不同。"
+    },
+    "insight-timer": {
+      "name": "Insight Timer",
+      "description": "免费冥想应用，10万+冥想课程，全球冥想社区。"
+    },
+    "meditopia": {
+      "name": "Meditopia",
+      "description": "心理健康应用，冥想课程，睡眠故事，压力管理。"
+    },
+    "simple-habit": {
+      "name": "Simple Habit",
+      "description": "5分钟冥想应用，碎片化时间，专家指导。"
+    },
+    "breethe": {
+      "name": "Breethe",
+      "description": "心理健康应用，冥想、催眠、睡前故事一站式。"
+    },
+    "sleep-score": {
+      "name": "SleepScore",
+      "description": "科学睡眠监测工具，分析睡眠质量，改善建议。"
+    },
+    "autosleep": {
+      "name": "AutoSleep",
+      "description": "iPhone睡眠自动追踪，无需穿戴设备，详细报告。"
+    },
+    "loseit": {
+      "name": "Lose It!",
+      "description": "减重管理App，卡路里计数，个性化减肥计划。"
+    },
+    "cronometer": {
+      "name": "Cronometer",
+      "description": "专业营养追踪工具，详细微量元素记录，健康管理。"
+    },
+    "fatsecret": {
+      "name": "FatSecret",
+      "description": "免费食物日记和体重管理，社区支持。"
+    },
+    "robinhood": {
+      "name": "Robinhood",
+      "description": "免佣金股票交易App，简单易用，碎股投资。"
+    },
+    "etoro": {
+      "name": "eToro",
+      "description": "社交投资平台，复制交易，多种资产类别。"
+    },
+    "coinbase": {
+      "name": "Coinbase",
+      "description": "加密货币交易平台，购买出售多种加密货币。"
+    },
+    "binance": {
+      "name": "Binance",
+      "description": "全球最大加密货币交易所，币种丰富，交易量大。"
+    },
+    "kraken": {
+      "name": "Kraken",
+      "description": "老牌加密货币交易所，安全可靠，多种币种。"
+    },
+    "acorns": {
+      "name": "Acorns",
+      "description": "自动投资App，零钱投资，零基础理财入门。"
+    },
+    "mint-budget": {
+      "name": "Mint预算",
+      "description": "个人财务预算管理工具，收入支出分析，账单提醒。"
+    },
+    "personal-capital": {
+      "name": "Personal Capital",
+      "description": "免费财富管理工具，投资追踪，退休规划。"
+    },
+    "credit-karma": {
+      "name": "Credit Karma",
+      "description": "免费信用分数查询，信用报告，理财建议。"
+    },
+    "splitwise": {
+      "name": "Splitwise",
+      "description": "共同费用分摊工具，旅行合租，账目清晰。"
+    },
+    "moovit": {
+      "name": "Moovit",
+      "description": "全球公共交通查询App，地铁公交实时数据。"
+    },
+    "citymapper": {
+      "name": "Citymapper",
+      "description": "城市出行导航，多模式换乘，地铁公交步行一体化。"
+    },
+    "rome2rio": {
+      "name": "Rome2Rio",
+      "description": "全球交通规划，飞机火车巴士自驾多种方案对比。"
+    },
+    "hopper": {
+      "name": "Hopper",
+      "description": "机票预测购买App，AI预测价格走势，提前预订。"
+    },
+    "skyscanner": {
+      "name": "Skyscanner",
+      "description": "全球机票比价平台，多家航空公司比较，最优惠价格。"
+    },
+    "kayak": {
+      "name": "Kayak",
+      "description": "综合旅游搜索，机票酒店租车租车一站式比价。"
+    },
+    "lyft": {
+      "name": "Lyft",
+      "description": "美国网约车平台，共享出行，司机乘客双向选择。"
+    },
+    "didi": {
+      "name": "滴滴出行",
+      "description": "中国领先网约车平台，快车专车顺风车多种服务。"
+    },
+    "ikea": {
+      "name": "IKEA宜家",
+      "description": "宜家家居官方平台，家具设计灵感，AR家具摆放。"
+    },
+    "houzz": {
+      "name": "Houzz",
+      "description": "家居设计灵感平台，装修案例，设计师目录。"
+    },
+    "pinterest-life": {
+      "name": "Pinterest生活",
+      "description": "Pinterest生活灵感图集，DIY、装饰、美食全覆盖。"
+    },
+    "wayfair": {
+      "name": "Wayfair",
+      "description": "家居购物平台，家具家居装饰一站式。"
+    },
+    "accuweather": {
+      "name": "AccuWeather",
+      "description": "专业天气预报，分钟级降水预报，恶劣天气提醒。"
+    },
+    "wunderground": {
+      "name": "Weather Underground",
+      "description": "社区化天气预报，本地气象站数据，超本地化。"
+    },
+    "windy": {
+      "name": "Windy",
+      "description": "可视化天气预报，风力气压云图专业气象工具。"
+    },
+    "rover": {
+      "name": "Rover",
+      "description": "宠物寄养平台，找宠物保姆，狗狗遛弯服务。"
+    },
+    "barkbox": {
+      "name": "BarkBox",
+      "description": "宠物订阅盒子，每月狗狗玩具零食玩具配送。"
+    },
+    "garden-tags": {
+      "name": "Garden Tags",
+      "description": "园艺管理App，植物识别，种植计划。"
+    },
+    "picturethis": {
+      "name": "PictureThis",
+      "description": "AI植物识别App，拍照识别植物，养护建议。"
+    },
+    "plantnet": {
+      "name": "PlantNet",
+      "description": "免费植物识别App，全球植物数据库，科研支持。"
+    },
+    "babycenter": {
+      "name": "BabyCenter",
+      "description": "孕育知识平台，从怀孕到育儿全程指导。"
+    },
+    "thebump": {
+      "name": "The Bump",
+      "description": "孕育工具App，怀孕周期追踪，命名建议。"
+    },
+    "todoist": {
+      "name": "Todoist",
+      "description": "跨平台待办事项管理，自然语言输入，项目分类。"
+    },
+    "ticktick": {
+      "name": "滴答清单",
+      "description": "一站式待办事项和习惯打卡，跨平台同步。"
+    },
+    "any-do": {
+      "name": "Any.do",
+      "description": "优雅的待办事项和日程管理，跨设备同步。"
+    },
+    "google-tasks": {
+      "name": "Google Tasks",
+      "description": "Google官方待办事项，Gmail集成，简洁高效。"
+    },
+    "things-3": {
+      "name": "Things 3",
+      "description": "苹果生态顶级待办事项App，UI精致，GTD理念。"
+    },
+    "omni-focus": {
+      "name": "OmniFocus",
+      "description": "专业GTD待办事项管理，强大任务组织功能。"
+    },
+    "pomofocus": {
+      "name": "Pomofocus",
+      "description": "在线番茄工作法计时器，自定义工作休息时间。"
+    },
+    "forest": {
+      "name": "Forest专注森林",
+      "description": "种树专注App，离开手机树会枯死，趣味性专注。"
+    },
+    "focus-to-do": {
+      "name": "Focus To-Do",
+      "description": "番茄工作法和任务管理结合，跨平台同步。"
+    },
+    "habitica": {
+      "name": "Habitica",
+      "description": "游戏化习惯养成App，完成任务打怪升级。"
+    },
+    "streaks": {
+      "name": "Streaks",
+      "description": "苹果生态习惯追踪App，连击计数，链式提醒。"
+    },
+    "productive": {
+      "name": "Productive",
+      "description": "习惯和日常计划App，可视化习惯追踪。"
+    },
+    "day-one": {
+      "name": "Day One日记",
+      "description": "苹果生态顶级日记App，多媒体支持，加密保护。"
+    },
+    "journey": {
+      "name": "Journey日记",
+      "description": "跨平台日记App，照片视频位置，跨设备同步。"
+    },
+    "diaro": {
+      "name": "Diaro",
+      "description": "简单易用的日记应用，照片视频位置标签。"
+    },
+    "cleanshot": {
+      "name": "CleanShot X",
+      "description": "Mac专业截图录屏工具，标注、GIF、视频录制。"
+    },
+    "snagit": {
+      "name": "Snagit",
+      "description": "专业截图和录屏工具，强大编辑功能。"
+    },
+    "sharex": {
+      "name": "ShareX",
+      "description": "免费开源截图录屏工具，强大自定义功能。"
+    },
+    "lightshot": {
+      "name": "Lightshot",
+      "description": "轻量级截图工具，跨平台，快速编辑分享。"
+    },
+    "adobe-scan": {
+      "name": "Adobe Scan",
+      "description": "手机扫描App，OCR文字识别，PDF生成。"
+    },
+    "camscanner": {
+      "name": "扫描全能王",
+      "description": "手机扫描App，OCR文字识别，文档数字化。"
+    },
+    "genius-scan": {
+      "name": "Genius Scan",
+      "description": "专业手机扫描App，OCR识别，PDF导出。"
+    },
+    "chrome": {
+      "name": "Google Chrome",
+      "description": "Google浏览器，市场份额第一，扩展生态丰富。"
+    },
+    "firefox": {
+      "name": "Firefox",
+      "description": "Mozilla开源浏览器，注重隐私保护，丰富扩展。"
+    },
+    "edge": {
+      "name": "Microsoft Edge",
+      "description": "微软浏览器，Chromium内核，跨平台同步。"
+    },
+    "safari": {
+      "name": "Safari",
+      "description": "苹果官方浏览器，Apple设备原生，能效出色。"
+    },
+    "brave": {
+      "name": "Brave浏览器",
+      "description": "注重隐私的浏览器，拦截广告，内置加密货币奖励。"
+    },
+    "opera": {
+      "name": "Opera浏览器",
+      "description": "老牌浏览器，内置VPN，侧边栏社交，节能模式。"
+    },
+    "itranslate": {
+      "name": "iTranslate",
+      "description": "移动端翻译App，支持100+语言，离线翻译。"
+    },
+    "reverso": {
+      "name": "Reverso翻译",
+      "description": "基于上下文的翻译工具，例句丰富，翻译准确。"
+    },
+    "lifesum": {
+      "name": "Lifesum",
+      "description": "健康饮食App，饮食计划，卡路里追踪。"
+    },
+    "komoot": {
+      "name": "Komoot",
+      "description": "户外路线规划，徒步骑行路线，导航详细。"
+    },
+    "alltrails": {
+      "name": "AllTrails",
+      "description": "徒步路线App，全球200万条路线，离线导航。"
+    },
+    "babbel": {
+      "name": "Babbel",
+      "description": "专业语言学习平台，14种语言，实用对话。"
+    },
+    "rosetta-stone": {
+      "name": "Rosetta Stone",
+      "description": "沉浸式语言学习平台，自然方法学语言。"
+    },
+    "busuu": {
+      "name": "Busuu",
+      "description": "社区驱动语言学习，母语者反馈，学习计划。"
+    },
+    "netflix": {
+      "name": "Netflix",
+      "description": "全球最大流媒体平台，海量电影剧集自制内容。"
+    },
+    "disney-plus": {
+      "name": "Disney+",
+      "description": "迪士尼官方流媒体，迪士尼漫威星战国家地理。"
+    },
+    "hbo-max": {
+      "name": "HBO Max",
+      "description": "HBO流媒体平台，HBO原创电影剧集。"
+    },
+    "prime-video": {
+      "name": "Prime Video",
+      "description": "亚马逊流媒体平台，电影剧集原创内容。"
+    },
+    "hulu": {
+      "name": "Hulu",
+      "description": "美国流媒体平台，电视剧集丰富，直播电视。"
+    },
+    "youtube-music": {
+      "name": "YouTube Music",
+      "description": "谷歌音乐流媒体，海量曲库，MV视频。"
+    },
+    "spotify": {
+      "name": "Spotify",
+      "description": "全球最大音乐流媒体，智能推荐，播客内容。"
+    },
+    "apple-music": {
+      "name": "Apple Music",
+      "description": "苹果音乐流媒体，无损音质，空间音频。"
+    },
+    "pandora": {
+      "name": "Pandora",
+      "description": "美国音乐流媒体，个性化电台推荐。"
+    },
+    "tidal": {
+      "name": "Tidal",
+      "description": "高品质音乐流媒体，HiFi音质，独家内容。"
+    },
+    "apple-podcasts": {
+      "name": "Apple Podcasts",
+      "description": "苹果播客平台，海量节目，订阅收听。"
+    },
+    "pocket-casts": {
+      "name": "Pocket Casts",
+      "description": "专业播客App，跨平台同步，强大的播放控制。"
+    },
+    "overcast": {
+      "name": "Overcast",
+      "description": "苹果生态播客App，智能播放速度，Voice Boost。"
+    },
+    "kindle": {
+      "name": "Kindle",
+      "description": "亚马逊电子阅读器，海量电子书，跨设备同步。"
+    },
+    "goodreads": {
+      "name": "Goodreads",
+      "description": "全球最大读书社区，书评推荐，阅读跟踪。"
+    },
+    "wattpad": {
+      "name": "Wattpad",
+      "description": "在线阅读和写作社区，原创小说，互动评论。"
+    },
+    "scribd": {
+      "name": "Scribd",
+      "description": "数字阅读平台，图书、音频书、文档订阅。"
+    },
+    "amazon-shop": {
+      "name": "Amazon购物",
+      "description": "全球最大电商平台，商品丰富，Prime会员服务。"
+    },
+    "taobao": {
+      "name": "淘宝网",
+      "description": "中国最大电商平台，海量商品，C2C购物。"
+    },
+    "jd": {
+      "name": "京东",
+      "description": "中国自营电商平台，正品保障，物流快捷。"
+    },
+    "pinduoduo": {
+      "name": "拼多多",
+      "description": "中国社交电商平台，拼团购物，性价比高。"
+    },
+    "linkedin": {
+      "name": "LinkedIn领英",
+      "description": "全球职业社交平台，求职招聘，人脉拓展。"
+    },
+    "indeed": {
+      "name": "Indeed求职",
+      "description": "全球最大求职招聘网站，海量职位，简历投递。"
+    },
+    "glassdoor": {
+      "name": "Glassdoor",
+      "description": "公司评价和薪资信息平台，面试经验分享。"
+    },
+    "boss-zhipin": {
+      "name": "BOSS直聘",
+      "description": "中国招聘平台，直接和老板聊，移动招聘。"
+    },
+    "lagou": {
+      "name": "拉勾招聘",
+      "description": "互联网行业招聘平台，技术岗位为主。"
+    },
+    "photo-magic": {
+      "name": "魔法相",
+      "description": "AI照片修复工具，老照片修复，照片上色。"
+    },
+    "myheritage": {
+      "name": "MyHeritage",
+      "description": "家谱和DNA测试服务，AI照片动画。"
+    },
+    "whatsapp": {
+      "name": "WhatsApp",
+      "description": "全球最大即时通讯应用，端到端加密，跨平台。"
+    },
+    "telegram": {
+      "name": "Telegram",
+      "description": "安全即时通讯应用，云端消息，大群组支持。"
+    },
+    "wechat": {
+      "name": "微信",
+      "description": "中国最大即时通讯App，社交支付生活一体化。"
+    },
+    "signal": {
+      "name": "Signal",
+      "description": "注重隐私的即时通讯App，端到端加密，开源。"
+    },
+    "line": {
+      "name": "LINE",
+      "description": "亚洲流行即时通讯，贴图表情丰富，泰国台湾流行。"
+    },
+    "messenger": {
+      "name": "Messenger",
+      "description": "Facebook即时通讯，跨平台，视频通话。"
+    },
+    "meituan-waimai": {
+      "name": "美团外卖",
+      "description": "中国最大外卖平台，覆盖餐饮超市药品等品类。"
+    },
+    "kfc": {
+      "name": "肯德基",
+      "description": "全球连锁快餐品牌，炸鸡汉堡套餐。"
+    },
+    "mcdonalds": {
+      "name": "麦当劳",
+      "description": "全球最大快餐连锁，汉堡薯条可乐。"
+    },
+    "starbucks": {
+      "name": "星巴克",
+      "description": "全球咖啡连锁品牌，咖啡饮品甜点。"
+    },
+    "luckin-coffee": {
+      "name": "瑞幸咖啡",
+      "description": "中国连锁咖啡品牌，高性价比咖啡。"
+    },
+    "xiaohongshu": {
+      "name": "小红书",
+      "description": "生活方式分享社区，美食旅行美妆种草。"
+    },
+    "dianping": {
+      "name": "大众点评",
+      "description": "本地生活服务平台，餐厅评价团购优惠。"
+    },
+    "mafengwo": {
+      "name": "马蜂窝",
+      "description": "旅游攻略社区，景点门票酒店预订。"
+    },
+    "ctrip": {
+      "name": "携程旅行",
+      "description": "中国在线旅游平台，机票酒店旅游度假。"
+    },
+    "qunar": {
+      "name": "去哪儿网",
+      "description": "机票酒店比价平台，旅游产品搜索。"
+    },
+    "trip-com": {
+      "name": "同程旅行",
+      "description": "在线旅游平台，机票酒店门票预订。"
+    },
+    "fliggy": {
+      "name": "飞猪旅行",
+      "description": "阿里旗下旅游平台，机票酒店度假。"
+    },
+    "klook": {
+      "name": "Klook客路",
+      "description": "亚洲旅游体验平台，景点门票活动预订。"
+    },
+    "viator": {
+      "name": "Viator",
+      "description": "全球旅游体验平台，一日游景点门票。"
+    },
+    "expedia": {
+      "name": "Expedia",
+      "description": "全球在线旅游平台，机票酒店套餐。"
+    },
+    "orbitz": {
+      "name": "Orbitz",
+      "description": "美国在线旅游平台，机票酒店预订。"
+    },
+    "travelocity": {
+      "name": "Travelocity",
+      "description": "在线旅游预订平台，机票酒店套餐。"
+    },
+    "amazon": {
+      "name": "Amazon",
+      "description": "全球最大电商平台，海量商品购物。"
+    },
+    "wish": {
+      "name": "Wish",
+      "description": "跨境电商平台，低价商品购物。"
+    },
+    "shopee": {
+      "name": "Shopee",
+      "description": "东南亚电商平台，社交电商购物。"
+    },
+    "lazada": {
+      "name": "Lazada",
+      "description": "东南亚电商平台，阿里旗下。"
+    },
+    "tmall": {
+      "name": "天猫",
+      "description": "阿里旗下B2C电商平台，品牌旗舰店。"
+    },
+    "suning": {
+      "name": "苏宁易购",
+      "description": "中国综合电商平台，家电数码。"
+    },
+    "dxy": {
+      "name": "丁香医生",
+      "description": "专业医疗健康平台，在线问诊科普。"
+    },
+    "haodf": {
+      "name": "好大夫在线",
+      "description": "在线医疗服务平台，专家问诊挂号。"
+    },
+    "chunyu": {
+      "name": "春雨医生",
+      "description": "在线问诊平台，健康咨询服务。"
+    },
+    "ali-health": {
+      "name": "阿里健康",
+      "description": "阿里旗下医疗健康平台，在线药房。"
+    },
+    "apple-watch": {
+      "name": "Apple Watch",
+      "description": "苹果智能手表，健康运动追踪。"
+    },
+    "garmin": {
+      "name": "Garmin",
+      "description": "专业运动手表，GPS导航心率监测。"
+    },
+    "polar": {
+      "name": "Polar",
+      "description": "芬兰运动手表，心率监测专业运动。"
+    },
+    "stack-exchange": {
+      "name": "Stack Exchange",
+      "description": "全球问答平台，技术知识分享。"
+    },
+    "stackoverflow": {
+      "name": "Stack Overflow",
+      "description": "程序员问答社区，编程问题解答。"
+    },
+    "quora": {
+      "name": "Quora",
+      "description": "英文问答社区，知识分享讨论。"
+    },
+    "wikipedia": {
+      "name": "Wikipedia",
+      "description": "全球最大百科全书，免费知识。"
+    },
+    "baike": {
+      "name": "百度百科",
+      "description": "中文百科全书，百科知识查询。"
+    },
+    "wolfram-alpha": {
+      "name": "Wolfram Alpha",
+      "description": "计算知识引擎，数学科学计算。"
+    },
+    "weibo": {
+      "name": "微博",
+      "description": "中国社交媒体平台，新闻热点分享。"
+    },
+    "twitter": {
+      "name": "Twitter",
+      "description": "全球社交媒体平台，实时新闻分享。"
+    },
+    "instagram": {
+      "name": "Instagram",
+      "description": "照片分享社交平台，图片视频社交。"
+    },
+    "snapchat": {
+      "name": "Snapchat",
+      "description": "阅后即焚社交App，照片视频分享。"
+    },
+    "facebook": {
+      "name": "Facebook",
+      "description": "全球最大社交平台，社交网络服务。"
+    },
+    "youtube": {
+      "name": "YouTube",
+      "description": "全球最大视频平台，视频分享观看。"
+    },
+    "archdaily": {
+      "name": "ArchDaily",
+      "description": "建筑设计网站，建筑案例分享。"
+    },
+    "designboom": {
+      "name": "Designboom",
+      "description": "设计新闻网站，建筑产品设计。"
+    },
+    "Dezeen": {
+      "name": "Dezeen",
+      "description": "设计媒体网站，建筑室内设计。"
+    },
+    "coolhousing": {
+      "name": "酷家乐",
+      "description": "中国家居设计平台，3D效果图。"
+    },
+    "qijia": {
+      "name": "齐家网",
+      "description": "中国家居装修平台，装修服务。"
+    },
+    "huadi": {
+      "name": "华帝",
+      "description": "中国厨电品牌，厨房电器。"
+    },
+    "midea": {
+      "name": "美的",
+      "description": "中国家电品牌，空调冰箱洗衣机。"
+    },
+    "haier": {
+      "name": "海尔",
+      "description": "中国家电品牌，智能家居。"
+    },
+    "gree": {
+      "name": "格力",
+      "description": "中国空调品牌，家用空调。"
+    },
+    "autohome": {
+      "name": "汽车之家",
+      "description": "中国汽车资讯平台，车型报价评测。"
+    },
+    "dongchedi": {
+      "name": "懂车帝",
+      "description": "字节跳动旗下汽车平台，视频评测。"
+    },
+    "che168": {
+      "name": "车168",
+      "description": "汽车资讯平台，车型对比报价。"
+    },
+    "carmax": {
+      "name": "CarMax",
+      "description": "美国二手车零售商，认证二手车。"
+    },
+    "truecar": {
+      "name": "TrueCar",
+      "description": "美国汽车报价平台，透明定价。"
+    },
+    "carvana": {
+      "name": "Carvana",
+      "description": "美国在线二手车平台，送车上门。"
+    },
+    "uber-eats": {
+      "name": "Uber Eats",
+      "description": "Uber旗下外卖平台，餐饮配送。"
+    },
+    "instacart": {
+      "name": "Instacart",
+      "description": "美国生鲜配送平台，超市购物配送。"
+    },
+    "alipay": {
+      "name": "支付宝",
+      "description": "中国第三方支付平台，移动支付。"
+    },
+    "wechat-pay": {
+      "name": "微信支付",
+      "description": "微信支付平台，移动支付服务。"
+    },
+    "square": {
+      "name": "Square",
+      "description": "移动支付和POS系统，小微商户。"
+    },
+    "venmo": {
+      "name": "Venmo",
+      "description": "美国社交支付App，朋友间转账。"
+    },
+    "cash-app": {
+      "name": "Cash App",
+      "description": "Square旗下支付App，转账支付。"
+    },
+    "wise": {
+      "name": "Wise",
+      "description": "国际汇款平台，低费率跨境转账。"
+    },
+    "remitly": {
+      "name": "Remitly",
+      "description": "国际汇款服务，快速安全跨境汇款。"
+    },
+    "worldremit": {
+      "name": "WorldRemit",
+      "description": "国际汇款平台，全球覆盖。"
+    },
+    "xiaohongshu-app": {
+      "name": "小红书App",
+      "description": "生活方式分享社区App，美食旅行美妆种草。"
+    },
+    "tiktok": {
+      "name": "TikTok",
+      "description": "全球短视频平台，创意视频分享。"
+    },
+    "qq": {
+      "name": "QQ",
+      "description": "腾讯即时通讯软件，社交娱乐一体。"
+    },
+    "sina": {
+      "name": "新浪",
+      "description": "中国门户网站，新闻资讯服务。"
+    },
+    "sohu": {
+      "name": "搜狐",
+      "description": "中国门户网站，新闻视频体育。"
+    },
+    "baidu": {
+      "name": "百度",
+      "description": "中国搜索引擎，信息检索服务。"
+    },
+    "google": {
+      "name": "Google",
+      "description": "全球搜索引擎，互联网服务。"
+    },
+    "cooking-channels": {
+      "name": "美食频道",
+      "description": "汇集全球美食视频教程，从基础烹饪到高级料理一应俱全。"
+    },
+    "food52": {
+      "name": "美食社区",
+      "description": "美食爱好者社区，分享食谱、厨具推荐和烹饪心得。"
+    },
+    "bbc-good-food": {
+      "name": "BBC美食",
+      "description": "BBC出品的美食网站，提供可靠的食谱和烹饪建议。"
+    },
+    "mealime": {
+      "name": "一周食谱规划",
+      "description": "根据家庭人数和饮食偏好自动生成一周食谱和购物清单。"
+    },
+    "sweetish": {
+      "name": "甜品食谱",
+      "description": "专注甜品制作的食谱网站，蛋糕、饼干、冰淇淋等应有尽有。"
+    },
+    "minimalist-baker": {
+      "name": "极简烘焙",
+      "description": "简单快捷的烘焙食谱，适合忙碌的现代人。"
+    },
+    "cookie-and-kate": {
+      "name": "素食食谱",
+      "description": "健康素食食谱网站，注重营养均衡和美味体验。"
+    },
+    "airbnb-experiences": {
+      "name": "Airbnb体验",
+      "description": "当地特色体验活动预订，深入了解目的地文化。"
+    },
+    "vrbo": {
+      "name": "度假租赁",
+      "description": "度假屋租赁平台，适合家庭和团体出行。"
+    },
+    "hotwire": {
+      "name": "特价旅行",
+      "description": "特价机票和酒店预订，节省旅行开支。"
+    },
+    "rentcars": {
+      "name": "租车服务",
+      "description": "全球租车比价平台，轻松找到合适的车辆。"
+    },
+    "getyourguide": {
+      "name": "旅行活动",
+      "description": "目的地旅行活动预订，体验当地特色。"
+    },
+    "mapmyrun": {
+      "name": "跑步地图",
+      "description": "记录跑步路线和数据，跟踪训练进度。"
+    },
+    "fitbod": {
+      "name": "智能健身",
+      "description": "AI驱动的健身计划，根据你的进度自动调整训练内容。"
+    },
+    "strong": {
+      "name": "力量训练",
+      "description": "专业力量训练追踪工具，记录每次训练的重量和次数。"
+    },
+    "yoga-with-adriene": {
+      "name": "瑜伽教程",
+      "description": "免费瑜伽视频教程，适合各水平练习者。"
+    },
+    "daily-burn": {
+      "name": "每日燃脂",
+      "description": "在线健身课程平台，多种训练类型满足不同需求。"
+    },
+    "calendar-app": {
+      "name": "日历应用",
+      "description": "在线日历工具，管理日程、设置提醒、共享日历。"
+    },
+    "pomodoro-timer": {
+      "name": "番茄钟",
+      "description": "经典番茄工作法计时器，提高工作效率。"
+    },
+    "simplenote": {
+      "name": "简约笔记",
+      "description": "简单纯粹的笔记应用，专注写作体验。"
+    },
+    "standard-notes": {
+      "name": "标准笔记",
+      "description": "注重隐私安全的开源笔记应用，端到端加密。"
+    },
+    "bear-notes": {
+      "name": "Bear笔记",
+      "description": "优雅的Markdown笔记应用，标签组织，快速搜索。"
+    },
+    "docusign": {
+      "name": "电子签名",
+      "description": "专业电子签名服务，在线签署和管理合同文件。"
+    },
+    "hellosign": {
+      "name": "HelloSign签名",
+      "description": "简单易用的电子签名工具，无需注册即可签署。"
+    },
+    "signnow": {
+      "name": "SignNow签名",
+      "description": "企业级电子签名解决方案，支持团队协作。"
+    },
+    "helpscout": {
+      "name": "邮件客服",
+      "description": "专注邮件客服的管理工具，团队协作处理客户邮件。"
+    },
+    "tiller-money": {
+      "name": "Tiller记账",
+      "description": "自动化记账工具，将银行交易同步到Google Sheet。"
+    },
+    "td-ameritrade": {
+      "name": "TD Ameritrade",
+      "description": "知名在线券商，提供股票、期权和基金交易。"
+    },
+    "etrade": {
+      "name": "E*TRADE",
+      "description": "在线证券交易平台，提供投资工具和研究报告。"
+    },
+    "memrise": {
+      "name": "Memrise",
+      "description": "记忆技巧语言学习平台，高效记忆单词和短语。"
+    },
+    "anki": {
+      "name": "Anki",
+      "description": "基于记忆曲线的闪卡学习工具，自定义学习内容。"
+    },
+    "quizizz": {
+      "name": "Quizizz",
+      "description": "游戏化在线测验平台，让学习变得有趣。"
+    },
+    "kahoot": {
+      "name": "Kahoot",
+      "description": "课堂互动问答平台，适合教学和培训场景。"
+    },
+    "edmodo": {
+      "name": "Edmodo",
+      "description": "教育社交平台，连接教师、学生和家长。"
+    },
+    "padlet": {
+      "name": "Padlet",
+      "description": "在线协作墙，共享想法、图片和文档。"
+    },
+    "mural": {
+      "name": "Mural白板",
+      "description": "设计思维和敏捷协作的在线白板工具。"
+    },
+    "microsoft-teams": {
+      "name": "Microsoft Teams",
+      "description": "微软团队协作平台，视频会议和文件共享。"
+    },
+    "discord": {
+      "name": "Discord",
+      "description": "游戏和社区聊天工具，支持语音和视频通话。"
+    },
+    "reddit": {
+      "name": "Reddit",
+      "description": "全球最大的社区平台，讨论各种话题和分享内容。"
+    },
+    "pinterest": {
+      "name": "Pinterest",
+      "description": "图片创意收集平台，发现灵感和保存创意。"
+    },
+    "vimeo": {
+      "name": "Vimeo",
+      "description": "高质量视频分享平台，适合专业创作者。"
+    },
+    "dailymotion": {
+      "name": "Dailymotion",
+      "description": "视频分享平台，提供各类视频内容。"
+    },
+    "twitch": {
+      "name": "Twitch",
+      "description": "游戏直播平台，观看游戏直播和电竞比赛。"
+    },
+    "soundcloud": {
+      "name": "SoundCloud",
+      "description": "音乐分享平台，发现新音乐和独立音乐人。"
+    },
+    "audible": {
+      "name": "Audible",
+      "description": "亚马逊有声书平台，海量有声读物和播客。"
+    },
+    "suijimm-random": {
+      "name": "随机数生成器",
+      "description": "密码学安全的随机数生成工具，支持整数小数、抽奖转盘、骰子模拟、密码生成等多种功能。"
+    },
+    "randomgenerator-org": {
+      "name": "全能随机生成器",
+      "description": "17种强大生成器集合：数字、密码、姓名、用户名、颜色、单词、骰子、字母等，即时生成无需注册。"
+    },
+    "online-password-generator": {
+      "name": "安全密码生成器",
+      "description": "使用Web Crypto API生成密码学安全密码，支持4-128位长度，完全在浏览器本地运行，零服务器请求。"
+    },
+    "better-password-generator": {
+      "name": "强密码生成器",
+      "description": "100%客户端运行的密码生成器，使用Web Crypto API，无数据存储，支持批量生成和CSV导出。"
+    },
+    "roller-dice": {
+      "name": "在线骰子模拟器",
+      "description": "免费虚拟骰子工具，支持D4到D100多种骰子类型，适用于龙与地下城、桌游和随机数生成。"
+    },
+    "randly-dice": {
+      "name": "虚拟骰子投掷器",
+      "description": "支持D2到D100任意面数骰子，密码学安全随机数生成，适用于桌游、教育和决策辅助。"
+    },
+    "coin-flip": {
+      "name": "在线抛硬币",
+      "description": "逼真的3D抛硬币模拟，使用密码学安全随机数生成器，支持多种硬币样式和统计追踪。"
+    },
+    "flippey": {
+      "name": "硬币翻转模拟器",
+      "description": "简洁的在线抛硬币工具，一键获得正面或反面结果，适用于快速决策和游戏。"
+    },
+    "flipacoinfree": {
+      "name": "免费抛硬币工具",
+      "description": "支持单次和多次抛硬币，实时统计和历史记录，支持加权概率和CSV导出。"
+    },
+    "wheelspinnerx": {
+      "name": "决策转盘",
+      "description": "在线决策转盘工具，支持自定义选项、权重调整、颜色设置，适用于抽奖、选择和决策。"
+    },
+    "gospinwheel-decision": {
+      "name": "随机决策轮盘",
+      "description": "终极随机决策工具，添加选项后旋转轮盘，支持权重调整和淘汰模式，适用于克服决策疲劳。"
+    },
+    "wheelpick": {
+      "name": "WheelPick选择器",
+      "description": "直观的轮盘选择工具，支持随机姓名选择、团队生成、奖品轮盘等多种用途。"
+    },
+    "spinwheel-app": {
+      "name": "SpinWheel随机选择器",
+      "description": "免费在线随机选择生成器，支持2-12个选项，适用于教师、家庭和决策辅助。"
+    },
+    "yes-or-no-wheel": {
+      "name": "Yes/No决策轮盘",
+      "description": "简单的Yes/No决策工具，支持添加Maybe选项或自定义选项，适用于快速决策。"
+    },
+    "playmetronome": {
+      "name": "在线节拍器",
+      "description": "专业在线节拍器，使用Web Audio API精确计时，支持20-300 BPM、多种拍号和声音选项。"
+    },
+    "tapmetronome": {
+      "name": "MetroBeats节拍器",
+      "description": "浏览器节拍器，支持实时节拍反馈、点击节拍传输、细分拍和渐进速度训练。"
+    },
+    "online-metronome-app": {
+      "name": "多功能节拍器",
+      "description": "支持30-500 BPM、多种拍号（2/4到12/8）、细分拍、小节静音和定时器功能。"
+    },
+    "online-metronome-org": {
+      "name": "简易在线节拍器",
+      "description": "简洁易用的在线节拍器，支持点击节拍输入，适用于所有乐器练习。"
+    },
+    "justaguitartuner": {
+      "name": "吉他调音器",
+      "description": "专业浏览器调音器，实时音高检测，支持标准调音、Drop D、Open G等多种调弦方式。"
+    },
+    "freeguitartuner": {
+      "name": "免费吉他调音器",
+      "description": "支持吉他、贝斯、尤克里里、班卓琴、曼陀林等多种乐器调音，精度±1 cent。"
+    },
+    "tunerguitar": {
+      "name": "专业吉他调音器",
+      "description": "实时音高检测和参考音播放，支持键盘快捷键，适用于日常练习和专业调音。"
+    },
+    "emojikitchen": {
+      "name": "表情符号厨房",
+      "description": "Google表情符号混搭工具，将两个表情符号组合成独特的自定义表情，适用于社交媒体和聊天。"
+    },
+    "getmoji": {
+      "name": "GetMoji表情库",
+      "description": "5000+表情符号库，支持分类浏览、组合推荐和颜文字，一键复制粘贴到任何平台。"
+    },
+    "devhydra-emoji": {
+      "name": "随机表情生成器",
+      "description": "500+表情符号随机生成，支持8种分类，一键复制，适用于社交媒体和聊天。"
+    },
+    "funnyemoji-ai": {
+      "name": "AI表情生成器",
+      "description": "AI驱动的自定义表情生成器，支持5种风格（卡通、写实、3D、像素、可爱），无需注册。"
+    },
+    "randomgeneratorlabs-joke": {
+      "name": "随机笑话生成器",
+      "description": "即时生成笑话，支持爸爸笑话、敲门笑话、编程笑话等多种类型，适用于缓解压力和社交。"
+    },
+    "everyfreetool-joke": {
+      "name": "AI笑话生成器",
+      "description": "150+笑话库，支持12种分类，包括编程、爸爸笑话、双关语、敲门笑话等，客户端运行。"
+    },
+    "maximcalculator-joke": {
+      "name": "笑话生成工具",
+      "description": "根据主题、受众和风格生成笑话，支持爸爸笑话、极客笑话、友好吐槽等，带有趣味评分。"
+    },
+    "toolsti-joke": {
+      "name": "家庭友好笑话生成器",
+      "description": "生成干净安全的笑话，支持爸爸笑话、双关语、敲门笑话、科技笑话等多种风格。"
+    },
+    "generatr-joke": {
+      "name": "Random Joke API生成器",
+      "description": "从JokeAPI获取笑话，支持编程、杂项、黑暗、双关、恐怖、圣诞等6种分类。"
+    },
+    "bmihealth-cn": {
+      "name": "BMI计算器",
+      "description": "科学计算BMI，采用中国成人标准，提供健康建议和分类标准，支持多种体重单位。"
+    },
+    "calculatorapp-bmi": {
+      "name": "BMI健康计算器",
+      "description": "WHO分类、健康体重范围、年龄性别调整、AI健康洞察，零广告，支持深色模式和PWA。"
+    },
+    "globalcalqulate-bmi": {
+      "name": "全球BMI计算器",
+      "description": "WHO 2026标准，支持种族特定阈值（亚洲BMI≥23超重），双单位制，180+国家适用。"
+    },
+    "calculators-im-bmi": {
+      "name": "BMI指数计算器",
+      "description": "计算BMI、分类、健康体重范围和理想体重，支持公制和英制单位，适用于所有年龄。"
+    },
+    "ajaxcalculators-bmi": {
+      "name": "BMI Prime计算器",
+      "description": "计算BMI、BMI Prime、分类和健康体重范围，支持公制和英制输入，提供详细公式说明。"
+    },
+    "randomtools-number": {
+      "name": "随机数生成工具",
+      "description": "可自定义范围、过滤和排序的随机数生成器，适用于彩票、抽奖、游戏和统计采样。"
+    },
+    "randomgen-online": {
+      "name": "随机数在线生成",
+      "description": "支持1-1000个随机数批量生成，可控制重复，自动保存设置，移动端友好。"
+    },
+    "fasttools-password": {
+      "name": "密码生成与强度检测",
+      "description": "密码学安全密码生成，支持密码和短语模式，熵强度显示，HIBP泄露检测，批量生成。"
+    },
+    "thepasswordgenerator": {
+      "name": "强密码生成器",
+      "description": "三种模式：随机、短语、简易，支持批量1000个密码，最长256字符，完全客户端运行。"
+    },
+    "safepasswordgenerator": {
+      "name": "安全密码生成器",
+      "description": "开源密码生成器，基于50000+泄露密码分析，支持自定义长度和字符集，完全客户端。"
+    },
+    "dicerolleronline": {
+      "name": "3D骰子模拟器",
+      "description": "3D虚拟骰子，支持1-100个骰子同时投掷，可自定义骰子面数，适用于桌游和随机选择。"
+    },
+    "rolldice-org": {
+      "name": "Dice Roller骰子",
+      "description": "支持自定义骰子颜色、声音和图片，最多3个骰子同时投掷，适用于游戏和决策。"
+    },
+    "gospinwheel-dice": {
+      "name": "在线骰子模拟器",
+      "description": "支持D6、D20、2D6、3D6等多种骰子配置，适用于龙与地下城、桌游和概率教学。"
+    },
+    "miniwebtool-emoji": {
+      "name": "表情组合生成器",
+      "description": "1500+表情符号，支持10种分类，随机、序列、组合和主题模式，适用于社交媒体。"
+    },
+    "playmetronome-tuner": {
+      "name": "吉他调音器Pro",
+      "description": "麦克风实时音高检测，支持EADGBE标准调弦，显示音分偏差，适用于吉他练习。"
+    },
+    "playmetronome-ukulele": {
+      "name": "尤克里里调音器",
+      "description": "标准GCEA调弦，麦克风检测，4弦界面，适用于尤克里里练习和调音。"
+    },
+    "playmetronome-taptempo": {
+      "name": "点击节拍检测",
+      "description": "点击或按空格键检测BPM，平均最近8次点击，适用于确定歌曲节奏。"
+    },
+    "playmetronome-bpmfinder": {
+      "name": "BPM检测器",
+      "description": "上传音频文件自动检测节奏，使用 onset detection 算法，适用于音乐制作。"
+    },
+    "playmetronome-tempoconverter": {
+      "name": "节奏转换器",
+      "description": "BPM与毫秒转换，支持四分音符、八分音符、十六分音符时长，适用于延迟和混响编程。"
+    },
+    "playmetronome-interval": {
+      "name": "音程训练器",
+      "description": "猜测两个音符之间的音程，渐进难度，适用于吉他手和音乐理论学习。"
+    },
+    "playmetronome-notes": {
+      "name": "音符识别训练",
+      "description": "通过听觉识别音符，渐进难度，适用于音乐教育和听力训练。"
+    },
+    "playmetronome-chordchart": {
+      "name": "吉他和弦图表",
+      "description": "吉他和弦图解，包含指法，点击可听声音，适用于吉他学习和练习。"
+    },
+    "playmetronome-frequency": {
+      "name": "音符频率表",
+      "description": "所有音符及其Hz值，点击可听每个音高，适用于音乐理论和调音参考。"
+    },
+    "uplup-coin": {
+      "name": "高级抛硬币工具",
+      "description": "支持1-1000个硬币同时抛掷，加权概率，3D动画，CSV/TXT导出，适用于概率教育。"
+    },
+    "flipsimu": {
+      "name": "Coin Flip Simulator",
+      "description": "可自定义硬币文本、图片、颜色，最多20个硬币，支持直觉测试和运气测试。"
+    },
+    "tapmetronome-subdivisions": {
+      "name": "节拍细分训练",
+      "description": "支持细分拍和渐进速度训练，适用于提高节奏精度和练习效率。"
+    },
+    "tapmetronome-timesignatures": {
+      "name": "拍号练习工具",
+      "description": "支持3/4、5/4、6/8、7/8等多种拍号，适用于复杂节奏练习。"
+    },
+    "tapmetronome-taptempo": {
+      "name": "MetroBeats点击节拍",
+      "description": "点击检测BPM并传输到主节拍器，适用于匹配歌曲节奏。"
+    },
+    "justaguitartuner-metronome": {
+      "name": "JustAGuitarTuner节拍器",
+      "description": "内置节拍器，可调节速度、点击节拍和拍号，与调音器配合使用。"
+    },
+    "freeguitartuner-bass": {
+      "name": "贝斯调音器",
+      "description": "支持4弦和5弦贝斯标准调音，精度±1 cent，适用于贝斯练习。"
+    },
+    "freeguitartuner-ukulele": {
+      "name": "尤克里里调音器",
+      "description": "标准C6调弦，麦克风检测，适用于尤克里里练习和调音。"
+    },
+    "freeguitartuner-mandolin": {
+      "name": "曼陀林调音器",
+      "description": "标准曼陀林调弦，麦克风检测，适用于曼陀林练习。"
+    },
+    "freeguitartuner-banjo": {
+      "name": "班卓琴调音器",
+      "description": "Open G调弦，麦克风检测，适用于班卓琴练习和调音。"
+    },
+    "getmoji-combos": {
+      "name": "表情组合推荐",
+      "description": "精选表情组合，适用于早安短信、生日祝福、爱情消息等各种场合。"
+    },
+    "getmoji-kaomoji": {
+      "name": "颜文字库",
+      "description": "数百个日文颜文字表情，从开心到悲伤、可爱到愤怒，一键复制。"
+    },
+    "getmoji-symbols": {
+      "name": "Unicode符号库",
+      "description": "76000+ Unicode符号和特殊字符，箭头、数学符号、货币符号、几何形状等。"
+    },
+    "getmoji-emoji-for": {
+      "name": "场合表情推荐",
+      "description": "根据关键词推荐表情，适用于爱情、生日、感谢、早安等各种场合。"
+    },
+    "getmoji-usecases": {
+      "name": "表情使用指南",
+      "description": "学习如何有效使用表情符号，从社交媒体到商务沟通的最佳实践。"
+    },
+    "flipsimu-intuition": {
+      "name": "直觉测试",
+      "description": "测试你的直觉能力，猜测硬币结果，统计正确率。"
+    },
+    "flipsimu-luck": {
+      "name": "运气测试",
+      "description": "测试你的运气，尝试连续获得相同结果的硬币。"
+    },
+    "flipsimu-tarot": {
+      "name": "Yes/No塔罗牌",
+      "description": "使用塔罗牌回答你的Yes/No问题，增加神秘感和趣味性。"
+    },
+    "flipsimu-dice": {
+      "name": "Flipsimu骰子投掷",
+      "description": "在线骰子投掷工具，与硬币翻转配合使用。"
+    },
+    "suijimm-wheel": {
+      "name": "在线抽奖转盘",
+      "description": "自定义奖项和颜色，流畅旋转动画，适用于年会抽奖、课堂点名、活动抽签。"
+    },
+    "suijimm-dice": {
+      "name": "在线骰子模拟",
+      "description": "支持D4到D20多面骰，1-6个骰子同时投掷，3D动画，自动统计总和。"
+    },
+    "suijimm-food": {
+      "name": "今天吃什么",
+      "description": "覆盖13大品类178道菜品，支持用餐场景筛选、口味偏好设置，选择困难症救星。"
+    },
+    "suijimm-password": {
+      "name": "随机密码生成",
+      "description": "密码学安全密码生成，支持4-64位长度，实时强度分析，提供PIN码、WiFi密码模板。"
+    },
+    "randomgenerator-number": {
+      "name": "随机数字生成",
+      "description": "整数或小数，任意范围，批量生成，即时结果。"
+    },
+    "randomgenerator-password": {
+      "name": "随机密码生成",
+      "description": "强密码生成，可配置长度和字符集，即时生成。"
+    },
+    "randomgenerator-name": {
+      "name": "随机姓名生成",
+      "description": "生成真实人名，支持西方、斯拉夫、亚洲、拉丁四种起源。"
+    },
+    "randomgenerator-username": {
+      "name": "随机用户名生成",
+      "description": "生成独特用户名，支持游戏标签、专业、可爱等多种风格。"
+    },
+    "randomgenerator-color": {
+      "name": "随机颜色生成",
+      "description": "生成HEX、RGB、HSL颜色，适用于设计和创意项目。"
+    },
+    "randomgenerator-word": {
+      "name": "随机单词生成",
+      "description": "按分类和风格生成随机单词，适用于创意写作和教育。"
+    },
+    "randomgenerator-dice": {
+      "name": "随机骰子投掷",
+      "description": "支持D4、D6、D8、D10、D12、D20、D100多种骰子类型。"
+    },
+    "randomgenerator-letter": {
+      "name": "随机字母生成",
+      "description": "生成随机字母，支持大小写选择。"
+    },
+    "randomgenerator-team": {
+      "name": "随机团队生成",
+      "description": "将人员随机分配到团队，适用于游戏、活动和分组。"
+    },
+    "randomgenerator-country": {
+      "name": "随机国家生成",
+      "description": "从任意地区生成随机国家，适用于教育和游戏。"
+    },
+    "randomgenerator-animal": {
+      "name": "随机动物生成",
+      "description": "生成哺乳动物、鸟类、爬行动物等随机动物名称。"
+    },
+    "randomgenerator-movie": {
+      "name": "随机电影生成",
+      "description": "从所有类型中随机选择电影，适用于电影推荐和娱乐。"
+    },
+    "randomgenerator-email": {
+      "name": "随机邮箱生成",
+      "description": "生成虚假邮箱用于测试和表单填写，适用于开发和测试。"
+    },
+    "randomgenerator-object": {
+      "name": "随机物品生成",
+      "description": "生成随机日常物品和对象，适用于创意写作和游戏。"
+    },
+    "rolldice-d4": {
+      "name": "D4骰子投掷",
+      "description": "四面骰子投掷工具，适用于小型伤害计算。"
+    },
+    "rolldice-d8": {
+      "name": "D8骰子投掷",
+      "description": "八面骰子投掷工具，适用于中型武器和法术。"
+    },
+    "rolldice-d10": {
+      "name": "D10骰子投掷",
+      "description": "十面骰子投掷工具，适用于百分比投掷。"
+    },
+    "rolldice-d12": {
+      "name": "D12骰子投掷",
+      "description": "十二面骰子投掷工具，适用于大型武器。"
+    },
+    "rolldice-d20": {
+      "name": "D20骰子投掷",
+      "description": "二十面骰子投掷工具，适用于D&D技能检定。"
+    },
+    "tapmetronome-bpm72": {
+      "name": "72 BPM节拍器",
+      "description": "72 BPM慢速练习节拍器，适用于精细技巧和困难过渡练习。"
+    },
+    "tapmetronome-bpm96": {
+      "name": "96 BPM节拍器",
+      "description": "96 BPM中速节拍器，适用于节奏感和律动练习。"
+    },
+    "tapmetronome-bpm120": {
+      "name": "120 BPM节拍器",
+      "description": "120 BPM标准节拍器，适用于流行、摇滚和日常热身。"
+    },
+    "tapmetronome-bpm140": {
+      "name": "140 BPM节拍器",
+      "description": "140 BPM快速节拍器，适用于能量、攻击和耐力练习。"
+    },
+    "justaguitartuner-dropd": {
+      "name": "Drop D调音器",
+      "description": "Drop D调弦模式，低E弦降至D，适用于重金属和摇滚。"
+    },
+    "justaguitartuner-openg": {
+      "name": "Open G调音器",
+      "description": "Open G调弦模式，适用于滑棒吉他和布鲁斯。"
+    },
+    "justaguitartuner-opend": {
+      "name": "Open D调音器",
+      "description": "Open D调弦模式，适用于滑棒吉他和民谣。"
+    },
+    "justaguitartuner-dadgad": {
+      "name": "DADGAD调音器",
+      "description": "DADGAD调弦模式，适用于民谣和凯尔特音乐。"
+    },
+    "justaguitartuner-halfdown": {
+      "name": "半音下调调音器",
+      "description": "所有弦降低半音，适用于降低张力或匹配录音。"
+    },
+    "gospinwheel-yesno": {
+      "name": "Yes/No决策转盘",
+      "description": "简单的Yes/No选择转盘，支持添加Maybe选项。"
+    },
+    "gospinwheel-randompicker": {
+      "name": "随机选择器",
+      "description": "从列表中随机选择一个选项，适用于抽奖和决策。"
+    },
+    "gospinwheel-teamgenerator": {
+      "name": "团队生成器",
+      "description": "将人员随机分配到团队，适用于游戏和活动分组。"
+    },
+    "wheelspinnerx-yesno": {
+      "name": "Yes/No Wheel",
+      "description": "快速Yes/No决策工具，支持自定义选项和权重。"
+    },
+    "wheelspinnerx-randomnumber": {
+      "name": "随机数字轮盘",
+      "description": "数字轮盘选择工具，适用于抽奖和随机选择。"
+    },
+    "wheelspinnerx-namepicker": {
+      "name": "姓名选择器",
+      "description": "从姓名列表中随机选择，适用于课堂点名和抽奖。"
+    },
+    "spinwheel-usecases": {
+      "name": "SpinWheel使用案例",
+      "description": "展示SpinWheel在各种场景下的应用案例和灵感。"
+    },
+    "markdown-platform-converter": {
+      "name": "多平台Markdown互转转换器",
+      "description": "公众号/B站专栏/知乎/小红书图文博主必备。支持标准Markdown格式与各大平台排版双向互转，以及平台格式相互转换（小红书↔公众号↔知乎↔B站），自动适配标题层级、列表、空行、#标签、段落间距、代码块降级，一键复制到剪贴板。"
+    },
+    "polyphonic-pinyin-annotator": {
+      "name": "多音字自动拼音标注工具",
+      "description": "批量给汉字标注拼音，智能识别多音字上下文(银行/行走/重庆/音乐/快乐等)，支持声调显示切换、只标生僻字、无拼音字单独列出。儿童读物/教辅材料/口播脚本/读书博主防读错格式一键复制导出，纯本地处理无需上传。"
+    },
+    "audio-bpm-detector": {
+      "name": "音频BPM节拍测算器",
+      "description": "本地上传音频文件或使用麦克风实时检测音乐节拍速度(BPM/Beats Per Minute)，短视频卡点剪辑、DJ混音、舞蹈练习、剧情卡点必备。支持节拍打点标记、手动校准、100%浏览器端处理不上传任何文件。"
+    },
+    "srt-subtitle-generator": {
+      "name": "本地SRT字幕生成器",
+      "description": "文案转字幕利器。粘贴文案自动按标点/按字数/按时长均匀拆分生成标准SRT字幕文件，支持自定义每句字数、整体时长、起始时间偏移、时间轴毫秒格式修正；一键下载.srt文件或复制字幕文本到剪映/PR，短视频剪辑博主必备。"
+    },
+    "multi-timezone-publish-time": {
+      "name": "多时区发布时间计算器",
+      "description": "跨境/海外自媒体/外贸营销必备。输入目标发布时间（本地时区或北京时间）一键换算出全球主要时区(美西/美东/伦敦/巴黎/迪拜/东京/悉尼/首尔/新德里/莫斯科)对应时间，智能识别夏令时(DST)，可视化展示粉丝活跃时段交集方便选出最佳发布点。"
+    },
+    "wc-2026-schedule": {
+      "name": "2026 世界杯完整赛程查询器",
+      "description": "美加墨世界杯 48 队 104 场完整本地赛程库。支持美加墨当地时区切换、今日/明日/分组/球队筛选，点击比赛查看场馆城市，LocalStorage 收藏关注球队一键筛选，离线无网也能看。"
+    },
+    "wc-champion-predictor": {
+      "name": "世界杯个人冠军预测存档工具",
+      "description": "选择心中冠军、亚军、季军、四强、黑马队伍，填写预测理由，一键生成专属预测卡片（国旗+赛事主题背景）高清PNG下载分享。LocalStorage永久保存，赛后可回来对照结果。"
+    },
+    "wc-poster-generator": {
+      "name": "世界杯赛事封面海报生成器",
+      "description": "纯 Canvas 无水印海报制作。内置全平台尺寸（9:16/3:4/2.35:1/16:9），素材库含各国国旗、足球纹理、2026主题渐变。输入对阵、比分、标签，拖拽排版导出高清PNG，支持本地图片叠加。"
+    },
+    "wc-ascii-art": {
+      "name": "球员国旗字符画生成器",
+      "description": "输入国家队名字、球星姓名，即时生成足球风 ASCII 字符画，可用于笔记结尾签名、评论区配图、社交平台个性签名。纯前端、一键复制、支持自定义字符密度。"
+    },
+    "wc-fan-avatar": {
+      "name": "世界杯专属随机球迷头像生成器",
+      "description": "选择支持的国家队，自动搭配足球、奖杯、美加墨三国元素，Canvas 生成专属球迷头像。圆形/方形可选，透明底PNG一键下载，分享到各个社交平台。"
+    },
+    "wc-scoreboard-simulator": {
+      "name": "虚拟助威记分牌模拟器",
+      "description": "网页动态世界杯记分板，自定义两队国旗、队名、比分，进球动画+欢呼声特效，录屏可做短视频助威素材。支持倒计时开球、比赛时间暂停/继续，完全本地运行。"
+    },
+    "wc-name-decorator": {
+      "name": "球星名字花体装饰工具",
+      "description": "输入球星姓名或任意文字，自动生成几十套足球风花体字+特殊符号组合（⚽🏆🇦🇷🇫🇷 等 Unicode 装饰）。适合短视频标题、评论区装饰、朋友圈签名，一键复制。"
+    }
+  },
+  "sidebar2": {
+    "workflows": "工具工作流",
+    "home": "全部工具",
+    "apiKeys": "API 密钥",
+    "templates": "发现模板",
+    "ideas": "创意工坊",
+    "categories": "工具分类"
+  },
+  "ads": {
+    "label": "广告 · Sponsored",
+    "closeA11y": "关闭广告",
+    "a11yLabel": "广告位 {slot}",
+    "placeholder": {
+      "title": "广告位预留",
+      "hint": "此处为 {size} 广告位（槽位 {slot}）。配置 Publisher ID 后自动展示广告。"
+    }
+  },
+  "affiliate": {
+    "title": "合作伙伴精选",
+    "subtitle": "我们亲自验证过的专业工具。通过下方链接支持我们，您不会额外付费。",
+    "badgeText": "合作伙伴",
+    "cta": "了解详情",
+    "disclaimer": "部分链接为联盟推广链接，通过此链接购买我们可能获得少量佣金，不影响您的实际价格。"
+  },
+  "pricing": {
+    "navLabel": "升级 Pro",
+    "heroTitle": "选择适合你的版本",
+    "heroSubtitle": "从免费版起步，随时升级到 Pro 解锁无限处理与高级模板。一次买断，终身升级。",
+    "mostPopular": "最受欢迎",
+    "bestValue": "性价比最高",
+    "free": {
+      "name": "免费版",
+      "price": "¥0",
+      "period": "永久免费",
+      "cta": "继续免费使用",
+      "features": [
+        "所有基础工具免费使用",
+        "单次处理 5MB 以内文件",
+        "批量操作最多 10 个文件",
+        "基础工作流模板 20+",
+        "社区标准支持"
+      ]
+    },
+    "pro": {
+      "name": "Pro 月付",
+      "price": "¥29",
+      "period": "/月",
+      "cta": "升级 Pro",
+      "features": [
+        "包含免费版所有功能",
+        "单次处理 100MB 大文件",
+        "批量操作无限制",
+        "AI 高级功能优先访问",
+        "高清无水印导出",
+        "Pro 工作流模板 100+",
+        "优先邮件支持"
+      ]
+    },
+    "lifetime": {
+      "name": "终身授权",
+      "price": "¥299",
+      "period": "一次性付款 · 终身升级",
+      "cta": "立即买断",
+      "features": [
+        "包含 Pro 月付所有功能",
+        "终身免费更新升级",
+        "未来所有新工具 Pro 权限",
+        "企业级功能优先体验",
+        "每年 1 次 1 对 1 技术咨询",
+        "小团队授权（最多 5 个账号）"
+      ]
+    },
+    "faq": {
+      "q1": "支持哪些付款方式？",
+      "a1": "目前支持支付宝、微信支付、银行卡、Visa/Mastercard、Apple Pay、Google Pay。付款由 Lemon Squeezy / Gumroad 担保处理。",
+      "q2": "可以退款吗？",
+      "a2": "付款后 7 天内功能不符合预期，可无理由申请全额退款（在支付平台订单页申请）。",
+      "q3": "可以在多台设备使用吗？",
+      "a3": "个人版最多 3 台自用设备；终身小团队版最多 5 个员工账号。",
+      "q4": "终身授权是真的终身吗？",
+      "a4": "是的，一次付款终身使用，后续所有 Pro 功能、新工具、安全更新全部免费。"
+    },
+    "footer": "付款或订单问题？联系 billing@korelyy.com"
+  },
+  "breadcrumb": {
+    "home": "首页"
+  }
+}
