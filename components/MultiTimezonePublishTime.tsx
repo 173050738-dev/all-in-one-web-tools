@@ -453,7 +453,7 @@ export default function MultiTimezonePublishTime({ locale = 'zh' }: MultiTimezon
                 <Globe2 className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
+                <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t('subtitle')}</p>
               </div>
             </div>
@@ -556,7 +556,7 @@ export default function MultiTimezonePublishTime({ locale = 'zh' }: MultiTimezon
                                     )}
                                   </div>
                                   <div className="mt-2 flex items-baseline gap-2 flex-wrap">
-                                    <span className="text-2xl font-bold tabular-nums text-gray-900 dark:text-gray-100">
+                                    <span className="text-xl font-bold tabular-nums text-gray-900 dark:text-gray-100">
                                       {timeStr}
                                     </span>
                                     <span className="text-sm tabular-nums text-gray-500 dark:text-gray-400">

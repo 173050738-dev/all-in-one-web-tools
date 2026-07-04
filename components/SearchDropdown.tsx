@@ -2,6 +2,7 @@
 
 import { Search, Sparkles, Code, Palette, GraduationCap, Briefcase, Video, X, ArrowRight, Wand2, Loader2 } from 'lucide-react';
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import { tools } from '@/data/tools';
 import { searchTools } from '@/data/search';
 import { scenes } from '@/data/scenes';
@@ -86,6 +87,22 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const toolsT = useTranslations('tools');
+
+  const safeTranslate = (key: string, fallback: string) => {
+    try {
+      const v = toolsT(key);
+      if (v && v !== key) return v;
+    } catch { /* fallthrough */ }
+    return fallback;
+  };
+  const translateField = (tool: any, field: 'name' | 'description') => {
+    const fallback = field === 'name' ? (tool.name || '') : (tool.description || '');
+    if (locale === 'zh') return fallback;
+    const slug = tool.slug || tool.id || '';
+    const altId = tool.id && tool.id !== tool.slug ? tool.id : '';
+    return safeTranslate(`${slug}.${field}`, altId ? safeTranslate(`${altId}.${field}`, fallback) : fallback);
+  };
 
   const isAiMode = ENABLE_AI_FEATURES && _isAiModeRaw;
   const setIsAiMode = (v: boolean | ((p: boolean) => boolean)) => {
@@ -299,7 +316,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                       </div>
                       <div className='min-w-0 flex-1'>
                         <p className='text-sm font-medium text-gray-900 dark:text-gray-100 truncate'>
-                          {tool.name}
+                          {translateField(tool, 'name')}
                         </p>
                         <p className='text-xs text-purple-600 dark:text-purple-400 mt-1'>
                           {tool.aiReason}
@@ -367,10 +384,10 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                           </div>
                           <div className='min-w-0 flex-1'>
                             <p className='text-sm font-medium text-gray-900 dark:text-gray-100 truncate'>
-                              {tool.name}
+                              {translateField(tool, 'name')}
                             </p>
                             <p className='text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5'>
-                              {tool.description}
+                              {translateField(tool, 'description')}
                             </p>
                           </div>
                           {tool.isFree && (

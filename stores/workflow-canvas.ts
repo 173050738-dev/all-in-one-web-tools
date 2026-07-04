@@ -111,7 +111,18 @@ export const useWorkflowCanvasStore = create<CanvasEditorState>()(
       name: 'tool-hub-workflow-canvas',
       storage: createJSONStorage(() => {
         if (typeof window === 'undefined') return { getItem: () => null, setItem: () => {}, removeItem: () => {} };
-        return localStorage;
+        try {
+          const __t = '__zustand_ls_probe__';
+          localStorage.setItem(__t, '1');
+          localStorage.removeItem(__t);
+          return {
+            getItem: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
+            setItem: (k, v) => { try { localStorage.setItem(k, v); } catch {} },
+            removeItem: (k) => { try { localStorage.removeItem(k); } catch {} },
+          };
+        } catch {
+          return { getItem: () => null, setItem: () => {}, removeItem: () => {} };
+        }
       }),
       partialize: (s) => ({
         workflowId: s.workflowId,

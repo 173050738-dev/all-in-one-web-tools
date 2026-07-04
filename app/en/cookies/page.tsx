@@ -16,14 +16,14 @@ export default function CookieSettingsPage() {
   };
 
   return (
-    <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-      <h1 className='text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2'>{t('title')}</h1>
-      <p className='text-sm text-gray-500 dark:text-gray-400 mb-8'>
+    <div className='max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8'>
+      <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1 sm:mb-2'>{t('title')}</h1>
+      <p className='text-[11px] sm:text-xs text-gray-500 dark:text-gray-400 mb-4 sm:mb-5'>
         Customize your cookie preferences
       </p>
 
       <div className='space-y-4'>
-        <div className='bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6'>
+        <div className='bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-5'>
           <div className='flex items-start gap-4'>
             <div className='p-2 rounded-lg bg-green-100 dark:bg-green-900/30'>
               <Shield className='h-5 w-5 text-green-600 dark:text-green-400' />
@@ -35,12 +35,12 @@ export default function CookieSettingsPage() {
                   Always Active
                 </span>
               </div>
-              <p className='text-sm text-gray-600 dark:text-gray-400 mt-1'>{t('necessary-desc')}</p>
+              <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 mt-1'>{t('necessary-desc')}</p>
             </div>
           </div>
         </div>
 
-        <div className='bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6'>
+        <div className='bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-5'>
           <div className='flex items-start gap-4'>
             <div className='p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30'>
               <BarChart3 className='h-5 w-5 text-blue-600 dark:text-blue-400' />
@@ -55,12 +55,12 @@ export default function CookieSettingsPage() {
                   <span className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${analytics ? 'translate-x-5' : ''}`} />
                 </button>
               </div>
-              <p className='text-sm text-gray-600 dark:text-gray-400 mt-1'>{t('analytics-desc')}</p>
+              <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 mt-1'>{t('analytics-desc')}</p>
             </div>
           </div>
         </div>
 
-        <div className='bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6'>
+        <div className='bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-5'>
           <div className='flex items-start gap-4'>
             <div className='p-2 rounded-lg bg-purple-100 dark:bg-purple-900/30'>
               <Target className='h-5 w-5 text-purple-600 dark:text-purple-400' />
@@ -75,7 +75,7 @@ export default function CookieSettingsPage() {
                   <span className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${advertising ? 'translate-x-5' : ''}`} />
                 </button>
               </div>
-              <p className='text-sm text-gray-600 dark:text-gray-400 mt-1'>{t('advertising-desc')}</p>
+              <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 mt-1'>{t('advertising-desc')}</p>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function CookieSettingsPage() {
       <div className='mt-8'>
         <button
           onClick={handleSave}
-          className='px-6 py-3 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors font-medium shadow-sm hover:shadow-md flex items-center gap-2'
+          className='px-4 sm:px-5 py-2 sm:py-2.5 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors font-medium shadow-sm hover:shadow-md flex items-center gap-2'
         >
           {saved ? (
             <>

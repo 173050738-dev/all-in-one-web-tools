@@ -417,7 +417,7 @@ export default function SentimentAnalyzer({ locale = 'zh' }: SentimentAnalyzerPr
       <div className="space-y-6">
         <div className="card p-4 sm:p-6">
           <div className="mb-4 sm:mb-6">
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
+            <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{t('subtitle')}</p>
           </div>
 

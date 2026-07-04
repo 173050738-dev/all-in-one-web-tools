@@ -144,7 +144,7 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
             <FileText className='h-5 w-5 sm:h-6 sm:w-6' />
           </div>
           <div>
-            <h1 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
+            <h1 className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
             <p className='text-sm text-gray-600 dark:text-gray-400'>{t('subtitle')}</p>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
                 key={card.key}
                 className='rounded-xl border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-gray-800/60 p-4'
               >
-                <div className='text-2xl font-bold text-primary-600 dark:text-primary-400'>
+                <div className='text-xl font-bold text-primary-600 dark:text-primary-400'>
                   {card.value.toLocaleString()}
                 </div>
                 <div className='text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mt-1'>
@@ -210,7 +210,7 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
                 key={card.key}
                 className='rounded-xl border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-gray-800/60 p-4'
               >
-                <div className='text-2xl font-bold text-primary-600 dark:text-primary-400'>
+                <div className='text-xl font-bold text-primary-600 dark:text-primary-400'>
                   {card.value.toLocaleString()}
                 </div>
                 <div className='text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mt-1'>

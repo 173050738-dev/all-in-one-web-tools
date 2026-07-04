@@ -1,6 +1,8 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import { useTranslations } from 'next-intl';
-import { Code, Image, FileText, Binary, Link, Palette, Type, Video, Terminal, Zap, Heart, Star, ShieldCheck, Key, Smartphone, Home, Shuffle, Volume2, Calendar, Grid3X3, User, MessageCircle, Dices } from 'lucide-react';
-import type { Tool } from '@/data/tools';
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { Code, Image, FileText, Binary, Link, Palette, Type, Video, Terminal, Zap, Heart, Star, ShieldCheck, Key, Smartphone, Home, Shuffle, Volume2, Calendar, Grid3X3, User, MessageCircle, Dices, Shield, Globe, CreditCard, UserPlus } from 'lucide-react';
+import type { Tool, PaymentMethod, SignupType } from '@/data/tools';
 import { usePreferencesStore } from '@/stores/preferences';
 import SafeLink from './SafeLink';
 import { logLike, logFavorite } from '@/utils/audit-log';
@@ -39,7 +41,7 @@ function formatLikes(count: number): string {
   return count.toString();
 }
 
-export default function ToolCard({ tool, locale }: { tool: Tool; locale: string }) {
+export default function ToolCard({ tool, locale, selectable = false }: { tool: Tool; locale: string; selectable?: boolean }) {
   const t = useTranslations('dashboard');
   const toolsT = useTranslations('tools');
   const tcT = useTranslations('toolcard');
@@ -53,12 +55,14 @@ export default function ToolCard({ tool, locale }: { tool: Tool; locale: string 
     return fallback;
   };
 
+  const toolSlug = tool.slug || tool.id || '';
+  const toolKeyAlt = tool.id && tool.id !== tool.slug ? tool.id : '';
   const toolName = locale === 'zh'
     ? tool.name
-    : (englishTags[tool.id] ? safeTranslate(`${tool.id}.name`, tool.name) : tool.name);
+    : safeTranslate(`${toolSlug}.name`, toolKeyAlt ? safeTranslate(`${toolKeyAlt}.name`, tool.name) : tool.name);
   const toolDescription = locale === 'zh'
     ? tool.description
-    : (englishTags[tool.id] ? safeTranslate(`${tool.id}.description`, tool.description) : tool.description);
+    : safeTranslate(`${toolSlug}.description`, toolKeyAlt ? safeTranslate(`${toolKeyAlt}.description`, tool.description) : tool.description);
   const toolTags = locale === 'zh'
     ? tool.tags
     : (Array.isArray(englishTags[tool.id]) && englishTags[tool.id].length > 0 ? englishTags[tool.id] : tool.tags);
@@ -106,80 +110,144 @@ export default function ToolCard({ tool, locale }: { tool: Tool; locale: string 
   const getPlatformText = (platform?: string) => {
     switch (platform) {
       case 'desktop':
-        return '电脑端';
+        return tcT('platform-desktop');
       case 'mobile':
-        return '手机端';
+        return tcT('platform-mobile');
       default:
-        return '所有端';
+        return tcT('platform-all');
     }
   };
 
+  const getAccessStyle = (tag?: string) => {
+    if (tag === 'direct') {
+      return 'bg-teal-50 text-teal-700 dark:bg-teal-900/25 dark:text-teal-400 border border-teal-100 dark:border-teal-900/40';
+    }
+    return 'bg-rose-50 text-rose-700 dark:bg-rose-900/25 dark:text-rose-400 border border-rose-100 dark:border-rose-900/40';
+  };
+
+  const getAccessIcon = (tag?: string) => (tag === 'direct' ? Globe : Shield);
+  const getAccessText = (tag?: string) =>
+    tag === 'direct' ? tcT('access-direct') : tcT('access-vpn-required');
+
+  const paymentStyle = 'bg-indigo-50 text-indigo-700 dark:bg-indigo-900/25 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/40';
+  const signupStyle = 'bg-amber-50 text-amber-700 dark:bg-amber-900/25 dark:text-amber-400 border border-amber-100 dark:border-amber-900/40';
+  const localProcessingStyle = 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50';
+
+  const paymentLabel: Record<PaymentMethod, string> = {
+    alipay: tcT('payment-alipay'),
+    wechat: tcT('payment-wechat'),
+    visa: tcT('payment-visa'),
+    mastercard: tcT('payment-mastercard'),
+  };
+  const signupLabel: Record<SignupType, string> = {
+    'no-signup': tcT('signup-no-signup'),
+    email: tcT('signup-email'),
+    'cn-phone': tcT('signup-cn-phone'),
+    'global-phone': tcT('signup-global-phone'),
+    'cc-required': tcT('signup-cc-required'),
+  };
+
+  const extraBadges: Array<{ text: string; style: string }> = [];
+  if (tool.accessTag) {
+    extraBadges.push({ text: getAccessText(tool.accessTag), style: getAccessStyle(tool.accessTag) });
+  }
+
   const cardContent = (
     <div className='w-full bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-800 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 h-full flex flex-col relative'>
-      <div className='h-1 bg-[#34A89C] flex-shrink-0' />
-      {/* 左上角固定：安全认证徽章（统一标签尺寸） */}
-      <span className='absolute left-3 top-[14px] z-10 px-2 py-0.5 rounded-md text-[11px] font-medium whitespace-nowrap shrink-0 inline-flex items-center gap-0.5 bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50 shadow-[0_1px_2px_rgba(16,185,129,0.08)]'>
-        <ShieldCheck className='h-3 w-3' />
+      <div
+        className={[
+          'h-1.5 flex-shrink-0',
+          tool.complianceLevel === 'green'
+            ? 'bg-emerald-500 dark:bg-emerald-400'
+            : tool.complianceLevel === 'yellow'
+              ? 'bg-amber-400 dark:bg-amber-300'
+              : tool.complianceLevel === 'red'
+                ? 'bg-rose-500 dark:bg-rose-400'
+                : 'bg-[#34A89C]',
+        ].join(' ')}
+        title={
+          tool.complianceLevel === 'green'
+            ? tcT('compliance-green')
+            : tool.complianceLevel === 'yellow'
+              ? tcT('compliance-yellow')
+              : tool.complianceLevel === 'red'
+                ? tcT('compliance-red')
+                : tcT('compliance-standard')
+        }
+      />
+      {/* 左上角固定：安全认证徽章（仅顶部角标区，不影响下方标题行） */}
+      <span className='absolute left-2.5 top-2.5 z-10 px-1.5 py-0.5 rounded-md text-[10px] font-medium whitespace-nowrap shrink-0 inline-flex items-center gap-0.5 bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50 shadow-[0_1px_2px_rgba(16,185,129,0.08)]'>
+        <ShieldCheck className='h-2.5 w-2.5' />
         {tcT('verified')}
       </span>
-      <div className='p-3 sm:p-4 flex-1 flex flex-col min-h-0 w-full'>
-        {/* 顶行右上角：收藏 + 点赞（严格等高，点赞带累计数） */}
-        <div className='flex items-start justify-end mb-2 sm:mb-2.5 gap-1 flex-shrink-0'>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              toggleFavorite(tool.id);
-              logFavorite(tool.id);
-            }}
-            className={`px-1.5 py-1.5 rounded-lg flex-shrink-0 inline-flex items-center justify-center transition-all duration-200 hover:scale-105 ${favorited ? 'bg-orange-100 text-orange-500 dark:bg-orange-900/30' : 'bg-gray-100 text-gray-400 hover:text-orange-500 dark:bg-gray-800 dark:text-gray-500 dark:hover:text-orange-400'}`}
-            title={tcT('saveToToolbox')}
-          >
-            <Star className={`h-3.5 w-3.5 ${favorited ? 'fill-current' : ''}`} />
-          </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              toggleLike(tool.id);
-              logLike(tool.id);
-            }}
-            className={`px-2 py-1.5 rounded-lg flex-shrink-0 inline-flex items-center gap-1 transition-all duration-200 hover:scale-105 ${liked ? 'bg-red-100 text-red-500 dark:bg-red-900/30' : 'bg-gray-100 text-gray-400 hover:text-red-500 dark:bg-gray-800 dark:text-gray-500 dark:hover:text-red-400'}`}
-            title={tcT('like')}
-          >
-            <Heart className={`h-3.5 w-3.5 ${liked ? 'fill-current' : ''}`} />
-            <span className='text-[11px] font-semibold tabular-nums leading-none tracking-tight'>{formatLikes(totalLikes)}</span>
-          </button>
+      <div className='p-2.5 sm:p-3 flex-1 flex flex-col min-h-0 w-full'>
+        {/* 顶行右上角：收藏 + 点赞（严格等高，点赞带累计数），40px 触控面积 */}
+        <div className='flex items-start justify-end mb-1.5 sm:mb-2 gap-1 flex-shrink-0'>
+          {/* 收藏/点赞：可见盒子严格 = 难度/免费付费 badge（px-1.5 py-0.5 rounded-md text-[10px]），触控通过 -mx-1.5 外扩 */}
+          <div className='flex items-center justify-center min-w-[40px] min-h-[40px] -mx-1 -my-1'>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleFavorite(tool.id);
+                logFavorite(tool.id);
+              }}
+              className={`px-1.5 py-0.5 rounded-md inline-flex items-center justify-center gap-0.5 transition-all duration-200 hover:scale-105 active:scale-95 ${favorited ? 'bg-orange-100 text-orange-500 dark:bg-orange-900/30' : 'bg-gray-100 text-gray-400 hover:text-orange-500 dark:bg-gray-800 dark:text-gray-500 dark:hover:text-orange-400'}`}
+              title={tcT('saveToToolbox')}
+            >
+              <Star className={`h-3 w-3 ${favorited ? 'fill-current' : ''}`} />
+            </button>
+          </div>
+          <div className='flex items-center justify-center min-w-[40px] min-h-[40px] -mx-1 -my-1'>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleLike(tool.id);
+                logLike(tool.id);
+              }}
+              className={`px-1.5 py-0.5 rounded-md inline-flex items-center gap-0.5 transition-all duration-200 hover:scale-105 active:scale-95 ${liked ? 'bg-red-100 text-red-500 dark:bg-red-900/30' : 'bg-gray-100 text-gray-400 hover:text-red-500 dark:bg-gray-800 dark:text-gray-500 dark:hover:text-red-400'}`}
+              title={tcT('like')}
+            >
+              <Heart className={`h-3 w-3 ${liked ? 'fill-current' : ''}`} />
+              <span className='text-[10px] font-medium tabular-nums leading-none tracking-tight'>{formatLikes(totalLikes)}</span>
+            </button>
+          </div>
         </div>
 
-        {/* 标题行：工具名 + 标签 inline（全部统一标签尺寸） */}
-        <div className='flex flex-wrap items-baseline gap-1.5 mb-1.5 sm:mb-2 flex-shrink-0 min-w-0'>
-          <h3 className='font-semibold text-sm sm:text-base text-gray-900 dark:text-gray-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors leading-tight shrink-0'>
-            {toolName}
-          </h3>
+        {/* 标题行：verified 徽章在顶部角标区，不与标题行重叠，无需左缩进 */}
+        <h3 className='font-semibold text-xs sm:text-sm text-gray-900 dark:text-gray-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors leading-snug mb-1 sm:mb-1.5 whitespace-normal break-words min-w-0'>
+          {toolName}
+        </h3>
+
+        <div className='flex flex-wrap items-baseline gap-1 mb-1 sm:mb-1.5 flex-shrink-0 min-w-0'>
           {tool.difficulty && (
-            <span className={`px-2 py-0.5 rounded-md text-[11px] font-medium whitespace-nowrap shrink-0 ${getDifficultyStyle(tool.difficulty)}`}>
+            <span className={`px-1.5 py-0.5 rounded-md text-[10px] font-medium whitespace-nowrap shrink-0 ${getDifficultyStyle(tool.difficulty)}`}>
               {getDifficultyText(tool.difficulty)}
             </span>
           )}
-          <span className={`px-2 py-0.5 rounded-md text-[11px] font-medium whitespace-nowrap shrink-0 ${tool.isLimitedFree ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' : tool.isFree ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400'}`}>
+          <span className={`px-1.5 py-0.5 rounded-md text-[10px] font-medium whitespace-nowrap shrink-0 ${tool.isLimitedFree ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' : tool.isFree ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400'}`}>
             {tool.isLimitedFree ? t('limited-free') : tool.isFree ? t('free') : t('paid')}
           </span>
-          <span className={`px-2 py-0.5 rounded-md text-[11px] font-medium whitespace-nowrap shrink-0 ${getPlatformStyle(tool.platform)}`}>
-            {getPlatformText(tool.platform)}
-          </span>
+          {extraBadges.slice(0, 1).map((b, i) => (
+            <span key={i} className={`px-1.5 py-0.5 rounded-md text-[10px] font-medium whitespace-nowrap shrink-0 ${b.style}`}>
+              {b.text}
+            </span>
+          ))}
         </div>
 
         {/* 工具介绍：比工具名小一号 */}
-        <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 flex-1 line-clamp-3 leading-relaxed overflow-hidden'>{toolDescription}</p>
+        <p className='text-[10px] sm:text-[11px] text-gray-600 dark:text-gray-400 flex-1 line-clamp-3 leading-relaxed overflow-hidden'>{toolDescription}</p>
 
-        {/* 底部关键词标签：统一尺寸 */}
-        <div className='mt-2 sm:mt-2.5 flex flex-wrap gap-1.5 flex-shrink-0 h-6 overflow-hidden'>
-          {toolTags.slice(0, 2).map((tag) => (
-            <span key={tag} className='px-2 py-0.5 rounded-md text-[11px] font-medium bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400 truncate max-w-[80px] sm:max-w-none'>
-              {tag}
-            </span>
-          ))}
+        {/* 底部信息行：左侧关键词标签 */}
+        <div className='mt-1.5 sm:mt-2 flex-shrink-0'>
+          <div className='flex flex-wrap gap-1 h-5 overflow-hidden'>
+            {toolTags.slice(0, 2).map((tag) => (
+              <span key={tag} className='px-1.5 py-0.5 rounded-md text-[10px] font-medium bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400 truncate max-w-[80px] sm:max-w-none'>
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

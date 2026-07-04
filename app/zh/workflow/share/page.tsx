@@ -130,59 +130,59 @@ export default function WorkflowSharePage() {
         <div className='flex-1 min-w-0'>
           <a
             href={`/${locale}/workflows`}
-            className='inline-flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 mb-4 transition-colors'
+            className='inline-flex items-center gap-1 text-[11px] sm:text-xs text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 mb-3 sm:mb-4 transition-colors'
           >
-            <ChevronLeft className='w-4 h-4' />
+            <ChevronLeft className='w-3.5 h-3.5' />
             {locale === 'zh' ? '返回工作流列表' : 'Back to workflows'}
           </a>
 
           {error ? (
-            <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 text-center'>
-              <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center'>
-                <Code className='w-8 h-8 text-red-500' />
+            <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8 text-center'>
+              <div className='w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-2xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center'>
+                <Code className='w-6 h-6 sm:w-7 sm:h-7 text-red-500' />
               </div>
-              <p className='text-gray-600 dark:text-gray-400 mb-4'>{error}</p>
+              <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 mb-3 sm:mb-4'>{error}</p>
               <a
                 href={`/${locale}/workflows`}
-                className='inline-flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-xl hover:bg-primary-600 transition-colors'
+                className='inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary-500 text-white rounded-xl hover:bg-primary-600 transition-colors text-[11px] sm:text-xs'
               >
                 {locale === 'zh' ? '返回工作流' : 'Back to Workflows'}
               </a>
             </div>
           ) : workflow ? (
             <>
-              <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 sm:p-6 lg:p-8 mb-6'>
-                <div className='flex items-start justify-between mb-4 sm:mb-6'>
-                  <div className='flex items-center gap-3 sm:gap-4 flex-1 min-w-0'>
-                    <div className='p-3 sm:p-4 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 text-purple-600 dark:text-purple-400 flex-shrink-0'>
-                      <Icon className='w-6 h-6 sm:w-8 sm:h-8' />
+              <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 mb-5 sm:mb-6'>
+                <div className='flex items-start justify-between mb-3 sm:mb-5'>
+                  <div className='flex items-center gap-2.5 sm:gap-3 flex-1 min-w-0'>
+                    <div className='p-2.5 sm:p-3 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 text-purple-600 dark:text-purple-400 flex-shrink-0'>
+                      <Icon className='w-5 h-5 sm:w-6 sm:h-6' />
                     </div>
                     <div className='min-w-0'>
-                      <div className='flex items-center gap-2 mb-1'>
-                        <span className='text-xs px-2 py-0.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400'>
+                      <div className='flex items-center gap-1.5 mb-0.5'>
+                        <span className='text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400'>
                           {locale === 'zh' ? '分享的工作流' : 'Shared Workflow'}
                         </span>
                       </div>
-                      <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1 truncate'>
+                      <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1 sm:mb-2 truncate'>
                         {workflow.title}
                       </h1>
-                      <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400 line-clamp-2'>
+                      <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400 line-clamp-2 leading-relaxed'>
                         {workflow.description}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className='flex flex-wrap gap-2 mb-4'>
-                  <div className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs sm:text-sm font-medium ${getDifficultyStyle(workflow.difficulty)}`}>
+                <div className='flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4'>
+                  <div className={`flex items-center gap-0.5 px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-medium ${getDifficultyStyle(workflow.difficulty)}`}>
                     {getDifficultyText(workflow.difficulty)}
                   </div>
-                  <div className='flex items-center gap-1 px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400'>
-                    <Clock className='w-3.5 h-3.5' />
+                  <div className='flex items-center gap-0.5 px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400'>
+                    <Clock className='w-3 h-3' />
                     {workflow.estimatedTime}
                   </div>
-                  <div className='flex items-center gap-1 px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'>
-                    <Play className='w-3.5 h-3.5' />
+                  <div className='flex items-center gap-0.5 px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-medium bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'>
+                    <Play className='w-3 h-3' />
                     {workflow.steps.length} {locale === 'zh' ? '个步骤' : 'steps'}
                   </div>
                 </div>
@@ -190,22 +190,22 @@ export default function WorkflowSharePage() {
                 <button
                   onClick={handleSave}
                   disabled={saved}
-                  className={`w-full py-3 text-sm sm:text-base font-medium rounded-xl transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2 ${
+                  className={`w-full py-2.5 sm:py-3 text-[11px] sm:text-xs font-medium rounded-xl transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-1.5 ${
                     saved
                       ? 'bg-green-500 text-white shadow-green-500/25'
                       : 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 shadow-purple-500/25'
                   }`}
                 >
-                  <Save className='w-5 h-5' />
+                  <Save className='w-4 h-4 sm:w-5 sm:h-5' />
                   {saved
                     ? (locale === 'zh' ? '已保存，正在跳转...' : 'Saved, redirecting...')
                     : (locale === 'zh' ? '保存到我的工作流' : 'Save to My Workflows')}
                 </button>
               </div>
 
-              <div className='space-y-3 sm:space-y-4'>
-                <h2 className='text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2'>
-                  <span className='w-8 h-8 rounded-lg bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 text-sm font-bold'>
+              <div className='space-y-2.5 sm:space-y-3'>
+                <h2 className='text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2 mb-2 sm:mb-2.5'>
+                  <span className='w-7 h-7 rounded-lg bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 text-[11px] sm:text-xs font-bold'>
                     {workflow.steps.length}
                   </span>
                   {locale === 'zh' ? '操作步骤' : 'Steps'}
@@ -217,10 +217,10 @@ export default function WorkflowSharePage() {
 
                   return (
                     <div key={index} className='relative'>
-                      <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5'>
-                        <div className='flex items-start gap-3 sm:gap-4'>
+                      <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4'>
+                        <div className='flex items-start gap-2.5 sm:gap-3'>
                           <div className='flex flex-col items-center flex-shrink-0'>
-                            <div className='w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-primary-500/25'>
+                            <div className='w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 text-white flex items-center justify-center font-bold text-[11px] shadow-lg shadow-primary-500/25'>
                               {index + 1}
                             </div>
                             {!isLast && (
@@ -228,10 +228,10 @@ export default function WorkflowSharePage() {
                             )}
                           </div>
                           <div className='flex-1 min-w-0'>
-                            <h3 className='font-semibold text-gray-900 dark:text-gray-100 text-sm sm:text-base mb-1'>
+                            <h3 className='font-semibold text-gray-900 dark:text-gray-100 text-[11px] sm:text-xs mb-0.5'>
                               {step.title}
                             </h3>
-                            <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
+                            <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 mb-2.5 leading-relaxed'>
                               {step.description}
                             </p>
                             {tool && tool.externalUrl && (
@@ -239,10 +239,10 @@ export default function WorkflowSharePage() {
                                 href={tool.externalUrl}
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                className='inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-medium bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/40 transition-colors group'
+                                className='inline-flex items-center gap-1 px-2.5 py-1 text-[10px] sm:text-[11px] font-medium bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/40 transition-colors group'
                               >
                                 {tool.name}
-                                <ArrowRight className='w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-0.5 transition-transform' />
+                                <ArrowRight className='w-2.5 h-2.5 sm:w-3 sm:h-3 group-hover:translate-x-0.5 transition-transform' />
                               </a>
                             )}
                           </div>
@@ -254,11 +254,11 @@ export default function WorkflowSharePage() {
               </div>
             </>
           ) : (
-            <div className='text-center py-12'>
-              <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center animate-pulse'>
-                <Code className='w-8 h-8 text-gray-400' />
+            <div className='text-center py-10 sm:py-12'>
+              <div className='w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center animate-pulse'>
+                <Code className='w-6 h-6 sm:w-7 sm:h-7 text-gray-400' />
               </div>
-              <p className='text-gray-500 dark:text-gray-400'>
+              <p className='text-[11px] sm:text-xs text-gray-500 dark:text-gray-400'>
                 {locale === 'zh' ? '加载中...' : 'Loading...'}
               </p>
             </div>

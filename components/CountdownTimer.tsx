@@ -401,7 +401,7 @@ export default function CountdownTimer({ locale = 'zh' }: CountdownProps) {
                   <Calendar className='h-5 w-5 sm:h-6 sm:w-6' />
                 </div>
                 <div>
-                  <h1 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
+                  <h1 className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
                   <p className='text-sm text-gray-600 dark:text-gray-400'>{t('subtitle')}</p>
                 </div>
               </div>
@@ -479,7 +479,7 @@ export default function CountdownTimer({ locale = 'zh' }: CountdownProps) {
                             <div className='text-center'>
                               <div className='text-4xl sm:text-5xl font-bold mb-1'>
                                 {Math.abs(daysLeft)}
-                                <span className='text-xl sm:text-2xl ml-1 font-normal'>{t('days')}</span>
+                                <span className='text-lg sm:text-xl ml-1 font-normal'>{t('days')}</span>
                               </div>
                               <div className='flex items-center justify-center gap-3 text-white/80 text-sm'>
                                 <span className='flex items-center gap-1'>

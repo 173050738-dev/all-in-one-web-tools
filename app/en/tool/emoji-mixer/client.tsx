@@ -26,6 +26,26 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
   const breadcrumbT = useTranslations('breadcrumb');
   const sidebarT = useTranslations('sidebar');
   const tool = getToolBySlug((resolvedParams?.slug ?? pathSlug) as string);
+  // ===== Korelyy: i18n for tool name/description (auto-injected) =====
+  const __toolsT = useTranslations('tools');
+  const __i18nSlug = (resolvedParams?.slug ?? pathSlug) as string;
+  const __i18nName = (() => {
+    const fb = tool?.name ?? '';
+    if (resolvedLocale === 'zh' || !tool) return fb;
+    const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
+    return tryKey(__i18nSlug + '.name')
+      ?? (tool.id && tool.id !== __i18nSlug ? tryKey(tool.id + '.name') : null)
+      ?? fb;
+  })();
+  const __i18nDesc = (() => {
+    const fb = tool?.description ?? '';
+    if (resolvedLocale === 'zh' || !tool) return fb;
+    const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
+    return tryKey(__i18nSlug + '.description')
+      ?? (tool.id && tool.id !== __i18nSlug ? tryKey(tool.id + '.description') : null)
+      ?? fb;
+  })();
+
   const toolsT = useTranslations('tools');
   const isZhLocal = resolvedLocale === 'zh';
   const translatedToolName = tool
@@ -91,7 +111,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
         {tool && (
           <>
             <ChevronRight className='h-3.5 w-3.5 text-gray-400 shrink-0' />
-            <span className='font-medium text-gray-900 dark:text-gray-100 truncate max-w-[260px]'>{tool.name}</span>
+            <span className='font-medium text-gray-900 dark:text-gray-100 truncate max-w-[260px]'>{__i18nName}</span>
           </>
         )}
       </div>

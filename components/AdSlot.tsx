@@ -11,23 +11,56 @@ export type AdSlotSize =
   | 'sticky-bottom' // 移动端 底部粘性
   | 'auto';        // 自适应
 
-const CLOSED_ADS_STORAGE_KEY = 'korelyy:closed-ad-slots';
+const CLOSED_ADS_STORAGE_KEY = 'korelyy:closed-ad-slots-v2';
+const CLOSED_ADS_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
-function getClosedSlots(): string[] {
-  if (typeof window === 'undefined') return [];
+type ClosedAdsMap = Record<string, number>;
+
+function readClosedMap(): ClosedAdsMap {
+  if (typeof window === 'undefined') return {};
   try {
     const raw = window.localStorage.getItem(CLOSED_ADS_STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as string[]) : [];
+    if (!raw) return {};
+    const parsed = JSON.parse(raw) as ClosedAdsMap;
+    if (!parsed || typeof parsed !== 'object') return {};
+    return parsed;
   } catch {
-    return [];
+    return {};
   }
+}
+
+function pruneAndGetClosedSlots(): string[] {
+  if (typeof window === 'undefined') return [];
+  const map = readClosedMap();
+  const now = Date.now();
+  const result: string[] = [];
+  const pruned: ClosedAdsMap = {};
+  for (const [slot, expiresAt] of Object.entries(map)) {
+    if (typeof expiresAt === 'number' && expiresAt > now) {
+      result.push(slot);
+      pruned[slot] = expiresAt;
+    }
+  }
+  try {
+    if (Object.keys(pruned).length !== Object.keys(map).length) {
+      window.localStorage.setItem(CLOSED_ADS_STORAGE_KEY, JSON.stringify(pruned));
+    }
+  } catch {
+    /* ignore */
+  }
+  return result;
+}
+
+function getClosedSlots(): string[] {
+  return pruneAndGetClosedSlots();
 }
 
 function saveClosedSlot(slotId: string): void {
   if (typeof window === 'undefined') return;
   try {
-    const closed = Array.from(new Set([...getClosedSlots(), slotId]));
-    window.localStorage.setItem(CLOSED_ADS_STORAGE_KEY, JSON.stringify(closed));
+    const map = readClosedMap();
+    map[slotId] = Date.now() + CLOSED_ADS_TTL_MS;
+    window.localStorage.setItem(CLOSED_ADS_STORAGE_KEY, JSON.stringify(map));
   } catch {
     /* ignore */
   }

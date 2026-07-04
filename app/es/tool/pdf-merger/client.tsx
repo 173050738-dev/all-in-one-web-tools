@@ -23,19 +23,39 @@ const pathLocale = (() => {
 const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolvedParams.locale)) ? resolvedParams.locale : pathLocale;
   const t = useTranslations('tool');
   const tool = getToolBySlug((resolvedParams?.slug ?? pathSlug) as string);
+  // ===== Korelyy: i18n for tool name/description (auto-injected) =====
+  const __toolsT = useTranslations('tools');
+  const __i18nSlug = (resolvedParams?.slug ?? pathSlug) as string;
+  const __i18nName = (() => {
+    const fb = tool?.name ?? '';
+    if (resolvedLocale === 'zh' || !tool) return fb;
+    const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
+    return tryKey(__i18nSlug + '.name')
+      ?? (tool.id && tool.id !== __i18nSlug ? tryKey(tool.id + '.name') : null)
+      ?? fb;
+  })();
+  const __i18nDesc = (() => {
+    const fb = tool?.description ?? '';
+    if (resolvedLocale === 'zh' || !tool) return fb;
+    const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
+    return tryKey(__i18nSlug + '.description')
+      ?? (tool.id && tool.id !== __i18nSlug ? tryKey(tool.id + '.description') : null)
+      ?? fb;
+  })();
+
   const relatedTools = tool ? getRelatedTools(tool) : [];
   const { addToHistory } = usePreferencesStore();
   useEffect(() => {
     if (tool) {
       addToHistory(tool.id);
-      document.title = `${tool.name} - Korelyy Tools`;
+      document.title = `${__i18nName} - Korelyy Tools`;
       let metaDesc = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
       if (!metaDesc) {
         metaDesc = document.createElement('meta');
         metaDesc.name = 'description';
         document.head.appendChild(metaDesc);
       }
-      metaDesc.setAttribute('content', tool.description);
+      metaDesc.setAttribute('content', __i18nDesc);
     }
   }, [tool]);
   const [files, setFiles] = useState<File[]>([]);
@@ -69,8 +89,8 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                 <FileText className='h-5 w-5 sm:h-6 sm:w-6' />
               </div>
               <div>
-                <h1 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>{tool.name}</h1>
-                <p className='text-sm text-gray-600 dark:text-gray-400'>{tool.description}</p>
+                <h1 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>{__i18nName}</h1>
+                <p className='text-sm text-gray-600 dark:text-gray-400'>{__i18nDesc}</p>
               </div>
             </div>
             <div className='border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 sm:p-12 text-center'>

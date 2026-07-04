@@ -260,3 +260,75 @@
 [dir="rtl"] .modal-scroll::-webkit-scrollbar {
   display: none;
 }
+
+/* ===== Phase 2.3: RTL 基础镜像 (阿拉伯语/希伯来语等 RTL 布局) ===== */
+[dir="rtl"] {
+  font-family: 'Tajawal', 'Noto Sans Arabic', 'Inter', system-ui, sans-serif;
+}
+
+[dir="rtl"] .rtl-flip-x {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .rtl-space-reverse {
+  justify-content: flex-end;
+}
+
+/* 水平滚动方向反转 */
+[dir="rtl"] .category-scroll {
+  transform: scaleX(-1);
+  direction: rtl;
+}
+[dir="rtl"] .category-scroll > * {
+  transform: scaleX(-1);
+}
+
+/* Flex 行方向自动镜像 */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse !important;
+}
+[dir="rtl"] .flex-row-reverse {
+  flex-direction: row !important;
+}
+
+/* ===== Phase 0.4: 徽章对比度 WCAG 4.5:1 色阶 ===== */
+.badge-free {
+  background-color: #ECFDF5;
+  color: #065F46;
+}
+.dark .badge-free {
+  background-color: rgba(5, 150, 105, 0.18);
+  color: #6EE7B7;
+}
+.badge-freemium {
+  background-color: #EFF6FF;
+  color: #1E40AF;
+}
+.dark .badge-freemium {
+  background-color: rgba(37, 99, 235, 0.18);
+  color: #93C5FD;
+}
+.badge-paid {
+  background-color: #FFF7ED;
+  color: #9A3412;
+}
+.dark .badge-paid {
+  background-color: rgba(234, 88, 12, 0.18);
+  color: #FDBA74;
+}
+.badge-privacy {
+  background-color: #F0FDFA;
+  color: #115E59;
+}
+.dark .badge-privacy {
+  background-color: rgba(13, 148, 136, 0.18);
+  color: #5EEAD4;
+}
+.badge-access {
+  background-color: #FEF2F2;
+  color: #991B1B;
+}
+.dark .badge-access {
+  background-color: rgba(220, 38, 38, 0.16);
+  color: #FECACA;
+}

@@ -250,7 +250,7 @@ export default function EmojiMixer({ locale = 'zh' }: EmojiMixerProps) {
             <Sparkles className='h-6 w-6' />
           </div>
           <div>
-            <h1 className='text-2xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
+            <h1 className='text-xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
             <p className='text-gray-600 dark:text-gray-400 text-sm'>{t('subtitle')}</p>
           </div>
         </div>
@@ -354,7 +354,7 @@ export default function EmojiMixer({ locale = 'zh' }: EmojiMixerProps) {
                     setRightEmoji(emoji);
                   }
                 }}
-                className={`p-2 text-2xl sm:text-3xl rounded-xl transition-all hover:scale-110 ${
+                className={`p-2 text-lg sm:text-xl rounded-xl transition-all hover:scale-110 ${
                   (activeTab === 'faces' && leftEmoji === emoji) ||
                   (activeTab !== 'faces' && rightEmoji === emoji)
                     ? 'bg-yellow-100 dark:bg-yellow-900/30 scale-110'

@@ -18,7 +18,7 @@
 const SUPPORTED_LOCALES = new Set(['en', 'zh', 'es', 'hi', 'fr', 'ar']);
 const LOCALE_COOKIE_KEY = 'korelyy-locale';
 
-const STATIC_BYPASS_PREFIXES = ['/_next/', '/_headers', '/_redirects'];
+const STATIC_BYPASS_PREFIXES = ['/_next/', '/_headers', '/_redirects', '/yandex_', '/google'];
 const STATIC_BYPASS_FILES = new Set([
   '/robots.txt',
   '/sitemap.xml',
@@ -26,6 +26,9 @@ const STATIC_BYPASS_FILES = new Set([
   '/sw.js',
   '/favicon.svg',
   '/og-image.svg',
+  '/favicon.ico',
+  '/ads.txt',
+  '/index.txt',
 ]);
 
 function hasStaticExtension(pathname) {
@@ -96,7 +99,13 @@ function pickLocaleFromAccept(header) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    const { pathname, search } = url;
+    const { pathname, search, hostname } = url;
+
+    // 0) www 子域名 -> 主域名 308 永久跳转（SEO 权重合并，保留完整路径和查询串）
+    if (hostname === 'www.korelyy.com') {
+      const apex = new URL(pathname + search, 'https://korelyy.com');
+      return Response.redirect(apex.toString(), 308);
+    }
 
     // 1) 静态资源白名单：直接放行
     if (

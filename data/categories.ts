@@ -4,7 +4,7 @@ export interface Category {
   icon: string;
 }
 
-import { tools } from './tools';
+import { getStaticCategoryCount, getStaticTotalTools } from './_static-counts.generated';
 
 export const categories: Category[] = [
   {
@@ -143,6 +143,21 @@ export const getCategoryById = (id: string): Category | undefined => {
   return categories.find((cat) => cat.id === id);
 };
 
+let _dynamicCategoryCountTable: Record<string, number> | null = null;
+
+export function setDynamicCategoryCounts(table: Record<string, number>): void {
+  _dynamicCategoryCountTable = table;
+}
+
 export const getCategoryCount = (categoryId: string): number => {
-  return tools.filter((tool) => tool.category === categoryId).length;
+  if (_dynamicCategoryCountTable) {
+    const v = _dynamicCategoryCountTable[categoryId];
+    if (typeof v === 'number') return v;
+  }
+  // 兜底：构建阶段预计算的静态常量（≈1054条真实工具），保证 categories.ts 不必顶层 import tools
+  return getStaticCategoryCount(categoryId);
+};
+
+export const getTotalToolsCount = (): number => {
+  return getStaticTotalTools();
 };

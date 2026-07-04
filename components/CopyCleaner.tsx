@@ -508,7 +508,7 @@ export default function CopyCleaner({ locale = 'zh' }: CopyCleanerProps) {
             <Shrink className="h-5 w-5 sm:h-6 sm:w-6" />
           </div>
           <div>
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
+            <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('subtitle')}</p>
           </div>
         </div>
@@ -661,7 +661,7 @@ export default function CopyCleaner({ locale = 'zh' }: CopyCleanerProps) {
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 sm:mb-5">{t('stats')}</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             <div className="p-4 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100/60 dark:from-orange-900/20 dark:to-orange-800/10 border border-orange-100 dark:border-orange-800/30">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-600 dark:text-orange-400 mb-1">
+              <div className="text-lg sm:text-xl font-bold text-orange-600 dark:text-orange-400 mb-1">
                 {stats.repeatLines}
               </div>
               <div className="text-xs sm:text-sm text-orange-700 dark:text-orange-300">
@@ -669,7 +669,7 @@ export default function CopyCleaner({ locale = 'zh' }: CopyCleanerProps) {
               </div>
             </div>
             <div className="p-4 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100/60 dark:from-gray-800/60 dark:to-gray-700/30 border border-gray-200 dark:border-gray-700">
-              <div className="text-2xl sm:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-1">
+              <div className="text-lg sm:text-xl font-bold text-gray-700 dark:text-gray-300 mb-1">
                 {stats.fillerCount}
               </div>
               <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
@@ -677,7 +677,7 @@ export default function CopyCleaner({ locale = 'zh' }: CopyCleanerProps) {
               </div>
             </div>
             <div className="p-4 rounded-xl bg-gradient-to-br from-slate-50 to-slate-100/60 dark:from-slate-800/50 dark:to-slate-700/20 border border-slate-200 dark:border-slate-700">
-              <div className="text-2xl sm:text-3xl font-bold text-slate-600 dark:text-slate-300 mb-1">
+              <div className="text-lg sm:text-xl font-bold text-slate-600 dark:text-slate-300 mb-1">
                 {stats.goldenCount}
               </div>
               <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
@@ -685,7 +685,7 @@ export default function CopyCleaner({ locale = 'zh' }: CopyCleanerProps) {
               </div>
             </div>
             <div className="p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100/60 dark:from-emerald-900/20 dark:to-emerald-800/10 border border-emerald-100 dark:border-emerald-800/30">
-              <div className="text-2xl sm:text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">
+              <div className="text-lg sm:text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">
                 {stats.keptChars}
               </div>
               <div className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-300">

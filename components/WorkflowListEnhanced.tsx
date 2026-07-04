@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useState, useEffect, useMemo } from 'react';
+import { Fragment, useState, useEffect, useMemo, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import {
   Zap,
@@ -35,15 +35,15 @@ import {
   Megaphone,
   FileText,
   ArrowRight,
+  Construction,
 } from 'lucide-react';
 import { usePreferencesStore } from '@/stores/preferences';
-import { workflows } from '@/data/workflows';
+import type { Workflow } from '@/data/workflows';
 import { resolveToolLink, isExternalTool, getToolDisplayLabel } from '@/lib/toolLinks';
 import { translateWorkflow } from '@/lib/workflowTranslations';
 import type { Locale } from '@/lib/workflowTranslations';
-import { tools } from '@/data/tools';
+import type { Tool } from '@/data/tools';
 import WorkflowCreator from './WorkflowCreator';
-import WorkflowCreatorCanvas from './workflow/WorkflowCreatorCanvas';
 import { safeNavigate } from '@/lib/url-whitelist';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
@@ -76,7 +76,6 @@ const translations: Record<string, Record<string, string>> = {
     'stats.completed': '已完成',
     'stats.streak': '连续天数',
     'section.continue': '继续未完成',
-    'section.recommended': '热门推荐',
     'section.recent': '最近使用',
     'section.trigger': '场景触发 · 一键启动',
     'section.apps': '已接入 400+ 应用',
@@ -118,6 +117,7 @@ const translations: Record<string, Record<string, string>> = {
     'trigger.then': '执行动作',
     'trigger.result': '预期产出',
     'apps.more': '查看全部工具 →',
+    'state.loadingMore': '加载中...',
   },
   en: {
     'action.back': 'Back',
@@ -138,7 +138,6 @@ const translations: Record<string, Record<string, string>> = {
     'stats.completed': 'Completed',
     'stats.streak': 'Day Streak',
     'section.continue': 'Continue Where You Left Off',
-    'section.recommended': 'Recommended for You',
     'section.recent': 'Recently Launched',
     'section.trigger': 'Trigger → Action Workflows',
     'section.apps': '400+ Apps Connected',
@@ -180,6 +179,7 @@ const translations: Record<string, Record<string, string>> = {
     'trigger.then': 'Do',
     'trigger.result': 'Result',
     'apps.more': 'Browse all tools →',
+    'state.loadingMore': 'Loading more...',
   },
   hi: {
     'action.back': 'वापस',
@@ -200,7 +200,6 @@ const translations: Record<string, Record<string, string>> = {
     'stats.completed': 'पूर्ण',
     'stats.streak': 'दिन का स्ट्रीक',
     'section.continue': 'जहाँ छोड़ा था वहाँ से जारी रखें',
-    'section.recommended': 'आपके लिए अनुशंसित',
     'section.recent': 'हाल ही में लॉन्च किए गए',
     'section.trigger': 'ट्रिगर → एक्शन वर्कफ़्लो',
     'section.apps': '400+ ऐप्स जुड़े हुए हैं',
@@ -242,6 +241,7 @@ const translations: Record<string, Record<string, string>> = {
     'trigger.then': 'करें',
     'trigger.result': 'परिणाम',
     'apps.more': 'सभी टूल देखें →',
+    'state.loadingMore': 'अधिक लोड हो रहा है...',
   },
   fr: {
     'action.back': 'Retour',
@@ -262,7 +262,6 @@ const translations: Record<string, Record<string, string>> = {
     'stats.completed': 'Terminés',
     'stats.streak': 'Série de Jours',
     'section.continue': 'Reprendre là où vous en étiez',
-    'section.recommended': 'Recommandé pour Vous',
     'section.recent': 'Lancés Récemment',
     'section.trigger': 'Déclencheur → Action',
     'section.apps': '400+ Apps Connectées',
@@ -304,6 +303,7 @@ const translations: Record<string, Record<string, string>> = {
     'trigger.then': 'Action',
     'trigger.result': 'Résultat',
     'apps.more': 'Voir tous les outils →',
+    'state.loadingMore': 'Chargement...',
   },
   es: {
     'action.back': 'Volver',
@@ -324,7 +324,6 @@ const translations: Record<string, Record<string, string>> = {
     'stats.completed': 'Completados',
     'stats.streak': 'Racha de Días',
     'section.continue': 'Continuar donde lo dejaste',
-    'section.recommended': 'Recomendado para Ti',
     'section.recent': 'Lanzados Recientemente',
     'section.trigger': 'Disparador → Acción',
     'section.apps': '400+ Apps Conectadas',
@@ -366,6 +365,7 @@ const translations: Record<string, Record<string, string>> = {
     'trigger.then': 'Acción',
     'trigger.result': 'Resultado',
     'apps.more': 'Ver todas las herramientas →',
+    'state.loadingMore': 'Cargando más...',
   },
   ar: {
     'action.back': 'رجوع',
@@ -386,7 +386,6 @@ const translations: Record<string, Record<string, string>> = {
     'stats.completed': 'مكتمل',
     'stats.streak': 'أيام متتالية',
     'section.continue': 'تابع من حيث توقفت',
-    'section.recommended': 'موصى به لك',
     'section.recent': 'أُطلق مؤخراً',
     'section.trigger': 'محفز → إجراء',
     'section.apps': '+400 تطبيق متصل',
@@ -428,6 +427,7 @@ const translations: Record<string, Record<string, string>> = {
     'trigger.then': 'نفذ',
     'trigger.result': 'النتيجة',
     'apps.more': 'عرض جميع الأدوات →',
+    'state.loadingMore': 'جارٍ تحميل المزيد...',
   },
 };
 
@@ -603,6 +603,50 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   } = usePreferencesStore();
   const t = getT(locale);
 
+  // ============================================================
+  // 懒加载 workflows + tools 两大数组：
+  // SSR/首屏 HTML 不再内联 300KB+workflows + 200KB+tools 大常量，
+  // 水合完成后动态 import，避免 TTFB 飙升到 4~7s。
+  // 变量名故意保持 workflows/tools 不变，下游所有 .filter/.find/.map 零改动。
+  // ============================================================
+  const [workflows, setWorkflows] = useState<Workflow[]>([]);
+  const [tools, setTools] = useState<Tool[]>([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
+  const [loadError, setLoadError] = useState<Error | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        let wfArr: Workflow[] = [];
+        let tlArr: Tool[] = [];
+        try {
+          const [wfMod, toolsMod] = await Promise.all([
+            import('@/data/workflows'),
+            import('@/data/tools'),
+          ]);
+          wfArr = (wfMod.workflows || []) as Workflow[];
+          tlArr = (toolsMod.tools || []) as Tool[];
+        } catch (importErr) {
+          if (typeof window !== 'undefined') {
+            try { console.warn('[workflows] lazy chunk import failed, falling back:', importErr); } catch {}
+          }
+        }
+        if (cancelled) return;
+        setWorkflows(wfArr);
+        setTools(tlArr);
+        setDataLoaded(true);
+      } catch (err) {
+        if (cancelled) return;
+        try { console.error('[workflows] data load critical error:', err); } catch {}
+        setLoadError(err instanceof Error ? err : new Error(String(err)));
+        setWorkflows([]);
+        setTools([]);
+        setDataLoaded(true);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
   const [activeTab, setActiveTab] = useState<TabType>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showCreator, setShowCreator] = useState(false);
@@ -614,9 +658,17 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   const [time, setTime] = useState<TimeFilter>('all');
   const [toolSlugs, setToolSlugs] = useState('');
 
+  const [visibleCount, setVisibleCount] = useState(10);
+  const [sentinelEl, setSentinelEl] = useState<HTMLDivElement | null>(null);
+  const sentinelCallback = useCallback((el: HTMLDivElement | null) => { setSentinelEl(el); }, []);
+
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    setVisibleCount(10);
+  }, [activeTab, searchQuery, difficulty, time, toolSlugs, locale]);
 
   const officialWorkflows = useMemo(
     () => workflows.map((w) => translateWorkflow(w, locale as Locale)),
@@ -735,7 +787,10 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
       w.title.toLowerCase().includes(q) ||
       w.description.toLowerCase().includes(q) ||
       w.tags.some((tt: string) => tt.toLowerCase().includes(q)) ||
-      w.steps.some((s: any) => String(s.title || '').toLowerCase().includes(q))
+      w.steps.some((s: any) =>
+        String(s.title || '').toLowerCase().includes(q) ||
+        String(s.toolSlug || '').toLowerCase().includes(q)
+      )
     );
   };
 
@@ -771,6 +826,24 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   };
 
   const displayedWorkflows = filterByAdvanced(filterBySearch(filterByTab(getAllWorkflows())));
+
+  useEffect(() => {
+    const el = sentinelEl;
+    if (!el) return;
+    if (visibleCount >= displayedWorkflows.length) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setVisibleCount((v) => Math.min(v + 10, displayedWorkflows.length));
+          }
+        }
+      },
+      { root: null, rootMargin: '240px 0px', threshold: 0 },
+    );
+    io.observe(el);
+    return () => { io.disconnect(); };
+  }, [visibleCount, displayedWorkflows.length, sentinelEl]);
 
   const getProgressInfo = (id: string) => {
     const progress = workflowProgress[id];
@@ -884,115 +957,115 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
         </div>
       ) : (
         <>
-          <div className='flex items-center gap-4 mb-4'>
+          <div className='flex items-center gap-2 mb-2.5 sm:mb-3'>
         <a href={`/${locale}`} className='flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#5461A8] dark:hover:text-[#B2BADE] transition-colors'>
-          <ArrowLeft className='h-5 w-5' />
-          <span className='text-sm font-medium'>{t('action.back')}</span>
+          <ArrowLeft className='h-4 w-4' />
+          <span className='text-[11px] sm:text-xs font-medium'>{t('action.back')}</span>
         </a>
       </div>
 
-      <div className='flex items-center justify-between mb-4 sm:mb-6 gap-3 flex-wrap'>
+      <div className='flex items-center justify-between mb-3 sm:mb-5 gap-2.5 flex-wrap'>
         <div>
-          <h1 className='text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1 flex items-center gap-2'>
-            <Sparkles className='w-7 h-7 sm:w-8 sm:h-8 text-[#5461A8]' />
+          <h1 className='text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-gray-100 mb-0.5 sm:mb-1 flex items-center gap-2'>
+            <Sparkles className='w-5 h-5 sm:w-6 sm:h-6 text-[#5461A8]' />
             {t('title')}
           </h1>
-          <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400'>
+          <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400'>
             {t('subtitle')}
           </p>
         </div>
         <div className='flex items-center gap-2'>
           <button
             onClick={() => setShowFilter(true)}
-            className='inline-flex items-center gap-1.5 px-3 sm:px-4 py-2.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium text-xs sm:text-sm rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-[0.98] transition-colors'
+            className='inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium text-[11px] sm:text-xs rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-[0.98] transition-colors'
           >
-            <Filter className='w-4 h-4' />
+            <Filter className='w-3.5 h-3.5' />
             <span className='hidden sm:inline'>{t('action.filter')}</span>
           </button>
           <button
             onClick={() => setShowCreatorCanvas(true)}
-            className='inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 bg-[#5461A8] hover:bg-[#4a579a] text-white font-medium text-sm sm:text-base rounded-xl shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all'
+            className='inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 bg-[#5461A8] hover:bg-[#4a579a] text-white font-medium text-[11px] sm:text-xs rounded-xl shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all'
           >
-            <Layers className='w-5 h-5' />
+            <Layers className='w-4 h-4' />
             {t('action.canvas')}
           </button>
           <button
             onClick={() => setShowCreator(true)}
-            className='inline-flex items-center gap-1.5 px-3 sm:px-4 py-2.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium text-xs sm:text-sm rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-[0.98] transition-colors'
+            className='inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium text-[11px] sm:text-xs rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 active:scale-[0.98] transition-colors'
             title={t('action.listMode')}
           >
-            <List className='w-4 h-4' />
+            <List className='w-3.5 h-3.5' />
             <span className='hidden sm:inline'>{t('action.list')}</span>
           </button>
         </div>
       </div>
 
-      <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 sm:mb-6'>
-        <div className='relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 overflow-hidden'>
+      <div className='grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-4 sm:mb-5'>
+        <div className='relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-2.5 sm:p-3 overflow-hidden'>
           <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]' />
           <div className='flex items-center gap-2 mb-1 pt-0.5'>
-            <div className='w-8 h-8 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
-              <ListTodo className='w-4 h-4 text-[#5461A8] dark:text-[#B2BADE]' />
+            <div className='w-7 h-7 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
+              <ListTodo className='w-3.5 h-3.5 text-[#5461A8] dark:text-[#B2BADE]' />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>
+          <p className='text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100'>
             {officialWorkflows.length + customWorkflows.length}
           </p>
-          <p className='text-xs text-gray-500 dark:text-gray-400'>
+          <p className='text-[11px] text-gray-500 dark:text-gray-400'>
             {t('stats.total')}
           </p>
         </div>
-        <div className='relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 overflow-hidden'>
+        <div className='relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-2.5 sm:p-3 overflow-hidden'>
           <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]/60' />
           <div className='flex items-center gap-2 mb-1 pt-0.5'>
-            <div className='w-8 h-8 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
-              <Clock3 className='w-4 h-4 text-[#5461A8] dark:text-[#B2BADE]' />
+            <div className='w-7 h-7 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
+              <Clock3 className='w-3.5 h-3.5 text-[#5461A8] dark:text-[#B2BADE]' />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>
+          <p className='text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100'>
             {inProgressIds.length}
           </p>
-          <p className='text-xs text-gray-500 dark:text-gray-400'>
+          <p className='text-[11px] text-gray-500 dark:text-gray-400'>
             {t('stats.inProgress')}
           </p>
         </div>
-        <div className='relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 overflow-hidden'>
+        <div className='relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-2.5 sm:p-3 overflow-hidden'>
           <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]' />
           <div className='flex items-center gap-2 mb-1 pt-0.5'>
-            <div className='w-8 h-8 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
-              <CheckCircle2 className='w-4 h-4 text-[#34A89C]' />
+            <div className='w-7 h-7 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
+              <CheckCircle2 className='w-3.5 h-3.5 text-[#34A89C]' />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>
+          <p className='text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100'>
             {workflowStats.totalCompleted}
           </p>
-          <p className='text-xs text-gray-500 dark:text-gray-400'>
+          <p className='text-[11px] text-gray-500 dark:text-gray-400'>
             {t('stats.completed')}
           </p>
         </div>
-        <div className='relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 overflow-hidden'>
+        <div className='relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-2.5 sm:p-3 overflow-hidden'>
           <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]/60' />
           <div className='flex items-center gap-2 mb-1 pt-0.5'>
-            <div className='w-8 h-8 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
-              <Flame className='w-4 h-4 text-[#5461A8] dark:text-[#B2BADE]' />
+            <div className='w-7 h-7 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
+              <Flame className='w-3.5 h-3.5 text-[#5461A8] dark:text-[#B2BADE]' />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>
+          <p className='text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100'>
             {workflowStats.streakDays}
           </p>
-          <p className='text-xs text-gray-500 dark:text-gray-400'>
+          <p className='text-[11px] text-gray-500 dark:text-gray-400'>
             {t('stats.streak')}
           </p>
         </div>
       </div>
 
       {/* ===== A) Trigger-Action 场景卡（Zapier 风格） ===== */}
-      <div className='mb-6 sm:mb-7'>
-        <h2 className='text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2'>
-          <Zap className='w-5 h-5 text-yellow-500' />
+      <div className='mb-5 sm:mb-6'>
+        <h2 className='text-[13px] sm:text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2 sm:mb-2.5 flex items-center gap-2'>
+          <Zap className='w-4 h-4 text-yellow-500' />
           {t('section.trigger')}
         </h2>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3'>
           {triggerTemplates.map((tr, idx) => {
             const wf = officialWorkflows.find(w => w.id === tr.workflowIds[0]);
             const href = wf ? `/${locale}/workflow/${wf.slug}` : `/${locale}/workflows`;
@@ -1001,33 +1074,33 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                 key={idx}
                 href={href}
                 onClick={() => triggerWf(tr.workflowIds)}
-                className='group relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md hover:-translate-y-0.5 transition-all overflow-hidden'
+                className='group relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md hover:-translate-y-0.5 transition-all overflow-hidden'
               >
                 <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]' />
                 <div className='relative pt-0.5'>
                   <div className='flex items-center gap-2 mb-3'>
-                    <span className='inline-flex items-center gap-1 px-2 py-1 rounded-full text-[11px] font-semibold text-white bg-[#5461A8] shadow-sm'>
+                    <span className='inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold text-white bg-[#5461A8] shadow-sm'>
                       {t('trigger.when')}
                     </span>
-                    <span className='text-sm font-medium text-gray-800 dark:text-gray-200 line-clamp-1'>{tr.trigger}</span>
+                    <span className='text-[11px] font-medium text-gray-800 dark:text-gray-200 line-clamp-1'>{tr.trigger}</span>
                   </div>
                   <div className='flex items-start gap-2 mb-3'>
-                    <div className='w-8 h-8 flex-shrink-0 rounded-lg bg-[#34A89C] flex items-center justify-center text-white shadow-sm'>
-                      <ArrowRight className='w-4 h-4' />
+                    <div className='w-7 h-7 flex-shrink-0 rounded-lg bg-[#34A89C] flex items-center justify-center text-white shadow-sm'>
+                      <ArrowRight className='w-3.5 h-3.5' />
                     </div>
                     <div className='min-w-0 flex-1'>
-                      <div className='text-[11px] text-gray-500 dark:text-gray-400 mb-0.5'>{t('trigger.then')}</div>
-                      <div className='text-sm font-semibold text-gray-900 dark:text-gray-100 line-clamp-2'>{tr.action}</div>
+                      <div className='text-[10px] text-gray-500 dark:text-gray-400 mb-0.5'>{t('trigger.then')}</div>
+                      <div className='text-[11px] font-semibold text-gray-900 dark:text-gray-100 line-clamp-2'>{tr.action}</div>
                     </div>
                   </div>
-                  <div className='mb-3 pl-10'>
-                    <div className='text-[11px] text-gray-500 dark:text-gray-400 mb-0.5'>{t('trigger.result')}</div>
-                    <div className='text-xs text-gray-600 dark:text-gray-300 line-clamp-2'>{tr.result}</div>
+                  <div className='mb-3 pl-9'>
+                    <div className='text-[10px] text-gray-500 dark:text-gray-400 mb-0.5'>{t('trigger.result')}</div>
+                    <div className='text-[11px] leading-relaxed text-gray-600 dark:text-gray-300 line-clamp-2'>{tr.result}</div>
                   </div>
-                  <div className='flex items-center justify-between pl-10'>
-                    <span className='inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold text-white bg-[#5461A8] shadow-sm hover:bg-[#4a579a] hover:scale-105 active:scale-[0.98] transition-all'>
+                  <div className='flex items-center justify-between pl-9'>
+                    <span className='inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-semibold text-white bg-[#5461A8] shadow-sm hover:bg-[#4a579a] hover:scale-105 active:scale-[0.98] transition-all'>
                       {t('action.launch')}
-                      <ChevronRight className='w-3 h-3 group-hover:translate-x-0.5 transition-transform' />
+                      <ChevronRight className='w-2.5 h-2.5 group-hover:translate-x-0.5 transition-transform' />
                     </span>
                     {wf && (
                       <div className='text-[10px] text-gray-400 dark:text-gray-500'>
@@ -1043,18 +1116,18 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
       </div>
 
       {/* ===== E) 顶部横滑 30 个国民 App / 工具 引流条 ===== */}
-      <div className='mb-6 sm:mb-7'>
-        <div className='flex items-center justify-between mb-3'>
-          <h2 className='text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2'>
-            <Cpu className='w-5 h-5 text-[#5461A8]' />
+      <div className='mb-5 sm:mb-6'>
+        <div className='flex items-center justify-between mb-2 sm:mb-2.5'>
+          <h2 className='text-[13px] sm:text-sm font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2'>
+            <Cpu className='w-4 h-4 text-[#5461A8]' />
             {t('section.apps')}
           </h2>
-          <a href={`/${locale}`} className='text-xs sm:text-sm font-medium text-[#5461A8] dark:text-[#B2BADE] hover:text-[#4a579a] dark:hover:text-[#D9DCF0] flex items-center gap-1'>
+          <a href={`/${locale}`} className='text-[11px] sm:text-xs font-medium text-[#5461A8] dark:text-[#B2BADE] hover:text-[#4a579a] dark:hover:text-[#D9DCF0] flex items-center gap-1'>
             {t('apps.more')}
-            <ChevronRight className='w-3 h-3' />
+            <ChevronRight className='w-2.5 h-2.5' />
           </a>
         </div>
-        <div className='flex gap-2 sm:gap-3 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide'>
+        <div className='flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide'>
           {topApps.map(tl => {
             const Icon = iconMap['Zap'] || Zap;
             return (
@@ -1063,13 +1136,13 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                 href={resolveToolLink(tl.id, locale).url}
                 target={isExternalTool(tl.id) ? '_blank' : undefined}
                 rel={isExternalTool(tl.id) ? 'noopener noreferrer' : undefined}
-                className='flex-shrink-0 w-20 sm:w-24 flex flex-col items-center gap-2 p-2 sm:p-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md hover:-translate-y-0.5 transition-all group'
+                className='flex-shrink-0 w-18 sm:w-22 flex flex-col items-center gap-1.5 p-1.5 sm:p-2 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md hover:-translate-y-0.5 transition-all group'
                 title={tl.name}
               >
-                <div className='w-10 h-10 sm:w-11 sm:h-11 rounded-lg flex items-center justify-center bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#34A89C] group-hover:scale-110 transition-transform'>
-                  <Icon className='w-5 h-5 sm:w-6 sm:h-6' />
+                <div className='w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#34A89C] group-hover:scale-110 transition-transform'>
+                  <Icon className='w-4 h-4 sm:w-5 sm:h-5' />
                 </div>
-                <span className='text-[11px] sm:text-xs font-medium text-gray-700 dark:text-gray-300 text-center line-clamp-2 leading-tight'>
+                <span className='text-[10px] sm:text-[11px] font-medium text-gray-700 dark:text-gray-300 text-center line-clamp-2 leading-tight'>
                   {tl.name}
                 </span>
               </a>
@@ -1079,12 +1152,12 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
       </div>
 
       {inProgressIds.length > 0 && (
-        <div className='mb-5 sm:mb-6'>
-          <h2 className='text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2'>
-            <Clock3 className='w-5 h-5 text-blue-500' />
+        <div className='mb-4 sm:mb-5'>
+          <h2 className='text-[13px] sm:text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2 sm:mb-2.5 flex items-center gap-2'>
+            <Clock3 className='w-4 h-4 text-blue-500' />
             {t('section.continue')}
           </h2>
-          <div className='flex gap-3 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide'>
+          <div className='flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide'>
             {getAllWorkflows()
               .filter(w => inProgressIds.includes(w.id))
               .slice(0, 5)
@@ -1098,34 +1171,34 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                   <a
                     key={workflow.id}
                     href={detailUrl}
-                    className='relative flex-shrink-0 w-64 sm:w-72 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:shadow-md hover:-translate-y-0.5 transition-all group overflow-hidden'
+                    className='relative flex-shrink-0 w-64 sm:w-72 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 hover:shadow-md hover:-translate-y-0.5 transition-all group overflow-hidden'
                   >
                     <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]' />
-                    <div className='flex items-center gap-3 mb-2 pt-0.5'>
-                      <div className='p-2 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#5461A8] dark:text-[#B2BADE]'>
-                        <Icon className='w-5 h-5' />
+                    <div className='flex items-center gap-2 mb-1.5 pt-0.5'>
+                      <div className='p-1.5 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#5461A8] dark:text-[#B2BADE]'>
+                        <Icon className='w-4 h-4' />
                       </div>
                       <div className='min-w-0 flex-1'>
-                        <h3 className='font-semibold text-gray-900 dark:text-gray-100 text-sm truncate group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] transition-colors'>
+                        <h3 className='font-semibold text-gray-900 dark:text-gray-100 text-[11px] sm:text-xs truncate group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] transition-colors'>
                           {workflow.title}
                         </h3>
                       </div>
                     </div>
-                    <div className='mb-2'>
-                      <div className='flex justify-between text-xs mb-1'>
+                    <div className='mb-1.5'>
+                      <div className='flex justify-between text-[11px] mb-0.5'>
                         <span className='text-gray-600 dark:text-gray-400'>{t('label.progress')}</span>
                         <span className='font-medium text-[#5461A8] dark:text-[#B2BADE]'>{progress?.percent || 0}%</span>
                       </div>
-                      <div className='h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden'>
+                      <div className='h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden'>
                         <div
                           className='h-full bg-[#5461A8] rounded-full transition-all'
                           style={{ width: `${progress?.percent || 0}%` }}
                         />
                       </div>
                     </div>
-                    <div className='flex items-center gap-1 text-xs text-[#5461A8] dark:text-[#B2BADE] font-medium'>
+                    <div className='flex items-center gap-1 text-[11px] text-[#5461A8] dark:text-[#B2BADE] font-medium'>
                       {t('action.continue')}
-                      <ChevronRight className='w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform' />
+                      <ChevronRight className='w-3 h-3 group-hover:translate-x-0.5 transition-transform' />
                     </div>
                   </a>
                 );
@@ -1135,13 +1208,13 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
       )}
 
       {/* ===== D) 最近启动 MRU 条 ===== */}
-      <div className='mb-5 sm:mb-6'>
-        <h2 className='text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2'>
-          <RotateCcw className='w-5 h-5 text-green-500' />
+      <div className='mb-4 sm:mb-5'>
+        <h2 className='text-[13px] sm:text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2 sm:mb-2.5 flex items-center gap-2'>
+          <RotateCcw className='w-4 h-4 text-green-500' />
           {t('section.recent')}
         </h2>
         {recentWorkflows.length > 0 ? (
-          <div className='flex gap-3 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide'>
+          <div className='flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide'>
             {recentWorkflows.map((workflow) => {
               const Icon = iconMap[workflow.icon] || Zap;
               const progress = getProgressInfo(workflow.id);
@@ -1153,24 +1226,24 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                   key={workflow.id}
                   href={detailUrl}
                   onClick={() => handleStartWorkflow(workflow)}
-                  className='relative flex-shrink-0 w-56 sm:w-64 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md transition-all group overflow-hidden'
+                  className='relative flex-shrink-0 w-56 sm:w-64 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md transition-all group overflow-hidden'
                 >
                   <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]/80' />
-                  <div className='flex items-center gap-3 mb-2 pt-0.5'>
-                    <div className='p-2 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#34A89C]'>
-                      <Icon className='w-5 h-5' />
+                  <div className='flex items-center gap-2 mb-1.5 pt-0.5'>
+                    <div className='p-1.5 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#34A89C]'>
+                      <Icon className='w-4 h-4' />
                     </div>
                     <div className='min-w-0 flex-1'>
-                      <h3 className='font-semibold text-gray-900 dark:text-gray-100 text-xs sm:text-sm truncate group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] transition-colors'>
+                      <h3 className='font-semibold text-gray-900 dark:text-gray-100 text-[11px] sm:text-xs truncate group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] transition-colors'>
                         {workflow.title}
                       </h3>
                     </div>
                   </div>
-                  <p className='text-[11px] text-gray-500 dark:text-gray-400 line-clamp-2 mb-2 min-h-[32px]'>
+                  <p className='text-[11px] text-gray-500 dark:text-gray-400 line-clamp-2 mb-1.5 min-h-[32px]'>
                     {workflow.description}
                   </p>
                   <div className='flex items-center justify-between'>
-                    <div className='flex items-center gap-2 text-[11px] text-gray-400 dark:text-gray-500'>
+                    <div className='flex items-center gap-1.5 text-[11px] text-gray-400 dark:text-gray-500'>
                       <Clock className='w-3 h-3' />
                       {workflow.estimatedTime}
                     </div>
@@ -1185,70 +1258,28 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
             })}
           </div>
         ) : (
-          <div className='rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 p-5 text-center'>
-            <div className='inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400'>
-              <RotateCcw className='w-4 h-4' />
+          <div className='rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 p-4 text-center'>
+            <div className='inline-flex items-center gap-1.5 text-[11px] sm:text-xs text-gray-500 dark:text-gray-400'>
+              <RotateCcw className='w-3.5 h-3.5' />
               <span>{t('empty.recent')}</span>
             </div>
           </div>
         )}
       </div>
 
-      {workflowStats.totalCompleted === 0 && activeTab === 'all' && !searchQuery && difficulty === 'all' && time === 'all' && !toolSlugs && (
-        <div className='mb-5 sm:mb-6'>
-          <h2 className='text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2'>
-            <Sparkles className='w-5 h-5 text-yellow-500' />
-            {t('section.recommended')}
-          </h2>
-          <div className='flex gap-3 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide'>
-            {officialWorkflows.slice(0, 4).map((workflow) => {
-              const Icon = iconMap[workflow.icon] || Zap;
-              return (
-                <a
-                  key={workflow.id}
-                  href={`/${locale}/workflow/${workflow.slug}`}
-                  onClick={() => handleStartWorkflow(workflow)}
-                  className='relative flex-shrink-0 w-56 sm:w-64 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md transition-all group overflow-hidden'
-                >
-                  <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]' />
-                  <div className='flex items-center gap-3 mb-2 pt-0.5'>
-                    <div className='p-2 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#5461A8] dark:text-[#B2BADE]'>
-                      <Icon className='w-5 h-5' />
-                    </div>
-                    <h3 className='font-semibold text-gray-900 dark:text-gray-100 text-sm truncate group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] transition-colors flex-1'>
-                      {workflow.title}
-                    </h3>
-                  </div>
-                  <p className='text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-2'>
-                    {workflow.description}
-                  </p>
-                  <div className='flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500'>
-                    <Clock className='w-3 h-3' />
-                    {workflow.estimatedTime}
-                    <span className='mx-1'>·</span>
-                    <ListTodo className='w-3 h-3' />
-                    {workflow.steps.length} {t('label.steps')}
-                  </div>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      <div className='relative mb-4 sm:mb-5'>
-        <Search className='absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400' />
+      <div className='relative mb-3 sm:mb-4'>
+        <Search className='absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400' />
         <input
           type='text'
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder={t('placeholder.search')}
-          className='w-full pl-12 pr-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5461A8]/40 focus:border-[#5461A8]/60 transition-all'
+          className='w-full pl-10 pr-3 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-[11px] sm:text-xs text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5461A8]/40 focus:border-[#5461A8]/60 transition-all'
         />
       </div>
 
       {/* ===== C) 角色 Persona Tabs ===== */}
-      <div className='flex flex-col sm:flex-row sm:items-start gap-3 mb-4 sm:mb-5'>
+      <div className='flex flex-col sm:flex-row sm:items-start gap-2.5 mb-3 sm:mb-4'>
         <div className='flex gap-2 overflow-x-auto pb-1 scrollbar-hide -mx-1 px-1 flex-1'>
           {PERSONA_TABS.map((tab) => {
             const active = activeTab === tab.key;
@@ -1256,13 +1287,13 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-all border ${
+                className={`flex items-center gap-1 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-medium whitespace-nowrap transition-all border ${
                   active
                     ? 'bg-[#5461A8] text-white border-[#5461A8] shadow-sm shadow-[#5461A8]/30'
                     : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60'
                 }`}
               >
-                <tab.icon className={`w-4 h-4 ${active ? 'text-white' : tab.color}`} />
+                <tab.icon className={`w-3.5 h-3.5 ${active ? 'text-white' : tab.color}`} />
                 {t(tab.labelKey)}
               </button>
             );
@@ -1275,13 +1306,13 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-all border ${
+                className={`flex items-center gap-1 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-medium whitespace-nowrap transition-all border ${
                   active
                     ? 'bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100 shadow-lg shadow-gray-900/25 dark:shadow-gray-100/25'
                     : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'
                 }`}
               >
-                <tab.icon className='w-4 h-4' />
+                <tab.icon className='w-3.5 h-3.5' />
                 {t(tab.labelKey)}
               </button>
             );
@@ -1289,9 +1320,49 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
         </div>
       </div>
 
-      {displayedWorkflows.length > 0 ? (
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-          {displayedWorkflows.flatMap((workflow, idx) => {
+      {/* 骨架屏：首屏不依赖 workflows/tools 两大数组，显示 shimmer，避免 HTML 内联 500KB+ 大常量 */}
+      {!dataLoaded && (
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mt-1' aria-hidden='true'>
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className='group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 flex flex-col animate-pulse min-h-[260px]'>
+              <div className='flex items-start justify-between gap-2.5 mb-2.5'>
+                <div className='flex items-center gap-2.5 min-w-0 flex-1'>
+                  <div className='p-2 sm:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 w-10 h-10 sm:w-11 sm:h-11' />
+                  <div className='min-w-0 flex-1 space-y-1.5'>
+                    <div className='flex items-center gap-1.5'>
+                      <div className='h-3.5 w-12 bg-gray-100 dark:bg-gray-700 rounded-full' />
+                      <div className='h-3.5 w-10 bg-gray-100 dark:bg-gray-700 rounded-full' />
+                    </div>
+                    <div className='h-4 w-4/5 bg-gray-200 dark:bg-gray-700 rounded' />
+                  </div>
+                </div>
+                <div className='w-6 h-6 bg-gray-100 dark:bg-gray-700 rounded-lg' />
+              </div>
+              <div className='h-3 w-full bg-gray-200 dark:bg-gray-700 rounded mb-1' />
+              <div className='h-3 w-3/4 bg-gray-200 dark:bg-gray-700 rounded mb-2.5' />
+              <div className='space-y-1 mb-2.5'>
+                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
+                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
+                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
+                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
+                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
+              </div>
+              <div className='flex items-center justify-between mt-auto pt-2.5 border-t border-gray-100 dark:border-gray-700/50 gap-2.5'>
+                <div className='flex items-center gap-1.5'>
+                  <div className='h-4 w-4 bg-gray-100 dark:bg-gray-700 rounded' />
+                  <div className='h-3 w-14 bg-gray-100 dark:bg-gray-700 rounded' />
+                </div>
+                <div className='h-6 w-16 bg-gray-100 dark:bg-gray-700 rounded-full' />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {dataLoaded && displayedWorkflows.length > 0 ? (
+        <>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3'>
+          {displayedWorkflows.slice(0, visibleCount).flatMap((workflow, idx) => {
             const Icon = iconMap[workflow.icon] || Zap;
             const progress = getProgressInfo(workflow.id);
             const detailUrl = workflow.isCustom
@@ -1302,10 +1373,10 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
               <a
                 key={workflow.id}
                 href={detailUrl}
-                className='group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md transition-all cursor-pointer relative overflow-hidden flex flex-col'
+                className='group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 hover:border-[#5461A8]/40 dark:hover:border-[#5461A8]/60 hover:shadow-md transition-all cursor-pointer relative overflow-hidden flex flex-col'
               >
                 {progress && !progress.isComplete && progress.percent > 0 && (
-                  <div className='absolute top-0 left-0 right-0 h-1 bg-gray-100 dark:bg-gray-700'>
+                  <div className='absolute top-0 left-0 right-0 h-0.5 bg-gray-100 dark:bg-gray-700'>
                     <div
                       className='h-full bg-[#5461A8] transition-all'
                       style={{ width: `${progress.percent}%` }}
@@ -1313,26 +1384,26 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                   </div>
                 )}
                 {progress && progress.isComplete && (
-                  <div className='absolute top-0 left-0 right-0 h-1 bg-[#34A89C]' />
+                  <div className='absolute top-0 left-0 right-0 h-0.5 bg-[#34A89C]' />
                 )}
 
-                <div className='flex items-start justify-between gap-3 mb-3'>
-                  <div className='flex items-center gap-3 min-w-0 flex-1'>
-                    <div className='p-2.5 sm:p-3 rounded-xl bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#5461A8] dark:text-[#B2BADE] flex-shrink-0 group-hover:scale-110 transition-transform'>
-                      <Icon className='w-5 h-5 sm:w-6 sm:h-6' />
+                <div className='flex items-start justify-between gap-2.5 mb-2.5'>
+                  <div className='flex items-center gap-2.5 min-w-0 flex-1'>
+                    <div className='p-2 sm:p-2.5 rounded-xl bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#5461A8] dark:text-[#B2BADE] flex-shrink-0 group-hover:scale-110 transition-transform'>
+                      <Icon className='w-4 h-4 sm:w-5 sm:h-5' />
                     </div>
                     <div className='min-w-0 flex-1'>
                       <div className='flex items-center gap-1.5 mb-0.5 flex-wrap'>
                         {workflow.isCustom && (
-                          <span className='text-xs px-1.5 py-0.5 rounded bg-[#F5F6FB] dark:bg-[#3a406a]/40 text-[#5461A8] dark:text-[#B2BADE] font-medium'>
+                          <span className='text-[10px] px-1.5 py-0.5 rounded bg-[#F5F6FB] dark:bg-[#3a406a]/40 text-[#5461A8] dark:text-[#B2BADE] font-medium'>
                             {t('label.mine')}
                           </span>
                         )}
-                        <span className={`text-xs px-1.5 py-0.5 rounded font-medium ${getDifficultyStyle(workflow.difficulty)}`}>
+                        <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${getDifficultyStyle(workflow.difficulty)}`}>
                           {t(`difficulty.${workflow.difficulty}`)}
                         </span>
                       </div>
-                      <h3 className='font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] transition-colors truncate text-sm sm:text-base'>
+                      <h3 className='font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] transition-colors truncate text-xs sm:text-sm'>
                         {workflow.title}
                       </h3>
                     </div>
@@ -1343,28 +1414,28 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                       e.stopPropagation();
                       toggleWorkflowFavorite(workflow.id);
                     }}
-                    className={`p-1.5 rounded-lg transition-all flex-shrink-0 ${
+                    className={`p-1 rounded-lg transition-all flex-shrink-0 ${
                       isFavorite(workflow.id)
                         ? 'text-yellow-500'
                         : 'text-gray-300 dark:text-gray-600 hover:text-yellow-500'
                     }`}
                   >
-                    <Star className={`w-4 h-4 sm:w-5 sm:h-5 ${isFavorite(workflow.id) ? 'fill-current' : ''}`} />
+                    <Star className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${isFavorite(workflow.id) ? 'fill-current' : ''}`} />
                   </button>
                 </div>
 
-                <p className='text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2 min-h-[40px]'>
+                <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 mb-2.5 line-clamp-2 min-h-[32px] leading-relaxed'>
                   {workflow.description}
                 </p>
 
                 {/* ===== B) 5 步可打勾 + 跳工具页 ===== */}
-                <div className='mb-3 space-y-1.5'>
+                <div className='mb-2.5 space-y-1'>
                   {workflow.steps.slice(0, 5).map((step: any, i: number) => {
                     const done = completedSet.has(i);
                     return (
                       <div
                         key={i}
-                        className={`flex items-center gap-2 p-2 rounded-lg transition-colors ${
+                        className={`flex items-center gap-2 p-1.5 rounded-lg transition-colors ${
                           done
                             ? 'bg-[#E8F4F2] dark:bg-[#2a4a46]/30'
                             : 'bg-gray-50 dark:bg-gray-900/40 hover:bg-gray-100 dark:hover:bg-gray-800'
@@ -1373,16 +1444,16 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                         <button
                           onClick={(e) => handleToggleStep(e, workflow.id, i, workflow.steps.length)}
                           title={t('label.completeStep')}
-                          className={`flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all active:scale-90 ${
+                          className={`flex-shrink-0 w-[18px] h-[18px] rounded-full border-2 flex items-center justify-center transition-all active:scale-90 ${
                             done
                               ? 'bg-[#34A89C] border-[#34A89C] text-white'
                               : 'border-gray-300 dark:border-gray-600 hover:border-[#5461A8] dark:hover:border-[#5461A8]'
                           }`}
                         >
-                          {done ? <CheckCircle className='w-3.5 h-3.5' /> : <Circle className='w-3 h-3 text-transparent group-hover:text-gray-300 dark:group-hover:text-gray-600' />}
+                          {done ? <CheckCircle className='w-3 h-3' /> : <Circle className='w-2.5 h-2.5 text-transparent group-hover:text-gray-300 dark:group-hover:text-gray-600' />}
                         </button>
                         <div className='min-w-0 flex-1'>
-                          <div className={`text-xs font-medium truncate ${done ? 'text-[#34A89C] dark:text-[#74c5bc] line-through' : 'text-gray-800 dark:text-gray-200'}`}>
+                          <div className={`text-[11px] sm:text-xs font-medium truncate ${done ? 'text-[#34A89C] dark:text-[#74c5bc] line-through' : 'text-gray-800 dark:text-gray-200'}`}>
                             <span className='text-gray-400 dark:text-gray-500 mr-1'>{i + 1}.</span>
                             {step.title}
                           </div>
@@ -1396,13 +1467,13 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                             safeNavigate(link.url, link.type === 'external' ? '_blank' : undefined);
                           }}
                           title={`${t('label.openTool')}: ${getToolDisplayLabel(step.toolSlug) || step.toolSlug}${isExternalTool(step.toolSlug) ? '（外部）' : ''}`}
-                          className={`flex-shrink-0 inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-medium transition-colors ${
+                          className={`flex-shrink-0 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md text-[10px] font-medium transition-colors h-[18px] ${
                             isExternalTool(step.toolSlug)
                               ? 'text-[#34A89C] hover:bg-[#E8F4F2] dark:hover:bg-[#2a4a46]/30'
                               : 'text-[#5461A8] dark:text-[#B2BADE] hover:bg-[#F5F6FB] dark:hover:bg-[#3a406a]/30'
                           }`}
                         >
-                          <ArrowRight className='w-3 h-3' />
+                          <ArrowRight className='w-2.5 h-2.5' />
                         </button>
                       </div>
                     );
@@ -1414,29 +1485,29 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                   )}
                 </div>
 
-                <div className='flex items-center justify-between mt-auto pt-2 border-t border-gray-100 dark:border-gray-700/50'>
-                  <div className='flex items-center gap-2 sm:gap-3 text-xs text-gray-500 dark:text-gray-400'>
-                    <span className='flex items-center gap-1'>
-                      <Clock className='w-3.5 h-3.5' />
+                <div className='flex items-center justify-between mt-2.5 pt-2.5 border-t border-gray-100 dark:border-gray-700/50 gap-2.5'>
+                  <div className='flex items-center gap-2.5 text-[11px] text-gray-500 dark:text-gray-400 flex-wrap'>
+                    <span className='flex items-center gap-0.5'>
+                      <Clock className='w-3 h-3' />
                       {workflow.estimatedTime}
                     </span>
-                    <span className='flex items-center gap-1'>
-                      <ListTodo className='w-3.5 h-3.5' />
+                    <span className='flex items-center gap-0.5'>
+                      <ListTodo className='w-3 h-3' />
                       {workflow.steps.length} {t('label.steps')}
                     </span>
                     {progress && !progress.isComplete && progress.percent > 0 && (
-                      <span className='flex items-center gap-1 text-[#5461A8] dark:text-[#B2BADE] font-medium'>
+                      <span className='flex items-center gap-0.5 text-[#5461A8] dark:text-[#B2BADE] font-medium'>
                         {progress.percent}%
                       </span>
                     )}
                     {progress?.isComplete && (
-                      <span className='flex items-center gap-1 text-[#34A89C] font-medium'>
-                        <CheckCircle2 className='w-3.5 h-3.5' />
+                      <span className='flex items-center gap-0.5 text-[#34A89C] font-medium'>
+                        <CheckCircle2 className='w-3 h-3' />
                         {t('label.done')}
                       </span>
                     )}
                   </div>
-                  <ChevronRight className='w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] group-hover:translate-x-0.5 transition-all' />
+                  <ChevronRight className='w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 group-hover:text-[#5461A8] dark:group-hover:text-[#B2BADE] group-hover:translate-x-0.5 transition-all flex-shrink-0' />
                 </div>
               </a>
             );
@@ -1444,23 +1515,34 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
             if (idx === 2) {
               return [
                 card,
-                <Fragment key="wf-infeed-ad-1">
-                  <div className="contents">
-                    <AdSlot
-                      slot="workflows-infeed-1"
-                      size="in-feed"
-                      closable
-                      showPlaceholder
-                    />
-                  </div>
-                </Fragment>,
+                <AdSlot
+                  key="wf-infeed-ad-1"
+                  slot="workflows-infeed-1"
+                  size="in-feed"
+                  closable
+                  showPlaceholder
+                />,
               ];
             }
             return [card];
           })}
         </div>
-      ) : (
-        <div className='text-center py-12 sm:py-16'>
+        {visibleCount < displayedWorkflows.length && (
+          <>
+            <div ref={sentinelCallback} className='h-4 w-full' aria-hidden='true' />
+            <div className='flex justify-center pt-2 pb-2 mt-5 sm:mt-6'>
+              <div className='flex items-center gap-2 text-[11px] sm:text-xs text-gray-500 dark:text-gray-400'>
+                <div className='h-4 w-4 rounded-full border-2 border-gray-300 dark:border-gray-600 border-t-[#5461A8] dark:border-t-[#B2BADE] animate-spin' />
+                <span>{t('state.loadingMore')} ({visibleCount} / {displayedWorkflows.length})</span>
+              </div>
+            </div>
+          </>
+        )}
+        </>
+      ) : null}
+
+      {dataLoaded && displayedWorkflows.length === 0 && (
+        <div className='text-center py-6 sm:p-8'>
           <div className='w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>
             {activeTab === 'mine' ? (
               <FolderPlus className='w-8 h-8 sm:w-10 sm:h-10 text-gray-400' />
@@ -1472,7 +1554,18 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
               <Search className='w-8 h-8 sm:w-10 sm:h-10 text-gray-400' />
             )}
           </div>
-          <p className='text-gray-500 dark:text-gray-400 mb-4 text-sm sm:text-base'>
+          <h2 className='text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1.5'>
+            {activeTab === 'mine'
+              ? t('empty.mine')
+              : activeTab === 'favorites'
+              ? t('empty.favorites')
+              : activeTab === 'completed'
+              ? t('empty.completed')
+              : activeTab === 'inprogress'
+              ? t('empty.inProgress')
+              : t('empty.all')}
+          </h2>
+          <p className='text-[11px] sm:text-xs text-gray-500 dark:text-gray-400 mb-4'>
             {activeTab === 'mine'
               ? t('empty.mine')
               : activeTab === 'favorites'
@@ -1486,7 +1579,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
           {(difficulty !== 'all' || time !== 'all' || toolSlugs) && (
             <button
               onClick={resetFilters}
-              className='inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-sm font-medium rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors mb-3'
+              className='inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-[11px] sm:text-xs font-medium rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors mb-3'
             >
               <RotateCcw className='w-4 h-4' />
               {t('action.reset')}
@@ -1495,7 +1588,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
           {activeTab === 'mine' && (
             <button
               onClick={() => setShowCreatorCanvas(true)}
-              className='inline-flex items-center gap-2 px-4 py-2 bg-[#5461A8] text-white text-sm font-medium rounded-xl hover:bg-[#4a579a] transition-colors'
+              className='inline-flex items-center gap-2 px-4 py-2 bg-[#5461A8] text-white text-[11px] sm:text-xs font-medium rounded-xl hover:bg-[#4a579a] transition-colors'
             >
               <Layers className='w-4 h-4' />
               {t('action.createFirst')}
@@ -1621,13 +1714,176 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
       )}
 
       {showCreatorCanvas && (
-        <WorkflowCreatorCanvas
+        <CanvasComingSoonModal
           locale={locale}
           onClose={() => setShowCreatorCanvas(false)}
         />
       )}
         </>
       )}
+    </div>
+  );
+}
+
+const COMING_SOON: Record<string, Record<string, string>> = {
+  zh: {
+    title: '新建画布功能 · 即将上线',
+    subtitle: '拖拽式画布编排、节点连线、模板生成、AI 自动构建正在紧锣密鼓开发中',
+    eta: '预计上线：2026 年 Q3',
+    feature1: '🎯 拖拽式画布：零代码编排复杂工作流',
+    feature2: '🔗 节点自动连线：智能锚点对齐 + 贝塞尔曲线',
+    feature3: '🧠 AI 智能生成：一句话描述自动生成完整流程',
+    feature4: '📦 50+ 模板市场：行业模板一键导入复用',
+    close: '知道了，返回列表',
+  },
+  en: {
+    title: 'Canvas Editor · Coming Soon',
+    subtitle: 'Drag-and-drop canvas editor, node connection lines, templates, AI workflow builder are in development',
+    eta: 'ETA: Q3 2026',
+    feature1: '🎯 Drag & Drop Canvas: Build complex workflows with zero code',
+    feature2: '🔗 Auto Connection Lines: Smart anchor align + bezier curves',
+    feature3: '🧠 AI Generator: Describe in one sentence, auto-build the flow',
+    feature4: '📦 50+ Templates: Industry-ready templates ready to import',
+    close: 'Got it, back to list',
+  },
+  hi: {
+    title: 'कैनवास एडिटर · जल्द आ रहा है',
+    subtitle: 'ड्रैग एंड ड्रॉप कैनवास, नोड कनेक्शन, टेम्पलेट्स, AI जनरेटर विकास में हैं',
+    eta: 'लॉन्च: Q3 2026',
+    feature1: '🎯 ड्रैग एंड ड्रॉप कैनवास: बिना कोड के जटिल वर्कफ़्लो बनाएं',
+    feature2: '🔗 ऑटो कनेक्शन लाइन्स: स्मार्ट एंकर + बेजियर कर्व्स',
+    feature3: '🧠 AI जनरेटर: एक वाक्य में वर्णन करें, फ्लो अपने आप बनेगा',
+    feature4: '📦 50+ टेम्पलेट्स: उद्योग के तैयार टेम्पलेट्स इम्पोर्ट करें',
+    close: 'ठीक है, सूची पर वापस जाएं',
+  },
+  fr: {
+    title: 'Éditeur Canevas · Bientôt disponible',
+    subtitle: 'Éditeur glisser-déposer, connexions entre nœuds, templates et générateur IA en développement',
+    eta: 'Disponible : T3 2026',
+    feature1: '🎯 Canevas Glisser-Déposer : Créez des workflows complexes sans code',
+    feature2: '🔗 Connexions Auto : Ancrages intelligents + courbes de Bézier',
+    feature3: '🧠 Générateur IA : Décrivez en une phrase, le workflow se crée seul',
+    feature4: '📦 50+ Templates : Templates prêts à l\'emploi à importer',
+    close: 'Compris, retour à la liste',
+  },
+  es: {
+    title: 'Editor de Lienzo · Próximamente',
+    subtitle: 'Editor de arrastrar y soltar, conexiones, plantillas y generador IA en desarrollo',
+    eta: 'Fecha: Q3 2026',
+    feature1: '🎯 Lienzo Arrastrar-Soltar: Crea flujos complejos sin código',
+    feature2: '🔗 Conexiones Auto: Anclajes inteligentes + curvas Bézier',
+    feature3: '🧠 Generador IA: Describe en una frase, el flujo se crea solo',
+    feature4: '📦 50+ Plantillas: Listas para importar y usar',
+    close: 'Entendido, volver a la lista',
+  },
+  ar: {
+    title: 'محرر اللوحة · قريباً',
+    subtitle: 'محرر السحب والإفلات، خطوط الربط، القوالب والمولد بالذكاء الاصطناعي قيد التطوير',
+    eta: 'التاريخ: Q3 2026',
+    feature1: '🎯 لوحة السحب والإفلات: أنشئ سير عمل معقد بدون برمجة',
+    feature2: '🔗 خطوط ربط تلقائية: مراكز ذكية + منحنيات بيزيه',
+    feature3: '🧠 المولد الذكي: صف في جملة واحدة، ينشئ السير تلقائياً',
+    feature4: '📦 50+ قالب: قوالب صناعية جاهزة للاستيراد',
+    close: 'تم الفهم، العودة للقائمة',
+  },
+};
+
+function getCS(locale: string, key: string): string {
+  const dict = COMING_SOON[locale] || COMING_SOON.zh;
+  return dict[key] ?? COMING_SOON.zh[key] ?? key;
+}
+
+function CanvasComingSoonModal({ locale, onClose }: { locale: string; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col bg-gray-50 dark:bg-gray-900 md:rounded-2xl md:m-4 md:shadow-2xl md:border md:border-gray-200 md:dark:border-gray-700 md:overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500" />
+      {/* Header */}
+      <div className="h-14 sm:h-16 flex-shrink-0 flex items-center gap-2 sm:gap-3 px-3 sm:px-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+        <button
+          onClick={onClose}
+          className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-500 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 flex-shrink-0"
+        >
+          <X className="w-4 h-4 sm:w-5 sm:h-5" />
+        </button>
+        <div className="min-w-0 flex-1">
+          <div className="text-[11px] uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold flex items-center gap-1.5">
+            <Layers className="w-3 h-3 text-indigo-500" />
+            Canvas Editor
+          </div>
+          <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-gray-100 truncate">
+            {getCS(locale, 'title')}
+          </div>
+        </div>
+        <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-indigo-50 via-blue-50 to-cyan-50 dark:from-indigo-950/40 dark:via-blue-950/40 dark:to-cyan-950/40 border border-indigo-200/50 dark:border-indigo-800/40">
+          <Clock className="w-3.5 h-3.5 text-indigo-500" strokeWidth={2} />
+          <span className="text-xs font-semibold text-indigo-700 dark:text-indigo-300">
+            {getCS(locale, 'eta')}
+          </span>
+        </div>
+        <button
+          onClick={onClose}
+          className="hidden sm:inline-flex h-9 sm:h-10 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-medium bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 text-white shadow-sm shadow-indigo-500/25 items-center gap-1.5 active:scale-[0.98] transition-all"
+        >
+          <Sparkles className="w-3.5 h-3.5" />
+          {getCS(locale, 'close')}
+        </button>
+      </div>
+
+      {/* Body */}
+      <div className="flex-1 min-h-0 overflow-auto">
+        <div className="min-h-full flex items-center justify-center px-4 sm:px-8 py-10 sm:py-16">
+          <div className="max-w-2xl w-full flex flex-col items-center text-center">
+            <div className="relative mb-8 sm:mb-10">
+              <div className="absolute inset-0 rounded-3xl blur-2xl opacity-30 bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500" />
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 shadow-xl flex items-center justify-center">
+                <Layers className="w-12 h-12 sm:w-16 sm:h-16 text-white" strokeWidth={1.8} />
+              </div>
+              <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center rotate-12 border border-gray-100 dark:border-gray-700">
+                <Construction className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500" strokeWidth={2} />
+              </div>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-3 sm:mb-4">
+              {getCS(locale, 'title')}
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-xl mb-8 sm:mb-10">
+              {getCS(locale, 'subtitle')}
+            </p>
+
+            <div className="w-full max-w-lg grid gap-2.5 sm:gap-3 mb-8 sm:mb-10">
+              {['feature1', 'feature2', 'feature3', 'feature4'].map((fk, i) => (
+                <div
+                  key={fk}
+                  className="flex items-start gap-3 px-4 sm:px-5 py-3 sm:py-3.5 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 text-left"
+                >
+                  <div className="mt-0.5 flex-shrink-0">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500" />
+                  </div>
+                  <p className="text-xs sm:text-sm md:text-[15px] text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {getCS(locale, fk)}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="sm:hidden w-full space-y-3">
+              <button
+                onClick={onClose}
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 text-white text-sm font-bold shadow-md shadow-indigo-500/25 active:scale-[0.98] transition-all"
+              >
+                <Sparkles className="w-4 h-4" />
+                {getCS(locale, 'close')}
+              </button>
+              <div className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200/60 dark:border-indigo-800/40 text-xs font-semibold text-indigo-700 dark:text-indigo-300">
+                <Clock className="w-3.5 h-3.5" strokeWidth={2} />
+                {getCS(locale, 'eta')}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-gray-300/40 dark:via-gray-600/40 to-transparent" />
     </div>
   );
 }

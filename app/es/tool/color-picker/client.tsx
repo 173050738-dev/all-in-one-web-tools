@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { useParams, usePathname } from 'next/navigation';
 import ColorPicker from '@/components/ColorPicker';
 import ToolDetailWrapper from '@/components/ToolDetailWrapper';
@@ -24,6 +25,26 @@ export default function ToolPage() {
       : pathLocale;
 
   const tool = getToolBySlug(SLUG);
+  // ===== Korelyy: i18n for tool name/description (auto-injected) =====
+  const __toolsT = useTranslations('tools');
+  const __i18nSlug = (resolvedParams?.slug ?? SLUG) as string;
+  const __i18nName = (() => {
+    const fb = tool?.name ?? '';
+    if (resolvedLocale === 'zh' || !tool) return fb;
+    const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
+    return tryKey(__i18nSlug + '.name')
+      ?? (tool.id && tool.id !== __i18nSlug ? tryKey(tool.id + '.name') : null)
+      ?? fb;
+  })();
+  const __i18nDesc = (() => {
+    const fb = tool?.description ?? '';
+    if (resolvedLocale === 'zh' || !tool) return fb;
+    const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
+    return tryKey(__i18nSlug + '.description')
+      ?? (tool.id && tool.id !== __i18nSlug ? tryKey(tool.id + '.description') : null)
+      ?? fb;
+  })();
+
   const { addToHistory } = usePreferencesStore();  useEffect(() => {
     if (tool) {
       addToHistory(tool.id);

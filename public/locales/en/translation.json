@@ -27,6 +27,8 @@
     "batchProcess": "Batch Process",
     "apiKeys": "API Keys",
     "ideas": "Ideas",
+    "blog": "Blog",
+    "blogBadge": "📚 Blog",
     "backHome": "Back to Home",
     "ideasBadge": "💡 Ideas"
   },
@@ -43,7 +45,35 @@
     "noResultsWithSearchAndCategory": "No tools matching \"{query}\" found in this category. Switch to all categories?",
     "noResultsWithSearch": "No matching tools found. Please try other keywords.",
     "viewAllCategories": "View all categories",
-    "loadMore": "Load More"
+    "loadMore": "Load More",
+    "platform-all": "All platforms",
+    "platform-desktop": "Desktop",
+    "platform-mobile": "Mobile",
+    "access-direct": "Direct access",
+    "access-vpn-required": "Restricted region",
+    "payment-alipay": "Alipay",
+    "payment-wechat": "WeChat Pay",
+    "payment-visa": "Visa",
+    "payment-mastercard": "Mastercard",
+    "signup-no-signup": "No signup",
+    "signup-email": "Email signup",
+    "signup-cn-phone": "CN phone required",
+    "signup-global-phone": "Global phone req.",
+    "signup-cc-required": "Credit card req.",
+    "privacy-local-processing": "Local processing",
+    "privacy-local-note": "🔒 Runs locally in your browser. Files are auto-cleared after 10 minutes — nothing is uploaded. 📏 Limits: images ≤20MB, PDFs ≤50MB.",
+    "advanced-filter": "Advanced filter",
+    "filter-all": "All",
+    "compliance-level": "Compliance level",
+    "compliance-green": "Trusted (low risk)",
+    "compliance-yellow": "General (self-assess)",
+    "compliance-red": "High risk (use with caution)",
+    "compliance-standard": "Standard tool",
+    "access-level": "Access",
+    "signup-requirement": "Signup",
+    "privacy-heading": "Data processing",
+    "privacy-cloud-processing": "Cloud processing",
+    "apply-filter": "Apply filter & go home"
   },
   "sidebar": {
     "all-tools": "All Tools",
@@ -90,7 +120,12 @@
     "hot-tools": "Hot Tools",
     "difficulty-easy": "Easy",
     "difficulty-medium": "Medium",
-    "difficulty-advanced": "Advanced"
+    "difficulty-advanced": "Advanced",
+    "sort-by-label": "Sort",
+    "no-results-title": "No matching tools found",
+    "no-results-hint": "Try a different keyword, or explore these popular categories and tools",
+    "try-these-categories": "Popular categories",
+    "try-these-tools": "Trending tools"
   },
   "compliance": {
     "title": "Compliance Transparency",
@@ -127,6 +162,8 @@
     "contact-desc": "Contact Us",
     "compliance": "Compliance",
     "compliance-desc": "Tool verification",
+    "blog": "Blog",
+    "blog-desc": "Tutorials, SEO guides & use cases",
     "sitemap": "Sitemap",
     "github": "GitHub",
     "github-desc": "View source code",
@@ -1286,10 +1323,6 @@
     "tidio": {
       "name": "Tidio AI",
       "description": "Online tidio ai for AI, bots, chat, support. Works right in your browser — free, secure, and no install required."
-    },
-    "helpScout": {
-      "name": "HelpScout Email",
-      "description": "Online helpscout email for email, support, B2B, helpdesk. Works right in your browser — free, secure, and no install required."
     },
     "olark": {
       "name": "Olark Chat",
@@ -4090,6 +4123,302 @@
     "wc-name-decorator": {
       "name": "Wc Name Decorator",
       "description": "Free Wc Name Decorator: supports decorator, fancy text, and more. 100% local processing on your device for maximum privacy."
+    },
+    "wevideo": {
+      "name": "WeVideo Cloud Editor",
+      "description": "Cloud-based online video editor with multi-track audio and video, green screen, and dynamic text. Fully responsive on mobile and desktop with seamless device sync."
+    },
+    "clipchamp": {
+      "name": "Clipchamp Light Editor",
+      "description": "Microsoft's lightweight web video editor packed with templates. Trim, splice, add captions, compress, and export MP4 all in one smooth workflow."
+    },
+    "hippo-video": {
+      "name": "Hippo Video Platform",
+      "description": "All-in-one video platform for sales and support teams. Screen recording, editing, personalized video mail, and rich tracking analytics in a unified dashboard."
+    },
+    "renderforest": {
+      "name": "Renderforest Video Factory",
+      "description": "Visual video template factory to generate promos, logo intros, and outros in one click. No editing skills required, fully responsive across devices."
+    },
+    "animaker": {
+      "name": "Animaker Animation Studio",
+      "description": "Do-it-yourself 2D animation platform. Drag and drop characters, scenes, and props to build videos, or create live digital avatars for streaming."
+    },
+    "tella-tv": {
+      "name": "Tella Screen Recorder",
+      "description": "Screen recording and light editing for remote teams. Compose webcam, screen share, and slides into layouts, then share with a single link for viewing."
+    },
+    "animoto": {
+      "name": "Animoto Short Film Maker",
+      "description": "Upload photos and music to automatically generate story-driven short films. Weddings, travel, and product showcases come out in HD, one-click responsive export."
+    },
+    "biteable": {
+      "name": "Biteable Workplace Videos",
+      "description": "Thousands of templates for HR training, internal comms, and workplace explainers. Drag-and-drop assembly keeps brand visuals consistent across every video."
+    },
+    "playplay": {
+      "name": "PlayPlay Brand Video Maker",
+      "description": "Enterprise-grade video platform with professional templates for newsrooms, PR, and product launches. Auto-apply brand colors, fonts, and assets."
+    },
+    "powtoon": {
+      "name": "Powtoon Presentation Animator",
+      "description": "Turn slide decks into animated videos instantly. Rich character motions, voiceover dubbing, and animated captions make training way more engaging than PPT."
+    },
+    "rawshorts": {
+      "name": "RawShorts Text to Video",
+      "description": "Paste a script to auto-match templates, characters, voiceover, and footage. AI-assisted workflow quickly produces high-quality explainer animations."
+    },
+    "flixier": {
+      "name": "Flixier Cloud Editor",
+      "description": "Cloud GPU-accelerated video editing. Import directly from Twitch and YouTube, export in under a minute, and collaborate with teammates on shared versions."
+    },
+    "vidyard": {
+      "name": "Vidyard Video Marketing",
+      "description": "B2B marketing video hosting and analytics platform. Send personalized 1:1 videos, see who watched for how long, and embed CTAs to track conversions."
+    },
+    "typito": {
+      "name": "Typito Animated Captions",
+      "description": "Video editor built around dynamic captions and brand templates. 200+ caption animations, brand kits, and real-time team review built in."
+    },
+    "movavi": {
+      "name": "Movavi Video Suite",
+      "description": "Lightweight all-in-one video editor, recorder, and converter. Clean beginner-friendly UI that packs screen recording, format conversion, and timeline editing."
+    },
+    "headliner": {
+      "name": "Headliner Podcast to Video",
+      "description": "Turn podcast audio into videos with one click. Auto-generates waveform animations, captions, and avatars sized for short-video platforms. Free tier adds watermark."
+    },
+    "postman-api": {
+      "name": "Postman API Debugger",
+      "description": "The industry-leading API debugging and collaboration platform. Test REST and GraphQL endpoints, spin up mock services, automate tests, and sync across your team."
+    },
+    "swagger-ui": {
+      "name": "Swagger API Docs",
+      "description": "OpenAPI visualization and try-it-out tool for REST APIs. Auto-generates interactive endpoint docs so frontend and backend teams can ship together faster."
+    },
+    "sentry-io": {
+      "name": "Sentry Error Monitor",
+      "description": "Cross-app error and performance monitoring SaaS. Real-time capture of frontend and backend crash stacks, performance bottlenecks, and alert distribution."
+    },
+    "apidog": {
+      "name": "Apifox API Workbench",
+      "description": "All-in-one API collaboration workbench combining docs, debugging, mocking, and testing. The popular Postman alternative used by teams globally."
+    },
+    "baidu-ocr": {
+      "name": "Baidu OCR Service",
+      "description": "Baidu AI Platform's official OCR service. Recognizes general text, receipts, ID cards, handwriting, and multilingual content, fully compliant for China."
+    },
+    "tencent-ai": {
+      "name": "Tencent AI Platform",
+      "description": "Tencent Cloud's official AI capabilities. Face, body, voice, NLP, and OCR image recognition in a single family bucket, fully registered for domestic China use."
+    },
+    "aliyun-ai": {
+      "name": "Alibaba Cloud AI Platform",
+      "description": "Alibaba Cloud's machine learning PAI and vision/voice platform, serving the Tongyi family of models as registered enterprise-grade services for China."
+    },
+    "squoosh-app": {
+      "name": "Squoosh Image Compressor",
+      "description": "Google's online image compression comparison tool. Side-by-side WebP, AVIF, and JXL comparison with live parameter tuning in a what-you-see interface."
+    },
+    "picresize": {
+      "name": "PicResize Crop & Resize",
+      "description": "Vintage online image crop and resize tool. No registration — rotate, mirror, add borders, apply effects, and batch process multiple images in one go."
+    },
+    "lunapic": {
+      "name": "LunaPic Online Photo Editor",
+      "description": "Legendary free online photo editor with 100+ effects and filters, transparent background removal, and animated GIF editing. All features remain 100% free."
+    },
+    "befunky": {
+      "name": "BeFunky Photo Studio",
+      "description": "Combines photo editing, collages, and graphic design in one platform. Portrait retouching, batch processing, and poster templates let non-designers ship fast."
+    },
+    "pdf24-tools": {
+      "name": "PDF24 Toolbox",
+      "description": "German-made toolbox of 30+ PDF utilities. Merge, split, compress, convert, sign, OCR, and unlock PDFs for free with no watermarks. Privacy-first local processing."
+    },
+    "pdf-cafe": {
+      "name": "PDF Candy Toolkit",
+      "description": "Candy-themed free PDF toolkit with a colorful, clean UI. 47 PDF processing tools work in browser and mobile, completely free with no intrusive ads."
+    },
+    "dopdf": {
+      "name": "doPDF Virtual Printer",
+      "description": "Classic free virtual printer driver. Print to PDF from any app just like printing to paper, with customizable resolution and embedded font support."
+    },
+    "pdfexpert": {
+      "name": "PDF Expert Reader",
+      "description": "Apple-ecosystem flagship PDF reader and editor. Smooth reading, signatures, form filling, and OCR recognition across iPhone, iPad, and Mac seamlessly."
+    },
+    "bilibili-creator": {
+      "name": "Bilibili Creator Hub",
+      "description": "Bilibili's official creator management center. Upload works, analyze viewer data, engage with fans, and manage monetization — the daily command center for Bilibili creators."
+    },
+    "9gag": {
+      "name": "9GAG Funny Community",
+      "description": "The world's largest humor community for funny images, GIFs, and videos. The birthplace of memes, the ultimate stress-buster, fully responsive across devices."
+    },
+    "ted-talks": {
+      "name": "TED Talks Library",
+      "description": "The official home of world-class TED Talks. Thousands of under-18-minute high-quality talks with multilingual subtitles — a deep dive into the best ideas."
+    },
+    "obsidian-md": {
+      "name": "Obsidian Linked Notes",
+      "description": "Local-first Markdown knowledge base with bidirectional links. Powerful graph visualization and a rich plugin ecosystem, the top choice for PKM enthusiasts."
+    },
+    "crello": {
+      "name": "VistaCreate Graphic Designer",
+      "description": "Vista family online graphic design tool. Tens of millions of stock assets and templates for posters and social media images — zero experience drag-and-drop design."
+    },
+    "placeit": {
+      "name": "Placeit Mockup Generator",
+      "description": "One-stop shop for logo design and product mockups. Apply your art to T-shirts, phones, books, and packaging right in the browser — the e-commerce designer's best friend."
+    },
+    "designrr": {
+      "name": "Designrr eBook Creator",
+      "description": "Turn blog posts, podcasts, and PDFs into polished eBooks and lead magnets instantly. Built-in templates, cover art, and auto table-of-contents for content marketers."
+    },
+    "logaster": {
+      "name": "Logaster Logo Maker",
+      "description": "Enter your brand name and instantly generate multiple logo concepts. Download vector source files plus full business card, letterhead, and social media branding kits."
+    },
+    "shopee-seller": {
+      "name": "Shopee Seller Center",
+      "description": "Shopee's official seller dashboard for Southeast Asian cross-border e-commerce. Manage listings, orders, logistics, marketing campaigns, and analytics all in one place."
+    },
+    "prowritingaid": {
+      "name": "ProWritingAid Deep Grammar Check",
+      "description": "Writer-grade deep English writing checker. 20+ in-depth reports, style consistency analysis, and repeated-word detection — as thorough as a human editor."
+    },
+    "scribens": {
+      "name": "Scribens Grammar Check",
+      "description": "Free bilingual (English-French) grammar, spelling, and style checker. Paste text directly to get highlighted suggestions, with plugins for Office and Chrome."
+    },
+    "hubspot-free": {
+      "name": "HubSpot Marketing Hub",
+      "description": "The world-famous CRM and marketing automation platform. The generous free tier includes forms, landing pages, and email automation — everything to get started."
+    },
+    "getresponse": {
+      "name": "GetResponse Marketing Funnel",
+      "description": "Four-in-one email marketing, automation funnel, landing page, and webinar builder. Covers the entire independent-store customer acquisition and conversion chain."
+    },
+    "semrush-free": {
+      "name": "Semrush SEO Suite",
+      "description": "The Swiss Army knife for SEO marketers. Full-stack analysis of keywords, competitors, backlinks, traffic, and ads — data covering 190+ countries worldwide."
+    },
+    "mangools": {
+      "name": "Mangools SEO Bundle",
+      "description": "The cleanest UI in SEO tooling. Bundle includes KWFinder for keywords, SERPChecker for rankings, and SERPWatcher for tracking — simple, effective, and affordable."
+    },
+    "seo-review-tools": {
+      "name": "SEO Review Toolbox",
+      "description": "Veteran free Dutch SEO audit toolkit. Page weight checks, keyword density, broken link scans, robots.txt validation, and Google Search Console integration — 100% free."
+    },
+    "later-app": {
+      "name": "Later Social Scheduler",
+      "description": "Instagram's official scheduling partner. Visual drag-and-drop calendar to plan posts, plus the LinkinBio link-in-bio landing page beloved by creators."
+    },
+    "planoly": {
+      "name": "Planoly Visual Planner",
+      "description": "The leading visual social media planner. Preview Instagram and Pinterest grids before publishing, plus comment management and UGC collection in one tool."
+    },
+    "lever-co": {
+      "name": "Lever Recruiting ATS",
+      "description": "The modern Silicon Valley-favorite applicant tracking system. Visual recruiting funnel, referrals, and strong candidate relationship management integrations."
+    },
+    "zoho-people": {
+      "name": "Zoho People HRIS",
+      "description": "The HRIS product in Zoho's software family. Unified onboarding, attendance, leave, performance, payroll, and employee records — SMB-friendly pricing."
+    },
+    "webmd": {
+      "name": "WebMD Health Guide",
+      "description": "America's largest health and medical information portal. Symptom checker, drug information, doctor finder, and authoritative trusted content from medical experts."
+    },
+    "meetup": {
+      "name": "Meetup Event Finder",
+      "description": "The world's largest in-person interest-event platform. Find tech meetups, book clubs, hiking groups, and boardgame nights — meet real people in your city."
+    },
+    "imdb": {
+      "name": "IMDb Movie Bible",
+      "description": "The global authority for film and TV ratings and information. Credits, cast lists, box office numbers, critic reviews, and the daily Top Charts for what to watch next."
+    },
+    "rottentomatoes": {
+      "name": "Rotten Tomatoes Reviews",
+      "description": "North America's definitive critic-aggregation site. The famous Tomatometer freshness and Popcorn Audience Score help you avoid bad movies. Charts updated daily."
+    },
+    "audacity-tutorial": {
+      "name": "Audacity Audio Editor",
+      "description": "The free, open-source, cross-platform veteran audio editor. Recording, noise reduction, multi-track mixing, and a mature plugin ecosystem built up over 20+ years."
+    },
+    "audio-mass": {
+      "name": "AudioMass Browser DAW",
+      "description": "A lightweight digital audio workstation that runs entirely in the browser. Multi-track waveform editing, real-time effects, and WAV export — zero downloads required."
+    },
+    "twisted-wave": {
+      "name": "TwistedWave Online Audio",
+      "description": "Professional single-track audio editor that runs in your browser. No downloads needed, with unlimited undo, batch processing, and cloud-saved project files."
+    },
+    "sketchfab": {
+      "name": "Sketchfab 3D Community",
+      "description": "The world's largest 3D model sharing and viewing platform. View, download, and buy GLB/USDZ/WebGL models straight in the browser with creator marketplace transactions."
+    },
+    "vectary": {
+      "name": "Vectary Online 3D Modeler",
+      "description": "The no-barrier browser-based 3D modeling and rendering platform. Figma-style drag and drop, PBR materials, lighting, and AR preview — designer-friendly workflow."
+    },
+    "spline-3d": {
+      "name": "Spline Interactive 3D",
+      "description": "The real-time browser 3D tool for designers and front-end devs. Scene events, interactive states, React integration, and direct Web-exportable production-ready assets."
+    },
+    "flourish-studio": {
+      "name": "Flourish Animated Charts",
+      "description": "The favorite interactive chart-animation platform of data journalists. Build complex bar-chart races, map scatters, and story-driven visuals with one click."
+    },
+    "datawrapper": {
+      "name": "DataWrapper Chart Maker",
+      "description": "German-made news-grade online chart and map builder. Professional color palettes, responsive embeds, and the choice of top media organizations worldwide."
+    },
+    "virus-total": {
+      "name": "VirusTotal Multi-Engine Scan",
+      "description": "Google-owned multi-antivirus scanner. Scan files, URLs, IPs, and hashes against 70+ engines simultaneously and aggregate threat intelligence."
+    },
+    "urlscan-io": {
+      "name": "URLscan Link Scanner",
+      "description": "Sandbox-style security analyzer for URLs. Captures screenshots, DOM trees, request chains, and malicious indicators for any submitted link."
+    },
+    "miro-board": {
+      "name": "Miro Online Whiteboard",
+      "description": "The de-facto standard for remote collaboration whiteboards. Rich template library, sticky notes, mind maps, and an infinite canvas that feels smooth everywhere."
+    },
+    "basecamp": {
+      "name": "Basecamp Campfire Workspace",
+      "description": "The famously opinionated remote-company collaboration tool. Project message boards, to-dos, docs, and chat — the opinionated best practice for small teams."
+    },
+    "zip-extractor": {
+      "name": "Extract.me Archive Unzipper",
+      "description": "Pure browser-based local file unzipper. Supports 7z, RAR, ZIP, TAR, and 50+ formats — files never leave your machine so privacy stays tight."
+    },
+    "cloudconvert-extra": {
+      "name": "CloudConvert File Converter",
+      "description": "Cloud-based conversion of 200+ file formats. Documents, images, audio, video, CAD, and fonts — including robust API and reliable batch processing."
+    },
+    "online-ocr": {
+      "name": "OnlineOCR Text Recognizer",
+      "description": "Veteran free online OCR service. Convert images and PDFs to editable Word, Excel, or plain text in many languages — small files without registration."
+    },
+    "promo-video-maker": {
+      "name": "Promo Social Video Maker",
+      "description": "A huge library of pro video templates and licensed stock footage. Quickly create social ads, promos, and product videos with AI-powered one-click subtitles. Edit seamlessly from phone or desktop."
+    },
+    "magisto-ai-video": {
+      "name": "Magisto AI Video Editor",
+      "description": "Smart AI picks shots, adds music, and assembles polished short videos automatically. Great for travel vlogs, marketing, weddings, and family memories. Works on iOS, Android, and PC."
+    },
+    "dropbox-paper": {
+      "name": "Dropbox Paper Collaborative Docs",
+      "description": "Lightweight real-time collaborative docs. Embed code, tables, to-dos, videos, and file previews with deep Dropbox cloud integration. Editing is smooth on any mobile device."
+    },
+    "dezeen": {
+      "name": "Dezeen",
+      "description": "Design media site covering architecture, interior design, and design news."
     }
   },
   "sidebar2": {
@@ -4176,7 +4505,52 @@
     },
     "footer": "Payment or billing questions? Email billing@korelyy.com"
   },
+  "compare": {
+    "title": "Compare AI Tools (Up to 3)",
+    "selected": "Selected {n}/3",
+    "clear": "Clear all",
+    "compareNow": "View Comparison",
+    "price": "Pricing",
+    "compliance": "Compliance",
+    "platform": "Platform",
+    "difficulty": "Difficulty",
+    "tags": "Tags",
+    "description": "Description",
+    "name": "Tool",
+    "favorited": "Saved",
+    "remove": "Remove from compare",
+    "emptyHint": "Select 2–3 tools on category pages to start comparing.",
+    "atLeastTwo": "Please select at least 2 tools to compare",
+    "linkCopied": "Compare link copied!",
+    "related": "Related Tools",
+    "openPage": "Open compare page"
+  },
   "breadcrumb": {
     "home": "Home"
+  },
+  "kofi": {
+    "supportUs": "Support Korelyy & keep free tools alive",
+    "closeAria": "Dismiss unlock banner (hidden for 7 days)",
+    "getStarted": "Unlock now",
+    "or": "or",
+    "learnMore": "Visit Ko-fi",
+    "perMonth": "per month",
+    "oneTime": "one-time",
+    "team": "Team seat",
+    "includes": "Includes",
+    "activateCode": "Enter activation code",
+    "activatePlaceholder": "Paste code (e.g. KOFI-XXXX)",
+    "activateSubmit": "Activate",
+    "activateSuccess": "Activated! Thanks for your support ❤️",
+    "activateFail": "Invalid code, please check or unlock via the buttons below",
+    "memberBadge": "Supporter Member",
+    "memberExpires": "Valid until {date}",
+    "txWelcome": "Welcome! Payment successful — all premium content unlocked 🎉",
+    "txInvalid": "Payment verification failed, please enter a code manually or re-pay",
+    "premiumContent": "Premium Unlocked",
+    "freeContent": "Free Features",
+    "exportPdf": "Export PDF Report",
+    "printHint": "Members: watermark-free HD / Guests: 30s trial with watermark",
+    "backToCompare": "Back to Compare"
   }
 }

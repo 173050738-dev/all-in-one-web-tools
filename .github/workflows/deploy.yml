@@ -57,7 +57,7 @@ jobs:
             exit 1
           fi
           set +e
-          for f in _headers _redirects favicon.svg og-image.svg robots.txt sitemap.xml; do
+          for f in _headers _redirects favicon.svg og-image.svg robots.txt sitemap.xml ads.txt; do
             if [ -f "public/$f" ]; then
               cp -f "public/$f" "out/$f"
               echo "copied public/$f -> out/$f ($(wc -c < public/$f) bytes)"
@@ -72,7 +72,7 @@ jobs:
       - name: Verify critical files in out/
         run: |
           missing=0
-          for f in _headers _redirects favicon.ico favicon.svg og-image.svg robots.txt sitemap.xml; do
+          for f in _headers _redirects favicon.ico favicon.svg og-image.svg robots.txt sitemap.xml ads.txt; do
             if [ -f "out/$f" ]; then
               echo "  ✅ out/$f ($(stat -c%s out/$f) bytes)"
             else

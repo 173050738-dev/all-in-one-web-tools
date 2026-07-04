@@ -13,13 +13,16 @@ gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}');
 `;
 
-const ADSENSE_PUBLISHER_ID_DEFAULT = 'ca-pub-7235824755389632';
-const ADSENSE_PUBLISHER_ID = (process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || ADSENSE_PUBLISHER_ID_DEFAULT) as string;
-const ADSENSE_SRC = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`;
+const ADSENSE_PUBLISHER_ID = (process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || '') as string;
+const ADSENSE_ENABLED = ADSENSE_PUBLISHER_ID.startsWith('ca-pub-');
+const ADSENSE_SRC = ADSENSE_ENABLED
+  ? `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`
+  : '';
 
 const SITE_URL = 'https://korelyy.com';
-const OG_IMAGE = '/og-image.svg';
+const OG_IMAGE = '/og-image.png';
 const FAVICON = '/favicon.svg';
+const OG_IMAGE_TYPE = 'image/png';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -89,7 +92,7 @@ export const metadata: Metadata = {
     'msapplication-TileColor': '#2A3154',
     'msapplication-tap-highlight': 'no',
     'mobile-web-app-capable': 'yes',
-    'google-adsense-account': 'ca-pub-7235824755389632',
+    ...(ADSENSE_ENABLED ? { 'google-adsense-account': ADSENSE_PUBLISHER_ID } : null),
   },
   openGraph: {
     type: 'website',
@@ -105,7 +108,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        type: 'image/svg+xml',
+        type: OG_IMAGE_TYPE,
         alt: 'Korelyy Tool Hub — Free online tools',
       },
     ],
@@ -171,6 +174,33 @@ export default async function RootLayout({
         {isProd && (
           <>
             <Script
+              id="console-error-filter"
+              strategy="beforeInteractive"
+              suppressHydrationWarning
+            >
+              {`(function(){
+  var ADS_HOSTS = /pagead2\\.googlesyndication\\.com|googlesyndication\\.com|adsbygoogle/i;
+  function isAdsErr(msg) {
+    if (!msg) return false;
+    var s = typeof msg === 'string' ? msg : (msg.message || '') + ' ' + (msg.filename || '') + ' ' + (msg.stack || '');
+    return ADS_HOSTS.test(s);
+  }
+  window.addEventListener('error', function(e) {
+    if (isAdsErr(e.error) || isAdsErr(e.message) || (e.target && e.target.src && ADS_HOSTS.test(e.target.src))) {
+      try { e.preventDefault(); } catch(_) {}
+      try { e.stopImmediatePropagation(); } catch(_) {}
+      return false;
+    }
+  }, true);
+  window.addEventListener('unhandledrejection', function(e) {
+    var r = e.reason;
+    if (r && (isAdsErr(r.message) || (r.stack && ADS_HOSTS.test(r.stack)) || (typeof r === 'string' && ADS_HOSTS.test(r)))) {
+      try { e.preventDefault(); } catch(_) {}
+    }
+  });
+})();`}
+            </Script>
+            <Script
               strategy="afterInteractive"
               src={GA_GTAG_SRC}
               data-ga-id={GA_MEASUREMENT_ID}
@@ -182,15 +212,17 @@ export default async function RootLayout({
               data-ga-id={GA_MEASUREMENT_ID}
               suppressHydrationWarning
             />
-            <Script
-              id="adsbygoogle-loader"
-              strategy="afterInteractive"
-              src={ADSENSE_SRC}
-              crossOrigin="anonymous"
-              data-ad-client={ADSENSE_PUBLISHER_ID}
-              async
-              suppressHydrationWarning
-            />
+            {ADSENSE_ENABLED && (
+              <Script
+                id="adsbygoogle-loader"
+                strategy="afterInteractive"
+                src={ADSENSE_SRC}
+                crossOrigin="anonymous"
+                data-ad-client={ADSENSE_PUBLISHER_ID}
+                async
+                suppressHydrationWarning
+              />
+            )}
           </>
         )}
         <Script

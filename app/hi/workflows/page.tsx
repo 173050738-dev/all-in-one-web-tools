@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import {
-  pageGenerateMetadataSync,
+  workflowsIndexGenerateMetadataSync,
+  WorkflowsIndexJsonLd,
   PageBreadcrumbJsonLd,
   type SeoLocale,
 } from '@/components/seo';
@@ -10,7 +11,7 @@ const LOCALE: SeoLocale = 'hi';
 const PATH_WITHOUT_LOCALE = "/workflows";
 const TITLE_SEGMENT = "वर्कफ़्लो";
 const DESC_SEGMENT = "";
-const SELF_BREADCRUMB_NAME = "वर्कफ़्लो";
+const SELF_BREADCRUMB_NAME = "AI वर्कफ़्लो";
 
 const HOME_BREADCRUMB: Record<SeoLocale, string> = {
   en: 'Home',
@@ -22,7 +23,7 @@ const HOME_BREADCRUMB: Record<SeoLocale, string> = {
 };
 
 export function generateMetadata(): Metadata {
-  return pageGenerateMetadataSync(LOCALE, PATH_WITHOUT_LOCALE, TITLE_SEGMENT, DESC_SEGMENT || undefined);
+  return workflowsIndexGenerateMetadataSync(LOCALE);
 }
 
 export default function StaticPage() {
@@ -32,9 +33,10 @@ export default function StaticPage() {
         locale={LOCALE}
         segments={[
           { name: HOME_BREADCRUMB[LOCALE], path: '/' },
-          { name: SELF_BREADCRUMB_NAME },
+          { name: SELF_BREADCRUMB_NAME, path: '/workflows' },
         ]}
       />
+      <WorkflowsIndexJsonLd locale={LOCALE} />
       <ClientPage />
     </>
   );

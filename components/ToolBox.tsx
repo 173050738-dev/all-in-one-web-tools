@@ -16,12 +16,29 @@ interface ToolBoxProps {
 
 export default function ToolBox({ locale, isOpen, onClose }: ToolBoxProps) {
   const t = useTranslations('toolbox');
+  const toolsT = useTranslations('tools');
   const favoriteTools = useFavoritesStore((s) => s.favoriteTools);
   const toggleFavorite = useFavoritesStore((s) => s.toggleFavorite);
   const removeFromHistory = useFavoritesStore((s) => s.removeFromHistory);
   const clearFavorites = useFavoritesStore((s) => s.clearFavorites);
   const [searchQuery, setSearchQuery] = useState('');
   const panelRef = useRef<HTMLDivElement>(null);
+
+  const safeTranslate = (key: string, fallback: string) => {
+    try {
+      const v = toolsT(key);
+      if (v && v !== key) return v;
+    } catch { /* fallthrough */ }
+    return fallback;
+  };
+
+  const translateField = (tool: typeof tools[0], field: 'name' | 'description') => {
+    const fallback = field === 'name' ? tool.name : tool.description;
+    if (locale === 'zh') return fallback;
+    const slug = tool.slug || tool.id || '';
+    const altId = tool.id && tool.id !== tool.slug ? tool.id : '';
+    return safeTranslate(`${slug}.${field}`, altId ? safeTranslate(`${altId}.${field}`, fallback) : fallback);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -38,10 +55,12 @@ export default function ToolBox({ locale, isOpen, onClose }: ToolBoxProps) {
 
   const favoriteToolList = tools.filter(tool => favoriteTools.includes(tool.id));
   
-  const filteredTools = favoriteToolList.filter(tool => 
-    tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    tool.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredTools = favoriteToolList.filter(tool => {
+    const n = translateField(tool, 'name').toLowerCase();
+    const d = translateField(tool, 'description').toLowerCase();
+    const q = searchQuery.toLowerCase();
+    return n.includes(q) || d.includes(q);
+  });
 
   const handleNavigate = (tool: typeof tools[0]) => {
     if (tool.externalUrl) {
@@ -129,10 +148,10 @@ export default function ToolBox({ locale, isOpen, onClose }: ToolBoxProps) {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-medium text-gray-900 dark:text-gray-100 truncate">
-                      {tool.name}
+                      {translateField(tool, 'name')}
                     </h4>
                     <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-                      {tool.description}
+                      {translateField(tool, 'description')}
                     </p>
                   </div>
                   <div className="flex items-center gap-2">

@@ -209,7 +209,7 @@ ${arrangedLines.map(line => {
             <span className="text-lg sm:text-xl font-serif">書</span>
           </div>
           <div>
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t.title}</h1>
+            <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{t.title}</h1>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t.subtitle}</p>
           </div>
         </div>

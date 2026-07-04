@@ -409,7 +409,7 @@ export default function ApiKeysManager({ locale = 'zh' }: { locale?: string }) {
             <Shield className='w-6 h-6 sm:w-7 sm:h-7' />
           </div>
           <div>
-            <h1 className='text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100'>
+            <h1 className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>
               {t('title')}
             </h1>
             <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400'>
@@ -426,7 +426,7 @@ export default function ApiKeysManager({ locale = 'zh' }: { locale?: string }) {
               <Key className='w-4 h-4 text-green-600 dark:text-green-400' />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>
+          <p className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>
             {activeKeys.length}
           </p>
           <p className='text-xs text-gray-500 dark:text-gray-400'>
@@ -440,7 +440,7 @@ export default function ApiKeysManager({ locale = 'zh' }: { locale?: string }) {
               <Zap className='w-4 h-4 text-blue-600 dark:text-blue-400' />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>
+          <p className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>
             {totalCalls}
           </p>
           <p className='text-xs text-gray-500 dark:text-gray-400'>
@@ -454,7 +454,7 @@ export default function ApiKeysManager({ locale = 'zh' }: { locale?: string }) {
               <Lock className='w-4 h-4 text-purple-600 dark:text-purple-400' />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>
+          <p className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>
             AES-256
           </p>
           <p className='text-xs text-gray-500 dark:text-gray-400'>
@@ -468,7 +468,7 @@ export default function ApiKeysManager({ locale = 'zh' }: { locale?: string }) {
               <Shield className='w-4 h-4 text-orange-600 dark:text-orange-400' />
             </div>
           </div>
-          <p className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>
+          <p className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>
             100%
           </p>
           <p className='text-xs text-gray-500 dark:text-gray-400'>

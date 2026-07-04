@@ -1,51 +1,71 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { ShieldCheck, ShieldAlert, Lock, FileCheck, Globe, Calendar, CheckCircle, Info, Clock } from 'lucide-react';
-import { tools, computeComplianceLevel } from '@/data/tools';
+import type { Tool, ComplianceLevel } from '@/data/tools';
+import { STATIC_COMPLIANCE_STATS } from '@/data/_static-counts.generated';
 import { getComplianceDetails } from '@/data/compliance';
+
+type FullBundle = {
+  tools: Tool[];
+  computeComplianceLevel: (t: Tool) => ComplianceLevel;
+};
 
 export default function CompliancePage() {
   const t = useTranslations('compliance');
   const [selectedTab, setSelectedTab] = useState<'all' | 'verified' | 'pending'>('all');
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
+  const [bundle, setBundle] = useState<FullBundle | null>(null);
 
-  const stats = useMemo(() => {
-    const verifiedCount = tools.filter(t => computeComplianceLevel(t) !== 'red').length;
-    const pendingCount = tools.filter(t => computeComplianceLevel(t) === 'red').length;
-    const totalCount = tools.length;
-    return { verifiedCount, pendingCount, totalCount };
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const mod = await import('@/data/tools');
+      if (cancelled) return;
+      setBundle({
+        tools: (mod.tools || []) as Tool[],
+        computeComplianceLevel: mod.computeComplianceLevel,
+      });
+    })();
+    return () => { cancelled = true; };
   }, []);
 
+  const stats = useMemo(() => {
+    if (bundle) {
+      const verifiedCount = bundle.tools.filter(t => bundle.computeComplianceLevel(t) !== 'red').length;
+      const pendingCount = bundle.tools.filter(t => bundle.computeComplianceLevel(t) === 'red').length;
+      const totalCount = bundle.tools.length;
+      return { verifiedCount, pendingCount, totalCount };
+    }
+    return STATIC_COMPLIANCE_STATS;
+  }, [bundle]);
+
   const filteredTools = useMemo(() => {
-    if (selectedTab === 'all') {
-      return tools;
-    }
-    if (selectedTab === 'verified') {
-      return tools.filter(t => computeComplianceLevel(t) !== 'red');
-    }
-    return tools.filter(t => computeComplianceLevel(t) === 'red');
-  }, [selectedTab]);
+    if (!bundle) return [] as Tool[];
+    if (selectedTab === 'all') return bundle.tools;
+    if (selectedTab === 'verified') return bundle.tools.filter(t => bundle.computeComplianceLevel(t) !== 'red');
+    return bundle.tools.filter(t => bundle.computeComplianceLevel(t) === 'red');
+  }, [selectedTab, bundle]);
 
   const selectedToolData = useMemo(() => {
-    if (!selectedTool) return null;
-    const tool = tools.find(t => t.id === selectedTool);
+    if (!selectedTool || !bundle) return null;
+    const tool = bundle.tools.find(t => t.id === selectedTool);
     if (!tool) return null;
     return {
       ...tool,
-      complianceLevel: computeComplianceLevel(tool),
+      complianceLevel: bundle.bundle.computeComplianceLevel(tool),
       complianceDetails: getComplianceDetails(tool.externalUrl || '', tool.name),
     };
-  }, [selectedTool]);
+  }, [selectedTool, bundle]);
 
   return (
-    <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
-      <div className="text-center mb-8">
+    <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      <div className="text-center mb-6 sm:mb-8">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mb-4">
           <Lock className="w-8 h-8 text-white" />
         </div>
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1 sm:mb-2">
           {t('title')}
         </h1>
         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -75,7 +95,7 @@ export default function CompliancePage() {
         </div>
       </div>
 
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-8">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-6 sm:mb-8">
         <div className="flex border-b border-gray-200 dark:border-gray-700">
           <button
             onClick={() => setSelectedTab('all')}
@@ -98,28 +118,44 @@ export default function CompliancePage() {
         </div>
 
         <div className="p-4 max-h-[600px] overflow-y-auto">
-          <div className="space-y-2">
-            {filteredTools.map((tool) => {
-              const level = computeComplianceLevel(tool);
-              const details = getComplianceDetails(tool.externalUrl || '', tool.name);
-              return (
-                <button
-                  key={tool.id}
-                  onClick={() => setSelectedTool(tool.id)}
-                  className={`w-full flex items-center gap-3 p-3 rounded-lg text-left transition-colors ${selectedTool === tool.id ? 'bg-primary-50 dark:bg-primary-900/30' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                >
-                  <div className={`w-2 h-2 rounded-full ${level === 'red' ? 'bg-red-500' : 'bg-emerald-500'}`} />
-                  <div className="flex-1 min-w-0">
-                    <p className="font-medium text-sm text-gray-900 dark:text-gray-100 truncate">{tool.name}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">{details.description}</p>
+          {!bundle && (
+            <div className="space-y-2" aria-hidden="true">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div key={i} className="w-full flex items-center gap-3 p-3 rounded-lg animate-pulse">
+                  <div className="w-2 h-2 rounded-full bg-gray-200 dark:bg-gray-600" />
+                  <div className="flex-1 min-w-0 space-y-1.5">
+                    <div className="h-4 w-2/3 bg-gray-200 dark:bg-gray-700 rounded" />
+                    <div className="h-3 w-1/2 bg-gray-100 dark:bg-gray-800 rounded" />
                   </div>
-                  <span className={`text-xs px-2 py-1 rounded ${level === 'red' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400'}`}>
-                    {level === 'red' ? t('pending') : t('verified')}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
+                  <div className="h-5 w-14 bg-gray-100 dark:bg-gray-700 rounded" />
+                </div>
+              ))}
+            </div>
+          )}
+          {bundle && (
+            <div className="space-y-2">
+              {filteredTools.map((tool) => {
+                const level = bundle.computeComplianceLevel(tool);
+                const details = getComplianceDetails(tool.externalUrl || '', tool.name);
+                return (
+                  <button
+                    key={tool.id}
+                    onClick={() => setSelectedTool(tool.id)}
+                    className={`w-full flex items-center gap-3 p-3 rounded-lg text-left transition-colors ${selectedTool === tool.id ? 'bg-primary-50 dark:bg-primary-900/30' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                  >
+                    <div className={`w-2 h-2 rounded-full ${level === 'red' ? 'bg-red-500' : 'bg-emerald-500'}`} />
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium text-sm sm:text-base text-gray-900 dark:text-gray-100 truncate">{tool.name}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{details.description}</p>
+                    </div>
+                    <span className={`text-xs px-2 py-1 rounded ${level === 'red' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400'}`}>
+                      {level === 'red' ? t('pending') : t('verified')}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 
@@ -190,11 +226,11 @@ export default function CompliancePage() {
 
             {selectedToolData.complianceDetails.networkRequirement && (
               <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-2">
                   <Info className="w-5 h-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h5 className="font-medium text-amber-800 dark:text-amber-300 mb-1">{t('network-note')}</h5>
-                    <p className="text-sm text-amber-700 dark:text-amber-400">{selectedToolData.complianceDetails.networkRequirement}</p>
+                    <h5 className="text-[11px] sm:text-xs font-medium text-amber-800 dark:text-amber-300 mb-1">{t('network-note')}</h5>
+                    <p className="text-[11px] sm:text-xs text-amber-700 dark:text-amber-400">{selectedToolData.complianceDetails.networkRequirement}</p>
                   </div>
                 </div>
               </div>
@@ -207,7 +243,7 @@ export default function CompliancePage() {
                   href={selectedToolData.externalUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-primary-600 dark:text-primary-400 hover:underline truncate flex-1"
+                  className="text-sm sm:text-base text-primary-600 dark:text-primary-400 hover:underline truncate flex-1"
                 >
                   {selectedToolData.externalUrl}
                 </a>
@@ -219,7 +255,7 @@ export default function CompliancePage() {
 
       <div className="mt-8 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
         <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-3">{t('policy-title')}</h3>
-        <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <div className="space-y-3 text-sm sm:text-base text-gray-600 dark:text-gray-400">
           <p>{t('policy-p1')}</p>
           <p>{t('policy-p2')}</p>
           <p>{t('policy-p3')}</p>

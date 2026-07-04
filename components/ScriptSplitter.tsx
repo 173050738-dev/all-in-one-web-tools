@@ -295,7 +295,7 @@ export default function ScriptSplitter({ locale = 'zh' }: ScriptSplitterProps) {
             <Film className="h-5 w-5 sm:h-6 sm:w-6" />
           </div>
           <div>
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
+            <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
             <p className="text-sm text-gray-600 dark:text-gray-400">{t('subtitle')}</p>
           </div>
         </div>
@@ -378,11 +378,11 @@ export default function ScriptSplitter({ locale = 'zh' }: ScriptSplitterProps) {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">{t('chars')}</div>
-                  <div className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">{totalChars.toLocaleString()}</div>
+                  <div className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{totalChars.toLocaleString()}</div>
                 </div>
                 <div>
                   <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">{t('duration')}</div>
-                  <div className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">{totalDur.toFixed(1)}s</div>
+                  <div className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{totalDur.toFixed(1)}s</div>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 space-y-2">

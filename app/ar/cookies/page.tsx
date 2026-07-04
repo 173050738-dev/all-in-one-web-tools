@@ -40,15 +40,15 @@ export default function CookiesPage() {
   ];
 
   return (
-    <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-      <h1 className='text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2'>{t('title')}</h1>
-      <p className='text-sm text-gray-500 dark:text-gray-400 mb-8'>最后更新：2026年6月21日</p>
+    <div className='max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8'>
+      <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1 sm:mb-2'>{t('title')}</h1>
+      <p className='text-[11px] sm:text-xs text-gray-500 dark:text-gray-400 mb-4 sm:mb-5'>最后更新：2026年6月21日</p>
 
-      <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-8'>
-        <div className='flex items-start gap-3'>
+      <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6 sm:mb-8'>
+        <div className='flex items-start gap-2'>
           <Info className='h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5' />
           <div>
-            <p className='text-sm text-blue-800 dark:text-blue-200'>
+            <p className='text-[11px] sm:text-xs text-blue-800 dark:text-blue-200'>
               Cookie是存储在您设备上的小型文本文件，用于改善您的浏览体验。您可以在下方管理各类Cookie的偏好设置。请注意，禁用某些Cookie可能会影响网站功能。
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function CookiesPage() {
 
           return (
             <div key={type.key} className='bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden'>
-              <div className='p-6'>
+              <div className='p-4 sm:p-5'>
                 <div className='flex items-start justify-between gap-4'>
                   <div className='flex items-start gap-4 flex-1'>
                     <div className='p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400'>
@@ -77,7 +77,7 @@ export default function CookiesPage() {
                           </span>
                         )}
                       </div>
-                      <p className='text-sm text-gray-600 dark:text-gray-400 leading-relaxed'>
+                      <p className='text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 leading-relaxed'>
                         {type.description}
                       </p>
                     </div>
@@ -107,12 +107,12 @@ export default function CookiesPage() {
         <div className='pt-4'>
           <button
             onClick={handleSave}
-            className='w-full px-6 py-3 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors font-medium shadow-sm hover:shadow-md active:scale-[0.98] transform duration-150'
+            className='w-full px-4 sm:px-5 py-2 sm:py-2.5 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors font-medium shadow-sm hover:shadow-md active:scale-[0.98] transform duration-150'
           >
             {saved ? '偏好设置已保存' : '保存偏好设置'}
           </button>
           {saved && (
-            <p className='text-center text-sm text-green-600 dark:text-green-400 mt-2'>
+            <p className='text-center text-sm sm:text-base text-green-600 dark:text-green-400 mt-2'>
               您的Cookie偏好设置已成功保存并生效
             </p>
           )}

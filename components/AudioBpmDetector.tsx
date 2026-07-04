@@ -596,7 +596,7 @@ export default function AudioBpmDetector({ locale = 'zh' }: AudioBpmDetectorProp
                 <Activity className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
+                <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t('subtitle')}</p>
               </div>
             </div>
@@ -660,7 +660,7 @@ export default function AudioBpmDetector({ locale = 'zh' }: AudioBpmDetectorProp
                     <div className="p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40">
                       <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-1">{t('tap.currentBPM')}</div>
                       <div className="flex items-center justify-between">
-                        <div className="text-2xl font-bold tabular-nums text-gray-900 dark:text-gray-100">
+                        <div className="text-xl font-bold tabular-nums text-gray-900 dark:text-gray-100">
                           {tapBPM || '--'}
                         </div>
                         <button
@@ -678,13 +678,13 @@ export default function AudioBpmDetector({ locale = 'zh' }: AudioBpmDetectorProp
                       <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-1">
                         {t('tap.avgBPM', { n: Math.min(history.length, 16) })}
                       </div>
-                      <div className="text-2xl font-bold tabular-nums text-gray-900 dark:text-gray-100">
+                      <div className="text-xl font-bold tabular-nums text-gray-900 dark:text-gray-100">
                         {tapBPM || '--'}
                       </div>
                     </div>
                     <div className="p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40">
                       <div className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-1">{t('tap.interval')}</div>
-                      <div className="text-2xl font-bold tabular-nums text-gray-900 dark:text-gray-100">
+                      <div className="text-xl font-bold tabular-nums text-gray-900 dark:text-gray-100">
                         {lastInterval != null ? `${lastInterval}${t('tap.ms')}` : '--'}
                       </div>
                     </div>

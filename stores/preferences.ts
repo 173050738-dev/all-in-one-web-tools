@@ -227,23 +227,32 @@ interface PreferencesState {
 const STORAGE_KEY = 'tool-station-preferences';
 
 const secureStorage = {
-  getItem: async (name: string): Promise<string | null> => {
-    if (typeof localStorage === 'undefined') return null;
-    const encrypted = localStorage.getItem(name);
-    if (!encrypted) return null;
+  getItem: (name: string): Promise<string | null> => {
     try {
-      return await decryptData(encrypted);
+      if (typeof localStorage === 'undefined') return Promise.resolve(null);
+      const encrypted = localStorage.getItem(name);
+      if (!encrypted) return Promise.resolve(null);
+      return Promise.resolve()
+        .then(() => decryptData(encrypted))
+        .catch(() => encrypted as any)
+        .then((v) => (v === undefined || v === null ? null : (v as string | null)))
+        .catch(() => null);
     } catch {
-      return encrypted;
+      return Promise.resolve(null);
     }
   },
-  setItem: async (name: string, value: string): Promise<void> => {
-    if (typeof localStorage === 'undefined') return;
+  setItem: (name: string, value: string): Promise<void> => {
     try {
-      const encrypted = await encryptData(value);
-      localStorage.setItem(name, encrypted);
+      if (typeof localStorage === 'undefined') return Promise.resolve();
+      return Promise.resolve()
+        .then(() => encryptData(value))
+        .catch(() => value)
+        .then((encrypted) => {
+          try { localStorage.setItem(name, encrypted as string); } catch { /* noop */ }
+        })
+        .catch(() => { try { localStorage.setItem(name, value); } catch { /* noop */ } });
     } catch {
-      try { localStorage.setItem(name, value); } catch { /* noop */ }
+      return Promise.resolve();
     }
   },
   removeItem: (name: string): void => {

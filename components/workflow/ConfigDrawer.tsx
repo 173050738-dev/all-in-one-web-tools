@@ -91,6 +91,9 @@ export interface ConfigDrawerProps {
   onCopy?: () => void;
   onDelete?: () => void;
   onRunTest?: () => void;
+  onSaveConfig?: (patch: Partial<WorkflowNodeData>) => void;
+  onOpenExternalUrl?: (url?: string) => void;
+  onSelectFromVault?: () => void;
   testState?: 'idle' | 'running' | 'success' | 'error';
 }
 
@@ -109,6 +112,9 @@ export default function ConfigDrawer({
   onCopy,
   onDelete,
   onRunTest,
+  onSaveConfig,
+  onOpenExternalUrl,
+  onSelectFromVault,
   testState = 'idle',
 }: ConfigDrawerProps) {
   /* — 空接口预留：保存节点配置到后端 — */
@@ -225,7 +231,8 @@ export default function ConfigDrawer({
                     className={`${INPUT_CLS} flex-1 bg-gray-50 dark:bg-gray-800/50 text-gray-500`}
                   />
                   <button
-                    className="px-3 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-xs font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex-shrink-0"
+                    onClick={() => onOpenExternalUrl?.('https://example.com/tool/compress')}
+                    className="px-3 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 text-xs font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 active:scale-[0.96] transition-all flex-shrink-0"
                     title={pick(locale, I18N.openUrl)}
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -263,7 +270,10 @@ export default function ConfigDrawer({
                   placeholder={pick(locale, I18N.apiKeyPlaceholder)}
                   className={`${INPUT_CLS} flex-1 font-mono text-[11px] tracking-tight`}
                 />
-                <button className="px-3 rounded-lg border border-gray-200 dark:border-gray-700 text-[11px] font-semibold text-indigo-600 dark:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition-colors flex-shrink-0 whitespace-nowrap">
+                <button
+                  onClick={onSelectFromVault}
+                  className="px-3 rounded-lg border border-gray-200 dark:border-gray-700 text-[11px] font-semibold text-indigo-600 dark:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 active:scale-[0.96] transition-all flex-shrink-0 whitespace-nowrap"
+                >
                   {pick(locale, I18N.selectKey)}
                 </button>
               </div>
@@ -328,7 +338,7 @@ export default function ConfigDrawer({
             </button>
           </div>
           <button
-            onClick={() => onUpdateNode?.({})}
+            onClick={() => onSaveConfig?.({})}
             className="w-full h-10 rounded-xl text-sm font-bold flex items-center justify-center gap-1.5 bg-gradient-to-r from-indigo-500 via-blue-500 to-violet-500 text-white shadow-md shadow-indigo-500/25 hover:shadow-lg hover:shadow-indigo-500/35 hover:scale-[1.01] active:scale-[0.99] transition-all"
           >
             <Save className="w-4 h-4" strokeWidth={2} />

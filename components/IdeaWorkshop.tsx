@@ -43,7 +43,7 @@ import {
   Settings,
   Menu,
 } from 'lucide-react';
-import { usePreferencesStore, type Idea, type Bid, type Comment, type Developer } from '@/stores/preferences';
+import { useCommunityStore, type Idea, type Bid, type Comment, type Developer } from '@/stores/community';
 
 export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
   const translations: Record<string, Record<string, string>> = {
@@ -184,6 +184,11 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
       'default.bidDelivery': '7天',
       'filter.contains.free': '免费',
       'filter.contains.tip': '打赏',
+      'tab.all': '全部需求',
+      'tab.mine': '我发布的',
+      'tab.voted': '我投票的',
+      'tab.emptyMine': '你还没发布过需求，点右上角「发布需求」开始吧~',
+      'tab.emptyVoted': '你还没给任何需求投票，去看看热门需求吧~',
     },
     en: {
       'status.pending': 'Pending Review',
@@ -322,6 +327,11 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
       'default.bidDelivery': '7 days',
       'filter.contains.free': 'Free',
       'filter.contains.tip': 'Tip',
+      'tab.all': 'All Needs',
+      'tab.mine': 'Mine',
+      'tab.voted': 'I Voted',
+      'tab.emptyMine': 'You haven\'t posted any needs yet — tap "Post Need" top right to start!',
+      'tab.emptyVoted': 'You haven\'t voted any needs — go check out the trending ones!',
     },
     hi: {
       'status.pending': 'समीक्षा लंबित',
@@ -460,6 +470,11 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
       'default.bidDelivery': '7 दिन',
       'filter.contains.free': 'निःशुल्क',
       'filter.contains.tip': 'टिप',
+      'tab.all': 'सभी आवश्यकताएँ',
+      'tab.mine': 'मेरी पोस्ट की गई',
+      'tab.voted': 'मैंने वोट दिया',
+      'tab.emptyMine': 'आपने अभी कोई आवश्यकता पोस्ट नहीं की है — शुरू करने के लिए ऊपर दाईं ओर "आवश्यकता पोस्ट करें" दबाएँ!',
+      'tab.emptyVoted': 'आपने किसी भी आवश्यकता को वोट नहीं दिया है — ट्रेंडिंग देखें!',
     },
     fr: {
       'status.pending': 'En attente',
@@ -598,6 +613,11 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
       'default.bidDelivery': '7 jours',
       'filter.contains.free': 'Gratuit',
       'filter.contains.tip': 'Pourboire',
+      'tab.all': 'Tous les besoins',
+      'tab.mine': 'Mes publications',
+      'tab.voted': 'Mes votes',
+      'tab.emptyMine': 'Vous n\'avez encore posté aucun besoin — cliquez sur "Poster un Besoin" en haut à droite pour commencer !',
+      'tab.emptyVoted': 'Vous n\'avez voté aucun besoin — allez voir les tendances !',
     },
     es: {
       'status.pending': 'Pendiente',
@@ -736,6 +756,11 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
       'default.bidDelivery': '7 días',
       'filter.contains.free': 'Gratis',
       'filter.contains.tip': 'Propina',
+      'tab.all': 'Todas las necesidades',
+      'tab.mine': 'Mis publicadas',
+      'tab.voted': 'Votadas por mí',
+      'tab.emptyMine': 'Todavía no has publicado ninguna necesidad — pulsa "Publicar Necesidad" arriba a la derecha para empezar!',
+      'tab.emptyVoted': 'No has votado ninguna necesidad — ¡ve a ver las populares!',
     },
     ar: {
       'status.pending': 'قيد المراجعة',
@@ -874,6 +899,11 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
       'default.bidDelivery': '7 أيام',
       'filter.contains.free': 'مجاني',
       'filter.contains.tip': 'بقشيش',
+      'tab.all': 'كل الاحتياجات',
+      'tab.mine': 'التي نشرتها',
+      'tab.voted': 'التي صوتت لها',
+      'tab.emptyMine': 'لم تنشر أي احتياجات بعد — اضغط على "نشر الاحتياج" أعلى اليمين للبدء!',
+      'tab.emptyVoted': 'لم تصوت لأي احتياجات — اذهب وشاهد الاحتياجات الشائعة!',
     },
   };
 
@@ -892,13 +922,32 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
 
   const t = getT(locale);
 
-  const statusConfig: Record<string, { label: string; color: string; bg: string; icon: any }> = {
-    pending: { label: t('status.pending'), color: 'text-yellow-600', bg: 'bg-yellow-100 dark:bg-yellow-900/30', icon: Clock },
-    reviewing: { label: t('status.reviewing'), color: 'text-blue-600', bg: 'bg-blue-100 dark:bg-blue-900/30', icon: Lightbulb },
-    bidding: { label: t('status.bidding'), color: 'text-orange-600', bg: 'bg-orange-100 dark:bg-orange-900/30', icon: Handshake },
-    developing: { label: t('status.developing'), color: 'text-purple-600', bg: 'bg-purple-100 dark:bg-purple-900/30', icon: Loader2 },
-    completed: { label: t('status.completed'), color: 'text-green-600', bg: 'bg-green-100 dark:bg-green-900/30', icon: CheckCircle2 },
-    rejected: { label: t('status.rejected'), color: 'text-gray-500', bg: 'bg-gray-100 dark:bg-gray-800', icon: X },
+  const statusConfig: Record<string, { label: string; color: string; bg: string; icon: any; border: string }> = {
+    pending: { label: t('status.pending'), color: 'text-orange-700', bg: 'bg-orange-50 dark:bg-orange-900/25', icon: Clock, border: 'border border-orange-200/70 dark:border-orange-800/40' },
+    reviewing: { label: t('status.reviewing'), color: 'text-sky-700', bg: 'bg-sky-50 dark:bg-sky-900/25', icon: Lightbulb, border: 'border border-sky-200/70 dark:border-sky-800/40' },
+    bidding: { label: t('status.bidding'), color: 'text-amber-700', bg: 'bg-amber-50 dark:bg-amber-900/25', icon: Handshake, border: 'border border-amber-200/70 dark:border-amber-800/40' },
+    developing: { label: t('status.developing'), color: 'text-violet-700', bg: 'bg-violet-50 dark:bg-violet-900/25', icon: Loader2, border: 'border border-violet-200/70 dark:border-violet-800/40' },
+    completed: { label: t('status.completed'), color: 'text-emerald-700', bg: 'bg-emerald-50 dark:bg-emerald-900/25', icon: CheckCircle2, border: 'border border-emerald-200/70 dark:border-emerald-800/40' },
+    rejected: { label: t('status.rejected'), color: 'text-rose-700', bg: 'bg-rose-50 dark:bg-rose-900/25', icon: X, border: 'border border-rose-200/70 dark:border-rose-800/40' },
+  };
+
+  const getCategoryStyle = (id: string) => {
+    switch (id) {
+      case 'image-tools':
+        return 'bg-pink-50 dark:bg-pink-900/25 text-pink-700 dark:text-pink-400 border border-pink-200/70 dark:border-pink-800/40';
+      case 'ai-tools':
+        return 'bg-violet-50 dark:bg-violet-900/25 text-violet-700 dark:text-violet-400 border border-violet-200/70 dark:border-violet-800/40';
+      case 'lifestyle':
+        return 'bg-amber-50 dark:bg-amber-900/25 text-amber-700 dark:text-amber-400 border border-amber-200/70 dark:border-amber-800/40';
+      case 'productivity':
+        return 'bg-emerald-50 dark:bg-emerald-900/25 text-emerald-700 dark:text-emerald-400 border border-emerald-200/70 dark:border-emerald-800/40';
+      case 'developer-tools':
+        return 'bg-sky-50 dark:bg-sky-900/25 text-sky-700 dark:text-sky-400 border border-sky-200/70 dark:border-sky-800/40';
+      case 'other':
+        return 'bg-slate-50 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700';
+      default:
+        return 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700';
+    }
   };
 
   const categories = [
@@ -933,6 +982,8 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
     comments,
     currentRole,
     currentDeveloperId,
+    userId,
+    ideaVotes,
     addIdea,
     voteIdea,
     hasVotedIdea,
@@ -945,7 +996,8 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
     getBidsByIdea,
     getCommentsByIdea,
     getCurrentDeveloper,
-  } = usePreferencesStore();
+    _ensureUserId,
+  } = useCommunityStore();
 
   const [view, setView] = useState<'list' | 'detail' | 'becomeDev' | 'devList'>('list');
   const [selectedIdea, setSelectedIdea] = useState<Idea | null>(null);
@@ -953,11 +1005,12 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
   const [showBidForm, setShowBidForm] = useState(false);
   const [showFilterMobile, setShowFilterMobile] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [statusFilter, setStatusFilter] = useState<'all' | 'bidding' | 'developing' | 'completed'>('all');
+  const [statusFilter, setStatusFilter] = useState<'all' | Idea['status']>('all');
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [budgetFilter, setBudgetFilter] = useState('all');
   const [sortBy, setSortBy] = useState<'votes' | 'newest' | 'bids'>('newest');
   const [viewMode, setViewMode] = useState<'card' | 'list'>('card');
+  const [activeTab, setActiveTab] = useState<'all' | 'mine' | 'voted'>('all');
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -988,14 +1041,23 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
   const ideaComments = selectedIdea ? getCommentsByIdea(selectedIdea.id) : [];
 
   const filteredIdeas = useMemo(() => {
+    const uid = userId || _ensureUserId();
     let result = [...ideas];
+
+    if (activeTab === 'mine') {
+      result = result.filter((i) => i.authorId === uid);
+    } else if (activeTab === 'voted') {
+      result = result.filter((i) => i.votedBy.includes(uid) || ideaVotes[i.id]);
+    }
 
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(
         (i) =>
           i.title.toLowerCase().includes(q) ||
-          i.description.toLowerCase().includes(q)
+          i.description.toLowerCase().includes(q) ||
+          (i.category && String(i.category).toLowerCase().includes(q)) ||
+          (i.authorName && String(i.authorName).toLowerCase().includes(q))
       );
     }
 
@@ -1027,7 +1089,7 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
     }
 
     return result;
-  }, [ideas, searchQuery, statusFilter, categoryFilter, budgetFilter, sortBy, t]);
+  }, [ideas, searchQuery, statusFilter, categoryFilter, budgetFilter, sortBy, activeTab, ideaVotes, userId, t]);
 
   const stats = useMemo(() => {
     const total = ideas.length;
@@ -1150,7 +1212,8 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
   };
 
   const isMyIdea = (idea: Idea) => {
-    return idea.authorId === usePreferencesStore.getState().userId;
+    const uid = userId || _ensureUserId();
+    return idea.authorId === uid;
   };
 
   const FilterSidebar = () => (
@@ -1167,7 +1230,7 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
           {t('filter.projectStatus')}
         </h4>
         <div className='space-y-1'>
-          {['all', 'bidding', 'developing', 'completed'].map((s) => (
+          {['all', 'pending', 'reviewing', 'bidding', 'developing', 'completed', 'rejected'].map((s) => (
             <button
               key={s}
               onClick={() => setStatusFilter(s as any)}
@@ -1271,7 +1334,7 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
         <div className='h-1 bg-[#34A89C] flex-shrink-0' />
         <div className='p-4 flex-1 flex flex-col min-h-0'>
         <div className='flex items-start justify-between gap-2 mb-2'>
-          <span className={`flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-medium flex-shrink-0 ${status.bg} ${status.color}`}>
+          <span className={`flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-medium flex-shrink-0 ${status.bg} ${status.color} ${status.border}`}>
             <StatusIcon className='h-3 w-3' />
             {status.label}
           </span>
@@ -1291,7 +1354,7 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
 
         <div className='flex flex-wrap gap-1.5 mb-3'>
           {cat && cat.id !== 'all' && (
-            <span className='px-2 py-0.5 rounded-md text-[11px] font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'>
+            <span className={`px-2 py-0.5 rounded-md text-[11px] font-medium ${getCategoryStyle(cat.id)}`}>
               {cat.icon} {cat.name}
             </span>
           )}
@@ -1310,13 +1373,13 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
           </div>
           <button
             onClick={(e) => { e.stopPropagation(); voteIdea(idea.id); }}
-            className={`flex items-center gap-1 px-2 py-1.5 rounded-lg transition-all duration-200 hover:scale-105 ${
+            className={`min-h-[40px] min-w-[56px] flex items-center justify-center gap-1 px-3 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 ${
               voted
                 ? 'bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400'
                 : 'text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-500'
             }`}
           >
-            <ThumbsUp className={`h-3.5 w-3.5 ${voted ? 'fill-current' : ''}`} />
+            <ThumbsUp className={`h-4 w-4 ${voted ? 'fill-current' : ''}`} />
             <span className='text-[11px] font-semibold tabular-nums leading-none'>{idea.votes}</span>
           </button>
         </div>
@@ -1456,7 +1519,7 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
               <Users className='h-6 w-6' />
             </div>
             <div>
-              <h1 className='text-2xl font-bold text-gray-900 dark:text-gray-100'>{t('devList.title')}</h1>
+              <h1 className='text-xl font-bold text-gray-900 dark:text-gray-100'>{t('devList.title')}</h1>
               <p className='text-gray-600 dark:text-gray-400 text-sm'>{t('devList.subtitle')}</p>
             </div>
           </div>
@@ -1928,7 +1991,7 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
         </div>
 
         <div className='text-center'>
-          <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1 sm:mb-2'>
+          <h1 className='text-lg sm:text-xl lg:text-xl font-bold text-gray-900 dark:text-gray-100 mb-1 sm:mb-2'>
             {currentRole === 'developer' ? t('hero.titleDev') : t('hero.titleUser')}
           </h1>
           <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-5 max-w-3xl mx-auto'>
@@ -1973,22 +2036,44 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
 
         <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto'>
           <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 shadow-sm hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all'>
-            <p className='text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 tabular-nums mb-1'>{stats.total}</p>
+            <p className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100 tabular-nums mb-1'>{stats.total}</p>
             <p className='text-xs sm:text-sm text-gray-500 dark:text-gray-400'>{t('stats.total')}</p>
           </div>
           <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 shadow-sm hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all'>
-            <p className='text-2xl sm:text-3xl font-bold text-orange-600 dark:text-orange-400 tabular-nums mb-1'>{stats.bidding}</p>
+            <p className='text-lg sm:text-xl font-bold text-orange-600 dark:text-orange-400 tabular-nums mb-1'>{stats.bidding}</p>
             <p className='text-xs sm:text-sm text-gray-500 dark:text-gray-400'>{t('stats.bidding')}</p>
           </div>
           <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 shadow-sm hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all'>
-            <p className='text-2xl sm:text-3xl font-bold text-green-600 dark:text-green-400 tabular-nums mb-1'>{stats.completed}</p>
+            <p className='text-lg sm:text-xl font-bold text-green-600 dark:text-green-400 tabular-nums mb-1'>{stats.completed}</p>
             <p className='text-xs sm:text-sm text-gray-500 dark:text-gray-400'>{t('stats.completed')}</p>
           </div>
           <div className='bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 shadow-sm hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all overflow-hidden relative'>
             <div className='h-1 bg-[#34A89C] -mx-4 -mt-4 sm:-mx-5 sm:-mt-5 mb-4 sm:mb-5 flex-shrink-0 opacity-70' />
-            <p className='text-2xl sm:text-3xl font-bold text-[#34A89C] dark:text-[#4AB8A9] tabular-nums mb-1'>{stats.devCount}</p>
+            <p className='text-lg sm:text-xl font-bold text-[#34A89C] dark:text-[#4AB8A9] tabular-nums mb-1'>{stats.devCount}</p>
             <p className='text-xs sm:text-sm text-gray-500 dark:text-gray-400'>{t('stats.developers')}</p>
           </div>
+        </div>
+      </div>
+
+      <div className='mb-4 sm:mb-6 max-w-5xl mx-auto'>
+        <div className='flex items-center gap-1 p-1 bg-gray-100 dark:bg-gray-800 rounded-xl overflow-x-auto'>
+          {(['all', 'mine', 'voted'] as const).map((tab, idx) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`flex-1 min-w-0 px-3 py-2 min-h-[40px] rounded-lg text-sm font-medium transition-all whitespace-nowrap flex items-center justify-center gap-1.5 ${
+                activeTab === tab
+                  ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-400 shadow-sm'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+              }`}
+              dir={locale === 'ar' ? 'rtl' : 'ltr'}
+            >
+              {idx === 0 && <Sparkles className='h-4 w-4 flex-shrink-0' />}
+              {idx === 1 && <User className='h-4 w-4 flex-shrink-0' />}
+              {idx === 2 && <Heart className='h-4 w-4 flex-shrink-0' />}
+              <span className='truncate'>{t(`tab.${tab}`)}</span>
+            </button>
+          ))}
         </div>
       </div>
 
@@ -2075,8 +2160,22 @@ export default function IdeaWorkshop({ locale = 'zh' }: { locale?: string }) {
           {filteredIdeas.length === 0 ? (
             <div className='text-center py-16 text-gray-500'>
               <Lightbulb className='h-16 w-16 mx-auto mb-4 opacity-30' />
-              <p className='text-lg mb-2'>{t('list.emptyTitle')}</p>
-              <p className='text-sm text-gray-400'>{t('list.emptySub')}</p>
+              {activeTab === 'mine' ? (
+                <>
+                  <p className='text-lg mb-2 font-semibold text-gray-700 dark:text-gray-300'>{t('tab.mine')}</p>
+                  <p className='text-sm text-gray-400 max-w-md mx-auto'>{t('tab.emptyMine')}</p>
+                </>
+              ) : activeTab === 'voted' ? (
+                <>
+                  <p className='text-lg mb-2 font-semibold text-gray-700 dark:text-gray-300'>{t('tab.voted')}</p>
+                  <p className='text-sm text-gray-400 max-w-md mx-auto'>{t('tab.emptyVoted')}</p>
+                </>
+              ) : (
+                <>
+                  <p className='text-lg mb-2'>{t('list.emptyTitle')}</p>
+                  <p className='text-sm text-gray-400'>{t('list.emptySub')}</p>
+                </>
+              )}
             </div>
           ) : (
             <div className={viewMode === 'card' ? 'grid grid-cols-1 md:grid-cols-2 gap-4' : 'space-y-3'}>

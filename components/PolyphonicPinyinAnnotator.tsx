@@ -832,7 +832,7 @@ export default function PolyphonicPinyinAnnotator({ locale = 'zh' }: PolyphonicP
                 <Languages className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
+                <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t('subtitle')}</p>
               </div>
             </div>

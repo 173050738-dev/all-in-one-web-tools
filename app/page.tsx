@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 
 const SITE_URL = 'https://korelyy.com';
-const OG_IMAGE = '/og-image.svg';
+const OG_IMAGE = '/og-image.png';
+const OG_IMAGE_TYPE = 'image/png';
 const DEFAULT_LANG = '/en/';
 
 export const metadata: Metadata = {
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        type: 'image/svg+xml',
+        type: OG_IMAGE_TYPE,
         alt: 'Korelyy Tool Hub — Free online tools',
       },
     ],

@@ -27,6 +27,8 @@
     "batchProcess": "批量文件处理",
     "apiKeys": "API 密钥",
     "ideas": "创意工坊",
+    "blog": "博客",
+    "blogBadge": "📚 博客",
     "backHome": "返回首页",
     "ideasBadge": "💡 创意工坊"
   },
@@ -43,7 +45,35 @@
     "noResultsWithSearchAndCategory": "当前分类下没有找到匹配\"{query}\"的工具，是否切换到全部分类？",
     "noResultsWithSearch": "没有找到匹配的工具，请尝试其他关键词",
     "viewAllCategories": "查看全部分类",
-    "loadMore": "加载更多"
+    "loadMore": "加载更多",
+    "platform-all": "所有端",
+    "platform-desktop": "电脑端",
+    "platform-mobile": "手机端",
+    "access-direct": "国内直连",
+    "access-vpn-required": "需特殊网络",
+    "payment-alipay": "支付宝",
+    "payment-wechat": "微信支付",
+    "payment-visa": "Visa",
+    "payment-mastercard": "Mastercard",
+    "signup-no-signup": "免注册",
+    "signup-email": "邮箱注册",
+    "signup-cn-phone": "需国内手机号",
+    "signup-global-phone": "需境外手机号",
+    "signup-cc-required": "需信用卡",
+    "privacy-local-processing": "本地处理",
+    "privacy-local-note": "🔒 本工具在浏览器本地处理，文件上传后10分钟自动清理，不上传服务器。📏 单次处理上限：图片≤20MB，PDF≤50MB。",
+    "advanced-filter": "高级筛选",
+    "filter-all": "全部",
+    "compliance-level": "合规级别",
+    "compliance-green": "可信（低风险）",
+    "compliance-yellow": "一般风险（自行判断）",
+    "compliance-red": "高风险（谨慎使用）",
+    "compliance-standard": "常规工具",
+    "access-level": "访问门槛",
+    "signup-requirement": "注册要求",
+    "privacy-heading": "数据处理方式",
+    "privacy-cloud-processing": "云端处理",
+    "apply-filter": "应用筛选并返回首页"
   },
   "sidebar": {
     "all-tools": "全部工具",
@@ -90,7 +120,12 @@
     "hot-tools": "热门工具",
     "difficulty-easy": "简单",
     "difficulty-medium": "中等",
-    "difficulty-advanced": "高级"
+    "difficulty-advanced": "高级",
+    "sort-by-label": "排序",
+    "no-results-title": "没有找到匹配的工具",
+    "no-results-hint": "换个关键词试试，或看看下面的热门分类和工具",
+    "try-these-categories": "热门分类",
+    "try-these-tools": "热门推荐工具"
   },
   "compliance": {
     "title": "合规透明页",
@@ -127,6 +162,8 @@
     "contact-desc": "联系我们",
     "compliance": "合规透明",
     "compliance-desc": "工具合规核查",
+    "blog": "博客",
+    "blog-desc": "工具教程、SEO指南、场景文章",
     "sitemap": "网站地图",
     "github": "GitHub",
     "github-desc": "查看源代码",
@@ -1286,10 +1323,6 @@
     "tidio": {
       "name": "AI客服机器人",
       "description": "AI驱动的客服平台，聊天机器人和实时客服结合。"
-    },
-    "helpScout": {
-      "name": "邮件客服平台",
-      "description": "基于邮件的客户服务平台，适合B2B客户服务。"
     },
     "olark": {
       "name": "网站实时聊天",
@@ -3308,8 +3341,8 @@
       "description": "中国家居设计平台，3D效果图。"
     },
     "qijia": {
-      "name": "齐家网",
-      "description": "中国家居装修平台，装修服务。"
+      "name": "土巴兔装修",
+      "description": "土巴兔装修服务平台，找装修公司、设计、报价、工长、施工监理一站式。"
     },
     "huadi": {
       "name": "华帝",
@@ -4090,6 +4123,302 @@
     "wc-name-decorator": {
       "name": "球星名字花体装饰工具",
       "description": "输入球星姓名或任意文字，自动生成几十套足球风花体字+特殊符号组合（⚽🏆🇦🇷🇫🇷 等 Unicode 装饰）。适合短视频标题、评论区装饰、朋友圈签名，一键复制。"
+    },
+    "wevideo": {
+      "name": "WeVideo云端剪辑",
+      "description": "基于云端的视频在线编辑器，支持多轨音视频、绿幕抠像、动态文字，手机电脑同步响应。"
+    },
+    "clipchamp": {
+      "name": "Clipchamp轻剪辑",
+      "description": "微软旗下轻量级网页视频编辑器，模板丰富，支持裁剪拼接字幕压缩导出MP4一条龙。"
+    },
+    "hippo-video": {
+      "name": "Hippo Video视频平台",
+      "description": "面向销售和客服的一体化视频平台，录屏、剪辑、个性化视频邮件、追踪数据全支持。"
+    },
+    "renderforest": {
+      "name": "Renderforest视频工厂",
+      "description": "可视化视频模板工厂，宣传片动画Logo片头片尾一键生成，无需剪辑基础，响应式跨端。"
+    },
+    "animaker": {
+      "name": "Animaker动画制作",
+      "description": "平民化二维动画视频平台，角色、场景、道具拖曳组合，真人直播数字人也能做。"
+    },
+    "tella-tv": {
+      "name": "Tella录屏剪辑",
+      "description": "面向远程团队的录屏与轻剪辑工具，摄像头、屏幕、PPT合成布局，一键分享链接观看。"
+    },
+    "animoto": {
+      "name": "Animoto智能短片",
+      "description": "上传图片音乐自动生成故事感短片，婚庆、旅行、产品展示一键出片，响应式导出高清。"
+    },
+    "biteable": {
+      "name": "Biteable职场短视频",
+      "description": "HR培训、内部沟通、职场说明类视频模板千余套，拖曳组合快速出片，品牌风格统一。"
+    },
+    "playplay": {
+      "name": "PlayPlay品牌视频",
+      "description": "企业品牌级视频制作平台，新闻室、公关、产品发布专业模板，品牌色字体自动统一。"
+    },
+    "powtoon": {
+      "name": "Powtoon演示动画",
+      "description": "演示文稿秒变动画视频，人物表情动作、旁白配音、字幕动效，培训宣讲比PPT更抓人。"
+    },
+    "rawshorts": {
+      "name": "RawShorts文字转视频",
+      "description": "输入脚本自动匹配模板、角色、配音、素材，AI辅助快速产出讲解类动画视频。"
+    },
+    "flixier": {
+      "name": "Flixier云剪辑",
+      "description": "云端GPU加速视频剪辑，导入TwitchYouTube直剪，导出1分钟以内，支持团队协作版本。"
+    },
+    "vidyard": {
+      "name": "Vidyard视频营销",
+      "description": "B2B营销视频托管与分析平台，个性化1对1视频、谁看了看多久、CTA内嵌转化追踪。"
+    },
+    "typito": {
+      "name": "Typito动态字幕",
+      "description": "主打动态字幕与品牌模板的视频编辑器，200+字幕动画、品牌套件、实时团队审阅。"
+    },
+    "movavi": {
+      "name": "Movavi视频套件",
+      "description": "轻量级视频剪辑录屏全家桶，界面简洁、新手友好，格式转换、屏幕录制、视频剪辑集成。"
+    },
+    "headliner": {
+      "name": "Headliner播客转视频",
+      "description": "播客音频一键转视频，自动生成波形动画字幕、头像，适配短视频平台，免费版有水印。"
+    },
+    "postman-api": {
+      "name": "Postman接口调试",
+      "description": "业界最流行的API调试协作平台，RESTGraphQL调试、Mock服务、自动化测试、团队同步。"
+    },
+    "swagger-ui": {
+      "name": "Swagger接口文档",
+      "description": "OpenAPI接口文档可视化与调试工具，自动生成交互式API文档，前后端协作对接神器。"
+    },
+    "sentry-io": {
+      "name": "Sentry错误监控",
+      "description": "跨端应用错误与性能监控SaaS，实时捕获前后端崩溃堆栈、性能瓶颈、告警分发处理。"
+    },
+    "apidog": {
+      "name": "Apifox接口管家",
+      "description": "一站式API协作平台，文档调试Mock测试四合一，Postman替代，国内外团队广泛使用。"
+    },
+    "baidu-ocr": {
+      "name": "百度文字识别",
+      "description": "百度AI开放平台OCR服务，通用、票据、身份证、手写、多语种文字识别，大厂合规备案。"
+    },
+    "tencent-ai": {
+      "name": "腾讯AI开放平台",
+      "description": "腾讯云AI官方能力平台，人脸、人体、语音、NLP、OCR图像识别全家桶，国内全备案。"
+    },
+    "aliyun-ai": {
+      "name": "阿里云AI平台",
+      "description": "阿里云机器学习PAI与视觉语音平台，通义系列能力对外服务，国内企业级合规备案。"
+    },
+    "squoosh-app": {
+      "name": "Squoosh图片压缩",
+      "description": "Google出品在线图片压缩对比工具，WebPAVIFJXL多格式并排对比，所见即所得调参数。"
+    },
+    "picresize": {
+      "name": "PicResize裁剪缩放",
+      "description": "老牌在线图片裁剪缩放工具，无需注册，旋转镜像边框特效批量处理，傻瓜式一键搞定。"
+    },
+    "lunapic": {
+      "name": "LunaPic在线修图",
+      "description": "老牌免费线上图片编辑器，特效滤镜百余种、透明背景、动图GIF编辑，功能全免费。"
+    },
+    "befunky": {
+      "name": "BeFunky图片工坊",
+      "description": "图片编辑+拼贴画+设计三合一平台，人像美化、批量处理、海报模板，零基础出图。"
+    },
+    "pdf24-tools": {
+      "name": "PDF24工具箱",
+      "description": "德国出品30+PDF工具集，合并分割压缩转换签名OCR解密，免费无水印，隐私本地优先。"
+    },
+    "pdf-cafe": {
+      "name": "PDF Candy糖果站",
+      "description": "糖果色界面的免费PDF工具站，47种PDF处理功能，网页端移动端皆可用，清爽无广告。"
+    },
+    "dopdf": {
+      "name": "doPDF虚拟打印",
+      "description": "经典免费虚拟打印机驱动，任意应用打印即可生成PDF，支持自定义分辨率嵌入字体。"
+    },
+    "pdfexpert": {
+      "name": "PDF Expert阅读器",
+      "description": "苹果生态标杆级PDF编辑批注工具，阅读顺滑、签名表单、OCR识别，跨iPhone iPad Mac。"
+    },
+    "bilibili-creator": {
+      "name": "B站创作中心",
+      "description": "B站官方创作管理中心，稿件上传、数据分析、粉丝互动、变现管理，UP主日常工作台。"
+    },
+    "9gag": {
+      "name": "9GAG趣味社区",
+      "description": "全球最大搞笑图片动图视频社区， meme 发源地，刷梗解压神器，响应式多端同步。"
+    },
+    "ted-talks": {
+      "name": "TED演讲宝库",
+      "description": "全球顶级TED演讲官方站，数千条18分钟内高质量演讲视频配多语言字幕，思想冲浪。"
+    },
+    "obsidian-md": {
+      "name": "Obsidian双链笔记",
+      "description": "本地优先Markdown双向链接知识库，图谱可视化、插件生态百花齐放，PKM玩家首选。"
+    },
+    "crello": {
+      "name": "VistaCreate设计",
+      "description": "Vista家族在线平面设计器，千万级素材模板海报社交媒体图，零设计基础拖拽出图。"
+    },
+    "placeit": {
+      "name": "Placeit样机生成",
+      "description": "Logo设计+样机mockup一站式，T恤手机壳书籍包装盒模型在线套图，电商设计神器。"
+    },
+    "designrr": {
+      "name": "Designrr电子书",
+      "description": "博文播客PDF一键翻成精美电子书Lead Magnet，内置模板封面目录，内容获客利器。"
+    },
+    "logaster": {
+      "name": "Logaster在线Logo",
+      "description": "输入品牌名秒生成多款Logo概念，下载矢量源文件名片信头社交媒套件一条龙。"
+    },
+    "shopee-seller": {
+      "name": "Shopee卖家中心",
+      "description": "虾皮东南亚跨境电商官方卖家工作台，商品上架、订单物流、营销活动、数据分析统管。"
+    },
+    "prowritingaid": {
+      "name": "ProWritingAid深度校对",
+      "description": "作家级别英文写作深度校对，20+报告、风格一致性分析、重复词检测，媲美人工编辑。"
+    },
+    "scribens": {
+      "name": "Scribens语法检查",
+      "description": "英法双语免费语法拼写风格检查器，直接粘贴即出高亮建议，支持Office Chrome插件。"
+    },
+    "hubspot-free": {
+      "name": "HubSpot营销中枢",
+      "description": "全球知名CRM与营销自动化平台，免费版功能慷慨，表单落地页邮件自动化样样通。"
+    },
+    "getresponse": {
+      "name": "GetResponse营销漏斗",
+      "description": "邮件营销+自动化漏斗+落地页+网络研讨会四合一，独立站获客转化全链路覆盖。"
+    },
+    "semrush-free": {
+      "name": "Semrush SEO套件",
+      "description": "SEO营销人必备瑞士军刀，关键词竞品外链流量广告全栈分析，数据覆盖全球190+国家。"
+    },
+    "mangools": {
+      "name": "Mangools SEO全家桶",
+      "description": "界面最清新的SEO工具包，KWFinder关键词、SERPChecker排名、SERPWatcher追踪，好用不贵。"
+    },
+    "seo-review-tools": {
+      "name": "SEO Review工具箱",
+      "description": "荷兰老牌免费SEO检查工具集，页面权重、关键词密度、死链、 robots、GSC集成全免。"
+    },
+    "later-app": {
+      "name": "Later社媒排期",
+      "description": "Instagram官方合作排期工具，可视化日历拖拽发布，IG专属LinkinBio链接聚合页。"
+    },
+    "planoly": {
+      "name": "Planoly视觉规划",
+      "description": "主打视觉化的社媒策划平台，Ins Pinterest九宫格预览、评论管理、UGC收集一站式。"
+    },
+    "lever-co": {
+      "name": "Lever招聘ATS",
+      "description": "硅谷新宠现代化招聘管理ATS，可视化招聘漏斗、内推候选人关系管理集成强。"
+    },
+    "zoho-people": {
+      "name": "Zoho People人事系统",
+      "description": "Zoho全家桶中HRIS产品，入转调离考勤休假绩效薪酬档案一体化，性价比高中小友好。"
+    },
+    "webmd": {
+      "name": "WebMD医疗科普",
+      "description": "美国最大医疗健康科普资讯站，症状自查、药品信息、医生查找，权威内容可信度高。"
+    },
+    "meetup": {
+      "name": "Meetup线下聚会",
+      "description": "全球最大兴趣主题线下活动平台，技术读书徒步桌游，找到同城同好面基社交。"
+    },
+    "imdb": {
+      "name": "IMDb电影圣经",
+      "description": "全球电影电视权威评分信息库，演员片单票房评论TOP榜，观影追剧风向标。"
+    },
+    "rottentomatoes": {
+      "name": "烂番茄影评",
+      "description": "北美影评聚合标杆站点，新鲜度爆米花双指标，烂片预警神器，榜单每日更新。"
+    },
+    "audacity-tutorial": {
+      "name": "Audacity音频编辑",
+      "description": "免费开源跨平台的老牌音频编辑器，录音降噪多轨混音效果器插件生态极其成熟。"
+    },
+    "audio-mass": {
+      "name": "AudioMass网页DAW",
+      "description": "纯浏览器运行的轻量数字音频工作站，多轨波形编辑、实时效果器、导出免安装。"
+    },
+    "twisted-wave": {
+      "name": "TwistedWave在线音频",
+      "description": "浏览器内单轨专业音频编辑器，无需下载，Undo无限、批处理、云端保存工作文件。"
+    },
+    "sketchfab": {
+      "name": "Sketchfab 3D社区",
+      "description": "全球最大3D模型分享展示平台，GLB/USDZ/WebGL 浏览器直看下载，创作者商店交易。"
+    },
+    "vectary": {
+      "name": "Vectary在线建模",
+      "description": "无门槛浏览器3D建模渲染平台，Figma式拖曳、材质灯光AR预览，设计师友好。"
+    },
+    "spline-3d": {
+      "name": "Spline交互3D",
+      "description": "面向设计师与前端的浏览器实时3D工具，场景事件交互、React集成、Web直接导出可用。"
+    },
+    "flourish-studio": {
+      "name": "Flourish动感图表",
+      "description": "数据记者最爱的交互式图表动画平台，复杂条形竞赛图、地图散点故事一键生成。"
+    },
+    "datawrapper": {
+      "name": "DataWrapper制图",
+      "description": "德国新闻级在线图表地图生成器，配色专业、响应式嵌入、媒体机构广泛采用。"
+    },
+    "virus-total": {
+      "name": "VirusTotal多引擎查毒",
+      "description": "Google旗下多杀毒引擎联合扫描服务，文件URLIP哈希70+引擎同查，威胁情报汇总。"
+    },
+    "urlscan-io": {
+      "name": "URLscan链接扫描",
+      "description": "沙箱式URL安全扫描分析，页面截图、DOM树、请求链路、恶意指标一网打尽。"
+    },
+    "miro-board": {
+      "name": "Miro在线白板",
+      "description": "远程协作白板界事实标准，模板库丰富、便签思维导图画布无限大，跨端手感顺滑。"
+    },
+    "basecamp": {
+      "name": "Basecamp营地协作",
+      "description": "简约不简单的远程公司协作工具，项目公告板、待办、文档、聊天，小团队最佳实践。"
+    },
+    "zip-extractor": {
+      "name": "Extract.me在线解压",
+      "description": "浏览器端纯本地解压工具，支持7z rar zip tar等50+格式，文件不上传服务器更安全。"
+    },
+    "cloudconvert-extra": {
+      "name": "CloudConvert转换",
+      "description": "200+种文件格式云端互相转换，文档图片音视频CAD字体API批量，质量稳定可靠。"
+    },
+    "online-ocr": {
+      "name": "OnlineOCR网识别",
+      "description": "老牌免费在线OCR站点，图片PDF转可编辑Word Excel文本，多语言识别，小文件免注册。"
+    },
+    "promo-video-maker": {
+      "name": "Promo视频广告制作",
+      "description": "海量专业视频模板和正版素材库，快速制作社媒广告、宣传片、产品视频，AI辅助一键生成字幕，手机电脑同步编辑。"
+    },
+    "magisto-ai-video": {
+      "name": "Magisto AI视频剪辑",
+      "description": "智能AI自动选镜头、加音乐、合成精美短视频，适用于旅行Vlog、营销、婚礼、家庭回忆，iOS/Android/PC全平台可用。"
+    },
+    "dropbox-paper": {
+      "name": "Dropbox Paper协作文档",
+      "description": "轻量级多人实时在线协作文档，支持嵌入代码、表格、待办、视频、文件预览，与Dropbox云端深度整合，手机端流畅编辑。"
+    },
+    "dezeen": {
+      "name": "Dezeen",
+      "description": "设计媒体网站，建筑室内设计。"
     }
   },
   "sidebar2": {
@@ -4176,7 +4505,52 @@
     },
     "footer": "付款或订单问题？联系 billing@korelyy.com"
   },
+  "compare": {
+    "title": "AI 工具对比（最多 3 个）",
+    "selected": "已选择 {n}/3",
+    "clear": "清空",
+    "compareNow": "开始对比",
+    "price": "收费方式",
+    "compliance": "合规性",
+    "platform": "平台支持",
+    "difficulty": "上手难度",
+    "tags": "关键词",
+    "description": "产品简介",
+    "name": "工具名称",
+    "favorited": "已收藏",
+    "remove": "移除对比",
+    "emptyHint": "请在分类或搜索页选择 2–3 个工具开始对比。",
+    "atLeastTwo": "请至少选择 2 个工具进行对比",
+    "linkCopied": "对比链接已复制！",
+    "related": "相关工具",
+    "openPage": "打开对比页"
+  },
   "breadcrumb": {
     "home": "首页"
+  },
+  "kofi": {
+    "supportUs": "支持 Korelyy 继续维护免费工具",
+    "closeAria": "关闭解锁横幅（7 天内不再显示）",
+    "getStarted": "立即解锁",
+    "or": "或",
+    "learnMore": "了解 Ko-fi",
+    "perMonth": "每月",
+    "oneTime": "一次性",
+    "team": "团队授权",
+    "includes": "包含",
+    "activateCode": "输入激活码",
+    "activatePlaceholder": "粘贴激活码（如 KOFI-XXXX）",
+    "activateSubmit": "激活",
+    "activateSuccess": "激活成功！感谢支持 ❤️",
+    "activateFail": "激活码无效，请检查或通过下方按钮解锁",
+    "memberBadge": "支持者会员",
+    "memberExpires": "有效期至 {date}",
+    "txWelcome": "欢迎，打赏成功！已解锁所有高级内容 🎉",
+    "txInvalid": "打赏校验失败，请手动输入激活码或重新支付",
+    "premiumContent": "解锁高级内容",
+    "freeContent": "当前免费功能",
+    "exportPdf": "导出 PDF 报告",
+    "printHint": "会员：无水印高清版 / 游客：带水印 30 秒试用版",
+    "backToCompare": "返回对比"
   }
 }

@@ -48,29 +48,68 @@ function escapeForHtml(s) {
   return String(s == null ? '' : s)
     .replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 }
+function escapeRe(s) {
+  return String(s == null ? '' : s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+const OG_IMAGE_REL = '/og-image.png';
+const OG_IMAGE_ABS = BASE_URL.replace(/\/$/, '') + OG_IMAGE_REL;
+const OG_IMAGE_TYPE = 'image/png';
+const OG_IMAGE_W = 1200;
+const OG_IMAGE_H = 630;
+const OG_IMAGE_ALT_SUFFIX = ' — Korelyy Tools Hub';
 
-function buildInjection({ name, description, canonical }) {
+function buildHreflang(pathWithoutLocale) {
+  const p = pathWithoutLocale.startsWith('/') ? pathWithoutLocale : '/' + pathWithoutLocale;
+  const canonical = p.endsWith('/') ? p : p + '/';
+  const base = BASE_URL.replace(/\/$/, '');
+  const lines = [];
+  for (const l of SUPPORTED_LOCALES) {
+    lines.push(`<link rel="alternate" hreflang="${l}" href="${base}/${l}${canonical}" />`);
+  }
+  lines.push(`<link rel="alternate" hreflang="x-default" href="${base}/en${canonical}" />`);
+  return lines.join('\n') + '\n';
+}
+
+function buildOgImageBlock() {
+  return (
+    `<meta property="og:image" content="${OG_IMAGE_ABS}">\n` +
+    `<meta property="og:image:secure_url" content="${OG_IMAGE_ABS}">\n` +
+    `<meta property="og:image:width" content="${OG_IMAGE_W}">\n` +
+    `<meta property="og:image:height" content="${OG_IMAGE_H}">\n` +
+    `<meta property="og:image:type" content="${OG_IMAGE_TYPE}">\n` +
+    `<meta name="twitter:image" content="${OG_IMAGE_ABS}">\n`
+  );
+}
+
+function buildInjection({ name, description, canonical, pathWithoutLocale, ogImageAlt }) {
   const title = name + ' - Korelyy Tools';
   const desc = description || name;
   const t = escapeForHtml(title);
   const d = escapeForHtml(desc);
   const c = escapeForHtml(canonical);
+  const alt = escapeForHtml((ogImageAlt || name) + OG_IMAGE_ALT_SUFFIX);
+  const hfl = pathWithoutLocale ? buildHreflang(pathWithoutLocale) : '';
   return (
     '\n<!-- SEO:static-injected -->\n' +
-    '<title>' + t + '</title>\n' +
-    '<meta name="description" content="' + d + '">\n' +
-    '<meta property="og:type" content="website">\n' +
-    '<meta property="og:site_name" content="Korelyy Tools">\n' +
-    '<meta property="og:title" content="' + t + '">\n' +
-    '<meta property="og:description" content="' + d + '">\n' +
-    '<meta property="og:url" content="' + c + '">\n' +
-    '<meta name="twitter:card" content="summary_large_image">\n' +
-    '<meta name="twitter:title" content="' + t + '">\n' +
-    '<meta name="twitter:description" content="' + d + '">\n' +
-    '<link rel="canonical" href="' + c + '">\n' +
+    `<title>${t}</title>\n` +
+    `<meta name="description" content="${d}">\n` +
+    `<meta property="og:type" content="website">\n` +
+    `<meta property="og:site_name" content="Korelyy Tools">\n` +
+    `<meta property="og:title" content="${t}">\n` +
+    `<meta property="og:description" content="${d}">\n` +
+    `<meta property="og:url" content="${c}">\n` +
+    buildOgImageBlock() +
+    `<meta property="og:image:alt" content="${alt}">\n` +
+    `<meta name="twitter:card" content="summary_large_image">\n` +
+    `<meta name="twitter:title" content="${t}">\n` +
+    `<meta name="twitter:description" content="${d}">\n` +
+    `<meta name="twitter:image:alt" content="${alt}">\n` +
+    `<link rel="canonical" href="${c}">\n` +
+    (hfl ? `<!-- hreflang:6-lang+x-default -->\n${hfl}` : '') +
     '<!-- /SEO:static-injected -->\n'
   );
 }
@@ -84,9 +123,14 @@ const REMOVE_PATTERNS = [
   /<meta[^>]+property=["']og:title["'][^>]*\/?>\s*/gi,
   /<meta[^>]+property=["']og:description["'][^>]*\/?>\s*/gi,
   /<meta[^>]+property=["']og:url["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+property=["']og:image[^"']*["'][^>]*\/?>\s*/gi,
   /<meta[^>]+name=["']twitter:card["'][^>]*\/?>\s*/gi,
   /<meta[^>]+name=["']twitter:title["'][^>]*\/?>\s*/gi,
   /<meta[^>]+name=["']twitter:description["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']twitter:image[^"']*["'][^>]*\/?>\s*/gi,
+  /<link[^>]+rel=["']alternate["'][^>]+hreflang=["'][^"']+["'][^>]*\/?>\s*/gi,
+  /<!--\s*SEO:static-injected\s*-->[\s\S]*?<!--\s*\/SEO:static-injected\s*-->\s*/gi,
+  /<!--\s*hreflang:6-lang\+x-default\s*-->[^]*?(?=<\/head>|<\!|\Z)/g,
 ];
 
 function replaceHead(html, injection) {
@@ -119,9 +163,34 @@ for (const l of SUPPORTED_LOCALES) {
       name: tool.name,
       description: tool.description,
       canonical,
+      pathWithoutLocale: `/tool/${slug}`,
+      ogImageAlt: tool.name,
     });
-    const html = fs.readFileSync(file, 'utf8');
-    const next = replaceHead(html, injection);
+    let html = fs.readFileSync(file, 'utf8');
+    let next = replaceHead(html, injection);
+
+    // ===== Visible text i18n patch (prerender fallback: prerender renders ZH
+    // because useTranslations('tools') is not SSR-capable in build export)
+    // ALSO patch the Next.js RSC payload (self.__next_f.push strings) so that
+    // hydration does not overwrite our translated <h1>/breadcrumb/subtitle
+    // back to Chinese (React 18 hydration-mismatch forced-re-render). =====
+    const zhT = localeData.zh && localeData.zh[slug];
+    if (zhT && zhT.name && l !== 'zh') {
+      const zhName = zhT.name;
+      const zhDesc = zhT.description || '';
+      const i18nName = tool.name;       // already localeData[l][slug].name
+      const i18nDesc = tool.description; // already localeData[l][slug].description
+      if (zhName !== i18nName) {
+        // === GLOBAL replace across entire HTML (covers: <h1>, breadcrumb,
+        // JSON-LD name, <title> (already correct but safe), AND self.__next_f
+        // RSC payload strings so React hydration sees matching VDOM === DOM ===
+        next = next.split(zhName).join(i18nName);
+      }
+      if (zhDesc && i18nDesc && zhDesc !== i18nDesc) {
+        // Subtitle (<p> below H1), and RSC payload description field
+        next = next.split(zhDesc).join(i18nDesc);
+      }
+    }
     fs.writeFileSync(file, next, 'utf8');
     written++;
   }
@@ -151,10 +220,167 @@ const adsenseAdded = addAdsenseAll(outDir);
 console.log('[rewrite-meta] adsense injected into pages:', adsenseAdded);
 
 console.log(
-  '[rewrite-meta] written=' +
+  '[rewrite-meta] written-tool-pages=' +
     written +
     ' skippedNoFile=' +
     skippedNoFile +
     ' skippedNoTranslation=' +
     skippedNoTranslation
 );
+
+// ===================== Non-tool pages (home, /tools/, about, blog, contact, etc.) =====================
+const SITE_META = {
+  en: {
+    siteName: 'Korelyy Tools',
+    homeTitle: 'Korelyy Tool Hub — 100% Free Online Tools',
+    homeDescription:
+      'Discover 100+ free online tools for developers, creators and businesses: image editing, PDF, QR codes, AI prompts, passwords, text utilities and more. No signup, private, works on all devices. 6 languages supported.',
+  },
+  zh: {
+    siteName: 'Korelyy 工具库',
+    homeTitle: 'Korelyy 工具库 - 免费在线工具聚合平台',
+    homeDescription:
+      '100+ 免费在线工具：开发工具、图片处理、PDF 合并、二维码生成、AI 提示词、密码生成、文本处理、世界杯主题工具等。本地处理，隐私安全，无需注册，6 种语言全端适配。',
+  },
+  es: {
+    siteName: 'Korelyy Herramientas',
+    homeTitle: 'Korelyy — Herramientas en línea 100% gratuitas',
+    homeDescription:
+      'Más de 100 herramientas en línea gratuitas: edición de imágenes, PDF, códigos QR, IA, contraseñas, utilidades de texto y más. Sin registro, privado, funciona en todos los dispositivos. 6 idiomas.',
+  },
+  hi: {
+    siteName: 'Korelyy टूल हब',
+    homeTitle: 'टूल हब - 100% मुफ्त ऑनलाइन टूल्स | Korelyy',
+    homeDescription:
+      'डेवलपर्स, क्रिएटर्स और व्यवसायों के लिए 100+ मुफ्त ऑनलाइन टूल्स: इमेज एडिटिंग, PDF, QR कोड, AI प्रॉम्प्ट, पासवर्ड, टेक्स्ट यूटिलिटीज और बहुत कुछ। बिना साइनअप के, 6 भाषाएं।',
+  },
+  fr: {
+    siteName: 'Korelyy Outils',
+    homeTitle: 'Korelyy — Outils en ligne 100 % gratuits',
+    homeDescription:
+      "Plus de 100 outils en ligne gratuits : retouche d'images, PDF, QR codes, IA, mots de passe, utilitaires texte, etc. Sans inscription, privé, compatible tous appareils. 6 langues.",
+  },
+  ar: {
+    siteName: 'كورلي لأدوات الويب',
+    homeTitle: 'كورلي — أدوات مجانية 100 % عبر الإنترنت',
+    homeDescription:
+      'أكثر من 100 أداة مجانية عبر الإنترنت لمطوّري البرمجيات والمبدعين والشركات: تحرير الصور، PDF، أكواد QR، ذكاء اصطناعي، كلمات مرور، أدوات نصية والمزيد. بدون تسجيل. 6 لغات.',
+  },
+};
+
+const KNOWN_NONTOOL_PAGES = [
+  { path: '/', i18nTitleKey: 'siteName', descriptionKey: 'homeDescription' },
+  { path: '/tools/', i18nTitleKey: 'homeTitle', descriptionKey: 'homeDescription' },
+  { path: '/about/', titleFb: 'About', breadcrumb: true },
+  { path: '/blog/', titleFb: 'Blog', breadcrumb: true },
+  { path: '/contact/', titleFb: 'Contact', breadcrumb: true },
+  { path: '/compliance/', titleFb: 'Compliance', breadcrumb: true },
+  { path: '/cookies/', titleFb: 'Cookie Policy', breadcrumb: true },
+  { path: '/disclaimer/', titleFb: 'Disclaimer', breadcrumb: true },
+  { path: '/privacy/', titleFb: 'Privacy Policy', breadcrumb: true },
+  { path: '/terms/', titleFb: 'Terms of Service', breadcrumb: true },
+  { path: '/ideas/', titleFb: 'Ideas Workshop', breadcrumb: true },
+  { path: '/templates/', titleFb: 'Templates', breadcrumb: true },
+  { path: '/api-keys/', titleFb: 'API Keys', breadcrumb: true },
+  { path: '/workflows/', titleFb: 'Workflows', breadcrumb: true },
+  { path: '/workflow/canvas/', titleFb: 'Workflow Canvas', breadcrumb: true },
+  { path: '/batch-image-processor/', titleFb: 'Batch Image Processor', breadcrumb: true },
+];
+
+const NAV_KEY_MAP = {
+  about: ['sidebar2', 'about-us'],
+  blog: ['sidebar', 'blog'],
+  contact: ['sidebar2', 'contact-us'],
+  compliance: ['sidebar2', 'compliance'],
+  cookies: ['legal', 'cookies-title'],
+  disclaimer: ['legal', 'disclaimer-title'],
+  privacy: ['legal', 'privacy-title'],
+  terms: ['legal', 'terms-title'],
+  ideas: ['sidebar2', 'ideas'],
+  templates: ['sidebar2', 'templates'],
+  'api-keys': ['sidebar2', 'apiKeys'],
+  workflows: ['sidebar2', 'workflows'],
+  'workflow/canvas': ['sidebar2', 'workflows'],
+  'batch-image-processor': ['tools', 'batch-image-processor.name'],
+};
+
+function readJsonPath(json, dotPath) {
+  let cur = json;
+  for (const part of dotPath.split('.')) {
+    if (cur == null || typeof cur !== 'object') return null;
+    cur = cur[part];
+  }
+  return typeof cur === 'string' ? cur : null;
+}
+
+function resolveNonToolMeta(locale, p) {
+  const base = SITE_META[locale] || SITE_META.en;
+  const short = p.replace(/^\//, '').replace(/\/$/, '');
+
+  // Translated title/desc from translation.json
+  const l10n = localeData[locale] || {};
+  const keyPath = NAV_KEY_MAP[short];
+  let title = null;
+  let description = base.homeDescription;
+
+  if (keyPath) {
+    const ns = keyPath[0] === 'legal' || keyPath[0] === 'sidebar' || keyPath[0] === 'sidebar2'
+      ? locale // sidebar/sidebar2/legal live in whole translation.json
+      : null;
+    // Need full translation json; re-read as full json
+  }
+  // Full translation read
+  try {
+    const fullTrans = JSON.parse(
+      fs.readFileSync(path.join(ROOT, 'public', 'locales', locale, 'translation.json'), 'utf8')
+    );
+    if (p === '/' || p === '/tools/') {
+      title = base.homeTitle;
+      description = base.homeDescription;
+      return { title, description };
+    }
+    if (keyPath) {
+      title = readJsonPath(fullTrans, keyPath.join('.'));
+      const descFromNs = readJsonPath(fullTrans, `${keyPath[0]}.site-description`);
+      if (descFromNs) description = descFromNs;
+    }
+    if (!title) {
+      // Fallback: capitalize first letters of short path
+      title = short.split(/[/-]/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') + ' | ' + base.siteName;
+    } else if (!/\|/.test(title)) {
+      title = title + ' | ' + base.siteName;
+    }
+  } catch (e) {
+    console.warn('[rewrite-meta] resolve meta failed (' + locale + p + '):', e.message);
+  }
+  return { title: title || base.homeTitle, description };
+}
+
+let nonToolWritten = 0;
+let nonToolSkipped = 0;
+for (const l of SUPPORTED_LOCALES) {
+  for (const page of KNOWN_NONTOOL_PAGES) {
+    const relPath = page.path;
+    const filePath = path.join(outDir, l, relPath.replace(/^\//, ''), 'index.html');
+    if (!fs.existsSync(filePath)) {
+      nonToolSkipped++;
+      continue;
+    }
+    const meta = resolveNonToolMeta(l, relPath);
+    const canonical = BASE_URL.replace(/\/$/, '') + '/' + l + relPath;
+    // pathWithoutLocale for hreflang
+    const pathForHreflang = relPath === '/' ? '/' : relPath;
+    const injection = buildInjection({
+      name: meta.title.replace(/\s*\|[^|]*$/, '').trim() || SITE_META[l].siteName,
+      description: meta.description,
+      canonical,
+      pathWithoutLocale: pathForHreflang,
+      ogImageAlt: SITE_META[l].siteName,
+    });
+    const html = fs.readFileSync(filePath, 'utf8');
+    const next = replaceHead(html, injection);
+    fs.writeFileSync(filePath, next, 'utf8');
+    nonToolWritten++;
+  }
+}
+console.log('[rewrite-meta] non-tool pages written=' + nonToolWritten + ' skipped=' + nonToolSkipped);

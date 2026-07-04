@@ -15,3 +15,38 @@
   Cross-Origin-Opener-Policy: same-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Content-Security-Policy: default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https: http: https://www.google-analytics.com https://stats.g.doubleclick.net https://static.cloudflareinsights.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://region2.google-analytics.com https://*.analytics.google.com https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://tagmanager.google.com https://static.cloudflareinsights.com; upgrade-insecure-requests
+
+# ============================================================
+# 性能加速 & 长缓存（配合 Brotli + splitChunks 后产物）
+# 后声明的 /_next/static/ 等更具体路径优先级更高
+# ============================================================
+
+# ---------- Next.js 静态 chunk（hash 文件名，可永久缓存）
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+
+# ---------- 语言包 locale json（内容稳定，1 个月缓存 + SWR 兜底）
+/locales/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding
+
+# ---------- 公共静态资源（svg/ico/图片/manifest）
+/*.svg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Vary: Accept-Encoding
+/*.ico
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Vary: Accept-Encoding
+/*.webmanifest
+  Cache-Control: public, max-age=604800
+/*.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/*.txt
+  Cache-Control: public, max-age=3600
+
+# ---------- HTML 页面：短缓存 + stale-while-revalidate
+# 保证搜索引擎 & 用户首屏拿到最新内容，同时 Cloudflare 边缘节点命中高
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language

@@ -517,7 +517,7 @@ export default function FortuneSticks({ locale = 'zh' }: FortuneSticksProps) {
             <Dices className='h-6 w-6' />
           </div>
           <div>
-            <h1 className='text-2xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
+            <h1 className='text-xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
             <p className='text-gray-600 dark:text-gray-400 text-sm'>{t('subtitle')}</p>
           </div>
         </div>
@@ -586,7 +586,7 @@ export default function FortuneSticks({ locale = 'zh' }: FortuneSticksProps) {
                   }}
                 >
                   <p className='text-sm opacity-80 mb-1'>{result.number}</p>
-                  <p className='text-2xl font-bold mb-1'>{result.level}</p>
+                  <p className='text-xl font-bold mb-1'>{result.level}</p>
                   <p className='text-lg mb-2'>{result.text}</p>
                   <p className='text-sm opacity-90'>{result.detail}</p>
                 </div>

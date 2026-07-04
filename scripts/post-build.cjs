@@ -22,6 +22,7 @@ const COPY_FILES = [
   '_worker.js',
   'favicon.svg',
   'og-image.svg',
+  'og-image.png',
   'robots.txt',
   'sitemap.xml',
   'site.webmanifest',
@@ -40,6 +41,18 @@ for (const f of COPY_FILES) {
 // duplicate favicon.svg as favicon.ico for CF Pages fallback (browsers MIME-sniff)
 if (fs.existsSync(path.join(PUB, 'favicon.svg'))) {
   fs.copyFileSync(path.join(PUB, 'favicon.svg'), path.join(OUT, 'favicon.ico'));
+  copied++;
+}
+// --- Guarantee out/ads.txt (source of truth: post-build, avoids public/ads.txt
+//     conflicting with app/ads.txt/route.ts in Next.js dev HMR) ---
+{
+  const adsTxtPath = path.join(OUT, 'ads.txt');
+  const adsTxtContent =
+    '# AdSense ads.txt for Korelyy Tools — https://korelyy.com\n' +
+    'google.com, pub-7235824755389632, DIRECT, f08c47fec0942fa0\n';
+  fs.writeFileSync(adsTxtPath, adsTxtContent, 'utf8');
+  const sz = fs.statSync(adsTxtPath).size;
+  console.log('[post-build] wrote out/ads.txt (' + sz + ' bytes)');
   copied++;
 }
 console.log('[post-build] copied', copied, 'static files to out/');

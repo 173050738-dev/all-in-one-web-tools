@@ -208,7 +208,6 @@ export const englishTags: Record<string, string[]> = {
   'hatchful': ['logo', 'Shopify', 'free', 'design'],
   'have-i-been-pwned': ['breach', 'check', 'email', 'security'],
   'headspace': ['meditation', 'mindfulness', 'stress', 'sleep'],
-  'helpScout': ['email', 'support', 'B2B', 'helpdesk'],
   'hemingway': ['writing', 'analysis', 'style', 'clarity'],
   'heroku': ['cloud', 'PaaS', 'deployment', 'scaling'],
   'heygen': ['AI', 'video', 'translate', 'voiceover'],

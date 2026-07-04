@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/build-sitemap-robots.mjs",
+    "prebuild": "node scripts/build-data-bundles.cjs ; node scripts/generate-blog-routes.cjs ; node scripts/build-sitemap-robots.mjs",
     "build": "next build",
+    "postbuild": "node scripts/rewrite-meta.cjs && node scripts/post-build.cjs",
+    "predeploy": "npm run build",
+    "deploy": "wrangler pages deploy ./out --branch main --commit-dirty=true",
     "start": "next start",
     "lint": "next lint",
     "clean": "node scripts/clean.cjs",

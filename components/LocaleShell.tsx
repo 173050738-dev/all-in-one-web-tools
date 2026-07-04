@@ -13,6 +13,7 @@ import {
   getSavedLocale,
   type SupportedLocale,
 } from '@/lib/language-detection';
+import { KNOWN_LOCALES, SITE_URL, DEFAULT_LOCALE } from '@/components/seo';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
   ssr: false,
@@ -145,6 +146,34 @@ export default function LocaleShell({
 
     // 跳转执行后，不再切回显示 children，避免英文闪屏
     setAutoLocaleReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const pathname = window.location.pathname;
+    const pathLocale = parsePathLocale(pathname);
+    if (!pathLocale) return;
+
+    const restPath = pathname.slice(pathLocale.length + 1) || '/';
+    const normalized = restPath.startsWith('/') ? restPath : `/${restPath}`;
+    const canonical = normalized.endsWith('/') ? normalized : `${normalized}/`;
+
+    const DATA_ATTR = 'data-korelyy-hreflang';
+    Array.from(document.head.querySelectorAll(`link[${DATA_ATTR}]`)).forEach((el) => el.remove());
+
+    const createLink = (hflang: string, locale: string) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.setAttribute('hrefLang', hflang);
+      link.href = `${SITE_URL}/${locale}${canonical}`;
+      link.setAttribute(DATA_ATTR, '1');
+      return link;
+    };
+
+    for (const l of KNOWN_LOCALES) {
+      document.head.appendChild(createLink(l, l));
+    }
+    document.head.appendChild(createLink('x-default', DEFAULT_LOCALE));
   }, []);
 
   function handleStickyClose() {

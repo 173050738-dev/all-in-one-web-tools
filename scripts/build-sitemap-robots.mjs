@@ -23,6 +23,17 @@ while ((m = slugRegex.exec(toolsSrc)) !== null) {
 }
 console.log(`[sitemap-build] Found ${toolSlugs.size} tool slugs`);
 
+// ---------------- Extract blog slugs from data/blog.ts via regex ----------------
+const blogPath = path.join(ROOT, 'data', 'blog.ts');
+const blogSrc = fs.existsSync(blogPath) ? fs.readFileSync(blogPath, 'utf-8') : '';
+const blogSlugRegex = /slug:\s*['"`]([^'"`]+)['"`]/g;
+const blogSlugs = new Set();
+let mb;
+while ((mb = blogSlugRegex.exec(blogSrc)) !== null) {
+  if (mb[1]) blogSlugs.add(mb[1]);
+}
+console.log(`[sitemap-build] Found ${blogSlugs.size} blog slugs`);
+
 // ---------------- Page entries ----------------
 const staticPages = [
   { path: '/', changeFreq: 'daily', priority: 1.0 },
@@ -31,6 +42,7 @@ const staticPages = [
   { path: '/workflows', changeFreq: 'weekly', priority: 0.6 },
   { path: '/workflow/canvas', changeFreq: 'monthly', priority: 0.4 },
   { path: '/workflow/custom', changeFreq: 'monthly', priority: 0.4 },
+  { path: '/blog', changeFreq: 'daily', priority: 0.85 },
 ];
 
 const toolEntries = [...toolSlugs].map((slug) => ({
@@ -39,7 +51,13 @@ const toolEntries = [...toolSlugs].map((slug) => ({
   priority: 0.8,
 }));
 
-const allPages = [...staticPages, ...toolEntries];
+const blogEntries = [...blogSlugs].map((slug) => ({
+  path: `/blog/${slug}`,
+  changeFreq: 'weekly',
+  priority: 0.9,
+}));
+
+const allPages = [...staticPages, ...toolEntries, ...blogEntries];
 console.log(`[sitemap-build] ${allPages.length} page entries (×${KNOWN_LOCALES.length} locales = ${allPages.length * KNOWN_LOCALES.length} URLs)`);
 
 // ---------------- Generate sitemap.xml ----------------
@@ -82,26 +100,31 @@ const robots = `# Korelyy robots.txt
 
 User-agent: *
 Allow: /
+Allow: /blog/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Googlebot
 Allow: /
+Allow: /blog/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Bingbot
 Allow: /
+Allow: /blog/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Yandex
 Allow: /
+Allow: /blog/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Baiduspider
 Allow: /
+Allow: /blog/
 Disallow: /api/
 Disallow: /_next/
 

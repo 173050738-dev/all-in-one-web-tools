@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import {
   Sparkles,
   Zap,
@@ -62,6 +62,7 @@ const translations: Record<string, Record<string, string>> = {
     'difficulty.advanced': '进阶',
     'state.emptyTitle': '没有找到匹配的模板',
     'state.emptyDesc': '试试其他关键词或分类',
+    'state.loadingMore': '加载中...',
     'cta.title': '想创建自己的工作流？',
     'cta.subtitle': '完全自定义你的工作流程，组合任意工具，打造专属效率工具',
     'label.steps': '步骤',
@@ -96,6 +97,7 @@ const translations: Record<string, Record<string, string>> = {
     'difficulty.advanced': 'Advanced',
     'state.emptyTitle': 'No matching templates found',
     'state.emptyDesc': 'Try other keywords or categories',
+    'state.loadingMore': 'Loading more...',
     'cta.title': 'Want to create your own workflow?',
     'cta.subtitle': 'Fully customize your workflow, combine any tools, and build your own productivity system.',
     'label.steps': 'steps',
@@ -130,6 +132,7 @@ const translations: Record<string, Record<string, string>> = {
     'difficulty.advanced': 'उन्नत',
     'state.emptyTitle': 'कोई मेल खाने वाला टेम्पलेट नहीं मिला',
     'state.emptyDesc': 'अन्य कीवर्ड या श्रेणियाँ आज़माएं',
+    'state.loadingMore': 'और लोड हो रहा है...',
     'cta.title': 'अपना खुद का वर्कफ़्लो बनाना चाहते हैं?',
     'cta.subtitle': 'अपने वर्कफ़्लो को पूरी तरह से कस्टमाइज़ करें, किसी भी टूल को जोड़ें।',
     'label.steps': 'चरण',
@@ -164,6 +167,7 @@ const translations: Record<string, Record<string, string>> = {
     'difficulty.advanced': 'Avancé',
     'state.emptyTitle': 'Aucun modèle correspondant',
     'state.emptyDesc': 'Essayez d\'autres mots-clés ou catégories',
+    'state.loadingMore': 'Chargement en cours...',
     'cta.title': 'Vous voulez créer votre propre workflow?',
     'cta.subtitle': 'Personnalisez entièrement votre workflow, combinez n\'importe quels outils.',
     'label.steps': 'étapes',
@@ -198,6 +202,7 @@ const translations: Record<string, Record<string, string>> = {
     'difficulty.advanced': 'Avanzado',
     'state.emptyTitle': 'No se encontraron plantillas coincidentes',
     'state.emptyDesc': 'Prueba otras palabras clave o categorías',
+    'state.loadingMore': 'Cargando más...',
     'cta.title': '¿Quieres crear tu propio flujo?',
     'cta.subtitle': 'Personaliza completamente tu flujo, combina cualquier herramienta.',
     'label.steps': 'pasos',
@@ -232,6 +237,7 @@ const translations: Record<string, Record<string, string>> = {
     'difficulty.advanced': 'متقدم',
     'state.emptyTitle': 'لم يتم العثور على قوالب مطابقة',
     'state.emptyDesc': 'جرب كلمات مفتاحية أو فئات أخرى',
+    'state.loadingMore': 'جاري تحميل المزيد...',
     'cta.title': 'هل تريد إنشاء سير عمل خاص بك؟',
     'cta.subtitle': 'خصص سير عملك بالكامل، واجمع أي أدوات.',
     'label.steps': 'خطوات',
@@ -267,6 +273,8 @@ export default function WorkflowTemplates({ locale }: { locale: string }) {
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'popular' | 'newest' | 'easiest'>('popular');
   const [mounted, setMounted] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(20);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -306,6 +314,28 @@ export default function WorkflowTemplates({ locale }: { locale: string }) {
       }
     });
   }, [filteredWorkflows, sortBy]);
+
+  useEffect(() => {
+    setVisibleCount(20);
+  }, [searchQuery, activeCategory, sortBy, locale]);
+
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el) return;
+    if (visibleCount >= sortedWorkflows.length) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setVisibleCount((v) => Math.min(v + 20, sortedWorkflows.length));
+          }
+        }
+      },
+      { root: null, rootMargin: '240px 0px', threshold: 0 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [visibleCount, sortedWorkflows.length]);
 
   const featuredWorkflows = workflows.slice(0, 3);
 
@@ -350,7 +380,7 @@ export default function WorkflowTemplates({ locale }: { locale: string }) {
             <span>{t('banner.featured')}</span>
           </div>
 
-          <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold mb-3'>
+          <h1 className='text-lg sm:text-xl lg:text-4xl font-bold mb-3'>
             {t('banner.title')}
           </h1>
 
@@ -503,18 +533,31 @@ export default function WorkflowTemplates({ locale }: { locale: string }) {
             </p>
           </div>
         ) : (
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5'>
-            {sortedWorkflows.map((workflow) => (
-              <TemplateCard
-                key={workflow.id}
-                workflow={workflow}
-                locale={locale}
-                isFavorite={isFavorite(workflow.id)}
-                onToggleFavorite={() => toggleWorkflowFavorite(workflow.id)}
-                onStart={() => handleStartWorkflow(workflow.slug)}
-              />
-            ))}
-          </div>
+          <>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5'>
+              {sortedWorkflows.slice(0, visibleCount).map((workflow) => (
+                <TemplateCard
+                  key={workflow.id}
+                  workflow={workflow}
+                  locale={locale}
+                  isFavorite={isFavorite(workflow.id)}
+                  onToggleFavorite={() => toggleWorkflowFavorite(workflow.id)}
+                  onStart={() => handleStartWorkflow(workflow.slug)}
+                />
+              ))}
+            </div>
+            {visibleCount < sortedWorkflows.length && (
+              <div className='flex justify-center pt-6 pb-2 relative'>
+                <div ref={sentinelRef} className='absolute -top-10 left-1/2 h-px w-px' />
+                <div className='flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400'>
+                  <div className='h-4 w-4 rounded-full border-2 border-gray-300 dark:border-gray-600 border-t-[#5461A8] dark:border-t-[#B2BADE] animate-spin' />
+                  <span>
+                    {t('state.loadingMore')} ({visibleCount} / {sortedWorkflows.length})
+                  </span>
+                </div>
+              </div>
+            )}
+          </>
         )}
       </div>
 

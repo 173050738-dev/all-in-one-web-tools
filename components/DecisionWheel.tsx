@@ -514,7 +514,7 @@ export default function DecisionWheel({ locale = 'zh' }: DecisionWheelProps) {
                 <Shuffle className='h-5 w-5 sm:h-6 sm:w-6' />
               </div>
               <div>
-                <h1 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
+                <h1 className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
                 <p className='text-sm text-gray-600 dark:text-gray-400'>{t('subtitle')}</p>
               </div>
             </div>
@@ -546,7 +546,7 @@ export default function DecisionWheel({ locale = 'zh' }: DecisionWheelProps) {
                 <div className='text-center animate-bounce'>
                   <div className='inline-block px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-2xl shadow-lg'>
                     <p className='text-sm opacity-80 mb-1'>{t('label.result')} 🎉</p>
-                    <p className='text-2xl sm:text-3xl font-bold'>{result}</p>
+                    <p className='text-lg sm:text-xl font-bold'>{result}</p>
                   </div>
                 </div>
               )}

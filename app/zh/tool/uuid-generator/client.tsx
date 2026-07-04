@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import UuidGenerator from '@/components/UuidGenerator';
 import ToolDetailWrapper from '@/components/ToolDetailWrapper';
-import { getToolBySlug } from '@/data/tools';
 import { usePreferencesStore } from '@/stores/preferences';
 
 const VALID_LOCALES = ['zh', 'en', 'hi', 'fr', 'es', 'ar'];
@@ -23,12 +22,21 @@ export default function ToolPage() {
       ? resolvedParams.locale
       : pathLocale;
 
-  const tool = getToolBySlug(SLUG);
-  const { addToHistory } = usePreferencesStore();  useEffect(() => {
-    if (tool) {
-      addToHistory(tool.id);
-    }
-  }, [tool, addToHistory]);
+  const { addToHistory } = usePreferencesStore();
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const mod = await import('@/data/tools');
+        if (cancelled) return;
+        const found = (mod.getToolBySlug || (() => undefined))(SLUG);
+        if (found) addToHistory(found.id);
+      } catch (e) {
+        // 静默：懒加载失败不影响页面主功能
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [addToHistory]);
 
   return (
     <ToolDetailWrapper locale={resolvedLocale} slug={SLUG}>

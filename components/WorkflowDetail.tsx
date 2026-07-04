@@ -1,5 +1,6 @@
 'use client';
-import { useState, useEffect, useMemo } from 'react';
+import dynamic from 'next/dynamic';
+import { Fragment, useState, useEffect, useMemo } from 'react';
 import {
   ChevronLeft,
   Clock,
@@ -43,6 +44,14 @@ import { resolveToolLink, isExternalTool, getToolDisplayLabel } from '@/lib/tool
 import { translateWorkflow } from '@/lib/workflowTranslations';
 import type { Locale } from '@/lib/workflowTranslations';
 import type { CustomWorkflowStep, CustomWorkflow } from '@/stores/preferences';
+
+const KofiUnlockBanner = dynamic(() => import('@/components/KofiUnlockBanner'), { ssr: false });
+const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
+  ssr: false,
+  loading: () => (
+    <div aria-hidden="true" className="w-full min-h-[120px] sm:min-h-[130px] rounded-xl border border-transparent" />
+  ),
+});
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Presentation,
@@ -437,7 +446,7 @@ interface WorkflowDetailProps {
 export default function WorkflowDetail({
   slug,
   locale,
-  workflow,
+  workflow: workflowProp,
   isCustom = false,
   customWorkflow,
 }: WorkflowDetailProps) {
@@ -472,12 +481,39 @@ export default function WorkflowDetail({
   const [toolSearchQuery, setToolSearchQuery] = useState('');
   const [showToolPicker, setShowToolPicker] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [adMounted, setAdMounted] = useState(false);
+
+  const [resolvedWorkflow, setResolvedWorkflow] = useState<Workflow | undefined>(workflowProp);
+  const [wfLoaded, setWfLoaded] = useState<boolean>(!!workflowProp || isCustom);
+
+  useEffect(() => {
+    setAdMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (isCustom || workflowProp || wfLoaded) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const mod = await import('@/data/workflows');
+        if (cancelled) return;
+        const found = (mod.getWorkflowBySlug || (() => undefined))(slug);
+        if (found && !cancelled) setResolvedWorkflow(found as Workflow);
+      } catch (e) {
+        // 静默
+      } finally {
+        if (!cancelled) setWfLoaded(true);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [slug, isCustom, workflowProp, wfLoaded]);
 
   const currentWorkflow = useMemo(() => {
     if (isCustom) return customWorkflow;
-    return workflow ? translateWorkflow(workflow, locale as Locale) : undefined;
-  }, [isCustom, customWorkflow, workflow, locale]);
+    return resolvedWorkflow ? translateWorkflow(resolvedWorkflow, locale as Locale) : undefined;
+  }, [isCustom, customWorkflow, resolvedWorkflow, locale]);
   const workflowId = currentWorkflow?.id || '';
+  const showKofi = useMemo(() => locale === 'zh' || locale === 'en' || true, [locale]);
   const userRating = getWorkflowRating(workflowId);
   const progress = getWorkflowProgress(workflowId);
   const totalSteps = currentWorkflow?.steps.length || 0;
@@ -648,7 +684,7 @@ export default function WorkflowDetail({
                   <Icon className='w-6 h-6 sm:w-8 sm:h-8' />
                 </div>
                 <div className='min-w-0'>
-                  <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1 truncate'>
+                  <h1 className='text-lg sm:text-xl lg:text-xl font-bold text-gray-900 dark:text-gray-100 mb-1 truncate'>
                     {currentWorkflow.title}
                   </h1>
                   <p className='text-sm sm:text-base text-gray-600 dark:text-gray-400 line-clamp-2'>
@@ -793,70 +829,81 @@ export default function WorkflowDetail({
               const isStepCompleted = progress?.completedSteps.includes(index);
 
               return (
-                <div key={index} className='relative'>
-                  <div className={`bg-white dark:bg-gray-800 rounded-xl border p-4 sm:p-5 transition-all ${
-                    isStepCompleted
-                      ? 'border-green-300 dark:border-green-700 bg-green-50/50 dark:bg-green-900/10'
-                      : 'border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md'
-                  }`}>
-                    <div className='flex items-start gap-3 sm:gap-4'>
-                      <div className='flex flex-col items-center flex-shrink-0'>
-                        <button
-                          onClick={() => handleStepToggle(index)}
-                          className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center font-bold text-sm shadow-lg transition-all ${
-                            isStepCompleted
-                              ? 'bg-gradient-to-br from-green-500 to-green-600 text-white shadow-green-500/25'
-                              : 'bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-primary-500/25 hover:scale-105'
-                          }`}
-                        >
-                          {isStepCompleted ? <Check className='w-4 h-4 sm:w-5 sm:h-5' /> : index + 1}
-                        </button>
-                        {!isLast && (
-                          <div className={`w-0.5 flex-1 mt-1 min-h-[20px] ${isStepCompleted ? 'bg-green-300 dark:bg-green-700' : 'bg-gray-200 dark:bg-gray-700'}`} style={{ minHeight: '20px' }} />
-                        )}
-                      </div>
-                      <div className='flex-1 min-w-0'>
-                        <div className='flex items-start justify-between gap-2 mb-1'>
-                          <h3 className={`font-semibold text-sm sm:text-base ${isStepCompleted ? 'text-green-700 dark:text-green-400 line-through' : 'text-gray-900 dark:text-gray-100'}`}>
-                            {step.title}
-                          </h3>
+                <Fragment key={index}>
+                  <div className='relative'>
+                    <div className={`bg-white dark:bg-gray-800 rounded-xl border p-4 sm:p-5 transition-all ${
+                      isStepCompleted
+                        ? 'border-green-300 dark:border-green-700 bg-green-50/50 dark:bg-green-900/10'
+                        : 'border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md'
+                    }`}>
+                      <div className='flex items-start gap-3 sm:gap-4'>
+                        <div className='flex flex-col items-center flex-shrink-0'>
+                          <button
+                            onClick={() => handleStepToggle(index)}
+                            className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center font-bold text-sm shadow-lg transition-all ${
+                              isStepCompleted
+                                ? 'bg-gradient-to-br from-green-500 to-green-600 text-white shadow-green-500/25'
+                                : 'bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-primary-500/25 hover:scale-105'
+                            }`}
+                          >
+                            {isStepCompleted ? <Check className='w-4 h-4 sm:w-5 sm:h-5' /> : index + 1}
+                          </button>
+                          {!isLast && (
+                            <div className={`w-0.5 flex-1 mt-1 min-h-[20px] ${isStepCompleted ? 'bg-green-300 dark:bg-green-700' : 'bg-gray-200 dark:bg-gray-700'}`} style={{ minHeight: '20px' }} />
+                          )}
                         </div>
-                        <p className={`text-sm mb-3 ${isStepCompleted ? 'text-[#34A89C]' : 'text-gray-600 dark:text-gray-400'}`}>
-                          {step.description}
-                        </p>
-                        {(() => {
-                          const resolved = resolveToolLink(step.toolSlug, locale);
-                          const link = tool?.externalUrl
-                            ? { type: 'external' as const, url: tool.externalUrl, label: tool.name }
-                            : tool && tool.slug
-                              ? { type: 'internal' as const, url: `/${locale}/tool/${tool.slug}`, label: tool.name }
-                              : { type: resolved.type, url: resolved.url, label: getToolDisplayLabel(step.toolSlug) || (tool?.name ?? (resolved.displayName || String(step.toolSlug || '').toUpperCase())) };
-                          const isExt = link.type === 'external';
-                          return (
-                            <a
-                              href={link.url}
-                              target={isExt ? '_blank' : '_self'}
-                              rel={isExt ? 'noopener noreferrer' : ''}
-                              onClick={() => {
-                                if (!isStepCompleted && isStarted) {
-                                  handleStepToggle(index);
-                                }
-                              }}
-                              className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors group ${
-                                isExt
-                                  ? 'bg-[#E8F4F2] dark:bg-[#2a4a46]/30 text-[#34A89C] hover:bg-[#D7EAE7] dark:hover:bg-[#2a4a46]/50'
-                                  : 'bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#5461A8] dark:text-[#B2BADE] hover:bg-[#ECEEF8] dark:hover:bg-[#3a406a]/50'
-                              }`}
-                            >
-                              {link.label}
-                              {isExt && <ExternalLink className='w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-0.5 transition-transform' />}
-                            </a>
-                          );
-                        })()}
+                        <div className='flex-1 min-w-0'>
+                          <div className='flex items-start justify-between gap-2 mb-1'>
+                            <h3 className={`font-semibold text-sm sm:text-base ${isStepCompleted ? 'text-green-700 dark:text-green-400 line-through' : 'text-gray-900 dark:text-gray-100'}`}>
+                              {step.title}
+                            </h3>
+                          </div>
+                          <p className={`text-sm mb-3 ${isStepCompleted ? 'text-[#34A89C]' : 'text-gray-600 dark:text-gray-400'}`}>
+                            {step.description}
+                          </p>
+                          {(() => {
+                            const resolved = resolveToolLink(step.toolSlug, locale);
+                            const link = tool?.externalUrl
+                              ? { type: 'external' as const, url: tool.externalUrl, label: tool.name }
+                              : tool && tool.slug
+                                ? { type: 'internal' as const, url: `/${locale}/tool/${tool.slug}`, label: tool.name }
+                                : { type: resolved.type, url: resolved.url, label: getToolDisplayLabel(step.toolSlug) || (tool?.name ?? (resolved.displayName || String(step.toolSlug || '').toUpperCase())) };
+                            const isExt = link.type === 'external';
+                            return (
+                              <a
+                                href={link.url}
+                                target={isExt ? '_blank' : '_self'}
+                                rel={isExt ? 'noopener noreferrer' : ''}
+                                onClick={() => {
+                                  if (!isStepCompleted && isStarted) {
+                                    handleStepToggle(index);
+                                  }
+                                }}
+                                className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors group ${
+                                  isExt
+                                    ? 'bg-[#E8F4F2] dark:bg-[#2a4a46]/30 text-[#34A89C] hover:bg-[#D7EAE7] dark:hover:bg-[#2a4a46]/50'
+                                    : 'bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#5461A8] dark:text-[#B2BADE] hover:bg-[#ECEEF8] dark:hover:bg-[#3a406a]/50'
+                                }`}
+                              >
+                                {link.label}
+                                {isExt && <ExternalLink className='w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-0.5 transition-transform' />}
+                              </a>
+                            );
+                          })()}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                  {adMounted && index === 3 && !isLast && (
+                    <div data-ad-slot-wrap='workflow-step4-below' className='my-1'>
+                      <AdSlot
+                        slot={`workflow-step4-${workflowId || 'wf'}-${locale}`}
+                        size='in-feed'
+                        showPlaceholder={true}
+                      />
+                    </div>
+                  )}
+                </Fragment>
               );
             })}
           </div>
@@ -920,6 +967,17 @@ export default function WorkflowDetail({
               </a>
             </div>
           </div>
+          {showKofi && <KofiUnlockBanner slug={'workflow-'+workflowId} locale={locale} variant="top" />}
+          {adMounted && (
+            <div data-ad-slot-wrap='workflow-footer' className='mt-4 sm:mt-6'>
+              <AdSlot
+                slot={`workflow-bottom-${workflowId || 'wf'}-${locale}`}
+                size='in-feed'
+                showPlaceholder={true}
+              />
+            </div>
+          )}
+          {showKofi && <KofiUnlockBanner slug={'workflow-'+workflowId} locale={locale} variant="bottom" />}
         </div>
       </div>
 
@@ -1209,7 +1267,7 @@ export default function WorkflowDetail({
             <div className='w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-lg shadow-yellow-500/30 animate-bounce'>
               <Trophy className='w-10 h-10 text-white' />
             </div>
-            <h3 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2'>
+            <h3 className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100 mb-2'>
               {t('label.completeTitle')}
             </h3>
             <p className='text-gray-600 dark:text-gray-400 mb-6'>
