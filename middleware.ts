@@ -1,4 +1,11 @@
+import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
+
+const intlMiddleware = createMiddleware({
+  locales: ['en', 'zh', 'es', 'hi', 'fr', 'ar'],
+  defaultLocale: 'zh',
+  localePrefix: 'as-needed'
+});
 
 export default function middleware(request: NextRequest) {
   const url = new URL(request.url);
@@ -13,7 +20,7 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(url.toString(), 308);
   }
 
-  const response = NextResponse.next();
+  const response = intlMiddleware(request);
 
   if (isLocalhost) {
     response.headers.set(
