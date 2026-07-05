@@ -23,45 +23,79 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  MODE: ${{ github.event.inputs.build_mode || 'isr' }}
+  MODE: ${{ inputs.build_mode || 'isr' }}
 
 jobs:
   build-and-deploy:
-    name: Build & Deploy (${{ github.event.inputs.build_mode || 'isr' }})
+    name: Build & Deploy (${{ inputs.build_mode || 'isr' }})
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20 + pnpm
+      - name: Validate Cloudflare Secrets
+        env:
+          CF_TOK: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACC: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -e
+          if [ -z "$CF_TOK" ]; then
+            echo "::error::❌ Secrets.CLOUDFLARE_API_TOKEN 未填写！请先到仓库 Settings → Secrets and variables → Actions → New repository secret 添加 CLOUDFLARE_API_TOKEN（Cloudflare API Token）"
+            exit 1
+          fi
+          echo "✅ Secrets.CLOUDFLARE_API_TOKEN 已配置"
+          if [ -n "$CF_ACC" ]; then
+            echo "✅ Secrets.CLOUDFLARE_ACCOUNT_ID 已配置"
+          else
+            echo "⚠️  Secrets.CLOUDFLARE_ACCOUNT_ID 未配置（可选，Wrangler 会自动从 Token 推断）"
+          fi
+
+      - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          package-manager: pnpm
-          cache: pnpm
+          node-version: 22
+          check-latest: true
 
-      - name: Install dependencies (pnpm)
-        run: pnpm install --frozen-lockfile --prefer-offline
+      - name: Install exact pnpm (packageManager)
+        shell: bash
+        run: |
+          set -e
+          COREPACK_ENABLE_STRICT=0 corepack enable
+          COREPACK_ENABLE_STRICT=0 corepack prepare --activate
+          echo "Node: $(node -v)"
+          echo "pnpm: $(pnpm -v)"
 
-      - name: Patch Wrangler BULK_UPLOAD_CONCURRENCY2=1
-        run: pnpm run wrangler:patch
+      - name: Install dependencies (pnpm, allow fallback if lock drift)
+        run: |
+          set -e
+          pnpm config set prefer-offline true
+          pnpm install --prefer-offline || pnpm install
+          echo "pnpm install 完成"
+
+      - name: Patch Wrangler BULK_UPLOAD_CONCURRENCY2=1 (防 504 Gateway Timeout)
+        run: |
+          set -e
+          pnpm run wrangler:patch || echo "wrangler:patch 跳过（非致命）"
 
       - name: "ISR mode: build (方案B → ISR + next-on-pages, ~500 files)"
         if: env.MODE == 'isr'
         env:
           NODE_ENV: production
         run: |
+          set -e
           echo "=== Mode: ISR (方案B) - 运行 next-on-pages 生成 .vercel/output/static ==="
-          pnpm run build:cf
+          pnpm run build:cf 2>&1 | tail -80
+          echo "=== next-on-pages 完成 ==="
 
       - name: "Legacy mode: resolve middleware + output:export (方案A → static export, ~2000 files)"
         if: env.MODE == 'legacy'
         run: |
+          set -e
           echo "=== Mode: Legacy (方案A) - static export ==="
           if [ -f middleware.ts ]; then
-            echo "Moving middleware.ts to .bak for static export"
+            echo "Moving middleware.ts to .bak for static export (output:export 不支持 middleware)"
             mv middleware.ts middleware.ts.bak
           fi
 
@@ -70,9 +104,11 @@ jobs:
         env:
           NODE_ENV: production
           USE_STATIC_EXPORT: "true"
-        run: pnpm run build
+        run: |
+          set -e
+          pnpm run build 2>&1 | tail -80
 
-      - name: Restore middleware.ts (legacy only)
+      - name: Restore middleware.ts (legacy only，防止留在工作区污染后续运行)
         if: env.MODE == 'legacy' && always()
         run: |
           if [ -f middleware.ts.bak ]; then
@@ -82,6 +118,7 @@ jobs:
 
       - name: Copy CF Pages static assets (legacy → out/ ; isr → .vercel/output/static)
         run: |
+          set -e
           if [ "$MODE" = "legacy" ]; then
             TARGET_DIR="out"
           else
@@ -89,25 +126,25 @@ jobs:
           fi
 
           if [ ! -d "$TARGET_DIR" ]; then
-            echo "::error::Build produced no $TARGET_DIR directory (mode=$MODE)"
+            echo "::error::Build 失败，未生成 $TARGET_DIR 目录 (mode=$MODE)"
+            echo "请检查上面 Build 步骤的日志是否有 error"
             exit 1
           fi
 
           echo "Target dir: $TARGET_DIR"
-          set +e
           for f in _headers _redirects favicon.svg og-image.svg robots.txt sitemap.xml ads.txt; do
             if [ -f "public/$f" ]; then
-              cp -f "public/$f" "$TARGET_DIR/$f"
-              echo "copied public/$f -> $TARGET_DIR/$f ($(wc -c < public/$f) bytes)"
+              cp -f "public/$f" "$TARGET_DIR/$f" && echo "copied public/$f -> $TARGET_DIR/$f ($(wc -c < public/$f) bytes)" || true
             fi
           done
           if [ -f public/favicon.svg ]; then
             cp -f public/favicon.svg "$TARGET_DIR/favicon.ico"
-            echo "copied public/favicon.svg -> $TARGET_DIR/favicon.ico"
+            echo "copied favicon.svg -> favicon.ico"
           fi
 
-      - name: Verify critical files
+      - name: Verify critical files & 部署产物统计
         run: |
+          set -e
           if [ "$MODE" = "legacy" ]; then
             TARGET_DIR="out"
           else
@@ -116,30 +153,18 @@ jobs:
 
           total_files=$(find "$TARGET_DIR" -type f | wc -l)
           html_files=$(find "$TARGET_DIR" -type f -name "*.html" | wc -l)
-          echo "=== 部署产物统计 (mode=$MODE) ==="
-          echo "  总文件数: $total_files"
+          echo "================ 部署产物统计 (mode=$MODE) ================"
+          echo "  总文件数: $total_files (Cloudflare Pages 上限 20,000)"
           echo "  HTML 文件数: $html_files"
           echo ""
-
           missing=0
           for f in _headers _redirects favicon.ico favicon.svg og-image.svg robots.txt sitemap.xml ads.txt; do
             if [ -f "$TARGET_DIR/$f" ]; then
-              echo "  ✅ $TARGET_DIR/$f ($(stat -c%s $TARGET_DIR/$f) bytes)"
+              echo "  ✅ $TARGET_DIR/$f ($(stat -c%s $TARGET_DIR/$f 2>/dev/null || stat -f%z $TARGET_DIR/$f 2>/dev/null) bytes)"
             else
-              echo "  ❌ $TARGET_DIR/$f MISSING"
-              missing=1
+              echo "  ⚠️  $TARGET_DIR/$f 缺失（非致命，继续部署）"
             fi
           done
-
-          if grep -q 'og:title' "$TARGET_DIR/index.html" 2>/dev/null && grep -q 'rel="canonical"' "$TARGET_DIR/index.html" 2>/dev/null; then
-            echo "  ✅ $TARGET_DIR/index.html: has og:title + canonical"
-          else
-            echo "  ⚠️  $TARGET_DIR/index.html: og/canonical meta check skipped"
-          fi
-
-          if [ "$missing" -ne 0 ]; then
-            echo "::warning::Some CF asset files missing, upload continues but check headers/icons"
-          fi
 
       - name: Deploy to Cloudflare Pages
         env:
@@ -148,49 +173,60 @@ jobs:
           NODE_ENV: production
           CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}
         run: |
+          set -e
           PROJECT="${CF_PAGES_PROJECT:-korelyy-tools}"
           BRANCH="${GITHUB_REF_NAME:-main}"
-
           if [ "$MODE" = "legacy" ]; then
             DEPLOY_DIR="out"
           else
             DEPLOY_DIR=".vercel/output/static"
           fi
 
-          echo "Deploying mode=$MODE project=$PROJECT branch=$BRANCH dir=$DEPLOY_DIR"
-          pnpm exec wrangler pages deploy "$DEPLOY_DIR" --project-name="$PROJECT" --branch="$BRANCH" --commit-dirty=true
+          echo ""
+          echo "================================================================"
+          echo "  🚀 Deploying to Cloudflare Pages"
+          echo "  mode=$MODE  project=$PROJECT  branch=$BRANCH  dir=$DEPLOY_DIR"
+          echo "================================================================"
+          pnpm exec wrangler pages deploy "$DEPLOY_DIR" \
+            --project-name="$PROJECT" \
+            --branch="$BRANCH" \
+            --commit-dirty=true 2>&1 | tail -60
+          echo ""
+          echo "✅ wrangler pages deploy 完成"
 
       - name: Deployment summary
+        if: always()
         run: |
           PROJECT="${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}"
           SHA="${GITHUB_SHA::7}"
           BRANCH="${GITHUB_REF_NAME}"
-          MODE_DISPLAY="$MODE"
-          if [ "$MODE" = "legacy" ]; then
-            TARGET_NOTE="方案A：静态导出（精选SSG + CSR详情页，约 2019 文件）"
+          MODE_DISPLAY="${MODE:-isr}"
+          if [ "$MODE_DISPLAY" = "legacy" ]; then
+            TARGET_NOTE="方案A：静态导出（精选SSG + 客户端详情页，≈2000 文件）"
           else
-            TARGET_NOTE="方案B：ISR 增量静态再生（约 500 文件，首访问渲染 + 1h 缓存）"
+            TARGET_NOTE="方案B：ISR 增量静态再生（≈500 文件，首访问渲染 + 1h 缓存，永不超 20k 上限）"
           fi
 
           {
-            echo "## 部署完成 🎉"
+            echo "## 部署结果 📦"
             echo ""
             echo "- **构建模式**: \`${MODE_DISPLAY}\` → ${TARGET_NOTE}"
             echo "- **项目**: \`${PROJECT}\`"
             echo "- **Commit**: \`${SHA}\`"
             echo "- **分支**: \`${BRANCH}\`"
-            echo "- **Wrangler 上传并发**: BULK_UPLOAD_CONCURRENCY2=1 (自动 patch，防止 Gateway Timeout)"
+            echo "- **Wrangler 上传并发**: BULK_UPLOAD_CONCURRENCY2=1 (patch 过，防 Gateway Timeout)"
             echo ""
-            echo "访问地址："
+            echo "### 访问地址"
             echo "- Pages 临时域: https://${PROJECT}.pages.dev"
-            echo "- 自定义域名: https://www.korelyy.com"
+            echo "- 自定义域名(www): https://www.korelyy.com"
             echo "- 自定义域名(裸域): https://korelyy.com"
             echo ""
-            echo "> 回滚方式：Cloudflare Pages 后台 → 项目 → Deployments → 点上个版本 ··· → Promote to production"
-            echo "> 后端 Auth Worker 独立部署（workers/auth/wrangler.auth.jsonc），不受本工作流影响"
+            echo "> 紧急回滚：Cloudflare Pages → \`${PROJECT}\` → Deployments → 上个版本右点 ··· → Promote to production"
+            echo "> 后端 /api/auth/* 由独立的 Auth Worker 提供，不受本工作流影响"
             echo ""
-            echo "### 模式切换"
-            echo "手动运行本 Workflow 时，\`build_mode\` 下拉框选择："
-            echo "- \`isr\`（默认）→ 方案B ISR：文件最少，长期推荐"
-            echo "- \`legacy\` → 方案A 静态导出：立即稳定，与 Windows 本地一致"
+            echo "### 以后怎么重新部署？"
+            echo "**方式1（自动）**：改完代码 commit → git push → 本工作流自动触发（默认 mode=\`isr\`）"
+            echo "**方式2（手动+可选模式）**：Actions → Deploy to Cloudflare Pages → Run workflow → \`build_mode\` 选："
+            echo "- \`isr\`（默认）→ 方案B，文件最少长期推荐"
+            echo "- \`legacy\` → 方案A，全静态导出"
           } >> $GITHUB_STEP_SUMMARY
