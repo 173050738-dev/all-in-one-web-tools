@@ -6,6 +6,13 @@
 # trailingSlash: true 规范化（所有语言目录强制尾部斜杠，SEO统一URL）
 # ============================================================
 
+# ---------- 根路径 → /zh/（默认中文首页，308 永久重定向 + 保留查询参数） ----------
+/                   /zh/                   308
+
+# ---------- www.korelyy.com → korelyy.com（308 永久重定向 + 完整路径透传） ----------
+https://www.korelyy.com/*    https://korelyy.com/:splat    308
+http://www.korelyy.com/*     https://korelyy.com/:splat    308
+
 # ---------- 6语言入口：不带斜杠 → 带斜杠（301永久重定向） ----------
 /zh /zh/ 301
 /en /en/ 301
