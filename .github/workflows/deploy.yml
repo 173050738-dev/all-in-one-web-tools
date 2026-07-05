@@ -4,6 +4,15 @@ on:
   push:
     branches: [main, master]
   workflow_dispatch:
+    inputs:
+      build_mode:
+        description: 构建模式
+        required: false
+        default: isr
+        type: choice
+        options:
+          - isr
+          - legacy
 
 permissions:
   contents: read
@@ -13,101 +22,175 @@ concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  MODE: ${{ github.event.inputs.build_mode || 'isr' }}
+
 jobs:
   build-and-deploy:
-    name: Build & Deploy to CF Pages
+    name: Build & Deploy (${{ github.event.inputs.build_mode || 'isr' }})
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js 20 + pnpm
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          package-manager: pnpm
+          cache: pnpm
 
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
+      - name: Install dependencies (pnpm)
+        run: pnpm install --frozen-lockfile --prefer-offline
 
-      - name: Resolve middleware + output:export conflict (temporarily remove)
+      - name: Patch Wrangler BULK_UPLOAD_CONCURRENCY2=1
+        run: pnpm run wrangler:patch
+
+      - name: "ISR mode: build (方案B → ISR + next-on-pages, ~500 files)"
+        if: env.MODE == 'isr'
+        env:
+          NODE_ENV: production
         run: |
+          echo "=== Mode: ISR (方案B) - 运行 next-on-pages 生成 .vercel/output/static ==="
+          pnpm run build:cf
+
+      - name: "Legacy mode: resolve middleware + output:export (方案A → static export, ~2000 files)"
+        if: env.MODE == 'legacy'
+        run: |
+          echo "=== Mode: Legacy (方案A) - static export ==="
           if [ -f middleware.ts ]; then
             echo "Moving middleware.ts to .bak for static export"
             mv middleware.ts middleware.ts.bak
           fi
 
-      - name: Build (Next.js static export)
+      - name: "Legacy mode: build (USE_STATIC_EXPORT=true)"
+        if: env.MODE == 'legacy'
         env:
           NODE_ENV: production
-        run: npm run build
+          USE_STATIC_EXPORT: "true"
+        run: pnpm run build
 
-      - name: Restore middleware.ts
+      - name: Restore middleware.ts (legacy only)
+        if: env.MODE == 'legacy' && always()
         run: |
           if [ -f middleware.ts.bak ]; then
             mv middleware.ts.bak middleware.ts
+            echo "middleware.ts restored"
           fi
 
-      - name: Copy CF Pages static assets to out/
+      - name: Copy CF Pages static assets (legacy → out/ ; isr → .vercel/output/static)
         run: |
-          if [ ! -d out ]; then
-            echo "::error::Build produced no out/ directory"
+          if [ "$MODE" = "legacy" ]; then
+            TARGET_DIR="out"
+          else
+            TARGET_DIR=".vercel/output/static"
+          fi
+
+          if [ ! -d "$TARGET_DIR" ]; then
+            echo "::error::Build produced no $TARGET_DIR directory (mode=$MODE)"
             exit 1
           fi
+
+          echo "Target dir: $TARGET_DIR"
           set +e
           for f in _headers _redirects favicon.svg og-image.svg robots.txt sitemap.xml ads.txt; do
             if [ -f "public/$f" ]; then
-              cp -f "public/$f" "out/$f"
-              echo "copied public/$f -> out/$f ($(wc -c < public/$f) bytes)"
+              cp -f "public/$f" "$TARGET_DIR/$f"
+              echo "copied public/$f -> $TARGET_DIR/$f ($(wc -c < public/$f) bytes)"
             fi
           done
-          # favicon.ico: copy SVG as ico (browsers parse by content, not extension)
           if [ -f public/favicon.svg ]; then
-            cp -f public/favicon.svg out/favicon.ico
-            echo "copied public/favicon.svg -> out/favicon.ico"
+            cp -f public/favicon.svg "$TARGET_DIR/favicon.ico"
+            echo "copied public/favicon.svg -> $TARGET_DIR/favicon.ico"
           fi
 
-      - name: Verify critical files in out/
+      - name: Verify critical files
         run: |
+          if [ "$MODE" = "legacy" ]; then
+            TARGET_DIR="out"
+          else
+            TARGET_DIR=".vercel/output/static"
+          fi
+
+          total_files=$(find "$TARGET_DIR" -type f | wc -l)
+          html_files=$(find "$TARGET_DIR" -type f -name "*.html" | wc -l)
+          echo "=== 部署产物统计 (mode=$MODE) ==="
+          echo "  总文件数: $total_files"
+          echo "  HTML 文件数: $html_files"
+          echo ""
+
           missing=0
           for f in _headers _redirects favicon.ico favicon.svg og-image.svg robots.txt sitemap.xml ads.txt; do
-            if [ -f "out/$f" ]; then
-              echo "  ✅ out/$f ($(stat -c%s out/$f) bytes)"
+            if [ -f "$TARGET_DIR/$f" ]; then
+              echo "  ✅ $TARGET_DIR/$f ($(stat -c%s $TARGET_DIR/$f) bytes)"
             else
-              echo "  ❌ out/$f MISSING"
+              echo "  ❌ $TARGET_DIR/$f MISSING"
               missing=1
             fi
           done
-          # Check root index.html metadata
-          if grep -q 'og:title' out/index.html && grep -q 'rel="canonical"' out/index.html; then
-            echo "  ✅ out/index.html: has og:title + canonical"
+
+          if grep -q 'og:title' "$TARGET_DIR/index.html" 2>/dev/null && grep -q 'rel="canonical"' "$TARGET_DIR/index.html" 2>/dev/null; then
+            echo "  ✅ $TARGET_DIR/index.html: has og:title + canonical"
           else
-            echo "  ⚠️  out/index.html: og/canonical meta check skipped"
+            echo "  ⚠️  $TARGET_DIR/index.html: og/canonical meta check skipped"
           fi
+
           if [ "$missing" -ne 0 ]; then
             echo "::warning::Some CF asset files missing, upload continues but check headers/icons"
           fi
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy out --project-name=${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }} --branch=${{ github.ref_name }}
         env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           NODE_ENV: production
+          CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}
+        run: |
+          PROJECT="${CF_PAGES_PROJECT:-korelyy-tools}"
+          BRANCH="${GITHUB_REF_NAME:-main}"
+
+          if [ "$MODE" = "legacy" ]; then
+            DEPLOY_DIR="out"
+          else
+            DEPLOY_DIR=".vercel/output/static"
+          fi
+
+          echo "Deploying mode=$MODE project=$PROJECT branch=$BRANCH dir=$DEPLOY_DIR"
+          pnpm exec wrangler pages deploy "$DEPLOY_DIR" --project-name="$PROJECT" --branch="$BRANCH" --commit-dirty=true
 
       - name: Deployment summary
         run: |
-          echo "## 部署完成 🎉" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- 项目: \`${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "- Commit: \`${GITHUB_SHA::7}\`" >> $GITHUB_STEP_SUMMARY
-          echo "- 分支: \`${GITHUB_REF_NAME}\`" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "访问地址：" >> $GITHUB_STEP_SUMMARY
-          echo "- Pages 临时域: https://${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}.pages.dev" >> $GITHUB_STEP_SUMMARY
-          echo "- 自定义域名: https://www.korelyy.com" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "> 如需回滚：到 Cloudflare Pages 后台 → 项目 → Deployments → 点上个版本 ··· → Promote to production" >> $GITHUB_STEP_SUMMARY
+          PROJECT="${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}"
+          SHA="${GITHUB_SHA::7}"
+          BRANCH="${GITHUB_REF_NAME}"
+          MODE_DISPLAY="$MODE"
+          if [ "$MODE" = "legacy" ]; then
+            TARGET_NOTE="方案A：静态导出（精选SSG + CSR详情页，约 2019 文件）"
+          else
+            TARGET_NOTE="方案B：ISR 增量静态再生（约 500 文件，首访问渲染 + 1h 缓存）"
+          fi
+
+          {
+            echo "## 部署完成 🎉"
+            echo ""
+            echo "- **构建模式**: \`${MODE_DISPLAY}\` → ${TARGET_NOTE}"
+            echo "- **项目**: \`${PROJECT}\`"
+            echo "- **Commit**: \`${SHA}\`"
+            echo "- **分支**: \`${BRANCH}\`"
+            echo "- **Wrangler 上传并发**: BULK_UPLOAD_CONCURRENCY2=1 (自动 patch，防止 Gateway Timeout)"
+            echo ""
+            echo "访问地址："
+            echo "- Pages 临时域: https://${PROJECT}.pages.dev"
+            echo "- 自定义域名: https://www.korelyy.com"
+            echo "- 自定义域名(裸域): https://korelyy.com"
+            echo ""
+            echo "> 回滚方式：Cloudflare Pages 后台 → 项目 → Deployments → 点上个版本 ··· → Promote to production"
+            echo "> 后端 Auth Worker 独立部署（workers/auth/wrangler.auth.jsonc），不受本工作流影响"
+            echo ""
+            echo "### 模式切换"
+            echo "手动运行本 Workflow 时，\`build_mode\` 下拉框选择："
+            echo "- \`isr\`（默认）→ 方案B ISR：文件最少，长期推荐"
+            echo "- \`legacy\` → 方案A 静态导出：立即稳定，与 Windows 本地一致"
+          } >> $GITHUB_STEP_SUMMARY

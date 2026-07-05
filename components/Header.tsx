@@ -1,14 +1,18 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿'use client';
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿'use client';
 
 import { useTranslations } from 'next-intl';
 import { Menu, Globe, Sun, Moon, Sparkles, X, RefreshCw, Folder, History, MoreVertical, Settings, Trophy, Accessibility, Bookmark, Share2, ChevronDown, Check, Layers, Home, Key, Image as ImageIcon, Sparkles as SparklesIcon, Lightbulb, BookOpen } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { usePreferencesStore } from '@/stores/preferences';
+import { useAchievementsStore } from '@/stores/achievements';
 import { useLocaleSwitcher } from '@/lib/useLocaleSwitcher';
 import { saveLocale, SupportedLocale } from '@/lib/language-detection';
 import ShareButton from './ShareButton';
 import InstallToHomeButton from './InstallToHomeButton';
+import AuthModal from './AuthModal';
+import { useAuthStore } from '@/stores/auth';
+import { LogIn, User, LogOut, Star } from 'lucide-react';
 
 // 动态导入面板组件，减少首屏bundle
 const ToolBox = dynamic(() => import('./ToolBox'), { loading: () => null });
@@ -116,8 +120,10 @@ export default function Header({ locale }: { locale: string }) {
   const t = useTranslations('header');
   const tNav = useTranslations('nav');
   const tNav2 = useTranslations('nav2');
+  const tAuth = useTranslations('auth');
   const { theme, toggleTheme, setLocale, searchQuery, setSearchQuery, favoriteTools, history } = usePreferencesStore();
   const { switchLocale } = useLocaleSwitcher();
+  const auth = useAuthStore();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showBookmarkToast, setShowBookmarkToast] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
@@ -129,14 +135,17 @@ export default function Header({ locale }: { locale: string }) {
   const [showAchievements, setShowAchievements] = useState(false);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showLangMenu, setShowLangMenu] = useState(false);
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
   
   const moreMenuRef = useRef<HTMLDivElement>(null);
   const langMenuRef = useRef<HTMLDivElement>(null);
+  const accountMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setHasMounted(true);
-  }, []);
+    auth.hydrateFromStorage();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const locales = [
     { code: 'en', name: 'EN', flag: '🇺🇸' },
@@ -154,6 +163,7 @@ export default function Header({ locale }: { locale: string }) {
     setShowAchievements(false);
     setShowMoreMenu(false);
     setShowLangMenu(false);
+    setShowAccountMenu(false);
   };
 
   useEffect(() => {
@@ -178,6 +188,9 @@ export default function Header({ locale }: { locale: string }) {
       }
       if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
         setShowLangMenu(false);
+      }
+      if (accountMenuRef.current && !accountMenuRef.current.contains(event.target as Node)) {
+        setShowAccountMenu(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -321,6 +334,122 @@ export default function Header({ locale }: { locale: string }) {
 
             {/* Share Button */}
             <ShareButton />
+
+            {/* Account Menu */}
+            <div className='relative' ref={accountMenuRef}>
+              <button
+                onClick={() => {
+                  if (!hasMounted) return;
+                  if (auth.status === 'authed') {
+                    if (!showAccountMenu) { closeAllHeaderPanels(); notifyCloseOthers('header'); }
+                    setShowAccountMenu(!showAccountMenu);
+                  } else {
+                    closeAllHeaderPanels();
+                    notifyCloseOthers('header');
+                    auth.setModal(true, 'login');
+                  }
+                }}
+                className={`p-2 transition-colors relative inline-flex items-center justify-center rounded-full ${auth.status === 'authed' ? 'w-[44px] h-[44px] overflow-hidden ring-1 ring-white/25 shadow-sm shadow-black/10' : 'text-white hover:bg-white/10 min-h-[44px] min-w-[44px]'}`}
+                aria-label={tAuth('account-menu')}
+                title={tAuth('account-menu')}
+              >
+                {auth.status === 'authed' && auth.user ? (
+                  <>
+                    {auth.user.avatar_url ? (
+                      <img
+                        src={auth.user.avatar_url}
+                        alt=''
+                        referrerPolicy='no-referrer'
+                        className='w-full h-full object-cover rounded-full'
+                      />
+                    ) : (
+                      <span className='w-full h-full inline-flex items-center justify-center bg-gradient-to-br from-primary-400 to-indigo-500 text-white text-[13px] font-bold'>
+                        {(auth.user.display_name || auth.user.email || '?').charAt(0).toUpperCase()}
+                      </span>
+                    )}
+                  </>
+                ) : (
+                  <LogIn className='h-[18px] w-[18px]' />
+                )}
+              </button>
+
+              {auth.status === 'authed' && showAccountMenu && (
+                <div className='absolute right-0 top-full mt-2 w-60 sm:w-64 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200'>
+                  {/* Header card */}
+                  <div className='px-4 py-3 border-b border-gray-100 dark:border-gray-700 bg-gradient-to-br from-primary-50 dark:from-primary-900/10 to-white dark:to-gray-800'>
+                    <div className='flex items-center gap-3 min-w-0'>
+                      <div className='w-10 h-10 shrink-0 rounded-full overflow-hidden ring-2 ring-white dark:ring-gray-700 shadow-sm'>
+                        {auth.user?.avatar_url ? (
+                          <img
+                            src={auth.user.avatar_url}
+                            alt=''
+                            referrerPolicy='no-referrer'
+                            className='w-full h-full object-cover'
+                          />
+                        ) : (
+                          <div className='w-full h-full inline-flex items-center justify-center bg-gradient-to-br from-primary-400 to-indigo-500 text-white text-sm font-bold'>
+                            {(auth.user?.display_name || auth.user?.email || '?').charAt(0).toUpperCase()}
+                          </div>
+                        )}
+                      </div>
+                      <div className='min-w-0 flex-1'>
+                        <div className='flex items-center gap-1.5'>
+                          <span className='text-sm font-bold text-gray-900 dark:text-white truncate'>
+                            {auth.user?.display_name || auth.user?.email?.split('@')[0] || tAuth('badge-guest')}
+                          </span>
+                          <span className='px-1.5 py-0.5 rounded-full text-[9px] font-semibold uppercase tracking-wider bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 shrink-0'>
+                            {auth.user?.plan === 'pro' ? tAuth('badge-pro') : tAuth('badge-free')}
+                          </span>
+                        </div>
+                        <div className='text-[11px] text-gray-500 dark:text-gray-400 truncate mt-0.5'>
+                          {auth.user?.email}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='py-1.5'>
+                    <button
+                      onClick={() => { setShowAccountMenu(false); }}
+                      className='w-full flex items-center gap-2.5 px-3 py-2 text-left text-xs text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors'
+                    >
+                      <User className='w-4 h-4 text-gray-500 dark:text-gray-400 shrink-0' />
+                      <span className='font-medium flex-1'>{tAuth('profile')}</span>
+                    </button>
+                    <button
+                      onClick={() => {
+                        setShowAccountMenu(false);
+                        closeAllHeaderPanels();
+                        notifyCloseOthers('header');
+                        setShowToolBox(true);
+                      }}
+                      className='w-full flex items-center gap-2.5 px-3 py-2 text-left text-xs text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors'
+                    >
+                      <Star className='w-4 h-4 text-gray-500 dark:text-gray-400 shrink-0' />
+                      <span className='font-medium flex-1'>{tAuth('my-favorites')}</span>
+                      {hasMounted && favoriteTools.length > 0 && (
+                        <span className='px-1.5 py-0.5 text-[10px] bg-orange-500 text-white rounded-full min-w-[18px] text-center tabular-nums'>
+                          {favoriteTools.length > 99 ? '99+' : favoriteTools.length}
+                        </span>
+                      )}
+                    </button>
+                  </div>
+
+                  <div className='border-t border-gray-100 dark:border-gray-700 py-1.5'>
+                    <button
+                      onClick={() => {
+                        setShowAccountMenu(false);
+                        auth.logout();
+                      }}
+                      className='w-full flex items-center gap-2.5 px-3 py-2 text-left text-xs text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-900/10 transition-colors'
+                    >
+                      <LogOut className='w-4 h-4 shrink-0' />
+                      <span className='font-semibold flex-1'>{tAuth('sign-out')}</span>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Language Switcher - Dropdown */}
             <div className='hidden sm:block relative' ref={langMenuRef}>
@@ -505,6 +634,7 @@ export default function Header({ locale }: { locale: string }) {
       <HistoryPanel locale={locale} isOpen={showHistory} onClose={() => setShowHistory(false)} />
       <AccessibilitySettings locale={locale} isOpen={showAccessibility} onClose={() => setShowAccessibility(false)} />
       <AchievementsPanel locale={locale} isOpen={showAchievements} onClose={() => setShowAchievements(false)} />
+      <AuthModal />
     </header>
   );
 }

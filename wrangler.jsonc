@@ -1,6 +1,19 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "korelyy-tools",
-  "pages_build_output_dir": "./out",
-  "compatibility_date": "2026-07-01"
+  "pages_build_output_dir": "./.vercel/output/static",
+  "compatibility_date": "2026-06-24",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "8127d06b-19d6-4b9a-aaf7-c6d74fb2c2c6"
+    }
+  ],
+  "vars": {
+    "JWT_ISSUER": "korelyy.com",
+    "ACCESS_TOKEN_TTL_SEC": "604800"
+  }
 }

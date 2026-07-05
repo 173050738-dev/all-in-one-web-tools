@@ -1,14 +1,11 @@
 import type { Metadata } from 'next';
-
-const WORKFLOW_SLUGS: { slug: string }[] = [];
+import { TOP_WORKFLOW_SLUGS } from '@/lib/topSlugs';
 
 export function generateStaticParams() {
-  if (WORKFLOW_SLUGS.length === 0) {
-    const { workflows } = require('@/data/workflows');
-    for (const w of workflows) WORKFLOW_SLUGS.push({ slug: w.slug });
-  }
-  return WORKFLOW_SLUGS;
+  return TOP_WORKFLOW_SLUGS.map(slug => ({ slug }));
 }
+
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;

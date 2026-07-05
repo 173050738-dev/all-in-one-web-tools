@@ -34,6 +34,17 @@ while ((mb = blogSlugRegex.exec(blogSrc)) !== null) {
 }
 console.log(`[sitemap-build] Found ${blogSlugs.size} blog slugs`);
 
+// ---------------- Extract news slugs from data/news.ts via regex ----------------
+const newsPath = path.join(ROOT, 'data', 'news.ts');
+const newsSrc = fs.existsSync(newsPath) ? fs.readFileSync(newsPath, 'utf-8') : '';
+const newsSlugRegex = /slug:\s*['"`]([^'"`]+)['"`]/g;
+const newsSlugs = new Set();
+let mn;
+while ((mn = newsSlugRegex.exec(newsSrc)) !== null) {
+  if (mn[1] && !['news', 'weekly', 'issue'].includes(mn[1])) newsSlugs.add(mn[1]);
+}
+console.log(`[sitemap-build] Found ${newsSlugs.size} news slugs`);
+
 // ---------------- Page entries ----------------
 const staticPages = [
   { path: '/', changeFreq: 'daily', priority: 1.0 },
@@ -43,6 +54,7 @@ const staticPages = [
   { path: '/workflow/canvas', changeFreq: 'monthly', priority: 0.4 },
   { path: '/workflow/custom', changeFreq: 'monthly', priority: 0.4 },
   { path: '/blog', changeFreq: 'daily', priority: 0.85 },
+  { path: '/news', changeFreq: 'weekly', priority: 0.85 },
 ];
 
 const toolEntries = [...toolSlugs].map((slug) => ({
@@ -57,7 +69,13 @@ const blogEntries = [...blogSlugs].map((slug) => ({
   priority: 0.9,
 }));
 
-const allPages = [...staticPages, ...toolEntries, ...blogEntries];
+const newsEntries = [...newsSlugs].map((slug) => ({
+  path: `/news/${slug}`,
+  changeFreq: 'weekly',
+  priority: 0.9,
+}));
+
+const allPages = [...staticPages, ...toolEntries, ...blogEntries, ...newsEntries];
 console.log(`[sitemap-build] ${allPages.length} page entries (×${KNOWN_LOCALES.length} locales = ${allPages.length * KNOWN_LOCALES.length} URLs)`);
 
 // ---------------- Generate sitemap.xml ----------------
@@ -101,30 +119,35 @@ const robots = `# Korelyy robots.txt
 User-agent: *
 Allow: /
 Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Googlebot
 Allow: /
 Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Bingbot
 Allow: /
 Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Yandex
 Allow: /
 Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Baiduspider
 Allow: /
 Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 

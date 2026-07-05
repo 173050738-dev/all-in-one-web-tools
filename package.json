@@ -2,13 +2,19 @@
   "name": "tool-station",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@10.33.4",
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/build-data-bundles.cjs ; node scripts/generate-blog-routes.cjs ; node scripts/build-sitemap-robots.mjs",
     "build": "next build",
+    "build:legacy": "set USE_STATIC_EXPORT=true&& next build",
+    "build:cf": "next-on-pages",
     "postbuild": "node scripts/rewrite-meta.cjs && node scripts/post-build.cjs",
-    "predeploy": "npm run build",
-    "deploy": "wrangler pages deploy ./out --branch main --commit-dirty=true",
+    "wrangler:patch": "node scripts/patch-wrangler.cjs",
+    "_skip_predeploy": "npm run build",
+    "deploy": "pnpm run build:cf && pnpm run wrangler:patch && wrangler pages deploy .vercel/output/static --branch main --commit-dirty=true --project-name korelyy-tools",
+    "deploy:legacy": "pnpm run build:legacy && pnpm run wrangler:patch && wrangler pages deploy ./out --branch main --commit-dirty=true --project-name korelyy-tools",
+    "deploy:auth": "wrangler deploy -c workers/auth/wrangler.auth.jsonc",
     "start": "next start",
     "lint": "next lint",
     "clean": "node scripts/clean.cjs",
@@ -31,6 +37,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
@@ -39,6 +46,7 @@
     "eslint-config-next": "^15.0.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "wrangler": "^4.103.0"
   }
 }

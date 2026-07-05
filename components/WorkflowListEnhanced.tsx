@@ -45,6 +45,14 @@ import type { Locale } from '@/lib/workflowTranslations';
 import type { Tool } from '@/data/tools';
 import WorkflowCreator from './WorkflowCreator';
 import { safeNavigate } from '@/lib/url-whitelist';
+import { isTopWorkflowSlug } from '@/lib/topSlugs';
+
+function getWorkflowDetailUrl(locale: string, workflow: { id: string; slug?: string; isCustom?: boolean }): string {
+  if (workflow.isCustom) return `/${locale}/workflow/custom/${workflow.id}`;
+  const slug = workflow.slug || workflow.id;
+  if (isTopWorkflowSlug(slug)) return `/${locale}/workflow/${slug}`;
+  return `/${locale}/workflow/detail/?slug=${encodeURIComponent(slug)}`;
+}
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
   ssr: false,
@@ -1068,7 +1076,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3'>
           {triggerTemplates.map((tr, idx) => {
             const wf = officialWorkflows.find(w => w.id === tr.workflowIds[0]);
-            const href = wf ? `/${locale}/workflow/${wf.slug}` : `/${locale}/workflows`;
+            const href = wf ? getWorkflowDetailUrl(locale, wf) : `/${locale}/workflows`;
             return (
               <a
                 key={idx}
@@ -1164,9 +1172,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
               .map((workflow) => {
                 const Icon = iconMap[workflow.icon] || Zap;
                 const progress = getProgressInfo(workflow.id);
-                const detailUrl = workflow.isCustom
-                  ? `/${locale}/workflow/custom/${workflow.id}`
-                  : `/${locale}/workflow/${workflow.slug}`;
+                const detailUrl = getWorkflowDetailUrl(locale, workflow);
                 return (
                   <a
                     key={workflow.id}

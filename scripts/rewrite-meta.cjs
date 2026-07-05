@@ -197,7 +197,13 @@ for (const l of SUPPORTED_LOCALES) {
 }
 
 function addAdsenseAll(dir) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  let entries;
+  try {
+    entries = fs.readdirSync(dir, { withFileTypes: true });
+  } catch (e) {
+    console.warn('[rewrite-meta] adsense skip dir (' + dir + '):', e.code || e.message);
+    return 0;
+  }
   let added = 0;
   for (const entry of entries) {
     const p = path.join(dir, entry.name);
@@ -206,11 +212,22 @@ function addAdsenseAll(dir) {
       continue;
     }
     if (entry.isFile() && entry.name.toLowerCase() === 'index.html') {
-      const html = fs.readFileSync(p, 'utf8');
+      let html;
+      try {
+        html = fs.readFileSync(p, 'utf8');
+      } catch (e) {
+        console.warn('[rewrite-meta] adsense skip read:', p, e.code || e.message);
+        continue;
+      }
       if (html.includes('<!-- AdSense:static-injected -->')) continue;
       if (!/<\/head>/i.test(html)) continue;
       const next = html.replace(/<\/head>/i, ADSENSE_BLOCK + '</head>');
-      fs.writeFileSync(p, next, 'utf8');
+      try {
+        fs.writeFileSync(p, next, 'utf8');
+      } catch (e) {
+        console.warn('[rewrite-meta] adsense skip write:', p, e.code || e.message);
+        continue;
+      }
       added++;
     }
   }

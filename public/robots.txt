@@ -4,26 +4,36 @@
 
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Googlebot
 Allow: /
+Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Bingbot
 Allow: /
+Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Yandex
 Allow: /
+Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Baiduspider
 Allow: /
+Allow: /blog/
+Allow: /news/
 Disallow: /api/
 Disallow: /_next/
 

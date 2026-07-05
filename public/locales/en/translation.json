@@ -106,11 +106,12 @@
     "compliance-filter": "Compliance",
     "all": "All",
     "verified": "Verified",
-    "pending": "Pending"
+    "pending": "Pending",
+    "blog": "Blog"
   },
   "dashboard": {
-    "title": "Find tools? Korelyy it is.",
-    "subtitle": "The world's leading tool aggregation platform",
+    "title": "Find the right tools, only on Korelyy",
+    "subtitle": "The world's trusted tool aggregation hub",
     "sort-newest": "Newest",
     "sort-popular": "Most Popular",
     "sort-free": "All Free Tools",
@@ -461,8 +462,8 @@
       "description": "Online photopea image for image, edit, PSD, design. Works right in your browser — free, secure, and no install required."
     },
     "cloudconvert": {
-      "name": "Cloudconvert Format",
-      "description": "Online cloudconvert format for format, convert, document, video. Works right in your browser — free, secure, and no install required."
+      "name": "CloudConvert",
+      "description": "Cloud-based file conversion supporting 200+ formats including documents, images, video, audio, and archives. Convert files securely without installing software."
     },
     "vidshift": {
       "name": "Vidshift Video",
@@ -493,12 +494,12 @@
       "description": "Online ilovepdf pdf for PDF, merge, convert, edit. Works right in your browser — free, secure, and no install required."
     },
     "canva": {
-      "name": "Canva Design",
-      "description": "Online canva design for design, template, poster, AI. Works right in your browser — free, secure, and no install required."
+      "name": "Canva",
+      "description": "Drag-and-drop graphic design platform with thousands of templates for social media, presentations, posters, resumes, and more. No design skills required."
     },
     "figma": {
-      "name": "Figma UI",
-      "description": "Online figma ui for UI, design, collaboration, prototype. Works right in your browser — free, secure, and no install required."
+      "name": "Figma",
+      "description": "Collaborative interface design tool for UI/UX teams. Design, prototype, and share work in real time with a cloud-based canvas accessible from any browser."
     },
     "replit": {
       "name": "Replit Code",
@@ -517,20 +518,20 @@
       "description": "Online hemingway writing for writing, analysis, style, clarity. Works right in your browser — free, secure, and no install required."
     },
     "notion": {
-      "name": "Notion Collaboration",
-      "description": "Online notion collaboration for collaboration, notes, project, AI. Works right in your browser — free, secure, and no install required."
+      "name": "Notion",
+      "description": "All-in-one workspace for notes, docs, databases, project boards, and wikis. Organize work and life with building blocks and AI-powered writing."
     },
     "trello": {
-      "name": "Trello Project",
-      "description": "Online trello project for project, management, kanban, collaboration. Works right in your browser — free, secure, and no install required."
+      "name": "Trello",
+      "description": "Kanban-style project management tool with boards, lists, and cards. Organize tasks, add due dates and checklists, and move work through a visual pipeline."
     },
     "slack": {
-      "name": "Slack Communication",
-      "description": "Online slack communication for communication, team, collaboration, messages. Works right in your browser — free, secure, and no install required."
+      "name": "Slack",
+      "description": "Channel-based messaging platform for teams. Organize conversations by topic, share files, integrate with 1000+ apps, and collaborate from anywhere."
     },
     "github": {
-      "name": "Github Code",
-      "description": "Online github code for code, hosting, open source, collaboration. Works right in your browser — free, secure, and no install required."
+      "name": "GitHub",
+      "description": "World's largest developer platform for code hosting, version control with Git, issue tracking, pull requests, Actions CI/CD, and open-source collaboration."
     },
     "stackblitz": {
       "name": "Stackblitz IDE",
@@ -718,7 +719,7 @@
     },
     "google-docs": {
       "name": "Google Docs",
-      "description": "Online google docs for document, collaboration, Google, cloud. Works right in your browser — free, secure, and no install required."
+      "description": "Web-based word processor with real-time collaboration. Create and edit documents with teammates, track changes, and access from anywhere with autosave."
     },
     "google-sheets": {
       "name": "Google Sheets",
@@ -729,12 +730,12 @@
       "description": "Online google slides for presentation, slides, Google, collaboration. Works right in your browser — free, secure, and no install required."
     },
     "dropbox": {
-      "name": "Dropbox Storage",
-      "description": "Online dropbox storage for storage, sync, share, cloud. Works right in your browser — free, secure, and no install required."
+      "name": "Dropbox",
+      "description": "Cloud storage and file sync platform. Access files from any device, share folders securely, collaborate on documents, and back up data automatically."
     },
     "onedrive": {
-      "name": "Onedrive Storage",
-      "description": "Online onedrive storage for storage, Microsoft, Office, sync. Works right in your browser — free, secure, and no install required."
+      "name": "Microsoft OneDrive",
+      "description": "Personal and business cloud storage integrated with Microsoft 365. Store, share, and co-author Word, Excel, and PowerPoint files from anywhere."
     },
     "we-transfer": {
       "name": "We Transfer",
@@ -777,8 +778,8 @@
       "description": "Online video converter for video, convert, format, online. Works right in your browser — free, secure, and no install required."
     },
     "evernote": {
-      "name": "Evernote Notes",
-      "description": "Online evernote notes for notes, organize, sync, cross-platform. Works right in your browser — free, secure, and no install required."
+      "name": "Evernote",
+      "description": "Cross-platform note-taking app to capture ideas, web clips, photos, and documents. Organize with notebooks and tags, search across everything, and sync to all devices."
     },
     "smashing-magazine": {
       "name": "Smashing Magazine",
@@ -921,20 +922,20 @@
       "description": "Online figjam whiteboard for whiteboard, Figma, collaboration, realtime. Works right in your browser — free, secure, and no install required."
     },
     "monday": {
-      "name": "Monday Project",
-      "description": "Online monday project for project, management, tracking, team. Works right in your browser — free, secure, and no install required."
+      "name": "Monday.com",
+      "description": "Visual project management with customizable work OS. Build workflows, track tasks, collaborate in real time, and manage teams on a no-code platform."
     },
     "asana": {
-      "name": "Asana Task",
-      "description": "Online asana task for task, management, team, tracking. Works right in your browser — free, secure, and no install required."
+      "name": "Asana",
+      "description": "Work management platform to organize projects, assign tasks, set deadlines, and track progress across teams with boards, timelines, and automations."
     },
     "clickup": {
       "name": "Clickup Workspace",
       "description": "Online clickup workspace for workspace, all-in-one, management, goals. Works right in your browser — free, secure, and no install required."
     },
     "linear": {
-      "name": "Linear Project",
-      "description": "Online linear project for project, management, developers, tracking. Works right in your browser — free, secure, and no install required."
+      "name": "Linear",
+      "description": "Streamlined issue tracking and project management built for software teams. Fast keyboard-first UI, roadmaps, cycles, and integrations with GitHub and Figma."
     },
     "sentry": {
       "name": "Sentry Monitoring",
@@ -1141,8 +1142,8 @@
       "description": "Online atlassian collaboration for collaboration, Jira, Confluence, suite. Works right in your browser — free, secure, and no install required."
     },
     "confluence": {
-      "name": "Confluence Knowledge",
-      "description": "Online confluence knowledge for knowledge, wiki, docs, collaboration. Works right in your browser — free, secure, and no install required."
+      "name": "Confluence",
+      "description": "Team knowledge base and collaboration wiki by Atlassian. Create, organize, and share documentation, meeting notes, and project pages in one space."
     },
     "notability": {
       "name": "Notability Notes",
@@ -1161,8 +1162,8 @@
       "description": "Online bear notes for notes, Markdown, elegant, tags. Works right in your browser — free, secure, and no install required."
     },
     "obsidian": {
-      "name": "Obsidian Notes",
-      "description": "Online obsidian notes for notes, Markdown, knowledge graph, links. Works right in your browser — free, secure, and no install required."
+      "name": "Obsidian",
+      "description": "Markdown-based knowledge base with local-first storage and bidirectional links. Build a personal graph of interconnected notes without locking your data."
     },
     "logseq": {
       "name": "Logseq Notes",
@@ -1722,7 +1723,7 @@
     },
     "google-drive": {
       "name": "Google Drive",
-      "description": "Online google drive for utility. Works right in your browser — free, secure, and no install required."
+      "description": "Google's cloud storage service with integrated Docs, Sheets, and Slides. Store files, collaborate in real time, and access work from any device."
     },
     "box": {
       "name": "Box",
@@ -2441,8 +2442,8 @@
       "description": "Online rocketchat chat for chat, open source, collaboration, video. Works right in your browser — free, secure, and no install required."
     },
     "zoom": {
-      "name": "Zoom Video",
-      "description": "Online zoom video for video, conferencing, remote, sharing. Works right in your browser — free, secure, and no install required."
+      "name": "Zoom",
+      "description": "Video conferencing platform for meetings, webinars, and virtual events. Host HD calls, share screens, record sessions, and collaborate with chat and whiteboards."
     },
     "teams": {
       "name": "Teams Collaboration",
@@ -4527,6 +4528,113 @@
   },
   "breadcrumb": {
     "home": "Home"
+  },
+  "news": {
+    "breadcrumb-news": "Weekly News",
+    "eyebrow": "📰 Weekly Digest",
+    "hero-title": "5 Picks a Week, Understand the Tool World",
+    "hero-description": "Handpicked weekly updates on tools, industry trends and productivity practices. 3-minute read, no fluff, no spam.",
+    "issues-label": "issues",
+    "items-label": "news items",
+    "avg-readtime": "Avg read",
+    "minutes": "min",
+    "latest-issue": "Latest Issue",
+    "read-latest": "Read now →",
+    "archive-title": "Archive",
+    "sidebar-tags-title": "Trending Tags",
+    "sidebar-rules-title": "Column Rules",
+    "sidebar-rules-1": "Every Sunday, 52 issues a year without breaks",
+    "sidebar-rules-2": "Max 5 items per issue for high signal density",
+    "sidebar-rules-3": "All news come with source links, fully verifiable",
+    "sidebar-rules-4": "Email subscribers get it 24 hours early",
+    "sidebar-blog-title": "Also check the Blog",
+    "sidebar-blog-desc": "From tool reviews to methodologies — long-form deep dives",
+    "notfound-title": "This issue has not been published yet",
+    "notfound-desc": "The issue number may be invalid, or content is still being drafted.",
+    "back-to-list": "Back to news list",
+    "editor-pick": "Editor's Pick",
+    "source-link": "View source",
+    "share": "Share",
+    "editor-pick-full": "Editor's Pick Tool",
+    "pager-nav-title": "More Issues",
+    "pager-prev": "Previous",
+    "pager-next": "Next",
+    "post-tags-title": "Tags in this issue",
+    "post-related-tools": "Related Tools",
+    "back-to-top": "Back to top"
+  },
+  "newsletter": {
+    "eyebrow": "Email Newsletter",
+    "title": "Subscribe to Weekly Digest",
+    "description": "Every Sunday 8AM, 5 curated news straight to your inbox. No ads, no noise, one-click unsubscribe.",
+    "placeholder": "Enter your email address",
+    "button": "Subscribe",
+    "privacy-note": "Email is stored locally only, never uploaded",
+    "status-success": "🎉 Subscribed! Thank you",
+    "status-duplicate": "This email is already subscribed",
+    "status-invalid": "Invalid email format, please check",
+    "status-error": "Subscription failed, please try again",
+    "status-submitting": "Submitting...",
+    "subscribed-title": "Successfully subscribed",
+    "subscribed-to": "Weekly digest will be sent to",
+    "unsubscribe": "Unsubscribe",
+    "unsubscribe-confirm-title": "Confirm unsubscribe?",
+    "unsubscribe-confirm-to": "You will be removed from the list",
+    "unsubscribe-confirm": "Yes, unsubscribe",
+    "cancel": "Cancel",
+    "unsubscribed-title": "Successfully unsubscribed",
+    "unsubscribed-desc": "You will no longer receive weekly emails. Come back anytime!"
+  },
+  "auth": {
+    "login": "Sign In",
+    "register": "Sign Up",
+    "switch-to-login": "Already have an account? Sign in",
+    "switch-to-register": "Don't have an account? Create one free",
+    "or-continue-with": "Or continue with",
+    "google-login": "Continue with Google",
+    "email-label": "Email",
+    "email-placeholder": "you@example.com",
+    "password-label": "Password",
+    "password-placeholder": "At least 8 characters",
+    "submit-login": "Sign In",
+    "submit-register": "Create Account",
+    "submitting": "Submitting...",
+    "close-modal": "Close",
+    "close-aria": "Close sign in modal",
+    "forgot-password": "Forgot password?",
+    "password-hint": "Min. 8 chars — mix of letters and numbers recommended",
+    "legal-note": "By registering, you agree to our Terms and Privacy Policy",
+    "guest-note": "Core tools work without an account. Sign in to sync favorites across devices.",
+    "account-menu": "Account",
+    "sign-in": "Sign In / Sign Up",
+    "sign-out": "Sign Out",
+    "profile": "Profile",
+    "my-favorites": "My Favorites",
+    "badge-guest": "Guest",
+    "badge-free": "Free",
+    "badge-pro": "Pro",
+    "email-sent": "Email sent",
+    "verify-email": "Please verify your email first",
+    "login-success": "Signed in!",
+    "register-success": "Account created!",
+    "logout-success": "Signed out",
+    "err-generic": "Something went wrong. Please try again.",
+    "err-invalid-email": "Please enter a valid email address",
+    "err-password-short": "Password must be at least 8 characters",
+    "err-password-long": "Password can be at most 128 characters",
+    "err-email-exists": "This email is already registered — sign in instead",
+    "err-credentials": "Incorrect email or password",
+    "err-wrong-provider": "This email was registered with a different method",
+    "err-banned": "Your account has been banned. Contact support for help.",
+    "err-rate-limited": "Too many attempts. Please try again in 10 minutes.",
+    "err-timeout": "Request timed out. Check your connection.",
+    "err-network": "Network error. Please try again.",
+    "err-missing-auth": "Please sign in first",
+    "err-invalid-auth": "Session expired. Please sign in again.",
+    "err-user-gone": "Account no longer exists",
+    "err-google-off": "Google sign-in is not enabled yet",
+    "err-google-soon": "Google sign-in is coming soon",
+    "err-server": "Server is busy. Try again later."
   },
   "kofi": {
     "supportUs": "Support Korelyy & keep free tools alive",

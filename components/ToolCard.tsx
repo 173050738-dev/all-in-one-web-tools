@@ -6,7 +6,8 @@ import type { Tool, PaymentMethod, SignupType } from '@/data/tools';
 import { usePreferencesStore } from '@/stores/preferences';
 import SafeLink from './SafeLink';
 import { logLike, logFavorite } from '@/utils/audit-log';
-import { englishTags } from '@/data/english-tags';
+import { englishTags, tagZhToEn } from '@/data/english-tags';
+import { isTopToolSlug } from '@/lib/topSlugs';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Code,
@@ -65,7 +66,9 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
     : safeTranslate(`${toolSlug}.description`, toolKeyAlt ? safeTranslate(`${toolKeyAlt}.description`, tool.description) : tool.description);
   const toolTags = locale === 'zh'
     ? tool.tags
-    : (Array.isArray(englishTags[tool.id]) && englishTags[tool.id].length > 0 ? englishTags[tool.id] : tool.tags);
+    : (Array.isArray(englishTags[tool.id]) && englishTags[tool.id].length > 0
+        ? englishTags[tool.id]
+        : tool.tags.map(tag => tagZhToEn[tag] || tag));
   const liked = isLiked(tool.id);
   const favorited = isFavorite(tool.id);
   const totalLikes = (tool.likes || 0) + (liked ? 1 : 0);
@@ -261,8 +264,12 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
     );
   }
 
+  const toolPath = tool.slug && isTopToolSlug(tool.slug)
+    ? `/${locale}/tool/${tool.slug}`
+    : `/${locale}/tool/detail/?slug=${encodeURIComponent(tool.slug || '')}`;
+
   return (
-    <a href={`/${locale}/tool/${tool.slug}`} className='w-full block group'>
+    <a href={toolPath} className='w-full block group'>
       {cardContent}
     </a>
   );

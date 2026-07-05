@@ -6,7 +6,6 @@ import { History, X, Clock, Trash2, ExternalLink, ArrowRight } from 'lucide-reac
 import { tools } from '@/data/tools';
 import { useFavoritesStore, HistoryItem } from '@/stores/favorites';
 import SafeLink from './SafeLink';
-import { englishTags } from '@/data/english-tags';
 
 interface HistoryPanelProps {
   locale: string;
@@ -48,6 +47,28 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
   const [searchQuery, setSearchQuery] = useState('');
   const panelRef = useRef<HTMLDivElement>(null);
 
+  const safeTranslate = (key: string, fallback: string) => {
+    try {
+      const translated = toolsT(key);
+      if (translated && translated !== key) return translated;
+    } catch { /* fallthrough */ }
+    return fallback;
+  };
+
+  const getToolDisplayName = (tool: (typeof tools)[number]): string => {
+    if (locale === 'zh') return tool.name;
+    const slug = tool.slug || tool.id || '';
+    const keyAlt = tool.id && tool.id !== slug ? tool.id : '';
+    return safeTranslate(`${slug}.name`, keyAlt ? safeTranslate(`${keyAlt}.name`, tool.name) : tool.name);
+  };
+
+  const getToolDisplayDesc = (tool: (typeof tools)[number]): string => {
+    if (locale === 'zh') return tool.description;
+    const slug = tool.slug || tool.id || '';
+    const keyAlt = tool.id && tool.id !== slug ? tool.id : '';
+    return safeTranslate(`${slug}.description`, keyAlt ? safeTranslate(`${keyAlt}.description`, tool.description) : tool.description);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (panelRef.current && !panelRef.current.contains(event.target as Node)) {
@@ -66,10 +87,14 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
     return { ...item, tool };
   }).filter(item => item.tool);
 
-  const filteredHistory = historyWithTools.filter(item => 
-    item.tool!.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.tool!.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredHistory = historyWithTools.filter(item => {
+    const q = searchQuery.toLowerCase();
+    if (!q) return true;
+    return (
+      getToolDisplayName(item.tool!).toLowerCase().includes(q) ||
+      getToolDisplayDesc(item.tool!).toLowerCase().includes(q)
+    );
+  });
 
   const groupedHistory = filteredHistory.reduce((acc, item) => {
     const date = new Date(item.timestamp).toLocaleDateString(locale === 'zh' ? 'zh-CN' : 'en-US', {
@@ -175,11 +200,7 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
                         </div>
                         <div className="flex-1 min-w-0">
                           <h4 className="font-medium text-gray-900 dark:text-gray-100 truncate">
-                            {locale === 'zh'
-                              ? item.tool!.name
-                              : englishTags[item.tool!.id]
-                                ? toolsT(`${item.tool!.id}.name`)
-                                : item.tool!.name}
+                            {getToolDisplayName(item.tool!)}
                           </h4>
                           <p className="text-xs text-gray-500 dark:text-gray-400">
                             {formatTime(item.timestamp, locale)}

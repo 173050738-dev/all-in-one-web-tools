@@ -8,6 +8,12 @@ import {
   getBlogReadingTime,
   type BlogPost,
 } from '@/data/blog';
+import {
+  NEWS_ISSUES,
+  getNewsIssueBySlug,
+  getLocalizedText as getNewsText,
+  type NewsIssue,
+} from '@/data/news';
 import { categories } from '@/data/categories';
 import { workflows, getWorkflowBySlug, type Workflow, type WorkflowStep } from '@/data/workflows';
 
@@ -1669,4 +1675,304 @@ export function ComparePageJsonLd(props: {
 export function getComparePageStrings(locale: string) {
   const l = resolveLocale(locale);
   return COMPARE_PAGE_TITLES[l];
+}
+
+// ================= News / Weekly Digest Metadata + JSON-LD =================
+
+const NEWS_COUNT = NEWS_ISSUES.length;
+
+export const NEWS_INDEX_TITLES: Record<SeoLocale, string> = {
+  en: `Weekly News Digest (${NEWS_COUNT} issues) · Korelyy`,
+  zh: `每周极简资讯（${NEWS_COUNT}期） · Korelyy`,
+  es: `Resumen Semanal de Noticias (${NEWS_COUNT} ediciones) · Korelyy`,
+  hi: `साप्ताहिक सार डाइजेस्ट (${NEWS_COUNT} अंक) · Korelyy`,
+  fr: `Hebdo · Résumé Hebdomadaire (${NEWS_COUNT} numéros) · Korelyy`,
+  ar: `ملخص الأخبار الأسبوعي (${NEWS_COUNT} أعداد) · Korelyy`,
+};
+
+export const NEWS_INDEX_DESCRIPTIONS: Record<SeoLocale, string> = {
+  en: `Only 5 items per week. Zero fluff, curated insights on AI tools, productivity methods, indie dev growth tactics, and browser-only local processing tech. No ads, no sponsored content.`,
+  zh: `每周只看 5 条。AI 工具进展、效率方法论、独立开发者增长实战、纯前端本地处理技术，零广告零软文，只看干货。`,
+  es: `Solo 5 noticias por semana. Cero relleno, ideas curadas sobre herramientas de IA, métodos de productividad, estrategias de crecimiento para desarrolladores indie y tecnología de procesamiento local en el navegador. Sin anuncios ni patrocinados.`,
+  hi: `हर सप्ताह केवल 5 आइटम। ज़ीरो फ़्लफ, AI टूल्स पर क्यूरेटेड इंसाइट्स, प्रोडक्टिविटी मेथड्स, इंडी डेव ग्रोथ टैक्टिक्स, और ब्राउज़र-ओनली लोकल प्रोसेसिंग टेक्नोलॉजी। कोई विज्ञापन नहीं, कोई स्पॉन्सर्ड कंटेंट नहीं।`,
+  fr: `Exactement 5 actualités par semaine. Zéro remplissage, analyses triées sur le volet : outils IA, méthodes de productivité, tactiques de croissance pour devs indie, et tech de traitement purement local dans le navigateur. Aucune pub, aucun article sponsorisé.`,
+  ar: `٥ عناصر فقط في الأسبوع. صفري الحشو، رؤى منسقة حول أدوات الذكاء الاصطناعي وطرق الإنتاجية واستراتيجيات نمو المطورين المستقلين وتكنولوجيا المعالجة المحلية في المتصفح فقط. لا إعلانات، لا محتوى مدعوم.`,
+};
+
+export const NEWS_INDEX_KEYWORDS: Record<SeoLocale, string[]> = {
+  en: ['weekly tech news', 'AI tools digest', 'productivity newsletter', 'indie dev', 'minimalist insights'],
+  zh: ['每周资讯', 'AI工具', '效率周报', '独立开发者', '极简资讯'],
+  es: ['noticias semanales tech', 'resumen IA', 'newsletter productividad', 'dev indie'],
+  hi: ['साप्ताहिक टेक समाचार', 'AI डाइजेस्ट', 'प्रोडक्टिविटी न्यूज़लेटर', 'इंडी डेव'],
+  fr: ['actualités hebdo tech', 'résumé IA', 'newsletter productivité', 'dev indie'],
+  ar: ['أخبار تقنية أسبوعية', 'ملخص أدوات ذكاء اصطناعي', 'نشرة الإنتاجية', 'مطور مستقل'],
+};
+
+export const NEWS_BREADCRUMB_NAME: Record<SeoLocale, string> = {
+  en: 'Weekly News',
+  zh: '每周资讯',
+  es: 'Noticias Semanales',
+  hi: 'साप्ताहिक समाचार',
+  fr: 'Hebdo',
+  ar: 'أخبار أسبوعية',
+};
+
+export function newsIndexGenerateMetadataSync(locale: SeoLocale): Metadata {
+  const l = resolveLocale(locale);
+  const baseMeta = SITE_META_BAREMAP[l];
+  const alt = localizedAlternatesForLocale(l, '/news');
+  const title = NEWS_INDEX_TITLES[l];
+  const description = NEWS_INDEX_DESCRIPTIONS[l];
+  const keywords = Array.from(new Set([...baseMeta.homeKeywords.slice(0, 5), ...NEWS_INDEX_KEYWORDS[l]])).slice(0, 20);
+  return {
+    title: { absolute: title },
+    description,
+    keywords,
+    alternates: alt,
+    metadataBase: new URL(SITE_URL),
+    applicationName: baseMeta.siteName,
+    authors: [{ name: 'Korelyy Team' }],
+    creator: 'Korelyy',
+    publisher: 'Korelyy',
+    openGraph: {
+      type: 'website',
+      url: `${SITE_URL}${alt.canonical}`,
+      siteName: baseMeta.siteName,
+      title,
+      description,
+      locale: LOCALE_OPEN_GRAPH[l],
+      alternateLocale: KNOWN_LOCALES.filter((x) => x !== l).map((x) => LOCALE_OPEN_GRAPH[x]),
+      images: [{ url: OG_IMAGE_ABS, width: 1200, height: 630, type: OG_IMAGE_TYPE, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@korelyy',
+      title,
+      description,
+      images: [OG_IMAGE_ABS],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+    },
+    category: 'technology',
+  };
+}
+
+export async function newsIndexGenerateMetadata(locale: SeoLocale): Promise<Metadata> {
+  return newsIndexGenerateMetadataSync(locale);
+}
+
+export function newsIssueGenerateMetadataSync(locale: SeoLocale, slug: string): Metadata {
+  const l = resolveLocale(locale);
+  const baseMeta = SITE_META_BAREMAP[l];
+  const issue = getNewsIssueBySlug(slug);
+  const alt = localizedAlternatesForLocale(l, `/news/${slug}`);
+
+  if (!issue) {
+    return {
+      title: baseMeta.homeTitle,
+      description: baseMeta.homeDescription,
+      alternates: alt,
+      metadataBase: new URL(SITE_URL),
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const issueTitle = getNewsText(issue.title, l, `Weekly #${issue.issueNo}`);
+  const subtitle = getNewsText(issue.subtitle, l, baseMeta.homeDescription);
+  const description = getNewsText(issue.description, l, subtitle);
+  const keywords = getNewsText<string[]>(issue.keywords as any, l, baseMeta.homeKeywords as any) || [];
+  const absTitle = `${issueTitle} · ${NEWS_BREADCRUMB_NAME[l]} | ${baseMeta.siteName}`;
+  const readMin = issue.readingMinutes?.[l as SeoLocale] || issue.readingMinutes?.en || 3;
+
+  return {
+    title: { absolute: absTitle },
+    description,
+    keywords: Array.from(new Set([...baseMeta.homeKeywords.slice(0, 3), ...keywords])).slice(0, 20),
+    alternates: alt,
+    metadataBase: new URL(SITE_URL),
+    applicationName: baseMeta.siteName,
+    authors: [{ name: 'Korelyy Team' }],
+    creator: 'Korelyy',
+    publisher: 'Korelyy',
+    openGraph: {
+      type: 'article',
+      url: `${SITE_URL}${alt.canonical}`,
+      siteName: baseMeta.siteName,
+      title: absTitle,
+      description,
+      locale: LOCALE_OPEN_GRAPH[l],
+      alternateLocale: KNOWN_LOCALES.filter((x) => x !== l).map((x) => LOCALE_OPEN_GRAPH[x]),
+      images: [{ url: OG_IMAGE_ABS, width: 1200, height: 630, type: OG_IMAGE_TYPE, alt: issueTitle }],
+      publishedTime: issue.publishedAt,
+      tags: issue.tags.map((t) => getNewsText(t, l, '')).filter(Boolean),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@korelyy',
+      title: absTitle,
+      description,
+      images: [OG_IMAGE_ABS],
+    },
+    other: {
+      'article:published_time': issue.publishedAt,
+      'article:tag': issue.tags.map((t) => getNewsText(t, l, '')).filter(Boolean).join(', '),
+      'article:section': NEWS_BREADCRUMB_NAME[l],
+      'reading-time': `${readMin} min read`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+    },
+    category: 'technology',
+  };
+}
+
+export async function newsIssueGenerateMetadata(locale: SeoLocale, slug: string): Promise<Metadata> {
+  return newsIssueGenerateMetadataSync(locale, slug);
+}
+
+export function NewsIndexJsonLd(props: { locale: SeoLocale }): React.ReactElement | null {
+  const { locale } = props;
+  const l = resolveLocale(locale);
+  const baseMeta = SITE_META_BAREMAP[l];
+  const homeBreadcrumbName = translateForJsonld(l, 'breadcrumb', 'home', l === 'zh' ? '首页' : l === 'hi' ? 'होम' : l === 'es' ? 'Inicio' : l === 'fr' ? 'Accueil' : l === 'ar' ? 'الرئيسية' : 'Home');
+  const newsBreadcrumbName = NEWS_BREADCRUMB_NAME[l];
+  const canonical = `${SITE_URL}/${l}/news/`;
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
+      { '@type': 'ListItem', position: 2, name: newsBreadcrumbName, item: canonical },
+    ],
+  };
+
+  const sortedIssues = [...NEWS_ISSUES].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
+  const newsItems = sortedIssues.map((issue, i) => {
+    const title = getNewsText(issue.title, l);
+    const desc = getNewsText(issue.subtitle, l, getNewsText(issue.description, l));
+    const itemCount = issue.items.length;
+    return {
+      '@type': 'Article',
+      position: i + 1,
+      headline: title,
+      description: desc,
+      image: OG_IMAGE_ABS,
+      datePublished: issue.publishedAt,
+      author: { '@type': 'Organization', name: baseMeta.brandName, url: SITE_URL },
+      url: `${SITE_URL}/${l}/news/${issue.slug}/`,
+      keywords: issue.tags.map((t) => getNewsText(t, l, '')).filter(Boolean).join(', '),
+      articleSection: newsBreadcrumbName,
+      wordCount: itemCount * 120,
+      inLanguage: LOCALE_OPEN_GRAPH[l],
+      isAccessibleForFree: true,
+    };
+  });
+
+  const collectionPage = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: NEWS_INDEX_TITLES[l],
+    description: NEWS_INDEX_DESCRIPTIONS[l],
+    url: canonical,
+    inLanguage: LOCALE_OPEN_GRAPH[l],
+    publisher: { '@type': 'Organization', name: baseMeta.brandName, url: SITE_URL },
+    hasPart: newsItems,
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPage) }} />
+    </>
+  );
+}
+
+export function NewsIssueJsonLd(props: { locale: SeoLocale; slug: string }): React.ReactElement | null {
+  const { locale, slug } = props;
+  const l = resolveLocale(locale);
+  const issue = getNewsIssueBySlug(slug);
+  if (!issue) return null;
+
+  const baseMeta = SITE_META_BAREMAP[l];
+  const homeBreadcrumbName = translateForJsonld(l, 'breadcrumb', 'home', l === 'zh' ? '首页' : l === 'hi' ? 'होम' : l === 'es' ? 'Inicio' : l === 'fr' ? 'Accueil' : l === 'ar' ? 'الرئيسية' : 'Home');
+  const newsBreadcrumbName = NEWS_BREADCRUMB_NAME[l];
+  const issueTitle = getNewsText(issue.title, l, `Weekly #${issue.issueNo}`);
+  const description = getNewsText(issue.subtitle, l, getNewsText(issue.description, l, baseMeta.homeDescription));
+  const readMin = issue.readingMinutes?.[l as SeoLocale] || issue.readingMinutes?.en || 3;
+  const issueCanonical = `${SITE_URL}/${l}/news/${slug}/`;
+  const tagList = issue.tags.map((t) => getNewsText(t, l, '')).filter(Boolean);
+  const totalWordCount = issue.items.reduce((sum, item) => {
+    const summary = getNewsText(item.summary, l, '');
+    return sum + Math.max(50, Math.round(summary.length / 6));
+  }, 0);
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
+      { '@type': 'ListItem', position: 2, name: newsBreadcrumbName, item: `${SITE_URL}/${l}/news/` },
+      { '@type': 'ListItem', position: 3, name: issueTitle, item: issueCanonical },
+    ],
+  };
+
+  const articleSections = issue.items.map((item, i) => {
+    const cat = getNewsText(item.category, l, 'News');
+    const sectionTitle = getNewsText(item.title, l, `${cat} #${i + 1}`);
+    const sectionBody = getNewsText(item.summary, l, '');
+    return {
+      '@type': 'CreativeWork',
+      position: i + 1,
+      headline: sectionTitle,
+      description: sectionBody,
+      keywords: cat,
+      about: { '@type': 'Thing', name: cat },
+      articleSection: cat,
+      image: OG_IMAGE_ABS,
+      url: `${issueCanonical}#item-${i + 1}`,
+    };
+  });
+
+  const newsArticle = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: issueTitle,
+    description,
+    image: OG_IMAGE_ABS,
+    datePublished: issue.publishedAt,
+    dateModified: issue.publishedAt,
+    author: { '@type': 'Organization', name: baseMeta.brandName, url: SITE_URL },
+    publisher: {
+      '@type': 'Organization',
+      name: baseMeta.brandName,
+      url: SITE_URL,
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.svg` },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': issueCanonical },
+    keywords: tagList.join(', '),
+    articleSection: newsBreadcrumbName,
+    articleBody: issue.items.map((item, i) => `${i + 1}. ${getNewsText(item.title, l, '')}`).join('\n'),
+    hasPart: articleSections,
+    wordCount: Math.max(400, totalWordCount || readMin * 160),
+    inLanguage: LOCALE_OPEN_GRAPH[l],
+    url: issueCanonical,
+    isAccessibleForFree: true,
+    timeRequired: `PT${readMin}M`,
+    ...(tagList.length ? { about: tagList.map((name) => ({ '@type': 'Thing', name })) } : {}),
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(newsArticle) }} />
+    </>
+  );
 }

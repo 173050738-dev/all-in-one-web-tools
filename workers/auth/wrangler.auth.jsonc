@@ -1,0 +1,24 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "korelyy-auth-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    { "pattern": "korelyy.com/api/auth/*", "zone_name": "korelyy.com" },
+    { "pattern": "www.korelyy.com/api/auth/*", "zone_name": "korelyy.com" }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "korelyy-users",
+      "database_id": "8127d06b-19d6-4b9a-aaf7-c6d74fb2c2c6"
+    }
+  ],
+  "vars": {
+    "JWT_ISSUER": "korelyy.com",
+    "ACCESS_TOKEN_TTL_SEC": "604800"
+  }
+  // 生产环境密钥通过 `wrangler secret put JWT_SECRET` / BCRYPT_PEPPER / GOOGLE_OAUTH_CLIENT_ID 逐个上传
+  // 本地开发密钥读取自当前目录下的 .dev.vars 文件（已写入 .gitignore）
+}

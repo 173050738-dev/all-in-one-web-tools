@@ -1,0 +1,308 @@
+'use client';
+
+import { useEffect, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
+import { Home, ChevronRight, ExternalLink, ArrowLeft, ShieldCheck, Star, Heart } from 'lucide-react';
+import { useParams, usePathname } from 'next/navigation';
+import { getToolBySlug, getRelatedTools } from '@/data/tools';
+import { categories } from '@/data/categories';
+import ToolCard from '@/components/ToolCard';
+import { usePreferencesStore } from '@/stores/preferences';
+import SafeLink from '@/components/SafeLink';
+import { tagZhToEn, englishTags } from '@/data/english-tags';
+import { logLike, logFavorite } from '@/utils/audit-log';
+
+const VALID_LOCALES = ['zh', 'en', 'hi', 'fr', 'es', 'ar'];
+
+function setMeta(attr: 'name' | 'property', key: string, content: string) {
+  if (!content) return;
+  let el = document.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', content);
+}
+
+export default function ToolFallbackClient({ localeParam, slugParam }: { localeParam?: string; slugParam?: string }) {
+  const resolvedParams = useParams() as unknown as { locale?: string; slug?: string };
+  const pathname = usePathname();
+  const pathLocaleMatch = pathname.match(/^\/([a-z]{2})(\/|$)/);
+  const rawPathLocale = (pathLocaleMatch && pathLocaleMatch[1]) || '';
+  const pathLocale = VALID_LOCALES.includes(rawPathLocale) ? rawPathLocale : 'en';
+  const resolvedLocale = localeParam || (resolvedParams?.locale && VALID_LOCALES.includes(resolvedParams.locale) ? resolvedParams.locale : pathLocale);
+
+  const pathSlugMatch = pathname.match(/\/tool\/([^/]+)/);
+  const pathSlug = pathSlugMatch ? pathSlugMatch[1] : undefined;
+  const resolvedSlug = slugParam || resolvedParams?.slug || pathSlug || '';
+
+  const t = useTranslations('tool');
+  const tcT = useTranslations('toolcard');
+  const breadcrumbT = useTranslations('breadcrumb');
+  const sidebarT = useTranslations('sidebar');
+  const toolsT = useTranslations('tools');
+
+  const tool = getToolBySlug(resolvedSlug);
+  const relatedTools = tool ? getRelatedTools(tool) : [];
+  const category = tool ? categories.find((c) => c.id === tool.category) : undefined;
+  const { addToHistory, toggleLike, isLiked, toggleFavorite, isFavorite } = usePreferencesStore();
+
+  const safeTranslate = (key: string, fallback: string) => {
+    try {
+      const translated = toolsT(key);
+      if (translated && translated !== key) return translated;
+    } catch { /* fallthrough */ }
+    return fallback;
+  };
+
+  const isZh = resolvedLocale === 'zh';
+  const translateToolField = (field: 'name' | 'description'): string => {
+    if (!tool) return '';
+    const fallback = field === 'name' ? tool.name : tool.description;
+    if (isZh) return fallback;
+    const slug = tool.slug || tool.id || '';
+    const idAlt = tool.id && tool.id !== slug ? tool.id : '';
+    return safeTranslate(`${slug}.${field}`, idAlt ? safeTranslate(`${idAlt}.${field}`, fallback) : fallback);
+  };
+  const toolName = translateToolField('name');
+  const toolDescription = translateToolField('description');
+
+  const translatedTags = useMemo(() => {
+    if (!tool) return [];
+    if (isZh) return tool.tags;
+    if (Array.isArray(englishTags[tool.id]) && englishTags[tool.id].length > 0) return englishTags[tool.id];
+    return tool.tags.map(tag => tagZhToEn[tag] || tag);
+  }, [tool, isZh]);
+
+  const liked = tool ? isLiked(tool.id) : false;
+  const favorited = tool ? isFavorite(tool.id) : false;
+  const totalLikes = tool ? (tool.likes || 0) + (liked ? 1 : 0) : 0;
+  const formatLikes = (count: number): string => {
+    if (count >= 1000000) return (count / 1000000).toFixed(1) + 'M';
+    if (count >= 1000) return (count / 1000).toFixed(1) + 'k';
+    return count.toString();
+  };
+
+  useEffect(() => {
+    if (!tool) return;
+    addToHistory(tool.id);
+    const title = toolName ? `${toolName} - Korelyy Tools` : 'Korelyy Tools';
+    document.title = title;
+    const desc = toolDescription || tool.description;
+    const canonical = `${window.location.origin}${window.location.pathname}`;
+    setMeta('name', 'description', desc);
+    setMeta('property', 'og:type', 'website');
+    setMeta('property', 'og:site_name', 'Korelyy Tools');
+    setMeta('property', 'og:title', title);
+    setMeta('property', 'og:description', desc);
+    setMeta('property', 'og:url', canonical);
+    setMeta('name', 'twitter:card', 'summary_large_image');
+    setMeta('name', 'twitter:title', title);
+    setMeta('name', 'twitter:description', desc);
+    let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
+    }
+    link.setAttribute('href', canonical);
+  }, [tool, toolName, toolDescription, addToHistory]);
+
+  if (!tool) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+          {isZh ? '工具未找到' : 'Tool Not Found'}
+        </h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-8">
+          {isZh ? '您访问的工具不存在或已被移除。' : 'The tool you requested does not exist or has been removed.'}
+        </p>
+        <a
+          href={`/${resolvedLocale}`}
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-medium transition-colors min-h-[48px]"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          {isZh ? '返回首页' : 'Back to Home'}
+        </a>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      <nav aria-label="Breadcrumb" className="mb-4 sm:mb-6">
+        <ol className="flex flex-wrap items-center gap-1 text-[11px] sm:text-xs">
+          <li>
+            <a
+              href={`/${resolvedLocale}`}
+              className="flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors min-h-[24px]"
+            >
+              <Home className="h-3 w-3" />
+              <span>{breadcrumbT('home')}</span>
+            </a>
+          </li>
+          {category && (
+            <>
+              <li aria-hidden="true">
+                <ChevronRight className="h-2.5 w-2.5 text-gray-400 shrink-0" />
+              </li>
+              <li>
+                <a
+                  href={`/${resolvedLocale}?category=${category.id}`}
+                  className="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors truncate max-w-[160px]"
+                >
+                  {sidebarT(category.id)}
+                </a>
+              </li>
+            </>
+          )}
+          <li aria-hidden="true">
+            <ChevronRight className="h-2.5 w-2.5 text-gray-400 shrink-0" />
+          </li>
+          <li aria-current="page" className="font-medium text-gray-900 dark:text-gray-100 truncate max-w-[220px]">
+            {toolName}
+          </li>
+        </ol>
+      </nav>
+
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+        <section className="flex-1 min-w-0">
+          {tool.localProcessing && (
+            <div
+              role="note"
+              className="mb-5 rounded-2xl border border-emerald-100 dark:border-emerald-900/40 bg-emerald-50/70 dark:bg-emerald-900/10 px-4 py-3 text-xs leading-relaxed text-emerald-800 dark:text-emerald-200"
+            >
+              {tcT('privacy-local-note')}
+            </div>
+          )}
+
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700">
+            <div
+              className={[
+                'h-2 flex-shrink-0',
+                tool.complianceLevel === 'green'
+                  ? 'bg-emerald-500 dark:bg-emerald-400'
+                  : tool.complianceLevel === 'yellow'
+                    ? 'bg-amber-400 dark:bg-amber-300'
+                    : tool.complianceLevel === 'red'
+                      ? 'bg-rose-500 dark:bg-rose-400'
+                      : 'bg-[#34A89C]',
+              ].join(' ')}
+            />
+            <div className="p-5 sm:p-7">
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-primary-500 to-cyan-500 flex items-center justify-center shadow-lg shrink-0">
+                  <span className="text-3xl sm:text-4xl font-bold text-white">
+                    {toolName.charAt(0).toUpperCase()}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (tool) {
+                        toggleFavorite(tool.id);
+                        logFavorite(tool.id);
+                      }
+                    }}
+                    className={`px-2 py-1.5 rounded-md inline-flex items-center justify-center gap-1 transition-all duration-200 hover:scale-105 active:scale-95 ${favorited ? 'bg-orange-100 text-orange-500 dark:bg-orange-900/30' : 'bg-gray-100 text-gray-400 hover:text-orange-500 dark:bg-gray-800 dark:text-gray-500 dark:hover:text-orange-400'}`}
+                    title={isZh ? '收藏到工具箱' : 'Save to Toolbox'}
+                  >
+                    <Star className={`h-4 w-4 ${favorited ? 'fill-current' : ''}`} />
+                    <span className="text-xs font-medium hidden sm:inline">{isZh ? '收藏' : 'Save'}</span>
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (tool) {
+                        toggleLike(tool.id);
+                        logLike(tool.id);
+                      }
+                    }}
+                    className={`px-2 py-1.5 rounded-md inline-flex items-center gap-1 transition-all duration-200 hover:scale-105 active:scale-95 ${liked ? 'bg-red-100 text-red-500 dark:bg-red-900/30' : 'bg-gray-100 text-gray-400 hover:text-red-500 dark:bg-gray-800 dark:text-gray-500 dark:hover:text-red-400'}`}
+                    title={isZh ? '点赞' : 'Like'}
+                  >
+                    <Heart className={`h-4 w-4 ${liked ? 'fill-current' : ''}`} />
+                    <span className="text-xs font-medium tabular-nums leading-none">{formatLikes(totalLikes)}</span>
+                  </button>
+                </div>
+              </div>
+
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 leading-tight">
+                {toolName}
+              </h1>
+
+              <div className="flex flex-wrap items-center gap-1.5 mb-4">
+                {tool.difficulty && (
+                  <span className={`px-2 py-0.5 rounded-md text-[11px] font-medium whitespace-nowrap shrink-0 ${
+                    tool.difficulty === 'easy' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                      : tool.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400'
+                        : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
+                  }`}>
+                    {tool.difficulty === 'easy' ? tcT('easy') : tool.difficulty === 'medium' ? tcT('medium') : tcT('advanced')}
+                  </span>
+                )}
+                <span className={`px-2 py-0.5 rounded-md text-[11px] font-medium whitespace-nowrap shrink-0 ${
+                  tool.isLimitedFree ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
+                    : tool.isFree ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                      : 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400'
+                }`}>
+                  {tool.isLimitedFree ? (isZh ? '限次免费' : 'Freemium') : tool.isFree ? (isZh ? '免费' : 'Free') : (isZh ? '付费' : 'Paid')}
+                </span>
+                <span className="px-2 py-0.5 rounded-md text-[11px] font-medium whitespace-nowrap shrink-0 inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50">
+                  <ShieldCheck className="h-3 w-3" />
+                  {tcT('verified')}
+                </span>
+              </div>
+
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                {toolDescription}
+              </p>
+
+              <div className="flex flex-wrap gap-1.5 mb-7">
+                {translatedTags.slice(0, 6).map((tag) => (
+                  <span key={tag} className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {tool.externalUrl ? (
+                <SafeLink
+                  href={tool.externalUrl}
+                  locale={resolvedLocale}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white text-sm sm:text-base font-semibold shadow-lg shadow-primary-600/20 transition-all duration-200 min-h-[52px]"
+                >
+                  <ExternalLink className="h-5 w-5" />
+                  {isZh ? '访问官方网站' : 'Visit Official Website'}
+                </SafeLink>
+              ) : (
+                <div className="rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 p-4">
+                  <p className="text-sm text-amber-800 dark:text-amber-200">
+                    {isZh ? '此工具正在开发中，敬请期待。' : 'This tool is coming soon. Stay tuned!'}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        <aside className="w-full lg:w-[320px] xl:w-[340px] flex-shrink-0 space-y-5">
+          {relatedTools.length > 0 && (
+            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5">
+              <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                {isZh ? '相关工具推荐' : 'Related Tools'}
+              </h2>
+              <div className="space-y-3">
+                {relatedTools.slice(0, 4).map((rt) => (
+                  <ToolCard key={rt.id} tool={rt} locale={resolvedLocale} />
+                ))}
+              </div>
+            </div>
+          )}
+        </aside>
+      </div>
+    </div>
+  );
+}

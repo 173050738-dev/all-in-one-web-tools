@@ -201,7 +201,7 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
                       onClick={() => setSelectedCategory(cat.id)}
                       className={`flex-shrink-0 whitespace-nowrap px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs transition-colors ${selectedCategory === cat.id ? 'bg-[#0F5759] text-white hover:bg-[#0C4849]' : 'bg-gray-100 dark:bg-gray-800 text-[#466B6C] dark:text-gray-300'}`}
                     >
-                      {cat.name}
+                      {tSidebar(cat.id)}
                     </button>
                   );
                 })}

@@ -1,9 +1,20 @@
-// scripts/post-build.cjs — restore middleware, copy CF static assets to out/ root.
+// scripts/post-build.cjs — restore middleware, copy CF static assets to out/ (legacy) AND .vercel/output/static (next-on-pages ISR).
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, 'out');
+const VERCEL_OUT_STATIC = path.join(ROOT, '.vercel', 'output', 'static');
 const PUB = path.join(ROOT, 'public');
+
+function ensureDir(dir) {
+  try {
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+ensureDir(OUT);
 
 const mwBak = path.join(ROOT, 'middleware.ts.bak');
 const mw = path.join(ROOT, 'middleware.ts');
@@ -29,30 +40,38 @@ const COPY_FILES = [
   'sw.js',
   'ads.txt',
 ];
+const targets = [OUT];
+if (fs.existsSync(VERCEL_OUT_STATIC)) targets.push(VERCEL_OUT_STATIC);
 let copied = 0;
-for (const f of COPY_FILES) {
-  const src = path.join(PUB, f);
-  const dst = path.join(OUT, f);
-  if (fs.existsSync(src)) {
-    fs.copyFileSync(src, dst);
-    copied++;
+for (const target of targets) {
+  ensureDir(target);
+  for (const f of COPY_FILES) {
+    const src = path.join(PUB, f);
+    const dst = path.join(target, f);
+    if (fs.existsSync(src)) {
+      try { fs.copyFileSync(src, dst); copied++; }
+      catch (e) { console.warn('[post-build] skip copy', f, '→', target, e.code || e.message); }
+    }
+  }
+  if (fs.existsSync(path.join(PUB, 'favicon.svg'))) {
+    try { fs.copyFileSync(path.join(PUB, 'favicon.svg'), path.join(target, 'favicon.ico')); copied++; }
+    catch (e) { console.warn('[post-build] skip favicon.ico →', target, e.code || e.message); }
   }
 }
-// duplicate favicon.svg as favicon.ico for CF Pages fallback (browsers MIME-sniff)
-if (fs.existsSync(path.join(PUB, 'favicon.svg'))) {
-  fs.copyFileSync(path.join(PUB, 'favicon.svg'), path.join(OUT, 'favicon.ico'));
-  copied++;
+// --- Guarantee ads.txt in out/ and .vercel/output/static (source of truth: post-build) ---
+const adsTxtContent =
+  '# AdSense ads.txt for Korelyy Tools — https://korelyy.com\n' +
+  'google.com, pub-7235824755389632, DIRECT, f08c47fec0942fa0\n';
+for (const target of targets) {
+  ensureDir(target);
+  try {
+    const adsTxtPath = path.join(target, 'ads.txt');
+    fs.writeFileSync(adsTxtPath, adsTxtContent, 'utf8');
+    const sz = fs.statSync(adsTxtPath).size;
+    console.log('[post-build] wrote ads.txt (' + sz + ' bytes) → ' + path.relative(ROOT, target));
+    copied++;
+  } catch (e) {
+    console.warn('[post-build] skip ads.txt →', target, e.code || e.message);
+  }
 }
-// --- Guarantee out/ads.txt (source of truth: post-build, avoids public/ads.txt
-//     conflicting with app/ads.txt/route.ts in Next.js dev HMR) ---
-{
-  const adsTxtPath = path.join(OUT, 'ads.txt');
-  const adsTxtContent =
-    '# AdSense ads.txt for Korelyy Tools — https://korelyy.com\n' +
-    'google.com, pub-7235824755389632, DIRECT, f08c47fec0942fa0\n';
-  fs.writeFileSync(adsTxtPath, adsTxtContent, 'utf8');
-  const sz = fs.statSync(adsTxtPath).size;
-  console.log('[post-build] wrote out/ads.txt (' + sz + ' bytes)');
-  copied++;
-}
-console.log('[post-build] copied', copied, 'static files to out/');
+console.log('[post-build] copied', copied, 'static files to targets:', targets.map(t => path.relative(ROOT, t)).join(','));
