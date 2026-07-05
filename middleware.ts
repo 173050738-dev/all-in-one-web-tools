@@ -9,6 +9,13 @@ const intlMiddleware = createMiddleware({
 
 export default function middleware(request: NextRequest) {
   const url = new URL(request.url);
+
+  if (url.pathname === '/' || url.pathname === '') {
+    const zhUrl = new URL('/zh/', url.origin);
+    zhUrl.search = url.search;
+    return NextResponse.redirect(zhUrl.toString(), 307);
+  }
+
   const isLocalhost =
     url.hostname === 'localhost' ||
     url.hostname === '127.0.0.1' ||
