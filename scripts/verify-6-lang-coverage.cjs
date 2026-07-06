@@ -1,3 +1,4 @@
+/* eslint-disable */
 #!/usr/bin/env node
 // ============================================================================
 // scripts/verify-6-lang-coverage.cjs

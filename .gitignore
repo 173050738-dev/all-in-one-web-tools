@@ -41,3 +41,9 @@ pages-secrets-generated.json
 deploy*-jobinfo.txt
 deploy8*.log
 middleware.ts.bak
+
+# ===== 本次清理：本地缓存 / 构建产物 / 临时脚本 =====
+.vercel/
+tsconfig.tsbuildinfo
+scripts/.indexnow-key
+.tmp-db-migrate.py

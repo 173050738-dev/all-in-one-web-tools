@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Bing Webmaster Tools 域所有权 XML 验证文件。
+  ⚠️  使用前请替换下方 <user> 标签内的 TOKEN：
+    1. 登录 https://www.bing.com/webmasters → 选择 korelyy.com 站点
+    2. Configure My Site → Verify Ownership → 选择 "XML File Authentication"
+    3. 下载 BingSiteAuth.xml，用它的 <user>xxxx</user> 内容替换下方 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    4. 保存此文件后重新构建部署（会出现在 https://korelyy.com/BingSiteAuth.xml ）
+  💡  推荐优先用 meta msvalidate.01 验证（不用改这个文件）：
+       在部署环境变量里设置 KORELYY_MSVALIDATE_01 即可。
+-->
+<users>
+  <user>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</user>
+</users>

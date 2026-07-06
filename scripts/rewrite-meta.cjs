@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Post-build SEO injector for static export.
 // ToolDetailWrapper injects title/OG/Twitter/canonical via client useEffect which crawlers cannot see.
 // This script rewrites each tool detail HTML directly in out/ so the first response already contains correct tags.
@@ -9,6 +10,22 @@ const path = require('path');
 
 const SUPPORTED_LOCALES = ['zh', 'en', 'fr', 'es', 'hi', 'ar'];
 const BASE_URL = process.env.KORELYY_CANONICAL_BASE || 'https://korelyy.com';
+
+// === Bing / Google Webmaster Tools 验证令牌（从 Dashboard 生成后粘贴，非空才会注入 meta）
+//   Bing： https://www.bing.com/webmasters → Configure My Site → Verify Ownership → HTML Meta Tag
+//   Google：https://search.google.com/search-console → HTML Tag 验证
+const MSVALIDATE_01 = process.env.KORELYY_MSVALIDATE_01 || '3sKs9BXluR_EB3DKXv97nanpcgGXmtOYgZkszRgodyP6tDxztOBDdbh5aoxuCUVEDu9rAgJ5wn_fsPGfEeB_yQ';
+const GOOGLE_SITE_VERIFICATION = process.env.KORELYY_GOOGLE_VERIFY || '';
+const SEZNAM_WMT = process.env.KORELYY_SEZNAM_VERIFY || 'vDusJvnf3rUuyQ73mx3E6NLzrCmo4wxG';
+
+const LOCALE_BREADCRUMB_LABELS = {
+  zh: { home: '首页', tools: '工具', tool: '工具详情', blog: '博客', news: '资讯', about: '关于', contact: '联系我们', workflows: '工作流', templates: '模板库', ideas: '创意工坊', 'api-keys': 'API 密钥', compliance: '合规性', cookies: 'Cookie 政策', disclaimer: '免责声明', privacy: '隐私政策', terms: '服务条款' },
+  en: { home: 'Home', tools: 'Tools', tool: 'Tool Detail', blog: 'Blog', news: 'News', about: 'About', contact: 'Contact', workflows: 'Workflows', templates: 'Templates', ideas: 'Ideas', 'api-keys': 'API Keys', compliance: 'Compliance', cookies: 'Cookie Policy', disclaimer: 'Disclaimer', privacy: 'Privacy', terms: 'Terms' },
+  es: { home: 'Inicio', tools: 'Herramientas', tool: 'Detalle', blog: 'Blog', news: 'Noticias', about: 'Acerca de', contact: 'Contacto', workflows: 'Flujos', templates: 'Plantillas', ideas: 'Ideas', 'api-keys': 'API Keys', compliance: 'Cumplimiento', cookies: 'Cookies', disclaimer: 'Descargo', privacy: 'Privacidad', terms: 'Términos' },
+  fr: { home: 'Accueil', tools: 'Outils', tool: 'Détail', blog: 'Blog', news: 'Actualités', about: 'À propos', contact: 'Contact', workflows: 'Workflows', templates: 'Modèles', ideas: 'Idées', 'api-keys': 'API Keys', compliance: 'Conformité', cookies: 'Cookies', disclaimer: 'Avertissement', privacy: 'Confidentialité', terms: 'Conditions' },
+  hi: { home: 'होम', tools: 'टूल्स', tool: 'विवरण', blog: 'ब्लॉग', news: 'समाचार', about: 'हमारे बारे में', contact: 'संपर्क', workflows: 'वर्कफ़्लो', templates: 'टेम्पलेट्स', ideas: 'विचार', 'api-keys': 'API Keys', compliance: 'अनुपालन', cookies: 'कुकी', disclaimer: 'अस्वीकरण', privacy: 'गोपनीयता', terms: 'नियम' },
+  ar: { home: 'الرئيسية', tools: 'الأدوات', tool: 'التفاصيل', blog: 'المدونة', news: 'الأخبار', about: 'عنا', contact: 'اتصل', workflows: 'سير العمل', templates: 'القوالب', ideas: 'أفكار', 'api-keys': 'مفاتيح واجهات', compliance: 'الامتثال', cookies: 'ملفات تعريف الارتباط', disclaimer: 'إخلاء المسؤولية', privacy: 'الخصوصية', terms: 'الشروط' },
+};
 
 const ADSENSE_PUB = 'ca-pub-7235824755389632';
 const ADSENSE_BLOCK =
@@ -74,6 +91,158 @@ function buildHreflang(pathWithoutLocale) {
   return lines.join('\n') + '\n';
 }
 
+function buildRobotsMeta() {
+  const standard = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+  const bing = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, notranslate';
+  let out = `<meta name="robots" content="${standard}">\n`;
+  out += `<meta name="googlebot" content="${standard}">\n`;
+  out += `<meta name="bingbot" content="${bing}">\n`;
+  out += `<meta name="baiduspider" content="${standard}">\n`;
+  out += `<meta name="yandex" content="${standard}">\n`;
+  if (MSVALIDATE_01) {
+    out += `<meta name="msvalidate.01" content="${escapeForHtml(MSVALIDATE_01)}">\n`;
+  }
+  if (GOOGLE_SITE_VERIFICATION) {
+    out += `<meta name="google-site-verification" content="${escapeForHtml(GOOGLE_SITE_VERIFICATION)}">\n`;
+  }
+  if (SEZNAM_WMT) {
+    out += `<meta name="seznam-wmt" content="${escapeForHtml(SEZNAM_WMT)}">\n`;
+  }
+  return out;
+}
+
+function slugToLabel(locale, segment) {
+  const map = LOCALE_BREADCRUMB_LABELS[locale] || LOCALE_BREADCRUMB_LABELS.en;
+  if (map[segment]) return map[segment];
+  return segment
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function buildBreadcrumbList(locale, pathWithoutLocale, finalName) {
+  const base = BASE_URL.replace(/\/$/, '');
+  const map = LOCALE_BREADCRUMB_LABELS[locale] || LOCALE_BREADCRUMB_LABELS.en;
+  const segments = (pathWithoutLocale || '').replace(/^\/|\/$/g, '').split('/').filter(Boolean);
+  const items = [];
+  // position 1: Home
+  items.push({
+    '@type': 'ListItem',
+    position: 1,
+    name: map.home || 'Home',
+    item: `${base}/${locale}/`,
+  });
+  // intermediate segments
+  let acc = '';
+  for (let i = 0; i < segments.length - 1; i++) {
+    const seg = segments[i];
+    acc += '/' + seg;
+    const name = slugToLabel(locale, seg);
+    // if segment is 'tool' -> link to /tools/ 更合理
+    const href = seg === 'tool' ? `${base}/${locale}/tools/` : `${base}/${locale}${acc}/`;
+    items.push({
+      '@type': 'ListItem',
+      position: items.length + 1,
+      name,
+      item: href,
+    });
+  }
+  // final position
+  const finalSegment = segments[segments.length - 1];
+  if (segments.length === 0) {
+    // Home page: 只有一条 Home（不重复）
+  } else {
+    const last = items.length + 1;
+    const name = (finalName && typeof finalName === 'string' && finalName.trim()) || slugToLabel(locale, finalSegment || '');
+    const href = `${base}/${locale}/${segments.join('/')}/`;
+    items.push({
+      '@type': 'ListItem',
+      position: last,
+      name,
+      item: href,
+    });
+  }
+  const jsonld = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items,
+  };
+  return `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>\n`;
+}
+
+function buildGlobalOrgAndWebSiteJsonLd() {
+  const base = BASE_URL.replace(/\/$/, '');
+  const org = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Korelyy',
+    alternateName: ['Korelyy Tools', 'Korelyy 工具库', 'كورلي'],
+    url: base + '/',
+    logo: {
+      '@type': 'ImageObject',
+      url: base + '/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+    foundingDate: '2025',
+    sameAs: [
+      'https://twitter.com/korelyy',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      availableLanguage: ['English', 'Chinese', 'Spanish', 'French', 'Hindi', 'Arabic'],
+    },
+  };
+  const website = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Korelyy Tools',
+    alternateName: ['Korelyy', 'Korelyy 工具库'],
+    url: base + '/',
+    inLanguage: 'en',
+    availableLanguage: ['en', 'zh-CN', 'es', 'hi', 'fr', 'ar-SA'],
+    publisher: { '@type': 'Organization', name: 'Korelyy', url: base + '/' },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${base}/en/tools/?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  };
+  return (
+    `<script type="application/ld+json">${JSON.stringify(org)}</script>\n` +
+    `<script type="application/ld+json">${JSON.stringify(website)}</script>\n`
+  );
+}
+
+function buildWebPageJsonLd({ locale, name, description, canonical }) {
+  const base = BASE_URL.replace(/\/$/, '');
+  const jsonld = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: name || 'Korelyy Tools',
+    description: description || '',
+    url: canonical,
+    inLanguage: locale || 'en',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Korelyy Tools',
+      url: `${base}/`,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${base}/en/tools/?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    potentialAction: {
+      '@type': 'ReadAction',
+      target: [canonical],
+    },
+  };
+  return `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>\n`;
+}
+
 function buildOgImageBlock() {
   return (
     `<meta property="og:image" content="${OG_IMAGE_ABS}">\n` +
@@ -85,7 +254,7 @@ function buildOgImageBlock() {
   );
 }
 
-function buildInjection({ name, description, canonical, pathWithoutLocale, ogImageAlt }) {
+function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt }) {
   const title = name + ' - Korelyy Tools';
   const desc = description || name;
   const t = escapeForHtml(title);
@@ -93,15 +262,23 @@ function buildInjection({ name, description, canonical, pathWithoutLocale, ogIma
   const c = escapeForHtml(canonical);
   const alt = escapeForHtml((ogImageAlt || name) + OG_IMAGE_ALT_SUFFIX);
   const hfl = pathWithoutLocale ? buildHreflang(pathWithoutLocale) : '';
+  const robotsBlock = buildRobotsMeta();
+  const globalLd = buildGlobalOrgAndWebSiteJsonLd();
+  const webpageLd = buildWebPageJsonLd({ locale: locale || 'en', name: title, description: desc, canonical });
+  const breadcrumbLd = pathWithoutLocale
+    ? buildBreadcrumbList(locale || 'en', pathWithoutLocale, name)
+    : '';
   return (
     '\n<!-- SEO:static-injected -->\n' +
     `<title>${t}</title>\n` +
+    robotsBlock +
     `<meta name="description" content="${d}">\n` +
     `<meta property="og:type" content="website">\n` +
     `<meta property="og:site_name" content="Korelyy Tools">\n` +
     `<meta property="og:title" content="${t}">\n` +
     `<meta property="og:description" content="${d}">\n` +
     `<meta property="og:url" content="${c}">\n` +
+    `<meta property="og:locale" content="${LOCALE_OPEN_GRAPH_MAP[locale] || 'en_US'}">\n` +
     buildOgImageBlock() +
     `<meta property="og:image:alt" content="${alt}">\n` +
     `<meta name="twitter:card" content="summary_large_image">\n` +
@@ -110,15 +287,36 @@ function buildInjection({ name, description, canonical, pathWithoutLocale, ogIma
     `<meta name="twitter:image:alt" content="${alt}">\n` +
     `<link rel="canonical" href="${c}">\n` +
     (hfl ? `<!-- hreflang:6-lang+x-default -->\n${hfl}` : '') +
+    globalLd +
+    webpageLd +
+    breadcrumbLd +
     '<!-- /SEO:static-injected -->\n'
   );
 }
+
+const LOCALE_OPEN_GRAPH_MAP = {
+  zh: 'zh_CN',
+  en: 'en_US',
+  fr: 'fr_FR',
+  es: 'es_ES',
+  hi: 'hi_IN',
+  ar: 'ar_SA',
+};
 
 const REMOVE_PATTERNS = [
   /<title[^>]*>[\s\S]*?<\/title>\s*/gi,
   /<link[^>]+rel=["']canonical["'][^>]*\/?>\s*/gi,
   /<meta[^>]+name=["']description["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']robots["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']googlebot["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']bingbot["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']baiduspider["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']yandex["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']msvalidate\.01["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']google-site-verification["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+name=["']seznam-wmt["'][^>]*\/?>\s*/gi,
   /<meta[^>]+property=["']og:type["'][^>]*\/?>\s*/gi,
+  /<meta[^>]+property=["']og:locale["'][^>]*\/?>\s*/gi,
   /<meta[^>]+property=["']og:site_name["'][^>]*\/?>\s*/gi,
   /<meta[^>]+property=["']og:title["'][^>]*\/?>\s*/gi,
   /<meta[^>]+property=["']og:description["'][^>]*\/?>\s*/gi,
@@ -129,6 +327,7 @@ const REMOVE_PATTERNS = [
   /<meta[^>]+name=["']twitter:description["'][^>]*\/?>\s*/gi,
   /<meta[^>]+name=["']twitter:image[^"']*["'][^>]*\/?>\s*/gi,
   /<link[^>]+rel=["']alternate["'][^>]+hreflang=["'][^"']+["'][^>]*\/?>\s*/gi,
+  /<script[^>]+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>\s*/gi,
   /<!--\s*SEO:static-injected\s*-->[\s\S]*?<!--\s*\/SEO:static-injected\s*-->\s*/gi,
   /<!--\s*hreflang:6-lang\+x-default\s*-->[^]*?(?=<\/head>|<\!|\Z)/g,
 ];
@@ -160,6 +359,7 @@ for (const l of SUPPORTED_LOCALES) {
     }
     const canonical = BASE_URL.replace(/\/$/, '') + '/' + l + '/tool/' + slug + '/';
     const injection = buildInjection({
+      locale: l,
       name: tool.name,
       description: tool.description,
       canonical,
@@ -388,6 +588,7 @@ for (const l of SUPPORTED_LOCALES) {
     // pathWithoutLocale for hreflang
     const pathForHreflang = relPath === '/' ? '/' : relPath;
     const injection = buildInjection({
+      locale: l,
       name: meta.title.replace(/\s*\|[^|]*$/, '').trim() || SITE_META[l].siteName,
       description: meta.description,
       canonical,

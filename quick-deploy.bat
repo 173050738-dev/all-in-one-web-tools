@@ -90,7 +90,7 @@ if not exist out (
   exit /b 3
 )
 set COPIED=0
-for %%f in (_headers _redirects favicon.svg og-image.svg robots.txt sitemap.xml) do (
+for %%f in (_headers _redirects favicon.svg og-image.png robots.txt sitemap.xml) do (
   if exist public\%%f (
     copy /Y public\%%f out\%%f >nul
     set /a COPIED+=1
@@ -125,6 +125,14 @@ if errorlevel 1 (
 )
 
 echo.
+
+REM ---------- 9/9. 推送 Bing/Yandex/IndexNow（加速收录） ----------
+echo [9/9] 推送 sitemap 8000+ URL 到 Bing / Yandex / IndexNow
+echo   （若部署域名尚未生效 key.txt，Bing 会 403；等生效后重跑 node scripts/indexnow-push.mjs --apply）
+echo.
+call node scripts\indexnow-push.mjs --apply
+echo.
+
 echo ================================================================
 echo   🎉 部署成功！
 echo   访问地址: https://%PAGES_PROJECT%.pages.dev

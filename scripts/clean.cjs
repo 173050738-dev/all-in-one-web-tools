@@ -1,3 +1,4 @@
+/* eslint-disable */
 // scripts/clean.cjs — drop .next and out using Node filesystem (bypasses shell quirks)
 const fs = require('fs');
 const path = require('path');

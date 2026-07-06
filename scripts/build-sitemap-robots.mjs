@@ -127,31 +127,146 @@ User-agent: Googlebot
 Allow: /
 Allow: /blog/
 Allow: /news/
+Allow: /tools/
+Allow: /workflows/
+Allow: /templates/
 Disallow: /api/
 Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 2
+
+User-agent: Googlebot-News
+Allow: /blog/
+Allow: /news/
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 1
+
+User-agent: Googlebot-Video
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 2
 
 User-agent: Bingbot
 Allow: /
 Allow: /blog/
 Allow: /news/
+Allow: /tools/
+Allow: /workflows/
+Allow: /templates/
 Disallow: /api/
 Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+Crawl-delay: 1
 
 User-agent: Yandex
 Allow: /
 Allow: /blog/
 Allow: /news/
+Allow: /tools/
 Disallow: /api/
 Disallow: /_next/
+Crawl-delay: 1
 
 User-agent: Baiduspider
 Allow: /
 Allow: /blog/
 Allow: /news/
+Allow: /tools/
 Disallow: /api/
 Disallow: /_next/
+Crawl-delay: 1
+
+User-agent: PetalBot
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /workflows/
+Allow: /templates/
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+Crawl-delay: 1
+
+User-agent: Yeti
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /workflows/
+Allow: /templates/
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+Crawl-delay: 1
+
+User-agent: SeznamBot
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /workflows/
+Allow: /templates/
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /workflows/
+Allow: /templates/
+Disallow: /api/
+Disallow: /_next/
+Crawl-delay: 1
+
+User-agent: Bravebot
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /workflows/
+Allow: /templates/
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+Crawl-delay: 1
+
+User-agent: YepBot
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /workflows/
+Allow: /templates/
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+Crawl-delay: 1
 
 Sitemap: ${SITE_URL}/sitemap.xml
+Sitemap: ${SITE_URL}/sitemap-index.xml
 
 Host: ${SITE_URL}
 `;

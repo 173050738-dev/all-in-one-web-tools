@@ -8,7 +8,7 @@ import { searchTools } from '@/data/search';
 import { scenes } from '@/data/scenes';
 import { usePreferencesStore } from '@/stores/preferences';
 
-const ENABLE_AI_FEATURES = false;
+const ENABLE_AI_FEATURES = true;
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Sparkles,

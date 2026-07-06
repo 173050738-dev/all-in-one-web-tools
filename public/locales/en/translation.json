@@ -114,6 +114,7 @@
     "subtitle": "The world's trusted tool aggregation hub",
     "sort-newest": "Newest",
     "sort-popular": "Most Popular",
+    "sort-recommended": "For You",
     "sort-free": "All Free Tools",
     "free": "Free",
     "paid": "Paid",
@@ -4420,6 +4421,774 @@
     "dezeen": {
       "name": "Dezeen",
       "description": "Design media site covering architecture, interior design, and design news."
+    },
+    "nike-run-club": {
+      "name": "Nike Run Club",
+      "description": "Free Nike Run Club: supports nike, run, and more. 100% local processing on your device for maximum privacy."
+    },
+    "adidas-running-runtastic": {
+      "name": "Adidas Running Runtastic",
+      "description": "Free Adidas Running Runtastic: supports adidas, running, and more. 100% local processing on your device for maximum privacy."
+    },
+    "runkeeper": {
+      "name": "Runkeeper",
+      "description": "Free Runkeeper: supports runkeeper, 跑步, and more. 100% local processing on your device for maximum privacy."
+    },
+    "garmin-connect": {
+      "name": "Garmin Connect",
+      "description": "Garmin Connect online editor. Customize garmin, tune connect, export instantly. Cross-device, no signup."
+    },
+    "coros": {
+      "name": "Coros",
+      "description": "Coros online editor. Customize coros, tune 运动, export instantly. Cross-device, no signup."
+    },
+    "polar-flow": {
+      "name": "Polar Flow",
+      "description": "Online Polar Flow tool with features: polar, flow, 运动. Works right in your browser — free, secure, and no install required."
+    },
+    "vdot-calculator": {
+      "name": "Vdot Calculator",
+      "description": "Free Vdot Calculator: supports vdot, calculator, and more. 100% local processing on your device for maximum privacy."
+    },
+    "active-race-results": {
+      "name": "Active Race Results",
+      "description": "Online Active Race Results tool with features: active, race, results. Works right in your browser — free, secure, and no install required."
+    },
+    "trainingpeaks": {
+      "name": "Trainingpeaks",
+      "description": "Online Trainingpeaks tool with features: trainingpeaks, 徒步, 登山. Works right in your browser — free, secure, and no install required."
+    },
+    "final-surge": {
+      "name": "Final Surge",
+      "description": "Free Final Surge: supports final, surge, and more. 100% local processing on your device for maximum privacy."
+    },
+    "runalyze": {
+      "name": "Runalyze",
+      "description": "Runalyze online editor. Customize runalyze, tune 跑步, export instantly. Cross-device, no signup."
+    },
+    "stryd-power": {
+      "name": "Stryd Power",
+      "description": "Free Stryd Power: supports stryd, power, and more. 100% local processing on your device for maximum privacy."
+    },
+    "racewow": {
+      "name": "Racewow",
+      "description": "Racewow online editor. Customize racewow, tune 跑步, export instantly. Cross-device, no signup."
+    },
+    "lets-do-this": {
+      "name": "Lets Do This",
+      "description": "Free Lets Do This: supports lets, do, and more. 100% local processing on your device for maximum privacy."
+    },
+    "find-a-marathon": {
+      "name": "Find A Marathon",
+      "description": "Find A Marathon online editor. Customize find, tune a, export instantly. Cross-device, no signup."
+    },
+    "running2win": {
+      "name": "Running2win",
+      "description": "Running2win online editor. Customize running2win, tune 跑步, export instantly. Cross-device, no signup."
+    },
+    "mcmillan-calculator": {
+      "name": "Mcmillan Calculator",
+      "description": "Online Mcmillan Calculator tool with features: mcmillan, calculator, 跑步. Works right in your browser — free, secure, and no install required."
+    },
+    "marathon-handbook": {
+      "name": "Marathon Handbook",
+      "description": "Marathon Handbook online editor. Customize marathon, tune handbook, export instantly. Cross-device, no signup."
+    },
+    "cool-running": {
+      "name": "Cool Running",
+      "description": "Online Cool Running tool with features: cool, running, 跑步. Works right in your browser — free, secure, and no install required."
+    },
+    "worlds-marathons": {
+      "name": "Worlds Marathons",
+      "description": "Online Worlds Marathons tool with features: worlds, marathons, 跑步. Works right in your browser — free, secure, and no install required."
+    },
+    "runsignup": {
+      "name": "Runsignup",
+      "description": "Online Runsignup tool with features: runsignup, 跑步, 马拉松. Works right in your browser — free, secure, and no install required."
+    },
+    "pace-calculator": {
+      "name": "Pace Calculator",
+      "description": "Online Pace Calculator tool with features: pace, calculator, 跑步. Works right in your browser — free, secure, and no install required."
+    },
+    "treadmill-calc": {
+      "name": "Treadmill Calc",
+      "description": "Online Treadmill Calc tool with features: treadmill, calc, 跑步. Works right in your browser — free, secure, and no install required."
+    },
+    "couch-to-5k": {
+      "name": "Couch To 5k",
+      "description": "Couch To 5k online editor. Customize couch, tune to, export instantly. Cross-device, no signup."
+    },
+    "race-predictor": {
+      "name": "Race Predictor",
+      "description": "Race Predictor online editor. Customize race, tune predictor, export instantly. Cross-device, no signup."
+    },
+    "ride-with-gps": {
+      "name": "Ride With Gps",
+      "description": "Online Ride With Gps tool with features: ride, with, gps. Works right in your browser — free, secure, and no install required."
+    },
+    "bikemap": {
+      "name": "Bikemap",
+      "description": "Bikemap online editor. Customize bikemap, tune 骑行, export instantly. Cross-device, no signup."
+    },
+    "cyclemeter": {
+      "name": "Cyclemeter",
+      "description": "Online Cyclemeter tool with features: cyclemeter, 骑行, 公路车. Works right in your browser — free, secure, and no install required."
+    },
+    "wahoo-systm": {
+      "name": "Wahoo Systm",
+      "description": "Free Wahoo Systm: supports wahoo, systm, and more. 100% local processing on your device for maximum privacy."
+    },
+    "trainerroad": {
+      "name": "Trainerroad",
+      "description": "Online Trainerroad tool with features: trainerroad, 骑行, 公路车. Works right in your browser — free, secure, and no install required."
+    },
+    "zwift": {
+      "name": "Zwift",
+      "description": "Zwift online editor. Customize zwift, tune 骑行, export instantly. Cross-device, no signup."
+    },
+    "rouvy": {
+      "name": "Rouvy",
+      "description": "Online Rouvy tool with features: rouvy, 骑行, 公路车. Works right in your browser — free, secure, and no install required."
+    },
+    "rgt-cycling": {
+      "name": "Rgt Cycling",
+      "description": "Online Rgt Cycling tool with features: rgt, cycling, 骑行. Works right in your browser — free, secure, and no install required."
+    },
+    "bikeregister": {
+      "name": "Bikeregister",
+      "description": "Online Bikeregister tool with features: bikeregister, 骑行, 公路车. Works right in your browser — free, secure, and no install required."
+    },
+    "geometry-geeks": {
+      "name": "Geometry Geeks",
+      "description": "Online Geometry Geeks tool with features: geometry, geeks, 装备评测. Works right in your browser — free, secure, and no install required."
+    },
+    "best-bike-split": {
+      "name": "Best Bike Splitter",
+      "description": "Best Bike Splitter online editor. Customize best, tune bike, export instantly. Cross-device, no signup."
+    },
+    "golden-cheetah": {
+      "name": "Golden Cheetah",
+      "description": "Free Golden Cheetah: supports golden, cheetah, and more. 100% local processing on your device for maximum privacy."
+    },
+    "cyclestreets": {
+      "name": "Cyclestreets",
+      "description": "Free Cyclestreets: supports cyclestreets, 骑行, and more. 100% local processing on your device for maximum privacy."
+    },
+    "open-cycle-map": {
+      "name": "Open Cycle Map",
+      "description": "Free Open Cycle Map: supports open, cycle, and more. 100% local processing on your device for maximum privacy."
+    },
+    "bikeradar": {
+      "name": "Bikeradar",
+      "description": "Online Bikeradar tool with features: bikeradar, 骑行, 公路车. Works right in your browser — free, secure, and no install required."
+    },
+    "trailforks": {
+      "name": "Trailforks",
+      "description": "Free Trailforks: supports trailforks, 徒步, and more. 100% local processing on your device for maximum privacy."
+    },
+    "singletracks": {
+      "name": "Singletracks",
+      "description": "Singletracks online editor. Customize singletracks, tune 运动, export instantly. Cross-device, no signup."
+    },
+    "pinkbike": {
+      "name": "Pinkbike",
+      "description": "Online Pinkbike tool with features: pinkbike, 骑行, 公路车. Works right in your browser — free, secure, and no install required."
+    },
+    "veloviewer": {
+      "name": "Veloviewer",
+      "description": "Free Veloviewer: supports veloviewer, 骑行, and more. 100% local processing on your device for maximum privacy."
+    },
+    "todays-plan": {
+      "name": "Todays Plan",
+      "description": "Todays Plan online editor. Customize todays, tune plan, export instantly. Cross-device, no signup."
+    },
+    "fullgaz": {
+      "name": "Fullgaz",
+      "description": "Fullgaz online editor. Customize fullgaz, tune 骑行, export instantly. Cross-device, no signup."
+    },
+    "bike-calc": {
+      "name": "Bike Calc",
+      "description": "Online Bike Calc tool with features: bike, calc, 骑行. Works right in your browser — free, secure, and no install required."
+    },
+    "bike-insurance-check": {
+      "name": "Bike Insurance Checker",
+      "description": "Free Bike Insurance Checker: supports bike, insurance, and more. 100% local processing on your device for maximum privacy."
+    },
+    "sram-shift-calc": {
+      "name": "Sram Shift Calc",
+      "description": "Sram Shift Calc online editor. Customize sram, tune shift, export instantly. Cross-device, no signup."
+    },
+    "project-4321": {
+      "name": "Project 4321",
+      "description": "Free Project 4321: supports project, 4321, and more. 100% local processing on your device for maximum privacy."
+    },
+    "nike-training-club": {
+      "name": "Nike Training Club",
+      "description": "Online Nike Training Club tool with features: nike, training, club. Works right in your browser — free, secure, and no install required."
+    },
+    "peloton-digital": {
+      "name": "Peloton Digital",
+      "description": "Free Peloton Digital: supports peloton, digital, and more. 100% local processing on your device for maximum privacy."
+    },
+    "sweat-app": {
+      "name": "Sweat App",
+      "description": "Sweat App online editor. Customize sweat, tune app, export instantly. Cross-device, no signup."
+    },
+    "centr-chris-hemsworth": {
+      "name": "Centr Chris Hemsworth",
+      "description": "Free Centr Chris Hemsworth: supports centr, chris, and more. 100% local processing on your device for maximum privacy."
+    },
+    "ob-fitness": {
+      "name": "Ob Fitness",
+      "description": "Ob Fitness online editor. Customize ob, tune fitness, export instantly. Cross-device, no signup."
+    },
+    "fitbit-premium": {
+      "name": "Fitbit Premium",
+      "description": "Fitbit Premium online editor. Customize fitbit, tune premium, export instantly. Cross-device, no signup."
+    },
+    "strong-lifts": {
+      "name": "Strong Lifts",
+      "description": "Strong Lifts online editor. Customize strong, tune lifts, export instantly. Cross-device, no signup."
+    },
+    "starting-strength": {
+      "name": "Starting Strength",
+      "description": "Starting Strength online editor. Customize starting, tune strength, export instantly. Cross-device, no signup."
+    },
+    "exrx": {
+      "name": "Exrx",
+      "description": "Free Exrx: supports exrx, 运动, and more. 100% local processing on your device for maximum privacy."
+    },
+    "bodybuilding-guides": {
+      "name": "Bodybuilding Guides",
+      "description": "Bodybuilding Guides online editor. Customize bodybuilding, tune guides, export instantly. Cross-device, no signup."
+    },
+    "fitocracy": {
+      "name": "Fitocracy",
+      "description": "Online Fitocracy tool with features: fitocracy, 健身, 力量训练. Works right in your browser — free, secure, and no install required."
+    },
+    "habit-nest": {
+      "name": "Habit Nest",
+      "description": "Habit Nest online editor. Customize habit, tune nest, export instantly. Cross-device, no signup."
+    },
+    "workout-labs": {
+      "name": "Workout Labs",
+      "description": "Workout Labs online editor. Customize workout, tune labs, export instantly. Cross-device, no signup."
+    },
+    "freedom-strong": {
+      "name": "Freedom Strong",
+      "description": "Free Freedom Strong: supports freedom, strong, and more. 100% local processing on your device for maximum privacy."
+    },
+    "darebee": {
+      "name": "Darebee",
+      "description": "Online Darebee tool with features: darebee, 健身, 力量训练. Works right in your browser — free, secure, and no install required."
+    },
+    "12minuteathlete": {
+      "name": "12minuteathlete",
+      "description": "Free 12minuteathlete: supports 12minuteathlete, 健身, and more. 100% local processing on your device for maximum privacy."
+    },
+    "fitness-blender": {
+      "name": "Fitness Blender",
+      "description": "Fitness Blender online editor. Customize fitness, tune blender, export instantly. Cross-device, no signup."
+    },
+    "poosh": {
+      "name": "Poosh",
+      "description": "Free Poosh: supports poosh, 健身, and more. 100% local processing on your device for maximum privacy."
+    },
+    "p90x-schedule": {
+      "name": "P90x Schedule",
+      "description": "P90x Schedule online editor. Customize p90x, tune schedule, export instantly. Cross-device, no signup."
+    },
+    "insanity-workout": {
+      "name": "Insanity Workout",
+      "description": "Free Insanity Workout: supports insanity, workout, and more. 100% local processing on your device for maximum privacy."
+    },
+    "musclewiki": {
+      "name": "Musclewiki",
+      "description": "Free Musclewiki: supports musclewiki, 运动, and more. 100% local processing on your device for maximum privacy."
+    },
+    "strech-lab": {
+      "name": "Strech Lab",
+      "description": "Strech Lab online editor. Customize strech, tune lab, export instantly. Cross-device, no signup."
+    },
+    "romwod": {
+      "name": "Romwod",
+      "description": "Romwod online editor. Customize romwod, tune 瑜伽, export instantly. Cross-device, no signup."
+    },
+    "yoga-international": {
+      "name": "Yoga International",
+      "description": "Free Yoga International: supports yoga, international, and more. 100% local processing on your device for maximum privacy."
+    },
+    "gaia-yoga": {
+      "name": "Gaia Yoga",
+      "description": "Free Gaia Yoga: supports gaia, yoga, and more. 100% local processing on your device for maximum privacy."
+    },
+    "do-you-yoga": {
+      "name": "Do You Yoga",
+      "description": "Online Do You Yoga tool with features: do, you, yoga. Works right in your browser — free, secure, and no install required."
+    },
+    "yoga-download": {
+      "name": "Yoga Downloader",
+      "description": "Online Yoga Downloader tool with features: yoga, download, 瑜伽. Works right in your browser — free, secure, and no install required."
+    },
+    "my-yoga-works": {
+      "name": "My Yoga Works",
+      "description": "Free My Yoga Works: supports my, yoga, and more. 100% local processing on your device for maximum privacy."
+    },
+    "pilates-anytime": {
+      "name": "Pilates Anytime",
+      "description": "Free Pilates Anytime: supports pilates, anytime, and more. 100% local processing on your device for maximum privacy."
+    },
+    "club-pilates": {
+      "name": "Club Pilates",
+      "description": "Online Club Pilates tool with features: club, pilates, 瑜伽. Works right in your browser — free, secure, and no install required."
+    },
+    "blogilates": {
+      "name": "Blogilates",
+      "description": "Free Blogilates: supports blogilates, 瑜伽, and more. 100% local processing on your device for maximum privacy."
+    },
+    "stretching-timer": {
+      "name": "Stretching Timer",
+      "description": "Online Stretching Timer tool with features: stretching, timer, 瑜伽. Works right in your browser — free, secure, and no install required."
+    },
+    "foam-roller-guide": {
+      "name": "Foam Roller Guide",
+      "description": "Online Foam Roller Guide tool with features: foam, roller, guide. Works right in your browser — free, secure, and no install required."
+    },
+    "yin-yoga-cheatsheet": {
+      "name": "Yin Yoga Cheatsheet",
+      "description": "Yin Yoga Cheatsheet online editor. Customize yin, tune yoga, export instantly. Cross-device, no signup."
+    },
+    "yoga-journal": {
+      "name": "Yoga Journal",
+      "description": "Free Yoga Journal: supports yoga, journal, and more. 100% local processing on your device for maximum privacy."
+    },
+    "medito": {
+      "name": "Medito",
+      "description": "Medito online editor. Customize medito, tune 瑜伽, export instantly. Cross-device, no signup."
+    },
+    "waking-up": {
+      "name": "Waking Up",
+      "description": "Waking Up online editor. Customize waking, tune up, export instantly. Cross-device, no signup."
+    },
+    "mindful-cms": {
+      "name": "Mindful Cms",
+      "description": "Mindful Cms online editor. Customize mindful, tune cms, export instantly. Cross-device, no signup."
+    },
+    "breathwrk": {
+      "name": "Breathwrk",
+      "description": "Online Breathwrk tool with features: breathwrk, 瑜伽, 普拉提. Works right in your browser — free, secure, and no install required."
+    },
+    "478-breathing": {
+      "name": "478 Breathing",
+      "description": "Free 478 Breathing: supports 478, breathing, and more. 100% local processing on your device for maximum privacy."
+    },
+    "box-breathing": {
+      "name": "Box Breathing",
+      "description": "Online Box Breathing tool with features: box, breathing, 瑜伽. Works right in your browser — free, secure, and no install required."
+    },
+    "progressive-muscle-relaxation": {
+      "name": "Progressive Muscle Relaxation",
+      "description": "Progressive Muscle Relaxation online editor. Customize progressive, tune muscle, export instantly. Cross-device, no signup."
+    },
+    "swim-com": {
+      "name": "Swim Com",
+      "description": "Online Swim Com tool with features: swim, com, 游泳. Works right in your browser — free, secure, and no install required."
+    },
+    "swimsmooth": {
+      "name": "Swimsmooth",
+      "description": "Free Swimsmooth: supports swimsmooth, 游泳, and more. 100% local processing on your device for maximum privacy."
+    },
+    "goswim": {
+      "name": "Goswim",
+      "description": "Online Goswim tool with features: goswim, 健身, 力量训练. Works right in your browser — free, secure, and no install required."
+    },
+    "swimulator": {
+      "name": "Swimulator",
+      "description": "Swimulator online editor. Customize swimulator, tune 游泳, export instantly. Cross-device, no signup."
+    },
+    "trainerroad-swim": {
+      "name": "Trainerroad Swim",
+      "description": "Trainerroad Swim online editor. Customize trainerroad, tune swim, export instantly. Cross-device, no signup."
+    },
+    "slowtwitch": {
+      "name": "Slowtwitch",
+      "description": "Free Slowtwitch: supports slowtwitch, 运动, and more. 100% local processing on your device for maximum privacy."
+    },
+    "tridot": {
+      "name": "Tridot",
+      "description": "Free Tridot: supports tridot, 游泳, and more. 100% local processing on your device for maximum privacy."
+    },
+    "beginnertriathlete": {
+      "name": "Beginnertriathlete",
+      "description": "Beginnertriathlete online editor. Customize beginnertriathlete, tune 游泳, export instantly. Cross-device, no signup."
+    },
+    "ironman-training-peaks": {
+      "name": "Ironman Training Peaks",
+      "description": "Online Ironman Training Peaks tool with features: ironman, training, peaks. Works right in your browser — free, secure, and no install required."
+    },
+    "suunto-ironman": {
+      "name": "Suunto Ironman",
+      "description": "Online Suunto Ironman tool with features: suunto, ironman, 体育数据. Works right in your browser — free, secure, and no install required."
+    },
+    "kayak-sit-on-top": {
+      "name": "Kayak Sit On Top",
+      "description": "Online Kayak Sit On Top tool with features: kayak, sit, on. Works right in your browser — free, secure, and no install required."
+    },
+    "surf-forecast": {
+      "name": "Surf Forecast",
+      "description": "Surf Forecast online editor. Customize surf, tune forecast, export instantly. Cross-device, no signup."
+    },
+    "windguru": {
+      "name": "Windguru",
+      "description": "Online Windguru tool with features: windguru, 游泳, 铁人三项. Works right in your browser — free, secure, and no install required."
+    },
+    "magicseaweed": {
+      "name": "Magicseaweed",
+      "description": "Free Magicseaweed: supports magicseaweed, 游泳, and more. 100% local processing on your device for maximum privacy."
+    },
+    "wannasurf": {
+      "name": "Wannasurf",
+      "description": "Online Wannasurf tool with features: wannasurf, 游泳, 铁人三项. Works right in your browser — free, secure, and no install required."
+    },
+    "wikiloc": {
+      "name": "Wikiloc",
+      "description": "Online Wikiloc tool with features: wikiloc, 运动, 健康. Works right in your browser — free, secure, and no install required."
+    },
+    "hikingproject": {
+      "name": "Hikingproject",
+      "description": "Online Hikingproject tool with features: hikingproject, 徒步, 登山. Works right in your browser — free, secure, and no install required."
+    },
+    "mountain-project": {
+      "name": "Mountain Project",
+      "description": "Free Mountain Project: supports mountain, project, and more. 100% local processing on your device for maximum privacy."
+    },
+    "summitpost": {
+      "name": "Summitpost",
+      "description": "Summitpost online editor. Customize summitpost, tune 徒步, export instantly. Cross-device, no signup."
+    },
+    "peakbagger": {
+      "name": "Peakbagger",
+      "description": "Peakbagger online editor. Customize peakbagger, tune 徒步, export instantly. Cross-device, no signup."
+    },
+    "outdooractive": {
+      "name": "Outdooractive",
+      "description": "Online Outdooractive tool with features: outdooractive, 徒步, 登山. Works right in your browser — free, secure, and no install required."
+    },
+    "satgear-checklist": {
+      "name": "Satgear Checklist",
+      "description": "Online Satgear Checklist tool with features: satgear, checklist, 装备评测. Works right in your browser — free, secure, and no install required."
+    },
+    "lighterpack": {
+      "name": "Lighterpack",
+      "description": "Lighterpack online editor. Customize lighterpack, tune 徒步, export instantly. Cross-device, no signup."
+    },
+    "rei-co-op-checklists": {
+      "name": "Rei Co Op Checklists",
+      "description": "Online Rei Co Op Checklists tool with features: rei, co, op. Works right in your browser — free, secure, and no install required."
+    },
+    "campendium": {
+      "name": "Campendium",
+      "description": "Free Campendium: supports campendium, 徒步, and more. 100% local processing on your device for maximum privacy."
+    },
+    "free-campsites": {
+      "name": "Free Campsites",
+      "description": "Free Free Campsites: supports free, campsites, and more. 100% local processing on your device for maximum privacy."
+    },
+    "hipcamp": {
+      "name": "Hipcamp",
+      "description": "Online Hipcamp tool with features: hipcamp, 徒步, 登山. Works right in your browser — free, secure, and no install required."
+    },
+    "campsite-photos": {
+      "name": "Campsite Photos",
+      "description": "Online Campsite Photos tool with features: campsite, photos, 徒步. Works right in your browser — free, secure, and no install required."
+    },
+    "noaa-weather": {
+      "name": "Noaa Weather",
+      "description": "Online Noaa Weather tool with features: noaa, weather, 徒步. Works right in your browser — free, secure, and no install required."
+    },
+    "mountain-weather-forecast": {
+      "name": "Mountain Weather Forecast",
+      "description": "Free Mountain Weather Forecast: supports mountain, weather, and more. 100% local processing on your device for maximum privacy."
+    },
+    "meteoblue-mountain": {
+      "name": "Meteoblue Mountain",
+      "description": "Online Meteoblue Mountain tool with features: meteoblue, mountain, 徒步. Works right in your browser — free, secure, and no install required."
+    },
+    "wildsafe-bear": {
+      "name": "Wildsafe Bear",
+      "description": "Wildsafe Bear online editor. Customize wildsafe, tune bear, export instantly. Cross-device, no signup."
+    },
+    "sotaventos-mountain": {
+      "name": "Sotaventos Mountain",
+      "description": "Sotaventos Mountain online editor. Customize sotaventos, tune mountain, export instantly. Cross-device, no signup."
+    },
+    "nba-stats": {
+      "name": "Nba Stats",
+      "description": "Online Nba Stats tool with features: nba, stats, 体育数据. Works right in your browser — free, secure, and no install required."
+    },
+    "basketball-reference": {
+      "name": "Basketball Reference",
+      "description": "Basketball Reference online editor. Customize basketball, tune reference, export instantly. Cross-device, no signup."
+    },
+    "bball-index": {
+      "name": "Bball Index",
+      "description": "Online Bball Index tool with features: bball, index, 体育数据. Works right in your browser — free, secure, and no install required."
+    },
+    "hoopshype-salaries": {
+      "name": "Hoopshype Salaries",
+      "description": "Hoopshype Salaries online editor. Customize hoopshype, tune salaries, export instantly. Cross-device, no signup."
+    },
+    "fifa-ratings": {
+      "name": "Fifa Ratings",
+      "description": "Fifa Ratings online editor. Customize fifa, tune ratings, export instantly. Cross-device, no signup."
+    },
+    "transfermarkt": {
+      "name": "Transfermarkt",
+      "description": "Transfermarkt online editor. Customize transfermarkt, tune 体育数据, export instantly. Cross-device, no signup."
+    },
+    "sofascore": {
+      "name": "Sofascore",
+      "description": "Online Sofascore tool with features: sofascore, 体育数据, 实时比分. Works right in your browser — free, secure, and no install required."
+    },
+    "fbref": {
+      "name": "Fbref",
+      "description": "Fbref online editor. Customize fbref, tune 体育数据, export instantly. Cross-device, no signup."
+    },
+    "understat": {
+      "name": "Understat",
+      "description": "Online Understat tool with features: understat, 体育数据, 实时比分. Works right in your browser — free, secure, and no install required."
+    },
+    "tennis-atp-tour": {
+      "name": "Tennis Atp Tour",
+      "description": "Tennis Atp Tour online editor. Customize tennis, tune atp, export instantly. Cross-device, no signup."
+    },
+    "tennis-wta": {
+      "name": "Tennis Wta",
+      "description": "Online Tennis Wta tool with features: tennis, wta, 体育数据. Works right in your browser — free, secure, and no install required."
+    },
+    "tennis-abstract": {
+      "name": "Tennis Abstract",
+      "description": "Tennis Abstract online editor. Customize tennis, tune abstract, export instantly. Cross-device, no signup."
+    },
+    "flashscore-tennis": {
+      "name": "Flashscore Tennis",
+      "description": "Free Flashscore Tennis: supports flashscore, tennis, and more. 100% local processing on your device for maximum privacy."
+    },
+    "bwf-badminton": {
+      "name": "Bwf Badminton",
+      "description": "Bwf Badminton online editor. Customize bwf, tune badminton, export instantly. Cross-device, no signup."
+    },
+    "badminton-warehouse": {
+      "name": "Badminton Warehouse",
+      "description": "Online Badminton Warehouse tool with features: badminton, warehouse, 体育数据. Works right in your browser — free, secure, and no install required."
+    },
+    "ittf-world": {
+      "name": "Ittf World",
+      "description": "Online Ittf World tool with features: ittf, world, 体育数据. Works right in your browser — free, secure, and no install required."
+    },
+    "tabletennis-reference": {
+      "name": "Tabletennis Reference",
+      "description": "Tabletennis Reference online editor. Customize tabletennis, tune reference, export instantly. Cross-device, no signup."
+    },
+    "revspin": {
+      "name": "Revspin",
+      "description": "Revspin online editor. Customize revspin, tune 体育数据, export instantly. Cross-device, no signup."
+    },
+    "fivb-volleyball": {
+      "name": "Fivb Volleyball",
+      "description": "Online Fivb Volleyball tool with features: fivb, volleyball, 体育数据. Works right in your browser — free, secure, and no install required."
+    },
+    "volleybox": {
+      "name": "Volleybox",
+      "description": "Online Volleybox tool with features: volleybox, 体育数据, 实时比分. Works right in your browser — free, secure, and no install required."
+    },
+    "pga-tour-stats": {
+      "name": "Pga Tour Stats",
+      "description": "Free Pga Tour Stats: supports pga, tour, and more. 100% local processing on your device for maximum privacy."
+    },
+    "handicap-differential": {
+      "name": "Handicap Differential",
+      "description": "Free Handicap Differential: supports handicap, differential, and more. 100% local processing on your device for maximum privacy."
+    },
+    "golfnow-tee-times": {
+      "name": "Golfnow Tee Times",
+      "description": "Free Golfnow Tee Times: supports golfnow, tee, and more. 100% local processing on your device for maximum privacy."
+    },
+    "2k-sports-handicap": {
+      "name": "2k Sports Handicap",
+      "description": "2k Sports Handicap online editor. Customize 2k, tune sports, export instantly. Cross-device, no signup."
+    },
+    "golfshake-handicap": {
+      "name": "Golfshake Handicap",
+      "description": "Free Golfshake Handicap: supports golfshake, handicap, and more. 100% local processing on your device for maximum privacy."
+    },
+    "ski-resort-stats": {
+      "name": "Ski Resort Stats",
+      "description": "Online Ski Resort Stats tool with features: ski, resort, stats. Works right in your browser — free, secure, and no install required."
+    },
+    "on-the-snow": {
+      "name": "On The Snow",
+      "description": "On The Snow online editor. Customize on, tune the, export instantly. Cross-device, no signup."
+    },
+    "snow-forecast": {
+      "name": "Snow Forecast",
+      "description": "Snow Forecast online editor. Customize snow, tune forecast, export instantly. Cross-device, no signup."
+    },
+    "powder-forecast": {
+      "name": "Powder Forecast",
+      "description": "Free Powder Forecast: supports powder, forecast, and more. 100% local processing on your device for maximum privacy."
+    },
+    "zrankings-ski": {
+      "name": "Zrankings Ski",
+      "description": "Zrankings Ski online editor. Customize zrankings, tune ski, export instantly. Cross-device, no signup."
+    },
+    "skiers-tracker": {
+      "name": "Skiers Tracker",
+      "description": "Free Skiers Tracker: supports skiers, tracker, and more. 100% local processing on your device for maximum privacy."
+    },
+    "snowboard-encyc": {
+      "name": "Snowboard Encyc",
+      "description": "Online Snowboard Encyc tool with features: snowboard, encyc, 滑雪. Works right in your browser — free, secure, and no install required."
+    },
+    "the-house-board-size": {
+      "name": "The House Board Size",
+      "description": "Online The House Board Size tool with features: the, house, board. Works right in your browser — free, secure, and no install required."
+    },
+    "skate-video-calendar": {
+      "name": "Skate Video Calendar",
+      "description": "Skate Video Calendar online editor. Customize skate, tune video, export instantly. Cross-device, no signup."
+    },
+    "skatepark-directory": {
+      "name": "Skatepark Directory",
+      "description": "Free Skatepark Directory: supports skatepark, directory, and more. 100% local processing on your device for maximum privacy."
+    },
+    "concretedisciples": {
+      "name": "Concretedisciples",
+      "description": "Concretedisciples online editor. Customize concretedisciples, tune 滑雪, export instantly. Cross-device, no signup."
+    },
+    "roller-skate-size": {
+      "name": "Roller Skate Size",
+      "description": "Online Roller Skate Size tool with features: roller, skate, size. Works right in your browser — free, secure, and no install required."
+    },
+    "inline-skate-buyers-guide": {
+      "name": "Inline Skate Buyers Guide",
+      "description": "Free Inline Skate Buyers Guide: supports inline, skate, and more. 100% local processing on your device for maximum privacy."
+    },
+    "bouldering-grade-converter": {
+      "name": "Bouldering Grade Converter",
+      "description": "Bouldering Grade Converter online editor. Customize bouldering, tune grade, export instantly. Cross-device, no signup."
+    },
+    "climbfinder": {
+      "name": "Climbfinder",
+      "description": "Free Climbfinder: supports climbfinder, 体育数据, and more. 100% local processing on your device for maximum privacy."
+    },
+    "macro-calculator": {
+      "name": "Macro Calculator",
+      "description": "Online Macro Calculator tool with features: macro, calculator, 营养. Works right in your browser — free, secure, and no install required."
+    },
+    "tdee-calculator": {
+      "name": "Tdee Calculator",
+      "description": "Free Tdee Calculator: supports tdee, calculator, and more. 100% local processing on your device for maximum privacy."
+    },
+    "bmr-calculator": {
+      "name": "Bmr Calculator",
+      "description": "Online Bmr Calculator tool with features: bmr, calculator, 营养. Works right in your browser — free, secure, and no install required."
+    },
+    "protein-intake": {
+      "name": "Protein Intake",
+      "description": "Online Protein Intake tool with features: protein, intake, 营养. Works right in your browser — free, secure, and no install required."
+    },
+    "hydration-calculator": {
+      "name": "Hydration Calculator",
+      "description": "Online Hydration Calculator tool with features: hydration, calculator, 营养. Works right in your browser — free, secure, and no install required."
+    },
+    "water-reminder": {
+      "name": "Water Reminder",
+      "description": "Online Water Reminder tool with features: health, hydration, reminder. Works right in your browser — free, secure, and no install required."
+    },
+    "body-fat-calc": {
+      "name": "Body Fat Calc",
+      "description": "Free Body Fat Calc: supports body, fat, and more. 100% local processing on your device for maximum privacy."
+    },
+    "bmi-calc-health": {
+      "name": "Bmi Calc Health",
+      "description": "Bmi Calc Health online editor. Customize bmi, tune calc, export instantly. Cross-device, no signup."
+    },
+    "vo2max-calc": {
+      "name": "Vo2max Calc",
+      "description": "Free Vo2max Calc: supports vo2max, calc, and more. 100% local processing on your device for maximum privacy."
+    },
+    "one-rm-1rep-max": {
+      "name": "One Rm 1rep Max",
+      "description": "One Rm 1rep Max online editor. Customize one, tune rm, export instantly. Cross-device, no signup."
+    },
+    "meal-prep-planner": {
+      "name": "Meal Prep Planner",
+      "description": "Meal Prep Planner online editor. Customize meal, tune prep, export instantly. Cross-device, no signup."
+    },
+    "pre-workout-examiner": {
+      "name": "Pre Workout Examiner",
+      "description": "Online Pre Workout Examiner tool with features: pre, workout, examiner. Works right in your browser — free, secure, and no install required."
+    },
+    "eventbrite-sports": {
+      "name": "Eventbrite Sports",
+      "description": "Online Eventbrite Sports tool with features: eventbrite, sports, 赛事. Works right in your browser — free, secure, and no install required."
+    },
+    "meetup-sports": {
+      "name": "Meetup Sports",
+      "description": "Online Meetup Sports tool with features: meetup, sports, 赛事. Works right in your browser — free, secure, and no install required."
+    },
+    "raceroster": {
+      "name": "Raceroster",
+      "description": "Raceroster online editor. Customize raceroster, tune 跑步, export instantly. Cross-device, no signup."
+    },
+    "ticketmaster-sports": {
+      "name": "Ticketmaster Sports",
+      "description": "Ticketmaster Sports online editor. Customize ticketmaster, tune sports, export instantly. Cross-device, no signup."
+    },
+    "sporting-news-scores": {
+      "name": "Sporting News Scores",
+      "description": "Free Sporting News Scores: supports sporting, news, and more. 100% local processing on your device for maximum privacy."
+    },
+    "gearbrain": {
+      "name": "Gearbrain",
+      "description": "Gearbrain online editor. Customize gearbrain, tune 装备评测, export instantly. Cross-device, no signup."
+    },
+    "wirecutter-fitness": {
+      "name": "Wirecutter Fitness",
+      "description": "Online Wirecutter Fitness tool with features: wirecutter, fitness, 健身. Works right in your browser — free, secure, and no install required."
+    },
+    "outdoorgearlab": {
+      "name": "Outdoorgearlab",
+      "description": "Online Outdoorgearlab tool with features: outdoorgearlab, 徒步, 登山. Works right in your browser — free, secure, and no install required."
+    },
+    "switchback-travel-gear": {
+      "name": "Switchback Travel Gear",
+      "description": "Switchback Travel Gear online editor. Customize switchback, tune travel, export instantly. Cross-device, no signup."
+    },
+    "rotten-wire": {
+      "name": "Rotten Wire",
+      "description": "Free Rotten Wire: supports rotten, wire, and more. 100% local processing on your device for maximum privacy."
+    },
+    "strava-stats-dashboard": {
+      "name": "Strava Stats Dashboard",
+      "description": "Strava Stats Dashboard online editor. Customize strava, tune stats, export instantly. Cross-device, no signup."
+    },
+    "athlinks-race-results": {
+      "name": "Athlinks Race Results",
+      "description": "Athlinks Race Results online editor. Customize athlinks, tune race, export instantly. Cross-device, no signup."
+    },
+    "sporttracks": {
+      "name": "Sporttracks",
+      "description": "Free Sporttracks: supports sporttracks, 运动, and more. 100% local processing on your device for maximum privacy."
+    },
+    "trainerroad-announcer": {
+      "name": "Trainerroad Announcer",
+      "description": "Trainerroad Announcer online editor. Customize trainerroad, tune announcer, export instantly. Cross-device, no signup."
+    },
+    "sport-psychology-today": {
+      "name": "Sport Psychology Today",
+      "description": "Sport Psychology Today online editor. Customize sport, tune psychology, export instantly. Cross-device, no signup."
     }
   },
   "sidebar2": {
@@ -4634,7 +5403,75 @@
     "err-user-gone": "Account no longer exists",
     "err-google-off": "Google sign-in is not enabled yet",
     "err-google-soon": "Google sign-in is coming soon",
-    "err-server": "Server is busy. Try again later."
+    "err-server": "Server is busy. Try again later.",
+    "continue-google": "Continue with Google",
+    "err-google-bad-token": "Invalid Google token — unable to verify identity",
+    "err-google-bad-audience": "Google client ID mismatch, please contact support",
+    "err-google-token-expired": "Google sign-in expired, please try again",
+    "err-google-bad-profile": "Google profile is missing required fields (e.g. email)",
+    "err-google-popup-blocked": "Sign-in popup was blocked, please allow popups or retry",
+    "err-google-cancelled": "Google sign-in cancelled",
+    "sign-in-sub": "Welcome back — sign in to sync your favorites",
+    "create-account": "Create account",
+    "create-account-sub": "Free sign-up — sync favorites & history across devices",
+    "no-account": "Don't have an account?",
+    "has-account": "Already have an account?",
+    "or-email": "Or continue with email",
+    "password-confirm-label": "Confirm password",
+    "password-confirm-placeholder": "Re-enter your password",
+    "err-passwords-mismatch": "Passwords do not match",
+    "pw-empty": "(not entered)",
+    "pw-weak": "Weak",
+    "pw-fair": "Fair",
+    "pw-good": "Good",
+    "pw-strong": "Strong",
+    "pw-show": "Show password",
+    "pw-hide": "Hide password",
+    "forgot-password-sub": "Enter your email and we'll send you reset instructions",
+    "reset-password": "Set a new password",
+    "reset-password-sub": "Choose a new password, then sign in with it",
+    "send-reset-link": "Send reset instructions",
+    "update-password": "Update password",
+    "remember-password": "Remembered your password?",
+    "need-new-token": "Reset link expired?",
+    "request-another": "Request a new one",
+    "forgot-token-issued": "(Dev mode) reset token generated",
+    "forgot-email-sent": "If registered, a reset link has been sent",
+    "reset-token-ready": "Reset token ready — set your new password",
+    "reset-expires-min": " min left",
+    "reset-success": "Password updated! Please sign in with your new password.",
+    "err-reset-missing-token": "Missing reset token — start with forgot password",
+    "err-reset-invalid": "Invalid reset token, please request a new one",
+    "err-reset-used": "Reset token already used, please request a new one",
+    "err-reset-expired": "Reset token expired, please request a new one",
+    "err-old-password-required": "Please enter your current password",
+    "err-same-password": "New password cannot be the same as the old one",
+    "err-name-too-long": "Display name cannot exceed 64 characters",
+    "profile-updated": "Profile updated successfully",
+    "password-changed": "Password changed successfully",
+    "profile-title": "My Profile",
+    "profile-subtitle": "Manage your account info and preferences",
+    "profile-section-basic": "Basic Info",
+    "profile-section-security": "Security",
+    "profile-name-label": "Display Name",
+    "profile-name-placeholder": "Enter your display name",
+    "profile-email-label": "Email",
+    "profile-plan-label": "Plan",
+    "profile-joined-label": "Joined",
+    "profile-provider-label": "Sign-in method",
+    "profile-language-label": "Language",
+    "profile-save": "Save changes",
+    "profile-saving": "Saving...",
+    "profile-saved-tip": "Saved",
+    "profile-old-pw-label": "Current password",
+    "profile-new-pw-label": "New password",
+    "profile-new-pw-placeholder": "At least 8 characters",
+    "profile-change-pw": "Change password",
+    "profile-changing-pw": "Changing...",
+    "profile-close": "Close",
+    "provider-email": "Email & Password",
+    "provider-google": "Google Account",
+    "footer-legal": "By continuing you agree to our Terms and Privacy Policy"
   },
   "kofi": {
     "supportUs": "Support Korelyy & keep free tools alive",

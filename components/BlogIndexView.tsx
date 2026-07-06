@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import type { SeoLocale } from '@/components/seo';
 import { getLocalizedText, type BlogPost } from '@/data/blog';
 import BlogPostCard from '@/components/BlogPostCard';
 import { Search, SlidersHorizontal } from 'lucide-react';
+
+const PAGE_SIZE = 15;
 
 interface Props {
   locale: SeoLocale;
@@ -16,6 +18,9 @@ export default function BlogIndexView({ locale }: Props) {
   const [loaded, setLoaded] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
+  const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+  const hasScrolledRef = useRef<boolean>(false);
 
   // 懒加载 blog 数据：避免 SSR HTML 内联 ~300KB blog 内容导致 TTFB 7s+
   useEffect(() => {
@@ -23,12 +28,49 @@ export default function BlogIndexView({ locale }: Props) {
     (async () => {
       const mod = await import('@/data/blog');
       if (cancelled) return;
-      const list = (mod.getBlogPostsList || (() => []))(locale, 50) as BlogPost[];
+      const list = (mod.getBlogPostsList || (() => []))(locale, Number.POSITIVE_INFINITY) as BlogPost[];
       setAllPosts(list);
       setLoaded(true);
     })();
     return () => { cancelled = true; };
   }, [locale]);
+
+  // 切换搜索/分类/语言时重置可见数量 & 滚动锁
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+    hasScrolledRef.current = false;
+  }, [searchQuery, activeCategory, locale]);
+
+  // 滚动监听：用户首次产生向下滚动后才允许自动加载
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 8) hasScrolledRef.current = true;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // 下滑自动加载更多（IntersectionObserver sentinel）
+  const loadMore = useCallback(() => {
+    setVisibleCount((prev) => prev + PAGE_SIZE);
+  }, []);
+
+  useEffect(() => {
+    if (!loaded) return;
+    const node = sentinelRef.current;
+    if (!node) return;
+    if (typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && hasScrolledRef.current) loadMore();
+        });
+      },
+      { rootMargin: '240px 0px', threshold: 0 }
+    );
+    observer.observe(node);
+    return () => { observer.disconnect(); };
+  }, [loaded, loadMore]);
 
   const i18n = useMemo(() => {
     switch (locale) {
@@ -44,6 +86,11 @@ export default function BlogIndexView({ locale }: Props) {
           catTutorial: '教程',
           catSeo: 'SEO 指南',
           catCompare: '对比测评',
+          catSport: '运动健身',
+          catDev: '开发技术',
+          catOffice: '办公效率',
+          catMedia: '设计与多媒体',
+          catOps: '运营与增长',
           resultCount: (n: number) => `共 ${n} 篇文章`,
         };
       case 'hi':
@@ -58,6 +105,11 @@ export default function BlogIndexView({ locale }: Props) {
           catTutorial: 'ट्यूटोरियल',
           catSeo: 'SEO गाइड',
           catCompare: 'तुलना',
+          catSport: 'फिटनेस',
+          catDev: 'डेवलपमेंट',
+          catOffice: 'ऑफिस प्रोडक्टिविटी',
+          catMedia: 'डिज़ाइन & मीडिया',
+          catOps: 'ऑपरेशन्स & ग्रोथ',
           resultCount: (n: number) => `${n} पोस्ट`,
         };
       case 'es':
@@ -72,6 +124,11 @@ export default function BlogIndexView({ locale }: Props) {
           catTutorial: 'Tutoriales',
           catSeo: 'Guías SEO',
           catCompare: 'Comparativas',
+          catSport: 'Deporte & Fitness',
+          catDev: 'Desarrollo',
+          catOffice: 'Productividad',
+          catMedia: 'Diseño & Multimedia',
+          catOps: 'Operaciones & Crecimiento',
           resultCount: (n: number) => `${n} publicaciones`,
         };
       case 'fr':
@@ -86,6 +143,11 @@ export default function BlogIndexView({ locale }: Props) {
           catTutorial: 'Tutoriels',
           catSeo: 'Guides SEO',
           catCompare: 'Comparatifs',
+          catSport: 'Sport & Fitness',
+          catDev: 'Développement',
+          catOffice: 'Productivité',
+          catMedia: 'Design & Média',
+          catOps: 'Ops & Croissance',
           resultCount: (n: number) => `${n} articles`,
         };
       case 'ar':
@@ -100,6 +162,11 @@ export default function BlogIndexView({ locale }: Props) {
           catTutorial: 'دروس',
           catSeo: 'أدلة SEO',
           catCompare: 'مقارنات',
+          catSport: 'الرياضة واللياقة',
+          catDev: 'التطوير',
+          catOffice: 'الإنتاجية',
+          catMedia: 'التصميم والوسائط',
+          catOps: 'العمليات والنمو',
           resultCount: (n: number) => `${n} مقالة`,
         };
       default:
@@ -114,16 +181,45 @@ export default function BlogIndexView({ locale }: Props) {
           catTutorial: 'Tutorials',
           catSeo: 'SEO Guides',
           catCompare: 'Comparisons',
+          catSport: 'Fitness',
+          catDev: 'Development',
+          catOffice: 'Productivity',
+          catMedia: 'Design & Media',
+          catOps: 'Ops & Growth',
           resultCount: (n: number) => `${n} articles`,
         };
     }
   }, [locale]);
 
+  const SPORT_TAGS = new Set([
+    'Running','Cycling','Hiking','Yoga','Strength','Swimming','Rehab','Nutrition','Racing','Sports Psychology',
+    '跑步','骑行','徒步登山','瑜伽','力量训练','游泳','康复','营养','赛事','运动心理',
+  ]);
+  const DEV_TAGS = new Set([
+    'Regex','Regex Patterns','Performance','Security','Base64','Case Conversion','JSON','UUID','Timestamps','Markdown',
+    'CSS','JavaScript','Docker','Next.js','API Design',
+    '正则表达式','正则模板','性能优化','安全','Base64 编码','大小写转换','JSON 格式化','UUID 生成','时间戳转换','Markdown 预览',
+    'CSS新特性','JS性能','API设计',
+  ]);
+  const OFFICE_TAGS = new Set([
+    'PDF Tools','PDF','QR Code','AI Office','Time Management','Project Management',
+    'PDF工具','二维码','AI办公','时间管理','项目管理',
+  ]);
+  const MEDIA_TAGS = new Set([
+    'Image','Image Compression','图像处理','图片压缩',
+  ]);
+  const OPS_TAGS = new Set([
+    'SEO','Social Media','Korelyy','Monetization','Compliance','Content Writing',
+    '站内SEO','社媒矩阵','Korelyy运营','变现','跨境合规','内容写作',
+  ]);
+  const primaryTagEn = (p: BlogPost) => String((p.tags[0] as any)?.en || '').trim();
+  const primaryTagZh = (p: BlogPost) => String((p.tags[0] as any)?.zh || '').trim();
+
   const categories = useMemo(() => [
     { id: 'all', label: i18n.catAll, match: () => true },
     { id: 'tutorial', label: i18n.catTutorial, match: (p: BlogPost) => p.tags.some((t) => {
       const v = String(getLocalizedText(t, locale, '')).toLowerCase();
-      return v.includes('tutorial') || v.includes('guide') || v.includes('教程') || v.includes('ट्यूटोरियल') || v.includes('guía') || v.includes('tutoriel') || v.includes('درس');
+      return v.includes('tutorial') || v.includes('guide') || v.includes('教程') || v.includes('ट्यूटोरियल') || v.includes('guía') || v.includes('tutoriel') || v.includes('درس') || v.includes('指南');
     })},
     { id: 'seo', label: i18n.catSeo, match: (p: BlogPost) => p.tags.some((t) => {
       const v = String(getLocalizedText(t, locale, '')).toLowerCase();
@@ -131,8 +227,13 @@ export default function BlogIndexView({ locale }: Props) {
     })},
     { id: 'compare', label: i18n.catCompare, match: (p: BlogPost) => p.tags.some((t) => {
       const v = String(getLocalizedText(t, locale, '')).toLowerCase();
-      return v.includes('vs') || v.includes('compare') || v.includes('comparison') || v.includes('对比') || v.includes('compare') || v.includes('तुलना') || v.includes('comparativa') || v.includes('comparatif') || v.includes('مقارنة');
+      return v.includes('vs') || v.includes('compare') || v.includes('comparison') || v.includes('对比') || v.includes('तुलना') || v.includes('comparativa') || v.includes('comparatif') || v.includes('مقارنة') || v.includes('横评');
     })},
+    { id: 'sport', label: i18n.catSport, match: (p: BlogPost) => SPORT_TAGS.has(primaryTagEn(p)) || SPORT_TAGS.has(primaryTagZh(p)) },
+    { id: 'dev', label: i18n.catDev, match: (p: BlogPost) => DEV_TAGS.has(primaryTagEn(p)) || DEV_TAGS.has(primaryTagZh(p)) },
+    { id: 'office', label: i18n.catOffice, match: (p: BlogPost) => OFFICE_TAGS.has(primaryTagEn(p)) || OFFICE_TAGS.has(primaryTagZh(p)) },
+    { id: 'media', label: i18n.catMedia, match: (p: BlogPost) => MEDIA_TAGS.has(primaryTagEn(p)) || MEDIA_TAGS.has(primaryTagZh(p)) },
+    { id: 'ops', label: i18n.catOps, match: (p: BlogPost) => OPS_TAGS.has(primaryTagEn(p)) || OPS_TAGS.has(primaryTagZh(p)) },
   ], [locale, i18n]);
 
   const filteredPosts = useMemo(() => {
@@ -233,11 +334,32 @@ export default function BlogIndexView({ locale }: Props) {
       ) : null}
 
       {loaded && filteredPosts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3 lg:gap-4">
-          {filteredPosts.map((post) => (
-            <BlogPostCard key={post.slug} post={post} locale={locale} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3 lg:gap-4">
+            {filteredPosts.slice(0, visibleCount).map((post) => (
+              <BlogPostCard key={post.slug} post={post} locale={locale} />
+            ))}
+          </div>
+          {visibleCount < filteredPosts.length ? (
+            <div ref={sentinelRef} className="mt-5 sm:mt-7" aria-hidden="true">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3 lg:gap-4">
+                {Array.from({ length: Math.min(3, filteredPosts.length - visibleCount) }).map((_, i) => (
+                  <div key={i} className="rounded-2xl border border-gray-200/80 dark:border-gray-800/80 bg-white dark:bg-gray-900/50 p-3 sm:p-4 flex flex-col h-full min-h-[260px] animate-pulse">
+                    <div className="h-32 sm:h-36 rounded-xl bg-gray-200 dark:bg-gray-800 mb-3 sm:mb-4" />
+                    <div className="h-4 w-1/2 bg-gray-200 dark:bg-gray-800 rounded mb-2" />
+                    <div className="h-5 w-full bg-gray-300 dark:bg-gray-700 rounded mb-2" />
+                    <div className="h-4 w-full bg-gray-200 dark:bg-gray-800 rounded mb-1.5" />
+                    <div className="h-4 w-4/5 bg-gray-200 dark:bg-gray-800 rounded mb-3 mt-auto" />
+                    <div className="flex items-center justify-between">
+                      <div className="h-6 w-20 bg-gray-100 dark:bg-gray-800 rounded-full" />
+                      <div className="h-8 w-24 bg-indigo-100 dark:bg-indigo-900/30 rounded-full" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
+        </>
       ) : null}
     </div>
   );

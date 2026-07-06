@@ -535,11 +535,23 @@ export const RootJsonLd = React.memo(function RootJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Korelyy',
+    alternateName: ['Korelyy Tools', 'Korelyy 工具库', 'كورلي'],
     url: SITE_URL,
-    logo: `${SITE_URL}/favicon.svg`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/og-image.png`,
+      width: 1200,
+      height: 630,
+    },
+    foundingDate: '2025',
     sameAs: [
       'https://twitter.com/korelyy',
     ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      availableLanguage: ['English', 'Chinese', 'Spanish', 'French', 'Hindi', 'Arabic'],
+    },
   };
   const website = {
     '@context': 'https://schema.org',
@@ -549,9 +561,10 @@ export const RootJsonLd = React.memo(function RootJsonLd() {
     url: SITE_URL,
     inLanguage: 'en',
     availableLanguage: ['en', 'zh-CN', 'es', 'hi', 'fr', 'ar-SA'],
+    publisher: { '@type': 'Organization', name: 'Korelyy', url: SITE_URL },
     potentialAction: {
       '@type': 'SearchAction',
-      target: `${SITE_URL}/en/?q={search_term_string}`,
+      target: `${SITE_URL}/en/tools/?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   };

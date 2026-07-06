@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
  * 构建时预生成静态数据子集脚本
  * 运行：node scripts/build-data-bundles.cjs

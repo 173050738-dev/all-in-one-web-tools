@@ -6,6 +6,7 @@ export interface Env {
   BCRYPT_PEPPER: string;
   JWT_ISSUER?: string;
   ACCESS_TOKEN_TTL_SEC?: string;
+  RESET_TOKEN_TTL_SEC?: string;
   GOOGLE_OAUTH_CLIENT_ID?: string;
   DEBUG_AUTH_ENABLED?: string;
   DEBUG_AUTH_TOKEN?: string;
@@ -109,6 +110,92 @@ async function verifyPassword(password: string, stored: string, pepper = ''): Pr
   let diff = 0;
   for (let i = 0; i < actual.length; i++) diff |= actual[i] ^ expected[i];
   return diff === 0;
+}
+
+async function sha256Hex(s: string): Promise<string> {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+// ---------- Google id_token JWT (RS256) signature verification via JWKS ----------
+interface JwksCacheEntry { keys: Map<string, CryptoKey>; expiresAt: number }
+const jwksCache: { value: JwksCacheEntry | null } = { value: null };
+
+async function getGoogleJwkByKid(kid: string): Promise<CryptoKey | null> {
+  const now = Date.now();
+  if (!jwksCache.value || jwksCache.value.expiresAt < now) {
+    try {
+      const resp = await fetch('https://www.googleapis.com/oauth2/v3/certs', {
+        cf: { cacheTtl: 21600, cacheEverything: true },
+      });
+      if (!resp.ok) return null;
+      const data = (await resp.json()) as { keys: Array<{ kid: string; kty: string; n: string; e: string; alg: string; use: string }> };
+      const keyMap = new Map<string, CryptoKey>();
+      for (const k of data.keys || []) {
+        if (k.kty !== 'RSA' || k.use !== 'sig' || k.alg !== 'RS256') continue;
+        try {
+          const jwk = { kty: 'RSA', n: k.n, e: k.e, alg: 'RS256', ext: true };
+          const cryptoKey = await crypto.subtle.importKey(
+            'jwk',
+            jwk as any,
+            { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+            false,
+            ['verify']
+          );
+          if (k.kid) keyMap.set(k.kid, cryptoKey);
+        } catch {
+          /* ignore import failures */
+        }
+      }
+      jwksCache.value = { keys: keyMap, expiresAt: now + 6 * 3600 * 1000 };
+    } catch {
+      return null;
+    }
+  }
+  return jwksCache.value.keys.get(kid) || null;
+}
+
+async function verifyGoogleIdToken(idToken: string, expectedAud: string): Promise<{ valid: boolean; payload: any; reason?: string }> {
+  const segments = idToken.split('.');
+  if (segments.length !== 3) return { valid: false, payload: null, reason: 'SEGMENTS' };
+  const [headB64, bodyB64, sigB64] = segments;
+  let header: any = null;
+  let payload: any = null;
+  try {
+    header = JSON.parse(new TextDecoder().decode(b64UrlDecode(headB64)));
+    payload = JSON.parse(new TextDecoder().decode(b64UrlDecode(bodyB64)));
+  } catch {
+    return { valid: false, payload: null, reason: 'DECODE' };
+  }
+  if (!header || typeof header !== 'object') return { valid: false, payload, reason: 'HEADER' };
+  if (!payload || typeof payload !== 'object') return { valid: false, payload, reason: 'PAYLOAD' };
+  const now = Math.floor(Date.now() / 1000);
+  if (header.alg !== 'RS256') return { valid: false, payload, reason: 'ALG' };
+  if (payload.iss !== 'https://accounts.google.com' && payload.iss !== 'accounts.google.com') {
+    return { valid: false, payload, reason: 'ISS' };
+  }
+  if (payload.aud !== expectedAud && !(Array.isArray(payload.aud) && payload.aud.includes(expectedAud))) {
+    return { valid: false, payload, reason: 'AUD' };
+  }
+  if (payload.exp && payload.exp < now) return { valid: false, payload, reason: 'EXP' };
+  if (payload.iat && payload.iat > now + 60) return { valid: false, payload, reason: 'IAT' };
+  const kid = typeof header.kid === 'string' ? header.kid : '';
+  if (!kid) return { valid: false, payload, reason: 'KID' };
+  const key = await getGoogleJwkByKid(kid);
+  if (!key) return { valid: false, payload, reason: 'NO_KEY' };
+  try {
+    const signedPart = `${headB64}.${bodyB64}`;
+    const sigOk = await crypto.subtle.verify(
+      'RSASSA-PKCS1-v1_5',
+      key,
+      b64UrlDecode(sigB64),
+      new TextEncoder().encode(signedPart)
+    );
+    if (!sigOk) return { valid: false, payload, reason: 'SIG' };
+  } catch {
+    return { valid: false, payload, reason: 'SIG_ERR' };
+  }
+  return { valid: true, payload };
 }
 
 // ---------- JWT HS256 via WebCrypto HMAC ----------
@@ -377,10 +464,243 @@ async function syncFavoritesBatch(env: Env, uid: string, body: any): Promise<Res
   return getFavorites(env, uid);
 }
 
-// ---------- Google OAuth placeholder ----------
+// ---------- Health check ----------
+async function handleHealth(env: Env): Promise<Response> {
+  let dbOk = true;
+  try {
+    await env.DB.prepare('SELECT 1 AS x').first<any>();
+  } catch {
+    dbOk = false;
+  }
+  return json({
+    ok: true,
+    service: 'korelyy-auth-api',
+    version: '1.1.0-worker',
+    db_connected: dbOk,
+    pbkdf2_iter: PBKDF2_ITER,
+    server_time: Math.floor(Date.now() / 1000),
+  });
+}
+
+// ---------- Google OAuth via id_token (GIS SDK flow) ----------
 async function handleGoogleAuth(request: Request, env: Env, ip: string): Promise<Response> {
   if (!env.GOOGLE_OAUTH_CLIENT_ID) return json({ ok: false, error: 'GOOGLE_NOT_CONFIGURED' }, 501);
-  return json({ ok: false, error: 'OAUTH_COMING_SOON' }, 501);
+  if (!rateLimit(ip, 'auth:google', 10, 600)) return json({ ok: false, error: 'RATE_LIMITED' }, 429);
+  const body = (await request.json().catch(() => null)) as any;
+  const idToken = typeof body?.idToken === 'string' ? body.idToken.trim() : '';
+  if (!idToken) return json({ ok: false, error: 'BAD_BODY' }, 400);
+
+  const v = await verifyGoogleIdToken(idToken, env.GOOGLE_OAUTH_CLIENT_ID);
+  if (!v.valid || !v.payload) {
+    const reason = v.reason || 'INVALID';
+    const map: Record<string, string> = {
+      SEGMENTS: 'GOOGLE_BAD_TOKEN', DECODE: 'GOOGLE_BAD_TOKEN', HEADER: 'GOOGLE_BAD_TOKEN',
+      PAYLOAD: 'GOOGLE_BAD_TOKEN', ALG: 'GOOGLE_BAD_ALG', ISS: 'GOOGLE_BAD_ISSUER',
+      AUD: 'GOOGLE_BAD_AUDIENCE', EXP: 'GOOGLE_TOKEN_EXPIRED', IAT: 'GOOGLE_TOKEN_NOT_YET',
+      KID: 'GOOGLE_BAD_KID', NO_KEY: 'GOOGLE_NO_KEY', SIG: 'GOOGLE_BAD_SIGNATURE',
+      SIG_ERR: 'GOOGLE_BAD_SIGNATURE', INVALID: 'GOOGLE_BAD_TOKEN',
+    };
+    return json({ ok: false, error: map[reason] || 'GOOGLE_BAD_TOKEN', detail: reason }, 400);
+  }
+  const payload = v.payload;
+  const email = typeof payload.email === 'string' ? payload.email.trim() : '';
+  const emailVerified = payload.email_verified === true || payload.email_verified === 'true';
+  const googleSub = typeof payload.sub === 'string' ? payload.sub : '';
+  if (!isValidEmail(email) || !googleSub) {
+    return json({ ok: false, error: 'GOOGLE_BAD_PROFILE' }, 400);
+  }
+
+  const emailNorm = normalizeEmail(email);
+  const locale = typeof body.locale === 'string' && ['en', 'zh', 'es', 'hi', 'fr', 'ar'].includes(body.locale) ? body.locale : 'en';
+  const displayName = (typeof payload.name === 'string' && payload.name.trim()) ? payload.name.trim().slice(0, 64) : email.split('@')[0].slice(0, 32);
+  const avatarUrl = typeof payload.picture === 'string' ? payload.picture : null;
+  const ttl = parseInt(env.ACCESS_TOKEN_TTL_SEC || '604800', 10);
+
+  let row = await env.DB
+    .prepare('SELECT id, email, email_normalized, password_hash, display_name, locale, auth_provider, created_at, subscription_tier, is_banned, google_sub FROM users WHERE google_sub = ? OR email_normalized = ?')
+    .bind(googleSub, emailNorm)
+    .first<any>();
+
+  const nowTs = Math.floor(Date.now() / 1000);
+  let userId: string;
+
+  if (!row) {
+    userId = uid();
+    await env.DB
+      .prepare(
+        'INSERT INTO users (id, email, email_normalized, password_hash, display_name, locale, avatar_url, auth_provider, google_sub, email_verified_at, created_at, updated_at, last_login_at, last_login_ip) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)'
+      )
+      .bind(userId, email, emailNorm, 'oauth:google', displayName, locale, avatarUrl, 'google', googleSub, emailVerified ? nowTs : null, nowTs, nowTs, nowTs, ip)
+      .run();
+  } else {
+    if (row.is_banned === 1) return json({ ok: false, error: 'BANNED' }, 403);
+    userId = row.id;
+    const updateFields: string[] = [];
+    const bindVals: any[] = [];
+    if (!row.google_sub && googleSub) { updateFields.push('google_sub = ?'); bindVals.push(googleSub); }
+    if (row.auth_provider !== 'google') { updateFields.push('auth_provider = ?'); bindVals.push('google'); }
+    if (!row.display_name && displayName) { updateFields.push('display_name = ?'); bindVals.push(displayName); }
+    if (!row.avatar_url && avatarUrl) { updateFields.push('avatar_url = ?'); bindVals.push(avatarUrl); }
+    if (emailVerified && !row.email_verified_at) { updateFields.push('email_verified_at = ?'); bindVals.push(nowTs); }
+    updateFields.push('last_login_at = ?'); bindVals.push(nowTs);
+    updateFields.push('last_login_ip = ?'); bindVals.push(ip);
+    updateFields.push('updated_at = ?'); bindVals.push(nowTs);
+    bindVals.push(userId);
+    if (updateFields.length) {
+      await env.DB.prepare(`UPDATE users SET ${updateFields.join(', ')} WHERE id = ?`).bind(...bindVals).run();
+    }
+  }
+
+  const fresh = await env.DB
+    .prepare('SELECT id, email, display_name, locale, auth_provider, created_at, subscription_tier, email_verified_at FROM users WHERE id = ?')
+    .bind(userId)
+    .first<any>();
+
+  const token = await signJwt({ sub: userId, claims: { prv: 'google' } }, env.JWT_SECRET, ttl, env.JWT_ISSUER || 'korelyy.com');
+  return json({
+    ok: true,
+    token,
+    user: mePayload(fresh.id, fresh.email, fresh.display_name, fresh.locale, fresh.auth_provider, fresh.created_at, fresh.subscription_tier, !!fresh.email_verified_at),
+  });
+}
+
+// ---------- Password reset request (forgot) ----------
+async function handleForgotPassword(request: Request, env: Env, ip: string): Promise<Response> {
+  if (!rateLimit(ip, 'auth:forgot', 5, 600)) return json({ ok: false, error: 'RATE_LIMITED' }, 429);
+  const body = (await request.json().catch(() => null)) as any;
+  const email = typeof body?.email === 'string' ? body.email.trim() : '';
+  if (!isValidEmail(email)) return json({ ok: false, error: 'INVALID_EMAIL' }, 400);
+  const emailNorm = normalizeEmail(email);
+  const user = await env.DB.prepare('SELECT id, auth_provider FROM users WHERE email_normalized = ?').bind(emailNorm).first<any>();
+
+  if (!user) {
+    await new Promise((r) => setTimeout(r, 400));
+    return json({ ok: true, message: 'RESET_LINK_SENT_SIMULATED' });
+  }
+  if (user.auth_provider !== 'email') {
+    return json({ ok: false, error: 'WRONG_PROVIDER' }, 400);
+  }
+
+  const tokenRaw = new Uint8Array(32);
+  crypto.getRandomValues(tokenRaw);
+  const token = b64Url(tokenRaw);
+  const nowTs = Math.floor(Date.now() / 1000);
+  const ttl = parseInt(env.RESET_TOKEN_TTL_SEC || '900', 10);
+  const expiresAt = nowTs + ttl;
+
+  await env.DB.prepare('DELETE FROM password_reset_tokens WHERE user_id = ?').bind(user.id).run();
+  await env.DB
+    .prepare('INSERT INTO password_reset_tokens (token_hash, user_id, created_at, expires_at, ip_address) VALUES (?,?,?,?,?)')
+    .bind(await sha256Hex(token), user.id, nowTs, expiresAt, ip)
+    .run();
+
+  return json({ ok: true, message: 'RESET_LINK_READY', reset_token: token, expires_in: ttl });
+}
+
+// ---------- Password reset confirmation ----------
+async function handleResetPassword(request: Request, env: Env, ip: string): Promise<Response> {
+  if (!rateLimit(ip, 'auth:reset', 5, 600)) return json({ ok: false, error: 'RATE_LIMITED' }, 429);
+  const body = (await request.json().catch(() => null)) as any;
+  const token = typeof body?.token === 'string' ? body.token.trim() : '';
+  const newPassword = typeof body?.password === 'string' ? body.password : '';
+  if (!token) return json({ ok: false, error: 'MISSING_TOKEN' }, 400);
+  if (newPassword.length < 8) return json({ ok: false, error: 'PASSWORD_TOO_SHORT' }, 400);
+  if (newPassword.length > 128) return json({ ok: false, error: 'PASSWORD_TOO_LONG' }, 400);
+
+  const tokenHash = await sha256Hex(token);
+  const nowTs = Math.floor(Date.now() / 1000);
+  const row = await env.DB
+    .prepare('SELECT id, user_id, expires_at, used_at FROM password_reset_tokens WHERE token_hash = ?')
+    .bind(tokenHash)
+    .first<any>();
+
+  if (!row) return json({ ok: false, error: 'RESET_TOKEN_INVALID' }, 400);
+  if (row.used_at) return json({ ok: false, error: 'RESET_TOKEN_USED' }, 400);
+  if (row.expires_at < nowTs) return json({ ok: false, error: 'RESET_TOKEN_EXPIRED' }, 400);
+
+  const user = await env.DB.prepare('SELECT id, is_banned FROM users WHERE id = ?').bind(row.user_id).first<any>();
+  if (!user) return json({ ok: false, error: 'USER_GONE' }, 404);
+  if (user.is_banned === 1) return json({ ok: false, error: 'BANNED' }, 403);
+
+  const pwHash = await hashPassword(newPassword, env.BCRYPT_PEPPER || '');
+  await env.DB.prepare('UPDATE users SET password_hash = ?, updated_at = ? WHERE id = ?').bind(pwHash, nowTs, row.user_id).run();
+  await env.DB.prepare('UPDATE password_reset_tokens SET used_at = ?, used_ip = ? WHERE id = ?').bind(nowTs, ip, row.id).run();
+
+  return json({ ok: true, message: 'PASSWORD_RESET_OK' });
+}
+
+// ---------- Profile update (display_name, locale) ----------
+async function handleUpdateProfile(request: Request, env: Env, uid: string): Promise<Response> {
+  const body = (await request.json().catch(() => null)) as any;
+  if (!body) return json({ ok: false, error: 'BAD_BODY' }, 400);
+
+  const nowTs = Math.floor(Date.now() / 1000);
+  const updates: string[] = [];
+  const binds: any[] = [];
+
+  if (typeof body.display_name === 'string') {
+    const name = body.display_name.trim().slice(0, 64);
+    updates.push('display_name = ?');
+    binds.push(name || null);
+  }
+  if (typeof body.locale === 'string' && ['en', 'zh', 'es', 'hi', 'fr', 'ar'].includes(body.locale)) {
+    updates.push('locale = ?');
+    binds.push(body.locale);
+  }
+
+  if (updates.length === 0) {
+    const u = await env.DB
+      .prepare('SELECT id, email, display_name, locale, auth_provider, created_at, subscription_tier, email_verified_at FROM users WHERE id = ?')
+      .bind(uid)
+      .first<any>();
+    if (!u) return json({ ok: false, error: 'USER_GONE' }, 404);
+    return json({ ok: true, user: mePayload(u.id, u.email, u.display_name, u.locale, u.auth_provider, u.created_at, u.subscription_tier, !!u.email_verified_at) });
+  }
+
+  updates.push('updated_at = ?');
+  binds.push(nowTs);
+  binds.push(uid);
+
+  await env.DB.prepare(`UPDATE users SET ${updates.join(', ')} WHERE id = ?`).bind(...binds).run();
+
+  const u = await env.DB
+    .prepare('SELECT id, email, display_name, locale, auth_provider, created_at, subscription_tier, email_verified_at FROM users WHERE id = ?')
+    .bind(uid)
+    .first<any>();
+  if (!u) return json({ ok: false, error: 'USER_GONE' }, 404);
+  return json({ ok: true, user: mePayload(u.id, u.email, u.display_name, u.locale, u.auth_provider, u.created_at, u.subscription_tier, !!u.email_verified_at) });
+}
+
+// ---------- Change password (with old password verification) ----------
+async function handleChangePassword(request: Request, env: Env, uid: string, ip: string): Promise<Response> {
+  if (!rateLimit(ip, 'auth:change-pw', 10, 600)) return json({ ok: false, error: 'RATE_LIMITED' }, 429);
+  const body = (await request.json().catch(() => null)) as any;
+  if (!body) return json({ ok: false, error: 'BAD_BODY' }, 400);
+
+  const oldPassword = typeof body.old_password === 'string' ? body.old_password : '';
+  const newPassword = typeof body.new_password === 'string' ? body.new_password : '';
+
+  if (newPassword.length < 8) return json({ ok: false, error: 'PASSWORD_TOO_SHORT' }, 400);
+  if (newPassword.length > 128) return json({ ok: false, error: 'PASSWORD_TOO_LONG' }, 400);
+  if (!oldPassword) return json({ ok: false, error: 'OLD_PASSWORD_REQUIRED' }, 400);
+  if (oldPassword === newPassword) return json({ ok: false, error: 'SAME_PASSWORD' }, 400);
+
+  const row = await env.DB
+    .prepare('SELECT id, password_hash, auth_provider, is_banned FROM users WHERE id = ?')
+    .bind(uid)
+    .first<any>();
+  if (!row) return json({ ok: false, error: 'USER_GONE' }, 404);
+  if (row.is_banned === 1) return json({ ok: false, error: 'BANNED' }, 403);
+  if (row.auth_provider !== 'email') return json({ ok: false, error: 'WRONG_PROVIDER' }, 400);
+
+  const ok = await verifyPassword(oldPassword, row.password_hash, env.BCRYPT_PEPPER || '');
+  if (!ok) return json({ ok: false, error: 'INVALID_CREDENTIALS' }, 401);
+
+  const nowTs = Math.floor(Date.now() / 1000);
+  const pwHash = await hashPassword(newPassword, env.BCRYPT_PEPPER || '');
+  await env.DB.prepare('UPDATE users SET password_hash = ?, updated_at = ? WHERE id = ?').bind(pwHash, nowTs, uid).run();
+
+  return json({ ok: true, message: 'PASSWORD_CHANGED' });
 }
 
 // ---------- Router ----------
@@ -459,11 +779,14 @@ export default {
       }
 
       // Auth routes
+      if (path === '/api/auth/health' && request.method === 'GET') return jsonWrap(await handleHealth(env), corsH);
       if (path === '/api/auth/register' && request.method === 'POST') return jsonWrap(await handleRegister(request, env, ip), corsH);
       if (path === '/api/auth/login' && request.method === 'POST') return jsonWrap(await handleLogin(request, env, ip), corsH);
       if (path === '/api/auth/me' && request.method === 'GET') return jsonWrap(await handleMe(request, env), corsH);
       if (path === '/api/auth/logout' && (request.method === 'POST' || request.method === 'GET')) return jsonWrap(await handleLogout(), corsH);
       if (path === '/api/auth/google' && request.method === 'POST') return jsonWrap(await handleGoogleAuth(request, env, ip), corsH);
+      if (path === '/api/auth/password/forgot' && request.method === 'POST') return jsonWrap(await handleForgotPassword(request, env, ip), corsH);
+      if (path === '/api/auth/password/reset' && request.method === 'POST') return jsonWrap(await handleResetPassword(request, env, ip), corsH);
 
       // Favorites routes (authed only)
       const authedPrefix = '/api/auth';
@@ -478,6 +801,12 @@ export default {
         if (path === '/api/auth/favorites/sync' && request.method === 'POST') {
           const body = (await request.json().catch(() => null)) as any;
           return jsonWrap(await syncFavoritesBatch(env, uid, body), corsH);
+        }
+        if (path === '/api/auth/profile/update' && (request.method === 'POST' || request.method === 'PUT')) {
+          return jsonWrap(await handleUpdateProfile(request, env, uid), corsH);
+        }
+        if (path === '/api/auth/password/change' && (request.method === 'POST' || request.method === 'PUT')) {
+          return jsonWrap(await handleChangePassword(request, env, uid, ip), corsH);
         }
         return jsonWrap(json({ ok: false, error: 'NOT_FOUND' }, 404), corsH);
       }

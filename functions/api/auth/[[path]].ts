@@ -25,6 +25,7 @@ export interface Env {
   JWT_ISSUER?: string;
   ACCESS_TOKEN_TTL_SEC?: string;
   GOOGLE_OAUTH_CLIENT_ID?: string;
+  RESET_TOKEN_TTL_SEC?: string;
   DEBUG_AUTH_ENABLED?: string;
   DEBUG_AUTH_TOKEN?: string;
 }
@@ -409,7 +410,230 @@ async function syncFavoritesBatch(env: Env, uid: string, body: any): Promise<Res
 
 async function handleGoogleAuth(request: Request, env: Env, ip: string): Promise<Response> {
   if (!env.GOOGLE_OAUTH_CLIENT_ID) return json({ ok: false, error: 'GOOGLE_NOT_CONFIGURED' }, 501);
-  return json({ ok: false, error: 'OAUTH_COMING_SOON' }, 501);
+  if (!rateLimit(ip, 'auth:google', 10, 600)) return json({ ok: false, error: 'RATE_LIMITED' }, 429);
+  const body = (await request.json().catch(() => null)) as any;
+  const idToken = typeof body?.idToken === 'string' ? body.idToken.trim() : '';
+  if (!idToken) return json({ ok: false, error: 'BAD_BODY' }, 400);
+
+  let payload: any = null;
+  try {
+    const segments = idToken.split('.');
+    if (segments.length !== 3) return json({ ok: false, error: 'GOOGLE_BAD_TOKEN' }, 400);
+    payload = JSON.parse(new TextDecoder().decode(b64UrlDecode(segments[1])));
+  } catch {
+    return json({ ok: false, error: 'GOOGLE_BAD_TOKEN' }, 400);
+  }
+
+  const now = Math.floor(Date.now() / 1000);
+  if (!payload || typeof payload !== 'object') return json({ ok: false, error: 'GOOGLE_BAD_TOKEN' }, 400);
+  if (payload.iss !== 'https://accounts.google.com' && payload.iss !== 'accounts.google.com') {
+    return json({ ok: false, error: 'GOOGLE_BAD_ISSUER' }, 400);
+  }
+  if (payload.aud !== env.GOOGLE_OAUTH_CLIENT_ID) {
+    return json({ ok: false, error: 'GOOGLE_BAD_AUDIENCE' }, 400);
+  }
+  if (payload.exp && payload.exp < now) {
+    return json({ ok: false, error: 'GOOGLE_TOKEN_EXPIRED' }, 400);
+  }
+  const email = typeof payload.email === 'string' ? payload.email.trim() : '';
+  const emailVerified = payload.email_verified === true || payload.email_verified === 'true';
+  const googleSub = typeof payload.sub === 'string' ? payload.sub : '';
+  if (!isValidEmail(email) || !googleSub) {
+    return json({ ok: false, error: 'GOOGLE_BAD_PROFILE' }, 400);
+  }
+
+  const emailNorm = normalizeEmail(email);
+  const locale = typeof body.locale === 'string' && ['en', 'zh', 'es', 'hi', 'fr', 'ar'].includes(body.locale) ? body.locale : 'en';
+  const displayName = (typeof payload.name === 'string' && payload.name.trim()) ? payload.name.trim().slice(0, 64) : email.split('@')[0].slice(0, 32);
+  const avatarUrl = typeof payload.picture === 'string' ? payload.picture : null;
+  const ttl = parseInt(env.ACCESS_TOKEN_TTL_SEC || '604800', 10);
+
+  let row = await env.DB
+    .prepare('SELECT id, email, email_normalized, password_hash, display_name, locale, auth_provider, created_at, subscription_tier, is_banned, google_sub FROM users WHERE google_sub = ? OR email_normalized = ?')
+    .bind(googleSub, emailNorm)
+    .first<any>();
+
+  const nowTs = Math.floor(Date.now() / 1000);
+  let userId: string;
+
+  if (!row) {
+    userId = uid();
+    await env.DB
+      .prepare(
+        'INSERT INTO users (id, email, email_normalized, password_hash, display_name, locale, avatar_url, auth_provider, google_sub, email_verified_at, created_at, updated_at, last_login_at, last_login_ip) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)'
+      )
+      .bind(userId, email, emailNorm, 'oauth:google', displayName, locale, avatarUrl, 'google', googleSub, emailVerified ? nowTs : null, nowTs, nowTs, nowTs, ip)
+      .run();
+  } else {
+    if (row.is_banned === 1) return json({ ok: false, error: 'BANNED' }, 403);
+    userId = row.id;
+    const updateFields: string[] = [];
+    const bindVals: any[] = [];
+    if (!row.google_sub && googleSub) { updateFields.push('google_sub = ?'); bindVals.push(googleSub); }
+    if (row.auth_provider !== 'google') { updateFields.push('auth_provider = ?'); bindVals.push('google'); }
+    if (!row.display_name && displayName) { updateFields.push('display_name = ?'); bindVals.push(displayName); }
+    if (!row.avatar_url && avatarUrl) { updateFields.push('avatar_url = ?'); bindVals.push(avatarUrl); }
+    if (emailVerified && !row.email_verified_at) { updateFields.push('email_verified_at = ?'); bindVals.push(nowTs); }
+    updateFields.push('last_login_at = ?'); bindVals.push(nowTs);
+    updateFields.push('last_login_ip = ?'); bindVals.push(ip);
+    updateFields.push('updated_at = ?'); bindVals.push(nowTs);
+    bindVals.push(userId);
+    if (updateFields.length) {
+      await env.DB.prepare(`UPDATE users SET ${updateFields.join(', ')} WHERE id = ?`).bind(...bindVals).run();
+    }
+  }
+
+  const fresh = await env.DB
+    .prepare('SELECT id, email, display_name, locale, auth_provider, created_at, subscription_tier, email_verified_at FROM users WHERE id = ?')
+    .bind(userId)
+    .first<any>();
+
+  const token = await signJwt({ sub: userId, claims: { prv: 'google' } }, env.JWT_SECRET, ttl, env.JWT_ISSUER || 'korelyy.com');
+  return json({
+    ok: true,
+    token,
+    user: mePayload(fresh.id, fresh.email, fresh.display_name, fresh.locale, fresh.auth_provider, fresh.created_at, fresh.subscription_tier, !!fresh.email_verified_at),
+  });
+}
+
+async function handleForgotPassword(request: Request, env: Env, ip: string): Promise<Response> {
+  if (!rateLimit(ip, 'auth:forgot', 5, 600)) return json({ ok: false, error: 'RATE_LIMITED' }, 429);
+  const body = (await request.json().catch(() => null)) as any;
+  const email = typeof body?.email === 'string' ? body.email.trim() : '';
+  if (!isValidEmail(email)) return json({ ok: false, error: 'INVALID_EMAIL' }, 400);
+  const emailNorm = normalizeEmail(email);
+  const user = await env.DB.prepare('SELECT id, auth_provider FROM users WHERE email_normalized = ?').bind(emailNorm).first<any>();
+
+  if (!user) {
+    await new Promise((r) => setTimeout(r, 400));
+    return json({ ok: true, message: 'RESET_LINK_SENT_SIMULATED' });
+  }
+  if (user.auth_provider !== 'email') {
+    return json({ ok: false, error: 'WRONG_PROVIDER' }, 400);
+  }
+
+  const tokenRaw = new Uint8Array(32);
+  crypto.getRandomValues(tokenRaw);
+  const token = b64Url(tokenRaw);
+  const nowTs = Math.floor(Date.now() / 1000);
+  const ttl = parseInt(env.RESET_TOKEN_TTL_SEC || '900', 10);
+  const expiresAt = nowTs + ttl;
+
+  await env.DB.prepare('DELETE FROM password_reset_tokens WHERE user_id = ?').bind(user.id).run();
+  await env.DB
+    .prepare('INSERT INTO password_reset_tokens (token_hash, user_id, created_at, expires_at, ip_address) VALUES (?,?,?,?,?)')
+    .bind(await sha256Hex(token), user.id, nowTs, expiresAt, ip)
+    .run();
+
+  return json({ ok: true, message: 'RESET_LINK_READY', reset_token: token, expires_in: ttl });
+}
+
+async function handleResetPassword(request: Request, env: Env, ip: string): Promise<Response> {
+  if (!rateLimit(ip, 'auth:reset', 5, 600)) return json({ ok: false, error: 'RATE_LIMITED' }, 429);
+  const body = (await request.json().catch(() => null)) as any;
+  const token = typeof body?.token === 'string' ? body.token.trim() : '';
+  const newPassword = typeof body?.password === 'string' ? body.password : '';
+  if (!token) return json({ ok: false, error: 'MISSING_TOKEN' }, 400);
+  if (newPassword.length < 8) return json({ ok: false, error: 'PASSWORD_TOO_SHORT' }, 400);
+  if (newPassword.length > 128) return json({ ok: false, error: 'PASSWORD_TOO_LONG' }, 400);
+
+  const tokenHash = await sha256Hex(token);
+  const nowTs = Math.floor(Date.now() / 1000);
+  const row = await env.DB
+    .prepare('SELECT id, user_id, expires_at, used_at FROM password_reset_tokens WHERE token_hash = ?')
+    .bind(tokenHash)
+    .first<any>();
+
+  if (!row) return json({ ok: false, error: 'RESET_TOKEN_INVALID' }, 400);
+  if (row.used_at) return json({ ok: false, error: 'RESET_TOKEN_USED' }, 400);
+  if (row.expires_at < nowTs) return json({ ok: false, error: 'RESET_TOKEN_EXPIRED' }, 400);
+
+  const user = await env.DB.prepare('SELECT id, is_banned FROM users WHERE id = ?').bind(row.user_id).first<any>();
+  if (!user) return json({ ok: false, error: 'USER_GONE' }, 404);
+  if (user.is_banned === 1) return json({ ok: false, error: 'BANNED' }, 403);
+
+  const pwHash = await hashPassword(newPassword, env.BCRYPT_PEPPER || '');
+  await env.DB.prepare('UPDATE users SET password_hash = ?, updated_at = ? WHERE id = ?').bind(pwHash, nowTs, row.user_id).run();
+  await env.DB.prepare('UPDATE password_reset_tokens SET used_at = ?, used_ip = ? WHERE id = ?').bind(nowTs, ip, row.id).run();
+
+  return json({ ok: true, message: 'PASSWORD_RESET_OK' });
+}
+
+async function handleUpdateProfile(request: Request, env: Env, uid: string): Promise<Response> {
+  const body = (await request.json().catch(() => null)) as any;
+  if (!body) return json({ ok: false, error: 'BAD_BODY' }, 400);
+
+  const nowTs = Math.floor(Date.now() / 1000);
+  const updates: string[] = [];
+  const binds: any[] = [];
+
+  if (typeof body.display_name === 'string') {
+    const name = body.display_name.trim().slice(0, 64);
+    updates.push('display_name = ?');
+    binds.push(name || null);
+  }
+  if (typeof body.locale === 'string' && ['en', 'zh', 'es', 'hi', 'fr', 'ar'].includes(body.locale)) {
+    updates.push('locale = ?');
+    binds.push(body.locale);
+  }
+
+  if (updates.length === 0) {
+    const u = await env.DB
+      .prepare('SELECT id, email, display_name, locale, auth_provider, created_at, subscription_tier, email_verified_at FROM users WHERE id = ?')
+      .bind(uid)
+      .first<any>();
+    if (!u) return json({ ok: false, error: 'USER_GONE' }, 404);
+    return json({ ok: true, user: mePayload(u.id, u.email, u.display_name, u.locale, u.auth_provider, u.created_at, u.subscription_tier, !!u.email_verified_at) });
+  }
+
+  updates.push('updated_at = ?');
+  binds.push(nowTs);
+  binds.push(uid);
+
+  await env.DB.prepare(`UPDATE users SET ${updates.join(', ')} WHERE id = ?`).bind(...binds).run();
+
+  const u = await env.DB
+    .prepare('SELECT id, email, display_name, locale, auth_provider, created_at, subscription_tier, email_verified_at FROM users WHERE id = ?')
+    .bind(uid)
+    .first<any>();
+  if (!u) return json({ ok: false, error: 'USER_GONE' }, 404);
+  return json({ ok: true, user: mePayload(u.id, u.email, u.display_name, u.locale, u.auth_provider, u.created_at, u.subscription_tier, !!u.email_verified_at) });
+}
+
+async function handleChangePassword(request: Request, env: Env, uid: string, ip: string): Promise<Response> {
+  if (!rateLimit(ip, 'auth:change-pw', 10, 600)) return json({ ok: false, error: 'RATE_LIMITED' }, 429);
+  const body = (await request.json().catch(() => null)) as any;
+  if (!body) return json({ ok: false, error: 'BAD_BODY' }, 400);
+
+  const oldPassword = typeof body.old_password === 'string' ? body.old_password : '';
+  const newPassword = typeof body.new_password === 'string' ? body.new_password : '';
+
+  if (newPassword.length < 8) return json({ ok: false, error: 'PASSWORD_TOO_SHORT' }, 400);
+  if (newPassword.length > 128) return json({ ok: false, error: 'PASSWORD_TOO_LONG' }, 400);
+  if (!oldPassword) return json({ ok: false, error: 'OLD_PASSWORD_REQUIRED' }, 400);
+  if (oldPassword === newPassword) return json({ ok: false, error: 'SAME_PASSWORD' }, 400);
+
+  const row = await env.DB
+    .prepare('SELECT id, password_hash, auth_provider, is_banned FROM users WHERE id = ?')
+    .bind(uid)
+    .first<any>();
+  if (!row) return json({ ok: false, error: 'USER_GONE' }, 404);
+  if (row.is_banned === 1) return json({ ok: false, error: 'BANNED' }, 403);
+  if (row.auth_provider !== 'email') return json({ ok: false, error: 'WRONG_PROVIDER' }, 400);
+
+  const ok = await verifyPassword(oldPassword, row.password_hash, env.BCRYPT_PEPPER || '');
+  if (!ok) return json({ ok: false, error: 'INVALID_CREDENTIALS' }, 401);
+
+  const nowTs = Math.floor(Date.now() / 1000);
+  const pwHash = await hashPassword(newPassword, env.BCRYPT_PEPPER || '');
+  await env.DB.prepare('UPDATE users SET password_hash = ?, updated_at = ? WHERE id = ?').bind(pwHash, nowTs, uid).run();
+
+  return json({ ok: true, message: 'PASSWORD_CHANGED' });
+}
+
+async function sha256Hex(s: string): Promise<string> {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
 // ============== Pages Functions Advanced Mode ==============
@@ -439,6 +663,8 @@ export default {
       if (path === '/api/auth/login' && request.method === 'POST') return jsonWrap(await handleLogin(request, env, ip), corsH);
       if (path === '/api/auth/logout' && (request.method === 'POST' || request.method === 'GET')) return jsonWrap(await handleLogout(), corsH);
       if (path === '/api/auth/google' && request.method === 'POST') return jsonWrap(await handleGoogleAuth(request, env, ip), corsH);
+      if (path === '/api/auth/password/forgot' && request.method === 'POST') return jsonWrap(await handleForgotPassword(request, env, ip), corsH);
+      if (path === '/api/auth/password/reset' && request.method === 'POST') return jsonWrap(await handleResetPassword(request, env, ip), corsH);
 
       // DEBUG endpoint (production hardened: env guard + admin token)
       if (path === '/api/auth/debug/env' && request.method === 'GET') {
@@ -500,7 +726,7 @@ export default {
         return jsonWrap(json(diag), corsH);
       }
 
-      // ====== 需要鉴权的端点（收藏夹 + /me） ======
+      // ====== 需要鉴权的端点（收藏夹 + /me + profile + password/change） ======
       const authedPrefix = '/api/auth';
       if (path.startsWith(authedPrefix)) {
         const { uid, error } = await authenticate(request, env);
@@ -514,6 +740,12 @@ export default {
         if (path === '/api/auth/favorites/sync' && request.method === 'POST') {
           const body = (await request.json().catch(() => null)) as any;
           return jsonWrap(await syncFavoritesBatch(env, uid, body), corsH);
+        }
+        if (path === '/api/auth/profile/update' && (request.method === 'POST' || request.method === 'PUT')) {
+          return jsonWrap(await handleUpdateProfile(request, env, uid), corsH);
+        }
+        if (path === '/api/auth/password/change' && (request.method === 'POST' || request.method === 'PUT')) {
+          return jsonWrap(await handleChangePassword(request, env, uid, ip), corsH);
         }
         return jsonWrap(json({ ok: false, error: 'NOT_FOUND' }, 404), corsH);
       }

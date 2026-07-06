@@ -151,7 +151,7 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
   };
 
   const extraBadges: Array<{ text: string; style: string }> = [];
-  if (tool.accessTag) {
+  if (locale === 'zh' && tool.accessTag) {
     extraBadges.push({ text: getAccessText(tool.accessTag), style: getAccessStyle(tool.accessTag) });
   }
 

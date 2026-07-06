@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿'use client';
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿'use client';
 
 import { useTranslations } from 'next-intl';
 import { Menu, Globe, Sun, Moon, Sparkles, X, RefreshCw, Folder, History, MoreVertical, Settings, Trophy, Accessibility, Bookmark, Share2, ChevronDown, Check, Layers, Home, Key, Image as ImageIcon, Sparkles as SparklesIcon, Lightbulb, BookOpen } from 'lucide-react';
@@ -19,6 +19,7 @@ const ToolBox = dynamic(() => import('./ToolBox'), { loading: () => null });
 const HistoryPanel = dynamic(() => import('./HistoryPanel'), { loading: () => null });
 const AccessibilitySettings = dynamic(() => import('./AccessibilitySettings'), { loading: () => null });
 const AchievementsPanel = dynamic(() => import('./AchievementsPanel'), { loading: () => null });
+const ProfilePanel = dynamic(() => import('./ProfilePanel'), { loading: () => null });
 
 function Logo() {
   return (
@@ -130,6 +131,7 @@ export default function Header({ locale }: { locale: string }) {
   const [showUpdateToast, setShowUpdateToast] = useState(false);
   const [showToolBox, setShowToolBox] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
   const [showShortcuts, setShowShortcuts] = useState(false);
   const [showAccessibility, setShowAccessibility] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
@@ -159,6 +161,7 @@ export default function Header({ locale }: { locale: string }) {
   const closeAllHeaderPanels = () => {
     setShowToolBox(false);
     setShowHistory(false);
+    setShowProfile(false);
     setShowAccessibility(false);
     setShowAchievements(false);
     setShowMoreMenu(false);
@@ -410,7 +413,12 @@ export default function Header({ locale }: { locale: string }) {
 
                   <div className='py-1.5'>
                     <button
-                      onClick={() => { setShowAccountMenu(false); }}
+                      onClick={() => {
+                        setShowAccountMenu(false);
+                        closeAllHeaderPanels();
+                        notifyCloseOthers('header');
+                        setShowProfile(true);
+                      }}
                       className='w-full flex items-center gap-2.5 px-3 py-2 text-left text-xs text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors'
                     >
                       <User className='w-4 h-4 text-gray-500 dark:text-gray-400 shrink-0' />
@@ -632,6 +640,7 @@ export default function Header({ locale }: { locale: string }) {
       
       <ToolBox locale={locale} isOpen={showToolBox} onClose={() => setShowToolBox(false)} />
       <HistoryPanel locale={locale} isOpen={showHistory} onClose={() => setShowHistory(false)} />
+      <ProfilePanel locale={locale} isOpen={showProfile} onClose={() => setShowProfile(false)} />
       <AccessibilitySettings locale={locale} isOpen={showAccessibility} onClose={() => setShowAccessibility(false)} />
       <AchievementsPanel locale={locale} isOpen={showAchievements} onClose={() => setShowAchievements(false)} />
       <AuthModal />

@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Quick Pages deploy via Cloudflare REST API (bypasses wrangler Windows logdir ENOENT)
 // Usage: node scripts/deploy-pages-now.cjs
 const fs = require('fs');

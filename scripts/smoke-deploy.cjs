@@ -1,3 +1,4 @@
+/* eslint-disable */
 const BASE = process.env.KORELYY_SMOKE_BASE || 'https://5c7b1057.korelyy-tools.pages.dev';
 
 async function head(path, extraHeaders = {}) {

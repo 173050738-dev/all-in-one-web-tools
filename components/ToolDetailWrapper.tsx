@@ -237,20 +237,22 @@ export default function ToolDetailWrapper({ locale, slug, children }: ToolDetail
                     <option value="red">{tcT('compliance-red')}</option>
                   </select>
                 </div>
-                <div>
-                  <label htmlFor="p2-access" className="block text-[10px] font-medium text-gray-500 dark:text-gray-400 mb-1">
-                    {tcT('access-level')}
-                  </label>
-                  <select
-                    id="p2-access"
-                    defaultValue=""
-                    className="w-full min-h-[36px] rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 px-2.5 py-1.5 text-xs text-gray-900 dark:text-gray-100 focus:ring-1 focus:ring-primary-400 outline-none"
-                  >
-                    <option value="">{tcT('filter-all')}</option>
-                    <option value="direct">{tcT('access-direct')}</option>
-                    <option value="vpn-required">{tcT('access-vpn-required')}</option>
-                  </select>
-                </div>
+                {isZh && (
+                  <div>
+                    <label htmlFor="p2-access" className="block text-[10px] font-medium text-gray-500 dark:text-gray-400 mb-1">
+                      {tcT('access-level')}
+                    </label>
+                    <select
+                      id="p2-access"
+                      defaultValue=""
+                      className="w-full min-h-[36px] rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 px-2.5 py-1.5 text-xs text-gray-900 dark:text-gray-100 focus:ring-1 focus:ring-primary-400 outline-none"
+                    >
+                      <option value="">{tcT('filter-all')}</option>
+                      <option value="direct">{tcT('access-direct')}</option>
+                      <option value="vpn-required">{tcT('access-vpn-required')}</option>
+                    </select>
+                  </div>
+                )}
                 <div>
                   <label htmlFor="p2-signup" className="block text-[10px] font-medium text-gray-500 dark:text-gray-400 mb-1">
                     {tcT('signup-requirement')}

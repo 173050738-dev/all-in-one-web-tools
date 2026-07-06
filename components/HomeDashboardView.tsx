@@ -8,6 +8,9 @@ import type { Tool, ComplianceLevel } from '@/data/tools';
 import { INITIAL_HOME_TOOLS } from '@/data/_initial-home.generated';
 import { categories, setDynamicCategoryCounts, getCategoryCount } from '@/data/categories';
 import { usePreferencesStore } from '@/stores/preferences';
+import { useAuthStore } from '@/stores/auth';
+import { useFavoritesStore } from '@/stores/favorites';
+import { buildRecommendedOrder, type RecommendProfile } from '@/lib/recommend';
 import { Layers, Search, Sparkles, Flame, BookOpen } from 'lucide-react';
 
 type ComplianceFn = (tool: Tool) => ComplianceLevel;
@@ -22,7 +25,27 @@ interface DynamicBundle {
 const INITIAL_COUNT = 15;
 const LOAD_MORE_COUNT = 15;
 
-type SortMode = 'newest' | 'popular' | 'free';
+type SortMode = 'newest' | 'popular' | 'free' | 'recommended';
+
+const HEADER_ACTION_BTN_BASE = [
+  'flex', 'items-center', 'justify-center',
+  'gap-1', 'whitespace-nowrap',
+  'px-2 sm:px-2.5', 'py-1 sm:py-1.5',
+  'min-h-[32px]',
+  'rounded-lg',
+  'text-[11px] sm:text-xs', 'font-medium',
+  'transition-colors', 'active:scale-95',
+].join(' ');
+
+const CATEGORY_CHIP_BASE = [
+  'flex-shrink-0', 'whitespace-nowrap',
+  'inline-flex', 'items-center', 'justify-center',
+  'px-2.5 sm:px-3', 'py-1 sm:py-1.5',
+  'min-h-[32px]',
+  'rounded-lg',
+  'text-[11px] sm:text-xs', 'font-medium',
+  'transition-colors',
+].join(' ');
 
 // ===== 首屏用的轻量版本工具（INITIAL_HOME_TOOLS），几 KB 就可完成首屏渲染 =====
 function initialComputeComplianceLevel(tool: Tool | (Omit<Tool, 'signup' | 'payment' | 'externalUrl'>)): ComplianceLevel {
@@ -78,10 +101,20 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   const tcT = useTranslations('toolcard');
   const tNav2 = useTranslations('nav2');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const authedStatus = useAuthStore((s) => s.status);
+  const isAuthed = authedStatus === 'authed';
   const [sortBy, setSortBy] = useState<SortMode>('newest');
+  const authHistory = useAuthStore((s) => s.favorites).slice();
+  const favs = useFavoritesStore((s) => s);
   const [displayCount, setDisplayCount] = useState(INITIAL_COUNT);
   const { searchQuery } = usePreferencesStore();
   const loaderRef = useRef<HTMLDivElement>(null);
+  const sortBySetRef = useRef(false);
+  useEffect(() => {
+    if (sortBySetRef.current) return;
+    sortBySetRef.current = true;
+    if (isAuthed) setSortBy('recommended');
+  }, [isAuthed]);
 
   // ===== 动态大 bundle：初始 null，useEffect 中 import('@/data/tools') 水合后填入 =====
   const [bundle, setBundle] = useState<DynamicBundle | null>(null);
@@ -134,8 +167,39 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   );
 
   const filteredTools = useMemo(() => {
-    return applyFilterAndSort(currentPool, selectedCategory, sortBy, searchQuery, computeCL, searchFn);
-  }, [currentPool, selectedCategory, sortBy, searchQuery, computeCL, searchFn]);
+    const effectiveSort: SortMode = sortBy === 'recommended' ? 'newest' : sortBy;
+    const base = applyFilterAndSort(currentPool, selectedCategory, effectiveSort, searchQuery, computeCL, searchFn);
+    if (sortBy !== 'recommended') return base;
+    const history = (() => {
+      const m = new Map<string, { toolId: string; timestamp: number }>();
+      const list1 = favs.recentlyUsedTools ?? [];
+      const list2 = favs.history ?? [];
+      for (let i = 0; i < list1.length; i++) {
+        const h = list1[i];
+        const prev = m.get(h.toolId);
+        if (!prev || prev.timestamp < h.timestamp) m.set(h.toolId, h);
+      }
+      for (let i = 0; i < list2.length; i++) {
+        const h = list2[i];
+        const prev = m.get(h.toolId);
+        if (!prev || prev.timestamp < h.timestamp) m.set(h.toolId, h);
+      }
+      return Array.from(m.values());
+    })();
+    const favoriteIds = Array.from(new Set<string>([
+      ...(favs.favoriteTools ?? []),
+      ...(favs.favoritedTools ?? []),
+      ...(authHistory ?? []),
+    ]));
+    const profile: RecommendProfile = {
+      history,
+      likedIds: favs.likedTools ?? [],
+      favoriteIds,
+      isAuthed,
+      preferredLocale: locale,
+    };
+    return buildRecommendedOrder(base, profile);
+  }, [currentPool, selectedCategory, sortBy, searchQuery, computeCL, searchFn, favs, authHistory, isAuthed, locale]);
 
   // bundle 加载完 / 筛选变化时，重置显示数量
   useEffect(() => {
@@ -188,7 +252,7 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
               <div className='flex items-center gap-1.5 overflow-x-auto pb-1 category-scroll' style={{ scrollbarWidth: 'thin' }}>
                 <button
                   onClick={() => setSelectedCategory('all')}
-                  className={`flex-shrink-0 whitespace-nowrap px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs transition-colors ${selectedCategory === 'all' ? 'bg-[#0F5759] text-white hover:bg-[#0C4849]' : 'bg-gray-100 dark:bg-gray-800 text-[#466B6C] dark:text-gray-300'}`}
+                  className={`${CATEGORY_CHIP_BASE} ${selectedCategory === 'all' ? 'bg-[#0F5759] text-white hover:bg-[#0C4849]' : 'bg-gray-100 dark:bg-gray-800 text-[#466B6C] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
                 >
                   {tSidebar('all')}
                 </button>
@@ -199,7 +263,7 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
                     <button
                       key={cat.id}
                       onClick={() => setSelectedCategory(cat.id)}
-                      className={`flex-shrink-0 whitespace-nowrap px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs transition-colors ${selectedCategory === cat.id ? 'bg-[#0F5759] text-white hover:bg-[#0C4849]' : 'bg-gray-100 dark:bg-gray-800 text-[#466B6C] dark:text-gray-300'}`}
+                      className={`${CATEGORY_CHIP_BASE} ${selectedCategory === cat.id ? 'bg-[#0F5759] text-white hover:bg-[#0C4849]' : 'bg-gray-100 dark:bg-gray-800 text-[#466B6C] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
                     >
                       {tSidebar(cat.id)}
                     </button>
@@ -217,27 +281,28 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
               <div className='flex items-center gap-1 sm:gap-1.5 overflow-x-auto pb-1'>
                 <a
                   href={`/${locale}/workflows`}
-                  className='flex items-center justify-center gap-1 whitespace-nowrap px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-medium bg-primary-600 text-white hover:bg-primary-700 transition-colors active:scale-95 border border-primary-700/20 min-h-[32px]'
+                  className={`${HEADER_ACTION_BTN_BASE} bg-primary-600 text-white hover:bg-primary-700 border border-primary-700/20`}
                 >
                   <Layers className='w-3 h-3 sm:w-3.5 sm:h-3.5' />
                   {tNav2('workflows')}
                 </a>
                 <a
                   href={`/${locale}/blog`}
-                  className='flex items-center justify-center gap-1 whitespace-nowrap px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors active:scale-95 border border-gray-200 dark:border-gray-700 min-h-[32px]'
+                  className={`${HEADER_ACTION_BTN_BASE} bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700`}
                 >
                   <BookOpen className='w-3 h-3 sm:w-3.5 sm:h-3.5' />
                   {tNav2('blog')}
                 </a>
-                <div className='w-px h-6 bg-gray-200 dark:bg-gray-700 mx-0.5 hidden sm:block' />
-                <label className='inline-flex items-center gap-1.5 rounded-lg text-[11px] sm:text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors px-2 sm:px-2.5 py-1 sm:py-1.5 border border-transparent min-h-[32px]'>
+                <div className='w-px h-8 bg-gray-200 dark:bg-gray-700 mx-0.5 hidden sm:block' />
+                <label className={`${HEADER_ACTION_BTN_BASE} bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 border border-transparent`}>
                   <span className='text-gray-500 dark:text-gray-400 whitespace-nowrap'>{t('sort-by-label')}</span>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as SortMode)}
-                    className='bg-transparent border-none outline-none appearance-none pr-0 -mr-0.5 text-[11px] sm:text-xs font-medium text-gray-900 dark:text-gray-100 cursor-pointer min-h-[28px]'
+                    className='bg-transparent border-none outline-none appearance-none pr-0 -mr-0.5 text-[11px] sm:text-xs font-medium text-gray-900 dark:text-gray-100 cursor-pointer min-h-[24px]'
                     aria-label={t('sort-by-label')}
                   >
+                    <option value='recommended'>{t('sort-recommended')}</option>
                     <option value='newest'>{t('sort-newest')}</option>
                     <option value='popular'>{t('sort-popular')}</option>
                     <option value='free'>{t('sort-free')}</option>
@@ -284,7 +349,7 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
                           <button
                             key={cat!.id}
                             onClick={() => setSelectedCategory(cat!.id)}
-                            className="whitespace-nowrap px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-gray-50 dark:bg-gray-800/70 hover:bg-primary-50 dark:hover:bg-primary-900/20 border border-gray-200 dark:border-gray-700 text-[11px] sm:text-xs font-medium text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 transition-colors inline-flex items-center gap-1 min-h-[36px]"
+                            className={`${CATEGORY_CHIP_BASE} bg-gray-50 dark:bg-gray-800/70 hover:bg-primary-50 dark:hover:bg-primary-900/20 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 gap-1`}
                           >
                             <Search className="h-3 w-3 opacity-60" />
                             {tSidebar(cat!.id)}

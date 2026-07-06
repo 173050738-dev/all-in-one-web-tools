@@ -114,6 +114,7 @@
     "subtitle": "दुनिया का प्रमुख टूल एग्रीगेशन प्लेटफॉर्म",
     "sort-newest": "नवीनतम",
     "sort-popular": "सबसे लोकप्रिय",
+    "sort-recommended": "आपके लिए",
     "sort-free": "सभी निःशुल्क उपकरण",
     "free": "निःशुल्क",
     "paid": "सशुल्क",
@@ -4420,6 +4421,774 @@
     "dezeen": {
       "name": "Dezeen",
       "description": "डिज़ाइन मीडिया साइट, जिसमें वास्तुकला, इंटीरियर डिज़ाइन और डिज़ाइन समाचार शामिल हैं।"
+    },
+    "nike-run-club": {
+      "name": "Nike Run Club",
+      "description": "ऑनलाइन Nike Run Club एडिटर। Nike को कस्टमाइज़ करें, Run को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "adidas-running-runtastic": {
+      "name": "Adidas Running Runtastic",
+      "description": "ऑनलाइन Adidas Running Runtastic टूल — फीचर्स: Adidas, Running, Runtastic. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "runkeeper": {
+      "name": "Runkeeper",
+      "description": "ऑनलाइन Runkeeper टूल — फीचर्स: Runkeeper, 跑步, 马拉松. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "garmin-connect": {
+      "name": "Garmin Connect",
+      "description": "निःशुल्क Garmin Connect: Garmin, Connect और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "coros": {
+      "name": "Coros",
+      "description": "ऑनलाइन Coros टूल — फीचर्स: Coros, 运动, 健康. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "polar-flow": {
+      "name": "Polar Flow",
+      "description": "निःशुल्क Polar Flow: Polar, Flow और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "vdot-calculator": {
+      "name": "Vdot कैलकुलेटर",
+      "description": "ऑनलाइन Vdot कैलकुलेटर टूल — फीचर्स: Vdot, कैलकुलेटर, 跑步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "active-race-results": {
+      "name": "Active Race Results",
+      "description": "निःशुल्क Active Race Results: Active, Race और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "trainingpeaks": {
+      "name": "Trainingpeaks",
+      "description": "निःशुल्क Trainingpeaks: Trainingpeaks, 徒步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "final-surge": {
+      "name": "Final Surge",
+      "description": "ऑनलाइन Final Surge एडिटर। Final को कस्टमाइज़ करें, Surge को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "runalyze": {
+      "name": "Runalyze",
+      "description": "निःशुल्क Runalyze: Runalyze, 跑步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "stryd-power": {
+      "name": "Stryd Power",
+      "description": "ऑनलाइन Stryd Power एडिटर। Stryd को कस्टमाइज़ करें, Power को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "racewow": {
+      "name": "Racewow",
+      "description": "निःशुल्क Racewow: Racewow, 跑步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "lets-do-this": {
+      "name": "Lets Do This",
+      "description": "ऑनलाइन Lets Do This टूल — फीचर्स: Lets, Do, This. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "find-a-marathon": {
+      "name": "Find A Marathon",
+      "description": "निःशुल्क Find A Marathon: Find, A और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "running2win": {
+      "name": "Running2win",
+      "description": "निःशुल्क Running2win: Running2win, 跑步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "mcmillan-calculator": {
+      "name": "Mcmillan कैलकुलेटर",
+      "description": "ऑनलाइन Mcmillan कैलकुलेटर एडिटर। Mcmillan को कस्टमाइज़ करें, कैलकुलेटर को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "marathon-handbook": {
+      "name": "Marathon Handbook",
+      "description": "ऑनलाइन Marathon Handbook टूल — फीचर्स: Marathon, Handbook, 跑步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "cool-running": {
+      "name": "Cool Running",
+      "description": "ऑनलाइन Cool Running एडिटर। Cool को कस्टमाइज़ करें, Running को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "worlds-marathons": {
+      "name": "Worlds Marathons",
+      "description": "निःशुल्क Worlds Marathons: Worlds, Marathons और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "runsignup": {
+      "name": "Runsignup",
+      "description": "ऑनलाइन Runsignup एडिटर। Runsignup को कस्टमाइज़ करें, 跑步 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "pace-calculator": {
+      "name": "Pace कैलकुलेटर",
+      "description": "ऑनलाइन Pace कैलकुलेटर एडिटर। Pace को कस्टमाइज़ करें, कैलकुलेटर को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "treadmill-calc": {
+      "name": "Treadmill Calc",
+      "description": "ऑनलाइन Treadmill Calc एडिटर। Treadmill को कस्टमाइज़ करें, Calc को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "couch-to-5k": {
+      "name": "Couch To 5k",
+      "description": "ऑनलाइन Couch To 5k टूल — फीचर्स: Couch, To, 5k. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "race-predictor": {
+      "name": "Race Predictor",
+      "description": "निःशुल्क Race Predictor: Race, Predictor और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "ride-with-gps": {
+      "name": "Ride With Gps",
+      "description": "निःशुल्क Ride With Gps: Ride, With और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "bikemap": {
+      "name": "Bikemap",
+      "description": "ऑनलाइन Bikemap टूल — फीचर्स: Bikemap, 骑行, 公路车. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "cyclemeter": {
+      "name": "Cyclemeter",
+      "description": "ऑनलाइन Cyclemeter एडिटर। Cyclemeter को कस्टमाइज़ करें, 骑行 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "wahoo-systm": {
+      "name": "Wahoo Systm",
+      "description": "ऑनलाइन Wahoo Systm एडिटर। Wahoo को कस्टमाइज़ करें, Systm को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "trainerroad": {
+      "name": "Trainerroad",
+      "description": "निःशुल्क Trainerroad: Trainerroad, 骑行 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "zwift": {
+      "name": "Zwift",
+      "description": "ऑनलाइन Zwift टूल — फीचर्स: Zwift, 骑行, 公路车. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "rouvy": {
+      "name": "Rouvy",
+      "description": "निःशुल्क Rouvy: Rouvy, 骑行 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "rgt-cycling": {
+      "name": "Rgt Cycling",
+      "description": "निःशुल्क Rgt Cycling: Rgt, Cycling और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "bikeregister": {
+      "name": "Bikeregister",
+      "description": "ऑनलाइन Bikeregister एडिटर। Bikeregister को कस्टमाइज़ करें, 骑行 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "geometry-geeks": {
+      "name": "Geometry Geeks",
+      "description": "निःशुल्क Geometry Geeks: Geometry, Geeks और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "best-bike-split": {
+      "name": "Best Bike विभाजक",
+      "description": "निःशुल्क Best Bike विभाजक: Best, Bike और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "golden-cheetah": {
+      "name": "Golden Cheetah",
+      "description": "ऑनलाइन Golden Cheetah एडिटर। Golden को कस्टमाइज़ करें, Cheetah को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "cyclestreets": {
+      "name": "Cyclestreets",
+      "description": "ऑनलाइन Cyclestreets एडिटर। Cyclestreets को कस्टमाइज़ करें, 骑行 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "open-cycle-map": {
+      "name": "Open Cycle Map",
+      "description": "ऑनलाइन Open Cycle Map एडिटर। Open को कस्टमाइज़ करें, Cycle को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "bikeradar": {
+      "name": "Bikeradar",
+      "description": "निःशुल्क Bikeradar: Bikeradar, 骑行 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "trailforks": {
+      "name": "Trailforks",
+      "description": "ऑनलाइन Trailforks टूल — फीचर्स: Trailforks, 徒步, 登山. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "singletracks": {
+      "name": "Singletracks",
+      "description": "ऑनलाइन Singletracks टूल — फीचर्स: Singletracks, 运动, 健康. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "pinkbike": {
+      "name": "Pinkbike",
+      "description": "निःशुल्क Pinkbike: Pinkbike, 骑行 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "veloviewer": {
+      "name": "Veloviewer",
+      "description": "ऑनलाइन Veloviewer टूल — फीचर्स: Veloviewer, 骑行, 公路车. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "todays-plan": {
+      "name": "Todays Plan",
+      "description": "निःशुल्क Todays Plan: Todays, Plan और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "fullgaz": {
+      "name": "Fullgaz",
+      "description": "निःशुल्क Fullgaz: Fullgaz, 骑行 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "bike-calc": {
+      "name": "Bike Calc",
+      "description": "निःशुल्क Bike Calc: Bike, Calc और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "bike-insurance-check": {
+      "name": "Bike Insurance जाँचकर्ता",
+      "description": "ऑनलाइन Bike Insurance जाँचकर्ता एडिटर। Bike को कस्टमाइज़ करें, Insurance को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "sram-shift-calc": {
+      "name": "Sram Shift Calc",
+      "description": "ऑनलाइन Sram Shift Calc टूल — फीचर्स: Sram, Shift, Calc. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "project-4321": {
+      "name": "Project 4321",
+      "description": "ऑनलाइन Project 4321 एडिटर। Project को कस्टमाइज़ करें, 4321 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "nike-training-club": {
+      "name": "Nike Training Club",
+      "description": "निःशुल्क Nike Training Club: Nike, Training और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "peloton-digital": {
+      "name": "Peloton Digital",
+      "description": "ऑनलाइन Peloton Digital टूल — फीचर्स: Peloton, Digital, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "sweat-app": {
+      "name": "Sweat App",
+      "description": "निःशुल्क Sweat App: Sweat, App और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "centr-chris-hemsworth": {
+      "name": "Centr Chris Hemsworth",
+      "description": "ऑनलाइन Centr Chris Hemsworth एडिटर। Centr को कस्टमाइज़ करें, Chris को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "ob-fitness": {
+      "name": "Ob Fitness",
+      "description": "निःशुल्क Ob Fitness: Ob, Fitness और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "fitbit-premium": {
+      "name": "Fitbit Premium",
+      "description": "निःशुल्क Fitbit Premium: Fitbit, Premium और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "strong-lifts": {
+      "name": "Strong Lifts",
+      "description": "ऑनलाइन Strong Lifts टूल — फीचर्स: Strong, Lifts, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "starting-strength": {
+      "name": "Starting Strength",
+      "description": "ऑनलाइन Starting Strength टूल — फीचर्स: Starting, Strength, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "exrx": {
+      "name": "Exrx",
+      "description": "ऑनलाइन Exrx टूल — फीचर्स: Exrx, 运动, 健康. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "bodybuilding-guides": {
+      "name": "Bodybuilding Guides",
+      "description": "निःशुल्क Bodybuilding Guides: Bodybuilding, Guides और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "fitocracy": {
+      "name": "Fitocracy",
+      "description": "ऑनलाइन Fitocracy एडिटर। Fitocracy को कस्टमाइज़ करें, 健身 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "habit-nest": {
+      "name": "Habit Nest",
+      "description": "निःशुल्क Habit Nest: Habit, Nest और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "workout-labs": {
+      "name": "Workout Labs",
+      "description": "निःशुल्क Workout Labs: Workout, Labs और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "freedom-strong": {
+      "name": "Freedom Strong",
+      "description": "ऑनलाइन Freedom Strong एडिटर। Freedom को कस्टमाइज़ करें, Strong को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "darebee": {
+      "name": "Darebee",
+      "description": "ऑनलाइन Darebee एडिटर। Darebee को कस्टमाइज़ करें, 健身 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "12minuteathlete": {
+      "name": "12minuteathlete",
+      "description": "ऑनलाइन 12minuteathlete टूल — फीचर्स: 12minuteathlete, 健身, 力量训练. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "fitness-blender": {
+      "name": "Fitness Blender",
+      "description": "ऑनलाइन Fitness Blender टूल — फीचर्स: Fitness, Blender, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "poosh": {
+      "name": "Poosh",
+      "description": "ऑनलाइन Poosh टूल — फीचर्स: Poosh, 健身, 力量训练. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "p90x-schedule": {
+      "name": "P90x Schedule",
+      "description": "निःशुल्क P90x Schedule: P90x, Schedule और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "insanity-workout": {
+      "name": "Insanity Workout",
+      "description": "ऑनलाइन Insanity Workout टूल — फीचर्स: Insanity, Workout, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "musclewiki": {
+      "name": "Musclewiki",
+      "description": "ऑनलाइन Musclewiki टूल — फीचर्स: Musclewiki, 运动, 健康. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "strech-lab": {
+      "name": "Strech Lab",
+      "description": "ऑनलाइन Strech Lab टूल — फीचर्स: Strech, Lab, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "romwod": {
+      "name": "Romwod",
+      "description": "निःशुल्क Romwod: Romwod, 瑜伽 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "yoga-international": {
+      "name": "Yoga International",
+      "description": "ऑनलाइन Yoga International टूल — फीचर्स: Yoga, International, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "gaia-yoga": {
+      "name": "Gaia Yoga",
+      "description": "ऑनलाइन Gaia Yoga टूल — फीचर्स: Gaia, Yoga, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "do-you-yoga": {
+      "name": "Do You Yoga",
+      "description": "निःशुल्क Do You Yoga: Do, You और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "yoga-download": {
+      "name": "Yoga डाउनलोडर",
+      "description": "ऑनलाइन Yoga डाउनलोडर एडिटर। Yoga को कस्टमाइज़ करें, Download को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "my-yoga-works": {
+      "name": "My Yoga Works",
+      "description": "ऑनलाइन My Yoga Works एडिटर। My को कस्टमाइज़ करें, Yoga को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "pilates-anytime": {
+      "name": "Pilates Anytime",
+      "description": "ऑनलाइन Pilates Anytime टूल — फीचर्स: Pilates, Anytime, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "club-pilates": {
+      "name": "Club Pilates",
+      "description": "ऑनलाइन Club Pilates एडिटर। Club को कस्टमाइज़ करें, Pilates को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "blogilates": {
+      "name": "Blogilates",
+      "description": "ऑनलाइन Blogilates टूल — फीचर्स: Blogilates, 瑜伽, 普拉提. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "stretching-timer": {
+      "name": "Stretching टाइमर",
+      "description": "निःशुल्क Stretching टाइमर: Stretching, टाइमर और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "foam-roller-guide": {
+      "name": "Foam Roller Guide",
+      "description": "निःशुल्क Foam Roller Guide: Foam, Roller और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "yin-yoga-cheatsheet": {
+      "name": "Yin Yoga Cheatsheet",
+      "description": "ऑनलाइन Yin Yoga Cheatsheet टूल — फीचर्स: Yin, Yoga, Cheatsheet. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "yoga-journal": {
+      "name": "Yoga Journal",
+      "description": "ऑनलाइन Yoga Journal एडिटर। Yoga को कस्टमाइज़ करें, Journal को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "medito": {
+      "name": "Medito",
+      "description": "निःशुल्क Medito: Medito, 瑜伽 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "waking-up": {
+      "name": "Waking Up",
+      "description": "निःशुल्क Waking Up: Waking, Up और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "mindful-cms": {
+      "name": "Mindful Cms",
+      "description": "ऑनलाइन Mindful Cms टूल — फीचर्स: Mindful, Cms, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "breathwrk": {
+      "name": "Breathwrk",
+      "description": "निःशुल्क Breathwrk: Breathwrk, 瑜伽 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "478-breathing": {
+      "name": "478 Breathing",
+      "description": "ऑनलाइन 478 Breathing टूल — फीचर्स: 478, Breathing, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "box-breathing": {
+      "name": "Box Breathing",
+      "description": "ऑनलाइन Box Breathing एडिटर। Box को कस्टमाइज़ करें, Breathing को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "progressive-muscle-relaxation": {
+      "name": "Progressive Muscle Relaxation",
+      "description": "निःशुल्क Progressive Muscle Relaxation: Progressive, Muscle और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "swim-com": {
+      "name": "Swim Com",
+      "description": "निःशुल्क Swim Com: Swim, Com और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "swimsmooth": {
+      "name": "Swimsmooth",
+      "description": "ऑनलाइन Swimsmooth टूल — फीचर्स: Swimsmooth, 游泳, 铁人三项. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "goswim": {
+      "name": "Goswim",
+      "description": "ऑनलाइन Goswim एडिटर। Goswim को कस्टमाइज़ करें, 健身 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "swimulator": {
+      "name": "Swimulator",
+      "description": "ऑनलाइन Swimulator टूल — फीचर्स: Swimulator, 游泳, 铁人三项. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "trainerroad-swim": {
+      "name": "Trainerroad Swim",
+      "description": "निःशुल्क Trainerroad Swim: Trainerroad, Swim और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "slowtwitch": {
+      "name": "Slowtwitch",
+      "description": "ऑनलाइन Slowtwitch एडिटर। Slowtwitch को कस्टमाइज़ करें, 运动 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "tridot": {
+      "name": "Tridot",
+      "description": "ऑनलाइन Tridot एडिटर। Tridot को कस्टमाइज़ करें, 游泳 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "beginnertriathlete": {
+      "name": "Beginnertriathlete",
+      "description": "ऑनलाइन Beginnertriathlete टूल — फीचर्स: Beginnertriathlete, 游泳, 铁人三项. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "ironman-training-peaks": {
+      "name": "Ironman Training Peaks",
+      "description": "निःशुल्क Ironman Training Peaks: Ironman, Training और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "suunto-ironman": {
+      "name": "Suunto Ironman",
+      "description": "ऑनलाइन Suunto Ironman एडिटर। Suunto को कस्टमाइज़ करें, Ironman को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "kayak-sit-on-top": {
+      "name": "Kayak Sit On Top",
+      "description": "निःशुल्क Kayak Sit On Top: Kayak, Sit और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "surf-forecast": {
+      "name": "Surf Forecast",
+      "description": "ऑनलाइन Surf Forecast टूल — फीचर्स: Surf, Forecast, 游泳. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "windguru": {
+      "name": "Windguru",
+      "description": "निःशुल्क Windguru: Windguru, 游泳 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "magicseaweed": {
+      "name": "Magicseaweed",
+      "description": "ऑनलाइन Magicseaweed टूल — फीचर्स: Magicseaweed, 游泳, 铁人三项. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "wannasurf": {
+      "name": "Wannasurf",
+      "description": "ऑनलाइन Wannasurf एडिटर। Wannasurf को कस्टमाइज़ करें, 游泳 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "wikiloc": {
+      "name": "Wikiloc",
+      "description": "निःशुल्क Wikiloc: Wikiloc, 运动 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "hikingproject": {
+      "name": "Hikingproject",
+      "description": "निःशुल्क Hikingproject: Hikingproject, 徒步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "mountain-project": {
+      "name": "Mountain Project",
+      "description": "ऑनलाइन Mountain Project टूल — फीचर्स: Mountain, Project, 徒步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "summitpost": {
+      "name": "Summitpost",
+      "description": "निःशुल्क Summitpost: Summitpost, 徒步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "peakbagger": {
+      "name": "Peakbagger",
+      "description": "ऑनलाइन Peakbagger टूल — फीचर्स: Peakbagger, 徒步, 登山. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "outdooractive": {
+      "name": "Outdooractive",
+      "description": "निःशुल्क Outdooractive: Outdooractive, 徒步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "satgear-checklist": {
+      "name": "Satgear Checklist",
+      "description": "निःशुल्क Satgear Checklist: Satgear, Checklist और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "lighterpack": {
+      "name": "Lighterpack",
+      "description": "ऑनलाइन Lighterpack टूल — फीचर्स: Lighterpack, 徒步, 登山. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "rei-co-op-checklists": {
+      "name": "Rei Co Op Checklists",
+      "description": "निःशुल्क Rei Co Op Checklists: Rei, Co और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "campendium": {
+      "name": "Campendium",
+      "description": "ऑनलाइन Campendium टूल — फीचर्स: Campendium, 徒步, 登山. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "free-campsites": {
+      "name": "Free Campsites",
+      "description": "ऑनलाइन Free Campsites टूल — फीचर्स: Free, Campsites, 徒步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "hipcamp": {
+      "name": "Hipcamp",
+      "description": "ऑनलाइन Hipcamp एडिटर। Hipcamp को कस्टमाइज़ करें, 徒步 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "campsite-photos": {
+      "name": "Campsite Photos",
+      "description": "ऑनलाइन Campsite Photos एडिटर। Campsite को कस्टमाइज़ करें, Photos को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "noaa-weather": {
+      "name": "Noaa Weather",
+      "description": "निःशुल्क Noaa Weather: Noaa, Weather और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "mountain-weather-forecast": {
+      "name": "Mountain Weather Forecast",
+      "description": "ऑनलाइन Mountain Weather Forecast टूल — फीचर्स: Mountain, Weather, Forecast. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "meteoblue-mountain": {
+      "name": "Meteoblue Mountain",
+      "description": "ऑनलाइन Meteoblue Mountain एडिटर। Meteoblue को कस्टमाइज़ करें, Mountain को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "wildsafe-bear": {
+      "name": "Wildsafe Bear",
+      "description": "निःशुल्क Wildsafe Bear: Wildsafe, Bear और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "sotaventos-mountain": {
+      "name": "Sotaventos Mountain",
+      "description": "ऑनलाइन Sotaventos Mountain टूल — फीचर्स: Sotaventos, Mountain, 徒步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "nba-stats": {
+      "name": "Nba Stats",
+      "description": "निःशुल्क Nba Stats: Nba, Stats और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "basketball-reference": {
+      "name": "Basketball Reference",
+      "description": "ऑनलाइन Basketball Reference टूल — फीचर्स: Basketball, Reference, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "bball-index": {
+      "name": "Bball Index",
+      "description": "ऑनलाइन Bball Index एडिटर। Bball को कस्टमाइज़ करें, Index को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "hoopshype-salaries": {
+      "name": "Hoopshype Salaries",
+      "description": "निःशुल्क Hoopshype Salaries: Hoopshype, Salaries और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "fifa-ratings": {
+      "name": "Fifa Ratings",
+      "description": "ऑनलाइन Fifa Ratings टूल — फीचर्स: Fifa, Ratings, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "transfermarkt": {
+      "name": "Transfermarkt",
+      "description": "ऑनलाइन Transfermarkt टूल — फीचर्स: Transfermarkt, 体育数据, 实时比分. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "sofascore": {
+      "name": "Sofascore",
+      "description": "ऑनलाइन Sofascore एडिटर। Sofascore को कस्टमाइज़ करें, 体育数据 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "fbref": {
+      "name": "Fbref",
+      "description": "निःशुल्क Fbref: Fbref, 体育数据 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "understat": {
+      "name": "Understat",
+      "description": "निःशुल्क Understat: Understat, 体育数据 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "tennis-atp-tour": {
+      "name": "Tennis Atp Tour",
+      "description": "निःशुल्क Tennis Atp Tour: Tennis, Atp और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "tennis-wta": {
+      "name": "Tennis Wta",
+      "description": "ऑनलाइन Tennis Wta एडिटर। Tennis को कस्टमाइज़ करें, Wta को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "tennis-abstract": {
+      "name": "Tennis Abstract",
+      "description": "ऑनलाइन Tennis Abstract टूल — फीचर्स: Tennis, Abstract, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "flashscore-tennis": {
+      "name": "Flashscore Tennis",
+      "description": "ऑनलाइन Flashscore Tennis टूल — फीचर्स: Flashscore, Tennis, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "bwf-badminton": {
+      "name": "Bwf Badminton",
+      "description": "निःशुल्क Bwf Badminton: Bwf, Badminton और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "badminton-warehouse": {
+      "name": "Badminton Warehouse",
+      "description": "निःशुल्क Badminton Warehouse: Badminton, Warehouse और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "ittf-world": {
+      "name": "Ittf World",
+      "description": "निःशुल्क Ittf World: Ittf, World और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "tabletennis-reference": {
+      "name": "Tabletennis Reference",
+      "description": "निःशुल्क Tabletennis Reference: Tabletennis, Reference और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "revspin": {
+      "name": "Revspin",
+      "description": "ऑनलाइन Revspin टूल — फीचर्स: Revspin, 体育数据, 实时比分. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "fivb-volleyball": {
+      "name": "Fivb Volleyball",
+      "description": "ऑनलाइन Fivb Volleyball एडिटर। Fivb को कस्टमाइज़ करें, Volleyball को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "volleybox": {
+      "name": "Volleybox",
+      "description": "ऑनलाइन Volleybox एडिटर। Volleybox को कस्टमाइज़ करें, 体育数据 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "pga-tour-stats": {
+      "name": "Pga Tour Stats",
+      "description": "ऑनलाइन Pga Tour Stats टूल — फीचर्स: Pga, Tour, Stats. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "handicap-differential": {
+      "name": "Handicap Differential",
+      "description": "ऑनलाइन Handicap Differential टूल — फीचर्स: Handicap, Differential, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "golfnow-tee-times": {
+      "name": "Golfnow Tee Times",
+      "description": "ऑनलाइन Golfnow Tee Times टूल — फीचर्स: Golfnow, Tee, Times. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "2k-sports-handicap": {
+      "name": "2k Sports Handicap",
+      "description": "ऑनलाइन 2k Sports Handicap टूल — फीचर्स: 2k, Sports, Handicap. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "golfshake-handicap": {
+      "name": "Golfshake Handicap",
+      "description": "ऑनलाइन Golfshake Handicap एडिटर। Golfshake को कस्टमाइज़ करें, Handicap को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "ski-resort-stats": {
+      "name": "Ski Resort Stats",
+      "description": "ऑनलाइन Ski Resort Stats एडिटर। Ski को कस्टमाइज़ करें, Resort को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "on-the-snow": {
+      "name": "On The Snow",
+      "description": "निःशुल्क On The Snow: On, The और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "snow-forecast": {
+      "name": "Snow Forecast",
+      "description": "ऑनलाइन Snow Forecast टूल — फीचर्स: Snow, Forecast, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "powder-forecast": {
+      "name": "Powder Forecast",
+      "description": "ऑनलाइन Powder Forecast एडिटर। Powder को कस्टमाइज़ करें, Forecast को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "zrankings-ski": {
+      "name": "Zrankings Ski",
+      "description": "ऑनलाइन Zrankings Ski टूल — फीचर्स: Zrankings, Ski, 滑雪. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "skiers-tracker": {
+      "name": "Skiers Tracker",
+      "description": "ऑनलाइन Skiers Tracker एडिटर। Skiers को कस्टमाइज़ करें, Tracker को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "snowboard-encyc": {
+      "name": "Snowboard Encyc",
+      "description": "ऑनलाइन Snowboard Encyc एडिटर। Snowboard को कस्टमाइज़ करें, Encyc को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "the-house-board-size": {
+      "name": "The House Board Size",
+      "description": "ऑनलाइन The House Board Size एडिटर। The को कस्टमाइज़ करें, House को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "skate-video-calendar": {
+      "name": "Skate वीडियो Calendar",
+      "description": "ऑनलाइन Skate वीडियो Calendar टूल — फीचर्स: Skate, वीडियो, Calendar. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "skatepark-directory": {
+      "name": "Skatepark Directory",
+      "description": "ऑनलाइन Skatepark Directory एडिटर। Skatepark को कस्टमाइज़ करें, Directory को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "concretedisciples": {
+      "name": "Concretedisciples",
+      "description": "ऑनलाइन Concretedisciples टूल — फीचर्स: Concretedisciples, 滑雪, 滑板. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "roller-skate-size": {
+      "name": "Roller Skate Size",
+      "description": "निःशुल्क Roller Skate Size: Roller, Skate और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "inline-skate-buyers-guide": {
+      "name": "Inline Skate Buyers Guide",
+      "description": "ऑनलाइन Inline Skate Buyers Guide एडिटर। Inline को कस्टमाइज़ करें, Skate को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "bouldering-grade-converter": {
+      "name": "Bouldering Grade कनवर्टर",
+      "description": "निःशुल्क Bouldering Grade कनवर्टर: Bouldering, Grade और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "climbfinder": {
+      "name": "Climbfinder",
+      "description": "ऑनलाइन Climbfinder एडिटर। Climbfinder को कस्टमाइज़ करें, 体育数据 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "macro-calculator": {
+      "name": "Macro कैलकुलेटर",
+      "description": "ऑनलाइन Macro कैलकुलेटर एडिटर। Macro को कस्टमाइज़ करें, कैलकुलेटर को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "tdee-calculator": {
+      "name": "Tdee कैलकुलेटर",
+      "description": "ऑनलाइन Tdee कैलकुलेटर एडिटर। Tdee को कस्टमाइज़ करें, कैलकुलेटर को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "bmr-calculator": {
+      "name": "Bmr कैलकुलेटर",
+      "description": "निःशुल्क Bmr कैलकुलेटर: Bmr, कैलकुलेटर और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "protein-intake": {
+      "name": "Protein Intake",
+      "description": "ऑनलाइन Protein Intake एडिटर। Protein को कस्टमाइज़ करें, Intake को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "hydration-calculator": {
+      "name": "Hydration कैलकुलेटर",
+      "description": "निःशुल्क Hydration कैलकुलेटर: Hydration, कैलकुलेटर और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "water-reminder": {
+      "name": "Water Reminder",
+      "description": "ऑनलाइन Water Reminder एडिटर। Health को कस्टमाइज़ करें, Hydration को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "body-fat-calc": {
+      "name": "Body Fat Calc",
+      "description": "ऑनलाइन Body Fat Calc टूल — फीचर्स: Body, Fat, Calc. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "bmi-calc-health": {
+      "name": "Bmi Calc Health",
+      "description": "निःशुल्क Bmi Calc Health: Bmi, Calc और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "vo2max-calc": {
+      "name": "Vo2max Calc",
+      "description": "ऑनलाइन Vo2max Calc एडिटर। Vo2max को कस्टमाइज़ करें, Calc को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "one-rm-1rep-max": {
+      "name": "One Rm 1rep Max",
+      "description": "निःशुल्क One Rm 1rep Max: One, Rm और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "meal-prep-planner": {
+      "name": "Meal Prep Planner",
+      "description": "ऑनलाइन Meal Prep Planner टूल — फीचर्स: Meal, Prep, Planner. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "pre-workout-examiner": {
+      "name": "Pre Workout Examiner",
+      "description": "निःशुल्क Pre Workout Examiner: Pre, Workout और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "eventbrite-sports": {
+      "name": "Eventbrite Sports",
+      "description": "ऑनलाइन Eventbrite Sports एडिटर। Eventbrite को कस्टमाइज़ करें, Sports को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "meetup-sports": {
+      "name": "Meetup Sports",
+      "description": "ऑनलाइन Meetup Sports एडिटर। Meetup को कस्टमाइज़ करें, Sports को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "raceroster": {
+      "name": "Raceroster",
+      "description": "निःशुल्क Raceroster: Raceroster, 跑步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "ticketmaster-sports": {
+      "name": "Ticketmaster Sports",
+      "description": "ऑनलाइन Ticketmaster Sports टूल — फीचर्स: Ticketmaster, Sports, 赛事. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "sporting-news-scores": {
+      "name": "Sporting News Scores",
+      "description": "ऑनलाइन Sporting News Scores एडिटर। Sporting को कस्टमाइज़ करें, News को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "gearbrain": {
+      "name": "Gearbrain",
+      "description": "निःशुल्क Gearbrain: Gearbrain, 装备评测 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "wirecutter-fitness": {
+      "name": "Wirecutter Fitness",
+      "description": "ऑनलाइन Wirecutter Fitness एडिटर। Wirecutter को कस्टमाइज़ करें, Fitness को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "outdoorgearlab": {
+      "name": "Outdoorgearlab",
+      "description": "ऑनलाइन Outdoorgearlab एडिटर। Outdoorgearlab को कस्टमाइज़ करें, 徒步 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "switchback-travel-gear": {
+      "name": "Switchback Travel Gear",
+      "description": "निःशुल्क Switchback Travel Gear: Switchback, Travel और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "rotten-wire": {
+      "name": "Rotten Wire",
+      "description": "ऑनलाइन Rotten Wire टूल — फीचर्स: Rotten, Wire, 装备评测. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
+    },
+    "strava-stats-dashboard": {
+      "name": "Strava Stats Dashboard",
+      "description": "निःशुल्क Strava Stats Dashboard: Strava, Stats और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "athlinks-race-results": {
+      "name": "Athlinks Race Results",
+      "description": "निःशुल्क Athlinks Race Results: Athlinks, Race और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "sporttracks": {
+      "name": "Sporttracks",
+      "description": "ऑनलाइन Sporttracks एडिटर। Sporttracks को कस्टमाइज़ करें, 运动 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
+    },
+    "trainerroad-announcer": {
+      "name": "Trainerroad Announcer",
+      "description": "निःशुल्क Trainerroad Announcer: Trainerroad, Announcer और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
+    },
+    "sport-psychology-today": {
+      "name": "Sport Psychology Today",
+      "description": "निःशुल्क Sport Psychology Today: Sport, Psychology और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     }
   },
   "sidebar2": {
@@ -4634,7 +5403,75 @@
     "err-user-gone": "यह खाता अब मौजूद नहीं",
     "err-google-off": "Google लॉगिन चालू नहीं",
     "err-google-soon": "Google लॉगिन जल्द आ रहा है",
-    "err-server": "सर्वर व्यस्त है। बाद में प्रयास करें।"
+    "err-server": "सर्वर व्यस्त है। बाद में प्रयास करें।",
+    "continue-google": "Google से जारी रखें",
+    "err-google-bad-token": "अमान्य Google टोकन — पहचान सत्यापित नहीं हो सकी",
+    "err-google-bad-audience": "Google क्लाइंट ID मेल नहीं खाता, सपोर्ट से संपर्क करें",
+    "err-google-token-expired": "Google लॉगिन का समय समाप्त, फिर प्रयास करें",
+    "err-google-bad-profile": "Google प्रोफ़ाइल में आवश्यक फ़ील्ड (जैसे ईमेल) गायब है",
+    "err-google-popup-blocked": "लॉगिन पॉपअप ब्लॉक हुआ, पॉपअप की अनुमति दें या पुनः प्रयास करें",
+    "err-google-cancelled": "Google लॉगिन रद्द हो गया",
+    "sign-in-sub": "वापसी पर स्वागत है — फेवरेट सिंक करने के लिए लॉग इन करें",
+    "create-account": "खाता बनाएं",
+    "create-account-sub": "निःशुल्क पंजीकरण — फेवरेट और इतिहास सभी डिवाइस पर सिंक",
+    "no-account": "खाता नहीं है?",
+    "has-account": "पहले से खाता है?",
+    "or-email": "या ईमेल से जारी रखें",
+    "password-confirm-label": "पासवर्ड की पुष्टि करें",
+    "password-confirm-placeholder": "पासवर्ड फिर से डालें",
+    "err-passwords-mismatch": "दोनों पासवर्ड मेल नहीं खाते",
+    "pw-empty": "(डाला नहीं गया)",
+    "pw-weak": "कमजोर",
+    "pw-fair": "सामान्य",
+    "pw-good": "अच्छा",
+    "pw-strong": "बहुत अच्छा",
+    "pw-show": "पासवर्ड दिखाएं",
+    "pw-hide": "पासवर्ड छुपाएं",
+    "forgot-password-sub": "अपना ईमेल डालें, हम रीसेट निर्देश भेजेंगे",
+    "reset-password": "नया पासवर्ड सेट करें",
+    "reset-password-sub": "नया पासवर्ड चुनें, फिर उससे लॉग इन करें",
+    "send-reset-link": "रीसेट निर्देश भेजें",
+    "update-password": "पासवर्ड अपडेट करें",
+    "remember-password": "पासवर्ड याद आ गया?",
+    "need-new-token": "रीसेट लिंक का समय समाप्त?",
+    "request-another": "नया अनुरोध करें",
+    "forgot-token-issued": "(डेव मोड) रीसेट टोकन बन गया",
+    "forgot-email-sent": "अगर रजिस्टर्ड है, तो रीसेट लिंक भेज दिया गया है",
+    "reset-token-ready": "रीसेट टोकन तैयार — नया पासवर्ड डालें",
+    "reset-expires-min": " मिनट शेष",
+    "reset-success": "पासवर्ड अपडेट! नए पासवर्ड से लॉग इन करें।",
+    "err-reset-missing-token": "रीसेट टोकन गायब — फॉरगॉट पासवर्ड से शुरू करें",
+    "err-reset-invalid": "अमान्य रीसेट टोकन, नया अनुरोध करें",
+    "err-reset-used": "टोकन पहले ही इस्तेमाल हो चुका, नया अनुरोध करें",
+    "err-reset-expired": "रीसेट टोकन का समय समाप्त, नया अनुरोध करें",
+    "err-old-password-required": "कृपया अपना वर्तमान पासवर्ड दर्ज करें",
+    "err-same-password": "नया पासवर्ड पुराने जैसा नहीं हो सकता",
+    "err-name-too-long": "नाम 64 अक्षरों से अधिक नहीं हो सकता",
+    "profile-updated": "प्रोफ़ाइल सफलतापूर्वक अपडेट हो गई",
+    "password-changed": "पासवर्ड सफलतापूर्वक बदला गया",
+    "profile-title": "मेरी प्रोफ़ाइल",
+    "profile-subtitle": "अपनी खाता जानकारी और वरीयताएँ प्रबंधित करें",
+    "profile-section-basic": "मूल जानकारी",
+    "profile-section-security": "सुरक्षा",
+    "profile-name-label": "प्रदर्शन नाम",
+    "profile-name-placeholder": "अपना नाम दर्ज करें",
+    "profile-email-label": "ईमेल",
+    "profile-plan-label": "प्लान",
+    "profile-joined-label": "शामिल हुए",
+    "profile-provider-label": "साइन-इन विधि",
+    "profile-language-label": "भाषा",
+    "profile-save": "परिवर्तन सहेजें",
+    "profile-saving": "सहेजा जा रहा है...",
+    "profile-saved-tip": "सहेजा गया",
+    "profile-old-pw-label": "वर्तमान पासवर्ड",
+    "profile-new-pw-label": "नया पासवर्ड",
+    "profile-new-pw-placeholder": "कम से कम 8 अक्षर",
+    "profile-change-pw": "पासवर्ड बदलें",
+    "profile-changing-pw": "बदला जा रहा है...",
+    "profile-close": "बंद करें",
+    "provider-email": "ईमेल और पासवर्ड",
+    "provider-google": "Google खाता",
+    "footer-legal": "जारी रखने पर आप शर्तें और गोपनीयता नीति स्वीकार करते हैं"
   },
   "kofi": {
     "supportUs": "Korelyy को मुफ्त टूल्स बनाए रखने में सहयोग करें",

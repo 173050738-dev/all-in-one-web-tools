@@ -195,6 +195,8 @@ async function apiCall<T = any>(
 type RegisterInput = { email: string; password: string; locale: string };
 type LoginInput = { email: string; password: string };
 type ToggleFavInput = { tool_slug: string; tool_id?: string; source?: string };
+type ForgotResult = { ok: boolean; error?: string; reset_token?: string; expires_in?: number; message?: string };
+type ResetResult = { ok: boolean; error?: string; message?: string };
 
 export const authApi = {
   readStoredToken: safeReadToken,
@@ -217,12 +219,31 @@ export const authApi = {
     return { ok: true, token, access_token: token, user };
   },
 
-  async loginGoogle(idToken: string): Promise<AuthResult> {
-    const r: any = await apiCall<any>('POST', '/api/auth/google', { idToken }, { needAuth: false });
+  async loginGoogle(idToken: string, locale?: string): Promise<AuthResult> {
+    const payload: any = { idToken };
+    if (locale) payload.locale = locale;
+    const r: any = await apiCall<any>('POST', '/api/auth/google', payload, { needAuth: false });
     if (!r?.ok) return { ok: false, error: r?.error || 'HTTP_500' };
     const token = r.access_token || r.token;
     const user = normalizeUser(r.user);
     return { ok: true, token, access_token: token, user };
+  },
+
+  async forgotPassword(email: string): Promise<ForgotResult> {
+    const r: any = await apiCall<any>('POST', '/api/auth/password/forgot', { email }, { needAuth: false });
+    if (!r?.ok) return { ok: false, error: r?.error || 'HTTP_500' };
+    return {
+      ok: true,
+      reset_token: r.reset_token,
+      expires_in: r.expires_in,
+      message: r.message,
+    };
+  },
+
+  async resetPassword(token: string, password: string): Promise<ResetResult> {
+    const r: any = await apiCall<any>('POST', '/api/auth/password/reset', { token, password }, { needAuth: false });
+    if (!r?.ok) return { ok: false, error: r?.error || 'HTTP_500' };
+    return { ok: true, message: r.message };
   },
 
   async me(): Promise<AuthResult> {
@@ -280,5 +301,26 @@ export const authApi = {
   // Legacy alias kept for callers referencing syncFavoritesBatch
   syncFavoritesBatch(items: Array<{ tool_slug: string; tool_id?: string; favorited_at?: number; source?: string }>): Promise<FavResult> {
     return authApi.syncFavorites(items.map((i) => i.tool_slug));
+  },
+
+  async updateProfile(data: { display_name?: string; locale?: string }): Promise<AuthResult> {
+    const r: any = await apiCall<any>('POST', '/api/auth/profile/update', data, { needAuth: true });
+    if (!r?.ok) return { ok: false, error: r?.error || 'HTTP_500' };
+    const user = normalizeUser(r.user);
+    if (user) {
+      safeWriteUser(user);
+    }
+    return { ok: true, user };
+  },
+
+  async changePassword(oldPassword: string, newPassword: string): Promise<{ ok: boolean; error?: string; message?: string }> {
+    const r: any = await apiCall<any>(
+      'POST',
+      '/api/auth/password/change',
+      { old_password: oldPassword, new_password: newPassword },
+      { needAuth: true }
+    );
+    if (!r?.ok) return { ok: false, error: r?.error || 'HTTP_500' };
+    return { ok: true, message: r.message };
   },
 };

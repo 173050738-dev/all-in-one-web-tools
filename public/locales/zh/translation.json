@@ -114,6 +114,7 @@
     "subtitle": "全球领先工具聚合平台",
     "sort-newest": "最新",
     "sort-popular": "最受欢迎",
+    "sort-recommended": "猜你喜欢",
     "sort-free": "全部免费工具",
     "free": "免费",
     "paid": "付费",
@@ -4420,6 +4421,774 @@
     "dezeen": {
       "name": "Dezeen",
       "description": "设计媒体网站，建筑室内设计。"
+    },
+    "nike-run-club": {
+      "name": "Nike Run Club 跑步",
+      "description": "Nike Run Club 跑步，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "adidas-running-runtastic": {
+      "name": "Adidas Runtastic 跑步",
+      "description": "Adidas Runtastic 跑步，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "runkeeper": {
+      "name": "Runkeeper 跑步记录",
+      "description": "Runkeeper 跑步记录，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "garmin-connect": {
+      "name": "Garmin Connect 佳明",
+      "description": "Garmin Connect 佳明，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "coros": {
+      "name": "COROS 高驰运动",
+      "description": "COROS 高驰运动，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "polar-flow": {
+      "name": "Polar Flow 博能",
+      "description": "Polar Flow 博能，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "vdot-calculator": {
+      "name": "VDOT 跑步训练计算器",
+      "description": "VDOT 跑步训练计算器，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "active-race-results": {
+      "name": "Active 赛事成绩查询",
+      "description": "Active 赛事成绩查询，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "trainingpeaks": {
+      "name": "TrainingPeaks 训练日志",
+      "description": "TrainingPeaks 训练日志，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "final-surge": {
+      "name": "Final Surge 跑步教练",
+      "description": "Final Surge 跑步教练，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "runalyze": {
+      "name": "Runalyze 跑步分析",
+      "description": "Runalyze 跑步分析，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "stryd-power": {
+      "name": "Stryd 跑步功率",
+      "description": "Stryd 跑步功率，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "racewow": {
+      "name": "RaceWow 赛事报名",
+      "description": "RaceWow 赛事报名，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "lets-do-this": {
+      "name": "LetsDoThis 全球赛事",
+      "description": "LetsDoThis 全球赛事，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "find-a-marathon": {
+      "name": "FindAMarathon 马拉松查询",
+      "description": "FindAMarathon 马拉松查询，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "running2win": {
+      "name": "Running2Win 跑步日志",
+      "description": "Running2Win 跑步日志，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "mcmillan-calculator": {
+      "name": "McMillan 跑步配速计算器",
+      "description": "McMillan 跑步配速计算器，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "marathon-handbook": {
+      "name": "MarathonHandbook 训练计划",
+      "description": "MarathonHandbook 训练计划，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "cool-running": {
+      "name": "Cool Running 跑步入门",
+      "description": "Cool Running 跑步入门，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "worlds-marathons": {
+      "name": "WorldsMarathons 大满贯",
+      "description": "WorldsMarathons 大满贯，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "runsignup": {
+      "name": "RunSignUp 赛事报名",
+      "description": "RunSignUp 赛事报名，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "pace-calculator": {
+      "name": "跑步配速计算器",
+      "description": "跑步配速计算器，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "treadmill-calc": {
+      "name": "跑步机坡度速度换算器",
+      "description": "跑步机坡度速度换算器，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "couch-to-5k": {
+      "name": "Couch to 5K 从零跑步",
+      "description": "Couch to 5K 从零跑步，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "race-predictor": {
+      "name": "跑步比赛成绩预测器",
+      "description": "跑步比赛成绩预测器，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "ride-with-gps": {
+      "name": "RideWithGPS 骑行路线",
+      "description": "RideWithGPS 骑行路线，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "bikemap": {
+      "name": "Bikemap 全球骑行地图",
+      "description": "Bikemap 全球骑行地图，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "cyclemeter": {
+      "name": "Cyclemeter 骑行记录",
+      "description": "Cyclemeter 骑行记录，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "wahoo-systm": {
+      "name": "Wahoo SYSTM 智能训练",
+      "description": "Wahoo SYSTM 智能训练，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "trainerroad": {
+      "name": "TrainerRoad 功率训练",
+      "description": "TrainerRoad 功率训练，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "zwift": {
+      "name": "Zwift 虚拟骑行",
+      "description": "Zwift 虚拟骑行，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "rouvy": {
+      "name": "ROUVY 实景骑行",
+      "description": "ROUVY 实景骑行，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "rgt-cycling": {
+      "name": "RGT Cycling 虚拟骑行",
+      "description": "RGT Cycling 虚拟骑行，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "bikeregister": {
+      "name": "BikeRegister 防盗登记",
+      "description": "BikeRegister 防盗登记，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "geometry-geeks": {
+      "name": "车架几何对比工具",
+      "description": "车架几何对比工具，运动装备专业评测对比平台，跑步鞋、骑行台、健身器材、户外装备与运动耳机实测对比，选购指南避免踩坑，性价比一目了然。"
+    },
+    "best-bike-split": {
+      "name": "BestBikeSplit 比赛分段分析",
+      "description": "BestBikeSplit 比赛分段分析，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "golden-cheetah": {
+      "name": "GoldenCheetah 开源运动分析",
+      "description": "GoldenCheetah 开源运动分析，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "cyclestreets": {
+      "name": "CycleStreets 英国骑行路线",
+      "description": "CycleStreets 英国骑行路线，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "open-cycle-map": {
+      "name": "OpenCycleMap 全球骑行地图",
+      "description": "OpenCycleMap 全球骑行地图，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "bikeradar": {
+      "name": "Bikeradar 骑行评测工具",
+      "description": "Bikeradar 骑行评测工具，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "trailforks": {
+      "name": "Trailforks 山地车路线",
+      "description": "Trailforks 山地车路线，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "singletracks": {
+      "name": "Singletracks 山地车百科",
+      "description": "Singletracks 山地车百科，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "pinkbike": {
+      "name": "Pinkbike 山地车社区",
+      "description": "Pinkbike 山地车社区，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "veloviewer": {
+      "name": "VeloViewer Strava增强",
+      "description": "VeloViewer Strava增强，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "todays-plan": {
+      "name": "TodaysPlan 骑行教练端",
+      "description": "TodaysPlan 骑行教练端，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "fullgaz": {
+      "name": "FullGaz 骑行实景视频",
+      "description": "FullGaz 骑行实景视频，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "bike-calc": {
+      "name": "BikeCalc 齿比速度计算器",
+      "description": "BikeCalc 齿比速度计算器，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "bike-insurance-check": {
+      "name": "自行车保险比价",
+      "description": "自行车保险比价，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "sram-shift-calc": {
+      "name": "SRAM 变速计算器",
+      "description": "SRAM 变速计算器，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "project-4321": {
+      "name": "Project 4321 功率计算器",
+      "description": "Project 4321 功率计算器，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "nike-training-club": {
+      "name": "Nike Training Club 训练",
+      "description": "Nike Training Club 训练，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "peloton-digital": {
+      "name": "Peloton 直播单车课",
+      "description": "Peloton 直播单车课，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "sweat-app": {
+      "name": "Sweat 女性健身",
+      "description": "Sweat 女性健身，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "centr-chris-hemsworth": {
+      "name": "Centr 锤哥健身",
+      "description": "Centr 锤哥健身，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "ob-fitness": {
+      "name": "Openfit 直播健身课",
+      "description": "Openfit 直播健身课，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "fitbit-premium": {
+      "name": "Fitbit 高级健康",
+      "description": "Fitbit 高级健康，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "strong-lifts": {
+      "name": "StrongLifts 力量训练",
+      "description": "StrongLifts 力量训练，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "starting-strength": {
+      "name": "StartingStrength 基础力量",
+      "description": "StartingStrength 基础力量，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "exrx": {
+      "name": "ExRx 运动训练百科",
+      "description": "ExRx 运动训练百科，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "bodybuilding-guides": {
+      "name": "Bodybuilding 训练指南",
+      "description": "Bodybuilding 训练指南，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "fitocracy": {
+      "name": "Fitocracy 游戏化健身",
+      "description": "Fitocracy 游戏化健身，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "habit-nest": {
+      "name": "Habit Nest 健身打卡",
+      "description": "Habit Nest 健身打卡，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "workout-labs": {
+      "name": "WorkoutLabs 动作图解",
+      "description": "WorkoutLabs 动作图解，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "freedom-strong": {
+      "name": "囚徒健身徒手训练",
+      "description": "囚徒健身徒手训练，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "darebee": {
+      "name": "Darebee 每日挑战",
+      "description": "Darebee 每日挑战，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "12minuteathlete": {
+      "name": "12分钟高效HIIT",
+      "description": "12分钟高效HIIT，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "fitness-blender": {
+      "name": "FitnessBlender 免费训练视频",
+      "description": "FitnessBlender 免费训练视频，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "poosh": {
+      "name": "Poosh 居家健身",
+      "description": "Poosh 居家健身，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "p90x-schedule": {
+      "name": "P90X 90天训练日程",
+      "description": "P90X 90天训练日程，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "insanity-workout": {
+      "name": "Insanity 极限燃脂日程",
+      "description": "Insanity 极限燃脂日程，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "musclewiki": {
+      "name": "MuscleWiki 肌肉解剖训练",
+      "description": "MuscleWiki 肌肉解剖训练，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "strech-lab": {
+      "name": "拉伸动作图解库",
+      "description": "拉伸动作图解库，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "romwod": {
+      "name": "ROMWOD 柔韧性训练",
+      "description": "ROMWOD 柔韧性训练，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "yoga-international": {
+      "name": "Yoga International 国际瑜伽",
+      "description": "Yoga International 国际瑜伽，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "gaia-yoga": {
+      "name": "Gaia 灵性瑜伽视频",
+      "description": "Gaia 灵性瑜伽视频，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "do-you-yoga": {
+      "name": "DoYou 瑜伽课程",
+      "description": "DoYou 瑜伽课程，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "yoga-download": {
+      "name": "YogaDownload 在线课",
+      "description": "YogaDownload 在线课，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "my-yoga-works": {
+      "name": "MyYogaWorks 名师课",
+      "description": "MyYogaWorks 名师课，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "pilates-anytime": {
+      "name": "PilatesAnytime 普拉提",
+      "description": "PilatesAnytime 普拉提，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "club-pilates": {
+      "name": "ClubPilates 门店查询",
+      "description": "ClubPilates 门店查询，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "blogilates": {
+      "name": "Blogilates POP Pilates",
+      "description": "Blogilates POP Pilates，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "stretching-timer": {
+      "name": "拉伸倒计时计时器",
+      "description": "拉伸倒计时计时器，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "foam-roller-guide": {
+      "name": "泡沫轴使用指南",
+      "description": "泡沫轴使用指南，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "yin-yoga-cheatsheet": {
+      "name": "阴瑜伽序列速查表",
+      "description": "阴瑜伽序列速查表，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "yoga-journal": {
+      "name": "Yoga Journal 杂志工具",
+      "description": "Yoga Journal 杂志工具，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "medito": {
+      "name": "Medito 免费冥想",
+      "description": "Medito 免费冥想，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "waking-up": {
+      "name": "WakingUp 每日冥想",
+      "description": "WakingUp 每日冥想，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "mindful-cms": {
+      "name": "Mindful 正念入门",
+      "description": "Mindful 正念入门，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "breathwrk": {
+      "name": "Breathwrk 呼吸训练",
+      "description": "Breathwrk 呼吸训练，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "478-breathing": {
+      "name": "4-7-8 呼吸法计时器",
+      "description": "4-7-8 呼吸法计时器，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "box-breathing": {
+      "name": "BoxBreathing 海豹式呼吸",
+      "description": "BoxBreathing 海豹式呼吸，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "progressive-muscle-relaxation": {
+      "name": "渐进肌肉放松音频",
+      "description": "渐进肌肉放松音频，涵盖阴瑜伽、流瑜伽、普拉提、正念冥想与呼吸训练的专业课程库，从入门到进阶名师带练，改善柔韧、缓解焦虑、有效提升睡眠质量。"
+    },
+    "swim-com": {
+      "name": "Swim.com 游泳分析",
+      "description": "Swim.com 游泳分析，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "swimsmooth": {
+      "name": "SwimSmooth 自由泳纠正",
+      "description": "SwimSmooth 自由泳纠正，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "goswim": {
+      "name": "GoSwim 游泳动作视频",
+      "description": "GoSwim 游泳动作视频，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "swimulator": {
+      "name": "Swimulator 泳池训练计划",
+      "description": "Swimulator 泳池训练计划，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "trainerroad-swim": {
+      "name": "Triathlon 铁人三项训练",
+      "description": "Triathlon 铁人三项训练，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "slowtwitch": {
+      "name": "Slowtwitch 铁三社区",
+      "description": "Slowtwitch 铁三社区，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "tridot": {
+      "name": "TriDot 铁三AI教练",
+      "description": "TriDot 铁三AI教练，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "beginnertriathlete": {
+      "name": "BeginnerTriathlete 入门",
+      "description": "BeginnerTriathlete 入门，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "ironman-training-peaks": {
+      "name": "IRONMAN 官方训练计划",
+      "description": "IRONMAN 官方训练计划，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "suunto-ironman": {
+      "name": "铁三数据导入分析",
+      "description": "铁三数据导入分析，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "kayak-sit-on-top": {
+      "name": "皮划艇装备对比",
+      "description": "皮划艇装备对比，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "surf-forecast": {
+      "name": "SurfForecast 冲浪预报",
+      "description": "SurfForecast 冲浪预报，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "windguru": {
+      "name": "Windguru 风帆风筝冲浪预报",
+      "description": "Windguru 风帆风筝冲浪预报，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "magicseaweed": {
+      "name": "MSW 全球浪高预报",
+      "description": "MSW 全球浪高预报，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "wannasurf": {
+      "name": "Wannasurf 全球冲浪点地图",
+      "description": "Wannasurf 全球冲浪点地图，游泳铁三冲浪皮划艇等水上运动专业工具，动作纠正视频、训练计划生成、赛事预报与浪况风力实时数据，科学备赛稳步提升运动表现。"
+    },
+    "wikiloc": {
+      "name": "Wikiloc 路线共享",
+      "description": "Wikiloc 路线共享，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "hikingproject": {
+      "name": "HikingProject 徒步项目",
+      "description": "HikingProject 徒步项目，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "mountain-project": {
+      "name": "MountainProject 攀岩路线",
+      "description": "MountainProject 攀岩路线，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "summitpost": {
+      "name": "SummitPost 山峰百科",
+      "description": "SummitPost 山峰百科，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "peakbagger": {
+      "name": "Peakbagger 登峰记录",
+      "description": "Peakbagger 登峰记录，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "outdooractive": {
+      "name": "OutdoorActive 欧洲户外地图",
+      "description": "OutdoorActive 欧洲户外地图，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "satgear-checklist": {
+      "name": "背包打包清单计算器",
+      "description": "背包打包清单计算器，运动装备专业评测对比平台，跑步鞋、骑行台、健身器材、户外装备与运动耳机实测对比，选购指南避免踩坑，性价比一目了然。"
+    },
+    "lighterpack": {
+      "name": "LighterPack 装备重量分析",
+      "description": "LighterPack 装备重量分析，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "rei-co-op-checklists": {
+      "name": "REI 户外打包清单",
+      "description": "REI 户外打包清单，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "campendium": {
+      "name": "Campendium 免费营地查询",
+      "description": "Campendium 免费营地查询，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "free-campsites": {
+      "name": "FreeCampsites 营地地图",
+      "description": "FreeCampsites 营地地图，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "hipcamp": {
+      "name": "Hipcamp 露营地预订",
+      "description": "Hipcamp 露营地预订，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "campsite-photos": {
+      "name": "CampsitePhotos 营地实景",
+      "description": "CampsitePhotos 营地实景，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "noaa-weather": {
+      "name": "NOAA 户外天气预报",
+      "description": "NOAA 户外天气预报，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "mountain-weather-forecast": {
+      "name": "MountainForecast 山峰天气",
+      "description": "MountainForecast 山峰天气，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "meteoblue-mountain": {
+      "name": "Meteoblue 高山天气预报",
+      "description": "Meteoblue 高山天气预报，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "wildsafe-bear": {
+      "name": "防熊知识与装备",
+      "description": "防熊知识与装备，运动装备专业评测对比平台，跑步鞋、骑行台、健身器材、户外装备与运动耳机实测对比，选购指南避免踩坑，性价比一目了然。"
+    },
+    "sotaventos-mountain": {
+      "name": "登山高度与等高线查看器",
+      "description": "登山高度与等高线查看器，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "nba-stats": {
+      "name": "NBA 官方数据统计",
+      "description": "NBA 官方数据统计，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "basketball-reference": {
+      "name": "BasketballReference 历史数据",
+      "description": "BasketballReference 历史数据，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "bball-index": {
+      "name": "Bball Index 高阶数据",
+      "description": "Bball Index 高阶数据，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "hoopshype-salaries": {
+      "name": "HoopsHype 球员薪资",
+      "description": "HoopsHype 球员薪资，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "fifa-ratings": {
+      "name": "EA Sports FC 球员能力值",
+      "description": "EA Sports FC 球员能力值，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "transfermarkt": {
+      "name": "Transfermarkt 转会市场",
+      "description": "Transfermarkt 转会市场，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "sofascore": {
+      "name": "Sofascore 实时比分",
+      "description": "Sofascore 实时比分，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "fbref": {
+      "name": "FBref 足球高阶数据",
+      "description": "FBref 足球高阶数据，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "understat": {
+      "name": "Understat xG 期望进球",
+      "description": "Understat xG 期望进球，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "tennis-atp-tour": {
+      "name": "ATP Tour 官方数据",
+      "description": "ATP Tour 官方数据，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "tennis-wta": {
+      "name": "WTA 女子网球官方",
+      "description": "WTA 女子网球官方，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "tennis-abstract": {
+      "name": "TennisAbstract 高阶网球统计",
+      "description": "TennisAbstract 高阶网球统计，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "flashscore-tennis": {
+      "name": "FlashScore 网球比分",
+      "description": "FlashScore 网球比分，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "bwf-badminton": {
+      "name": "BWF 世界羽联官方",
+      "description": "BWF 世界羽联官方，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "badminton-warehouse": {
+      "name": "羽毛球装备对比器",
+      "description": "羽毛球装备对比器，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "ittf-world": {
+      "name": "ITTF 国际乒联官网",
+      "description": "ITTF 国际乒联官网，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "tabletennis-reference": {
+      "name": "乒乓球胶皮对比",
+      "description": "乒乓球胶皮对比，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "revspin": {
+      "name": "RevSpin 胶皮性能数据库",
+      "description": "RevSpin 胶皮性能数据库，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "fivb-volleyball": {
+      "name": "FIVB 国际排联官方",
+      "description": "FIVB 国际排联官方，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "volleybox": {
+      "name": "Volleybox 排球资料库",
+      "description": "Volleybox 排球资料库，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "pga-tour-stats": {
+      "name": "PGA TOUR 高尔夫数据",
+      "description": "PGA TOUR 高尔夫数据，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "handicap-differential": {
+      "name": "高尔夫差点计算器",
+      "description": "高尔夫差点计算器，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "golfnow-tee-times": {
+      "name": "GolfNow 开球时间预订",
+      "description": "GolfNow 开球时间预订，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "2k-sports-handicap": {
+      "name": "Golfshot 高尔夫GPS",
+      "description": "Golfshot 高尔夫GPS，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "golfshake-handicap": {
+      "name": "Golfshake 记分工具",
+      "description": "Golfshake 记分工具，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "ski-resort-stats": {
+      "name": "SkiResortInfo 雪场数据",
+      "description": "SkiResortInfo 雪场数据，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "on-the-snow": {
+      "name": "OnTheSnow 雪况实时",
+      "description": "OnTheSnow 雪况实时，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "snow-forecast": {
+      "name": "Snow-Forecast 全球降雪预报",
+      "description": "Snow-Forecast 全球降雪预报，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "powder-forecast": {
+      "name": "PowderLines 粉雪雷达",
+      "description": "PowderLines 粉雪雷达，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "zrankings-ski": {
+      "name": "ZRankings 雪场排名",
+      "description": "ZRankings 雪场排名，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "skiers-tracker": {
+      "name": "Skitracker 滑雪数据",
+      "description": "Skitracker 滑雪数据，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "snowboard-encyc": {
+      "name": "单板板型对照",
+      "description": "单板板型对照，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "the-house-board-size": {
+      "name": "滑板尺寸计算器",
+      "description": "滑板尺寸计算器，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "skate-video-calendar": {
+      "name": "滑板赛事日历",
+      "description": "滑板赛事日历，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "skatepark-directory": {
+      "name": "全球滑板场地图",
+      "description": "全球滑板场地图，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "concretedisciples": {
+      "name": "ConcreteDisciples 滑板公园",
+      "description": "ConcreteDisciples 滑板公园，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "roller-skate-size": {
+      "name": "轮滑鞋尺码对照表",
+      "description": "轮滑鞋尺码对照表，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "inline-skate-buyers-guide": {
+      "name": "直排轮滑购买指南",
+      "description": "直排轮滑购买指南，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "bouldering-grade-converter": {
+      "name": "攀岩难度等级对照表",
+      "description": "攀岩难度等级对照表，滑雪滑板攀岩轮滑极限运动综合资源，全球雪场雪况预报、板型尺码对照、攀岩难度换算、滑板场地图与赛事日历一站全部搞定。"
+    },
+    "climbfinder": {
+      "name": "ClimbFinder 全球岩场",
+      "description": "ClimbFinder 全球岩场，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "macro-calculator": {
+      "name": "宏量营养素计算器",
+      "description": "宏量营养素计算器，运动营养与体重管理专业工具，精准计算每日消耗、基础代谢、宏量营养素摄入，支持卡路里记录、周食谱规划与补剂成分对比分析。"
+    },
+    "tdee-calculator": {
+      "name": "TDEE 日消耗计算器",
+      "description": "TDEE 日消耗计算器，运动营养与体重管理专业工具，精准计算每日消耗、基础代谢、宏量营养素摄入，支持卡路里记录、周食谱规划与补剂成分对比分析。"
+    },
+    "bmr-calculator": {
+      "name": "BMR 基础代谢计算器",
+      "description": "BMR 基础代谢计算器，运动营养与体重管理专业工具，精准计算每日消耗、基础代谢、宏量营养素摄入，支持卡路里记录、周食谱规划与补剂成分对比分析。"
+    },
+    "protein-intake": {
+      "name": "蛋白质摄入计算器",
+      "description": "蛋白质摄入计算器，运动营养与体重管理专业工具，精准计算每日消耗、基础代谢、宏量营养素摄入，支持卡路里记录、周食谱规划与补剂成分对比分析。"
+    },
+    "hydration-calculator": {
+      "name": "每日饮水计算器",
+      "description": "每日饮水计算器，运动营养与体重管理专业工具，精准计算每日消耗、基础代谢、宏量营养素摄入，支持卡路里记录、周食谱规划与补剂成分对比分析。"
+    },
+    "water-reminder": {
+      "name": "喝水提醒在线版",
+      "description": "喝水提醒在线版，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "body-fat-calc": {
+      "name": "体脂率估算器(皮褶法)",
+      "description": "体脂率估算器(皮褶法)，运动营养与体重管理专业工具，精准计算每日消耗、基础代谢、宏量营养素摄入，支持卡路里记录、周食谱规划与补剂成分对比分析。"
+    },
+    "bmi-calc-health": {
+      "name": "BMI 体质指数计算器",
+      "description": "BMI 体质指数计算器，运动营养与体重管理专业工具，精准计算每日消耗、基础代谢、宏量营养素摄入，支持卡路里记录、周食谱规划与补剂成分对比分析。"
+    },
+    "vo2max-calc": {
+      "name": "VO2max 最大摄氧量估算",
+      "description": "VO2max 最大摄氧量估算，专业运动科学计算器，涵盖配速VDOT、齿比速度、坡度、1RM力量、高尔夫差点、比赛成绩预测等工具，数据辅助训练更科学高效。"
+    },
+    "one-rm-1rep-max": {
+      "name": "1RM 最大力量计算器",
+      "description": "1RM 最大力量计算器，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "meal-prep-planner": {
+      "name": "增肌减脂周食谱规划",
+      "description": "增肌减脂周食谱规划，运动营养与体重管理专业工具，精准计算每日消耗、基础代谢、宏量营养素摄入，支持卡路里记录、周食谱规划与补剂成分对比分析。"
+    },
+    "pre-workout-examiner": {
+      "name": "补剂成分对比表",
+      "description": "补剂成分对比表，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "eventbrite-sports": {
+      "name": "Eventbrite 体育赛事查询",
+      "description": "Eventbrite 体育赛事查询，全球体育赛事查询报名平台，跑步铁三球类比赛报名、同城运动小组、门票购买与个人成绩档案管理，不错过每一场精彩活动。"
+    },
+    "meetup-sports": {
+      "name": "Meetup 同城运动小组",
+      "description": "Meetup 同城运动小组，全球体育赛事查询报名平台，跑步铁三球类比赛报名、同城运动小组、门票购买与个人成绩档案管理，不错过每一场精彩活动。"
+    },
+    "raceroster": {
+      "name": "RaceRoster 赛事报名",
+      "description": "RaceRoster 赛事报名，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "ticketmaster-sports": {
+      "name": "Ticketmaster 体育门票",
+      "description": "Ticketmaster 体育门票，全球体育赛事查询报名平台，跑步铁三球类比赛报名、同城运动小组、门票购买与个人成绩档案管理，不错过每一场精彩活动。"
+    },
+    "sporting-news-scores": {
+      "name": "Sporting News 比分直播",
+      "description": "Sporting News 比分直播，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "gearbrain": {
+      "name": "GearBrain 运动装备对比",
+      "description": "GearBrain 运动装备对比，运动装备专业评测对比平台，跑步鞋、骑行台、健身器材、户外装备与运动耳机实测对比，选购指南避免踩坑，性价比一目了然。"
+    },
+    "wirecutter-fitness": {
+      "name": "NYT Wirecutter 健身装备榜",
+      "description": "NYT Wirecutter 健身装备榜，分部位分难度的健身训练库，从新手徒手到进阶力量计划全覆盖，支持动作图解、直播课程与打卡追踪，居家或健身房都能高效开展训练。"
+    },
+    "outdoorgearlab": {
+      "name": "OutdoorGearLab 户外测评",
+      "description": "OutdoorGearLab 户外测评，徒步登山露营一站式工具，全球路线共享、山峰海拔等高线查看、营地查询与装备重量清单分析，保障每次户外出行安全又舒适。"
+    },
+    "switchback-travel-gear": {
+      "name": "SwitchbackTravel 装备评测",
+      "description": "SwitchbackTravel 装备评测，运动装备专业评测对比平台，跑步鞋、骑行台、健身器材、户外装备与运动耳机实测对比，选购指南避免踩坑，性价比一目了然。"
+    },
+    "rotten-wire": {
+      "name": "运动耳机音质对比",
+      "description": "运动耳机音质对比，运动装备专业评测对比平台，跑步鞋、骑行台、健身器材、户外装备与运动耳机实测对比，选购指南避免踩坑，性价比一目了然。"
+    },
+    "strava-stats-dashboard": {
+      "name": "Strava Stats 数据增强",
+      "description": "Strava Stats 数据增强，篮球足球网球羽球乒乓排球高尔夫全球联赛数据中心，实时比分、球员高阶统计、转会薪资、历史战绩与差点计算全方位涵盖。"
+    },
+    "athlinks-race-results": {
+      "name": "Athlinks 个人成绩档案",
+      "description": "Athlinks 个人成绩档案，专业跑步训练辅助工具，精准记录里程配速心率，内置多级马拉松训练计划、赛事报名查询与成绩数据分析，助力从入门到PB全阶段稳步提升。"
+    },
+    "sporttracks": {
+      "name": "SportTracks 运动日志",
+      "description": "SportTracks 运动日志，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "trainerroad-announcer": {
+      "name": "训练日历与周期化规划",
+      "description": "训练日历与周期化规划，骑行爱好者的综合平台，提供全球路线规划、功率训练课表、虚拟实景骑行与装备评测，支持码表数据同步，公路山地通勤骑行一站搞定。"
+    },
+    "sport-psychology-today": {
+      "name": "运动心理调节工具",
+      "description": "运动心理调节工具，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
     }
   },
   "sidebar2": {
@@ -4634,7 +5403,75 @@
     "err-user-gone": "账号不存在或已被删除",
     "err-google-off": "Google 登录暂未开放",
     "err-google-soon": "Google 登录即将上线，敬请期待",
-    "err-server": "服务器繁忙，请稍后重试"
+    "err-server": "服务器繁忙，请稍后重试",
+    "continue-google": "继续使用 Google",
+    "err-google-bad-token": "Google 令牌无效，无法验证身份",
+    "err-google-bad-audience": "Google 客户端ID不匹配，请联系管理员",
+    "err-google-token-expired": "Google 登录已过期，请重试",
+    "err-google-bad-profile": "Google 账户缺少必要的资料（如邮箱）",
+    "err-google-popup-blocked": "登录窗口被拦截，请允许弹窗或重试",
+    "err-google-cancelled": "已取消 Google 登录",
+    "sign-in-sub": "欢迎回来，登录以同步你的收藏",
+    "create-account": "创建账户",
+    "create-account-sub": "免费注册，跨设备同步收藏与历史记录",
+    "no-account": "没有账户？",
+    "has-account": "已有账户？",
+    "or-email": "或使用邮箱",
+    "password-confirm-label": "确认密码",
+    "password-confirm-placeholder": "再次输入密码",
+    "err-passwords-mismatch": "两次输入的密码不一致",
+    "pw-empty": "（未输入）",
+    "pw-weak": "弱",
+    "pw-fair": "一般",
+    "pw-good": "良好",
+    "pw-strong": "强",
+    "pw-show": "显示密码",
+    "pw-hide": "隐藏密码",
+    "forgot-password-sub": "输入你的邮箱，我们将发送重置密码的说明",
+    "reset-password": "设置新密码",
+    "reset-password-sub": "请输入你的新密码，完成后可用新密码登录",
+    "send-reset-link": "发送重置说明",
+    "update-password": "确认修改密码",
+    "remember-password": "记起密码了？",
+    "need-new-token": "重置链接已失效？",
+    "request-another": "重新申请",
+    "forgot-token-issued": "（开发模式）已生成重置令牌",
+    "forgot-email-sent": "如果邮箱已注册，重置链接已发送",
+    "reset-token-ready": "重置令牌就绪，请设置新密码",
+    "reset-expires-min": " 分钟内有效",
+    "reset-success": "密码已更新！请使用新密码登录",
+    "err-reset-missing-token": "缺少重置令牌，请从找回密码开始",
+    "err-reset-invalid": "重置令牌无效，请重新申请",
+    "err-reset-used": "该重置令牌已使用，请重新申请",
+    "err-reset-expired": "重置令牌已过期，请重新申请",
+    "err-old-password-required": "请输入当前密码",
+    "err-same-password": "新密码不能与旧密码相同",
+    "err-name-too-long": "昵称不能超过 64 个字符",
+    "profile-updated": "个人资料已更新",
+    "password-changed": "密码已修改成功",
+    "profile-title": "个人资料",
+    "profile-subtitle": "管理你的账户信息与偏好设置",
+    "profile-section-basic": "基本信息",
+    "profile-section-security": "安全设置",
+    "profile-name-label": "昵称",
+    "profile-name-placeholder": "输入显示昵称",
+    "profile-email-label": "邮箱",
+    "profile-plan-label": "订阅方案",
+    "profile-joined-label": "注册时间",
+    "profile-provider-label": "注册方式",
+    "profile-language-label": "界面语言",
+    "profile-save": "保存修改",
+    "profile-saving": "保存中...",
+    "profile-saved-tip": "已保存",
+    "profile-old-pw-label": "当前密码",
+    "profile-new-pw-label": "新密码",
+    "profile-new-pw-placeholder": "至少 8 位",
+    "profile-change-pw": "修改密码",
+    "profile-changing-pw": "修改中...",
+    "profile-close": "关闭",
+    "provider-email": "邮箱密码",
+    "provider-google": "Google 账户",
+    "footer-legal": "继续即代表同意服务条款与隐私政策"
   },
   "kofi": {
     "supportUs": "支持 Korelyy 继续维护免费工具",

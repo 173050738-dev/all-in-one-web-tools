@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Fix static routes where TITLE_SEGMENT already contains " | brand" causing double brand
 const fs = require('fs');
 const path = require('path');

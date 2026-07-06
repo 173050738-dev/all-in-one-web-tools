@@ -114,6 +114,7 @@
     "subtitle": "منصة تجميع الأدوات الرائدة عالمياً",
     "sort-newest": "الأحدث",
     "sort-popular": "الأكثر شعبية",
+    "sort-recommended": "مقترحات لك",
     "sort-free": "جميع الأدوات المجانية",
     "free": "مجاني",
     "paid": "مدفوع",
@@ -4420,6 +4421,774 @@
     "dezeen": {
       "name": "Dezeen",
       "description": "موقع إعلامي متخصص في التصميم، يغطي الهندسة المعمارية والتصميم الداخلي وأخبار التصميم."
+    },
+    "nike-run-club": {
+      "name": "Nike Run Club",
+      "description": "Nike Run Club مجاني: يدعم Nike و Run والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "adidas-running-runtastic": {
+      "name": "Adidas Running Runtastic",
+      "description": "Adidas Running Runtastic مجاني: يدعم Adidas و Running والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "runkeeper": {
+      "name": "Runkeeper",
+      "description": "Runkeeper مجاني: يدعم Runkeeper و 跑步 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "garmin-connect": {
+      "name": "Garmin Connect",
+      "description": "محرر Garmin Connect عبر الإنترنت. خصّص Garmin واضبط Connect وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "coros": {
+      "name": "Coros",
+      "description": "محرر Coros عبر الإنترنت. خصّص Coros واضبط 运动 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "polar-flow": {
+      "name": "Polar Flow",
+      "description": "أداة Polar Flow عبر الإنترنت مع الميزات: Polar و Flow و 运动. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "vdot-calculator": {
+      "name": "Vdot آلة حاسبة",
+      "description": "Vdot آلة حاسبة مجاني: يدعم Vdot و آلة حاسبة والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "active-race-results": {
+      "name": "Active Race Results",
+      "description": "أداة Active Race Results عبر الإنترنت مع الميزات: Active و Race و Results. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "trainingpeaks": {
+      "name": "Trainingpeaks",
+      "description": "أداة Trainingpeaks عبر الإنترنت مع الميزات: Trainingpeaks و 徒步 و 登山. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "final-surge": {
+      "name": "Final Surge",
+      "description": "Final Surge مجاني: يدعم Final و Surge والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "runalyze": {
+      "name": "Runalyze",
+      "description": "محرر Runalyze عبر الإنترنت. خصّص Runalyze واضبط 跑步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "stryd-power": {
+      "name": "Stryd Power",
+      "description": "Stryd Power مجاني: يدعم Stryd و Power والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "racewow": {
+      "name": "Racewow",
+      "description": "محرر Racewow عبر الإنترنت. خصّص Racewow واضبط 跑步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "lets-do-this": {
+      "name": "Lets Do This",
+      "description": "Lets Do This مجاني: يدعم Lets و Do والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "find-a-marathon": {
+      "name": "Find A Marathon",
+      "description": "محرر Find A Marathon عبر الإنترنت. خصّص Find واضبط A وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "running2win": {
+      "name": "Running2win",
+      "description": "محرر Running2win عبر الإنترنت. خصّص Running2win واضبط 跑步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "mcmillan-calculator": {
+      "name": "Mcmillan آلة حاسبة",
+      "description": "أداة Mcmillan آلة حاسبة عبر الإنترنت مع الميزات: Mcmillan و آلة حاسبة و 跑步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "marathon-handbook": {
+      "name": "Marathon Handbook",
+      "description": "محرر Marathon Handbook عبر الإنترنت. خصّص Marathon واضبط Handbook وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "cool-running": {
+      "name": "Cool Running",
+      "description": "أداة Cool Running عبر الإنترنت مع الميزات: Cool و Running و 跑步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "worlds-marathons": {
+      "name": "Worlds Marathons",
+      "description": "أداة Worlds Marathons عبر الإنترنت مع الميزات: Worlds و Marathons و 跑步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "runsignup": {
+      "name": "Runsignup",
+      "description": "أداة Runsignup عبر الإنترنت مع الميزات: Runsignup و 跑步 و 马拉松. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "pace-calculator": {
+      "name": "Pace آلة حاسبة",
+      "description": "أداة Pace آلة حاسبة عبر الإنترنت مع الميزات: Pace و آلة حاسبة و 跑步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "treadmill-calc": {
+      "name": "Treadmill Calc",
+      "description": "أداة Treadmill Calc عبر الإنترنت مع الميزات: Treadmill و Calc و 跑步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "couch-to-5k": {
+      "name": "Couch To 5k",
+      "description": "محرر Couch To 5k عبر الإنترنت. خصّص Couch واضبط To وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "race-predictor": {
+      "name": "Race Predictor",
+      "description": "محرر Race Predictor عبر الإنترنت. خصّص Race واضبط Predictor وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "ride-with-gps": {
+      "name": "Ride With Gps",
+      "description": "أداة Ride With Gps عبر الإنترنت مع الميزات: Ride و With و Gps. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "bikemap": {
+      "name": "Bikemap",
+      "description": "محرر Bikemap عبر الإنترنت. خصّص Bikemap واضبط 骑行 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "cyclemeter": {
+      "name": "Cyclemeter",
+      "description": "أداة Cyclemeter عبر الإنترنت مع الميزات: Cyclemeter و 骑行 و 公路车. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "wahoo-systm": {
+      "name": "Wahoo Systm",
+      "description": "Wahoo Systm مجاني: يدعم Wahoo و Systm والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "trainerroad": {
+      "name": "Trainerroad",
+      "description": "أداة Trainerroad عبر الإنترنت مع الميزات: Trainerroad و 骑行 و 公路车. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "zwift": {
+      "name": "Zwift",
+      "description": "محرر Zwift عبر الإنترنت. خصّص Zwift واضبط 骑行 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "rouvy": {
+      "name": "Rouvy",
+      "description": "أداة Rouvy عبر الإنترنت مع الميزات: Rouvy و 骑行 و 公路车. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "rgt-cycling": {
+      "name": "Rgt Cycling",
+      "description": "أداة Rgt Cycling عبر الإنترنت مع الميزات: Rgt و Cycling و 骑行. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "bikeregister": {
+      "name": "Bikeregister",
+      "description": "أداة Bikeregister عبر الإنترنت مع الميزات: Bikeregister و 骑行 و 公路车. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "geometry-geeks": {
+      "name": "Geometry Geeks",
+      "description": "أداة Geometry Geeks عبر الإنترنت مع الميزات: Geometry و Geeks و 装备评测. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "best-bike-split": {
+      "name": "Best Bike فاصل",
+      "description": "محرر Best Bike فاصل عبر الإنترنت. خصّص Best واضبط Bike وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "golden-cheetah": {
+      "name": "Golden Cheetah",
+      "description": "Golden Cheetah مجاني: يدعم Golden و Cheetah والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "cyclestreets": {
+      "name": "Cyclestreets",
+      "description": "Cyclestreets مجاني: يدعم Cyclestreets و 骑行 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "open-cycle-map": {
+      "name": "Open Cycle Map",
+      "description": "Open Cycle Map مجاني: يدعم Open و Cycle والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "bikeradar": {
+      "name": "Bikeradar",
+      "description": "أداة Bikeradar عبر الإنترنت مع الميزات: Bikeradar و 骑行 و 公路车. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "trailforks": {
+      "name": "Trailforks",
+      "description": "Trailforks مجاني: يدعم Trailforks و 徒步 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "singletracks": {
+      "name": "Singletracks",
+      "description": "محرر Singletracks عبر الإنترنت. خصّص Singletracks واضبط 运动 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "pinkbike": {
+      "name": "Pinkbike",
+      "description": "أداة Pinkbike عبر الإنترنت مع الميزات: Pinkbike و 骑行 و 公路车. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "veloviewer": {
+      "name": "Veloviewer",
+      "description": "Veloviewer مجاني: يدعم Veloviewer و 骑行 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "todays-plan": {
+      "name": "Todays Plan",
+      "description": "محرر Todays Plan عبر الإنترنت. خصّص Todays واضبط Plan وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "fullgaz": {
+      "name": "Fullgaz",
+      "description": "محرر Fullgaz عبر الإنترنت. خصّص Fullgaz واضبط 骑行 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "bike-calc": {
+      "name": "Bike Calc",
+      "description": "أداة Bike Calc عبر الإنترنت مع الميزات: Bike و Calc و 骑行. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "bike-insurance-check": {
+      "name": "Bike Insurance مدقق",
+      "description": "Bike Insurance مدقق مجاني: يدعم Bike و Insurance والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "sram-shift-calc": {
+      "name": "Sram Shift Calc",
+      "description": "محرر Sram Shift Calc عبر الإنترنت. خصّص Sram واضبط Shift وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "project-4321": {
+      "name": "Project 4321",
+      "description": "Project 4321 مجاني: يدعم Project و 4321 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "nike-training-club": {
+      "name": "Nike Training Club",
+      "description": "أداة Nike Training Club عبر الإنترنت مع الميزات: Nike و Training و Club. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "peloton-digital": {
+      "name": "Peloton Digital",
+      "description": "Peloton Digital مجاني: يدعم Peloton و Digital والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "sweat-app": {
+      "name": "Sweat App",
+      "description": "محرر Sweat App عبر الإنترنت. خصّص Sweat واضبط App وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "centr-chris-hemsworth": {
+      "name": "Centr Chris Hemsworth",
+      "description": "Centr Chris Hemsworth مجاني: يدعم Centr و Chris والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "ob-fitness": {
+      "name": "Ob Fitness",
+      "description": "محرر Ob Fitness عبر الإنترنت. خصّص Ob واضبط Fitness وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "fitbit-premium": {
+      "name": "Fitbit Premium",
+      "description": "محرر Fitbit Premium عبر الإنترنت. خصّص Fitbit واضبط Premium وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "strong-lifts": {
+      "name": "Strong Lifts",
+      "description": "محرر Strong Lifts عبر الإنترنت. خصّص Strong واضبط Lifts وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "starting-strength": {
+      "name": "Starting Strength",
+      "description": "محرر Starting Strength عبر الإنترنت. خصّص Starting واضبط Strength وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "exrx": {
+      "name": "Exrx",
+      "description": "Exrx مجاني: يدعم Exrx و 运动 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "bodybuilding-guides": {
+      "name": "Bodybuilding Guides",
+      "description": "محرر Bodybuilding Guides عبر الإنترنت. خصّص Bodybuilding واضبط Guides وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "fitocracy": {
+      "name": "Fitocracy",
+      "description": "أداة Fitocracy عبر الإنترنت مع الميزات: Fitocracy و 健身 و 力量训练. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "habit-nest": {
+      "name": "Habit Nest",
+      "description": "محرر Habit Nest عبر الإنترنت. خصّص Habit واضبط Nest وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "workout-labs": {
+      "name": "Workout Labs",
+      "description": "محرر Workout Labs عبر الإنترنت. خصّص Workout واضبط Labs وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "freedom-strong": {
+      "name": "Freedom Strong",
+      "description": "Freedom Strong مجاني: يدعم Freedom و Strong والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "darebee": {
+      "name": "Darebee",
+      "description": "أداة Darebee عبر الإنترنت مع الميزات: Darebee و 健身 و 力量训练. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "12minuteathlete": {
+      "name": "12minuteathlete",
+      "description": "12minuteathlete مجاني: يدعم 12minuteathlete و 健身 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "fitness-blender": {
+      "name": "Fitness Blender",
+      "description": "محرر Fitness Blender عبر الإنترنت. خصّص Fitness واضبط Blender وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "poosh": {
+      "name": "Poosh",
+      "description": "Poosh مجاني: يدعم Poosh و 健身 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "p90x-schedule": {
+      "name": "P90x Schedule",
+      "description": "محرر P90x Schedule عبر الإنترنت. خصّص P90x واضبط Schedule وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "insanity-workout": {
+      "name": "Insanity Workout",
+      "description": "Insanity Workout مجاني: يدعم Insanity و Workout والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "musclewiki": {
+      "name": "Musclewiki",
+      "description": "Musclewiki مجاني: يدعم Musclewiki و 运动 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "strech-lab": {
+      "name": "Strech Lab",
+      "description": "محرر Strech Lab عبر الإنترنت. خصّص Strech واضبط Lab وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "romwod": {
+      "name": "Romwod",
+      "description": "محرر Romwod عبر الإنترنت. خصّص Romwod واضبط 瑜伽 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "yoga-international": {
+      "name": "Yoga International",
+      "description": "Yoga International مجاني: يدعم Yoga و International والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "gaia-yoga": {
+      "name": "Gaia Yoga",
+      "description": "Gaia Yoga مجاني: يدعم Gaia و Yoga والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "do-you-yoga": {
+      "name": "Do You Yoga",
+      "description": "أداة Do You Yoga عبر الإنترنت مع الميزات: Do و You و Yoga. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "yoga-download": {
+      "name": "Yoga منزّل",
+      "description": "أداة Yoga منزّل عبر الإنترنت مع الميزات: Yoga و Download و 瑜伽. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "my-yoga-works": {
+      "name": "My Yoga Works",
+      "description": "My Yoga Works مجاني: يدعم My و Yoga والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "pilates-anytime": {
+      "name": "Pilates Anytime",
+      "description": "Pilates Anytime مجاني: يدعم Pilates و Anytime والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "club-pilates": {
+      "name": "Club Pilates",
+      "description": "أداة Club Pilates عبر الإنترنت مع الميزات: Club و Pilates و 瑜伽. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "blogilates": {
+      "name": "Blogilates",
+      "description": "Blogilates مجاني: يدعم Blogilates و 瑜伽 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "stretching-timer": {
+      "name": "Stretching مؤقت",
+      "description": "أداة Stretching مؤقت عبر الإنترنت مع الميزات: Stretching و مؤقت و 瑜伽. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "foam-roller-guide": {
+      "name": "Foam Roller Guide",
+      "description": "أداة Foam Roller Guide عبر الإنترنت مع الميزات: Foam و Roller و Guide. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "yin-yoga-cheatsheet": {
+      "name": "Yin Yoga Cheatsheet",
+      "description": "محرر Yin Yoga Cheatsheet عبر الإنترنت. خصّص Yin واضبط Yoga وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "yoga-journal": {
+      "name": "Yoga Journal",
+      "description": "Yoga Journal مجاني: يدعم Yoga و Journal والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "medito": {
+      "name": "Medito",
+      "description": "محرر Medito عبر الإنترنت. خصّص Medito واضبط 瑜伽 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "waking-up": {
+      "name": "Waking Up",
+      "description": "محرر Waking Up عبر الإنترنت. خصّص Waking واضبط Up وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "mindful-cms": {
+      "name": "Mindful Cms",
+      "description": "محرر Mindful Cms عبر الإنترنت. خصّص Mindful واضبط Cms وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "breathwrk": {
+      "name": "Breathwrk",
+      "description": "أداة Breathwrk عبر الإنترنت مع الميزات: Breathwrk و 瑜伽 و 普拉提. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "478-breathing": {
+      "name": "478 Breathing",
+      "description": "478 Breathing مجاني: يدعم 478 و Breathing والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "box-breathing": {
+      "name": "Box Breathing",
+      "description": "أداة Box Breathing عبر الإنترنت مع الميزات: Box و Breathing و 瑜伽. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "progressive-muscle-relaxation": {
+      "name": "Progressive Muscle Relaxation",
+      "description": "محرر Progressive Muscle Relaxation عبر الإنترنت. خصّص Progressive واضبط Muscle وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "swim-com": {
+      "name": "Swim Com",
+      "description": "أداة Swim Com عبر الإنترنت مع الميزات: Swim و Com و 游泳. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "swimsmooth": {
+      "name": "Swimsmooth",
+      "description": "Swimsmooth مجاني: يدعم Swimsmooth و 游泳 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "goswim": {
+      "name": "Goswim",
+      "description": "أداة Goswim عبر الإنترنت مع الميزات: Goswim و 健身 و 力量训练. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "swimulator": {
+      "name": "Swimulator",
+      "description": "محرر Swimulator عبر الإنترنت. خصّص Swimulator واضبط 游泳 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "trainerroad-swim": {
+      "name": "Trainerroad Swim",
+      "description": "محرر Trainerroad Swim عبر الإنترنت. خصّص Trainerroad واضبط Swim وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "slowtwitch": {
+      "name": "Slowtwitch",
+      "description": "Slowtwitch مجاني: يدعم Slowtwitch و 运动 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "tridot": {
+      "name": "Tridot",
+      "description": "Tridot مجاني: يدعم Tridot و 游泳 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "beginnertriathlete": {
+      "name": "Beginnertriathlete",
+      "description": "محرر Beginnertriathlete عبر الإنترنت. خصّص Beginnertriathlete واضبط 游泳 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "ironman-training-peaks": {
+      "name": "Ironman Training Peaks",
+      "description": "أداة Ironman Training Peaks عبر الإنترنت مع الميزات: Ironman و Training و Peaks. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "suunto-ironman": {
+      "name": "Suunto Ironman",
+      "description": "أداة Suunto Ironman عبر الإنترنت مع الميزات: Suunto و Ironman و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "kayak-sit-on-top": {
+      "name": "Kayak Sit On Top",
+      "description": "أداة Kayak Sit On Top عبر الإنترنت مع الميزات: Kayak و Sit و On. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "surf-forecast": {
+      "name": "Surf Forecast",
+      "description": "محرر Surf Forecast عبر الإنترنت. خصّص Surf واضبط Forecast وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "windguru": {
+      "name": "Windguru",
+      "description": "أداة Windguru عبر الإنترنت مع الميزات: Windguru و 游泳 و 铁人三项. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "magicseaweed": {
+      "name": "Magicseaweed",
+      "description": "Magicseaweed مجاني: يدعم Magicseaweed و 游泳 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "wannasurf": {
+      "name": "Wannasurf",
+      "description": "أداة Wannasurf عبر الإنترنت مع الميزات: Wannasurf و 游泳 و 铁人三项. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "wikiloc": {
+      "name": "Wikiloc",
+      "description": "أداة Wikiloc عبر الإنترنت مع الميزات: Wikiloc و 运动 و 健康. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "hikingproject": {
+      "name": "Hikingproject",
+      "description": "أداة Hikingproject عبر الإنترنت مع الميزات: Hikingproject و 徒步 و 登山. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "mountain-project": {
+      "name": "Mountain Project",
+      "description": "Mountain Project مجاني: يدعم Mountain و Project والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "summitpost": {
+      "name": "Summitpost",
+      "description": "محرر Summitpost عبر الإنترنت. خصّص Summitpost واضبط 徒步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "peakbagger": {
+      "name": "Peakbagger",
+      "description": "محرر Peakbagger عبر الإنترنت. خصّص Peakbagger واضبط 徒步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "outdooractive": {
+      "name": "Outdooractive",
+      "description": "أداة Outdooractive عبر الإنترنت مع الميزات: Outdooractive و 徒步 و 登山. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "satgear-checklist": {
+      "name": "Satgear Checklist",
+      "description": "أداة Satgear Checklist عبر الإنترنت مع الميزات: Satgear و Checklist و 装备评测. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "lighterpack": {
+      "name": "Lighterpack",
+      "description": "محرر Lighterpack عبر الإنترنت. خصّص Lighterpack واضبط 徒步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "rei-co-op-checklists": {
+      "name": "Rei Co Op Checklists",
+      "description": "أداة Rei Co Op Checklists عبر الإنترنت مع الميزات: Rei و Co و Op. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "campendium": {
+      "name": "Campendium",
+      "description": "Campendium مجاني: يدعم Campendium و 徒步 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "free-campsites": {
+      "name": "Free Campsites",
+      "description": "Free Campsites مجاني: يدعم Free و Campsites والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "hipcamp": {
+      "name": "Hipcamp",
+      "description": "أداة Hipcamp عبر الإنترنت مع الميزات: Hipcamp و 徒步 و 登山. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "campsite-photos": {
+      "name": "Campsite Photos",
+      "description": "أداة Campsite Photos عبر الإنترنت مع الميزات: Campsite و Photos و 徒步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "noaa-weather": {
+      "name": "Noaa Weather",
+      "description": "أداة Noaa Weather عبر الإنترنت مع الميزات: Noaa و Weather و 徒步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "mountain-weather-forecast": {
+      "name": "Mountain Weather Forecast",
+      "description": "Mountain Weather Forecast مجاني: يدعم Mountain و Weather والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "meteoblue-mountain": {
+      "name": "Meteoblue Mountain",
+      "description": "أداة Meteoblue Mountain عبر الإنترنت مع الميزات: Meteoblue و Mountain و 徒步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "wildsafe-bear": {
+      "name": "Wildsafe Bear",
+      "description": "محرر Wildsafe Bear عبر الإنترنت. خصّص Wildsafe واضبط Bear وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "sotaventos-mountain": {
+      "name": "Sotaventos Mountain",
+      "description": "محرر Sotaventos Mountain عبر الإنترنت. خصّص Sotaventos واضبط Mountain وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "nba-stats": {
+      "name": "Nba Stats",
+      "description": "أداة Nba Stats عبر الإنترنت مع الميزات: Nba و Stats و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "basketball-reference": {
+      "name": "Basketball Reference",
+      "description": "محرر Basketball Reference عبر الإنترنت. خصّص Basketball واضبط Reference وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "bball-index": {
+      "name": "Bball Index",
+      "description": "أداة Bball Index عبر الإنترنت مع الميزات: Bball و Index و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "hoopshype-salaries": {
+      "name": "Hoopshype Salaries",
+      "description": "محرر Hoopshype Salaries عبر الإنترنت. خصّص Hoopshype واضبط Salaries وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "fifa-ratings": {
+      "name": "Fifa Ratings",
+      "description": "محرر Fifa Ratings عبر الإنترنت. خصّص Fifa واضبط Ratings وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "transfermarkt": {
+      "name": "Transfermarkt",
+      "description": "محرر Transfermarkt عبر الإنترنت. خصّص Transfermarkt واضبط 体育数据 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "sofascore": {
+      "name": "Sofascore",
+      "description": "أداة Sofascore عبر الإنترنت مع الميزات: Sofascore و 体育数据 و 实时比分. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "fbref": {
+      "name": "Fbref",
+      "description": "محرر Fbref عبر الإنترنت. خصّص Fbref واضبط 体育数据 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "understat": {
+      "name": "Understat",
+      "description": "أداة Understat عبر الإنترنت مع الميزات: Understat و 体育数据 و 实时比分. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "tennis-atp-tour": {
+      "name": "Tennis Atp Tour",
+      "description": "محرر Tennis Atp Tour عبر الإنترنت. خصّص Tennis واضبط Atp وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "tennis-wta": {
+      "name": "Tennis Wta",
+      "description": "أداة Tennis Wta عبر الإنترنت مع الميزات: Tennis و Wta و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "tennis-abstract": {
+      "name": "Tennis Abstract",
+      "description": "محرر Tennis Abstract عبر الإنترنت. خصّص Tennis واضبط Abstract وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "flashscore-tennis": {
+      "name": "Flashscore Tennis",
+      "description": "Flashscore Tennis مجاني: يدعم Flashscore و Tennis والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "bwf-badminton": {
+      "name": "Bwf Badminton",
+      "description": "محرر Bwf Badminton عبر الإنترنت. خصّص Bwf واضبط Badminton وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "badminton-warehouse": {
+      "name": "Badminton Warehouse",
+      "description": "أداة Badminton Warehouse عبر الإنترنت مع الميزات: Badminton و Warehouse و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "ittf-world": {
+      "name": "Ittf World",
+      "description": "أداة Ittf World عبر الإنترنت مع الميزات: Ittf و World و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "tabletennis-reference": {
+      "name": "Tabletennis Reference",
+      "description": "محرر Tabletennis Reference عبر الإنترنت. خصّص Tabletennis واضبط Reference وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "revspin": {
+      "name": "Revspin",
+      "description": "محرر Revspin عبر الإنترنت. خصّص Revspin واضبط 体育数据 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "fivb-volleyball": {
+      "name": "Fivb Volleyball",
+      "description": "أداة Fivb Volleyball عبر الإنترنت مع الميزات: Fivb و Volleyball و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "volleybox": {
+      "name": "Volleybox",
+      "description": "أداة Volleybox عبر الإنترنت مع الميزات: Volleybox و 体育数据 و 实时比分. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "pga-tour-stats": {
+      "name": "Pga Tour Stats",
+      "description": "Pga Tour Stats مجاني: يدعم Pga و Tour والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "handicap-differential": {
+      "name": "Handicap Differential",
+      "description": "Handicap Differential مجاني: يدعم Handicap و Differential والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "golfnow-tee-times": {
+      "name": "Golfnow Tee Times",
+      "description": "Golfnow Tee Times مجاني: يدعم Golfnow و Tee والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "2k-sports-handicap": {
+      "name": "2k Sports Handicap",
+      "description": "محرر 2k Sports Handicap عبر الإنترنت. خصّص 2k واضبط Sports وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "golfshake-handicap": {
+      "name": "Golfshake Handicap",
+      "description": "Golfshake Handicap مجاني: يدعم Golfshake و Handicap والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "ski-resort-stats": {
+      "name": "Ski Resort Stats",
+      "description": "أداة Ski Resort Stats عبر الإنترنت مع الميزات: Ski و Resort و Stats. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "on-the-snow": {
+      "name": "On The Snow",
+      "description": "محرر On The Snow عبر الإنترنت. خصّص On واضبط The وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "snow-forecast": {
+      "name": "Snow Forecast",
+      "description": "محرر Snow Forecast عبر الإنترنت. خصّص Snow واضبط Forecast وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "powder-forecast": {
+      "name": "Powder Forecast",
+      "description": "Powder Forecast مجاني: يدعم Powder و Forecast والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "zrankings-ski": {
+      "name": "Zrankings Ski",
+      "description": "محرر Zrankings Ski عبر الإنترنت. خصّص Zrankings واضبط Ski وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "skiers-tracker": {
+      "name": "Skiers Tracker",
+      "description": "Skiers Tracker مجاني: يدعم Skiers و Tracker والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "snowboard-encyc": {
+      "name": "Snowboard Encyc",
+      "description": "أداة Snowboard Encyc عبر الإنترنت مع الميزات: Snowboard و Encyc و 滑雪. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "the-house-board-size": {
+      "name": "The House Board Size",
+      "description": "أداة The House Board Size عبر الإنترنت مع الميزات: The و House و Board. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "skate-video-calendar": {
+      "name": "Skate فيديو Calendar",
+      "description": "محرر Skate فيديو Calendar عبر الإنترنت. خصّص Skate واضبط فيديو وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "skatepark-directory": {
+      "name": "Skatepark Directory",
+      "description": "Skatepark Directory مجاني: يدعم Skatepark و Directory والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "concretedisciples": {
+      "name": "Concretedisciples",
+      "description": "محرر Concretedisciples عبر الإنترنت. خصّص Concretedisciples واضبط 滑雪 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "roller-skate-size": {
+      "name": "Roller Skate Size",
+      "description": "أداة Roller Skate Size عبر الإنترنت مع الميزات: Roller و Skate و Size. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "inline-skate-buyers-guide": {
+      "name": "Inline Skate Buyers Guide",
+      "description": "Inline Skate Buyers Guide مجاني: يدعم Inline و Skate والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "bouldering-grade-converter": {
+      "name": "Bouldering Grade محول",
+      "description": "محرر Bouldering Grade محول عبر الإنترنت. خصّص Bouldering واضبط Grade وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "climbfinder": {
+      "name": "Climbfinder",
+      "description": "Climbfinder مجاني: يدعم Climbfinder و 体育数据 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "macro-calculator": {
+      "name": "Macro آلة حاسبة",
+      "description": "أداة Macro آلة حاسبة عبر الإنترنت مع الميزات: Macro و آلة حاسبة و 营养. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "tdee-calculator": {
+      "name": "Tdee آلة حاسبة",
+      "description": "Tdee آلة حاسبة مجاني: يدعم Tdee و آلة حاسبة والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "bmr-calculator": {
+      "name": "Bmr آلة حاسبة",
+      "description": "أداة Bmr آلة حاسبة عبر الإنترنت مع الميزات: Bmr و آلة حاسبة و 营养. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "protein-intake": {
+      "name": "Protein Intake",
+      "description": "أداة Protein Intake عبر الإنترنت مع الميزات: Protein و Intake و 营养. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "hydration-calculator": {
+      "name": "Hydration آلة حاسبة",
+      "description": "أداة Hydration آلة حاسبة عبر الإنترنت مع الميزات: Hydration و آلة حاسبة و 营养. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "water-reminder": {
+      "name": "Water Reminder",
+      "description": "أداة Water Reminder عبر الإنترنت مع الميزات: Health و Hydration و Reminder. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "body-fat-calc": {
+      "name": "Body Fat Calc",
+      "description": "Body Fat Calc مجاني: يدعم Body و Fat والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "bmi-calc-health": {
+      "name": "Bmi Calc Health",
+      "description": "محرر Bmi Calc Health عبر الإنترنت. خصّص Bmi واضبط Calc وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "vo2max-calc": {
+      "name": "Vo2max Calc",
+      "description": "Vo2max Calc مجاني: يدعم Vo2max و Calc والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "one-rm-1rep-max": {
+      "name": "One Rm 1rep Max",
+      "description": "محرر One Rm 1rep Max عبر الإنترنت. خصّص One واضبط Rm وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "meal-prep-planner": {
+      "name": "Meal Prep Planner",
+      "description": "محرر Meal Prep Planner عبر الإنترنت. خصّص Meal واضبط Prep وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "pre-workout-examiner": {
+      "name": "Pre Workout Examiner",
+      "description": "أداة Pre Workout Examiner عبر الإنترنت مع الميزات: Pre و Workout و Examiner. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "eventbrite-sports": {
+      "name": "Eventbrite Sports",
+      "description": "أداة Eventbrite Sports عبر الإنترنت مع الميزات: Eventbrite و Sports و 赛事. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "meetup-sports": {
+      "name": "Meetup Sports",
+      "description": "أداة Meetup Sports عبر الإنترنت مع الميزات: Meetup و Sports و 赛事. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "raceroster": {
+      "name": "Raceroster",
+      "description": "محرر Raceroster عبر الإنترنت. خصّص Raceroster واضبط 跑步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "ticketmaster-sports": {
+      "name": "Ticketmaster Sports",
+      "description": "محرر Ticketmaster Sports عبر الإنترنت. خصّص Ticketmaster واضبط Sports وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "sporting-news-scores": {
+      "name": "Sporting News Scores",
+      "description": "Sporting News Scores مجاني: يدعم Sporting و News والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "gearbrain": {
+      "name": "Gearbrain",
+      "description": "محرر Gearbrain عبر الإنترنت. خصّص Gearbrain واضبط 装备评测 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "wirecutter-fitness": {
+      "name": "Wirecutter Fitness",
+      "description": "أداة Wirecutter Fitness عبر الإنترنت مع الميزات: Wirecutter و Fitness و 健身. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "outdoorgearlab": {
+      "name": "Outdoorgearlab",
+      "description": "أداة Outdoorgearlab عبر الإنترنت مع الميزات: Outdoorgearlab و 徒步 و 登山. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
+    },
+    "switchback-travel-gear": {
+      "name": "Switchback Travel Gear",
+      "description": "محرر Switchback Travel Gear عبر الإنترنت. خصّص Switchback واضبط Travel وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "rotten-wire": {
+      "name": "Rotten Wire",
+      "description": "Rotten Wire مجاني: يدعم Rotten و Wire والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "strava-stats-dashboard": {
+      "name": "Strava Stats Dashboard",
+      "description": "محرر Strava Stats Dashboard عبر الإنترنت. خصّص Strava واضبط Stats وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "athlinks-race-results": {
+      "name": "Athlinks Race Results",
+      "description": "محرر Athlinks Race Results عبر الإنترنت. خصّص Athlinks واضبط Race وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "sporttracks": {
+      "name": "Sporttracks",
+      "description": "Sporttracks مجاني: يدعم Sporttracks و 运动 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
+    },
+    "trainerroad-announcer": {
+      "name": "Trainerroad Announcer",
+      "description": "محرر Trainerroad Announcer عبر الإنترنت. خصّص Trainerroad واضبط Announcer وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "sport-psychology-today": {
+      "name": "Sport Psychology Today",
+      "description": "محرر Sport Psychology Today عبر الإنترنت. خصّص Sport واضبط Psychology وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     }
   },
   "sidebar2": {
@@ -4634,7 +5403,75 @@
     "err-user-gone": "هذا الحساب لم يعد موجوداً",
     "err-google-off": "تسجيل الدخول بـ Google غير مفعل",
     "err-google-soon": "تسجيل الدخول بـ Google قريباً",
-    "err-server": "الخادم مشغول. أعد المحاولة لاحقاً."
+    "err-server": "الخادم مشغول. أعد المحاولة لاحقاً.",
+    "continue-google": "تابع باستخدام Google",
+    "err-google-bad-token": "رمز Google غير صالح — تعذر التحقق من الهوية",
+    "err-google-bad-audience": "معرف عميل Google غير متطابق، تواصل مع الدعم",
+    "err-google-token-expired": "انتهت صلاحية تسجيل الدخول Google، أعد المحاولة",
+    "err-google-bad-profile": "الملف الشخصي Google يفتقر إلى بيانات مطلوبة (مثل البريد)",
+    "err-google-popup-blocked": "نافذة الدخول ممنوعة، اسمح النوافذ المنبثقة أو أعد المحاولة",
+    "err-google-cancelled": "تم إلغاء تسجيل الدخول عبر Google",
+    "sign-in-sub": "مرحباً بعودتك — سجل دخولك لمزامنة المفضلة",
+    "create-account": "إنشاء حساب",
+    "create-account-sub": "تسجيل مجاني — مزامنة المفضلة والسجل على جميع الأجهزة",
+    "no-account": "ليس لديك حساب؟",
+    "has-account": "لديك حساب بالفعل؟",
+    "or-email": "أو تابع بالبريد الإلكتروني",
+    "password-confirm-label": "تأكيد كلمة المرور",
+    "password-confirm-placeholder": "أعد إدخال كلمة المرور",
+    "err-passwords-mismatch": "كلمتا المرور غير متطابقتين",
+    "pw-empty": "(لم تُدخل)",
+    "pw-weak": "ضعيفة",
+    "pw-fair": "متوسطة",
+    "pw-good": "جيدة",
+    "pw-strong": "قوية جداً",
+    "pw-show": "إظهار كلمة المرور",
+    "pw-hide": "إخفاء كلمة المرور",
+    "forgot-password-sub": "أدخل بريدك وسنرسل لك تعليمات إعادة التعيين",
+    "reset-password": "تعيين كلمة مرور جديدة",
+    "reset-password-sub": "اختر كلمة مرور جديدة ثم سجل الدخول بها",
+    "send-reset-link": "إرسال تعليمات الإعادة",
+    "update-password": "تحديث كلمة المرور",
+    "remember-password": "تذكرت كلمة المرور؟",
+    "need-new-token": "انتهت صلاحية رابط الإعادة؟",
+    "request-another": "اطلب رابطاً جديداً",
+    "forgot-token-issued": "(وضع المطوّر) تم توليد رمز الإعادة",
+    "forgot-email-sent": "إذا كان مسجلاً، تم إرسال رابط الإعادة",
+    "reset-token-ready": "رمز الإعادة جاهز — أدخل كلمة المرور الجديدة",
+    "reset-expires-min": " دقيقة متبقية",
+    "reset-success": "تم تحديث كلمة المرور! سجل الدخول بالجديدة.",
+    "err-reset-missing-token": "رمز الإعادة مفقود — ابدأ من نسيان كلمة المرور",
+    "err-reset-invalid": "رمز إعادة غير صالح، اطلب رمزاً جديداً",
+    "err-reset-used": "الرمز مستخدم مسبقاً، اطلب رمزاً جديداً",
+    "err-reset-expired": "انتهت صلاحية الرمز، اطلب رمزاً جديداً",
+    "err-old-password-required": "يرجى إدخال كلمة المرور الحالية",
+    "err-same-password": "لا يمكن أن تكون كلمة المرور الجديدة مماثلة للقديمة",
+    "err-name-too-long": "لا يمكن أن يتجاوز الاسم 64 حرفاً",
+    "profile-updated": "تم تحديث الملف الشخصي بنجاح",
+    "password-changed": "تم تغيير كلمة المرور بنجاح",
+    "profile-title": "ملفي الشخصي",
+    "profile-subtitle": "إدارة معلومات حسابك والتفضيلات",
+    "profile-section-basic": "المعلومات الأساسية",
+    "profile-section-security": "الأمان",
+    "profile-name-label": "الاسم المعروض",
+    "profile-name-placeholder": "أدخل اسمك",
+    "profile-email-label": "البريد الإلكتروني",
+    "profile-plan-label": "الخطة",
+    "profile-joined-label": "تاريخ التسجيل",
+    "profile-provider-label": "طريقة تسجيل الدخول",
+    "profile-language-label": "اللغة",
+    "profile-save": "حفظ التغييرات",
+    "profile-saving": "جارٍ الحفظ...",
+    "profile-saved-tip": "تم الحفظ",
+    "profile-old-pw-label": "كلمة المرور الحالية",
+    "profile-new-pw-label": "كلمة المرور الجديدة",
+    "profile-new-pw-placeholder": "8 أحرف على الأقل",
+    "profile-change-pw": "تغيير كلمة المرور",
+    "profile-changing-pw": "جارٍ التغيير...",
+    "profile-close": "إغلاق",
+    "provider-email": "البريد وكلمة المرور",
+    "provider-google": "حساب Google",
+    "footer-legal": "بالمتابعة أنت توافق على الشروط وسياسة الخصوصية"
   },
   "kofi": {
     "supportUs": "ادعم Korelyy للحفاظ على الأدوات المجانية",

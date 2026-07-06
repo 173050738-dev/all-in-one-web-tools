@@ -143,15 +143,31 @@ function Copy-IfExists([string]$src, [string]$dst) {
     Write-Warn "  skip (not found): $(Split-Path $src -Leaf)"
   }
 }
+function Copy-Glob([string]$pattern, [string]$srcDir, [string]$dstDir) {
+  $files = Get-ChildItem -Path $srcDir -Filter $pattern -File -ErrorAction SilentlyContinue
+  foreach ($f in $files) {
+    Copy-Item -Path $f.FullName -Destination (Join-Path $dstDir $f.Name) -Force
+    Write-Ok "  copied $($f.Name)  ($($f.Length) bytes)"
+  }
+  if (-not $files -or $files.Count -eq 0) {
+    Write-Warn "  no matches for $pattern"
+  }
+}
 $pub = Join-Path $ScriptDir "public"
 if (Test-Path $outDir) {
   Copy-IfExists (Join-Path $pub "_headers")    (Join-Path $outDir "_headers")
   Copy-IfExists (Join-Path $pub "_redirects")  (Join-Path $outDir "_redirects")
   Copy-IfExists (Join-Path $pub "favicon.svg") (Join-Path $outDir "favicon.svg")
   Copy-IfExists (Join-Path $pub "favicon.svg") (Join-Path $outDir "favicon.ico")
-  Copy-IfExists (Join-Path $pub "og-image.svg")(Join-Path $outDir "og-image.svg")
+  Copy-IfExists (Join-Path $pub "og-image.png")(Join-Path $outDir "og-image.png")
   Copy-IfExists (Join-Path $pub "robots.txt")  (Join-Path $outDir "robots.txt")
   Copy-IfExists (Join-Path $pub "sitemap.xml") (Join-Path $outDir "sitemap.xml")
+  Copy-IfExists (Join-Path $pub "ads.txt")     (Join-Path $outDir "ads.txt")
+  Copy-IfExists (Join-Path $pub "BingSiteAuth.xml") (Join-Path $outDir "BingSiteAuth.xml")
+  # 复制所有 TXT / HTML / XML 验证文件（Google GSC、Yandex、IndexNow key 等）
+  Copy-Glob "*.txt"  $pub $outDir
+  Copy-Glob "*.html" $pub $outDir
+  Copy-Glob "*.xml"  $pub $outDir
 } else {
   Write-Warn "  out/ 目录不存在，跳过兜底复制（上传前会被检测拦截）"
 }
@@ -179,9 +195,31 @@ if ($LASTEXITCODE -ne 0) {
 Write-Ok "部署上传完成！"
 
 # ------------------------------------------------------------
-# Step 7: 收尾 & 后续步骤说明
+# Step 7: 主动推 Bing/Yandex/IndexNow（触发即时爬取，不用等 Bing 自然爬）
 # ------------------------------------------------------------
-Write-Step "7/7 部署已提交 🎉"
+Write-Step "7/8 推送 8000+ URL 到 Bing / Yandex / IndexNow（加速收录）"
+Write-Host "  调用 scripts/indexnow-push.mjs --apply，推送到 Bing + Yandex + IndexNow 联盟" -ForegroundColor Gray
+Write-Host "  （若 key.txt 还未在线，Bing 会返回 403；等 DNS 生效后重新执行本步骤再推一次）`n" -ForegroundColor Gray
+
+$indexnowExit = 0
+try {
+  & node (Join-Path $ScriptDir "scripts/indexnow-push.mjs") --apply
+  $indexnowExit = $LASTEXITCODE
+} catch {
+  Write-Warning "  IndexNow 脚本执行异常: $($_.Exception.Message)"
+  $indexnowExit = 99
+}
+
+if ($indexnowExit -eq 0) {
+  Write-Ok "IndexNow 推送完成（Yandex 一般立即生效；Bing 需等 key.txt 在线成功后 24h 内抓取）"
+} else {
+  Write-Warning "IndexNow 推送返回非 0 (exit=$indexnowExit)。等部署生效后可手动执行:  node scripts/indexnow-push.mjs --apply"
+}
+
+# ------------------------------------------------------------
+# Step 8: 收尾 & 后续步骤说明
+# ------------------------------------------------------------
+Write-Step "8/8 部署已提交 🎉"
 
 Write-Host @"
 

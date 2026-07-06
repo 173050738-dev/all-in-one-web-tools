@@ -57,13 +57,24 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
   };
 
   const isZh = resolvedLocale === 'zh';
+  const containsCjk = (s: string) => /[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]/.test(s);
+  const slugToTitle = (s: string) =>
+    s.replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim().replace(/\b\w/g, (c) => c.toUpperCase());
   const translateToolField = (field: 'name' | 'description'): string => {
     if (!tool) return '';
     const fallback = field === 'name' ? tool.name : tool.description;
     if (isZh) return fallback;
     const slug = tool.slug || tool.id || '';
     const idAlt = tool.id && tool.id !== slug ? tool.id : '';
-    return safeTranslate(`${slug}.${field}`, idAlt ? safeTranslate(`${idAlt}.${field}`, fallback) : fallback);
+    const translated = safeTranslate(
+      `${slug}.${field}`,
+      idAlt ? safeTranslate(`${idAlt}.${field}`, fallback) : fallback
+    );
+    if (containsCjk(translated)) {
+      if (field === 'name') return slugToTitle(slug || tool.id);
+      return '';
+    }
+    return translated;
   };
   const toolName = translateToolField('name');
   const toolDescription = translateToolField('description');

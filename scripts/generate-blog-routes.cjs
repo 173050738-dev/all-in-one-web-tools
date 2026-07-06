@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Generate the thin route files for:
 //   6 locales × (blog/page.tsx + blog/[slug]/page.tsx)
 //   + 6 locales × (news/page.tsx + news/[slug]/page.tsx)

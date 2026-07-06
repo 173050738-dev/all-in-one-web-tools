@@ -8,7 +8,7 @@
     "prebuild": "node scripts/build-data-bundles.cjs ; node scripts/generate-blog-routes.cjs ; node scripts/build-sitemap-robots.mjs",
     "build": "next build",
     "build:legacy": "set USE_STATIC_EXPORT=true&& next build",
-    "build:cf": "next-on-pages",
+    "build:cf": "node scripts/run-next-on-pages.cjs",
     "postbuild": "node scripts/rewrite-meta.cjs && node scripts/post-build.cjs",
     "wrangler:patch": "node scripts/patch-wrangler.cjs",
     "_skip_predeploy": "npm run build",

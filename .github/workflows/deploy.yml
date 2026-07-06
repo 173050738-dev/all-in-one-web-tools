@@ -132,11 +132,32 @@ jobs:
           fi
 
           echo "Target dir: $TARGET_DIR"
-          for f in _headers _redirects favicon.svg og-image.svg robots.txt sitemap.xml ads.txt; do
+          for f in _headers _redirects favicon.svg og-image.png robots.txt sitemap.xml ads.txt BingSiteAuth.xml; do
             if [ -f "public/$f" ]; then
               cp -f "public/$f" "$TARGET_DIR/$f" && echo "copied public/$f -> $TARGET_DIR/$f ($(wc -c < public/$f) bytes)" || true
             fi
           done
+          # Copy all *.txt (IndexNow key file, Yandex verification, Google verification etc.)
+          if compgen -G "public/*.txt" > /dev/null 2>&1; then
+            for f in public/*.txt; do
+              bn="$(basename "$f")"
+              cp -f "$f" "$TARGET_DIR/$bn" && echo "copied public/$bn -> $TARGET_DIR/$bn ($(wc -c < public/$f) bytes)" || true
+            done
+          fi
+          # Copy all *.html verification files (Google Search Console, Yandex, etc.)
+          if compgen -G "public/*.html" > /dev/null 2>&1; then
+            for f in public/*.html; do
+              bn="$(basename "$f")"
+              cp -f "$f" "$TARGET_DIR/$bn" && echo "copied public/$bn -> $TARGET_DIR/$bn ($(wc -c < public/$f) bytes)" || true
+            done
+          fi
+          # Copy all *.xml (BingSiteAuth, sitemap variants)
+          if compgen -G "public/*.xml" > /dev/null 2>&1; then
+            for f in public/*.xml; do
+              bn="$(basename "$f")"
+              cp -f "$f" "$TARGET_DIR/$bn" && echo "copied public/$bn -> $TARGET_DIR/$bn ($(wc -c < public/$f) bytes)" || true
+            done
+          fi
           if [ -f public/favicon.svg ]; then
             cp -f public/favicon.svg "$TARGET_DIR/favicon.ico"
             echo "copied favicon.svg -> favicon.ico"
@@ -158,7 +179,7 @@ jobs:
           echo "  HTML 文件数: $html_files"
           echo ""
           missing=0
-          for f in _headers _redirects favicon.ico favicon.svg og-image.svg robots.txt sitemap.xml ads.txt; do
+          for f in _headers _redirects favicon.ico favicon.svg og-image.png robots.txt sitemap.xml ads.txt; do
             if [ -f "$TARGET_DIR/$f" ]; then
               echo "  ✅ $TARGET_DIR/$f ($(stat -c%s $TARGET_DIR/$f 2>/dev/null || stat -f%z $TARGET_DIR/$f 2>/dev/null) bytes)"
             else
@@ -193,6 +214,20 @@ jobs:
             --commit-dirty=true 2>&1 | tail -60
           echo ""
           echo "✅ wrangler pages deploy 完成"
+
+      - name: Submit URLs to Bing/Yandex via IndexNow
+        if: success()
+        env:
+          INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY }}
+        run: |
+          set -e
+          echo "=== IndexNow submit: 读取 sitemap.xml -> 推 Bing/Yandex/IndexNow ==="
+          # 先重生成 sitemap/robots 确保最新（build 时已生成，防遗漏）
+          node scripts/build-sitemap-robots.mjs 2>&1 | tail -15
+          node scripts/indexnow-push.mjs --apply 2>&1 | tail -30
+          echo ""
+          echo "✅ IndexNow submit 完成（推到 Bing/Yandex/api.indexnow.org）"
+          echo "tip: 24h 内 Bing Webmaster → URL Submission 里可以看到提交数量"
 
       - name: Deployment summary
         if: always()

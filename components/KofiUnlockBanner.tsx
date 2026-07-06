@@ -18,7 +18,54 @@ type Props = {
 const CLOSE_KEY_PREFIX = 'kofi-banner-closed:';
 const CLOSE_DURATION_MS = 7 * 24 * 60 * 60 * 1000;
 const MEMBER_KEY = 'kofi-member';
-const ACTIVATE_CODE_REGEX = /^KOFI-[A-Z0-9]{6,12}$/;
+const TOKEN_KEY = 'korelyy_auth_token_v1';
+const ACTIVATE_CODE_REGEX = /^KOFI-[A-Z]{2}-[A-Z0-9]{6}-[A-F0-9]{8}$/;
+const FALLBACK_ACTIVATE_PLACEHOLDER = 'KOFI-MN-XXXXXX-XXXXXXXX';
+
+const KOFI_API_FETCH_TIMEOUT = 10000;
+
+function readAuthToken(): string {
+  if (typeof window === 'undefined') return '';
+  try { return window.localStorage.getItem(TOKEN_KEY) || ''; } catch { return ''; }
+}
+
+async function kofiApi<T = any>(
+  method: 'GET' | 'POST',
+  path: string,
+  body?: any,
+  opts: { extraHeaders?: Record<string, string> } = {}
+): Promise<T> {
+  const token = readAuthToken();
+  const headers: Record<string, string> = { Accept: 'application/json' };
+  if (body !== undefined) headers['Content-Type'] = 'application/json';
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+  if (opts.extraHeaders) Object.assign(headers, opts.extraHeaders);
+  const [p, q] = path.split('?');
+  const normalizedPath = p.replace(/\/+$/, '') + '/' + (q ? `?${q}` : '');
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), KOFI_API_FETCH_TIMEOUT);
+  try {
+    const r = await fetch(normalizedPath, {
+      method,
+      headers,
+      credentials: 'include',
+      body: body !== undefined ? JSON.stringify(body) : undefined,
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+    const text = await r.text();
+    let data: any = null;
+    try { data = text ? JSON.parse(text) : null; } catch { data = { ok: false, error: 'BAD_JSON' }; }
+    if (!r.ok && (!data || typeof data.ok === 'undefined')) {
+      return { ok: false, error: `HTTP_${r.status}` } as any;
+    }
+    return (data || { ok: true }) as T;
+  } catch (e: any) {
+    clearTimeout(timer);
+    if (e?.name === 'AbortError' || e?.message === 'TIMEOUT') return { ok: false, error: 'TIMEOUT' } as any;
+    return { ok: false, error: 'NETWORK' } as any;
+  }
+}
 
 const BUTTON_BASE =
   'inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 disabled:opacity-50 min-h-[44px] touch-manipulation';
@@ -54,6 +101,8 @@ interface KofiMember {
   tier: string;
   createdAt: number;
   expiresAt: number;
+  source?: string;
+  membershipId?: string;
 }
 
 function useKofiTxUnlock(txWelcome: string, txInvalid: string) {
@@ -63,24 +112,47 @@ function useKofiTxUnlock(txWelcome: string, txInvalid: string) {
     const params = new URLSearchParams(window.location.search);
     const tx = params.get('tx');
     const tier = params.get('tier');
+    const email = params.get('email') || '';
     if (tx && tier) {
-      try {
-        const member: KofiMember = {
-          tx,
-          tier,
-          createdAt: Date.now(),
-          expiresAt: Date.now() + 30 * 86400 * 1000,
-        };
-        window.localStorage.setItem(MEMBER_KEY, JSON.stringify(member));
-        window.history.replaceState({}, '', window.location.pathname);
-        setToast(txWelcome);
-        const id = setTimeout(() => setToast(null), 2000);
-        return () => clearTimeout(id);
-      } catch {
-        setToast(txInvalid);
-        const id = setTimeout(() => setToast(null), 2000);
-        return () => clearTimeout(id);
-      }
+      (async () => {
+        try {
+          const payload: any = { tx, tier };
+          if (email) payload.email = email;
+          const r: any = await kofiApi('POST', '/api/kofi/link', payload);
+          if (!r?.ok) {
+            setToast(txInvalid);
+            const id = setTimeout(() => setToast(null), 2200);
+            return () => clearTimeout(id);
+          }
+          const m: any = r.membership || {};
+          const expiresAt = (typeof m.expiresAt === 'number' ? m.expiresAt * 1000 : null) || Date.now() + 30 * 86400 * 1000;
+          const activatedAt = (typeof m.activatedAt === 'number' ? m.activatedAt * 1000 : null) || Date.now();
+          const cache: KofiMember = {
+            tx: tx || undefined,
+            tier: m.tier || tier || 'monthly',
+            createdAt: activatedAt,
+            expiresAt,
+            source: m.source || 'kofi_tx_link',
+            membershipId: m.id,
+          };
+          try {
+            window.localStorage.setItem(MEMBER_KEY, JSON.stringify(cache));
+          } catch { /* ignore */ }
+          try {
+            const url = new URL(window.location.href);
+            url.searchParams.delete('tx');
+            url.searchParams.delete('tier');
+            url.searchParams.delete('email');
+            window.history.replaceState({}, '', url.toString());
+          } catch { /* ignore */ }
+          setToast(txWelcome);
+          window.dispatchEvent(new Event('storage'));
+          setTimeout(() => setToast(null), 2200);
+        } catch {
+          setToast(txInvalid);
+          setTimeout(() => setToast(null), 2200);
+        }
+      })();
     }
   }, [txWelcome, txInvalid]);
   return toast;
@@ -91,33 +163,94 @@ interface KofiMemberState {
   tier: string;
   expiresAt: number;
   remainingDays: number;
+  activatedAt: number;
+  source: string | null;
+  loaded: boolean;
+}
+
+function cacheFromStorage(): KofiMemberState {
+  if (typeof window === 'undefined') {
+    return { isMember: false, tier: '', expiresAt: 0, remainingDays: 0, activatedAt: 0, source: null, loaded: false };
+  }
+  try {
+    const raw = window.localStorage.getItem(MEMBER_KEY);
+    if (!raw) return { isMember: false, tier: '', expiresAt: 0, remainingDays: 0, activatedAt: 0, source: null, loaded: false };
+    const parsed: KofiMember = JSON.parse(raw);
+    if (!parsed || !parsed.expiresAt || Date.now() >= parsed.expiresAt) {
+      try { window.localStorage.removeItem(MEMBER_KEY); } catch { /* ignore */ }
+      return { isMember: false, tier: '', expiresAt: 0, remainingDays: 0, activatedAt: 0, source: null, loaded: false };
+    }
+    const remainingDays = Math.max(1, Math.ceil((parsed.expiresAt - Date.now()) / 86400 / 1000));
+    return { isMember: true, tier: parsed.tier || '', expiresAt: parsed.expiresAt, remainingDays, activatedAt: parsed.createdAt || 0, source: parsed.source || null, loaded: false };
+  } catch {
+    return { isMember: false, tier: '', expiresAt: 0, remainingDays: 0, activatedAt: 0, source: null, loaded: false };
+  }
 }
 
 function useKofiMember(): KofiMemberState {
-  const read = (): KofiMemberState => {
-    if (typeof window === 'undefined') {
-      return { isMember: false, tier: '', expiresAt: 0, remainingDays: 0 };
-    }
-    try {
-      const raw = window.localStorage.getItem(MEMBER_KEY);
-      if (!raw) return { isMember: false, tier: '', expiresAt: 0, remainingDays: 0 };
-      const parsed: KofiMember = JSON.parse(raw);
-      if (!parsed || !parsed.expiresAt || Date.now() >= parsed.expiresAt) {
-        try { window.localStorage.removeItem(MEMBER_KEY); } catch { /* ignore */ }
-        return { isMember: false, tier: '', expiresAt: 0, remainingDays: 0 };
-      }
-      const remainingDays = Math.max(1, Math.ceil((parsed.expiresAt - Date.now()) / 86400 / 1000));
-      return { isMember: true, tier: parsed.tier || '', expiresAt: parsed.expiresAt, remainingDays };
-    } catch {
-      return { isMember: false, tier: '', expiresAt: 0, remainingDays: 0 };
-    }
-  };
-  const [state, setState] = useState<KofiMemberState>(read);
+  const [state, setState] = useState<KofiMemberState>(() => cacheFromStorage());
+
   useEffect(() => {
-    setState(read());
-    const id = setInterval(() => setState(read()), 60000);
-    return () => clearInterval(id);
+    let cancelled = false;
+    (async () => {
+      try {
+        const r: any = await kofiApi('GET', '/api/kofi/me');
+        if (cancelled) return;
+        if (!r?.ok) {
+          // API 失败时以缓存为准（保证页面不抖动）
+          setState((s) => ({ ...s, loaded: true }));
+          return;
+        }
+        if (r.isMember && typeof r.expiresAt === 'number' && r.expiresAt > Math.floor(Date.now() / 1000)) {
+          const expiresAtMs = r.expiresAt * 1000;
+          const activatedAtMs = (typeof r.activatedAt === 'number' ? r.activatedAt : Math.floor(Date.now() / 1000)) * 1000;
+          const remainingDays = Math.max(1, Math.ceil((expiresAtMs - Date.now()) / 86400 / 1000));
+          const next: KofiMemberState = {
+            isMember: true,
+            tier: r.tier || 'pro',
+            expiresAt: expiresAtMs,
+            remainingDays,
+            activatedAt: activatedAtMs,
+            source: r.source || null,
+            loaded: true,
+          };
+          try {
+            const cache: KofiMember = {
+              tier: next.tier,
+              createdAt: next.activatedAt,
+              expiresAt: next.expiresAt,
+              source: next.source || undefined,
+              membershipId: r.membershipId || undefined,
+            };
+            window.localStorage.setItem(MEMBER_KEY, JSON.stringify(cache));
+          } catch { /* ignore */ }
+          setState(next);
+          return;
+        }
+        // 后端告知非会员 → 清掉可能用户手动塞的 localStorage
+        try { window.localStorage.removeItem(MEMBER_KEY); } catch { /* ignore */ }
+        setState({ isMember: false, tier: '', expiresAt: 0, remainingDays: 0, activatedAt: 0, source: null, loaded: true });
+      } catch {
+        if (!cancelled) setState((s) => ({ ...s, loaded: true }));
+      }
+    })();
+
+    const onStorage = () => { if (!cancelled) setState(cacheFromStorage()); };
+    const onVisibility = () => {
+      if (document.visibilityState === 'visible' && !cancelled) setState(cacheFromStorage());
+    };
+    window.addEventListener('storage', onStorage);
+    document.addEventListener('visibilitychange', onVisibility);
+    const id = window.setInterval(() => { if (!cancelled) setState(cacheFromStorage()); }, 60000);
+
+    return () => {
+      cancelled = true;
+      window.removeEventListener('storage', onStorage);
+      document.removeEventListener('visibilitychange', onVisibility);
+      clearInterval(id);
+    };
   }, []);
+
   return state;
 }
 
@@ -159,7 +292,7 @@ function i18n(locale: string): KofiKeys {
     team: '团队授权',
     includes: '包含',
     activateCode: '输入激活码',
-    activatePlaceholder: '粘贴激活码（如 KOFI-XXXX）',
+    activatePlaceholder: `粘贴激活码（${FALLBACK_ACTIVATE_PLACEHOLDER}）`,
     activateSubmit: '激活',
     activateSuccess: '激活成功！感谢支持 ❤️',
     activateFail: '激活码无效，请检查或通过下方按钮解锁',
@@ -184,7 +317,7 @@ function i18n(locale: string): KofiKeys {
     team: 'Team seat',
     includes: 'Includes',
     activateCode: 'Enter activation code',
-    activatePlaceholder: 'Paste code (e.g. KOFI-XXXX)',
+    activatePlaceholder: `Paste code (${FALLBACK_ACTIVATE_PLACEHOLDER})`,
     activateSubmit: 'Activate',
     activateSuccess: 'Activated! Thanks for your support ❤️',
     activateFail: 'Invalid code, please check or unlock via the buttons below',
@@ -209,7 +342,7 @@ function i18n(locale: string): KofiKeys {
     team: 'टीम लाइसेंस',
     includes: 'शामिल हैं',
     activateCode: 'सक्रियण कोड दर्ज करें',
-    activatePlaceholder: 'कोड पेस्ट करें (जैसे KOFI-XXXX)',
+    activatePlaceholder: `कोड पेस्ट करें (${FALLBACK_ACTIVATE_PLACEHOLDER})`,
     activateSubmit: 'सक्रिय करें',
     activateSuccess: 'सक्रिय सफल! आपके समर्थन के लिए धन्यवाद ❤️',
     activateFail: 'अमान्य कोड, कृपया जाँचें या नीचे दिए गए बटन से अनलॉक करें',
@@ -234,7 +367,7 @@ function i18n(locale: string): KofiKeys {
     team: 'Licence équipe',
     includes: 'Inclut',
     activateCode: 'Saisir le code d\'activation',
-    activatePlaceholder: 'Coller le code (ex. KOFI-XXXX)',
+    activatePlaceholder: `Coller le code (${FALLBACK_ACTIVATE_PLACEHOLDER})`,
     activateSubmit: 'Activer',
     activateSuccess: 'Activé ! Merci pour votre soutien ❤️',
     activateFail: 'Code invalide, merci de vérifier ou débloquer via les boutons ci-dessous',
@@ -259,7 +392,7 @@ function i18n(locale: string): KofiKeys {
     team: 'Licencia por equipo',
     includes: 'Incluye',
     activateCode: 'Introducir código de activación',
-    activatePlaceholder: 'Pega el código (ej. KOFI-XXXX)',
+    activatePlaceholder: `Pega el código (${FALLBACK_ACTIVATE_PLACEHOLDER})`,
     activateSubmit: 'Activar',
     activateSuccess: '¡Activado! Gracias por tu apoyo ❤️',
     activateFail: 'Código inválido, por favor revisa o desbloquea con los botones de abajo',
@@ -284,7 +417,7 @@ function i18n(locale: string): KofiKeys {
     team: 'ترخيص الفريق',
     includes: 'يشمل',
     activateCode: 'أدخل رمز التفعيل',
-    activatePlaceholder: 'الصق الرمز (مثل KOFI-XXXX)',
+    activatePlaceholder: `الصق الرمز (${FALLBACK_ACTIVATE_PLACEHOLDER})`,
     activateSubmit: 'تفعيل',
     activateSuccess: 'تم التفعيل! شكراً لدعمك ❤️',
     activateFail: 'رمز غير صالح، يرجى التحقق أو الفتح عبر الأزرار أدناه',
@@ -329,26 +462,46 @@ export default function KofiUnlockBanner({ slug, locale, variant = 'top' }: Prop
   const monthly = buildKofiUrl('monthly', slug, locale);
   const lifetime = buildKofiUrl('one_time', slug, locale);
 
-  const handleActivate = () => {
+  const [activating, setActivating] = useState(false);
+
+  const handleActivate = async () => {
     const code = activateCode.trim().toUpperCase();
-    if (ACTIVATE_CODE_REGEX.test(code)) {
-      try {
-        const m: KofiMember = {
-          tier: 'manual',
-          createdAt: Date.now(),
-          expiresAt: Date.now() + 30 * 86400 * 1000,
-        };
-        window.localStorage.setItem(MEMBER_KEY, JSON.stringify(m));
-        window.dispatchEvent(new Event('storage'));
-      } catch { /* ignore */ }
+    if (activating) return;
+    if (!ACTIVATE_CODE_REGEX.test(code)) {
+      setActivateToast(t.activateFail);
+      setTimeout(() => setActivateToast(null), 2500);
+      return;
+    }
+    setActivating(true);
+    try {
+      const r: any = await kofiApi('POST', '/api/kofi/activate', { code });
+      if (!r?.ok || !r?.membership) {
+        setActivateToast(t.activateFail);
+        setTimeout(() => setActivateToast(null), 2600);
+        return;
+      }
+      const m: any = r.membership;
+      const expiresAtMs = (typeof m.expiresAt === 'number' ? m.expiresAt * 1000 : null) || Date.now() + 30 * 86400 * 1000;
+      const activatedAtMs = (typeof m.activatedAt === 'number' ? m.activatedAt * 1000 : null) || Date.now();
+      const cache: KofiMember = {
+        tier: m.tier || 'pro',
+        createdAt: activatedAtMs,
+        expiresAt: expiresAtMs,
+        source: m.source || 'activation_code',
+        membershipId: m.id,
+      };
+      try { window.localStorage.setItem(MEMBER_KEY, JSON.stringify(cache)); } catch { /* ignore */ }
       setActivateToast(t.activateSuccess);
       setActivateCode('');
       setActivateOpen(false);
+      window.dispatchEvent(new Event('storage'));
       setTimeout(() => setActivateToast(null), 2500);
-      setTimeout(() => window.location.reload(), 300);
-    } else {
+      setTimeout(() => window.location.reload(), 400);
+    } catch {
       setActivateToast(t.activateFail);
       setTimeout(() => setActivateToast(null), 2500);
+    } finally {
+      setActivating(false);
     }
   };
 

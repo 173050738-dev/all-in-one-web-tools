@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿import createNextIntlPlugin from "next-intl/plugin";
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.tsx");
 
@@ -26,6 +26,18 @@ const nextConfig = {
       {
         source: "/api/auth/:path*",
         destination: "http://localhost:8787/api/auth/:path*",
+      },
+      {
+        source: "/api/ai-recommend",
+        destination: "http://localhost:8787/api/ai-recommend",
+      },
+      {
+        source: "/api/ai-workflow",
+        destination: "http://localhost:8787/api/ai-workflow",
+      },
+      {
+        source: "/api/kofi/:path*",
+        destination: "http://localhost:8787/api/kofi/:path*",
       },
     ];
   },

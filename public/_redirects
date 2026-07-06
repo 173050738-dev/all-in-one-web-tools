@@ -78,3 +78,51 @@ http://www.korelyy.com/*     https://korelyy.com/:splat    308
 
 # ---------- 根路径 / 默认语言页面（Next.js静态导出会生成 /index.html，不跳转） ----------
 # 注意：HTTPS 强制跳转请到 Cloudflare 后台 SSL/TLS → Edge Certificates → 开启 "Always Use HTTPS"
+
+# ---------- 3 个历史死链修复（compare/compare/* / go/go/*），避免用户收藏的旧 URL 出现 404 ----------
+#    /<lang>/compare/     → /<lang>/tools/           (对比页下线，统一跳工具列表)
+#    /<lang>/compare/<slug> → /<lang>/tool/<slug>    (单工具对比 → 工具详情)
+#    /<lang>/go/          → /<lang>/tools/           (跳转中心下线)
+#    /<lang>/go/<slug>    → /<lang>/tool/<slug>      (旧外链 → 对应工具详情)
+/zh/compare    /zh/tools/          301
+/zh/compare/   /zh/tools/          301
+/zh/compare/*  /zh/tool/:splat     301
+/zh/go         /zh/tools/          301
+/zh/go/        /zh/tools/          301
+/zh/go/*       /zh/tool/:splat     301
+
+/en/compare    /en/tools/          301
+/en/compare/   /en/tools/          301
+/en/compare/*  /en/tool/:splat     301
+/en/go         /en/tools/          301
+/en/go/        /en/tools/          301
+/en/go/*       /en/tool/:splat     301
+
+/es/compare    /es/tools/          301
+/es/compare/   /es/tools/          301
+/es/compare/*  /es/tool/:splat     301
+/es/go         /es/tools/          301
+/es/go/        /es/tools/          301
+/es/go/*       /es/tool/:splat     301
+
+/fr/compare    /fr/tools/          301
+/fr/compare/   /fr/tools/          301
+/fr/compare/*  /fr/tool/:splat     301
+/fr/go         /fr/tools/          301
+/fr/go/        /fr/tools/          301
+/fr/go/*       /fr/tool/:splat     301
+
+/hi/compare    /hi/tools/          301
+/hi/compare/   /hi/tools/          301
+/hi/compare/*  /hi/tool/:splat     301
+/hi/go         /hi/tools/          301
+/hi/go/        /hi/tools/          301
+/hi/go/*       /hi/tool/:splat     301
+
+/ar/compare    /ar/tools/          301
+/ar/compare/   /ar/tools/          301
+/ar/compare/*  /ar/tool/:splat     301
+/ar/go         /ar/tools/          301
+/ar/go/        /ar/tools/          301
+/ar/go/*       /ar/tool/:splat     301
+

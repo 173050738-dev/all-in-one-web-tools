@@ -114,6 +114,7 @@
     "subtitle": "La plateforme d'agrégation d'outils leader mondiale",
     "sort-newest": "Plus récents",
     "sort-popular": "Plus populaires",
+    "sort-recommended": "Pour vous",
     "sort-free": "Tous les outils gratuits",
     "free": "Gratuit",
     "paid": "Payant",
@@ -4420,6 +4421,774 @@
     "dezeen": {
       "name": "Dezeen",
       "description": "Site média de design : actualités architecture, design intérieur et design."
+    },
+    "nike-run-club": {
+      "name": "Nike Run Club",
+      "description": "Outil Nike Run Club en ligne avec fonctionnalités : Nike, Run, Club. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "adidas-running-runtastic": {
+      "name": "Adidas Running Runtastic",
+      "description": "Éditeur Adidas Running Runtastic en ligne. Personnalisez Adidas, ajustez Running, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "runkeeper": {
+      "name": "Runkeeper",
+      "description": "Éditeur Runkeeper en ligne. Personnalisez Runkeeper, ajustez 跑步, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "garmin-connect": {
+      "name": "Garmin Connect",
+      "description": "Outil Garmin Connect en ligne avec fonctionnalités : Garmin, Connect, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "coros": {
+      "name": "Coros",
+      "description": "Coros gratuit : prend en charge Coros, 运动 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "polar-flow": {
+      "name": "Polar Flow",
+      "description": "Éditeur Polar Flow en ligne. Personnalisez Polar, ajustez Flow, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "vdot-calculator": {
+      "name": "Vdot Calculateur",
+      "description": "Éditeur Vdot Calculateur en ligne. Personnalisez Vdot, ajustez Calculateur, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "active-race-results": {
+      "name": "Active Race Results",
+      "description": "Éditeur Active Race Results en ligne. Personnalisez Active, ajustez Race, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "trainingpeaks": {
+      "name": "Trainingpeaks",
+      "description": "Éditeur Trainingpeaks en ligne. Personnalisez Trainingpeaks, ajustez 徒步, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "final-surge": {
+      "name": "Final Surge",
+      "description": "Outil Final Surge en ligne avec fonctionnalités : Final, Surge, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "runalyze": {
+      "name": "Runalyze",
+      "description": "Outil Runalyze en ligne avec fonctionnalités : Runalyze, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "stryd-power": {
+      "name": "Stryd Power",
+      "description": "Outil Stryd Power en ligne avec fonctionnalités : Stryd, Power, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "racewow": {
+      "name": "Racewow",
+      "description": "Outil Racewow en ligne avec fonctionnalités : Racewow, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "lets-do-this": {
+      "name": "Lets Do This",
+      "description": "Éditeur Lets Do This en ligne. Personnalisez Lets, ajustez Do, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "find-a-marathon": {
+      "name": "Find A Marathon",
+      "description": "Outil Find A Marathon en ligne avec fonctionnalités : Find, A, Marathon. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "running2win": {
+      "name": "Running2win",
+      "description": "Outil Running2win en ligne avec fonctionnalités : Running2win, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "mcmillan-calculator": {
+      "name": "Mcmillan Calculateur",
+      "description": "Mcmillan Calculateur gratuit : prend en charge Mcmillan, Calculateur et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "marathon-handbook": {
+      "name": "Marathon Handbook",
+      "description": "Marathon Handbook gratuit : prend en charge Marathon, Handbook et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "cool-running": {
+      "name": "Cool Running",
+      "description": "Cool Running gratuit : prend en charge Cool, Running et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "worlds-marathons": {
+      "name": "Worlds Marathons",
+      "description": "Éditeur Worlds Marathons en ligne. Personnalisez Worlds, ajustez Marathons, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "runsignup": {
+      "name": "Runsignup",
+      "description": "Runsignup gratuit : prend en charge Runsignup, 跑步 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "pace-calculator": {
+      "name": "Pace Calculateur",
+      "description": "Pace Calculateur gratuit : prend en charge Pace, Calculateur et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "treadmill-calc": {
+      "name": "Treadmill Calc",
+      "description": "Treadmill Calc gratuit : prend en charge Treadmill, Calc et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "couch-to-5k": {
+      "name": "Couch To 5k",
+      "description": "Couch To 5k gratuit : prend en charge Couch, To et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "race-predictor": {
+      "name": "Race Predictor",
+      "description": "Outil Race Predictor en ligne avec fonctionnalités : Race, Predictor, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "ride-with-gps": {
+      "name": "Ride With Gps",
+      "description": "Éditeur Ride With Gps en ligne. Personnalisez Ride, ajustez With, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "bikemap": {
+      "name": "Bikemap",
+      "description": "Bikemap gratuit : prend en charge Bikemap, 骑行 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "cyclemeter": {
+      "name": "Cyclemeter",
+      "description": "Cyclemeter gratuit : prend en charge Cyclemeter, 骑行 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "wahoo-systm": {
+      "name": "Wahoo Systm",
+      "description": "Outil Wahoo Systm en ligne avec fonctionnalités : Wahoo, Systm, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "trainerroad": {
+      "name": "Trainerroad",
+      "description": "Éditeur Trainerroad en ligne. Personnalisez Trainerroad, ajustez 骑行, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "zwift": {
+      "name": "Zwift",
+      "description": "Zwift gratuit : prend en charge Zwift, 骑行 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "rouvy": {
+      "name": "Rouvy",
+      "description": "Éditeur Rouvy en ligne. Personnalisez Rouvy, ajustez 骑行, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "rgt-cycling": {
+      "name": "Rgt Cycling",
+      "description": "Éditeur Rgt Cycling en ligne. Personnalisez Rgt, ajustez Cycling, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "bikeregister": {
+      "name": "Bikeregister",
+      "description": "Bikeregister gratuit : prend en charge Bikeregister, 骑行 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "geometry-geeks": {
+      "name": "Geometry Geeks",
+      "description": "Éditeur Geometry Geeks en ligne. Personnalisez Geometry, ajustez Geeks, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "best-bike-split": {
+      "name": "Best Bike Séparateur",
+      "description": "Outil Best Bike Séparateur en ligne avec fonctionnalités : Best, Bike, Split. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "golden-cheetah": {
+      "name": "Golden Cheetah",
+      "description": "Outil Golden Cheetah en ligne avec fonctionnalités : Golden, Cheetah, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "cyclestreets": {
+      "name": "Cyclestreets",
+      "description": "Outil Cyclestreets en ligne avec fonctionnalités : Cyclestreets, 骑行, 公路车. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "open-cycle-map": {
+      "name": "Open Cycle Map",
+      "description": "Outil Open Cycle Map en ligne avec fonctionnalités : Open, Cycle, Map. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "bikeradar": {
+      "name": "Bikeradar",
+      "description": "Éditeur Bikeradar en ligne. Personnalisez Bikeradar, ajustez 骑行, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "trailforks": {
+      "name": "Trailforks",
+      "description": "Éditeur Trailforks en ligne. Personnalisez Trailforks, ajustez 徒步, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "singletracks": {
+      "name": "Singletracks",
+      "description": "Singletracks gratuit : prend en charge Singletracks, 运动 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "pinkbike": {
+      "name": "Pinkbike",
+      "description": "Éditeur Pinkbike en ligne. Personnalisez Pinkbike, ajustez 骑行, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "veloviewer": {
+      "name": "Veloviewer",
+      "description": "Éditeur Veloviewer en ligne. Personnalisez Veloviewer, ajustez 骑行, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "todays-plan": {
+      "name": "Todays Plan",
+      "description": "Outil Todays Plan en ligne avec fonctionnalités : Todays, Plan, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "fullgaz": {
+      "name": "Fullgaz",
+      "description": "Outil Fullgaz en ligne avec fonctionnalités : Fullgaz, 骑行, 公路车. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "bike-calc": {
+      "name": "Bike Calc",
+      "description": "Éditeur Bike Calc en ligne. Personnalisez Bike, ajustez Calc, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "bike-insurance-check": {
+      "name": "Bike Insurance Vérificateur",
+      "description": "Outil Bike Insurance Vérificateur en ligne avec fonctionnalités : Bike, Insurance, Check. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "sram-shift-calc": {
+      "name": "Sram Shift Calc",
+      "description": "Sram Shift Calc gratuit : prend en charge Sram, Shift et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "project-4321": {
+      "name": "Project 4321",
+      "description": "Outil Project 4321 en ligne avec fonctionnalités : Project, 4321, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "nike-training-club": {
+      "name": "Nike Training Club",
+      "description": "Éditeur Nike Training Club en ligne. Personnalisez Nike, ajustez Training, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "peloton-digital": {
+      "name": "Peloton Digital",
+      "description": "Éditeur Peloton Digital en ligne. Personnalisez Peloton, ajustez Digital, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "sweat-app": {
+      "name": "Sweat App",
+      "description": "Outil Sweat App en ligne avec fonctionnalités : Sweat, App, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "centr-chris-hemsworth": {
+      "name": "Centr Chris Hemsworth",
+      "description": "Outil Centr Chris Hemsworth en ligne avec fonctionnalités : Centr, Chris, Hemsworth. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "ob-fitness": {
+      "name": "Ob Fitness",
+      "description": "Outil Ob Fitness en ligne avec fonctionnalités : Ob, Fitness, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "fitbit-premium": {
+      "name": "Fitbit Premium",
+      "description": "Outil Fitbit Premium en ligne avec fonctionnalités : Fitbit, Premium, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "strong-lifts": {
+      "name": "Strong Lifts",
+      "description": "Strong Lifts gratuit : prend en charge Strong, Lifts et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "starting-strength": {
+      "name": "Starting Strength",
+      "description": "Starting Strength gratuit : prend en charge Starting, Strength et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "exrx": {
+      "name": "Exrx",
+      "description": "Éditeur Exrx en ligne. Personnalisez Exrx, ajustez 运动, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "bodybuilding-guides": {
+      "name": "Bodybuilding Guides",
+      "description": "Outil Bodybuilding Guides en ligne avec fonctionnalités : Bodybuilding, Guides, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "fitocracy": {
+      "name": "Fitocracy",
+      "description": "Fitocracy gratuit : prend en charge Fitocracy, 健身 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "habit-nest": {
+      "name": "Habit Nest",
+      "description": "Outil Habit Nest en ligne avec fonctionnalités : Habit, Nest, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "workout-labs": {
+      "name": "Workout Labs",
+      "description": "Outil Workout Labs en ligne avec fonctionnalités : Workout, Labs, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "freedom-strong": {
+      "name": "Freedom Strong",
+      "description": "Outil Freedom Strong en ligne avec fonctionnalités : Freedom, Strong, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "darebee": {
+      "name": "Darebee",
+      "description": "Darebee gratuit : prend en charge Darebee, 健身 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "12minuteathlete": {
+      "name": "12minuteathlete",
+      "description": "Éditeur 12minuteathlete en ligne. Personnalisez 12minuteathlete, ajustez 健身, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "fitness-blender": {
+      "name": "Fitness Blender",
+      "description": "Fitness Blender gratuit : prend en charge Fitness, Blender et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "poosh": {
+      "name": "Poosh",
+      "description": "Éditeur Poosh en ligne. Personnalisez Poosh, ajustez 健身, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "p90x-schedule": {
+      "name": "P90x Schedule",
+      "description": "Outil P90x Schedule en ligne avec fonctionnalités : P90x, Schedule, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "insanity-workout": {
+      "name": "Insanity Workout",
+      "description": "Éditeur Insanity Workout en ligne. Personnalisez Insanity, ajustez Workout, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "musclewiki": {
+      "name": "Musclewiki",
+      "description": "Éditeur Musclewiki en ligne. Personnalisez Musclewiki, ajustez 运动, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "strech-lab": {
+      "name": "Strech Lab",
+      "description": "Strech Lab gratuit : prend en charge Strech, Lab et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "romwod": {
+      "name": "Romwod",
+      "description": "Outil Romwod en ligne avec fonctionnalités : Romwod, 瑜伽, 普拉提. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "yoga-international": {
+      "name": "Yoga International",
+      "description": "Éditeur Yoga International en ligne. Personnalisez Yoga, ajustez International, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "gaia-yoga": {
+      "name": "Gaia Yoga",
+      "description": "Éditeur Gaia Yoga en ligne. Personnalisez Gaia, ajustez Yoga, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "do-you-yoga": {
+      "name": "Do You Yoga",
+      "description": "Éditeur Do You Yoga en ligne. Personnalisez Do, ajustez You, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "yoga-download": {
+      "name": "Yoga Téléchargeur",
+      "description": "Yoga Téléchargeur gratuit : prend en charge Yoga, Download et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "my-yoga-works": {
+      "name": "My Yoga Works",
+      "description": "Outil My Yoga Works en ligne avec fonctionnalités : My, Yoga, Works. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "pilates-anytime": {
+      "name": "Pilates Anytime",
+      "description": "Éditeur Pilates Anytime en ligne. Personnalisez Pilates, ajustez Anytime, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "club-pilates": {
+      "name": "Club Pilates",
+      "description": "Club Pilates gratuit : prend en charge Club, Pilates et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "blogilates": {
+      "name": "Blogilates",
+      "description": "Éditeur Blogilates en ligne. Personnalisez Blogilates, ajustez 瑜伽, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "stretching-timer": {
+      "name": "Stretching Minuteur",
+      "description": "Éditeur Stretching Minuteur en ligne. Personnalisez Stretching, ajustez Minuteur, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "foam-roller-guide": {
+      "name": "Foam Roller Guide",
+      "description": "Éditeur Foam Roller Guide en ligne. Personnalisez Foam, ajustez Roller, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "yin-yoga-cheatsheet": {
+      "name": "Yin Yoga Cheatsheet",
+      "description": "Yin Yoga Cheatsheet gratuit : prend en charge Yin, Yoga et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "yoga-journal": {
+      "name": "Yoga Journal",
+      "description": "Outil Yoga Journal en ligne avec fonctionnalités : Yoga, Journal, 瑜伽. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "medito": {
+      "name": "Medito",
+      "description": "Outil Medito en ligne avec fonctionnalités : Medito, 瑜伽, 普拉提. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "waking-up": {
+      "name": "Waking Up",
+      "description": "Outil Waking Up en ligne avec fonctionnalités : Waking, Up, 瑜伽. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "mindful-cms": {
+      "name": "Mindful Cms",
+      "description": "Mindful Cms gratuit : prend en charge Mindful, Cms et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "breathwrk": {
+      "name": "Breathwrk",
+      "description": "Éditeur Breathwrk en ligne. Personnalisez Breathwrk, ajustez 瑜伽, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "478-breathing": {
+      "name": "478 Breathing",
+      "description": "Éditeur 478 Breathing en ligne. Personnalisez 478, ajustez Breathing, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "box-breathing": {
+      "name": "Box Breathing",
+      "description": "Box Breathing gratuit : prend en charge Box, Breathing et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "progressive-muscle-relaxation": {
+      "name": "Progressive Muscle Relaxation",
+      "description": "Outil Progressive Muscle Relaxation en ligne avec fonctionnalités : Progressive, Muscle, Relaxation. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "swim-com": {
+      "name": "Swim Com",
+      "description": "Éditeur Swim Com en ligne. Personnalisez Swim, ajustez Com, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "swimsmooth": {
+      "name": "Swimsmooth",
+      "description": "Éditeur Swimsmooth en ligne. Personnalisez Swimsmooth, ajustez 游泳, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "goswim": {
+      "name": "Goswim",
+      "description": "Goswim gratuit : prend en charge Goswim, 健身 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "swimulator": {
+      "name": "Swimulator",
+      "description": "Swimulator gratuit : prend en charge Swimulator, 游泳 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "trainerroad-swim": {
+      "name": "Trainerroad Swim",
+      "description": "Outil Trainerroad Swim en ligne avec fonctionnalités : Trainerroad, Swim, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "slowtwitch": {
+      "name": "Slowtwitch",
+      "description": "Outil Slowtwitch en ligne avec fonctionnalités : Slowtwitch, 运动, 健康. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "tridot": {
+      "name": "Tridot",
+      "description": "Outil Tridot en ligne avec fonctionnalités : Tridot, 游泳, 铁人三项. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "beginnertriathlete": {
+      "name": "Beginnertriathlete",
+      "description": "Beginnertriathlete gratuit : prend en charge Beginnertriathlete, 游泳 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "ironman-training-peaks": {
+      "name": "Ironman Training Peaks",
+      "description": "Éditeur Ironman Training Peaks en ligne. Personnalisez Ironman, ajustez Training, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "suunto-ironman": {
+      "name": "Suunto Ironman",
+      "description": "Suunto Ironman gratuit : prend en charge Suunto, Ironman et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "kayak-sit-on-top": {
+      "name": "Kayak Sit On Top",
+      "description": "Éditeur Kayak Sit On Top en ligne. Personnalisez Kayak, ajustez Sit, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "surf-forecast": {
+      "name": "Surf Forecast",
+      "description": "Surf Forecast gratuit : prend en charge Surf, Forecast et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "windguru": {
+      "name": "Windguru",
+      "description": "Éditeur Windguru en ligne. Personnalisez Windguru, ajustez 游泳, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "magicseaweed": {
+      "name": "Magicseaweed",
+      "description": "Éditeur Magicseaweed en ligne. Personnalisez Magicseaweed, ajustez 游泳, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "wannasurf": {
+      "name": "Wannasurf",
+      "description": "Wannasurf gratuit : prend en charge Wannasurf, 游泳 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "wikiloc": {
+      "name": "Wikiloc",
+      "description": "Éditeur Wikiloc en ligne. Personnalisez Wikiloc, ajustez 运动, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "hikingproject": {
+      "name": "Hikingproject",
+      "description": "Éditeur Hikingproject en ligne. Personnalisez Hikingproject, ajustez 徒步, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "mountain-project": {
+      "name": "Mountain Project",
+      "description": "Éditeur Mountain Project en ligne. Personnalisez Mountain, ajustez Project, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "summitpost": {
+      "name": "Summitpost",
+      "description": "Outil Summitpost en ligne avec fonctionnalités : Summitpost, 徒步, 登山. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "peakbagger": {
+      "name": "Peakbagger",
+      "description": "Peakbagger gratuit : prend en charge Peakbagger, 徒步 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "outdooractive": {
+      "name": "Outdooractive",
+      "description": "Éditeur Outdooractive en ligne. Personnalisez Outdooractive, ajustez 徒步, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "satgear-checklist": {
+      "name": "Satgear Checklist",
+      "description": "Éditeur Satgear Checklist en ligne. Personnalisez Satgear, ajustez Checklist, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "lighterpack": {
+      "name": "Lighterpack",
+      "description": "Lighterpack gratuit : prend en charge Lighterpack, 徒步 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "rei-co-op-checklists": {
+      "name": "Rei Co Op Checklists",
+      "description": "Éditeur Rei Co Op Checklists en ligne. Personnalisez Rei, ajustez Co, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "campendium": {
+      "name": "Campendium",
+      "description": "Éditeur Campendium en ligne. Personnalisez Campendium, ajustez 徒步, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "free-campsites": {
+      "name": "Free Campsites",
+      "description": "Éditeur Free Campsites en ligne. Personnalisez Free, ajustez Campsites, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "hipcamp": {
+      "name": "Hipcamp",
+      "description": "Hipcamp gratuit : prend en charge Hipcamp, 徒步 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "campsite-photos": {
+      "name": "Campsite Photos",
+      "description": "Campsite Photos gratuit : prend en charge Campsite, Photos et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "noaa-weather": {
+      "name": "Noaa Weather",
+      "description": "Éditeur Noaa Weather en ligne. Personnalisez Noaa, ajustez Weather, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "mountain-weather-forecast": {
+      "name": "Mountain Weather Forecast",
+      "description": "Éditeur Mountain Weather Forecast en ligne. Personnalisez Mountain, ajustez Weather, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "meteoblue-mountain": {
+      "name": "Meteoblue Mountain",
+      "description": "Meteoblue Mountain gratuit : prend en charge Meteoblue, Mountain et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "wildsafe-bear": {
+      "name": "Wildsafe Bear",
+      "description": "Outil Wildsafe Bear en ligne avec fonctionnalités : Wildsafe, Bear, 装备评测. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "sotaventos-mountain": {
+      "name": "Sotaventos Mountain",
+      "description": "Sotaventos Mountain gratuit : prend en charge Sotaventos, Mountain et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "nba-stats": {
+      "name": "Nba Stats",
+      "description": "Éditeur Nba Stats en ligne. Personnalisez Nba, ajustez Stats, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "basketball-reference": {
+      "name": "Basketball Reference",
+      "description": "Basketball Reference gratuit : prend en charge Basketball, Reference et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "bball-index": {
+      "name": "Bball Index",
+      "description": "Bball Index gratuit : prend en charge Bball, Index et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "hoopshype-salaries": {
+      "name": "Hoopshype Salaries",
+      "description": "Outil Hoopshype Salaries en ligne avec fonctionnalités : Hoopshype, Salaries, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "fifa-ratings": {
+      "name": "Fifa Ratings",
+      "description": "Fifa Ratings gratuit : prend en charge Fifa, Ratings et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "transfermarkt": {
+      "name": "Transfermarkt",
+      "description": "Transfermarkt gratuit : prend en charge Transfermarkt, 体育数据 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "sofascore": {
+      "name": "Sofascore",
+      "description": "Sofascore gratuit : prend en charge Sofascore, 体育数据 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "fbref": {
+      "name": "Fbref",
+      "description": "Outil Fbref en ligne avec fonctionnalités : Fbref, 体育数据, 实时比分. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "understat": {
+      "name": "Understat",
+      "description": "Éditeur Understat en ligne. Personnalisez Understat, ajustez 体育数据, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "tennis-atp-tour": {
+      "name": "Tennis Atp Tour",
+      "description": "Outil Tennis Atp Tour en ligne avec fonctionnalités : Tennis, Atp, Tour. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "tennis-wta": {
+      "name": "Tennis Wta",
+      "description": "Tennis Wta gratuit : prend en charge Tennis, Wta et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "tennis-abstract": {
+      "name": "Tennis Abstract",
+      "description": "Tennis Abstract gratuit : prend en charge Tennis, Abstract et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "flashscore-tennis": {
+      "name": "Flashscore Tennis",
+      "description": "Éditeur Flashscore Tennis en ligne. Personnalisez Flashscore, ajustez Tennis, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "bwf-badminton": {
+      "name": "Bwf Badminton",
+      "description": "Outil Bwf Badminton en ligne avec fonctionnalités : Bwf, Badminton, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "badminton-warehouse": {
+      "name": "Badminton Warehouse",
+      "description": "Éditeur Badminton Warehouse en ligne. Personnalisez Badminton, ajustez Warehouse, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "ittf-world": {
+      "name": "Ittf World",
+      "description": "Éditeur Ittf World en ligne. Personnalisez Ittf, ajustez World, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "tabletennis-reference": {
+      "name": "Tabletennis Reference",
+      "description": "Outil Tabletennis Reference en ligne avec fonctionnalités : Tabletennis, Reference, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "revspin": {
+      "name": "Revspin",
+      "description": "Revspin gratuit : prend en charge Revspin, 体育数据 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "fivb-volleyball": {
+      "name": "Fivb Volleyball",
+      "description": "Fivb Volleyball gratuit : prend en charge Fivb, Volleyball et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "volleybox": {
+      "name": "Volleybox",
+      "description": "Volleybox gratuit : prend en charge Volleybox, 体育数据 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "pga-tour-stats": {
+      "name": "Pga Tour Stats",
+      "description": "Éditeur Pga Tour Stats en ligne. Personnalisez Pga, ajustez Tour, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "handicap-differential": {
+      "name": "Handicap Differential",
+      "description": "Éditeur Handicap Differential en ligne. Personnalisez Handicap, ajustez Differential, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "golfnow-tee-times": {
+      "name": "Golfnow Tee Times",
+      "description": "Éditeur Golfnow Tee Times en ligne. Personnalisez Golfnow, ajustez Tee, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "2k-sports-handicap": {
+      "name": "2k Sports Handicap",
+      "description": "2k Sports Handicap gratuit : prend en charge 2k, Sports et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "golfshake-handicap": {
+      "name": "Golfshake Handicap",
+      "description": "Outil Golfshake Handicap en ligne avec fonctionnalités : Golfshake, Handicap, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "ski-resort-stats": {
+      "name": "Ski Resort Stats",
+      "description": "Ski Resort Stats gratuit : prend en charge Ski, Resort et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "on-the-snow": {
+      "name": "On The Snow",
+      "description": "Outil On The Snow en ligne avec fonctionnalités : On, The, Snow. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "snow-forecast": {
+      "name": "Snow Forecast",
+      "description": "Snow Forecast gratuit : prend en charge Snow, Forecast et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "powder-forecast": {
+      "name": "Powder Forecast",
+      "description": "Outil Powder Forecast en ligne avec fonctionnalités : Powder, Forecast, 滑雪. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "zrankings-ski": {
+      "name": "Zrankings Ski",
+      "description": "Zrankings Ski gratuit : prend en charge Zrankings, Ski et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "skiers-tracker": {
+      "name": "Skiers Tracker",
+      "description": "Outil Skiers Tracker en ligne avec fonctionnalités : Skiers, Tracker, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "snowboard-encyc": {
+      "name": "Snowboard Encyc",
+      "description": "Snowboard Encyc gratuit : prend en charge Snowboard, Encyc et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "the-house-board-size": {
+      "name": "The House Board Size",
+      "description": "The House Board Size gratuit : prend en charge The, House et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "skate-video-calendar": {
+      "name": "Skate Vidéo Calendar",
+      "description": "Skate Vidéo Calendar gratuit : prend en charge Skate, Vidéo et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "skatepark-directory": {
+      "name": "Skatepark Directory",
+      "description": "Outil Skatepark Directory en ligne avec fonctionnalités : Skatepark, Directory, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "concretedisciples": {
+      "name": "Concretedisciples",
+      "description": "Concretedisciples gratuit : prend en charge Concretedisciples, 滑雪 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "roller-skate-size": {
+      "name": "Roller Skate Size",
+      "description": "Éditeur Roller Skate Size en ligne. Personnalisez Roller, ajustez Skate, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "inline-skate-buyers-guide": {
+      "name": "Inline Skate Buyers Guide",
+      "description": "Outil Inline Skate Buyers Guide en ligne avec fonctionnalités : Inline, Skate, Buyers. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "bouldering-grade-converter": {
+      "name": "Bouldering Grade Convertisseur",
+      "description": "Outil Bouldering Grade Convertisseur en ligne avec fonctionnalités : Bouldering, Grade, Convertisseur. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "climbfinder": {
+      "name": "Climbfinder",
+      "description": "Outil Climbfinder en ligne avec fonctionnalités : Climbfinder, 体育数据, 实时比分. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "macro-calculator": {
+      "name": "Macro Calculateur",
+      "description": "Macro Calculateur gratuit : prend en charge Macro, Calculateur et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "tdee-calculator": {
+      "name": "Tdee Calculateur",
+      "description": "Outil Tdee Calculateur en ligne avec fonctionnalités : Tdee, Calculateur, 营养. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "bmr-calculator": {
+      "name": "Bmr Calculateur",
+      "description": "Éditeur Bmr Calculateur en ligne. Personnalisez Bmr, ajustez Calculateur, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "protein-intake": {
+      "name": "Protein Intake",
+      "description": "Protein Intake gratuit : prend en charge Protein, Intake et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "hydration-calculator": {
+      "name": "Hydration Calculateur",
+      "description": "Éditeur Hydration Calculateur en ligne. Personnalisez Hydration, ajustez Calculateur, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "water-reminder": {
+      "name": "Water Reminder",
+      "description": "Water Reminder gratuit : prend en charge Health, Hydration et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "body-fat-calc": {
+      "name": "Body Fat Calc",
+      "description": "Éditeur Body Fat Calc en ligne. Personnalisez Body, ajustez Fat, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "bmi-calc-health": {
+      "name": "Bmi Calc Health",
+      "description": "Outil Bmi Calc Health en ligne avec fonctionnalités : Bmi, Calc, Health. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "vo2max-calc": {
+      "name": "Vo2max Calc",
+      "description": "Outil Vo2max Calc en ligne avec fonctionnalités : Vo2max, Calc, 计算器. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "one-rm-1rep-max": {
+      "name": "One Rm 1rep Max",
+      "description": "Outil One Rm 1rep Max en ligne avec fonctionnalités : One, Rm, 1rep. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "meal-prep-planner": {
+      "name": "Meal Prep Planner",
+      "description": "Meal Prep Planner gratuit : prend en charge Meal, Prep et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "pre-workout-examiner": {
+      "name": "Pre Workout Examiner",
+      "description": "Éditeur Pre Workout Examiner en ligne. Personnalisez Pre, ajustez Workout, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "eventbrite-sports": {
+      "name": "Eventbrite Sports",
+      "description": "Eventbrite Sports gratuit : prend en charge Eventbrite, Sports et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "meetup-sports": {
+      "name": "Meetup Sports",
+      "description": "Meetup Sports gratuit : prend en charge Meetup, Sports et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "raceroster": {
+      "name": "Raceroster",
+      "description": "Outil Raceroster en ligne avec fonctionnalités : Raceroster, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "ticketmaster-sports": {
+      "name": "Ticketmaster Sports",
+      "description": "Ticketmaster Sports gratuit : prend en charge Ticketmaster, Sports et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "sporting-news-scores": {
+      "name": "Sporting News Scores",
+      "description": "Outil Sporting News Scores en ligne avec fonctionnalités : Sporting, News, Scores. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "gearbrain": {
+      "name": "Gearbrain",
+      "description": "Outil Gearbrain en ligne avec fonctionnalités : Gearbrain, 装备评测, 对比. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "wirecutter-fitness": {
+      "name": "Wirecutter Fitness",
+      "description": "Wirecutter Fitness gratuit : prend en charge Wirecutter, Fitness et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "outdoorgearlab": {
+      "name": "Outdoorgearlab",
+      "description": "Outdoorgearlab gratuit : prend en charge Outdoorgearlab, 徒步 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale."
+    },
+    "switchback-travel-gear": {
+      "name": "Switchback Travel Gear",
+      "description": "Outil Switchback Travel Gear en ligne avec fonctionnalités : Switchback, Travel, Gear. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "rotten-wire": {
+      "name": "Rotten Wire",
+      "description": "Éditeur Rotten Wire en ligne. Personnalisez Rotten, ajustez Wire, exportez instantanément. Multi-appareils, aucune inscription."
+    },
+    "strava-stats-dashboard": {
+      "name": "Strava Stats Dashboard",
+      "description": "Outil Strava Stats Dashboard en ligne avec fonctionnalités : Strava, Stats, Dashboard. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "athlinks-race-results": {
+      "name": "Athlinks Race Results",
+      "description": "Outil Athlinks Race Results en ligne avec fonctionnalités : Athlinks, Race, Results. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "sporttracks": {
+      "name": "Sporttracks",
+      "description": "Outil Sporttracks en ligne avec fonctionnalités : Sporttracks, 运动, 健康. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "trainerroad-announcer": {
+      "name": "Trainerroad Announcer",
+      "description": "Outil Trainerroad Announcer en ligne avec fonctionnalités : Trainerroad, Announcer, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+    },
+    "sport-psychology-today": {
+      "name": "Sport Psychology Today",
+      "description": "Outil Sport Psychology Today en ligne avec fonctionnalités : Sport, Psychology, Today. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
     }
   },
   "sidebar2": {
@@ -4634,7 +5403,75 @@
     "err-user-gone": "Ce compte n'existe plus",
     "err-google-off": "Connexion Google indisponible",
     "err-google-soon": "Connexion Google bientôt disponible",
-    "err-server": "Serveur saturé. Réessaye plus tard."
+    "err-server": "Serveur saturé. Réessaye plus tard.",
+    "continue-google": "Continuer avec Google",
+    "err-google-bad-token": "Jeton Google invalide — impossible de vérifier l'identité",
+    "err-google-bad-audience": "ID client Google non valide, contacte le support",
+    "err-google-token-expired": "Connexion Google expirée, réessaie",
+    "err-google-bad-profile": "Profil Google incomplet (ex: e-mail manquant)",
+    "err-google-popup-blocked": "Fenêtre de connexion bloquée — autorise les popups ou réessaie",
+    "err-google-cancelled": "Connexion Google annulée",
+    "sign-in-sub": "Bon retour — connecte-toi pour synchroniser tes favoris",
+    "create-account": "Créer un compte",
+    "create-account-sub": "Inscription gratuite — synchronise favoris et historique",
+    "no-account": "Pas encore de compte ?",
+    "has-account": "Tu as déjà un compte ?",
+    "or-email": "Ou continuer avec e-mail",
+    "password-confirm-label": "Confirmer le mot de passe",
+    "password-confirm-placeholder": "Resaisir le mot de passe",
+    "err-passwords-mismatch": "Les mots de passe ne correspondent pas",
+    "pw-empty": "(non saisi)",
+    "pw-weak": "Faible",
+    "pw-fair": "Moyen",
+    "pw-good": "Bon",
+    "pw-strong": "Très bon",
+    "pw-show": "Afficher le mot de passe",
+    "pw-hide": "Masquer le mot de passe",
+    "forgot-password-sub": "Saisis ton e-mail — nous t'enverrons la procédure",
+    "reset-password": "Définir un nouveau mot de passe",
+    "reset-password-sub": "Choisis un nouveau mot de passe, puis connecte-toi",
+    "send-reset-link": "Envoyer la procédure",
+    "update-password": "Mettre à jour le mot de passe",
+    "remember-password": "Tu as retrouvé ton mot de passe ?",
+    "need-new-token": "Lien de réinitialisation expiré ?",
+    "request-another": "En demander un nouveau",
+    "forgot-token-issued": "(Mode dev) jeton de réinitialisation généré",
+    "forgot-email-sent": "Si enregistré, un lien de réinitialisation a été envoyé",
+    "reset-token-ready": "Jeton prêt — saisis ton nouveau mot de passe",
+    "reset-expires-min": " min restantes",
+    "reset-success": "Mot de passe mis à jour ! Connecte-toi avec le nouveau.",
+    "err-reset-missing-token": "Jeton manquant — commence par mot de passe oublié",
+    "err-reset-invalid": "Jeton invalide, demande-en un nouveau",
+    "err-reset-used": "Jeton déjà utilisé, demande-en un nouveau",
+    "err-reset-expired": "Jeton expiré, demande-en un nouveau",
+    "err-old-password-required": "Veuillez saisir votre mot de passe actuel",
+    "err-same-password": "Le nouveau mot de passe ne peut pas être identique à l'ancien",
+    "err-name-too-long": "Le nom d'affichage ne peut pas dépasser 64 caractères",
+    "profile-updated": "Profil mis à jour avec succès",
+    "password-changed": "Mot de passe changé avec succès",
+    "profile-title": "Mon Profil",
+    "profile-subtitle": "Gérez les informations de votre compte et vos préférences",
+    "profile-section-basic": "Informations de base",
+    "profile-section-security": "Sécurité",
+    "profile-name-label": "Nom affiché",
+    "profile-name-placeholder": "Entrez votre nom",
+    "profile-email-label": "E-mail",
+    "profile-plan-label": "Forfait",
+    "profile-joined-label": "Inscrit le",
+    "profile-provider-label": "Méthode de connexion",
+    "profile-language-label": "Langue",
+    "profile-save": "Enregistrer",
+    "profile-saving": "Enregistrement...",
+    "profile-saved-tip": "Enregistré",
+    "profile-old-pw-label": "Mot de passe actuel",
+    "profile-new-pw-label": "Nouveau mot de passe",
+    "profile-new-pw-placeholder": "Au moins 8 caractères",
+    "profile-change-pw": "Changer le mot de passe",
+    "profile-changing-pw": "Modification...",
+    "profile-close": "Fermer",
+    "provider-email": "E-mail et mot de passe",
+    "provider-google": "Compte Google",
+    "footer-legal": "En continuant, tu acceptes les CGU et la politique de confidentialité"
   },
   "kofi": {
     "supportUs": "Soutenez Korelyy et gardez les outils gratuits en ligne",
