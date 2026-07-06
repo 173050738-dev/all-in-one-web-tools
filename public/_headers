@@ -26,11 +26,13 @@
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
   Vary: Accept-Encoding
+  # ASSETS-CACHE-TAG-PLACEHOLDER
 
 # ---------- 语言包 locale json（内容稳定，1 个月缓存 + SWR 兜底）
 /locales/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400, stale-if-error=604800
   Vary: Accept-Encoding
+  Cache-Tag: korelyy-assets
 
 # ---------- 公共静态资源（svg/ico/图片/manifest）
 /*.svg
@@ -48,6 +50,9 @@
 
 # ---------- HTML 页面：短缓存 + stale-while-revalidate
 # 保证搜索引擎 & 用户首屏拿到最新内容，同时 Cloudflare 边缘节点命中高
+# Cache-Tag 由 deploy workflow 按 MODE 动态注入（legacy=korelyy-legacy-<runid> / isr=korelyy-isr-<runid>）
+# 清缓存时 Cloudflare → Caching → Purge → Purge by Cache-Tag 精准清，无需 Purge Everything
 /*.html
   Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400, stale-if-error=604800
   Vary: Accept-Encoding, Accept-Language
+  # CACHE-TAG-PLACEHOLDER-DO-NOT-REMOVE

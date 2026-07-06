@@ -6,13 +6,13 @@ on:
   workflow_dispatch:
     inputs:
       build_mode:
-        description: 构建模式
+        description: 构建模式（默认 legacy 稳定主力；isr 仅实验用）
         required: false
-        default: isr
+        default: legacy
         type: choice
         options:
-          - isr
           - legacy
+          - isr
 
 permissions:
   contents: read
@@ -23,13 +23,14 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  MODE: ${{ inputs.build_mode || 'isr' }}
+  MODE: ${{ inputs.build_mode || 'legacy' }}
+  DEPLOY_TS: ${{ github.run_id }}-${{ github.run_attempt }}
 
 jobs:
   build-and-deploy:
-    name: Build & Deploy (${{ inputs.build_mode || 'isr' }})
+    name: Build & Deploy (${{ inputs.build_mode || 'legacy' }})
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
 
     steps:
       - name: Checkout
@@ -79,34 +80,116 @@ jobs:
           set -e
           pnpm run wrangler:patch || echo "wrangler:patch 跳过（非致命）"
 
-      - name: "ISR mode: build (方案B → ISR + next-on-pages, ~500 files)"
+      - name: "ISR mode: build (方案B → ISR + next-on-pages, 备用实验模式)"
         if: env.MODE == 'isr'
         env:
           NODE_ENV: production
         run: |
           set -e
-          echo "=== Mode: ISR (方案B) - 运行 next-on-pages 生成 .vercel/output/static ==="
+          echo "=== [ISR 实验模式] 运行 next-on-pages 生成 .vercel/output/static ==="
+          echo "  注意：ISR 当前为备用实验模式，TOP 工具页需预生成否则 SSR fallback 易崩"
           pnpm run build:cf 2>&1 | tail -80
           echo "=== next-on-pages 完成 ==="
 
-      - name: "Legacy mode: resolve middleware + output:export (方案A → static export, ~2000 files)"
+      - name: "ISR mode: 自检 → 前 20 TOP slug 静态 HTML 必须存在（否则 fail，防止部署空壳）"
+        if: env.MODE == 'isr'
+        run: |
+          set -e
+          echo "=== [ISR 性能分层自检] 验证 TOP slug 预生成 ==="
+          TARGET=".vercel/output/static"
+          TOTAL_HTML=$(find "$TARGET" -type f -name "*.html" | wc -l)
+          ZH_TOOL_HTML=$(find "$TARGET/zh/tool" -maxdepth 2 -name index.html 2>/dev/null | wc -l || echo 0)
+          echo "  总 HTML 数: $TOTAL_HTML"
+          echo "  /zh/tool/* 下 HTML 数: $ZH_TOOL_HTML"
+          MIN_HTML=120
+          if [ "$TOTAL_HTML" -lt "$MIN_HTML" ]; then
+            echo "::error::❌ ISR 产物不足！总 HTML=$TOTAL_HTML < $MIN_HTML 阈值 → TOP slug 预生成失败，拒绝部署空壳！"
+            echo "  请检查 next-on-pages wrapper (scripts/run-next-on-pages.cjs) 或 generateStaticParams()"
+            exit 2
+          fi
+          # Spot-check 3 个典型 TOP slug（qr-code-generator / regex-tester / base64-tool）
+          missing=0
+          for slug in qr-code-generator regex-tester base64-tool pdf-compress image-compressor; do
+            for locale in zh en; do
+              f="$TARGET/$locale/tool/$slug/index.html"
+              if [ -f "$f" ] && [ -s "$f" ]; then
+                echo "  ✅ $locale/$slug → $(wc -c < $f) bytes"
+              else
+                echo "  ❌ $locale/$slug → 缺失或为空！"
+                missing=$((missing+1))
+              fi
+            done
+          done
+          if [ "$missing" -gt 0 ]; then
+            echo "::error::❌ ISR TOP slug 预生成缺失 $missing 个，拒绝部署！"
+            exit 3
+          fi
+          echo "✅ [ISR 自检通过] TOP slug 预生成完整"
+
+      - name: "Legacy mode: resolve middleware + output:export (方案A → static export, 主力稳定模式)"
         if: env.MODE == 'legacy'
         run: |
           set -e
-          echo "=== Mode: Legacy (方案A) - static export ==="
+          echo "=== [Legacy 主力模式] static export（output: export，全页预生成 100% 可打开） ==="
           if [ -f middleware.ts ]; then
             echo "Moving middleware.ts to .bak for static export (output:export 不支持 middleware)"
             mv middleware.ts middleware.ts.bak
           fi
 
-      - name: "Legacy mode: build (USE_STATIC_EXPORT=true)"
+      - name: "Legacy mode: build (USE_STATIC_EXPORT=true, 性能分层启用)"
         if: env.MODE == 'legacy'
         env:
           NODE_ENV: production
           USE_STATIC_EXPORT: "true"
         run: |
           set -e
-          pnpm run build 2>&1 | tail -80
+          echo "  性能优化: SWC minify=on / optimizePackageImports=on / poweredByHeader=off"
+          pnpm run build 2>&1 | tail -100
+
+      - name: "Legacy mode: 自检 → 工具详情 HTML 数 ≥ 1000（否则 fail，防止构建静默失败）"
+        if: env.MODE == 'legacy'
+        run: |
+          set -e
+          echo "=== [Legacy 性能分层自检] 验证 全量工具 + 博客 + 工作流 HTML 生成量 ==="
+          TARGET="out"
+          TOTAL_HTML=$(find "$TARGET" -type f -name "*.html" | wc -l)
+          ZH_TOOL_HTML=$(find "$TARGET/zh/tool" -maxdepth 2 -name index.html 2>/dev/null | wc -l || echo 0)
+          EN_TOOL_HTML=$(find "$TARGET/en/tool" -maxdepth 2 -name index.html 2>/dev/null | wc -l || echo 0)
+          BLOG_HTML=$(find "$TARGET" -path "*/blog/*" -name index.html 2>/dev/null | wc -l || echo 0)
+          WF_HTML=$(find "$TARGET" -path "*workflows*" -name index.html 2>/dev/null | wc -l || echo 0)
+          echo "  总 HTML: $TOTAL_HTML (阈值 ≥ 1500)"
+          echo "    /zh/tool/*: $ZH_TOOL_HTML (阈值 ≥ 1000)"
+          echo "    /en/tool/*: $EN_TOOL_HTML (阈值 ≥ 1000)"
+          echo "    /blog/*:   $BLOG_HTML"
+          echo "    workflows:  $WF_HTML"
+          if [ "$TOTAL_HTML" -lt 1500 ] || [ "$ZH_TOOL_HTML" -lt 1000 ]; then
+            echo "::error::❌ Legacy 产物不足！总=$TOTAL_HTML /zh/tool=$ZH_TOOL_HTML（低于阈值）→ 构建失败！"
+            echo "  请检查上面 Legacy build 步骤的错误日志"
+            exit 4
+          fi
+          # Spot-check 5 个典型工具详情页（含 TOP 和冷门）
+          missing=0
+          for slug in qr-code-generator regex-tester base64-tool pdf-compress image-resizer watermark-remover; do
+            for locale in zh en; do
+              f="$TARGET/$locale/tool/$slug/index.html"
+              if [ -f "$f" ] && [ -s "$f" ]; then
+                size=$(wc -c < "$f")
+                if [ "$size" -lt 15000 ]; then
+                  echo "  ⚠️  $locale/$slug → 体积过小 $size bytes（可能是空壳？）"
+                else
+                  echo "  ✅ $locale/$slug → $size bytes"
+                fi
+              else
+                echo "  ❌ $locale/$slug → 缺失或为空！"
+                missing=$((missing+1))
+              fi
+            done
+          done
+          if [ "$missing" -gt 0 ]; then
+            echo "::error::❌ Legacy 关键详情页缺失 $missing 个，拒绝部署！"
+            exit 5
+          fi
+          echo "✅ [Legacy 自检通过] 全量 HTML 生成完整"
 
       - name: Restore middleware.ts (legacy only，防止留在工作区污染后续运行)
         if: env.MODE == 'legacy' && always()
@@ -116,13 +199,15 @@ jobs:
             echo "middleware.ts restored"
           fi
 
-      - name: Copy CF Pages static assets (legacy → out/ ; isr → .vercel/output/static)
+      - name: Copy CF Pages static assets + 注入性能分层 Cache-Tag (legacy → out/ ; isr → .vercel/output/static)
         run: |
           set -e
           if [ "$MODE" = "legacy" ]; then
             TARGET_DIR="out"
+            CACHE_TAG="korelyy-legacy-${DEPLOY_TS}"
           else
             TARGET_DIR=".vercel/output/static"
+            CACHE_TAG="korelyy-isr-${DEPLOY_TS}"
           fi
 
           if [ ! -d "$TARGET_DIR" ]; then
@@ -132,6 +217,8 @@ jobs:
           fi
 
           echo "Target dir: $TARGET_DIR"
+          echo "性能分层 Cache-Tag: $CACHE_TAG（未来可按 tag 精准清缓存，无需 Purge Everything）"
+
           for f in _headers _redirects favicon.svg og-image.png robots.txt sitemap.xml ads.txt BingSiteAuth.xml; do
             if [ -f "public/$f" ]; then
               cp -f "public/$f" "$TARGET_DIR/$f" && echo "copied public/$f -> $TARGET_DIR/$f ($(wc -c < public/$f) bytes)" || true
@@ -162,6 +249,29 @@ jobs:
             cp -f public/favicon.svg "$TARGET_DIR/favicon.ico"
             echo "copied favicon.svg -> favicon.ico"
           fi
+          # ============ 性能分层 Cache-Tag 注入 ============
+          # 把 _headers 里的占位符替换成当前 MODE + run_id 唯一的 Cache-Tag
+          # 未来清缓存：Cloudflare → Caching → Purge → Purge by Cache-Tag → 填 korelyy-legacy-xxx
+          # 就能精准只清本次部署产生的 HTML，不影响 /_next/static 等 hash 资源（永久缓存）
+          if [ -f "$TARGET_DIR/_headers" ]; then
+            TAG_LINE="  Cache-Tag: ${CACHE_TAG}"
+            if grep -q "CACHE-TAG-PLACEHOLDER-DO-NOT-REMOVE" "$TARGET_DIR/_headers"; then
+              sed -i "s|^  # CACHE-TAG-PLACEHOLDER-DO-NOT-REMOVE$|${TAG_LINE}|" "$TARGET_DIR/_headers"
+              echo "✅ 已注入 HTML Cache-Tag: ${CACHE_TAG}"
+            else
+              echo "⚠️  _headers 未找到 CACHE-TAG-PLACEHOLDER-DO-NOT-REMOVE 占位符（跳过 Cache-Tag 注入）"
+            fi
+            # /_next/static/* 公共 hash 资源：固定 tag = korelyy-assets（换 logo 时单独清）
+            ASSETS_TAG_LINE="  Cache-Tag: korelyy-assets"
+            if grep -q "ASSETS-CACHE-TAG-PLACEHOLDER" "$TARGET_DIR/_headers"; then
+              sed -i "s|^  # ASSETS-CACHE-TAG-PLACEHOLDER$|${ASSETS_TAG_LINE}|" "$TARGET_DIR/_headers"
+              echo "✅ 已注入静态资源 Cache-Tag: korelyy-assets"
+            fi
+          fi
+          # 生成 cache-tag-manifest.txt（方便以后查用了什么 tag）
+          echo "${CACHE_TAG}" > "$TARGET_DIR/cache-tag-manifest.txt"
+          echo "korelyy-assets" >> "$TARGET_DIR/cache-tag-manifest.txt"
+          echo "✅ Cache-Tag 清单写入: $TARGET_DIR/cache-tag-manifest.txt"
 
       - name: Verify critical files & 部署产物统计
         run: |

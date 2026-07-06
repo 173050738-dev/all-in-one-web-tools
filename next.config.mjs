@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import createNextIntlPlugin from "next-intl/plugin";
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.tsx");
 
@@ -7,14 +7,27 @@ const USE_STATIC_EXPORT = process.env.USE_STATIC_EXPORT === 'true' || process.en
 const nextConfig = {
   ...(USE_STATIC_EXPORT ? { output: 'export' } : {}),
   trailingSlash: true,
+  reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   images: {
     unoptimized: true,
+    formats: ['image/webp'],
+    remotePatterns: [
+      { protocol: 'https', hostname: '**' },
+    ],
   },
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  onDemandEntries: {
+    maxInactiveAge: 60 * 1000,
+    pagesBufferLength: 10,
   },
   // ============================================================
   // 本地开发代理：/api/auth/* → 本地 Cloudflare Worker (端口 8787)
