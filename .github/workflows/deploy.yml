@@ -97,8 +97,10 @@ jobs:
           set -e
           echo "=== [ISR 性能分层自检] 验证 TOP slug 预生成 ==="
           TARGET=".vercel/output/static"
-          TOTAL_HTML=$(find "$TARGET" -type f -name "*.html" | wc -l)
-          ZH_TOOL_HTML=$(find "$TARGET/zh/tool" -maxdepth 2 -name index.html 2>/dev/null | wc -l || echo 0)
+          count_glob() { shopt -s nullglob dotglob; local -a a=($2); echo ${#a[@]}; }
+          TOTAL_HTML=$( (find "$TARGET" -type f -name "*.html" | wc -l) || true )
+          TOTAL_HTML=${TOTAL_HTML//[[:space:]]/}
+          ZH_TOOL_HTML=$(count_glob _ "$TARGET/zh/tool/*/index.html")
           echo "  总 HTML 数: $TOTAL_HTML"
           echo "  /zh/tool/* 下 HTML 数: $ZH_TOOL_HTML"
           MIN_HTML=120
@@ -152,11 +154,14 @@ jobs:
           set -e
           echo "=== [Legacy 性能分层自检] 验证 全量工具 + 博客 + 工作流 HTML 生成量 ==="
           TARGET="out"
-          TOTAL_HTML=$(find "$TARGET" -type f -name "*.html" | wc -l)
-          ZH_TOOL_HTML=$(find "$TARGET/zh/tool" -maxdepth 2 -name index.html 2>/dev/null | wc -l || echo 0)
-          EN_TOOL_HTML=$(find "$TARGET/en/tool" -maxdepth 2 -name index.html 2>/dev/null | wc -l || echo 0)
-          BLOG_HTML=$(find "$TARGET" -path "*/blog/*" -name index.html 2>/dev/null | wc -l || echo 0)
-          WF_HTML=$(find "$TARGET" -path "*workflows*" -name index.html 2>/dev/null | wc -l || echo 0)
+          count_glob() { shopt -s nullglob dotglob; local -a a=($2); echo ${#a[@]}; }
+          TOTAL_HTML=$( (find "$TARGET" -type f -name "*.html" | wc -l) || true )
+          TOTAL_HTML=${TOTAL_HTML//[[:space:]]/}
+          ZH_TOOL_HTML=$(count_glob _ "$TARGET/zh/tool/*/index.html")
+          EN_TOOL_HTML=$(count_glob _ "$TARGET/en/tool/*/index.html")
+          BLOG_HTML=$(count_glob _ "$TARGET/*/blog/*/index.html")
+          WF_HTML=$( (find "$TARGET" -type f -path "*workflow*" -name index.html 2>/dev/null | wc -l) || true )
+          WF_HTML=${WF_HTML//[[:space:]]/}
           echo "  总 HTML: $TOTAL_HTML (阈值 ≥ 1500)"
           echo "    /zh/tool/*: $ZH_TOOL_HTML (阈值 ≥ 1000)"
           echo "    /en/tool/*: $EN_TOOL_HTML (阈值 ≥ 1000)"
