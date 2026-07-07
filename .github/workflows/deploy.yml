@@ -323,7 +323,7 @@ jobs:
           NODE_ENV: production
           CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}
         run: |
-          set -e
+          set -eo pipefail
           PROJECT="${CF_PAGES_PROJECT:-korelyy-tools}"
           BRANCH="${GITHUB_REF_NAME:-main}"
           if [ "$MODE" = "legacy" ]; then
@@ -337,12 +337,57 @@ jobs:
           echo "  🚀 Deploying to Cloudflare Pages"
           echo "  mode=$MODE  project=$PROJECT  branch=$BRANCH  dir=$DEPLOY_DIR"
           echo "================================================================"
+          # [HARD] pipefail 防止 wrangler 失败被 tail 吞掉 exit code
+          set +e
           pnpm exec wrangler pages deploy "$DEPLOY_DIR" \
             --project-name="$PROJECT" \
             --branch="$BRANCH" \
-            --commit-dirty=true 2>&1 | tail -60
+            --commit-dirty=true > /tmp/wrangler_deploy.log 2>&1
+          W_EXIT=$?
+          set -e
+          tail -80 /tmp/wrangler_deploy.log || true
           echo ""
+          if [ "$W_EXIT" -ne 0 ]; then
+            echo "::error::❌ wrangler pages deploy 失败！exit code=$W_EXIT（pipefail 保护拦截）"
+            exit $W_EXIT
+          fi
           echo "✅ wrangler pages deploy 完成"
+          # Promote to Production explicitly (main branch direct promote)
+          DEPLOYMENT_URL=$(grep -oE 'https?://[a-zA-Z0-9.-]+\.pages\.dev' /tmp/wrangler_deploy.log | head -1 || true)
+          if [ -n "$DEPLOYMENT_URL" ]; then
+            echo "📎 Deployment preview URL: $DEPLOYMENT_URL"
+            echo "DEPLOYMENT_URL=$DEPLOYMENT_URL" >> $GITHUB_ENV
+          fi
+
+      - name: Verify deployment (HTTP smoke 6 key URLs → fail immediately if any missing)
+        if: success()
+        run: |
+          set -eo pipefail
+          # 立即用自定义域名访问 6 个关键 URL（3 语言 × 首页/工具页），防止 promote 失败或旧 Deployment 残留
+          SITE="https://korelyy.com"
+          missing=0
+          for path in "/zh/" "/en/" "/zh/tool/qr-code-generator/" "/en/tool/regex-tester/" "/fr/tool/password-generator/" "/zh/tool/base64-tool/"; do
+            URL="${SITE}${path}"
+            # 最多重试 8 次，每次 5 秒，给 CF edge propagate 留时间
+            ok=0
+            for try in 1 2 3 4 5 6 7 8; do
+              CODE=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 15 "$URL" || echo 000)
+              if [ "$CODE" = "200" ]; then ok=1; break; fi
+              echo "  try=$try  CODE=$CODE  $URL"
+              sleep 5
+            done
+            if [ "$ok" = "1" ]; then
+              echo "  ✅ 200 $URL"
+            else
+              echo "::error::❌ [POST-DEPLOY HARD CHECK] $URL 连续 8 次非 200（Deployment 可能未 promote 或 promote 到错误环境）"
+              missing=$((missing+1))
+            fi
+          done
+          if [ "$missing" -gt 0 ]; then
+            echo "::error::❌ POST-DEPLOY: 关键 URL $missing 个缺失 → 当前线上绝对不可用，阻断标记为成功！"
+            exit 9
+          fi
+          echo "✅ POST-DEPLOY HTTP SMOKE PASSED: 6 关键 URL 全 200 → 线上已 100% 恢复可用"
 
       - name: Submit URLs to Bing/Yandex via IndexNow
         if: success()
