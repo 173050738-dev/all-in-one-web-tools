@@ -225,13 +225,13 @@ jobs:
             echo "::error::❌ [HARD] Legacy 抽样详情页 $small_size 个体积过小（疑似空壳，渲染可能失败）"
             exit 7
           fi
-          # ====== HARD 自研强校验：36 个自研工具白名单 × 6 语言 必须 100% 存在且 > 10KB ======
+          # ====== HARD 自研强校验：36 个自研工具白名单 × 6 语言(en/zh/es/hi/fr/ar) 必须 100% 存在且 > 10KB ======
           INTERNAL_SLUGS="avatar-decorator base64-tool caption-generator case-converter color-picker copy-cleaner countdown danmaku decision-wheel emoji-mixer fortune-sticks grid-cutter image-compressor image-to-base64 json-formatter keyword-spinoff-generator markdown-platform-adapter markdown-preview mortgage-calculator password-generator pdf-merger pinyin-annotator qr-code-generator random-number regex-tester script-splitter sentiment-analyzer text-counter text-tools text-to-speech timestamp-converter title-weight-checker url-encode-decode uuid-generator vertical-chinese-generator wallpaper-maker"
           INTERNAL_MISSING=0
           INTERNAL_SMALL=0
           INTERNAL_TOTAL=0
           for slug in $INTERNAL_SLUGS; do
-            for locale in zh en ar ja hi es; do
+            for locale in en zh es hi fr ar; do
               INTERNAL_TOTAL=$((INTERNAL_TOTAL+1))
               f="$TARGET/$locale/tool/$slug/index.html"
               if [ ! -f "$f" ] || [ ! -s "$f" ]; then
