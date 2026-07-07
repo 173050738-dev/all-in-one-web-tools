@@ -88,7 +88,15 @@ jobs:
           set -eo pipefail
           echo "=== [ISR 实验模式] 运行 next-on-pages 生成 .vercel/output/static ==="
           echo "  注意：ISR 当前为备用实验模式，TOP 工具页需预生成否则 SSR fallback 易崩"
-          pnpm run build:cf 2>&1 | tail -80
+          set +e
+          pnpm run build:cf > /tmp/build_isr.log 2>&1
+          BUILD_EXIT=$?
+          set -e
+          tail -80 /tmp/build_isr.log || true
+          if [ "$BUILD_EXIT" -ne 0 ]; then
+            echo "::error::❌ ISR build:cf 失败！exit code=$BUILD_EXIT（完整日志见 /tmp/build_isr.log）"
+            exit $BUILD_EXIT
+          fi
           echo "=== next-on-pages 完成 ==="
 
       - name: "ISR mode: 自检 → 前 20 TOP slug 静态 HTML 必须存在（否则 fail，防止部署空壳）"
@@ -146,7 +154,15 @@ jobs:
         run: |
           set -eo pipefail
           echo "  性能优化: SWC minify=on / optimizePackageImports=on / poweredByHeader=off"
-          pnpm run build 2>&1 | tail -100
+          set +e
+          pnpm run build > /tmp/build_legacy.log 2>&1
+          BUILD_EXIT=$?
+          set -e
+          tail -100 /tmp/build_legacy.log || true
+          if [ "$BUILD_EXIT" -ne 0 ]; then
+            echo "::error::❌ Legacy build 失败！exit code=$BUILD_EXIT（完整日志见 /tmp/build_legacy.log）"
+            exit $BUILD_EXIT
+          fi
 
       - name: "Legacy mode: 自检 → 工具详情 HTML 数 ≥ 阈值（否则 fail，防止构建静默失败）"
         if: env.MODE == 'legacy'
@@ -397,10 +413,28 @@ jobs:
           set -e
           echo "=== IndexNow submit: 读取 sitemap.xml -> 推 Bing/Yandex/IndexNow ==="
           # 先重生成 sitemap/robots 确保最新（build 时已生成，防遗漏）
-          node scripts/build-sitemap-robots.mjs 2>&1 | tail -15
-          node scripts/indexnow-push.mjs --apply 2>&1 | tail -30
+          set +e
+          node scripts/build-sitemap-robots.mjs > /tmp/sitemap_gen.log 2>&1
+          SM_EXIT=$?
+          set -e
+          tail -15 /tmp/sitemap_gen.log || true
+          if [ "$SM_EXIT" -ne 0 ]; then
+            echo "::warning:: sitemap 生成失败 exit=$SM_EXIT，跳过但不阻断部署"
+          else
+            echo "✅ sitemap/robots 重生成成功"
+          fi
+          set +e
+          node scripts/indexnow-push.mjs --apply > /tmp/indexnow_push.log 2>&1
+          IN_EXIT=$?
+          set -e
+          tail -30 /tmp/indexnow_push.log || true
+          if [ "$IN_EXIT" -ne 0 ]; then
+            echo "::warning:: IndexNow 推送失败 exit=$IN_EXIT，跳过但不阻断部署（24h 后可手动再推）"
+          else
+            echo "✅ IndexNow 推送成功"
+          fi
           echo ""
-          echo "✅ IndexNow submit 完成（推到 Bing/Yandex/api.indexnow.org）"
+          echo "✅ IndexNow submit 步骤完成（推到 Bing/Yandex/api.indexnow.org）"
           echo "tip: 24h 内 Bing Webmaster → URL Submission 里可以看到提交数量"
 
       - name: Deployment summary
