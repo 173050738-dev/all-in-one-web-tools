@@ -85,6 +85,402 @@ jobs:
         env:
           NODE_ENV: production
         run: |
+          set -eo pipefail
+          echo "=== [ISR 实验模式] 运行 next-on-pages 生成 .vercel/output/static ==="
+          echo "  注意：ISR 当前为备用实验模式，TOP 工具页需预生成否则 SSR fallback 易崩"
+          pnpm run build:cf 2>&1 | tail -80
+          echo "=== next-on-pages 完成 ==="
+
+      - name: "ISR mode: 自检 → 前 20 TOP slug 静态 HTML 必须存在（否则 fail，防止部署空壳）"
+        if: env.MODE == 'isr'
+        run: |
+          set -eo pipefail
+          echo "=== [ISR 性能分层自检] 验证 TOP slug 预生成 ==="
+          TARGET=".vercel/output/static"
+          count_glob() { shopt -s nullglob dotglob; local -a a=($2); echo ${#a[@]}; }
+          TOTAL_HTML=$( (find "$TARGET" -type f -name "*.html" | wc -l) || true )
+          TOTAL_HTML=${TOTAL_HTML//[[:space:]]/}
+          ZH_TOOL_HTML=$(count_glob _ "$TARGET/zh/tool/*/index.html")
+          echo "  总 HTML 数: $TOTAL_HTML"
+          echo "  /zh/tool/* 下 HTML 数: $ZH_TOOL_HTML"
+          MIN_HTML=30
+          if [ "$TOTAL_HTML" -lt "$MIN_HTML" ]; then
+            echo "::error::❌ [HARD] ISR 产物太少！总 HTML=$TOTAL_HTML < 最小值 $MIN_HTML（防止部署空壳）"
+            echo "  请检查 next-on-pages wrapper 或 build 日志是否有报错"
+            exit 4
+          fi
+          # Spot-check 3 个典型 TOP slug（qr-code-generator / regex-tester / base64-tool）
+          missing=0
+          for slug in qr-code-generator regex-tester base64-tool; do
+            for locale in zh en; do
+              f="$TARGET/$locale/tool/$slug/index.html"
+              if [ -f "$f" ] && [ -s "$f" ]; then
+                echo "  ✅ $locale/$slug → $(wc -c < $f) bytes"
+              else
+                echo "  ❌ $locale/$slug → 缺失或为空"
+                missing=$((missing+1))
+              fi
+            done
+          done
+          if [ "$missing" -gt 0 ]; then
+            echo "::error::❌ [HARD] ISR TOP slug 缺失 $missing 个（防止部署半成品）"
+            exit 5
+          fi
+          echo "✅ [ISR 自检通过] TOP slug 预生成完整 → 继续部署"
+
+      - name: "Legacy mode: resolve middleware + output:export (方案A → static export, 主力稳定模式)"
+        if: env.MODE == 'legacy'
+        run: |
+          set -e
+          echo "=== [Legacy 主力模式] static export（output: export，全页预生成 100% 可打开） ==="
+          if [ -f middleware.ts ]; then
+            echo "Moving middleware.ts to .bak for static export (output:export 不支持 middleware)"
+            mv middleware.ts middleware.ts.bak
+          fi
+
+      - name: "Legacy mode: build (USE_STATIC_EXPORT=true, 性能分层启用)"
+        if: env.MODE == 'legacy'
+        env:
+          NODE_ENV: production
+          USE_STATIC_EXPORT: "true"
+        run: |
+          set -eo pipefail
+          echo "  性能优化: SWC minify=on / optimizePackageImports=on / poweredByHeader=off"
+          pnpm run build 2>&1 | tail -100
+
+      - name: "Legacy mode: 自检 → 工具详情 HTML 数 ≥ 阈值（否则 fail，防止构建静默失败）"
+        if: env.MODE == 'legacy'
+        run: |
+          set -eo pipefail
+          echo "=== [Legacy 性能分层自检] 验证 全量工具 + 博客 + 工作流 HTML 生成量 ==="
+          TARGET="out"
+          count_glob() { shopt -s nullglob dotglob; local -a a=($2); echo ${#a[@]}; }
+          TOTAL_HTML=$( (find "$TARGET" -type f -name "*.html" | wc -l) || true )
+          TOTAL_HTML=${TOTAL_HTML//[[:space:]]/}
+          ZH_TOOL_HTML=$(count_glob _ "$TARGET/zh/tool/*/index.html")
+          EN_TOOL_HTML=$(count_glob _ "$TARGET/en/tool/*/index.html")
+          BLOG_HTML=$(count_glob _ "$TARGET/*/blog/*/index.html")
+          WF_HTML=$( (find "$TARGET" -type f -path "*workflow*" -name index.html 2>/dev/null | wc -l) || true )
+          WF_HTML=${WF_HTML//[[:space:]]/}
+          echo "  总 HTML: $TOTAL_HTML (HARD 阈值 ≥ 6000，本地 Windows 实测=9824，留 60% 余量)"
+          echo "    /zh/tool/*: $ZH_TOOL_HTML (HARD 阈值 ≥ 800，本地实测=1219，留 65% 余量)"
+          echo "    /en/tool/*: $EN_TOOL_HTML"
+          echo "    /blog/*:   $BLOG_HTML"
+          echo "    workflows:  $WF_HTML"
+          # ====== HARD 阈值：防止部署半成品（本地仿真值*60%留余量） ======
+          MIN_TOTAL=6000
+          MIN_ZH_TOOL=800
+          if [ "$TOTAL_HTML" -lt "$MIN_TOTAL" ]; then
+            echo "::error::❌ [HARD] Legacy 总 HTML=$TOTAL_HTML < 最小值 $MIN_TOTAL（构建可能在中途失败，只生成了首页）"
+            echo "  请回看 Legacy build 步骤的完整日志是否有 error"
+            exit 2
+          fi
+          if [ "$ZH_TOOL_HTML" -lt "$MIN_ZH_TOOL" ]; then
+            echo "::error::❌ [HARD] /zh/tool/* HTML=$ZH_TOOL_HTML < 最小值 $MIN_ZH_TOOL（工具详情页大量缺失）"
+            echo "  请检查 USE_STATIC_EXPORT 环境变量是否传进了 generateStaticParams()"
+            exit 3
+          fi
+          # Spot-check 6 个典型工具详情页（TOP + 冷门）— HARD fail 只要缺就终止
+          missing=0
+          small_size=0
+          for slug in qr-code-generator regex-tester base64-tool password-generator decision-wheel danmaku timestamp-converter uuid-generator; do
+            for locale in zh en; do
+              f="$TARGET/$locale/tool/$slug/index.html"
+              if [ -f "$f" ] && [ -s "$f" ]; then
+                size=$(wc -c < "$f")
+                if [ "$size" -lt 10000 ]; then
+                  echo "  ❌ $locale/$slug → 体积过小 $size bytes（<10KB，疑似空壳页）"
+                  small_size=$((small_size+1))
+                else
+                  echo "  ✅ $locale/$slug → $size bytes"
+                fi
+              else
+                echo "  ❌ $locale/$slug → 缺失或为空"
+                missing=$((missing+1))
+              fi
+            done
+          done
+          if [ "$missing" -gt 0 ]; then
+            echo "::error::❌ [HARD] Legacy 抽样详情页缺失 $missing 个（绝对禁止部署半成品）"
+            exit 6
+          fi
+          if [ "$small_size" -gt 0 ]; then
+            echo "::error::❌ [HARD] Legacy 抽样详情页 $small_size 个体积过小（疑似空壳，渲染可能失败）"
+            exit 7
+          fi
+          echo "✅ [Legacy 自检通过] 全量 HTML 生成量达标 → 继续部署"
+
+      - name: Restore middleware.ts (legacy only，防止留在工作区污染后续运行)
+        if: env.MODE == 'legacy' && always()
+        run: |
+          if [ -f middleware.ts.bak ]; then
+            mv middleware.ts.bak middleware.ts
+            echo "middleware.ts restored"
+          fi
+
+      - name: Copy CF Pages static assets + 注入性能分层 Cache-Tag (legacy → out/ ; isr → .vercel/output/static)
+        run: |
+          set -e
+          if [ "$MODE" = "legacy" ]; then
+            TARGET_DIR="out"
+            CACHE_TAG="korelyy-legacy-${DEPLOY_TS}"
+          else
+            TARGET_DIR=".vercel/output/static"
+            CACHE_TAG="korelyy-isr-${DEPLOY_TS}"
+          fi
+
+          if [ ! -d "$TARGET_DIR" ]; then
+            echo "::error::Build 失败，未生成 $TARGET_DIR 目录 (mode=$MODE)"
+            echo "请检查上面 Build 步骤的日志是否有 error"
+            exit 1
+          fi
+
+          echo "Target dir: $TARGET_DIR"
+          echo "性能分层 Cache-Tag: $CACHE_TAG（未来可按 tag 精准清缓存，无需 Purge Everything）"
+
+          for f in _headers _redirects favicon.svg og-image.png robots.txt sitemap.xml ads.txt BingSiteAuth.xml; do
+            if [ -f "public/$f" ]; then
+              cp -f "public/$f" "$TARGET_DIR/$f" && echo "copied public/$f -> $TARGET_DIR/$f ($(wc -c < public/$f) bytes)" || true
+            fi
+          done
+          # Copy all *.txt (IndexNow key file, Yandex verification, Google verification etc.)
+          if compgen -G "public/*.txt" > /dev/null 2>&1; then
+            for f in public/*.txt; do
+              bn="$(basename "$f")"
+              cp -f "$f" "$TARGET_DIR/$bn" && echo "copied public/$bn -> $TARGET_DIR/$bn ($(wc -c < public/$f) bytes)" || true
+            done
+          fi
+          # Copy all *.html verification files (Google Search Console, Yandex, etc.)
+          if compgen -G "public/*.html" > /dev/null 2>&1; then
+            for f in public/*.html; do
+              bn="$(basename "$f")"
+              cp -f "$f" "$TARGET_DIR/$bn" && echo "copied public/$bn -> $TARGET_DIR/$bn ($(wc -c < public/$f) bytes)" || true
+            done
+          fi
+          # Copy all *.xml (BingSiteAuth, sitemap variants)
+          if compgen -G "public/*.xml" > /dev/null 2>&1; then
+            for f in public/*.xml; do
+              bn="$(basename "$f")"
+              cp -f "$f" "$TARGET_DIR/$bn" && echo "copied public/$bn -> $TARGET_DIR/$bn ($(wc -c < public/$f) bytes)" || true
+            done
+          fi
+          if [ -f public/favicon.svg ]; then
+            cp -f public/favicon.svg "$TARGET_DIR/favicon.ico"
+            echo "copied favicon.svg -> favicon.ico"
+          fi
+          # ============ 性能分层 Cache-Tag 注入 ============
+          # 把 _headers 里的占位符替换成当前 MODE + run_id 唯一的 Cache-Tag
+          # 未来清缓存：Cloudflare → Caching → Purge → Purge by Cache-Tag → 填 korelyy-legacy-xxx
+          # 就能精准只清本次部署产生的 HTML，不影响 /_next/static 等 hash 资源（永久缓存）
+          if [ -f "$TARGET_DIR/_headers" ]; then
+            TAG_LINE="  Cache-Tag: ${CACHE_TAG}"
+            if grep -q "CACHE-TAG-PLACEHOLDER-DO-NOT-REMOVE" "$TARGET_DIR/_headers"; then
+              sed -i "s|^  # CACHE-TAG-PLACEHOLDER-DO-NOT-REMOVE$|${TAG_LINE}|" "$TARGET_DIR/_headers"
+              echo "✅ 已注入 HTML Cache-Tag: ${CACHE_TAG}"
+            else
+              echo "⚠️  _headers 未找到 CACHE-TAG-PLACEHOLDER-DO-NOT-REMOVE 占位符（跳过 Cache-Tag 注入）"
+            fi
+            # /_next/static/* 公共 hash 资源：固定 tag = korelyy-assets（换 logo 时单独清）
+            ASSETS_TAG_LINE="  Cache-Tag: korelyy-assets"
+            if grep -q "ASSETS-CACHE-TAG-PLACEHOLDER" "$TARGET_DIR/_headers"; then
+              sed -i "s|^  # ASSETS-CACHE-TAG-PLACEHOLDER$|${ASSETS_TAG_LINE}|" "$TARGET_DIR/_headers"
+              echo "✅ 已注入静态资源 Cache-Tag: korelyy-assets"
+            fi
+          fi
+          # 生成 cache-tag-manifest.txt（方便以后查用了什么 tag）
+          echo "${CACHE_TAG}" > "$TARGET_DIR/cache-tag-manifest.txt"
+          echo "korelyy-assets" >> "$TARGET_DIR/cache-tag-manifest.txt"
+          echo "✅ Cache-Tag 清单写入: $TARGET_DIR/cache-tag-manifest.txt"
+
+      - name: Verify critical files & 部署产物统计
+        run: |
+          set -e
+          if [ "$MODE" = "legacy" ]; then
+            TARGET_DIR="out"
+          else
+            TARGET_DIR=".vercel/output/static"
+          fi
+
+          total_files=$(find "$TARGET_DIR" -type f | wc -l)
+          html_files=$(find "$TARGET_DIR" -type f -name "*.html" | wc -l)
+          echo "================ 部署产物统计 (mode=$MODE) ================"
+          echo "  总文件数: $total_files (Cloudflare Pages 上限 20,000)"
+          echo "  HTML 文件数: $html_files"
+          echo ""
+          missing=0
+          for f in _headers _redirects favicon.ico favicon.svg og-image.png robots.txt sitemap.xml ads.txt; do
+            if [ -f "$TARGET_DIR/$f" ]; then
+              echo "  ✅ $TARGET_DIR/$f ($(stat -c%s $TARGET_DIR/$f 2>/dev/null || stat -f%z $TARGET_DIR/$f 2>/dev/null) bytes)"
+            else
+              echo "  ⚠️  $TARGET_DIR/$f 缺失（非致命，继续部署）"
+            fi
+          done
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          NODE_ENV: production
+          CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}
+        run: |
+          set -e
+          PROJECT="${CF_PAGES_PROJECT:-korelyy-tools}"
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          if [ "$MODE" = "legacy" ]; then
+            DEPLOY_DIR="out"
+          else
+            DEPLOY_DIR=".vercel/output/static"
+          fi
+
+          echo ""
+          echo "================================================================"
+          echo "  🚀 Deploying to Cloudflare Pages"
+          echo "  mode=$MODE  project=$PROJECT  branch=$BRANCH  dir=$DEPLOY_DIR"
+          echo "================================================================"
+          pnpm exec wrangler pages deploy "$DEPLOY_DIR" \
+            --project-name="$PROJECT" \
+            --branch="$BRANCH" \
+            --commit-dirty=true 2>&1 | tail -60
+          echo ""
+          echo "✅ wrangler pages deploy 完成"
+
+      - name: Submit URLs to Bing/Yandex via IndexNow
+        if: success()
+        env:
+          INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY }}
+        run: |
+          set -e
+          echo "=== IndexNow submit: 读取 sitemap.xml -> 推 Bing/Yandex/IndexNow ==="
+          # 先重生成 sitemap/robots 确保最新（build 时已生成，防遗漏）
+          node scripts/build-sitemap-robots.mjs 2>&1 | tail -15
+          node scripts/indexnow-push.mjs --apply 2>&1 | tail -30
+          echo ""
+          echo "✅ IndexNow submit 完成（推到 Bing/Yandex/api.indexnow.org）"
+          echo "tip: 24h 内 Bing Webmaster → URL Submission 里可以看到提交数量"
+
+      - name: Deployment summary
+        if: always()
+        run: |
+          PROJECT="${{ vars.CF_PAGES_PROJECT || 'korelyy-tools' }}"
+          SHA="${GITHUB_SHA::7}"
+          BRANCH="${GITHUB_REF_NAME}"
+          MODE_DISPLAY="${MODE:-isr}"
+          if [ "$MODE_DISPLAY" = "legacy" ]; then
+            TARGET_NOTE="方案A：静态导出（精选SSG + 客户端详情页，≈2000 文件）"
+          else
+            TARGET_NOTE="方案B：ISR 增量静态再生（≈500 文件，首访问渲染 + 1h 缓存，永不超 20k 上限）"
+          fi
+
+          {
+            echo "## 部署结果 📦"
+            echo ""
+            echo "- **构建模式**: \`${MODE_DISPLAY}\` → ${TARGET_NOTE}"
+            echo "- **项目**: \`${PROJECT}\`"
+            echo "- **Commit**: \`${SHA}\`"
+            echo "- **分支**: \`${BRANCH}\`"
+            echo "- **Wrangler 上传并发**: BULK_UPLOAD_CONCURRENCY2=1 (patch 过，防 Gateway Timeout)"
+            echo ""
+            echo "### 访问地址"
+            echo "- Pages 临时域: https://${PROJECT}.pages.dev"
+            echo "- 自定义域名(www): https://www.korelyy.com"
+            echo "- 自定义域名(裸域): https://korelyy.com"
+            echo ""
+            echo "> 紧急回滚：Cloudflare Pages → \`${PROJECT}\` → Deployments → 上个版本右点 ··· → Promote to production"
+            echo "> 后端 /api/auth/* 由独立的 Auth Worker 提供，不受本工作流影响"
+            echo ""
+            echo "### 以后怎么重新部署？"
+            echo "**方式1（自动）**：改完代码 commit → git push → 本工作流自动触发（默认 mode=\`isr\`）"
+            echo "**方式2（手动+可选模式）**：Actions → Deploy to Cloudflare Pages → Run workflow → \`build_mode\` 选："
+            echo "- \`isr\`（默认）→ 方案B，文件最少长期推荐"
+            echo "- \`legacy\` → 方案A，全静态导出"
+          } >> $GITHUB_STEP_SUMMARY
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      build_mode:
+        description: 构建模式（默认 legacy 稳定主力；isr 仅实验用）
+        required: false
+        default: legacy
+        type: choice
+        options:
+          - legacy
+          - isr
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  MODE: ${{ inputs.build_mode || 'legacy' }}
+  DEPLOY_TS: ${{ github.run_id }}-${{ github.run_attempt }}
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy (${{ inputs.build_mode || 'legacy' }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate Cloudflare Secrets
+        env:
+          CF_TOK: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACC: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -e
+          if [ -z "$CF_TOK" ]; then
+            echo "::error::❌ Secrets.CLOUDFLARE_API_TOKEN 未填写！请先到仓库 Settings → Secrets and variables → Actions → New repository secret 添加 CLOUDFLARE_API_TOKEN（Cloudflare API Token）"
+            exit 1
+          fi
+          echo "✅ Secrets.CLOUDFLARE_API_TOKEN 已配置"
+          if [ -n "$CF_ACC" ]; then
+            echo "✅ Secrets.CLOUDFLARE_ACCOUNT_ID 已配置"
+          else
+            echo "⚠️  Secrets.CLOUDFLARE_ACCOUNT_ID 未配置（可选，Wrangler 会自动从 Token 推断）"
+          fi
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          check-latest: true
+
+      - name: Install exact pnpm (packageManager)
+        shell: bash
+        run: |
+          set -e
+          COREPACK_ENABLE_STRICT=0 corepack enable
+          COREPACK_ENABLE_STRICT=0 corepack prepare --activate
+          echo "Node: $(node -v)"
+          echo "pnpm: $(pnpm -v)"
+
+      - name: Install dependencies (pnpm, allow fallback if lock drift)
+        run: |
+          set -e
+          pnpm config set prefer-offline true
+          pnpm install --prefer-offline || pnpm install
+          echo "pnpm install 完成"
+
+      - name: Patch Wrangler BULK_UPLOAD_CONCURRENCY2=1 (防 504 Gateway Timeout)
+        run: |
+          set -e
+          pnpm run wrangler:patch || echo "wrangler:patch 跳过（非致命）"
+
+      - name: "ISR mode: build (方案B → ISR + next-on-pages, 备用实验模式)"
+        if: env.MODE == 'isr'
+        env:
+          NODE_ENV: production
+        run: |
           set -e
           echo "=== [ISR 实验模式] 运行 next-on-pages 生成 .vercel/output/static ==="
           echo "  注意：ISR 当前为备用实验模式，TOP 工具页需预生成否则 SSR fallback 易崩"
