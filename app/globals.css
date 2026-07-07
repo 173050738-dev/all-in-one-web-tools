@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -50,6 +50,18 @@
     min-height: 100vh;
     background-color: var(--bg-warm);
     color: var(--text-main);
+  }
+
+  :lang(ar) {
+    font-family: 'Noto Sans Arabic', 'Segoe UI', Tahoma, Arial, system-ui, sans-serif;
+    font-feature-settings: "calt" 1, "liga" 1, "kern" 1;
+    letter-spacing: 0 !important;
+    word-spacing: 0.01em;
+  }
+
+  :lang(hi) {
+    font-family: 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', 'Kokila', 'Segoe UI', system-ui, sans-serif;
+    font-feature-settings: "calt" 1, "liga" 1, "kern" 1;
   }
   
   img {

@@ -74,6 +74,7 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   const loaderRef = useRef<HTMLDivElement>(null);
   const sortBySetRef = useRef(false);
   const categoryCountInitRef = useRef(false);
+  const allToolsInitRef = useRef(false);
   useEffect(() => {
     if (sortBySetRef.current) return;
     sortBySetRef.current = true;
@@ -90,6 +91,14 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
       countTable[t.category] = (countTable[t.category] || 0) + 1;
     }
     setDynamicCategoryCounts(countTable);
+  }, []);
+
+  useEffect(() => {
+    if (allToolsInitRef.current) return;
+    allToolsInitRef.current = true;
+    try {
+      useFavoritesStore.getState().initializeAllTools(tools as any[]);
+    } catch { /* ignore */ }
   }, []);
 
   const filteredTools = useMemo(() => {

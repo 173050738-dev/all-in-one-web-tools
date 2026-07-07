@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿'use client';
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿'use client';
 
 import { useTranslations } from 'next-intl';
 import { Menu, Globe, Sun, Moon, Sparkles, X, RefreshCw, Folder, History, MoreVertical, Settings, Trophy, Accessibility, Bookmark, Share2, ChevronDown, Check, Layers, Home, Key, Image as ImageIcon, Sparkles as SparklesIcon, Lightbulb, BookOpen } from 'lucide-react';
@@ -139,6 +139,8 @@ export default function Header({ locale }: { locale: string }) {
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+  const [showFavUnauthToast, setShowFavUnauthToast] = useState(false);
+  const [showFavSyncFailToast, setShowFavSyncFailToast] = useState(false);
   
   const moreMenuRef = useRef<HTMLDivElement>(null);
   const langMenuRef = useRef<HTMLDivElement>(null);
@@ -177,6 +179,36 @@ export default function Header({ locale }: { locale: string }) {
     };
     window.addEventListener('close-all-overlay-panels', onCloseAll as EventListener);
     return () => window.removeEventListener('close-all-overlay-panels', onCloseAll as EventListener);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    let unauthTimer: ReturnType<typeof setTimeout> | null = null;
+    let failTimer: ReturnType<typeof setTimeout> | null = null;
+
+    const onFavUnauth = () => {
+      if (unauthTimer) clearTimeout(unauthTimer);
+      setShowFavSyncFailToast(false);
+      setShowFavUnauthToast(true);
+      unauthTimer = setTimeout(() => setShowFavUnauthToast(false), 3500);
+    };
+    const onFavSync = (e: Event) => {
+      const ev = e as CustomEvent<{ kind: string; error?: string }>;
+      if (ev.detail?.kind !== 'error') return;
+      if (failTimer) clearTimeout(failTimer);
+      setShowFavUnauthToast(false);
+      setShowFavSyncFailToast(true);
+      failTimer = setTimeout(() => setShowFavSyncFailToast(false), 4500);
+    };
+
+    window.addEventListener('fav:unauth-toggle', onFavUnauth as EventListener);
+    window.addEventListener('fav:sync-result', onFavSync as EventListener);
+    return () => {
+      window.removeEventListener('fav:unauth-toggle', onFavUnauth as EventListener);
+      window.removeEventListener('fav:sync-result', onFavSync as EventListener);
+      if (unauthTimer) clearTimeout(unauthTimer);
+      if (failTimer) clearTimeout(failTimer);
+    };
   }, []);
 
   const notifyCloseOthers = (except: string) => {
@@ -634,6 +666,28 @@ export default function Header({ locale }: { locale: string }) {
         {showUpdateToast && (
           <div className='fixed top-16 sm:top-20 right-3 sm:right-4 z-50 px-3 sm:px-4 py-2.5 sm:py-3 bg-[#34A89C] text-white text-sm rounded-lg shadow-lg animate-bounce'>
             {tNav('updateComplete')}
+          </div>
+        )}
+        {showFavUnauthToast && (
+          <div
+            onClick={() => {
+              setShowFavUnauthToast(false);
+              try { auth.setModal(true, 'login'); } catch { /* ignore */ }
+            }}
+            className='fixed cursor-pointer top-16 sm:top-20 right-3 sm:right-4 z-50 max-w-[280px] sm:max-w-sm px-3 sm:px-4 py-2.5 sm:py-3 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white text-xs sm:text-sm rounded-lg shadow-lg transition-colors select-none'
+          >
+            <div className='font-semibold mb-0.5'>⭐ {tAuth('my-favorites')}</div>
+            <div className='text-white/85 leading-relaxed'>{tAuth('guest-note')}</div>
+            <div className='text-[11px] text-white/70 mt-1 underline decoration-dotted underline-offset-2'>→ {tAuth('sign-in')}</div>
+          </div>
+        )}
+        {showFavSyncFailToast && (
+          <div
+            onClick={() => setShowFavSyncFailToast(false)}
+            className='fixed cursor-pointer top-16 sm:top-20 right-3 sm:right-4 z-50 max-w-[280px] sm:max-w-sm px-3 sm:px-4 py-2.5 sm:py-3 bg-rose-600 hover:bg-rose-700 text-white text-xs sm:text-sm rounded-lg shadow-lg transition-colors select-none'
+          >
+            <div className='font-semibold mb-0.5'>☁️ {tAuth('err-network')}</div>
+            <div className='text-white/85 leading-relaxed'>收藏已保存到本地，网络恢复后登录可再次同步。</div>
           </div>
         )}
       </div>

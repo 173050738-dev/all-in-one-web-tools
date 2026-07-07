@@ -136,45 +136,37 @@ const _validateChangePassword = (oldPassword: string, newPassword: string): stri
   return null;
 };
 
-const getPrefStore = () => {
+const getFavStore = () => {
   if (typeof window === 'undefined') return null;
   try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const m = require('./preferences');
-    return (m.usePreferencesStore as typeof import('./preferences').usePreferencesStore) || null;
+    const m = require('./favorites');
+    return (m.useFavoritesStore as typeof import('./favorites').useFavoritesStore) || null;
   } catch {
     return null;
   }
 };
 
 const applyServerFavoritesToLocal = (serverSlugs: string[]) => {
-  const pref = getPrefStore();
-  if (!pref) return;
+  const favStore = getFavStore();
+  if (!favStore) return;
   try {
-    const s = pref.getState() as any;
-    const local: Array<{ slug?: string; id?: string }> = (s.favoriteTools || []) as any;
-    const serverSet = new Set(serverSlugs);
-    const localBySlug = new Map<string, any>();
-    (local || []).forEach((t: any) => {
-      const key = t.slug || t.id;
-      if (key) localBySlug.set(key, t);
-    });
-    const localSlugs = (local || []).map((t: any) => t.slug || t.id).filter(Boolean) as string[];
-    const mergedSlugs = Array.from(new Set([...serverSlugs, ...localSlugs]));
-    const merged = mergedSlugs.map((slug) => localBySlug.get(slug) || { slug });
-    if (typeof s.setFavoriteTools === 'function' && JSON.stringify(merged) !== JSON.stringify(local)) {
-      s.setFavoriteTools(merged as any);
+    const s = favStore.getState() as any;
+    if (typeof s.mergeFromServer === 'function') {
+      s.mergeFromServer(serverSlugs);
     }
   } catch { /* ignore */ }
 };
 
 const localFavoritesAsSlugs = (): string[] => {
-  const pref = getPrefStore();
-  if (!pref) return [];
+  const favStore = getFavStore();
+  if (!favStore) return [];
   try {
-    const list = (pref.getState() as any).favoriteTools || [];
-    return (list as Array<{ slug?: string; id?: string }>)
-      .map((t) => t.slug || t.id).filter(Boolean) as string[];
+    const s = favStore.getState() as any;
+    if (typeof s.getFavoriteSlugs === 'function') {
+      return s.getFavoriteSlugs() || [];
+    }
+    const ids: string[] = (s.favoriteTools || []) as string[];
+    return ids.filter(Boolean);
   } catch {
     return [];
   }

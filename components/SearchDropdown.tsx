@@ -11,6 +11,154 @@ import { resolveToolLink } from '@/lib/toolLinks';
 
 const ENABLE_AI_FEATURES = true;
 
+type LocaleStrings = {
+  searchPlaceholder: string;
+  aiPlaceholder: string;
+  aiThinking: string;
+  aiRecommend: string;
+  aiSmartRecommend: string;
+  aiSmartRecommendDesc: string;
+  aiExampleQueries: string[];
+  backToSearch: string;
+  searchHistory: string;
+  clear: string;
+  popularScenarios: string;
+  noToolsFound: string;
+  tryOtherKeywords: string;
+  clearAriaLabel: string;
+  back: string;
+  aiBtn: string;
+  free: string;
+  toolsFound: (n: number) => string;
+};
+
+const LOCALE_STRINGS: Record<string, LocaleStrings> = {
+  zh: {
+    searchPlaceholder: '搜索工具，或试试"做PPT"、"抠图"',
+    aiPlaceholder: '描述你的需求，AI帮你找工具...',
+    aiThinking: 'AI正在思考中...',
+    aiRecommend: 'AI 推荐',
+    aiSmartRecommend: 'AI 智能推荐',
+    aiSmartRecommendDesc: '描述你的需求，AI帮你找到最合适的工具',
+    aiExampleQueries: ['做PPT用什么工具', '图片压缩加水印', '写论文找资料', '开发工具推荐'],
+    backToSearch: '← 返回普通搜索',
+    searchHistory: '搜索历史',
+    clear: '清空',
+    popularScenarios: '热门场景',
+    noToolsFound: '没找到相关工具',
+    tryOtherKeywords: '试试其他关键词',
+    clearAriaLabel: '清除',
+    back: '返回',
+    aiBtn: 'AI',
+    free: '免费',
+    toolsFound: (n) => `找到 ${n} 个工具`,
+  },
+  en: {
+    searchPlaceholder: 'Search tools, try "PPT" or "remove bg"',
+    aiPlaceholder: 'Describe your need, AI finds tools...',
+    aiThinking: 'AI is thinking...',
+    aiRecommend: 'AI Recommendation',
+    aiSmartRecommend: 'AI Smart Recommendation',
+    aiSmartRecommendDesc: 'Describe your need, AI finds the best tools',
+    aiExampleQueries: ['Tools for PPT design', 'Image compress + watermark', 'Research paper tools', 'Developer tools'],
+    backToSearch: '← Back to search',
+    searchHistory: 'Search History',
+    clear: 'Clear',
+    popularScenarios: 'Popular Scenarios',
+    noToolsFound: 'No tools found',
+    tryOtherKeywords: 'Try other keywords',
+    clearAriaLabel: 'Clear',
+    back: 'Back',
+    aiBtn: 'AI',
+    free: 'Free',
+    toolsFound: (n) => `${n} tools found`,
+  },
+  es: {
+    searchPlaceholder: 'Buscar herramientas, prueba "PPT" o "quitar fondo"',
+    aiPlaceholder: 'Describe tu necesidad, IA encuentra herramientas...',
+    aiThinking: 'La IA está pensando...',
+    aiRecommend: 'Recomendación IA',
+    aiSmartRecommend: 'Recomendación inteligente',
+    aiSmartRecommendDesc: 'Describe tu necesidad, la IA encuentra las mejores herramientas',
+    aiExampleQueries: ['Herramientas para diseño PPT', 'Comprimir imagen + marca de agua', 'Herramientas para tesis', 'Herramientas de desarrollo'],
+    backToSearch: '← Volver a búsqueda normal',
+    searchHistory: 'Historial',
+    clear: 'Borrar',
+    popularScenarios: 'Escenarios populares',
+    noToolsFound: 'No se encontraron herramientas',
+    tryOtherKeywords: 'Prueba otras palabras clave',
+    clearAriaLabel: 'Borrar',
+    back: 'Volver',
+    aiBtn: 'IA',
+    free: 'Gratis',
+    toolsFound: (n) => `${n} herramientas encontradas`,
+  },
+  fr: {
+    searchPlaceholder: 'Rechercher des outils, essayer "PPT" ou "suppr. fond"',
+    aiPlaceholder: 'Décrivez votre besoin, IA trouve des outils...',
+    aiThinking: 'L\'IA réfléchit...',
+    aiRecommend: 'Recommandation IA',
+    aiSmartRecommend: 'Recommandation intelligente',
+    aiSmartRecommendDesc: 'Décrivez votre besoin, l\'IA trouve les meilleurs outils',
+    aiExampleQueries: ['Outils pour diaporama', 'Compresser image + filigrane', 'Outils mémoire', 'Outils de développement'],
+    backToSearch: '← Retour à la recherche',
+    searchHistory: 'Historique',
+    clear: 'Effacer',
+    popularScenarios: 'Scénarios populaires',
+    noToolsFound: 'Aucun outil trouvé',
+    tryOtherKeywords: 'Essayez d\'autres mots-clés',
+    clearAriaLabel: 'Effacer',
+    back: 'Retour',
+    aiBtn: 'IA',
+    free: 'Gratuit',
+    toolsFound: (n) => `${n} outil(s) trouvé(s)`,
+  },
+  hi: {
+    searchPlaceholder: 'टूल्स खोजें, "PPT" या "बैकग्राउंड हटाएं" आज़माएं',
+    aiPlaceholder: 'अपनी ज़रूरत बताएं, AI टूल्स ढूंढता है...',
+    aiThinking: 'AI सोच रहा है...',
+    aiRecommend: 'AI सुझाव',
+    aiSmartRecommend: 'AI स्मार्ट सुझाव',
+    aiSmartRecommendDesc: 'अपनी ज़रूरत बताएं, AI सबसे बेहतरीन टूल्स खोजता है',
+    aiExampleQueries: ['PPT डिज़ाइन टूल्स', 'इमेज कॉम्प्रेस + वॉटरमार्क', 'थीसिस टूल्स', 'डेवलपर टूल्स'],
+    backToSearch: '← सामान्य खोज पर वापस',
+    searchHistory: 'खोज इतिहास',
+    clear: 'साफ़ करें',
+    popularScenarios: 'लोकप्रिय स्थितियाँ',
+    noToolsFound: 'कोई टूल नहीं मिला',
+    tryOtherKeywords: 'दूसरे कीवर्ड आज़माएं',
+    clearAriaLabel: 'साफ़ करें',
+    back: 'वापस',
+    aiBtn: 'AI',
+    free: 'मुफ़्त',
+    toolsFound: (n) => `${n} टूल मिले`,
+  },
+  ar: {
+    searchPlaceholder: 'ابحث عن أدوات، جرّب "PPT" أو "إزالة الخلفية"',
+    aiPlaceholder: 'صف احتياجك، الذكاء الاصطناعي يجد الأدوات...',
+    aiThinking: 'الذكاء الاصطناعي يفكّر...',
+    aiRecommend: 'توصية الذكاء الاصطناعي',
+    aiSmartRecommend: 'التوصية الذكية',
+    aiSmartRecommendDesc: 'صف احتياجك، يجد الذكاء الاصطناعي أفضل الأدوات',
+    aiExampleQueries: ['أدوات تصميم الشرائح', 'ضغط الصورة + علامة مائية', 'أدوات البحث العلمي', 'أدوات المطورين'],
+    backToSearch: '← العودة للبحث العادي',
+    searchHistory: 'سجل البحث',
+    clear: 'مسح',
+    popularScenarios: 'سيناريوهات شائعة',
+    noToolsFound: 'لم يتم العثور على أدوات',
+    tryOtherKeywords: 'جرّب كلمات مفتاحية أخرى',
+    clearAriaLabel: 'مسح',
+    back: 'رجوع',
+    aiBtn: 'ذكاء',
+    free: 'مجاني',
+    toolsFound: (n) => `${n} أداة تم العثور عليها`,
+  },
+};
+
+function getStrings(locale: string): LocaleStrings {
+  return LOCALE_STRINGS[locale] ?? LOCALE_STRINGS.en;
+}
+
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Sparkles,
   Code,
@@ -80,6 +228,7 @@ const sceneDescs: Record<string, Record<string, string>> = {
 };
 
 export default function SearchDropdown({ locale, isMobile = false }: SearchDropdownProps) {
+  const s = getStrings(locale);
   const { searchQuery, setSearchQuery } = usePreferencesStore();
   const [isOpen, setIsOpen] = useState(false);
   const [_isAiModeRaw, _setIsAiModeRaw] = useState(false);
@@ -228,8 +377,8 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
   };
 
   const placeholder = isAiMode
-    ? (locale === 'zh' ? '描述你的需求，AI帮你找工具...' : 'Describe your need, AI finds tools...')
-    : (locale === 'zh' ? '搜索工具，或试试"做PPT"、"抠图"' : 'Search tools, try "PPT" or "remove bg"');
+    ? s.aiPlaceholder
+    : s.searchPlaceholder;
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
@@ -267,7 +416,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
             <button
               onClick={handleClear}
               className='w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 active:bg-gray-200 dark:active:bg-gray-600 transition-colors'
-              aria-label={locale === 'zh' ? '清除' : 'Clear'}
+              aria-label={s.clearAriaLabel}
             >
               <X className='h-4 w-4 text-gray-500 dark:text-gray-400' />
             </button>
@@ -286,7 +435,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
               ) : (
                 <Wand2 className='h-4 w-4 flex-shrink-0' />
               )}
-              <span>{isAiMode ? (locale === 'zh' ? '返回' : 'Back') : (locale === 'zh' ? 'AI' : 'AI')}</span>
+              <span>{isAiMode ? s.back : s.aiBtn}</span>
             </button>
           )}
         </div>
@@ -300,7 +449,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                 <div className='px-4 py-12 text-center'>
                   <Loader2 className='w-8 h-8 text-purple-500 mx-auto mb-3 animate-spin' />
                   <p className='text-sm text-gray-500 dark:text-gray-400'>
-                    {locale === 'zh' ? 'AI正在思考中...' : 'AI is thinking...'}
+                    {s.aiThinking}
                   </p>
                 </div>
               ) : aiResult && aiResult.tools.length > 0 ? (
@@ -309,7 +458,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                     <div className='flex items-center gap-2 mb-1'>
                       <Wand2 className='w-4 h-4 text-purple-500' />
                       <span className='text-xs font-medium text-purple-700 dark:text-purple-300 uppercase tracking-wider'>
-                        {locale === 'zh' ? 'AI 推荐' : 'AI Recommendation'}
+                        {s.aiRecommend}
                       </span>
                     </div>
                     <p className='text-sm text-gray-600 dark:text-gray-300'>{aiResult.reason}</p>
@@ -335,7 +484,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                       </div>
                       {tool.isFree && (
                         <span className='flex-shrink-0 px-2 py-0.5 text-[10px] font-medium bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full'>
-                          {locale === 'zh' ? '免费' : 'Free'}
+                          {s.free}
                         </span>
                       )}
                     </a>
@@ -345,7 +494,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                       onClick={handleBackToSearch}
                       className='text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
                     >
-                      {locale === 'zh' ? '← 返回普通搜索' : '← Back to search'}
+                      {s.backToSearch}
                     </button>
                   </div>
                 </>
@@ -353,13 +502,13 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                 <div className='px-4 py-8 text-center'>
                   <Wand2 className='w-10 h-10 text-purple-400 mx-auto mb-3' />
                   <p className='text-sm font-medium text-gray-700 dark:text-gray-300 mb-1'>
-                    {locale === 'zh' ? 'AI 智能推荐' : 'AI Smart Recommendation'}
+                    {s.aiSmartRecommend}
                   </p>
                   <p className='text-xs text-gray-500 dark:text-gray-400 mb-4'>
-                    {locale === 'zh' ? '描述你的需求，AI帮你找到最合适的工具' : 'Describe your need, AI finds the best tools'}
+                    {s.aiSmartRecommendDesc}
                   </p>
                   <div className='flex flex-wrap gap-1.5 justify-center'>
-                    {(locale === 'zh' ? ['做PPT用什么工具', '图片压缩加水印', '写论文找资料', '开发工具推荐'] : ['Tools for PPT design', 'Image compress + watermark', 'Research paper tools', 'Developer tools']).map((q) => (
+                    {s.aiExampleQueries.map((q) => (
                       <button
                         key={q}
                         onClick={() => { setSearchQuery(q); fetchAiRecommend(); }}
@@ -376,7 +525,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                     <div className='flex items-center gap-2 mb-1'>
                       <Wand2 className='w-4 h-4 text-purple-500' />
                       <span className='text-xs font-medium text-purple-700 dark:text-purple-300 uppercase tracking-wider'>
-                        {locale === 'zh' ? 'AI 推荐' : 'AI Recommendation'}
+                        {s.aiRecommend}
                       </span>
                     </div>
                   </div>
@@ -401,7 +550,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                           </div>
                           {tool.isFree && (
                             <span className='flex-shrink-0 px-2 py-0.5 text-[10px] font-medium bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full'>
-                              {locale === 'zh' ? '免费' : 'Free'}
+                              {s.free}
                             </span>
                           )}
                         </a>
@@ -410,7 +559,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                       <div className='px-4 py-8 text-center'>
                         <Search className='w-8 h-8 text-gray-300 dark:text-gray-600 mx-auto mb-2' />
                         <p className='text-sm text-gray-500 dark:text-gray-400'>
-                          {locale === 'zh' ? '没找到相关工具' : 'No tools found'}
+                          {s.noToolsFound}
                         </p>
                       </div>
                     )}
@@ -426,14 +575,14 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                     <div className='flex items-center gap-2'>
                       <Search className='w-4 h-4 text-gray-400' />
                       <span className='text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider'>
-                        {locale === 'zh' ? '搜索历史' : 'Search History'}
+                        {s.searchHistory}
                       </span>
                     </div>
                     <button
                       onClick={clearHistory}
                       className='px-2 py-1.5 min-h-[36px] inline-flex items-center rounded-md text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors'
                     >
-                      {locale === 'zh' ? '清空' : 'Clear'}
+                      {s.clear}
                     </button>
                   </div>
                   <div className='flex flex-wrap gap-1.5'>
@@ -452,7 +601,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
               <div className='flex items-center gap-2 mb-3'>
                 <Sparkles className='w-4 h-4 text-primary-500' />
                 <span className='text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider'>
-                  {locale === 'zh' ? '热门场景' : 'Popular Scenarios'}
+                  {s.popularScenarios}
                 </span>
               </div>
               <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
@@ -487,7 +636,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                 <>
                   <div className='px-4 py-2 sticky top-0 bg-white dark:bg-gray-800'>
                     <span className='text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider'>
-                      {locale === 'zh' ? `找到 ${results.length} 个工具` : `${results.length} tools found`}
+                      {s.toolsFound(results.length)}
                     </span>
                   </div>
                   {results.map((tool) => {
@@ -503,15 +652,15 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                       </div>
                       <div className='min-w-0 flex-1'>
                         <p className='text-sm font-medium text-gray-900 dark:text-gray-100 truncate'>
-                          {tool.name}
+                          {translateField(tool, 'name')}
                         </p>
                         <p className='text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5'>
-                          {tool.description}
+                          {translateField(tool, 'description')}
                         </p>
                       </div>
                       {tool.isFree && (
                         <span className='flex-shrink-0 px-2 py-0.5 text-[10px] font-medium bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full'>
-                          {locale === 'zh' ? '免费' : 'Free'}
+                          {s.free}
                         </span>
                       )}
                     </a>
@@ -521,10 +670,10 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                 <div className='px-4 py-10 text-center'>
                   <Search className='w-10 h-10 text-gray-300 dark:text-gray-600 mx-auto mb-3' />
                   <p className='text-sm text-gray-500 dark:text-gray-400'>
-                    {locale === 'zh' ? '没找到相关工具' : 'No tools found'}
+                    {s.noToolsFound}
                   </p>
                   <p className='text-xs text-gray-400 dark:text-gray-500 mt-1'>
-                    {locale === 'zh' ? '试试其他关键词' : 'Try other keywords'}
+                    {s.tryOtherKeywords}
                   </p>
                 </div>
               )}
