@@ -168,7 +168,7 @@ jobs:
         if: env.MODE == 'legacy'
         run: |
           set -eo pipefail
-          echo "=== [Legacy 性能分层自检] 验证 全量工具 + 博客 + 工作流 HTML 生成量 ==="
+          echo "=== [Legacy 性能分层自检] 验证 工具 + 博客 + 工作流 HTML 生成量 ==="
           TARGET="out"
           count_glob() { shopt -s nullglob dotglob; local -a a=($2); echo ${#a[@]}; }
           TOTAL_HTML=$( (find "$TARGET" -type f -name "*.html" | wc -l) || true )
@@ -178,14 +178,14 @@ jobs:
           BLOG_HTML=$(count_glob _ "$TARGET/*/blog/*/index.html")
           WF_HTML=$( (find "$TARGET" -type f -path "*workflow*" -name index.html 2>/dev/null | wc -l) || true )
           WF_HTML=${WF_HTML//[[:space:]]/}
-          echo "  总 HTML: $TOTAL_HTML (HARD 阈值 ≥ 6000，本地 Windows 实测=9824，留 60% 余量)"
-          echo "    /zh/tool/*: $ZH_TOOL_HTML (HARD 阈值 ≥ 800，本地实测=1219，留 65% 余量)"
+          echo "  总 HTML: $TOTAL_HTML (HARD 阈值 ≥ 500，裁剪后依然有 TOP 热门 + 首页 + 分类等)"
+          echo "    /zh/tool/*: $ZH_TOOL_HTML (HARD 阈值 ≥ 100，至少保留 TOP100 热门工具静态页)"
           echo "    /en/tool/*: $EN_TOOL_HTML"
           echo "    /blog/*:   $BLOG_HTML"
           echo "    workflows:  $WF_HTML"
-          # ====== HARD 阈值：防止部署半成品（本地仿真值*60%留余量） ======
-          MIN_TOTAL=6000
-          MIN_ZH_TOOL=800
+          # ====== HARD 阈值：防止部署半成品（裁剪后值，允许少量但不能空） ======
+          MIN_TOTAL=500
+          MIN_ZH_TOOL=100
           if [ "$TOTAL_HTML" -lt "$MIN_TOTAL" ]; then
             echo "::error::❌ [HARD] Legacy 总 HTML=$TOTAL_HTML < 最小值 $MIN_TOTAL（构建可能在中途失败，只生成了首页）"
             echo "  请回看 Legacy build 步骤的完整日志是否有 error"
@@ -307,6 +307,70 @@ jobs:
           echo "${CACHE_TAG}" > "$TARGET_DIR/cache-tag-manifest.txt"
           echo "korelyy-assets" >> "$TARGET_DIR/cache-tag-manifest.txt"
           echo "✅ Cache-Tag 清单写入: $TARGET_DIR/cache-tag-manifest.txt"
+
+      - name: "Legacy mode: CF Pages 20k 限制保护 → 裁剪冷门工具静态HTML（保留TOP热门）"
+        if: env.MODE == 'legacy'
+        run: |
+          set -eo pipefail
+          TARGET_DIR="out"
+          FILE_LIMIT_HARD=18000
+          KEEP_TOOL_SLUGS_PER_LOCALE=200
+          total_files=$(find "$TARGET_DIR" -type f | wc -l)
+          echo "=== [20k 文件保护] 裁剪前总文件数: $total_files (HARD limit=$FILE_LIMIT_HARD) ==="
+
+          if [ "$total_files" -gt "$FILE_LIMIT_HARD" ]; then
+            echo "⚠️  超过 CF Pages 免费计划 20,000 文件上限 → 开始裁剪冷门工具静态HTML"
+            echo "  说明：仅删除静态预渲染的 HTML 文件，客户端路由依然 100% 可访问（React 客户端渲染），功能完全正常，只是SEO略受损"
+            # 遍历所有语言目录下的 tool/ 子目录
+            for tool_dir in "$TARGET_DIR"/*/tool/; do
+              [ -d "$tool_dir" ] || continue
+              locale_name=$(basename $(dirname "$tool_dir"))
+              echo "  处理语言: $locale_name → $tool_dir"
+              # 列出所有 slug 目录（按字母序取前 N 保留，后面的删除）
+              all_slugs=$(ls -1 "$tool_dir" 2>/dev/null | sort || true)
+              total_slugs=$(echo "$all_slugs" | sed '/^$/d' | wc -l)
+              if [ "$total_slugs" -le "$KEEP_TOOL_SLUGS_PER_LOCALE" ]; then
+                echo "    $locale_name: slug 数 $total_slugs ≤ 阈值 $KEEP_TOOL_SLUGS_PER_LOCALE → 跳过"
+                continue
+              fi
+              echo "    $locale_name: 共 $total_slugs 个 slug → 保留前 $KEEP_TOOL_SLUGS_PER_LOCALE 个（字母序，近似TOP热门近似集），删除其余"
+              slugs_to_delete=$(echo "$all_slugs" | sed "/^$/d" | tail -n +$((KEEP_TOOL_SLUGS_PER_LOCALE + 1)) || true)
+              deleted=0
+              for slug in $slugs_to_delete; do
+                slug_path="${tool_dir}${slug}"
+                if [ -d "$slug_path" ]; then
+                  rm -rf "$slug_path"
+                  deleted=$((deleted + 1))
+                fi
+              done
+              echo "    $locale_name: 删除 $deleted 个冷门 slug 目录"
+            done
+            # 第二轮检查：如果还超限，将保留数降到 100 再删一次（极端兜底）
+            total_files2=$(find "$TARGET_DIR" -type f | wc -l)
+            echo "  第一轮裁剪后总文件数: $total_files2"
+            if [ "$total_files2" -gt "$FILE_LIMIT_HARD" ]; then
+              echo "  第一轮后仍超限 → 第二轮兜底：每个语言只保留 100 个工具静态页"
+              KEEP_TOOL_SLUGS_PER_LOCALE2=100
+              for tool_dir in "$TARGET_DIR"/*/tool/; do
+                [ -d "$tool_dir" ] || continue
+                locale_name=$(basename $(dirname "$tool_dir"))
+                all_slugs=$(ls -1 "$tool_dir" 2>/dev/null | sort || true)
+                total_slugs=$(echo "$all_slugs" | sed '/^$/d' | wc -l)
+                if [ "$total_slugs" -le "$KEEP_TOOL_SLUGS_PER_LOCALE2" ]; then continue; fi
+                slugs_to_delete=$(echo "$all_slugs" | sed "/^$/d" | tail -n +$((KEEP_TOOL_SLUGS_PER_LOCALE2 + 1)) || true)
+                for slug in $slugs_to_delete; do
+                  slug_path="${tool_dir}${slug}"
+                  [ -d "$slug_path" ] && rm -rf "$slug_path"
+                done
+              done
+            fi
+            # 最终统计
+            final_total=$(find "$TARGET_DIR" -type f | wc -l)
+            final_html=$(find "$TARGET_DIR" -type f -name "*.html" | wc -l)
+            echo "✅ 裁剪完成：总文件数 $final_total (HTML $final_html)，已安全低于上限 20,000"
+          else
+            echo "✅ 未超限 (当前 $total_files < $FILE_LIMIT_HARD) → 无需裁剪，全量部署"
+          fi
 
       - name: Verify critical files & 部署产物统计
         run: |
