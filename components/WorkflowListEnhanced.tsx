@@ -38,11 +38,11 @@ import {
   Construction,
 } from 'lucide-react';
 import { usePreferencesStore } from '@/stores/preferences';
-import type { Workflow } from '@/data/workflows';
+import { workflows, type Workflow } from '@/data/workflows';
 import { resolveToolLink, isExternalTool, getToolDisplayLabel } from '@/lib/toolLinks';
 import { translateWorkflow } from '@/lib/workflowTranslations';
 import type { Locale } from '@/lib/workflowTranslations';
-import type { Tool } from '@/data/tools';
+import { tools, type Tool } from '@/data/tools';
 import WorkflowCreator from './WorkflowCreator';
 import { safeNavigate } from '@/lib/url-whitelist';
 import { isTopWorkflowSlug } from '@/lib/topSlugs';
@@ -617,44 +617,6 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   // 水合完成后动态 import，避免 TTFB 飙升到 4~7s。
   // 变量名故意保持 workflows/tools 不变，下游所有 .filter/.find/.map 零改动。
   // ============================================================
-  const [workflows, setWorkflows] = useState<Workflow[]>([]);
-  const [tools, setTools] = useState<Tool[]>([]);
-  const [dataLoaded, setDataLoaded] = useState(false);
-  const [loadError, setLoadError] = useState<Error | null>(null);
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        let wfArr: Workflow[] = [];
-        let tlArr: Tool[] = [];
-        try {
-          const [wfMod, toolsMod] = await Promise.all([
-            import('@/data/workflows'),
-            import('@/data/tools'),
-          ]);
-          wfArr = (wfMod.workflows || []) as Workflow[];
-          tlArr = (toolsMod.tools || []) as Tool[];
-        } catch (importErr) {
-          if (typeof window !== 'undefined') {
-            try { console.warn('[workflows] lazy chunk import failed, falling back:', importErr); } catch {}
-          }
-        }
-        if (cancelled) return;
-        setWorkflows(wfArr);
-        setTools(tlArr);
-        setDataLoaded(true);
-      } catch (err) {
-        if (cancelled) return;
-        try { console.error('[workflows] data load critical error:', err); } catch {}
-        setLoadError(err instanceof Error ? err : new Error(String(err)));
-        setWorkflows([]);
-        setTools([]);
-        setDataLoaded(true);
-      }
-    })();
-    return () => { cancelled = true; };
-  }, []);
-
   const [activeTab, setActiveTab] = useState<TabType>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showCreator, setShowCreator] = useState(false);
@@ -1326,46 +1288,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
         </div>
       </div>
 
-      {/* 骨架屏：首屏不依赖 workflows/tools 两大数组，显示 shimmer，避免 HTML 内联 500KB+ 大常量 */}
-      {!dataLoaded && (
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mt-1' aria-hidden='true'>
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className='group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 sm:p-4 flex flex-col animate-pulse min-h-[260px]'>
-              <div className='flex items-start justify-between gap-2.5 mb-2.5'>
-                <div className='flex items-center gap-2.5 min-w-0 flex-1'>
-                  <div className='p-2 sm:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 w-10 h-10 sm:w-11 sm:h-11' />
-                  <div className='min-w-0 flex-1 space-y-1.5'>
-                    <div className='flex items-center gap-1.5'>
-                      <div className='h-3.5 w-12 bg-gray-100 dark:bg-gray-700 rounded-full' />
-                      <div className='h-3.5 w-10 bg-gray-100 dark:bg-gray-700 rounded-full' />
-                    </div>
-                    <div className='h-4 w-4/5 bg-gray-200 dark:bg-gray-700 rounded' />
-                  </div>
-                </div>
-                <div className='w-6 h-6 bg-gray-100 dark:bg-gray-700 rounded-lg' />
-              </div>
-              <div className='h-3 w-full bg-gray-200 dark:bg-gray-700 rounded mb-1' />
-              <div className='h-3 w-3/4 bg-gray-200 dark:bg-gray-700 rounded mb-2.5' />
-              <div className='space-y-1 mb-2.5'>
-                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
-                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
-                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
-                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
-                <div className='h-5 w-full bg-gray-100 dark:bg-gray-800 rounded-lg' />
-              </div>
-              <div className='flex items-center justify-between mt-auto pt-2.5 border-t border-gray-100 dark:border-gray-700/50 gap-2.5'>
-                <div className='flex items-center gap-1.5'>
-                  <div className='h-4 w-4 bg-gray-100 dark:bg-gray-700 rounded' />
-                  <div className='h-3 w-14 bg-gray-100 dark:bg-gray-700 rounded' />
-                </div>
-                <div className='h-6 w-16 bg-gray-100 dark:bg-gray-700 rounded-full' />
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {dataLoaded && displayedWorkflows.length > 0 ? (
+      {displayedWorkflows.length > 0 ? (
         <>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3'>
           {displayedWorkflows.slice(0, visibleCount).flatMap((workflow, idx) => {
@@ -1547,7 +1470,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
         </>
       ) : null}
 
-      {dataLoaded && displayedWorkflows.length === 0 && (
+      {displayedWorkflows.length === 0 && (
         <div className='text-center py-6 sm:p-8'>
           <div className='w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>
             {activeTab === 'mine' ? (

@@ -4,8 +4,8 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import Sidebar from '@/components/Sidebar';
 import ToolCard from '@/components/ToolCard';
 import SearchDropdown from '@/components/SearchDropdown';
-import type { Tool, ComplianceLevel } from '@/data/tools';
-import { INITIAL_HOME_TOOLS } from '@/data/_initial-home.generated';
+import { tools, computeComplianceLevel, type Tool, type ComplianceLevel } from '@/data/tools';
+import { searchTools } from '@/data/search';
 import { categories, setDynamicCategoryCounts, getCategoryCount } from '@/data/categories';
 import { usePreferencesStore } from '@/stores/preferences';
 import { useAuthStore } from '@/stores/auth';
@@ -13,17 +13,8 @@ import { useFavoritesStore } from '@/stores/favorites';
 import { buildRecommendedOrder, type RecommendProfile } from '@/lib/recommend';
 import { Layers, Search, Sparkles, Flame, BookOpen } from 'lucide-react';
 
-type ComplianceFn = (tool: Tool) => ComplianceLevel;
-type SearchToolsFn = (pool: Tool[], q: string) => Tool[];
-
-interface DynamicBundle {
-  tools: Tool[];
-  computeComplianceLevel: ComplianceFn;
-  searchTools: SearchToolsFn;
-}
-
-const INITIAL_COUNT = 15;
-const LOAD_MORE_COUNT = 15;
+const INITIAL_COUNT = 30;
+const LOAD_MORE_COUNT = 30;
 
 type SortMode = 'newest' | 'popular' | 'free' | 'recommended';
 
@@ -47,42 +38,14 @@ const CATEGORY_CHIP_BASE = [
   'transition-colors',
 ].join(' ');
 
-// ===== 首屏用的轻量版本工具（INITIAL_HOME_TOOLS），几 KB 就可完成首屏渲染 =====
-function initialComputeComplianceLevel(tool: Tool | (Omit<Tool, 'signup' | 'payment' | 'externalUrl'>)): ComplianceLevel {
-  if (tool.complianceLevel) return tool.complianceLevel as ComplianceLevel;
-  const name = tool.name || '';
-  const desc = tool.description || '';
-  if ((tool as any).signup?.includes('cn-phone') || (tool as any).payment?.includes('alipay') || (tool as any).payment?.includes('wechat')) return 'yellow';
-  const cnSignal = /[\u4e00-\u9fa5]{2,}|国内|备案|中文|中国/.test(name + desc);
-  if (cnSignal) return 'yellow';
-  return 'green';
-}
-
-function initialSearchTools(pool: Tool[], q: string): Tool[] {
-  const query = q.trim().toLowerCase();
-  if (!query) return pool;
-  return pool.filter((t) => {
-    const hay = [
-      t.name,
-      t.description,
-      t.slug,
-      t.category,
-      (t.tags || []).join(' '),
-    ].join(' ').toLowerCase();
-    return hay.includes(query);
-  });
-}
-
 function applyFilterAndSort(
   pool: Tool[],
   selectedCategory: string,
   sortBy: SortMode,
   searchQuery: string,
-  complianceFn: ComplianceFn,
-  searchFn: SearchToolsFn,
 ): Tool[] {
-  let result = [...pool] as Tool[];
-  if (searchQuery.trim()) result = searchFn(result, searchQuery);
+  let result = [...pool];
+  if (searchQuery.trim()) result = searchTools(result, searchQuery);
   if (selectedCategory !== 'all') result = result.filter((tool) => tool.category === selectedCategory);
   if (sortBy === 'popular') {
     result = [...result].sort((a, b) => (b.likes || 0) - (a.likes || 0));
@@ -91,7 +54,7 @@ function applyFilterAndSort(
   } else if (sortBy === 'free') {
     result = result.filter((tool) => tool.isFree);
   }
-  result = result.filter((tool) => complianceFn(tool as Tool) !== 'red');
+  result = result.filter((tool) => computeComplianceLevel(tool) !== 'red');
   return result;
 }
 
@@ -110,65 +73,28 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   const { searchQuery } = usePreferencesStore();
   const loaderRef = useRef<HTMLDivElement>(null);
   const sortBySetRef = useRef(false);
+  const categoryCountInitRef = useRef(false);
   useEffect(() => {
     if (sortBySetRef.current) return;
     sortBySetRef.current = true;
     if (isAuthed) setSortBy('recommended');
   }, [isAuthed]);
 
-  // ===== 动态大 bundle：初始 null，useEffect 中 import('@/data/tools') 水合后填入 =====
-  const [bundle, setBundle] = useState<DynamicBundle | null>(null);
-  const bundleLoadedRef = useRef(false);
-
   useEffect(() => {
-    if (bundleLoadedRef.current) return;
-    bundleLoadedRef.current = true;
-    (async () => {
-      try {
-        const [toolsMod, searchMod] = await Promise.all([
-          import('@/data/tools'),
-          import('@/data/search'),
-        ]);
-        const fullTools: Tool[] = (toolsMod.tools || []) as Tool[];
-
-        // 刷新分类计数为真实值
-        const countTable: Record<string, number> = {};
-        for (const t of fullTools) {
-          const lv = toolsMod.computeComplianceLevel(t);
-          if (lv === 'red') continue; // 与首页 filter 保持一致
-          countTable[t.category] = (countTable[t.category] || 0) + 1;
-        }
-        setDynamicCategoryCounts(countTable);
-
-        setBundle({
-          tools: fullTools,
-          computeComplianceLevel: toolsMod.computeComplianceLevel,
-          searchTools: searchMod.searchTools as SearchToolsFn,
-        });
-      } catch (e) {
-        // 懒加载失败，继续保持首屏 initial 20 条，不影响首屏渲染
-        console.warn('[HomeDashboardView] lazy load tools bundle failed:', e);
-      }
-    })();
+    if (categoryCountInitRef.current) return;
+    categoryCountInitRef.current = true;
+    const countTable: Record<string, number> = {};
+    for (const t of tools) {
+      const lv = computeComplianceLevel(t);
+      if (lv === 'red') continue;
+      countTable[t.category] = (countTable[t.category] || 0) + 1;
+    }
+    setDynamicCategoryCounts(countTable);
   }, []);
-
-  // ===== 始终按"当前 bundle"（首屏 initial，激活后全量）来计算 filtered =====
-  const currentPool: Tool[] = useMemo<Tool[]>(() => {
-    return (bundle ? bundle.tools : (INITIAL_HOME_TOOLS as Tool[])) as Tool[];
-  }, [bundle]);
-
-  const computeCL: ComplianceFn = useMemo(
-    () => (bundle ? bundle.computeComplianceLevel : initialComputeComplianceLevel),
-    [bundle],
-  );
-  const searchFn: SearchToolsFn = useMemo(
-    () => (bundle ? bundle.searchTools : initialSearchTools),
-    [bundle],
-  );
 
   const filteredTools = useMemo(() => {
     const effectiveSort: SortMode = sortBy === 'recommended' ? 'newest' : sortBy;
-    const base = applyFilterAndSort(currentPool, selectedCategory, effectiveSort, searchQuery, computeCL, searchFn);
+    const base = applyFilterAndSort(tools, selectedCategory, effectiveSort, searchQuery);
     if (sortBy !== 'recommended') return base;
     const history = (() => {
       const m = new Map<string, { toolId: string; timestamp: number }>();
@@ -199,12 +125,11 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
       preferredLocale: locale,
     };
     return buildRecommendedOrder(base, profile);
-  }, [currentPool, selectedCategory, sortBy, searchQuery, computeCL, searchFn, favs, authHistory, isAuthed, locale]);
+  }, [selectedCategory, sortBy, searchQuery, favs, authHistory, isAuthed, locale]);
 
-  // bundle 加载完 / 筛选变化时，重置显示数量
   useEffect(() => {
     setDisplayCount(INITIAL_COUNT);
-  }, [selectedCategory, sortBy, searchQuery, bundle]);
+  }, [selectedCategory, sortBy, searchQuery]);
 
   // 无限滚动
   useEffect(() => {
@@ -223,13 +148,13 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   const displayedTools = filteredTools.slice(0, displayCount);
   const hasMore = displayCount < filteredTools.length;
 
-  // 空态的热门 5 推荐（同样基于当前 pool）
+  // 空态的热门 5 推荐
   const top5ForEmpty = useMemo(() => {
-    return [...currentPool]
-      .filter((tool) => computeCL(tool) !== 'red')
+    return [...tools]
+      .filter((tool) => computeComplianceLevel(tool) !== 'red')
       .sort((a, b) => (b.likes || 0) - (a.likes || 0))
       .slice(0, 5);
-  }, [currentPool, computeCL]);
+  }, []);
 
   return (
     <div className='max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8'>
@@ -274,9 +199,6 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
             <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 mb-3 sm:mb-5'>
               <p className='text-[11px] sm:text-xs text-[#466B6C] dark:text-gray-400'>
                 {tcT('showing')} {displayedTools.length} / {filteredTools.length} {tcT('toolsCount')}
-                {!bundle && (
-                  <span className='ml-2 text-[#0F5759]/70 dark:text-emerald-300/80'>·</span>
-                )}
               </p>
               <div className='flex items-center gap-1 sm:gap-1.5 overflow-x-auto pb-1'>
                 <a
