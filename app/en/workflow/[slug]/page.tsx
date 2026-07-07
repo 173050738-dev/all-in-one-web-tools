@@ -1,8 +1,12 @@
 import type { Metadata } from 'next';
 import { TOP_WORKFLOW_SLUGS } from '@/lib/topSlugs';
+import { workflows } from '@/data/workflows';
+
+const USE_STATIC_EXPORT = process.env.USE_STATIC_EXPORT === 'true' || process.env.USE_STATIC_EXPORT === '1';
 
 export function generateStaticParams() {
-  return TOP_WORKFLOW_SLUGS.map(slug => ({ slug }));
+  const list = USE_STATIC_EXPORT ? workflows.map(w => w.slug) : TOP_WORKFLOW_SLUGS;
+  return list.map(slug => ({ slug }));
 }
 
 export const revalidate = 3600;

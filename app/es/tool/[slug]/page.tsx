@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ToolFallbackClient from '@/components/ToolFallbackClient';
-import { getToolBySlug } from '@/data/tools';
+import { tools, getToolBySlug } from '@/data/tools';
 import { TOP_TOOL_SLUGS } from '@/lib/topSlugs';
 import {
   toolGenerateMetadata,
@@ -10,9 +10,11 @@ import {
 } from '@/components/seo';
 
 const LOCALE: SeoLocale = 'es';
+const USE_STATIC_EXPORT = process.env.USE_STATIC_EXPORT === 'true' || process.env.USE_STATIC_EXPORT === '1';
 
 export function generateStaticParams() {
-  return TOP_TOOL_SLUGS.map(slug => ({ slug }));
+  const list = USE_STATIC_EXPORT ? tools.map(t => t.slug) : TOP_TOOL_SLUGS;
+  return list.map(slug => ({ slug }));
 }
 
 export const revalidate = 3600;
