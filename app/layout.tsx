@@ -1,6 +1,6 @@
 import './globals.css';
 import { Metadata, Viewport } from 'next';
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import Script from 'next/script';
 import { RootJsonLd } from '@/components/seo';
 
@@ -147,16 +147,49 @@ export const viewport: Viewport = {
 };
 
 const RTL_LOCALES = new Set(['ar']);
-const KNOWN_LOCALES = ['en', 'zh', 'es', 'hi', 'fr', 'ar'];
+const KNOWN_LOCALES = ['en', 'zh', 'es', 'hi', 'fr', 'ar'] as const;
+type KnownLocale = (typeof KNOWN_LOCALES)[number];
 
-async function detectLocaleFromCookie(): Promise<string> {
+function isKnownLocale(v: string | null | undefined): v is KnownLocale {
+  return !!v && (KNOWN_LOCALES as readonly string[]).includes(v);
+}
+
+function pickFirstPathSegment(rawPath: string | null | undefined): KnownLocale | null {
+  if (!rawPath) return null;
+  const cleaned = rawPath.split('?')[0].split('#')[0];
+  const first = cleaned.split('/').filter(Boolean)[0];
+  return isKnownLocale(first) ? first : null;
+}
+
+async function detectLocaleFromPath(): Promise<KnownLocale | null> {
+  if (typeof headers !== 'function') return null;
+  try {
+    const h = await headers();
+    const invokePath = h.get('x-invoke-path') ?? h.get('x-next-pathname') ?? h.get(':path');
+    const fromPath = pickFirstPathSegment(invokePath);
+    if (fromPath) return fromPath;
+    const referer = h.get('referer');
+    if (referer) {
+      let p: URL | null = null;
+      try { p = new URL(referer); } catch { p = null; }
+      if (p) {
+        const fromReferer = pickFirstPathSegment(p.pathname);
+        if (fromReferer) return fromReferer;
+      }
+    }
+  } catch {
+    /* headers() unavailable outside render context */
+  }
+  return null;
+}
+
+async function detectLocaleFromCookie(): Promise<KnownLocale | null> {
   try {
     const ck = (await cookies()).get('NEXT_LOCALE');
-    if (ck && KNOWN_LOCALES.includes(ck.value)) return ck.value;
+    return isKnownLocale(ck?.value) ? ck.value : null;
   } catch {
-    /* cookies() only available in server components & requests */
+    return null;
   }
-  return 'en';
 }
 
 export default async function RootLayout({
@@ -164,7 +197,9 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const locale = await detectLocaleFromCookie();
+  const pathLocale = await detectLocaleFromPath();
+  const cookieLocale = await detectLocaleFromCookie();
+  const locale: KnownLocale = pathLocale ?? cookieLocale ?? 'en';
   const dir: 'ltr' | 'rtl' = RTL_LOCALES.has(locale) ? 'rtl' : 'ltr';
   const isProd = process.env.NODE_ENV === 'production';
 

@@ -275,7 +275,7 @@
 
 /* ===== Phase 2.3: RTL 基础镜像 (阿拉伯语/希伯来语等 RTL 布局) ===== */
 [dir="rtl"] {
-  font-family: 'Tajawal', 'Noto Sans Arabic', 'Inter', system-ui, sans-serif;
+  font-family: 'Noto Sans Arabic', 'Segoe UI', Tahoma, Arial, system-ui, sans-serif;
 }
 
 [dir="rtl"] .rtl-flip-x {
