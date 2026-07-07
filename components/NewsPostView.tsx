@@ -13,6 +13,7 @@ import NewsCard from '@/components/NewsCard';
 import SafeLink from '@/components/SafeLink';
 import { getToolBySlug } from '@/data/tools';
 import ToolCard from '@/components/ToolCard';
+import { resolveToolLink } from '@/lib/toolLinks';
 import {
   getNewsIssueBySlug,
   getAllNewsSlugs,
@@ -196,10 +197,11 @@ export default function NewsPostView({ locale, slug }: { locale: SeoLocale; slug
             {item.relatedToolSlugs && item.relatedToolSlugs.length > 0 && item.relatedToolSlugs.slice(0, 3).map(ts => {
               const tool = getToolBySlug(ts);
               if (!tool) return null;
+              const link = resolveToolLink(tool.slug || tool.id, locale);
               return (
                 <Link
                   key={ts}
-                  href={`/${locale}/tool/${tool.slug || tool.id}`}
+                  href={link.url}
                   className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-700/50 hover:bg-primary-50 dark:hover:bg-primary-900/20 text-[10px] font-medium text-gray-600 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
                 >
                   <BookmarkCheck className="h-2.5 w-2.5" />

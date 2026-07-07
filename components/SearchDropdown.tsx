@@ -7,6 +7,7 @@ import { tools } from '@/data/tools';
 import { searchTools } from '@/data/search';
 import { scenes } from '@/data/scenes';
 import { usePreferencesStore } from '@/stores/preferences';
+import { resolveToolLink } from '@/lib/toolLinks';
 
 const ENABLE_AI_FEATURES = true;
 
@@ -133,6 +134,16 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
     try {
       localStorage.removeItem('korelyy_search_history');
     } catch {}
+  };
+
+  const getToolLinkAttrs = (toolSlug: string | undefined, toolId: string) => {
+    const link = resolveToolLink(toolSlug || toolId, locale);
+    const isExt = link.type === 'external';
+    return {
+      href: link.url,
+      target: isExt ? '_blank' : '_self',
+      rel: isExt ? 'noopener noreferrer' : '',
+    };
   };
 
   const results = useMemo(() => {
@@ -303,12 +314,12 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                     </div>
                     <p className='text-sm text-gray-600 dark:text-gray-300'>{aiResult.reason}</p>
                   </div>
-                  {aiResult.tools.map((tool: any) => (
+                  {aiResult.tools.map((tool: any) => {
+                    const attrs = getToolLinkAttrs(tool.slug, tool.id);
+                    return (
                     <a
                       key={tool.id}
-                      href={tool.externalUrl || `/${locale}/tool/${tool.slug}`}
-                      target={tool.externalUrl ? '_blank' : '_self'}
-                      rel={tool.externalUrl ? 'noopener noreferrer' : ''}
+                      {...attrs}
                       className='flex items-start gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 active:bg-gray-100 dark:active:bg-gray-700 transition-colors'
                     >
                       <div className='flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 flex items-center justify-center'>
@@ -328,7 +339,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                         </span>
                       )}
                     </a>
-                  ))}
+                    ); })}
                   <div className='px-4 py-2 border-t border-gray-100 dark:border-gray-700'>
                     <button
                       onClick={handleBackToSearch}
@@ -374,9 +385,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                       results.map((tool) => (
                         <a
                           key={tool.id}
-                          href={tool.externalUrl || `/${locale}/tool/${tool.slug}`}
-                      target={tool.externalUrl ? '_blank' : '_self'}
-                      rel={tool.externalUrl ? 'noopener noreferrer' : ''}
+                          {...getToolLinkAttrs(tool.slug, tool.id)}
                           className='flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 active:bg-gray-100 dark:active:bg-gray-700 transition-colors'
                         >
                           <div className='flex-shrink-0 w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center'>
@@ -481,14 +490,14 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                       {locale === 'zh' ? `找到 ${results.length} 个工具` : `${results.length} tools found`}
                     </span>
                   </div>
-                  {results.map((tool) => (
-                    <a
-                      key={tool.id}
-                      href={tool.externalUrl || `/${locale}/tool/${tool.slug}`}
-                      target={tool.externalUrl ? '_blank' : '_self'}
-                      rel={tool.externalUrl ? 'noopener noreferrer' : ''}
-                      className='flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 active:bg-gray-100 dark:active:bg-gray-700 transition-colors'
-                    >
+                  {results.map((tool) => {
+                      const attrs = getToolLinkAttrs(tool.slug, tool.id);
+                      return (
+                        <a
+                          key={tool.id}
+                          {...attrs}
+                          className='flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 active:bg-gray-100 dark:active:bg-gray-700 transition-colors'
+                        >
                       <div className='flex-shrink-0 w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center'>
                         <Search className='w-4 h-4 text-gray-400' />
                       </div>
@@ -506,7 +515,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
                         </span>
                       )}
                     </a>
-                  ))}
+                      ); })}
                 </>
               ) : (
                 <div className='px-4 py-10 text-center'>

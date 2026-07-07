@@ -343,9 +343,7 @@ export default function WorkflowDetailSimple({
                             const resolved = resolveToolLink(step.toolSlug, locale);
                             const link = tool?.externalUrl
                               ? { type: 'external' as const, url: tool.externalUrl, label: tool.name }
-                              : tool && tool.slug
-                                ? { type: 'internal' as const, url: `/${locale}/tool/${tool.slug}`, label: tool.name }
-                                : { type: resolved.type, url: resolved.url, label: getToolDisplayLabel(step.toolSlug) || (tool?.name ?? (resolved.displayName || String(step.toolSlug || '').toUpperCase())) };
+                              : { type: resolved.type, url: resolved.url || `/${locale}`, label: getToolDisplayLabel(step.toolSlug) || (tool?.name ?? (resolved.displayName || String(step.toolSlug || '').toUpperCase())) };
                             const isExt = link.type === 'external';
                             return (
                               <a

@@ -1,4 +1,6 @@
-export type ToolLinkType = 'internal' | 'external' | 'fallback';
+import { getToolBySlug } from '@/data/tools';
+
+export type ToolLinkType = 'internal' | 'external' | 'detail' | 'fallback';
 
 export interface ResolvedToolLink {
   type: ToolLinkType;
@@ -470,6 +472,23 @@ export function resolveToolLink(slug: string | undefined | null, locale: string 
     };
   }
 
+  const tool = getToolBySlug(candidate);
+  if (tool?.externalUrl) {
+    return {
+      type: 'external',
+      url: tool.externalUrl,
+      displayName: tool.name || candidate,
+    };
+  }
+
+  if (tool) {
+    return {
+      type: 'detail',
+      url: `/${locale}/tool/detail/?slug=${encodeURIComponent(candidate)}`,
+      realSlug: candidate,
+    };
+  }
+
   return {
     type: 'fallback',
     url: `/${locale}`,
@@ -479,7 +498,7 @@ export function resolveToolLink(slug: string | undefined | null, locale: string 
 export function getToolDisplayLabel(slug: string | undefined | null): string | null {
   if (!slug) return null;
   const raw = String(slug).trim().toLowerCase();
-  return EXTERNAL_DISPLAY_NAMES[raw] || null;
+  return EXTERNAL_DISPLAY_NAMES[raw] || getToolBySlug(raw)?.name || null;
 }
 
 export function isInternalTool(slug: string | undefined | null): boolean {
@@ -494,5 +513,7 @@ export function isExternalTool(slug: string | undefined | null): boolean {
   const raw = String(slug).trim().toLowerCase();
   const direct = !!EXTERNAL_TOOL_URLS[raw];
   const aliased = !!SLUG_ALIAS[raw] && !!EXTERNAL_TOOL_URLS[SLUG_ALIAS[raw]];
-  return direct || aliased;
+  if (direct || aliased) return true;
+  const tool = getToolBySlug(raw);
+  return !!tool?.externalUrl;
 }

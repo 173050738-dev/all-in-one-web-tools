@@ -1,9 +1,16 @@
 import { INITIAL_HOME_TOOLS } from '@/data/_initial-home.generated';
 import { workflows } from '@/data/workflows';
+import { INTERNAL_TOOL_SLUGS } from './toolLinks';
 
 export const TOP_TOOL_SLUGS: string[] = INITIAL_HOME_TOOLS
   .slice(0, 20)
   .map((t) => t.slug);
+
+const _mergedStaticToolSet = new Set<string>([
+  ...INTERNAL_TOOL_SLUGS,
+  ...TOP_TOOL_SLUGS,
+]);
+export const STATIC_EXPORT_TOOL_SLUGS: string[] = Array.from(_mergedStaticToolSet);
 
 const TOP_TOOL_SET = new Set(TOP_TOOL_SLUGS);
 export function isTopToolSlug(slug: string): boolean {

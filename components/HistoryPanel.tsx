@@ -6,6 +6,7 @@ import { History, X, Clock, Trash2, ExternalLink, ArrowRight } from 'lucide-reac
 import { tools } from '@/data/tools';
 import { useFavoritesStore, HistoryItem } from '@/stores/favorites';
 import SafeLink from './SafeLink';
+import { resolveToolLink } from '@/lib/toolLinks';
 
 interface HistoryPanelProps {
   locale: string;
@@ -112,10 +113,11 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
   const handleNavigate = (toolId: string) => {
     const tool = tools.find(t => t.id === toolId);
     if (tool) {
-      if (tool.externalUrl) {
-        window.open(tool.externalUrl, '_blank');
+      const link = resolveToolLink(tool.slug || tool.id, locale);
+      if (link.type === 'external') {
+        window.open(link.url, '_blank', 'noopener,noreferrer');
       } else {
-        window.location.href = `/${locale}/tool/${tool.slug}`;
+        window.location.href = link.url;
       }
     }
     onClose();

@@ -252,7 +252,7 @@ export default function StepInspector({
 
   const openUrl = () => {
     if (finalToolUrl && typeof window !== 'undefined') {
-      const target = (!externalUrl && resolvedToolLink?.type === 'internal') ? '_self' : '_blank';
+      const target = (!externalUrl && (resolvedToolLink?.type === 'internal' || resolvedToolLink?.type === 'detail')) ? '_self' : '_blank';
       safeNavigate(finalToolUrl, target);
     }
   };

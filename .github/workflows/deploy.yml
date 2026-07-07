@@ -315,8 +315,71 @@ jobs:
           TARGET_DIR="out"
           FILE_LIMIT_HARD=18000
           KEEP_TOOL_SLUGS_PER_LOCALE=200
+
+          # === 47 自研工具白名单：永不删除，即使裁剪也要完整保留 ===
+          INTERNAL_SLUGS=(
+            "avatar-decorator"
+            "audio-bpm-detector"
+            "base64-tool"
+            "caption-generator"
+            "case-converter"
+            "color-picker"
+            "copy-cleaner"
+            "countdown"
+            "danmaku"
+            "decision-wheel"
+            "emoji-mixer"
+            "fortune-sticks"
+            "grid-cutter"
+            "image-compressor"
+            "image-to-base64"
+            "json-formatter"
+            "keyword-spinoff-generator"
+            "markdown-platform-adapter"
+            "markdown-platform-converter"
+            "markdown-preview"
+            "mortgage-calculator"
+            "multi-timezone-publish-time"
+            "password-generator"
+            "pdf-merger"
+            "pinyin-annotator"
+            "polyphonic-pinyin-annotator"
+            "qr-code-generator"
+            "random-number"
+            "regex-tester"
+            "script-splitter"
+            "sentiment-analyzer"
+            "srt-subtitle-generator"
+            "text-counter"
+            "text-to-speech"
+            "text-tools"
+            "timestamp-converter"
+            "title-weight-checker"
+            "url-encode-decode"
+            "uuid-generator"
+            "vertical-chinese-generator"
+            "wallpaper-maker"
+            "wc-2026-schedule"
+            "wc-ascii-art"
+            "wc-champion-predictor"
+            "wc-fan-avatar"
+            "wc-name-decorator"
+            "wc-poster-generator"
+            "wc-scoreboard-simulator"
+          )
+          echo "自研工具白名单数: ${#INTERNAL_SLUGS[@]} (永不裁剪)"
+
           total_files=$(find "$TARGET_DIR" -type f | wc -l)
           echo "=== [20k 文件保护] 裁剪前总文件数: $total_files (HARD limit=$FILE_LIMIT_HARD) ==="
+
+          # 工具函数：判断 slug 是否在自研白名单中
+          is_internal_slug() {
+            local slug="$1"
+            for s in "${INTERNAL_SLUGS[@]}"; do
+              if [ "$s" = "$slug" ]; then return 0; fi
+            done
+            return 1
+          }
 
           if [ "$total_files" -gt "$FILE_LIMIT_HARD" ]; then
             echo "⚠️  超过 CF Pages 免费计划 20,000 文件上限 → 开始裁剪冷门工具静态HTML"
@@ -326,14 +389,27 @@ jobs:
               [ -d "$tool_dir" ] || continue
               locale_name=$(basename $(dirname "$tool_dir"))
               echo "  处理语言: $locale_name → $tool_dir"
-              # 列出所有 slug 目录（按字母序取前 N 保留，后面的删除）
-              all_slugs=$(ls -1 "$tool_dir" 2>/dev/null | sort || true)
+              # 先把自研工具白名单从候选池中剔除，永不参与裁剪
+              all_slugs_raw=$(ls -1 "$tool_dir" 2>/dev/null | sort || true)
+              all_slugs=""
+              internal_count=0
+              while IFS= read -r slug; do
+                [ -z "$slug" ] && continue
+                if is_internal_slug "$slug"; then
+                  internal_count=$((internal_count + 1))
+                  continue
+                fi
+                all_slugs="${all_slugs}${slug}
+"
+              done <<< "$all_slugs_raw"
+              all_slugs=$(echo "$all_slugs" | sed '/^$/d' || true)
               total_slugs=$(echo "$all_slugs" | sed '/^$/d' | wc -l)
+              echo "    $locale_name: 白名单跳过 $internal_count 个自研工具，剩余 $total_slugs 个非自研 slug 参与裁剪评估"
               if [ "$total_slugs" -le "$KEEP_TOOL_SLUGS_PER_LOCALE" ]; then
-                echo "    $locale_name: slug 数 $total_slugs ≤ 阈值 $KEEP_TOOL_SLUGS_PER_LOCALE → 跳过"
+                echo "    $locale_name: 非自研 slug 数 $total_slugs ≤ 阈值 $KEEP_TOOL_SLUGS_PER_LOCALE → 跳过"
                 continue
               fi
-              echo "    $locale_name: 共 $total_slugs 个 slug → 保留前 $KEEP_TOOL_SLUGS_PER_LOCALE 个（字母序，近似TOP热门近似集），删除其余"
+              echo "    $locale_name: 非自研共 $total_slugs 个 slug → 保留前 $KEEP_TOOL_SLUGS_PER_LOCALE 个（字母序，近似TOP热门近似集），删除其余"
               slugs_to_delete=$(echo "$all_slugs" | sed "/^$/d" | tail -n +$((KEEP_TOOL_SLUGS_PER_LOCALE + 1)) || true)
               deleted=0
               for slug in $slugs_to_delete; do
@@ -349,12 +425,20 @@ jobs:
             total_files2=$(find "$TARGET_DIR" -type f | wc -l)
             echo "  第一轮裁剪后总文件数: $total_files2"
             if [ "$total_files2" -gt "$FILE_LIMIT_HARD" ]; then
-              echo "  第一轮后仍超限 → 第二轮兜底：每个语言只保留 100 个工具静态页"
+              echo "  第一轮后仍超限 → 第二轮兜底：每个语言非自研只保留 100 个工具静态页（自研仍不受影响）"
               KEEP_TOOL_SLUGS_PER_LOCALE2=100
               for tool_dir in "$TARGET_DIR"/*/tool/; do
                 [ -d "$tool_dir" ] || continue
                 locale_name=$(basename $(dirname "$tool_dir"))
-                all_slugs=$(ls -1 "$tool_dir" 2>/dev/null | sort || true)
+                all_slugs_raw=$(ls -1 "$tool_dir" 2>/dev/null | sort || true)
+                all_slugs=""
+                while IFS= read -r slug; do
+                  [ -z "$slug" ] && continue
+                  if is_internal_slug "$slug"; then continue; fi
+                  all_slugs="${all_slugs}${slug}
+"
+                done <<< "$all_slugs_raw"
+                all_slugs=$(echo "$all_slugs" | sed '/^$/d' || true)
                 total_slugs=$(echo "$all_slugs" | sed '/^$/d' | wc -l)
                 if [ "$total_slugs" -le "$KEEP_TOOL_SLUGS_PER_LOCALE2" ]; then continue; fi
                 slugs_to_delete=$(echo "$all_slugs" | sed "/^$/d" | tail -n +$((KEEP_TOOL_SLUGS_PER_LOCALE2 + 1)) || true)

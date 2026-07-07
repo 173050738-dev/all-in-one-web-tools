@@ -99,9 +99,7 @@ export default function WorkflowDetailClient({ slug, locale, workflow }: { slug:
                           const resolved = resolveToolLink(step.toolSlug, locale);
                           const link = tool?.externalUrl
                             ? { type: 'external' as const, url: tool.externalUrl, label: tool.name }
-                            : tool && tool.slug
-                              ? { type: 'internal' as const, url: `/${locale}/tool/${tool.slug}`, label: tool.name }
-                              : { type: resolved.type, url: resolved.url || `/${locale}`, label: getToolDisplayLabel(step.toolSlug) || (tool?.name ?? (resolved.displayName || String(step.toolSlug || '').toUpperCase())) };
+                            : { type: resolved.type, url: resolved.url || `/${locale}`, label: getToolDisplayLabel(step.toolSlug) || (tool?.name ?? (resolved.displayName || String(step.toolSlug || '').toUpperCase())) };
                           const isExt = link.type === 'external';
                           return (
                             <a href={link.url} target={isExt ? '_blank' : '_self'} rel={isExt ? 'noopener noreferrer' : ''} className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg transition-colors group ${isExt ? 'bg-[#E8F4F2] dark:bg-[#2a4a46]/30 text-[#34A89C] hover:bg-[#D7EAE7] dark:hover:bg-[#2a4a46]/50' : 'bg-[#F5F6FB] dark:bg-[#3a406a]/30 text-[#5461A8] dark:text-[#B2BADE] hover:bg-[#ECEEF8] dark:hover:bg-[#3a406a]/50'}`}>
