@@ -399,8 +399,7 @@ jobs:
                   internal_count=$((internal_count + 1))
                   continue
                 fi
-                all_slugs="${all_slugs}${slug}
-"
+                all_slugs="${all_slugs}${slug}"$'\n'
               done <<< "$all_slugs_raw"
               all_slugs=$(echo "$all_slugs" | sed '/^$/d' || true)
               total_slugs=$(echo "$all_slugs" | sed '/^$/d' | wc -l)
@@ -435,8 +434,7 @@ jobs:
                 while IFS= read -r slug; do
                   [ -z "$slug" ] && continue
                   if is_internal_slug "$slug"; then continue; fi
-                  all_slugs="${all_slugs}${slug}
-"
+                  all_slugs="${all_slugs}${slug}"$'\n'
                 done <<< "$all_slugs_raw"
                 all_slugs=$(echo "$all_slugs" | sed '/^$/d' || true)
                 total_slugs=$(echo "$all_slugs" | sed '/^$/d' | wc -l)
