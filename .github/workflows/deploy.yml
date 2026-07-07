@@ -178,14 +178,14 @@ jobs:
           BLOG_HTML=$(count_glob _ "$TARGET/*/blog/*/index.html")
           WF_HTML=$( (find "$TARGET" -type f -path "*workflow*" -name index.html 2>/dev/null | wc -l) || true )
           WF_HTML=${WF_HTML//[[:space:]]/}
-          echo "  总 HTML: $TOTAL_HTML (HARD 阈值 ≥ 500，裁剪后依然有 TOP 热门 + 首页 + 分类等)"
-          echo "    /zh/tool/*: $ZH_TOOL_HTML (HARD 阈值 ≥ 100，至少保留 TOP100 热门工具静态页)"
+          echo "  总 HTML: $TOTAL_HTML (HARD 阈值 ≥ 400 — STATIC_EXPORT_TOOL_SLUGS 精选白名单 + 首页分类等)"
+          echo "    /zh/tool/*: $ZH_TOOL_HTML (HARD 阈值 ≥ 55 — 自研工具(36) + TOP热门工具 + 兜底)"
           echo "    /en/tool/*: $EN_TOOL_HTML"
           echo "    /blog/*:   $BLOG_HTML"
           echo "    workflows:  $WF_HTML"
           # ====== HARD 阈值：防止部署半成品（裁剪后值，允许少量但不能空） ======
-          MIN_TOTAL=500
-          MIN_ZH_TOOL=100
+          MIN_TOTAL=400
+          MIN_ZH_TOOL=55
           if [ "$TOTAL_HTML" -lt "$MIN_TOTAL" ]; then
             echo "::error::❌ [HARD] Legacy 总 HTML=$TOTAL_HTML < 最小值 $MIN_TOTAL（构建可能在中途失败，只生成了首页）"
             echo "  请回看 Legacy build 步骤的完整日志是否有 error"
@@ -194,9 +194,10 @@ jobs:
           if [ "$ZH_TOOL_HTML" -lt "$MIN_ZH_TOOL" ]; then
             echo "::error::❌ [HARD] /zh/tool/* HTML=$ZH_TOOL_HTML < 最小值 $MIN_ZH_TOOL（工具详情页大量缺失）"
             echo "  请检查 USE_STATIC_EXPORT 环境变量是否传进了 generateStaticParams()"
+            echo "  STATIC_EXPORT_TOOL_SLUGS 白名单数量（自研36 + TOP20 去重后 ≈ 56）应当大于本阈值"
             exit 3
           fi
-          # Spot-check 6 个典型工具详情页（TOP + 冷门）— HARD fail 只要缺就终止
+          # Spot-check 8 个典型工具详情页（TOP + 冷门）— HARD fail 只要缺就终止
           missing=0
           small_size=0
           for slug in qr-code-generator regex-tester base64-tool password-generator decision-wheel danmaku timestamp-converter uuid-generator; do
@@ -224,7 +225,37 @@ jobs:
             echo "::error::❌ [HARD] Legacy 抽样详情页 $small_size 个体积过小（疑似空壳，渲染可能失败）"
             exit 7
           fi
-          echo "✅ [Legacy 自检通过] 全量 HTML 生成量达标 → 继续部署"
+          # ====== HARD 自研强校验：36 个自研工具白名单 × 6 语言 必须 100% 存在且 > 10KB ======
+          INTERNAL_SLUGS="avatar-decorator base64-tool caption-generator case-converter color-picker copy-cleaner countdown danmaku decision-wheel emoji-mixer fortune-sticks grid-cutter image-compressor image-to-base64 json-formatter keyword-spinoff-generator markdown-platform-adapter markdown-preview mortgage-calculator password-generator pdf-merger pinyin-annotator qr-code-generator random-number regex-tester script-splitter sentiment-analyzer text-counter text-tools text-to-speech timestamp-converter title-weight-checker url-encode-decode uuid-generator vertical-chinese-generator wallpaper-maker"
+          INTERNAL_MISSING=0
+          INTERNAL_SMALL=0
+          INTERNAL_TOTAL=0
+          for slug in $INTERNAL_SLUGS; do
+            for locale in zh en ar ja hi es; do
+              INTERNAL_TOTAL=$((INTERNAL_TOTAL+1))
+              f="$TARGET/$locale/tool/$slug/index.html"
+              if [ ! -f "$f" ] || [ ! -s "$f" ]; then
+                echo "  ❌ [自研必达] $locale/$slug → 缺失或为空"
+                INTERNAL_MISSING=$((INTERNAL_MISSING+1))
+                continue
+              fi
+              size=$(wc -c < "$f")
+              if [ "$size" -lt 10000 ]; then
+                echo "  ❌ [自研必达] $locale/$slug → 体积过小 $size bytes（<10KB，疑似空壳）"
+                INTERNAL_SMALL=$((INTERNAL_SMALL+1))
+              fi
+            done
+          done
+          echo "  [自研强校验] 期望=$INTERNAL_TOTAL，缺失=$INTERNAL_MISSING，小体积=$INTERNAL_SMALL"
+          if [ "$INTERNAL_MISSING" -gt 0 ]; then
+            echo "::error::❌ [HARD] 自研工具静态页缺失 $INTERNAL_MISSING 个 — STATIC_EXPORT_TOOL_SLUGS 白名单可能遗漏了 INTERNAL_TOOL_SLUGS"
+            exit 11
+          fi
+          if [ "$INTERNAL_SMALL" -gt 0 ]; then
+            echo "::error::❌ [HARD] 自研工具静态页 $INTERNAL_SMALL 个体积过小（疑似渲染失败，渲染错误未触发 build exit≠0）"
+            exit 12
+          fi
+          echo "✅ [Legacy 自检通过] 全量 HTML 生成量 + 自研工具强校验全部达标 → 继续部署"
 
       - name: Restore middleware.ts (legacy only，防止留在工作区污染后续运行)
         if: env.MODE == 'legacy' && always()
