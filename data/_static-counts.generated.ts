@@ -4,35 +4,35 @@
 // 不必顶层 import tools（1056 条工具 ≈ 几百 KB）。
 // ============================================================
 
-export const STATIC_TOTAL_TOOLS_COUNT: number = 1220;
-export const STATIC_VERIFIED_TOOLS_COUNT: number = 1220;
+export const STATIC_TOTAL_TOOLS_COUNT: number = 1320;
+export const STATIC_VERIFIED_TOOLS_COUNT: number = 1320;
 export const STATIC_PENDING_TOOLS_COUNT: number = 0;
 
 export const STATIC_CATEGORY_COUNTS: Record<string, number> = {
-  "dev-tools": 168,
-  "ai-tools": 30,
+  "dev-tools": 179,
+  "ai-tools": 33,
   "image-tools": 30,
-  "pdf-tools": 14,
-  "media-tools": 58,
-  "productivity": 171,
-  "design-tools": 44,
+  "pdf-tools": 18,
+  "media-tools": 63,
+  "productivity": 182,
+  "design-tools": 55,
   "ecommerce": 10,
-  "content-tools": 13,
-  "marketing": 7,
+  "content-tools": 16,
+  "marketing": 15,
   "seo-tools": 9,
   "social-media": 15,
   "customer-service": 10,
-  "finance-tools": 34,
-  "hr-tools": 12,
-  "education": 44,
-  "health": 226,
+  "finance-tools": 41,
+  "hr-tools": 21,
+  "education": 52,
+  "health": 228,
   "lifestyle": 158,
-  "video-editing": 27,
-  "audio-tools": 42,
+  "video-editing": 33,
+  "audio-tools": 44,
   "3d-tools": 14,
   "data-viz": 23,
   "security": 23,
-  "collaboration": 10,
+  "collaboration": 20,
   "file-tools": 15,
   "api-tools": 8,
 };
@@ -52,7 +52,7 @@ export interface StaticComplianceStats {
 }
 
 export const STATIC_COMPLIANCE_STATS: StaticComplianceStats = {
-  verifiedCount: 1220,
+  verifiedCount: 1320,
   pendingCount: 0,
-  totalCount: 1220,
+  totalCount: 1320,
 };
