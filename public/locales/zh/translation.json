@@ -1035,8 +1035,8 @@
       "description": "Notion官方API，构建基于Notion的应用和集成。"
     },
     "cal-com": {
-      "name": "开源预约系统",
-      "description": "开源预约安排系统，类似Calendly，可自托管。"
+      "name": "Cal.com开源预约",
+      "description": "Calendly的开源免费替代方案，代码可自托管、完全白标自定义域名和Logo，无品牌广告，独立SaaS产品内置预约功能的首选。"
     },
     "n8n": {
       "name": "开源自动化平台",
@@ -2635,8 +2635,8 @@
       "description": "代码截图工具，生成精美的代码图片，分享代码。"
     },
     "ray-so": {
-      "name": "Ray.so",
-      "description": "代码分享工具，创建漂亮的代码片段图片。"
+      "name": "Ray.so梦幻代码截图",
+      "description": "更酷炫的代码美化截图，玻璃拟态+磨砂渐变背景+深/浅主题+窗口阴影，生成的代码图比Carbon更有设计感，前端开发者分享首选。"
     },
     "wakatime": {
       "name": "WakaTime",
@@ -5189,6 +5189,398 @@
     "sport-psychology-today": {
       "name": "运动心理调节工具",
       "description": "运动心理调节工具，专业运动辅助工具，数据驱动训练决策，帮助运动爱好者科学提升表现、减少伤病、尽情享受每一次运动的过程。"
+    },
+    "canva-video": {
+      "name": "Canva视频编辑器",
+      "description": "零基础短视频制作神器，10000+视频模板一键套用，支持多比例横竖屏切换，剪字幕、加转场、换背景音乐手机端全搞定。"
+    },
+    "capcut-web": {
+      "name": "剪映专业版网页",
+      "description": "字节跳动官方在线视频剪辑平台，和剪映APP素材全同步，智能字幕、一键成片、曲线变速、调色预设齐，电脑+手机浏览器直接剪。"
+    },
+    "descript-video": {
+      "name": "Descript AI视频剪辑",
+      "description": "文字改稿式剪辑视频，自动生成逐字稿字幕，删除文字就是剪掉画面，AI虚拟人配音+播客+录屏三合一，自由职业内容生产提效3倍。"
+    },
+    "veed-io": {
+      "name": "Veed在线视频工作室",
+      "description": "浏览器端一站式视频工具，录屏、裁剪、自动字幕、背景移除、绿幕抠像、加水印、压缩、格式转换全齐，自媒体人日更神器。"
+    },
+    "kapwing-tools": {
+      "name": "Kapwing多媒体工具箱",
+      "description": "Meme图、短视频、GIF一站式制作，视频加文字、加字幕、拼接、裁剪、转GIF，微信公众号/小红书封面模板齐全，无需登录即可使用。"
+    },
+    "wistia-hosting": {
+      "name": "Wistia商业视频托管",
+      "description": "企业级营销视频托管平台，高清无广告播放、访客观看热力图、收集邮箱线索、自定义播放器品牌，创业公司官网视频首选。"
+    },
+    "vidyard-messages": {
+      "name": "Vidyard视频消息",
+      "description": "自由职业者远程沟通神器，一键录制屏幕+摄像头视频消息，带客户观看追踪，比打字高效10倍，客户问题秒懂。"
+    },
+    "loom-recorder": {
+      "name": "Loom异步录屏分享",
+      "description": "远程协作录屏TOP1，屏幕+人脸+语音同步录制，自动生成链接，客户点击即看，支持评论打点，远程团队和Upwork接单标配。"
+    },
+    "screencastify-chrome": {
+      "name": "Screencastify教程录屏",
+      "description": "Chrome插件录屏，免费版每集30分钟，支持摄像头叠加、画笔标注、一键导出MP4或Google Drive，教师/培训师录课首选。"
+    },
+    "streamyard-live": {
+      "name": "StreamYard多平台直播",
+      "description": "浏览器直播推流，无需OBS，一键同时推流抖音、视频号、B站、YouTube、Facebook、LinkedIn 6+平台，加Logo、跑马灯、邀请嘉宾连麦。"
+    },
+    "restream-io": {
+      "name": "Restream直播多推",
+      "description": "全球直播分发领航者，一次推流到30+社交平台（B站/视频号/YouTube/Twitch/X），带视频存储回放、直播间聊天聚合，个人IP直播带货标配。"
+    },
+    "runway-gen": {
+      "name": "Runway AI视频工具",
+      "description": "专业级AI视频创作工具套件，文字生成场景、图片转动效、绿幕一键抠图、老视频修复超分，影视后期和独立动画师的生产力倍增器。"
+    },
+    "pika-labs": {
+      "name": "Pika AI视频生成",
+      "description": "文字/图片转高清动画视频，支持动漫、3D、写实、赛博朋克等多种风格，自媒体片头、电商产品演示创意快速出样。"
+    },
+    "submagic-auto": {
+      "name": "Submagic AI字幕生成",
+      "description": "AI自动识别语音生成短视频字幕，支持彩色高亮、Emoji点缀、双语对照，40+语言一键导出SRT，TikTok和YouTube Shorts涨粉标配。"
+    },
+    "opus-clip": {
+      "name": "Opus长视频切短视频",
+      "description": "AI一键把长播客/访谈/直播切出10条高光短视频，自动生成爆款Hook开头、加Virality评分、配字幕和B-ROLL，内容工作室省80%剪辑时间。"
+    },
+    "repurpose-io": {
+      "name": "Repurpose内容二次分发",
+      "description": "内容一鱼多吃自动化：YouTube自动转成音频发播客、切短视频发TikTok/Shorts，博客转LinkedIn图文，个人IP内容分发效率提10倍。"
+    },
+    "riverside-fm": {
+      "name": "Riverside高清远程采访",
+      "description": "远程视频/播客采访录制天花板，嘉宾无需下载软件，本地4K音视频逐帧存储，直播推流+自动转文字稿+多轨道素材一键导出。"
+    },
+    "streamlabs-obs": {
+      "name": "Streamlabs直播助手",
+      "description": "直播一键美化助手，Overlays打赏特效模板、聊天机器人、观众互动游戏、提醒弹窗，新人主播快速打造精致直播间。"
+    },
+    "motion-array": {
+      "name": "Motion Array视频素材库",
+      "description": "一站式视频素材全库，PR/AE/FCPX模板、LUT调色预设、转场插件、配乐音效、8K无版权视频素材，按月订阅无限商用下载。"
+    },
+    "artlist-io": {
+      "name": "Artlist无版权音乐",
+      "description": "全球创作者公认的商用音乐授权平台，订阅期内全平台无版权风险，YouTuber/Freelancer/广告公司长期授权首选，无索赔纠纷。"
+    },
+    "epidemic-sound": {
+      "name": "Epidemic Sound音效库",
+      "description": "40万首+高品质正版音乐+10万+音效，订阅全包，可用于YouTube/抖音/广告片/游戏，自动匹配音乐时长，版权索赔100%兜底。"
+    },
+    "storyblocks-vid": {
+      "name": "Storyblocks素材平台",
+      "description": "视频+音频+图片三合一订阅，100万+HD/4K无版权视频、AE/PR模板、80万+照片矢量，Freelancer接外包降低素材成本。"
+    },
+    "pixabay-video": {
+      "name": "Pixabay免费视频素材",
+      "description": "全球最大CC0免费视频站，数百万条HD/4K无版权视频+照片+音乐+矢量插画，无需署名商用全免费，创业初期零成本素材首选。"
+    },
+    "pexels-videos": {
+      "name": "Pexels免费视频图片",
+      "description": "高质量免费无版权视频与图片聚合平台，Pexels视频精选全球创作者投稿，画面质感高、分类清晰，免费商用无需授权。"
+    },
+    "unsplash-images": {
+      "name": "Unsplash高清图库",
+      "description": "设计师必备的免费高清图片站，全球摄影师社区投稿，风景、科技、商业、人物高清大图全免费商用，API可直接接入产品。"
+    },
+    "canva-design": {
+      "name": "Canva全场景设计",
+      "description": "创业团队设计0门槛，LOGO、海报、名片、PPT、菜单、H5邀请函、优惠券、易拉宝100万+模板，拖拽式修改，小白秒出图。"
+    },
+    "figma-design": {
+      "name": "Figma产品设计协作",
+      "description": "全球TOP产品UI/UX设计工具，浏览器原生多人协作，组件库、原型交互动效、DevMode切图一键给开发，SaaS创业和独立开发者标配。"
+    },
+    "feishu-docs": {
+      "name": "飞书文档协作",
+      "description": "字节跳动出品的企业协作套件，文档+表格+多维表格+日历+会议+OKR一体化，创业公司50人以下基础版全免费，替代Office全家桶。"
+    },
+    "tencent-docs": {
+      "name": "腾讯文档",
+      "description": "国内用户最多的在线文档表格工具，和微信无缝打通，直接分享给好友无需登录，多人同时编辑实时保存，小微企业轻协作首选。"
+    },
+    "notion-workspace": {
+      "name": "Notion创业知识库",
+      "description": "All-in-One工作空间，商业计划书、SOP操作手册、客户CRM、项目看板、产品Roadmap全塞一个Notion里，自由职业者的数字大脑。"
+    },
+    "xmind-mindmap": {
+      "name": "XMind思维导图",
+      "description": "商业计划书逻辑梳理首选思维导图，鱼骨图、组织结构图、甘特图、矩阵图多视图，脑图一键导出PPT/Word/PDF，手机端云同步。"
+    },
+    "processon-flow": {
+      "name": "ProcessOn在线流程图",
+      "description": "国内最好用的在线流程图与思维导图工具，BPMN流程图、ER图、拓扑图、UI原型、思维导图，模板中心80万+精品图，一键共享协作。"
+    },
+    "whimsical-wire": {
+      "name": "Whimsical线框图看板",
+      "description": "产品经理快速出低保真原型+流程图+看板+便签四合一，无需设计感，简洁线条专业规范，独立开发者接私单用它3天出需求文档。"
+    },
+    "chuangkit-poster": {
+      "name": "创客贴国内设计",
+      "description": "专为国内创业者优化的在线设计平台，餐饮菜单、微商海报、地产宣传单、招聘启事、促销横幅本地化模板，自带国内商用字体授权。"
+    },
+    "markup-hero": {
+      "name": "Markup Hero截图标注",
+      "description": "产品经理和自由职业者的截图+长截图+PDF标注神器，箭头、画笔、文字、模糊打码、多图拼接、一键生成链接给客户评论反馈。"
+    },
+    "airtable-db": {
+      "name": "Airtable低代码数据库",
+      "description": "像Excel一样用的关系型数据库，客户CRM、项目管理、库存管理、选题日历全部搭积木搞定，支持视图切换、表单收集、自动化。"
+    },
+    "feishu-bitable": {
+      "name": "飞书多维表格",
+      "description": "国产Airtable平替，看板、甘特图、画册、表单、流程图多视图切换，支持自动化、数据看板、跨表关联，国内网络流畅无阻塞。"
+    },
+    "tencent-survey": {
+      "name": "腾讯问卷调研",
+      "description": "国内市场调研与数据收集首选，30+题型、逻辑跳转、抽奖红包、样本服务，和微信生态打通，朋友圈转发填问卷零门槛。"
+    },
+    "typeform-form": {
+      "name": "Typeform优雅表单",
+      "description": "高颜值交互式表单/问卷/报名页，一题一页的卡片式体验，完成率比传统表单高3倍，海外Freelancer接客户需求收集神器。"
+    },
+    "jotform-builder": {
+      "name": "Jotform万能表单",
+      "description": "10000+表单模板，预约、报名、支付、电子签名、产品订单、合同审批、HR入职表，拖拽式搭建，支持Stripe/支付宝收款。"
+    },
+    "pandadoc-sign": {
+      "name": "PandaDoc电子合同",
+      "description": "电子提案、报价单、合同、NDA一站式制作签署，内置合规电子签名，追踪客户打开时间和停留点，外贸B2B签单转化率+40%。"
+    },
+    "fadada-sign": {
+      "name": "法大大电子签名",
+      "description": "国内合规电子签名与合同管理平台，国密算法+公证处存证+司法认可，签劳动合同、供应商合同、股东协议全合法有效，API接入方便。"
+    },
+    "shangshangqian": {
+      "name": "上上签电子签约",
+      "description": "企业级电子签约SaaS，和国内200+生态打通（钉钉、企业微信、Oracle、SAP），实名认证+区块链存证，单笔合同秒级批量签署。"
+    },
+    "good-acc": {
+      "name": "畅捷通好会计",
+      "description": "用友旗下小微企业在线财务软件，智能取票、自动记账、一键报税、老板经营看板，无需懂会计，个体户+初创公司记外账首选。"
+    },
+    "mingpian全能王": {
+      "name": "名片全能王在线",
+      "description": "拍照一秒识别名片自动入库，CRM客户跟进管理、日程提醒、群发节日祝福，商务BD拓展客户的手机端效率神器，支持微信名片互通。"
+    },
+    "aiqicha-query": {
+      "name": "爱企查工商查询",
+      "description": "百度旗下企业信息查询平台，公司注册信息、股东结构、司法风险、经营异常、知识产权免费查，创业合作前背调必过一遍。"
+    },
+    "tianyancha": {
+      "name": "天眼查企业风控",
+      "description": "国内最权威的企业征信大数据平台，关系图谱发掘关联公司、疑似实际控制人、企业链图，投资尽调和大客户信用评估必备。"
+    },
+    "trae-cn": {
+      "name": "Trae AI编程助手",
+      "description": "国产AI编程IDE，深度集成大模型，代码自动补全、Bug自动修复、文档一键生成、前端组件预览，独立开发者一人顶十人团队。"
+    },
+    "codeium-free": {
+      "name": "Codeium免费AI补全",
+      "description": "永久免费的AI代码补全工具，支持70+编程语言、VSCode/JetBrains/Neovim/Vim多编辑器插件，Chat+Search+补全三合一，替代Copilot省钱。"
+    },
+    "dida-365": {
+      "name": "滴答清单任务管理",
+      "description": "国产GTD任务管理App天花板，待办+日历+番茄钟+专注统计四合一，全平台云同步，微信/钉钉提醒，创业人日周月复盘最佳伴侣。"
+    },
+    "upwork-market": {
+      "name": "Upwork全球接单",
+      "description": "全球最大的Freelance自由职业平台，软件开发、设计、写作、翻译、营销、数据录入全品类，美元结算，远程工作入门必研究的平台规则。"
+    },
+    "fiverr-gig": {
+      "name": "Fiverr服务交易",
+      "description": "全球知名的微服务交易市场，起步价5美元，LOGO设计、视频剪辑、SEO优化、文案写作标准化服务包，适合新手销售标准化服务。"
+    },
+    "zbj-service": {
+      "name": "猪八戒服务市场",
+      "description": "国内最大的创意服务众包平台，LOGO、VI、网站、APP开发、文案、翻译、装修设计，中小企业发布需求一键对比服务商报价。"
+    },
+    "yuanling-work": {
+      "name": "圆领远程工作",
+      "description": "国内远程工作招聘与自由职业平台，按小时/按项目收费，平台托管资金保障，程序员/设计师/运营/产品远程岗位一站式对接。"
+    },
+    "pj-work": {
+      "name": "程序员客栈外包",
+      "description": "国内垂直IT技术外包平台，实名认证开发者匹配，按阶段托管付款+源码交付+售后保修，独立开发者和小团队接技术项目的渠道。"
+    },
+    "toggl-track": {
+      "name": "Toggl工时追踪",
+      "description": "Freelancer按小时收费必备，一键启动计时、自动记录项目和任务、区分客户、生成周报月报，工时数据直接导出到发票工具收款。"
+    },
+    "harvest-invoice": {
+      "name": "Harvest工时+发票",
+      "description": "工时追踪+在线发票二合一，自动把工时和费用转成正规发票，客户信用卡/PayPal在线支付，催款邮件自动发送，收款可视化报表。"
+    },
+    "freshbooks-cloud": {
+      "name": "FreshBooks云会计",
+      "description": "专为自由职业者和5人以下团队设计的云会计软件，时间追踪、自动发票、费用报销、在线收款、税务准备，北美Freelancer报税标配。"
+    },
+    "wave-invoicing": {
+      "name": "Wave免费发票工具",
+      "description": "真正永久免费的发票+会计工具，无隐藏费用，无限发票、无限客户、银行对账、财务报表，北美新Freelance零成本启动首选。"
+    },
+    "andco-freelance": {
+      "name": "AND.CO Freelance套件",
+      "description": "Fiverr旗下的自由职业全流程工具，提案、合同、NDA、时间追踪、发票、支付、税务文档一条龙，接单后90%文书工作自动化。"
+    },
+    "bonsai-suite": {
+      "name": "Bonsai Freelance提案",
+      "description": "顶级Freelancer用的业务套件，1000+行业合同模板（律师审核）、专业提案PDF、自动定时发票、会计税务报告，年入10万刀以上必入。"
+    },
+    "calendly-meeting": {
+      "name": "Calendly自动预约",
+      "description": "和客户约会议的效率神器，把你的可用时间段生成一个链接，客户点进去自助选时间，自动同步Google/Outlook/飞书日历，短信邮件双提醒。"
+    },
+    "acuity-sched": {
+      "name": "Acuity预约管理",
+      "description": "服务型Freelancer和个体户的预约+收款神器，瑜伽/健身/咨询/摄影/家教按服务类型设时间、收定金、自动Zoom创建会议+群发提醒。"
+    },
+    "tencent-meeting": {
+      "name": "腾讯会议在线",
+      "description": "国内最流畅的视频会议工具，一键发起邀请链接，微信直接加入无需下载，最多2000人同时参会，屏幕共享、虚拟背景、会议纪要AI自动生成。"
+    },
+    "zoom-video": {
+      "name": "Zoom视频会议",
+      "description": "全球最流行的远程视频会议工具，跨平台兼容，屏幕共享+虚拟背景+分组讨论+会议录制，Freelancer和海外客户沟通毫无障碍。"
+    },
+    "feishu-meeting": {
+      "name": "飞书妙记会议",
+      "description": "飞书自带视频会议+妙纪要，实时转写文字、一键导出Word/Notion、说话人自动识别、重点话题检索，团队会议资料沉淀省90%整理时间。"
+    },
+    "miro-whiteboard": {
+      "name": "Miro在线白板",
+      "description": "全球最强的在线协作白板，思维导图、用户旅程、竞品分析、头脑风暴、站会看板、流程图模板多到爆炸，分布式团队脑暴必备。"
+    },
+    "invision-freehand": {
+      "name": "Freehand协作白板",
+      "description": "InVision旗下的设计协作白板，设计师和客户线上改稿的利器，线框稿+Figma嵌入+评论打点+便签投票，远程评审会1小时搞定。"
+    },
+    "skillshare-learn": {
+      "name": "Skillshare技能学习",
+      "description": "自由职业者充电首选，设计、剪辑、编程、营销、写作、插画、摄影、创业2.8万+高质量视频课程，月度订阅无限看。"
+    },
+    "coursera-plus": {
+      "name": "Coursera大学课程",
+      "description": "全球顶尖大学和公司官方课程平台，Google、IBM、Meta的职业证书全球公认，适合Freelancer系统学习技能、获得行业认可的证书。"
+    },
+    "degreed-skill": {
+      "name": "Degreed技能矩阵",
+      "description": "个人技能发展记录平台，把你读过的书、学过的课、证书、项目、文章统一录入，自动生成可视化技能矩阵报告，Freelancer找工作加分。"
+    },
+    "canva-resume": {
+      "name": "Canva简历模板",
+      "description": "找工作/接私单的简历神器，500+专业简历模板（一页纸简历、创意简历、设计师简历、程序员简历），免费导出PDF/图片。"
+    },
+    "standard-resume": {
+      "name": "Standard Resume简洁简历",
+      "description": "程序员/设计师/运营极简ATS友好简历生成器，一行一行填自动排版，支持导入LinkedIn，不用调格式就能出HR最爱的一页纸简历。"
+    },
+    "read-cv": {
+      "name": "Read.cv创意作品集",
+      "description": "创意工作者的个人简历+作品集社交平台，设计师、产品经理、开发者展示作品的LinkedIn替代，社区优质项目机会内推直推。"
+    },
+    "tide-focus": {
+      "name": "Tide白噪音番茄钟",
+      "description": "深度专注三合一：白噪音+番茄钟25/5循环+专注时长统计，下雨声、咖啡馆、海浪、图书馆多场景音效，Freelancer在家工作抗干扰。"
+    },
+    "noisli-bg": {
+      "name": "Noisli背景音效",
+      "description": "自由搭配的背景声音，咖啡+下雨+打字+鸟叫+火车任意混合，可单独调音量；带计时器和文本编辑器，写文案和代码的BGM神器。"
+    },
+    "forest-focus": {
+      "name": "Forest专注种树",
+      "description": "戒掉手机分心，专注时间种下一棵虚拟树，时间到存活、玩手机立刻枯萎；累计种树够多可以真的种真树，学习和自律打卡神器。"
+    },
+    "todoist-gtd": {
+      "name": "Todoist任务清单",
+      "description": "全球经典GTD任务管理App，智能截止日期识别、项目文件夹、标签、优先级、重复规则、Karma积分，全平台同步，500强员工在用。"
+    },
+    "ms-todo": {
+      "name": "微软To Do待办",
+      "description": "微软出品的免费待办，和Outlook邮箱、Teams、Office全家桶深度打通，我的一天、已规划、重要、任务清单5种视图，职场人无缝衔接。"
+    },
+    "obsidian-publish": {
+      "name": "Obsidian知识库",
+      "description": "本地优先的Markdown双向链接笔记软件，资料像维基百科一样互联，丰富的插件市场和社区主题，适合构建个人知识库或独立产品文档。"
+    },
+    "roam-research": {
+      "name": "Roam Research网状笔记",
+      "description": "双向链接笔记的开山之作，每日笔记+块级引用+关系图谱，把零散知识连成网，作家、研究员、产品经理深度思考写作的首选。"
+    },
+    "duolingo-web": {
+      "name": "多邻国语言学习",
+      "description": "全球最火的免费语言学习平台，英/日/韩/法/西/德/意40+语言，游戏化闯关+每日打卡+排位赛，碎片时间学外语越学越上瘾。"
+    },
+    "anki-web": {
+      "name": "Anki闪卡记忆",
+      "description": "间隔重复记忆算法的标杆，考研/考证/医学/法律/背单词神器，自己做卡片或下载他人牌组，配合手机端App同步，遗忘曲线科学复习。"
+    },
+    "grammarly-check": {
+      "name": "Grammarly英文润色",
+      "description": "全球最多人用的英文写作检查工具，语法、拼写、语气、剽窃检测、学术规范，接海外写作、翻译、留学文书单的Freelancer必备。"
+    },
+    "netease-jianwai": {
+      "name": "网易见外工作台",
+      "description": "网易出品的AI字幕翻译与转写平台，视频自动生成中英文双语字幕、音频转文字、文档翻译，合规备案国内访问快，自媒体人做搬运必备。"
+    },
+    "deepl-translate": {
+      "name": "DeepL精准翻译",
+      "description": "公认翻译质量最好的AI翻译器，上下文理解超越Google翻译，英/法/德/日/西/中/俄30+语言互译，保留原格式导出文档翻译。"
+    },
+    "ilovepdf-io": {
+      "name": "iLovePDF PDF工具箱",
+      "description": "全球PDF工具天花板，PDF合并、拆分、压缩、转Word/Excel/PPT/图片、加密解密、水印、页码、旋转、OCR识别24种功能全免费。"
+    },
+    "smallpdf-tools": {
+      "name": "SmallPDF瑞士军刀",
+      "description": "PDF界的瑞士军刀，20+文档工具全齐，界面清爽无广告，和Google Drive/Dropbox/OneDrive云端直连，处理完自动存云端。"
+    },
+    "kami-pdf": {
+      "name": "Kami在线PDF标注",
+      "description": "老师和学生的最爱，在线PDF/Word/图片/电子书高亮、划重点、文字评论、语音评论、签名、画图，Google Classroom无缝集成。"
+    },
+    "lightpdf-cloud": {
+      "name": "LightPDF云PDF",
+      "description": "国产PDF云服务，PDF转Word/Excel/PPT/JPG/TXT、OCR文字识别、PDF编辑、签名、水印移除合规版，国内浏览器秒开。"
+    },
+    "carbon-now": {
+      "name": "Carbon代码美化截图",
+      "description": "技术博主写公众号/推特的神器，复制代码生成带语法高亮+渐变背景+行号+圆角的精美代码图，一键导出PNG/SVG，技术分享图直接用。"
+    },
+    "codepen-io": {
+      "name": "CodePen前端灵感",
+      "description": "全球最大的前端代码灵感社区，HTML/CSS/JS在线调试和分享，酷炫动画、交互动效、CSS艺术、SVG作品，找前端UI灵感和代码片段首选。"
+    },
+    "figma-community": {
+      "name": "Figma社区模板",
+      "description": "免费设计资源金矿，App UI、仪表盘、插画、3D图标、线框原型、设计系统100万+文件，一键复制到自己Figma编辑器直接改。"
+    },
+    "dribbble-design": {
+      "name": "Dribbble设计灵感",
+      "description": "全球设计师作品集平台，UI/UX、插画、动效、品牌、网页设计TOP作品都在这里，接设计私单的设计师发布作品吸引客户首选地。"
+    },
+    "behance-portfolio": {
+      "name": "Behance作品发布",
+      "description": "Adobe旗下的创意作品社区，平面、UI、建筑、摄影、插画、动效长图项目展示，Adobe Talent招聘直通，设计师找高薪工作的线上简历。"
+    },
+    "notion-templates": {
+      "name": "Notion模板库",
+      "description": "官方精选的数千个Notion免费模板，OKR追踪、第二大脑、CRM、旅行规划、习惯打卡、读书清单、预算管理，找到模板一键复制即用。"
+    },
+    "product-hunt": {
+      "name": "Product Hunt新产品",
+      "description": "全球新产品发现社区，SaaS、工具、App、AI产品每日发布榜，独立开发者和创业者找灵感、研究竞品、发布自己产品的首发平台。"
+    },
+    "hunt-webflow": {
+      "name": "Webflow无代码建站",
+      "description": "设计师首选的无代码建站平台，拖拽式设计+CMS后台+表单+支付+多语言+SEO优化全齐，独立开发者做企业官网/落地页接外包一单回本。"
     }
   },
   "sidebar2": {

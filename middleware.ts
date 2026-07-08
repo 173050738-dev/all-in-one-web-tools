@@ -1,9 +1,48 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 
+export const SUPPORTED_LOCALES = ['en', 'zh', 'es', 'hi', 'fr', 'ar'] as const;
+export type MiddlewareLocale = (typeof SUPPORTED_LOCALES)[number];
+const DEFAULT_LOCALE_FALLBACK: MiddlewareLocale = 'en';
+
+function detectLocaleFromRequest(request: NextRequest): MiddlewareLocale {
+  const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value as MiddlewareLocale | undefined;
+  if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale)) {
+    return cookieLocale;
+  }
+
+  const acceptLang = request.headers.get('accept-language') || '';
+  if (!acceptLang) return DEFAULT_LOCALE_FALLBACK;
+
+  try {
+    const parts = acceptLang.split(',').map((chunk) => {
+      const [raw, qRaw] = chunk.trim().split(';') as [string, string?];
+      const q = qRaw ? parseFloat(qRaw.replace(/^q=/, '')) : 1;
+      return { tag: raw.toLowerCase().trim(), q: isNaN(q) ? 1 : q };
+    }).filter((p) => p.tag && p.q > 0).sort((a, b) => b.q - a.q);
+
+    for (const { tag } of parts) {
+      if (tag === 'zh' || tag.startsWith('zh-') || tag.startsWith('zh_')) {
+        return 'zh';
+      }
+    }
+
+    for (const { tag } of parts) {
+      const short = tag.split(/[-_]/)[0];
+      if ((SUPPORTED_LOCALES as readonly string[]).includes(short) && short !== 'zh') {
+        return short as MiddlewareLocale;
+      }
+    }
+  } catch {
+    /* ignore parse error, fall through */
+  }
+  return DEFAULT_LOCALE_FALLBACK;
+}
+
 const intlMiddleware = createMiddleware({
-  locales: ['en', 'zh', 'es', 'hi', 'fr', 'ar'],
-  defaultLocale: 'zh',
+  locales: [...SUPPORTED_LOCALES],
+  defaultLocale: DEFAULT_LOCALE_FALLBACK,
+  localeDetection: false,
   localePrefix: 'always'
 });
 
@@ -19,9 +58,17 @@ export default function middleware(request: NextRequest) {
   }
 
   if (url.pathname === '/' || url.pathname === '') {
-    const zhUrl = new URL('/zh/', url.origin);
-    zhUrl.search = url.search;
-    return NextResponse.redirect(zhUrl.toString(), 307);
+    const detected = detectLocaleFromRequest(request);
+    const targetUrl = new URL(`/${detected}/`, url.origin);
+    targetUrl.search = url.search;
+    const response = NextResponse.redirect(targetUrl.toString(), 307);
+    response.cookies.set('NEXT_LOCALE', detected, {
+      path: '/',
+      httpOnly: false,
+      sameSite: 'lax',
+      maxAge: 60 * 60 * 24 * 365,
+    });
+    return response;
   }
 
   const isLocalhost =

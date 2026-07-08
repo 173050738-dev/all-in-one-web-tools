@@ -1035,8 +1035,8 @@
       "description": "عبر الإنترنت notion api for API, Notion, developer, integration. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cal-com": {
-      "name": "Cal Com",
-      "description": "عبر الإنترنت cal com for scheduling, booking, أوبن source, self-hosted. Works right in your متصفح — مجاني, آمن, and لا install required."
+      "name": "Cal.com Open Source Scheduling",
+      "description": "Open-source, free, self-hostable Calendly alternative. White-label custom domain, logo, zero branding — perfect for SaaS embedding."
     },
     "n8n": {
       "name": "N8n Automation",
@@ -2635,8 +2635,8 @@
       "description": "عبر الإنترنت carbon كود for كود, screenshot, share, beautiful. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "ray-so": {
-      "name": "Ray.so",
-      "description": "عبر الإنترنت ray.so for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
+      "name": "Ray.so Dreamy Code Shots",
+      "description": "Glassmorphic code screenshots; sleek gradient frosted backgrounds with themes & drop shadows — fancier sharing images for frontend devs."
     },
     "wakatime": {
       "name": "Wakatime Time",
@@ -5189,6 +5189,398 @@
     "sport-psychology-today": {
       "name": "Sport Psychology Today",
       "description": "محرر Sport Psychology Today عبر الإنترنت. خصّص Sport واضبط Psychology وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
+    },
+    "canva-video": {
+      "name": "Canva Video Editor",
+      "description": "Zero-skills short video creator, 10,000+ templates with drag-and-drop, multi-aspect ratio, captions and transitions — works fully on mobile browsers."
+    },
+    "capcut-web": {
+      "name": "CapCut Web Editor",
+      "description": "ByteDance's online video editor fully synced with mobile CapCut. Smart captions, one-click trailer, speed ramping and LUT presets."
+    },
+    "descript-video": {
+      "name": "Descript AI Video",
+      "description": "Edit video by editing text — auto transcriptions, AI overdub, screen and podcast recorder all in one. Triples solo content creator throughput."
+    },
+    "veed-io": {
+      "name": "VEED Online Studio",
+      "description": "Browser all-in-one video studio: recording, trimming, auto captions, BG removal, chroma key, watermark, compression, conversion."
+    },
+    "kapwing-tools": {
+      "name": "Kapwing Media Kit",
+      "description": "One-stop memes, short videos and GIFs. Add text / captions / stitching / trimming, WeChat and Xiaohongshu cover templates preloaded."
+    },
+    "wistia-hosting": {
+      "name": "Wistia Video Hosting",
+      "description": "Marketing-grade ad-free HD video hosting with viewer heatmaps, email lead capture and branded player. Perfect for startup websites."
+    },
+    "vidyard-messages": {
+      "name": "Vidyard Video Messages",
+      "description": "Record screen+camera async video messages with watch tracking — way clearer than typed text for freelancers working with overseas clients."
+    },
+    "loom-recorder": {
+      "name": "Loom Async Screen Share",
+      "description": "The #1 async screen recorder. Captures screen + face + voice, auto-generates shareable link with timestamped comments — remote work staple."
+    },
+    "screencastify-chrome": {
+      "name": "Screencastify Recorder",
+      "description": "Chrome screen recorder with 30-min free sessions, webcam overlay, pen annotation, one-click MP4 or Google Drive export — great for tutors."
+    },
+    "streamyard-live": {
+      "name": "StreamYard Multi-Platform Live",
+      "description": "Browser live streaming to Douyin, Bilibili, Video Account, YouTube, Facebook, LinkedIn simultaneously with logo, ticker and guest call-ins."
+    },
+    "restream-io": {
+      "name": "Restream Multi-Distribute",
+      "description": "Stream once and reach 30+ social platforms with VOD storage, replay and unified chat. Essential for live commerce creators."
+    },
+    "runway-gen": {
+      "name": "Runway AI Video Suite",
+      "description": "Pro AI video creation toolkit: text-to-scene, image motion, one-click chroma key, old video restoration and upscaling."
+    },
+    "pika-labs": {
+      "name": "Pika AI Video Generator",
+      "description": "Text / image-to-HD animation with anime, 3D, realistic and cyberpunk styles. Fast prototyping for titles and product demos."
+    },
+    "submagic-auto": {
+      "name": "Submagic AI Captions",
+      "description": "Auto-gen short-video captions with color highlights, emoji callouts and bilingual SRT export. Viral boost for TikTok/Shorts."
+    },
+    "opus-clip": {
+      "name": "Opus Long-to-Shorts AI",
+      "description": "Clips 10 viral shorts from long podcasts with auto hooks, Virality scores, captions and B-ROLL, saving 80% of studio editing time."
+    },
+    "repurpose-io": {
+      "name": "Repurpose Content Repurposing",
+      "description": "Automated content repurposing pipeline: YouTube to podcast, shorts, TikTok, blog post to LinkedIn carousels."
+    },
+    "riverside-fm": {
+      "name": "Riverside Remote Recording",
+      "description": "Top-grade remote interview recorder. Guests join via browser, local 4K multitrack storage, live streaming and auto transcription."
+    },
+    "streamlabs-obs": {
+      "name": "Streamlabs Live Assistant",
+      "description": "Stream beautification toolkit: overlays, donation effects, chatbots, interactive games and alerts for new streamers."
+    },
+    "motion-array": {
+      "name": "Motion Array Stock",
+      "description": "All-in-one asset subscription: PR/AE/FCPX templates, LUTs, transitions, SFX music, 8K royalty-free stock."
+    },
+    "artlist-io": {
+      "name": "Artlist Royalty-Free Music",
+      "description": "Creator-standard royalty-free music subscription with global license coverage, zero YouTube Content ID claims."
+    },
+    "epidemic-sound": {
+      "name": "Epidemic Sound Library",
+      "description": "400K+ tracks + 100K SFX with unlimited subscription; auto-fits duration with 100% claim protection."
+    },
+    "storyblocks-vid": {
+      "name": "Storyblocks Assets",
+      "description": "3-in-1 video/audio/image subscription; lower per-project asset costs for freelancers and creative studios."
+    },
+    "pixabay-video": {
+      "name": "Pixabay Free Stock Video",
+      "description": "Largest CC0 free library with millions of HD/4K videos, images, music, vectors — 100% free commercial use, no attribution."
+    },
+    "pexels-videos": {
+      "name": "Pexels Free Video & Images",
+      "description": "Curated high-quality free stock; curated HD/4K videos, photos, all hand-picked by humans, free commercial."
+    },
+    "unsplash-images": {
+      "name": "Unsplash HD Photos",
+      "description": "Designer-grade free HD photos from global photographers; free commercial with a public REST API for product integration."
+    },
+    "canva-design": {
+      "name": "Canva Design Platform",
+      "description": "Zero-learning-curve design for startups. 1M+ templates of logos, posters, business cards, PPTs, menus, H5 invites, banners."
+    },
+    "figma-design": {
+      "name": "Figma Design Collaboration",
+      "description": "The industry-leading UI/UX collaborative design platform; component libraries, interactive prototypes, DevMode hand-off — solo dev staple."
+    },
+    "feishu-docs": {
+      "name": "Feishu Collaboration Suite",
+      "description": "Docs, Sheets, Bitable, Calendar, Meetings, OKRs unified. Free for teams under 50 — perfect Chinese Office 365 alternative."
+    },
+    "tencent-docs": {
+      "name": "Tencent Docs",
+      "description": "Most popular online docs & sheets in China. WeChat shareable, no login to view, real-time multi-user co-edit."
+    },
+    "notion-workspace": {
+      "name": "Notion Workspace",
+      "description": "All-in-one workspace for business plans, SOPs, CRM, kanban boards and roadmaps — the digital brain of every freelancer."
+    },
+    "xmind-mindmap": {
+      "name": "XMind Mind Maps",
+      "description": "Business planning mind mapping with fishbone, org chart, Gantt and matrix views; one-click PPT/Word/PDF export."
+    },
+    "processon-flow": {
+      "name": "ProcessOn Diagrams",
+      "description": "Top-tier online flowcharts, mind maps, BPMN, ER, network topology, wireframes; 800K+ community templates."
+    },
+    "whimsical-wire": {
+      "name": "Whimsical Wireframe Suite",
+      "description": "PM fast prototyping kit: low-fi wireframes + flowcharts + kanban + sticky notes. 3-day spec turnaround for freelance devs."
+    },
+    "chuangkit-poster": {
+      "name": "ChuangKit Chinese Design",
+      "description": "China-tailored design: catering menus, WeChat posters, real-estate flyers, recruitment, domestic commercial font licensing built-in."
+    },
+    "markup-hero": {
+      "name": "Markup Hero Screenshots",
+      "description": "Annotated, long screenshots + PDF marking. Arrows, blurs, text, mosaic, multi-image collages, shareable links for client reviews."
+    },
+    "airtable-db": {
+      "name": "Airtable Low-Code DB",
+      "description": "Relational database that feels like Excel: CRM, projects, inventory, content calendar, forms + automation — no code required."
+    },
+    "feishu-bitable": {
+      "name": "Feishu Bitable",
+      "description": "Domestic Airtable with kanban, Gantt, gallery, form, automation and cross-table relations, fast domestic network."
+    },
+    "tencent-survey": {
+      "name": "Tencent Surveys",
+      "description": "Top China market research tool; 30+ question types, logic jumps, lucky money rewards, WeChat sharing, sample panel."
+    },
+    "typeform-form": {
+      "name": "Typeform Beautiful Forms",
+      "description": "High-conversion one-question-at-a-time forms with 3x completion rate; overseas client intake must-have."
+    },
+    "jotform-builder": {
+      "name": "Jotform Forms Builder",
+      "description": "10K+ templates for booking, sign-ups, payments, e-signatures, orders, approvals, onboarding; drag-drop with Stripe/WeChat Pay."
+    },
+    "pandadoc-sign": {
+      "name": "PandaDoc e-Signatures",
+      "description": "Proposals, quotes, contracts, NDAs with legally-binding e-signatures, open time tracking — +40% close rate for B2B sales."
+    },
+    "fadada-sign": {
+      "name": "FaDaDa e-Contracts",
+      "description": "China-compliant e-signatures: national cryptography, notary deposit, judicial admissibility, REST API integrations."
+    },
+    "shangshangqian": {
+      "name": "ShangShangQian Enterprise Sign",
+      "description": "Enterprise SaaS e-signatures with 200+ native integrations; real-name auth, blockchain notarization, bulk signing."
+    },
+    "good-acc": {
+      "name": "Yonyou Good Accounting",
+      "description": "Yonyou cloud accounting for micro-businesses; auto capture invoices, bookkeeping, one-click tax filing, owner dashboard."
+    },
+    "mingpian全能王": {
+      "name": "名片全能王在线",
+      "description": "拍照一秒识别名片自动入库，CRM客户跟进管理、日程提醒、群发节日祝福，商务BD拓展客户的手机端效率神器，支持微信名片互通。"
+    },
+    "aiqicha-query": {
+      "name": "AIQiCha Business Search",
+      "description": "Baidu free business registry search; corporate info, shareholders, legal risks, IPRs — must-check before partnerships."
+    },
+    "tianyancha": {
+      "name": "TianYanCha Risk Intel",
+      "description": "The most authoritative business credit big data in China; relationship graphs, UBO mining, due-diligence deep-dive."
+    },
+    "trae-cn": {
+      "name": "Trae AI Coding IDE",
+      "description": "Chinese AI-powered IDE with LLMs, auto completion, auto bug fix, doc generation and live preview. 10x solo dev productivity."
+    },
+    "codeium-free": {
+      "name": "Codeium Free AI Complete",
+      "description": "Forever-free AI code completion for 70+ languages across VSCode/JetBrains/Neovim/Vim. Chat + search + autocomplete in one."
+    },
+    "dida-365": {
+      "name": "TickTick Task Manager",
+      "description": "The GTD app leader in China; todos + calendar + pomodoro + focus reports, cloud sync, WeChat/DingTalk reminders."
+    },
+    "upwork-market": {
+      "name": "Upwork Freelance Marketplace",
+      "description": "Largest global freelance marketplace. Dev, design, copy, translate, SEO, data; USD payouts — the benchmark platform."
+    },
+    "fiverr-gig": {
+      "name": "Fiverr Gigs Marketplace",
+      "description": "Micro-services from $5; logo, video, SEO, copywriting packaged as Gigs — beginner-friendly global sales."
+    },
+    "zbj-service": {
+      "name": "ZBJ Service Marketplace",
+      "description": "China's largest creative services platform: logos, VI, sites, apps, copy, translation. Compare quotes from vendors."
+    },
+    "yuanling-work": {
+      "name": "YuanLing Remote Work",
+      "description": "Domestic freelance and remote job board; hourly or project escrow billing, dev/design/ops/PM roles matched."
+    },
+    "pj-work": {
+      "name": "Proginn Outsourcing",
+      "description": "China tech-only freelance matching. Verified developers, milestone escrow, source code delivery and maintenance warranty."
+    },
+    "toggl-track": {
+      "name": "Toggl Time Tracking",
+      "description": "Hourly freelancers must-have. One-click timers, project/client tags, weekly/monthly reports — export directly to invoicing tools."
+    },
+    "harvest-invoice": {
+      "name": "Harvest Time + Invoicing",
+      "description": "Time + online invoices unified; auto turn billable hours into invoices, card/PayPal payments, auto reminders, AR dashboard."
+    },
+    "freshbooks-cloud": {
+      "name": "FreshBooks Cloud Accounting",
+      "description": "Cloud accounting for freelancers and teams <5. Time, invoicing, expenses, online payments, tax packs — NA freelancer standard."
+    },
+    "wave-invoicing": {
+      "name": "Wave Free Invoicing",
+      "description": "Truly forever free invoicing + accounting. Unlimited invoices, clients, bank reconciliation, reports — zero startup cost."
+    },
+    "andco-freelance": {
+      "name": "AND.CO Freelance OS",
+      "description": "Fiverr-owned all-in freelance OS: proposals, contracts, NDAs, time, invoices, payments, tax docs; 90% admin automated."
+    },
+    "bonsai-suite": {
+      "name": "Bonsai Freelance Bundle",
+      "description": "Premium freelance bundle; 1000+ lawyer-vetted templates, branded proposals, recurring invoices, tax reports — for $100K+ earners."
+    },
+    "calendly-meeting": {
+      "name": "Calendly Scheduling",
+      "description": "Share a personal booking link; clients self-serve times. Auto syncs to Google/Outlook/Feishu with dual SMS + email reminders."
+    },
+    "acuity-sched": {
+      "name": "Acuity Appointment Suite",
+      "description": "Service-freelancer appointment & payment: per-service calendars, deposits, auto Zoom creation and mass reminders."
+    },
+    "tencent-meeting": {
+      "name": "Tencent Meetings",
+      "description": "Best China video meetings. One-click invite links; join from WeChat without app; 2000 participants, share, AI minutes."
+    },
+    "zoom-video": {
+      "name": "Zoom Video Meetings",
+      "description": "The world standard video conferencing. Cross-platform, screen share, breakout rooms, cloud recording — crystal clear with overseas clients."
+    },
+    "feishu-meeting": {
+      "name": "Feishu Minutes",
+      "description": "Meetings with AI Minutes: live transcription, Word/Notion export, speaker diarization, topic search; 90% less recap time."
+    },
+    "miro-whiteboard": {
+      "name": "Miro Online Whiteboard",
+      "description": "The world's strongest collaborative whiteboard. Mind maps, user journeys, competitive analysis, stand-ups, retros."
+    },
+    "invision-freehand": {
+      "name": "Freehand Design Whiteboard",
+      "description": "InVision collaborative review board; wireframes + Figma embed, comment pinning, sticky-note voting, one-hour remote design review."
+    },
+    "skillshare-learn": {
+      "name": "Skillshare Creative Learning",
+      "description": "Freelancer upskilling favorite. 28K+ quality classes in design, video, code, marketing, writing, photography, entrepreneurship."
+    },
+    "coursera-plus": {
+      "name": "Coursera University Courses",
+      "description": "Top university and corporation courses. Google, IBM, Meta Career Certificates globally recognized — structured skill-building."
+    },
+    "degreed-skill": {
+      "name": "Degreed Skill Matrix",
+      "description": "Unified skill tracking for books, courses, certs, projects and articles; auto-generate a visual skill matrix report for job hunting."
+    },
+    "canva-resume": {
+      "name": "Canva Resume Builder",
+      "description": "500+ professional resume templates: one-page, creative, designer, dev, PM. Free export as PDF/PNG for job hunt or freelance pitches."
+    },
+    "standard-resume": {
+      "name": "Standard Resume Builder",
+      "description": "ATS-friendly clean resumes for devs/designers/PMs. Fill line-by-line, auto-formats to recruiter-preferred 1-page; LinkedIn import."
+    },
+    "read-cv": {
+      "name": "Read.cv Portfolio Site",
+      "description": "Creative worker LinkedIn alternative. Mini portfolios + resume + community, curated referral opportunities and internal promotions."
+    },
+    "tide-focus": {
+      "name": "Tide Focus White Noise",
+      "description": "Deep focus 3-in-1: white noise, 25/5 Pomodoro, focus stats. Rain, cafe, ocean, library ASMR to fight home-office distraction."
+    },
+    "noisli-bg": {
+      "name": "Noisli Background Mixer",
+      "description": "Mix-and-match background sounds: cafe, rain, typing, fire, birds, trains. Independent volume, timer + mini text editor for writing/coding."
+    },
+    "forest-focus": {
+      "name": "Forest Phone Discipline",
+      "description": "Plant virtual trees during focus sessions; if you quit early the tree dies. Accumulate coins to plant REAL trees. Anti-procrastination viral app."
+    },
+    "todoist-gtd": {
+      "name": "Todoist Task Manager",
+      "description": "World-famous GTD app with natural-language date parsing, projects, labels, priorities, recurring rules, Karma and all-device sync."
+    },
+    "ms-todo": {
+      "name": "Microsoft To Do",
+      "description": "Free Microsoft tasks, deep Outlook, Teams and Office integration. My Day / Planned / Important views — seamless for office workers."
+    },
+    "obsidian-publish": {
+      "name": "Obsidian Knowledge Base",
+      "description": "Local-first markdown bidirectional-link notes. Plugins and themes galore, great for personal Zettelkasten and product docs."
+    },
+    "roam-research": {
+      "name": "Roam Research Notes",
+      "description": "The original bi-directional note app. Daily Notes, block-level references and graph view for writers, PMs and researchers."
+    },
+    "duolingo-web": {
+      "name": "Duolingo Languages",
+      "description": "World's #1 free language app. 40+ languages with game-like lessons, streaks, leagues — addictive micro-study every day."
+    },
+    "anki-web": {
+      "name": "Anki Spaced Flashcards",
+      "description": "The gold standard SRS app. Self-made or shared decks for exams, med, law, language. Scientific forgetting curve reviews, mobile sync."
+    },
+    "grammarly-check": {
+      "name": "Grammarly English Checker",
+      "description": "The most popular English writing assistant. Grammar, tone, plagiarism, academic checks — essential for writers and translators."
+    },
+    "netease-jianwai": {
+      "name": "NetEase JianWai AI",
+      "description": "NetEase AI caption translation; bilingual subtitles, audio-to-text, document translation; China fast access with ICP filing."
+    },
+    "deepl-translate": {
+      "name": "DeepL Translator",
+      "description": "Widely recognized best AI translator; 30+ languages with contextual awareness; formatted document translation included."
+    },
+    "ilovepdf-io": {
+      "name": "iLovePDF Toolkit",
+      "description": "Top PDF tool worldwide. Merge, split, compress, convert to Word/Excel/PPT/Image, encrypt, watermark, page, rotate, OCR — 24 functions free."
+    },
+    "smallpdf-tools": {
+      "name": "SmallPDF Swiss Knife",
+      "description": "The Swiss-army PDF kit. 20+ clean, ad-free tools; Google Drive, Dropbox and OneDrive cloud integration, save back to cloud."
+    },
+    "kami-pdf": {
+      "name": "Kami PDF Annotator",
+      "description": "The favorite K12 PDF annotation app. Highlight, text, voice, signature and draw on PDFs/Word/images; Google Classroom integration."
+    },
+    "lightpdf-cloud": {
+      "name": "LightPDF China Cloud",
+      "description": "Domestic Chinese PDF cloud. Word/Excel/PPT/JPG/TXT conversion, OCR text recognition, editing, signature, compliant watermark removal."
+    },
+    "carbon-now": {
+      "name": "Carbon Code Screenshots",
+      "description": "Technical bloggers favorite. Paste code → beautiful syntax-highlighted pics with gradient BG, line numbers, rounded — PNG/SVG export."
+    },
+    "codepen-io": {
+      "name": "CodePen Frontend Playground",
+      "description": "Largest frontend inspiration community. Live HTML/CSS/JS pens; animations, interactive widgets, CSS art — daily UI inspiration."
+    },
+    "figma-community": {
+      "name": "Figma Community Files",
+      "description": "The free-design goldmine. 1M+ App UI, dash, illustration, 3D icon, wireframe, DS files — duplicate into Figma and edit."
+    },
+    "dribbble-design": {
+      "name": "Dribbble Design Inspiration",
+      "description": "Top designer portfolio platform. UI/UX, illustration, motion, branding. Post works to attract freelance client inquiries."
+    },
+    "behance-portfolio": {
+      "name": "Behance Creative Portfolios",
+      "description": "Adobe creative showcase. Graphic, UI, architecture, photography long-form projects; Adobe Talent connects to premium jobs."
+    },
+    "notion-templates": {
+      "name": "Notion Template Gallery",
+      "description": "Curated thousands of free Notion templates. OKR, Second Brain, CRM, trip planner, habit tracker, budget — duplicate & go."
+    },
+    "product-hunt": {
+      "name": "Product Hunt Launches",
+      "description": "The place to discover new products. SaaS, tools, apps, AI launches daily. Indiehackers research competitors and launch here first."
+    },
+    "hunt-webflow": {
+      "name": "Webflow No-Code Builder",
+      "description": "Designer-first no-code builder. Drag-and-drop, CMS, forms, payments, multilingual, SEO. Freelancers build client sites in days not weeks."
     }
   },
   "sidebar2": {

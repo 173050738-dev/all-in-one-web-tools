@@ -17,7 +17,12 @@ build.log
 .vscode/
 .idea/
 _BACKUPS/
+.backup_*
 _*.cjs
+*.bak
+curl_body_*.txt
+scripts/_local_scripts/
+middleware.ts.bak
 _*.js
 _*.json
 curl_body_*.txt
