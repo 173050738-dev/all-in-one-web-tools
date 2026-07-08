@@ -542,6 +542,20 @@ jobs:
             echo "DEPLOYMENT_URL=$DEPLOYMENT_URL" >> $GITHUB_ENV
           fi
 
+      - name: Wait for Cloudflare CDN edge sync (防爬虫/校验命中旧版本 403)
+        if: success()
+        run: |
+          WAIT_SECONDS=90
+          echo "⏳ 部署产物已推送到 Pages，等待 ${WAIT_SECONDS}s 让 Cloudflare 全球边缘节点同步..."
+          echo "   （为什么要等？你之前 CI 后头条爬虫 403=就是同步空窗期被抓了）"
+          for i in $(seq 1 $WAIT_SECONDS); do
+            if [ $((i % 15)) -eq 0 ]; then
+              echo "   ⏱️  已等 $i / ${WAIT_SECONDS}s..."
+            fi
+            sleep 1
+          done
+          echo "✅ Cloudflare CDN 等待结束，开始 HTTP smoke 校验"
+
       - name: Verify deployment (HTTP smoke 6 key URLs → fail immediately if any missing)
         if: success()
         run: |

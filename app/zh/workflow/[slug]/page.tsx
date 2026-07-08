@@ -1,7 +1,13 @@
 import type { Metadata } from 'next';
 import { TOP_WORKFLOW_SLUGS } from '@/lib/topSlugs';
 import { workflows } from '@/data/workflows';
+import {
+  workflowDetailGenerateMetadata,
+  WorkflowDetailJsonLd,
+  type SeoLocale,
+} from '@/components/seo';
 
+const LOCALE: SeoLocale = 'zh';
 const USE_STATIC_EXPORT = process.env.USE_STATIC_EXPORT === 'true' || process.env.USE_STATIC_EXPORT === '1';
 
 export function generateStaticParams() {
@@ -13,10 +19,7 @@ export const revalidate = 3600;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  return {
-    title: `工作流: ${slug}`,
-    description: `工作流页面 ${slug}`,
-  };
+  return workflowDetailGenerateMetadata(LOCALE, slug);
 }
 
 export default async function WorkflowPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
@@ -24,11 +27,14 @@ export default async function WorkflowPage({ params }: { params: Promise<{ slug:
   const { workflows } = await import('@/data/workflows');
   const workflow = workflows.find(w => w.slug === p.slug);
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-xl font-bold">{workflow?.title || p.slug}</h1>
-      <p className="text-gray-600 mb-4">{workflow?.description}</p>
-      <p>Locale: {p.locale}</p>
-      <p>Steps: {workflow?.steps.length || 0}</p>
-    </div>
+    <>
+      <WorkflowDetailJsonLd locale={LOCALE} slugOrWorkflow={p.slug} />
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <h1 className="text-xl font-bold">{workflow?.title || p.slug}</h1>
+        <p className="text-gray-600 mb-4">{workflow?.description}</p>
+        <p>Locale: {p.locale}</p>
+        <p>Steps: {workflow?.steps.length || 0}</p>
+      </div>
+    </>
   );
 }

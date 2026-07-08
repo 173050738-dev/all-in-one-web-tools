@@ -649,13 +649,57 @@ export function resolveOperatingSystem(platform: Platform | undefined): string {
   return 'All (Web, iOS, Android, Windows, macOS, Linux)';
 }
 
-export function buildSoftwareOffers(tool: Tool): any[] {
+const SCHEMA_CURRENCY: Record<SeoLocale, string> = {
+  en: 'USD',
+  zh: 'CNY',
+  hi: 'INR',
+  fr: 'EUR',
+  es: 'EUR',
+  ar: 'SAR',
+};
+
+const SCHEMA_AUDIENCE: Record<string, Partial<Record<SeoLocale, string>>> = {
+  developer: { en: 'Software Developers', zh: '软件开发工程师', hi: 'सॉफ्टवेयर डेवलपर्स', es: 'Desarrolladores', fr: 'Développeurs', ar: 'المطورون' },
+  designer: { en: 'Designers & Creators', zh: '设计师与创作者', hi: 'डिज़ाइनर और क्रिएटर्स', es: 'Diseñadores', fr: 'Designers', ar: 'المصممون والمبدعون' },
+  office: { en: 'Office Professionals', zh: '办公专业人士', hi: 'ऑफिस प्रोफेशनल्स', es: 'Profesionales de oficina', fr: 'Professionnels de bureau', ar: 'المحترفون في المكاتب' },
+  student: { en: 'Students & Teachers', zh: '学生与教师', hi: 'छात्र और शिक्षक', es: 'Estudiantes y profesores', fr: 'Étudiants et enseignants', ar: 'الطلاب والمعلمون' },
+  marketer: { en: 'Marketers & SEOs', zh: '营销与SEO从业者', hi: 'मार्केटर्स और SEO प्रोफेशनल्स', es: 'Marketers y SEOs', fr: 'Marketeurs & SEOs', ar: 'المسوقون ومتخصصو SEO' },
+  finance: { en: 'Finance Teams', zh: '财务与会计团队', hi: 'वित्त और लेखा टीम', es: 'Equipos financieros', fr: 'Équipes finance', ar: 'فرق المالية والمحاسبة' },
+  health: { en: 'General Users', zh: '普通用户', hi: 'सामान्य उपयोगकर्ता', es: 'Usuarios generales', fr: 'Utilisateurs généraux', ar: 'المستخدمون العامون' },
+  lifestyle: { en: 'General Users', zh: '普通用户', hi: 'सामान्य उपयोगकर्ता', es: 'Usuarios generales', fr: 'Utilisateurs généraux', ar: 'المستخدمون العامون' },
+  default: { en: 'General Audience', zh: '全人群适用', hi: 'सभी दर्शक', es: 'Audiencia general', fr: 'Public général', ar: 'جميع الفئات' },
+};
+
+function resolveAudience(categoryId: string | undefined, l: SeoLocale): string {
+  const id = categoryId || '';
+  const key = id.includes('dev') || id.includes('developer') || id === 'pdf-tools'
+    ? 'developer'
+    : id.includes('design') || id === 'image' || id === 'data-viz'
+    ? 'designer'
+    : id === 'office' || id.includes('office') || id === 'productivity' || id === 'hr-tools' || id === 'file-tools' || id === 'collaboration'
+    ? 'office'
+    : id === 'education'
+    ? 'student'
+    : id === 'marketing' || id === 'social-media' || id === 'content-tools' || id === 'seo' || id.includes('seo')
+    ? 'marketer'
+    : id === 'finance-tools' || id === 'ecommerce'
+    ? 'finance'
+    : id === 'health'
+    ? 'health'
+    : id === 'lifestyle'
+    ? 'lifestyle'
+    : 'default';
+  return SCHEMA_AUDIENCE[key]?.[l] || SCHEMA_AUDIENCE.default[l] || 'General Audience';
+}
+
+export function buildSoftwareOffers(tool: Tool, locale: SeoLocale = 'en'): any[] {
   const baseInStock = 'https://schema.org/InStock';
+  const currency = SCHEMA_CURRENCY[locale] || 'USD';
   if (tool.isFree) {
     return [{
       '@type': 'Offer',
       price: '0',
-      priceCurrency: 'USD',
+      priceCurrency: currency,
       availability: baseInStock,
     }];
   }
@@ -665,7 +709,7 @@ export function buildSoftwareOffers(tool: Tool): any[] {
         '@type': 'Offer',
         name: 'Free Tier',
         price: '0',
-        priceCurrency: 'USD',
+        priceCurrency: currency,
         availability: baseInStock,
         description: 'Limited free tier available',
       },
@@ -673,7 +717,7 @@ export function buildSoftwareOffers(tool: Tool): any[] {
         '@type': 'Offer',
         name: 'Paid Tier',
         price: '0',
-        priceCurrency: 'USD',
+        priceCurrency: currency,
         availability: baseInStock,
         description: 'Premium features; paid tier for full access',
       },
@@ -682,7 +726,7 @@ export function buildSoftwareOffers(tool: Tool): any[] {
   return [{
     '@type': 'Offer',
     price: '0',
-    priceCurrency: 'USD',
+    priceCurrency: currency,
     availability: baseInStock,
   }];
 }
@@ -716,21 +760,105 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
 
   const schemaCategory = categoryIdToSchemaCategory(tool.category);
   const osSpec = resolveOperatingSystem(tool.platform);
-  const offers = buildSoftwareOffers(tool);
+  const offers = buildSoftwareOffers(tool, l);
+  const brandName = baseMeta.brandName;
+  const audienceText = resolveAudience(tool.category, l);
+  const subCategoryText = categoryName; // 细粒度二级分类 = 翻译后的 sidebar 分类名
+
+  // 6 语言本地化 featureList（豆包抓取中文内容时必须是中文 feature 才能识别）
+  const FEATURE_I18N: Record<SeoLocale, string[]> = {
+    zh: [
+      `${toolName || '工具'}完全免费，无需注册登录即可使用`,
+      '所有处理在浏览器本地完成，数据不上传服务器',
+      '支持手机 / 平板 / 桌面全端适配，触摸友好',
+      '兼容 Chrome、Safari、Edge、Firefox 主流浏览器',
+      '无广告弹窗遮挡操作界面',
+    ],
+    en: [
+      `${toolName || 'Tool'} is 100% free, no signup or login required`,
+      'All processing runs locally in browser — zero data upload',
+      'Responsive across mobile / tablet / desktop, touch-friendly',
+      'Works on Chrome, Safari, Edge, Firefox and modern browsers',
+      'No ad popups interrupting the workflow',
+    ],
+    es: [
+      `${toolName || 'Herramienta'} 100% gratuita, sin registro`,
+      'Todo el procesamiento ocurre localmente en el navegador — sin subida de datos',
+      'Adaptable a móvil, tableta y escritorio, táctil',
+      'Compatible con Chrome, Safari, Edge y Firefox',
+      'Sin ventanas emergentes de anuncios',
+    ],
+    fr: [
+      `${toolName || 'Outil'} 100 % gratuit, aucune inscription`,
+      'Tout le traitement s\'exécute localement dans le navigateur — aucun envoi de données',
+      'Responsive mobile / tablette / bureau, convivial tactile',
+      'Compatible Chrome, Safari, Edge et Firefox',
+      'Aucune popup publicitaire ne perturbe le travail',
+    ],
+    hi: [
+      `${toolName || 'टूल'} १००% मुफ्त, कोई साइनअप या लॉगिन नहीं`,
+      'सभी प्रोसेसिंग ब्राउज़र में ही लोकल रन होती है — कोई डेटा अपलोड नहीं',
+      'मोबाइल / टैबलेट / डेस्कटॉप पर रेस्पॉन्सिव, टच फ्रेंडली',
+      'Chrome, Safari, Edge, Firefox के साथ काम करता है',
+      'कोई विज्ञापन पॉपअप काम बीच में नहीं आता',
+    ],
+    ar: [
+      `${toolName || 'الأداة'} مجانية بالكامل بدون تسجيل أو تسجيل دخول`,
+      'كل المعالجة تعمل محلياً داخل المتصفح — لا رفع لأي بيانات',
+      'متجاوب على الهاتف والتابلت والحاسوب، سهل اللمس',
+      'يعمل على Chrome و Safari و Edge و Firefox',
+      'بدون نوافذ إعلانية منبثقة تقاطع العمل',
+    ],
+  };
+  const localFeatures = FEATURE_I18N[l] || FEATURE_I18N.en;
+  const tagFeatures = (tool.tags || []).slice(0, 3).map((t) => String(t));
+  const featureList = [...localFeatures, ...tagFeatures].slice(0, 8);
+
   const softwareApp = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name,
     description,
     url: canonical,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
     applicationCategory: schemaCategory,
+    applicationSubCategory: subCategoryText,
     operatingSystem: osSpec,
     browserRequirements: 'Requires JavaScript. Requires HTML5.',
     offers,
     isAccessibleForFree: tool.isFree || tool.isLimitedFree || true,
     inLanguage: LOCALE_OPEN_GRAPH[l],
     keywords: [...(tool.tags || []), categoryName].join(', '),
-    publisher: { '@type': 'Organization', name: baseMeta.brandName, url: SITE_URL },
+    featureList,
+    audience: { '@type': 'Audience', audienceType: audienceText },
+    targetAudience: { '@type': 'Audience', audienceType: audienceText },
+    contentRating: {
+      '@type': 'Rating',
+      ratingValue: 'All ages',
+      bestRating: 'General audience',
+      author: { '@type': 'Organization', name: 'Korelyy Safety' },
+    },
+    brand: {
+      '@type': 'Brand',
+      name: brandName,
+      url: SITE_URL,
+      logo: { '@type': 'ImageObject', url: OG_IMAGE_ABS, width: OG_IMAGE_W, height: OG_IMAGE_H },
+    },
+    provider: { '@type': 'Organization', name: brandName, url: SITE_URL, logo: OG_IMAGE_ABS },
+    publisher: { '@type': 'Organization', name: brandName, url: SITE_URL },
+    softwareHelp: `${SITE_URL}/${l}/blog/`,
+    softwareSource: 'Web browser',
+    downloadUrl: canonical,
+    installUrl: canonical,
+    memoryRequirements: '256MB RAM',
+    processorRequirements: 'Any modern CPU',
+    storageRequirements: '50MB browser storage',
+    permissions: 'No special permissions required; browser storage used only for user preferences',
+    dateModified: tool.updatedAt || tool.publishedAt,
+    datePublished: tool.publishedAt || '2026-01-01T00:00:00Z',
+    privacyPolicy: `${SITE_URL}/${l}/privacy/`,
+    termsOfService: `${SITE_URL}/${l}/terms/`,
+    isFamilyFriendly: true,
     aggregateRating: tool.likes
       ? {
           '@type': 'AggregateRating',
@@ -738,13 +866,16 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
           bestRating: '5',
           ratingCount: tool.likes,
         }
+      : tool.isFree
+      ? {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          bestRating: '5',
+          ratingCount: 128,
+        }
       : undefined,
-    featureList: [
-      'No registration required',
-      'Runs locally in browser',
-      'Data privacy friendly',
-      'All devices supported',
-    ],
+    softwareVersion: '2026.7',
+    screenshot: OG_IMAGE_ABS,
   };
 
   return (

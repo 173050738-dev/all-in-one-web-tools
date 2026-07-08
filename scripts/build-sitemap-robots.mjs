@@ -111,6 +111,39 @@ const sitemapPath = path.join(publicDir, 'sitemap.xml');
 fs.writeFileSync(sitemapPath, xml, 'utf-8');
 console.log(`[sitemap-build] Wrote ${sitemapPath} (${Math.round(xml.length / 1024)} KB)`);
 
+// ---------------- Generate locale-specific sitemaps (zh / fr / en for 头条 & 海外SEO) ----------------
+const XMLNS_LOCALE = 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
+function buildLocaleSitemap(locale) {
+  let lxml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset ${XMLNS_LOCALE}>\n`;
+  for (const page of allPages) {
+    const base = page.path === '/' ? '' : page.path;
+    const url = `${SITE_URL}/${locale}${base}/`;
+    const priority = (locale === DEFAULT_LOCALE ? page.priority : page.priority * 0.92).toFixed(2);
+    lxml += `  <url>\n`;
+    lxml += `    <loc>${url}</loc>\n`;
+    lxml += `    <lastmod>${now}</lastmod>\n`;
+    lxml += `    <changefreq>${page.changeFreq}</changefreq>\n`;
+    lxml += `    <priority>${priority}</priority>\n`;
+    lxml += `  </url>\n`;
+  }
+  lxml += `</urlset>\n`;
+  const p = path.join(publicDir, `sitemap-${locale}.xml`);
+  fs.writeFileSync(p, lxml, 'utf-8');
+  console.log(`[sitemap-build] Wrote ${p} for locale=${locale} (${Math.round(lxml.length / 1024)} KB, ${allPages.length} URLs)`);
+}
+['zh', 'fr', 'en', 'hi', 'es', 'ar'].forEach(buildLocaleSitemap);
+
+// ---------------- Generate sitemap-index.xml (aggregates locale sitemaps) ----------------
+let indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+for (const l of KNOWN_LOCALES) {
+  indexXml += `  <sitemap>\n    <loc>${SITE_URL}/sitemap-${l}.xml</loc>\n    <lastmod>${now}</lastmod>\n  </sitemap>\n`;
+}
+indexXml += `  <sitemap>\n    <loc>${SITE_URL}/sitemap.xml</loc>\n    <lastmod>${now}</lastmod>\n  </sitemap>\n`;
+indexXml += `</sitemapindex>\n`;
+const indexPath = path.join(publicDir, 'sitemap-index.xml');
+fs.writeFileSync(indexPath, indexXml, 'utf-8');
+console.log(`[sitemap-build] Wrote ${indexPath} (${indexXml.length} bytes)`);
+
 // ---------------- Generate robots.txt ----------------
 const robots = `# Korelyy robots.txt
 # Generated automatically — do not edit by hand.
@@ -120,8 +153,57 @@ User-agent: *
 Allow: /
 Allow: /blog/
 Allow: /news/
+Allow: /tools/
+Allow: /workflows/
 Disallow: /api/
 Disallow: /_next/
+
+# ======== 头条搜索 / 豆包 专属爬虫（豆包抓取依赖头条搜索爬虫，必须单独放行）========
+# ToutiaoSpider = 头条搜索主爬虫（zhanzhang.toutiao.com 绑定域名后爬取来源）
+User-agent: ToutiaoSpider
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /tool/
+Allow: /workflows/
+Allow: /templates/
+Allow: /about/
+Allow: /compliance/
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+# 头条爬虫相对温和，Crawl-delay 不设置避免降低抓取频率
+
+# ByteSpider = 字节跳动通用爬虫（豆包大模型训练/搜索补充抓取）
+User-agent: ByteSpider
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /tool/
+Allow: /workflows/
+Allow: /templates/
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+
+# Bytespider (全小写，部分豆包爬虫节点UA变体)
+User-agent: Bytespider
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /tool/
+Allow: /workflows/
+Allow: /templates/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*?_rsc=
 
 User-agent: Googlebot
 Allow: /
@@ -265,8 +347,12 @@ Disallow: /ideas
 Disallow: /*?_rsc=
 Crawl-delay: 1
 
+# ======== Sitemaps（含分语言版本，头条站长平台单独提交 zh/fr）========
 Sitemap: ${SITE_URL}/sitemap.xml
 Sitemap: ${SITE_URL}/sitemap-index.xml
+Sitemap: ${SITE_URL}/sitemap-zh.xml
+Sitemap: ${SITE_URL}/sitemap-fr.xml
+Sitemap: ${SITE_URL}/sitemap-en.xml
 
 Host: ${SITE_URL}
 `;

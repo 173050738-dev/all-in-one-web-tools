@@ -6,8 +6,57 @@ User-agent: *
 Allow: /
 Allow: /blog/
 Allow: /news/
+Allow: /tools/
+Allow: /workflows/
 Disallow: /api/
 Disallow: /_next/
+
+# ======== 头条搜索 / 豆包 专属爬虫（豆包抓取依赖头条搜索爬虫，必须单独放行）========
+# ToutiaoSpider = 头条搜索主爬虫（zhanzhang.toutiao.com 绑定域名后爬取来源）
+User-agent: ToutiaoSpider
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /tool/
+Allow: /workflows/
+Allow: /templates/
+Allow: /about/
+Allow: /compliance/
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+# 头条爬虫相对温和，Crawl-delay 不设置避免降低抓取频率
+
+# ByteSpider = 字节跳动通用爬虫（豆包大模型训练/搜索补充抓取）
+User-agent: ByteSpider
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /tool/
+Allow: /workflows/
+Allow: /templates/
+Allow: /og-image.png
+Disallow: /api/
+Disallow: /_next/
+Disallow: /ideas
+Disallow: /*?_rsc=
+
+# Bytespider (全小写，部分豆包爬虫节点UA变体)
+User-agent: Bytespider
+Allow: /
+Allow: /blog/
+Allow: /news/
+Allow: /tools/
+Allow: /tool/
+Allow: /workflows/
+Allow: /templates/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*?_rsc=
 
 User-agent: Googlebot
 Allow: /
@@ -151,7 +200,11 @@ Disallow: /ideas
 Disallow: /*?_rsc=
 Crawl-delay: 1
 
+# ======== Sitemaps（含分语言版本，头条站长平台单独提交 zh/fr）========
 Sitemap: https://korelyy.com/sitemap.xml
 Sitemap: https://korelyy.com/sitemap-index.xml
+Sitemap: https://korelyy.com/sitemap-zh.xml
+Sitemap: https://korelyy.com/sitemap-fr.xml
+Sitemap: https://korelyy.com/sitemap-en.xml
 
 Host: https://korelyy.com

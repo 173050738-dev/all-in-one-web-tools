@@ -92,6 +92,7 @@ export const metadata: Metadata = {
     'msapplication-TileColor': '#2A3154',
     'msapplication-tap-highlight': 'no',
     'mobile-web-app-capable': 'yes',
+    'bytedance-verification-code': 'lB1lsK0p56mGhxh4iowe',
     ...(ADSENSE_ENABLED ? { 'google-adsense-account': ADSENSE_PUBLISHER_ID } : null),
   },
   openGraph: {
