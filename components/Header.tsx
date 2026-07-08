@@ -181,33 +181,71 @@ export default function Header({ locale }: { locale: string }) {
     return () => window.removeEventListener('close-all-overlay-panels', onCloseAll as EventListener);
   }, []);
 
+  const [showFavSyncSuccessToast, setShowFavSyncSuccessToast] = useState(false);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
     let unauthTimer: ReturnType<typeof setTimeout> | null = null;
     let failTimer: ReturnType<typeof setTimeout> | null = null;
+    let successTimer: ReturnType<typeof setTimeout> | null = null;
+    let retryTimer: ReturnType<typeof setTimeout> | null = null;
 
     const onFavUnauth = () => {
       if (unauthTimer) clearTimeout(unauthTimer);
       setShowFavSyncFailToast(false);
+      setShowFavSyncSuccessToast(false);
       setShowFavUnauthToast(true);
       unauthTimer = setTimeout(() => setShowFavUnauthToast(false), 3500);
     };
     const onFavSync = (e: Event) => {
       const ev = e as CustomEvent<{ kind: string; error?: string }>;
-      if (ev.detail?.kind !== 'error') return;
-      if (failTimer) clearTimeout(failTimer);
-      setShowFavUnauthToast(false);
-      setShowFavSyncFailToast(true);
-      failTimer = setTimeout(() => setShowFavSyncFailToast(false), 4500);
+      if (ev.detail?.kind === 'error') {
+        if (failTimer) clearTimeout(failTimer);
+        if (successTimer) clearTimeout(successTimer);
+        setShowFavUnauthToast(false);
+        setShowFavSyncSuccessToast(false);
+        setShowFavSyncFailToast(true);
+        failTimer = setTimeout(() => setShowFavSyncFailToast(false), 4500);
+      } else if (ev.detail?.kind === 'success') {
+        if (successTimer) clearTimeout(successTimer);
+        if (failTimer) clearTimeout(failTimer);
+        setShowFavSyncFailToast(false);
+        setShowFavSyncSuccessToast(true);
+        successTimer = setTimeout(() => setShowFavSyncSuccessToast(false), 2800);
+      }
+    };
+    const onNetworkRestore = () => {
+      try {
+        const authStore = require('@/stores/auth').useAuthStore;
+        const authState = authStore?.getState?.();
+        const isAuthed = authState?.status === 'authed';
+        if (!isAuthed) return;
+        const favStore = require('@/stores/favorites').useFavoritesStore;
+        const favState = favStore?.getState?.();
+        if (!favState || favState.cloudSyncStatus !== 'error') return;
+        if (failTimer) clearTimeout(failTimer);
+        setShowFavSyncFailToast(false);
+        setShowFavSyncSuccessToast(true);
+        setShowFavUnauthToast(false);
+        successTimer = setTimeout(() => setShowFavSyncSuccessToast(false), 2500);
+        if (retryTimer) clearTimeout(retryTimer);
+        retryTimer = setTimeout(() => {
+          try { favState?.retryAllPending?.(); } catch { /* ignore */ }
+        }, 400);
+      } catch { /* ignore */ }
     };
 
     window.addEventListener('fav:unauth-toggle', onFavUnauth as EventListener);
     window.addEventListener('fav:sync-result', onFavSync as EventListener);
+    window.addEventListener('online', onNetworkRestore as EventListener);
     return () => {
       window.removeEventListener('fav:unauth-toggle', onFavUnauth as EventListener);
       window.removeEventListener('fav:sync-result', onFavSync as EventListener);
+      window.removeEventListener('online', onNetworkRestore as EventListener);
       if (unauthTimer) clearTimeout(unauthTimer);
       if (failTimer) clearTimeout(failTimer);
+      if (successTimer) clearTimeout(successTimer);
+      if (retryTimer) clearTimeout(retryTimer);
     };
   }, []);
 
@@ -686,8 +724,17 @@ export default function Header({ locale }: { locale: string }) {
             onClick={() => setShowFavSyncFailToast(false)}
             className='fixed cursor-pointer top-16 sm:top-20 right-3 sm:right-4 z-50 max-w-[280px] sm:max-w-sm px-3 sm:px-4 py-2.5 sm:py-3 bg-rose-600 hover:bg-rose-700 text-white text-xs sm:text-sm rounded-lg shadow-lg transition-colors select-none'
           >
-            <div className='font-semibold mb-0.5'>☁️ {tAuth('err-network')}</div>
-            <div className='text-white/85 leading-relaxed'>收藏已保存到本地，网络恢复后登录可再次同步。</div>
+            <div className='font-semibold mb-0.5'>💾 {tAuth('fav-saved-local')}</div>
+            <div className='text-white/85 leading-relaxed'>{tAuth('fav-saved-detail')}</div>
+          </div>
+        )}
+        {showFavSyncSuccessToast && (
+          <div
+            onClick={() => setShowFavSyncSuccessToast(false)}
+            className='fixed cursor-pointer top-16 sm:top-20 right-3 sm:right-4 z-50 max-w-[280px] sm:max-w-sm px-3 sm:px-4 py-2.5 sm:py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm rounded-lg shadow-lg transition-colors select-none'
+          >
+            <div className='font-semibold mb-0.5'>✅ {tAuth('fav-sync-success')}</div>
+            <div className='text-white/85 leading-relaxed'>{tAuth('fav-sync-retry')}</div>
           </div>
         )}
       </div>

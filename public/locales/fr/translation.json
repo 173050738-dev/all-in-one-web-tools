@@ -283,7 +283,23 @@
     "back": "Retour au tableau de bord",
     "related": "Outils associés",
     "guide": "Guide d'utilisation",
-    "features": "Fonctionnalités"
+    "features": "Fonctionnalités",
+    "section-scenarios": "Cas d'usage",
+    "section-tutorial": "Comment utiliser",
+    "section-advantages": "Pourquoi nous choisir",
+    "scenarios-hint": "Problèmes courants résolus",
+    "tutorial-hint": "Étapes simples à suivre",
+    "advantages-hint": "Notre valeur ajoutée",
+    "fallback-scenario-1": "Fatigué des logiciels desktop lourds pour une tâche simple",
+    "fallback-scenario-2": "Besoin d'une solution rapide sur ordinateur partagé ou mobile, sans installation",
+    "fallback-scenario-3": "Inquiétude pour la vie privée en envoyant des fichiers sensibles à des services inconnus",
+    "fallback-tutorial-1": "Ouvre l'outil — pas d'inscription, pas de téléchargement",
+    "fallback-tutorial-2": "Colle, téléverse ou saisis ton contenu dans la zone prévue",
+    "fallback-tutorial-3": "Ajuste les préférences puis appuie sur le bouton pour obtenir le résultat instantanément",
+    "fallback-tutorial-4": "Copie, télécharge ou partage — tout s'exécute localement dans ton navigateur",
+    "fallback-advantage-1": "100% dans le navigateur — rien ne s'installe, rien ne te piste",
+    "fallback-advantage-2": "Mobile & bureau avec UI tactile optimisée, 6 langues supportées",
+    "fallback-advantage-3": "Résultats immédiats, sans filigrane, sans paiement caché sur l'essentiel"
   },
   "tools": {
     "163": {
@@ -5863,7 +5879,11 @@
     "profile-close": "Fermer",
     "provider-email": "E-mail et mot de passe",
     "provider-google": "Compte Google",
-    "footer-legal": "En continuant, tu acceptes les CGU et la politique de confidentialité"
+    "footer-legal": "En continuant, tu acceptes les CGU et la politique de confidentialité",
+    "fav-saved-local": "Enregistré localement",
+    "fav-saved-detail": "Favoris enregistrés sur cet appareil. Connecte-toi après le retour du réseau pour synchroniser.",
+    "fav-sync-success": "Favoris synchronisés avec succès",
+    "fav-sync-retry": "Réseau rétabli — nouvelle tentative de synchronisation"
   },
   "kofi": {
     "supportUs": "Soutenez Korelyy et gardez les outils gratuits en ligne",

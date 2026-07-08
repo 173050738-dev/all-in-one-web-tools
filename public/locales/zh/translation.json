@@ -280,10 +280,26 @@
     "social-desc": "与朋友分享工具"
   },
   "tool": {
-    "back": "返回仪表板",
+    "back": "返回仪表盘",
     "related": "相关工具",
     "guide": "使用指南",
-    "features": "功能特性"
+    "features": "功能特性",
+    "section-scenarios": "痛点场景",
+    "section-tutorial": "使用教程",
+    "section-advantages": "优势对比",
+    "scenarios-hint": "这些场景你一定遇到过",
+    "tutorial-hint": "3步搞定，0学习成本",
+    "advantages-hint": "为什么选我们",
+    "fallback-scenario-1": "不想下几G的大软件，只是偶尔用一次，启动慢还占硬盘",
+    "fallback-scenario-2": "在公司/网吧/手机临时办公，没有权限装软件，事情又急",
+    "fallback-scenario-3": "传私密文档去陌生网站不放心，担心数据泄露或被爬虫",
+    "fallback-tutorial-1": "打开工具即开即用，无需注册、无需下载任何东西",
+    "fallback-tutorial-2": "粘贴文字、上传文件或输入参数，按提示填写",
+    "fallback-tutorial-3": "点击主按钮即可获得结果，所有处理在浏览器本地完成",
+    "fallback-tutorial-4": "一键复制、下载或分享结果，不留下任何服务端痕迹",
+    "fallback-advantage-1": "纯浏览器本地处理，数据不上传服务器，隐私有保障",
+    "fallback-advantage-2": "手机/平板/电脑全端适配，触摸友好，6种语言随心切换",
+    "fallback-advantage-3": "核心功能永久免费、无水印、无隐藏收费套路"
   },
   "tools": {
     "163": {
@@ -5863,7 +5879,11 @@
     "profile-close": "关闭",
     "provider-email": "邮箱密码",
     "provider-google": "Google 账户",
-    "footer-legal": "继续即代表同意服务条款与隐私政策"
+    "footer-legal": "继续即代表同意服务条款与隐私政策",
+    "fav-saved-local": "已保存到本地",
+    "fav-saved-detail": "收藏已保存到本机，网络恢复后登录可再次同步。",
+    "fav-sync-success": "收藏同步成功",
+    "fav-sync-retry": "网络已恢复，正在重试同步"
   },
   "kofi": {
     "supportUs": "支持 Korelyy 继续维护免费工具",

@@ -89,13 +89,13 @@ export default function middleware(request: NextRequest) {
       'Content-Security-Policy',
       "default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com https: data: blob:; " +
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; " +
-        "img-src 'self' data: blob: https: http:; " +
+        "img-src 'self' data: blob: https: http: https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net; " +
         "font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; " +
-        "connect-src 'self' ws: wss: http: https: data:; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+        "connect-src 'self' ws: wss: http: https: data: https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://adservice.google.com; " +
         "worker-src 'self' blob:; " +
         "manifest-src 'self'; " +
-        "frame-src 'none'; " +
+        "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com; " +
         "object-src 'none'; " +
         "base-uri 'self'; " +
         "form-action 'self'; " +
@@ -106,14 +106,14 @@ export default function middleware(request: NextRequest) {
       'Content-Security-Policy',
       "default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com https: data: blob:; " +
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; " +
-        "img-src 'self' data: blob: https: http:; " +
+        "img-src 'self' data: blob: https: http: https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://fundingchoices.google.com; " +
         "font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; " +
-        "connect-src 'self' ws: wss: https: data:; " +
-        "script-src 'self' 'unsafe-inline'; " +
+        "connect-src 'self' ws: wss: https: data: https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://adservice.google.com; " +
+        "script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://adservice.google.com; " +
         "worker-src 'self' blob:; " +
         "manifest-src 'self'; " +
         "upgrade-insecure-requests; " +
-        "frame-src 'none'; " +
+        "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://fundingchoices.google.com; " +
         "object-src 'none'; " +
         "base-uri 'self'; " +
         "form-action 'self'; " +

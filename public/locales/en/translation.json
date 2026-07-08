@@ -283,7 +283,23 @@
     "back": "Back to Dashboard",
     "related": "Related Tools",
     "guide": "Usage Guide",
-    "features": "Features"
+    "features": "Features",
+    "section-scenarios": "When You Need This",
+    "section-tutorial": "How to Use",
+    "section-advantages": "Why Choose Korelyy",
+    "scenarios-hint": "Common pain points this tool solves",
+    "tutorial-hint": "Step-by-step instructions",
+    "advantages-hint": "What makes us better",
+    "fallback-scenario-1": "Tired of bloated desktop software that takes minutes to launch for a simple task",
+    "fallback-scenario-2": "Need a quick fix while working on a shared computer or phone, nothing installed",
+    "fallback-scenario-3": "Worrying about privacy when uploading sensitive files to unknown online services",
+    "fallback-tutorial-1": "Open the tool — no sign-up or download needed",
+    "fallback-tutorial-2": "Paste, upload or type your content in the input area",
+    "fallback-tutorial-3": "Adjust preferences, then tap the action button to get your result instantly",
+    "fallback-tutorial-4": "Copy, download or share the output — everything runs locally in your browser",
+    "fallback-advantage-1": "100% browser-based — nothing installs, nothing tracks you",
+    "fallback-advantage-2": "Mobile & desktop with touch-optimized UI, 6 languages supported",
+    "fallback-advantage-3": "Instant results with no watermarks, no hidden paywalls on core features"
   },
   "tools": {
     "163": {
@@ -5863,7 +5879,11 @@
     "profile-close": "Close",
     "provider-email": "Email & Password",
     "provider-google": "Google Account",
-    "footer-legal": "By continuing you agree to our Terms and Privacy Policy"
+    "footer-legal": "By continuing you agree to our Terms and Privacy Policy",
+    "fav-saved-local": "Saved locally",
+    "fav-saved-detail": "Favorites saved to this device. Sign in after network restore to sync.",
+    "fav-sync-success": "Favorites synced successfully",
+    "fav-sync-retry": "Network restored — retrying sync"
   },
   "kofi": {
     "supportUs": "Support Korelyy & keep free tools alive",

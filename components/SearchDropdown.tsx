@@ -247,11 +247,16 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
     return fallback;
   };
   const translateField = (tool: any, field: 'name' | 'description') => {
-    const fallback = field === 'name' ? (tool.name || '') : (tool.description || '');
-    if (locale === 'zh') return fallback;
+    const fallback = field === 'name'
+      ? (locale === 'zh' ? (tool.name || '') : (tool.nameEn || tool.name || ''))
+      : (locale === 'zh' ? (tool.description || '') : (tool.descriptionEn || tool.description || ''));
     const slug = tool.slug || tool.id || '';
     const altId = tool.id && tool.id !== tool.slug ? tool.id : '';
-    return safeTranslate(`${slug}.${field}`, altId ? safeTranslate(`${altId}.${field}`, fallback) : fallback);
+    const t = safeTranslate(
+      `${slug}.${field}`,
+      altId ? safeTranslate(`${altId}.${field}`, fallback) : fallback
+    );
+    return t;
   };
 
   const isAiMode = ENABLE_AI_FEATURES && _isAiModeRaw;

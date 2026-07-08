@@ -31,7 +31,9 @@ export interface FavoritesState {
   clearHistory: () => void;
   setFavoriteTools: (toolIds: string[]) => void;
   getFavoriteSlugs: () => string[];
-  mergeFromServer: (serverSlugs: string[]) => void;
+  getFavoriteIdsCompat: () => string[];
+  mergeFromServer: (serverSlugs: string[] | string | any) => void;
+  retryAllPending: () => Promise<number>;
   _setCloudStatus: (s: CloudSyncStatus, err?: string | null) => void;
 }
 
@@ -213,17 +215,100 @@ export const useFavoritesStore = create<FavoritesState>()(
           .filter(Boolean) as string[];
       },
 
+      getFavoriteIdsCompat: () => {
+        const s = get();
+        const candidates = [
+          s.favoriteTools,
+          s.favoritedTools,
+          s.likedTools,
+        ];
+        const seen = new Set<string>();
+        const result: string[] = [];
+        for (const arr of candidates) {
+          if (!Array.isArray(arr)) continue;
+          for (const v of arr) {
+            if (typeof v !== 'string') continue;
+            const clean = v.trim();
+            if (!clean || seen.has(clean)) continue;
+            seen.add(clean);
+            const asId = _slugToId(s.allTools, clean);
+            const pushVal = asId || clean;
+            if (!seen.has(pushVal)) {
+              seen.add(pushVal);
+              result.push(pushVal);
+            }
+          }
+        }
+        return result;
+      },
+
       mergeFromServer: (serverSlugs) => {
         const s = get();
-        const serverIds = (serverSlugs || [])
+        let cleaned: string[] = [];
+        if (Array.isArray(serverSlugs)) {
+          cleaned = (serverSlugs as any[]).map((x) => {
+            if (typeof x === 'string') return x;
+            if (x && typeof x === 'object') {
+              return (x.slug as string) || (x.tool_slug as string) || (x.id as string) || '';
+            }
+            return '';
+          }).filter(Boolean) as string[];
+        } else if (typeof serverSlugs === 'string') {
+          try {
+            const parsed = JSON.parse(serverSlugs);
+            cleaned = Array.isArray(parsed) ? parsed.filter((x: any) => typeof x === 'string') : [];
+          } catch {
+            cleaned = serverSlugs.split(',').map((x) => x.trim()).filter(Boolean);
+          }
+        } else if (serverSlugs && typeof serverSlugs === 'object') {
+          const raw = (serverSlugs as any).next || (serverSlugs as any).slugs || (serverSlugs as any).favorites || [];
+          cleaned = Array.isArray(raw) ? raw.filter((x: any) => typeof x === 'string') : [];
+        }
+        const serverIds = cleaned
           .map((slug) => _slugToId(s.allTools, slug))
           .filter(Boolean) as string[];
         const localIds = s.favoriteTools || [];
         const merged = Array.from(new Set<string>([...serverIds, ...localIds]));
-        set({ favoriteTools: merged, favoritedTools: merged });
+        set({ favoriteTools: merged, favoritedTools: merged, cloudSyncStatus: 'idle', lastCloudError: null });
       },
 
-      _setCloudStatus: (s, err = null) => set({ cloudSyncStatus: s, lastCloudError: err }),
+      retryAllPending: async () => {
+        const s = get();
+        const authStore = _getAuthStore();
+        const authState = authStore?.getState?.();
+        if (!authState || authState.status !== 'authed') return 0;
+        const pendingSlugs = s.getFavoriteSlugs();
+        if (!pendingSlugs.length) return 0;
+        let successCount = 0;
+        let lastErr: string | null = null;
+        set({ cloudSyncStatus: 'syncing', lastCloudError: null });
+        try {
+          const syncFn: ((slugs: string[]) => Promise<string[] | { next?: string[]; favorites?: string[] }>) | undefined =
+            authState.bulkSyncFavorites || authState.syncFavorites;
+          const r = syncFn ? await syncFn(pendingSlugs) : pendingSlugs;
+          const nextSlugs: string[] = Array.isArray(r)
+            ? r
+            : (r?.next || r?.favorites || pendingSlugs);
+          const nextIds = nextSlugs
+            .map((slug) => _slugToId(get().allTools, slug))
+            .filter(Boolean) as string[];
+          successCount = nextIds.length;
+          set({
+            favoriteTools: nextIds,
+            favoritedTools: nextIds,
+            cloudSyncStatus: 'idle',
+            lastCloudError: null,
+          });
+          _emitSyncResult('success', { retry: true, count: successCount });
+        } catch (e: any) {
+          lastErr = typeof e?.message === 'string' ? e.message : 'RETRY_SYNC_FAIL';
+          set({ cloudSyncStatus: 'error', lastCloudError: lastErr });
+          _emitSyncResult('error', { retry: true, error: lastErr });
+        }
+        return successCount;
+      },
+
+      _setCloudStatus: (status, err = null) => set({ cloudSyncStatus: status, lastCloudError: err }),
     }),
     {
       name: 'tool-hub-favorites',

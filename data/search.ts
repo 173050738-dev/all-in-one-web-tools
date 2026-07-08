@@ -79,6 +79,23 @@ const synonymMap: Record<string, string[]> = {
   'ppt template': ['ppt模板', '幻灯片模板', '演示文稿模板', 'powerpoint template'],
   'avatar maker': ['头像制作', '头像生成', 'avatar generator', '头像设计'],
   'logo maker': ['logo设计', 'logo生成', 'logo creator', '商标设计'],
+  'seo': ['搜索引擎优化', '网站优化', 'seo优化', '关键词优化', 'search engine optimization'],
+  'svg': ['矢量图', 'svg编辑器', 'svg转换', 'vector', '矢量图标'],
+  'docx': ['word', 'word文档', 'doc', 'word处理', '文档处理'],
+  'mp4': ['视频', '视频处理', '视频剪辑', 'video', 'video editor'],
+  'tupian yasuo': ['图片压缩', '压缩图片', '照片压缩', '图片优化'],
+  'koutu': ['抠图', '去背景', '背景去除', '透明背景'],
+  'fanyi': ['翻译', '在线翻译', '翻译器', '翻译工具'],
+  'jianli': ['简历', 'cv', 'resume', '简历模板'],
+  'p yixia': ['p图', '修图', '照片编辑', '图片处理'],
+  'zuoge ppt': ['做ppt', '制作幻灯片', 'ppt制作', '演示文稿'],
+  'zuo ppt': ['做ppt', 'ppt制作', '幻灯片', '演示文稿'],
+  'jiage shuiyin': ['加水印', '水印', '添加水印', '图片水印'],
+  'kou ge tu': ['抠个图', '抠图', '去背景', '抠背景'],
+  'zhuan ge shi': ['转格式', '格式转换', '文件转换', '格式互转'],
+  'ps': ['p图', '修图', '照片编辑', 'photoshop', '图片处理'],
+  'cad': ['cad图纸', 'cad查看器', 'dwg', 'cad转换'],
+  'psd': ['psd查看', 'photoshop文件', 'psd转换', 'psd编辑器'],
 };
 
 export function searchTools(tools: Tool[], query: string): Tool[] {

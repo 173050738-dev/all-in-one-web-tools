@@ -283,7 +283,23 @@
     "back": "Volver al panel",
     "related": "Herramientas relacionadas",
     "guide": "Guía de uso",
-    "features": "Características"
+    "features": "Características",
+    "section-scenarios": "Casos de uso",
+    "section-tutorial": "Cómo usar",
+    "section-advantages": "Por qué elegirnos",
+    "scenarios-hint": "Problemas comunes que resuelve",
+    "tutorial-hint": "Instrucciones paso a paso",
+    "advantages-hint": "Lo que nos diferencia",
+    "fallback-scenario-1": "Cansado de software de escritorio pesado para una tarea sencilla",
+    "fallback-scenario-2": "Necesitas una solución rápida en un ordenador compartido o móvil",
+    "fallback-scenario-3": "Preocupado por la privacidad al subir archivos a servicios desconocidos",
+    "fallback-tutorial-1": "Abre la herramienta — sin registro ni descarga",
+    "fallback-tutorial-2": "Pega, sube o escribe tu contenido en el área de entrada",
+    "fallback-tutorial-3": "Ajusta las preferencias y pulsa el botón para obtener el resultado al instante",
+    "fallback-tutorial-4": "Copia, descarga o comparte — todo se ejecuta localmente en tu navegador",
+    "fallback-advantage-1": "100% en el navegador — nada se instala, nada te rastrea",
+    "fallback-advantage-2": "Móvil y escritorio con UI optimizada táctil, 6 idiomas",
+    "fallback-advantage-3": "Resultados instantáneos, sin marcas de agua, sin muros de pago en lo esencial"
   },
   "tools": {
     "163": {
@@ -5863,7 +5879,11 @@
     "profile-close": "Cerrar",
     "provider-email": "Correo y contraseña",
     "provider-google": "Cuenta de Google",
-    "footer-legal": "Al continuar aceptas los Términos y la Política de privacidad"
+    "footer-legal": "Al continuar aceptas los Términos y la Política de privacidad",
+    "fav-saved-local": "Guardado localmente",
+    "fav-saved-detail": "Favoritos guardados en este dispositivo. Inicia sesión al recuperar la red para sincronizar.",
+    "fav-sync-success": "Favoritos sincronizados correctamente",
+    "fav-sync-retry": "Red restaurada — reintentando sincronización"
   },
   "kofi": {
     "supportUs": "Apoya a Korelyy y mantén las herramientas gratuitas",
