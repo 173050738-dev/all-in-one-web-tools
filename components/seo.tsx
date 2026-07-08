@@ -768,42 +768,42 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
   // 6 语言本地化 featureList（豆包抓取中文内容时必须是中文 feature 才能识别）
   const FEATURE_I18N: Record<SeoLocale, string[]> = {
     zh: [
-      `${toolName || '工具'}完全免费，无需注册登录即可使用`,
+      `${name || '工具'}完全免费，无需注册登录即可使用`,
       '所有处理在浏览器本地完成，数据不上传服务器',
       '支持手机 / 平板 / 桌面全端适配，触摸友好',
       '兼容 Chrome、Safari、Edge、Firefox 主流浏览器',
       '无广告弹窗遮挡操作界面',
     ],
     en: [
-      `${toolName || 'Tool'} is 100% free, no signup or login required`,
+      `${name || 'Tool'} is 100% free, no signup or login required`,
       'All processing runs locally in browser — zero data upload',
       'Responsive across mobile / tablet / desktop, touch-friendly',
       'Works on Chrome, Safari, Edge, Firefox and modern browsers',
       'No ad popups interrupting the workflow',
     ],
     es: [
-      `${toolName || 'Herramienta'} 100% gratuita, sin registro`,
+      `${name || 'Herramienta'} 100% gratuita, sin registro`,
       'Todo el procesamiento ocurre localmente en el navegador — sin subida de datos',
       'Adaptable a móvil, tableta y escritorio, táctil',
       'Compatible con Chrome, Safari, Edge y Firefox',
       'Sin ventanas emergentes de anuncios',
     ],
     fr: [
-      `${toolName || 'Outil'} 100 % gratuit, aucune inscription`,
+      `${name || 'Outil'} 100 % gratuit, aucune inscription`,
       'Tout le traitement s\'exécute localement dans le navigateur — aucun envoi de données',
       'Responsive mobile / tablette / bureau, convivial tactile',
       'Compatible Chrome, Safari, Edge et Firefox',
       'Aucune popup publicitaire ne perturbe le travail',
     ],
     hi: [
-      `${toolName || 'टूल'} १००% मुफ्त, कोई साइनअप या लॉगिन नहीं`,
+      `${name || 'टूल'} १००% मुफ्त, कोई साइनअप या लॉगिन नहीं`,
       'सभी प्रोसेसिंग ब्राउज़र में ही लोकल रन होती है — कोई डेटा अपलोड नहीं',
       'मोबाइल / टैबलेट / डेस्कटॉप पर रेस्पॉन्सिव, टच फ्रेंडली',
       'Chrome, Safari, Edge, Firefox के साथ काम करता है',
       'कोई विज्ञापन पॉपअप काम बीच में नहीं आता',
     ],
     ar: [
-      `${toolName || 'الأداة'} مجانية بالكامل بدون تسجيل أو تسجيل دخول`,
+      `${name || 'الأداة'} مجانية بالكامل بدون تسجيل أو تسجيل دخول`,
       'كل المعالجة تعمل محلياً داخل المتصفح — لا رفع لأي بيانات',
       'متجاوب على الهاتف والتابلت والحاسوب، سهل اللمس',
       'يعمل على Chrome و Safari و Edge و Firefox',
