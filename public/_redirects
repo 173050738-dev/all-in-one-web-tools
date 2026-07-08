@@ -7,11 +7,17 @@
 # ============================================================
 
 # ---------- 头条/豆包站长验证文件：强制不重定向（内部200重写，绕过Clean URLs + 多语言前缀逻辑） ----------
-/ByteDanceVerify      /ByteDanceVerify.html    200
-/ByteDanceVerify.html /ByteDanceVerify.html    200
+# 匹配所有可能的路径变体（带/不带后缀、带/不带尾斜杠、带/不带语言前缀）
+/ByteDanceVerify*      /ByteDanceVerify.html    200
+/zh/ByteDanceVerify*   /ByteDanceVerify.html    200
+/en/ByteDanceVerify*   /ByteDanceVerify.html    200
+/es/ByteDanceVerify*   /ByteDanceVerify.html    200
+/fr/ByteDanceVerify*   /ByteDanceVerify.html    200
+/hi/ByteDanceVerify*   /ByteDanceVerify.html    200
+/ar/ByteDanceVerify*   /ByteDanceVerify.html    200
 
-# ---------- 根路径 → /zh/（默认中文首页，308 永久重定向 + 保留查询参数） ----------
-/                   /zh/                   308
+# ---------- P1-A：根路径 / 不再强制308跳转/zh/ → 由客户端index.html根据Accept-Language动态选择语言 ----------
+# （移除之前的 / → /zh/ 308 规则，避免全球用户强制中文）
 
 # ---------- www.korelyy.com → korelyy.com（308 永久重定向 + 完整路径透传） ----------
 https://www.korelyy.com/*    https://korelyy.com/:splat    308
