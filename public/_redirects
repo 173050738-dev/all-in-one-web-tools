@@ -6,6 +6,10 @@
 # trailingSlash: true 规范化（所有语言目录强制尾部斜杠，SEO统一URL）
 # ============================================================
 
+# ---------- 头条/豆包站长验证文件：强制不重定向（内部200重写，绕过Clean URLs + 多语言前缀逻辑） ----------
+/ByteDanceVerify      /ByteDanceVerify.html    200
+/ByteDanceVerify.html /ByteDanceVerify.html    200
+
 # ---------- 根路径 → /zh/（默认中文首页，308 永久重定向 + 保留查询参数） ----------
 /                   /zh/                   308
 
