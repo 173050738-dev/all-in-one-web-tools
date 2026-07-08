@@ -10,6 +10,7 @@ export interface ResolvedToolLink {
 }
 
 export const INTERNAL_TOOL_SLUGS = new Set<string>([
+  'audio-bpm-detector',
   'avatar-decorator',
   'base64-tool',
   'caption-generator',
@@ -27,16 +28,20 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'json-formatter',
   'keyword-spinoff-generator',
   'markdown-platform-adapter',
+  'markdown-platform-converter',
   'markdown-preview',
   'mortgage-calculator',
+  'multi-timezone-publish-time',
   'password-generator',
   'pdf-merger',
   'pinyin-annotator',
+  'polyphonic-pinyin-annotator',
   'qr-code-generator',
   'random-number',
   'regex-tester',
   'script-splitter',
   'sentiment-analyzer',
+  'srt-subtitle-generator',
   'text-counter',
   'text-tools',
   'text-to-speech',
@@ -46,6 +51,13 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'uuid-generator',
   'vertical-chinese-generator',
   'wallpaper-maker',
+  'wc-2026-schedule',
+  'wc-ascii-art',
+  'wc-champion-predictor',
+  'wc-fan-avatar',
+  'wc-name-decorator',
+  'wc-poster-generator',
+  'wc-scoreboard-simulator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

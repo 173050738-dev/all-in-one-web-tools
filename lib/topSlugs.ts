@@ -7,8 +7,7 @@ export const TOP_TOOL_SLUGS: string[] = INITIAL_HOME_TOOLS
   .map((t) => t.slug);
 
 const _mergedStaticToolSet = new Set<string>([
-  ...INTERNAL_TOOL_SLUGS,
-  ...TOP_TOOL_SLUGS,
+  ...TOP_TOOL_SLUGS.filter((s) => !INTERNAL_TOOL_SLUGS.has(s)),
 ]);
 export const STATIC_EXPORT_TOOL_SLUGS: string[] = Array.from(_mergedStaticToolSet);
 

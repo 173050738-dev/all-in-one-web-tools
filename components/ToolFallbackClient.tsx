@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Home, ChevronRight, ExternalLink, ArrowLeft, ShieldCheck, Star, Heart, Lightbulb, ListChecks, Award, CheckCircle2 } from 'lucide-react';
-import { useParams, usePathname } from 'next/navigation';
+import { Home, ChevronRight, ExternalLink, ArrowLeft, ShieldCheck, Star, Heart, Lightbulb, ListChecks, Award, CheckCircle2, Wrench } from 'lucide-react';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import { getToolBySlug, getRelatedTools } from '@/data/tools';
 import { categories } from '@/data/categories';
 import ToolCard from '@/components/ToolCard';
@@ -11,6 +11,8 @@ import { usePreferencesStore } from '@/stores/preferences';
 import SafeLink from '@/components/SafeLink';
 import { tagZhToEn, englishTags } from '@/data/english-tags';
 import { logLike, logFavorite } from '@/utils/audit-log';
+import { ToolPageJsonLd, type SeoLocale } from '@/components/seo';
+import { INTERNAL_TOOL_SLUGS } from '@/lib/toolLinks';
 
 const VALID_LOCALES = ['zh', 'en', 'hi', 'fr', 'es', 'ar'];
 
@@ -28,6 +30,7 @@ function setMeta(attr: 'name' | 'property', key: string, content: string) {
 export default function ToolFallbackClient({ localeParam, slugParam }: { localeParam?: string; slugParam?: string }) {
   const resolvedParams = useParams() as unknown as { locale?: string; slug?: string };
   const pathname = usePathname();
+  const router = useRouter();
   const pathLocaleMatch = pathname.match(/^\/([a-z]{2})(\/|$)/);
   const rawPathLocale = (pathLocaleMatch && pathLocaleMatch[1]) || '';
   const pathLocale = VALID_LOCALES.includes(rawPathLocale) ? rawPathLocale : 'en';
@@ -36,6 +39,9 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
   const pathSlugMatch = pathname.match(/\/tool\/([^/]+)/);
   const pathSlug = pathSlugMatch ? pathSlugMatch[1] : undefined;
   const resolvedSlug = slugParam || resolvedParams?.slug || pathSlug || '';
+
+  const isInternalTool = INTERNAL_TOOL_SLUGS.has(resolvedSlug);
+  const internalToolUrl = `/${resolvedLocale}/tool/${resolvedSlug}`;
 
   const t = useTranslations('tool');
   const tcT = useTranslations('toolcard');
@@ -51,9 +57,14 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
   const safeTranslate = (key: string, fallback: string) => {
     try {
       const translated = toolsT(key);
-      if (translated && translated !== key) return translated;
-    } catch { /* fallthrough */ }
-    return fallback;
+      if (!translated) return fallback;
+      if (translated === key) return fallback;
+      if (translated.endsWith(`.${key}`)) return fallback;
+      if (typeof translated === 'string' && /\.(scenario|tutorial|advantage)-\d+$/.test(translated)) return fallback;
+      return translated;
+    } catch {
+      return fallback;
+    }
   };
 
   const isZh = resolvedLocale === 'zh';
@@ -96,6 +107,10 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
   };
 
   useEffect(() => {
+    if (isInternalTool) {
+      router.replace(internalToolUrl);
+      return;
+    }
     if (!tool) return;
     addToHistory(tool.id);
     const title = toolName ? `${toolName} - Korelyy Tools` : 'Korelyy Tools';
@@ -118,7 +133,30 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
       document.head.appendChild(link);
     }
     link.setAttribute('href', canonical);
-  }, [tool, toolName, toolDescription, addToHistory]);
+  }, [isInternalTool, internalToolUrl, router, tool, toolName, toolDescription, addToHistory]);
+
+  if (isInternalTool) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <div className="animate-spin w-12 h-12 border-4 border-primary-600 border-t-transparent rounded-full mx-auto mb-5" />
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+          {isZh ? '正在打开工具…' : 'Opening tool…'}
+        </h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-8">
+          {isZh
+            ? '若未自动跳转，请点击下方按钮直接进入工具页面。'
+            : 'If you are not redirected automatically, click the button below to open the tool page.'}
+        </p>
+        <a
+          href={internalToolUrl}
+          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white text-sm sm:text-base font-semibold shadow-lg shadow-primary-600/20 transition-all duration-200 min-h-[52px]"
+        >
+          <Wrench className="h-5 w-5" />
+          {isZh ? '立即打开工具' : 'Open Tool Now'}
+        </a>
+      </div>
+    );
+  }
 
   if (!tool) {
     return (
@@ -141,7 +179,9 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+    <>
+      <ToolPageJsonLd locale={resolvedLocale as SeoLocale} slug={resolvedSlug} />
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
       <nav aria-label="Breadcrumb" className="mb-4 sm:mb-6">
         <ol className="flex flex-wrap items-center gap-1 text-[11px] sm:text-xs">
           <li>
@@ -279,7 +319,15 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
                 ))}
               </div>
 
-              {tool.externalUrl ? (
+              {isInternalTool ? (
+                <a
+                  href={internalToolUrl}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white text-sm sm:text-base font-semibold shadow-lg shadow-primary-600/20 transition-all duration-200 min-h-[52px]"
+                >
+                  <Wrench className="h-5 w-5" />
+                  {isZh ? '立即使用工具' : 'Use Tool Now'}
+                </a>
+              ) : tool.externalUrl ? (
                 <SafeLink
                   href={tool.externalUrl}
                   locale={resolvedLocale}
@@ -400,5 +448,6 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
         </aside>
       </div>
     </div>
+    </>
   );
 }
