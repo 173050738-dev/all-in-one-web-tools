@@ -143,10 +143,10 @@ export const EndNode = memo(function EndNode(props: NodeProps<FlowNode>) {
 
 export const ToolNode = memo(function ToolNode(props: NodeProps<any>) {
   const { id, selected, data } = props;
-  if (data.kind !== 'tool') return null;
-
   const removeNode = useWorkflowCanvasStore((s) => s.removeNode);
   const selectNode = useWorkflowCanvasStore((s) => s.selectNode);
+  if (data.kind !== 'tool') return null;
+
   const status = data.status;
   const style = STATUS_STYLES[status] || STATUS_STYLES.idle;
   const StatusIcon = style.icon;

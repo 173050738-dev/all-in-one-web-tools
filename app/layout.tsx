@@ -243,6 +243,7 @@ export default async function RootLayout({
               suppressHydrationWarning
             />
             <Script
+              id="ga-init-inline"
               strategy="afterInteractive"
               dangerouslySetInnerHTML={{ __html: GA_INIT_SCRIPT }}
               data-ga-id={GA_MEASUREMENT_ID}

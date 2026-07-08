@@ -13,8 +13,6 @@ interface Props {
 
 export default function ToolRelatedGuides({ toolSlug, locale }: Props) {
   const posts = useMemo(() => getBlogPostsByToolSlug(toolSlug), [toolSlug]);
-  if (!posts.length) return null;
-
   const heading = useMemo(() => {
     switch (locale) {
       case 'zh':
@@ -31,6 +29,7 @@ export default function ToolRelatedGuides({ toolSlug, locale }: Props) {
         return '📚 Related Guides & Templates';
     }
   }, [locale]);
+  if (!posts.length) return null;
 
   return (
     <section
