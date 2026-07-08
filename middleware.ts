@@ -10,6 +10,14 @@ const intlMiddleware = createMiddleware({
 export default function middleware(request: NextRequest) {
   const url = new URL(request.url);
 
+  if (
+    url.pathname === '/ByteDanceVerify.html' ||
+    url.pathname === '/ByteDanceVerify' ||
+    url.pathname.startsWith('/ByteDanceVerify')
+  ) {
+    return NextResponse.next();
+  }
+
   if (url.pathname === '/' || url.pathname === '') {
     const zhUrl = new URL('/zh/', url.origin);
     zhUrl.search = url.search;
