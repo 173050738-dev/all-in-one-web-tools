@@ -204,7 +204,10 @@ Crawl-delay: 1
 Sitemap: https://korelyy.com/sitemap.xml
 Sitemap: https://korelyy.com/sitemap-index.xml
 Sitemap: https://korelyy.com/sitemap-zh.xml
-Sitemap: https://korelyy.com/sitemap-fr.xml
 Sitemap: https://korelyy.com/sitemap-en.xml
+Sitemap: https://korelyy.com/sitemap-es.xml
+Sitemap: https://korelyy.com/sitemap-fr.xml
+Sitemap: https://korelyy.com/sitemap-hi.xml
+Sitemap: https://korelyy.com/sitemap-ar.xml
 
 Host: https://korelyy.com

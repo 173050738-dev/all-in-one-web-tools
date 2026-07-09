@@ -41,8 +41,43 @@
 /*.ico
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
   Vary: Accept-Encoding
+/*.png
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Vary: Accept-Encoding
+/*.jpg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Vary: Accept-Encoding
+/*.jpeg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Vary: Accept-Encoding
+/*.gif
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Vary: Accept-Encoding
+/*.webp
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Vary: Accept-Encoding
+/*.avif
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  Vary: Accept-Encoding
 /*.webmanifest
   Cache-Control: public, max-age=604800
+/*.css
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=2592000, immutable
+  Vary: Accept-Encoding
+/*.js
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=2592000, immutable
+  Vary: Accept-Encoding
+/*.mjs
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=2592000, immutable
+  Vary: Accept-Encoding
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
 /*.xml
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 /*.txt
@@ -56,3 +91,46 @@
   Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400, stale-if-error=604800
   Vary: Accept-Encoding, Accept-Language
   # CACHE-TAG-PLACEHOLDER-DO-NOT-REMOVE
+
+# ---------- Next App Router 页面路径（不带 .html 后缀）
+# 首页根
+/
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+# 6 种语言首页
+/zh
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/zh/
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/en
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/en/
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/es
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/es/
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/fr
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/fr/
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/hi
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/hi/
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/ar
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language
+/ar/
+  Cache-Control: public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800
+  Vary: Accept-Encoding, Accept-Language

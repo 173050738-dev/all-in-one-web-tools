@@ -249,7 +249,11 @@ type CPSLink = {
     | 'aliyun-newbie'
     | 'notion-ai-annual'
     | 'chatgpt-plus'
-    | 'korelyy-premium';
+    | 'korelyy-premium'
+    | 'canva-pro'
+    | 'adobe-acrobat-pro'
+    | 'github-copilot'
+    | 'figma-pro';
   /** TODO-CPS-REPLACE: 注册对应联盟后把下面 href 换成真实推广链接 */
   href: string;
   /** 左上角小标签 */
@@ -339,6 +343,58 @@ const I18N_LINKS: Record<AdLocale, Record<CPSLink['id'], CPSLink>> = {
       tagTxt: '',
       iconChar: '✨',
     },
+    'canva-pro': {
+      id: 'canva-pro',
+      href: '#',
+      tag: '图片 / 设计',
+      title: 'Canva Pro 会员',
+      subtitle: '100万+ 模板 · 品牌素材 · AI 抠图 · 批量设计',
+      cta: '30 天免费 →',
+      gradientFrom: 'from-sky-400',
+      gradientTo: 'to-cyan-600',
+      tagBg: 'bg-white/80 text-sky-700',
+      tagTxt: '',
+      iconChar: '🎨',
+    },
+    'adobe-acrobat-pro': {
+      id: 'adobe-acrobat-pro',
+      href: '#',
+      tag: 'PDF 专业版',
+      title: 'Adobe Acrobat Pro',
+      subtitle: 'PDF 编辑 / 签名 / OCR 识别 / 合并压缩，业界标准',
+      cta: '7 天免费 →',
+      gradientFrom: 'from-red-500',
+      gradientTo: 'to-rose-700',
+      tagBg: 'bg-white/80 text-red-700',
+      tagTxt: '',
+      iconChar: '📑',
+    },
+    'github-copilot': {
+      id: 'github-copilot',
+      href: '#',
+      tag: 'AI 编程助手',
+      title: 'GitHub Copilot',
+      subtitle: 'IDE 实时写代码 · 补全重构 · 查 Bug，效率翻倍',
+      cta: '免费试用 →',
+      gradientFrom: 'from-zinc-700',
+      gradientTo: 'to-zinc-900',
+      tagBg: 'bg-white/80 text-zinc-700',
+      tagTxt: '',
+      iconChar: '💻',
+    },
+    'figma-pro': {
+      id: 'figma-pro',
+      href: '#',
+      tag: 'UI / UX 设计',
+      title: 'Figma Professional',
+      subtitle: '协作式原型 · 组件库 · Dev Mode，设计到开发一站',
+      cta: '免费开始 →',
+      gradientFrom: 'from-fuchsia-500',
+      gradientTo: 'to-purple-700',
+      tagBg: 'bg-white/80 text-fuchsia-700',
+      tagTxt: '',
+      iconChar: '🖼️',
+    },
   },
   en: {
     'grammarly-premium': {
@@ -405,6 +461,58 @@ const I18N_LINKS: Record<AdLocale, Record<CPSLink['id'], CPSLink>> = {
       tagBg: 'bg-white/80 text-indigo-700',
       tagTxt: '',
       iconChar: '✨',
+    },
+    'canva-pro': {
+      id: 'canva-pro',
+      href: '#',
+      tag: 'Image / Design',
+      title: 'Canva Pro Membership',
+      subtitle: '1M+ templates · Brand kit · AI background removal · Bulk create.',
+      cta: '30-Day Free →',
+      gradientFrom: 'from-sky-400',
+      gradientTo: 'to-cyan-600',
+      tagBg: 'bg-white/80 text-sky-700',
+      tagTxt: '',
+      iconChar: '🎨',
+    },
+    'adobe-acrobat-pro': {
+      id: 'adobe-acrobat-pro',
+      href: '#',
+      tag: 'PDF Pro Suite',
+      title: 'Adobe Acrobat Pro',
+      subtitle: 'PDF editing · E-sign · OCR · Merge & compress. The industry standard.',
+      cta: '7-Day Free →',
+      gradientFrom: 'from-red-500',
+      gradientTo: 'to-rose-700',
+      tagBg: 'bg-white/80 text-red-700',
+      tagTxt: '',
+      iconChar: '📑',
+    },
+    'github-copilot': {
+      id: 'github-copilot',
+      href: '#',
+      tag: 'AI Coding Assistant',
+      title: 'GitHub Copilot',
+      subtitle: 'Real-time code in your IDE · Autocomplete · Refactor · Debug. 2× faster.',
+      cta: 'Free Trial →',
+      gradientFrom: 'from-zinc-700',
+      gradientTo: 'to-zinc-900',
+      tagBg: 'bg-white/80 text-zinc-700',
+      tagTxt: '',
+      iconChar: '💻',
+    },
+    'figma-pro': {
+      id: 'figma-pro',
+      href: '#',
+      tag: 'UI / UX Design',
+      title: 'Figma Professional',
+      subtitle: 'Collaborative prototypes · Libraries · Dev Mode — design to dev, one tool.',
+      cta: 'Start Free →',
+      gradientFrom: 'from-fuchsia-500',
+      gradientTo: 'to-purple-700',
+      tagBg: 'bg-white/80 text-fuchsia-700',
+      tagTxt: '',
+      iconChar: '🖼️',
     },
   },
   es: {
@@ -473,6 +581,58 @@ const I18N_LINKS: Record<AdLocale, Record<CPSLink['id'], CPSLink>> = {
       tagTxt: '',
       iconChar: '✨',
     },
+    'canva-pro': {
+      id: 'canva-pro',
+      href: '#',
+      tag: 'Imagen / Diseño',
+      title: 'Canva Pro',
+      subtitle: 'Más de 1M de plantillas · Kit de marca · Eliminar fondo IA · Diseño por lotes.',
+      cta: '30 días Gratis →',
+      gradientFrom: 'from-sky-400',
+      gradientTo: 'to-cyan-600',
+      tagBg: 'bg-white/80 text-sky-700',
+      tagTxt: '',
+      iconChar: '🎨',
+    },
+    'adobe-acrobat-pro': {
+      id: 'adobe-acrobat-pro',
+      href: '#',
+      tag: 'PDF Profesional',
+      title: 'Adobe Acrobat Pro',
+      subtitle: 'Editar PDF · Firmar · OCR · Comprimir y unir. El estándar del sector.',
+      cta: '7 días Gratis →',
+      gradientFrom: 'from-red-500',
+      gradientTo: 'to-rose-700',
+      tagBg: 'bg-white/80 text-red-700',
+      tagTxt: '',
+      iconChar: '📑',
+    },
+    'github-copilot': {
+      id: 'github-copilot',
+      href: '#',
+      tag: 'IA para Programar',
+      title: 'GitHub Copilot',
+      subtitle: 'Código en tiempo real en tu IDE · Autocompletar · Refactor · Depurar. 2× más rápido.',
+      cta: 'Prueba Gratis →',
+      gradientFrom: 'from-zinc-700',
+      gradientTo: 'to-zinc-900',
+      tagBg: 'bg-white/80 text-zinc-700',
+      tagTxt: '',
+      iconChar: '💻',
+    },
+    'figma-pro': {
+      id: 'figma-pro',
+      href: '#',
+      tag: 'Diseño UI / UX',
+      title: 'Figma Professional',
+      subtitle: 'Prototipos colaborativos · Librerías · Dev Mode — diseño a dev, una herramienta.',
+      cta: 'Empieza Gratis →',
+      gradientFrom: 'from-fuchsia-500',
+      gradientTo: 'to-purple-700',
+      tagBg: 'bg-white/80 text-fuchsia-700',
+      tagTxt: '',
+      iconChar: '🖼️',
+    },
   },
   fr: {
     'grammarly-premium': {
@@ -539,6 +699,58 @@ const I18N_LINKS: Record<AdLocale, Record<CPSLink['id'], CPSLink>> = {
       tagBg: 'bg-white/80 text-indigo-700',
       tagTxt: '',
       iconChar: '✨',
+    },
+    'canva-pro': {
+      id: 'canva-pro',
+      href: '#',
+      tag: 'Image / Design',
+      title: 'Canva Pro',
+      subtitle: '1M+ de modèles · Kit de marque · Suppression fond IA · Création en lot.',
+      cta: '30 jours Gratuit →',
+      gradientFrom: 'from-sky-400',
+      gradientTo: 'to-cyan-600',
+      tagBg: 'bg-white/80 text-sky-700',
+      tagTxt: '',
+      iconChar: '🎨',
+    },
+    'adobe-acrobat-pro': {
+      id: 'adobe-acrobat-pro',
+      href: '#',
+      tag: 'PDF Pro',
+      title: 'Adobe Acrobat Pro',
+      subtitle: 'Édition PDF · Signature · OCR · Fusionner et compresser. La référence.',
+      cta: '7 jours Gratuit →',
+      gradientFrom: 'from-red-500',
+      gradientTo: 'to-rose-700',
+      tagBg: 'bg-white/80 text-red-700',
+      tagTxt: '',
+      iconChar: '📑',
+    },
+    'github-copilot': {
+      id: 'github-copilot',
+      href: '#',
+      tag: 'IA de Code',
+      title: 'GitHub Copilot',
+      subtitle: 'Code en temps réel dans l’IDE · Auto-complétion · Refactor · Déboguer. 2× plus vite.',
+      cta: 'Essai Gratuit →',
+      gradientFrom: 'from-zinc-700',
+      gradientTo: 'to-zinc-900',
+      tagBg: 'bg-white/80 text-zinc-700',
+      tagTxt: '',
+      iconChar: '💻',
+    },
+    'figma-pro': {
+      id: 'figma-pro',
+      href: '#',
+      tag: 'Design UI / UX',
+      title: 'Figma Professional',
+      subtitle: 'Prototypes collaboratifs · Librairies · Dev Mode — design & dev, un outil.',
+      cta: 'Démarrer Gratuit →',
+      gradientFrom: 'from-fuchsia-500',
+      gradientTo: 'to-purple-700',
+      tagBg: 'bg-white/80 text-fuchsia-700',
+      tagTxt: '',
+      iconChar: '🖼️',
     },
   },
   ar: {
@@ -607,6 +819,58 @@ const I18N_LINKS: Record<AdLocale, Record<CPSLink['id'], CPSLink>> = {
       tagTxt: '',
       iconChar: '✨',
     },
+    'canva-pro': {
+      id: 'canva-pro',
+      href: '#',
+      tag: 'صورة / تصميم',
+      title: 'Canva Pro',
+      subtitle: 'أكثر من مليون قالب · هوية علامة تجارية · إزالة خلفية بالذكاء · تصميم مجمع.',
+      cta: '30 يومًا مجاني →',
+      gradientFrom: 'from-sky-400',
+      gradientTo: 'to-cyan-600',
+      tagBg: 'bg-white/80 text-sky-700',
+      tagTxt: '',
+      iconChar: '🎨',
+    },
+    'adobe-acrobat-pro': {
+      id: 'adobe-acrobat-pro',
+      href: '#',
+      tag: 'PDF احترافي',
+      title: 'Adobe Acrobat Pro',
+      subtitle: 'تعديل PDF · توقيع إلكتروني · OCR · دمج وضغط. المعيار الصناعي.',
+      cta: '7 أيام مجانية →',
+      gradientFrom: 'from-red-500',
+      gradientTo: 'to-rose-700',
+      tagBg: 'bg-white/80 text-red-700',
+      tagTxt: '',
+      iconChar: '📑',
+    },
+    'github-copilot': {
+      id: 'github-copilot',
+      href: '#',
+      tag: 'ذكاء للبرمجة',
+      title: 'GitHub Copilot',
+      subtitle: 'كود في الوقت الفعلي داخل IDE · إكمال تلقائي · إعادة بناء · تصحيح أخطاء. أسرع مرتين.',
+      cta: 'تجربة مجانية →',
+      gradientFrom: 'from-zinc-700',
+      gradientTo: 'to-zinc-900',
+      tagBg: 'bg-white/80 text-zinc-700',
+      tagTxt: '',
+      iconChar: '💻',
+    },
+    'figma-pro': {
+      id: 'figma-pro',
+      href: '#',
+      tag: 'تصميم UI / UX',
+      title: 'Figma Professional',
+      subtitle: 'نماذج أولية تعاونية · مكتبات مكونات · Dev Mode — من التصميم للتطوير في أداة واحدة.',
+      cta: 'ابدأ مجانًا →',
+      gradientFrom: 'from-fuchsia-500',
+      gradientTo: 'to-purple-700',
+      tagBg: 'bg-white/80 text-fuchsia-700',
+      tagTxt: '',
+      iconChar: '🖼️',
+    },
   },
   hi: {
     'grammarly-premium': {
@@ -674,6 +938,58 @@ const I18N_LINKS: Record<AdLocale, Record<CPSLink['id'], CPSLink>> = {
       tagTxt: '',
       iconChar: '✨',
     },
+    'canva-pro': {
+      id: 'canva-pro',
+      href: '#',
+      tag: 'इमेज / डिज़ाइन',
+      title: 'Canva Pro मेंबरशिप',
+      subtitle: '10 लाख+ टेम्पलेट · ब्रांड किट · AI बैकग्राउंड हटाना · बल्क डिज़ाइन।',
+      cta: '30 दिन फ्री →',
+      gradientFrom: 'from-sky-400',
+      gradientTo: 'to-cyan-600',
+      tagBg: 'bg-white/80 text-sky-700',
+      tagTxt: '',
+      iconChar: '🎨',
+    },
+    'adobe-acrobat-pro': {
+      id: 'adobe-acrobat-pro',
+      href: '#',
+      tag: 'PDF प्रो सूट',
+      title: 'Adobe Acrobat Pro',
+      subtitle: 'PDF एडिट · ई-साइन · OCR · मर्ज और कंप्रेस। इंडस्ट्री स्टैंडर्ड।',
+      cta: '7 दिन फ्री →',
+      gradientFrom: 'from-red-500',
+      gradientTo: 'to-rose-700',
+      tagBg: 'bg-white/80 text-red-700',
+      tagTxt: '',
+      iconChar: '📑',
+    },
+    'github-copilot': {
+      id: 'github-copilot',
+      href: '#',
+      tag: 'AI कोडिंग असिस्टेंट',
+      title: 'GitHub Copilot',
+      subtitle: 'आपके IDE में रियल-टाइम कोड · ऑटोकंपलीट · रिफैक्टर · डीबग। 2× तेज़।',
+      cta: 'फ्री ट्रायल →',
+      gradientFrom: 'from-zinc-700',
+      gradientTo: 'to-zinc-900',
+      tagBg: 'bg-white/80 text-zinc-700',
+      tagTxt: '',
+      iconChar: '💻',
+    },
+    'figma-pro': {
+      id: 'figma-pro',
+      href: '#',
+      tag: 'UI / UX डिज़ाइन',
+      title: 'Figma Professional',
+      subtitle: 'सहयोगी प्रोटोटाइप · लाइब्रेरी · डेव मोड — डिज़ाइन से डेव तक, एक टूल।',
+      cta: 'फ्री स्टार्ट →',
+      gradientFrom: 'from-fuchsia-500',
+      gradientTo: 'to-purple-700',
+      tagBg: 'bg-white/80 text-fuchsia-700',
+      tagTxt: '',
+      iconChar: '🖼️',
+    },
   },
 };
 
@@ -681,6 +997,76 @@ interface CPSPlaceholderProps {
   slot: string;
   size: AdSlotSize;
   sizeLabel: string;
+}
+
+function resolveFromToolContext(
+  slot: string,
+): { primary: CPSLink['id']; secondary: CPSLink['id'] } | null {
+  const parts = slot.split('-');
+  const slug = parts.slice(1, -2).join('-').toLowerCase();
+  const category = (parts[parts.length - 1] || '').toLowerCase();
+  const fullText = `${slug} ${category}`;
+
+  const matches = (keywords: string[]): boolean =>
+    keywords.some((k) => fullText.includes(k.toLowerCase()));
+
+  // ===== 1. PDF / OCR 工具 → Adobe Acrobat Pro =====
+  if (matches(['pdf', 'ocr', 'acrobat', 'sign', 'signature', 'compress', 'merge'])) {
+    return { primary: 'adobe-acrobat-pro', secondary: 'grammarly-premium' };
+  }
+  // ===== 2. 图片 / 设计 / 编辑 → Canva Pro =====
+  if (matches([
+    'image', 'photo', 'picture', 'compress', 'compressor', 'cutter', 'grid',
+    'wallpaper', 'avatar', 'poster', 'decorator', 'emoji', 'mixer', 'edit',
+    'editor', 'resizer', 'crop', 'color', 'picker', 'palette', 'design',
+    'img', 'figure', 'removebg', 'background', 'design-tools', 'graphics',
+  ])) {
+    return { primary: 'canva-pro', secondary: 'figma-pro' };
+  }
+  // ===== 3. UI / UX / 原型 / Figma 类 → Figma Pro =====
+  if (matches(['figma', 'prototype', 'ui', 'ux', 'wireframe', 'mockup'])) {
+    return { primary: 'figma-pro', secondary: 'canva-pro' };
+  }
+  // ===== 4. 开发 / 代码 / 格式化 / DevTools → GitHub Copilot =====
+  if (matches([
+    'json', 'formatter', 'regex', 'tester', 'code', 'script', 'uuid',
+    'generate', 'generator', 'encode', 'decode', 'base64', 'markdown', 'preview',
+    'convert', 'timestamp', 'converter', 'parser', 'yaml', 'xml', 'lint',
+    'devtools', 'developer', 'programming', 'syntax', 'highlight', 'diff',
+    'patch', 'ssh', 'jwt', 'encode-decode', 'crypto', 'hash', 'encode',
+  ])) {
+    return { primary: 'github-copilot', secondary: 'korelyy-premium' };
+  }
+  // ===== 5. 写作 / 标题 / 字幕 / 文案 / 翻译 → Grammarly Premium =====
+  if (matches([
+    'text', 'translate', 'translator', 'case', 'convert', 'copy', 'cleaner',
+    'counter', 'sentiment', 'analyzer', 'caption', 'generator', 'title',
+    'pinyin', 'annotator', 'keyword', 'spin', 'off', 'seo', 'srt', 'subtitle',
+    'speech', 'sentence', 'paragraph', 'essay', 'writing', 'writer',
+    'grammar', 'spell', 'word', 'character',
+  ])) {
+    return { primary: 'grammarly-premium', secondary: 'notion-ai-annual' };
+  }
+  // ===== 6. AI / 工作流 / 生成 / 智能 类 → ChatGPT Plus + Notion AI =====
+  if (matches([
+    'ai', 'workflow', 'caption', 'sentiment', 'tts', 'text-to-speech',
+    'transcript', 'analyze', 'assistant', 'recommend', 'bot',
+  ])) {
+    return { primary: 'chatgpt-plus', secondary: 'notion-ai-annual' };
+  }
+  // ===== 7. 金融 / 贷款 / 计算 → 先推自己 Korelyy Premium（广告合规风险高）=====
+  if (matches(['mortgage', 'finance', 'loan', 'calculator', 'interest'])) {
+    return { primary: 'korelyy-premium', secondary: 'aliyun-newbie' };
+  }
+  // ===== 8. 体育 / 足球 / WC → Korelyy Premium（联盟产品少，先推自己会员）=====
+  if (matches(['wc-', 'worldcup', 'football', 'sport', 'scoreboard', 'poster', 'fan'])) {
+    return { primary: 'korelyy-premium', secondary: 'chatgpt-plus' };
+  }
+  // ===== 9. QR / 条码 / 二维码 / 生成 → Notion AI + Korelyy Premium =====
+  if (matches(['qr', 'qrcode', 'barcode', 'scanner'])) {
+    return { primary: 'notion-ai-annual', secondary: 'korelyy-premium' };
+  }
+  return null;
 }
 
 function AdCPSPlaceholder({ slot, size }: CPSPlaceholderProps) {
@@ -699,12 +1085,19 @@ function AdCPSPlaceholder({ slot, size }: CPSPlaceholderProps) {
   let primary: CPSLink['id'];
   let secondary: CPSLink['id'];
 
-  if (size === 'rectangle' || slot.includes('-rectangle') || slot.includes('tool-')) {
-    // 工具详情页右侧方形 → 放写作用 AI（精准匹配「文字工作者」工具用户）
+  // ====== 最高优先级：从工具 slug + category 精确匹配（转化率 2~5×）======
+  const toolMatch = (size === 'rectangle' || size === 'banner' || slot.startsWith('tool-'))
+    ? resolveFromToolContext(slot)
+    : null;
+  if (toolMatch) {
+    primary = toolMatch.primary;
+    secondary = toolMatch.secondary;
+  } else if (size === 'rectangle' || slot.includes('-rectangle') || slot.includes('tool-')) {
+    // 工具详情页右侧方形 → 写作用 AI（文字工作者用户）
     primary = 'grammarly-premium';
     secondary = 'korelyy-premium';
   } else if (size === 'in-feed' || slot.includes('infeed') || slot.includes('in-feed')) {
-    // 工作流 / 工具列表信息流 → 阿里云 + Notion 双卡片（左云服务器右笔记）
+    // 工作流 / 工具列表信息流 → 阿里云 + Notion 双卡片
     primary = 'aliyun-newbie';
     secondary = 'notion-ai-annual';
   } else if (size === 'sticky-bottom') {

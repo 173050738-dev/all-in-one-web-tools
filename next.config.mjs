@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import createNextIntlPlugin from "next-intl/plugin";
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.tsx");
 
@@ -50,6 +50,58 @@ const nextConfig = {
       {
         source: "/api/kofi/:path*",
         destination: "http://localhost:8787/api/kofi/:path*",
+      },
+    ];
+  },
+  async headers() {
+    const STATIC_CACHE =
+      "public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=2592000, stale-if-error=604800, immutable";
+    const HTML_SOFT_CACHE =
+      "public, max-age=600, s-maxage=600, stale-while-revalidate=86400, stale-if-error=604800";
+    return [
+      {
+        source: "/_next/static/:path*",
+        headers: [{ key: "Cache-Control", value: STATIC_CACHE }],
+      },
+      {
+        source: "/:all*(svg|jpg|jpeg|png|gif|webp|avif|ico|woff|woff2|ttf|otf|eot)",
+        headers: [{ key: "Cache-Control", value: STATIC_CACHE }],
+      },
+      {
+        source: "/:path*.css",
+        headers: [{ key: "Cache-Control", value: STATIC_CACHE }],
+      },
+      {
+        source: "/:path*.js",
+        headers: [{ key: "Cache-Control", value: STATIC_CACHE }],
+      },
+      {
+        source: "/locales/:path*",
+        headers: [{ key: "Cache-Control", value: STATIC_CACHE }],
+      },
+      {
+        source: "/",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
+      },
+      {
+        source: "/:locale(zh|en|es|fr|hi|ar)",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
+      },
+      {
+        source: "/:locale(zh|en|es|fr|hi|ar)/",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
+      },
+      {
+        source: "/(zh|en|es|fr|hi|ar)/tool/:slug*",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
+      },
+      {
+        source: "/(zh|en|es|fr|hi|ar)/workflow/:slug*",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
+      },
+      {
+        source: "/(zh|en|es|fr|hi|ar)/tools/:slug*",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
       },
     ];
   },

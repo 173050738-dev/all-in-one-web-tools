@@ -4,6 +4,7 @@ import { useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { Home, ChevronRight, ExternalLink, ArrowLeft, ShieldCheck, Star, Heart, Lightbulb, ListChecks, Award, CheckCircle2, Wrench } from 'lucide-react';
 import { useParams, usePathname, useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { getToolBySlug, getRelatedTools } from '@/data/tools';
 import { categories } from '@/data/categories';
 import ToolCard from '@/components/ToolCard';
@@ -13,6 +14,16 @@ import { tagZhToEn, englishTags } from '@/data/english-tags';
 import { logLike, logFavorite } from '@/utils/audit-log';
 import { ToolPageJsonLd, type SeoLocale } from '@/components/seo';
 import { INTERNAL_TOOL_SLUGS } from '@/lib/toolLinks';
+
+const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
+  ssr: false,
+  loading: () => (
+    <div
+      aria-hidden="true"
+      className="w-full rounded-xl border border-transparent min-h-[90px] sm:min-h-[110px]"
+    />
+  ),
+});
 
 const VALID_LOCALES = ['zh', 'en', 'hi', 'fr', 'es', 'ar'];
 
@@ -429,10 +440,19 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
                 })}
               </ul>
             </section>
+
+            <AdSlot
+              slot={`tool-${tool?.id || resolvedSlug}-banner-${category?.id || 'general'}`}
+              size="banner"
+            />
           </div>
         </section>
 
         <aside className="w-full lg:w-[320px] xl:w-[340px] flex-shrink-0 space-y-5">
+          <AdSlot
+            slot={`tool-${tool?.id || resolvedSlug}-rectangle-${category?.id || 'general'}`}
+            size="rectangle"
+          />
           {relatedTools.length > 0 && (
             <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5">
               <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100 mb-4">
