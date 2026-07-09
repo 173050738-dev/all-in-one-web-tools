@@ -29,7 +29,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
   const __toolsT = useTranslations('tools');
   const __i18nSlug = (resolvedParams?.slug ?? pathSlug) as string;
   const __i18nName = (() => {
-    const fb = tool?.name ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.name ?? '') : (((tool as any).nameEn ?? '') || (tool.name ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.name')
@@ -37,7 +37,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
       ?? fb;
   })();
   const __i18nDesc = (() => {
-    const fb = tool?.description ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.description ?? '') : (((tool as any).descriptionEn ?? '') || (tool.description ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.description')
@@ -187,9 +187,9 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
 
             <div className='flex gap-1 sm:gap-2 mb-4 sm:mb-6 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-x-auto'>
               {[
-                { key: 'stats', label: '文字统计' },
-                { key: 'case', label: '大小写转换' },
-                { key: 'dedup', label: '去重/整理' },
+                { key: 'stats', label: 'टेक्स्ट आँकड़े' },
+                { key: 'case', label: 'केस कनवर्टर' },
+                { key: 'dedup', label: 'डुप्लिकेट हटाएँ / व्यवस्थित' },
               ].map((tab) => (
                 <button
                   key={tab.key}
@@ -207,18 +207,18 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
 
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'>
               <div>
-                <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>输入文本</label>
+                <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>टेक्स्ट डालें</label>
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  placeholder='在此粘贴或输入文本...'
+                  placeholder='यहाँ अपना टेक्स्ट पेस्ट या टाइप करें...'
                   className='w-full h-56 sm:h-72 p-3 sm:p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary-500'
                 />
               </div>
               <div>
                 <div className='flex items-center justify-between mb-2'>
                   <label className='block text-sm font-medium text-gray-700 dark:text-gray-300'>
-                    {activeTab === 'stats' ? '统计结果' : '输出结果'}
+                    {activeTab === 'stats' ? 'आँकड़े परिणाम' : 'आउटपुट परिणाम'}
                   </label>
                   {activeTab !== 'stats' && (
                     <button
@@ -227,7 +227,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                       className='flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs sm:text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed'
                     >
                       {copied ? <Check className='h-4 w-4 text-green-500' /> : <Copy className='h-4 w-4' />}
-                      {copied ? '已复制' : '复制'}
+                      {copied ? 'कॉपी हो गया' : 'कॉपी करें'}
                     </button>
                   )}
                 </div>
@@ -235,17 +235,17 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                 {activeTab === 'stats' && (
                   <div className='h-56 sm:h-72 p-3 sm:p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 overflow-y-auto'>
                     <div className='space-y-2.5 sm:space-y-3'>
-                      <StatItem label='总字符数' value={stats.chars} />
-                      <StatItem label='不含空格字符' value={stats.charsNoSpace} />
-                      <StatItem label='单词数' value={stats.words} />
-                      <StatItem label='行数' value={stats.lines} />
-                      <StatItem label='段落数' value={stats.paragraphs} />
+                      <StatItem label='कुल वर्ण' value={stats.chars} />
+                      <StatItem label='वर्ण (स्पेस रहित)' value={stats.charsNoSpace} />
+                      <StatItem label='शब्द' value={stats.words} />
+                      <StatItem label='पंक्तियाँ' value={stats.lines} />
+                      <StatItem label='पैराग्राफ' value={stats.paragraphs} />
                       <div className='pt-2 border-t border-gray-200 dark:border-gray-700'>
-                        <p className='text-xs text-gray-500 dark:text-gray-400 mb-2'>字符分析</p>
+                        <p className='text-xs text-gray-500 dark:text-gray-400 mb-2'>वर्ण विश्लेषण</p>
                         <div className='space-y-1.5'>
-                          <StatItem label='中文字符' value={stats.chineseChars} small />
-                          <StatItem label='英文字母' value={stats.englishChars} small />
-                          <StatItem label='数字字符' value={stats.digits} small />
+                          <StatItem label='चीनी वर्ण' value={stats.chineseChars} small />
+                          <StatItem label='अंग्रेज़ी अक्षर' value={stats.englishChars} small />
+                          <StatItem label='अंक' value={stats.digits} small />
                         </div>
                       </div>
                     </div>
@@ -256,7 +256,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                   <textarea
                     value={output}
                     readOnly
-                    placeholder='结果将显示在这里...'
+                    placeholder='परिणाम यहाँ दिखेगा...'
                     className='w-full h-56 sm:h-72 p-3 sm:p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm resize-none'
                   />
                 )}
@@ -265,27 +265,27 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
 
             {activeTab === 'case' && (
               <div className='mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3'>
-                <ActionButton onClick={toUpperCase} disabled={!text}>全部大写</ActionButton>
-                <ActionButton onClick={toLowerCase} disabled={!text}>全部小写</ActionButton>
-                <ActionButton onClick={toTitleCase} disabled={!text}>首字母大写</ActionButton>
-                <ActionButton onClick={toSentenceCase} disabled={!text}>句首大写</ActionButton>
-                <ActionButton onClick={toggleCase} disabled={!text}>大小写反转</ActionButton>
+                <ActionButton onClick={toUpperCase} disabled={!text}>ऊपरी अक्षर</ActionButton>
+                <ActionButton onClick={toLowerCase} disabled={!text}>निचले अक्षर</ActionButton>
+                <ActionButton onClick={toTitleCase} disabled={!text}>शीर्षक केस</ActionButton>
+                <ActionButton onClick={toSentenceCase} disabled={!text}>वाक्य केस</ActionButton>
+                <ActionButton onClick={toggleCase} disabled={!text}>केस उलटें</ActionButton>
                 <button
                   onClick={() => { setOutput(text); }}
                   disabled={!text}
                   className='px-3 py-2 rounded-lg text-xs sm:text-sm border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'
                 >
-                  还原原文
+                  मूल पुनर्स्थापित
                 </button>
               </div>
             )}
 
             {activeTab === 'dedup' && (
               <div className='mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3'>
-                <ActionButton onClick={removeDuplicateLines} disabled={!text}>行去重</ActionButton>
-                <ActionButton onClick={removeEmptyLines} disabled={!text}>删除空行</ActionButton>
-                <ActionButton onClick={removeExtraSpaces} disabled={!text}>去除多余空格</ActionButton>
-                <ActionButton onClick={reverseText} disabled={!text}>文本反转</ActionButton>
+                <ActionButton onClick={removeDuplicateLines} disabled={!text}>डुप्लिकेट लाइन हटाएँ</ActionButton>
+                <ActionButton onClick={removeEmptyLines} disabled={!text}>खाली लाइनें हटाएँ</ActionButton>
+                <ActionButton onClick={removeExtraSpaces} disabled={!text}>अतिरिक्त स्पेस हटाएँ</ActionButton>
+                <ActionButton onClick={reverseText} disabled={!text}>टेक्स्ट उलटें</ActionButton>
               </div>
             )}
           </div>
@@ -294,33 +294,33 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           <div className='card p-4 sm:p-6'>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('guide')}</h3>
             <p className='text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4'>
-              输入文本后选择功能，即可进行文字统计、大小写转换、去重整理等操作，全部本地处理。
+              टेक्स्ट डालें उसके बाद एक क्रिया चुनें टेक्स्ट आँकड़े、केस कनवर्टर、, डुप्लिकेट हटाएँ / व्यवस्थित और भी। 100% लोकल।
             </p>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('features')}</h3>
             <ul className='space-y-2'>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                实时文字统计（字符/单词/行数）
+                रियल-टाइमटेक्स्ट आँकड़े (वर्ण / शब्द /पंक्तियाँ）
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                5 种大小写转换模式
+                5  प्रकार के केस कनवर्टर
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                行去重 / 删除空行
+                डुप्लिकेट लाइन हटाएँ / खाली लाइनें हटाएँ
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                中英文混合统计
+                CJK + लैटिन मिश्रित विश्लेषण
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                一键复制结果
+                एक क्लिक में कॉपी करें परिणाम
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                纯本地处理，隐私安全
+                केवल स्थानीय, गोपनीयता सुरक्षित
               </li>
             </ul>
           </div>

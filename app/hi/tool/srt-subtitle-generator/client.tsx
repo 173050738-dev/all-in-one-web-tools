@@ -29,7 +29,7 @@ export default function ToolPage() {
   const __toolsT = useTranslations('tools');
   const __i18nSlug = (resolvedParams?.slug ?? SLUG) as string;
   const __i18nName = (() => {
-    const fb = tool?.name ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.name ?? '') : (((tool as any).nameEn ?? '') || (tool.name ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.name')
@@ -37,7 +37,7 @@ export default function ToolPage() {
       ?? fb;
   })();
   const __i18nDesc = (() => {
-    const fb = tool?.description ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.description ?? '') : (((tool as any).descriptionEn ?? '') || (tool.description ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.description')

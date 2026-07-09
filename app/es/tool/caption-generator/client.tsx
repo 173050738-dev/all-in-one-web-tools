@@ -30,7 +30,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
   const __toolsT = useTranslations('tools');
   const __i18nSlug = (resolvedParams?.slug ?? pathSlug) as string;
   const __i18nName = (() => {
-    const fb = tool?.name ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.name ?? '') : (((tool as any).nameEn ?? '') || (tool.name ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.name')
@@ -38,7 +38,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
       ?? fb;
   })();
   const __i18nDesc = (() => {
-    const fb = tool?.description ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.description ?? '') : (((tool as any).descriptionEn ?? '') || (tool.description ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.description')
@@ -56,7 +56,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
             const t = toolsT(`${tool.id}.name`);
             if (t && t !== `${tool.id}.name`) return t;
           } catch {}
-          return tool.name;
+          return (((tool as any).nameEn ?? '') || tool.name);
         })()
     : undefined;
   const translatedToolDesc = tool
@@ -67,7 +67,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
             const t = toolsT(`${tool.id}.description`);
             if (t && t !== `${tool.id}.description`) return t;
           } catch {}
-          return tool.description;
+          return (((tool as any).descriptionEn ?? '') || tool.description);
         })()
     : undefined;
   const relatedTools = tool ? getRelatedTools(tool) : [];
@@ -82,7 +82,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
         metaDesc.name = 'description';
         document.head.appendChild(metaDesc);
       }
-      metaDesc.setAttribute('content', translatedToolDesc || (tool ? tool.description : ''));
+      metaDesc.setAttribute('content', translatedToolDesc || (tool ? (resolvedLocale === 'zh' ? tool.description : (((tool as any).descriptionEn ?? '') || tool.description)) : ''));
     }
   }, [tool]);
 
@@ -115,7 +115,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           </>
         )}
       </div>
-      <CaptionGenerator />
+      <CaptionGenerator locale={resolvedLocale} />
     </div>
   );
 }

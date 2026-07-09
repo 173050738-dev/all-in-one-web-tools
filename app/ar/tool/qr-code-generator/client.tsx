@@ -30,7 +30,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
   const __toolsT = useTranslations('tools');
   const __i18nSlug = (resolvedParams?.slug ?? pathSlug) as string;
   const __i18nName = (() => {
-    const fb = tool?.name ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.name ?? '') : (((tool as any).nameEn ?? '') || (tool.name ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.name')
@@ -38,7 +38,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
       ?? fb;
   })();
   const __i18nDesc = (() => {
-    const fb = tool?.description ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.description ?? '') : (((tool as any).descriptionEn ?? '') || (tool.description ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.description')
@@ -173,11 +173,11 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6'>
               <div className='space-y-4'>
                 <div>
-                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>二维码内容</label>
+                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>محتوى رمز QR</label>
                   <textarea
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    placeholder='输入网址、文本或任何内容...'
+                    placeholder='أدخل رابطاً أو نصاً أو أي محتوى...'
                     className='w-full h-32 sm:h-40 p-3 sm:p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary-500'
                   />
                 </div>
@@ -185,12 +185,12 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                 <div className='space-y-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg'>
                   <div className='flex items-center gap-2'>
                     <Palette className='h-4 w-4 sm:h-5 sm:w-5 text-gray-500' />
-                    <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>自定义样式</span>
+                    <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>تنسيق مخصص</span>
                   </div>
 
                   <div>
                     <div className='flex items-center justify-between mb-1'>
-                      <label className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>尺寸</label>
+                      <label className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>الحجم</label>
                       <span className='text-xs sm:text-sm text-primary-600 dark:text-primary-400 font-medium'>{size}px</span>
                     </div>
                     <input
@@ -206,7 +206,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
 
                   <div className='grid grid-cols-2 gap-3'>
                     <div>
-                      <label className='block text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-1'>前景色</label>
+                      <label className='block text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-1'>المقدمة</label>
                       <div className='flex items-center gap-2'>
                         <input
                           type='color'
@@ -223,7 +223,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                       </div>
                     </div>
                     <div>
-                      <label className='block text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-1'>背景色</label>
+                      <label className='block text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-1'>الخلفية</label>
                       <div className='flex items-center gap-2'>
                         <input
                           type='color'
@@ -245,7 +245,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
 
               <div className='space-y-4'>
                 <div>
-                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>预览</label>
+                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>معاينة</label>
                   <div
                     ref={qrRef}
                     className='flex items-center justify-center p-4 sm:p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 min-h-[200px] sm:min-h-[280px]'
@@ -260,7 +260,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                         includeMargin={true}
                       />
                     ) : (
-                      <p className='text-gray-400 text-sm'>请输入内容生成二维码</p>
+                      <p className='text-gray-400 text-sm'>أدخل محتوى لإنشاء رمز QR</p>
                     )}
                   </div>
                 </div>
@@ -272,7 +272,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                     className='flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg btn-primary disabled:opacity-50 disabled:cursor-not-allowed'
                   >
                     <Download className='h-4 w-4 sm:h-5 sm:w-5' />
-                    下载 PNG
+                    تنزيل PNG
                   </button>
                   <button
                     onClick={copyToClipboard}
@@ -280,13 +280,13 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                     className='flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'
                   >
                     {copied ? <Check className='h-4 w-4 sm:h-5 sm:w-5 text-green-500' /> : <Copy className='h-4 w-4 sm:h-5 sm:w-5' />}
-                    {copied ? '已复制' : '复制图片'}
+                    {copied ? 'تم النسخ' : 'نسخ الصورة'}
                   </button>
                 </div>
 
                 <div className='p-3 sm:p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg'>
                   <p className='text-xs sm:text-sm text-blue-700 dark:text-blue-300'>
-                    💡 提示：支持网址、文本、联系方式等任意内容。选择颜色时请确保前景色和背景色有足够对比度，以便扫码识别。
+                    💡 تلميح: يدعم الروابط والنص ومعلومات الاتصال وغيرها. عند اختيار الألوان تأكد من التباين الكافي بين المقدمة والخلفية لقراءة سلسة.
                   </p>
                 </div>
               </div>
@@ -297,33 +297,33 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           <div className='card p-4 sm:p-6'>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('guide')}</h3>
             <p className='text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4'>
-              输入任意内容即可生成二维码，支持自定义尺寸和颜色，一键下载 PNG 图片。
+              أدخل أي محتوى لإنشاء رمز QR. حجم وألوان قابلة للتخصيص، تنزيل PNG بنقرة واحدة.
             </p>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('features')}</h3>
             <ul className='space-y-2'>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                支持任意文本/网址
+                أي نص أو رابط
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                自定义尺寸 (128-512px)
+                حجم مخصص (128–512 بكسل)
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                自定义前景/背景色
+                مقدمة وخلفية مخصصة
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                高清 PNG 下载
+                تنزيل PNG عالي الدقة
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                一键复制到剪贴板
+                نسخ إلى الحافظة بنقرة واحدة
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                本地生成，保护隐私
+                توليد محلي وآمن للخصوصية
               </li>
             </ul>
           </div>
