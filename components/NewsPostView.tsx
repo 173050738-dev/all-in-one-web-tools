@@ -205,7 +205,7 @@ export default function NewsPostView({ locale, slug }: { locale: SeoLocale; slug
                   className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-700/50 hover:bg-primary-50 dark:hover:bg-primary-900/20 text-[10px] font-medium text-gray-600 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
                 >
                   <BookmarkCheck className="h-2.5 w-2.5" />
-                  {tool.name}
+                  {locale === 'zh' ? tool.name : (tool.nameEn || tool.name)}
                 </Link>
               );
             })}

@@ -176,12 +176,12 @@ export default function ProfilePanel({ locale, isOpen, onClose }: ProfilePanelPr
       : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300';
 
   const localeOptions = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'zh', name: '中文', flag: '🇨🇳' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'en', name: 'EN', flag: '🇺🇸' },
+    { code: 'zh', name: 'ZH', flag: '🇨🇳' },
+    { code: 'es', name: 'ES', flag: '🇪🇸' },
+    { code: 'hi', name: 'हिं', flag: '🇮🇳' },
+    { code: 'fr', name: 'FR', flag: '🇫🇷' },
+    { code: 'ar', name: 'ع', flag: '🇸🇦' },
   ];
 
   const flashStyle =
@@ -314,7 +314,7 @@ export default function ProfilePanel({ locale, isOpen, onClose }: ProfilePanelPr
                         title={l.name}
                       >
                         <span className="text-base leading-none">{l.flag}</span>
-                        <span className="text-[10px] font-medium leading-none mt-0.5">{l.code === 'zh' ? '中' : l.code === 'en' ? 'EN' : l.code === 'es' ? 'ES' : l.code === 'hi' ? 'हिं' : l.code === 'fr' ? 'FR' : 'ع'}</span>
+                        <span className="text-[10px] font-medium leading-none mt-0.5">{l.code === 'zh' ? 'ZH' : l.code === 'en' ? 'EN' : l.code === 'es' ? 'ES' : l.code === 'hi' ? 'हिं' : l.code === 'fr' ? 'FR' : 'ع'}</span>
                       </button>
                     );
                   })}

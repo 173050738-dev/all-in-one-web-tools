@@ -137,6 +137,11 @@ export const categories: Category[] = [
     name: 'API Tools',
     icon: 'Code',
   },
+  {
+    id: 'game-tools',
+    name: 'Gaming Tools',
+    icon: 'Gamepad2',
+  },
 ];
 
 export const getCategoryById = (id: string): Category | undefined => {

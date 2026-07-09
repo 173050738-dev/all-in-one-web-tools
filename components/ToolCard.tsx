@@ -48,27 +48,40 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
   const tcT = useTranslations('toolcard');
   const { toggleLike, isLiked, toggleFavorite, isFavorite } = usePreferencesStore();
 
-  const safeTranslate = (key: string, fallback: string) => {
+  const safeTranslate = (key: string, altValue: string) => {
     try {
       const translated = toolsT(key);
       if (translated && translated !== key) return translated;
     } catch { /* fallthrough */ }
-    return fallback;
+    return altValue;
   };
 
   const toolSlug = tool.slug || tool.id || '';
   const toolKeyAlt = tool.id && tool.id !== tool.slug ? tool.id : '';
-  const toolName = locale === 'zh'
-    ? tool.name
-    : safeTranslate(`${toolSlug}.name`, toolKeyAlt ? safeTranslate(`${toolKeyAlt}.name`, tool.name) : tool.name);
-  const toolDescription = locale === 'zh'
-    ? tool.description
-    : safeTranslate(`${toolSlug}.description`, toolKeyAlt ? safeTranslate(`${toolKeyAlt}.description`, tool.description) : tool.description);
+
+  const translateField = (
+    fieldKey: 'name' | 'description',
+    zhField: string,
+    enField: string | undefined,
+  ): string => {
+    if (locale === 'zh') return zhField;
+    const primary = safeTranslate(
+      `${toolSlug}.${fieldKey}`,
+      toolKeyAlt ? safeTranslate(`${toolKeyAlt}.${fieldKey}`, '') : '',
+    );
+    if (primary) return primary;
+    return enField || zhField;
+  };
+
+  const toolName = translateField('name', tool.name, tool.nameEn);
+  const toolDescription = translateField('description', tool.description, tool.descriptionEn);
   const toolTags = locale === 'zh'
     ? tool.tags
     : (Array.isArray(englishTags[tool.id]) && englishTags[tool.id].length > 0
         ? englishTags[tool.id]
-        : tool.tags.map(tag => tagZhToEn[tag] || tag));
+        : (Array.isArray(tool.tagsEn) && tool.tagsEn.length > 0
+            ? tool.tagsEn
+            : tool.tags.map((tag) => tagZhToEn[tag] || tag)));
   const liked = isLiked(tool.id);
   const favorited = isFavorite(tool.id);
   const totalLikes = (tool.likes || 0) + (liked ? 1 : 0);

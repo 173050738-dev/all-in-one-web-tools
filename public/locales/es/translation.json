@@ -103,6 +103,7 @@
     "collaboration": "Colaboración",
     "file-tools": "Herramientas de archivos",
     "api-tools": "Herramientas API",
+    "game-tools": "Herramientas de juegos",
     "compliance-filter": "Filtro de cumplimiento",
     "all": "Todos",
     "verified": "Verificado",
@@ -507,7 +508,7 @@
       "description": "en línea tinypng compress for compress, imagen, optimize, WebP. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "ilovepdf": {
-      "name": "Ilovepdf PDF",
+      "name": "iLovePDF PDF",
       "description": "en línea ilovepdf PDF for PDF, fusionar, convert, edit. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "canva": {
@@ -523,7 +524,7 @@
       "description": "en línea replit código for código, editor, AI, deployment. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "codepen": {
-      "name": "Codepen Frontend",
+      "name": "CodePen Frontend",
       "description": "en línea codepen frontend for frontend, código, share, community. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "grammarly": {
@@ -551,7 +552,7 @@
       "description": "en línea github código for código, hosting, Open source, collaboration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "stackblitz": {
-      "name": "Stackblitz IDE",
+      "name": "StackBlitz IDE",
       "description": "en línea stackblitz ide for IDE, cloud, development, vista previa. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "codesandbox": {
@@ -579,7 +580,7 @@
       "description": "en línea pexels images for images, photography, gratuito, videos. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "giphy": {
-      "name": "Giphy GIF",
+      "name": "GIPHY GIF",
       "description": "en línea giphy gif for GIF, animation, emoji, search. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tinify": {
@@ -635,7 +636,7 @@
       "description": "en línea regex101 Regex for Regex, testing, matching, development. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "jsonlint": {
-      "name": "Jsonlint JSON",
+      "name": "JSONLint JSON",
       "description": "en línea jsonlint JSON for JSON, validation, format, development. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "jqplay": {
@@ -679,31 +680,31 @@
       "description": "en línea dafont fonts for fonts, gratuito, download, design. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pdfescape": {
-      "name": "Pdfescape PDF",
+      "name": "PDFEscape PDF",
       "description": "en línea pdfescape PDF for PDF, edit, form, gratuito. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "smallpdf": {
-      "name": "Smallpdf PDF",
+      "name": "SmallPDF PDF",
       "description": "en línea smallpdf PDF for PDF, compress, convert, edit. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sejda": {
-      "name": "Sejda PDF",
+      "name": "Sejda Documento PDF",
       "description": "en línea sejda PDF for PDF, professional, process, convert. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pdf2go": {
-      "name": "Pdf2go PDF",
+      "name": "PDF2Go PDF",
       "description": "en línea pdf2go PDF for PDF, convert, en línea, herramientas. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cuttly": {
-      "name": "Cuttly URL",
+      "name": "Cuttly Enlace web",
       "description": "en línea cuttly URL for URL, shortener, track, gratuito. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "bitly": {
-      "name": "Bitly URL",
+      "name": "Bitly Enlace web",
       "description": "en línea bitly URL for URL, shortener, analytics, brand. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tinyurl": {
-      "name": "Tinyurl URL",
+      "name": "TinyURL URL",
       "description": "en línea tinyurl URL for URL, shortener, gratuito, simple. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tldr-pages": {
@@ -715,7 +716,7 @@
       "description": "en línea devdocs docs for docs, API, development, offline. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "jsfiddle": {
-      "name": "Jsfiddle JavaScript",
+      "name": "JSFiddle JavaScript",
       "description": "en línea jsfiddle javascript for JavaScript, testing, vista previa, código. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "css-tricks": {
@@ -723,11 +724,11 @@
       "description": "en línea css tricks for CSS, tips, frontend, tutorials. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cssgridgarden": {
-      "name": "Cssgridgarden CSS",
+      "name": "CSS Grid Garden CSS",
       "description": "en línea cssgridgarden css for CSS, cuadrícula, learning, juego. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "flexboxfroggy": {
-      "name": "Flexboxfroggy CSS",
+      "name": "Flexbox Froggy CSS",
       "description": "en línea flexboxfroggy css for CSS, Flexbox, learning, juego. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "typing-game": {
@@ -759,7 +760,7 @@
       "description": "en línea we transfer for files, transfer, gratuito, large. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "send-anywhere": {
-      "name": "Send Anywhere",
+      "name": "Enviar Anywhere",
       "description": "en línea send anywhere for files, transfer, cross-plataforma, quick. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "clideo": {
@@ -771,15 +772,15 @@
       "description": "en línea kapwing vídeo for vídeo, edit, en línea, creation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "audiojoiner": {
-      "name": "Audiojoiner Audio",
+      "name": "Audiojoiner Audio digital",
       "description": "en línea audiojoiner audio for audio, fusionar, gratuito, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "mp3cut": {
-      "name": "Mp3cut Audio",
+      "name": "MP3 Cut Audio",
       "description": "en línea mp3cut audio for audio, edit, cut, gratuito. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "audiotrimmer": {
-      "name": "Audiotrimmer Audio",
+      "name": "Audiotrimmer Audio digital",
       "description": "en línea audiotrimmer audio for audio, trim, en línea, herramientas. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "online-converter": {
@@ -975,31 +976,31 @@
       "description": "en línea railway deployment for deployment, app, database, modern. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "fly": {
-      "name": "Fly Edge",
+      "name": "Fly.io Edge",
       "description": "en línea fly edge for edge, computing, deployment, global. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "supabase": {
-      "name": "Supabase Backend",
+      "name": "Supabase Infraestructura servidor",
       "description": "en línea supabase backend for backend, Open source, database, Firebase. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "firebase": {
-      "name": "Firebase Backend",
+      "name": "Firebase Infraestructura servidor",
       "description": "en línea firebase backend for backend, Google, database, BaaS. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "prisma": {
-      "name": "Prisma ORM",
+      "name": "Prisma Mapeo objeto-relacional",
       "description": "en línea prisma orm for ORM, Node.js, database, type-seguro. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "postman": {
-      "name": "Postman API",
+      "name": "Postman Interfaz programación",
       "description": "en línea postman api for API, testing, development, collaboration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "insomnia": {
-      "name": "Insomnia API",
+      "name": "Insomnia Interfaz programación",
       "description": "en línea insomnia api for API, debug, Open source, testing. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "hoppscotch": {
-      "name": "Hoppscotch API",
+      "name": "Hoppscotch Interfaz programación",
       "description": "en línea hoppscotch api for API, client, Open source, navegador. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tableplus": {
@@ -1031,7 +1032,7 @@
       "description": "en línea localtunnel tunnel for tunnel, gratuito, intranet, share. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pipedream": {
-      "name": "Pipedream API",
+      "name": "Pipedream Interfaz programación",
       "description": "en línea pipedream api for API, integration, automation, workflows. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "zapier": {
@@ -1047,7 +1048,7 @@
       "description": "en línea ifttt automation for automation, IoT, smart, connect. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "notion-api": {
-      "name": "Notion API",
+      "name": "Notion Interfaz programación",
       "description": "en línea notion api for API, Notion, developer, integration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cal-com": {
@@ -1079,11 +1080,11 @@
       "description": "en línea grafana monitoring for monitoring, dashboard, visualization, alerts. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "uptime-kuma": {
-      "name": "Uptime Kuma",
+      "name": "Tiempo Activo Kuma",
       "description": "en línea uptime kuma for monitoring, uptime, Open source, self-hosted. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "portainer": {
-      "name": "Portainer Docker",
+      "name": "Portainer Contenedores Docker",
       "description": "en línea portainer docker for Docker, container, management, GUI. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "photoprism": {
@@ -1107,7 +1108,7 @@
       "description": "en línea tldraw whiteboard for whiteboard, infinite, canvas, collaboration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "umal": {
-      "name": "Umal",
+      "name": "Monitor Uptime",
       "description": "en línea umal for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "whimsical": {
@@ -1123,7 +1124,7 @@
       "description": "en línea diagrams diagram for diagram, architecture, draw, cloud. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pdftotext": {
-      "name": "Pdftotext PDF",
+      "name": "PDF a Texto PDF",
       "description": "en línea pdftotext PDF for PDF, texto, extract, convert. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pdf编辑": {
@@ -1199,7 +1200,7 @@
       "description": "en línea shopify e-commerce for e-commerce, store, en línea, sell. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "woocommerce": {
-      "name": "Woocommerce WordPress",
+      "name": "WooCommerce WordPress",
       "description": "en línea woocommerce wordpress for WordPress, e-commerce, plugin, store. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "stripe": {
@@ -1211,7 +1212,7 @@
       "description": "en línea paypal payment for payment, PayPal, checkout, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "alibaba": {
-      "name": "Alibaba B2B",
+      "name": "Alibaba Empresa a Empresa",
       "description": "en línea alibaba b2b for B2B, wholesale, supplier, trade. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "aliexpress": {
@@ -1243,15 +1244,15 @@
       "description": "en línea sendgrid email for email, API, delivery, transactional. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "hubspot": {
-      "name": "Hubspot Marketing",
+      "name": "HubSpot Marketing",
       "description": "en línea hubspot marketing for marketing, automation, CRM, sales. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "marketo": {
-      "name": "Marketo B2B",
+      "name": "Marketo Empresa a Empresa",
       "description": "en línea marketo b2b for B2B, marketing, automation, leads. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "semrush": {
-      "name": "Semrush SEO",
+      "name": "Semrush Posicionamiento web",
       "description": "en línea semrush seo for SEO, analysis, keywords, competitor. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "ahrefs": {
@@ -1259,7 +1260,7 @@
       "description": "en línea ahrefs backlinks for backlinks, SEO, analysis, ranking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "moz": {
-      "name": "Moz SEO",
+      "name": "Moz Posicionamiento web",
       "description": "en línea moz seo for SEO, authority, ranking, analysis. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "google-analytics": {
@@ -1287,7 +1288,7 @@
       "description": "en línea canva social for social, design, Instagram, Facebook. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "later": {
-      "name": "Later Instagram",
+      "name": "Después Instagram",
       "description": "en línea later instagram for Instagram, scheduling, social, hashtags. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sproutsocial": {
@@ -1303,7 +1304,7 @@
       "description": "en línea brandwatch ai for AI, monitoring, sentimiento, analytics. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tweetdeck": {
-      "name": "Tweetdeck Twitter",
+      "name": "TweetDeck Twitter",
       "description": "en línea tweetdeck twitter for Twitter, management, real-time, multi-column. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "linkedin-manager": {
@@ -1315,7 +1316,7 @@
       "description": "en línea pinterest business for Pinterest, visual, marketing, traffic. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "intercom": {
-      "name": "Intercom Chat",
+      "name": "Intercom Chat en vivo",
       "description": "en línea intercom chat for chat, bots, customer, messaging. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "zendesk": {
@@ -1335,7 +1336,7 @@
       "description": "en línea livechat live for live, chat, support, real-time. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "crisp": {
-      "name": "Crisp Chat",
+      "name": "Crisp Chat en vivo",
       "description": "en línea crisp chat for chat, gratuito, support, multi-site. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tidio": {
@@ -1343,7 +1344,7 @@
       "description": "en línea tidio ai for AI, bots, chat, support. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "olark": {
-      "name": "Olark Chat",
+      "name": "Olark Chat en vivo",
       "description": "en línea olark chat for chat, live, website, simple. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "drift": {
@@ -1367,7 +1368,7 @@
       "description": "en línea wave gratuito for gratuito, accounting, invoicing, bookkeeping. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "mint": {
-      "name": "Mint Personal",
+      "name": "Mint Gestión personal",
       "description": "en línea mint personal for personal, finance, budget, bills. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "ynab": {
@@ -1375,7 +1376,7 @@
       "description": "en línea ynab budget for budget, zero-based, finance, planning. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "expensify": {
-      "name": "Expensify Expenses",
+      "name": "Expensify Gastos",
       "description": "en línea expensify expenses for expenses, receipts, corporate, automation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "concur": {
@@ -1383,7 +1384,7 @@
       "description": "en línea concur travel for travel, expenses, SAP, enterprise. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "stripe-dashboard": {
-      "name": "Stripe Dashboard",
+      "name": "Stripe Panel",
       "description": "en línea stripe dashboard for Stripe, dashboard, transactions, payments. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "paypal-business": {
@@ -1395,23 +1396,23 @@
       "description": "en línea bamboo hr for HR, recruiting, onboarding, performance. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "workday": {
-      "name": "Workday HR",
+      "name": "Workday RRHH",
       "description": "en línea workday hr for HR, enterprise, cloud, HCM. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "linkedin-recruiter": {
-      "name": "Linkedin Recruiter",
+      "name": "LinkedIn Reclutador",
       "description": "en línea linkedin recruiter for LinkedIn, recruiter, talent, hiring. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "indeed-recruit": {
-      "name": "Indeed Recruit",
+      "name": "Indeed Reclutamiento",
       "description": "en línea indeed recruit for recruiting, jobs, hiring, talent. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "greenhouse": {
-      "name": "Greenhouse Recruiting",
+      "name": "Greenhouse Reclutamiento",
       "description": "en línea greenhouse recruiting for recruiting, workflow, interviews, hiring. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "lever": {
-      "name": "Lever Talent",
+      "name": "Lever Talento",
       "description": "en línea lever talent for talent, AI, recruiting, CRM. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "slack-hr": {
@@ -1427,7 +1428,7 @@
       "description": "en línea google workspace for Google, workspace, enterprise, collaboration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "microsoft-365": {
-      "name": "Microsoft 365",
+      "name": "Microsoft Suite 365",
       "description": "en línea microsoft 365 for Microsoft, office, Teams, enterprise. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "coursera": {
@@ -1443,11 +1444,11 @@
       "description": "en línea edx gratuito for gratuito, university, courses, certification. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "khan-academy": {
-      "name": "Khan Academy",
+      "name": "Khan Academia",
       "description": "en línea khan academy for gratuito, K12, math, science. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "duolingo": {
-      "name": "Duolingo Language",
+      "name": "Duolingo Idioma",
       "description": "en línea duolingo language for language, learning, gratuito, games. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "quizlet": {
@@ -1455,11 +1456,11 @@
       "description": "en línea quizlet flashcards for flashcards, learning, study, memory. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "notion-students": {
-      "name": "Notion Students",
+      "name": "Notion Estudiantes",
       "description": "en línea notion students for notes, students, templates, organization. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "coursera-for-campus": {
-      "name": "Coursera For Campus",
+      "name": "Coursera Para Campus",
       "description": "en línea coursera for campus for university, courses, certificates, campus. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "udacity": {
@@ -1467,7 +1468,7 @@
       "description": "en línea udacity programming for programming, nanodegree, AI, data. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "skillshare": {
-      "name": "Skillshare Creative",
+      "name": "Skillshare Creativo",
       "description": "en línea skillshare creative for creative, skills, design, business. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "myfitnesspal": {
@@ -1475,11 +1476,11 @@
       "description": "en línea myfitnesspal health for health, diet, calories, tracking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "headspace": {
-      "name": "Headspace Meditation",
+      "name": "Headspace Meditación",
       "description": "en línea headspace meditation for meditation, mindfulness, stress, sleep. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "calm": {
-      "name": "Calm Relaxation",
+      "name": "Calm Relajación",
       "description": "en línea calm relaxation for relaxation, sleep, meditation, music. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "strava": {
@@ -1487,11 +1488,11 @@
       "description": "en línea strava sports for sports, running, cycling, GPS. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sleep-cycle": {
-      "name": "Sleep Cycle",
+      "name": "Sueño Cycle",
       "description": "en línea sleep cycle for sleep, alarm, tracking, analysis. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "noom": {
-      "name": "Noom Diet",
+      "name": "Noom Dieta",
       "description": "en línea noom diet for diet, health, peso loss, behavior. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "whoop": {
@@ -1499,11 +1500,11 @@
       "description": "en línea whoop sports for sports, wearable, recovery, tracking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "aaptiv": {
-      "name": "Aaptiv Fitness",
+      "name": "Aaptiv Aptitud",
       "description": "en línea aaptiv fitness for fitness, AI, training, workouts. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "fitbit": {
-      "name": "Fitbit Wearable",
+      "name": "Fitbit Portátil",
       "description": "en línea fitbit wearable for wearable, steps, heart rate, health. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "apple-health": {
@@ -1511,11 +1512,11 @@
       "description": "en línea apple health for Apple, health, iPhone, data. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "airbnb": {
-      "name": "Airbnb Stays",
+      "name": "Airbnb Alojamientos",
       "description": "en línea airbnb stays for stays, travel, accommodation, booking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "booking": {
-      "name": "Booking Hotels",
+      "name": "Reserva Hotels",
       "description": "en línea booking hotels for hotels, booking, travel, accommodation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tripadvisor": {
@@ -1523,11 +1524,11 @@
       "description": "en línea tripadvisor travel for travel, reviews, restaurants, attractions. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "google-maps": {
-      "name": "Google Maps",
+      "name": "Google Mapas",
       "description": "en línea google maps for maps, navigation, directions, traffic. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "uber": {
-      "name": "Uber Rides",
+      "name": "Uber Viajes",
       "description": "en línea uber rides for rides, taxi, transport, booking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "grubhub": {
@@ -1535,15 +1536,15 @@
       "description": "en línea grubhub food for food, delivery, ordering, restaurants. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "doordash": {
-      "name": "Doordash Delivery",
+      "name": "Doordash Entrega",
       "description": "en línea doordash delivery for delivery, food, restaurants, convenience. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "yelp": {
-      "name": "Yelp Reviews",
+      "name": "Yelp Reseñas",
       "description": "en línea yelp reviews for reviews, local, restaurants, businesses. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tripit": {
-      "name": "Tripit Itinerary",
+      "name": "Tripit Itinerario",
       "description": "en línea tripit itinerary for itinerary, travel, flights, planning. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "google-travel": {
@@ -1551,11 +1552,11 @@
       "description": "en línea google travel for travel, flights, hotels, Google. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "premiere-pro": {
-      "name": "Premiere Pro",
+      "name": "Premiere Profesional",
       "description": "en línea premiere pro for vídeo, editing, Adobe, professional. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "final-cut-pro": {
-      "name": "Final Cut Pro",
+      "name": "Final Corte Profesional",
       "description": "en línea final cut pro for vídeo, editing, Apple, Mac. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "davinci-resolve": {
@@ -1587,11 +1588,11 @@
       "description": "en línea flexclip vídeo for vídeo, templates, en línea, creation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "audacity": {
-      "name": "Audacity Audio",
+      "name": "Audacity Audio digital",
       "description": "en línea audacity audio for audio, editing, Open-source, recording. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "garageband": {
-      "name": "Garageband Audio",
+      "name": "GarageBand Audio",
       "description": "en línea garageband audio for audio, music, Apple, creation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "ableton": {
@@ -1615,51 +1616,51 @@
       "description": "en línea splice music for music, samples, sounds, collaboration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "logic-pro": {
-      "name": "Logic Pro",
+      "name": "Logic Profesional",
       "description": "en línea logic pro for music, production, Apple, professional. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "podcastle": {
-      "name": "Podcastle Podcast",
+      "name": "Podcastle Programa de podcast",
       "description": "en línea podcastle podcast for podcast, AI, recording, editing. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "anchor": {
-      "name": "Anchor Podcast",
+      "name": "Anchor Programa de podcast",
       "description": "en línea anchor podcast for podcast, Spotify, gratuito, hosting. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "blender": {
-      "name": "Blender 3D",
+      "name": "Blender 3D (Tridimensional)",
       "description": "en línea blender 3d for 3D, Open-source, modeling, rendering. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sketchup": {
-      "name": "Sketchup 3D",
+      "name": "SketchUp 3D",
       "description": "en línea sketchup 3d for 3D, architecture, design, visualization. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tinkercad": {
-      "name": "Tinkercad 3D",
+      "name": "Tinkercad 3D (Tridimensional)",
       "description": "en línea tinkercad 3d for 3D, Autodesk, design, printing. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "fusion-360": {
-      "name": "Fusion 360",
+      "name": "Fusion Vista 360°",
       "description": "en línea fusion 360 for 3D, CAD, cloud, manufacturing. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cinema-4d": {
-      "name": "Cinema 4d",
+      "name": "Cinema 4D",
       "description": "en línea cinema 4d for 3D, rendering, animation, professional. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "threejs": {
-      "name": "Threejs 3D",
+      "name": "Three.js 3D",
       "description": "en línea threejs 3d for 3D, WebGL, JavaScript, Web. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "babylonjs": {
-      "name": "Babylonjs 3D",
+      "name": "Babylon.js 3D",
       "description": "en línea babylonjs 3d for 3D, juego, Microsoft, WebGL. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "meshroom": {
-      "name": "Meshroom 3D",
+      "name": "Meshroom 3D (Tridimensional)",
       "description": "en línea meshroom 3d for 3D, scanning, Open-source, photo. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "substance": {
-      "name": "Substance 3D",
+      "name": "Substance 3D (Tridimensional)",
       "description": "en línea substance 3d for 3D, material, texture, Adobe. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tableau": {
@@ -1667,15 +1668,15 @@
       "description": "en línea tableau data for data, visualization, analysis, dashboard. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "power-bi": {
-      "name": "Power Bi",
+      "name": "Potencia Bi",
       "description": "en línea power bi for BI, Microsoft, data, visualization. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "looker": {
-      "name": "Looker BI",
+      "name": "Looker Inteligencia empresarial",
       "description": "en línea looker bi for BI, Google, cloud, analysis. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "chartjs": {
-      "name": "Chartjs Charts",
+      "name": "Chartjs Gráficos",
       "description": "en línea chartjs charts for charts, JavaScript, Open-source, Web. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "d3js": {
@@ -1683,15 +1684,15 @@
       "description": "en línea d3js data for data, visualization, JavaScript, SVG. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "plotly": {
-      "name": "Plotly Charts",
+      "name": "Plotly Gráficos",
       "description": "en línea plotly charts for charts, interactive, Python, Open-source. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "infogram": {
-      "name": "Infogram Infographic",
+      "name": "Infogram Infografía",
       "description": "en línea infogram infographic for infographic, visualization, en línea, drag-Drop. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "venngage": {
-      "name": "Venngage Infographic",
+      "name": "Venngage Infografía",
       "description": "en línea venngage infographic for infographic, report, visualization, templates. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "flourish": {
@@ -1727,27 +1728,27 @@
       "description": "en línea nordpass contraseña for contraseña, NordVPN, sync, seguridad. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "have-i-been-pwned": {
-      "name": "Have I Been Pwned",
+      "name": "Tengo I Estado Comprometido",
       "description": "en línea have i been pwned for breach, check, email, seguridad. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "virustotal": {
-      "name": "Virustotal Virus",
+      "name": "Virustotal Antivirus",
       "description": "en línea virustotal virus for virus, detection, scanning, archivo. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cryptomator": {
-      "name": "Cryptomator Encryption",
+      "name": "Cryptomator Cifrado",
       "description": "en línea cryptomator encryption for encryption, cloud, Open-source, privacy. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "google-drive": {
-      "name": "Google Drive",
+      "name": "Google Almacenamiento en nube",
       "description": "en línea google drive for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "box": {
-      "name": "Box",
+      "name": "Caja",
       "description": "en línea box for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sharepoint": {
-      "name": "Sharepoint",
+      "name": "SharePoint",
       "description": "en línea sharepoint for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "coggle": {
@@ -1775,11 +1776,11 @@
       "description": "en línea pdf24 PDF for PDF, gratuito, herramientas, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "zamzar": {
-      "name": "Zamzar Convert",
+      "name": "Zamzar Convertir",
       "description": "en línea zamzar convert for convert, format, email, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "googledrive-files": {
-      "name": "Googledrive Files",
+      "name": "Googledrive Archivos",
       "description": "en línea googledrive files for Google, search, cloud, archivo. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "compress2go": {
@@ -1787,35 +1788,35 @@
       "description": "en línea compress2go compress for compress, ZIP, archivo, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "stoplight": {
-      "name": "Stoplight API",
+      "name": "Stoplight Interfaz programación",
       "description": "en línea stoplight api for API, docs, design, OpenAPI. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "swagger": {
-      "name": "Swagger API",
+      "name": "Swagger Interfaz programación",
       "description": "en línea swagger api for API, OpenAPI, docs, testing. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "readme": {
-      "name": "Readme API",
+      "name": "Readme Interfaz programación",
       "description": "en línea readme api for API, docs, hosting, interactive. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "runscope": {
-      "name": "Runscope API",
+      "name": "Runscope Interfaz programación",
       "description": "en línea runscope api for API, monitoring, testing, automation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "mocky": {
-      "name": "Mocky API",
+      "name": "Mocky Interfaz programación",
       "description": "en línea mocky api for API, mock, gratuito, development. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "ngrok-api": {
-      "name": "Ngrok API",
+      "name": "Ngrok Interfaz programación",
       "description": "en línea ngrok api for API, tunnel, development, local. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "repl-it": {
-      "name": "Repl It",
+      "name": "Replit",
       "description": "en línea repl it for IDE, en línea, collaboration, hosting. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "gitpod": {
-      "name": "Gitpod Cloud",
+      "name": "Gitpod Nube",
       "description": "en línea gitpod cloud for cloud, IDE, Docker, GitHub. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "perplexity": {
@@ -1823,7 +1824,7 @@
       "description": "en línea perplexity ai for AI, search, real-time, citation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "character-ai": {
-      "name": "Character Ai",
+      "name": "Character IA",
       "description": "en línea character ai for AI, role, conversation, interaction. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "poe": {
@@ -1859,11 +1860,11 @@
       "description": "en línea 讯飞智作 ai for AI, vídeo, dubbing, digital human. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "grammarly-go": {
-      "name": "Grammarly Go",
+      "name": "Grammarly Ir",
       "description": "en línea grammarly go for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "quillbot": {
-      "name": "Quillbot",
+      "name": "QuillBot",
       "description": "en línea quillbot for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "scribbr": {
@@ -1875,11 +1876,11 @@
       "description": "en línea frase for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "invideo": {
-      "name": "Invideo",
+      "name": "InVideo",
       "description": "en línea invideo for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "veedio": {
-      "name": "Veedio",
+      "name": "VEED",
       "description": "en línea veedio for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "filmora": {
@@ -1891,7 +1892,7 @@
       "description": "en línea wave vídeo for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "subtitles": {
-      "name": "Subtitles",
+      "name": "Subtítulos",
       "description": "en línea subtitles for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cloudflare": {
@@ -1899,7 +1900,7 @@
       "description": "en línea cloudflare for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "netlify-cms": {
-      "name": "Netlify Cms",
+      "name": "Netlify CMS",
       "description": "en línea netlify cms for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sanity": {
@@ -1915,11 +1916,11 @@
       "description": "en línea contentful for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "shields": {
-      "name": "Shields",
+      "name": "Shields.io",
       "description": "en línea shields for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "gitlab": {
-      "name": "Gitlab",
+      "name": "GitLab",
       "description": "en línea gitlab for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "bitbucket": {
@@ -1927,11 +1928,11 @@
       "description": "en línea bitbucket for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "vercel-functions": {
-      "name": "Vercel Functions",
+      "name": "Vercel Funciones",
       "description": "en línea vercel functions for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cloudflare-workers": {
-      "name": "Cloudflare Workers",
+      "name": "Cloudflare Servidores cloud",
       "description": "en línea cloudflare workers for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "vite": {
@@ -1939,7 +1940,7 @@
       "description": "en línea vite for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "nextjs": {
-      "name": "Nextjs",
+      "name": "Next.js",
       "description": "en línea nextjs for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "remix": {
@@ -1951,15 +1952,15 @@
       "description": "en línea astro for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "solidjs": {
-      "name": "Solidjs",
+      "name": "Solid.js",
       "description": "en línea solidjs for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "vuejs": {
-      "name": "Vuejs",
+      "name": "Vue.js",
       "description": "en línea vuejs for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "nuxtjs": {
-      "name": "Nuxtjs",
+      "name": "Nuxt.js",
       "description": "en línea nuxtjs for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "svelte": {
@@ -1967,7 +1968,7 @@
       "description": "en línea svelte for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sveltekit": {
-      "name": "Sveltekit",
+      "name": "SvelteKit",
       "description": "en línea sveltekit for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "gatsby": {
@@ -1975,19 +1976,19 @@
       "description": "en línea gatsby for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "chakra-ui": {
-      "name": "Chakra Ui",
+      "name": "Chakra UI",
       "description": "en línea chakra ui for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tailwindcss": {
-      "name": "Tailwindcss",
+      "name": "Tailwind CSS",
       "description": "en línea tailwindcss for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "styled-components": {
-      "name": "Styled Components",
+      "name": "Styled Biblioteca componentes",
       "description": "en línea styled components for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "react-query": {
-      "name": "React Query",
+      "name": "React Consulta",
       "description": "en línea react query for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "axios": {
@@ -1999,7 +2000,7 @@
       "description": "en línea lodash for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "date-fns": {
-      "name": "Date Fns",
+      "name": "Fecha Fns",
       "description": "en línea date fns for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "react-hook-form": {
@@ -2011,19 +2012,19 @@
       "description": "en línea zod for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "react-router": {
-      "name": "React Router",
+      "name": "React Enrutador",
       "description": "en línea react router for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "framer-motion": {
-      "name": "Framer Motion",
+      "name": "Framer Movimiento",
       "description": "en línea framer motion for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "gsap": {
-      "name": "Gsap",
+      "name": "GSAP",
       "description": "en línea gsap for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "playcanvas": {
-      "name": "Playcanvas",
+      "name": "PlayCanvas",
       "description": "en línea playcanvas for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "splines": {
@@ -2031,7 +2032,7 @@
       "description": "en línea splines for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "p5js": {
-      "name": "P5js",
+      "name": "p5.js",
       "description": "en línea p5js for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "processing": {
@@ -2071,11 +2072,11 @@
       "description": "en línea cloudflare pages for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "heroku": {
-      "name": "Heroku Cloud",
+      "name": "Heroku Nube",
       "description": "en línea heroku cloud for cloud, PaaS, deployment, scaling. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "aws-amplify": {
-      "name": "Aws Amplify",
+      "name": "AWS Amplify",
       "description": "en línea aws amplify for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "mongodb-atlas": {
@@ -2103,11 +2104,11 @@
       "description": "en línea socket io for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "auth0": {
-      "name": "Auth0 Authentication",
+      "name": "Auth0 Autenticación",
       "description": "en línea auth0 authentication for authentication, seguridad, OAuth2, SSO. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "okta": {
-      "name": "Okta Authentication",
+      "name": "Okta Autenticación",
       "description": "en línea okta authentication for authentication, enterprise, SSO, MFA. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "nextauth": {
@@ -2135,7 +2136,7 @@
       "description": "en línea apollo for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "create-react-app": {
-      "name": "Create React App",
+      "name": "Crear React Aplicación",
       "description": "en línea create react app for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "nodejs": {
@@ -2143,43 +2144,43 @@
       "description": "en línea nodejs for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "deno": {
-      "name": "Deno Runtime",
+      "name": "Deno Tiempo ejec.",
       "description": "en línea deno runtime for runtime, JavaScript, TypeScript, seguro. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "bun": {
-      "name": "Bun Runtime",
+      "name": "Bun Tiempo ejec.",
       "description": "en línea bun runtime for runtime, fast, package, todo-in-one. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "npm": {
-      "name": "Npm Package",
+      "name": "Npm Paquete",
       "description": "en línea npm package for package, Node.js, dependencies, manager. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "yarn": {
-      "name": "Yarn Package",
+      "name": "Yarn Paquete",
       "description": "en línea yarn package for package, fast, reliable, manager. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pnpm": {
-      "name": "Pnpm Package",
+      "name": "Pnpm Paquete",
       "description": "en línea pnpm package for package, fast, disk saving, shared. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "jest": {
-      "name": "Jest Testing",
+      "name": "Jest Pruebas",
       "description": "en línea jest testing for testing, JavaScript, Facebook, snapshot. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "vitest": {
-      "name": "Vitest Testing",
+      "name": "Vitest Pruebas",
       "description": "en línea vitest testing for testing, Vite, frontend, fast. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cypress": {
-      "name": "Cypress E2E",
+      "name": "Cypress Extremo a Extremo",
       "description": "en línea cypress e2e for E2E, testing, automation, frontend. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "playwright": {
-      "name": "Playwright E2E",
+      "name": "Playwright Extremo a Extremo",
       "description": "en línea playwright e2e for E2E, testing, Microsoft, navegador. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "eslint": {
-      "name": "Eslint Linter",
+      "name": "Eslint Comprobador de código",
       "description": "en línea eslint linter for linter, código, JavaScript, errors. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "prettier": {
@@ -2187,11 +2188,11 @@
       "description": "en línea prettier formateador for formateador, código, style, unify. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "webpack": {
-      "name": "Webpack Bundler",
+      "name": "Webpack Empaquetador",
       "description": "en línea webpack bundler for bundler, frontend, module, build. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rollup": {
-      "name": "Rollup Bundler",
+      "name": "Rollup Empaquetador",
       "description": "en línea rollup bundler for bundler, module, Tree-shaking, optimization. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "parcel": {
@@ -2211,7 +2212,7 @@
       "description": "en línea tencent translate for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "zhihu": {
-      "name": "Zhihu Q&A",
+      "name": "Zhihu Preguntas",
       "description": "en línea zhihu q&a for Q&A, knowledge, community, Chino. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "csdn": {
@@ -2231,11 +2232,11 @@
       "description": "en línea aliyun for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tencent-cloud": {
-      "name": "Tencent Cloud",
+      "name": "Tencent Nube",
       "description": "en línea tencent cloud for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "huawei-cloud": {
-      "name": "Huawei Cloud",
+      "name": "Huawei Nube",
       "description": "en línea huawei cloud for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "upyun": {
@@ -2247,7 +2248,7 @@
       "description": "en línea dcloud for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "uni-app": {
-      "name": "Uni App",
+      "name": "Uni Aplicación",
       "description": "en línea uni app for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "taro": {
@@ -2259,7 +2260,7 @@
       "description": "en línea ant design for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "element-ui": {
-      "name": "Element Ui",
+      "name": "Element UI",
       "description": "en línea element ui for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "vant": {
@@ -2267,7 +2268,7 @@
       "description": "en línea vant for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "nutui": {
-      "name": "Nutui",
+      "name": "Nut UI",
       "description": "en línea nutui for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "echarts": {
@@ -2291,7 +2292,7 @@
       "description": "en línea tuotu for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "canva-cn": {
-      "name": "Canva Cn",
+      "name": "Canva China",
       "description": "en línea canva cn for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "wps": {
@@ -2307,7 +2308,7 @@
       "description": "en línea dingtalk for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "weixin-work": {
-      "name": "Weixin Work",
+      "name": "Weixin Trabajo",
       "description": "en línea weixin work for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "teambition": {
@@ -2339,7 +2340,7 @@
       "description": "en línea meituan for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "eleme": {
-      "name": "Eleme Food Delivery",
+      "name": "Eleme Comida Entrega",
       "description": "en línea eleme food delivery for food delivery, Alibaba, restaurant, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "netease-music": {
@@ -2379,7 +2380,7 @@
       "description": "en línea youku vídeo for vídeo, movies, dramas, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rtl": {
-      "name": "Rtl Testing",
+      "name": "Rtl Pruebas",
       "description": "en línea rtl testing for testing, React, component, user. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "storybook": {
@@ -2391,11 +2392,11 @@
       "description": "en línea esbuild build for build, fast, Go, JavaScript. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "stylelint": {
-      "name": "Stylelint Linter",
+      "name": "Stylelint Comprobador de código",
       "description": "en línea stylelint linter for linter, CSS, style, standards. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "husky": {
-      "name": "Husky Git",
+      "name": "Husky Gestión Git",
       "description": "en línea husky git for Git, hooks, commit, automation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "lint-staged": {
@@ -2403,7 +2404,7 @@
       "description": "en línea lint staged for lint, staged, Git, efficiency. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "commitlint": {
-      "name": "Commitlint Git",
+      "name": "Commitlint Gestión Git",
       "description": "en línea commitlint git for Git, commit, standardize, equipo. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sketch": {
@@ -2423,11 +2424,11 @@
       "description": "en línea adobe xd for design, Adobe, UI, prototype. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "affinity-designer": {
-      "name": "Affinity Designer",
+      "name": "Affinity Diseñador",
       "description": "en línea affinity designer for vector, drawing, professional, alternative. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "affinity-photo": {
-      "name": "Affinity Photo",
+      "name": "Affinity Foto",
       "description": "en línea affinity photo for photo, editing, professional, alternative. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "procreate": {
@@ -2451,11 +2452,11 @@
       "description": "en línea slack alternative for communication, equipo, voice, community. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "mattermost": {
-      "name": "Mattermost Chat",
+      "name": "Mattermost Chat en vivo",
       "description": "en línea mattermost chat for chat, Open source, enterprise, self-hosted. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rocketchat": {
-      "name": "Rocketchat Chat",
+      "name": "Rocketchat Chat en vivo",
       "description": "en línea rocketchat chat for chat, Open source, collaboration, vídeo. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "zoom": {
@@ -2471,19 +2472,19 @@
       "description": "en línea jitsi vídeo for vídeo, conferencing, Open source, encrypted. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "gotomeeting": {
-      "name": "Gotomeeting Meeting",
+      "name": "Gotomeeting Reunión",
       "description": "en línea gotomeeting meeting for meeting, en línea, sharing, recording. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "webex": {
-      "name": "Webex Meeting",
+      "name": "Webex Reunión",
       "description": "en línea webex meeting for meeting, enterprise, Cisco, seguridad. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "masterclass": {
-      "name": "Masterclass Education",
+      "name": "Masterclass Educación",
       "description": "en línea masterclass education for education, master, celebrity, courses. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "lynda": {
-      "name": "Lynda Education",
+      "name": "Lynda Educación",
       "description": "en línea lynda education for education, LinkedIn, business, technical. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "codecademy": {
@@ -2503,7 +2504,7 @@
       "description": "en línea exercism programming for programming, practice, mentor, review. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "excel": {
-      "name": "Excel Spreadsheet",
+      "name": "Excel Hoja cálculo",
       "description": "en línea excel spreadsheet for spreadsheet, data, analysis, Microsoft. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "google-data-studio": {
@@ -2515,11 +2516,11 @@
       "description": "en línea excel en línea for spreadsheet, en línea, collaboration, cloud. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "numbers": {
-      "name": "Numbers Spreadsheet",
+      "name": "Numbers Hoja cálculo",
       "description": "en línea numbers spreadsheet for spreadsheet, Apple, iCloud, templates. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "power-query": {
-      "name": "Power Query",
+      "name": "Potencia Query",
       "description": "en línea power query for data, cleaning, transformation, Power. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "python": {
@@ -2543,27 +2544,27 @@
       "description": "en línea matplotlib data for data, visualization, Python, charts. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "aws": {
-      "name": "Aws Cloud",
+      "name": "Aws Nube",
       "description": "en línea aws cloud for cloud, Amazon, computing, storage. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "azure": {
-      "name": "Azure Cloud",
+      "name": "Azure Nube",
       "description": "en línea azure cloud for cloud, Microsoft, AI, machine learning. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "gcp": {
-      "name": "Gcp Cloud",
+      "name": "Gcp Nube",
       "description": "en línea gcp cloud for cloud, Google, AI, big data. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "digitalocean": {
-      "name": "Digitalocean Cloud",
+      "name": "Digitalocean Nube",
       "description": "en línea digitalocean cloud for cloud, hosting, developer, simple. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "linode": {
-      "name": "Linode Cloud",
+      "name": "Linode Nube",
       "description": "en línea linode cloud for cloud, VPS, hosting, high performance. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "duo": {
-      "name": "Duo Authentication",
+      "name": "Duo Autenticación",
       "description": "en línea duo authentication for authentication, seguridad, MFA, protection. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "snyk": {
@@ -2579,7 +2580,7 @@
       "description": "en línea checkmarx seguridad for seguridad, testing, static analysis, SAST. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "weather": {
-      "name": "Weather Weather",
+      "name": "Clima Clima",
       "description": "en línea weather weather for weather, forecast, air quality, global. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "calculator": {
@@ -2591,7 +2592,7 @@
       "description": "en línea unit convertidor for unit, conversion, length, peso. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "dictionary": {
-      "name": "Dictionary Dictionary",
+      "name": "Diccionario Diccionario",
       "description": "en línea dictionary dictionary for dictionary, translation, words, pronunciation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "thesaurus": {
@@ -2603,23 +2604,23 @@
       "description": "en línea temporizador temporizador for temporizador, cuenta atrás, Pomodoro, focus. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "stopwatch": {
-      "name": "Stopwatch Stopwatch",
+      "name": "Cronómetro Cronómetro",
       "description": "en línea stopwatch stopwatch for stopwatch, timing, precise, split. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "calendar": {
-      "name": "Calendar Calendar",
+      "name": "Calendario Calendario",
       "description": "en línea calendar calendar for calendar, dates, holidays, week view. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "winrar": {
-      "name": "Winrar Compression",
+      "name": "Winrar Compresión",
       "description": "en línea winrar compression for compression, archivo, RAR, ZIP. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "7zip": {
-      "name": "7zip Compression",
+      "name": "7zip Compresión",
       "description": "en línea 7zip compression for compression, gratuito, Open source, high ratio. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "bandizip": {
-      "name": "Bandizip Compression",
+      "name": "Bandizip Compresión",
       "description": "en línea bandizip compression for compression, gratuito, ad-gratuito, formats. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "ccleaner": {
@@ -2627,7 +2628,7 @@
       "description": "en línea ccleaner cleaning for cleaning, system, optimization, junk. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "recuva": {
-      "name": "Recuva Recovery",
+      "name": "Recuva Recuperación",
       "description": "en línea recuva recovery for recovery, archivo, deleted, data. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "markdown": {
@@ -2635,11 +2636,11 @@
       "description": "en línea Markdown Markdown for Markdown, editor, vista previa, export. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "drawio": {
-      "name": "Drawio Diagramming",
+      "name": "Drawio Diagramación",
       "description": "en línea drawio diagramming for diagramming, flowchart, mind map, gratuito. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "plantuml": {
-      "name": "Plantuml Diagramming",
+      "name": "Plantuml Diagramación",
       "description": "en línea plantuml diagramming for diagramming, UML, código, texto. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "mermaid": {
@@ -2651,19 +2652,19 @@
       "description": "en línea carbon código for código, screenshot, share, beautiful. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "ray-so": {
-      "name": "Ray.so Dreamy Code Shots",
+      "name": "Ray.so Ensueño Código Capturas",
       "description": "Capturas de código con estilo glassmorphic. Fondos degradados esmerilados con temas y sombras — imágenes para compartir más elegantes."
     },
     "wakatime": {
-      "name": "Wakatime Time",
+      "name": "Wakatime Tiempo",
       "description": "en línea wakatime time for time, tracking, coding, statistics. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "codecov": {
-      "name": "Codecov Coverage",
+      "name": "Codecov Cobertura",
       "description": "en línea codecov coverage for coverage, testing, código, quality. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "coveralls": {
-      "name": "Coveralls Coverage",
+      "name": "Coveralls Cobertura",
       "description": "en línea coveralls coverage for coverage, CI, testing, reports. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "codeclimate": {
@@ -2707,15 +2708,15 @@
       "description": "en línea keep for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "nike-training": {
-      "name": "Nike Training",
+      "name": "Nike Entrenamiento",
       "description": "en línea nike training for fitness, Nike, training, plan. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "peloton": {
-      "name": "Peloton Fitness",
+      "name": "Peloton Aptitud",
       "description": "en línea peloton fitness for fitness, spin, classes, training. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "adidas-training": {
-      "name": "Adidas Training",
+      "name": "Adidas Entrenamiento",
       "description": "en línea adidas training for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "seven": {
@@ -2739,7 +2740,7 @@
       "description": "en línea meditopia for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "simple-habit": {
-      "name": "Simple Habit",
+      "name": "Sencillo Hábito",
       "description": "en línea simple habit for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "breethe": {
@@ -2747,7 +2748,7 @@
       "description": "en línea breethe for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sleep-score": {
-      "name": "Sleep Score",
+      "name": "Sueño Score",
       "description": "en línea sleep score for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "autosleep": {
@@ -2795,7 +2796,7 @@
       "description": "en línea mint budget for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "personal-capital": {
-      "name": "Personal Capital",
+      "name": "Gestión personal Capital",
       "description": "en línea personal capital for finance, investment, retirement, planning. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "credit-karma": {
@@ -2843,11 +2844,11 @@
       "description": "en línea ikea for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "houzz": {
-      "name": "Houzz Home",
+      "name": "Houzz Hogar",
       "description": "en línea houzz home for home, design, renovation, inspiration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pinterest-life": {
-      "name": "Pinterest Life",
+      "name": "Pinterest Vida",
       "description": "en línea pinterest life for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "wayfair": {
@@ -2855,7 +2856,7 @@
       "description": "en línea wayfair for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "accuweather": {
-      "name": "Accuweather Weather",
+      "name": "Accuweather Clima",
       "description": "en línea accuweather weather for weather, forecast, accurate, meteorology. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "wunderground": {
@@ -2875,7 +2876,7 @@
       "description": "en línea barkbox for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "garden-tags": {
-      "name": "Garden Tags",
+      "name": "Jardín Tags",
       "description": "en línea garden tags for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "picturethis": {
@@ -2903,7 +2904,7 @@
       "description": "en línea ticktick for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "any-do": {
-      "name": "Any Do",
+      "name": "Any Hacer",
       "description": "en línea any do for tasks, management, smart, todo. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "google-tasks": {
@@ -2911,11 +2912,11 @@
       "description": "en línea google tasks for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "things-3": {
-      "name": "Things 3",
+      "name": "Things Versión 3",
       "description": "en línea things 3 for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "omni-focus": {
-      "name": "Omni Focus",
+      "name": "Omni Enfoque",
       "description": "en línea omni focus for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pomofocus": {
@@ -2923,11 +2924,11 @@
       "description": "en línea pomofocus for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "forest": {
-      "name": "Forest",
+      "name": "Bosque",
       "description": "en línea forest for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "focus-to-do": {
-      "name": "Focus To Do",
+      "name": "Enfoque A Hacer",
       "description": "en línea focus to do for focus, time, todo, pomodoro. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "habitica": {
@@ -2943,7 +2944,7 @@
       "description": "en línea productive for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "day-one": {
-      "name": "Day One",
+      "name": "Day Uno",
       "description": "en línea day one for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "journey": {
@@ -2959,7 +2960,7 @@
       "description": "en línea cleanshot for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "snagit": {
-      "name": "Snagit",
+      "name": "Sna Git",
       "description": "en línea snagit for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sharex": {
@@ -2971,7 +2972,7 @@
       "description": "en línea lightshot for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "adobe-scan": {
-      "name": "Adobe Scan",
+      "name": "Adobe Escanear",
       "description": "en línea adobe scan for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "camscanner": {
@@ -2979,7 +2980,7 @@
       "description": "en línea camscanner for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "genius-scan": {
-      "name": "Genius Scan",
+      "name": "Genius Escanear",
       "description": "en línea genius scan for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "chrome": {
@@ -3027,7 +3028,7 @@
       "description": "en línea alltrails for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "babbel": {
-      "name": "Babbel Language",
+      "name": "Babbel Idioma",
       "description": "en línea babbel language for language, learning, speaking, conversation. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rosetta-stone": {
@@ -3047,7 +3048,7 @@
       "description": "en línea disney plus for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "hbo-max": {
-      "name": "Hbo Max",
+      "name": "Hbo Máximo",
       "description": "en línea hbo max for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "prime-video": {
@@ -3123,7 +3124,7 @@
       "description": "en línea pinduoduo e-commerce for e-commerce, grupo buy, social, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "linkedin": {
-      "name": "Linkedin",
+      "name": "LinkedIn",
       "description": "en línea linkedin for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "indeed": {
@@ -3143,7 +3144,7 @@
       "description": "en línea lagou for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "photo-magic": {
-      "name": "Photo Magic",
+      "name": "Foto Magic",
       "description": "en línea photo magic for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "myheritage": {
@@ -3151,7 +3152,7 @@
       "description": "en línea myheritage for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "whatsapp": {
-      "name": "Whatsapp",
+      "name": "Whats App",
       "description": "en línea whatsapp for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "telegram": {
@@ -3159,7 +3160,7 @@
       "description": "en línea telegram for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "wechat": {
-      "name": "Wechat",
+      "name": "WeChat",
       "description": "en línea wechat for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "signal": {
@@ -3167,7 +3168,7 @@
       "description": "en línea signal for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "line": {
-      "name": "Line",
+      "name": "Línea",
       "description": "en línea line for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "messenger": {
@@ -3187,11 +3188,11 @@
       "description": "en línea mcdonalds fast food for fast food, burger, fries, global. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "starbucks": {
-      "name": "Starbucks Coffee",
+      "name": "Starbucks Café",
       "description": "en línea starbucks coffee for coffee, cafe, drinks, global. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "luckin-coffee": {
-      "name": "Luckin Coffee",
+      "name": "Luckin Café",
       "description": "en línea luckin coffee for coffee, China, affordable, chain. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "xiaohongshu": {
@@ -3199,7 +3200,7 @@
       "description": "en línea xiaohongshu lifestyle for lifestyle, community, beauty, shopping. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "dianping": {
-      "name": "Dianping Reviews",
+      "name": "Dianping Reseñas",
       "description": "en línea dianping reviews for reviews, restaurant, grupo buy, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "mafengwo": {
@@ -3215,7 +3216,7 @@
       "description": "en línea qunar travel for travel, flights, hotels, comparison. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "trip-com": {
-      "name": "Trip Com",
+      "name": "Viaje Com",
       "description": "en línea trip com for travel, flights, hotels, tickets. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "fliggy": {
@@ -3271,11 +3272,11 @@
       "description": "en línea dxy healthcare for healthcare, medical, consultation, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "haodf": {
-      "name": "Haodf Medical",
+      "name": "Haodf Médico",
       "description": "en línea haodf medical for medical, consultation, doctor, booking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "chunyu": {
-      "name": "Chunyu Medical",
+      "name": "Chunyu Médico",
       "description": "en línea chunyu medical for medical, consultation, health, advice. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "ali-health": {
@@ -3303,15 +3304,15 @@
       "description": "en línea stackoverflow programming for programming, Q&A, developers, coding. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "quora": {
-      "name": "Quora Q&A",
+      "name": "Quora Preguntas",
       "description": "en línea quora q&a for Q&A, knowledge, English, community. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "wikipedia": {
-      "name": "Wikipedia Encyclopedia",
+      "name": "Wikipedia Enciclopedia",
       "description": "en línea wikipedia encyclopedia for encyclopedia, knowledge, gratuito, global. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "baike": {
-      "name": "Baike Encyclopedia",
+      "name": "Baike Enciclopedia",
       "description": "en línea baike encyclopedia for encyclopedia, Chino, knowledge, lookup. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "wolfram-alpha": {
@@ -3351,11 +3352,11 @@
       "description": "en línea designboom design for design, news, architecture, product. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "Dezeen": {
-      "name": "Dezeen",
+      "name": "Revista Dezeen",
       "description": "en línea dezeen for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "coolhousing": {
-      "name": "Coolhousing Home",
+      "name": "Coolhousing Hogar",
       "description": "en línea coolhousing home for home, design, 3D, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "qijia": {
@@ -3367,15 +3368,15 @@
       "description": "en línea huadi kitchen for kitchen, appliances, brand, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "midea": {
-      "name": "Midea Appliances",
+      "name": "Midea Electrodomés.",
       "description": "en línea midea appliances for appliances, AC, fridge, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "haier": {
-      "name": "Haier Appliances",
+      "name": "Haier Electrodomés.",
       "description": "en línea haier appliances for appliances, smart home, China, brand. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "gree": {
-      "name": "Gree Air Conditioner",
+      "name": "Gree Aire Aire Acond.",
       "description": "en línea gree air conditioner for air conditioner, appliances, China, brand. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "autohome": {
@@ -3391,7 +3392,7 @@
       "description": "en línea che168 automotive for automotive, comparison, quotes, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "carmax": {
-      "name": "Carmax Used Cars",
+      "name": "Carmax Usados Coches",
       "description": "en línea carmax used cars for used cars, retail, certified, US. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "truecar": {
@@ -3399,7 +3400,7 @@
       "description": "en línea truecar automotive for automotive, pricing, transparent, US. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "carvana": {
-      "name": "Carvana Used Cars",
+      "name": "Carvana Usados Coches",
       "description": "en línea carvana used cars for used cars, en línea, delivery, US. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "uber-eats": {
@@ -3407,7 +3408,7 @@
       "description": "en línea uber eats for food delivery, Uber, restaurant, US. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "instacart": {
-      "name": "Instacart Grocery",
+      "name": "Instacart Supermercado",
       "description": "en línea instacart grocery for grocery, delivery, supermarket, US. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "alipay": {
@@ -3415,7 +3416,7 @@
       "description": "en línea alipay payment for payment, mobile, China, Alibaba. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "wechat-pay": {
-      "name": "Wechat Pay",
+      "name": "WeChat Pay",
       "description": "en línea wechat pay for payment, mobile, WeChat, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "square": {
@@ -3427,23 +3428,23 @@
       "description": "en línea venmo payment for payment, social, transfer, US. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cash-app": {
-      "name": "Cash App",
+      "name": "Cash Aplicación",
       "description": "en línea cash app for payment, transfer, Square, US. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "wise": {
-      "name": "Wise Remittance",
+      "name": "Wise Remesa",
       "description": "en línea wise remittance for remittance, cross-border, low fees, global. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "remitly": {
-      "name": "Remitly Remittance",
+      "name": "Remitly Remesa",
       "description": "en línea remitly remittance for remittance, fast, seguro, global. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "worldremit": {
-      "name": "Worldremit Remittance",
+      "name": "Worldremit Remesa",
       "description": "en línea worldremit remittance for remittance, global, coverage, transfer. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "xiaohongshu-app": {
-      "name": "Xiaohongshu App",
+      "name": "Xiaohongshu Aplicación",
       "description": "en línea xiaohongshu app for lifestyle, community, beauty, shopping. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tiktok": {
@@ -3451,7 +3452,7 @@
       "description": "en línea tiktok vídeo for vídeo, short, global, creative. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "qq": {
-      "name": "Qq Messaging",
+      "name": "Qq Mensajería",
       "description": "en línea qq messaging for messaging, social, entertainment, Tencent. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "sina": {
@@ -3463,15 +3464,15 @@
       "description": "en línea sohu news for news, portal, vídeo, China. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "baidu": {
-      "name": "Baidu Search",
+      "name": "Baidu Búsqueda",
       "description": "en línea baidu search for search, engine, China, information. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "google": {
-      "name": "Google Search",
+      "name": "Google Búsqueda",
       "description": "en línea google search for search, engine, global, internet. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cooking-channels": {
-      "name": "Cooking Channels",
+      "name": "Cocina Channels",
       "description": "en línea cooking channels for food, vídeo, tutorial, cooking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "food52": {
@@ -3495,7 +3496,7 @@
       "description": "en línea minimalist baker for baking, simple, recipes, bread. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "cookie-and-kate": {
-      "name": "Cookie And Kate",
+      "name": "Galleta And Kate",
       "description": "en línea cookie and kate for vegetarian, healthy, recipes, nutrition. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "airbnb-experiences": {
@@ -3511,7 +3512,7 @@
       "description": "en línea hotwire travel for travel, discount, flights, hotels. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rentcars": {
-      "name": "Rentcars Car Rental",
+      "name": "Rentcars Coche Alquiler",
       "description": "en línea rentcars car rental for car rental, travel, comparison, self-drive. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "getyourguide": {
@@ -3519,27 +3520,27 @@
       "description": "en línea getyourguide travel for travel, activities, experience, booking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "mapmyrun": {
-      "name": "Mapmyrun Running",
+      "name": "Mapmyrun Carrera",
       "description": "en línea mapmyrun running for running, sports, map, training. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "fitbod": {
-      "name": "Fitbod Fitness",
+      "name": "Fitbod Aptitud",
       "description": "en línea fitbod fitness for fitness, AI, training, plan. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "strong": {
-      "name": "Strong Fitness",
+      "name": "Strong Aptitud",
       "description": "en línea strong fitness for fitness, strength, training, tracking. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "yoga-with-adriene": {
-      "name": "Yoga With Adriene",
+      "name": "Yoga Con Adriene",
       "description": "en línea yoga with adriene for yoga, health, relax, vídeo. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "daily-burn": {
-      "name": "Daily Burn",
+      "name": "Diario Burn",
       "description": "en línea daily burn for fitness, workout, classes, training. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "calendar-app": {
-      "name": "Calendar App",
+      "name": "Calendario Aplicación",
       "description": "en línea calendar app for calendar, schedule, reminder, management. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pomodoro-timer": {
@@ -3563,11 +3564,11 @@
       "description": "en línea docusign for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "hellosign": {
-      "name": "Hellosign Signature",
+      "name": "Hellosign Firma",
       "description": "en línea hellosign signature for signature, electronic, simple, contract. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "signnow": {
-      "name": "Signnow Signature",
+      "name": "Signnow Firma",
       "description": "en línea signnow signature for signature, electronic, enterprise, collaboration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "helpscout": {
@@ -3575,7 +3576,7 @@
       "description": "en línea helpscout support for support, email, equipo, collaboration. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tiller-money": {
-      "name": "Tiller Money",
+      "name": "Tiller Dinero",
       "description": "en línea tiller money for bookkeeping, automation, Google, finance. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "td-ameritrade": {
@@ -3583,7 +3584,7 @@
       "description": "en línea td ameritrade for investment, brokerage, stocks, trading. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "etrade": {
-      "name": "Etrade Investment",
+      "name": "Etrade Inversión",
       "description": "en línea etrade investment for investment, brokerage, stocks, research. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "memrise": {
@@ -3595,7 +3596,7 @@
       "description": "en línea anki for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "quizizz": {
-      "name": "Quizizz Learning",
+      "name": "Quizizz Aprendizaje",
       "description": "en línea quizizz learning for learning, quiz, juego, interactive. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "kahoot": {
@@ -3603,7 +3604,7 @@
       "description": "en línea kahoot for utility. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "edmodo": {
-      "name": "Edmodo Education",
+      "name": "Edmodo Educación",
       "description": "en línea edmodo education for education, social, teachers, students. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "padlet": {
@@ -3615,7 +3616,7 @@
       "description": "en línea mural collaboration for collaboration, whiteboard, design, agile. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "microsoft-teams": {
-      "name": "Microsoft Teams",
+      "name": "Microsoft Equipos",
       "description": "en línea microsoft teams for collaboration, meetings, Microsoft, equipo. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "discord": {
@@ -3655,7 +3656,7 @@
       "description": "en línea suijimm aleatorio for aleatorio, generador, lotería, cryptographic. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-org": {
-      "name": "Randomgenerator Org",
+      "name": "Gener. Aleat. Org",
       "description": "en línea randomgenerator org for aleatorio, generador, contraseña, nombre, color. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "online-password-generator": {
@@ -3675,7 +3676,7 @@
       "description": "en línea randly dados for dados, aleatorio, juego, education. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "coin-flip": {
-      "name": "Coin Flip",
+      "name": "Criptomoneda Flip",
       "description": "en línea coin flip for coin, flip, aleatorio, decisión. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "flippey": {
@@ -3747,7 +3748,7 @@
       "description": "en línea devhydra emoji for emoji, aleatorio, generador, social. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "funnyemoji-ai": {
-      "name": "Funnyemoji Ai",
+      "name": "Funnyemoji IA",
       "description": "en línea funnyemoji ai for emoji, AI, generador, custom. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgeneratorlabs-joke": {
@@ -3771,7 +3772,7 @@
       "description": "en línea generatr joke for joke, API, aleatorio, humor. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "bmihealth-cn": {
-      "name": "Bmihealth Cn",
+      "name": "Bmihealth China",
       "description": "en línea bmihealth cn for BMI, health, peso, calculadora. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "calculatorapp-bmi": {
@@ -3815,7 +3816,7 @@
       "description": "en línea dicerolleronline dados for dados, 3D, juego, aleatorio. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rolldice-org": {
-      "name": "Rolldice Org",
+      "name": "Tirar Dados Org",
       "description": "en línea rolldice org for dados, custom, juego, aleatorio. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "gospinwheel-dice": {
@@ -3835,7 +3836,7 @@
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by PlayMetronome. No app download required."
     },
     "playmetronome-taptempo": {
-      "name": "Taptempo Tempo",
+      "name": "Tap Tempo Tempo",
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by PlayMetronome. No app download required."
     },
     "playmetronome-bpmfinder": {
@@ -3847,11 +3848,11 @@
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by PlayMetronome. No app download required."
     },
     "playmetronome-interval": {
-      "name": "Interval Interval",
+      "name": "Intervalo Intervalo",
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by PlayMetronome. No app download required."
     },
     "playmetronome-notes": {
-      "name": "Notes Note",
+      "name": "Notas Note",
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by PlayMetronome. No app download required."
     },
     "playmetronome-chordchart": {
@@ -3859,7 +3860,7 @@
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by PlayMetronome. No app download required."
     },
     "playmetronome-frequency": {
-      "name": "Frequency Frequency",
+      "name": "Frecuencia Frecuencia",
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by PlayMetronome. No app download required."
     },
     "uplup-coin": {
@@ -3871,15 +3872,15 @@
       "description": "en línea flipsimu coin for coin, flip, simulator, custom. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tapmetronome-subdivisions": {
-      "name": "Tapmetronome Subdivisions",
+      "name": "Tap Metrónomo Subdivisions",
       "description": "en línea tapmetronome subdivisions for metrónomo, subdivision, training, rhythm. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tapmetronome-timesignatures": {
-      "name": "Tapmetronome Timesignatures",
+      "name": "Tap Metrónomo Timesignatures",
       "description": "en línea tapmetronome timesignatures for time signature, rhythm, practice, music. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tapmetronome-taptempo": {
-      "name": "Tapmetronome Taptempo",
+      "name": "Tap Metrónomo Tap Tempo",
       "description": "en línea tapmetronome taptempo for tempo, BPM, tap, detector. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "justaguitartuner-metronome": {
@@ -3895,7 +3896,7 @@
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by FreeGuitarTuner. No app download required."
     },
     "freeguitartuner-mandolin": {
-      "name": "Mandolin Mandolin",
+      "name": "Mandolina Mandolina",
       "description": "Professional navegador-based instrument herramienta. Real-time audio processing powered by FreeGuitarTuner. No app download required."
     },
     "freeguitartuner-banjo": {
@@ -3919,7 +3920,7 @@
       "description": "en línea getmoji emoji for for emoji, recommendation, occasion, social. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "getmoji-usecases": {
-      "name": "Getmoji Usecases",
+      "name": "Getmoji Casos de Uso",
       "description": "en línea getmoji usecases for emoji, guide, usage, education. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "flipsimu-intuition": {
@@ -3967,7 +3968,7 @@
       "description": "en línea randomgenerator nombre for nombre, aleatorio, generador, international. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-username": {
-      "name": "Randomgenerator Username",
+      "name": "Gener. Aleat. Username",
       "description": "en línea randomgenerator username for username, aleatorio, generador, style. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-color": {
@@ -3975,7 +3976,7 @@
       "description": "en línea randomgenerator color for color, aleatorio, generador, design. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-word": {
-      "name": "Randomgenerator Word",
+      "name": "Gener. Aleat. Word",
       "description": "en línea randomgenerator word for word, aleatorio, generador, education. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-dice": {
@@ -3983,7 +3984,7 @@
       "description": "en línea randomgenerator dados for dados, aleatorio, juego, D&D. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-letter": {
-      "name": "Randomgenerator Letter",
+      "name": "Gener. Aleat. Letter",
       "description": "en línea randomgenerator letter for letter, aleatorio, generador, simple. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-team": {
@@ -3991,15 +3992,15 @@
       "description": "en línea randomgenerator equipo for equipo, aleatorio, agrupación, juego. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-country": {
-      "name": "Randomgenerator Country",
+      "name": "Gener. Aleat. Country",
       "description": "en línea randomgenerator country for country, aleatorio, generador, geography. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-animal": {
-      "name": "Randomgenerator Animal",
+      "name": "Gener. Aleat. Animal",
       "description": "en línea randomgenerator animal for animal, aleatorio, generador, education. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-movie": {
-      "name": "Randomgenerator Movie",
+      "name": "Gener. Aleat. Película",
       "description": "en línea randomgenerator movie for movie, aleatorio, recommendation, entertainment. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-email": {
@@ -4007,43 +4008,43 @@
       "description": "en línea randomgenerator email for email, aleatorio, test, development. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "randomgenerator-object": {
-      "name": "Randomgenerator Object",
+      "name": "Gener. Aleat. Object",
       "description": "en línea randomgenerator object for object, aleatorio, generador, creative. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rolldice-d4": {
-      "name": "Rolldice D4",
+      "name": "Tirar Dados D4",
       "description": "en línea rolldice d4 for dados, D4, juego, D&D. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rolldice-d8": {
-      "name": "Rolldice D8",
+      "name": "Tirar Dados D8",
       "description": "en línea rolldice d8 for dados, D8, juego, D&D. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rolldice-d10": {
-      "name": "Rolldice D10",
+      "name": "Tirar Dados D10",
       "description": "en línea rolldice d10 for dados, D10, juego, percentile. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rolldice-d12": {
-      "name": "Rolldice D12",
+      "name": "Tirar Dados D12",
       "description": "en línea rolldice d12 for dados, D12, juego, D&D. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "rolldice-d20": {
-      "name": "Rolldice D20",
+      "name": "Tirar Dados D20",
       "description": "en línea rolldice d20 for dados, D20, juego, D&D. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tapmetronome-bpm72": {
-      "name": "Tapmetronome Bpm72",
+      "name": "Tap Metrónomo Bpm72",
       "description": "en línea tapmetronome bpm72 for metrónomo, 72BPM, slow, practice. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tapmetronome-bpm96": {
-      "name": "Tapmetronome Bpm96",
+      "name": "Tap Metrónomo Bpm96",
       "description": "en línea tapmetronome bpm96 for metrónomo, 96BPM, medium, practice. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tapmetronome-bpm120": {
-      "name": "Tapmetronome Bpm120",
+      "name": "Tap Metrónomo Bpm120",
       "description": "en línea tapmetronome bpm120 for metrónomo, 120BPM, estándar, practice. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "tapmetronome-bpm140": {
-      "name": "Tapmetronome Bpm140",
+      "name": "Tap Metrónomo Bpm140",
       "description": "en línea tapmetronome bpm140 for metrónomo, 140BPM, fast, practice. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "justaguitartuner-dropd": {
@@ -4091,7 +4092,7 @@
       "description": "en línea aleatorio ruleta generador. Opciones personalizadas, animación de giro y selección aleatoria justa. Perfecto para juegos, decisiones y rifas."
     },
     "spinwheel-usecases": {
-      "name": "Usecases Cases",
+      "name": "Casos de Uso Cases",
       "description": "en línea aleatorio ruleta generador. Opciones personalizadas, animación de giro y selección aleatoria justa. Perfecto para juegos, decisiones y rifas."
     },
     "markdown-platform-converter": {
@@ -4099,7 +4100,7 @@
       "description": "Editor Markdown Convertidor en línea. Personaliza Markdown, ajusta Convertidor, exporta al instante. Multiplataforma, sin registro."
     },
     "polyphonic-pinyin-annotator": {
-      "name": "Polyphonic Pinyin Annotator",
+      "name": "Polifónico Pinyin Anotador",
       "description": "Herramienta Polyphonic Pinyin Annotator en línea con funciones: Pinyin, Polyphone, Annotation. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "audio-bpm-detector": {
@@ -4107,7 +4108,7 @@
       "description": "Herramienta Bpm Beat Analizador en línea con funciones: Bpm, Beat, Tempo. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "srt-subtitle-generator": {
-      "name": "Subtitle Srt Editor",
+      "name": "Subtítulo SRT Editor",
       "description": "Herramienta Subtitle Srt Editor en línea con funciones: Subtitle, Srt, Caption. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "multi-timezone-publish-time": {
@@ -4115,7 +4116,7 @@
       "description": "Herramienta Timezone Temporizador en línea con funciones: Timezone, Time, Calculadora. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "wc-2026-schedule": {
-      "name": "Wc 2026 Schedule",
+      "name": "WC 2026 Horario",
       "description": "Wc 2026 Schedule gratuita: admite World cup, 2026 y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "wc-champion-predictor": {
@@ -4127,7 +4128,7 @@
       "description": "Editor World Cup Poster Creador en línea. Personaliza World cup, ajusta Poster, exporta al instante. Multiplataforma, sin registro."
     },
     "wc-ascii-art": {
-      "name": "Wc Ascii Art",
+      "name": "WC ASCII Arte",
       "description": "Wc Ascii Art gratuita: admite Ascii, Text art y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "wc-fan-avatar": {
@@ -4135,11 +4136,11 @@
       "description": "Avatar World Cup Generador gratuita: admite Avatar, World cup y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "wc-scoreboard-simulator": {
-      "name": "Wc Scoreboard Simulator",
+      "name": "WC Marcador Simulador",
       "description": "Herramienta Wc Scoreboard Simulator en línea con funciones: Scoreboard, Score, World cup. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "wc-name-decorator": {
-      "name": "Wc Name Decorator",
+      "name": "WC Nombre Decorador",
       "description": "Editor Wc Name Decorator en línea. Personaliza Decorator, ajusta Fancy text, exporta al instante. Multiplataforma, sin registro."
     },
     "wevideo": {
@@ -4435,15 +4436,15 @@
       "description": "Documentos colaborativos en tiempo real muy ligeros. Integra código, tablas, tareas, vídeos y vistas previas de archivos con una profunda integración con la nube de Dropbox. Edición fluida en el móvil."
     },
     "dezeen": {
-      "name": "Dezeen",
+      "name": "Revista Dezeen",
       "description": "Sitio web de medios de diseño, que cubre arquitectura, diseño de interiores y noticias de diseño."
     },
     "nike-run-club": {
-      "name": "Nike Run Club",
+      "name": "Nike Carrera Club",
       "description": "Herramienta Nike Run Club en línea con funciones: Nike, Run, Club. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "adidas-running-runtastic": {
-      "name": "Adidas Running Runtastic",
+      "name": "Adidas Carrera Runtastic",
       "description": "Editor Adidas Running Runtastic en línea. Personaliza Adidas, ajusta Running, exporta al instante. Multiplataforma, sin registro."
     },
     "runkeeper": {
@@ -4451,7 +4452,7 @@
       "description": "Editor Runkeeper en línea. Personaliza Runkeeper, ajusta 跑步, exporta al instante. Multiplataforma, sin registro."
     },
     "garmin-connect": {
-      "name": "Garmin Connect",
+      "name": "Garmin Conectar",
       "description": "Herramienta Garmin Connect en línea con funciones: Garmin, Connect, 运动. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "coros": {
@@ -4467,7 +4468,7 @@
       "description": "Editor Vdot Calculadora en línea. Personaliza Vdot, ajusta Calculadora, exporta al instante. Multiplataforma, sin registro."
     },
     "active-race-results": {
-      "name": "Active Race Results",
+      "name": "Activo Carrera Resultados",
       "description": "Editor Active Race Results en línea. Personaliza Active, ajusta Race, exporta al instante. Multiplataforma, sin registro."
     },
     "trainingpeaks": {
@@ -4483,7 +4484,7 @@
       "description": "Herramienta Runalyze en línea con funciones: Runalyze, 跑步, 马拉松. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "stryd-power": {
-      "name": "Stryd Power",
+      "name": "Stryd Potencia",
       "description": "Herramienta Stryd Power en línea con funciones: Stryd, Power, 跑步. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "racewow": {
@@ -4491,11 +4492,11 @@
       "description": "Herramienta Racewow en línea con funciones: Racewow, 跑步, 马拉松. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "lets-do-this": {
-      "name": "Lets Do This",
+      "name": "Vamos Hacer Este",
       "description": "Editor Lets Do This en línea. Personaliza Lets, ajusta Do, exporta al instante. Multiplataforma, sin registro."
     },
     "find-a-marathon": {
-      "name": "Find A Marathon",
+      "name": "Encontrar A Maratón",
       "description": "Herramienta Find A Marathon en línea con funciones: Find, A, Marathon. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "running2win": {
@@ -4507,11 +4508,11 @@
       "description": "Mcmillan Calculadora gratuita: admite Mcmillan, Calculadora y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "marathon-handbook": {
-      "name": "Marathon Handbook",
+      "name": "Maratón Handbook",
       "description": "Marathon Handbook gratuita: admite Marathon, Handbook y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "cool-running": {
-      "name": "Cool Running",
+      "name": "Cool Carrera",
       "description": "Cool Running gratuita: admite Cool, Running y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "worlds-marathons": {
@@ -4531,15 +4532,15 @@
       "description": "Treadmill Calc gratuita: admite Treadmill, Calc y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "couch-to-5k": {
-      "name": "Couch To 5k",
+      "name": "Sofá A 5K",
       "description": "Couch To 5k gratuita: admite Couch, To y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "race-predictor": {
-      "name": "Race Predictor",
+      "name": "Carrera Predictor",
       "description": "Herramienta Race Predictor en línea con funciones: Race, Predictor, 跑步. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "ride-with-gps": {
-      "name": "Ride With Gps",
+      "name": "Viaje Con Gps",
       "description": "Editor Ride With Gps en línea. Personaliza Ride, ajusta With, exporta al instante. Multiplataforma, sin registro."
     },
     "bikemap": {
@@ -4555,7 +4556,7 @@
       "description": "Herramienta Wahoo Systm en línea con funciones: Wahoo, Systm, 骑行. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "trainerroad": {
-      "name": "Trainerroad",
+      "name": "TrainerRoad",
       "description": "Editor Trainerroad en línea. Personaliza Trainerroad, ajusta 骑行, exporta al instante. Multiplataforma, sin registro."
     },
     "zwift": {
@@ -4635,11 +4636,11 @@
       "description": "Sram Shift Calc gratuita: admite Sram, Shift y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "project-4321": {
-      "name": "Project 4321",
+      "name": "Proyecto 4321",
       "description": "Herramienta Project 4321 en línea con funciones: Project, 4321, 骑行. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "nike-training-club": {
-      "name": "Nike Training Club",
+      "name": "Nike Entrenamiento Club",
       "description": "Editor Nike Training Club en línea. Personaliza Nike, ajusta Training, exporta al instante. Multiplataforma, sin registro."
     },
     "peloton-digital": {
@@ -4647,7 +4648,7 @@
       "description": "Editor Peloton Digital en línea. Personaliza Peloton, ajusta Digital, exporta al instante. Multiplataforma, sin registro."
     },
     "sweat-app": {
-      "name": "Sweat App",
+      "name": "Sweat Aplicación",
       "description": "Herramienta Sweat App en línea con funciones: Sweat, App, 健身. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "centr-chris-hemsworth": {
@@ -4655,7 +4656,7 @@
       "description": "Herramienta Centr Chris Hemsworth en línea con funciones: Centr, Chris, Hemsworth. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "ob-fitness": {
-      "name": "Ob Fitness",
+      "name": "Ob Aptitud",
       "description": "Herramienta Ob Fitness en línea con funciones: Ob, Fitness, 健身. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "fitbit-premium": {
@@ -4663,7 +4664,7 @@
       "description": "Herramienta Fitbit Premium en línea con funciones: Fitbit, Premium, 运动. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "strong-lifts": {
-      "name": "Strong Lifts",
+      "name": "Fuerte Lifts",
       "description": "Strong Lifts gratuita: admite Strong, Lifts y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "starting-strength": {
@@ -4683,15 +4684,15 @@
       "description": "Fitocracy gratuita: admite Fitocracy, 健身 y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "habit-nest": {
-      "name": "Habit Nest",
+      "name": "Hábito Nest",
       "description": "Herramienta Habit Nest en línea con funciones: Habit, Nest, 健身. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "workout-labs": {
-      "name": "Workout Labs",
+      "name": "Entrenamiento Labs",
       "description": "Herramienta Workout Labs en línea con funciones: Workout, Labs, 健身. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "freedom-strong": {
-      "name": "Freedom Strong",
+      "name": "Freedom Fuerte",
       "description": "Herramienta Freedom Strong en línea con funciones: Freedom, Strong, 健身. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "darebee": {
@@ -4703,7 +4704,7 @@
       "description": "Editor 12minuteathlete en línea. Personaliza 12minuteathlete, ajusta 健身, exporta al instante. Multiplataforma, sin registro."
     },
     "fitness-blender": {
-      "name": "Fitness Blender",
+      "name": "Aptitud Blender",
       "description": "Fitness Blender gratuita: admite Fitness, Blender y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "poosh": {
@@ -4711,11 +4712,11 @@
       "description": "Editor Poosh en línea. Personaliza Poosh, ajusta 健身, exporta al instante. Multiplataforma, sin registro."
     },
     "p90x-schedule": {
-      "name": "P90x Schedule",
+      "name": "P90x Horario",
       "description": "Herramienta P90x Schedule en línea con funciones: P90x, Schedule, 健身. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "insanity-workout": {
-      "name": "Insanity Workout",
+      "name": "Insanity Entrenamiento",
       "description": "Editor Insanity Workout en línea. Personaliza Insanity, ajusta Workout, exporta al instante. Multiplataforma, sin registro."
     },
     "musclewiki": {
@@ -4731,7 +4732,7 @@
       "description": "Herramienta Romwod en línea con funciones: Romwod, 瑜伽, 普拉提. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "yoga-international": {
-      "name": "Yoga International",
+      "name": "Yoga Internacional",
       "description": "Editor Yoga International en línea. Personaliza Yoga, ajusta International, exporta al instante. Multiplataforma, sin registro."
     },
     "gaia-yoga": {
@@ -4739,7 +4740,7 @@
       "description": "Editor Gaia Yoga en línea. Personaliza Gaia, ajusta Yoga, exporta al instante. Multiplataforma, sin registro."
     },
     "do-you-yoga": {
-      "name": "Do You Yoga",
+      "name": "Hacer You Yoga",
       "description": "Editor Do You Yoga en línea. Personaliza Do, ajusta You, exporta al instante. Multiplataforma, sin registro."
     },
     "yoga-download": {
@@ -4767,7 +4768,7 @@
       "description": "Editor Stretching Temporizador en línea. Personaliza Stretching, ajusta Temporizador, exporta al instante. Multiplataforma, sin registro."
     },
     "foam-roller-guide": {
-      "name": "Foam Roller Guide",
+      "name": "Foam Roller Guía",
       "description": "Editor Foam Roller Guide en línea. Personaliza Foam, ajusta Roller, exporta al instante. Multiplataforma, sin registro."
     },
     "yin-yoga-cheatsheet": {
@@ -4783,11 +4784,11 @@
       "description": "Herramienta Medito en línea con funciones: Medito, 瑜伽, 普拉提. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "waking-up": {
-      "name": "Waking Up",
+      "name": "Waking Arriba",
       "description": "Herramienta Waking Up en línea con funciones: Waking, Up, 瑜伽. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "mindful-cms": {
-      "name": "Mindful Cms",
+      "name": "Mindful CMS",
       "description": "Mindful Cms gratuita: admite Mindful, Cms y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "breathwrk": {
@@ -4799,11 +4800,11 @@
       "description": "Editor 478 Breathing en línea. Personaliza 478, ajusta Breathing, exporta al instante. Multiplataforma, sin registro."
     },
     "box-breathing": {
-      "name": "Box Breathing",
+      "name": "Caja Breathing",
       "description": "Box Breathing gratuita: admite Box, Breathing y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "progressive-muscle-relaxation": {
-      "name": "Progressive Muscle Relaxation",
+      "name": "Progressive Muscle Relajación",
       "description": "Herramienta Progressive Muscle Relaxation en línea con funciones: Progressive, Muscle, Relaxation. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "swim-com": {
@@ -4823,7 +4824,7 @@
       "description": "Swimulator gratuita: admite Swimulator, 游泳 y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "trainerroad-swim": {
-      "name": "Trainerroad Swim",
+      "name": "TrainerRoad Swim",
       "description": "Herramienta Trainerroad Swim en línea con funciones: Trainerroad, Swim, 骑行. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "slowtwitch": {
@@ -4839,7 +4840,7 @@
       "description": "Beginnertriathlete gratuita: admite Beginnertriathlete, 游泳 y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "ironman-training-peaks": {
-      "name": "Ironman Training Peaks",
+      "name": "Ironman Entrenamiento Peaks",
       "description": "Editor Ironman Training Peaks en línea. Personaliza Ironman, ajusta Training, exporta al instante. Multiplataforma, sin registro."
     },
     "suunto-ironman": {
@@ -4847,7 +4848,7 @@
       "description": "Suunto Ironman gratuita: admite Suunto, Ironman y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "kayak-sit-on-top": {
-      "name": "Kayak Sit On Top",
+      "name": "Kayak Sit On Arriba",
       "description": "Editor Kayak Sit On Top en línea. Personaliza Kayak, ajusta Sit, exporta al instante. Multiplataforma, sin registro."
     },
     "surf-forecast": {
@@ -4875,7 +4876,7 @@
       "description": "Editor Hikingproject en línea. Personaliza Hikingproject, ajusta 徒步, exporta al instante. Multiplataforma, sin registro."
     },
     "mountain-project": {
-      "name": "Mountain Project",
+      "name": "Montaña Project",
       "description": "Editor Mountain Project en línea. Personaliza Mountain, ajusta Project, exporta al instante. Multiplataforma, sin registro."
     },
     "summitpost": {
@@ -4907,7 +4908,7 @@
       "description": "Editor Campendium en línea. Personaliza Campendium, ajusta 徒步, exporta al instante. Multiplataforma, sin registro."
     },
     "free-campsites": {
-      "name": "Free Campsites",
+      "name": "Gratis Campsites",
       "description": "Editor Free Campsites en línea. Personaliza Free, ajusta Campsites, exporta al instante. Multiplataforma, sin registro."
     },
     "hipcamp": {
@@ -4919,7 +4920,7 @@
       "description": "Campsite Photos gratuita: admite Campsite, Photos y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "noaa-weather": {
-      "name": "Noaa Weather",
+      "name": "Noaa Clima",
       "description": "Editor Noaa Weather en línea. Personaliza Noaa, ajusta Weather, exporta al instante. Multiplataforma, sin registro."
     },
     "mountain-weather-forecast": {
@@ -4927,7 +4928,7 @@
       "description": "Editor Mountain Weather Forecast en línea. Personaliza Mountain, ajusta Weather, exporta al instante. Multiplataforma, sin registro."
     },
     "meteoblue-mountain": {
-      "name": "Meteoblue Mountain",
+      "name": "Meteoblue Montaña",
       "description": "Meteoblue Mountain gratuita: admite Meteoblue, Mountain y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "wildsafe-bear": {
@@ -4935,15 +4936,15 @@
       "description": "Herramienta Wildsafe Bear en línea con funciones: Wildsafe, Bear, 装备评测. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "sotaventos-mountain": {
-      "name": "Sotaventos Mountain",
+      "name": "Sotaventos Montaña",
       "description": "Sotaventos Mountain gratuita: admite Sotaventos, Mountain y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "nba-stats": {
-      "name": "Nba Stats",
+      "name": "Nba Estadísticas",
       "description": "Editor Nba Stats en línea. Personaliza Nba, ajusta Stats, exporta al instante. Multiplataforma, sin registro."
     },
     "basketball-reference": {
-      "name": "Basketball Reference",
+      "name": "Basketball Referencia",
       "description": "Basketball Reference gratuita: admite Basketball, Reference y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "bball-index": {
@@ -4975,19 +4976,19 @@
       "description": "Editor Understat en línea. Personaliza Understat, ajusta 体育数据, exporta al instante. Multiplataforma, sin registro."
     },
     "tennis-atp-tour": {
-      "name": "Tennis Atp Tour",
+      "name": "Tenis Atp Tour",
       "description": "Herramienta Tennis Atp Tour en línea con funciones: Tennis, Atp, Tour. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "tennis-wta": {
-      "name": "Tennis Wta",
+      "name": "Tenis Wta",
       "description": "Tennis Wta gratuita: admite Tennis, Wta y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "tennis-abstract": {
-      "name": "Tennis Abstract",
+      "name": "Tenis Abstract",
       "description": "Tennis Abstract gratuita: admite Tennis, Abstract y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "flashscore-tennis": {
-      "name": "Flashscore Tennis",
+      "name": "Flashscore Tenis",
       "description": "Editor Flashscore Tennis en línea. Personaliza Flashscore, ajusta Tennis, exporta al instante. Multiplataforma, sin registro."
     },
     "bwf-badminton": {
@@ -4999,11 +5000,11 @@
       "description": "Editor Badminton Warehouse en línea. Personaliza Badminton, ajusta Warehouse, exporta al instante. Multiplataforma, sin registro."
     },
     "ittf-world": {
-      "name": "Ittf World",
+      "name": "Ittf Mundo",
       "description": "Editor Ittf World en línea. Personaliza Ittf, ajusta World, exporta al instante. Multiplataforma, sin registro."
     },
     "tabletennis-reference": {
-      "name": "Tabletennis Reference",
+      "name": "Tabletennis Referencia",
       "description": "Herramienta Tabletennis Reference en línea con funciones: Tabletennis, Reference, 体育数据. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "revspin": {
@@ -5019,31 +5020,31 @@
       "description": "Volleybox gratuita: admite Volleybox, 体育数据 y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "pga-tour-stats": {
-      "name": "Pga Tour Stats",
+      "name": "Pga Tour Estadísticas",
       "description": "Editor Pga Tour Stats en línea. Personaliza Pga, ajusta Tour, exporta al instante. Multiplataforma, sin registro."
     },
     "handicap-differential": {
-      "name": "Handicap Differential",
+      "name": "Hándicap Differential",
       "description": "Editor Handicap Differential en línea. Personaliza Handicap, ajusta Differential, exporta al instante. Multiplataforma, sin registro."
     },
     "golfnow-tee-times": {
-      "name": "Golfnow Tee Times",
+      "name": "Golfnow Tee Veces",
       "description": "Editor Golfnow Tee Times en línea. Personaliza Golfnow, ajusta Tee, exporta al instante. Multiplataforma, sin registro."
     },
     "2k-sports-handicap": {
-      "name": "2k Sports Handicap",
+      "name": "2k Deportes Hándicap",
       "description": "2k Sports Handicap gratuita: admite 2k, Sports y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "golfshake-handicap": {
-      "name": "Golfshake Handicap",
+      "name": "Golfshake Hándicap",
       "description": "Herramienta Golfshake Handicap en línea con funciones: Golfshake, Handicap, 体育数据. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "ski-resort-stats": {
-      "name": "Ski Resort Stats",
+      "name": "Ski Resort Estadísticas",
       "description": "Ski Resort Stats gratuita: admite Ski, Resort y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "on-the-snow": {
-      "name": "On The Snow",
+      "name": "On El Snow",
       "description": "Herramienta On The Snow en línea con funciones: On, The, Snow. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "snow-forecast": {
@@ -5067,7 +5068,7 @@
       "description": "Snowboard Encyc gratuita: admite Snowboard, Encyc y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "the-house-board-size": {
-      "name": "The House Board Size",
+      "name": "El House Board Size",
       "description": "The House Board Size gratuita: admite The, House y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "skate-video-calendar": {
@@ -5083,11 +5084,11 @@
       "description": "Concretedisciples gratuita: admite Concretedisciples, 滑雪 y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "roller-skate-size": {
-      "name": "Roller Skate Size",
+      "name": "Roller Skate Tamaño",
       "description": "Editor Roller Skate Size en línea. Personaliza Roller, ajusta Skate, exporta al instante. Multiplataforma, sin registro."
     },
     "inline-skate-buyers-guide": {
-      "name": "Inline Skate Buyers Guide",
+      "name": "Inline Skate Buyers Guía",
       "description": "Herramienta Inline Skate Buyers Guide en línea con funciones: Inline, Skate, Buyers. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "bouldering-grade-converter": {
@@ -5135,7 +5136,7 @@
       "description": "Herramienta Vo2max Calc en línea con funciones: Vo2max, Calc, 计算器. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "one-rm-1rep-max": {
-      "name": "One Rm 1rep Max",
+      "name": "Uno Rm 1rep Máximo",
       "description": "Herramienta One Rm 1rep Max en línea con funciones: One, Rm, 1rep. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "meal-prep-planner": {
@@ -5143,7 +5144,7 @@
       "description": "Meal Prep Planner gratuita: admite Meal, Prep y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "pre-workout-examiner": {
-      "name": "Pre Workout Examiner",
+      "name": "Pre Entrenamiento Examiner",
       "description": "Editor Pre Workout Examiner en línea. Personaliza Pre, ajusta Workout, exporta al instante. Multiplataforma, sin registro."
     },
     "eventbrite-sports": {
@@ -5163,7 +5164,7 @@
       "description": "Ticketmaster Sports gratuita: admite Ticketmaster, Sports y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "sporting-news-scores": {
-      "name": "Sporting News Scores",
+      "name": "Sporting Noticias Scores",
       "description": "Herramienta Sporting News Scores en línea con funciones: Sporting, News, Scores. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "gearbrain": {
@@ -5171,7 +5172,7 @@
       "description": "Herramienta Gearbrain en línea con funciones: Gearbrain, 装备评测, 对比. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "wirecutter-fitness": {
-      "name": "Wirecutter Fitness",
+      "name": "Wirecutter Aptitud",
       "description": "Wirecutter Fitness gratuita: admite Wirecutter, Fitness y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "outdoorgearlab": {
@@ -5179,7 +5180,7 @@
       "description": "Outdoorgearlab gratuita: admite Outdoorgearlab, 徒步 y más. Procesamiento 100% local en tu dispositivo para máxima privacidad."
     },
     "switchback-travel-gear": {
-      "name": "Switchback Travel Gear",
+      "name": "Switchback Viajes Gear",
       "description": "Herramienta Switchback Travel Gear en línea con funciones: Switchback, Travel, Gear. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "rotten-wire": {
@@ -5187,11 +5188,11 @@
       "description": "Editor Rotten Wire en línea. Personaliza Rotten, ajusta Wire, exporta al instante. Multiplataforma, sin registro."
     },
     "strava-stats-dashboard": {
-      "name": "Strava Stats Dashboard",
+      "name": "Strava Estadísticas Panel",
       "description": "Herramienta Strava Stats Dashboard en línea con funciones: Strava, Stats, Dashboard. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "athlinks-race-results": {
-      "name": "Athlinks Race Results",
+      "name": "Athlinks Carrera Resultados",
       "description": "Herramienta Athlinks Race Results en línea con funciones: Athlinks, Race, Results. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "sporttracks": {
@@ -5199,19 +5200,19 @@
       "description": "Herramienta Sporttracks en línea con funciones: Sporttracks, 运动, 健康. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "trainerroad-announcer": {
-      "name": "Trainerroad Announcer",
+      "name": "TrainerRoad Announcer",
       "description": "Herramienta Trainerroad Announcer en línea con funciones: Trainerroad, Announcer, 骑行. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "sport-psychology-today": {
-      "name": "Sport Psychology Today",
+      "name": "Sport Psychology Hoy",
       "description": "Herramienta Sport Psychology Today en línea con funciones: Sport, Psychology, Today. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada."
     },
     "canva-video": {
-      "name": "Canva Video Editor",
+      "name": "Canva Vídeo Editor",
       "description": "Crea vídeos cortos sin experiencia. Más de 10.000 plantillas con arrastrar y soltar, múltiples relaciones de aspecto, subtítulos y transiciones."
     },
     "capcut-web": {
-      "name": "CapCut Web Editor",
+      "name": "CapCut Web Editor de código",
       "description": "Editor de vídeo online de ByteDance, sincronizado con CapCut móvil. Subtítulos inteligentes, tráiler con un clic, curvas de velocidad y LUTs."
     },
     "descript-video": {
@@ -5223,7 +5224,7 @@
       "description": "Estudio de vídeo todo en uno en el navegador: grabación, recorte, subtítulos automáticos, fondo verde, marca de agua y compresión."
     },
     "kapwing-tools": {
-      "name": "Kapwing Media Kit",
+      "name": "Kapwing Medios Kit",
       "description": "Todo en uno para memes, vídeos cortos y GIFs. Texto, subtítulos, unión, recorte; plantillas de portada para WeChat y Xiaohongshu."
     },
     "wistia-hosting": {
@@ -5231,11 +5232,11 @@
       "description": "Alojamiento de vídeo HD sin anuncios para marketing. Mapas de calor de espectadores, captura de clientes potenciales y reproductor con marca."
     },
     "vidyard-messages": {
-      "name": "Vidyard Video Messages",
+      "name": "Vidyard Vídeo Messages",
       "description": "Graba mensajes de vídeo asíncronos de pantalla + cámara con seguimiento de visualización — mucho más claro que el texto escrito."
     },
     "loom-recorder": {
-      "name": "Loom Async Screen Share",
+      "name": "Loom Async Screen Compartir",
       "description": "El #1 de grabación asíncrona de pantalla. Captura pantalla + rostro + voz, genera enlace compartible con comentarios por marca de tiempo."
     },
     "screencastify-chrome": {
@@ -5251,7 +5252,7 @@
       "description": "Transmite una vez y llega a más de 30 plataformas sociales, con almacenamiento VOD, repeticiones y chat unificado. Imprescindible para livestreamers."
     },
     "runway-gen": {
-      "name": "Runway AI Video Suite",
+      "name": "Runway IA Vídeo Suite",
       "description": "Kit profesional de IA para creación de vídeo: texto a escena, movimiento de imágenes, chroma key con un clic y restauración de vídeos antiguos."
     },
     "pika-labs": {
@@ -5259,7 +5260,7 @@
       "description": "Texto / imagen a animación HD con estilos anime, 3D, realista y cyberpunk. Prototipado rápido de títulos y demos de producto."
     },
     "submagic-auto": {
-      "name": "Submagic AI Captions",
+      "name": "Submagic IA Captions",
       "description": "Genera automáticamente subtítulos de vídeo corto con resaltado de color, emojis y exportación SRT bilingüe — impulso viral para shorts."
     },
     "opus-clip": {
@@ -5267,19 +5268,19 @@
       "description": "Corta 10 shorts virales de podcasts largos con apertura automática, puntuación de viralidad, subtítulos y B-ROLL — ahorra 80% del tiempo."
     },
     "repurpose-io": {
-      "name": "Repurpose Content Repurposing",
+      "name": "Repurpose Contenido Repurposing",
       "description": "Pipeline automatizado de reutilización de contenido: YouTube a podcast, shorts, TikTok; post de blog a carruseles de LinkedIn."
     },
     "riverside-fm": {
-      "name": "Riverside Remote Recording",
+      "name": "Riverside Remoto Recording",
       "description": "Grabadora de entrevistas remotas de primera clase. Invitados entran por navegador, grabación local 4K multipista, directos y transcripción automática."
     },
     "streamlabs-obs": {
-      "name": "Streamlabs Live Assistant",
+      "name": "Streamlabs En vivo Assistant",
       "description": "Kit de embellecimiento para directos: overlays, efectos de donación, chatbots, juegos interactivos y alertas para nuevos streamers."
     },
     "motion-array": {
-      "name": "Motion Array Stock",
+      "name": "Movimiento Array Stock",
       "description": "Suscripción a todo tipo de recursos: plantillas PR/AE/FCPX, LUTs, transiciones, música SFX y archivos libres de derechos 8K."
     },
     "artlist-io": {
@@ -5307,7 +5308,7 @@
       "description": "Fotos HD gratuitas de grado diseñador de fotógrafos mundiales; libre para uso comercial con API REST pública para integración."
     },
     "canva-design": {
-      "name": "Canva Design Platform",
+      "name": "Canva Diseño Platform",
       "description": "Diseño sin curva de aprendizaje para startups. Más de 1 millón de plantillas de logos, carteles, tarjetas y menús."
     },
     "figma-design": {
@@ -5315,7 +5316,7 @@
       "description": "La plataforma de diseño colaborativo UI/UX líder. Bibliotecas de componentes, prototipos interactivos, entrega DevMode."
     },
     "feishu-docs": {
-      "name": "Feishu Collaboration Suite",
+      "name": "Feishu Colaboración Suite",
       "description": "Docs, Sheets, Bitable, Calendario, Reuniones y OKRs unificados. Gratis para equipos menores de 50 personas — alternativa china a Office 365."
     },
     "tencent-docs": {
@@ -5327,7 +5328,7 @@
       "description": "Espacio de trabajo todo en uno para planes empresariales, SOP, CRM, tableros kanban y hojas de ruta — el cerebro digital de cada freelancer."
     },
     "xmind-mindmap": {
-      "name": "XMind Mind Maps",
+      "name": "XMind Mind Mapas",
       "description": "Mapas mentales para planificación empresarial con vistas de espina de pescado, organigrama, Gantt y matriz. Exportación PPT/Word/PDF con un clic."
     },
     "processon-flow": {
@@ -5335,7 +5336,7 @@
       "description": "Flujogramas, mapas mentales, BPMN, ER, topologías de red y wireframes de primera clase. Más de 800.000 plantillas comunitarias."
     },
     "whimsical-wire": {
-      "name": "Whimsical Wireframe Suite",
+      "name": "Whimsical Suite Wireframe",
       "description": "Kit rápido de prototipos para PM: wireframes de baja fidelidad, flujogramas, kanban y notas adhesivas. Especificaciones de 3 días para desarrolladores freelance."
     },
     "chuangkit-poster": {
@@ -5343,11 +5344,11 @@
       "description": "Diseño adaptado a China: menús de restaurantes, pósters de WeChat, volantes inmobiliarios, contratación, licencias de fuentes comerciales locales."
     },
     "markup-hero": {
-      "name": "Markup Hero Screenshots",
+      "name": "Markup Hero Capturas",
       "description": "Capturas de pantalla largas anotadas + marcado PDF. Flechas, desenfoques, texto, mosaico, collages de varias imágenes y enlaces compartibles para clientes."
     },
     "airtable-db": {
-      "name": "Airtable Low-Code DB",
+      "name": "Airtable Low-Código DB",
       "description": "Base de datos relacional que parece Excel: CRM, proyectos, inventario, calendario de contenido, formularios y automatización — sin código."
     },
     "feishu-bitable": {
@@ -5359,7 +5360,7 @@
       "description": "Principal herramienta de investigación de mercado en China. Más de 30 tipos de preguntas, saltos lógicos, premios WeChat y panel de muestras."
     },
     "typeform-form": {
-      "name": "Typeform Beautiful Forms",
+      "name": "Typeform Hermoso Forms",
       "description": "Formularios de alta conversión, una pregunta a la vez, con tasa de finalización 3 veces mayor. Imprescindible para captación de clientes en el extranjero."
     },
     "jotform-builder": {
@@ -5375,7 +5376,7 @@
       "description": "Firmas electrónicas conforme a China: criptografía nacional, depósito notarial, admisibilidad judicial e integraciones API REST."
     },
     "shangshangqian": {
-      "name": "ShangShangQian Enterprise Sign",
+      "name": "ShangShangQian Empresarial Firmar",
       "description": "Firmas electrónicas SaaS empresariales con más de 200 integraciones nativas; autenticación de nombre real, notario blockchain, firmas masivas."
     },
     "good-acc": {
@@ -5387,7 +5388,7 @@
       "description": "Reconoce tarjetas de visita con una foto y guárdalas automáticamente. CRM de seguimiento, recordatorios de agenda, deseos de fiestas — interoperable con tarjetas WeChat."
     },
     "aiqicha-query": {
-      "name": "AIQiCha Business Search",
+      "name": "AIQiCha Business Búsqueda",
       "description": "Búsqueda gratuita de registros empresariales de Baidu: información corporativa, accionistas, riesgos legales y propiedad intelectual. Imprescindible antes de colaborar."
     },
     "tianyancha": {
@@ -5395,11 +5396,11 @@
       "description": "Los grandes datos de crédito empresarial más autoritarios de China; gráficos de relaciones, minería de beneficiarios finalistas e investigación exhaustiva."
     },
     "trae-cn": {
-      "name": "Trae AI Coding IDE",
+      "name": "Trae IA Coding IDE",
       "description": "IDE chino con IA: modelos LLM, autocompletado, corrección automática de errores, generación de documentos y vista previa en vivo. Aumenta 10x la productividad."
     },
     "codeium-free": {
-      "name": "Codeium Free AI Complete",
+      "name": "Codeium Gratis IA Complete",
       "description": "Completación de código AI gratuita para siempre para más de 70 lenguajes en VSCode, JetBrains, Neovim y Vim. Chat + búsqueda + autocompletado."
     },
     "dida-365": {
@@ -5407,19 +5408,19 @@
       "description": "La app líder GTD en China: tareas + calendario + pomodoro + informes de enfoque, sincronización en la nube y recordatorios WeChat/DingTalk."
     },
     "upwork-market": {
-      "name": "Upwork Freelance Marketplace",
+      "name": "Upwork Freelance Mercado",
       "description": "El mayor mercado global para freelancers. Desarrollo, diseño, redacción, traducción, SEO y datos — pagos en USD; la plataforma de referencia."
     },
     "fiverr-gig": {
-      "name": "Fiverr Gigs Marketplace",
+      "name": "Fiverr Gigs Mercado",
       "description": "Microservicios desde 5 dólares: logotipos, vídeo, SEO y redacción empaquetados como Gigs — ventas globales fáciles para principiantes."
     },
     "zbj-service": {
-      "name": "ZBJ Service Marketplace",
+      "name": "ZBJ Servicio Mercado",
       "description": "La mayor plataforma de servicios creativos de China: logos, identidad visual, sitios, apps, redacción y traducción. Compara cotizaciones."
     },
     "yuanling-work": {
-      "name": "YuanLing Remote Work",
+      "name": "YuanLing Remoto Trabajo",
       "description": "Tablero doméstico de trabajos freelance y remotos; facturación por hora o depósito de garantía por proyecto; desarrollo, diseño, ops, PM."
     },
     "pj-work": {
@@ -5427,11 +5428,11 @@
       "description": "Matching freelance exclusivo de tecnología en China. Desarrolladores verificados, depósito por hitos, entrega de código fuente y garantía de mantenimiento."
     },
     "toggl-track": {
-      "name": "Toggl Time Tracking",
+      "name": "Toggl Tiempo Seguimiento",
       "description": "Imprescindible para freelancers por hora. Temporizadores con un clic, etiquetas de proyecto/cliente, informes semanales/mensuales — exporta directamente."
     },
     "harvest-invoice": {
-      "name": "Harvest Time + Invoicing",
+      "name": "Harvest Tiempo + Invoicing",
       "description": "Tiempo + facturación online unificados; convierte automáticamente horas facturables en facturas, pagos con tarjeta/PayPal, recordatorios y panel."
     },
     "freshbooks-cloud": {
@@ -5439,15 +5440,15 @@
       "description": "Contabilidad en la nube para freelancers y equipos <5. Tiempo, facturación, gastos, pagos online, packs fiscales — punto de referencia norteamericano."
     },
     "wave-invoicing": {
-      "name": "Wave Free Invoicing",
+      "name": "Wave Gratis Invoicing",
       "description": "Facturación + contabilidad verdaderamente gratuita para siempre. Facturas, clientes, conciliación bancaria, informes ilimitados — coste cero."
     },
     "andco-freelance": {
-      "name": "AND.CO Freelance OS",
+      "name": "Y.CO Autónomo OS",
       "description": "Sistema operativo freelance propiedad de Fiverr: propuestas, contratos, acuerdos, tiempo, facturas, pagos, impuestos — 90% administrativo automatizado."
     },
     "bonsai-suite": {
-      "name": "Bonsai Freelance Bundle",
+      "name": "Bonsai Autónomo Bundle",
       "description": "Paquete premium para freelancers: más de 1.000 plantillas revisadas por abogados, propuestas con marca, facturas recurrentes e informes fiscales."
     },
     "calendly-meeting": {
@@ -5455,19 +5456,19 @@
       "description": "Comparte un enlace de reserva; tus clientes eligen hora. Sincroniza con Google/Outlook/Feishu con recordatorios SMS + email."
     },
     "acuity-sched": {
-      "name": "Acuity Appointment Suite",
+      "name": "Acuity Suite Citas",
       "description": "Citas y pagos para freelancers de servicios. Calendarios por servicio, depósitos, creación automática de Zoom y recordatorios masivos."
     },
     "tencent-meeting": {
-      "name": "Tencent Meetings",
+      "name": "Tencent Reuniones",
       "description": "El mejor software de reuniones en China. Enlaces con un clic; unirse desde WeChat sin app, 2000 participantes, pantalla compartida y actas con IA."
     },
     "zoom-video": {
-      "name": "Zoom Video Meetings",
+      "name": "Zoom Vídeo Meetings",
       "description": "El estándar mundial de videoconferencia. Multiplataforma, pantalla compartida, salas de descanso, grabación en la nube — claridad cristalina."
     },
     "feishu-meeting": {
-      "name": "Feishu Minutes",
+      "name": "Feishu Minutos",
       "description": "Reuniones con Minutos de IA: transcripción en vivo, exportación a Word/Notion, identificación de ponentes y búsqueda por temas — 90% menos resúmenes."
     },
     "miro-whiteboard": {
@@ -5479,7 +5480,7 @@
       "description": "Tablero de revisión colaborativo InVision. Wireframes + incrustación de Figma, comentarios anclados, votación con notas adhesivas."
     },
     "skillshare-learn": {
-      "name": "Skillshare Creative Learning",
+      "name": "Skillshare Creativo Learning",
       "description": "El favorito para mejorar en freelance. Más de 28.000 clases de calidad en diseño, vídeo, código, marketing, escritura y emprendimiento."
     },
     "coursera-plus": {
@@ -5511,7 +5512,7 @@
       "description": "Mezcla y combina sonidos de fondo: cafetería, lluvia, mecanografía, fuego, pájaros y trenes. Volumen independiente, temporizador y mini editor de texto."
     },
     "forest-focus": {
-      "name": "Forest Phone Discipline",
+      "name": "Bosque Phone Discipline",
       "description": "Planta árboles virtuales durante las sesiones; si abandonas antes, el árbol muere. Acumula monedas para plantar árboles REALES. Anti-procrastinación."
     },
     "todoist-gtd": {
@@ -5519,7 +5520,7 @@
       "description": "Mundialmente famosa app GTD con análisis de fecha en lenguaje natural, proyectos, etiquetas, prioridades, reglas recurrentes y Karma."
     },
     "ms-todo": {
-      "name": "Microsoft To Do",
+      "name": "Microsoft A Hacer",
       "description": "Tareas gratuitas de Microsoft con integración profunda de Outlook, Teams y Office. Vistas Mi Día / Planeado / Importante — flujo Office perfecto."
     },
     "obsidian-publish": {
@@ -5547,7 +5548,7 @@
       "description": "Traducción AI de subtítulos de NetEase: subtítulos bilingües, audio a texto, traducción de documentos. Red doméstica rápida con licencia ICP china."
     },
     "deepl-translate": {
-      "name": "DeepL Translator",
+      "name": "DeepL Traductor",
       "description": "Traductor AI ampliamente reconocido como el mejor; más de 30 idiomas con conciencia contextual, además de traducción de documentos con formato."
     },
     "ilovepdf-io": {
@@ -5555,19 +5556,19 @@
       "description": "La mejor herramienta PDF del mundo. Fusiona, divide, comprime, convierte a Word/Excel/PPT/Imagen, cifra, marca de agua, rota y OCR."
     },
     "smallpdf-tools": {
-      "name": "SmallPDF Swiss Knife",
+      "name": "Smallpdf Swiss Knife",
       "description": "La navaja suiza del PDF. Más de 20 herramientas limpias y sin anuncios; integración en la nube con Google Drive y Dropbox."
     },
     "kami-pdf": {
-      "name": "Kami PDF Annotator",
+      "name": "Kami PDF Anotador",
       "description": "La app de anotación PDF favorita de K-12. Resalta, texto, voz, firma y dibuja sobre PDF/Word/imágenes; integración con Google Classroom."
     },
     "lightpdf-cloud": {
-      "name": "LightPDF China Cloud",
+      "name": "LightPDF China Nube",
       "description": "PDF cloud doméstico chino. Conversión Word/Excel/PPT/JPG/TXT, reconocimiento OCR, edición, firma y marca de agua conforme."
     },
     "carbon-now": {
-      "name": "Carbon Code Screenshots",
+      "name": "Carbon Código Screenshots",
       "description": "Favorito de los bloggers técnicos. Pega código → imágenes con resaltado de sintaxis, fondo degradado, números de línea y esquinas redondeadas."
     },
     "codepen-io": {
@@ -5575,15 +5576,15 @@
       "description": "La mayor comunidad de inspiración frontend. Pens HTML/CSS/JS en vivo; animaciones, widgets interactivos y arte CSS — inspiración UI diaria."
     },
     "figma-community": {
-      "name": "Figma Community Files",
+      "name": "Figma Comunidad Archivos",
       "description": "Mina de oro de diseños gratuitos. Más de 1 millón de UI, dashboards, ilustraciones, iconos 3D y wireframes — duplícalos en Figma y edítalos."
     },
     "dribbble-design": {
-      "name": "Dribbble Design Inspiration",
+      "name": "Dribbble Diseño Inspiration",
       "description": "La plataforma principal de portafolios para diseñadores. UI/UX, ilustración, motion y branding. Publica obras para atraer consultas freelance."
     },
     "behance-portfolio": {
-      "name": "Behance Creative Portfolios",
+      "name": "Behance Creativo Portfolios",
       "description": "Escaparate creativo de Adobe. Proyectos largos de gráfica, UI, arquitectura y fotografía; Adobe Talent conecta a empleos premium."
     },
     "notion-templates": {
@@ -5591,7 +5592,7 @@
       "description": "Miles de plantillas gratuitas curadas de Notion: OKR, Segundo Cerebro, CRM, planificador de viajes, hábitos y presupuesto."
     },
     "product-hunt": {
-      "name": "Product Hunt Launches",
+      "name": "Producto Hunt Launches",
       "description": "El lugar para descubrir productos nuevos. Lanzamientos diarios de SaaS, herramientas, apps e IA. Los fundadores independientes investigan."
     },
     "hunt-webflow": {

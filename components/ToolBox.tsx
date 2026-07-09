@@ -33,11 +33,13 @@ export default function ToolBox({ locale, isOpen, onClose }: ToolBoxProps) {
   };
 
   const translateField = (tool: typeof tools[0], field: 'name' | 'description') => {
-    const fallback = field === 'name' ? tool.name : tool.description;
-    if (locale === 'zh') return fallback;
+    const zh = field === 'name' ? tool.name : tool.description;
+    if (locale === 'zh') return zh;
+    const en = field === 'name' ? ((tool as any).nameEn || zh) : ((tool as any).descriptionEn || zh);
     const slug = tool.slug || tool.id || '';
     const altId = tool.id && tool.id !== tool.slug ? tool.id : '';
-    return safeTranslate(`${slug}.${field}`, altId ? safeTranslate(`${altId}.${field}`, fallback) : fallback);
+    const v = safeTranslate(`${slug}.${field}`, altId ? safeTranslate(`${altId}.${field}`, '') : '');
+    return v || en;
   };
 
   useEffect(() => {

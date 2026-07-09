@@ -198,6 +198,13 @@ export default function LocaleShell({
         locale={locale}
         timeZone="Asia/Shanghai"
         now={new Date()}
+        onError={(error) => {
+          const msg = String((error as any).message || '');
+          if ((error as any).code === 'MISSING_MESSAGE' || /MISSING_MESSAGE/.test(msg)) {
+            throw error;
+          }
+          console.error('[next-intl error]', error);
+        }}
         formats={{
           dateTime: {
             short: { year: 'numeric', month: 'short', day: 'numeric' },

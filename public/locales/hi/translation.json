@@ -103,6 +103,7 @@
     "collaboration": "सहयोग",
     "file-tools": "फ़ाइल टूल्स",
     "api-tools": "API टूल्स",
+    "game-tools": "गेमिंग टूल्स",
     "compliance-filter": "अनुपालन फ़िल्टर",
     "all": "सभी",
     "verified": "सत्यापित",
@@ -507,7 +508,7 @@
       "description": "ऑनलाइन tinypng compress for compress, छवि, optimize, WebP. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "ilovepdf": {
-      "name": "Ilovepdf PDF",
+      "name": "iLovePDF PDF",
       "description": "ऑनलाइन ilovepdf PDF for PDF, विलय, convert, edit. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "canva": {
@@ -551,7 +552,7 @@
       "description": "ऑनलाइन github कोड for कोड, hosting, ओपन source, collaboration. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "stackblitz": {
-      "name": "Stackblitz IDE",
+      "name": "स्टैकब्लिट्ज़ IDE",
       "description": "ऑनलाइन stackblitz ide for IDE, cloud, development, पूर्वावलोकन. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "codesandbox": {
@@ -579,7 +580,7 @@
       "description": "ऑनलाइन pexels images for images, photography, निःशुल्क, videos. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "giphy": {
-      "name": "Giphy GIF",
+      "name": "गिफी GIF",
       "description": "ऑनलाइन giphy gif for GIF, animation, इमोजी, search. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tinify": {
@@ -635,7 +636,7 @@
       "description": "ऑनलाइन regex101 Regex for Regex, testing, matching, development. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "jsonlint": {
-      "name": "Jsonlint JSON",
+      "name": "JSONलिंट JSON",
       "description": "ऑनलाइन jsonlint JSON for JSON, validation, format, development. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "jqplay": {
@@ -679,31 +680,31 @@
       "description": "ऑनलाइन dafont fonts for fonts, निःशुल्क, download, design. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pdfescape": {
-      "name": "Pdfescape PDF",
+      "name": "PDFएस्केप PDF",
       "description": "ऑनलाइन pdfescape PDF for PDF, edit, form, निःशुल्क. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "smallpdf": {
-      "name": "Smallpdf PDF",
+      "name": "स्मॉलPDF PDF",
       "description": "ऑनलाइन smallpdf PDF for PDF, compress, convert, edit. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sejda": {
-      "name": "Sejda PDF",
+      "name": "सेज्डा PDF",
       "description": "ऑनलाइन sejda PDF for PDF, professional, process, convert. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pdf2go": {
-      "name": "Pdf2go PDF",
+      "name": "PDF2Go PDF",
       "description": "ऑनलाइन pdf2go PDF for PDF, convert, ऑनलाइन, उपकरण. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cuttly": {
-      "name": "Cuttly URL",
+      "name": "कटली URL",
       "description": "ऑनलाइन cuttly URL for URL, shortener, track, निःशुल्क. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "bitly": {
-      "name": "Bitly URL",
+      "name": "बिटली URL",
       "description": "ऑनलाइन bitly URL for URL, shortener, analytics, brand. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tinyurl": {
-      "name": "Tinyurl URL",
+      "name": "टिनीURL URL",
       "description": "ऑनलाइन tinyurl URL for URL, shortener, निःशुल्क, simple. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tldr-pages": {
@@ -723,11 +724,11 @@
       "description": "ऑनलाइन css tricks for CSS, tips, frontend, tutorials. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cssgridgarden": {
-      "name": "Cssgridgarden CSS",
+      "name": "CSS ग्रिड गार्डन CSS",
       "description": "ऑनलाइन cssgridgarden css for CSS, ग्रिड, learning, खेल. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "flexboxfroggy": {
-      "name": "Flexboxfroggy CSS",
+      "name": "फ्लेक्सबॉक्स फ्रॉगी CSS",
       "description": "ऑनलाइन flexboxfroggy css for CSS, Flexbox, learning, खेल. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "typing-game": {
@@ -987,7 +988,7 @@
       "description": "ऑनलाइन firebase backend for backend, Google, database, BaaS. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "prisma": {
-      "name": "Prisma ORM",
+      "name": "प्रिस्मा ORM",
       "description": "ऑनलाइन prisma orm for ORM, Node.js, database, type-सुरक्षित. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "postman": {
@@ -1107,7 +1108,7 @@
       "description": "ऑनलाइन tldraw whiteboard for whiteboard, infinite, canvas, collaboration. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "umal": {
-      "name": "Umal",
+      "name": "उमाल",
       "description": "ऑनलाइन umal for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "whimsical": {
@@ -1123,7 +1124,7 @@
       "description": "ऑनलाइन diagrams diagram for diagram, architecture, draw, cloud. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pdftotext": {
-      "name": "Pdftotext PDF",
+      "name": "PDF-टू-टेक्स्ट PDF",
       "description": "ऑनलाइन pdftotext PDF for PDF, पाठ, extract, convert. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pdf编辑": {
@@ -1251,7 +1252,7 @@
       "description": "ऑनलाइन marketo b2b for B2B, marketing, automation, leads. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "semrush": {
-      "name": "Semrush SEO",
+      "name": "सेमरश SEO",
       "description": "ऑनलाइन semrush seo for SEO, analysis, keywords, competitor. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "ahrefs": {
@@ -1259,7 +1260,7 @@
       "description": "ऑनलाइन ahrefs backlinks for backlinks, SEO, analysis, ranking. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "moz": {
-      "name": "Moz SEO",
+      "name": "मोज़ SEO",
       "description": "ऑनलाइन moz seo for SEO, authority, ranking, analysis. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "google-analytics": {
@@ -1375,7 +1376,7 @@
       "description": "ऑनलाइन ynab budget for budget, zero-based, finance, planning. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "expensify": {
-      "name": "Expensify Expenses",
+      "name": "एक्सपेंसिफ़ाई खर्चे",
       "description": "ऑनलाइन expensify expenses for expenses, receipts, corporate, automation. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "concur": {
@@ -1383,7 +1384,7 @@
       "description": "ऑनलाइन concur travel for travel, expenses, SAP, enterprise. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "stripe-dashboard": {
-      "name": "Stripe Dashboard",
+      "name": "स्ट्राइप डैशबोर्ड",
       "description": "ऑनलाइन stripe dashboard for Stripe, dashboard, transactions, payments. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "paypal-business": {
@@ -1395,23 +1396,23 @@
       "description": "ऑनलाइन bamboo hr for HR, recruiting, onboarding, performance. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "workday": {
-      "name": "Workday HR",
+      "name": "वर्कडे एचआर",
       "description": "ऑनलाइन workday hr for HR, enterprise, cloud, HCM. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "linkedin-recruiter": {
-      "name": "Linkedin Recruiter",
+      "name": "लिंक्डइन रिक्रूटर",
       "description": "ऑनलाइन linkedin recruiter for LinkedIn, recruiter, talent, hiring. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "indeed-recruit": {
-      "name": "Indeed Recruit",
+      "name": "इंडीड बहर्ता",
       "description": "ऑनलाइन indeed recruit for recruiting, jobs, hiring, talent. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "greenhouse": {
-      "name": "Greenhouse Recruiting",
+      "name": "ग्रीनहाउस बहर्ता",
       "description": "ऑनलाइन greenhouse recruiting for recruiting, workflow, interviews, hiring. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "lever": {
-      "name": "Lever Talent",
+      "name": "लीवर टैलेंट",
       "description": "ऑनलाइन lever talent for talent, AI, recruiting, CRM. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "slack-hr": {
@@ -1427,7 +1428,7 @@
       "description": "ऑनलाइन google workspace for Google, workspace, enterprise, collaboration. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "microsoft-365": {
-      "name": "Microsoft 365",
+      "name": "माइक्रोसॉफ्ट 365",
       "description": "ऑनलाइन microsoft 365 for Microsoft, office, Teams, enterprise. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "coursera": {
@@ -1443,11 +1444,11 @@
       "description": "ऑनलाइन edx निःशुल्क for निःशुल्क, university, courses, certification. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "khan-academy": {
-      "name": "Khan Academy",
+      "name": "खान अकादमी",
       "description": "ऑनलाइन khan academy for निःशुल्क, K12, math, science. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "duolingo": {
-      "name": "Duolingo Language",
+      "name": "Duolingo भाषा",
       "description": "ऑनलाइन duolingo language for language, learning, निःशुल्क, games. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "quizlet": {
@@ -1455,11 +1456,11 @@
       "description": "ऑनलाइन quizlet flashcards for flashcards, learning, study, memory. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "notion-students": {
-      "name": "Notion Students",
+      "name": "नोशन Students",
       "description": "ऑनलाइन notion students for notes, students, templates, organization. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "coursera-for-campus": {
-      "name": "Coursera For Campus",
+      "name": "Coursera के लिए कैंपस",
       "description": "ऑनलाइन coursera for campus for university, courses, certificates, campus. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "udacity": {
@@ -1467,7 +1468,7 @@
       "description": "ऑनलाइन udacity programming for programming, nanodegree, AI, data. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "skillshare": {
-      "name": "Skillshare Creative",
+      "name": "स्किलशेयर क्रिएटिव",
       "description": "ऑनलाइन skillshare creative for creative, skills, design, business. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "myfitnesspal": {
@@ -1475,11 +1476,11 @@
       "description": "ऑनलाइन myfitnesspal health for health, diet, calories, tracking. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "headspace": {
-      "name": "Headspace Meditation",
+      "name": "Headspace ध्यान",
       "description": "ऑनलाइन headspace meditation for meditation, mindfulness, stress, sleep. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "calm": {
-      "name": "Calm Relaxation",
+      "name": "Calm रिलैक्सेशन",
       "description": "ऑनलाइन calm relaxation for relaxation, sleep, meditation, music. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "strava": {
@@ -1487,11 +1488,11 @@
       "description": "ऑनलाइन strava sports for sports, running, cycling, GPS. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sleep-cycle": {
-      "name": "Sleep Cycle",
+      "name": "नींद Cycle",
       "description": "ऑनलाइन sleep cycle for sleep, alarm, tracking, analysis. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "noom": {
-      "name": "Noom Diet",
+      "name": "Noom डाइट",
       "description": "ऑनलाइन noom diet for diet, health, वेट loss, behavior. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "whoop": {
@@ -1503,7 +1504,7 @@
       "description": "ऑनलाइन aaptiv fitness for fitness, AI, training, workouts. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "fitbit": {
-      "name": "Fitbit Wearable",
+      "name": "फिटबिट Wearable",
       "description": "ऑनलाइन fitbit wearable for wearable, steps, heart rate, health. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "apple-health": {
@@ -1511,11 +1512,11 @@
       "description": "ऑनलाइन apple health for Apple, health, iPhone, data. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "airbnb": {
-      "name": "Airbnb Stays",
+      "name": "एअरबीएनबी Stays",
       "description": "ऑनलाइन airbnb stays for stays, travel, accommodation, booking. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "booking": {
-      "name": "Booking Hotels",
+      "name": "बुकिंग Hotels",
       "description": "ऑनलाइन booking hotels for hotels, booking, travel, accommodation. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tripadvisor": {
@@ -1523,11 +1524,11 @@
       "description": "ऑनलाइन tripadvisor travel for travel, reviews, restaurants, attractions. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "google-maps": {
-      "name": "Google Maps",
+      "name": "गूगल नक्शे",
       "description": "ऑनलाइन google maps for maps, navigation, directions, traffic. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "uber": {
-      "name": "Uber Rides",
+      "name": "उबर Rides",
       "description": "ऑनलाइन uber rides for rides, taxi, transport, booking. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "grubhub": {
@@ -1535,15 +1536,15 @@
       "description": "ऑनलाइन grubhub food for food, delivery, ordering, restaurants. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "doordash": {
-      "name": "Doordash Delivery",
+      "name": "Doordash डिलीवरी",
       "description": "ऑनलाइन doordash delivery for delivery, food, restaurants, convenience. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "yelp": {
-      "name": "Yelp Reviews",
+      "name": "Yelp समीक्षा",
       "description": "ऑनलाइन yelp reviews for reviews, स्थानीय, restaurants, businesses. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tripit": {
-      "name": "Tripit Itinerary",
+      "name": "Tripit आइटिनरेरी",
       "description": "ऑनलाइन tripit itinerary for itinerary, travel, flights, planning. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "google-travel": {
@@ -1559,7 +1560,7 @@
       "description": "ऑनलाइन final cut pro for वीडियो, editing, Apple, Mac. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "davinci-resolve": {
-      "name": "Davinci Resolve",
+      "name": "डाविंची रिज़ॉल्व",
       "description": "ऑनलाइन davinci resolve for वीडियो, रंग, grading, निःशुल्क. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "imovie": {
@@ -1619,47 +1620,47 @@
       "description": "ऑनलाइन logic pro for music, production, Apple, professional. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "podcastle": {
-      "name": "Podcastle Podcast",
+      "name": "Podcastle पॉडकास्ट",
       "description": "ऑनलाइन podcastle podcast for podcast, AI, recording, editing. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "anchor": {
-      "name": "Anchor Podcast",
+      "name": "Anchor पॉडकास्ट",
       "description": "ऑनलाइन anchor podcast for podcast, Spotify, निःशुल्क, hosting. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "blender": {
-      "name": "Blender 3D",
+      "name": "ब्लेंडर 3D",
       "description": "ऑनलाइन blender 3d for 3D, ओपन-source, modeling, rendering. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sketchup": {
-      "name": "Sketchup 3D",
+      "name": "स्केचअप 3D",
       "description": "ऑनलाइन sketchup 3d for 3D, architecture, design, visualization. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tinkercad": {
-      "name": "Tinkercad 3D",
+      "name": "टिंकरकैड 3D",
       "description": "ऑनलाइन tinkercad 3d for 3D, Autodesk, design, printing. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "fusion-360": {
-      "name": "Fusion 360",
+      "name": "फ्यूजन 360",
       "description": "ऑनलाइन fusion 360 for 3D, CAD, cloud, manufacturing. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cinema-4d": {
-      "name": "Cinema 4d",
+      "name": "सिनेमा 4D",
       "description": "ऑनलाइन cinema 4d for 3D, rendering, animation, professional. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "threejs": {
-      "name": "Threejs 3D",
+      "name": "Three.js 3D",
       "description": "ऑनलाइन threejs 3d for 3D, WebGL, JavaScript, Web. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "babylonjs": {
-      "name": "Babylonjs 3D",
+      "name": "Babylon.js 3D",
       "description": "ऑनलाइन babylonjs 3d for 3D, खेल, Microsoft, WebGL. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "meshroom": {
-      "name": "Meshroom 3D",
+      "name": "मेशरूम 3D",
       "description": "ऑनलाइन meshroom 3d for 3D, scanning, ओपन-source, photo. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "substance": {
-      "name": "Substance 3D",
+      "name": "सबस्टेंस 3D",
       "description": "ऑनलाइन substance 3d for 3D, material, texture, Adobe. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tableau": {
@@ -1667,15 +1668,15 @@
       "description": "ऑनलाइन tableau data for data, visualization, analysis, dashboard. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "power-bi": {
-      "name": "Power Bi",
+      "name": "शक्ति Bi",
       "description": "ऑनलाइन power bi for BI, Microsoft, data, visualization. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "looker": {
-      "name": "Looker BI",
+      "name": "लूकर BI",
       "description": "ऑनलाइन looker bi for BI, Google, cloud, analysis. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "chartjs": {
-      "name": "Chartjs Charts",
+      "name": "Chartjs चार्ट",
       "description": "ऑनलाइन chartjs charts for charts, JavaScript, ओपन-source, Web. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "d3js": {
@@ -1683,15 +1684,15 @@
       "description": "ऑनलाइन d3js data for data, visualization, JavaScript, SVG. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "plotly": {
-      "name": "Plotly Charts",
+      "name": "Plotly चार्ट",
       "description": "ऑनलाइन plotly charts for charts, interactive, Python, ओपन-source. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "infogram": {
-      "name": "Infogram Infographic",
+      "name": "Infogram इन्फोग्राफिक",
       "description": "ऑनलाइन infogram infographic for infographic, visualization, ऑनलाइन, drag-ड्रॉप. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "venngage": {
-      "name": "Venngage Infographic",
+      "name": "Venngage इन्फोग्राफिक",
       "description": "ऑनलाइन venngage infographic for infographic, report, visualization, templates. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "flourish": {
@@ -1727,27 +1728,27 @@
       "description": "ऑनलाइन nordpass पासवर्ड for पासवर्ड, NordVPN, sync, सुरक्षा. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "have-i-been-pwned": {
-      "name": "Have I Been Pwned",
+      "name": "है I रहा पव्नड",
       "description": "ऑनलाइन have i been pwned for breach, check, email, सुरक्षा. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "virustotal": {
-      "name": "Virustotal Virus",
+      "name": "Virustotal वायरस",
       "description": "ऑनलाइन virustotal virus for virus, detection, scanning, फ़ाइल. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cryptomator": {
-      "name": "Cryptomator Encryption",
+      "name": "क्रिप्टोमेटर एन्क्रिप्शन",
       "description": "ऑनलाइन cryptomator encryption for encryption, cloud, ओपन-source, privacy. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "google-drive": {
-      "name": "Google Drive",
+      "name": "गूगल Drive",
       "description": "ऑनलाइन google drive for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "box": {
-      "name": "Box",
+      "name": "बॉक्स",
       "description": "ऑनलाइन box for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sharepoint": {
-      "name": "Sharepoint",
+      "name": "शेयरपॉइंट",
       "description": "ऑनलाइन sharepoint for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "coggle": {
@@ -1775,11 +1776,11 @@
       "description": "ऑनलाइन pdf24 PDF for PDF, निःशुल्क, उपकरण, ऑनलाइन. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "zamzar": {
-      "name": "Zamzar Convert",
+      "name": "Zamzar कन्वर्ट",
       "description": "ऑनलाइन zamzar convert for convert, format, email, ऑनलाइन. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "googledrive-files": {
-      "name": "Googledrive Files",
+      "name": "Googledrive फ़ाइलें",
       "description": "ऑनलाइन googledrive files for Google, search, cloud, फ़ाइल. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "compress2go": {
@@ -1811,7 +1812,7 @@
       "description": "ऑनलाइन ngrok api for API, tunnel, development, स्थानीय. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "repl-it": {
-      "name": "Repl It",
+      "name": "रेप्लिट",
       "description": "ऑनलाइन repl it for IDE, ऑनलाइन, collaboration, hosting. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "gitpod": {
@@ -1823,7 +1824,7 @@
       "description": "ऑनलाइन perplexity ai for AI, search, real-time, citation. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "character-ai": {
-      "name": "Character Ai",
+      "name": "Character एआई",
       "description": "ऑनलाइन character ai for AI, role, conversation, interaction. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "poe": {
@@ -1859,31 +1860,31 @@
       "description": "ऑनलाइन 讯飞智作 ai for AI, वीडियो, dubbing, digital human. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "grammarly-go": {
-      "name": "Grammarly Go",
+      "name": "Grammarly जाना",
       "description": "ऑनलाइन grammarly go for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "quillbot": {
-      "name": "Quillbot",
+      "name": "क्विलबॉट",
       "description": "ऑनलाइन quillbot for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "scribbr": {
-      "name": "Scribbr",
+      "name": "स्क्रिबर",
       "description": "ऑनलाइन scribbr for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "frase": {
-      "name": "Frase",
+      "name": "फ्रेस",
       "description": "ऑनलाइन frase for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "invideo": {
-      "name": "Invideo",
+      "name": "इनवीडियो",
       "description": "ऑनलाइन invideo for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "veedio": {
-      "name": "Veedio",
+      "name": "वीड",
       "description": "ऑनलाइन veedio for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "filmora": {
-      "name": "Filmora",
+      "name": "फिल्मोरा",
       "description": "ऑनलाइन filmora for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wave-video": {
@@ -1891,115 +1892,115 @@
       "description": "ऑनलाइन wave वीडियो for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "subtitles": {
-      "name": "Subtitles",
+      "name": "सबटाइटल्स",
       "description": "ऑनलाइन subtitles for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cloudflare": {
-      "name": "Cloudflare",
+      "name": "क्लाउडफ्लेयर",
       "description": "ऑनलाइन cloudflare for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "netlify-cms": {
-      "name": "Netlify Cms",
+      "name": "Netlify सीएमएस",
       "description": "ऑनलाइन netlify cms for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sanity": {
-      "name": "Sanity",
+      "name": "सैनिटी",
       "description": "ऑनलाइन sanity for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "prismic": {
-      "name": "Prismic",
+      "name": "प्रिज्मिक",
       "description": "ऑनलाइन prismic for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "contentful": {
-      "name": "Contentful",
+      "name": "कॉन्टेंटफुल",
       "description": "ऑनलाइन contentful for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "shields": {
-      "name": "Shields",
+      "name": "शील्ड्स",
       "description": "ऑनलाइन shields for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "gitlab": {
-      "name": "Gitlab",
+      "name": "गिटलैब",
       "description": "ऑनलाइन gitlab for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "bitbucket": {
-      "name": "Bitbucket",
+      "name": "बिटबकेट",
       "description": "ऑनलाइन bitbucket for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "vercel-functions": {
-      "name": "Vercel Functions",
+      "name": "वर्सेल फ़ंक्शन",
       "description": "ऑनलाइन vercel functions for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cloudflare-workers": {
-      "name": "Cloudflare Workers",
+      "name": "क्लाउडफ्लेयर Workers",
       "description": "ऑनलाइन cloudflare workers for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "vite": {
-      "name": "Vite",
+      "name": "वाइट",
       "description": "ऑनलाइन vite for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "nextjs": {
-      "name": "Nextjs",
+      "name": "नेक्स्टजेएस",
       "description": "ऑनलाइन nextjs for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "remix": {
-      "name": "Remix",
+      "name": "रीमिक्स",
       "description": "ऑनलाइन remix for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "astro": {
-      "name": "Astro",
+      "name": "एस्ट्रो",
       "description": "ऑनलाइन astro for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "solidjs": {
-      "name": "Solidjs",
+      "name": "सॉलिडजेएस",
       "description": "ऑनलाइन solidjs for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "vuejs": {
-      "name": "Vuejs",
+      "name": "व्यूजेएस",
       "description": "ऑनलाइन vuejs for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "nuxtjs": {
-      "name": "Nuxtjs",
+      "name": "नक्स्टजेएस",
       "description": "ऑनलाइन nuxtjs for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "svelte": {
-      "name": "Svelte",
+      "name": "स्वेल्ट",
       "description": "ऑनलाइन svelte for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sveltekit": {
-      "name": "Sveltekit",
+      "name": "स्वेल्टकिट",
       "description": "ऑनलाइन sveltekit for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "gatsby": {
-      "name": "Gatsby",
+      "name": "गेट्सबी",
       "description": "ऑनलाइन gatsby for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "chakra-ui": {
-      "name": "Chakra Ui",
+      "name": "चक्रा UI",
       "description": "ऑनलाइन chakra ui for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tailwindcss": {
-      "name": "Tailwindcss",
+      "name": "टेलविंड CSS",
       "description": "ऑनलाइन tailwindcss for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "styled-components": {
-      "name": "Styled Components",
+      "name": "स्टाइल्ड कंपोनेंट्स",
       "description": "ऑनलाइन styled components for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "react-query": {
-      "name": "React Query",
+      "name": "रिएक्ट Query",
       "description": "ऑनलाइन react query for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "axios": {
-      "name": "Axios",
+      "name": "एक्सियोस",
       "description": "ऑनलाइन axios for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "lodash": {
-      "name": "Lodash",
+      "name": "लोडाश",
       "description": "ऑनलाइन lodash for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "date-fns": {
-      "name": "Date Fns",
+      "name": "दिनांक Fns",
       "description": "ऑनलाइन date fns for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "react-hook-form": {
@@ -2007,35 +2008,35 @@
       "description": "ऑनलाइन react hook form for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "zod": {
-      "name": "Zod",
+      "name": "ज़ॉड",
       "description": "ऑनलाइन zod for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "react-router": {
-      "name": "React Router",
+      "name": "रिएक्ट Router",
       "description": "ऑनलाइन react router for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "framer-motion": {
-      "name": "Framer Motion",
+      "name": "फ्रेमर मोशन",
       "description": "ऑनलाइन framer motion for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "gsap": {
-      "name": "Gsap",
+      "name": "जीएसएपी",
       "description": "ऑनलाइन gsap for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "playcanvas": {
-      "name": "Playcanvas",
+      "name": "प्लेकैनवास",
       "description": "ऑनलाइन playcanvas for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "splines": {
-      "name": "Splines",
+      "name": "स्पलाइन्स",
       "description": "ऑनलाइन splines for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "p5js": {
-      "name": "P5js",
+      "name": "पी5जेएस",
       "description": "ऑनलाइन p5js for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "processing": {
-      "name": "Processing",
+      "name": "प्रोसेसिंग",
       "description": "ऑनलाइन processing for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "doodle": {
@@ -2075,7 +2076,7 @@
       "description": "ऑनलाइन heroku cloud for cloud, PaaS, deployment, scaling. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "aws-amplify": {
-      "name": "Aws Amplify",
+      "name": "एडब्ल्यूएस Amplify",
       "description": "ऑनलाइन aws amplify for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "mongodb-atlas": {
@@ -2103,11 +2104,11 @@
       "description": "ऑनलाइन socket io for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "auth0": {
-      "name": "Auth0 Authentication",
+      "name": "Auth0 प्रमाणीकरण",
       "description": "ऑनलाइन auth0 authentication for authentication, सुरक्षा, OAuth2, SSO. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "okta": {
-      "name": "Okta Authentication",
+      "name": "Okta प्रमाणीकरण",
       "description": "ऑनलाइन okta authentication for authentication, enterprise, SSO, MFA. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "nextauth": {
@@ -2143,43 +2144,43 @@
       "description": "ऑनलाइन nodejs for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "deno": {
-      "name": "Deno Runtime",
+      "name": "Deno रनटाइम",
       "description": "ऑनलाइन deno runtime for runtime, JavaScript, TypeScript, सुरक्षित. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "bun": {
-      "name": "Bun Runtime",
+      "name": "Bun रनटाइम",
       "description": "ऑनलाइन bun runtime for runtime, fast, package, सभी-in-one. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "npm": {
-      "name": "Npm Package",
+      "name": "Npm पैकेज",
       "description": "ऑनलाइन npm package for package, Node.js, dependencies, manager. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "yarn": {
-      "name": "Yarn Package",
+      "name": "Yarn पैकेज",
       "description": "ऑनलाइन yarn package for package, fast, reliable, manager. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pnpm": {
-      "name": "Pnpm Package",
+      "name": "Pnpm पैकेज",
       "description": "ऑनलाइन pnpm package for package, fast, disk saving, shared. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "jest": {
-      "name": "Jest Testing",
+      "name": "Jest परीक्षण",
       "description": "ऑनलाइन jest testing for testing, JavaScript, Facebook, snapshot. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "vitest": {
-      "name": "Vitest Testing",
+      "name": "Vitest परीक्षण",
       "description": "ऑनलाइन vitest testing for testing, Vite, frontend, fast. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cypress": {
-      "name": "Cypress E2E",
+      "name": "Cypress एन्ड-टू-एन्ड",
       "description": "ऑनलाइन cypress e2e for E2E, testing, automation, frontend. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "playwright": {
-      "name": "Playwright E2E",
+      "name": "Playwright एन्ड-टू-एन्ड",
       "description": "ऑनलाइन playwright e2e for E2E, testing, Microsoft, ब्राउज़र. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "eslint": {
-      "name": "Eslint Linter",
+      "name": "Eslint लिंटर",
       "description": "ऑनलाइन eslint linter for linter, कोड, JavaScript, errors. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "prettier": {
@@ -2187,11 +2188,11 @@
       "description": "ऑनलाइन prettier फॉर्मेटर for फॉर्मेटर, कोड, style, unify. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "webpack": {
-      "name": "Webpack Bundler",
+      "name": "Webpack बंडलर",
       "description": "ऑनलाइन webpack bundler for bundler, frontend, module, build. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rollup": {
-      "name": "Rollup Bundler",
+      "name": "Rollup बंडलर",
       "description": "ऑनलाइन rollup bundler for bundler, module, Tree-shaking, optimization. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "parcel": {
@@ -2211,7 +2212,7 @@
       "description": "ऑनलाइन tencent translate for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "zhihu": {
-      "name": "Zhihu Q&A",
+      "name": "Zhihu सवाल जवाब",
       "description": "ऑनलाइन zhihu q&a for Q&A, knowledge, community, चीनी. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "csdn": {
@@ -2259,7 +2260,7 @@
       "description": "ऑनलाइन ant design for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "element-ui": {
-      "name": "Element Ui",
+      "name": "Element UI",
       "description": "ऑनलाइन element ui for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "vant": {
@@ -2267,7 +2268,7 @@
       "description": "ऑनलाइन vant for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "nutui": {
-      "name": "Nutui",
+      "name": "Nut UI",
       "description": "ऑनलाइन nutui for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "echarts": {
@@ -2291,7 +2292,7 @@
       "description": "ऑनलाइन tuotu for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "canva-cn": {
-      "name": "Canva Cn",
+      "name": "कैनवा Cn",
       "description": "ऑनलाइन canva cn for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wps": {
@@ -2299,7 +2300,7 @@
       "description": "ऑनलाइन wps for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "feishu": {
-      "name": "Feishu",
+      "name": "फीशु",
       "description": "ऑनलाइन feishu for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "dingtalk": {
@@ -2307,7 +2308,7 @@
       "description": "ऑनलाइन dingtalk for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "weixin-work": {
-      "name": "Weixin Work",
+      "name": "Weixin काम",
       "description": "ऑनलाइन weixin work for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "teambition": {
@@ -2335,11 +2336,11 @@
       "description": "ऑनलाइन tencent map for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "meituan": {
-      "name": "Meituan",
+      "name": "मीटुआन",
       "description": "ऑनलाइन meituan for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "eleme": {
-      "name": "Eleme Food Delivery",
+      "name": "एलेमे खाना डिलीवरी",
       "description": "ऑनलाइन eleme food delivery for food delivery, Alibaba, restaurant, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "netease-music": {
@@ -2379,7 +2380,7 @@
       "description": "ऑनलाइन youku वीडियो for वीडियो, movies, dramas, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rtl": {
-      "name": "Rtl Testing",
+      "name": "Rtl परीक्षण",
       "description": "ऑनलाइन rtl testing for testing, React, component, user. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "storybook": {
@@ -2391,11 +2392,11 @@
       "description": "ऑनलाइन esbuild build for build, fast, Go, JavaScript. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "stylelint": {
-      "name": "Stylelint Linter",
+      "name": "Stylelint लिंटर",
       "description": "ऑनलाइन stylelint linter for linter, CSS, style, standards. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "husky": {
-      "name": "Husky Git",
+      "name": "Husky गिट",
       "description": "ऑनलाइन husky git for Git, hooks, commit, automation. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "lint-staged": {
@@ -2403,7 +2404,7 @@
       "description": "ऑनलाइन lint staged for lint, staged, Git, efficiency. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "commitlint": {
-      "name": "Commitlint Git",
+      "name": "Commitlint गिट",
       "description": "ऑनलाइन commitlint git for Git, commit, standardize, टीम. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sketch": {
@@ -2419,15 +2420,15 @@
       "description": "ऑनलाइन framer design for design, interaction, React, prototype. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "adobe-xd": {
-      "name": "Adobe Xd",
+      "name": "एडोब Xd",
       "description": "ऑनलाइन adobe xd for design, Adobe, UI, prototype. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "affinity-designer": {
-      "name": "Affinity Designer",
+      "name": "Affinity डिज़ाइनर",
       "description": "ऑनलाइन affinity designer for vector, drawing, professional, alternative. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "affinity-photo": {
-      "name": "Affinity Photo",
+      "name": "Affinity तस्वीर",
       "description": "ऑनलाइन affinity photo for photo, editing, professional, alternative. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "procreate": {
@@ -2471,19 +2472,19 @@
       "description": "ऑनलाइन jitsi वीडियो for वीडियो, conferencing, ओपन source, encrypted. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "gotomeeting": {
-      "name": "Gotomeeting Meeting",
+      "name": "Gotomeeting मीटिंग",
       "description": "ऑनलाइन gotomeeting meeting for meeting, ऑनलाइन, sharing, recording. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "webex": {
-      "name": "Webex Meeting",
+      "name": "Webex मीटिंग",
       "description": "ऑनलाइन webex meeting for meeting, enterprise, Cisco, सुरक्षा. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "masterclass": {
-      "name": "Masterclass Education",
+      "name": "Masterclass शिक्षा",
       "description": "ऑनलाइन masterclass education for education, master, celebrity, courses. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "lynda": {
-      "name": "Lynda Education",
+      "name": "Lynda शिक्षा",
       "description": "ऑनलाइन lynda education for education, LinkedIn, business, technical. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "codecademy": {
@@ -2503,7 +2504,7 @@
       "description": "ऑनलाइन exercism programming for programming, practice, mentor, review. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "excel": {
-      "name": "Excel Spreadsheet",
+      "name": "Excel स्प्रेडशीट",
       "description": "ऑनलाइन excel spreadsheet for spreadsheet, data, analysis, Microsoft. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "google-data-studio": {
@@ -2515,11 +2516,11 @@
       "description": "ऑनलाइन excel ऑनलाइन for spreadsheet, ऑनलाइन, collaboration, cloud. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "numbers": {
-      "name": "Numbers Spreadsheet",
+      "name": "Numbers स्प्रेडशीट",
       "description": "ऑनलाइन numbers spreadsheet for spreadsheet, Apple, iCloud, templates. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "power-query": {
-      "name": "Power Query",
+      "name": "शक्ति Query",
       "description": "ऑनलाइन power query for data, cleaning, transformation, Power. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "python": {
@@ -2563,7 +2564,7 @@
       "description": "ऑनलाइन linode cloud for cloud, VPS, hosting, high performance. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "duo": {
-      "name": "Duo Authentication",
+      "name": "Duo प्रमाणीकरण",
       "description": "ऑनलाइन duo authentication for authentication, सुरक्षा, MFA, protection. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "snyk": {
@@ -2579,7 +2580,7 @@
       "description": "ऑनलाइन checkmarx सुरक्षा for सुरक्षा, testing, static analysis, SAST. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "weather": {
-      "name": "Weather Weather",
+      "name": "मौसम मौसम",
       "description": "ऑनलाइन weather weather for weather, forecast, air quality, global. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "calculator": {
@@ -2591,7 +2592,7 @@
       "description": "ऑनलाइन unit कनवर्टर for unit, conversion, length, वेट. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "dictionary": {
-      "name": "Dictionary Dictionary",
+      "name": "शब्दकोश शब्दकोश",
       "description": "ऑनलाइन dictionary dictionary for dictionary, translation, words, pronunciation. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "thesaurus": {
@@ -2603,23 +2604,23 @@
       "description": "ऑनलाइन टाइमर टाइमर for टाइमर, काउंटडाउन, Pomodoro, focus. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "stopwatch": {
-      "name": "Stopwatch Stopwatch",
+      "name": "स्टॉपवॉच स्टॉपवॉच",
       "description": "ऑनलाइन stopwatch stopwatch for stopwatch, timing, precise, split. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "calendar": {
-      "name": "Calendar Calendar",
+      "name": "कैलेंडर कैलेंडर",
       "description": "ऑनलाइन calendar calendar for calendar, dates, holidays, week view. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "winrar": {
-      "name": "Winrar Compression",
+      "name": "Winrar संपीड़न",
       "description": "ऑनलाइन winrar compression for compression, फ़ाइल, RAR, ZIP. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "7zip": {
-      "name": "7zip Compression",
+      "name": "7zip संपीड़न",
       "description": "ऑनलाइन 7zip compression for compression, निःशुल्क, ओपन source, high ratio. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "bandizip": {
-      "name": "Bandizip Compression",
+      "name": "Bandizip संपीड़न",
       "description": "ऑनलाइन bandizip compression for compression, निःशुल्क, ad-निःशुल्क, formats. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "ccleaner": {
@@ -2627,7 +2628,7 @@
       "description": "ऑनलाइन ccleaner cleaning for cleaning, system, optimization, junk. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "recuva": {
-      "name": "Recuva Recovery",
+      "name": "Recuva रिकवरी",
       "description": "ऑनलाइन recuva recovery for recovery, फ़ाइल, deleted, data. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "markdown": {
@@ -2635,11 +2636,11 @@
       "description": "ऑनलाइन मार्कडाउन मार्कडाउन for मार्कडाउन, editor, पूर्वावलोकन, export. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "drawio": {
-      "name": "Drawio Diagramming",
+      "name": "Drawio डायग्रामिंग",
       "description": "ऑनलाइन drawio diagramming for diagramming, flowchart, mind map, निःशुल्क. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "plantuml": {
-      "name": "Plantuml Diagramming",
+      "name": "Plantuml डायग्रामिंग",
       "description": "ऑनलाइन plantuml diagramming for diagramming, UML, कोड, पाठ. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "mermaid": {
@@ -2651,19 +2652,19 @@
       "description": "ऑनलाइन carbon कोड for कोड, screenshot, share, beautiful. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "ray-so": {
-      "name": "Ray.so Dreamy Code Shots",
+      "name": "रे.so स्वप्निल कोड शॉट्स",
       "description": "ग्लासमॉर्फिक स्टाइल का कोड स्क्रीनशॉट। ग्रेडियंट फ्रॉस्टेड बैकग्राउंड, थीम, ड्रॉप शैडो — कूल शेयरिंग इमेज।"
     },
     "wakatime": {
-      "name": "Wakatime Time",
+      "name": "Wakatime समय",
       "description": "ऑनलाइन wakatime time for time, tracking, coding, statistics. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "codecov": {
-      "name": "Codecov Coverage",
+      "name": "Codecov कवरेज",
       "description": "ऑनलाइन codecov coverage for coverage, testing, कोड, quality. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "coveralls": {
-      "name": "Coveralls Coverage",
+      "name": "Coveralls कवरेज",
       "description": "ऑनलाइन coveralls coverage for coverage, CI, testing, reports. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "codeclimate": {
@@ -2707,7 +2708,7 @@
       "description": "ऑनलाइन keep for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "nike-training": {
-      "name": "Nike Training",
+      "name": "नाइके प्रशिक्षण",
       "description": "ऑनलाइन nike training for fitness, Nike, training, plan. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "peloton": {
@@ -2715,7 +2716,7 @@
       "description": "ऑनलाइन peloton fitness for fitness, spin, classes, training. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "adidas-training": {
-      "name": "Adidas Training",
+      "name": "एडिडास प्रशिक्षण",
       "description": "ऑनलाइन adidas training for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "seven": {
@@ -2739,7 +2740,7 @@
       "description": "ऑनलाइन meditopia for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "simple-habit": {
-      "name": "Simple Habit",
+      "name": "सरल आदत",
       "description": "ऑनलाइन simple habit for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "breethe": {
@@ -2747,7 +2748,7 @@
       "description": "ऑनलाइन breethe for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sleep-score": {
-      "name": "Sleep Score",
+      "name": "नींद Score",
       "description": "ऑनलाइन sleep score for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "autosleep": {
@@ -2795,7 +2796,7 @@
       "description": "ऑनलाइन mint budget for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "personal-capital": {
-      "name": "Personal Capital",
+      "name": "पर्सनल Capital",
       "description": "ऑनलाइन personal capital for finance, investment, retirement, planning. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "credit-karma": {
@@ -2843,11 +2844,11 @@
       "description": "ऑनलाइन ikea for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "houzz": {
-      "name": "Houzz Home",
+      "name": "Houzz घर",
       "description": "ऑनलाइन houzz home for home, design, renovation, inspiration. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pinterest-life": {
-      "name": "Pinterest Life",
+      "name": "पिंटरेस्ट Life",
       "description": "ऑनलाइन pinterest life for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wayfair": {
@@ -2855,7 +2856,7 @@
       "description": "ऑनलाइन wayfair for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "accuweather": {
-      "name": "Accuweather Weather",
+      "name": "Accuweather मौसम",
       "description": "ऑनलाइन accuweather weather for weather, forecast, accurate, meteorology. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wunderground": {
@@ -2875,7 +2876,7 @@
       "description": "ऑनलाइन barkbox for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "garden-tags": {
-      "name": "Garden Tags",
+      "name": "बगीचा Tags",
       "description": "ऑनलाइन garden tags for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "picturethis": {
@@ -2903,19 +2904,19 @@
       "description": "ऑनलाइन ticktick for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "any-do": {
-      "name": "Any Do",
+      "name": "Any करें",
       "description": "ऑनलाइन any do for tasks, management, smart, todo. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "google-tasks": {
-      "name": "Google Tasks",
+      "name": "गूगल Tasks",
       "description": "ऑनलाइन google tasks for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "things-3": {
-      "name": "Things 3",
+      "name": "थिंग्स 3",
       "description": "ऑनलाइन things 3 for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "omni-focus": {
-      "name": "Omni Focus",
+      "name": "Omni फोकस",
       "description": "ऑनलाइन omni focus for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pomofocus": {
@@ -2923,11 +2924,11 @@
       "description": "ऑनलाइन pomofocus for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "forest": {
-      "name": "Forest",
+      "name": "जंगल",
       "description": "ऑनलाइन forest for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "focus-to-do": {
-      "name": "Focus To Do",
+      "name": "फोकस को करें",
       "description": "ऑनलाइन focus to do for focus, time, todo, pomodoro. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "habitica": {
@@ -2943,7 +2944,7 @@
       "description": "ऑनलाइन productive for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "day-one": {
-      "name": "Day One",
+      "name": "Day एक",
       "description": "ऑनलाइन day one for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "journey": {
@@ -2959,7 +2960,7 @@
       "description": "ऑनलाइन cleanshot for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "snagit": {
-      "name": "Snagit",
+      "name": "Sna गिट",
       "description": "ऑनलाइन snagit for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sharex": {
@@ -2971,7 +2972,7 @@
       "description": "ऑनलाइन lightshot for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "adobe-scan": {
-      "name": "Adobe Scan",
+      "name": "एडोब स्कैन",
       "description": "ऑनलाइन adobe scan for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "camscanner": {
@@ -2979,7 +2980,7 @@
       "description": "ऑनलाइन camscanner for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "genius-scan": {
-      "name": "Genius Scan",
+      "name": "Genius स्कैन",
       "description": "ऑनलाइन genius scan for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "chrome": {
@@ -3027,7 +3028,7 @@
       "description": "ऑनलाइन alltrails for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "babbel": {
-      "name": "Babbel Language",
+      "name": "Babbel भाषा",
       "description": "ऑनलाइन babbel language for language, learning, speaking, conversation. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rosetta-stone": {
@@ -3047,7 +3048,7 @@
       "description": "ऑनलाइन disney plus for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "hbo-max": {
-      "name": "Hbo Max",
+      "name": "Hbo अधिकतम",
       "description": "ऑनलाइन hbo max for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "prime-video": {
@@ -3079,7 +3080,7 @@
       "description": "ऑनलाइन tidal music for music, hi-fi, lossless, streaming. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "apple-podcasts": {
-      "name": "Apple Podcasts",
+      "name": "एप्पल Podcasts",
       "description": "ऑनलाइन apple podcasts for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pocket-casts": {
@@ -3107,7 +3108,7 @@
       "description": "ऑनलाइन scribd for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "amazon-shop": {
-      "name": "Amazon Shop",
+      "name": "अमेज़न Shop",
       "description": "ऑनलाइन amazon shop for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "taobao": {
@@ -3123,11 +3124,11 @@
       "description": "ऑनलाइन pinduoduo e-commerce for e-commerce, समूह buy, social, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "linkedin": {
-      "name": "Linkedin",
+      "name": "लिंक्डइन",
       "description": "ऑनलाइन linkedin for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "indeed": {
-      "name": "Indeed",
+      "name": "इंडीड",
       "description": "ऑनलाइन indeed for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "glassdoor": {
@@ -3143,7 +3144,7 @@
       "description": "ऑनलाइन lagou for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "photo-magic": {
-      "name": "Photo Magic",
+      "name": "तस्वीर Magic",
       "description": "ऑनलाइन photo magic for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "myheritage": {
@@ -3151,7 +3152,7 @@
       "description": "ऑनलाइन myheritage for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "whatsapp": {
-      "name": "Whatsapp",
+      "name": "Whats ऐप",
       "description": "ऑनलाइन whatsapp for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "telegram": {
@@ -3159,7 +3160,7 @@
       "description": "ऑनलाइन telegram for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wechat": {
-      "name": "Wechat",
+      "name": "वीचैट",
       "description": "ऑनलाइन wechat for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "signal": {
@@ -3167,7 +3168,7 @@
       "description": "ऑनलाइन signal for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "line": {
-      "name": "Line",
+      "name": "लाइन",
       "description": "ऑनलाइन line for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "messenger": {
@@ -3175,7 +3176,7 @@
       "description": "ऑनलाइन messenger for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "meituan-waimai": {
-      "name": "Meituan Waimai",
+      "name": "मीटुआन Waimai",
       "description": "ऑनलाइन meituan waimai for food delivery, restaurant, Meituan, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "kfc": {
@@ -3187,11 +3188,11 @@
       "description": "ऑनलाइन mcdonalds fast food for fast food, burger, fries, global. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "starbucks": {
-      "name": "Starbucks Coffee",
+      "name": "Starbucks कॉफी",
       "description": "ऑनलाइन starbucks coffee for coffee, cafe, drinks, global. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "luckin-coffee": {
-      "name": "Luckin Coffee",
+      "name": "Luckin कॉफी",
       "description": "ऑनलाइन luckin coffee for coffee, China, affordable, chain. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "xiaohongshu": {
@@ -3199,7 +3200,7 @@
       "description": "ऑनलाइन xiaohongshu lifestyle for lifestyle, community, beauty, shopping. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "dianping": {
-      "name": "Dianping Reviews",
+      "name": "Dianping समीक्षा",
       "description": "ऑनलाइन dianping reviews for reviews, restaurant, समूह buy, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "mafengwo": {
@@ -3215,7 +3216,7 @@
       "description": "ऑनलाइन qunar travel for travel, flights, hotels, comparison. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "trip-com": {
-      "name": "Trip Com",
+      "name": "यात्रा Com",
       "description": "ऑनलाइन trip com for travel, flights, hotels, tickets. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "fliggy": {
@@ -3271,11 +3272,11 @@
       "description": "ऑनलाइन dxy healthcare for healthcare, medical, consultation, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "haodf": {
-      "name": "Haodf Medical",
+      "name": "Haodf मेडिकल",
       "description": "ऑनलाइन haodf medical for medical, consultation, doctor, booking. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "chunyu": {
-      "name": "Chunyu Medical",
+      "name": "Chunyu मेडिकल",
       "description": "ऑनलाइन chunyu medical for medical, consultation, health, advice. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "ali-health": {
@@ -3283,7 +3284,7 @@
       "description": "ऑनलाइन ali health for healthcare, pharmacy, Alibaba, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "apple-watch": {
-      "name": "Apple Watch",
+      "name": "एप्पल Watch",
       "description": "ऑनलाइन apple watch for wearable, Apple, health, fitness. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "garmin": {
@@ -3303,15 +3304,15 @@
       "description": "ऑनलाइन stackoverflow programming for programming, Q&A, developers, coding. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "quora": {
-      "name": "Quora Q&A",
+      "name": "Quora सवाल जवाब",
       "description": "ऑनलाइन quora q&a for Q&A, knowledge, English, community. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wikipedia": {
-      "name": "Wikipedia Encyclopedia",
+      "name": "Wikipedia विश्वकोश",
       "description": "ऑनलाइन wikipedia encyclopedia for encyclopedia, knowledge, निःशुल्क, global. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "baike": {
-      "name": "Baike Encyclopedia",
+      "name": "Baike विश्वकोश",
       "description": "ऑनलाइन baike encyclopedia for encyclopedia, चीनी, knowledge, lookup. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wolfram-alpha": {
@@ -3351,11 +3352,11 @@
       "description": "ऑनलाइन designboom design for design, news, architecture, product. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "Dezeen": {
-      "name": "Dezeen",
+      "name": "डीज़ेन",
       "description": "ऑनलाइन dezeen for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "coolhousing": {
-      "name": "Coolhousing Home",
+      "name": "Coolhousing घर",
       "description": "ऑनलाइन coolhousing home for home, design, 3D, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "qijia": {
@@ -3367,15 +3368,15 @@
       "description": "ऑनलाइन huadi kitchen for kitchen, appliances, brand, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "midea": {
-      "name": "Midea Appliances",
+      "name": "Midea उपकरण",
       "description": "ऑनलाइन midea appliances for appliances, AC, fridge, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "haier": {
-      "name": "Haier Appliances",
+      "name": "Haier उपकरण",
       "description": "ऑनलाइन haier appliances for appliances, smart home, China, brand. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "gree": {
-      "name": "Gree Air Conditioner",
+      "name": "ग्री हवा कंडीशनर",
       "description": "ऑनलाइन gree air conditioner for air conditioner, appliances, China, brand. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "autohome": {
@@ -3391,7 +3392,7 @@
       "description": "ऑनलाइन che168 automotive for automotive, comparison, quotes, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "carmax": {
-      "name": "Carmax Used Cars",
+      "name": "कारमैक्स उपयोग किए गए कारें",
       "description": "ऑनलाइन carmax used cars for used cars, retail, certified, US. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "truecar": {
@@ -3399,15 +3400,15 @@
       "description": "ऑनलाइन truecar automotive for automotive, pricing, transparent, US. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "carvana": {
-      "name": "Carvana Used Cars",
+      "name": "कारवाना उपयोग किए गए कारें",
       "description": "ऑनलाइन carvana used cars for used cars, ऑनलाइन, delivery, US. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "uber-eats": {
-      "name": "Uber Eats",
+      "name": "उबर Eats",
       "description": "ऑनलाइन uber eats for food delivery, Uber, restaurant, US. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "instacart": {
-      "name": "Instacart Grocery",
+      "name": "Instacart किराना",
       "description": "ऑनलाइन instacart grocery for grocery, delivery, supermarket, US. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "alipay": {
@@ -3415,7 +3416,7 @@
       "description": "ऑनलाइन alipay payment for payment, mobile, China, Alibaba. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wechat-pay": {
-      "name": "Wechat Pay",
+      "name": "वीचैट Pay",
       "description": "ऑनलाइन wechat pay for payment, mobile, WeChat, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "square": {
@@ -3431,15 +3432,15 @@
       "description": "ऑनलाइन cash app for payment, transfer, Square, US. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "wise": {
-      "name": "Wise Remittance",
+      "name": "Wise प्रेषण",
       "description": "ऑनलाइन wise remittance for remittance, cross-border, low fees, global. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "remitly": {
-      "name": "Remitly Remittance",
+      "name": "Remitly प्रेषण",
       "description": "ऑनलाइन remitly remittance for remittance, fast, सुरक्षित, global. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "worldremit": {
-      "name": "Worldremit Remittance",
+      "name": "Worldremit प्रेषण",
       "description": "ऑनलाइन worldremit remittance for remittance, global, coverage, transfer. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "xiaohongshu-app": {
@@ -3451,7 +3452,7 @@
       "description": "ऑनलाइन tiktok वीडियो for वीडियो, short, global, creative. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "qq": {
-      "name": "Qq Messaging",
+      "name": "Qq मैसेजिंग",
       "description": "ऑनलाइन qq messaging for messaging, social, entertainment, Tencent. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "sina": {
@@ -3463,15 +3464,15 @@
       "description": "ऑनलाइन sohu news for news, portal, वीडियो, China. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "baidu": {
-      "name": "Baidu Search",
+      "name": "Baidu खोज",
       "description": "ऑनलाइन baidu search for search, engine, China, information. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "google": {
-      "name": "Google Search",
+      "name": "गूगल खोज",
       "description": "ऑनलाइन google search for search, engine, global, internet. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cooking-channels": {
-      "name": "Cooking Channels",
+      "name": "खाना बनाना Channels",
       "description": "ऑनलाइन cooking channels for food, वीडियो, tutorial, cooking. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "food52": {
@@ -3495,11 +3496,11 @@
       "description": "ऑनलाइन minimalist baker for baking, simple, recipes, bread. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "cookie-and-kate": {
-      "name": "Cookie And Kate",
+      "name": "कुकी And केट",
       "description": "ऑनलाइन cookie and kate for vegetarian, healthy, recipes, nutrition. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "airbnb-experiences": {
-      "name": "Airbnb Experiences",
+      "name": "एअरबीएनबी Experiences",
       "description": "ऑनलाइन airbnb experiences for travel, experiences, culture, activities. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "vrbo": {
@@ -3511,7 +3512,7 @@
       "description": "ऑनलाइन hotwire travel for travel, discount, flights, hotels. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rentcars": {
-      "name": "Rentcars Car Rental",
+      "name": "रेंटकार्स कार किराया",
       "description": "ऑनलाइन rentcars car rental for car rental, travel, comparison, self-drive. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "getyourguide": {
@@ -3519,7 +3520,7 @@
       "description": "ऑनलाइन getyourguide travel for travel, activities, experience, booking. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "mapmyrun": {
-      "name": "Mapmyrun Running",
+      "name": "Mapmyrun दौड़",
       "description": "ऑनलाइन mapmyrun running for running, sports, map, training. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "fitbod": {
@@ -3531,11 +3532,11 @@
       "description": "ऑनलाइन strong fitness for fitness, strength, training, tracking. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "yoga-with-adriene": {
-      "name": "Yoga With Adriene",
+      "name": "योग के साथ एड्रियन",
       "description": "ऑनलाइन yoga with adriene for yoga, health, relax, वीडियो. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "daily-burn": {
-      "name": "Daily Burn",
+      "name": "दैनिक Burn",
       "description": "ऑनलाइन daily burn for fitness, workout, classes, training. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "calendar-app": {
@@ -3563,11 +3564,11 @@
       "description": "ऑनलाइन docusign for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "hellosign": {
-      "name": "Hellosign Signature",
+      "name": "Hellosign हस्ताक्षर",
       "description": "ऑनलाइन hellosign signature for signature, electronic, simple, contract. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "signnow": {
-      "name": "Signnow Signature",
+      "name": "Signnow हस्ताक्षर",
       "description": "ऑनलाइन signnow signature for signature, electronic, enterprise, collaboration. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "helpscout": {
@@ -3575,7 +3576,7 @@
       "description": "ऑनलाइन helpscout support for support, email, टीम, collaboration. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tiller-money": {
-      "name": "Tiller Money",
+      "name": "Tiller पैसा",
       "description": "ऑनलाइन tiller money for bookkeeping, automation, Google, finance. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "td-ameritrade": {
@@ -3583,7 +3584,7 @@
       "description": "ऑनलाइन td ameritrade for investment, brokerage, stocks, trading. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "etrade": {
-      "name": "Etrade Investment",
+      "name": "Etrade निवेश",
       "description": "ऑनलाइन etrade investment for investment, brokerage, stocks, research. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "memrise": {
@@ -3595,7 +3596,7 @@
       "description": "ऑनलाइन anki for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "quizizz": {
-      "name": "Quizizz Learning",
+      "name": "Quizizz अध्ययन",
       "description": "ऑनलाइन quizizz learning for learning, quiz, खेल, interactive. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "kahoot": {
@@ -3603,7 +3604,7 @@
       "description": "ऑनलाइन kahoot for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "edmodo": {
-      "name": "Edmodo Education",
+      "name": "Edmodo शिक्षा",
       "description": "ऑनलाइन edmodo education for education, social, teachers, students. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "padlet": {
@@ -3615,11 +3616,11 @@
       "description": "ऑनलाइन mural collaboration for collaboration, whiteboard, design, agile. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "microsoft-teams": {
-      "name": "Microsoft Teams",
+      "name": "माइक्रोसॉफ्ट Teams",
       "description": "ऑनलाइन microsoft teams for collaboration, meetings, Microsoft, टीम. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "discord": {
-      "name": "Discord",
+      "name": "डिस्कॉर्ड",
       "description": "ऑनलाइन discord for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "reddit": {
@@ -3627,7 +3628,7 @@
       "description": "ऑनलाइन reddit for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pinterest": {
-      "name": "Pinterest",
+      "name": "पिंटरेस्ट",
       "description": "ऑनलाइन pinterest for utility. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "vimeo": {
@@ -3655,7 +3656,7 @@
       "description": "ऑनलाइन suijimm यादृच्छिक for यादृच्छिक, जेनरेटर, लॉटरी, cryptographic. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-org": {
-      "name": "Randomgenerator Org",
+      "name": "रैंडम जेनरेटर Org",
       "description": "ऑनलाइन randomgenerator org for यादृच्छिक, जेनरेटर, पासवर्ड, नाम, रंग. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "online-password-generator": {
@@ -3675,7 +3676,7 @@
       "description": "ऑनलाइन randly पासे for पासे, यादृच्छिक, खेल, education. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "coin-flip": {
-      "name": "Coin Flip",
+      "name": "क्रिप्टो Flip",
       "description": "ऑनलाइन coin flip for coin, flip, यादृच्छिक, निर्णय. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "flippey": {
@@ -3747,7 +3748,7 @@
       "description": "ऑनलाइन devhydra इमोजी for इमोजी, यादृच्छिक, जेनरेटर, social. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "funnyemoji-ai": {
-      "name": "Funnyemoji Ai",
+      "name": "Funnyemoji एआई",
       "description": "ऑनलाइन funnyemoji ai for इमोजी, AI, जेनरेटर, custom. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgeneratorlabs-joke": {
@@ -3771,7 +3772,7 @@
       "description": "ऑनलाइन generatr joke for joke, API, यादृच्छिक, humor. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "bmihealth-cn": {
-      "name": "Bmihealth Cn",
+      "name": "Bmihealth चीन",
       "description": "ऑनलाइन bmihealth cn for BMI, health, वेट, कैलकुलेटर. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "calculatorapp-bmi": {
@@ -3815,7 +3816,7 @@
       "description": "ऑनलाइन dicerolleronline पासे for पासे, 3D, खेल, यादृच्छिक. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rolldice-org": {
-      "name": "Rolldice Org",
+      "name": "रोलडाइस Org",
       "description": "ऑनलाइन rolldice org for पासे, custom, खेल, यादृच्छिक. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "gospinwheel-dice": {
@@ -3835,7 +3836,7 @@
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by PlayMetronome. नहीं app download required."
     },
     "playmetronome-taptempo": {
-      "name": "Taptempo Tempo",
+      "name": "टैपटेम्पो टेम्पो",
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by PlayMetronome. नहीं app download required."
     },
     "playmetronome-bpmfinder": {
@@ -3843,15 +3844,15 @@
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by PlayMetronome. नहीं app download required."
     },
     "playmetronome-tempoconverter": {
-      "name": "Tempoconverter Tempo",
+      "name": "Tempoconverter टेम्पो",
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by PlayMetronome. नहीं app download required."
     },
     "playmetronome-interval": {
-      "name": "Interval Interval",
+      "name": "अंतराल अंतराल",
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by PlayMetronome. नहीं app download required."
     },
     "playmetronome-notes": {
-      "name": "Notes Note",
+      "name": "नोट्स Note",
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by PlayMetronome. नहीं app download required."
     },
     "playmetronome-chordchart": {
@@ -3859,7 +3860,7 @@
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by PlayMetronome. नहीं app download required."
     },
     "playmetronome-frequency": {
-      "name": "Frequency Frequency",
+      "name": "आवृत्ति आवृत्ति",
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by PlayMetronome. नहीं app download required."
     },
     "uplup-coin": {
@@ -3871,15 +3872,15 @@
       "description": "ऑनलाइन flipsimu coin for coin, flip, simulator, custom. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tapmetronome-subdivisions": {
-      "name": "Tapmetronome Subdivisions",
+      "name": "टैपमेट्रोनोम Subdivisions",
       "description": "ऑनलाइन tapmetronome subdivisions for मेट्रोनोम, subdivision, training, rhythm. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tapmetronome-timesignatures": {
-      "name": "Tapmetronome Timesignatures",
+      "name": "टैपमेट्रोनोम Timesignatures",
       "description": "ऑनलाइन tapmetronome timesignatures for time signature, rhythm, practice, music. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tapmetronome-taptempo": {
-      "name": "Tapmetronome Taptempo",
+      "name": "टैपमेट्रोनोम Taptempo",
       "description": "ऑनलाइन tapmetronome taptempo for tempo, BPM, tap, detector. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "justaguitartuner-metronome": {
@@ -3895,23 +3896,23 @@
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by FreeGuitarTuner. नहीं app download required."
     },
     "freeguitartuner-mandolin": {
-      "name": "Mandolin Mandolin",
+      "name": "मैंडोलिन मैंडोलिन",
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by FreeGuitarTuner. नहीं app download required."
     },
     "freeguitartuner-banjo": {
-      "name": "Banjo Banjo",
+      "name": "बैंजो बैंजो",
       "description": "Professional ब्राउज़र-based instrument उपकरण. Real-time audio processing powered by FreeGuitarTuner. नहीं app download required."
     },
     "getmoji-combos": {
-      "name": "Getmoji Combos",
+      "name": "गेटमोजी Combos",
       "description": "ऑनलाइन getmoji combos for इमोजी, combo, recommendation, social. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "getmoji-kaomoji": {
-      "name": "Getmoji Kaomoji",
+      "name": "गेटमोजी Kaomoji",
       "description": "ऑनलाइन getmoji kaomoji for kaomoji, इमोजी, Japanese, social. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "getmoji-symbols": {
-      "name": "Getmoji Symbols",
+      "name": "गेटमोजी Symbols",
       "description": "ऑनलाइन getmoji symbols for symbol, Unicode, special, कॉपी. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "getmoji-emoji-for": {
@@ -3919,19 +3920,19 @@
       "description": "ऑनलाइन getmoji इमोजी for for इमोजी, recommendation, occasion, social. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "getmoji-usecases": {
-      "name": "Getmoji Usecases",
+      "name": "गेटमोजी Usecases",
       "description": "ऑनलाइन getmoji usecases for इमोजी, guide, usage, education. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "flipsimu-intuition": {
-      "name": "Flipsimu Intuition",
+      "name": "फ्लिपसिमु Intuition",
       "description": "ऑनलाइन flipsimu intuition for intuition, test, खेल, statistics. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "flipsimu-luck": {
-      "name": "Flipsimu Luck",
+      "name": "फ्लिपसिमु Luck",
       "description": "ऑनलाइन flipsimu luck for luck, test, खेल, coin. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "flipsimu-tarot": {
-      "name": "Flipsimu Tarot",
+      "name": "फ्लिपसिमु Tarot",
       "description": "ऑनलाइन flipsimu tarot for tarot, हाँ/नहीं, mystery, निर्णय. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "flipsimu-dice": {
@@ -3967,7 +3968,7 @@
       "description": "ऑनलाइन randomgenerator नाम for नाम, यादृच्छिक, जेनरेटर, international. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-username": {
-      "name": "Randomgenerator Username",
+      "name": "रैंडम जेनरेटर Username",
       "description": "ऑनलाइन randomgenerator username for username, यादृच्छिक, जेनरेटर, style. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-color": {
@@ -3975,7 +3976,7 @@
       "description": "ऑनलाइन randomgenerator रंग for रंग, यादृच्छिक, जेनरेटर, design. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-word": {
-      "name": "Randomgenerator Word",
+      "name": "रैंडम जेनरेटर Word",
       "description": "ऑनलाइन randomgenerator word for word, यादृच्छिक, जेनरेटर, education. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-dice": {
@@ -3983,7 +3984,7 @@
       "description": "ऑनलाइन randomgenerator पासे for पासे, यादृच्छिक, खेल, D&D. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-letter": {
-      "name": "Randomgenerator Letter",
+      "name": "रैंडम जेनरेटर Letter",
       "description": "ऑनलाइन randomgenerator letter for letter, यादृच्छिक, जेनरेटर, simple. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-team": {
@@ -3991,15 +3992,15 @@
       "description": "ऑनलाइन randomgenerator टीम for टीम, यादृच्छिक, समूहीकरण, खेल. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-country": {
-      "name": "Randomgenerator Country",
+      "name": "रैंडम जेनरेटर Country",
       "description": "ऑनलाइन randomgenerator country for country, यादृच्छिक, जेनरेटर, geography. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-animal": {
-      "name": "Randomgenerator Animal",
+      "name": "रैंडम जेनरेटर Animal",
       "description": "ऑनलाइन randomgenerator animal for animal, यादृच्छिक, जेनरेटर, education. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-movie": {
-      "name": "Randomgenerator Movie",
+      "name": "रैंडम जेनरेटर फिल्म",
       "description": "ऑनलाइन randomgenerator movie for movie, यादृच्छिक, recommendation, entertainment. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-email": {
@@ -4007,43 +4008,43 @@
       "description": "ऑनलाइन randomgenerator email for email, यादृच्छिक, test, development. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "randomgenerator-object": {
-      "name": "Randomgenerator Object",
+      "name": "रैंडम जेनरेटर Object",
       "description": "ऑनलाइन randomgenerator object for object, यादृच्छिक, जेनरेटर, creative. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rolldice-d4": {
-      "name": "Rolldice D4",
+      "name": "रोलडाइस D4",
       "description": "ऑनलाइन rolldice d4 for पासे, D4, खेल, D&D. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rolldice-d8": {
-      "name": "Rolldice D8",
+      "name": "रोलडाइस D8",
       "description": "ऑनलाइन rolldice d8 for पासे, D8, खेल, D&D. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rolldice-d10": {
-      "name": "Rolldice D10",
+      "name": "रोलडाइस D10",
       "description": "ऑनलाइन rolldice d10 for पासे, D10, खेल, percentile. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rolldice-d12": {
-      "name": "Rolldice D12",
+      "name": "रोलडाइस D12",
       "description": "ऑनलाइन rolldice d12 for पासे, D12, खेल, D&D. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "rolldice-d20": {
-      "name": "Rolldice D20",
+      "name": "रोलडाइस D20",
       "description": "ऑनलाइन rolldice d20 for पासे, D20, खेल, D&D. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tapmetronome-bpm72": {
-      "name": "Tapmetronome Bpm72",
+      "name": "टैपमेट्रोनोम Bpm72",
       "description": "ऑनलाइन tapmetronome bpm72 for मेट्रोनोम, 72BPM, slow, practice. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tapmetronome-bpm96": {
-      "name": "Tapmetronome Bpm96",
+      "name": "टैपमेट्रोनोम Bpm96",
       "description": "ऑनलाइन tapmetronome bpm96 for मेट्रोनोम, 96BPM, medium, practice. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tapmetronome-bpm120": {
-      "name": "Tapmetronome Bpm120",
+      "name": "टैपमेट्रोनोम Bpm120",
       "description": "ऑनलाइन tapmetronome bpm120 for मेट्रोनोम, 120BPM, मानक, practice. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "tapmetronome-bpm140": {
-      "name": "Tapmetronome Bpm140",
+      "name": "टैपमेट्रोनोम Bpm140",
       "description": "ऑनलाइन tapmetronome bpm140 for मेट्रोनोम, 140BPM, fast, practice. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "justaguitartuner-dropd": {
@@ -4091,7 +4092,7 @@
       "description": "ऑनलाइन यादृच्छिक पहिया जेनरेटर. कस्टम विकल्प, स्पिनिंग एनीमेशन, और निष्पक्ष यादृच्छिक चयन। खेल, निर्णय और लॉटरी के लिए बिल्कुल सही।"
     },
     "spinwheel-usecases": {
-      "name": "Usecases Cases",
+      "name": "यूज़केस Cases",
       "description": "ऑनलाइन यादृच्छिक पहिया जेनरेटर. कस्टम विकल्प, स्पिनिंग एनीमेशन, और निष्पक्ष यादृच्छिक चयन। खेल, निर्णय और लॉटरी के लिए बिल्कुल सही।"
     },
     "markdown-platform-converter": {
@@ -4099,7 +4100,7 @@
       "description": "ऑनलाइन Markdown कनवर्टर टूल — फीचर्स: Markdown, कनवर्टर, Wechat. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "polyphonic-pinyin-annotator": {
-      "name": "Polyphonic Pinyin Annotator",
+      "name": "पॉलीफोनिक पिनयिन एनोटेटर",
       "description": "ऑनलाइन Polyphonic Pinyin Annotator एडिटर। Pinyin को कस्टमाइज़ करें, Polyphone को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "audio-bpm-detector": {
@@ -4115,7 +4116,7 @@
       "description": "ऑनलाइन Timezone टाइमर एडिटर। Timezone को कस्टमाइज़ करें, Time को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "wc-2026-schedule": {
-      "name": "Wc 2026 Schedule",
+      "name": "विश्व कप 2026 शेड्यूल",
       "description": "ऑनलाइन Wc 2026 Schedule टूल — फीचर्स: World cup, 2026, Schedule. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "wc-champion-predictor": {
@@ -4127,7 +4128,7 @@
       "description": "निःशुल्क World Cup Poster निर्माता: World cup, Poster और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "wc-ascii-art": {
-      "name": "Wc Ascii Art",
+      "name": "विश्व कप ASCII कला",
       "description": "ऑनलाइन Wc Ascii Art एडिटर। Ascii को कस्टमाइज़ करें, Text art को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "wc-fan-avatar": {
@@ -4135,11 +4136,11 @@
       "description": "ऑनलाइन Avatar World Cup जनरेटर एडिटर। Avatar को कस्टमाइज़ करें, World cup को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "wc-scoreboard-simulator": {
-      "name": "Wc Scoreboard Simulator",
+      "name": "विश्व कप स्कोरबोर्ड सिम्युलेटर",
       "description": "ऑनलाइन Wc Scoreboard Simulator एडिटर। Scoreboard को कस्टमाइज़ करें, Score को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "wc-name-decorator": {
-      "name": "Wc Name Decorator",
+      "name": "विश्व कप नाम डेकोरेटर",
       "description": "ऑनलाइन Wc Name Decorator टूल — फीचर्स: Decorator, Fancy text, Football symbols. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "wevideo": {
@@ -4343,7 +4344,7 @@
       "description": "सिलिकॉन वैली की पसंदीदा मॉडर्न आवेदक ट्रैकिंग सिस्टम। विजुअल रिक्रूटिंग फ़नल, रेफ़रल और मज़बूत कैंडिडेट रिलेशनशिप मैनेजमेंट इंटीग्रेशन।"
     },
     "zoho-people": {
-      "name": "Zoho People HRIS",
+      "name": "Zoho लोग HRIS",
       "description": "Zoho सॉफ्टवेयर परिवार का HRIS प्रोडक्ट। यूनिफाइड ऑनबोर्डिंग, उपस्थिति, छुट्टी, परफॉर्मेंस, पेरोल और एम्प्लॉयी रिकॉर्ड्स — SMB-फ्रेंडली कीमत।"
     },
     "webmd": {
@@ -4435,15 +4436,15 @@
       "description": "लाइटवेट रियल-टाइम सहयोगात्मक डॉक्यूमेंट्स। कोड, टेबल, टू-डू, वीडियो और फाइल प्रीव्यू को इनबेड करें, Dropbox क्लाउड के साथ गहरी इंटीग्रेशन के साथ। मोबाइल पर स्मूथ एडिटिंग।"
     },
     "dezeen": {
-      "name": "Dezeen",
+      "name": "डीज़ेन",
       "description": "डिज़ाइन मीडिया साइट, जिसमें वास्तुकला, इंटीरियर डिज़ाइन और डिज़ाइन समाचार शामिल हैं।"
     },
     "nike-run-club": {
-      "name": "Nike Run Club",
+      "name": "नाइके दौड़ क्लब",
       "description": "ऑनलाइन Nike Run Club एडिटर। Nike को कस्टमाइज़ करें, Run को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "adidas-running-runtastic": {
-      "name": "Adidas Running Runtastic",
+      "name": "एडिडास दौड़ रनटास्टिक",
       "description": "ऑनलाइन Adidas Running Runtastic टूल — फीचर्स: Adidas, Running, Runtastic. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "runkeeper": {
@@ -4451,7 +4452,7 @@
       "description": "ऑनलाइन Runkeeper टूल — फीचर्स: Runkeeper, 跑步, 马拉松. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "garmin-connect": {
-      "name": "Garmin Connect",
+      "name": "गार्मिन कनेक्ट",
       "description": "निःशुल्क Garmin Connect: Garmin, Connect और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "coros": {
@@ -4459,7 +4460,7 @@
       "description": "ऑनलाइन Coros टूल — फीचर्स: Coros, 运动, 健康. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "polar-flow": {
-      "name": "Polar Flow",
+      "name": "पोलर Flow",
       "description": "निःशुल्क Polar Flow: Polar, Flow और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "vdot-calculator": {
@@ -4467,7 +4468,7 @@
       "description": "ऑनलाइन Vdot कैलकुलेटर टूल — फीचर्स: Vdot, कैलकुलेटर, 跑步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "active-race-results": {
-      "name": "Active Race Results",
+      "name": "सक्रिय दौड़ परिणाम",
       "description": "निःशुल्क Active Race Results: Active, Race और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "trainingpeaks": {
@@ -4475,7 +4476,7 @@
       "description": "निःशुल्क Trainingpeaks: Trainingpeaks, 徒步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "final-surge": {
-      "name": "Final Surge",
+      "name": "फाइनल Surge",
       "description": "ऑनलाइन Final Surge एडिटर। Final को कस्टमाइज़ करें, Surge को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "runalyze": {
@@ -4483,7 +4484,7 @@
       "description": "निःशुल्क Runalyze: Runalyze, 跑步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "stryd-power": {
-      "name": "Stryd Power",
+      "name": "Stryd शक्ति",
       "description": "ऑनलाइन Stryd Power एडिटर। Stryd को कस्टमाइज़ करें, Power को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "racewow": {
@@ -4491,11 +4492,11 @@
       "description": "निःशुल्क Racewow: Racewow, 跑步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "lets-do-this": {
-      "name": "Lets Do This",
+      "name": "चलो करें यह",
       "description": "ऑनलाइन Lets Do This टूल — फीचर्स: Lets, Do, This. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "find-a-marathon": {
-      "name": "Find A Marathon",
+      "name": "खोजें A मैराथन",
       "description": "निःशुल्क Find A Marathon: Find, A और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "running2win": {
@@ -4507,11 +4508,11 @@
       "description": "ऑनलाइन Mcmillan कैलकुलेटर एडिटर। Mcmillan को कस्टमाइज़ करें, कैलकुलेटर को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "marathon-handbook": {
-      "name": "Marathon Handbook",
+      "name": "मैराथन Handbook",
       "description": "ऑनलाइन Marathon Handbook टूल — फीचर्स: Marathon, Handbook, 跑步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "cool-running": {
-      "name": "Cool Running",
+      "name": "Cool दौड़",
       "description": "ऑनलाइन Cool Running एडिटर। Cool को कस्टमाइज़ करें, Running को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "worlds-marathons": {
@@ -4531,15 +4532,15 @@
       "description": "ऑनलाइन Treadmill Calc एडिटर। Treadmill को कस्टमाइज़ करें, Calc को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "couch-to-5k": {
-      "name": "Couch To 5k",
+      "name": "सोफा को 5K",
       "description": "ऑनलाइन Couch To 5k टूल — फीचर्स: Couch, To, 5k. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "race-predictor": {
-      "name": "Race Predictor",
+      "name": "दौड़ Predictor",
       "description": "निःशुल्क Race Predictor: Race, Predictor और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "ride-with-gps": {
-      "name": "Ride With Gps",
+      "name": "सवारी के साथ Gps",
       "description": "निःशुल्क Ride With Gps: Ride, With और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "bikemap": {
@@ -4555,7 +4556,7 @@
       "description": "ऑनलाइन Wahoo Systm एडिटर। Wahoo को कस्टमाइज़ करें, Systm को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "trainerroad": {
-      "name": "Trainerroad",
+      "name": "ट्रेनररोड",
       "description": "निःशुल्क Trainerroad: Trainerroad, 骑行 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "zwift": {
@@ -4615,7 +4616,7 @@
       "description": "ऑनलाइन Veloviewer टूल — फीचर्स: Veloviewer, 骑行, 公路车. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "todays-plan": {
-      "name": "Todays Plan",
+      "name": "Todays प्लान",
       "description": "निःशुल्क Todays Plan: Todays, Plan और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "fullgaz": {
@@ -4635,11 +4636,11 @@
       "description": "ऑनलाइन Sram Shift Calc टूल — फीचर्स: Sram, Shift, Calc. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "project-4321": {
-      "name": "Project 4321",
+      "name": "प्रोजेक्ट 4321",
       "description": "ऑनलाइन Project 4321 एडिटर। Project को कस्टमाइज़ करें, 4321 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "nike-training-club": {
-      "name": "Nike Training Club",
+      "name": "नाइके प्रशिक्षण क्लब",
       "description": "निःशुल्क Nike Training Club: Nike, Training और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "peloton-digital": {
@@ -4651,7 +4652,7 @@
       "description": "निःशुल्क Sweat App: Sweat, App और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "centr-chris-hemsworth": {
-      "name": "Centr Chris Hemsworth",
+      "name": "सेंटर क्रिस हेम्सवर्थ",
       "description": "ऑनलाइन Centr Chris Hemsworth एडिटर। Centr को कस्टमाइज़ करें, Chris को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "ob-fitness": {
@@ -4659,11 +4660,11 @@
       "description": "निःशुल्क Ob Fitness: Ob, Fitness और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "fitbit-premium": {
-      "name": "Fitbit Premium",
+      "name": "फिटबिट प्रीमियम",
       "description": "निःशुल्क Fitbit Premium: Fitbit, Premium और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "strong-lifts": {
-      "name": "Strong Lifts",
+      "name": "मजबूत Lifts",
       "description": "ऑनलाइन Strong Lifts टूल — फीचर्स: Strong, Lifts, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "starting-strength": {
@@ -4683,15 +4684,15 @@
       "description": "ऑनलाइन Fitocracy एडिटर। Fitocracy को कस्टमाइज़ करें, 健身 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "habit-nest": {
-      "name": "Habit Nest",
+      "name": "आदत Nest",
       "description": "निःशुल्क Habit Nest: Habit, Nest और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "workout-labs": {
-      "name": "Workout Labs",
+      "name": "वर्कआउट Labs",
       "description": "निःशुल्क Workout Labs: Workout, Labs और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "freedom-strong": {
-      "name": "Freedom Strong",
+      "name": "Freedom मजबूत",
       "description": "ऑनलाइन Freedom Strong एडिटर। Freedom को कस्टमाइज़ करें, Strong को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "darebee": {
@@ -4703,7 +4704,7 @@
       "description": "ऑनलाइन 12minuteathlete टूल — फीचर्स: 12minuteathlete, 健身, 力量训练. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "fitness-blender": {
-      "name": "Fitness Blender",
+      "name": "फिटनेस Blender",
       "description": "ऑनलाइन Fitness Blender टूल — फीचर्स: Fitness, Blender, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "poosh": {
@@ -4711,11 +4712,11 @@
       "description": "ऑनलाइन Poosh टूल — फीचर्स: Poosh, 健身, 力量训练. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "p90x-schedule": {
-      "name": "P90x Schedule",
+      "name": "P90x शेड्यूल",
       "description": "निःशुल्क P90x Schedule: P90x, Schedule और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "insanity-workout": {
-      "name": "Insanity Workout",
+      "name": "Insanity वर्कआउट",
       "description": "ऑनलाइन Insanity Workout टूल — फीचर्स: Insanity, Workout, 健身. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "musclewiki": {
@@ -4731,15 +4732,15 @@
       "description": "निःशुल्क Romwod: Romwod, 瑜伽 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "yoga-international": {
-      "name": "Yoga International",
+      "name": "योग International",
       "description": "ऑनलाइन Yoga International टूल — फीचर्स: Yoga, International, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "gaia-yoga": {
-      "name": "Gaia Yoga",
+      "name": "Gaia योग",
       "description": "ऑनलाइन Gaia Yoga टूल — फीचर्स: Gaia, Yoga, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "do-you-yoga": {
-      "name": "Do You Yoga",
+      "name": "करें You योग",
       "description": "निःशुल्क Do You Yoga: Do, You और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "yoga-download": {
@@ -4747,7 +4748,7 @@
       "description": "ऑनलाइन Yoga डाउनलोडर एडिटर। Yoga को कस्टमाइज़ करें, Download को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "my-yoga-works": {
-      "name": "My Yoga Works",
+      "name": "My योग Works",
       "description": "ऑनलाइन My Yoga Works एडिटर। My को कस्टमाइज़ करें, Yoga को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "pilates-anytime": {
@@ -4755,7 +4756,7 @@
       "description": "ऑनलाइन Pilates Anytime टूल — फीचर्स: Pilates, Anytime, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "club-pilates": {
-      "name": "Club Pilates",
+      "name": "क्लब Pilates",
       "description": "ऑनलाइन Club Pilates एडिटर। Club को कस्टमाइज़ करें, Pilates को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "blogilates": {
@@ -4767,15 +4768,15 @@
       "description": "निःशुल्क Stretching टाइमर: Stretching, टाइमर और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "foam-roller-guide": {
-      "name": "Foam Roller Guide",
+      "name": "Foam Roller गाइड",
       "description": "निःशुल्क Foam Roller Guide: Foam, Roller और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "yin-yoga-cheatsheet": {
-      "name": "Yin Yoga Cheatsheet",
+      "name": "Yin योग Cheatsheet",
       "description": "ऑनलाइन Yin Yoga Cheatsheet टूल — फीचर्स: Yin, Yoga, Cheatsheet. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "yoga-journal": {
-      "name": "Yoga Journal",
+      "name": "योग Journal",
       "description": "ऑनलाइन Yoga Journal एडिटर। Yoga को कस्टमाइज़ करें, Journal को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "medito": {
@@ -4783,11 +4784,11 @@
       "description": "निःशुल्क Medito: Medito, 瑜伽 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "waking-up": {
-      "name": "Waking Up",
+      "name": "Waking ऊपर",
       "description": "निःशुल्क Waking Up: Waking, Up और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "mindful-cms": {
-      "name": "Mindful Cms",
+      "name": "Mindful सीएमएस",
       "description": "ऑनलाइन Mindful Cms टूल — फीचर्स: Mindful, Cms, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "breathwrk": {
@@ -4799,11 +4800,11 @@
       "description": "ऑनलाइन 478 Breathing टूल — फीचर्स: 478, Breathing, 瑜伽. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "box-breathing": {
-      "name": "Box Breathing",
+      "name": "बॉक्स Breathing",
       "description": "ऑनलाइन Box Breathing एडिटर। Box को कस्टमाइज़ करें, Breathing को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "progressive-muscle-relaxation": {
-      "name": "Progressive Muscle Relaxation",
+      "name": "Progressive Muscle रिलैक्सेशन",
       "description": "निःशुल्क Progressive Muscle Relaxation: Progressive, Muscle और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "swim-com": {
@@ -4823,7 +4824,7 @@
       "description": "ऑनलाइन Swimulator टूल — फीचर्स: Swimulator, 游泳, 铁人三项. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "trainerroad-swim": {
-      "name": "Trainerroad Swim",
+      "name": "ट्रेनररोड Swim",
       "description": "निःशुल्क Trainerroad Swim: Trainerroad, Swim और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "slowtwitch": {
@@ -4839,7 +4840,7 @@
       "description": "ऑनलाइन Beginnertriathlete टूल — फीचर्स: Beginnertriathlete, 游泳, 铁人三项. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "ironman-training-peaks": {
-      "name": "Ironman Training Peaks",
+      "name": "Ironman प्रशिक्षण Peaks",
       "description": "निःशुल्क Ironman Training Peaks: Ironman, Training और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "suunto-ironman": {
@@ -4847,7 +4848,7 @@
       "description": "ऑनलाइन Suunto Ironman एडिटर। Suunto को कस्टमाइज़ करें, Ironman को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "kayak-sit-on-top": {
-      "name": "Kayak Sit On Top",
+      "name": "Kayak Sit On ऊपर",
       "description": "निःशुल्क Kayak Sit On Top: Kayak, Sit और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "surf-forecast": {
@@ -4875,7 +4876,7 @@
       "description": "निःशुल्क Hikingproject: Hikingproject, 徒步 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "mountain-project": {
-      "name": "Mountain Project",
+      "name": "पहाड़ Project",
       "description": "ऑनलाइन Mountain Project टूल — फीचर्स: Mountain, Project, 徒步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "summitpost": {
@@ -4907,7 +4908,7 @@
       "description": "ऑनलाइन Campendium टूल — फीचर्स: Campendium, 徒步, 登山. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "free-campsites": {
-      "name": "Free Campsites",
+      "name": "मुफ्त Campsites",
       "description": "ऑनलाइन Free Campsites टूल — फीचर्स: Free, Campsites, 徒步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "hipcamp": {
@@ -4919,7 +4920,7 @@
       "description": "ऑनलाइन Campsite Photos एडिटर। Campsite को कस्टमाइज़ करें, Photos को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "noaa-weather": {
-      "name": "Noaa Weather",
+      "name": "Noaa मौसम",
       "description": "निःशुल्क Noaa Weather: Noaa, Weather और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "mountain-weather-forecast": {
@@ -4927,7 +4928,7 @@
       "description": "ऑनलाइन Mountain Weather Forecast टूल — फीचर्स: Mountain, Weather, Forecast. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "meteoblue-mountain": {
-      "name": "Meteoblue Mountain",
+      "name": "Meteoblue पहाड़",
       "description": "ऑनलाइन Meteoblue Mountain एडिटर। Meteoblue को कस्टमाइज़ करें, Mountain को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "wildsafe-bear": {
@@ -4935,15 +4936,15 @@
       "description": "निःशुल्क Wildsafe Bear: Wildsafe, Bear और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "sotaventos-mountain": {
-      "name": "Sotaventos Mountain",
+      "name": "Sotaventos पहाड़",
       "description": "ऑनलाइन Sotaventos Mountain टूल — फीचर्स: Sotaventos, Mountain, 徒步. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "nba-stats": {
-      "name": "Nba Stats",
+      "name": "Nba आँकड़े",
       "description": "निःशुल्क Nba Stats: Nba, Stats और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "basketball-reference": {
-      "name": "Basketball Reference",
+      "name": "Basketball संदर्भ",
       "description": "ऑनलाइन Basketball Reference टूल — फीचर्स: Basketball, Reference, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "bball-index": {
@@ -4975,19 +4976,19 @@
       "description": "निःशुल्क Understat: Understat, 体育数据 और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "tennis-atp-tour": {
-      "name": "Tennis Atp Tour",
+      "name": "टेनिस Atp Tour",
       "description": "निःशुल्क Tennis Atp Tour: Tennis, Atp और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "tennis-wta": {
-      "name": "Tennis Wta",
+      "name": "टेनिस Wta",
       "description": "ऑनलाइन Tennis Wta एडिटर। Tennis को कस्टमाइज़ करें, Wta को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "tennis-abstract": {
-      "name": "Tennis Abstract",
+      "name": "टेनिस Abstract",
       "description": "ऑनलाइन Tennis Abstract टूल — फीचर्स: Tennis, Abstract, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "flashscore-tennis": {
-      "name": "Flashscore Tennis",
+      "name": "Flashscore टेनिस",
       "description": "ऑनलाइन Flashscore Tennis टूल — फीचर्स: Flashscore, Tennis, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "bwf-badminton": {
@@ -4999,11 +5000,11 @@
       "description": "निःशुल्क Badminton Warehouse: Badminton, Warehouse और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "ittf-world": {
-      "name": "Ittf World",
+      "name": "Ittf दुनिया",
       "description": "निःशुल्क Ittf World: Ittf, World और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "tabletennis-reference": {
-      "name": "Tabletennis Reference",
+      "name": "Tabletennis संदर्भ",
       "description": "निःशुल्क Tabletennis Reference: Tabletennis, Reference और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "revspin": {
@@ -5019,31 +5020,31 @@
       "description": "ऑनलाइन Volleybox एडिटर। Volleybox को कस्टमाइज़ करें, 体育数据 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "pga-tour-stats": {
-      "name": "Pga Tour Stats",
+      "name": "Pga Tour आँकड़े",
       "description": "ऑनलाइन Pga Tour Stats टूल — फीचर्स: Pga, Tour, Stats. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "handicap-differential": {
-      "name": "Handicap Differential",
+      "name": "हैंडीकैप Differential",
       "description": "ऑनलाइन Handicap Differential टूल — फीचर्स: Handicap, Differential, 体育数据. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "golfnow-tee-times": {
-      "name": "Golfnow Tee Times",
+      "name": "Golfnow Tee बार",
       "description": "ऑनलाइन Golfnow Tee Times टूल — फीचर्स: Golfnow, Tee, Times. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "2k-sports-handicap": {
-      "name": "2k Sports Handicap",
+      "name": "2k खेल हैंडीकैप",
       "description": "ऑनलाइन 2k Sports Handicap टूल — फीचर्स: 2k, Sports, Handicap. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "golfshake-handicap": {
-      "name": "Golfshake Handicap",
+      "name": "Golfshake हैंडीकैप",
       "description": "ऑनलाइन Golfshake Handicap एडिटर। Golfshake को कस्टमाइज़ करें, Handicap को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "ski-resort-stats": {
-      "name": "Ski Resort Stats",
+      "name": "Ski Resort आँकड़े",
       "description": "ऑनलाइन Ski Resort Stats एडिटर। Ski को कस्टमाइज़ करें, Resort को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "on-the-snow": {
-      "name": "On The Snow",
+      "name": "On वह Snow",
       "description": "निःशुल्क On The Snow: On, The और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "snow-forecast": {
@@ -5067,7 +5068,7 @@
       "description": "ऑनलाइन Snowboard Encyc एडिटर। Snowboard को कस्टमाइज़ करें, Encyc को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "the-house-board-size": {
-      "name": "The House Board Size",
+      "name": "वह House Board Size",
       "description": "ऑनलाइन The House Board Size एडिटर। The को कस्टमाइज़ करें, House को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "skate-video-calendar": {
@@ -5083,11 +5084,11 @@
       "description": "ऑनलाइन Concretedisciples टूल — फीचर्स: Concretedisciples, 滑雪, 滑板. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "roller-skate-size": {
-      "name": "Roller Skate Size",
+      "name": "Roller Skate आकार",
       "description": "निःशुल्क Roller Skate Size: Roller, Skate और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "inline-skate-buyers-guide": {
-      "name": "Inline Skate Buyers Guide",
+      "name": "Inline Skate Buyers गाइड",
       "description": "ऑनलाइन Inline Skate Buyers Guide एडिटर। Inline को कस्टमाइज़ करें, Skate को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "bouldering-grade-converter": {
@@ -5135,7 +5136,7 @@
       "description": "ऑनलाइन Vo2max Calc एडिटर। Vo2max को कस्टमाइज़ करें, Calc को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "one-rm-1rep-max": {
-      "name": "One Rm 1rep Max",
+      "name": "एक Rm 1rep अधिकतम",
       "description": "निःशुल्क One Rm 1rep Max: One, Rm और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "meal-prep-planner": {
@@ -5143,7 +5144,7 @@
       "description": "ऑनलाइन Meal Prep Planner टूल — फीचर्स: Meal, Prep, Planner. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "pre-workout-examiner": {
-      "name": "Pre Workout Examiner",
+      "name": "Pre वर्कआउट Examiner",
       "description": "निःशुल्क Pre Workout Examiner: Pre, Workout और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "eventbrite-sports": {
@@ -5163,7 +5164,7 @@
       "description": "ऑनलाइन Ticketmaster Sports टूल — फीचर्स: Ticketmaster, Sports, 赛事. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "sporting-news-scores": {
-      "name": "Sporting News Scores",
+      "name": "Sporting समाचार Scores",
       "description": "ऑनलाइन Sporting News Scores एडिटर। Sporting को कस्टमाइज़ करें, News को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "gearbrain": {
@@ -5179,7 +5180,7 @@
       "description": "ऑनलाइन Outdoorgearlab एडिटर। Outdoorgearlab को कस्टमाइज़ करें, 徒步 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "switchback-travel-gear": {
-      "name": "Switchback Travel Gear",
+      "name": "Switchback यात्रा Gear",
       "description": "निःशुल्क Switchback Travel Gear: Switchback, Travel और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "rotten-wire": {
@@ -5187,11 +5188,11 @@
       "description": "ऑनलाइन Rotten Wire टूल — फीचर्स: Rotten, Wire, 装备评测. सीधे आपके ब्राउज़र में काम करता है — निःशुल्क, सुरक्षित और कोई इंस्टॉल नहीं चाहिए।"
     },
     "strava-stats-dashboard": {
-      "name": "Strava Stats Dashboard",
+      "name": "Strava आँकड़े डैशबोर्ड",
       "description": "निःशुल्क Strava Stats Dashboard: Strava, Stats और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "athlinks-race-results": {
-      "name": "Athlinks Race Results",
+      "name": "Athlinks दौड़ परिणाम",
       "description": "निःशुल्क Athlinks Race Results: Athlinks, Race और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "sporttracks": {
@@ -5199,11 +5200,11 @@
       "description": "ऑनलाइन Sporttracks एडिटर। Sporttracks को कस्टमाइज़ करें, 运动 को ट्यून करें, तुरंत एक्सपोर्ट करें। क्रॉस-डिवाइस, कोई साइनअप नहीं।"
     },
     "trainerroad-announcer": {
-      "name": "Trainerroad Announcer",
+      "name": "ट्रेनररोड Announcer",
       "description": "निःशुल्क Trainerroad Announcer: Trainerroad, Announcer और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "sport-psychology-today": {
-      "name": "Sport Psychology Today",
+      "name": "Sport Psychology आज",
       "description": "निःशुल्क Sport Psychology Today: Sport, Psychology और अधिक को सपोर्ट करता है। अधिकतम गोपनीयता के लिए आपके डिवाइस पर 100% लोकल प्रोसेसिंग।"
     },
     "canva-video": {
@@ -5223,7 +5224,7 @@
       "description": "ब्राउज़र में ऑल-इन-वन वीडियो स्टूडियो: रिकॉर्डिंग, ट्रिमिंग, ऑटो कैप्शन, बैकग्राउंड रिमूव, वॉटरमार्क, कंप्रेशन।"
     },
     "kapwing-tools": {
-      "name": "Kapwing Media Kit",
+      "name": "Kapwing मीडिया Kit",
       "description": "मीम, शॉर्ट्स और GIF के लिए वन-स्टॉप। टेक्स्ट/कैप्शन/स्टिचिंग/ट्रिमिंग, WeChat और रेडबुक के कवर टेम्पलेट भी।"
     },
     "wistia-hosting": {
@@ -5231,11 +5232,11 @@
       "description": "मार्केटिंग-ग्रेड विज्ञापन-रहित HD वीडियो होस्टिंग। व्यूअर हीटमैप, ईमेल लीड कैप्चर और ब्रांडेड प्लेयर।"
     },
     "vidyard-messages": {
-      "name": "Vidyard Video Messages",
+      "name": "Vidyard वीडियो Messages",
       "description": "स्क्रीन+फेस का एसिंक्रोनस वीडियो संदेश रिकॉर्ड करें, वॉच ट्रैकिंग के साथ — टाइप टेक्स्ट से कहीं ज्यादा क्लियर।"
     },
     "loom-recorder": {
-      "name": "Loom Async Screen Share",
+      "name": "Loom Async Screen शेयर",
       "description": "नंबर 1 एसिंक्रोनस स्क्रीन रिकॉर्डर। स्क्रीन + चेहरा + आवाज़ कैप्चर, टाइमस्टैम्प कमेंट के साथ शेयर करने योग्य लिंक।"
     },
     "screencastify-chrome": {
@@ -5259,7 +5260,7 @@
       "description": "टेक्स्ट/इमेज-टू-HD एनिमेशन: anime/3D/रियलिस्टिक/साइबरपंक स्टाइल। टाइटल और प्रोडक्ट डेमो के लिए फास्ट प्रोटोटाइपिंग।"
     },
     "submagic-auto": {
-      "name": "Submagic AI Captions",
+      "name": "Submagic एआई Captions",
       "description": "शॉर्ट्स के लिए ऑटो-कैप्शन: कलर हाइलाइट, इमोजी कॉलआउट और द्विभाषी SRT एक्सपोर्ट के साथ TikTok/viral के लिए।"
     },
     "opus-clip": {
@@ -5267,19 +5268,19 @@
       "description": "लंबे पॉडकास्ट से 10 वायरल शॉर्ट्स काटता है: ऑटो हुक्स, वायरलिटी स्कोर, कैप्शन और B-ROLL — 80% स्टूडियो टाइम बचता।"
     },
     "repurpose-io": {
-      "name": "Repurpose Content Repurposing",
+      "name": "Repurpose कंटेंट Repurposing",
       "description": "ऑटोमेटेड कंटेंट रीपर्पोज़िंग पाइपलाइन: YouTube → पॉडकास्ट/शॉर्ट्स/TikTok; ब्लॉग पोस्ट → LinkedIn कैरूसेल्स।"
     },
     "riverside-fm": {
-      "name": "Riverside Remote Recording",
+      "name": "Riverside रिमोट Recording",
       "description": "प्रीमियम रिमोट इंटरव्यू रिकॉर्डर। गेस्ट ब्राउज़र से ज्वाइन, लोकल 4K मल्टीट्रैक रिकॉर्डिंग, लाइव स्ट्रीम और ऑटो ट्रांसक्रिप्शन।"
     },
     "streamlabs-obs": {
-      "name": "Streamlabs Live Assistant",
+      "name": "Streamlabs लाइव Assistant",
       "description": "लाइव स्ट्रीम की ब्यूटीफिकेशन टूलकिट: ओवरले, डोनेशन इफेक्ट्स, चैटबॉट्स, इंटरएक्टिव गेम और नए स्ट्रीमर्स के लिए अलर्ट।"
     },
     "motion-array": {
-      "name": "Motion Array Stock",
+      "name": "मोशन Array Stock",
       "description": "ऑल-इन-वन सेट सब्सक्रिप्शन: PR/AE/FCPX टेम्पलेट्स, LUTs, ट्रांजीशन, SFX संगीत और 8K रॉयल्टी-फ्री स्टॉक।"
     },
     "artlist-io": {
@@ -5307,7 +5308,7 @@
       "description": "ग्लोबल फोटोग्राफर्स की डिज़ाइनर-ग्रेड मुफ्त HD फ़ोटो; प्रोडक्ट इंटीग्रेशन के लिए पब्लिक REST API भी उपलब्ध।"
     },
     "canva-design": {
-      "name": "Canva Design Platform",
+      "name": "कैनवा डिज़ाइन Platform",
       "description": "स्टार्टअप्स के लिए जीरो-लर्निंग डिज़ाइन टूल। 1M+ टेम्पलेट्स: लोगो, पोस्टर, बिज़नेस कार्ड, पीपीटी, मेन्यू, बैनर।"
     },
     "figma-design": {
@@ -5327,7 +5328,7 @@
       "description": "बिज़नेस प्लान, SOP, CRM, कैनबन बोर्ड और रोडमैप के लिए ऑल-इन-वन वर्कस्पेस — हर फ्रीलांसर का डिजिटल ब्रेन।"
     },
     "xmind-mindmap": {
-      "name": "XMind Mind Maps",
+      "name": "XMind Mind नक्शे",
       "description": "बिज़नेस प्लानिंग माइंडमैप: फिशबोन, ऑर्ग चार्ट, गैंट, मैट्रिक्स व्यू। वन-क्लिक PPT/Word/PDF एक्सपोर्ट।"
     },
     "processon-flow": {
@@ -5343,23 +5344,23 @@
       "description": "चाइना-टेलर्ड डिज़ाइन: खाना मेन्यू, WeChat पोस्टर, रियल एस्टेट फ्लायर, भर्ती, डोमेस्टिक कॉमर्शियल फॉन्ट लाइसेंसिंग।"
     },
     "markup-hero": {
-      "name": "Markup Hero Screenshots",
+      "name": "Markup Hero स्क्रीनशॉट",
       "description": "एनोटेटेड लंबा स्क्रीनशॉट + PDF मार्किंग। एरो, ब्लर, टेक्स्ट, मोज़ेक, मल्टी इमेज कोलाज, क्लाइंट के लिए शेयर लिंक।"
     },
     "airtable-db": {
-      "name": "Airtable Low-Code DB",
+      "name": "Airtable Low-कोड DB",
       "description": "एक्सेल जैसी रिलेशनल डेटाबेस: CRM, प्रोजेक्ट, इन्वेंट्री, कंटेंट कैलेंडर, फ़ॉर्म + ऑटोमेशन — बिना कोड के।"
     },
     "feishu-bitable": {
-      "name": "Feishu Bitable",
+      "name": "फीशु Bitable",
       "description": "चाइना Airtable: कैनबन, गैंट, गैलरी, फ़ॉर्म, ऑटोमेशन और क्रॉस-टेबल रिलेशन के साथ, डोमेस्टिक फास्ट नेटवर्क।"
     },
     "tencent-survey": {
-      "name": "Tencent Surveys",
+      "name": "टेनसेंट Surveys",
       "description": "चीन का टॉप मार्केट रिसर्च टूल। 30+ प्रश्न प्रकार, लॉजिक जंप, लकी मनी रिवॉर्ड, WeChat शेयर, सैंपल पैनल।"
     },
     "typeform-form": {
-      "name": "Typeform Beautiful Forms",
+      "name": "Typeform सुंदर Forms",
       "description": "हाई-कन्वर्जन फॉर्म, एक समय में एक सवाल, 3x कंप्लीशन रेट। ओवरसीज़ क्लाइंट इंटेक के लिए मस्ट-हेव।"
     },
     "jotform-builder": {
@@ -5375,7 +5376,7 @@
       "description": "चाइना-कम्प्लाइंट ई-सिग्नेचर्स: नेशनल क्रिप्टोग्राफी, नोटरी डिपॉज़िट, जूडिशल एडमिसिबिलिटी, REST API इंटीग्रेशन।"
     },
     "shangshangqian": {
-      "name": "ShangShangQian Enterprise Sign",
+      "name": "ShangShangQian एंटरप्राइज़ साइन",
       "description": "एंटरप्राइज SaaS ई-सिग्नेचर्स: 200+ नेटिव इंटीग्रेशन, असली नाम सत्यापन, ब्लॉकचैन नोटराइज़ेशन, बल्क साइनिंग।"
     },
     "good-acc": {
@@ -5387,7 +5388,7 @@
       "description": "फोटो से सेकेंडों में बिज़नेस कार्ड पहचान और ऑटो इन्वेंट्री। CRM कस्टमर फॉलो-अप, शेड्यूल रिमाइंडर, त्योहारों की बधाई — WeChat कार्ड इंटरऑप।"
     },
     "aiqicha-query": {
-      "name": "AIQiCha Business Search",
+      "name": "AIQiCha Business खोज",
       "description": "Baidu का फ्री बिज़नेस रजिस्ट्री सर्च: कॉर्पोरेट जानकारी, शेयरधारक, कानूनी जोखिम, IPR — पार्टनरशिप से पहले मस्ट-चेक।"
     },
     "tianyancha": {
@@ -5395,11 +5396,11 @@
       "description": "चीन का सबसे अधिकृत बिज़नेस क्रेडिट बिग डेटा: रिलेशनशिप ग्राफ, UBO खनन, ड्यू डिलिजेंस डीप-डाइव।"
     },
     "trae-cn": {
-      "name": "Trae AI Coding IDE",
+      "name": "Trae एआई Coding IDE",
       "description": "LLM वाला चाइना AI-पावर्ड IDE: ऑटो-कंप्लीशन, ऑटो बग-फिक्स, डॉक जेनरेशन और लाइव पूर्वावलोकन — सोलो डेव 10x प्रोडक्टिविटी।"
     },
     "codeium-free": {
-      "name": "Codeium Free AI Complete",
+      "name": "Codeium मुफ्त एआई Complete",
       "description": "70+ लैंग्वेज़ के लिए हमेशा के लिए फ्री AI कोड कंप्लीशन। VSCode/JetBrains/Neovim/Vim पर चैट + सर्च + ऑटोकम्प्लीट एक ही जगह।"
     },
     "dida-365": {
@@ -5407,19 +5408,19 @@
       "description": "चीन में नंबर 1 GTD ऐप: todos + कैलेंडर + पोमोडोरो + फोकस रिपोर्ट, क्लाउड सिंक, WeChat/DingTalk रिमाइंडर।"
     },
     "upwork-market": {
-      "name": "Upwork Freelance Marketplace",
+      "name": "Upwork फ्रीलांस मार्केटप्लेस",
       "description": "सबसे बड़ा ग्लोबल फ्रीलांस मार्केटप्लेस। डेव, डिज़ाइन, कॉपी, ट्रांसलेट, SEO, डेटा; USD पेआउट — बेंचमार्क प्लेटफॉर्म।"
     },
     "fiverr-gig": {
-      "name": "Fiverr Gigs Marketplace",
+      "name": "Fiverr Gigs मार्केटप्लेस",
       "description": "$5 से शुरुआत वाले माइक्रो-सर्विसेज़: लोगो, वीडियो, SEO, कॉपीराइटिंग — Gigs के तौर पर पैक, शुरुआती के लिए आसान ग्लोबल सेल्स।"
     },
     "zbj-service": {
-      "name": "ZBJ Service Marketplace",
+      "name": "ZBJ सर्विस मार्केटप्लेस",
       "description": "चीन का सबसे बड़ा क्रिएटिव सर्विस प्लेटफॉर्म: लोगो, VI, साइट्स, ऐप्स, कॉपी, ट्रांसलेशन। विक्रेताओं की कोट की तुलना करें।"
     },
     "yuanling-work": {
-      "name": "YuanLing Remote Work",
+      "name": "YuanLing रिमोट काम",
       "description": "डोमेस्टिक फ्रीलांस और रिमोट जॉब बोर्ड; घंटे का या प्रोजेक्ट एस्क्रो बिलिंग, डेव/डिज़ाइन/ऑप्स/PM रोल्स मैच।"
     },
     "pj-work": {
@@ -5427,11 +5428,11 @@
       "description": "केवल चाइना टेक फ्रीलांस मैचिंग। वेरिफाइड डेवलपर्स, मीलस्टोन एस्क्रो, सोर्स कोड डिलीवरी और रखरखाव की गारंटी।"
     },
     "toggl-track": {
-      "name": "Toggl Time Tracking",
+      "name": "Toggl समय ट्रैकिंग",
       "description": "ऑवरली फ्रीलांसर्स का मस्ट-हेव। वन-क्लिक टाइमर, प्रोजेक्ट/क्लाइंट टैग, साप्ताहिक/मासिक रिपोर्ट्स — इनवॉइस में सीधे एक्सपोर्ट।"
     },
     "harvest-invoice": {
-      "name": "Harvest Time + Invoicing",
+      "name": "Harvest समय + Invoicing",
       "description": "टाइम + ऑनलाइन इनवॉइसिंग यूनिफाइड; बिलेबल घंटे को ऑटो इनवॉइस में बदलें, कार्ड/PayPal पेमेंट, ऑटो रिमाइंडर, AR डैशबोर्ड।"
     },
     "freshbooks-cloud": {
@@ -5439,15 +5440,15 @@
       "description": "फ्रीलांसर्स और <5 टीम के लिए क्लाउड अकाउंटिंग। टाइम, इनवॉइसिंग, ख़र्चे, ऑनलाइन पेमेंट, टैक्स पैक — अमेरिकी फ्रीलांसर्स का स्टैंडर्ड।"
     },
     "wave-invoicing": {
-      "name": "Wave Free Invoicing",
+      "name": "Wave मुफ्त Invoicing",
       "description": "सच में हमेशा के लिए फ्री इनवॉइसिंग + अकाउंटिंग। अनलिमिटेड इनवॉइस, क्लाइंट्स, बैंक रिकंसिलिएशन, रिपोर्ट्स — जीरो स्टार्टअप लागत।"
     },
     "andco-freelance": {
-      "name": "AND.CO Freelance OS",
+      "name": "AND.CO फ्रीलांस OS",
       "description": "Fiverr के स्वामित्व वाला फ्रीलांस OS: प्रोपोज़ल, कॉन्ट्रैक्ट्स, NDA, टाइम, इनवॉइस, पेमेंट, टैक्स डॉक्स — 90% एडमिन ऑटो।"
     },
     "bonsai-suite": {
-      "name": "Bonsai Freelance Bundle",
+      "name": "Bonsai फ्रीलांस Bundle",
       "description": "प्रीमियम फ्रीलांस बंडल: 1000+ वकील-वेटेड टेम्पलेट्स, ब्रांडेड प्रोपोज़ल्स, रिकरिंग इनवॉइस, टैक्स रिपोर्ट्स — $100K+ इनकम वालों के लिए।"
     },
     "calendly-meeting": {
@@ -5459,15 +5460,15 @@
       "description": "सर्विस-फ्रीलांसर्स के लिए अपॉइंटमेंट और पेमेंट। पर-सर्विस कैलेंडर, डिपॉज़िट, ऑटो Zoom क्रिएशन और मास रिमाइंडर।"
     },
     "tencent-meeting": {
-      "name": "Tencent Meetings",
+      "name": "टेनसेंट Meetings",
       "description": "चीन का नंबर 1 वीडियो मीटिंग। एक-क्लिक लिंक; बिना ऐप के WeChat से ज्वाइन, 2000 पार्टिसिपेंट, स्क्रीनशेयर और AI मिनट्स।"
     },
     "zoom-video": {
-      "name": "Zoom Video Meetings",
+      "name": "Zoom वीडियो Meetings",
       "description": "विश्व की मानक वीडियो कॉन्फ्रेंसिंग। क्रॉस-प्लेटफॉर्म, स्क्रीन शेयर, ब्रेकआरट रूम, क्लाउड रिकॉर्डिंग — क्रिस्टल क्लियर क्वालिटी।"
     },
     "feishu-meeting": {
-      "name": "Feishu Minutes",
+      "name": "फीशु Minutes",
       "description": "AI मिनट्स वाली मीटिंग: लाइव ट्रांसक्रिप्शन, Word/Notion एक्सपोर्ट, स्पीकर पहचान और टॉपिक-वाइज़ सर्च — 90% कम रिकैप काम।"
     },
     "miro-whiteboard": {
@@ -5479,7 +5480,7 @@
       "description": "InVision का सहयोगात्मक रिव्यू बोर्ड। वायरफ्रेम + Figma एम्बेड, पिन कमेंट, स्टिकी-नोट वोटिंग।"
     },
     "skillshare-learn": {
-      "name": "Skillshare Creative Learning",
+      "name": "स्किलशेयर क्रिएटिव Learning",
       "description": "फ्रीलांसर अपस्किलिंग फेवरेट। 28K+ क्वालिटी क्लासेज़: डिज़ाइन, वीडियो, कोड, मार्केटिंग, राइटिंग, फोटोग्राफी, उद्यमिता।"
     },
     "coursera-plus": {
@@ -5511,7 +5512,7 @@
       "description": "बैकग्राउंड साउंड मिक्स-एंड-मैच: कैफे, बारिश, टाइपिंग, आग, पक्षियों, ट्रेन। अलग-अलग वॉल्यूम, टाइमर + मिनी टेक्स्ट एडिटर।"
     },
     "forest-focus": {
-      "name": "Forest Phone Discipline",
+      "name": "जंगल Phone Discipline",
       "description": "फोकस सेशन में वर्चुअल ट्री लगाएं; जल्दी बाहर निकला तो पेड़ मर जाएगा। सिक्के जमा करें और असली पेड़ लगवाएं।"
     },
     "todoist-gtd": {
@@ -5519,7 +5520,7 @@
       "description": "विश्व प्रसिद्ध GTD ऐप: नेचुरल लैंग्वेज डेट पार्सिंग, प्रोजेक्ट, लेबल, प्रायोरिटी, रिकरिंग रूल्स, कर्मा और ऑल-डिवाइस सिंक।"
     },
     "ms-todo": {
-      "name": "Microsoft To Do",
+      "name": "माइक्रोसॉफ्ट को करें",
       "description": "फ्री Microsoft टास्क्स, गहरा Outlook/Teams/Office इंटीग्रेशन। \"आज का दिन / नियोजित / महत्वपूर्ण\" व्यू — सीलम ऑफिस वर्कफ़्लो।"
     },
     "obsidian-publish": {
@@ -5547,7 +5548,7 @@
       "description": "NetEase AI कैप्शन ट्रांसलेशन: द्विभाषी सबटाइटल्स, ऑडियो-टू-टेक्स्ट, डॉक्यूमेंट ट्रांसलेशन। चाइना हाई-स्पीड नेटवर्क और ICP लाइसेंस।"
     },
     "deepl-translate": {
-      "name": "DeepL Translator",
+      "name": "DeepL अनुवादक",
       "description": "व्यापक रूप से सर्वश्रेष्ठ माना जाने वाला AI ट्रांसलेटर। 30+ भाषाएँ संदर्भ जागरूकता के साथ-साथ स्वरूपित दस्तावेज़ों का अनुवाद।"
     },
     "ilovepdf-io": {
@@ -5555,11 +5556,11 @@
       "description": "वर्ल्ड बेस्ट PDF टूल: मर्ज, स्प्लिट, कंप्रेस, वर्ड/एक्सेल/PPT/इमेज में कन्वर्ट, एन्क्रिप्ट, वॉटरमार्क, पेज रोटेट, OCR — 25+ एक्शन।"
     },
     "smallpdf-tools": {
-      "name": "SmallPDF Swiss Knife",
+      "name": "स्मॉलPDF Swiss Knife",
       "description": "PDF का स्विस आर्मी चाकू। 20+ साफ़-सुथरे बिना विज्ञापन वाले टूल। Google Drive, Dropbox, OneDrive सिंक — क्लाउड में वापस सेव।"
     },
     "kami-pdf": {
-      "name": "Kami PDF Annotator",
+      "name": "Kami PDF एनोटेटर",
       "description": "K-12 का पसंदीदा PDF एनोटेशन ऐप। PDF/वर्ड/इमेज पर हाइलाइट, टेक्स्ट, वॉइस, सिग्नेचर और ड्रॉ — Google Classroom इंटीग्रेशन।"
     },
     "lightpdf-cloud": {
@@ -5567,7 +5568,7 @@
       "description": "डोमेस्टिक चाइना PDF क्लाउड। Word/Excel/PPT/JPG/TXT रूपांतरण, OCR पढ़ना, एडिट, सिग्नेचर, कॉम्प्लाइंट वॉटरमार्क।"
     },
     "carbon-now": {
-      "name": "Carbon Code Screenshots",
+      "name": "Carbon कोड Screenshots",
       "description": "टेक ब्लॉगर्स का फेवरेट। कोड पेस्ट करें → ग्रेडियंट बैकग्राउंड, लाइन नंबर, राउंडेड कॉर्नर के साथ सिंटैक्स हाईलाइटेड तस्वीरें।"
     },
     "codepen-io": {
@@ -5575,15 +5576,15 @@
       "description": "सबसे बड़ा फ्रंटएंड इंस्पायरेशन कम्युनिटी। लाइव HTML/CSS/JS पेन; एनीमेशन, इंटरैक्टिव विजेट्स, CSS आर्ट — रोज़ का UI प्रेरणा।"
     },
     "figma-community": {
-      "name": "Figma Community Files",
+      "name": "Figma समुदाय फ़ाइलें",
       "description": "फ्री डिज़ाइन की सोने की खान। 1M+ App UI, डैश, इलस्ट्रेशन, 3D आइकन, वायरफ्रेम — Figma में डुप्लिकेट और एडिट करें।"
     },
     "dribbble-design": {
-      "name": "Dribbble Design Inspiration",
+      "name": "Dribbble डिज़ाइन Inspiration",
       "description": "डिज़ाइनरों की शीर्ष पोर्टफोलियो प्लेटफॉर्म। UI/UX, इलस्ट्रेशन, मोशन, ब्रांडिंग। पोस्ट करें और फ्रीलांस इनक्वायरी पाएँ।"
     },
     "behance-portfolio": {
-      "name": "Behance Creative Portfolios",
+      "name": "Behance क्रिएटिव Portfolios",
       "description": "Adobe का क्रिएटिव शोकेस। ग्राफिक, UI, आर्किटेक्चर, फोटोग्राफी लंबे प्रोजेक्ट्स — Adobe Talent प्रीमियम जॉब्स कनेक्ट करता है।"
     },
     "notion-templates": {
@@ -5591,7 +5592,7 @@
       "description": "हज़ारों क्यूरेटेड मुफ्त नोशन टेम्पलेट्स: OKR, सेकंड ब्रेन, CRM, ट्रिप प्लानर, आदत ट्रैकर, बजट — डुप्लिकेट और चलाएँ।"
     },
     "product-hunt": {
-      "name": "Product Hunt Launches",
+      "name": "प्रोडक्ट Hunt Launches",
       "description": "नए प्रोडक्ट्स की खोज करने की जगह। SaaS, टूल्स, ऐप्स, AI के रोजाना लॉन्च। इंडीहैकर्स प्रतिद्वंदी रिसर्च + लॉन्च यहीं करते हैं।"
     },
     "hunt-webflow": {

@@ -60,14 +60,18 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
     if (locale === 'zh') return tool.name;
     const slug = tool.slug || tool.id || '';
     const keyAlt = tool.id && tool.id !== slug ? tool.id : '';
-    return safeTranslate(`${slug}.name`, keyAlt ? safeTranslate(`${keyAlt}.name`, tool.name) : tool.name);
+    const en = (tool as any).nameEn || tool.name;
+    const v = safeTranslate(`${slug}.name`, keyAlt ? safeTranslate(`${keyAlt}.name`, '') : '');
+    return v || en;
   };
 
   const getToolDisplayDesc = (tool: (typeof tools)[number]): string => {
     if (locale === 'zh') return tool.description;
     const slug = tool.slug || tool.id || '';
     const keyAlt = tool.id && tool.id !== slug ? tool.id : '';
-    return safeTranslate(`${slug}.description`, keyAlt ? safeTranslate(`${keyAlt}.description`, tool.description) : tool.description);
+    const en = (tool as any).descriptionEn || tool.description;
+    const v = safeTranslate(`${slug}.description`, keyAlt ? safeTranslate(`${keyAlt}.description`, '') : '');
+    return v || en;
   };
 
   useEffect(() => {

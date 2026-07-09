@@ -103,6 +103,7 @@
     "collaboration": "التعاون",
     "file-tools": "أدوات الملفات",
     "api-tools": "أدوات API",
+    "game-tools": "أدوات الألعاب",
     "compliance-filter": "مرشح الامتثال",
     "all": "الكل",
     "verified": "تم التحقق",
@@ -507,7 +508,7 @@
       "description": "عبر الإنترنت tinypng compress for compress, صورة, optimize, WebP. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "ilovepdf": {
-      "name": "Ilovepdf PDF",
+      "name": "آي لوف PDF PDF",
       "description": "عبر الإنترنت ilovepdf PDF for PDF, دمج, convert, edit. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "canva": {
@@ -579,7 +580,7 @@
       "description": "عبر الإنترنت pexels images for images, photography, مجاني, videos. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "giphy": {
-      "name": "Giphy GIF",
+      "name": "جيفي GIF",
       "description": "عبر الإنترنت giphy gif for GIF, animation, إيموجي, search. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tinify": {
@@ -635,7 +636,7 @@
       "description": "عبر الإنترنت regex101 ريجيكس for ريجيكس, testing, matching, development. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "jsonlint": {
-      "name": "Jsonlint JSON",
+      "name": "جيسون لينت JSON",
       "description": "عبر الإنترنت jsonlint JSON for JSON, validation, format, development. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "jqplay": {
@@ -679,19 +680,19 @@
       "description": "عبر الإنترنت dafont fonts for fonts, مجاني, download, design. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pdfescape": {
-      "name": "Pdfescape PDF",
+      "name": "بي دي إف إسكيپ PDF",
       "description": "عبر الإنترنت pdfescape PDF for PDF, edit, form, مجاني. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "smallpdf": {
-      "name": "Smallpdf PDF",
+      "name": "سمول PDF PDF",
       "description": "عبر الإنترنت smallpdf PDF for PDF, compress, convert, edit. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sejda": {
-      "name": "Sejda PDF",
+      "name": "سيجدا PDF",
       "description": "عبر الإنترنت sejda PDF for PDF, professional, process, convert. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pdf2go": {
-      "name": "Pdf2go PDF",
+      "name": "بي دي إف 2 جو PDF",
       "description": "عبر الإنترنت pdf2go PDF for PDF, convert, عبر الإنترنت, أدوات. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cuttly": {
@@ -715,7 +716,7 @@
       "description": "عبر الإنترنت devdocs docs for docs, API, development, offline. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "jsfiddle": {
-      "name": "Jsfiddle JavaScript",
+      "name": "جيس فيدل جافاسكربت",
       "description": "عبر الإنترنت jsfiddle javascript for JavaScript, testing, معاينة, كود. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "css-tricks": {
@@ -723,11 +724,11 @@
       "description": "عبر الإنترنت css tricks for CSS, tips, frontend, tutorials. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cssgridgarden": {
-      "name": "Cssgridgarden CSS",
+      "name": "حديقة الشبكة CSS",
       "description": "عبر الإنترنت cssgridgarden css for CSS, شبكة, learning, لعبة. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "flexboxfroggy": {
-      "name": "Flexboxfroggy CSS",
+      "name": "فليكس بوكس فروجي CSS",
       "description": "عبر الإنترنت flexboxfroggy css for CSS, Flexbox, learning, لعبة. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "typing-game": {
@@ -975,7 +976,7 @@
       "description": "عبر الإنترنت railway deployment for deployment, app, database, modern. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "fly": {
-      "name": "Fly Edge",
+      "name": "فلاي Edge",
       "description": "عبر الإنترنت fly edge for edge, computing, deployment, global. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "supabase": {
@@ -987,7 +988,7 @@
       "description": "عبر الإنترنت firebase backend for backend, Google, database, BaaS. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "prisma": {
-      "name": "Prisma ORM",
+      "name": "بريسما ORM",
       "description": "عبر الإنترنت prisma orm for ORM, Node.js, database, type-آمن. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "postman": {
@@ -1107,7 +1108,7 @@
       "description": "عبر الإنترنت tldraw whiteboard for whiteboard, infinite, canvas, collaboration. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "umal": {
-      "name": "Umal",
+      "name": "أومال",
       "description": "عبر الإنترنت umal for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "whimsical": {
@@ -1123,7 +1124,7 @@
       "description": "عبر الإنترنت diagrams diagram for diagram, architecture, draw, cloud. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pdftotext": {
-      "name": "Pdftotext PDF",
+      "name": "بي دي إف إلى نص PDF",
       "description": "عبر الإنترنت pdftotext PDF for PDF, نص, extract, convert. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pdf编辑": {
@@ -1375,7 +1376,7 @@
       "description": "عبر الإنترنت ynab budget for budget, zero-based, finance, planning. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "expensify": {
-      "name": "Expensify Expenses",
+      "name": "إكسبينس فاي مصاريف",
       "description": "عبر الإنترنت expensify expenses for expenses, receipts, corporate, automation. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "concur": {
@@ -1383,7 +1384,7 @@
       "description": "عبر الإنترنت concur travel for travel, expenses, SAP, enterprise. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "stripe-dashboard": {
-      "name": "Stripe Dashboard",
+      "name": "سترايب لوحة القيادة",
       "description": "عبر الإنترنت stripe dashboard for Stripe, dashboard, transactions, payments. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "paypal-business": {
@@ -1395,23 +1396,23 @@
       "description": "عبر الإنترنت bamboo hr for HR, recruiting, onboarding, performance. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "workday": {
-      "name": "Workday HR",
+      "name": "ورك داي الموارد البشرية",
       "description": "عبر الإنترنت workday hr for HR, enterprise, cloud, HCM. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "linkedin-recruiter": {
-      "name": "Linkedin Recruiter",
+      "name": "لينكد إن مدرب توظيف",
       "description": "عبر الإنترنت linkedin recruiter for LinkedIn, recruiter, talent, hiring. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "indeed-recruit": {
-      "name": "Indeed Recruit",
+      "name": "إنديد توظيف",
       "description": "عبر الإنترنت indeed recruit for recruiting, jobs, hiring, talent. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "greenhouse": {
-      "name": "Greenhouse Recruiting",
+      "name": "جرين هاوس توظيف",
       "description": "عبر الإنترنت greenhouse recruiting for recruiting, workflow, interviews, hiring. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "lever": {
-      "name": "Lever Talent",
+      "name": "ليفر مواهب",
       "description": "عبر الإنترنت lever talent for talent, AI, recruiting, CRM. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "slack-hr": {
@@ -1427,7 +1428,7 @@
       "description": "عبر الإنترنت google workspace for Google, workspace, enterprise, collaboration. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "microsoft-365": {
-      "name": "Microsoft 365",
+      "name": "مايكروسوفت 365",
       "description": "عبر الإنترنت microsoft 365 for Microsoft, office, Teams, enterprise. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "coursera": {
@@ -1443,11 +1444,11 @@
       "description": "عبر الإنترنت edx مجاني for مجاني, university, courses, certification. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "khan-academy": {
-      "name": "Khan Academy",
+      "name": "أكاديمية خان",
       "description": "عبر الإنترنت khan academy for مجاني, K12, math, science. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "duolingo": {
-      "name": "Duolingo Language",
+      "name": "Duolingo لغة",
       "description": "عبر الإنترنت duolingo language for language, learning, مجاني, games. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "quizlet": {
@@ -1455,11 +1456,11 @@
       "description": "عبر الإنترنت quizlet flashcards for flashcards, learning, study, memory. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "notion-students": {
-      "name": "Notion Students",
+      "name": "نوشن Students",
       "description": "عبر الإنترنت notion students for notes, students, templates, organization. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "coursera-for-campus": {
-      "name": "Coursera For Campus",
+      "name": "Coursera لـ حرم جامعي",
       "description": "عبر الإنترنت coursera for campus for university, courses, certificates, campus. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "udacity": {
@@ -1467,7 +1468,7 @@
       "description": "عبر الإنترنت udacity programming for programming, nanodegree, AI, data. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "skillshare": {
-      "name": "Skillshare Creative",
+      "name": "سكيل شير إبداعي",
       "description": "عبر الإنترنت skillshare creative for creative, skills, design, business. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "myfitnesspal": {
@@ -1475,11 +1476,11 @@
       "description": "عبر الإنترنت myfitnesspal health for health, diet, calories, tracking. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "headspace": {
-      "name": "Headspace Meditation",
+      "name": "Headspace تأمل",
       "description": "عبر الإنترنت headspace meditation for meditation, mindfulness, stress, sleep. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "calm": {
-      "name": "Calm Relaxation",
+      "name": "Calm استرخاء",
       "description": "عبر الإنترنت calm relaxation for relaxation, sleep, meditation, music. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "strava": {
@@ -1487,11 +1488,11 @@
       "description": "عبر الإنترنت strava sports for sports, running, cycling, GPS. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sleep-cycle": {
-      "name": "Sleep Cycle",
+      "name": "نوم Cycle",
       "description": "عبر الإنترنت sleep cycle for sleep, alarm, tracking, analysis. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "noom": {
-      "name": "Noom Diet",
+      "name": "Noom نظام غذائي",
       "description": "عبر الإنترنت noom diet for diet, health, وزن loss, behavior. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "whoop": {
@@ -1503,7 +1504,7 @@
       "description": "عبر الإنترنت aaptiv fitness for fitness, AI, training, workouts. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "fitbit": {
-      "name": "Fitbit Wearable",
+      "name": "فيتبيت Wearable",
       "description": "عبر الإنترنت fitbit wearable for wearable, steps, heart rate, health. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "apple-health": {
@@ -1511,11 +1512,11 @@
       "description": "عبر الإنترنت apple health for Apple, health, iPhone, data. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "airbnb": {
-      "name": "Airbnb Stays",
+      "name": "أير بي إن بي Stays",
       "description": "عبر الإنترنت airbnb stays for stays, travel, accommodation, booking. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "booking": {
-      "name": "Booking Hotels",
+      "name": "حجز Hotels",
       "description": "عبر الإنترنت booking hotels for hotels, booking, travel, accommodation. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tripadvisor": {
@@ -1523,11 +1524,11 @@
       "description": "عبر الإنترنت tripadvisor travel for travel, reviews, restaurants, attractions. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "google-maps": {
-      "name": "Google Maps",
+      "name": "جوجل خرائط",
       "description": "عبر الإنترنت google maps for maps, navigation, directions, traffic. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "uber": {
-      "name": "Uber Rides",
+      "name": "أوبر Rides",
       "description": "عبر الإنترنت uber rides for rides, taxi, transport, booking. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "grubhub": {
@@ -1535,15 +1536,15 @@
       "description": "عبر الإنترنت grubhub food for food, delivery, ordering, restaurants. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "doordash": {
-      "name": "Doordash Delivery",
+      "name": "Doordash توصيل",
       "description": "عبر الإنترنت doordash delivery for delivery, food, restaurants, convenience. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "yelp": {
-      "name": "Yelp Reviews",
+      "name": "Yelp تقييمات",
       "description": "عبر الإنترنت yelp reviews for reviews, محلي, restaurants, businesses. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tripit": {
-      "name": "Tripit Itinerary",
+      "name": "Tripit خط سير",
       "description": "عبر الإنترنت tripit itinerary for itinerary, travel, flights, planning. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "google-travel": {
@@ -1559,7 +1560,7 @@
       "description": "عبر الإنترنت final cut pro for فيديو, editing, Apple, Mac. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "davinci-resolve": {
-      "name": "Davinci Resolve",
+      "name": "دافنشي ريزولف",
       "description": "عبر الإنترنت davinci resolve for فيديو, لون, grading, مجاني. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "imovie": {
@@ -1619,11 +1620,11 @@
       "description": "عبر الإنترنت logic pro for music, production, Apple, professional. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "podcastle": {
-      "name": "Podcastle Podcast",
+      "name": "Podcastle بودكاست",
       "description": "عبر الإنترنت podcastle podcast for podcast, AI, recording, editing. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "anchor": {
-      "name": "Anchor Podcast",
+      "name": "Anchor بودكاست",
       "description": "عبر الإنترنت anchor podcast for podcast, Spotify, مجاني, hosting. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "blender": {
@@ -1639,11 +1640,11 @@
       "description": "عبر الإنترنت tinkercad 3d for 3D, Autodesk, design, printing. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "fusion-360": {
-      "name": "Fusion 360",
+      "name": "فيوجن 360",
       "description": "عبر الإنترنت fusion 360 for 3D, CAD, cloud, manufacturing. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cinema-4d": {
-      "name": "Cinema 4d",
+      "name": "سينما 4D",
       "description": "عبر الإنترنت cinema 4d for 3D, rendering, animation, professional. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "threejs": {
@@ -1667,15 +1668,15 @@
       "description": "عبر الإنترنت tableau data for data, visualization, analysis, dashboard. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "power-bi": {
-      "name": "Power Bi",
+      "name": "قوة Bi",
       "description": "عبر الإنترنت power bi for BI, Microsoft, data, visualization. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "looker": {
-      "name": "Looker BI",
+      "name": "لوكر BI",
       "description": "عبر الإنترنت looker bi for BI, Google, cloud, analysis. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "chartjs": {
-      "name": "Chartjs Charts",
+      "name": "Chartjs رسوم بيانية",
       "description": "عبر الإنترنت chartjs charts for charts, JavaScript, أوبن-source, Web. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "d3js": {
@@ -1683,15 +1684,15 @@
       "description": "عبر الإنترنت d3js data for data, visualization, JavaScript, SVG. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "plotly": {
-      "name": "Plotly Charts",
+      "name": "Plotly رسوم بيانية",
       "description": "عبر الإنترنت plotly charts for charts, interactive, Python, أوبن-source. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "infogram": {
-      "name": "Infogram Infographic",
+      "name": "Infogram إنفوجرافيك",
       "description": "عبر الإنترنت infogram infographic for infographic, visualization, عبر الإنترنت, drag-دروب. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "venngage": {
-      "name": "Venngage Infographic",
+      "name": "Venngage إنفوجرافيك",
       "description": "عبر الإنترنت venngage infographic for infographic, report, visualization, templates. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "flourish": {
@@ -1727,27 +1728,27 @@
       "description": "عبر الإنترنت nordpass كلمة المرور for كلمة المرور, NordVPN, sync, الأمن. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "have-i-been-pwned": {
-      "name": "Have I Been Pwned",
+      "name": "لدي I تم اختراق",
       "description": "عبر الإنترنت have i been pwned for breach, check, email, الأمن. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "virustotal": {
-      "name": "Virustotal Virus",
+      "name": "Virustotal فيروس",
       "description": "عبر الإنترنت virustotal virus for virus, detection, scanning, ملف. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cryptomator": {
-      "name": "Cryptomator Encryption",
+      "name": "تشفير كرابتوماتور",
       "description": "عبر الإنترنت cryptomator encryption for encryption, cloud, أوبن-source, privacy. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "google-drive": {
-      "name": "Google Drive",
+      "name": "جوجل Drive",
       "description": "عبر الإنترنت google drive for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "box": {
-      "name": "Box",
+      "name": "صندوق",
       "description": "عبر الإنترنت box for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sharepoint": {
-      "name": "Sharepoint",
+      "name": "شاربوينت",
       "description": "عبر الإنترنت sharepoint for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "coggle": {
@@ -1775,11 +1776,11 @@
       "description": "عبر الإنترنت pdf24 PDF for PDF, مجاني, أدوات, عبر الإنترنت. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "zamzar": {
-      "name": "Zamzar Convert",
+      "name": "Zamzar تحويل",
       "description": "عبر الإنترنت zamzar convert for convert, format, email, عبر الإنترنت. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "googledrive-files": {
-      "name": "Googledrive Files",
+      "name": "Googledrive ملفات",
       "description": "عبر الإنترنت googledrive files for Google, search, cloud, ملف. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "compress2go": {
@@ -1811,7 +1812,7 @@
       "description": "عبر الإنترنت ngrok api for API, tunnel, development, محلي. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "repl-it": {
-      "name": "Repl It",
+      "name": "ريبليت",
       "description": "عبر الإنترنت repl it for IDE, عبر الإنترنت, collaboration, hosting. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "gitpod": {
@@ -1823,7 +1824,7 @@
       "description": "عبر الإنترنت perplexity ai for AI, search, real-time, citation. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "character-ai": {
-      "name": "Character Ai",
+      "name": "Character ذكاء اصطناعي",
       "description": "عبر الإنترنت character ai for AI, role, conversation, interaction. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "poe": {
@@ -1859,31 +1860,31 @@
       "description": "عبر الإنترنت 讯飞智作 ai for AI, فيديو, dubbing, digital human. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "grammarly-go": {
-      "name": "Grammarly Go",
+      "name": "Grammarly يذهب",
       "description": "عبر الإنترنت grammarly go for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "quillbot": {
-      "name": "Quillbot",
+      "name": "كويل بوت",
       "description": "عبر الإنترنت quillbot for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "scribbr": {
-      "name": "Scribbr",
+      "name": "سكرايبر",
       "description": "عبر الإنترنت scribbr for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "frase": {
-      "name": "Frase",
+      "name": "فريز",
       "description": "عبر الإنترنت frase for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "invideo": {
-      "name": "Invideo",
+      "name": "إن فيديو",
       "description": "عبر الإنترنت invideo for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "veedio": {
-      "name": "Veedio",
+      "name": "فيد",
       "description": "عبر الإنترنت veedio for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "filmora": {
-      "name": "Filmora",
+      "name": "فيلمورا",
       "description": "عبر الإنترنت filmora for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wave-video": {
@@ -1891,115 +1892,115 @@
       "description": "عبر الإنترنت wave فيديو for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "subtitles": {
-      "name": "Subtitles",
+      "name": "ترجمة",
       "description": "عبر الإنترنت subtitles for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cloudflare": {
-      "name": "Cloudflare",
+      "name": "كلاود فلير",
       "description": "عبر الإنترنت cloudflare for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "netlify-cms": {
-      "name": "Netlify Cms",
+      "name": "Netlify CMS",
       "description": "عبر الإنترنت netlify cms for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sanity": {
-      "name": "Sanity",
+      "name": "سانيتي",
       "description": "عبر الإنترنت sanity for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "prismic": {
-      "name": "Prismic",
+      "name": "برازميك",
       "description": "عبر الإنترنت prismic for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "contentful": {
-      "name": "Contentful",
+      "name": "كونتينتفل",
       "description": "عبر الإنترنت contentful for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "shields": {
-      "name": "Shields",
+      "name": "شيلدز",
       "description": "عبر الإنترنت shields for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "gitlab": {
-      "name": "Gitlab",
+      "name": "جيت لاب",
       "description": "عبر الإنترنت gitlab for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "bitbucket": {
-      "name": "Bitbucket",
+      "name": "بيت باكيت",
       "description": "عبر الإنترنت bitbucket for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "vercel-functions": {
-      "name": "Vercel Functions",
+      "name": "وظائف فرسل",
       "description": "عبر الإنترنت vercel functions for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cloudflare-workers": {
-      "name": "Cloudflare Workers",
+      "name": "كلاود فلير Workers",
       "description": "عبر الإنترنت cloudflare workers for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "vite": {
-      "name": "Vite",
+      "name": "فيت",
       "description": "عبر الإنترنت vite for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "nextjs": {
-      "name": "Nextjs",
+      "name": "نيكست جي أس",
       "description": "عبر الإنترنت nextjs for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "remix": {
-      "name": "Remix",
+      "name": "ريميك्स",
       "description": "عبر الإنترنت remix for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "astro": {
-      "name": "Astro",
+      "name": "أسترو",
       "description": "عبر الإنترنت astro for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "solidjs": {
-      "name": "Solidjs",
+      "name": "سوليد جي أس",
       "description": "عبر الإنترنت solidjs for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "vuejs": {
-      "name": "Vuejs",
+      "name": "فيو جي أس",
       "description": "عبر الإنترنت vuejs for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "nuxtjs": {
-      "name": "Nuxtjs",
+      "name": "ناكست جي أس",
       "description": "عبر الإنترنت nuxtjs for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "svelte": {
-      "name": "Svelte",
+      "name": "سفيلت",
       "description": "عبر الإنترنت svelte for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sveltekit": {
-      "name": "Sveltekit",
+      "name": "سفيلت كيت",
       "description": "عبر الإنترنت sveltekit for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "gatsby": {
-      "name": "Gatsby",
+      "name": "جاتسبي",
       "description": "عبر الإنترنت gatsby for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "chakra-ui": {
-      "name": "Chakra Ui",
+      "name": "شاكرا يو آي",
       "description": "عبر الإنترنت chakra ui for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tailwindcss": {
-      "name": "Tailwindcss",
+      "name": "تيلويند سي إس إس",
       "description": "عبر الإنترنت tailwindcss for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "styled-components": {
-      "name": "Styled Components",
+      "name": "ستايلد كومبوننتس",
       "description": "عبر الإنترنت styled components for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "react-query": {
-      "name": "React Query",
+      "name": "ريأكت Query",
       "description": "عبر الإنترنت react query for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "axios": {
-      "name": "Axios",
+      "name": "أكسيوس",
       "description": "عبر الإنترنت axios for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "lodash": {
-      "name": "Lodash",
+      "name": "لوداش",
       "description": "عبر الإنترنت lodash for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "date-fns": {
-      "name": "Date Fns",
+      "name": "تاريخ Fns",
       "description": "عبر الإنترنت date fns for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "react-hook-form": {
@@ -2007,35 +2008,35 @@
       "description": "عبر الإنترنت react hook form for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "zod": {
-      "name": "Zod",
+      "name": "زود",
       "description": "عبر الإنترنت zod for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "react-router": {
-      "name": "React Router",
+      "name": "ريأكت Router",
       "description": "عبر الإنترنت react router for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "framer-motion": {
-      "name": "Framer Motion",
+      "name": "فريمر حركة",
       "description": "عبر الإنترنت framer motion for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "gsap": {
-      "name": "Gsap",
+      "name": "جي إس إي بي",
       "description": "عبر الإنترنت gsap for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "playcanvas": {
-      "name": "Playcanvas",
+      "name": "بلاي كانفاس",
       "description": "عبر الإنترنت playcanvas for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "splines": {
-      "name": "Splines",
+      "name": "سبلاينز",
       "description": "عبر الإنترنت splines for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "p5js": {
-      "name": "P5js",
+      "name": "بي 5 جي أس",
       "description": "عبر الإنترنت p5js for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "processing": {
-      "name": "Processing",
+      "name": "بروسيسينج",
       "description": "عبر الإنترنت processing for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "doodle": {
@@ -2075,7 +2076,7 @@
       "description": "عبر الإنترنت heroku cloud for cloud, PaaS, deployment, scaling. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "aws-amplify": {
-      "name": "Aws Amplify",
+      "name": "أمازون ويب Amplify",
       "description": "عبر الإنترنت aws amplify for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "mongodb-atlas": {
@@ -2103,11 +2104,11 @@
       "description": "عبر الإنترنت socket io for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "auth0": {
-      "name": "Auth0 Authentication",
+      "name": "Auth0 المصادقة",
       "description": "عبر الإنترنت auth0 authentication for authentication, الأمن, OAuth2, SSO. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "okta": {
-      "name": "Okta Authentication",
+      "name": "Okta المصادقة",
       "description": "عبر الإنترنت okta authentication for authentication, enterprise, SSO, MFA. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "nextauth": {
@@ -2143,43 +2144,43 @@
       "description": "عبر الإنترنت nodejs for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "deno": {
-      "name": "Deno Runtime",
+      "name": "Deno وقت التشغيل",
       "description": "عبر الإنترنت deno runtime for runtime, JavaScript, TypeScript, آمن. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "bun": {
-      "name": "Bun Runtime",
+      "name": "Bun وقت التشغيل",
       "description": "عبر الإنترنت bun runtime for runtime, fast, package, الكل-in-one. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "npm": {
-      "name": "Npm Package",
+      "name": "Npm حزمة",
       "description": "عبر الإنترنت npm package for package, Node.js, dependencies, manager. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "yarn": {
-      "name": "Yarn Package",
+      "name": "Yarn حزمة",
       "description": "عبر الإنترنت yarn package for package, fast, reliable, manager. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pnpm": {
-      "name": "Pnpm Package",
+      "name": "Pnpm حزمة",
       "description": "عبر الإنترنت pnpm package for package, fast, disk saving, shared. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "jest": {
-      "name": "Jest Testing",
+      "name": "Jest اختبار",
       "description": "عبر الإنترنت jest testing for testing, JavaScript, Facebook, snapshot. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "vitest": {
-      "name": "Vitest Testing",
+      "name": "Vitest اختبار",
       "description": "عبر الإنترنت vitest testing for testing, Vite, frontend, fast. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cypress": {
-      "name": "Cypress E2E",
+      "name": "Cypress نهاية إلى نهاية",
       "description": "عبر الإنترنت cypress e2e for E2E, testing, automation, frontend. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "playwright": {
-      "name": "Playwright E2E",
+      "name": "Playwright نهاية إلى نهاية",
       "description": "عبر الإنترنت playwright e2e for E2E, testing, Microsoft, متصفح. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "eslint": {
-      "name": "Eslint Linter",
+      "name": "Eslint مدقق كود",
       "description": "عبر الإنترنت eslint linter for linter, كود, JavaScript, errors. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "prettier": {
@@ -2187,11 +2188,11 @@
       "description": "عبر الإنترنت prettier منسّق for منسّق, كود, style, unify. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "webpack": {
-      "name": "Webpack Bundler",
+      "name": "Webpack مجمع الحزم",
       "description": "عبر الإنترنت webpack bundler for bundler, frontend, module, build. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rollup": {
-      "name": "Rollup Bundler",
+      "name": "Rollup مجمع الحزم",
       "description": "عبر الإنترنت rollup bundler for bundler, module, Tree-shaking, optimization. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "parcel": {
@@ -2211,7 +2212,7 @@
       "description": "عبر الإنترنت tencent translate for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "zhihu": {
-      "name": "Zhihu Q&A",
+      "name": "Zhihu أسئلة وأجوبة",
       "description": "عبر الإنترنت zhihu q&a for Q&A, knowledge, community, صيني. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "csdn": {
@@ -2259,7 +2260,7 @@
       "description": "عبر الإنترنت ant design for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "element-ui": {
-      "name": "Element Ui",
+      "name": "Element واجهة مستخدم",
       "description": "عبر الإنترنت element ui for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "vant": {
@@ -2267,7 +2268,7 @@
       "description": "عبر الإنترنت vant for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "nutui": {
-      "name": "Nutui",
+      "name": "Nut واجهة مستخدم",
       "description": "عبر الإنترنت nutui for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "echarts": {
@@ -2291,7 +2292,7 @@
       "description": "عبر الإنترنت tuotu for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "canva-cn": {
-      "name": "Canva Cn",
+      "name": "كانفا Cn",
       "description": "عبر الإنترنت canva cn for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wps": {
@@ -2299,7 +2300,7 @@
       "description": "عبر الإنترنت wps for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "feishu": {
-      "name": "Feishu",
+      "name": "فيشو",
       "description": "عبر الإنترنت feishu for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "dingtalk": {
@@ -2307,7 +2308,7 @@
       "description": "عبر الإنترنت dingtalk for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "weixin-work": {
-      "name": "Weixin Work",
+      "name": "Weixin عمل",
       "description": "عبر الإنترنت weixin work for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "teambition": {
@@ -2335,11 +2336,11 @@
       "description": "عبر الإنترنت tencent map for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "meituan": {
-      "name": "Meituan",
+      "name": "ميتوان",
       "description": "عبر الإنترنت meituan for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "eleme": {
-      "name": "Eleme Food Delivery",
+      "name": "إليمي طعام توصيل",
       "description": "عبر الإنترنت eleme food delivery for food delivery, Alibaba, restaurant, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "netease-music": {
@@ -2379,7 +2380,7 @@
       "description": "عبر الإنترنت youku فيديو for فيديو, movies, dramas, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rtl": {
-      "name": "Rtl Testing",
+      "name": "Rtl اختبار",
       "description": "عبر الإنترنت rtl testing for testing, React, component, user. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "storybook": {
@@ -2391,11 +2392,11 @@
       "description": "عبر الإنترنت esbuild build for build, fast, Go, JavaScript. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "stylelint": {
-      "name": "Stylelint Linter",
+      "name": "Stylelint مدقق كود",
       "description": "عبر الإنترنت stylelint linter for linter, CSS, style, standards. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "husky": {
-      "name": "Husky Git",
+      "name": "Husky جت",
       "description": "عبر الإنترنت husky git for Git, hooks, commit, automation. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "lint-staged": {
@@ -2403,7 +2404,7 @@
       "description": "عبر الإنترنت lint staged for lint, staged, Git, efficiency. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "commitlint": {
-      "name": "Commitlint Git",
+      "name": "Commitlint جت",
       "description": "عبر الإنترنت commitlint git for Git, commit, standardize, فريق. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sketch": {
@@ -2419,15 +2420,15 @@
       "description": "عبر الإنترنت framer design for design, interaction, React, prototype. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "adobe-xd": {
-      "name": "Adobe Xd",
+      "name": "أدوبي Xd",
       "description": "عبر الإنترنت adobe xd for design, Adobe, UI, prototype. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "affinity-designer": {
-      "name": "Affinity Designer",
+      "name": "Affinity مصمم",
       "description": "عبر الإنترنت affinity designer for vector, drawing, professional, alternative. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "affinity-photo": {
-      "name": "Affinity Photo",
+      "name": "Affinity صورة",
       "description": "عبر الإنترنت affinity photo for photo, editing, professional, alternative. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "procreate": {
@@ -2471,19 +2472,19 @@
       "description": "عبر الإنترنت jitsi فيديو for فيديو, conferencing, أوبن source, encrypted. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "gotomeeting": {
-      "name": "Gotomeeting Meeting",
+      "name": "Gotomeeting اجتماع",
       "description": "عبر الإنترنت gotomeeting meeting for meeting, عبر الإنترنت, sharing, recording. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "webex": {
-      "name": "Webex Meeting",
+      "name": "Webex اجتماع",
       "description": "عبر الإنترنت webex meeting for meeting, enterprise, Cisco, الأمن. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "masterclass": {
-      "name": "Masterclass Education",
+      "name": "Masterclass تعليم",
       "description": "عبر الإنترنت masterclass education for education, master, celebrity, courses. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "lynda": {
-      "name": "Lynda Education",
+      "name": "Lynda تعليم",
       "description": "عبر الإنترنت lynda education for education, LinkedIn, business, technical. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "codecademy": {
@@ -2503,7 +2504,7 @@
       "description": "عبر الإنترنت exercism programming for programming, practice, mentor, review. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "excel": {
-      "name": "Excel Spreadsheet",
+      "name": "Excel جدول بيانات",
       "description": "عبر الإنترنت excel spreadsheet for spreadsheet, data, analysis, Microsoft. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "google-data-studio": {
@@ -2515,11 +2516,11 @@
       "description": "عبر الإنترنت excel عبر الإنترنت for spreadsheet, عبر الإنترنت, collaboration, cloud. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "numbers": {
-      "name": "Numbers Spreadsheet",
+      "name": "Numbers جدول بيانات",
       "description": "عبر الإنترنت numbers spreadsheet for spreadsheet, Apple, iCloud, templates. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "power-query": {
-      "name": "Power Query",
+      "name": "قوة Query",
       "description": "عبر الإنترنت power query for data, cleaning, transformation, Power. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "python": {
@@ -2563,7 +2564,7 @@
       "description": "عبر الإنترنت linode cloud for cloud, VPS, hosting, high performance. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "duo": {
-      "name": "Duo Authentication",
+      "name": "Duo المصادقة",
       "description": "عبر الإنترنت duo authentication for authentication, الأمن, MFA, protection. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "snyk": {
@@ -2579,7 +2580,7 @@
       "description": "عبر الإنترنت checkmarx الأمن for الأمن, testing, static analysis, SAST. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "weather": {
-      "name": "Weather Weather",
+      "name": "طقس طقس",
       "description": "عبر الإنترنت weather weather for weather, forecast, air quality, global. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "calculator": {
@@ -2591,7 +2592,7 @@
       "description": "عبر الإنترنت unit محول for unit, conversion, length, وزن. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "dictionary": {
-      "name": "Dictionary Dictionary",
+      "name": "قاموس قاموس",
       "description": "عبر الإنترنت dictionary dictionary for dictionary, translation, words, pronunciation. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "thesaurus": {
@@ -2603,23 +2604,23 @@
       "description": "عبر الإنترنت مؤقت مؤقت for مؤقت, عد تنازلي, Pomodoro, focus. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "stopwatch": {
-      "name": "Stopwatch Stopwatch",
+      "name": "ساعة توقيت ساعة توقيت",
       "description": "عبر الإنترنت stopwatch stopwatch for stopwatch, timing, precise, split. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "calendar": {
-      "name": "Calendar Calendar",
+      "name": "تقويم تقويم",
       "description": "عبر الإنترنت calendar calendar for calendar, dates, holidays, week view. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "winrar": {
-      "name": "Winrar Compression",
+      "name": "Winrar ضغط",
       "description": "عبر الإنترنت winrar compression for compression, ملف, RAR, ZIP. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "7zip": {
-      "name": "7zip Compression",
+      "name": "7zip ضغط",
       "description": "عبر الإنترنت 7zip compression for compression, مجاني, أوبن source, high ratio. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "bandizip": {
-      "name": "Bandizip Compression",
+      "name": "Bandizip ضغط",
       "description": "عبر الإنترنت bandizip compression for compression, مجاني, ad-مجاني, formats. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "ccleaner": {
@@ -2627,7 +2628,7 @@
       "description": "عبر الإنترنت ccleaner cleaning for cleaning, system, optimization, junk. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "recuva": {
-      "name": "Recuva Recovery",
+      "name": "Recuva استعادة",
       "description": "عبر الإنترنت recuva recovery for recovery, ملف, deleted, data. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "markdown": {
@@ -2635,11 +2636,11 @@
       "description": "عبر الإنترنت ماركداون ماركداون for ماركداون, editor, معاينة, export. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "drawio": {
-      "name": "Drawio Diagramming",
+      "name": "Drawio الرسوم البيانية",
       "description": "عبر الإنترنت drawio diagramming for diagramming, flowchart, mind map, مجاني. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "plantuml": {
-      "name": "Plantuml Diagramming",
+      "name": "Plantuml الرسوم البيانية",
       "description": "عبر الإنترنت plantuml diagramming for diagramming, UML, كود, نص. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "mermaid": {
@@ -2651,19 +2652,19 @@
       "description": "عبر الإنترنت carbon كود for كود, screenshot, share, beautiful. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "ray-so": {
-      "name": "Ray.so Dreamy Code Shots",
+      "name": "راي.so حالمي كود لقطات",
       "description": "لقطات كود بأسلوب الزجاجي. خلفيات متدرجة ضبابية مع سمات وظلال — صور مشاركة أنيقة لتطبيقاتك."
     },
     "wakatime": {
-      "name": "Wakatime Time",
+      "name": "Wakatime وقت",
       "description": "عبر الإنترنت wakatime time for time, tracking, coding, statistics. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "codecov": {
-      "name": "Codecov Coverage",
+      "name": "Codecov تغطية",
       "description": "عبر الإنترنت codecov coverage for coverage, testing, كود, quality. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "coveralls": {
-      "name": "Coveralls Coverage",
+      "name": "Coveralls تغطية",
       "description": "عبر الإنترنت coveralls coverage for coverage, CI, testing, reports. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "codeclimate": {
@@ -2707,7 +2708,7 @@
       "description": "عبر الإنترنت keep for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "nike-training": {
-      "name": "Nike Training",
+      "name": "نايكي تدريب",
       "description": "عبر الإنترنت nike training for fitness, Nike, training, plan. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "peloton": {
@@ -2715,7 +2716,7 @@
       "description": "عبر الإنترنت peloton fitness for fitness, spin, classes, training. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "adidas-training": {
-      "name": "Adidas Training",
+      "name": "أديداس تدريب",
       "description": "عبر الإنترنت adidas training for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "seven": {
@@ -2739,7 +2740,7 @@
       "description": "عبر الإنترنت meditopia for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "simple-habit": {
-      "name": "Simple Habit",
+      "name": "بسيط عادة",
       "description": "عبر الإنترنت simple habit for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "breethe": {
@@ -2747,7 +2748,7 @@
       "description": "عبر الإنترنت breethe for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sleep-score": {
-      "name": "Sleep Score",
+      "name": "نوم Score",
       "description": "عبر الإنترنت sleep score for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "autosleep": {
@@ -2795,7 +2796,7 @@
       "description": "عبر الإنترنت mint budget for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "personal-capital": {
-      "name": "Personal Capital",
+      "name": "شخصي Capital",
       "description": "عبر الإنترنت personal capital for finance, investment, retirement, planning. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "credit-karma": {
@@ -2843,11 +2844,11 @@
       "description": "عبر الإنترنت ikea for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "houzz": {
-      "name": "Houzz Home",
+      "name": "Houzz منزل",
       "description": "عبر الإنترنت houzz home for home, design, renovation, inspiration. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pinterest-life": {
-      "name": "Pinterest Life",
+      "name": "بينتيريست Life",
       "description": "عبر الإنترنت pinterest life for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wayfair": {
@@ -2855,7 +2856,7 @@
       "description": "عبر الإنترنت wayfair for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "accuweather": {
-      "name": "Accuweather Weather",
+      "name": "Accuweather طقس",
       "description": "عبر الإنترنت accuweather weather for weather, forecast, accurate, meteorology. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wunderground": {
@@ -2875,7 +2876,7 @@
       "description": "عبر الإنترنت barkbox for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "garden-tags": {
-      "name": "Garden Tags",
+      "name": "حديقة Tags",
       "description": "عبر الإنترنت garden tags for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "picturethis": {
@@ -2903,19 +2904,19 @@
       "description": "عبر الإنترنت ticktick for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "any-do": {
-      "name": "Any Do",
+      "name": "Any فعل",
       "description": "عبر الإنترنت any do for tasks, management, smart, todo. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "google-tasks": {
-      "name": "Google Tasks",
+      "name": "جوجل Tasks",
       "description": "عبر الإنترنت google tasks for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "things-3": {
-      "name": "Things 3",
+      "name": "ثينغز 3",
       "description": "عبر الإنترنت things 3 for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "omni-focus": {
-      "name": "Omni Focus",
+      "name": "Omni تركيز",
       "description": "عبر الإنترنت omni focus for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pomofocus": {
@@ -2923,11 +2924,11 @@
       "description": "عبر الإنترنت pomofocus for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "forest": {
-      "name": "Forest",
+      "name": "غابة",
       "description": "عبر الإنترنت forest for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "focus-to-do": {
-      "name": "Focus To Do",
+      "name": "تركيز إلى فعل",
       "description": "عبر الإنترنت focus to do for focus, time, todo, pomodoro. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "habitica": {
@@ -2943,7 +2944,7 @@
       "description": "عبر الإنترنت productive for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "day-one": {
-      "name": "Day One",
+      "name": "Day واحد",
       "description": "عبر الإنترنت day one for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "journey": {
@@ -2959,7 +2960,7 @@
       "description": "عبر الإنترنت cleanshot for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "snagit": {
-      "name": "Snagit",
+      "name": "Sna جت",
       "description": "عبر الإنترنت snagit for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sharex": {
@@ -2971,7 +2972,7 @@
       "description": "عبر الإنترنت lightshot for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "adobe-scan": {
-      "name": "Adobe Scan",
+      "name": "أدوبي مسح",
       "description": "عبر الإنترنت adobe scan for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "camscanner": {
@@ -2979,7 +2980,7 @@
       "description": "عبر الإنترنت camscanner for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "genius-scan": {
-      "name": "Genius Scan",
+      "name": "Genius مسح",
       "description": "عبر الإنترنت genius scan for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "chrome": {
@@ -3027,7 +3028,7 @@
       "description": "عبر الإنترنت alltrails for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "babbel": {
-      "name": "Babbel Language",
+      "name": "Babbel لغة",
       "description": "عبر الإنترنت babbel language for language, learning, speaking, conversation. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rosetta-stone": {
@@ -3047,7 +3048,7 @@
       "description": "عبر الإنترنت disney plus for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "hbo-max": {
-      "name": "Hbo Max",
+      "name": "Hbo أقصى",
       "description": "عبر الإنترنت hbo max for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "prime-video": {
@@ -3079,7 +3080,7 @@
       "description": "عبر الإنترنت tidal music for music, hi-fi, lossless, streaming. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "apple-podcasts": {
-      "name": "Apple Podcasts",
+      "name": "أبل Podcasts",
       "description": "عبر الإنترنت apple podcasts for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pocket-casts": {
@@ -3107,7 +3108,7 @@
       "description": "عبر الإنترنت scribd for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "amazon-shop": {
-      "name": "Amazon Shop",
+      "name": "أمازون Shop",
       "description": "عبر الإنترنت amazon shop for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "taobao": {
@@ -3123,11 +3124,11 @@
       "description": "عبر الإنترنت pinduoduo e-commerce for e-commerce, مجموعة buy, social, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "linkedin": {
-      "name": "Linkedin",
+      "name": "لينكد إن",
       "description": "عبر الإنترنت linkedin for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "indeed": {
-      "name": "Indeed",
+      "name": "إنديد",
       "description": "عبر الإنترنت indeed for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "glassdoor": {
@@ -3143,7 +3144,7 @@
       "description": "عبر الإنترنت lagou for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "photo-magic": {
-      "name": "Photo Magic",
+      "name": "صورة Magic",
       "description": "عبر الإنترنت photo magic for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "myheritage": {
@@ -3151,7 +3152,7 @@
       "description": "عبر الإنترنت myheritage for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "whatsapp": {
-      "name": "Whatsapp",
+      "name": "Whats تطبيق",
       "description": "عبر الإنترنت whatsapp for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "telegram": {
@@ -3159,7 +3160,7 @@
       "description": "عبر الإنترنت telegram for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wechat": {
-      "name": "Wechat",
+      "name": "ويتشات",
       "description": "عبر الإنترنت wechat for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "signal": {
@@ -3167,7 +3168,7 @@
       "description": "عبر الإنترنت signal for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "line": {
-      "name": "Line",
+      "name": "خط",
       "description": "عبر الإنترنت line for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "messenger": {
@@ -3175,7 +3176,7 @@
       "description": "عبر الإنترنت messenger for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "meituan-waimai": {
-      "name": "Meituan Waimai",
+      "name": "ميتوان Waimai",
       "description": "عبر الإنترنت meituan waimai for food delivery, restaurant, Meituan, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "kfc": {
@@ -3187,11 +3188,11 @@
       "description": "عبر الإنترنت mcdonalds fast food for fast food, burger, fries, global. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "starbucks": {
-      "name": "Starbucks Coffee",
+      "name": "Starbucks قهوة",
       "description": "عبر الإنترنت starbucks coffee for coffee, cafe, drinks, global. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "luckin-coffee": {
-      "name": "Luckin Coffee",
+      "name": "Luckin قهوة",
       "description": "عبر الإنترنت luckin coffee for coffee, China, affordable, chain. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "xiaohongshu": {
@@ -3199,7 +3200,7 @@
       "description": "عبر الإنترنت xiaohongshu lifestyle for lifestyle, community, beauty, shopping. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "dianping": {
-      "name": "Dianping Reviews",
+      "name": "Dianping تقييمات",
       "description": "عبر الإنترنت dianping reviews for reviews, restaurant, مجموعة buy, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "mafengwo": {
@@ -3215,7 +3216,7 @@
       "description": "عبر الإنترنت qunar travel for travel, flights, hotels, comparison. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "trip-com": {
-      "name": "Trip Com",
+      "name": "رحلة Com",
       "description": "عبر الإنترنت trip com for travel, flights, hotels, tickets. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "fliggy": {
@@ -3271,11 +3272,11 @@
       "description": "عبر الإنترنت dxy healthcare for healthcare, medical, consultation, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "haodf": {
-      "name": "Haodf Medical",
+      "name": "Haodf طبي",
       "description": "عبر الإنترنت haodf medical for medical, consultation, doctor, booking. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "chunyu": {
-      "name": "Chunyu Medical",
+      "name": "Chunyu طبي",
       "description": "عبر الإنترنت chunyu medical for medical, consultation, health, advice. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "ali-health": {
@@ -3283,7 +3284,7 @@
       "description": "عبر الإنترنت ali health for healthcare, pharmacy, Alibaba, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "apple-watch": {
-      "name": "Apple Watch",
+      "name": "أبل Watch",
       "description": "عبر الإنترنت apple watch for wearable, Apple, health, fitness. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "garmin": {
@@ -3303,15 +3304,15 @@
       "description": "عبر الإنترنت stackoverflow programming for programming, Q&A, developers, coding. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "quora": {
-      "name": "Quora Q&A",
+      "name": "Quora أسئلة وأجوبة",
       "description": "عبر الإنترنت quora q&a for Q&A, knowledge, English, community. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wikipedia": {
-      "name": "Wikipedia Encyclopedia",
+      "name": "Wikipedia موسوعة",
       "description": "عبر الإنترنت wikipedia encyclopedia for encyclopedia, knowledge, مجاني, global. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "baike": {
-      "name": "Baike Encyclopedia",
+      "name": "Baike موسوعة",
       "description": "عبر الإنترنت baike encyclopedia for encyclopedia, صيني, knowledge, lookup. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wolfram-alpha": {
@@ -3351,11 +3352,11 @@
       "description": "عبر الإنترنت designboom design for design, news, architecture, product. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "Dezeen": {
-      "name": "Dezeen",
+      "name": "ديزين",
       "description": "عبر الإنترنت dezeen for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "coolhousing": {
-      "name": "Coolhousing Home",
+      "name": "Coolhousing منزل",
       "description": "عبر الإنترنت coolhousing home for home, design, 3D, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "qijia": {
@@ -3367,15 +3368,15 @@
       "description": "عبر الإنترنت huadi kitchen for kitchen, appliances, brand, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "midea": {
-      "name": "Midea Appliances",
+      "name": "Midea أجهزة",
       "description": "عبر الإنترنت midea appliances for appliances, AC, fridge, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "haier": {
-      "name": "Haier Appliances",
+      "name": "Haier أجهزة",
       "description": "عبر الإنترنت haier appliances for appliances, smart home, China, brand. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "gree": {
-      "name": "Gree Air Conditioner",
+      "name": "جري هواء مكيف",
       "description": "عبر الإنترنت gree air conditioner for air conditioner, appliances, China, brand. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "autohome": {
@@ -3391,7 +3392,7 @@
       "description": "عبر الإنترنت che168 automotive for automotive, comparison, quotes, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "carmax": {
-      "name": "Carmax Used Cars",
+      "name": "كارماكس مستعملة سيارات",
       "description": "عبر الإنترنت carmax used cars for used cars, retail, certified, US. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "truecar": {
@@ -3399,15 +3400,15 @@
       "description": "عبر الإنترنت truecar automotive for automotive, pricing, transparent, US. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "carvana": {
-      "name": "Carvana Used Cars",
+      "name": "كارفانا مستعملة سيارات",
       "description": "عبر الإنترنت carvana used cars for used cars, عبر الإنترنت, delivery, US. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "uber-eats": {
-      "name": "Uber Eats",
+      "name": "أوبر Eats",
       "description": "عبر الإنترنت uber eats for food delivery, Uber, restaurant, US. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "instacart": {
-      "name": "Instacart Grocery",
+      "name": "Instacart بقالة",
       "description": "عبر الإنترنت instacart grocery for grocery, delivery, supermarket, US. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "alipay": {
@@ -3415,7 +3416,7 @@
       "description": "عبر الإنترنت alipay payment for payment, mobile, China, Alibaba. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wechat-pay": {
-      "name": "Wechat Pay",
+      "name": "ويتشات Pay",
       "description": "عبر الإنترنت wechat pay for payment, mobile, WeChat, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "square": {
@@ -3431,15 +3432,15 @@
       "description": "عبر الإنترنت cash app for payment, transfer, Square, US. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "wise": {
-      "name": "Wise Remittance",
+      "name": "Wise تحويل",
       "description": "عبر الإنترنت wise remittance for remittance, cross-border, low fees, global. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "remitly": {
-      "name": "Remitly Remittance",
+      "name": "Remitly تحويل",
       "description": "عبر الإنترنت remitly remittance for remittance, fast, آمن, global. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "worldremit": {
-      "name": "Worldremit Remittance",
+      "name": "Worldremit تحويل",
       "description": "عبر الإنترنت worldremit remittance for remittance, global, coverage, transfer. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "xiaohongshu-app": {
@@ -3451,7 +3452,7 @@
       "description": "عبر الإنترنت tiktok فيديو for فيديو, short, global, creative. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "qq": {
-      "name": "Qq Messaging",
+      "name": "Qq مراسلة",
       "description": "عبر الإنترنت qq messaging for messaging, social, entertainment, Tencent. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "sina": {
@@ -3463,15 +3464,15 @@
       "description": "عبر الإنترنت sohu news for news, portal, فيديو, China. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "baidu": {
-      "name": "Baidu Search",
+      "name": "Baidu بحث",
       "description": "عبر الإنترنت baidu search for search, engine, China, information. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "google": {
-      "name": "Google Search",
+      "name": "جوجل بحث",
       "description": "عبر الإنترنت google search for search, engine, global, internet. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cooking-channels": {
-      "name": "Cooking Channels",
+      "name": "طبخ Channels",
       "description": "عبر الإنترنت cooking channels for food, فيديو, tutorial, cooking. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "food52": {
@@ -3495,11 +3496,11 @@
       "description": "عبر الإنترنت minimalist baker for baking, simple, recipes, bread. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "cookie-and-kate": {
-      "name": "Cookie And Kate",
+      "name": "كوكيز And كيت",
       "description": "عبر الإنترنت cookie and kate for vegetarian, healthy, recipes, nutrition. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "airbnb-experiences": {
-      "name": "Airbnb Experiences",
+      "name": "أير بي إن بي Experiences",
       "description": "عبر الإنترنت airbnb experiences for travel, experiences, culture, activities. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "vrbo": {
@@ -3511,7 +3512,7 @@
       "description": "عبر الإنترنت hotwire travel for travel, discount, flights, hotels. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rentcars": {
-      "name": "Rentcars Car Rental",
+      "name": "رينتكارز سيارة إيجار",
       "description": "عبر الإنترنت rentcars car rental for car rental, travel, comparison, self-drive. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "getyourguide": {
@@ -3519,7 +3520,7 @@
       "description": "عبر الإنترنت getyourguide travel for travel, activities, experience, booking. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "mapmyrun": {
-      "name": "Mapmyrun Running",
+      "name": "Mapmyrun جري",
       "description": "عبر الإنترنت mapmyrun running for running, sports, map, training. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "fitbod": {
@@ -3531,11 +3532,11 @@
       "description": "عبر الإنترنت strong fitness for fitness, strength, training, tracking. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "yoga-with-adriene": {
-      "name": "Yoga With Adriene",
+      "name": "يوغا مع أدريين",
       "description": "عبر الإنترنت yoga with adriene for yoga, health, relax, فيديو. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "daily-burn": {
-      "name": "Daily Burn",
+      "name": "يومي Burn",
       "description": "عبر الإنترنت daily burn for fitness, workout, classes, training. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "calendar-app": {
@@ -3563,11 +3564,11 @@
       "description": "عبر الإنترنت docusign for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "hellosign": {
-      "name": "Hellosign Signature",
+      "name": "Hellosign توقيع",
       "description": "عبر الإنترنت hellosign signature for signature, electronic, simple, contract. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "signnow": {
-      "name": "Signnow Signature",
+      "name": "Signnow توقيع",
       "description": "عبر الإنترنت signnow signature for signature, electronic, enterprise, collaboration. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "helpscout": {
@@ -3575,7 +3576,7 @@
       "description": "عبر الإنترنت helpscout support for support, email, فريق, collaboration. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tiller-money": {
-      "name": "Tiller Money",
+      "name": "Tiller مال",
       "description": "عبر الإنترنت tiller money for bookkeeping, automation, Google, finance. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "td-ameritrade": {
@@ -3583,7 +3584,7 @@
       "description": "عبر الإنترنت td ameritrade for investment, brokerage, stocks, trading. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "etrade": {
-      "name": "Etrade Investment",
+      "name": "Etrade استثمار",
       "description": "عبر الإنترنت etrade investment for investment, brokerage, stocks, research. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "memrise": {
@@ -3595,7 +3596,7 @@
       "description": "عبر الإنترنت anki for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "quizizz": {
-      "name": "Quizizz Learning",
+      "name": "Quizizz تعلم",
       "description": "عبر الإنترنت quizizz learning for learning, quiz, لعبة, interactive. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "kahoot": {
@@ -3603,7 +3604,7 @@
       "description": "عبر الإنترنت kahoot for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "edmodo": {
-      "name": "Edmodo Education",
+      "name": "Edmodo تعليم",
       "description": "عبر الإنترنت edmodo education for education, social, teachers, students. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "padlet": {
@@ -3615,11 +3616,11 @@
       "description": "عبر الإنترنت mural collaboration for collaboration, whiteboard, design, agile. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "microsoft-teams": {
-      "name": "Microsoft Teams",
+      "name": "مايكروسوفت Teams",
       "description": "عبر الإنترنت microsoft teams for collaboration, meetings, Microsoft, فريق. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "discord": {
-      "name": "Discord",
+      "name": "ديسكورد",
       "description": "عبر الإنترنت discord for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "reddit": {
@@ -3627,7 +3628,7 @@
       "description": "عبر الإنترنت reddit for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pinterest": {
-      "name": "Pinterest",
+      "name": "بينتيريست",
       "description": "عبر الإنترنت pinterest for utility. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "vimeo": {
@@ -3655,7 +3656,7 @@
       "description": "عبر الإنترنت suijimm عشوائي for عشوائي, مولد, يانصيب, cryptographic. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-org": {
-      "name": "Randomgenerator Org",
+      "name": "مولد عشوائي Org",
       "description": "عبر الإنترنت randomgenerator org for عشوائي, مولد, كلمة المرور, اسم, لون. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "online-password-generator": {
@@ -3675,7 +3676,7 @@
       "description": "عبر الإنترنت randly النرد for النرد, عشوائي, لعبة, education. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "coin-flip": {
-      "name": "Coin Flip",
+      "name": "عملة رقمية Flip",
       "description": "عبر الإنترنت coin flip for coin, flip, عشوائي, قرار. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "flippey": {
@@ -3747,7 +3748,7 @@
       "description": "عبر الإنترنت devhydra إيموجي for إيموجي, عشوائي, مولد, social. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "funnyemoji-ai": {
-      "name": "Funnyemoji Ai",
+      "name": "Funnyemoji ذكاء اصطناعي",
       "description": "عبر الإنترنت funnyemoji ai for إيموجي, AI, مولد, custom. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgeneratorlabs-joke": {
@@ -3771,7 +3772,7 @@
       "description": "عبر الإنترنت generatr joke for joke, API, عشوائي, humor. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "bmihealth-cn": {
-      "name": "Bmihealth Cn",
+      "name": "Bmihealth الصين",
       "description": "عبر الإنترنت bmihealth cn for BMI, health, وزن, آلة حاسبة. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "calculatorapp-bmi": {
@@ -3815,7 +3816,7 @@
       "description": "عبر الإنترنت dicerolleronline النرد for النرد, 3D, لعبة, عشوائي. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rolldice-org": {
-      "name": "Rolldice Org",
+      "name": "رول ديس Org",
       "description": "عبر الإنترنت rolldice org for النرد, custom, لعبة, عشوائي. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "gospinwheel-dice": {
@@ -3835,7 +3836,7 @@
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by PlayMetronome. لا app download required."
     },
     "playmetronome-taptempo": {
-      "name": "Taptempo Tempo",
+      "name": "تاب تيمبو تيمبو",
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by PlayMetronome. لا app download required."
     },
     "playmetronome-bpmfinder": {
@@ -3843,15 +3844,15 @@
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by PlayMetronome. لا app download required."
     },
     "playmetronome-tempoconverter": {
-      "name": "Tempoconverter Tempo",
+      "name": "Tempoconverter تيمبو",
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by PlayMetronome. لا app download required."
     },
     "playmetronome-interval": {
-      "name": "Interval Interval",
+      "name": "فترة فترة",
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by PlayMetronome. لا app download required."
     },
     "playmetronome-notes": {
-      "name": "Notes Note",
+      "name": "ملاحظات Note",
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by PlayMetronome. لا app download required."
     },
     "playmetronome-chordchart": {
@@ -3859,7 +3860,7 @@
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by PlayMetronome. لا app download required."
     },
     "playmetronome-frequency": {
-      "name": "Frequency Frequency",
+      "name": "تردد تردد",
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by PlayMetronome. لا app download required."
     },
     "uplup-coin": {
@@ -3871,15 +3872,15 @@
       "description": "عبر الإنترنت flipsimu coin for coin, flip, simulator, custom. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tapmetronome-subdivisions": {
-      "name": "Tapmetronome Subdivisions",
+      "name": "تاب ميترونوم Subdivisions",
       "description": "عبر الإنترنت tapmetronome subdivisions for مترونوم, subdivision, training, rhythm. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tapmetronome-timesignatures": {
-      "name": "Tapmetronome Timesignatures",
+      "name": "تاب ميترونوم Timesignatures",
       "description": "عبر الإنترنت tapmetronome timesignatures for time signature, rhythm, practice, music. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tapmetronome-taptempo": {
-      "name": "Tapmetronome Taptempo",
+      "name": "تاب ميترونوم Taptempo",
       "description": "عبر الإنترنت tapmetronome taptempo for tempo, BPM, tap, detector. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "justaguitartuner-metronome": {
@@ -3895,23 +3896,23 @@
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by FreeGuitarTuner. لا app download required."
     },
     "freeguitartuner-mandolin": {
-      "name": "Mandolin Mandolin",
+      "name": "ماندولين ماندولين",
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by FreeGuitarTuner. لا app download required."
     },
     "freeguitartuner-banjo": {
-      "name": "Banjo Banjo",
+      "name": "بانجو بانجو",
       "description": "Professional متصفح-based instrument أداة. Real-time audio processing powered by FreeGuitarTuner. لا app download required."
     },
     "getmoji-combos": {
-      "name": "Getmoji Combos",
+      "name": "غيت موجي Combos",
       "description": "عبر الإنترنت getmoji combos for إيموجي, combo, recommendation, social. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "getmoji-kaomoji": {
-      "name": "Getmoji Kaomoji",
+      "name": "غيت موجي Kaomoji",
       "description": "عبر الإنترنت getmoji kaomoji for kaomoji, إيموجي, Japanese, social. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "getmoji-symbols": {
-      "name": "Getmoji Symbols",
+      "name": "غيت موجي Symbols",
       "description": "عبر الإنترنت getmoji symbols for symbol, Unicode, special, نسخ. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "getmoji-emoji-for": {
@@ -3919,19 +3920,19 @@
       "description": "عبر الإنترنت getmoji إيموجي for for إيموجي, recommendation, occasion, social. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "getmoji-usecases": {
-      "name": "Getmoji Usecases",
+      "name": "غيت موجي Usecases",
       "description": "عبر الإنترنت getmoji usecases for إيموجي, guide, usage, education. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "flipsimu-intuition": {
-      "name": "Flipsimu Intuition",
+      "name": "فليب سيمو Intuition",
       "description": "عبر الإنترنت flipsimu intuition for intuition, test, لعبة, statistics. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "flipsimu-luck": {
-      "name": "Flipsimu Luck",
+      "name": "فليب سيمو Luck",
       "description": "عبر الإنترنت flipsimu luck for luck, test, لعبة, coin. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "flipsimu-tarot": {
-      "name": "Flipsimu Tarot",
+      "name": "فليب سيمو Tarot",
       "description": "عبر الإنترنت flipsimu tarot for tarot, نعم/لا, mystery, قرار. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "flipsimu-dice": {
@@ -3967,7 +3968,7 @@
       "description": "عبر الإنترنت randomgenerator اسم for اسم, عشوائي, مولد, international. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-username": {
-      "name": "Randomgenerator Username",
+      "name": "مولد عشوائي Username",
       "description": "عبر الإنترنت randomgenerator username for username, عشوائي, مولد, style. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-color": {
@@ -3975,7 +3976,7 @@
       "description": "عبر الإنترنت randomgenerator لون for لون, عشوائي, مولد, design. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-word": {
-      "name": "Randomgenerator Word",
+      "name": "مولد عشوائي Word",
       "description": "عبر الإنترنت randomgenerator word for word, عشوائي, مولد, education. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-dice": {
@@ -3983,7 +3984,7 @@
       "description": "عبر الإنترنت randomgenerator النرد for النرد, عشوائي, لعبة, D&D. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-letter": {
-      "name": "Randomgenerator Letter",
+      "name": "مولد عشوائي Letter",
       "description": "عبر الإنترنت randomgenerator letter for letter, عشوائي, مولد, simple. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-team": {
@@ -3991,15 +3992,15 @@
       "description": "عبر الإنترنت randomgenerator فريق for فريق, عشوائي, تجميع, لعبة. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-country": {
-      "name": "Randomgenerator Country",
+      "name": "مولد عشوائي Country",
       "description": "عبر الإنترنت randomgenerator country for country, عشوائي, مولد, geography. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-animal": {
-      "name": "Randomgenerator Animal",
+      "name": "مولد عشوائي Animal",
       "description": "عبر الإنترنت randomgenerator animal for animal, عشوائي, مولد, education. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-movie": {
-      "name": "Randomgenerator Movie",
+      "name": "مولد عشوائي فيلم",
       "description": "عبر الإنترنت randomgenerator movie for movie, عشوائي, recommendation, entertainment. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-email": {
@@ -4007,43 +4008,43 @@
       "description": "عبر الإنترنت randomgenerator email for email, عشوائي, test, development. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "randomgenerator-object": {
-      "name": "Randomgenerator Object",
+      "name": "مولد عشوائي Object",
       "description": "عبر الإنترنت randomgenerator object for object, عشوائي, مولد, creative. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rolldice-d4": {
-      "name": "Rolldice D4",
+      "name": "رول ديس D4",
       "description": "عبر الإنترنت rolldice d4 for النرد, D4, لعبة, D&D. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rolldice-d8": {
-      "name": "Rolldice D8",
+      "name": "رول ديس D8",
       "description": "عبر الإنترنت rolldice d8 for النرد, D8, لعبة, D&D. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rolldice-d10": {
-      "name": "Rolldice D10",
+      "name": "رول ديس D10",
       "description": "عبر الإنترنت rolldice d10 for النرد, D10, لعبة, percentile. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rolldice-d12": {
-      "name": "Rolldice D12",
+      "name": "رول ديس D12",
       "description": "عبر الإنترنت rolldice d12 for النرد, D12, لعبة, D&D. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "rolldice-d20": {
-      "name": "Rolldice D20",
+      "name": "رول ديس D20",
       "description": "عبر الإنترنت rolldice d20 for النرد, D20, لعبة, D&D. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tapmetronome-bpm72": {
-      "name": "Tapmetronome Bpm72",
+      "name": "تاب ميترونوم Bpm72",
       "description": "عبر الإنترنت tapmetronome bpm72 for مترونوم, 72BPM, slow, practice. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tapmetronome-bpm96": {
-      "name": "Tapmetronome Bpm96",
+      "name": "تاب ميترونوم Bpm96",
       "description": "عبر الإنترنت tapmetronome bpm96 for مترونوم, 96BPM, medium, practice. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tapmetronome-bpm120": {
-      "name": "Tapmetronome Bpm120",
+      "name": "تاب ميترونوم Bpm120",
       "description": "عبر الإنترنت tapmetronome bpm120 for مترونوم, 120BPM, قياسي, practice. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "tapmetronome-bpm140": {
-      "name": "Tapmetronome Bpm140",
+      "name": "تاب ميترونوم Bpm140",
       "description": "عبر الإنترنت tapmetronome bpm140 for مترونوم, 140BPM, fast, practice. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "justaguitartuner-dropd": {
@@ -4091,7 +4092,7 @@
       "description": "عبر الإنترنت عشوائي عجلة مولد. خيارات مخصصة، حركة دوران، واختيار عشوائي عادل. مثالي للألعاب والقرارات واليانصيب."
     },
     "spinwheel-usecases": {
-      "name": "Usecases Cases",
+      "name": "حالات الاستخدام Cases",
       "description": "عبر الإنترنت عشوائي عجلة مولد. خيارات مخصصة، حركة دوران، واختيار عشوائي عادل. مثالي للألعاب والقرارات واليانصيب."
     },
     "markdown-platform-converter": {
@@ -4099,7 +4100,7 @@
       "description": "Markdown محول مجاني: يدعم Markdown و محول والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "polyphonic-pinyin-annotator": {
-      "name": "Polyphonic Pinyin Annotator",
+      "name": "متعدد النغمات يين بين مشروح",
       "description": "Polyphonic Pinyin Annotator مجاني: يدعم Pinyin و Polyphone والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "audio-bpm-detector": {
@@ -4115,7 +4116,7 @@
       "description": "Timezone مؤقت مجاني: يدعم Timezone و Time والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "wc-2026-schedule": {
-      "name": "Wc 2026 Schedule",
+      "name": "كأس العالم ٢٠٢٦ جدول",
       "description": "محرر Wc 2026 Schedule عبر الإنترنت. خصّص World cup واضبط 2026 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "wc-champion-predictor": {
@@ -4127,7 +4128,7 @@
       "description": "أداة World Cup Poster صانع عبر الإنترنت مع الميزات: World cup و Poster و Cover. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "wc-ascii-art": {
-      "name": "Wc Ascii Art",
+      "name": "كأس العالم أسكي فن",
       "description": "أداة Wc Ascii Art عبر الإنترنت مع الميزات: Ascii و Text art و Football. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "wc-fan-avatar": {
@@ -4135,11 +4136,11 @@
       "description": "أداة Avatar World Cup مولد عبر الإنترنت مع الميزات: Avatar و World cup و Fan. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "wc-scoreboard-simulator": {
-      "name": "Wc Scoreboard Simulator",
+      "name": "كأس العالم لوحة النتائج محاكي",
       "description": "Wc Scoreboard Simulator مجاني: يدعم Scoreboard و Score والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "wc-name-decorator": {
-      "name": "Wc Name Decorator",
+      "name": "كأس العالم اسم مزين",
       "description": "Wc Name Decorator مجاني: يدعم Decorator و Fancy text والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "wevideo": {
@@ -4435,15 +4436,15 @@
       "description": "مستندات تعاونية خفيفة في الوقت الفعلي. دمج التعليمات البرمجية والجداول والمهام ومقاطع الفيديو ومعاينات الملفات مع تكامل سحابي عميق مع Dropbox. تحرير سلس على أي جهاز محمول."
     },
     "dezeen": {
-      "name": "Dezeen",
+      "name": "ديزين",
       "description": "موقع إعلامي متخصص في التصميم، يغطي الهندسة المعمارية والتصميم الداخلي وأخبار التصميم."
     },
     "nike-run-club": {
-      "name": "Nike Run Club",
+      "name": "نايكي جري نادي",
       "description": "Nike Run Club مجاني: يدعم Nike و Run والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "adidas-running-runtastic": {
-      "name": "Adidas Running Runtastic",
+      "name": "أديداس جري ران تاستيك",
       "description": "Adidas Running Runtastic مجاني: يدعم Adidas و Running والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "runkeeper": {
@@ -4451,7 +4452,7 @@
       "description": "Runkeeper مجاني: يدعم Runkeeper و 跑步 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "garmin-connect": {
-      "name": "Garmin Connect",
+      "name": "جارمين ربط",
       "description": "محرر Garmin Connect عبر الإنترنت. خصّص Garmin واضبط Connect وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "coros": {
@@ -4459,7 +4460,7 @@
       "description": "محرر Coros عبر الإنترنت. خصّص Coros واضبط 运动 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "polar-flow": {
-      "name": "Polar Flow",
+      "name": "بولار Flow",
       "description": "أداة Polar Flow عبر الإنترنت مع الميزات: Polar و Flow و 运动. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "vdot-calculator": {
@@ -4467,7 +4468,7 @@
       "description": "Vdot آلة حاسبة مجاني: يدعم Vdot و آلة حاسبة والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "active-race-results": {
-      "name": "Active Race Results",
+      "name": "نشط سباق نتائج",
       "description": "أداة Active Race Results عبر الإنترنت مع الميزات: Active و Race و Results. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "trainingpeaks": {
@@ -4475,7 +4476,7 @@
       "description": "أداة Trainingpeaks عبر الإنترنت مع الميزات: Trainingpeaks و 徒步 و 登山. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "final-surge": {
-      "name": "Final Surge",
+      "name": "نهائي Surge",
       "description": "Final Surge مجاني: يدعم Final و Surge والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "runalyze": {
@@ -4483,7 +4484,7 @@
       "description": "محرر Runalyze عبر الإنترنت. خصّص Runalyze واضبط 跑步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "stryd-power": {
-      "name": "Stryd Power",
+      "name": "Stryd قوة",
       "description": "Stryd Power مجاني: يدعم Stryd و Power والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "racewow": {
@@ -4491,11 +4492,11 @@
       "description": "محرر Racewow عبر الإنترنت. خصّص Racewow واضبط 跑步 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "lets-do-this": {
-      "name": "Lets Do This",
+      "name": "لنذهب فعل هذا",
       "description": "Lets Do This مجاني: يدعم Lets و Do والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "find-a-marathon": {
-      "name": "Find A Marathon",
+      "name": "البحث عن A ماراثون",
       "description": "محرر Find A Marathon عبر الإنترنت. خصّص Find واضبط A وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "running2win": {
@@ -4507,11 +4508,11 @@
       "description": "أداة Mcmillan آلة حاسبة عبر الإنترنت مع الميزات: Mcmillan و آلة حاسبة و 跑步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "marathon-handbook": {
-      "name": "Marathon Handbook",
+      "name": "ماراثون Handbook",
       "description": "محرر Marathon Handbook عبر الإنترنت. خصّص Marathon واضبط Handbook وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "cool-running": {
-      "name": "Cool Running",
+      "name": "Cool جري",
       "description": "أداة Cool Running عبر الإنترنت مع الميزات: Cool و Running و 跑步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "worlds-marathons": {
@@ -4531,15 +4532,15 @@
       "description": "أداة Treadmill Calc عبر الإنترنت مع الميزات: Treadmill و Calc و 跑步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "couch-to-5k": {
-      "name": "Couch To 5k",
+      "name": "أريكة إلى 5 كيلو",
       "description": "محرر Couch To 5k عبر الإنترنت. خصّص Couch واضبط To وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "race-predictor": {
-      "name": "Race Predictor",
+      "name": "سباق Predictor",
       "description": "محرر Race Predictor عبر الإنترنت. خصّص Race واضبط Predictor وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "ride-with-gps": {
-      "name": "Ride With Gps",
+      "name": "ركوب مع Gps",
       "description": "أداة Ride With Gps عبر الإنترنت مع الميزات: Ride و With و Gps. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "bikemap": {
@@ -4555,7 +4556,7 @@
       "description": "Wahoo Systm مجاني: يدعم Wahoo و Systm والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "trainerroad": {
-      "name": "Trainerroad",
+      "name": "ترينر رود",
       "description": "أداة Trainerroad عبر الإنترنت مع الميزات: Trainerroad و 骑行 و 公路车. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "zwift": {
@@ -4615,7 +4616,7 @@
       "description": "Veloviewer مجاني: يدعم Veloviewer و 骑行 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "todays-plan": {
-      "name": "Todays Plan",
+      "name": "Todays خطة",
       "description": "محرر Todays Plan عبر الإنترنت. خصّص Todays واضبط Plan وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "fullgaz": {
@@ -4635,11 +4636,11 @@
       "description": "محرر Sram Shift Calc عبر الإنترنت. خصّص Sram واضبط Shift وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "project-4321": {
-      "name": "Project 4321",
+      "name": "مشروع 4321",
       "description": "Project 4321 مجاني: يدعم Project و 4321 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "nike-training-club": {
-      "name": "Nike Training Club",
+      "name": "نايكي تدريب نادي",
       "description": "أداة Nike Training Club عبر الإنترنت مع الميزات: Nike و Training و Club. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "peloton-digital": {
@@ -4651,7 +4652,7 @@
       "description": "محرر Sweat App عبر الإنترنت. خصّص Sweat واضبط App وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "centr-chris-hemsworth": {
-      "name": "Centr Chris Hemsworth",
+      "name": "سنتر كريس هيمسوورث",
       "description": "Centr Chris Hemsworth مجاني: يدعم Centr و Chris والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "ob-fitness": {
@@ -4659,11 +4660,11 @@
       "description": "محرر Ob Fitness عبر الإنترنت. خصّص Ob واضبط Fitness وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "fitbit-premium": {
-      "name": "Fitbit Premium",
+      "name": "فيتبيت ممتاز",
       "description": "محرر Fitbit Premium عبر الإنترنت. خصّص Fitbit واضبط Premium وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "strong-lifts": {
-      "name": "Strong Lifts",
+      "name": "قوي Lifts",
       "description": "محرر Strong Lifts عبر الإنترنت. خصّص Strong واضبط Lifts وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "starting-strength": {
@@ -4683,15 +4684,15 @@
       "description": "أداة Fitocracy عبر الإنترنت مع الميزات: Fitocracy و 健身 و 力量训练. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "habit-nest": {
-      "name": "Habit Nest",
+      "name": "عادة Nest",
       "description": "محرر Habit Nest عبر الإنترنت. خصّص Habit واضبط Nest وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "workout-labs": {
-      "name": "Workout Labs",
+      "name": "تمرين Labs",
       "description": "محرر Workout Labs عبر الإنترنت. خصّص Workout واضبط Labs وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "freedom-strong": {
-      "name": "Freedom Strong",
+      "name": "Freedom قوي",
       "description": "Freedom Strong مجاني: يدعم Freedom و Strong والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "darebee": {
@@ -4703,7 +4704,7 @@
       "description": "12minuteathlete مجاني: يدعم 12minuteathlete و 健身 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "fitness-blender": {
-      "name": "Fitness Blender",
+      "name": "لياقة بدنية Blender",
       "description": "محرر Fitness Blender عبر الإنترنت. خصّص Fitness واضبط Blender وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "poosh": {
@@ -4711,11 +4712,11 @@
       "description": "Poosh مجاني: يدعم Poosh و 健身 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "p90x-schedule": {
-      "name": "P90x Schedule",
+      "name": "P90x جدول",
       "description": "محرر P90x Schedule عبر الإنترنت. خصّص P90x واضبط Schedule وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "insanity-workout": {
-      "name": "Insanity Workout",
+      "name": "Insanity تمرين",
       "description": "Insanity Workout مجاني: يدعم Insanity و Workout والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "musclewiki": {
@@ -4731,15 +4732,15 @@
       "description": "محرر Romwod عبر الإنترنت. خصّص Romwod واضبط 瑜伽 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "yoga-international": {
-      "name": "Yoga International",
+      "name": "يوغا International",
       "description": "Yoga International مجاني: يدعم Yoga و International والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "gaia-yoga": {
-      "name": "Gaia Yoga",
+      "name": "Gaia يوغا",
       "description": "Gaia Yoga مجاني: يدعم Gaia و Yoga والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "do-you-yoga": {
-      "name": "Do You Yoga",
+      "name": "فعل You يوغا",
       "description": "أداة Do You Yoga عبر الإنترنت مع الميزات: Do و You و Yoga. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "yoga-download": {
@@ -4747,7 +4748,7 @@
       "description": "أداة Yoga منزّل عبر الإنترنت مع الميزات: Yoga و Download و 瑜伽. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "my-yoga-works": {
-      "name": "My Yoga Works",
+      "name": "My يوغا Works",
       "description": "My Yoga Works مجاني: يدعم My و Yoga والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "pilates-anytime": {
@@ -4755,7 +4756,7 @@
       "description": "Pilates Anytime مجاني: يدعم Pilates و Anytime والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "club-pilates": {
-      "name": "Club Pilates",
+      "name": "نادي Pilates",
       "description": "أداة Club Pilates عبر الإنترنت مع الميزات: Club و Pilates و 瑜伽. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "blogilates": {
@@ -4767,15 +4768,15 @@
       "description": "أداة Stretching مؤقت عبر الإنترنت مع الميزات: Stretching و مؤقت و 瑜伽. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "foam-roller-guide": {
-      "name": "Foam Roller Guide",
+      "name": "Foam Roller دليل",
       "description": "أداة Foam Roller Guide عبر الإنترنت مع الميزات: Foam و Roller و Guide. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "yin-yoga-cheatsheet": {
-      "name": "Yin Yoga Cheatsheet",
+      "name": "Yin يوغا Cheatsheet",
       "description": "محرر Yin Yoga Cheatsheet عبر الإنترنت. خصّص Yin واضبط Yoga وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "yoga-journal": {
-      "name": "Yoga Journal",
+      "name": "يوغا Journal",
       "description": "Yoga Journal مجاني: يدعم Yoga و Journal والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "medito": {
@@ -4783,11 +4784,11 @@
       "description": "محرر Medito عبر الإنترنت. خصّص Medito واضبط 瑜伽 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "waking-up": {
-      "name": "Waking Up",
+      "name": "Waking فوق",
       "description": "محرر Waking Up عبر الإنترنت. خصّص Waking واضبط Up وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "mindful-cms": {
-      "name": "Mindful Cms",
+      "name": "Mindful CMS",
       "description": "محرر Mindful Cms عبر الإنترنت. خصّص Mindful واضبط Cms وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "breathwrk": {
@@ -4799,11 +4800,11 @@
       "description": "478 Breathing مجاني: يدعم 478 و Breathing والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "box-breathing": {
-      "name": "Box Breathing",
+      "name": "صندوق Breathing",
       "description": "أداة Box Breathing عبر الإنترنت مع الميزات: Box و Breathing و 瑜伽. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "progressive-muscle-relaxation": {
-      "name": "Progressive Muscle Relaxation",
+      "name": "Progressive Muscle استرخاء",
       "description": "محرر Progressive Muscle Relaxation عبر الإنترنت. خصّص Progressive واضبط Muscle وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "swim-com": {
@@ -4823,7 +4824,7 @@
       "description": "محرر Swimulator عبر الإنترنت. خصّص Swimulator واضبط 游泳 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "trainerroad-swim": {
-      "name": "Trainerroad Swim",
+      "name": "ترينر رود Swim",
       "description": "محرر Trainerroad Swim عبر الإنترنت. خصّص Trainerroad واضبط Swim وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "slowtwitch": {
@@ -4839,7 +4840,7 @@
       "description": "محرر Beginnertriathlete عبر الإنترنت. خصّص Beginnertriathlete واضبط 游泳 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "ironman-training-peaks": {
-      "name": "Ironman Training Peaks",
+      "name": "Ironman تدريب Peaks",
       "description": "أداة Ironman Training Peaks عبر الإنترنت مع الميزات: Ironman و Training و Peaks. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "suunto-ironman": {
@@ -4847,7 +4848,7 @@
       "description": "أداة Suunto Ironman عبر الإنترنت مع الميزات: Suunto و Ironman و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "kayak-sit-on-top": {
-      "name": "Kayak Sit On Top",
+      "name": "Kayak Sit On أعلى",
       "description": "أداة Kayak Sit On Top عبر الإنترنت مع الميزات: Kayak و Sit و On. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "surf-forecast": {
@@ -4875,7 +4876,7 @@
       "description": "أداة Hikingproject عبر الإنترنت مع الميزات: Hikingproject و 徒步 و 登山. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "mountain-project": {
-      "name": "Mountain Project",
+      "name": "جبل Project",
       "description": "Mountain Project مجاني: يدعم Mountain و Project والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "summitpost": {
@@ -4907,7 +4908,7 @@
       "description": "Campendium مجاني: يدعم Campendium و 徒步 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "free-campsites": {
-      "name": "Free Campsites",
+      "name": "مجاني Campsites",
       "description": "Free Campsites مجاني: يدعم Free و Campsites والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "hipcamp": {
@@ -4919,7 +4920,7 @@
       "description": "أداة Campsite Photos عبر الإنترنت مع الميزات: Campsite و Photos و 徒步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "noaa-weather": {
-      "name": "Noaa Weather",
+      "name": "Noaa طقس",
       "description": "أداة Noaa Weather عبر الإنترنت مع الميزات: Noaa و Weather و 徒步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "mountain-weather-forecast": {
@@ -4927,7 +4928,7 @@
       "description": "Mountain Weather Forecast مجاني: يدعم Mountain و Weather والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "meteoblue-mountain": {
-      "name": "Meteoblue Mountain",
+      "name": "Meteoblue جبل",
       "description": "أداة Meteoblue Mountain عبر الإنترنت مع الميزات: Meteoblue و Mountain و 徒步. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "wildsafe-bear": {
@@ -4935,15 +4936,15 @@
       "description": "محرر Wildsafe Bear عبر الإنترنت. خصّص Wildsafe واضبط Bear وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "sotaventos-mountain": {
-      "name": "Sotaventos Mountain",
+      "name": "Sotaventos جبل",
       "description": "محرر Sotaventos Mountain عبر الإنترنت. خصّص Sotaventos واضبط Mountain وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "nba-stats": {
-      "name": "Nba Stats",
+      "name": "Nba إحصائيات",
       "description": "أداة Nba Stats عبر الإنترنت مع الميزات: Nba و Stats و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "basketball-reference": {
-      "name": "Basketball Reference",
+      "name": "Basketball مرجع",
       "description": "محرر Basketball Reference عبر الإنترنت. خصّص Basketball واضبط Reference وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "bball-index": {
@@ -4975,19 +4976,19 @@
       "description": "أداة Understat عبر الإنترنت مع الميزات: Understat و 体育数据 و 实时比分. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "tennis-atp-tour": {
-      "name": "Tennis Atp Tour",
+      "name": "تنس Atp Tour",
       "description": "محرر Tennis Atp Tour عبر الإنترنت. خصّص Tennis واضبط Atp وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "tennis-wta": {
-      "name": "Tennis Wta",
+      "name": "تنس Wta",
       "description": "أداة Tennis Wta عبر الإنترنت مع الميزات: Tennis و Wta و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "tennis-abstract": {
-      "name": "Tennis Abstract",
+      "name": "تنس Abstract",
       "description": "محرر Tennis Abstract عبر الإنترنت. خصّص Tennis واضبط Abstract وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "flashscore-tennis": {
-      "name": "Flashscore Tennis",
+      "name": "Flashscore تنس",
       "description": "Flashscore Tennis مجاني: يدعم Flashscore و Tennis والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "bwf-badminton": {
@@ -4999,11 +5000,11 @@
       "description": "أداة Badminton Warehouse عبر الإنترنت مع الميزات: Badminton و Warehouse و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "ittf-world": {
-      "name": "Ittf World",
+      "name": "Ittf عالم",
       "description": "أداة Ittf World عبر الإنترنت مع الميزات: Ittf و World و 体育数据. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "tabletennis-reference": {
-      "name": "Tabletennis Reference",
+      "name": "Tabletennis مرجع",
       "description": "محرر Tabletennis Reference عبر الإنترنت. خصّص Tabletennis واضبط Reference وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "revspin": {
@@ -5019,31 +5020,31 @@
       "description": "أداة Volleybox عبر الإنترنت مع الميزات: Volleybox و 体育数据 و 实时比分. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "pga-tour-stats": {
-      "name": "Pga Tour Stats",
+      "name": "Pga Tour إحصائيات",
       "description": "Pga Tour Stats مجاني: يدعم Pga و Tour والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "handicap-differential": {
-      "name": "Handicap Differential",
+      "name": "عجز Differential",
       "description": "Handicap Differential مجاني: يدعم Handicap و Differential والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "golfnow-tee-times": {
-      "name": "Golfnow Tee Times",
+      "name": "Golfnow Tee مرات",
       "description": "Golfnow Tee Times مجاني: يدعم Golfnow و Tee والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "2k-sports-handicap": {
-      "name": "2k Sports Handicap",
+      "name": "2k رياضة عجز",
       "description": "محرر 2k Sports Handicap عبر الإنترنت. خصّص 2k واضبط Sports وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "golfshake-handicap": {
-      "name": "Golfshake Handicap",
+      "name": "Golfshake عجز",
       "description": "Golfshake Handicap مجاني: يدعم Golfshake و Handicap والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "ski-resort-stats": {
-      "name": "Ski Resort Stats",
+      "name": "Ski Resort إحصائيات",
       "description": "أداة Ski Resort Stats عبر الإنترنت مع الميزات: Ski و Resort و Stats. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "on-the-snow": {
-      "name": "On The Snow",
+      "name": "On الـ Snow",
       "description": "محرر On The Snow عبر الإنترنت. خصّص On واضبط The وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "snow-forecast": {
@@ -5067,7 +5068,7 @@
       "description": "أداة Snowboard Encyc عبر الإنترنت مع الميزات: Snowboard و Encyc و 滑雪. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "the-house-board-size": {
-      "name": "The House Board Size",
+      "name": "الـ House Board Size",
       "description": "أداة The House Board Size عبر الإنترنت مع الميزات: The و House و Board. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "skate-video-calendar": {
@@ -5083,11 +5084,11 @@
       "description": "محرر Concretedisciples عبر الإنترنت. خصّص Concretedisciples واضبط 滑雪 وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "roller-skate-size": {
-      "name": "Roller Skate Size",
+      "name": "Roller Skate حجم",
       "description": "أداة Roller Skate Size عبر الإنترنت مع الميزات: Roller و Skate و Size. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "inline-skate-buyers-guide": {
-      "name": "Inline Skate Buyers Guide",
+      "name": "Inline Skate Buyers دليل",
       "description": "Inline Skate Buyers Guide مجاني: يدعم Inline و Skate والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "bouldering-grade-converter": {
@@ -5135,7 +5136,7 @@
       "description": "Vo2max Calc مجاني: يدعم Vo2max و Calc والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "one-rm-1rep-max": {
-      "name": "One Rm 1rep Max",
+      "name": "واحد Rm 1rep أقصى",
       "description": "محرر One Rm 1rep Max عبر الإنترنت. خصّص One واضبط Rm وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "meal-prep-planner": {
@@ -5143,7 +5144,7 @@
       "description": "محرر Meal Prep Planner عبر الإنترنت. خصّص Meal واضبط Prep وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "pre-workout-examiner": {
-      "name": "Pre Workout Examiner",
+      "name": "Pre تمرين Examiner",
       "description": "أداة Pre Workout Examiner عبر الإنترنت مع الميزات: Pre و Workout و Examiner. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "eventbrite-sports": {
@@ -5163,7 +5164,7 @@
       "description": "محرر Ticketmaster Sports عبر الإنترنت. خصّص Ticketmaster واضبط Sports وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "sporting-news-scores": {
-      "name": "Sporting News Scores",
+      "name": "Sporting أخبار Scores",
       "description": "Sporting News Scores مجاني: يدعم Sporting و News والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "gearbrain": {
@@ -5179,7 +5180,7 @@
       "description": "أداة Outdoorgearlab عبر الإنترنت مع الميزات: Outdoorgearlab و 徒步 و 登山. تعمل مباشرة في متصفحك — مجانية وآمنة ولا تتطلب أي تثبيت."
     },
     "switchback-travel-gear": {
-      "name": "Switchback Travel Gear",
+      "name": "Switchback سفر Gear",
       "description": "محرر Switchback Travel Gear عبر الإنترنت. خصّص Switchback واضبط Travel وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "rotten-wire": {
@@ -5187,11 +5188,11 @@
       "description": "Rotten Wire مجاني: يدعم Rotten و Wire والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "strava-stats-dashboard": {
-      "name": "Strava Stats Dashboard",
+      "name": "Strava إحصائيات لوحة القيادة",
       "description": "محرر Strava Stats Dashboard عبر الإنترنت. خصّص Strava واضبط Stats وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "athlinks-race-results": {
-      "name": "Athlinks Race Results",
+      "name": "Athlinks سباق نتائج",
       "description": "محرر Athlinks Race Results عبر الإنترنت. خصّص Athlinks واضبط Race وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "sporttracks": {
@@ -5199,11 +5200,11 @@
       "description": "Sporttracks مجاني: يدعم Sporttracks و 运动 والمزيد. معالجة محلية بالكامل على جهازك لضمان أقصى درجات الخصوصية."
     },
     "trainerroad-announcer": {
-      "name": "Trainerroad Announcer",
+      "name": "ترينر رود Announcer",
       "description": "محرر Trainerroad Announcer عبر الإنترنت. خصّص Trainerroad واضبط Announcer وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "sport-psychology-today": {
-      "name": "Sport Psychology Today",
+      "name": "Sport Psychology اليوم",
       "description": "محرر Sport Psychology Today عبر الإنترنت. خصّص Sport واضبط Psychology وصدر فورًا. يعمل على جميع الأجهزة بدون تسجيل."
     },
     "canva-video": {
@@ -5223,7 +5224,7 @@
       "description": "استوديو فيديو متكامل داخل المتصفح: تسجيل وقص وترجمة تلقائية وإزالة خلفية ووضع علامة مائية وضغط."
     },
     "kapwing-tools": {
-      "name": "Kapwing Media Kit",
+      "name": "Kapwing إعلام Kit",
       "description": "واحة واحدة للميمات والفيديوهات القصيرة وGIF. إضافة نصوص وترجمة ولصق وقص وقوالب أغلفة لـ WeChat و Xiaohongshu."
     },
     "wistia-hosting": {
@@ -5231,11 +5232,11 @@
       "description": "استضافة فيديو عالية الدقة بدون إعلانات للتسويق. خرائط حرارة المشاهدين وجلب العملاء وعلامة تجارية للمشغل."
     },
     "vidyard-messages": {
-      "name": "Vidyard Video Messages",
+      "name": "Vidyard فيديو Messages",
       "description": "سجل رسائل فيديو غير متزامنة للشاشة والكاميرا مع تتبع المشاهدات — أوضح بكثير من الرسائل المكتوبة."
     },
     "loom-recorder": {
-      "name": "Loom Async Screen Share",
+      "name": "Loom Async Screen مشاركة",
       "description": "الأول عالمياً في تسجيل الشاشة غير المتزامن. يلتقط الشاشة والوجه والصوت وينشئ رابط مشاركة مع تعليقات لكل علامة زمنية."
     },
     "screencastify-chrome": {
@@ -5259,7 +5260,7 @@
       "description": "نص أو صورة إلى رسوم متحركة عالية الدقة بأسلوب الأنمي وثلاثي الأبعاد والواقعي والسيبر بانك، لنماذج أولية سريعة."
     },
     "submagic-auto": {
-      "name": "Submagic AI Captions",
+      "name": "Submagic ذكاء اصطناعي Captions",
       "description": "ينشئ تلقائياً ترجمة للفيديوهات القصيرة مع تلوين وتعليقات إيموجي وتصدير SRT ثنائي اللغة، لزيادة الانتشار الفيروسي."
     },
     "opus-clip": {
@@ -5267,19 +5268,19 @@
       "description": "يُقَطّع 10 مقاطع فيروسية من البودكاست الطويل مع خطاف تلقائي ونقاط انتشار وترجمة ومقاطع دعم — يوفر 80% من وقت التحرير."
     },
     "repurpose-io": {
-      "name": "Repurpose Content Repurposing",
+      "name": "Repurpose محتوى Repurposing",
       "description": "خط أنابيب آلي لإعادة استخدام المحتوى: يوتيوب إلى بودكاست ومقاطع قصيرة وتيك توك، ومن مدونة إلى معارض لينكدإن."
     },
     "riverside-fm": {
-      "name": "Riverside Remote Recording",
+      "name": "Riverside عن بعد Recording",
       "description": "مسجل مقابلات عن بعد فائق الجودة. يدخل الضيوف عبر المتصفح مع تسجيل محلي 4K متعدد المسارات وبث مباشر ونسخ تلقائي."
     },
     "streamlabs-obs": {
-      "name": "Streamlabs Live Assistant",
+      "name": "Streamlabs مباشر Assistant",
       "description": "حزمة تجميل البث المباشر: شاشات متراكبة وتأثيرات التبرعات وروبوتات الدردشة وألعاب تفاعلية وتنبيهات للمبتدئين."
     },
     "motion-array": {
-      "name": "Motion Array Stock",
+      "name": "حركة Array Stock",
       "description": "اشتراك شامل للموارد: قوالب PR/AE/FCPX، ومرشحات ألوان LUTs، وانتقالات، وموسيقى مؤثرات، ومحتوى عالي الدقة 8K مجاني."
     },
     "artlist-io": {
@@ -5307,7 +5308,7 @@
       "description": "صور عالية الدقة مجانية بمستوى المصممين من مصورين عالميين؛ استخدام تجاري حر مع واجهة برمجة عامة للتكامل."
     },
     "canva-design": {
-      "name": "Canva Design Platform",
+      "name": "كانفا تصميم Platform",
       "description": "تصميم بدون منحنى تعلم للشركات الناشئة. +1 مليون قالب لوجوهات وملصقات وبطاقات وعروض تقديمية وقوائم وبانرات."
     },
     "figma-design": {
@@ -5327,7 +5328,7 @@
       "description": "مساحة عمل متكاملة لخطط الأعمال والإجراءات الموحدة وإدارة العملاء ولوحات كانبان وخارطة الطريق، العقل الرقمي لكل حرفي مستقل."
     },
     "xmind-mindmap": {
-      "name": "XMind Mind Maps",
+      "name": "XMind Mind خرائط",
       "description": "خرائط ذهنية لتخطيط الأعمال بعروض هيكلية وتنظيمية وجانت ومصفوفة، مع تصدير سهل إلى PPT/Word/PDF بنقرة واحدة."
     },
     "processon-flow": {
@@ -5343,23 +5344,23 @@
       "description": "تصميم مخصص للسوق الصيني: قوائم المطاعم وملصقات WeChat ونشرات العقارات والتوظيف وتراخيص الخطوط المحلية."
     },
     "markup-hero": {
-      "name": "Markup Hero Screenshots",
+      "name": "Markup Hero لقطات شاشة",
       "description": "لقطات شاشة طويلة مشروحة + علامات PDF: أسهم وضبابية ونص وفسيفساء وملصقات متعددة الصور وروابط مشاركة."
     },
     "airtable-db": {
-      "name": "Airtable Low-Code DB",
+      "name": "Airtable Low-كود DB",
       "description": "قاعدة بيانات علائقية تشبه إكسل: إدارة العملاء والمشاريع والمخزون وتقويم المحتوى والنماذج والأتمتة — بدون برمجة."
     },
     "feishu-bitable": {
-      "name": "Feishu Bitable",
+      "name": "فيشو Bitable",
       "description": "Airtable صيني مزود بلوحات كانبان وجانت ومعرض ونماذج وتشغيل آلي وعلاقات بين الجداول مع سرعة عالية."
     },
     "tencent-survey": {
-      "name": "Tencent Surveys",
+      "name": "تينسنت Surveys",
       "description": "أفضل أداة أبحاث سوق في الصين. +30 نوع سؤال، وقفزات منطقية، ومكافآت وىشات، ومشاركة، ولوحة عينات."
     },
     "typeform-form": {
-      "name": "Typeform Beautiful Forms",
+      "name": "Typeform جميل Forms",
       "description": "نماذج عالية التحويل بسؤال واحد في كل مرة، بمعدل إكمال ثلاثي الأضعف. ضروري لجلب العملاء الدوليين."
     },
     "jotform-builder": {
@@ -5375,7 +5376,7 @@
       "description": "توقيعات إلكترونية متوافقة مع الصين: تشفير وطني، وإيداع كاتب العدل، والقبول القضائي، وتكامل واجهات برمجة."
     },
     "shangshangqian": {
-      "name": "ShangShangQian Enterprise Sign",
+      "name": "ShangShangQian مؤسسي توقيع",
       "description": "توقيعات إلكترونية للمؤسسات بـ +200 تكامل أصلي، وتوثيق بالاسم الحقيقي، وكتابة عدلية بلوكتشين، وتوقيعات جماعية."
     },
     "good-acc": {
@@ -5387,7 +5388,7 @@
       "description": "يتعرف على بطاقات الأعمال بصورة واحدة ويخزنها تلقائياً: إدارة العملاء، وتذكيرات بالمواعيد، وتهنئة بالمناسبات مع دعم بطاقات WeChat."
     },
     "aiqicha-query": {
-      "name": "AIQiCha Business Search",
+      "name": "AIQiCha Business بحث",
       "description": "بحث مجاني لشركات بايدو: بيانات الشركة والمساهمين والمخاطر القانونية والملكية الفكرية، لابد منه قبل أي تعاون."
     },
     "tianyancha": {
@@ -5399,7 +5400,7 @@
       "description": "بيئة تطوير صينية مدعومة بالذكاء الاصطناعي: نماذج لغة، وتكميل تلقائي، وإصلاح أخطاء، وتوليد وثائق ومعاينة مباشرة."
     },
     "codeium-free": {
-      "name": "Codeium Free AI Complete",
+      "name": "Codeium مجاني ذكاء اصطناعي Complete",
       "description": "إكمال كود ذكاء اصطناعي مجاني للأبد ل+70 لغة برمجة على VSCode وJetBrains وNeovim وVim مع دردشة وبحث وتكملة."
     },
     "dida-365": {
@@ -5407,19 +5408,19 @@
       "description": "تطبيق GTD الرائد في الصين: مهام + تقويم + بومودورو + تقارير تركيز، مع مزامنة سحابية وتذكيرات WeChat وDingTalk."
     },
     "upwork-market": {
-      "name": "Upwork Freelance Marketplace",
+      "name": "Upwork عمل حر سوق",
       "description": "أكبر سوق عالمي للحرفيين المستقلين: برمجة، وتصميم، وكتابة، وترجمة، وتحسين محركات، وبيانات، مع مدفوعات الدولار."
     },
     "fiverr-gig": {
-      "name": "Fiverr Gigs Marketplace",
+      "name": "Fiverr Gigs سوق",
       "description": "خدمات صغيرة تبدأ من 5 دولارات: شعارات، وفيديو، وتحسين محركات، وكتابة مغلفة كخدمات جاهزة للمبتدئين للبيع عالمياً."
     },
     "zbj-service": {
-      "name": "ZBJ Service Marketplace",
+      "name": "ZBJ خدمة سوق",
       "description": "أكبر منصة خدمات إبداعية في الصين: شعارات، هوية بصرية، مواقع، تطبيقات، وكتابة، وترجمة مع مقارنة عروض الأسعار."
     },
     "yuanling-work": {
-      "name": "YuanLing Remote Work",
+      "name": "YuanLing عن بعد عمل",
       "description": "لوظائف الصينية المستقلة والعن بعد: فواتير بالساعة أو ضمانات لكل مشروع مع مطابقة أدوار برمجة، وتصميم، وتشغيل، ومدير مشاريع."
     },
     "pj-work": {
@@ -5427,11 +5428,11 @@
       "description": "مطابقة مشاريع برمجة فقط في الصين: مطورون موثوقون، ودفعات لكل مرحلة، وتسليم أكواد مصدرية، وضمان صيانة ما بعد التسليم."
     },
     "toggl-track": {
-      "name": "Toggl Time Tracking",
+      "name": "Toggl وقت تتبع",
       "description": "ضروري للحرفيين بالساعة: مؤقت بنقرة واحدة، وعلامات للمشاريع والعملاء، وتقارير أسبوعية وشهرية، مع تصدير مباشر."
     },
     "harvest-invoice": {
-      "name": "Harvest Time + Invoicing",
+      "name": "Harvest وقت + Invoicing",
       "description": "موحد للتوقيت والفوترة: يحول ساعات العمل الفوترة تلقائياً إلى فواتير مع مدفوعات بطاقات وباي بال وتذكيرات ولوحة."
     },
     "freshbooks-cloud": {
@@ -5439,15 +5440,15 @@
       "description": "محاسبة سحابية للحرفيين المستقلين والفرق أقل من 5 عضو: وقت، وفوترة، ومصاريف، ومدفوعات، وباقات ضريبية."
     },
     "wave-invoicing": {
-      "name": "Wave Free Invoicing",
+      "name": "Wave مجاني Invoicing",
       "description": "فوترة + محاسبة مجانية للأبد بدون أي شروط: فواتير غير محددة وعملاء وتسوية بنكية وتقارير بتكلفة صفر."
     },
     "andco-freelance": {
-      "name": "AND.CO Freelance OS",
+      "name": "AND.CO عمل حر OS",
       "description": "نظام تشغيل للحرفيين مملوك لـ Fiverr: عروض، عقود، واتفاقيات سرية، وتوقيت، وفواتير، ومدفوعات، ومستندات ضريبية مع أتمتة 90%."
     },
     "bonsai-suite": {
-      "name": "Bonsai Freelance Bundle",
+      "name": "Bonsai عمل حر Bundle",
       "description": "حزمة ممتازة للحرفيين: +1000 قالب بمراجعة محاماة، وعروض بعلامتك التجارية، وفواتير دورية، وتقارير ضريبية للمحترفين."
     },
     "calendly-meeting": {
@@ -5459,15 +5460,15 @@
       "description": "المواعيد والمدفوعات لمقدمي الخدمات المستقلين. تقويمات لكل خدمة، ودائع، وإنشاء Zoom تلقائي وتذكيرات جماعية."
     },
     "tencent-meeting": {
-      "name": "Tencent Meetings",
+      "name": "تينسنت Meetings",
       "description": "أفضل برنامج اجتماعات في الصين. روابط بنقرة واحدة؛ الانضمام عبر WeChat بدون تطبيق، 2000 مشارك، وشرح الشاشة ومحاضر بالذكاء الاصطناعي."
     },
     "zoom-video": {
-      "name": "Zoom Video Meetings",
+      "name": "Zoom فيديو Meetings",
       "description": "المعيار العالمي لمؤتمرات الفيديو. متعدد المنصات، ومشاركة الشاشة، وغرف فرعية، وتسجيل سحابي — وضوح فائق."
     },
     "feishu-meeting": {
-      "name": "Feishu Minutes",
+      "name": "فيشو Minutes",
       "description": "اجتماعات مع محاضر ذكاء اصطناعي: نسخ مباشر وتصدير إلى Word/Notion، وتحديد المتحدثين والبحث حسب الموضوع — تقليل 90% من الملخصات."
     },
     "miro-whiteboard": {
@@ -5479,7 +5480,7 @@
       "description": "لوحة مراجعة تعاونية من InVision: نماذج أولية مع دمج Figما، وتعليقات مثبتة وتصويت بالملاحظات اللاصقة."
     },
     "skillshare-learn": {
-      "name": "Skillshare Creative Learning",
+      "name": "سكيل شير إبداعي Learning",
       "description": "الأفضل للحرفيين المستقلين لرفع المهارة: +28 ألف دورة عالية الجودة في التصميم والفيديو والبرمجة والتسويق والكتابة والعمل الحر."
     },
     "coursera-plus": {
@@ -5511,7 +5512,7 @@
       "description": "امزج خلفيات صوتية متعددة: مقهى، ومطر، وكتابة، ونار، وطيور، وقطارات. مستوى صوت لكل قناة مع مؤقت ومحرر نصوص صغير."
     },
     "forest-focus": {
-      "name": "Forest Phone Discipline",
+      "name": "غابة Phone Discipline",
       "description": "ازرع أشجار افتراضية أثناء الجلسات، إذا غادرت مبكراً تموت الشجرة، واجمع عملات لزراعة أشجار حقيقية في الحياة!"
     },
     "todoist-gtd": {
@@ -5519,7 +5520,7 @@
       "description": "تطبيق GTD العالمي الشهير مع فهم التواريخ باللغة الطبيعية، ومشاريع، وعلامات، وأولويات، وقواعد متكررة، ودرجات كارما."
     },
     "ms-todo": {
-      "name": "Microsoft To Do",
+      "name": "مايكروسوفت إلى فعل",
       "description": "مهام مجانية من مايكروسوفت مع تكامل عميق مع أوتلوك وتيمز وأوفيس. عروض: يومي/مخطط/مهم — سير عمل أوفيس سلس."
     },
     "obsidian-publish": {
@@ -5547,7 +5548,7 @@
       "description": "ترجمة ذكاء اصطناعي للترجمة من نت إيز: ترجمة ثنائية، وتحويل صوت إلى نص، وترجمة مستندات، بشبكة محلية سريعة وترخيص ICP."
     },
     "deepl-translate": {
-      "name": "DeepL Translator",
+      "name": "DeepL مترجم",
       "description": "مترجم ذكاء اصطناعي معترف به كالأفضل عالمياً: +30 لغة مع وعي سياقي وترجمة مستندات مع الحفاظ على التنسيق."
     },
     "ilovepdf-io": {
@@ -5555,11 +5556,11 @@
       "description": "أفضل أداة PDF في العالم: دمج، وتقسيم، وضغط، وتحويل إلى وورد/إكسل/PPT/صورة، وتشفير وعلامة مائية وتدوير وتعرف بصري."
     },
     "smallpdf-tools": {
-      "name": "SmallPDF Swiss Knife",
+      "name": "سمول PDF Swiss Knife",
       "description": "الأداة السويسرية للملفات PDF: +20 أداة نظيفة بدون إعلانات مع تكامل درايف جوجل ودروب بوكس واون درايف."
     },
     "kami-pdf": {
-      "name": "Kami PDF Annotator",
+      "name": "Kami PDF مشروح",
       "description": "تطبيق الشرح المفضل للمرحلة الدراسية K-12: تظليل نصي وصوتي وتوقيع ورسم على PDF/وورد/صور مع تكامل جوجل كلاسروم."
     },
     "lightpdf-cloud": {
@@ -5567,7 +5568,7 @@
       "description": "PDF سحابي صيني محلي: تحويل وورد/إكسل/PPT/JPG/TXT + التعرف الضوئي + تحرير + توقيع + علامة مائية قانونية."
     },
     "carbon-now": {
-      "name": "Carbon Code Screenshots",
+      "name": "Carbon كود Screenshots",
       "description": "المفضل لمدون التقنية: الصق الكود، واحصل على صور جميلة مع تلوين بناء الجملة وخلفية متدرجة وأرقام أسطر وزوايا دائرية."
     },
     "codepen-io": {
@@ -5575,15 +5576,15 @@
       "description": "أكبر مجتمع إلهام للواجهة الأمامية. أكواد HTML/CSS/JS حية، رسوم متحركة، وعناصر تفاعلية وفن CSS للإلهام اليومي."
     },
     "figma-community": {
-      "name": "Figma Community Files",
+      "name": "Figma مجتمع ملفات",
       "description": "منجم ذهبي للتصاميم المجانية: +1 مليون واجهة ولوحات بيانات ورسوم توضيحية وأيقونات ثلاثية الأبعاد، يمكن نسخها في فيجما."
     },
     "dribbble-design": {
-      "name": "Dribbble Design Inspiration",
+      "name": "Dribbble تصميم Inspiration",
       "description": "منصة البورتفوليو الأولى للمصممين: واجهات/تجربة مستخدم/توضيح/موشن/براندينج. انشر أعمالك لجلب عملاء حرين."
     },
     "behance-portfolio": {
-      "name": "Behance Creative Portfolios",
+      "name": "Behance إبداعي Portfolios",
       "description": "عروض إبداعية أدوبي: مشاريع طويلة للجرافيك وUI والعمارة والتصوير؛ أدوبي تالنت يربطك بوظائف متميزة."
     },
     "notion-templates": {
@@ -5591,7 +5592,7 @@
       "description": "آلاف قوالب نوشيون المجانية المختارة بعناية: OKR، دماغ ثانٍ، إدارة علاقات، مخطط سفر، متابعة العادات، ميزانية."
     },
     "product-hunt": {
-      "name": "Product Hunt Launches",
+      "name": "منتج Hunt Launches",
       "description": "المكان المناسب لاكتشاف المنتجات الجديدة: إطلاق SaaS والأدوات والتطبيقات والذكاء الاصطناعي يوميًا. يدرس المؤسسون المنافسين هناك."
     },
     "hunt-webflow": {

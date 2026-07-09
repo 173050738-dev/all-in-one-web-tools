@@ -50,8 +50,7 @@ import { isTopWorkflowSlug } from '@/lib/topSlugs';
 function getWorkflowDetailUrl(locale: string, workflow: { id: string; slug?: string; isCustom?: boolean }): string {
   if (workflow.isCustom) return `/${locale}/workflow/custom/${workflow.id}`;
   const slug = workflow.slug || workflow.id;
-  if (isTopWorkflowSlug(slug)) return `/${locale}/workflow/${slug}`;
-  return `/${locale}/workflow/detail/?slug=${encodeURIComponent(slug)}`;
+  return `/${locale}/workflow/${slug}/`;
 }
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {

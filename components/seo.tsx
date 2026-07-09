@@ -235,7 +235,7 @@ function toolKey(tool: { id?: string; slug?: string }, suffix: 'name' | 'descrip
   return `${key}.${suffix}`;
 }
 
-export function translateToolName(tool: { id?: string; slug?: string; name: string }, locale: SeoLocale, toolsT?: (key: string) => string) {
+export function translateToolName(tool: { id?: string; slug?: string; name: string; nameEn?: string }, locale: SeoLocale, toolsT?: (key: string) => string) {
   if (locale === 'zh') return tool.name;
   if (toolsT) {
     try {
@@ -246,11 +246,11 @@ export function translateToolName(tool: { id?: string; slug?: string; name: stri
       /* ignore */
     }
   }
-  return tool.name;
+  return tool.nameEn || tool.name;
 }
 
 export function translateToolDescription(
-  tool: { id?: string; slug?: string; description: string },
+  tool: { id?: string; slug?: string; description: string; descriptionEn?: string },
   locale: SeoLocale,
   toolsT?: (key: string) => string,
 ) {
@@ -264,7 +264,7 @@ export function translateToolDescription(
       /* ignore */
     }
   }
-  return tool.description;
+  return tool.descriptionEn || tool.description;
 }
 
 export function translateCategoryName(
@@ -411,12 +411,12 @@ export function toolGenerateMetadataSync(
   }
 
   const json = loadMessagesSync(l);
-  const name = translateFromJson(json, 'tools', `${tool.slug || tool.id}.name`, tool.name);
+  const name = translateFromJson(json, 'tools', `${tool.slug || tool.id}.name`, tool.nameEn || tool.name);
   const description = translateFromJson(
     json,
     'tools',
     `${tool.slug || tool.id}.description`,
-    tool.description,
+    tool.descriptionEn || tool.description,
   );
   const categoryName = translateFromJson(json, 'sidebar', tool.category, categories.find((c) => c.id === tool.category)?.name || tool.category);
   const title = `${name} — ${categoryName} | ${baseMeta.siteName}`;
@@ -737,8 +737,8 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
   const tool = getToolBySlug(slug);
   if (!tool) return null;
   const baseMeta = SITE_META_BAREMAP[l];
-  const name = translateForJsonld(l, 'tools', `${tool.slug || tool.id}.name`, tool.name);
-  const description = translateForJsonld(l, 'tools', `${tool.slug || tool.id}.description`, tool.description);
+  const name = translateForJsonld(l, 'tools', `${tool.slug || tool.id}.name`, tool.nameEn || tool.name);
+  const description = translateForJsonld(l, 'tools', `${tool.slug || tool.id}.description`, tool.descriptionEn || tool.description);
   const categoryName = translateForJsonld(
     l,
     'sidebar',
