@@ -111,7 +111,7 @@ function formatDate(iso: string, locale: SeoLocale): string {
     const d = new Date(iso);
     const intl = new Intl.DateTimeFormat(
       locale === 'zh' ? 'zh-CN' : locale === 'hi' ? 'hi-IN' : locale === 'es' ? 'es-ES' : locale === 'fr' ? 'fr-FR' : locale === 'ar' ? 'ar-SA' : 'en-US',
-      { year: 'numeric', month: 'short', day: 'numeric' },
+      { year: 'numeric', month: 'short', day: 'numeric', calendar: 'gregory', numberingSystem: 'latn' },
     );
     return intl.format(d);
   } catch {

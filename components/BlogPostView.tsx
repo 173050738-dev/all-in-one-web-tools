@@ -41,12 +41,12 @@ export default function BlogPostView({ locale, slug }: Props) {
     try {
       return new Date(post.updatedAt || post.publishedAt).toLocaleDateString(
         locale === 'zh' ? 'zh-CN' : locale === 'hi' ? 'hi-IN' : locale,
-        { year: 'numeric', month: 'long', day: 'numeric' },
+        { year: 'numeric', month: 'long', day: 'numeric', calendar: 'gregory', numberingSystem: 'latn' },
       );
     } catch {
       return (post.updatedAt || post.publishedAt).slice(0, 10);
     }
-  }, [post, locale]);
+  }, [post.updatedAt, post.publishedAt, locale]);
 
   const i18n = useMemo(() => {
     switch (locale) {

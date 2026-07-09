@@ -284,7 +284,7 @@ export const useFavoritesStore = create<FavoritesState>()(
         set({ cloudSyncStatus: 'syncing', lastCloudError: null });
         try {
           const syncFn: ((slugs: string[]) => Promise<string[] | { next?: string[]; favorites?: string[] }>) | undefined =
-            authState.bulkSyncFavorites || authState.syncFavorites;
+            authState.syncFavorites;
           const r = syncFn ? await syncFn(pendingSlugs) : pendingSlugs;
           const nextSlugs: string[] = Array.isArray(r)
             ? r

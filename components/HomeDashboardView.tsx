@@ -1,6 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { useState, useMemo, useEffect, useRef } from 'react';
+import dynamic from 'next/dynamic';
 import Sidebar from '@/components/Sidebar';
 import ToolCard from '@/components/ToolCard';
 import SearchDropdown from '@/components/SearchDropdown';
@@ -12,6 +13,16 @@ import { useAuthStore } from '@/stores/auth';
 import { useFavoritesStore } from '@/stores/favorites';
 import { buildRecommendedOrder, type RecommendProfile } from '@/lib/recommend';
 import { Layers, Search, Sparkles, Flame, BookOpen } from 'lucide-react';
+
+const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
+  ssr: false,
+  loading: () => (
+    <div
+      aria-hidden="true"
+      className="w-full col-span-full sm:col-span-2 lg:col-span-3 xl:col-span-4 rounded-xl border border-transparent min-h-[130px] sm:min-h-[150px]"
+    />
+  ),
+});
 
 const INITIAL_COUNT = 30;
 const LOAD_MORE_COUNT = 30;
@@ -242,9 +253,36 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
               </div>
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-3 lg:gap-4'>
-              {displayedTools.map((tool) => (
-                <ToolCard key={tool.id} tool={tool as any} locale={locale} selectable={selectedCategory !== 'all' || searchQuery.trim() !== ''} />
-              ))}
+              {(() => {
+                const nodes: React.ReactNode[] = [];
+                let adCount = 0;
+                const MAX_ADS = 3;
+                const AD_INTERVAL = 8;
+                for (let i = 0; i < displayedTools.length; i++) {
+                  const tool = displayedTools[i];
+                  nodes.push(
+                    <ToolCard
+                      key={tool.id}
+                      tool={tool as any}
+                      locale={locale}
+                      selectable={selectedCategory !== 'all' || searchQuery.trim() !== ''}
+                    />
+                  );
+                  const pos = i + 1;
+                  if (adCount < MAX_ADS && pos % AD_INTERVAL === 0 && pos < displayedTools.length) {
+                    adCount++;
+                    nodes.push(
+                      <AdSlot
+                        key={`infeed-ad-${adCount}-${pos}-${selectedCategory}-${sortBy}`}
+                        slot={`home-infeed-${adCount}-${locale}`}
+                        size="in-feed"
+                        showPlaceholder={true}
+                      />
+                    );
+                  }
+                }
+                return nodes;
+              })()}
             </div>
             {filteredTools.length === 0 && (
               <div className='text-center py-12'>

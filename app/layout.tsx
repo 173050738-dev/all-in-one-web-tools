@@ -18,6 +18,9 @@ const ADSENSE_ENABLED = ADSENSE_PUBLISHER_ID.startsWith('ca-pub-');
 const ADSENSE_SRC = ADSENSE_ENABLED
   ? `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`
   : '';
+const ADSENSE_INIT_INLINE = ADSENSE_ENABLED
+  ? `window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.push({ google_ad_client: "${ADSENSE_PUBLISHER_ID}", enable_page_level_ads: true });`
+  : '';
 
 const SITE_URL = 'https://korelyy.com';
 const OG_IMAGE = '/og-image.png';
@@ -257,6 +260,15 @@ export default async function RootLayout({
                 crossOrigin="anonymous"
                 data-ad-client={ADSENSE_PUBLISHER_ID}
                 async
+                suppressHydrationWarning
+              />
+            )}
+            {ADSENSE_ENABLED && (
+              <Script
+                id="adsbygoogle-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{ __html: ADSENSE_INIT_INLINE }}
+                data-ad-client={ADSENSE_PUBLISHER_ID}
                 suppressHydrationWarning
               />
             )}

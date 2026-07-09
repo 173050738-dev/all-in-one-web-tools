@@ -1,5 +1,6 @@
-import type { SeoLocale } from '@/components/seo';
-import { KNOWN_LOCALES } from '@/components/seo';
+export type SeoLocale = 'en' | 'zh' | 'es' | 'hi' | 'fr' | 'ar';
+const KNOWN_LOCALES: readonly SeoLocale[] = ['en', 'zh', 'es', 'hi', 'fr', 'ar'] as const;
+export { KNOWN_LOCALES };
 
 export interface NewsItem {
   id: string;

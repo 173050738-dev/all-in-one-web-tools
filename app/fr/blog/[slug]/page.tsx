@@ -16,16 +16,18 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  return blogPostGenerateMetadata(LOCALE, params.slug);
+  const { slug } = await params;
+  return blogPostGenerateMetadata(LOCALE, slug);
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   return (
     <>
-      <BlogPostJsonLd locale={LOCALE} slug={params.slug} />
-      <BlogPostView locale={LOCALE} slug={params.slug} />
+      <BlogPostJsonLd locale={LOCALE} slug={slug} />
+      <BlogPostView locale={LOCALE} slug={slug} />
     </>
   );
 }

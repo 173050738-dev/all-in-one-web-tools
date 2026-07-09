@@ -18910,7 +18910,8 @@ export const tools: Tool[] = [
     platform: 'all',
     accessTag: 'vpn-required',
     signup: ['no-signup'],
-  },
+  }
+,
   {
     id: 'canva-video', slug: 'canva-video', name: 'Canva视频编辑器',
     description: '零基础短视频制作神器，10000+视频模板一键套用，支持多比例横竖屏切换，剪字幕、加转场、换背景音乐手机端全搞定。',
