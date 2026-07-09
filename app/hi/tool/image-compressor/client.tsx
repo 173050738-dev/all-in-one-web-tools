@@ -1,10 +1,11 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import { ArrowLeft, Image as ImageIcon, Download, Upload, Settings, Home, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Image as ImageIcon, Download, Upload, Settings, Home, ChevronRight, Grid3X3 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { getToolBySlug, getRelatedTools } from '@/data/tools';
 import ToolCard from '@/components/ToolCard';
 import { usePreferencesStore } from '@/stores/preferences';
+import { usePipelineStore } from '@/stores/pipeline';
 import { categories } from '@/data/categories';
 import { useParams, usePathname } from 'next/navigation';
 
@@ -29,7 +30,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
   const __toolsT = useTranslations('tools');
   const __i18nSlug = (resolvedParams?.slug ?? pathSlug) as string;
   const __i18nName = (() => {
-    const fb = tool?.name ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.name ?? '') : (((tool as any).nameEn ?? '') || (tool.name ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.name')
@@ -37,7 +38,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
       ?? fb;
   })();
   const __i18nDesc = (() => {
-    const fb = tool?.description ?? '';
+    const fb = !tool ? '' : (resolvedLocale === 'zh' ? (tool.description ?? '') : (((tool as any).descriptionEn ?? '') || (tool.description ?? '')));
     if (resolvedLocale === 'zh' || !tool) return fb;
     const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
     return tryKey(__i18nSlug + '.description')
@@ -97,7 +98,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
     const file = e.target.files?.[0];
     if (!file) return;
     if (!file.type.startsWith('image/')) {
-      alert('请选择图片文件');
+      alert('कृपया एक छवि फ़ाइल चुनें');
       return;
     }
     setOriginalFile(file);
@@ -116,7 +117,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
     const file = e.dataTransfer.files?.[0];
     if (!file) return;
     if (!file.type.startsWith('image/')) {
-      alert('请选择图片文件');
+      alert('कृपया एक छवि फ़ाइल चुनें');
       return;
     }
     setOriginalFile(file);
@@ -174,6 +175,19 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
     link.download = `compressed_${originalFile.name.replace(/\.[^/.]+$/, '')}${ext}`;
     link.href = compressedImage;
     link.click();
+  };
+
+  const sendToGridCutter = () => {
+    if (!compressedImage) return;
+    usePipelineStore.getState().setPayload({
+      kind: 'image',
+      dataUrl: compressedImage,
+      fileName: originalFile?.name,
+      mimeType: originalFile?.type,
+      source: 'image-compressor',
+      createdAt: Date.now(),
+    });
+    window.location.href = '/' + resolvedLocale + '/tool/grid-cutter/';
   };
 
   const savedPercent = originalSize > 0 && compressedSize > 0
@@ -253,10 +267,10 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
               />
               <Upload className='h-10 w-10 sm:h-12 sm:w-12 mx-auto text-gray-400 mb-3 sm:mb-4' />
               <p className='text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium mb-1'>
-                点击或拖拽上传图片
+                छवि अपलोड करने के लिए क्लिक करें या खींचें
               </p>
               <p className='text-xs sm:text-sm text-gray-500 dark:text-gray-400'>
-                支持 JPG、PNG、WebP、GIF 等格式
+                JPG, PNG, WebP, GIF आदि स्वरूप समर्थित
               </p>
             </div>
 
@@ -265,7 +279,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'>
                   <div>
                     <div className='flex items-center justify-between mb-2'>
-                      <label className='block text-sm font-medium text-gray-700 dark:text-gray-300'>原图</label>
+                      <label className='block text-sm font-medium text-gray-700 dark:text-gray-300'>मूल</label>
                       <span className='text-xs sm:text-sm text-gray-500 dark:text-gray-400'>{formatSize(originalSize)}</span>
                     </div>
                     <div className='rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden bg-gray-50 dark:bg-gray-800'>
@@ -274,7 +288,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                   </div>
                   <div>
                     <div className='flex items-center justify-between mb-2'>
-                      <label className='block text-sm font-medium text-gray-700 dark:text-gray-300'>压缩后</label>
+                      <label className='block text-sm font-medium text-gray-700 dark:text-gray-300'>संपीड़ित</label>
                       <span className='text-xs sm:text-sm text-gray-500 dark:text-gray-400'>
                         {compressedSize > 0 ? formatSize(compressedSize) : '--'}
                         {savedPercent > 0 && <span className='text-green-500 ml-1'>(-{savedPercent}%)</span>}
@@ -285,7 +299,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                         <img src={compressedImage} alt='Compressed' className='w-full h-40 sm:h-48 object-contain' />
                       ) : (
                         <div className='w-full h-40 sm:h-48 flex items-center justify-center text-gray-400 text-sm'>
-                          点击开始压缩
+                          संपीड़न शुरू करने के लिए दबाएँ
                         </div>
                       )}
                     </div>
@@ -295,12 +309,12 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                 <div className='space-y-3 sm:space-y-4 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg'>
                   <div className='flex items-center gap-2'>
                     <Settings className='h-4 w-4 sm:h-5 sm:w-5 text-gray-500' />
-                    <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>压缩设置</span>
+                    <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>संपीड़न सेटिंग्स</span>
                   </div>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'>
                     <div>
                       <div className='flex items-center justify-between mb-1'>
-                        <label className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>压缩质量</label>
+                        <label className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>गुणवत्ता</label>
                         <span className='text-xs sm:text-sm text-primary-600 dark:text-primary-400 font-medium'>{Math.round(quality * 100)}%</span>
                       </div>
                       <input
@@ -315,7 +329,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                     </div>
                     <div>
                       <div className='flex items-center justify-between mb-1'>
-                        <label className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>最大宽度</label>
+                        <label className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>अधिकतम चौड़ाई</label>
                         <span className='text-xs sm:text-sm text-primary-600 dark:text-primary-400 font-medium'>{maxWidth}px</span>
                       </div>
                       <select
@@ -328,19 +342,19 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                         <option value={1024}>1024px</option>
                         <option value={800}>800px</option>
                         <option value={640}>640px</option>
-                        <option value={4096}>不限制 (原尺寸)</option>
+                        <option value={4096}>असीमित (मूल)</option>
                       </select>
                     </div>
                   </div>
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'>
+                <div className='grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4'>
                   <button
                     onClick={compressImage}
                     disabled={isProcessing}
                     className='w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed'
                   >
-                    {isProcessing ? '压缩中...' : '开始压缩'}
+                    {isProcessing ? 'संपीड़न हो रहा है...' : 'संपीड़न शुरू करें'}
                   </button>
                   <button
                     onClick={downloadImage}
@@ -348,7 +362,16 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                     className='w-full flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'
                   >
                     <Download className='h-4 w-4 sm:h-5 sm:w-5' />
-                    下载压缩图
+                    संपीड़ित डाउनलोड करें
+                  </button>
+
+                  <button
+                    onClick={sendToGridCutter}
+                    disabled={!compressedImage}
+                    className='w-full flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors min-h-[48px]'
+                  >
+                    <Grid3X3 className='h-4 w-4 sm:h-5 sm:w-5' />
+                    ग्रिड कटर में भेजें
                   </button>
                 </div>
               </div>
@@ -361,29 +384,29 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           <div className='card p-4 sm:p-6'>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('guide')}</h3>
             <p className='text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4'>
-              上传图片后调整压缩质量和尺寸，点击压缩即可快速减小图片文件大小，完全本地处理，不上传服务器。
+              छवि अपलोड करने के बाद संपीड़न गुणवत्ता और आकार समायोजित करें। फ़ाइल आकार कम करने के लिए दबाएँ। 100% स्थानीय प्रसंस्करण, कोई अपलोड नहीं।
             </p>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('features')}</h3>
             <ul className='space-y-2'>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                纯本地处理，保护隐私
+                केवल स्थानीय, गोपनीयता प्रथम
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                支持批量调节压缩质量
+                बैच क्वालिटी कंट्रोल
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                自定义最大宽度限制
+                कस्टम अधिकतम चौड़ाई सीमा
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                实时预览压缩效果
+                रियल-टाइम संपीड़न पूर्वावलोकन
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                支持拖拽上传
+                ड्रैग-एंड-ड्रॉप अपलोड
               </li>
             </ul>
           </div>

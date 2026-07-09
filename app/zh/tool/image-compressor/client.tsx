@@ -1,10 +1,11 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import { ArrowLeft, Image as ImageIcon, Download, Upload, Settings, Home, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Image as ImageIcon, Download, Upload, Settings, Home, ChevronRight, Grid3X3 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { getToolBySlug, getRelatedTools } from '@/data/tools';
 import ToolCard from '@/components/ToolCard';
 import { usePreferencesStore } from '@/stores/preferences';
+import { usePipelineStore } from '@/stores/pipeline';
 import { categories } from '@/data/categories';
 
 import { useParams, usePathname } from 'next/navigation';
@@ -176,6 +177,19 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
     link.click();
   };
 
+  const sendToGridCutter = () => {
+    if (!compressedImage) return;
+    usePipelineStore.getState().setPayload({
+      kind: 'image',
+      dataUrl: compressedImage,
+      fileName: originalFile?.name,
+      mimeType: originalFile?.type,
+      source: 'image-compressor',
+      createdAt: Date.now(),
+    });
+    window.location.href = '/' + resolvedLocale + '/tool/grid-cutter/';
+  };
+
   const savedPercent = originalSize > 0 && compressedSize > 0
     ? Math.round(((originalSize - compressedSize) / originalSize) * 100)
     : 0;
@@ -334,7 +348,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                   </div>
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'>
+                <div className='grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4'>
                   <button
                     onClick={compressImage}
                     disabled={isProcessing}
@@ -349,6 +363,15 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
                   >
                     <Download className='h-4 w-4 sm:h-5 sm:w-5' />
                     下载压缩图
+                  </button>
+
+                  <button
+                    onClick={sendToGridCutter}
+                    disabled={!compressedImage}
+                    className='w-full flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors min-h-[48px]'
+                  >
+                    <Grid3X3 className='h-4 w-4 sm:h-5 sm:w-5' />
+                    发送到九宫格切图
                   </button>
                 </div>
               </div>

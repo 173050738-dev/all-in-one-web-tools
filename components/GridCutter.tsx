@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
-import { Upload, Download, Grid3X3, RotateCcw, Image as ImageIcon, Check } from 'lucide-react';
+import { useState, useRef, useCallback, useEffect } from 'react';
+import { Upload, Download, Grid3X3, RotateCcw, Image as ImageIcon, Check, Inbox } from 'lucide-react';
+import { usePipelineStore, type PipelinePayload } from '@/stores/pipeline';
 
 interface GridCutterProps {
   locale?: string;
@@ -23,6 +24,7 @@ export default function GridCutter({ locale = 'zh' }: GridCutterProps) {
       downloadAll: '下载全部',
       tip: '按顺序保存到相册，发朋友圈更有逼格 ✨',
       slice: '切片',
+      received: '已从「图片压缩」接收图片',
     },
     en: {
       back: 'Back',
@@ -38,6 +40,7 @@ export default function GridCutter({ locale = 'zh' }: GridCutterProps) {
       downloadAll: 'Download All',
       tip: 'Save in order to your gallery. Perfect for social posts ✨',
       slice: 'Slice',
+      received: 'Image received from Image Compressor',
     },
     hi: {
       back: 'वापस',
@@ -53,6 +56,7 @@ export default function GridCutter({ locale = 'zh' }: GridCutterProps) {
       downloadAll: 'सभी डाउनलोड',
       tip: 'गैलरी में क्रम से सेव करें। सोशल पोस्ट के लिए बेहतरीन ✨',
       slice: 'टाइल',
+      received: 'इमेज कंप्रेसर से छवि प्राप्त हुई',
     },
     fr: {
       back: 'Retour',
@@ -68,6 +72,7 @@ export default function GridCutter({ locale = 'zh' }: GridCutterProps) {
       downloadAll: 'Tout Télécharger',
       tip: 'Enregistrez dans l\'ordre dans votre galerie. Parfait pour les posts ✨',
       slice: 'Carreau',
+      received: 'Image reçue du Compresseur d\'Images',
     },
     es: {
       back: 'Volver',
@@ -83,6 +88,7 @@ export default function GridCutter({ locale = 'zh' }: GridCutterProps) {
       downloadAll: 'Descargar Todo',
       tip: 'Guarda en orden en tu galería. Perfecto para publicaciones ✨',
       slice: 'Baldosa',
+      received: 'Imagen recibida del Compresor de Imágenes',
     },
     ar: {
       back: 'رجوع',
@@ -98,6 +104,7 @@ export default function GridCutter({ locale = 'zh' }: GridCutterProps) {
       downloadAll: 'تحميل الكل',
       tip: 'احفظ بالترتيب في المعرض. مثالي للمنشورات ✨',
       slice: 'مربع',
+      received: 'تم استلام الصورة من ضاغط الصور',
     },
   };
 
@@ -111,8 +118,27 @@ export default function GridCutter({ locale = 'zh' }: GridCutterProps) {
   const [image, setImage] = useState<string | null>(null);
   const [slices, setSlices] = useState<string[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [receivedFrom, setReceivedFrom] = useState<string | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    try {
+      const store = usePipelineStore.getState?.();
+      const payload = store ? (store.consumePayload ? (store.consumePayload() as PipelinePayload | null) : null) : null;
+      if (payload && payload.kind === 'image' && payload.dataUrl) {
+        setImage(payload.dataUrl);
+        setSlices([]);
+        setReceivedFrom(payload.source || 'image-compressor');
+        if (typeof window !== 'undefined') {
+          try { window.setTimeout(() => setReceivedFrom(null), 8000); } catch {}
+        }
+      }
+    } catch (e) {
+      // ignore SSR / store errors
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleImageUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -236,6 +262,12 @@ export default function GridCutter({ locale = 'zh' }: GridCutterProps) {
         </div>
       ) : (
         <div className='space-y-6'>
+          {receivedFrom && (
+            <div className='flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-300 text-xs sm:text-sm'>
+              <Inbox className='h-4 w-4 sm:h-4 sm:w-4 shrink-0' />
+              <span>{t('received')}</span>
+            </div>
+          )}
           <div className='bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-200 dark:border-gray-700'>
             <div className='flex items-center justify-between mb-4'>
               <h3 className='font-semibold text-gray-900 dark:text-gray-100'>{t('preview')}</h3>
