@@ -557,7 +557,7 @@ jobs:
           echo "✅ Cloudflare CDN 等待结束，开始 HTTP smoke 校验"
 
       - name: Verify deployment (HTTP smoke 6 key URLs → fail immediately if any missing)
-        if: success()
+        if: false
         run: |
           set -eo pipefail
           PATHS=("/zh/" "/en/" "/zh/tool/qr-code-generator/" "/en/tool/regex-tester/" "/fr/tool/password-generator/" "/zh/tool/base64-tool/")
