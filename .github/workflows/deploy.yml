@@ -82,19 +82,27 @@ jobs:
 
       - name: "ISR mode: build (方案B → ISR + next-on-pages, 备用实验模式)"
         if: env.MODE == 'isr'
+        timeout-minutes: 45
         env:
           NODE_ENV: production
+          NODE_OPTIONS: "--max-old-space-size=8192 --experimental-vm-modules"
+          NEXT_TELEMETRY_DISABLED: "1"
         run: |
           set -eo pipefail
           echo "=== [ISR 实验模式] 运行 next-on-pages 生成 .vercel/output/static ==="
           echo "  注意：ISR 当前为备用实验模式，TOP 工具页需预生成否则 SSR fallback 易崩"
+          echo "  开始构建... 时间戳: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           set +e
-          pnpm run build:cf > /tmp/build_isr.log 2>&1
+          timeout 42m pnpm run build:cf > /tmp/build_isr.log 2>&1
           BUILD_EXIT=$?
           set -e
-          tail -80 /tmp/build_isr.log || true
+          echo "  构建结束. 时间戳: $(date -u +%Y-%m-%dT%H:%M:%SZ)  exit=$BUILD_EXIT"
+          echo "========== tail -120 (最后120行构建日志) =========="
+          tail -120 /tmp/build_isr.log || true
           if [ "$BUILD_EXIT" -ne 0 ]; then
-            echo "::error::❌ ISR build:cf 失败！exit code=$BUILD_EXIT（完整日志见 /tmp/build_isr.log）"
+            echo "========== grep -i error =========="
+            grep -iE "error|oom|heap|killed|failed|cannot|timed out" /tmp/build_isr.log | tail -30 || true
+            echo "::error::❌ ISR build:cf 失败！exit code=$BUILD_EXIT（若 exit=124=超时/137=OOM被杀，完整日志见 /tmp/build_isr.log）"
             exit $BUILD_EXIT
           fi
           echo "=== next-on-pages 完成 ==="
@@ -145,21 +153,34 @@ jobs:
 
       - name: "Legacy mode: build (USE_STATIC_EXPORT=true, 性能分层启用)"
         if: env.MODE == 'legacy'
+        timeout-minutes: 45
         env:
           NODE_ENV: production
           USE_STATIC_EXPORT: "true"
+          NODE_OPTIONS: "--max-old-space-size=8192 --experimental-vm-modules"
+          NEXT_TELEMETRY_DISABLED: "1"
         run: |
           set -eo pipefail
           echo "  性能优化: SWC minify=on / optimizePackageImports=on / poweredByHeader=off"
+          echo "  Node内存上限: 8GB (NODE_OPTIONS=--max-old-space-size=8192)"
+          echo "  开始构建... 时间戳: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           set +e
-          pnpm run build > /tmp/build_legacy.log 2>&1
+          timeout 42m pnpm run build > /tmp/build_legacy.log 2>&1
           BUILD_EXIT=$?
           set -e
-          tail -100 /tmp/build_legacy.log || true
+          echo "  构建结束. 时间戳: $(date -u +%Y-%m-%dT%H:%M:%SZ)  exit=$BUILD_EXIT"
+          echo "========== tail -200 (最后200行构建日志) =========="
+          tail -200 /tmp/build_legacy.log || true
+          echo ""
+          echo "========== grep -i error (错误关键字扫描) =========="
+          grep -iE "error|oom|heap|killed|failed|cannot|timed out" /tmp/build_legacy.log | tail -30 || true
           if [ "$BUILD_EXIT" -ne 0 ]; then
-            echo "::error::❌ Legacy build 失败！exit code=$BUILD_EXIT（完整日志见 /tmp/build_legacy.log）"
+            echo "========== head -80 (前80行构建日志) =========="
+            head -80 /tmp/build_legacy.log || true
+            echo "::error::❌ Legacy build 失败！exit code=$BUILD_EXIT（完整日志见 /tmp/build_legacy.log，若 exit=124=超时/137=OOM被杀）"
             exit $BUILD_EXIT
           fi
+          echo "✅ Legacy build 成功!"
 
       - name: "Legacy mode: 自检 → 数量阈值+抽样页(SOFT) + 自研36×6强校验(HARD exit11/12)"
         if: env.MODE == 'legacy'
