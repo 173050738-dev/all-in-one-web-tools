@@ -22,12 +22,10 @@ const ADSENSE_INIT_INLINE = ADSENSE_ENABLED
   ? `window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.push({ google_ad_client: "${ADSENSE_PUBLISHER_ID}", enable_page_level_ads: true });`
   : '';
 
-const IMPACT_CDN_SRC = 'https://utt.impactcdn.com/P-A7469BB3-1344-4b3d-83d1-7319c29d6bb7.js';
 const IMPACT_INIT_INLINE = `
-(function(m,p,a,c){if(!m.p){m.p=c;p(c)}})(window,function(cp){cp=cp||[];cp.push(['arguments'])});
-window.impactStat = window.impactStat || [];
-window.impactStat('transfer m.links');
-window.impactStat('trackImpression');
+(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A7469883-f344-4b3d-83d1-7319a29d6bb71.js','script','impactStat',document,window);
+impactStat('transformLinks');
+impactStat('trackImpression');
 `;
 
 const SITE_URL = 'https://korelyy.com';
@@ -104,7 +102,7 @@ export const metadata: Metadata = {
     'msapplication-tap-highlight': 'no',
     'mobile-web-app-capable': 'yes',
     'bytedance-verification-code': 'lB1lsK0p56mGhxh4iowe',
-    'impact-site-verification': '9ec4c8fe-eaef-4357-9c7963098b9a',
+    'impact-site-verification': '9ec4c8fe-eaef-4357-9457-9c7963098b9a',
     ...(ADSENSE_ENABLED ? { 'google-adsense-account': ADSENSE_PUBLISHER_ID } : null),
   },
   openGraph: {
@@ -281,13 +279,6 @@ export default async function RootLayout({
                 suppressHydrationWarning
               />
             )}
-            <Script
-              id="impact-cdn-loader"
-              strategy="afterInteractive"
-              src={IMPACT_CDN_SRC}
-              async
-              suppressHydrationWarning
-            />
             <Script
               id="impact-init-inline"
               strategy="afterInteractive"
