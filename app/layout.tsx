@@ -96,6 +96,7 @@ export const metadata: Metadata = {
     'msapplication-tap-highlight': 'no',
     'mobile-web-app-capable': 'yes',
     'bytedance-verification-code': 'lB1lsK0p56mGhxh4iowe',
+    'impact-site-verification': '9ec4c8fe-eaef-4357-9c7963098b9a',
     ...(ADSENSE_ENABLED ? { 'google-adsense-account': ADSENSE_PUBLISHER_ID } : null),
   },
   openGraph: {
