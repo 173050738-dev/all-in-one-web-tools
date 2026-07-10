@@ -46,6 +46,12 @@ const intlMiddleware = createMiddleware({
   localePrefix: 'always'
 });
 
+function isVerificationBot(ua: string | null): boolean {
+  if (!ua) return false;
+  const low = ua.toLowerCase();
+  return low.includes('impact') || low.includes('verification') || low.includes('validator') || low.includes('site-verification') || low.includes('siteverification');
+}
+
 export default function middleware(request: NextRequest) {
   const url = new URL(request.url);
 
@@ -58,6 +64,12 @@ export default function middleware(request: NextRequest) {
   }
 
   if (url.pathname === '/' || url.pathname === '') {
+    const ua = request.headers.get('user-agent') || '';
+    if (isVerificationBot(ua)) {
+      const rewriteUrl = new URL('/en/', url.origin);
+      rewriteUrl.search = url.search;
+      return NextResponse.rewrite(rewriteUrl.toString());
+    }
     const detected = detectLocaleFromRequest(request);
     const targetUrl = new URL(`/${detected}/`, url.origin);
     targetUrl.search = url.search;
