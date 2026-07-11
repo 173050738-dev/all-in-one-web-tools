@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ToolFallbackClient from '@/components/ToolFallbackClient';
 
+import ToolSeoContent from '@/components/ToolSeoContent';
 const LOCALE = 'zh';
 
 export default function ToolDetailClientPage() {

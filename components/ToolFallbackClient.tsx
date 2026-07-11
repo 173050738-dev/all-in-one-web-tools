@@ -12,8 +12,8 @@ import { usePreferencesStore } from '@/stores/preferences';
 import SafeLink from '@/components/SafeLink';
 import { tagZhToEn, englishTags } from '@/data/english-tags';
 import { logLike, logFavorite } from '@/utils/audit-log';
-import { ToolPageJsonLd, type SeoLocale } from '@/components/seo';
 import { INTERNAL_TOOL_SLUGS } from '@/lib/toolLinks';
+import ToolSeoContent from '@/components/ToolSeoContent';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
   ssr: false,
@@ -191,7 +191,6 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
 
   return (
     <>
-      <ToolPageJsonLd locale={resolvedLocale as SeoLocale} slug={resolvedSlug} />
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
       <nav aria-label="Breadcrumb" className="mb-4 sm:mb-6">
         <ol className="flex flex-wrap items-center gap-1 text-[11px] sm:text-xs">
@@ -445,6 +444,7 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
               slot={`tool-${tool?.id || resolvedSlug}-banner-${category?.id || 'general'}`}
               size="banner"
             />
+            <ToolSeoContent locale={resolvedLocale} slug={resolvedSlug} />
           </div>
         </section>
 

@@ -6,6 +6,7 @@ import {
 } from '@/components/seo';
 import ClientPage from './client';
 
+import ToolSeoContent from '@/components/ToolSeoContent';
 const LOCALE: SeoLocale = 'fr';
 const SLUG = 'wc-2026-schedule';
 
@@ -18,6 +19,7 @@ export default function ToolDetailPage() {
     <>
       <ToolPageJsonLd locale={LOCALE} slug={SLUG} />
       <ClientPage />
+          <ToolSeoContent locale={LOCALE} slug={SLUG} />
     </>
   );
 }

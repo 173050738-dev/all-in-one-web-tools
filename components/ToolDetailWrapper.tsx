@@ -9,6 +9,7 @@ import { categories } from '@/data/categories';
 import ToolCard from '@/components/ToolCard';
 import { englishTags } from '@/data/english-tags';
 import { shouldShowKofiBanner } from '@/lib/monetization';
+import ToolSeoContent from '@/components/ToolSeoContent';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
   ssr: false,
@@ -183,6 +184,7 @@ export default function ToolDetailWrapper({ locale, slug, children }: ToolDetail
             toolSlug={slug}
             locale={locale as any}
           />
+          <ToolSeoContent locale={locale} slug={slug} />
         </section>
 
         {/* 右：侧栏广告 + 相关工具（移动端移到底部） */}

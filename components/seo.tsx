@@ -16,6 +16,7 @@ import {
 } from '@/data/news';
 import { categories } from '@/data/categories';
 import { workflows, getWorkflowBySlug, type Workflow, type WorkflowStep } from '@/data/workflows';
+import { buildToolFaqsFromJson, buildFaqJsonLd, type ToolLike, type FaqItem } from '@/lib/toolFaqs';
 
 export const SITE_URL = 'https://korelyy.com';
 export const KNOWN_LOCALES = ['en', 'zh', 'es', 'hi', 'fr', 'ar'] as const;
@@ -814,6 +815,10 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
   const tagFeatures = (tool.tags || []).slice(0, 3).map((t) => String(t));
   const featureList = [...localFeatures, ...tagFeatures].slice(0, 8);
 
+  const json = loadMessagesSync(l);
+  const faqs = buildToolFaqsFromJson(l, tool as ToolLike, json as any);
+  const faqPage = buildFaqJsonLd(faqs);
+
   const softwareApp = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -887,6 +892,10 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApp) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }}
       />
     </>
   );

@@ -338,12 +338,14 @@ const REMOVE_PATTERNS = [
 ];
 
 function replaceHead(html, injection) {
-  let h = html;
-  for (const p of REMOVE_PATTERNS) h = h.replace(p, '');
-  if (!/<\/head>/i.test(h)) {
-    throw new Error('missing </head> in HTML');
-  }
-  return h.replace(/<\/head>/i, injection + '</head>');
+  const headEndRegex = /<\/head>/i;
+  const m = html.match(headEndRegex);
+  if (!m) throw new Error('missing </head> in HTML');
+  const headEndIdx = m.index;
+  let headPart = html.slice(0, headEndIdx);
+  const restPart = html.slice(headEndIdx);
+  for (const p of REMOVE_PATTERNS) headPart = headPart.replace(p, '');
+  return headPart + injection + restPart;
 }
 
 let written = 0;
