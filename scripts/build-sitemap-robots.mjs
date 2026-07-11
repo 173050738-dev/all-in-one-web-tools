@@ -12,15 +12,19 @@ const SITE_URL = 'https://korelyy.com';
 const KNOWN_LOCALES = ['en', 'zh', 'es', 'hi', 'fr', 'ar'];
 const DEFAULT_LOCALE = 'en';
 
-// ---------------- Extract tool slugs from data/tools.ts via regex ----------------
-const toolsPath = path.join(ROOT, 'data', 'tools.ts');
-const toolsSrc = fs.readFileSync(toolsPath, 'utf-8');
-const slugRegex = /slug:\s*['"`]([^'"`]+)['"`]/g;
+// ---------------- Tool slugs = 实际静态导出的工具（真实存在，避免 404 死链） ----------------
+const topSlugsSrc = fs.readFileSync(path.join(ROOT, 'lib', 'topSlugs.ts'), 'utf-8');
+const toolLinksSrc = fs.readFileSync(path.join(ROOT, 'lib', 'toolLinks.ts'), 'utf-8');
 const toolSlugs = new Set();
-let m;
-while ((m = slugRegex.exec(toolsSrc)) !== null) {
-  if (m[1]) toolSlugs.add(m[1]);
+// (1) INTERNAL_TOOL_SLUGS = new Set<string>([ '...', ... ])
+const internalBlock = toolLinksSrc.match(/INTERNAL_TOOL_SLUGS\s*=\s*new Set<string>\(\[([\s\S]*?)\]\)/);
+if (internalBlock) {
+  for (const mm of internalBlock[1].matchAll(/['"`]([^'"`]+)['"`]/g)) toolSlugs.add(mm[1]);
 }
+// (2) TOP_TOOL_SLUGS 来自 INITIAL_HOME_TOOLS 前20（在 data/_initial-home.generated.ts）
+const homeSrc = fs.readFileSync(path.join(ROOT, 'data', '_initial-home.generated.ts'), 'utf-8');
+const homeSlugs = [...homeSrc.matchAll(/slug:\s*['"`]([^'"`]+)['"`]/g)].map(x => x[1]).slice(0, 20);
+for (const s of homeSlugs) toolSlugs.add(s);
 console.log(`[sitemap-build] Found ${toolSlugs.size} tool slugs`);
 
 // ---------------- Extract blog slugs from data/blog.ts via regex ----------------
@@ -347,12 +351,8 @@ Disallow: /ideas
 Disallow: /*?_rsc=
 Crawl-delay: 1
 
-# ======== Sitemaps（含分语言版本，头条站长平台单独提交 zh/fr）========
-Sitemap: ${SITE_URL}/sitemap.xml
+# ======== Sitemaps（分语言版本由 sitemap-index.xml 统一索引）========
 Sitemap: ${SITE_URL}/sitemap-index.xml
-Sitemap: ${SITE_URL}/sitemap-zh.xml
-Sitemap: ${SITE_URL}/sitemap-fr.xml
-Sitemap: ${SITE_URL}/sitemap-en.xml
 
 Host: ${SITE_URL}
 `;
