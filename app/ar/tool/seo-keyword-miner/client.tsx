@@ -7,6 +7,12 @@ import ToolCard from '@/components/ToolCard';
 import { usePreferencesStore } from '@/stores/preferences';
 import { categories } from '@/data/categories';
 import { useParams, usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Skeleton } from '@/components/ui/skeleton';
+import { cn } from '@/lib/cn';
 
 const VALID_LOCALES = ['zh', 'en', 'hi', 'fr', 'es', 'ar'];
 
@@ -87,22 +93,22 @@ async function copyText(text: string) {
   }
 }
 
-const heatStyle: Record<Heat, string> = {
-  High: 'bg-red-50 text-red-700 dark:bg-red-900/30 dark:text-red-300 border-red-200 dark:border-red-800',
-  Medium: 'bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 border-amber-200 dark:border-amber-800',
-  Low: 'bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300 border-green-200 dark:border-green-800',
+const heatBadgeClass: Record<Heat, string> = {
+  High: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300 border-red-200 dark:border-red-800',
+  Medium: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 border-amber-200 dark:border-amber-800',
+  Low: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800',
 };
 
-const compStyle: Record<Competition, string> = {
-  High: 'bg-rose-50 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300 border-rose-200 dark:border-rose-800',
-  Medium: 'bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 border-orange-200 dark:border-orange-800',
-  Low: 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800',
+const compBadgeClass: Record<Competition, string> = {
+  High: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300 border-rose-200 dark:border-rose-800',
+  Medium: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 border-orange-200 dark:border-orange-800',
+  Low: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 border-green-200 dark:border-green-800',
 };
 
-const intentStyle: Record<Intent, string> = {
-  Informational: 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-blue-200 dark:border-blue-800',
-  Transactional: 'bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 border-purple-200 dark:border-purple-800',
-  Navigational: 'bg-slate-50 text-slate-700 dark:bg-slate-900/30 dark:text-slate-300 border-slate-200 dark:border-slate-800',
+const intentBadgeClass: Record<Intent, string> = {
+  Informational: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-blue-200 dark:border-blue-800',
+  Transactional: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 border-purple-200 dark:border-purple-800',
+  Navigational: 'bg-slate-100 text-slate-700 dark:bg-slate-900/30 dark:text-slate-300 border-slate-200 dark:border-slate-800',
 };
 
 function heatLabel(h: Heat, locale: string): string {
@@ -132,6 +138,45 @@ function intentLabel(i: Intent, locale: string): string {
   return i;
 }
 
+function tipsList(locale: string): string[] {
+  if (locale === 'zh') return [
+    '核心词越短 → 能挖出来的长尾词越多',
+    '尝试加场景词：for students、2025、review 等',
+    '优先抓 Heat=高 / Competition=中低 的词做内容',
+    '每日免费 3 次，额度每天 0 点 UTC 重置',
+  ];
+  if (locale === 'es') return [
+    'Palabras más cortas → más variantes long-tail',
+    'Añade contexto: for students, 2025, review…',
+    'Prioriza Heat=Alta + Competencia=Media/Baja',
+    '3 intentos/día, se reinician a las 00:00 UTC',
+  ];
+  if (locale === 'fr') return [
+    'Mots courts → plus de variantes long-tail',
+    'Ajoutez du contexte : for students, 2025, review…',
+    'Priorisez Heat=Haute + Concurrence=Moyenne/Basse',
+    '3 essais/jour, réinitialisés à 00:00 UTC',
+  ];
+  if (locale === 'hi') return [
+    'छोटे शब्द → अधिक लॉन्ग-टेल वेरिएंट',
+    'संदर्भ डालें: for students, 2025, review…',
+    'हीट=उच्च + प्रतिस्पर्धा=मध्यम/कम को प्राथमिकता दें',
+    'दिन में 3 बार, 00:00 UTC पर रीसेट',
+  ];
+  if (locale === 'ar') return [
+    'كلمات أقصر → مزيد من المتغيرات الطويلة',
+    'أضف سياقاً: for students, 2025, review…',
+    'فضّل الشغف=عالٍ + المنافسة=متوسطة/منخفضة',
+    '3 محاولات/يوم، تصفر عند 00:00 UTC',
+  ];
+  return [
+    'Shorter seeds → richer long-tail variants',
+    'Add context: for students, 2025, review…',
+    'Prioritize Heat=High + Competition=Mid/Low',
+    '3 free attempts/day, resets 00:00 UTC',
+  ];
+}
+
 export default function ToolPage() {
   const resolvedParams = useParams() as unknown as { locale: string; slug?: string };
   const pathname = usePathname();
@@ -144,7 +189,6 @@ export default function ToolPage() {
   const sidebarT = useTranslations('sidebar');
   const tool = getToolBySlug((resolvedParams?.slug ?? pathSlug) as string);
 
-  // ===== Korelyy: i18n for tool name/description (auto-injected) =====
   const __toolsT = useTranslations('tools');
   const __i18nSlug = (resolvedParams?.slug ?? pathSlug) as string;
   const __i18nName = (() => {
@@ -202,6 +246,8 @@ export default function ToolPage() {
       disclaimer: '※ 热度、竞争为启发式 + AI 预估值，仅供参考，非精确搜索量数据',
       empty: '暂无结果，试试其它核心词',
       limit: '今日免费额度', limitOver: '今日免费额度已用完（每天 3 次），请明天再来',
+      tipsTitle: '使用小贴士',
+      relatedTitle: t('related' as any),
     };
     if (l === 'es') return {
       inputPlaceholder: 'Palabra clave semilla, ej: ai tools, remote work…',
@@ -211,6 +257,8 @@ export default function ToolPage() {
       disclaimer: '※ Interés / Competencia son estimaciones heurísticas + IA, no datos de volumen exactos.',
       empty: 'Sin resultados. Prueba otra palabra semilla.',
       limit: 'Cuota diaria gratuita', limitOver: 'Cuota diaria agotada (3 intentos/día). Vuelve mañana.',
+      tipsTitle: 'Quick Tips',
+      relatedTitle: t('related' as any),
     };
     if (l === 'fr') return {
       inputPlaceholder: 'Mot-clé de départ, ex: ai tools, télétravail…',
@@ -220,6 +268,8 @@ export default function ToolPage() {
       disclaimer: '※ Intérêt / Concurrence = estimation heuristique + IA, pas de volume exact.',
       empty: 'Aucun résultat. Essayez un autre mot-clé.',
       limit: 'Quota journalier gratuit', limitOver: 'Quota journalier épuisé (3 essais/jour). Revenez demain.',
+      tipsTitle: 'Quick Tips',
+      relatedTitle: t('related' as any),
     };
     if (l === 'hi') return {
       inputPlaceholder: 'बीज शब्द डालें, जैसे: ai tools, work from home…',
@@ -229,6 +279,8 @@ export default function ToolPage() {
       disclaimer: '※ हीट / प्रतिस्पर्धा अनुमानित है, सटीक सर्च वॉल्यूम नहीं।',
       empty: 'कोई परिणाम नहीं। दूसरा शब्द आज़माएँ।',
       limit: 'आज की मुफ्त कोटा', limitOver: 'आज की कोटा खत्म (3 बार/दिन)। कल फिर आना।',
+      tipsTitle: 'Quick Tips',
+      relatedTitle: t('related' as any),
     };
     if (l === 'ar') return {
       inputPlaceholder: 'كلمة رئيسية أساسية، مثل: ai tools…',
@@ -238,6 +290,8 @@ export default function ToolPage() {
       disclaimer: '※ الشغف / المنافسة تقديرات، ليست حجم بحث دقيق.',
       empty: 'لا نتائج. جرّب كلمة أخرى.',
       limit: 'الحد اليومي المجاني', limitOver: 'انتهى الحد اليومي (3 محاولات/يوم). عد غداً.',
+      tipsTitle: 'نصائح سريعة',
+      relatedTitle: t('related' as any),
     };
     return {
       inputPlaceholder: 'Enter seed keyword, e.g. ai tools, remote work, budget planner…',
@@ -247,6 +301,8 @@ export default function ToolPage() {
       disclaimer: '※ Heat / Competition are heuristic + AI estimates, not exact search volume.',
       empty: 'No results yet. Try a different seed keyword.',
       limit: 'Daily free quota', limitOver: 'Daily free quota exceeded (3 attempts/day). Please come back tomorrow.',
+      tipsTitle: 'Quick Tips',
+      relatedTitle: t('related' as any),
     };
   })();
 
@@ -258,7 +314,7 @@ export default function ToolPage() {
       for (const el of Array.from(inputs)) {
         const ph = (el.placeholder || '').toLowerCase();
         const v = (el.value || '').trim();
-        if (v && (ph.indexOf('keyword') !== -1 || ph.indexOf('核心') !== -1 || ph.indexOf('ai tools') !== -1 || el.className && String(el.className).indexOf('primary') !== -1)) {
+        if (v && (ph.indexOf('keyword') !== -1 || ph.indexOf('核心') !== -1 || ph.indexOf('ai tools') !== -1 || (el.className && String(el.className).indexOf('primary') !== -1))) {
           s = v;
           setSeed(v);
           break;
@@ -321,183 +377,215 @@ export default function ToolPage() {
 
   if (!tool) {
     return (
-      <div className='max-w-4xl mx-auto px-4 py-8'>
-        <p className='text-gray-600 dark:text-gray-400'>Tool not found.</p>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <p className="text-gray-600 dark:text-gray-400">Tool not found.</p>
       </div>
     );
   }
 
+  const cat = categories.find((c) => c.id === tool.category);
+
   return (
-    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-      <div className='flex flex-wrap items-center gap-1.5 text-xs sm:text-sm mb-6'>
-        <a href={`/${resolvedLocale}`} className='flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors min-h-[28px]'>
-          <Home className='h-4 w-4' />
+    <div className={cn('max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-6')}>
+      <nav
+        aria-label="breadcrumb"
+        className="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm"
+      >
+        <a
+          href={`/${resolvedLocale}`}
+          className="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors min-h-[28px]"
+        >
+          <Home className="h-4 w-4" />
           <span>{breadcrumbT('home')}</span>
         </a>
-        {tool && (() => {
-          const cat = categories.find((c) => c.id === tool.category);
-          if (!cat) return null;
-          return (
-            <>
-              <ChevronRight className='h-3.5 w-3.5 text-gray-400 shrink-0' />
-              <a
-                href={`/${resolvedLocale}?category=${cat.id}`}
-                className='text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors truncate max-w-[180px]'
-              >
-                {sidebarT(cat.id)}
-              </a>
-            </>
-          );
-        })()}
-        {tool && (
+        {cat && (
           <>
-            <ChevronRight className='h-3.5 w-3.5 text-gray-400 shrink-0' />
-            <span className='font-medium text-gray-900 dark:text-gray-100 truncate max-w-[260px]'>{__i18nName}</span>
+            <ChevronRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
+            <a
+              href={`/${resolvedLocale}?category=${cat.id}`}
+              className="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors truncate max-w-[180px]"
+            >
+              {sidebarT(cat.id)}
+            </a>
           </>
         )}
-      </div>
+        <ChevronRight className="h-3.5 w-3.5 text-gray-400 shrink-0" />
+        <span className="font-medium text-gray-900 dark:text-gray-100 truncate max-w-[260px]">{__i18nName}</span>
+      </nav>
 
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8'>
-        <aside className='lg:col-span-2 hidden lg:block'>
-          <div className='space-y-4'>
-            <h3 className='font-semibold text-gray-900 dark:text-gray-100'>{t('related')}</h3>
-            {relatedTools.map((tt) => (
-              <ToolCard key={tt.id} tool={tt} locale={resolvedLocale} />
-            ))}
+      <header className="space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="shrink-0 p-2 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">
+            <Search className="w-6 h-6" />
           </div>
-        </aside>
+          <div className="min-w-0 flex-1">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 text-start">
+              {__i18nName}
+            </h1>
+            <p className="mt-2 text-gray-500 dark:text-gray-400 text-start">
+              {__i18nDesc}
+            </p>
+          </div>
+        </div>
+      </header>
 
-        <main className='lg:col-span-7'>
-          <div className='card p-4 sm:p-6'>
-            <div className='flex items-center gap-3 mb-4 sm:mb-6'>
-              <div className='p-2 sm:p-3 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400'>
-                <Search className='h-5 w-5 sm:h-6 sm:w-6' />
-              </div>
-              <div className='flex-1 min-w-0'>
-                <h1 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 truncate'>{__i18nName}</h1>
-                <p className='text-sm text-gray-600 dark:text-gray-400 line-clamp-2'>{__i18nDesc}</p>
-              </div>
-            </div>
-
-            <div className='space-y-4'>
-              <div className='flex items-center justify-between gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
-                <span className='inline-flex items-center gap-1.5'>
-                  <AlertTriangle className='h-3.5 w-3.5 text-amber-500' />
-                  <span>{ui.disclaimer}</span>
-                </span>
-                <span className='shrink-0 font-medium text-gray-700 dark:text-gray-300'>
-                  {ui.limit}: {remaining}/{DAILY_LIMIT}
-                </span>
-              </div>
-
-              <div className='grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3'>
-                <input
-                  type='text'
+      <Card className="rounded-xl shadow-sm overflow-hidden border-gray-200 dark:border-gray-800 dark:bg-gray-900">
+        <CardHeader className="p-5 sm:p-6 pb-0 sm:pb-0 space-y-3">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <span className="inline-flex items-center gap-1.5 text-start">
+              <AlertTriangle className="h-3.5 w-3.5 text-amber-500 shrink-0" />
+              <span>{ui.disclaimer}</span>
+            </span>
+            <span className="font-medium text-gray-700 dark:text-gray-300 shrink-0 text-start sm:text-end">
+              {ui.limit}: {remaining}/{DAILY_LIMIT}
+            </span>
+          </div>
+        </CardHeader>
+        <CardContent className="p-5 sm:p-6 space-y-3">
+          <div className="space-y-3">
+            <div className="grid grid-cols-1 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3">
+                <Input
+                  type="text"
                   value={seed}
                   onChange={(e) => setSeed(e.target.value)}
                   onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); void mine(); } }}
                   placeholder={ui.inputPlaceholder}
-                  className='w-full p-3 sm:p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500'
+                  className="h-11 rounded-lg text-start"
                 />
-                <button
+                <Button
                   onClick={() => void mine()}
                   disabled={loading || remaining <= 0}
-                  className='inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary-600 text-white font-medium text-sm hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors min-w-[150px]'
+                  className="h-11 px-6 rounded-lg font-medium w-full sm:w-auto bg-primary-600 hover:bg-primary-700 text-white"
                 >
                   {loading ? (
-                    <Loader2 className='h-4 w-4 animate-spin' />
+                    <Loader2 className="h-4 w-4 animate-spin" />
                   ) : results.length ? (
-                    <RefreshCw className='h-4 w-4' />
+                    <RefreshCw className="h-4 w-4" />
                   ) : (
-                    <Search className='h-4 w-4' />
+                    <Search className="h-4 w-4" />
                   )}
-                  {loading ? ui.loading : results.length ? ui.btn2 : ui.btn}
-                </button>
+                  <span className="ms-2">
+                    {loading ? ui.loading : results.length ? ui.btn2 : ui.btn}
+                  </span>
+                </Button>
               </div>
+            </div>
 
-              {error && (
-                <div className='p-3 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 text-sm border border-red-200 dark:border-red-900/50'>
-                  {error}
+            {error && (
+              <div className="p-3 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 text-sm border border-red-200 dark:border-red-900/50 text-start">
+                {error}
+              </div>
+            )}
+
+            {loading && (
+              <div className="space-y-3 pt-2">
+                <div className="flex flex-wrap gap-2">
+                  <Skeleton className="h-8 w-28 rounded-lg" />
+                  <Skeleton className="h-8 w-28 rounded-lg" />
                 </div>
-              )}
+                <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800">
+                  <Skeleton className="h-10 w-full" />
+                  {[0, 1, 2, 3, 4].map((i) => (
+                    <Skeleton key={i} className="h-14 w-full border-t border-gray-100 dark:border-gray-800" />
+                  ))}
+                </div>
+              </div>
+            )}
 
-              {results.length > 0 && (
-                <div className='flex flex-wrap gap-2 pt-2'>
-                  <button
+            {!loading && results.length > 0 && (
+              <div className="space-y-3 pt-1">
+                <div className="flex flex-wrap gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
                     onClick={() => void onCopyAll()}
                     disabled={copyFlag === 'all'}
-                    className='inline-flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-60 transition-colors'
+                    className="h-9 rounded-lg border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
                   >
                     {copyFlag === 'all' ? (
-                      <Check className='h-4 w-4 text-green-600' />
+                      <Check className="h-4 w-4 text-green-600" />
                     ) : (
-                      <Copy className='h-4 w-4' />
+                      <Copy className="h-4 w-4" />
                     )}
-                    {copyFlag === 'all' ? ui.copied : ui.copyAll}
-                  </button>
-                  <button
+                    <span className="ms-1.5">
+                      {copyFlag === 'all' ? ui.copied : ui.copyAll}
+                    </span>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
                     onClick={() => downloadCSV(results)}
-                    className='inline-flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors'
+                    className="h-9 rounded-lg border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
                   >
-                    <Download className='h-4 w-4' />
-                    {ui.exportCsv}
-                  </button>
+                    <Download className="h-4 w-4" />
+                    <span className="ms-1.5">{ui.exportCsv}</span>
+                  </Button>
                 </div>
-              )}
 
-              {results.length > 0 && (
-                <div className='overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700'>
-                  <div className='overflow-x-auto'>
-                    <table className='w-full text-xs sm:text-sm'>
-                      <thead className='bg-gray-50 dark:bg-gray-800/70'>
+                <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-xs sm:text-sm">
+                      <thead className="bg-gray-50 dark:bg-gray-800/70">
                         <tr>
-                          <th className='px-3 py-3 text-left font-semibold text-gray-700 dark:text-gray-200 w-[26%]'>{ui.colKw}</th>
-                          <th className='px-3 py-3 text-left font-semibold text-gray-700 dark:text-gray-200 w-[10%]'>{ui.colIntent}</th>
-                          <th className='px-3 py-3 text-left font-semibold text-gray-700 dark:text-gray-200 w-[10%]'>{ui.colHeat}</th>
-                          <th className='px-3 py-3 text-left font-semibold text-gray-700 dark:text-gray-200 w-[10%]'>{ui.colComp}</th>
-                          <th className='px-3 py-3 text-left font-semibold text-gray-700 dark:text-gray-200 w-[36%]'>{ui.colSug}</th>
-                          <th className='px-3 py-3 text-right font-semibold text-gray-700 dark:text-gray-200 w-[8%]'></th>
+                          <th className="px-3 sm:px-4 py-3 text-start font-semibold text-gray-700 dark:text-gray-200 w-[28%]">{ui.colKw}</th>
+                          <th className="px-3 sm:px-4 py-3 text-start font-semibold text-gray-700 dark:text-gray-200 w-[11%]">{ui.colIntent}</th>
+                          <th className="px-3 sm:px-4 py-3 text-start font-semibold text-gray-700 dark:text-gray-200 w-[10%]">{ui.colHeat}</th>
+                          <th className="px-3 sm:px-4 py-3 text-start font-semibold text-gray-700 dark:text-gray-200 w-[10%]">{ui.colComp}</th>
+                          <th className="px-3 sm:px-4 py-3 text-start font-semibold text-gray-700 dark:text-gray-200 w-[34%]">{ui.colSug}</th>
+                          <th className="px-3 sm:px-4 py-3 text-end font-semibold text-gray-700 dark:text-gray-200 w-[7%]"></th>
                         </tr>
                       </thead>
-                      <tbody className='divide-y divide-gray-200 dark:divide-gray-800'>
+                      <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
                         {results.map((r, idx) => (
-                          <tr key={idx} className='hover:bg-gray-50/50 dark:hover:bg-gray-800/40 align-top'>
-                            <td className='px-3 py-3 font-medium text-gray-900 dark:text-gray-100 break-words'>{r.keyword}</td>
-                            <td className='px-3 py-3'>
-                              <span className={'inline-flex items-center px-2 py-0.5 rounded-full text-[11px] border ' + intentStyle[r.intent]}>
-                                {intentLabel(r.intent, resolvedLocale)}
-                              </span>
+                          <tr key={idx} className="hover:bg-gray-50/50 dark:hover:bg-gray-800/40 align-top">
+                            <td className="px-3 sm:px-4 py-3 font-medium text-gray-900 dark:text-gray-100 break-words text-start">
+                              {r.keyword}
                             </td>
-                            <td className='px-3 py-3'>
-                              <span className={'inline-flex items-center px-2 py-0.5 rounded-full text-[11px] border ' + heatStyle[r.heat]}>
+                            <td className="px-3 sm:px-4 py-3">
+                              <Badge
+                              variant="outline"
+                              className={cn('rounded-full border text-[11px] font-normal', intentBadgeClass[r.intent])}
+                            >
+                              {intentLabel(r.intent, resolvedLocale)}
+                            </Badge>
+                            </td>
+                            <td className="px-3 sm:px-4 py-3">
+                              <Badge
+                                variant="outline"
+                                className={cn('rounded-full border text-[11px] font-normal', heatBadgeClass[r.heat])}
+                              >
                                 {heatLabel(r.heat, resolvedLocale)}
-                              </span>
+                              </Badge>
                             </td>
-                            <td className='px-3 py-3'>
-                              <span className={'inline-flex items-center px-2 py-0.5 rounded-full text-[11px] border ' + compStyle[r.competition]}>
+                            <td className="px-3 sm:px-4 py-3">
+                              <Badge
+                                variant="outline"
+                                className={cn('rounded-full border text-[11px] font-normal', compBadgeClass[r.competition])}
+                              >
                                 {compLabel(r.competition, resolvedLocale)}
-                              </span>
+                              </Badge>
                             </td>
-                            <td className='px-3 py-3 text-gray-700 dark:text-gray-300 break-words leading-relaxed'>
+                            <td className="px-3 sm:px-4 py-3 text-gray-700 dark:text-gray-300 break-words leading-relaxed text-start">
                               {r.suggestion ? (
-                                <span className='inline-flex gap-1.5'>
-                                  <FileText className='h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-400' />
+                                <span className="inline-flex gap-1.5">
+                                  <FileText className="h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-400" />
                                   <span>{r.suggestion}</span>
                                 </span>
                               ) : (
-                                <span className='text-gray-400 dark:text-gray-500 italic'>—</span>
+                                <span className="text-gray-400 dark:text-gray-500 italic">—</span>
                               )}
                             </td>
-                            <td className='px-3 py-3 text-right'>
+                            <td className="px-3 sm:px-4 py-3 text-end">
                               <button
                                 onClick={() => void onCopyRow(r.keyword, idx)}
                                 title={copyFlag === idx ? ui.copied : ui.copyAll}
-                                className='inline-flex items-center justify-center h-7 w-7 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors'
+                                className="inline-flex items-center justify-center h-8 w-8 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                               >
                                 {copyFlag === idx ? (
-                                  <Check className='h-3.5 w-3.5 text-green-600' />
+                                  <Check className="h-3.5 w-3.5 text-green-600" />
                                 ) : (
-                                  <Copy className='h-3.5 w-3.5' />
+                                  <Copy className="h-3.5 w-3.5" />
                                 )}
                               </button>
                             </td>
@@ -507,63 +595,47 @@ export default function ToolPage() {
                     </table>
                   </div>
                 </div>
-              )}
+              </div>
+            )}
+
+            {!loading && results.length === 0 && !error && (
+              <div className="flex flex-col items-center justify-center gap-3 py-10 text-center text-gray-500 dark:text-gray-400">
+                <Search className="w-10 h-10 opacity-40" />
+                <p className="text-sm">{ui.empty}</p>
+              </div>
+            )}
+          </div>
+        </CardContent>
+      </Card>
+
+      <div className="grid grid-cols-1 gap-6">
+        <Card className="rounded-xl shadow-sm border-gray-200 dark:border-gray-800 dark:bg-gray-900">
+          <CardHeader className="p-5 sm:p-6 pb-3">
+            <CardTitle className="text-base font-semibold text-gray-900 dark:text-gray-100 text-start">
+              {ui.tipsTitle}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-5 sm:p-6 pt-0 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <ul className="space-y-2 list-disc ps-5 list-inside">
+              {tipsList(resolvedLocale).map((tip, i) => (
+                <li key={i} className="text-start">{tip}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+
+        {relatedTools.length > 0 && (
+          <div className="space-y-3">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-base text-start">
+              {ui.relatedTitle}
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {relatedTools.map((tt) => (
+                <ToolCard key={tt.id} tool={tt} locale={resolvedLocale} />
+              ))}
             </div>
           </div>
-        </main>
-
-        <aside className='lg:col-span-3 hidden lg:block'>
-          <div className='card p-4 sm:p-5 text-xs sm:text-sm text-gray-600 dark:text-gray-400 space-y-3'>
-            <h3 className='font-semibold text-gray-900 dark:text-gray-100 text-sm'>
-              {resolvedLocale === 'zh' ? '使用小贴士' : 'Quick Tips'}
-            </h3>
-            <ul className='list-disc list-inside space-y-1.5'>
-              {resolvedLocale === 'zh' ? (
-                <>
-                  <li>核心词越短 → 能挖出来的长尾词越多</li>
-                  <li>尝试加场景词：for students、2025、review 等</li>
-                  <li>优先抓 Heat=高 / Competition=中低 的词做内容</li>
-                  <li>每日免费 3 次，额度每天 0 点 UTC 重置</li>
-                </>
-              ) : resolvedLocale === 'es' ? (
-                <>
-                  <li>Palabras más cortas → más variantes long-tail</li>
-                  <li>Añade contexto: for students, 2025, review…</li>
-                  <li>Prioriza Heat=Alta + Competencia=Media/Baja</li>
-                  <li>3 intentos/día, se reinician a las 00:00 UTC</li>
-                </>
-              ) : resolvedLocale === 'fr' ? (
-                <>
-                  <li>Mots courts → plus de variantes long-tail</li>
-                  <li>Ajoutez du contexte : for students, 2025, review…</li>
-                  <li>Priorisez Heat=Haute + Concurrence=Moyenne/Basse</li>
-                  <li>3 essais/jour, réinitialisés à 00:00 UTC</li>
-                </>
-              ) : resolvedLocale === 'hi' ? (
-                <>
-                  <li>छोटे शब्द → अधिक लॉन्ग-टेल वेरिएंट</li>
-                  <li>संदर्भ डालें: for students, 2025, review…</li>
-                  <li>हीट=उच्च + प्रतिस्पर्धा=मध्यम/कम को प्राथमिकता दें</li>
-                  <li>दिन में 3 बार, 00:00 UTC पर रीसेट</li>
-                </>
-              ) : resolvedLocale === 'ar' ? (
-                <>
-                  <li>كلمات أقصر → مزيد من المتغيرات الطويلة</li>
-                  <li>أضف سياقاً: for students, 2025, review…</li>
-                  <li>فضّل الشغف=عالٍ + المنافسة=متوسطة/منخفضة</li>
-                  <li>3 محاولات/يوم، تصفر عند 00:00 UTC</li>
-                </>
-              ) : (
-                <>
-                  <li>Shorter seeds → richer long-tail variants</li>
-                  <li>Add context: for students, 2025, review…</li>
-                  <li>Prioritize Heat=High + Competition=Mid/Low</li>
-                  <li>3 free attempts/day, resets 00:00 UTC</li>
-                </>
-              )}
-            </ul>
-          </div>
-        </aside>
+        )}
       </div>
     </div>
   );
