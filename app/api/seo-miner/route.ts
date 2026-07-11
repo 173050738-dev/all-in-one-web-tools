@@ -106,9 +106,38 @@ export async function POST(req: NextRequest) {
       if (ordered.length >= MAX_CANDIDATE_KEYWORDS) break;
     }
 
-    const candidates = ordered.length
+    let candidates = ordered.length
       ? ordered.slice(0, MAX_CANDIDATE_KEYWORDS)
-      : [{ kw: seedClean, rank: 0 }];
+      : [];
+
+    if (candidates.length < 12) {
+      const extraModifiers = [
+        'how to', 'what is', 'best', 'top', 'vs', 'for', 'near me', 'free', 'online',
+        '2025', '2026', 'review', 'guide', 'tips', 'tutorial', 'examples', 'ideas',
+        'for beginners', 'without', 'cheap', 'affordable', 'professional', 'open source',
+      ];
+      const extraAhead = ['how to ', 'best ', 'top ', 'free ', 'cheap ', 'easy ', 'quick '];
+      const extraBehind = [
+        ' for students', ' for business', ' for beginners', ' for small business',
+        ' 2025', ' 2026', ' guide', ' review', ' tutorial', ' examples',
+        ' tips', ' ideas', ' near me', ' online', ' free',
+      ];
+      const manualSet = new Set<string>();
+      manualSet.add(seedClean);
+      for (const mod of extraModifiers) manualSet.add(`${seedClean} ${mod}`);
+      for (const mod of extraModifiers) manualSet.add(`${mod} ${seedClean}`);
+      for (const a of extraAhead) manualSet.add(`${a}${seedClean}`);
+      for (const b of extraBehind) manualSet.add(`${seedClean}${b}`);
+      const seedLow = seedClean.toLowerCase();
+      const extraArr = Array.from(manualSet)
+        .filter((k) => k.toLowerCase().includes(seedLow))
+        .filter((k) => !candidates.some((c) => c.kw.toLowerCase() === k.toLowerCase()))
+        .map((kw, i) => ({ kw, rank: candidates.length + i }))
+        .slice(0, Math.max(0, MAX_CANDIDATE_KEYWORDS - candidates.length));
+      candidates = candidates.concat(extraArr);
+    }
+
+    if (!candidates.length) candidates = [{ kw: seedClean, rank: 0 }];
 
     const baseLabels = candidates.map((c, i) => {
       const r = classifyHeatAndCompetition(c.kw, i, candidates.length);
