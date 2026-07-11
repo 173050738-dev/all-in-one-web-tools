@@ -18,6 +18,7 @@ const MSVALIDATE_01 = process.env.KORELYY_MSVALIDATE_01 || '3sKs9BXluR_EB3DKXv97
 const GOOGLE_SITE_VERIFICATION = process.env.KORELYY_GOOGLE_VERIFY || '';
 const SEZNAM_WMT = process.env.KORELYY_SEZNAM_VERIFY || 'vDusJvnf3rUuyQ73mx3E6NLzrCmo4wxG';
 const BYTEDANCE_VERIFICATION = process.env.KORELYY_BYTEDANCE_VERIFY || 'lB1lsK0p56mGhxh4iowe';
+const SHENMA_VERIFICATION = process.env.KORELYY_SHENMA_VERIFY || 'b770032578aedb343397f8f0441bb082_1783736755';
 
 const LOCALE_BREADCRUMB_LABELS = {
   zh: { home: '首页', tools: '工具', tool: '工具详情', blog: '博客', news: '资讯', about: '关于', contact: '联系我们', workflows: '工作流', templates: '模板库', ideas: '创意工坊', 'api-keys': 'API 密钥', compliance: '合规性', cookies: 'Cookie 政策', disclaimer: '免责声明', privacy: '隐私政策', terms: '服务条款' },
@@ -111,6 +112,9 @@ function buildRobotsMeta() {
   }
   if (BYTEDANCE_VERIFICATION) {
     out += `<meta name="bytedance-verification-code" content="${escapeForHtml(BYTEDANCE_VERIFICATION)}">\n`;
+  }
+  if (SHENMA_VERIFICATION) {
+    out += `<meta name="shenma-site-verification" content="${escapeForHtml(SHENMA_VERIFICATION)}">\n`;
   }
   return out;
 }

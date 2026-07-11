@@ -200,14 +200,7 @@ Disallow: /ideas
 Disallow: /*?_rsc=
 Crawl-delay: 1
 
-# ======== Sitemaps（含分语言版本，头条站长平台单独提交 zh/fr）========
-Sitemap: https://korelyy.com/sitemap.xml
+# ======== Sitemaps（分语言版本由 sitemap-index.xml 统一索引）========
 Sitemap: https://korelyy.com/sitemap-index.xml
-Sitemap: https://korelyy.com/sitemap-zh.xml
-Sitemap: https://korelyy.com/sitemap-en.xml
-Sitemap: https://korelyy.com/sitemap-es.xml
-Sitemap: https://korelyy.com/sitemap-fr.xml
-Sitemap: https://korelyy.com/sitemap-hi.xml
-Sitemap: https://korelyy.com/sitemap-ar.xml
 
 Host: https://korelyy.com
