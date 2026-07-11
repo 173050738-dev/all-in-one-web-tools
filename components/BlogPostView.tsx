@@ -9,6 +9,9 @@ import { getBlogPostBySlug, getBlogPostsList } from '@/data/blog';
 import { getLocalizedText, getBlogReadingTime } from '@/data/blog';
 import BlogContentRenderer from '@/components/BlogContentRenderer';
 import BlogPostCard from '@/components/BlogPostCard';
+import BlogToc from '@/components/BlogToc';
+import ReadingProgress from '@/components/ReadingProgress';
+import ShareButton from '@/components/ShareButton';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
   ssr: false,
@@ -37,6 +40,14 @@ export default function BlogPostView({ locale, slug }: Props) {
     () => getBlogPostsList(locale, 10).filter((p) => p.slug !== slug).slice(0, 3),
     [locale, slug],
   );
+  const { prevPost, nextPost } = useMemo(() => {
+    const all = getBlogPostsList(locale, Number.POSITIVE_INFINITY);
+    const idx = all.findIndex((p) => p.slug === slug);
+    return {
+      prevPost: idx > 0 ? all[idx - 1] : null,
+      nextPost: idx >= 0 && idx < all.length - 1 ? all[idx + 1] : null,
+    };
+  }, [locale, slug]);
   const date = useMemo(() => {
     try {
       return new Date(post.updatedAt || post.publishedAt).toLocaleDateString(
@@ -57,6 +68,8 @@ export default function BlogPostView({ locale, slug }: Props) {
           updated: '更新',
           reading: '阅读',
           share: '分享',
+          prevLabel: '上一篇',
+          nextLabel: '下一篇',
           related: '你可能还喜欢',
           tags: '标签',
           updatedTag: 'Updated',
@@ -70,6 +83,8 @@ export default function BlogPostView({ locale, slug }: Props) {
           updated: 'अपडेट',
           reading: 'पढ़ने का समय',
           share: 'शेयर',
+          prevLabel: 'पिछला',
+          nextLabel: 'अगला',
           related: 'आपको पसंद आ सकता है',
           tags: 'टैग',
           updatedTag: 'अपडेटेड',
@@ -83,6 +98,8 @@ export default function BlogPostView({ locale, slug }: Props) {
           updated: 'Actualizado',
           reading: 'Lectura',
           share: 'Compartir',
+          prevLabel: 'Anterior',
+          nextLabel: 'Siguiente',
           related: 'También te puede gustar',
           tags: 'Etiquetas',
           updatedTag: 'Actualizado',
@@ -96,6 +113,8 @@ export default function BlogPostView({ locale, slug }: Props) {
           updated: 'Mis à jour',
           reading: 'Lecture',
           share: 'Partager',
+          prevLabel: 'Précédent',
+          nextLabel: 'Suivant',
           related: 'Vous aimerez peut-être aussi',
           tags: 'Tags',
           updatedTag: 'Mis à jour',
@@ -109,6 +128,8 @@ export default function BlogPostView({ locale, slug }: Props) {
           updated: 'تحديث',
           reading: 'وقت القراءة',
           share: 'مشاركة',
+          prevLabel: 'السابق',
+          nextLabel: 'التالي',
           related: 'قد يعجبك أيضاً',
           tags: 'الوسوم',
           updatedTag: 'مُحدَّث',
@@ -122,6 +143,8 @@ export default function BlogPostView({ locale, slug }: Props) {
           updated: 'Updated',
           reading: 'Read',
           share: 'Share',
+          prevLabel: 'Previous',
+          nextLabel: 'Next',
           related: 'You might also like',
           tags: 'Tags',
           updatedTag: 'Updated',
@@ -132,8 +155,9 @@ export default function BlogPostView({ locale, slug }: Props) {
   }, [locale]);
 
   return (
-    <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
-      <div className="mb-4 sm:mb-5">
+    <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      <ReadingProgress />
+      <div className="mb-4 sm:mb-5 flex items-center justify-between gap-3">
         <Link
           href={`/${locale}/blog/`}
           className="text-[11px] sm:text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:underline"
@@ -141,8 +165,12 @@ export default function BlogPostView({ locale, slug }: Props) {
         >
           {i18n.back}
         </Link>
+        <ShareButton title={title} />
       </div>
 
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-8 xl:gap-10">
+      <div className="min-w-0">
+      <BlogToc blocks={post.content} locale={locale} variant="mobile" />
       <article>
         <header className="mb-6 sm:mb-8 border-b border-gray-200/70 dark:border-gray-800/70 pb-6 sm:pb-8">
           {tags.length > 0 && (
@@ -252,6 +280,23 @@ export default function BlogPostView({ locale, slug }: Props) {
         )}
       </article>
 
+      {(prevPost || nextPost) && (
+        <nav aria-label="Post navigation" className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+          {prevPost ? (
+            <Link href={`/${locale}/blog/${prevPost.slug}/`} prefetch={false} className="group rounded-2xl border border-gray-200/80 dark:border-gray-800/80 bg-white dark:bg-gray-900/50 p-4 hover:border-indigo-300 dark:hover:border-indigo-600 hover:shadow-md transition-all min-h-[44px] rtl:sm:order-2">
+              <div className="text-[11px] font-medium text-gray-400 dark:text-gray-500 mb-1">← {i18n.prevLabel}</div>
+              <div className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 line-clamp-2 leading-snug">{getLocalizedText(prevPost.title, locale, prevPost.slug)}</div>
+            </Link>
+          ) : <span className="hidden sm:block" />}
+          {nextPost ? (
+            <Link href={`/${locale}/blog/${nextPost.slug}/`} prefetch={false} className="group rounded-2xl border border-gray-200/80 dark:border-gray-800/80 bg-white dark:bg-gray-900/50 p-4 hover:border-indigo-300 dark:hover:border-indigo-600 hover:shadow-md transition-all min-h-[44px] text-right rtl:text-left">
+              <div className="text-[11px] font-medium text-gray-400 dark:text-gray-500 mb-1">{i18n.nextLabel} →</div>
+              <div className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 line-clamp-2 leading-snug">{getLocalizedText(nextPost.title, locale, nextPost.slug)}</div>
+            </Link>
+          ) : <span className="hidden sm:block" />}
+        </nav>
+      )}
+
       {related.length > 0 && (
         <section
           aria-labelledby="related-posts-title"
@@ -270,6 +315,12 @@ export default function BlogPostView({ locale, slug }: Props) {
           </div>
         </section>
       )}
+      </div>
+
+      <aside className="hidden lg:block">
+        <BlogToc blocks={post.content} locale={locale} variant="desktop" />
+      </aside>
+      </div>
     </div>
   );
 }

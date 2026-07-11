@@ -343,10 +343,26 @@ export default function BlogIndexView({ locale }: Props) {
 
       {loaded && filteredPosts.length > 0 ? (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3 lg:gap-4">
-            {filteredPosts.slice(0, visibleCount).map((post) => (
-              <BlogPostCard key={post.slug} post={post} locale={locale} />
-            ))}
+          <div className="space-y-2.5 sm:space-y-3 lg:space-y-4">
+            {(() => {
+              const list = filteredPosts.slice(0, visibleCount);
+              const first = list[0];
+              const rest = list.slice(1);
+              return (
+                <>
+                  {first ? (
+                    <BlogPostCard key={first.slug} post={first} locale={locale} layout="feature" />
+                  ) : null}
+                  {rest.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3 lg:gap-4">
+                      {rest.map((post) => (
+                        <BlogPostCard key={post.slug} post={post} locale={locale} />
+                      ))}
+                    </div>
+                  ) : null}
+                </>
+              );
+            })()}
           </div>
           {visibleCount < filteredPosts.length ? (
             <>

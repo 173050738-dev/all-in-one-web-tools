@@ -33,7 +33,7 @@ export default function BlogContentRenderer({ blocks, locale, className = '' }: 
         h2Counter += 1;
         const text = getLocalizedText(block.text, locale);
         renderedNodes.push(
-          <h2 key={`h-${i}`} className="mt-10 sm:mt-12 text-lg sm:text-xl tracking-tight">
+          <h2 id={`blk-${i}`} key={`h-${i}`} className="scroll-mt-24 mt-10 sm:mt-12 text-lg sm:text-xl tracking-tight">
             {text}
           </h2>,
         );
@@ -53,7 +53,7 @@ export default function BlogContentRenderer({ blocks, locale, className = '' }: 
       case 'h3': {
             const text = getLocalizedText(block.text, locale);
             renderedNodes.push(
-              <h3 key={`h-${i}`} className="mt-8 sm:mt-10 text-lg sm:text-xl tracking-tight">
+              <h3 id={`blk-${i}`} key={`h-${i}`} className="scroll-mt-24 mt-8 sm:mt-10 text-lg sm:text-xl tracking-tight">
                 {text}
               </h3>,
             );

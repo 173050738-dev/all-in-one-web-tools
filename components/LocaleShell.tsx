@@ -20,6 +20,8 @@ const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default
   loading: () => <div aria-hidden="true" className="h-[60px] sm:h-[72px]" />,
 });
 
+const FeedbackWidget = dynamic(() => import('@/components/FeedbackWidget'), { ssr: false });
+
 const STICKY_SLOT_HEIGHT_PX = 64;
 
 type LocaleShellProps = {
@@ -225,6 +227,7 @@ export default function LocaleShell({
         </main>
         <Footer />
         <CookieBanner />
+        <FeedbackWidget />
         {/* ===== Ad Slot 1/3: Mobile Sticky Bottom ===== */}
         <div className="sm:hidden" suppressHydrationWarning>
           <AdSlot
