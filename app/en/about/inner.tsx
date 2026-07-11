@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'About Us | Korelyy - Free Online Tools Hub for Global Creators',
+  title: 'About Us | Korelyy - Online Tools Hub for Global Creators',
   description:
     'Meet the Korelyy team and our mission. We curate 900+ browser-ready, privacy-first free tools across AI, image, PDF, office, developer and creative categories. Available in 6 languages to users in 180+ countries.',
 };

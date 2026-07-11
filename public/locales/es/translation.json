@@ -415,6 +415,10 @@
       "name": "Visualizador de Sentimiento",
       "description": "Banco 1500+ palabras. Positivo/dolor/neutral/negativo. Circular + barras."
     },
+    "seo-keyword-miner": {
+      "name": "Minero de Palabras Clave SEO",
+      "description": "Minero de palabras clave long-tail basado en Google Autocomplete + DeepSeek. Introduce una palabra semilla y genera más de 60 términos long-tail altamente relacionados con interés / competencia estimados, intención de búsqueda y sugerencias de temas de contenido. Copia y exportación CSV compatibles."
+    },
     "text-counter": {
       "name": "Contador de texto",
       "description": "Conteo en tiempo real de caracteres de texto, con/sin espacios, conteo de palabras, líneas, párrafos. Excelente para ensayos y manuscritos."

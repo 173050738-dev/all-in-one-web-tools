@@ -104,7 +104,7 @@ export const SITE_META_BAREMAP: Record<
 > = {
   en: {
     siteName: 'Korelyy Tools',
-    homeTitle: 'Korelyy Tool Hub — 100% Free Online Tools',
+    homeTitle: 'Korelyy Tool Hub — Online Tools',
     homeDescription:
       'Discover 100+ free online tools for developers, creators and businesses: image editing, PDF, QR codes, AI prompts, passwords, text utilities and more. No signup, private, works on all devices. 6 languages supported.',
     homeKeywords: [
@@ -126,7 +126,7 @@ export const SITE_META_BAREMAP: Record<
   },
   zh: {
     siteName: 'Korelyy 工具库',
-    homeTitle: 'Korelyy 工具库 - 免费在线工具聚合平台',
+    homeTitle: 'Korelyy 工具库 - 在线工具聚合平台',
     homeDescription:
       '100+ 免费在线工具：开发工具、图片处理、PDF 合并、二维码生成、AI 提示词、密码生成、文本处理、世界杯主题工具等。本地处理，隐私安全，无需注册，6 种语言全端适配。',
     homeKeywords: [
@@ -148,7 +148,7 @@ export const SITE_META_BAREMAP: Record<
   },
   es: {
     siteName: 'Korelyy Herramientas',
-    homeTitle: 'Korelyy — Herramientas en línea 100% gratuitas',
+    homeTitle: 'Korelyy — Herramientas en línea',
     homeDescription:
       'Más de 100 herramientas en línea gratuitas: edición de imágenes, PDF, códigos QR, IA, contraseñas, utilidades de texto y más. Sin registro, privado, funciona en todos los dispositivos. 6 idiomas.',
     homeKeywords: [
@@ -167,7 +167,7 @@ export const SITE_META_BAREMAP: Record<
   },
   hi: {
     siteName: 'Korelyy टूल हब',
-    homeTitle: 'टूल हब - 100% मुफ्त ऑनलाइन टूल्स | Korelyy',
+    homeTitle: 'ऑनलाइन टूल्स | Korelyy',
     homeDescription:
       'डेवलपर्स, क्रिएटर्स और व्यवसायों के लिए 100+ मुफ्त ऑनलाइन टूल्स: इमेज एडिटिंग, PDF, QR कोड, AI प्रॉम्प्ट, पासवर्ड, टेक्स्ट यूटिलिटीज और बहुत कुछ। बिना साइनअप के, 6 भाषाएं।',
     homeKeywords: [
@@ -186,7 +186,7 @@ export const SITE_META_BAREMAP: Record<
   },
   fr: {
     siteName: 'Korelyy Outils',
-    homeTitle: 'Korelyy — Outils en ligne 100 % gratuits',
+    homeTitle: 'Korelyy — Outils en ligne',
     homeDescription:
       'Plus de 100 outils en ligne gratuits : retouche d\u2019images, PDF, QR codes, IA, mots de passe, utilitaires texte, etc. Sans inscription, privé, compatible tous appareils. 6 langues.',
     homeKeywords: [
@@ -205,7 +205,7 @@ export const SITE_META_BAREMAP: Record<
   },
   ar: {
     siteName: 'كورلي لأدوات الويب',
-    homeTitle: 'كورلي — أدوات عبر الإنترنت مجانية 100%',
+    homeTitle: 'كورلي — أدوات عبر الإنترنت',
     homeDescription:
       'أكثر من 100 أداة مجانية عبر الإنترنت: تحرير الصور، وحدات PDF، رموز QR، أدوات الذكاء الاصطناعي، كلمات مرور، أدوات نصية، وغير ذلك. بدون تسجيل، خاص، يعمل على جميع الأجهزة. 6 لغات.',
     homeKeywords: [

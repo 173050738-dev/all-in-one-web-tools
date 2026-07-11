@@ -8,7 +8,7 @@ const DEFAULT_LANG = '/zh/';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Korelyy Tool Hub - 100% Free Online Tools',
+  title: 'Korelyy Tool Hub - Online Tools',
   description:
     'Discover 100% free online tools for productivity, creativity, image editing, PDF processing, AI workflows and more. No signup, works on all devices. 6 languages supported.',
   keywords: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: `https://korelyy.com/zh/`,
     siteName: 'Korelyy Tools',
-    title: 'Korelyy Tool Hub — 100% Free Online Tools (6 Languages)',
+    title: 'Korelyy Tool Hub — Online Tools (6 Languages)',
     description:
       'Free online tools for productivity, creativity, image editing, PDF processing and AI workflow automation. No signup required. Desktop and mobile friendly.',
     locale: 'zh_CN',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@korelyy',
-    title: 'Korelyy Tool Hub — 100% Free Online Tools',
+    title: 'Korelyy Tool Hub — Online Tools',
     description:
       'Free online tools for productivity, image editing, PDF processing & AI workflows. No signup, 6 languages, mobile friendly.',
     images: [OG_IMAGE],

@@ -36,7 +36,7 @@ const OG_IMAGE_TYPE = 'image/png';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Korelyy Tool Hub - 100% Free Online Tools',
+    default: 'Korelyy Tool Hub - Online Tools',
     template: '%s | Korelyy Tools',
   },
   description:
@@ -103,13 +103,14 @@ export const metadata: Metadata = {
     'mobile-web-app-capable': 'yes',
     'bytedance-verification-code': 'lB1lsK0p56mGhxh4iowe',
     'impact-site-verification': '9ec4c8fe-eaef-4357-9457-9c7963098b9a',
+    'shenma-site-verification': 'b770032578aedb343397f8f0441bb082_1783744695',
     ...(ADSENSE_ENABLED ? { 'google-adsense-account': ADSENSE_PUBLISHER_ID } : null),
   },
   openGraph: {
     type: 'website',
     url: SITE_URL,
     siteName: 'Korelyy Tools',
-    title: 'Korelyy Tool Hub - 100% Free Online Tools',
+    title: 'Korelyy Tool Hub - Online Tools',
     description:
       'Free online tools for productivity, creativity, image editing, PDF processing and AI workflows. No signup, all devices, 6 languages.',
     locale: 'en_US',
@@ -127,7 +128,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@korelyy',
-    title: 'Korelyy Tool Hub - 100% Free Online Tools',
+    title: 'Korelyy Tool Hub - Online Tools',
     description:
       'Free online tools for productivity, image editing, PDF processing & AI workflows. No signup, 6 languages.',
     images: [OG_IMAGE],

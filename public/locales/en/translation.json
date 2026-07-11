@@ -415,6 +415,10 @@
       "name": "Copy Sentiment Visualizer",
       "description": "Local sentiment word bank (1500+). Split positive/种草-urge/pain/neutral/negative. Pie + bar chart ratio. Direct visualize 种草 intensity & pain points density, optimize conversion."
     },
+    "seo-keyword-miner": {
+      "name": "SEO Keyword Miner",
+      "description": "Long-tail keyword miner based on Google Autocomplete + DeepSeek. Enter a seed keyword and generate 60+ highly-related long-tail terms with estimated heat / competition, search intent, and content topic suggestions. Copy and CSV export supported."
+    },
     "text-counter": {
       "name": "Text Counter",
       "description": "Real-time count of text characters, with/without spaces, word count, line count, paragraph count. Great for essays and manuscripts."

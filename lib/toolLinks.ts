@@ -40,6 +40,7 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'random-number',
   'regex-tester',
   'script-splitter',
+  'seo-keyword-miner',
   'sentiment-analyzer',
   'srt-subtitle-generator',
   'text-counter',

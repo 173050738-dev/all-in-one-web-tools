@@ -14,7 +14,7 @@ interface ShareButtonProps {
   title?: string;
 }
 
-export default function ShareButton({ title = 'Korelyy - Free Online Tools Collection' }: ShareButtonProps) {
+export default function ShareButton({ title = 'Korelyy - Online Tools Collection' }: ShareButtonProps) {
   const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const [showQRCode, setShowQRCode] = useState(false);

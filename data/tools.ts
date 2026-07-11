@@ -21942,6 +21942,24 @@ export const tools: Tool[] = [
     externalUrl: 'https://icons8.com/lunacy',
     likes: 11876, difficulty: 'medium', complianceLevel: 'green', platform: 'desktop', accessTag: 'direct', signup: ['email'],
   },
+{
+    id: 'seo-keyword-miner',
+    slug: 'seo-keyword-miner',
+    name: 'SEO关键词矿工',
+    description: '基于 Google Autocomplete + DeepSeek 的长尾词挖掘工具。输入核心词，一键生成 60+ 高相关长尾词，标注预估热度/竞争、搜索意图，并给出内容选题建议。支持复制和导出 CSV。',
+    category: 'seo-tools',
+    tags: ['SEO', '关键词', '长尾词', '内容营销', '选题'],
+    nameEn: 'SEO Keyword Miner', descriptionEn: 'Long-tail keyword miner based on Google Autocomplete + DeepSeek. Enter a seed keyword and generate 60+ highly-related long-tail terms with estimated heat / competition, search intent, and content topic suggestions. Copy and CSV export supported.', tagsEn: ['SEO', 'Keywords', 'Long-tail', 'Content Marketing', 'Topics'],
+    isFree: true,
+    icon: 'Search',
+    relatedTools: ['keyword-spinoff-generator'],
+    accessTag: 'direct',
+    signup: ['no-signup'],
+    localProcessing: false,
+    likes: 8800,
+    difficulty: 'easy',
+    complianceLevel: 'green',
+  },
 ];
 
 export const getToolBySlug = (slug: string): Tool | undefined => {

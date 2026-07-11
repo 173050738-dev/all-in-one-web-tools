@@ -415,6 +415,10 @@
       "name": "Visualiseur de Sentiment",
       "description": "Banque 1500+ mots. Positif/urge/douleur/neutre/négatif. Camembert + barres."
     },
+    "seo-keyword-miner": {
+      "name": "Mineur de Mots-clés SEO",
+      "description": "Mineur de mots-clés long-tail basé sur Google Autocomplete + DeepSeek. Saisissez un mot de départ et générez 60+ termes long-tail très pertinents avec intérêt / concurrence estimés, intention de recherche et suggestions de sujets de contenu. Copie et export CSV pris en charge."
+    },
     "text-counter": {
       "name": "Compteur de texte",
       "description": "Comptage en temps réel des caractères du texte, avec/sans espaces, nombre de mots, lignes, paragraphes. Excellent pour les essais et manuscrits."

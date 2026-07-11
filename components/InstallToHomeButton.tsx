@@ -122,7 +122,7 @@ const I18N: Record<string, {
     iosNote: '⚠️ Apple policy blocks auto-install prompts on iOS — only manual via Share menu',
     androidNote: '💡 Opens in standalone window after install — behaves like a native app',
     desktopNote: '💡 macOS Safari users: File → Add to Dock / Add to Home Screen',
-    title: 'Korelyy Tools · Free Online Tools Hub',
+    title: 'Korelyy Tools · Online Tools Hub',
     winFile: 'Korelyy Tools.url',
     macFile: 'Korelyy Tools.webloc',
     linuxFile: 'korelyy-tools.desktop',
@@ -549,7 +549,7 @@ Categories=Utility;Productivity;
             ref={menuRef}
             className="
               fixed inset-x-0 bottom-0 z-50 
-              sm:absolute sm:right-0 sm:top-full sm:left-auto sm:inset-x-auto sm:mt-2
+              sm:absolute sm:right-0 sm:top-full sm:left-auto sm:inset-x-auto sm:inset-y-auto sm:bottom-auto sm:mt-2
               w-full sm:w-[min(94vw,380px)] md:w-[420px]
               bg-white dark:bg-gray-800
               rounded-t-3xl sm:rounded-2xl

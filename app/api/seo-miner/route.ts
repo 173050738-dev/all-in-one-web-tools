@@ -1,0 +1,209 @@
+import { NextRequest, NextResponse } from 'next/server';
+
+const GOOGLE_SUGGEST_URL = 'https://suggestqueries.google.com/complete/search?client=firefox&q=';
+const MODIFIERS = ['how', 'what', 'best', 'vs', 'for', 'near', 'free', 'online', '2025', '2026'];
+const ALPHABET = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const MAX_AUTOCOMPLETE_PER_QUERY = 15;
+const MAX_CANDIDATE_KEYWORDS = 60;
+
+type Heat = 'High' | 'Medium' | 'Low';
+type Competition = 'High' | 'Medium' | 'Low';
+
+interface KeywordResult {
+  keyword: string;
+  intent: 'Informational' | 'Transactional' | 'Navigational';
+  heat: Heat;
+  competition: Competition;
+  suggestion: string;
+}
+
+function encodeKeyword(q: string): string {
+  return encodeURIComponent(q.trim());
+}
+
+async function fetchSuggestions(query: string, signal?: AbortSignal): Promise<string[]> {
+  try {
+    const res = await fetch(GOOGLE_SUGGEST_URL + encodeKeyword(query), {
+      signal,
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36',
+        'Accept-Language': 'en-US,en;q=0.9',
+      },
+      cache: 'no-store',
+    });
+    if (!res.ok) return [];
+    const text = await res.text();
+    const data = JSON.parse(text);
+    if (!Array.isArray(data) || !Array.isArray(data[1])) return [];
+    return data[1]
+      .filter((s: unknown) => typeof s === 'string')
+      .slice(0, MAX_AUTOCOMPLETE_PER_QUERY);
+  } catch {
+    return [];
+  }
+}
+
+function classifyHeatAndCompetition(
+  kw: string,
+  overallRank: number,
+  total: number,
+): { heat: Heat; competition: Competition } {
+  const words = kw.trim().split(/\s+/).length;
+  const length = kw.length;
+  const percentile = total <= 1 ? 1 : overallRank / total;
+
+  let heat: Heat;
+  if (percentile <= 0.25) heat = 'High';
+  else if (percentile <= 0.6) heat = 'Medium';
+  else heat = 'Low';
+
+  let competition: Heat;
+  if (words <= 2 && length <= 16) competition = 'High';
+  else if (words <= 3 && length <= 28) competition = 'Medium';
+  else competition = 'Low';
+
+  return { heat, competition };
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const { seed, locale = 'en' } = await req.json();
+    if (!seed || typeof seed !== 'string' || !seed.trim()) {
+      return NextResponse.json({ error: 'seed is required' }, { status: 400 });
+    }
+    const seedClean = seed.trim();
+
+    const queries = new Set<string>();
+    queries.add(seedClean);
+    for (const mod of MODIFIERS) queries.add(`${seedClean} ${mod}`);
+    for (const mod of MODIFIERS) queries.add(`${mod} ${seedClean}`);
+    for (const letter of ALPHABET.slice(0, 8)) queries.add(`${seedClean} ${letter}`);
+    for (const letter of ALPHABET.slice(0, 8)) queries.add(`${letter} ${seedClean}`);
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    const allSug: Array<{ kw: string; rank: number; query: string }> = [];
+
+    let globalRank = 0;
+    for (const q of Array.from(queries).slice(0, 28)) {
+      const list = await fetchSuggestions(q, controller.signal);
+      for (let i = 0; i < list.length; i++) {
+        allSug.push({ kw: list[i], rank: globalRank + i, query: q });
+      }
+      globalRank += Math.max(list.length, 1);
+    }
+    clearTimeout(timeout);
+
+    const seen = new Set<string>();
+    const ordered: Array<{ kw: string; rank: number }> = [];
+    for (const row of allSug) {
+      const norm = row.kw.toLowerCase().trim();
+      if (seen.has(norm)) continue;
+      if (!norm.includes(seedClean.toLowerCase())) continue;
+      seen.add(norm);
+      ordered.push({ kw: row.kw, rank: ordered.length });
+      if (ordered.length >= MAX_CANDIDATE_KEYWORDS) break;
+    }
+
+    const candidates = ordered.length
+      ? ordered.slice(0, MAX_CANDIDATE_KEYWORDS)
+      : [{ kw: seedClean, rank: 0 }];
+
+    const baseLabels = candidates.map((c, i) => {
+      const r = classifyHeatAndCompetition(c.kw, i, candidates.length);
+      return { keyword: c.kw, heat: r.heat, competition: r.competition };
+    });
+
+    const apiKey = process.env.DEEPSEEK_API_KEY;
+    const apiUrl = process.env.DEEPSEEK_API_URL || 'https://api.deepseek.com/v1/chat/completions';
+    const model = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
+
+    let aiMap: Record<string, { intent: KeywordResult['intent']; suggestion: string }> = {};
+
+    if (apiKey) {
+      const localePrompt =
+        locale === 'zh'
+          ? '用中文输出 suggestion 建议'
+          : locale === 'es'
+            ? 'Escribe suggestion en español'
+            : locale === 'fr'
+              ? 'Rédige suggestion en français'
+              : locale === 'hi'
+                ? 'suggestion ko hindi mein likhen'
+                : locale === 'ar'
+                  ? 'اكتب suggestion باللغة العربية'
+                  : 'Write suggestion in English';
+
+      const systemPrompt = `你是 SEO 关键词分析助手。针对候选关键词列表，为每词返回：{keyword, intent(Informational|Transactional|Navigational), suggestion(一句内容选题建议，不要太长)}。以 { keywords: [...] } 为顶层 JSON 返回。response_format: json_object。${localePrompt}。关键词列表:\n${baseLabels.map((b) => b.keyword).join('\n')}`;
+      const userPrompt =
+        locale === 'zh'
+          ? `为下列 SEO 长尾词分类 intent 并给出内容建议：\n${baseLabels.map((b) => b.keyword).join('\n')}`
+          : `Classify intent and give 1 content suggestion for each keyword:\n${baseLabels.map((b) => b.keyword).join('\n')}`;
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({
+            model,
+            messages: [
+              { role: 'system', content: systemPrompt },
+              { role: 'user', content: userPrompt },
+            ],
+            temperature: 0.3,
+            max_tokens: 1500,
+            response_format: { type: 'json_object' },
+          }),
+          signal: AbortSignal.timeout(12000),
+        });
+        if (response.ok) {
+          const data = await response.json();
+          const content = data.choices?.[0]?.message?.content || '{}';
+          const parsed = JSON.parse(content);
+          const list: Array<{
+            keyword: string;
+            intent?: KeywordResult['intent'];
+            suggestion?: string;
+          }> = Array.isArray(parsed)
+            ? parsed
+            : Array.isArray(parsed.keywords)
+              ? parsed.keywords
+              : [];
+          for (const item of list) {
+            if (!item.keyword) continue;
+            aiMap[item.keyword.toLowerCase()] = {
+              intent:
+                item.intent &&
+                ['Informational', 'Transactional', 'Navigational'].includes(item.intent)
+                  ? item.intent
+                  : 'Informational',
+              suggestion: item.suggestion || '',
+            };
+          }
+        }
+      } catch (e) {
+        console.error('seo-miner DeepSeek error:', e);
+      }
+    }
+
+    const results: KeywordResult[] = baseLabels.map((b) => {
+      const ai = aiMap[b.keyword.toLowerCase()] || aiMap[b.keyword];
+      return {
+        keyword: b.keyword,
+        intent: ai?.intent || 'Informational',
+        heat: b.heat,
+        competition: b.competition,
+        suggestion: ai?.suggestion || '',
+      };
+    });
+
+    return NextResponse.json({ keywords: results });
+  } catch (error) {
+    console.error('seo-miner error:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
+}
