@@ -954,23 +954,23 @@ export function blogIndexGenerateMetadataSync(locale: SeoLocale): Metadata {
   const alt = localizedAlternatesForLocale(l, '/blog');
   const blogTitles: Record<SeoLocale, string> = {
     en: 'Blog — Tutorials, Patterns & Performance Guides | Korelyy',
-    zh: '博客 — 工具教程、模板、性能优化指南 | Korelyy',
+    zh: '工具教程 — 免费使用技巧、模板、性能优化指南 | Korelyy',
     es: 'Blog — Tutoriales, Patrones y Guías de Rendimiento | Korelyy',
     hi: 'ब्लॉग — ट्यूटोरियल, पैटर्न और परफॉर्मेंस गाइड | Korelyy',
     fr: 'Blog — Tutoriels, Modèles et Guides de Performance | Korelyy',
     ar: 'المدونة — دروس، نماذج، وأداء أدلة | Korelyy',
   };
   const blogDescriptions: Record<SeoLocale, string> = {
-    en: 'Step-by-step tutorials, verified regex/JSON/QR patterns, and real-world performance benchmarks. Learn to use every Korelyy tool like a pro. 6 languages.',
-    zh: '工具实战手把手教程、验证级正则/JSON/QR 模板、真实性能基准测试。6 种语言同步更新，把 Korelyy 工具用到极致。',
-    es: 'Tutoriales paso a paso, patrones verificados de regex/JSON/QR y benchmarks reales. Aprende a usar cada herramienta de Korelyy como un pro. 6 idiomas.',
-    hi: 'चरण-दर-चरण ट्यूटोरियल, सत्यापित रेगेक्स/JSON/QR पैटर्न और असली परफॉर्मेंस बेंचमार्क। हर Korelyy टूल को प्रो की तरह उपयोग करना सीखें। 6 भाषाएँ।',
-    fr: 'Tutoriels étape par étape, motifs regex/JSON/QR vérifiés et benchmarks de performance réels. Apprenez à utiliser chaque outil Korelyy comme un pro. 6 langues.',
-    ar: 'دروس خطوة بخطوة، أنماط Regex/JSON/QR تم التحقق منها، واختبارات الأداء الحقيقي. تعلم استخدام كل أداة Korelyy مثل المحترفين. 6 لغات.',
+    en: 'Step-by-step free tool tutorials, verified regex/JSON/QR patterns, and real-world performance benchmarks. No signup required. Learn every Korelyy tool like a pro. 6 languages.',
+    zh: '免费工具实战手把手教程、验证级正则/JSON/QR 模板、真实性能基准测试。无需注册，开箱即用。6 种语言同步更新，把 Korelyy 工具用到极致。',
+    es: 'Tutoriales paso a paso de herramientas gratuitas, patrones verificados de regex/JSON/QR y benchmarks reales. Sin registro. Aprende cada herramienta de Korelyy como un pro. 6 idiomas.',
+    hi: 'निःशुल्क टूल्स के चरण-दर-चरण ट्यूटोरियल, सत्यापित रेगेक्स/JSON/QR पैटर्न और असली परफॉर्मेंस बेंचमार्क। कोई रजिस्ट्रेशन नहीं। हर Korelyy टूल को प्रो की तरह उपयोग करना सीखें। 6 भाषाएँ।',
+    fr: 'Tutoriels pas à pas d\'outils gratuits, motifs regex/JSON/QR vérifiés et benchmarks de performance réels. Pas d\'inscription. Apprenez chaque outil Korelyy comme un pro. 6 langues.',
+    ar: 'دروس خطوة بخطوة لأدوات مجانية، أنماط Regex/JSON/QR تم التحقق منها، واختبارات الأداء الحقيقي. لا تسجيل مطلوب. تعلم استخدام كل أداة Korelyy مثل المحترفين. 6 لغات.',
   };
   const blogKeywordsByLocale: Record<SeoLocale, string[]> = {
     en: ['free tools blog', 'regex tutorial', 'json formatter guide', 'qr code patterns', 'performance benchmarks'],
-    zh: ['工具博客', '正则教程', 'JSON格式化指南', '二维码模板', '性能基准'],
+    zh: ['工具教程', '免费工具使用技巧', '正则教程', 'JSON格式化指南', '二维码模板', '性能基准'],
     es: ['blog herramientas', 'tutorial regex', 'guia json', 'patrones qr', 'benchmark'],
     hi: ['टूल ब्लॉग', 'रेगेक्स ट्यूटोरियल', 'जेसन गाइड', 'क्यूआर पैटर्न', 'परफॉर्मेंस'],
     fr: ['blog outils', 'tutoriel regex', 'guide json', 'modèles qr', 'performances'],
@@ -1091,7 +1091,7 @@ export function BlogIndexJsonLd(props: { locale: SeoLocale }): React.ReactElemen
   const l = resolveLocale(locale);
   const baseMeta = SITE_META_BAREMAP[l];
   const homeBreadcrumbName = translateForJsonld(l, 'breadcrumb', 'home', l === 'zh' ? '首页' : 'Home');
-  const blogBreadcrumbName = l === 'zh' ? '博客' : l === 'hi' ? 'ब्लॉग' : l === 'es' ? 'Blog' : l === 'fr' ? 'Blog' : l === 'ar' ? 'المدونة' : 'Blog';
+  const blogBreadcrumbName = l === 'zh' ? '工具教程' : l === 'hi' ? 'ब्लॉग' : l === 'es' ? 'Blog' : l === 'fr' ? 'Blog' : l === 'ar' ? 'المدونة' : 'Blog';
   const canonical = `${SITE_URL}/${l}/blog/`;
 
   const breadcrumb = {
@@ -1149,13 +1149,19 @@ export function BlogPostJsonLd(props: { locale: SeoLocale; slug: string }): Reac
 
   const baseMeta = SITE_META_BAREMAP[l];
   const homeBreadcrumbName = translateForJsonld(l, 'breadcrumb', 'home', l === 'zh' ? '首页' : 'Home');
-  const blogBreadcrumbName = l === 'zh' ? '博客' : l === 'hi' ? 'ब्लॉग' : l === 'es' ? 'Blog' : l === 'fr' ? 'Blog' : l === 'ar' ? 'المدونة' : 'Blog';
+  const blogBreadcrumbName = l === 'zh' ? '工具教程' : l === 'hi' ? 'ब्लॉग' : l === 'es' ? 'Blog' : l === 'fr' ? 'Blog' : l === 'ar' ? 'المدونة' : 'Blog';
   const postTitle = getLocalizedText(post.title, l, `Blog Post: ${slug}`);
   const description = getLocalizedText(post.description, l, baseMeta.homeDescription);
   const readMin = getBlogReadingTime(post, l);
   const postCanonical = `${SITE_URL}/${l}/blog/${slug}/`;
   const img = post.coverImage || OG_IMAGE_ABS;
   const tagList = post.tags.map((t) => getLocalizedText(t, l, '')).filter(Boolean);
+
+  const keywordList = (() => {
+    const fromKeywords = (getLocalizedText<string[]>(post.keywords, l, []) || []).filter(Boolean);
+    const merged = Array.from(new Set([...tagList, ...fromKeywords]));
+    return merged.slice(0, 30);
+  })();
 
   const breadcrumb = {
     '@context': 'https://schema.org',
@@ -1178,14 +1184,14 @@ export function BlogPostJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     author: { '@type': 'Organization', name: baseMeta.brandName, url: SITE_URL },
     publisher: { '@type': 'Organization', name: baseMeta.brandName, url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.svg` } },
     mainEntityOfPage: { '@type': 'WebPage', '@id': postCanonical },
-    keywords: tagList.join(', '),
-    articleSection: 'Tools, Tutorials, Benchmarks',
+    keywords: keywordList.join(', '),
+    articleSection: 'Tools, Tutorials, Benchmarks, How-to',
     wordCount: Math.max(300, readMin * 180),
     inLanguage: LOCALE_OPEN_GRAPH[l],
     url: postCanonical,
     isAccessibleForFree: true,
     timeRequired: `PT${readMin}M`,
-    ...(tagList.length ? { about: tagList.map((name) => ({ '@type': 'Thing', name })) } : {}),
+    ...(keywordList.length ? { about: keywordList.map((name) => ({ '@type': 'Thing', name })) } : {}),
   };
 
   return (

@@ -324,8 +324,8 @@
       "description": "One-click text case conversion, supports PascalCase, camelCase, snake_case, kebab-case, UPPER/lower, Title Case, capitalize first letter."
     },
     "color-picker": {
-      "name": "PDF Toolkit",
-      "description": "All-in-one PDF processing tools, support compression, merging, splitting, converting to Word documents and batch renaming operations."
+      "name": "Color Picker",
+      "description": "Free online color picker with eyedropper, HEX/RGB/HSL/HSV/CMYK conversion, color palette generator, gradient builder, contrast checker (WCAG AA/AAA) and Tailwind/Material design swatches — all in the browser."
     },
     "copy-cleaner": {
       "name": "Copy Redundancy Cleaner & Annotator",

@@ -320,7 +320,7 @@
       "description": "Plus de panne d'inspiration ! 8 catégories : voyage, nourriture, amour, travail… Des centaines de textes prêts à copier en un clic."
     },
     "case-converter": {
-      "name": "Convertisseur de casse",
+      "name": "Convertir Casse",
       "description": "Conversion de casse de texte en un clic, prend en charge PascalCase, camelCase, snake_case, kebab-case, MAJUSCULES/minuscules, Casse de Titre, première lettre en majuscule."
     },
     "color-picker": {
@@ -396,7 +396,7 @@
       "description": "Pour tuteurs. Caractères rares/polyphoniques annotés. Distinguer lectures multiples. Export layout Pinyin."
     },
     "qr-code-generator": {
-      "name": "Générateur de QR Code",
+      "name": "Générateur QR",
       "description": "Créez des QR codes personnalisés : couleurs, logos, tailles. Téléchargement PNG haute résolution en un clic — URLs, texte, WiFi et plus."
     },
     "random-number": {
@@ -424,7 +424,7 @@
       "description": "Comptage en temps réel des caractères du texte, avec/sans espaces, nombre de mots, lignes, paragraphes. Excellent pour les essais et manuscrits."
     },
     "text-to-speech": {
-      "name": "Synthèse Vocale",
+      "name": "Texte en Parole",
       "description": "Transformez tout texte en voix naturelle. Ajustez vitesse, hauteur et volume. Idéal pour écouter romans et infos partout."
     },
     "text-tools": {
@@ -792,11 +792,11 @@
       "description": "en ligne en ligne convertisseur for convert, format, gratuit, en ligne. Works right in your navigateur — gratuit, sécurisé, and Non install required."
     },
     "image-converter": {
-      "name": "image convertisseur",
+      "name": "Convertir Images",
       "description": "en ligne image convertisseur for image, convert, format, en ligne. Works right in your navigateur — gratuit, sécurisé, and Non install required."
     },
     "video-converter": {
-      "name": "vidéo convertisseur",
+      "name": "Convertir Vidéo",
       "description": "en ligne vidéo convertisseur for vidéo, convert, format, en ligne. Works right in your navigateur — gratuit, sécurisé, and Non install required."
     },
     "evernote": {
@@ -2592,7 +2592,7 @@
       "description": "en ligne calculatrice calculatrice for calculatrice, scientific, unit conversion, en ligne. Works right in your navigateur — gratuit, sécurisé, and Non install required."
     },
     "unit-converter": {
-      "name": "Unit convertisseur",
+      "name": "Convertisseur Unité",
       "description": "en ligne unit convertisseur for unit, conversion, length, poids. Works right in your navigateur — gratuit, sécurisé, and Non install required."
     },
     "dictionary": {
@@ -3548,7 +3548,7 @@
       "description": "en ligne calendar app for calendar, schedule, reminder, management. Works right in your navigateur — gratuit, sécurisé, and Non install required."
     },
     "pomodoro-timer": {
-      "name": "Pomodoro minuteur",
+      "name": "Minuteur Pomodoro",
       "description": "en ligne pomodoro minuteur for pomodoro, focus, time, efficiency. Works right in your navigateur — gratuit, sécurisé, and Non install required."
     },
     "simplenote": {

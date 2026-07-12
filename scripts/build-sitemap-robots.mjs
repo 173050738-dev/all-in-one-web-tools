@@ -137,12 +137,11 @@ function buildLocaleSitemap(locale) {
 }
 ['zh', 'fr', 'en', 'hi', 'es', 'ar'].forEach(buildLocaleSitemap);
 
-// ---------------- Generate sitemap-index.xml (aggregates locale sitemaps) ----------------
+// ---------------- Generate sitemap-index.xml (aggregates locale sitemaps only — no full sitemap to avoid duplicate URL) ----------------
 let indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 for (const l of KNOWN_LOCALES) {
   indexXml += `  <sitemap>\n    <loc>${SITE_URL}/sitemap-${l}.xml</loc>\n    <lastmod>${now}</lastmod>\n  </sitemap>\n`;
 }
-indexXml += `  <sitemap>\n    <loc>${SITE_URL}/sitemap.xml</loc>\n    <lastmod>${now}</lastmod>\n  </sitemap>\n`;
 indexXml += `</sitemapindex>\n`;
 const indexPath = path.join(publicDir, 'sitemap-index.xml');
 fs.writeFileSync(indexPath, indexXml, 'utf-8');

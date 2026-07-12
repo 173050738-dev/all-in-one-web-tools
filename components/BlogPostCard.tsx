@@ -20,6 +20,7 @@ export default function BlogPostCard({ post, locale, layout = 'card' }: Props) {
   const date = formatDate(post.publishedAt, locale);
   const tags = post.tags.map((t) => getLocalizedText(t, locale, '')).filter(Boolean);
   const href = `/${locale}/blog/${post.slug}/`;
+  const coverImage = post.coverImage?.trim() || undefined;
   const gradient = getCoverGradient(post);
   const initial = getCoverInitial(post, title);
 
@@ -67,7 +68,7 @@ export default function BlogPostCard({ post, locale, layout = 'card' }: Props) {
     return (
       <article className="group relative w-full overflow-hidden rounded-3xl border border-gray-200/80 dark:border-gray-800/80 bg-white dark:bg-gray-900/50 hover:shadow-2xl hover:shadow-indigo-100/50 dark:hover:shadow-black/30 transition-all">
         <Link href={href} prefetch={false} className="grid grid-cols-1 md:grid-cols-2 focus:outline-none">
-          <CoverBlock gradient={gradient} initial={initial} tall />
+          <CoverBlock coverImage={coverImage} gradient={gradient} initial={initial} tall priority="high" />
           <div className="p-5 sm:p-7 lg:p-8 flex flex-col justify-center">
             <div className="flex flex-wrap items-center gap-2 mb-3">
               <time dateTime={post.publishedAt} className="text-xs font-medium text-gray-500 dark:text-gray-400">{date}</time>
@@ -94,7 +95,7 @@ export default function BlogPostCard({ post, locale, layout = 'card' }: Props) {
   return (
     <article className="group relative w-full h-full overflow-hidden rounded-3xl border border-gray-200/80 dark:border-gray-800/80 bg-white dark:bg-gray-900/50 hover:shadow-xl hover:shadow-indigo-100/50 dark:hover:shadow-black/20 hover:-translate-y-0.5 transition-all flex flex-col">
       <Link href={href} prefetch={false} className="block focus:outline-none flex-1 flex flex-col h-full">
-        <CoverBlock gradient={gradient} initial={initial} />
+        <CoverBlock coverImage={coverImage} gradient={gradient} initial={initial} priority="low" />
         <div className="p-3.5 sm:p-4 lg:p-5 flex-1 flex flex-col min-h-0">
           <div className="flex flex-wrap items-center gap-2 mb-2 sm:mb-3 flex-shrink-0">
             <time
@@ -140,14 +141,35 @@ export default function BlogPostCard({ post, locale, layout = 'card' }: Props) {
 }
 
 // 纯 CSS 渐变"封面"块（方案 A，零图片、零加载负担）
-function CoverBlock({ gradient, initial, tall = false }: { gradient: string; initial: string; tall?: boolean }) {
+function CoverBlock({ coverImage, gradient, initial, tall = false, priority = 'low' }: { coverImage?: string; gradient: string; initial: string; tall?: boolean; priority?: 'high' | 'low' }) {
+  const sizeCls = tall ? 'h-full min-h-[180px] md:min-h-[260px]' : 'h-32 sm:h-36';
+  const [imgReady, setImgReady] = React.useState(false);
   return (
     <div
       aria-hidden="true"
-      className={`relative w-full overflow-hidden bg-gradient-to-br ${gradient} ${tall ? 'h-full min-h-[180px] md:min-h-[260px]' : 'h-32 sm:h-36'}`}
+      className={`relative w-full overflow-hidden bg-gradient-to-br ${gradient} ${sizeCls}`}
     >
       <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,white_0,transparent_45%),radial-gradient(circle_at_80%_70%,white_0,transparent_40%)]" />
-      <div className="absolute -right-3 -bottom-5 select-none font-black leading-none text-white/25 tracking-tighter text-[96px] sm:text-[120px]">
+      {coverImage && (
+        <img
+          src={coverImage}
+          alt=""
+          width={tall ? 1200 : 800}
+          height={tall ? 675 : 450}
+          loading={priority === 'high' ? 'eager' : 'lazy'}
+          fetchPriority={priority}
+          decoding="async"
+          onLoad={() => setImgReady(true)}
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).style.display = 'none';
+            setImgReady(false);
+          }}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out ${imgReady ? 'opacity-100' : 'opacity-0'}`}
+        />
+      )}
+      <div
+        className={`absolute -right-3 -bottom-5 select-none font-black leading-none tracking-tighter text-[96px] sm:text-[120px] ${imgReady && coverImage ? 'text-white/40 mix-blend-overlay drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]' : 'text-white/25'}`}
+      >
         {initial}
       </div>
     </div>

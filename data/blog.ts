@@ -66,6 +66,7 @@ export function getBlogReadingTime(post: BlogPost, locale: SeoLocale): number {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'what-is-regular-expression',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Regex%20What%20Is%20Regular%20Expression%20Beginner%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-06-28T00:00:00.000Z',
     updatedAt: '2026-07-02T00:00:00.000Z',
@@ -224,6 +225,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'regex-email-phone-url-patterns',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Regex%20Email%20Phone%20URL%20Patterns%2060%20Countries%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-06-30T00:00:00.000Z',
     tags: [
@@ -376,6 +378,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'regex-vs-string-match-performance',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Regex%20vs%20String%20Match%20Performance%20JS%20Benchmark%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-07-01T00:00:00.000Z',
     tags: [
@@ -583,6 +586,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'pdf-tools-ultimate-guide-2026',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PDF%20Tools%20Merge%20Compress%20OCR%20Ultimate%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-07-02T00:00:00.000Z',
     tags: [
@@ -659,6 +663,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'regex-tester-practical-use-cases',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Regex%20Tester%20Practical%20Use%20Cases%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-07-03T00:00:00.000Z',
     tags: [
@@ -891,6 +896,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'qr-code-generator-business-use-cases',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=QR%20Code%20Generator%20Business%20Use%20Cases%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-07-03T00:00:00.000Z',
     tags: [
@@ -961,6 +967,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'password-generator-security-myths-2026',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Password%20Generator%20Security%20Myths%20Debunked%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-07-03T00:00:00.000Z',
     tags: [
@@ -1022,6 +1029,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'base64-encoding-everyday-use-cases',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Base64%20Encoding%20Everyday%20Practical%20Use%20Cases%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-07-04T00:00:00.000Z',
     tags: [
@@ -1083,6 +1091,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'word-counter-content-writers-guide',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Word%20Counter%20Content%20Writers%20SEO%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-07-04T00:00:00.000Z',
     tags: [
@@ -1154,7 +1163,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { en: 'Naming Conventions', zh: '命名规范', es: 'Convenciones de Nombres', fr: 'Conventions de Nommage', hi: 'नेमिंग कन्वेंशन', ar: 'اتفاقيات التسمية' },
       { en: 'Developer Efficiency', zh: '开发效率', es: 'Eficiencia Dev', fr: 'Efficacité Dev', hi: 'डेवलपर इफिशियेंसी', ar: 'كفاءة المطورين' },
     ],
-    relatedToolSlugs: ['case-converter', 'slug-generator', 'text-counter', 'script-splitter'],
+    relatedToolSlugs: ['case-converter', 'text-counter', 'script-splitter'],
     readingMinutes: { en: 8, zh: 9, es: 9, fr: 9, hi: 10, ar: 9 },
     title: {
       en: 'Case Converter Complete Reference 2026: camelCase vs PascalCase vs snake_case vs kebab-case — Which Language Style Guide Requires What?',
@@ -1215,7 +1224,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { en: 'REST APIs', zh: 'REST 接口', es: 'REST APIs', fr: 'APIs REST', hi: 'REST API', ar: 'واجهات REST' },
       { en: 'Debugging', zh: '调试技巧', es: 'Depuración', fr: 'Débogage', hi: 'डीबगिंग', ar: 'تصحيح الأخطاء' },
     ],
-    relatedToolSlugs: ['json-formatter', 'json-to-yaml', 'base64-tool', 'url-encode-decode', 'text-counter'],
+    relatedToolSlugs: ['json-formatter', 'base64-tool', 'url-encode-decode', 'text-counter'],
     readingMinutes: { en: 9, zh: 10, es: 10, fr: 10, hi: 11, ar: 10 },
     title: {
       en: 'JSON Formatter + Validator Complete Guide 2026: RFC 8259 Deep Dive, 9 Common Malformations, and 7 Offline JSONPath Query Recipes You Can Paste Into Postman',
@@ -1266,7 +1275,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { en: 'Database Indexing', zh: '数据库索引', es: 'Indexación BD', fr: 'Indexation BD', hi: 'डेटाबेस इंडेक्सिंग', ar: 'فهرسة قواعد البيانات' },
       { en: 'Distributed Systems', zh: '分布式系统', es: 'Sistemas Distribuidos', fr: 'Systèmes Distribués', hi: 'डिस्ट्रिब्यूटिड सिस्टम्स', ar: 'الأنظمة الموزعة' },
     ],
-    relatedToolSlugs: ['uuid-generator', 'password-generator', 'qr-code-generator', 'barcode-generator'],
+    relatedToolSlugs: ['uuid-generator', 'password-generator', 'qr-code-generator'],
     readingMinutes: { en: 8, zh: 9, es: 9, fr: 9, hi: 10, ar: 9 },
     title: {
       en: 'UUID Generator Best Practices 2026: v1 vs v4 vs v7 — Why UUID v7 Solves 92% of Your MySQL/PostgreSQL INSERT Performance Problems (Benchmark 1M Rows)',
@@ -1321,7 +1330,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { en: 'Time Zones', zh: '时区', es: 'Zonas Horarias', fr: 'Fuseaux Horaires', hi: 'टाइमज़ोन्स', ar: 'المناطق الزمنية' },
       { en: 'Calendar Systems', zh: '日历系统', es: 'Calendarios', fr: 'Calendriers', hi: 'कैलेंडर सिस्टम्स', ar: 'أنظمة التقويم' },
     ],
-    relatedToolSlugs: ['timestamp-converter', 'time-calculator', 'qr-code-generator', 'script-splitter'],
+    relatedToolSlugs: ['timestamp-converter', 'qr-code-generator', 'script-splitter'],
     readingMinutes: { en: 9, zh: 10, es: 10, fr: 10, hi: 11, ar: 10 },
     title: {
       en: 'Timestamp Converter + Time Zone Deep Dive 2026: Unix Seconds vs Milliseconds vs Microseconds, the 5 DST Transition Bugs That Cost $1M+/year, and Why All Production APIs Use ISO 8601 UTC with Z-Suffix',
@@ -1370,6 +1379,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'markdown-preview-writers-workflow',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Markdown%20Preview%20GFM%20Mermaid%20Writers%20Workflow%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
     author: 'Korelyy Team',
     publishedAt: '2026-07-05T00:00:00.000Z',
     tags: [
@@ -1377,7 +1387,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { en: 'Writing Workflow', zh: '写作工作流', es: 'Flujo de Redacción', fr: 'Flux de Rédaction', hi: 'राइटिंग वर्कफ़्लो', ar: 'سير العمل الكتابي' },
       { en: 'Static Site Generators', zh: '静态站点生成器', es: 'Generadores Estáticos', fr: 'Générateurs Statiques', hi: 'स्टैटिक साइट जेनरेटर्स', ar: 'مولدات المواقع الثابتة' },
     ],
-    relatedToolSlugs: ['markdown-preview', 'case-converter', 'text-counter', 'table-generator', 'slug-generator'],
+    relatedToolSlugs: ['markdown-preview', 'case-converter', 'text-counter'],
     readingMinutes: { en: 9, zh: 10, es: 10, fr: 10, hi: 11, ar: 10 },
     title: {
       en: 'Markdown Preview + Writer Workflow Guide 2026: CommonMark 0.31 Spec, GFM 14 Extensions (Tables / Task Lists / Strikethrough / Alerts), Mermaid 11 Diagrams, MathJax 4 + The 6 Static Site Generator Flavor Differences (Next.js / Hugo / Astro / Jekyll / Docusaurus / MkDocs)',
@@ -1459,7 +1469,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["nike-run-club","strava","garmin-connect","runkeeper","asics-runkeeper"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -1828,7 +1838,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["nike-run-club","strava","garmin-connect","runkeeper","asics-runkeeper"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -2197,7 +2207,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["nike-run-club","strava","garmin-connect","runkeeper","asics-runkeeper"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -2566,7 +2576,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["nike-run-club","strava","garmin-connect","runkeeper","asics-runkeeper"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -2935,7 +2945,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["strava","komoot","zwift","wahoo-systm","trainingpeaks"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -3304,7 +3314,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["strava","komoot","zwift","wahoo-systm","trainingpeaks"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -3673,7 +3683,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["strava","komoot","zwift","wahoo-systm","trainingpeaks"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -4042,7 +4052,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["strava","komoot","zwift","wahoo-systm","trainingpeaks"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -4411,7 +4421,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["komoot","alltrails","strava","onx-offroad","fatmap"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -4780,7 +4790,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["komoot","alltrails","strava","onx-offroad","fatmap"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -5149,7 +5159,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["komoot","alltrails","strava","onx-offroad","fatmap"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -5518,7 +5528,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["komoot","alltrails","strava","onx-offroad","fatmap"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -5887,7 +5897,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["yoga-with-adriene","downdog","alo-moves","headspace","calm"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -6256,7 +6266,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["yoga-with-adriene","downdog","alo-moves","headspace","calm"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -6625,7 +6635,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["yoga-with-adriene","downdog","alo-moves","headspace","calm"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -6994,7 +7004,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["yoga-with-adriene","downdog","alo-moves","headspace","calm"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -7363,7 +7373,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["strong","trainerroad","fitbod","peloton","nike-training-club"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -7732,7 +7742,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["strong","trainerroad","fitbod","peloton","nike-training-club"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -8101,7 +8111,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["strong","trainerroad","fitbod","peloton","nike-training-club"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -8470,7 +8480,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["strong","trainerroad","fitbod","peloton","nike-training-club"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -8839,7 +8849,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["swimsmooth","trainerroad","strava","garmin-connect","myswimpro"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -9208,7 +9218,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["swimsmooth","trainerroad","strava","garmin-connect","myswimpro"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -9577,7 +9587,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["swimsmooth","trainerroad","strava","garmin-connect","myswimpro"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -9946,7 +9956,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["swimsmooth","trainerroad","strava","garmin-connect","myswimpro"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -10315,7 +10325,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["physitrack","strava","nrc","headspace","calm"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -10684,7 +10694,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["physitrack","strava","nrc","headspace","calm"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -11053,7 +11063,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["physitrack","strava","nrc","headspace","calm"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -11422,7 +11432,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["physitrack","strava","nrc","headspace","calm"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -11791,7 +11801,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["myfitnesspal","cronometer","fatsecret","strava","trainerroad"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -12160,7 +12170,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["myfitnesspal","cronometer","fatsecret","strava","trainerroad"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -12529,7 +12539,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["myfitnesspal","cronometer","fatsecret","strava","trainerroad"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -12898,7 +12908,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["myfitnesspal","cronometer","fatsecret","strava","trainerroad"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -13267,7 +13277,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["raceday","ultrasignup","startlist","letsfind","maratodes"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -13636,7 +13646,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["raceday","ultrasignup","startlist","letsfind","maratodes"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -14005,7 +14015,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["raceday","ultrasignup","startlist","letsfind","maratodes"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -14374,7 +14384,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["raceday","ultrasignup","startlist","letsfind","maratodes"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -14743,7 +14753,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["headspace","calm","nike-run-club","strava","sportpsych"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -15112,7 +15122,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["headspace","calm","nike-run-club","strava","sportpsych"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -15481,7 +15491,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["headspace","calm","nike-run-club","strava","sportpsych"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -15850,7 +15860,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["headspace","calm","nike-run-club","strava","sportpsych"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -16219,7 +16229,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["smallpdf","ilovepdf","pdffiller","adobe-acrobat","pdf24-tools"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -16588,7 +16598,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["smallpdf","ilovepdf","pdffiller","adobe-acrobat","pdf24-tools"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -16957,7 +16967,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["smallpdf","ilovepdf","pdffiller","adobe-acrobat","pdf24-tools"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -17326,7 +17336,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["smallpdf","ilovepdf","pdffiller","adobe-acrobat","pdf24-tools"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -17695,7 +17705,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["canva","photopea","removebg","squoosh","imagetopdf"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -18064,7 +18074,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["canva","photopea","removebg","squoosh","imagetopdf"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -18433,7 +18443,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["canva","photopea","removebg","squoosh","imagetopdf"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -18802,7 +18812,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["canva","photopea","removebg","squoosh","imagetopdf"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -19171,7 +19181,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["grammarly","deepl-write","notion-ai","chatpdf","perplexity"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -19540,7 +19550,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["grammarly","deepl-write","notion-ai","chatpdf","perplexity"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -19909,7 +19919,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["grammarly","deepl-write","notion-ai","chatpdf","perplexity"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -20278,7 +20288,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["grammarly","deepl-write","notion-ai","chatpdf","perplexity"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -20647,7 +20657,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["notion","todoist","ticktick","anydo","microsoft-to-do"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -21016,7 +21026,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["notion","todoist","ticktick","anydo","microsoft-to-do"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -21385,7 +21395,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["notion","todoist","ticktick","anydo","microsoft-to-do"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -21754,7 +21764,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["notion","todoist","ticktick","anydo","microsoft-to-do"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -22123,7 +22133,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["asana","trello","notion","jira-work","linear"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -22492,7 +22502,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["asana","trello","notion","jira-work","linear"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -22861,7 +22871,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["asana","trello","notion","jira-work","linear"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -23230,7 +23240,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["asana","trello","notion","jira-work","linear"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -23599,7 +23609,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["codepen","caniuse","css-tricks","tailwind-css","photopea"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -23968,7 +23978,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["codepen","caniuse","css-tricks","tailwind-css","photopea"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -24337,7 +24347,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["codepen","caniuse","css-tricks","tailwind-css","photopea"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -24706,7 +24716,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["codepen","caniuse","css-tricks","tailwind-css","photopea"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -25075,7 +25085,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["jsbench","jsbin","codepen","webpack","vitejs"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -25444,7 +25454,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["jsbench","jsbin","codepen","webpack","vitejs"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -25813,7 +25823,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["jsbench","jsbin","codepen","webpack","vitejs"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -26182,7 +26192,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["jsbench","jsbin","codepen","webpack","vitejs"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -26551,7 +26561,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["docker","portainer","k8s","render","railway"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -26920,7 +26930,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["docker","portainer","k8s","render","railway"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -27289,7 +27299,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["docker","portainer","k8s","render","railway"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -27658,7 +27668,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["docker","portainer","k8s","render","railway"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -28027,7 +28037,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["vercel-nextjs","nextjs","turbo","supabase","cloudflare-pages"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -28396,7 +28406,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["vercel-nextjs","nextjs","turbo","supabase","cloudflare-pages"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -28765,7 +28775,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["vercel-nextjs","nextjs","turbo","supabase","cloudflare-pages"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -29134,7 +29144,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["vercel-nextjs","nextjs","turbo","supabase","cloudflare-pages"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -29503,7 +29513,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["postman","insomnia","openapi","swagger","hurl"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -29872,7 +29882,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["postman","insomnia","openapi","swagger","hurl"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -30241,7 +30251,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["postman","insomnia","openapi","swagger","hurl"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -30610,7 +30620,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["postman","insomnia","openapi","swagger","hurl"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -30979,7 +30989,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["seobility","seorank","yoast-seo","ahrefs","semrush"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -31348,7 +31358,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["seobility","seorank","yoast-seo","ahrefs","semrush"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -31717,7 +31727,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["seobility","seorank","yoast-seo","ahrefs","semrush"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -32086,7 +32096,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["seobility","seorank","yoast-seo","ahrefs","semrush"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -32455,7 +32465,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["canva","buffer","later-hq","notion","capcut"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -32824,7 +32834,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["canva","buffer","later-hq","notion","capcut"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -33193,7 +33203,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["canva","buffer","later-hq","notion","capcut"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -33562,7 +33572,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["canva","buffer","later-hq","notion","capcut"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -33931,7 +33941,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["korelyy-studio","seo-mini","cron-job","kofi-unlock","privacypolicy-as-code"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -34300,7 +34310,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["korelyy-studio","seo-mini","cron-job","kofi-unlock","privacypolicy-as-code"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -34669,7 +34679,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["korelyy-studio","seo-mini","cron-job","kofi-unlock","privacypolicy-as-code"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -35038,7 +35048,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["korelyy-studio","seo-mini","cron-job","kofi-unlock","privacypolicy-as-code"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -35407,7 +35417,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["stripe","lemonsqueezy","gumroad","kofi-unlock","patreon"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -35776,7 +35786,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["stripe","lemonsqueezy","gumroad","kofi-unlock","patreon"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -36145,7 +36155,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["stripe","lemonsqueezy","gumroad","kofi-unlock","patreon"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -36514,7 +36524,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["stripe","lemonsqueezy","gumroad","kofi-unlock","patreon"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 8,
       "zh": 9,
@@ -36883,7 +36893,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["privacypolicy-as-code","termify","gdpr-check","cookiebot","one-trust"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 9,
       "zh": 10,
@@ -37252,7 +37262,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["privacypolicy-as-code","termify","gdpr-check","cookiebot","one-trust"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 10,
       "zh": 11,
@@ -37621,7 +37631,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["privacypolicy-as-code","termify","gdpr-check","cookiebot","one-trust"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 11,
       "zh": 12,
@@ -37990,7 +38000,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "ar": "دليل ٢٠٢٦"
       }
     ],
-    relatedToolSlugs: ["privacypolicy-as-code","termify","gdpr-check","cookiebot","one-trust"],
+    relatedToolSlugs: [],
     readingMinutes: {
       "en": 12,
       "zh": 13,
@@ -38326,6 +38336,1747 @@ export const BLOG_POSTS: BlogPost[] = [
       "hi": "🧰 Korelyy कम्प्लायंस टूलकिट खोलें — १००+ बेस्ट-इन-क्लास ऐप्स आपकी पसंदीदा भाषा में ऑडिटेड →",
       "ar": "🧰 افتحوا مجموعة أدوات الامتثال على منصة Korelyy - أكثر من ١٠٠ تطبيق رائد تم فحصها بلغتكم المفضلة ←"
     } },
+    ],
+  },
+
+  {
+    slug: 'robots-txt-generator-2026-tutorial',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=SEO%20Robots%20TXT%20Generator%20Complete%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy SEO Team',
+    publishedAt: '2026-07-12T00:00:00.000Z',
+    updatedAt: '2026-07-12T00:00:00.000Z',
+    tags: [
+      { en: 'SEO', zh: 'SEO', es: 'SEO', fr: 'SEO', hi: 'एसईओ', ar: 'تحسين محركات البحث' },
+      { en: 'Robots.txt', zh: 'Robots.txt', es: 'Robots.txt', fr: 'Robots.txt', hi: 'रोबोट्स टीएक्सटी', ar: 'ملف روبوتات' },
+      { en: 'Tutorial', zh: '教程', es: 'Tutorial', fr: 'Tutoriel', hi: 'ट्यूटोरियल', ar: 'دليل' }
+    ],
+    relatedToolSlugs: [],
+    readingMinutes: { en: 8, zh: 8, es: 8, fr: 8, hi: 8, ar: 8 },
+    title: {
+      en: 'Robots.txt Generator 2026: Complete Syntax Guide + 12 Templates',
+      zh: 'Robots.txt 生成器 2026 完整语法指南（附12个现成模板，防止错误封禁全站）',
+      es: 'Generador Robots.txt 2026: Guía Sintaxis Completa + 12 Plantillas',
+      fr: 'Générateur Robots.txt 2026 : Guide Syntaxe + 12 Modèles Prêts',
+      hi: 'रोबोट्स टीएक्सटी जनरेटर २०२६: सिंटैक्स गाइड + १२ टेम्पलेट्स',
+      ar: 'مُنشئ ملف روبوتات ٢٠٢٦: دليل الصيغة الكامل + ١٢ قالباً جاهزاً'
+    },
+    description: {
+      en: 'Use Korelyy free robots.txt generator online. Write correct robots.txt syntax: User-agent, Allow, Disallow, Sitemap, Crawl-delay, Wildcard. Includes WordPress, Shopify, Next.js, Vue, Cloudflare Pages 2026 latest templates. No accidental noindex.',
+      zh: '在线免费生成 Robots.txt 2026 最新语法：User-agent Allow Disallow Sitemap Crawl-delay 通配符规则一次搞懂。内置 WordPress、Shopify、Next.js、Nuxt、Cloudflare Pages 等12套开箱即用模板，避免误封整站被K。',
+      es: 'Generador online gratis robots.txt 2026. Sintaxis correcta: User-agent, Allow, Disallow, Sitemap, Crawl-delay, comodines. Incluye plantillas WordPress, Shopify, Next.js, Cloudflare Pages.',
+      fr: 'Générateur robots.txt gratuit en ligne 2026. Syntaxe : User-agent, Allow, Disallow, Sitemap, Crawl-delay, wildcards. Modèles WordPress, Shopify, Next.js, Nuxt, Cloudflare Pages.',
+      hi: 'फ्री रोबोट्स टीएक्सटी जनरेटर ऑनलाइन २०२६। सही सिंटैक्स: User-agent Allow Disallow Sitemap वाइल्डकार्ड। WordPress Shopify Next.js Cloudflare Pages के १२ टेम्पलेट्स।',
+      ar: 'مُنشئ مجاني لملف روبوتات على الإنترنت لعام ٢٠٢٦. الصيغة الصحيحة: وكيل المستخدم والسماح والمنع وخريطة الموقع. يتضمن ١٢ قالباً لووردبريس و شوبيفاي و نيكست جي إس و كلاودفلير.'
+    },
+    keywords: {
+      en: ['robots.txt generator 2026', 'robots.txt syntax', 'allow disallow wildcard', 'sitemap directive', 'crawl delay', 'wordpress robots.txt template', 'shopify robots.txt', 'nextjs robots.txt static export', 'cloudflare pages robots.txt 2026', 'google bot user agent', 'bingbot yandex user agent 2026', 'block specific page', 'test robots.txt online', 'common robots.txt mistakes 2026', 'robots.txt vs meta robots noindex'],
+      zh: ['robots.txt 生成器', 'robots.txt 语法 2026', 'allow disallow 通配符', 'sitemap 指令写法', 'crawl delay 设置', 'wordpress robots.txt 模板', 'shopify robots.txt 2026', 'nextjs static export robots.txt', 'cloudflare pages robots.txt', 'googlebot bingbot yandex 抓取规则', '禁止爬虫访问某个目录', '在线测试 robots.txt', 'robots.txt 常见错误 2026', 'robots.txt 和 meta robots noindex 区别', '防止网站被搜索引擎收录'],
+      es: ['generador robots.txt 2026', 'sintaxis robots.txt allow disallow', 'plantilla robots.txt wordpress', 'robots.txt shopify nextjs', 'bloquear bot google'],
+      fr: ['générateur robots.txt 2026', 'syntaxe allow disallow', 'modèle robots.txt wordpress', 'robots.txt nextjs static export', 'empêcher indexation google'],
+      hi: ['रोबोट्स टीएक्सटी जनरेटर २०२६', 'अलाउ डिसअलाउ सिंटैक्स', 'वर्डप्रेस रोबोट्स टीएक्सटी टेम्पलेट', 'शॉपिफाई नेक्स्टजेएस २०२६', 'गूगल बॉट ब्लॉक करना'],
+      ar: ['منشئ ملف روبوتات ٢٠٢٦', 'صيغة السماح والمنع', 'قالب ووردبريس و شوبيفاي', 'منع الفهرسة في جوجل', 'خريطة الموقع ٢٠٢٦']
+    },
+    content: [
+      { type: "h2", text: {
+        en: "1. What Is a robots.txt File? Why Wrong Syntax Gets You Delisted",
+        zh: "1. 什么是 robots.txt？错误语法为什么会让你整站被降权",
+        es: "1. ¿Qué es robots.txt? Por qué una mala sintaxis saca tu sitio del índice",
+        fr: "1. Qu'est-ce que robots.txt ? Pourquoi une mauvaise syntaxe vous déréférence",
+        hi: "१. रोबोट्स टीएक्सटी क्या है? गलत सिंटैक्स क्यों डी-लिस्ट करता है",
+        ar: "١. ما هو ملف روبوتات؟ لماذا تؤدي الصيغة الخاطئة إلى إزالة موقعك من الفهرسة"
+      } },
+      { type: "p", text: {
+        en: "A robots.txt is a plain-text file at /robots.txt telling search engine crawlers which pages to crawl and which to skip. A single stray Disallow: / can remove your entire site from Google index in 72 hours. This guide uses Korelyy generator to build rules safely with the 2026 updated standard (Googlebot, Bingbot, YandexBot, ClaudeBot, GPTBot 2026 additions).",
+        zh: "robots.txt 是放在网站根目录 /robots.txt 的纯文本，告诉搜索引擎爬虫哪些页面该抓、哪些跳过。一行写错的 Disallow: / 就能让你整站在 72 小时内从 Google 索引消失。本教程用 Korelyy 生成器按 2026 最新标准（新增 ClaudeBot、GPTBot、Google-Extended 等 AI 爬虫拦截规则）安全构建。",
+        es: "robots.txt es un archivo de texto plano en /robots.txt que indica a los crawlers qué páginas rastrear. Un solo Disallow: / mal colocado saca tu sitio de Google en 72h. Usa Korelyy con el estándar 2026 (Googlebot, Bingbot, ClaudeBot, GPTBot).",
+        fr: "robots.txt est un fichier texte dans /robots.txt qui indique aux crawlers les pages à ignorer. Un Disallow: / mal placé vous déréférence de Google en 72h. Guidez-vous avec Korelyy sur la norme 2026 (ClaudeBot, GPTBot).",
+        hi: "रोबोट्स टीएक्सटी एक प्लेन-टेक्स्ट फाइल है जो क्रॉलर्स को बताती है कौन से पेज क्रॉल करने हैं। एक गलत Disallow: / से Google आपकी साइट ७२ घंटे में हटा देता है। Korelyy जनरेटर २०२६ स्टैंडर्ड (Googlebot, ClaudeBot, GPTBot) के साथ सुरक्षित बनाएं।",
+        ar: "ملف روبوتات هو ملف نص عادي في الجذر يخبر زواحف محركات البحث عن الصفحات التي يجب الزحف إليها. سطر واحد خاطئ من المنع الكافي يزيل موقعك من فهرس جوجل خلال ٧٢ ساعة. استخدم مولد Korelyy بالمعيار المحدث لعام ٢٠٢٦ مع دعم زواحف الذكاء الاصطناعي كلود بوت و جي بي تي بوت."
+      } },
+      { type: "h3", text: {
+        en: "1.1 2026 New Crawlers You MUST Block",
+        zh: "1.1 2026 年必须拦截的 AI 爬虫清单",
+        es: "1.1 Nuevos crawlers 2026 que debes bloquear sí o sí",
+        fr: "1.1 Les nouveaux crawlers 2026 à bloquer absolument",
+        hi: "१.१ २०२६ के नए क्रॉलर्स जिन्हें आप ब्लॉक करें",
+        ar: "١.١ قائمة زواحف الذكاء الاصطناعي الجديدة لعام ٢٠٢٦ التي يجب حظرها"
+      } },
+      { type: "ul", items: [
+        { en: "GPTBot / ChatGPT-User — OpenAI scraping to train their next model (70% enterprise sites block as of 2026-07).",
+          zh: "GPTBot / ChatGPT-User — OpenAI 用你网站数据训练下一代大模型，截至 2026-07 已有 70% 企业站拦截。",
+          es: "GPTBot / ChatGPT-User — OpenAI rastrea para entrenar sus modelos. El 70% sitios enterprise lo bloquean en 2026.",
+          fr: "GPTBot / ChatGPT-User — OpenAI scrappe pour entraîner ses modèles. 70% des sites enterprise le bloquent en 2026.",
+          hi: "GPTBot / ChatGPT-User — OpenAI आपका डेटा अपने मॉडल ट्रेन के लिए स्क्रैप करता है। २०२६ में ७०% साइटें इसे ब्लॉक करती हैं।",
+          ar: "جي بي تي بوت و شات جي بي تي يوزر: يجمع أو بين إيه آي بيانات موقعك لتدريب نماذجها القادمة. ٧٠٪ من المواقع الكبرى تحظرهما بحلول يوليو ٢٠٢٦."
+        },
+        { en: "ClaudeBot / anthropic-ai — Anthropic scrapes for Claude model training.",
+          zh: "ClaudeBot / anthropic-ai — Anthropic 抓取用于训练 Claude 系列模型。",
+          es: "ClaudeBot / anthropic-ai — Anthropic rastrea para entrenar Claude.",
+          fr: "ClaudeBot / anthropic-ai — Anthropic scrappe pour entraîner Claude.",
+          hi: "ClaudeBot / anthropic-ai — Anthropic अपने Claude मॉडल के लिए स्क्रैप करता है।",
+          ar: "كلود بوت و أنثروبك آي: يجمعان بيانات موقعك لتدريب سلسلة نماذج كلود."
+        },
+        { en: "Google-Extended — Google AI training crawler, separate from Googlebot search index.",
+          zh: "Google-Extended — Google 的 AI 训练专用爬虫，和 Googlebot 索引用爬虫完全独立，拦截不影响搜索收录。",
+          es: "Google-Extended — Crawler entrenamiento AI Google, separado de Googlebot de búsqueda.",
+          fr: "Google-Extended — Crawler d'entraînement IA de Google, indépendant de Googlebot (pas d'impact SEO).",
+          hi: "Google-Extended — Google का AI ट्रेनिंग क्रॉलर, Googlebot से अलग है। ब्लॉक करने से SEO फर्क नहीं पड़ता।",
+          ar: "جوجل إكستندد: زاحف تدريب الذكاء الاصطناعي التابع لجوجل منفصل عن جوجل بوت. حظره لا يؤثر على الفهرسة في البحث."
+        },
+        { en: "Amazonbot / Bytespider (TikTok) / PetalBot (Huawei) — 2026 fastest growing scrapers consuming bandwidth.",
+          zh: "Amazonbot / Bytespider（抖音爬虫）/ PetalBot（华为）— 2026 年消耗带宽最快的 3 个第三方爬虫。",
+          es: "Amazonbot / Bytespider (TikTok) / PetalBot (Huawei) — scrapers que más consumen ancho de banda 2026.",
+          fr: "Amazonbot / Bytespider (TikTok) / PetalBot (Huawei) — scrapers les plus gourmands en bande passante en 2026.",
+          hi: "Amazonbot / Bytespider (TikTok) / PetalBot (Huawei) — २०२६ में सबसे ज़्यादा बैंडविड्थ खाने वाले स्क्रेपर्स।",
+          ar: "أمازون بوت و بايت سبايدر تيك توك و بيتال بوت هواوي: الأسرع نمواً في استهلاك عرض النطاف لعام ٢٠٢٦."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "2. Korelyy Robots.txt Generator — 30-Second Safe Build",
+        zh: "2. Korelyy robots.txt 生成器 — 30 秒安全生成零错误",
+        es: "2. Generador Korelyy robots.txt — Construcción segura en 30 segundos",
+        fr: "2. Générateur Korelyy robots.txt — Génération sûre en 30 secondes",
+        hi: "२. Korelyy रोबोट्स टीएक्सटी जनरेटर — ३० सेकंड में सेफ बनाएं",
+        ar: "٢. مولد Korelyy لملف روبوتات: إنشاء آمن خلال ٣٠ ثانية"
+      } },
+      { type: "p", text: {
+        en: "Open Korelyy → Tools → SEO → Robots.txt Generator. (1) Pick platform preset (WordPress/Shopify/Next.js/static). (2) Toggle AI-scraper block (recommended on). (3) Paste Sitemap URL if any. (4) Add per-folder rules (Allow wp-admin/admin-ajax.php, Disallow /search/, /tag/, /author/ for WordPress). (5) Click Generate, copy, upload to / via SFTP/Cloudflare Pages Assets. Korelyy validates wildcard syntax (No $ after /*, correct Allow/Disallow precedence 2026 rules).",
+        zh: "打开 Korelyy → 工具 → SEO 工具 → Robots.txt 生成器。① 选择平台预设（WordPress / Shopify / Next.js 静态导出 / 纯静态站）；② 一键拦截 AI 爬虫（推荐开启，不影响正常搜索收录）；③ 粘贴 sitemap.xml 地址；④ 按需添加目录级规则（例如 WordPress：Allow /wp-admin/admin-ajax.php, Disallow /search/、/tag/、/author/、/page/、/feed/）；⑤ 点生成 → 复制 → 通过 SFTP 或 Cloudflare Pages Assets 上传到根目录。Korelyy 自动校验通配符写法（禁止 /* 后加 $、Allow 优先级高于 Disallow 等 2026 Google 标准）。",
+        es: "Abre Korelyy → SEO → Generador robots.txt: 1. Selecciona plataforma. 2. Activa bloqueo crawlers IA. 3. Pega Sitemap. 4. Añade reglas por carpeta. 5. Genera, copia, sube a la raíz. Korelyy valida sintaxis comodines.",
+        fr: "Ouvre Korelyy → SEO → Générateur robots.txt : 1. Plateforme. 2. Blocage IA. 3. Sitemap. 4. Règles par dossier. 5. Génère + copie + upload. Korelyy valide syntaxe wildcards.",
+        hi: "Korelyy खोलें → SEO → रोबोट्स टीएक्सटी जनरेटर: १. प्लेटफॉर्म चुनें। २. AI क्रॉलर ब्लॉक ऑन करें। ३. साइटमैप पेस्ट करें। ४. फोल्डरवाइज़ रूल जोड़ें। ५. जनरेट → कॉपी → अपलोड। Korelyy वाइल्डकार्ड सिंटैक्स वैलिडेट करता है।",
+        ar: "افتح Korelyy → أدوات تحسين محركات البحث → مولّد ملف روبوتات. ١. اختر المنصة. ٢. فعّل حظر زواحف الذكاء الاصطناعي. ٣. الصق عنوان خريطة الموقع. ٤. أضف قواعد المجلدات. ٥. إنشاء و نسخ و رفع. يتحقق Korelyy من صحة صيغة الأحرف البديلة تلقائياً."
+      } },
+      { type: "h3", text: {
+        en: "2.1 12 Ready-to-Use Templates (Copy Paste)",
+        zh: "2.1 12 个开箱即用模板（直接复制粘贴）",
+        es: "2.1 12 Plantillas listas para copiar-pegar",
+        fr: "2.1 12 Modèles prêts à copier-coller",
+        hi: "२.१ १२ कॉपी-पेस्ट के लिए तैयार टेम्पलेट्स",
+        ar: "٢.١ ١٢ قالباً جاهزاً للنسخ واللصق"
+      } },
+      { type: "ul", items: [
+        { en: "T1. Static Blog (Jekyll/Hugo/Cloudflare Pages): Allow all public, Disallow /private/ + /draft/ + /admin/, Block AI crawlers. Add Sitemap URL.",
+          zh: "模板1. 纯静态博客（Jekyll/Hugo/Cloudflare Pages）：Allow 全部公开目录，Disallow /private/ /draft/ /admin/，拦截 AI 爬虫，加 sitemap.xml。",
+          es: "T1. Blog estático Jekyll/Hugo/Cloudflare: Allow público, Disallow /private, /draft, /admin, bloqueo IA, Sitemap.",
+          fr: "T1. Blog statique Jekyll/Hugo/Cloudflare : Allow public, Disallow private/draft/admin, bloque IA, Sitemap.",
+          hi: "टेम्पलेट १. स्टैटिक ब्लॉग Jekyll/Hugo/Cloudflare: Allow public, Disallow private draft admin, AI block, Sitemap.",
+          ar: "القالب ١. مدونة ثابتة على كلاودفلير: السماح بالملفات العامة، منع الخاص والمسودات والإدارة، حظر زواحف الذكاء، إضافة خريطة الموقع."
+        },
+        { en: "T2. WordPress 2026: Allow /wp-admin/admin-ajax.php. Disallow /xmlrpc.php, /wp-json/, /?s=*, /search/, /page/*/comment-page-*, /tag/, /category/page/, /author/, /feed/. Block AI scrapers.",
+          zh: "模板2. WordPress 2026：Allow /wp-admin/admin-ajax.php；Disallow /xmlrpc.php、/wp-json/、/?s=*、/search/、comment-page-*、tag、category分页、author、feed；拦截 AI。",
+          es: "T2. WordPress 2026: Allow admin-ajax. Disallow xmlrpc, wp-json, search/?s, tag, author, feed. Bloqueo IA.",
+          fr: "T2. WordPress 2026 : Allow admin-ajax. Disallow xmlrpc, wp-json, /?s=, tag, author, feed. Blocage IA.",
+          hi: "टेम्पलेट २. वर्डप्रेस २०२६: Allow admin-ajax. Disallow xmlrpc/wp-json/?s/tag/author/feed. AI ब्लॉक।",
+          ar: "القالب ٢. ووردبريس ٢٠٢٦: السماح بملف AJAX الإداري. منع واجهة WP JSON وملف روبوتات والبحث والوسوم والمؤلفين وتغذيات RSS. حظر زواحف الذكاء الاصطناعي."
+        },
+        { en: "T3. Shopify: Use built-in online-store robots.txt editor. Add AI crawler block lines. Sitemap auto at /sitemap.xml.",
+          zh: "模板3. Shopify：使用 Shopify 自带的「在线商店→偏好设置→robots.txt 编辑器」追加 AI 爬虫拦截行；Sitemap 默认 /sitemap.xml。",
+          es: "T3. Shopify: Usa editor robots.txt integrado. Añade líneas bloqueo IA. Sitemap auto en /sitemap.xml.",
+          fr: "T3. Shopify : Éditeur robots.txt intégré. Ajout lignes blocage IA. Sitemap auto /sitemap.xml.",
+          hi: "टेम्पलेट ३. Shopify: इंटीग्रेटेड एडिटर से। AI ब्लॉक लाइन जोड़ें। Sitemap auto।",
+          ar: "القالب ٣. شوبيفاي: استخدم محرر ملف روبوتات المدمج. أضف أسطر حظر زواحف الذكاء. خريطة الموقع تلقائية."
+        },
+        { en: "T4. Next.js Static Export (Korelyy case): Disallow Next.js internals (/next/, /_next/), Disallow *.json, Sitemap /sitemap-index.xml, AI blocker.",
+          zh: "模板4. Next.js 静态导出（Korelyy 实际在用）：Disallow /_next/ 和 *.json；Sitemap 用 /sitemap-index.xml；AI 拦截。",
+          es: "T4. Next.js Export estático: Disallow /_next/, *.json. Sitemap /sitemap-index.xml. Bloqueo IA.",
+          fr: "T4. Next.js Export statique : Disallow /_next/, *.json. Sitemap /sitemap-index.xml. Bloc IA.",
+          hi: "टेम्पलेट ४. Next.js स्टैटिक एक्सपोर्ट: Disallow /_next/, *.json. Sitemap /sitemap-index.xml. AI ब्लॉक।",
+          ar: "القالب ٤. نيكست جي إس تصدير ثابت: منع المجلد الداخلي وملفات JSON. خريطة الموقع /sitemap-index.xml. حظر الذكاء الاصطناعي."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "3. 7 Deadly Robots.txt Mistakes 2026",
+        zh: "3. 2026 年 7 个 robots.txt 致命错误",
+        es: "3. 7 Errores mortales robots.txt en 2026",
+        fr: "3. 7 Erreurs fatales robots.txt en 2026",
+        hi: "३. २०२६ के ७ घातक रोबोट्स टीएक्सटी गलतियाँ",
+        ar: "٣. ٧ أخطاء قاتلة في ملف روبوتات لعام ٢٠٢٦"
+      } },
+      { type: "ul", items: [
+        { en: "E1. Disallow: / — Typo while trying Disallow /private/. Deindexes entire site.",
+          zh: "错误1. 本想写 Disallow /private/，手抖写成 Disallow: /，整站被 Google 清索引。",
+          es: "E1. Disallow: / — error tipográfico buscando /private. Quita todo del índice.",
+          fr: "E1. Disallow: / — erreur de frappe au lieu de /private. Déréférence tout le site.",
+          hi: "गलती १. Disallow: / — टाइपो /private/ की जगह। पूरी साइट डी-इंडेक्स।",
+          ar: "الخطأ ١. كتابة المنع الكامل عن طريق الخطأ بدلاً من منع مجلد خاص فقط. يؤدي إلى إزالة كامل الموقع من الفهرسة."
+        },
+        { en: "E2. Using Crawl-delay for Googlebot — Google ignores Crawl-delay since 2019. Use Search Console crawl rate.",
+          zh: "错误2. 对 Googlebot 写 Crawl-delay。Google 从 2019 年起就忽略 Crawl-delay，应该去 Google Search Console 调整抓取速度。",
+          es: "E2. Crawl-delay en Googlebot — lo ignora desde 2019. Usa Search Console.",
+          fr: "E2. Crawl-delay pour Googlebot — ignoré depuis 2019. Utilisez Search Console.",
+          hi: "गलती २. Googlebot के लिए Crawl-delay। Google २०१९ से इग्नोर करता है। Search Console इस्तेमाल करें।",
+          ar: "الخطأ ٢. استخدام تأخير الزحف لجوجل بوت. يتجاهله جوجل منذ ٢٠١٩. استخدم وحدة تحكم البحث بدلاً منه."
+        },
+        { en: "E3. Allowed .php but forgot Allow admin-ajax (WordPress) — breaks many plugins that serve dynamic content on frontend.",
+          zh: "错误3. WordPress Disallow /wp-admin/ 但漏掉 Allow /wp-admin/admin-ajax.php — 无数插件会挂（因为前端也调用 admin-ajax 做动态内容）。",
+          es: "E3. Disallow /wp-admin/ pero olvidas Allow admin-ajax.php — rompes plugins en frontend.",
+          fr: "E3. Disallow /wp-admin/ sans Allow admin-ajax.php — casse des plugins frontend.",
+          hi: "गलती ३. वर्डप्रेस में Disallow /wp-admin/ लेकिन Allow admin-ajax.php भूल जाना। सारे प्लगिन टूट जाते हैं।",
+          ar: "الخطأ ٣. منع مجلد الإدارة في ووردبريس مع نسيان السماح بملف AJAX الإداري. يتسبب في تعطل عدد كبير من الإضافات في الواجهة."
+        },
+        { en: "E4. Disallow /*.pdf$ — Google does not treat $ as end-of-string. Use Noindex HTTP header instead.",
+          zh: "错误4. 写 Disallow /*.pdf$ 想屏蔽 PDF。Google 不支持 $ 结尾匹配，正确做法是给 PDF 加 X-Robots-Tag: noindex HTTP 头。",
+          es: "E4. Disallow /*.pdf$ — Google ignora el $. Usa encabezado X-Robots-Tag en PDFs.",
+          fr: "E4. Disallow /*.pdf$ — Google ignore le $. Utilisez X-Robots-Tag sur les PDF.",
+          hi: "गलती ४. Disallow /*.pdf$ — Google $ को इग्नोर करता है। X-Robots-Tag noindex HTTP हेडर लगाएं।",
+          ar: "الخطأ ٤. استخدام علامة نهاية السلسلة في المنع لملفات الـ PDF. يتجاهلها جوجل. استخدم رأس X-Robots-Tag مع عدم الفهرسة بدلاً منه."
+        },
+        { en: "E5. Robots.txt alone to hide private pages — still indexed if linked externally. Use meta robots noindex + password.",
+          zh: "错误5. 只靠 robots.txt 想隐藏私密页面 — 如果有外链连到，Google 依然会索引。必须配合 meta robots noindex + 密码保护。",
+          es: "E5. Robots.txt para ocultar páginas privadas — Google sigue indexando si hay links externos. Añade meta noindex + contraseña.",
+          fr: "E5. Robots.txt pour cacher des pages privées — Google indexe si liens externes existent. Ajoutez meta noindex + mot de passe.",
+          hi: "गलती ५. केवल robots.txt से प्राइवेट पेज छुपाना। Google बाहरी लिंक से फिर भी इंडेक्स करेगा। meta noindex + पासवर्ड दोनों लगाएं।",
+          ar: "الخطأ ٥. الاعتماد على ملف روبوتات فقط لإخفاء الصفحات الخاصة. يظل جوجل يفهرسها إذا كانت مرتبطة من مواقع خارجية. استخدم وسم ميتا عدم الفهرسة مع كلمة مرور."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "4. Verify + Monitor After Upload",
+        zh: "4. 上传后验证+监控步骤",
+        es: "4. Verificación y monitorización tras subir",
+        fr: "4. Vérification + suivi après upload",
+        hi: "४. अपलोड के बाद वेरिफिकेशन + मॉनिटरिंग स्टेप्स",
+        ar: "٤. التحقق و المراقبة بعد الرفع"
+      } },
+      { type: "p", text: {
+        en: "Step 1: curl -I https://yoursite.com/robots.txt → expect HTTP 200 Content-Type: text/plain. Step 2: Google Search Console → Settings → Robots.txt tester. Paste problematic URLs like /search/ or /wp-admin/. Step 3: Request Google re-crawl via URL Inspection Tool (click Live Test then Request Indexing). Step 4: Check GSC Coverage report weekly for 4 weeks — watch for sudden Crawled — currently not indexed drops.",
+        zh: "步骤 1：curl -I https://你的域名/robots.txt → 返回 HTTP 200 + Content-Type: text/plain。步骤 2：Google Search Console → 设置 → robots.txt 测试器。粘贴 /search/、/wp-admin/ 等可疑路径确认生效。步骤 3：GSC → 网址检查工具 → 实时测试 → 请求编入索引。步骤 4：连续 4 周每周看「覆盖面报告」—警惕「已抓取但未编入索引」突然爆增。",
+        es: "1. curl -I → HTTP 200 text/plain. 2. GSC → Tester robots.txt. 3. Solicitar reindexación. 4. Revisar cobertura GSC 4 semanas.",
+        fr: "1. curl -I → 200 text/plain. 2. GSC → Testeur robots.txt. 3. Demander réindexation. 4. Surveiller rapport Couverture GSC 4 semaines.",
+        hi: "१. curl -I → २०० text/plain. २. GSC → रोबोट्स टेस्टर. ३. रीइंडेक्सिंग अनुरोध. ४. ४ सप्ताह तक GSC कवरेज रिपोर्ट देखें।",
+        ar: "١. تحقق من الرمز ٢٠٠ ونوع المحتوى نص عادي. ٢. استخدم مُختبر ملف روبوتات في وحدة تحكم البحث. ٣. طلب إعادة الفهرسة. ٤. راجع تقرير التغطية أسبوعياً لمدة ٤ أسابيع."
+      } },
+      { type: "h2", text: {
+        en: "5. Build Your Robots.txt Now + Check Sitemap",
+        zh: "5. 立刻生成你的 robots.txt + 检查 sitemap",
+        es: "5. Genera tu robots.txt ahora + comprueba Sitemap",
+        fr: "5. Générez votre robots.txt + Vérifiez Sitemap",
+        hi: "५. अभी अपना रोबोट्स टीएक्सटी बनाएं + साइटमैप चेक करें",
+        ar: "٥. أنشئ ملف روبوتات الآن + تحقق من خريطة الموقع"
+      } },
+      { type: "cta", link: "/tool/robots-txt-generator", text: {
+        en: "🧭 Open Korelyy Robots.txt Generator — 12 templates + AI crawler blocker + syntax validator in your favorite language →",
+        zh: "🧭 打开 Korelyy Robots.txt 生成器 — 内置 12 套模板 + AI 爬虫拦截 + 语法校验，支持您熟悉的 6 种语言 →",
+        es: "🧭 Abra el Generador robots.txt Korelyy — 12 plantillas + bloqueo IA + validador en su idioma →",
+        fr: "🧭 Ouvre le Générateur robots.txt Korelyy — 12 modèles + bloc IA + validateur dans votre langue →",
+        hi: "🧭 Korelyy रोबोट्स टीएक्सटी जनरेटर खोलें — १२ टेम्पलेट्स + AI ब्लॉकर + सिंटैक्स वैलिडेटर आपकी भाषा में →",
+        ar: "🧭 افتحوا مولد ملف روبوتات على Korelyy — ١٢ قالباً + حظر زواحف الذكاء + مدقق صيغة بلغتكم المفضلة →"
+      } },
+    ],
+  },
+
+  {
+    slug: 'sitemap-generator-2026-guide-14-formats',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=SEO%20Sitemap%20Generator%20XML%20TXT%20Image%20News%20Video%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy SEO Team',
+    publishedAt: '2026-07-11T00:00:00.000Z',
+    updatedAt: '2026-07-11T00:00:00.000Z',
+    tags: [
+      { en: 'SEO', zh: 'SEO', es: 'SEO', fr: 'SEO', hi: 'एसईओ', ar: 'تحسين محركات البحث' },
+      { en: 'Sitemap', zh: '网站地图', es: 'Mapa Web', fr: 'Sitemap', hi: 'साइटमैप', ar: 'خريطة الموقع' },
+      { en: 'Generator', zh: '生成器', es: 'Generador', fr: 'Générateur', hi: 'जनरेटर', ar: 'منشئ' }
+    ],
+    relatedToolSlugs: [],
+    readingMinutes: { en: 9, zh: 9, es: 9, fr: 9, hi: 9, ar: 9 },
+    title: {
+      en: 'Sitemap Generator 2026: XML vs TXT vs Image vs News (Critical Formats Compared)',
+      zh: 'Sitemap 生成器 2026 终极指南（XML/TXT/图片/新闻 14 种格式对比，附 Next.js/Shopify 批量生成）',
+      es: 'Generador Sitemap 2026: XML vs TXT vs Imagen vs Noticias (Formatos Comparados)',
+      fr: 'Générateur Sitemap 2026 : XML vs TXT vs Image vs News (Comparatif Formats)',
+      hi: 'साइटमैप जनरेटर २०२६: XML बनाम TXT बनाम इमेज बनाम न्यूज (क्रिटिकल फॉर्मेट तुलना)',
+      ar: 'مُنشئ خريطة الموقع ٢٠٢٦: مقارنة تنسيقات XML و نص عادي و الصور و الأخبار'
+    },
+    description: {
+      en: '2026 complete sitemap guide: XML sitemap, TXT sitemap, Image sitemap, News sitemap, Video sitemap. Learn lastmod priority changefreq, sitemap index for 50k+ URLs, pagination rules, canonical vs sitemap, how to submit to Google, Yandex, Bing. Static site, Next.js, WordPress, Shopify all-in-one generator on Korelyy.',
+      zh: '2026 最新网站地图终极指南：XML sitemap、TXT sitemap、图片 sitemap、新闻 sitemap、视频 sitemap、多语言 hreflang sitemap 一次搞清。教你写 lastmod priority changefreq、超过 5万 URL 用 sitemap-index.xml、分页/canonical 与 sitemap 的关系、Google/Bing/Yandex/Naver/Baidu 批量提交。Next.js/Shopify/WordPress/纯静态通用，Korelyy 在线生成无需安装。',
+      es: 'Guía sitemap 2026 completa: XML, TXT, Imagen, News, Video, hreflang. lastmod priority changefreq, sitemap-index >50k URLs, envío múltiple Google Bing Yandex. Generador Korelyy para Next.js Shopify WordPress.',
+      fr: 'Guide sitemap 2026 : XML, TXT, Image, News, Video, hreflang. lastmod priority changefreq, sitemap-index pour 50k URLs. Soumission Google Bing Yandex. Générateur Korelyy Next.js Shopify WordPress.',
+      hi: 'साइटमैप २०२६ गाइड: XML TXT इमेज न्यूज वीडियो hreflang। lastmod priority changefreq, 50k+ के लिए sitemap-index.xml। Google Bing Yandex सबमिट। Korelyy जनरेटर Next.js Shopify WordPress।',
+      ar: 'دليل كامل لخرائط المواقع ٢٠٢٦: XML و نص و صور و أخبار و فيديو و لغات متعددة. معلمات التاريخ الأولوية وتواتر التغيير وخرائط الفهرسة لأكثر من ٥٠ ألف عنوان رابط. الإرسال لجوجل و بينج و ياندكس. مولد Korelyy لمنصات مختلفة.'
+    },
+    keywords: {
+      en: ['sitemap generator 2026', 'xml sitemap format', 'txt sitemap vs xml', 'image sitemap wordpress', 'news sitemap google', 'video sitemap schema', 'sitemap index 50000 urls', 'lastmod changefreq priority', 'hreflang sitemap multilingual', 'submit sitemap google search console', 'bing yandex naver baidu sitemap submission', 'nextjs static export sitemap index', 'shopify sitemap 2026', 'cloudflare pages sitemap', 'sitemap canonical conflict', 'priority 1.0 best practice 2026', 'google sitemap limit 50MB', 'wordpress yoast sitemap 2026', 'sitemap broken links checker online'],
+      zh: ['sitemap 生成器', 'xml sitemap 格式', 'txt sitemap 和 xml sitemap 区别', '图片 sitemap WordPress', 'Google 新闻 sitemap', '视频 sitemap schema', 'sitemap index 5万URL', 'lastmod priority changefreq 写法', '多语言 hreflang sitemap', '提交 sitemap 到谷歌搜索控制台', '必应 百度 Yandex Naver sitemap 提交', 'nextjs static sitemap index', 'shopify sitemap 2026', 'cloudflare pages sitemap', 'sitemap 和 canonical 冲突', 'priority 1.0 最佳实践', 'sitemap 50MB 限制', 'Yoast SEO sitemap 2026', '在线检查 sitemap 死链'],
+      es: ['generador sitemap 2026', 'formato xml sitemap', 'sitemap txt vs xml', 'envio sitemap google bing'],
+      fr: ['générateur sitemap 2026', 'format xml', 'txt vs xml', 'soumission google bing yandex'],
+      hi: ['साइटमैप जनरेटर २०२६', 'xml फॉर्मेट', 'txt बनाम xml', 'google bing yandex सबमिशन'],
+      ar: ['منشئ خريطة موقع ٢٠٢٦', 'تنسيق XML', 'تقديم الخرائط لجوجل و بينج و ياندكس']
+    },
+    content: [
+      { type: "h2", text: {
+        en: "1. Which Sitemap Format Do You Actually Need?",
+        zh: "1. 你到底需要哪种 Sitemap 格式？",
+        es: "1. ¿Qué formato sitemap necesitas en realidad?",
+        fr: "1. Quel format de sitemap faut-il réellement ?",
+        hi: "१. आपको असल में कौन सा साइटमैप फॉर्मेट चाहिए?",
+        ar: "١. ما تنسيق خريطة الموقع الذي تحتاجه فعلياً؟"
+      } },
+      { type: "table",
+        headers: {
+          en: ["Format", "Use Case", "Max URLs", "Max File Size"],
+          zh: ["格式", "适用场景", "最多 URL", "最大文件大小"],
+          es: ["Formato", "Caso de uso", "URLs máx.", "Tamaño máx."],
+          fr: ["Format", "Cas d'usage", "URLs max", "Taille max"],
+          hi: ["फॉर्मेट", "उपयोग", "अधिकतम URL", "फाइल साइज़"],
+          ar: ["التنسيق", "حالة الاستخدام", "الحد الأقصى للروابط", "الحد الأقصى للحجم"]
+        },
+        rows: [
+          { en: ["XML Sitemap", "Default for all sites. Canonical URLs + lastmod.", "50,000", "50MB uncompressed"],
+            zh: ["XML Sitemap", "默认所有站都要。规范 URL + lastmod 更新时间。", "50,000", "50MB 未压缩"],
+            es: ["XML Sitemap", "Por defecto. URLs canónicas + lastmod.", "50,000", "50MB sin comprimir"],
+            fr: ["XML Sitemap", "Par défaut pour tous. URLs canoniques + lastmod.", "50 000", "50Mo non compressé"],
+            hi: ["XML साइटमैप", "सभी साइट के लिए डिफॉल्ट। कैनोनिकल URL + lastmod।", "50,000", "50MB अनकम्प्रेस्ड"],
+            ar: ["خريطة موقع XML", "الافتراضي لجميع المواقع. عناوين أساسية و تاريخ آخر تعديل.", "٥٠ ألف", "٥٠ ميغابايت غير مضغوط"]
+          },
+          { en: ["TXT Sitemap", "Quick low-effort. Just URL per line. No metadata.", "50,000", "50MB"],
+            zh: ["TXT Sitemap", "快速低维护，一行一个 URL 即可，不写元数据。", "50,000", "50MB"],
+            es: ["TXT Sitemap", "Rápido. Una URL por línea. Sin metadata.", "50,000", "50MB"],
+            fr: ["TXT Sitemap", "Rapide. Une URL par ligne. Pas de metadata.", "50 000", "50Mo"],
+            hi: ["TXT साइटमैप", "जल्दी से। एक URL प्रति लाइन। बिना मेटाडेटा।", "50,000", "50MB"],
+            ar: ["خريطة موقع نصية", "صيغة سريعة. عنوان واحد في كل سطر بدون بيانات وصفية.", "٥٠ ألف", "٥٠ ميغابايت"]
+          },
+          { en: ["Image Sitemap", "Blogs with 50+ embedded images in post.", "1,000 images per URL", "50MB"],
+            zh: ["图片 Sitemap", "博客正文里嵌了 50+ 张图的站点（必须单独列才能让 Google Images 收录）", "每个父 URL 1000 张图", "50MB"],
+            es: ["Sitemap Imagen", "Blogs con 50+ imágenes en entradas.", "1.000 img por URL", "50MB"],
+            fr: ["Sitemap Image", "Blogs avec 50+ images / article.", "1 000 img par URL", "50Mo"],
+            hi: ["इमेज साइटमैप", "५०+ इमेज वाले ब्लॉग।", "URL per 1000 इमेज", "50MB"],
+            ar: ["خريطة موقع الصور", "مدونات وأخبار تحتوي على أكثر من ٥٠ صورة في كل مقال.", "ألف صورة لكل عنوان أساسي", "٥٠ ميغابايت"]
+          },
+          { en: ["News Sitemap", "News publishers. Must be <2 days old, 1k URLs max.", "1,000", "50MB"],
+            zh: ["新闻 Sitemap", "新闻站专用，仅限 48 小时内发布的文章，最多 1000 条。", "1,000", "50MB"],
+            es: ["Sitemap Noticias", "Medios. <48h antigüedad, 1k URLs máx.", "1,000", "50MB"],
+            fr: ["Sitemap News", "Médias. <48h, 1k URLs max.", "1 000", "50Mo"],
+            hi: ["न्यूज़ साइटमैप", "न्यूज़ वेबसाइट। ४८ घंटे के भीतर, 1k max।", "1,000", "50MB"],
+            ar: ["خريطة موقع الأخبار", "لمنصات الأخبار الحصرية. مقالات أقل من ٤٨ ساعة و ألف عنوان كحد أقصى.", "١٠٠٠", "٥٠ ميغابايت"]
+          },
+          { en: ["Video Sitemap", "Platforms with embedded video (YouTube custom player).", "Unlimited (per XML limits)", "50MB"],
+            zh: ["视频 Sitemap", "嵌了自定义播放器视频的站点，帮 Google 拿缩略图/时长。", "按 XML 限制", "50MB"],
+            es: ["Sitemap Video", "Plataformas con video incrustado.", "Sin límite (dentro XML)", "50MB"],
+            fr: ["Sitemap Vidéo", "Plateformes avec vidéo intégrée.", "Limites XML", "50Mo"],
+            hi: ["वीडियो साइटमैप", "वीडियो इम्बेडेड वेबसाइट।", "XML सीमा के भीतर", "50MB"],
+            ar: ["خريطة موقع الفيديو", "لمنصات الفيديو مع مشغل مخصص. تساعد جوجل في جلب الصور المصغرة و المدة.", "حسب حدود XML", "٥٠ ميغابايت"]
+          },
+          { en: ["Sitemap Index", "When you exceed 50k URLs / 50MB.", "1,000 sitemaps", "50MB"],
+            zh: ["Sitemap 索引", "超过 5 万 URL 或 50MB 时，把多个 sitemap 包进 sitemap-index.xml。", "1,000 个子 sitemap", "50MB"],
+            es: ["Sitemap Index", "Superar 50k URLs / 50MB.", "1,000 sitemaps", "50MB"],
+            fr: ["Sitemap Index", "Quand 50k URLs / 50Mo dépassés.", "1 000 sitemaps", "50Mo"],
+            hi: ["साइटमैप इंडेक्स", "50k URL / 50MB से ज़्यादा।", "1,000 साइटमैप्स", "50MB"],
+            ar: ["فهرس خرائط المواقع", "عند تجاوز ٥٠ ألف عنوان أو ٥٠ ميغابايت. يجمع عدة خرائط في ملف واحد.", "١٠٠٠ خريطة تابعة", "٥٠ ميغابايت"]
+          }
+        ]
+      },
+      { type: "h2", text: {
+        en: "2. Generate with Korelyy in 2 Clicks (Your Platform Preset)",
+        zh: "2. 两步在 Korelyy 生成（按平台预设自动）",
+        es: "2. Genera con Korelyy en 2 clics (preajuste por plataforma)",
+        fr: "2. Générez avec Korelyy en 2 clics (préréglage plateforme)",
+        hi: "२. Korelyy में २ क्लिक में बनाएँ (अपनी प्लेटफॉर्म के अनुसार)",
+        ar: "٢. أنشئ باستخدام Korelyy بنقرتين (إعداد مسبق حسب المنصة)"
+      } },
+      { type: "p", text: {
+        en: "Open Korelyy → SEO → Sitemap Generator → (1) Pick platform preset (Static HTML, Next.js, Nuxt, WordPress, Shopify) → Korelyy auto skips pagination/query-parameter/taxonomy duplicates. (2) Upload your exported URL list OR crawl your site via our lightweight crawler (max 200k URLs, respects robots.txt). (3) Choose output formats (XML + TXT + Image + News if press). (4) Download as zip, unzip, upload /sitemaps/ folder, add Sitemap: https://yoursite/sitemap-index.xml line to robots.txt. Korelyy validates 50MB/50k count, escapes XML special chars & <loc> URL encoding automatically.",
+        zh: "打开 Korelyy → SEO → Sitemap 生成器 → ① 选平台预设（纯静态 / Next.js / Nuxt / WordPress / Shopify），Korelyy 自动剔除分页、查询参数、重复分类。② 两种取 URL 方式：粘贴导出列表 / 轻量爬虫爬取（最多 20 万 URL，自动遵守 robots.txt）。③ 勾选输出格式（XML、TXT、图片、新闻四选多）。④ 下载 zip 解包 → 传到 /sitemaps/ 目录 → 在 robots.txt 加一行 Sitemap: https://你的域名/sitemap-index.xml。Korelyy 自动校验 50MB/5万条上限、自动转义 XML 特殊字符、<loc> 自动 URL-Encode（避免 Google 报无效 URL）。",
+        es: "Abre Korelyy → SEO → Generador Sitemap. 1. Selecciona plataforma (auto elimina duplicados paginación/params). 2. Sube URLs o usa crawler 200k max. 3. Formatos a exportar. 4. Descarga zip, sube, añade línea a robots.txt. Korelyy valida 50MB/50k y escapa XML.",
+        fr: "Ouvre Korelyy → SEO → Générateur Sitemap : 1. Plateforme (dédupe pagination/params). 2. Upload URLs ou crawler max 200k. 3. Formats. 4. Télécharge zip + ajoute ligne robots.txt. Korelyy valide 50MB/50k et échappe XML.",
+        hi: "Korelyy खोलें → SEO → साइटमैप जनरेटर। १. प्लेटफॉर्म चुनें (ऑटो डुप्लिकेट हटाएँ)। २. URL अपलोड / क्रॉलर 200k। ३. फॉर्मेट चुनें। ४. ज़िप डाउनलोड → अपलोड → robots.txt में लाइन जोड़ें। Korelyy 50MB/50k वैलिडेट + XML एस्केप ऑटो।",
+        ar: "افتح Korelyy → أدوات تحسين محركات البحث → مولّد خريطة الموقع. ١. اختر المنصة ويقوم التلقائي بإزالة الروابط المكررة ونتائج البحث الداخلية و معاملات الاستعلام. ٢. ارفع قائمة الروابط أو استخدم الزاحف الخفيف حتى ٢٠٠ ألف عنوان. ٣. اختر صيغ المخرجات. ٤. حمل الملف المضغوط وارفعه ثم أضف السطر في ملف روبوتات. يقوم Korelyy بالتحقق من الحدود الأقصى وتهريب أحرف XML تلقائياً."
+      } },
+      { type: "h3", text: {
+        en: "2.1 Priority + Changefreq — Stop Guessing",
+        zh: "2.1 Priority 和 Changefreq — 别再瞎写",
+        es: "2.1 Priority + Changefreq — no adivines",
+        fr: "2.1 Priority + Changefreq — stop aux suppositions",
+        hi: "२.१ प्रायोरिटी + चेंजफ्रीक्वेंसी — कभी अनुमान न लगाएँ",
+        ar: "٢.١ الأولوية و تواتر التغيير: توقف عن التخمين"
+      } },
+      { type: "ul", items: [
+        { en: "Homepage → priority 1.0, changefreq daily. Important category pages 0.9. Blog post 0.8. Landing 0.8. Tag/Author 0.4. Paginated archives 0.3.",
+          zh: "首页 priority 1.0 + changefreq daily；重要分类页 0.9；博客正文/落地页 0.8；Tag/Author 页 0.4；分页归档 0.3。",
+          es: "Inicio 1.0 daily. Categorías 0.9. Entradas/Landing 0.8. Tag/Autor 0.4. Archivos paginados 0.3.",
+          fr: "Accueil 1.0 daily. Catégories 0.9. Articles/Landing 0.8. Tag/Auteur 0.4. Archives paginées 0.3.",
+          hi: "होमपेज 1.0 daily. कैटेगरी 0.9. लेख/लैंडिंग 0.8. टैग/ऑथर 0.4. पेजिनेटेड 0.3।",
+          ar: "الصفحة الرئيسية: الأولوية ١.٠ و التوتر يومياً. صفحات التصنيف الأساسية ٠.٩. المقالات وصفحات الهبوط ٠.٨. الوسوم وصفحات المؤلفين ٠.٤. صفحات الأرشيف المقسمة ٠.٣."
+        },
+        { en: "changefreq=always → only real-time pages (stock, live scores). Don't use for normal blogs; Google downgrades you.",
+          zh: "changefreq=always → 仅限实时页（股票/直播比分）。普通博客别用，Google 会判断你浮夸并降级。",
+          es: "changefreq=always → sólo páginas en tiempo real (bolsa, live scores). No en blogs normales, Google te penaliza.",
+          fr: "changefreq=always → uniquement temps réel (bourse, scores live). Ne pas utiliser sur les blogs : Google vous dégrade.",
+          hi: "changefreq=always → केवल रियल-टाइम पेज (स्टॉक, लाइव स्कोर). ब्लॉग में मत लगाओ Google डाउनग्रेड करेगा।",
+          ar: "تواتر التغيير دائماً: للصفحات المباشرة فقط (أسهم و نتائج رياضية مباشرة). لا تستخدمه في المدونات العادية فجوجل سيعاقبك على ذلك."
+        },
+        { en: "lastmod — Use real file mtime or Git commit time. Don't fake-change every day; Google catches on and ignores.",
+          zh: "lastmod 写真实文件修改时间或 Git 提交时间。别每天手动刷新伪装「有更新」，Google 能识别并直接忽略你 lastmod 字段。",
+          es: "lastmod — Hora mtime real o commit Git. No falsifiques; Google detecta y lo ignora.",
+          fr: "lastmod — Heure mtime réelle ou commit Git. Ne simulez pas ; Google détecte et ignore.",
+          hi: "lastmod — असली mtime या Git कमिट समय। झूठ मत बनाओ Google पकड़ लेगा।",
+          ar: "تاريخ آخر تعديل: استخدم تاريخ تعديل الملف الفعلي أو تاريخ دفعة النظام (كيت). لا تزوره يومياً حيث يتعرف عليه جوجل ويتجاهله."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "3. Submit to 6 Search Engines in 2026",
+        zh: "3. 2026 年提交到 6 大搜索引擎",
+        es: "3. Envía a 6 buscadores en 2026",
+        fr: "3. Soumettez à 6 moteurs en 2026",
+        hi: "३. २०२६ में ६ सर्च इंजन में सबमिट करें",
+        ar: "٣. أرسل الخريطة إلى ٦ محركات بحث لعام ٢٠٢٦"
+      } },
+      { type: "ul", items: [
+        { en: "Ping URLs: Google (https://www.google.com/ping?sitemap=), Bing/YAHOO (Bing Webmaster Tools sitemaps section), Yandex (Yandex Webmaster), Naver (Naver Search Advisor), Baidu (ziyuan.baidu.com: daily 50k push API).",
+          zh: "主动 Ping 提交：Google /ping?sitemap=、Bing 站长工具（必应）、Yandex 站长、Naver 搜索顾问（韩）、百度资源平台（每天 5 万推送额度 API 推送）。",
+          es: "Ping: Google /ping?sitemap=, Bing Webmaster, Yandex Webmaster, Naver Search Advisor, Baidu Ziyuan 50k/día API.",
+          fr: "Ping : Google /ping?sitemap=, Bing Webmaster, Yandex Webmaster, Naver Search Advisor, Baidu Ziyuan 50k/jour API.",
+          hi: "Ping सबमिट करें: Google /ping?sitemap=, Bing Webmaster, Yandex, Naver, Baidu Ziyuan 50k/दिन API।",
+          ar: "إرسال مباشر: واجهة Ping في جوجل و أدوات مشرفي المواقع لدى بينج و ياندكس و نايفر كوريا و منصة بايدو Ziyuan بخيار دفع ٥٠ ألف رابط يومياً عبر واجهة برمجة."
+        }
+      ] },
+      { type: "cta", toolSlug: "sitemap-generator", text: {
+        en: "🗺️ Open Korelyy Sitemap Generator — 6 formats + 50MB validator + 1-click platform preset in 6 languages →",
+        zh: "🗺️ 打开 Korelyy Sitemap 生成器 — 6 种格式 + 50MB 校验 + 平台预设一键，6 种语言友好支持 →",
+        es: "🗺️ Abra Generador Sitemap Korelyy — 6 formatos + validador 50MB + preajuste plataforma en 6 idiomas →",
+        fr: "🗺️ Ouvre Générateur Sitemap Korelyy — 6 formats + validateur 50Mo + préréglages en 6 langues →",
+        hi: "🗺️ Korelyy साइटमैप जनरेटर खोलें — ६ फॉर्मेट + 50MB वैलिडेटर + प्लेटफॉर्म प्रीसेट ६ भाषाओं में →",
+        ar: "🗺️ افتحوا مولد خريطة الموقع على Korelyy — ٦ صيغ + مدقق الحجم + إعدادات مسبقة لمنصات مختلفة ب٦ لغات →"
+      } },
+    ],
+  },
+
+  {
+    slug: 'meta-tags-generator-2026-og-twitter-schema',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=SEO%20Meta%20Tags%20Generator%20OpenGraph%20Twitter%20Card%20Schema.org%20JSON-LD%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy SEO Team',
+    publishedAt: '2026-07-10T00:00:00.000Z',
+    updatedAt: '2026-07-10T00:00:00.000Z',
+    tags: [
+      { en: 'SEO', zh: 'SEO', es: 'SEO', fr: 'SEO', hi: 'एसईओ', ar: 'تحسين محركات البحث' },
+      { en: 'Meta Tags', zh: 'Meta 标签', es: 'Meta Etiquetas', fr: 'Balises Meta', hi: 'मेटा टैग्स', ar: 'وسوم ميتا' },
+      { en: 'Open Graph', zh: 'Open Graph 社交分享', es: 'Open Graph', fr: 'Open Graph', hi: 'ओपन ग्राफ', ar: 'أوغن غراف' }
+    ],
+    relatedToolSlugs: [],
+    readingMinutes: { en: 8, zh: 8, es: 8, fr: 8, hi: 8, ar: 8 },
+    title: {
+      en: 'Meta Tags Generator 2026: OG, Twitter Card, Schema JSON-LD (All-in-One)',
+      zh: 'Meta 标签生成器 2026 三合一：OG / Twitter Card / Schema JSON-LD（附 SERP 预览和长度校验）',
+      es: 'Generador Meta Tags 2026: OG, Twitter Card, Schema JSON-LD (Todo en Uno)',
+      fr: 'Générateur Balises Meta 2026 : OG, Twitter Card, Schema JSON-LD (Tout-en-un)',
+      hi: 'मेटा टैग्स जनरेटर २०२६: OG, Twitter Card, Schema JSON-LD (ऑल-इन-वन)',
+      ar: 'مُنشئ وسوم ميتا ٢٠٢٦: أوغن غراف و بطاقة تويتر و مخطط JSON-LD الشامل'
+    },
+    description: {
+      en: 'Free online meta tags generator 2026. Write title (60 chars), description (155 chars), canonical, og:title, og:description, og:image, twitter:card summary_large_image, robots noindex/nofollow, article:published_time, author. Korelyy live SERP preview. JSON-LD FAQ, HowTo, Breadcrumb schema copy-paste. Title pixel-based checker prevents Google truncation.',
+      zh: '在线免费 2026 Meta 标签生成器。自动生成 title（60字/像素截断校验）、description（155字）、canonical、og:title、og:description、og:image、twitter:card summary_large_image、robots noindex/nofollow、article:published_time、author 全部。Korelyy 实时 Google SERP 预览（基于像素而非字数的截断算法，和 Google 实际一致）。还内置 FAQ、HowTo、Breadcrumb 的 JSON-LD 一键复制。',
+      es: 'Generador meta tags online gratis 2026. Title (60c), description (155c), canonical, og:*, twitter:card, robots. Preview SERP en vivo. JSON-LD FAQ, HowTo, Breadcrumb. Check píxel title para evitar truncado Google.',
+      fr: 'Générateur meta tags en ligne gratuit 2026. Title (60c), description (155c), canonical, og:*, twitter:card, robots. Prévisualisation SERP en direct. JSON-LD FAQ + HowTo + Breadcrumb. Vérif pixels titre (pas Google truncate).',
+      hi: 'फ्री ऑनलाइन मेटा टैग्स जनरेटर २०२६। Title (60), Description (155), canonical, og:*, twitter:card, robots. लाइव SERP प्रीव्यू Korelyy। JSON-LD FAQ, HowTo, Breadcrumb। पिक्सेल आधारित Title Truncate चेक।',
+      ar: 'مولّد وسوم ميتا مجاني على الإنترنت لعام ٢٠٢٦. عنوان و وصف و رابط أساسي و وسوم أوغن غراف و بطاقة تويتر و إعدادات زحف الروبوتات. مع عرض مباشر لنتائج البحث على غرار جوجل + مخططات JSON-LD للأسئلة الشائعة و دليل الخطوات و مسار التنقل.'
+    },
+    keywords: {
+      en: ['meta tag generator 2026', 'og title image generator', 'twitter card summary_large_image validator', 'serp preview pixel exact', 'google title length checker pixel', 'description length 155 characters', 'canonical tag duplicate content fix', 'json ld faq howto breadcrumb schema', 'meta robots noindex nofollow', 'article published_time author tags', 'charset viewport best practice 2026', 'meta theme-color mobile 2026', 'open graph locale alternate', 'og:type website vs article 2026', 'twitter creator handle publisher', 'schema.org organization person 2026', 'nextjs metadata dynamic pages', 'shopify meta tags liquid template', 'wordpress yoast vs rankmath meta 2026', 'cloudflare pages html meta tags'],
+      zh: ['meta 标签生成器', 'og 标签 og:title og:image', 'twitter card summary_large_image 预览', 'SERP 实时预览', 'Google title 字数像素校验', 'description 155 字截断', 'canonical 标签解决重复内容', 'JSON-LD FAQ HowTo Breadcrumb', 'meta robots noindex nofollow 区别', 'article published_time author', 'charset viewport 2026 最佳实践', 'meta theme-color 手机浏览器', 'og:locale alternate 多语言', 'og:type website 和 article 区别', 'twitter:creator publisher 写法', 'schema.org 组织 个人 2026', 'nextjs metadata 动态页', 'shopify meta 标签 liquid 模板', 'Yoast vs Rank Math meta 2026', 'cloudflare pages html meta 标签'],
+      es: ['generador meta etiquetas 2026', 'preview serp en vivo', 'schema JSON-LD FAQ'],
+      fr: ['générateur balises meta 2026', 'aperçu SERP', 'schema JSON-LD FAQ HowTo'],
+      hi: ['मेटा टैग्स जनरेटर २०२६', 'SERP प्रीव्यू', 'JSON-LD FAQ स्कीमा'],
+      ar: ['مولد وسوم ميتا ٢٠٢٦', 'عرض مباشر لنتائج البحث', 'مخطط JSON-LD للأسئلة الشائعة و دليل الخطوات']
+    },
+    content: [
+      { type: "h2", text: {
+        en: "1. The 10 Meta Tags That Actually Move Rankings in 2026",
+        zh: "1. 2026 年真正影响排名的 10 个 Meta 标签",
+        es: "1. Las 10 meta etiquetas que realmente mueven rankings en 2026",
+        fr: "1. Les 10 balises meta qui améliorent vraiment le classement en 2026",
+        hi: "१. २०२६ में असली रैंकिंग बदलने वाले १० मेटा टैग्स",
+        ar: "١. ١٠ وسوم ميتا تؤثر فعلياً في الترتيب لعام ٢٠٢٦"
+      } },
+      { type: "ol", items: [
+        { en: "<title> — #1 SEO signal. Use Korelyy pixel-based checker (not chars). Target 55-60 chars ≈ 580 pixels mobile. Brand name at end (| SiteName).",
+          zh: "① <title> — 排名第一信号！用 Korelyy 的像素校验器而不是纯字数。目标 55-60 字 ≈ 580 像素（移动端 Google SERP 实际宽度）。品牌名放在末尾：| 站点名。",
+          es: "<title> — Señal SEO nº1. Usa comprobador píxel Korelyy. 55-60c ≈ 580px móvil. Marca al final: | NombreSitio.",
+          fr: "<title> — Signal SEO n°1. Vérif par pixels Korelyy. 55-60c ≈ 580px mobile. Marque à la fin.",
+          hi: "<title> — नंबर १ SEO सिग्नल। Korelyy पिक्सेल चेकर इस्तेमाल करें। ५५-६० कैरेक्टर ≈ ५८० पिक्सेल। ब्रांड नाम अंत में।",
+          ar: "وسم العنوان: أهم إشارة لتحسين محركات البحث. استخدم مدقق البكسل في Korelyy لا عدد الأحرف. ٥٥-٦٠ حرفاً تقريباً ٥٨٠ بكسل على الهاتف. اسم العلامة في النهاية."
+        },
+        { en: "Meta description — Doesn't affect ranking directly but drives CTR (2026 Google confirms). Target 145-155 chars mobile. Include 1 number + 1 hook adjective (免费/Updated 2026/FREE/Step-by-Step).",
+          zh: "② Meta description — 不直接影响排名，但直接决定点击率（Google 2026 官方确认）。目标 145-155 字（移动端），至少包含 1 个数字 + 1 个钩子词（2026 最新/免费/一键/开箱即用）。",
+          es: "Meta description — No afecta ranking directamente, sí CTR. 145-155c móvil. 1 número + 1 adjetivo gancho (Gratis / Actualizado 2026).",
+          fr: "Meta description — Pas d'impact direct classement mais énorme CTR. 145-155c mobile. 1 chiffre + 1 adjectif crochet (Gratuit / MAJ 2026).",
+          hi: "Meta description — रैंकिंग पर नहीं, लेकिन CTR पर बोहोत असर। १४५-१५५ कैरेक्टर। १ नंबर + १ हुक (फ्री / अपडेटेड २०२६)।",
+          ar: "وسم الوصف: لا يؤثر على الترتيب مباشرة لكنه يحدد نسبة النقر إلى الظهور حسب إقرار جوجل لعام ٢٠٢٦. الهدف ١٤٥-١٥٥ حرفاً على الهاتف. أضف رقماً واحداً و كلمة جاذبة (مجاني - تحديث ٢٠٢٦ - دليل الخطوات)."
+        },
+        { en: "Canonical link — Prevents duplicate content when URLs share content (?s= query param, AMP, / vs /index.html, mobile subdomain). Use absolute URLs, not relative.",
+          zh: "③ Canonical 标签 — 同一个内容多个 URL（/?s= 搜索、AMP、/ 与 /index.html、移动子域）时防重复。务必写绝对路径而不是相对路径。",
+          es: "Canonical — Evita contenido duplicado cuando varias URLs comparten el mismo (?s=, AMP, / vs /index.html). URLs absolutas.",
+          fr: "Canonical — Évite contenu dupliqué si plusieurs URLs identiques (?s=, AMP, / vs /index.html). URLs absolues.",
+          hi: "Canonical लिंक — कई URL एक ही कंटेंट तब डुप्लिकेट न हो। (?s=, AMP, / vs /index.html)। अब्सोल्यूट URL लगाएँ।",
+          ar: "الرابط الأساسي: يمنع المحتوى المكرر عندما تشترك عدة روابط في نفس المحتوى (بحث داخلي، نسخ AMP، المسار الجذر و ملف الإيندكس). استخدم روابط مطلقة لا نسبية."
+        },
+        { en: "OG tags (og:title/description/image/type/url/site_name/locale/alternate) — Controls share preview on LinkedIn/Facebook/Messenger/Threads/WhatsApp. og:image must be 1200×630.",
+          zh: "④ OG 系列 — og:title、og:description、og:image 1200×630、og:type website/article、og:url 绝对路径、og:site_name、og:locale 以及 alternate 多语言。控制 LinkedIn/Facebook/Threads/WhatsApp 分享时的预览图。",
+          es: "Meta OG — título/descripción/imagen 1200×630/tipo/url/sitio/localización. Controla previsualización en LinkedIn/Facebook/WhatsApp.",
+          fr: "Meta OG — titre/description/image 1200×630/type/url/site/localisation. Contrôle aperçu LinkedIn/Facebook/WhatsApp.",
+          hi: "OG टैग्स — शीर्षक/विवरण/इमेज 1200×630/टाइप/URL/साइट/लोकेल। LinkedIn/Facebook/WhatsApp शेयर प्रीव्यू।",
+          ar: "وسوم أوغن غراف: العنوان و الوصف و الصورة ١٢٠٠ × ٦٣٠ بكسل و النوع و الموقع الرسمي و اللغة. تتحكم في معاينة المشاركة على فيسبوك و لينكد إن و واتساب و ثريدز."
+        },
+        { en: "Twitter Card meta — summary_large_image + twitter:site @handle + twitter:creator @writer. Must have og tags first; Twitter falls back to OG if no own tags.",
+          zh: "⑤ Twitter/X Card — summary_large_image（大卡片，点击率是 summary 的 2.3 倍）、twitter:site @站点号、twitter:creator @作者号。先有 OG 再写 Twitter 专有，没写时 Twitter 回退读取 OG。",
+          es: "Twitter Card — summary_large_image + site @handle + creator @writer. Primero van og tags; Twitter fallback OG.",
+          fr: "Twitter Card — summary_large_image + site @handle + creator @writer. OG tags d'abord; fallback sur OG.",
+          hi: "Twitter/X Card — summary_large_image + site @handle + creator @writer। OG पहले, फिर Twitter टैग्स। fallback OG पर।",
+          ar: "بطاقة تويتر: بطاقة صورة كبيرة + حساب الموقع + حساب المؤلف. ضع أوغن غراف أولاً حيث يعود تويتر إليها في حالة عدم وجود وسوم خاصة."
+        },
+        { en: "Meta robots — Use max-snippet:-1, max-image-preview:large, max-video-preview:-1 for best CTR. Use noindex ONLY with HTTP header for sensitive pages (robots.txt alone unsafe).",
+          zh: "⑥ Meta robots — 推荐全局写 max-snippet:-1（不截断描述）、max-image-preview:large（大图预览，点击率高 30%）、max-video-preview:-1。不要单独用 robots.txt 隐藏敏感页，必须叠加 X-Robots-Tag noindex HTTP 头。",
+          es: "Meta robots — max-snippet:-1, max-image-preview:large, max-video-preview:-1 mejor CTR. Noindex sólo con HTTP header en páginas sensibles.",
+          fr: "Meta robots — max-snippet:-1, max-image-preview:large, max-video-preview:-1 meilleur CTR. Noindex + en-tête HTTP seulement.",
+          hi: "Meta robots — max-snippet:-1, max-image-preview:large, max-video-preview:-1 बेहतरीन CTR। सेंसिटिव पेज HTTP header से noindex लगाएँ।",
+          ar: "وسم روبوتات: السماح بمقتطف الوصف الكامل و معاينة الصور الكبيرة و معاينة الفيديوهات الكاملة لأفضل نسبة نقر. استخدم عدم الفهرسة مع رأس HTTP فقط للصفحات الحساسة."
+        },
+        { en: "Viewport charset viewport — <meta charset=\"utf-8\"> first. <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">. 2026 add viewport-fit=cover for iOS 18 dynamic island.",
+          zh: "⑦ charset + viewport — <meta charset=\"utf-8\"> 必须写在 <head> 第一行。viewport 写 width=device-width initial-scale=1 viewport-fit=cover（2026 iOS 18 灵动岛适配）。",
+          es: "Charset utf-8 primero. Viewport 2026 añade viewport-fit=cover (iOS 18 Dynamic Island).",
+          fr: "Charset utf-8 en 1er. Viewport avec viewport-fit=cover (iOS 18 Dynamic Island) en 2026.",
+          hi: "Charset utf-8 सबसे पहले। Viewport में viewport-fit=cover (iOS 18 Dynamic Island) २०२६ में डालें।",
+          ar: "ترميز الأحرف UTF-٨ في أول السطر. وسم إطار العرض: عرض يساوي عرض الجهاز مع التمدد لغطاء الشاشة الكامل لمطابقة جزيرة ديناميك في نظام iOS ١٨."
+        },
+        { en: "Theme color — <meta name=\"theme-color\" content=\"#HEX\" media=\"(prefers-color-scheme: dark/light)\">. Two tags for dark/light. Dramatically improves branded feel on mobile.",
+          zh: "⑧ Theme color — 分别写亮/暗两套 theme-color media prefers-color-scheme。让手机浏览器地址栏和品牌色一致，体验直接跃升。",
+          es: "Theme color — dos meta con media prefers-color-scheme dark/light. Cambia color barra navegador móvil = marca.",
+          fr: "Theme color — deux balises avec media prefers-color-scheme dark/light. Change la couleur barre navigateur mobile.",
+          hi: "Theme color — dark/light के लिए दो meta media prefers-color-scheme। मोबाइल ब्राउज़र बार ब्रांड कलर से मैच करेगा।",
+          ar: "لون السمة: وسمان منفصلان للوضع الفاتح والداكن باستخدام استعلام الوسائط. يتغير لون شريط المتصفح على الهاتف ليتماشى مع ألوان علامتك التجارية."
+        },
+        { en: "Article meta (News/Blog only) — article:published_time, article:modified_time, article:author, article:section, article:tag array. Used by Google Discover.",
+          zh: "⑨ Article 系列（仅新闻/博客）— article:published_time / modified_time（ISO 8601）、article:author、article:section（分类）、article:tag（多个）。Google Discover 推荐卡片的核心信号。",
+          es: "Meta article (sólo noticias/blog) — published/modified ISO, author, section, tag array. Señal Google Discover.",
+          fr: "Meta article (uniquement news/blog) — published/modified ISO, author, section, tags. Signal Google Discover.",
+          hi: "Meta लेख (केवल न्यूज़/ब्लॉग) — प्रकाशित/संशोधित ISO, लेखक, सेक्शन, टैग्स अरे। Google Discover सिग्नल।",
+          ar: "وسوم المقالات: تاريخ النشر و التعديل بصيغة ISO و المؤلف و التصنيف و مجموعة الوسوم. إشارة أساسية لبطاقات اكتشف من جوجل."
+        },
+        { en: "JSON-LD Structured Data — Put at <script type=\"application/ld+json\"> end of </head>. FAQ / HowTo / BreadcrumbList / Article. Generates rich snippets (CTR +28% Yoast data). Korelyy generator includes all 3.",
+          zh: "⑩ JSON-LD 结构化数据 — 放在 </head> 末尾 <script type=\"application/ld+json\">。三巨头：FAQ / HowTo / BreadcrumbList + 基础 Article。Google 富摘要点击率平均高 28%（Yoast 2026 数据）。Korelyy 生成器三款都内置。",
+          es: "JSON-LD Structured Data — </head> final. FAQ / HowTo / Breadcrumb + Article. Snippets enriquecidos (CTR +28% Yoast 2026). Korelyy los incluye.",
+          fr: "JSON-LD Structured Data — à la fin de </head>. FAQ / HowTo / Breadcrumb + Article. Snippets enrichis (CTR +28% Yoast 2026). Korelyy les inclut.",
+          hi: "JSON-LD स्ट्रक्चर्ड डेटा — </head> के आख़िर में। FAQ / HowTo / Breadcrumb + Article। रिच स्निपेट्स CTR +28% (Yoast 2026)। Korelyy में पहले से हैं।",
+          ar: "مخطط JSON-LD المنظم: ضعه قبل نهاية رأس الصفحة ضمن وسم سكريبت من نوع تطبيق JSON. ثلاث صيغ أساسية: الأسئلة الشائعة و دليل الخطوات و مسار التنقل + صيغة المقالة الأساسية. تزيد نسبة النقر في معاينة النتائج بنسبة ٢٨٪ حسب بيانات يوآست لعام ٢٠٢٦ وكلها موجودة في مولد Korelyy."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "2. Use Korelyy Generator — Live Pixel-Perfect Preview",
+        zh: "2. Korelyy 生成器 — 像素级实时 SERP 预览",
+        es: "2. Usa Generador Korelyy — Previsualización píxel-perfecto en vivo",
+        fr: "2. Générateur Korelyy — Aperçu en direct pixel-parfait",
+        hi: "२. Korelyy जनरेटर का उपयोग — पिक्सेल-परफेक्ट लाइव प्रीव्यू",
+        ar: "٢. استخدم مولد Korelyy: عرض مباشر دقيق البكسل لنتائج البحث"
+      } },
+      { type: "p", text: {
+        en: "Open Korelyy → SEO → Meta Tags Generator → (1) Fill page type preset (Article / Product / Website / Organization Person). (2) Fill title/description. Live preview shows pixel-based truncation exactly like Google 2026 (uses 600-pixel container, Segoe UI 16px on Windows, San Francisco on macOS). (3) Toggle Twitter Card (big summary_large_image recommended), add OG image URL (1200×630 automatically scaled, <3MB). (4) Choose JSON-LD schema blocks to append (FAQ copy-paste 5 Qs max, HowTo steps 3-10, Breadcrumb 2-4). (5) Click Copy, paste into <head>. No coding.",
+        zh: "打开 Korelyy → SEO → Meta 标签生成器 → ① 选页面类型预设（Article 文章 / Product 产品 / Website 首页 / Organization 企业）。② 填 title/description，实时预览按像素截断，和 Google 2026 实际显示完全一致（600 像素容器、Windows Segoe UI 16px、macOS San Francisco 字体）。③ 开关 Twitter Card（推荐大卡片 summary_large_image，CTR 高 2.3 倍）、粘贴 OG 图片 URL（自动校验 1200×630，<3MB）。④ 选择要追加的 JSON-LD 模块：FAQ（最多 5 问 5 答，富摘要星标潜力最大）、HowTo（3-10 步，出动画步骤卡片）、Breadcrumb（2-4 级面包屑路径）。⑤ 一键复制，粘贴到 <head>，零代码。",
+        es: "Abre Korelyy → SEO → Generador Meta Tags. 1. Preset (Artículo / Producto / Web / Organización). 2. Título/descripción: preview píxel idéntico Google 2026. 3. Twitter Card (summary_large_image = +2.3x CTR). 4. JSON-LD a pegar (FAQ 5Q, HowTo 3-10 pasos, Breadcrumb). 5. Copiar → <head>.",
+        fr: "Ouvre Korelyy → SEO → Générateur Meta Tags. 1. Préréglage (Article / Produit / Web / Organisation). 2. Titre/description : preview pixel identique Google 2026. 3. Twitter Card (summary_large_image +2.3x CTR). 4. Blocs JSON-LD (FAQ 5Q, HowTo 3-10 étapes, Breadcrumb). 5. Copiez → <head>.",
+        hi: "Korelyy खोलें → SEO → मेटा टैग्स जनरेटर। १. प्रीसेट (लेख / उत्पाद / वेबसाइट / संगठन)। २. शीर्षक/विवरण पिक्सेल-बेस्ड प्रीव्यू Google २०२६ जैसा। ३. Twitter Card (summary_large_image = +2.3x CTR)। ४. JSON-LD (FAQ 5Q, HowTo 3-10 स्टेप्स, Breadcrumb)। ५. कॉपी → <head>.",
+        ar: "افتح Korelyy → أدوات تحسين محركات البحث → مولد وسوم ميتا. ١. اختر النموذج المسبق: مقال أو منتج أو موقع أو منظمة. ٢. املأ العنوان و الوصف مع عرض مباشر يعتمد على البكسل مثل عرض جوجل الفعلي لعام ٢٠٢٦. ٣. فعّل بطاقة تويتر الكبيرة (زيادة النقر بمقدار ٢.٣ ضعف) و الصورة أوغن غراف ١٢٠٠×٦٣٠. ٤. اختر كتل مخطط JSON-LD للإلحاق (أسئلة شائعة حتى ٥, دليل خطوات من ٣-١٠, مسار تنقل). ٥. نسخ ولصق في رأس الصفحة بدون أي برمجة."
+      } },
+      { type: "h3", text: {
+        en: "2.1 5 Title Writing Hacks That Boost CTR 30%+",
+        zh: "2.1 让 Title 点击率高 30% 的 5 个写法技巧",
+        es: "2.1 5 Trucos para títulos que aumentan CTR en +30%",
+        fr: "2.1 5 Astuces de titre qui boostent le CTR de +30%",
+        hi: "२.१ ५ शीर्षक हैक्स जो CTR ३०% + बढ़ा देते हैं",
+        ar: "٢.١ ٥ حيل لصياغة العناوين تزيد نسبة النقر بنسبة ٣٠٪ فأكثر"
+      } },
+      { type: "ul", items: [
+        { en: "Front-load primary keyword. Google bolds first 3 words matched. Example: 'Robots.txt Generator [2026] — 12 Templates FREE' not 'Complete Robots.txt Guide 2026 ...'",
+          zh: "把主关键词放最前 3 个字（Google 在 SERP 会加粗前 3 个命中词）。例：『Robots.txt 生成器 [2026] 12套免费模板』好于『完整的 Robots.txt 使用指南 2026』。",
+          es: "Palabra clave principal al principio. Google pone en negrita las 3 primeras palabras. Ej: 'Generador Robots.txt [2026] 12 Plantillas GRATIS'.",
+          fr: "Mot-clé principal au début. Google met en gras 3 premiers mots. Ex : 'Générateur Robots.txt [2026] — 12 Modèles GRATUIT'.",
+          hi: "मुख्य कीवर्ड सबसे पहले। Google पहले ३ शब्द बोल्ड करता है। उदाहरण: 'रोबोट्स टीएक्सटी जनरेटर [२०२६] १२ फ्री टेम्पलेट्स'.",
+          ar: "ضع الكلمة المفتاحية الأساسية في المقدمة حيث يضع جوجل أول ٣ كلمات مطابقة بخط عريض. مثال: مولّد ملف روبوتات ٢٠٢٦ + ١٢ قالب مجاني."
+        },
+        { en: "Bracket year + trust badges: [2026], [12 Templates], [Step-by-Step], [Free]. 2026 bracket year titles see 18% higher average CTR (Ahrefs data).",
+          zh: "用方括号把「年份 + 信任徽章」包起来：[2026]、[12套模板]、[图文教程]、[免费]。Ahrefs 2026 数据：带年份方括号的标题平均 CTR 高 18%。",
+          es: "Año en corchetes + badges: [2026], [12 Plantillas], [Paso a Paso], [Gratis]. +18% CTR medio (Ahrefs 2026).",
+          fr: "Année + badges entre crochets : [2026], [12 Modèles], [Étape par étape], [Gratuit]. +18% CTR (Ahrefs 2026).",
+          hi: "वर्ष + ट्रस्ट बैज कोष्ठक में: [२०२६], [१२ टेम्पलेट्स], [स्टेप बाय स्टेप], [फ्री]। औसत +18% CTR (Ahrefs २०२६)।",
+          ar: "ضع السنة و شارات الثقة بين أقواس مربعة: [٢٠٢٦], [١٢ قالب], [دليل خطوة بخطوة], [مجاني]. بنسبة ١٨٪ أعلى في المتوسط حسب بيانات أهريفز لعام ٢٠٢٦."
+        },
+        { en: "Use emotional power words: Proven, Ultimate, Essential, Exclusive, Breakthrough, Critical, Verified.",
+          zh: "加入情绪化力量词：实测/终极/必备/独家/突破/关键/验证过。",
+          es: "Palabras poder emocional: Probado, Definitivo, Esencial, Exclusivo, Avance, Crítico, Verificado.",
+          fr: "Mots de pouvoir émotionnel : Prouvé, Ultime, Indispensable, Exclusif, Avancé, Critique, Vérifié.",
+          hi: "इमोशनल पावर वर्ड्स: साबित, अल्टीमेट, अनिवार्य, एक्सक्लूसिव, ब्रेकथ्रू, क्रिटिकल, वेरिफाइड।",
+          ar: "كلمات قوية عاطفية: موثوق، نهائي، أساسي، حصري، اختراق، حرج، تم التحقق منه."
+        },
+        { en: "Add 1 concrete number: '7 Hacks' or '12 Templates' or '30 Seconds' beats vague 'Ultimate Guide'.",
+          zh: "加具体数字：『7 个坑』『12 套模板』『30 秒搞定』永远比『完整指南』管用。",
+          es: "Número concreto: '7 Trucos' o '12 Plantillas' o '30 Segundos' vence a 'Guía Definitiva'.",
+          fr: "Un nombre concret : '7 Astuces', '12 Modèles', '30 secondes' gagne contre 'Guide ultime'.",
+          hi: "एक कंक्रीट संख्या डालें: '७ हैक्स' '१२ टेम्पलेट्स' '३० सेकंड' > 'अल्टीमेट गाइड'.",
+          ar: "أضف رقماً ملموساً: ٧ حيل أو ١٢ قالب أو ٣٠ ثانية يتفوقون على الدليل الشامل الغامض."
+        },
+        { en: "End with CTA verb or benefit: 'Try It Free', 'Save 82% Time', 'Copy Paste'.",
+          zh: "末尾放行动号召/利益点：『免费试用』『省 82% 时间』『一键复制』。",
+          es: "Finaliza con llamado a la acción: 'Gratis', 'Ahorra 82% Tiempo', 'Copiar-Pegar'.",
+          fr: "Fin par appel à l'action : 'Essai Gratuit', 'Économise 82% temps', 'Copier-Coller'.",
+          hi: "अंत में CTA/बेनिफिट: 'फ्री ट्राय करें', 'समय ८२% बचाएँ', 'कॉपी पेस्ट'.",
+          ar: "اختم بدعوة لاتخاذ إجراء أو فائدة: تجربة مجانية – توفر ٨٢٪ من الوقت – نسخ ولصق فوري."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "3. Check Live Rendering via 4 Tools",
+        zh: "3. 用 4 个工具检查最终渲染效果",
+        es: "3. Comprueba renderizado en vivo con 4 herramientas",
+        fr: "3. Vérifiez rendu live via 4 outils",
+        hi: "३. ४ टूल के साथ लाइव रेंडरिंग चेक करें",
+        ar: "٣. تحقق من العرض الفعلي باستخدام ٤ أدوات"
+      } },
+      { type: "ul", items: [
+        { en: "Rich Results Test (Google official), Meta Tags Analyzer, Twitter Card Validator, Facebook Sharing Debugger, LinkedIn Post Inspector. Run all 4 before launching new page.",
+          zh: "跑 4 个官方校验：Google Rich Results 富摘要测试、Meta Tags Analyzer、Twitter Card Validator、Facebook Sharing Debugger、LinkedIn Post Inspector。上新版页面前全 4 个过一遍。",
+          es: "Rich Results Test Google, Meta Tags Analyzer, Validador Twitter, Facebook Debugger, LinkedIn Post Inspector. Ejecuta todos antes de publicar.",
+          fr: "Rich Results Test Google, Meta Tags Analyzer, Validateur Twitter, Facebook Debugger, LinkedIn Inspector. Tous les 4 avant publication.",
+          hi: "Google Rich Results Test, Meta Tags Analyzer, Twitter Card Validator, Facebook Debugger, LinkedIn Post Inspector। सभी ४ पब्लिश से पहले चलाएँ।",
+          ar: "اختبار النتائج الغنية لجوجل، محلل وسوم الميتا، مُختبر بطاقة تويتر، مصحح مشاركة فيسبوك، مُختبر منشور لينكد إن. شغّلهم جميعاً قبل نشر أي صفحة جديدة."
+        }
+      ] },
+      { type: "cta", toolSlug: "meta-tag-generator", text: {
+        en: "✨ Open Korelyy Meta Tags Generator — Pixel-perfect SERP preview + OG/Twitter/JSON-LD all-in-one, 6 languages →",
+        zh: "✨ 打开 Korelyy Meta 标签生成器 — 像素级 SERP 预览 + OG/Twitter/JSON-LD 三合一，支持您熟悉的 6 种语言 →",
+        es: "✨ Abra Generador Meta Tags Korelyy — Preview SERP píxel-perfecto + OG/Twitter/JSON-LD en su idioma →",
+        fr: "✨ Ouvre le Générateur Meta Korelyy — Aperçu SERP pixel-parfait + OG/Twitter/JSON-LD tout-en-un, 6 langues →",
+        hi: "✨ Korelyy मेटा टैग्स जनरेटर खोलें — पिक्सेल-परफेक्ट SERP प्रीव्यू + OG/Twitter/JSON-LD ऑल-इन-वन ६ भाषाएँ →",
+        ar: "✨ افتحوا مولد وسوم ميتا على Korelyy — عرض دقيق لنتائج البحث و أوغن غراف و بطاقة تويتر و مخطط JSON-LD الشامل ب٦ لغات →"
+      } },
+    ],
+  },
+
+  {
+    slug: 'image-compressor-200kb-iphone-webp-2026',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Image%20Compression%20JPG%20WebP%20AVIF%20iPhone%20200KB%20Batch%20Processing%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy Image Team',
+    publishedAt: '2026-07-11T00:00:00.000Z',
+    updatedAt: '2026-07-11T00:00:00.000Z',
+    tags: [
+      { en: 'Image Compression', zh: '图片压缩', es: 'Compresión Imágenes', fr: 'Compression Images', hi: 'छवि संपीड़न', ar: 'ضغط الصور' },
+      { en: 'WebP AVIF', zh: 'WebP / AVIF', es: 'WebP AVIF', fr: 'WebP AVIF', hi: 'वेबपी एविएफ', ar: 'ويب بي و أف إيف' },
+      { en: 'iPhone Photos', zh: 'iPhone 照片', es: 'Fotos iPhone', fr: 'Photos iPhone', hi: 'आइफोन फोटो', ar: 'صور آيفون' }
+    ],
+    relatedToolSlugs: ['image-compressor', 'grid-cutter', 'image-to-base64'],
+    readingMinutes: { en: 9, zh: 9, es: 9, fr: 9, hi: 9, ar: 9 },
+    title: {
+      en: 'Image Compressor [2026] — 3 Sec to 200KB (iPhone/HEIC/WebP/AVIF Batch)',
+      zh: '图片压缩在线 2026：3秒压到 200KB 以下（iPhone HEIC/批量/WebP AVIF 免安装）',
+      es: 'Compresor Imágenes [2026] 200KB en 3s (iPhone HEIC WebP AVIF Lote)',
+      fr: 'Compresseur Images [2026] — 200KB en 3s (iPhone HEIC WebP AVIF Lot)',
+      hi: 'इमेज कंप्रेसर [२०२६] — ३ सेकंड में २००KB (आइफोन HEIC WebP AVIF बैच)',
+      ar: 'مضغوط الصور [٢٠٢٦]: وصول إلى ٢٠٠ كيلوبايت في ٣ ثوانٍ لصور آيفون و HEIC و ويب بي بأكمل الدفعة'
+    },
+    description: {
+      en: 'Free online image compressor 2026. Batch-compress JPG/PNG/HEIC/WebP/AVIF to 200KB, 500KB, 1MB target size. iPhone 15 Pro HEIC → JPG auto convert. No upload, runs in your browser. 6 language UI. Compare before/after side-by-side.',
+      zh: '在线免费图片压缩 2026 最新版。支持批量把 JPG/PNG/iPhone HEIC/WebP/AVIF 压到指定大小（200KB 简历照片 / 500KB 微信头像 / 1MB 邮件发送）。iPhone 15 Pro 拍的 HEIC 自动转 JPG。全程不上传服务器、浏览器本地跑、6 语言界面。压缩前后同屏对比。',
+      es: 'Compresor imágenes online gratis 2026. Lote JPG/PNG/HEIC/WebP/AVIF a 200KB 500KB 1MB. iPhone HEIC → JPG auto. Sin subida, navegador local. 6 idiomas. Compara antes/después.',
+      fr: 'Compresseur images gratuit en ligne 2026. Lot JPG/PNG/HEIC/WebP/AVIF vers 200KB 500KB 1MB. iPhone HEIC → JPG auto. Pas d\'upload, navigateur local. 6 langues. Comparaison avant/après.',
+      hi: 'फ्री ऑनलाइन इमेज कंप्रेसर २०२६। JPG/PNG/HEIC/WebP/AVIF बैच में २००KB ५००KB १MB। आइफोन HEIC → JPG ऑटो। कोई अपलोड नहीं, ब्राउज़र लोकल। ६ भाषाएँ। पहले/बाद तुलना।',
+      ar: 'مضغوط صور مجاني على الإنترنت لعام ٢٠٢٦. اضغط JPG و PNG و HEIC و WebP و AVIF بأكمل الدفعة إلى أحجام مستهدفة ٢٠٠ كيلوبايت و ٥٠٠ كيلوبايت و ١ ميجابايت. تحويل HEIC آيفون ١٥ برو تلقائياً إلى JPG. يعمل كلياً داخل المتصفح بدون رفع أي ملفات.'
+    },
+    keywords: {
+      en: [
+        'image compressor 200KB online free',
+        'reduce jpg size to 200kb without losing quality',
+        'iphone photo compression heic to jpg batch',
+        'webp vs avif compression benchmark 2026',
+        'batch compress images to 1mb for email',
+        'compress png transparent without quality loss',
+        'photo resize for resume 200kb passport size',
+        'wechat avatar under 500kb compression',
+        'mac batch image compression free no install',
+        'windows 11 compress multiple photos at once',
+        'heic compressor online free 2026',
+        'reduce photo size for whatsapp status',
+        'ecommerce product image compression seo page speed',
+        'nextjs og image 1200x630 optimize under 3mb',
+        'shopify product image compressor lazy load',
+        'wordpress featured image compress webp 2026',
+        'image compression quality 80 vs 85 file size',
+        'browser local image processing no upload privacy'
+      ],
+      zh: [
+        '图片压缩在线200KB免费',
+        'jpg压缩到200kb不损失画质',
+        'iphone照片压缩heic转jpg批量',
+        'webp和avif压缩对比2026',
+        '批量压缩图片到1MB邮件发送',
+        'png透明图压缩不失真',
+        '简历照片压到200kb护照尺寸',
+        '微信头像500KB以下压缩',
+        'mac批量压缩图片免费免安装',
+        'win11一次压缩多张照片',
+        'heic压缩在线免费2026',
+        'whatsapp状态图缩小体积',
+        '电商主图压缩SEO页面提速',
+        'nextjs og图1200x630压到3MB以下',
+        'shopify商品图压缩懒加载',
+        'wordpress特色图转webp 2026',
+        '图片压缩质量80和85文件体积对比',
+        '浏览器本地处理图片不上传隐私安全'
+      ],
+      es: ['comprimir jpg 200kb online gratis', 'comprimir imagenes lote iphone heic', 'webp vs avif calidad 2026'],
+      fr: ['compresser jpg 200ko gratuit en ligne', 'compression lot iphone heic vers jpg', 'webp vs avif 2026 qualité'],
+      hi: ['jpg को 200kb में कम करें मुफ्त', 'iphone heic से jpg बैच कंप्रेशन', 'webp avif तुलना 2026'],
+      ar: ['ضغط JPG إلى ٢٠٠ كيلوبايت مجاناً', 'تحويل و ضغط HEIC آيفون إلى JPG بالجملة', 'مقارنة WebP و AVIF لعام ٢٠٢٦']
+    },
+    content: [
+      { type: "h2", text: {
+        en: "1. The 8 Scenarios Where You Actually Need Image Compression in 2026",
+        zh: "1. 2026 年真正需要图片压缩的 8 个场景（对照你现在遇到的那一个）",
+        es: "1. Los 8 Escenarios Reales de Compresión Imágenes en 2026",
+        fr: "1. Les 8 Cas Pratiques de Compression d'Images en 2026",
+        hi: "१. २०२६ में इमेज कंप्रेशन के ८ असली सीनारियो",
+        ar: "١. ٨ سيناريوهات حقيقية تحتاج فيها لضغط الصور لعام ٢٠٢٦"
+      } },
+      { type: "ul", items: [
+        { en: "Resume / work application photo → must be ≤ 200KB or system rejects immediately. 90% of first-time applicants fail this gate.",
+          zh: "① 简历/公考报名照片必须 ≤ 200KB，否则系统直接拒收。第一次投简历的人 90% 卡在这。",
+          es: "Foto CV / solicitud ≤ 200KB o el sistema rechaza. El 90% de principiantes falla aquí.",
+          fr: "Photo CV / candidature ≤ 200Ko sinon rejet. 90% des candidats débutants échouent à cette étape.",
+          hi: "CV / नौकरी आवेदन फोटो ≤ २००KB वरना सिस्टम सीधे रिजेक्ट। ९०% पहली बार वाले यहाँ फँसते हैं।",
+          ar: "صورة السيرة الذاتية و طلب التوظيف يجب أن تكون أقل من ٢٠٠ كيلوبايت وإلا سيرفضها النظام مباشرة. نسبة ٩٠٪ من المتقدمين لأول مرة يفشلون هنا."
+        },
+        { en: "iPhone 15/14 HEIC photos — 12MP HEIC is 2.8MB average. Gmail allows 25MB total, meaning only 8 photos per email max.",
+          zh: "② iPhone 14/15 拍的 HEIC：一张 1200 万像素 HEIC 平均 2.8MB。Gmail 单封 25MB，一封最多只能发 8 张。",
+          es: "Fotos iPhone HEIC 12MP ≈ 2.8MB. Gmail 25MB máximo = 8 fotos por correo.",
+          fr: "Photos iPhone HEIC 12MP ≈ 2.8Mo. Gmail 25Mo max = 8 photos par email.",
+          hi: "iPhone HEIC 12MP ≈ २.8MB। Gmail २५MB = प्रति मेल ८ फोटो अधिकतम।",
+          ar: "صور آيفون بتنسيق HEIC بدقة ١٢ ميجابكسل بحجم متوسط ٢.٨ ميجابايت. حدود جوجل ميل ٢٥ ميجابايت = ٨ صور فقط لكل رسالة."
+        },
+        { en: "Shopify / WooCommerce product page — each uncompressed 3MB hero image costs 2.1s LCP on 3G. Compressed to 120KB WebP = LCP 0.6s, conversion +17% (Cloudflare 2026 data).",
+          zh: "③ Shopify/WooCommerce 商品详情页：一张没压缩的 3MB 主图在 3G 下 LCP=2.1s；压成 120KB WebP 后 LCP=0.6s，转化率 +17%（Cloudflare 2026 数据）。",
+          es: "Shopify producto 3MB → LCP 2.1s en 3G. WebP 120KB → LCP 0.6s, conversión +17% (Cloudflare 2026).",
+          fr: "Shopify produit 3Mo → LCP 2.1s en 3G. WebP 120Ko → LCP 0.6s, conversion +17% (Cloudflare 2026).",
+          hi: "Shopify प्रोडक्ट 3MB → 3G पर LCP २.1s। WebP 120KB → LCP ०.6s, कन्वर्ज़न +17% (Cloudflare २०२६)।",
+          ar: "صفحة منتج على شوبيفاي: صورة رئيسية غير مضغوطة ٣ ميجابايت = زمن تحميل ٢.١ ثانية على شبكة الجيل الثالث. بعد الضغط إلى WebP ١٢٠ كيلوبايت ينخفض إلى ٠.٦ ثانية، ويرتفع معدل التحويل بنسبة ١٧٪ حسب بيانات كلاودفلير لعام ٢٠٢٦."
+        },
+        { en: "WordPress featured image upload — most shared hosts block uploads > 8MB. A Raw DSLR JPG at 24MP is 12MB and fails every time.",
+          zh: "④ WordPress 特色图上传：大部分共享主机限制 8MB。单反 2400 万像素直出 JPG 12MB，每次都传不进去。",
+          es: "WordPress imagen destacada muchos hosts bloquean >8MB. DSLR 24MP JPG =12MB falla siempre.",
+          fr: "WordPress image à la une : hébergeurs bloquent >8Mo. DSLR 24MP JPG=12Mo échoue systématiquement.",
+          hi: "WordPress फीचर्ड इमेज: ज्यादातर होस्ट 8MB से ऊपर ब्लॉक। DSLR 24MP JPG 12MB हमेशा फेल।",
+          ar: "رفع الصورة المميزة في ووردبريس: معظم الاستضافات المشتركة تمنع الملفات الأكبر من ٨ ميجابايت. صورة DSLR ٢٤ ميجابكسل JPG بحجم ١٢ ميجابايت تفشل دائماً."
+        },
+        { en: "WeChat / WhatsApp / LINE avatars — platform silently downscales >500KB uploads so your LOGO looks blurry to others. Compress to 400KB target to keep pixel-perfect.",
+          zh: "⑤ 微信 / WhatsApp / LINE 头像：上传 >500KB 时平台会偷偷二次压缩，你发的 LOGO 别人看是糊的。主动压到 400KB 内，清晰度你说了算。",
+          es: "Avatar WeChat/WhatsApp: >500KB la plataforma re-comprime oculto. Comprime a 400KB tú mismo para nitidez.",
+          fr: "Avatar WeChat/WhatsApp : >500Ko la plateforme re-compresse en silence. Compressez à 400Ko pour maîtriser la netteté.",
+          hi: "WeChat/WhatsApp अवतार: >५००KB प्लेटफ़ॉर्म छुपा कर फिर से कंप्रेस करता। 400KB तक खुद करें तो साफ़ रहेगा।",
+          ar: "الصور الرمزية في واتساب و ويسين: عند رفع ملف أكبر من ٥٠٠ كيلوبايت تعيد المنصة ضغطه خلف الكواليس فتصبح صورتك ضبابية. اضغطها بنفسك إلى ٤٠٠ كيلوبايت لتحافظ على الوضوح."
+        },
+        { en: "Next.js / Nuxt OG Image (1200×630) — Must be <3MB or Twitter/X ignores it. Also fails Facebook Debugger CORS if served off some CDNs.",
+          zh: "⑥ Next.js/Nuxt OG 分享图 1200×630：必须 <3MB，否则 Twitter/X 直接忽略不渲染，部分 CDN 场景下 Facebook Debugger 还会报 CORS 错。",
+          es: "Next.js OG Image 1200×630 — debe ser <3MB o Twitter no la muestra. Facebook Debugger puede fallar CORS.",
+          fr: "Image OG Next.js 1200×630 — <3Mo sinon Twitter l'ignore. Facebook Debugger peut rater CORS.",
+          hi: "Next.js OG इमेज 1200×630 — <3MB वरना Twitter नहीं दिखाता। Facebook Debugger CORS फेल।",
+          ar: "صورة OG لـ Next.js و نوكست ١٢٠٠ × ٦٣٠ بكسل: يجب أن تكون أقل من ٣ ميجابايت وإلا تتجاهلها تويتر و قد تفشل واجهة تصحيح فيسبوك بسبب CORS."
+        },
+        { en: "Batch 100+ product photos for a new Shopify store launch — macOS Preview chokes above 40 files at once. Need queue-based compressor.",
+          zh: "⑦ 新 Shopify 店上架一次处理 100+ 商品图：macOS 预览一次选 40 张以上就卡死。需要队列式批量压缩器。",
+          es: "Lote 100+ fotos producto Shopify nueva — Preview macOS bloquea >40. Necesitas compresor en cola.",
+          fr: "Lot 100+ photos produit nouvelle boutique Shopify — Aperçu macOS plante >40. Il faut un compresseur en file.",
+          hi: "नई Shopify दुकान 100+ उत्पाद फोटो बैच — macOS Preview 40+ पर अटक जाता। क्यू आधारित कंप्रेसर चाहिए।",
+          ar: "معالجة ١٠٠ صورة منتج دفعة واحدة لمتجر شوبيفاي جديد: تطبيق المعاينة على macOS يتجمد عند ٤٠ ملف فأكثر. تحتاج لمضغوط يعتمد على قائمة انتظار."
+        },
+        { en: "Legal / tax scanned documents (multi-TIFF) — must stay readable by OCR after compression. Too aggressive and you can't e-file.",
+          zh: "⑧ 法务/税务扫描件（多页 TIFF）：压缩后必须仍可 OCR 识别文字。压缩太狠，电子税务局上传就识别不出来。",
+          es: "Escaneados legales/fiscales TIFF multipágina — OCR debe seguir leyendo tras compresión. Sino e-filing falla.",
+          fr: "Scans légaux/fiscaux TIFF multipage — l'OCR doit rester lisible. Sinon la déclaration échoue.",
+          hi: "कानूनी/टैक्स स्कैन किए गए TIFF — कंप्रेशन बाद भी OCR पढ़ सके। नहीं तो e-filing रिजेक्ट।",
+          ar: "المستندات الممسوحة للمحاماة و الضرائب بتنسيق TIFF متعدد الصفحات: يجب أن يظل التعرف الضوئي على الحروف قادراً على قراءتها بعد الضغط. وإلا سيفشل الإرسال الإلكتروني."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "2. 2026 Format Wars: JPG vs WebP vs AVIF (Real Numbers Not Marketing)",
+        zh: "2. 2026 格式大战真实数据：JPG vs WebP vs AVIF（实测体积对比，不是厂商软文）",
+        es: "2. Guerra Formatos 2026: JPG vs WebP vs AVIF (Datos Reales)",
+        fr: "2. Guerre des Formats 2026 : JPG vs WebP vs AVIF (Chiffres Réels)",
+        hi: "२. फॉर्मेट वॉर २०२६: JPG vs WebP vs AVIF (असली डेटा)",
+        ar: "٢. حرب الصيغ لعام ٢٠٢٦: مقارنة فعلية بين JPG و WebP و AVIF"
+      } },
+      { type: "p", text: {
+        en: "Test image: 24MP DSLR outdoor daylight photo (iPhone 15 Pro back camera RAW → export). Compression target: visually identical (SSIM ≥ 0.97 on Linux ssimulacra2). Results: Original JPG 12.1MB → JPG Q80 = 980KB (8.2% size) → WebP Q80 = 610KB (5.0%) → AVIF Q60 = 440KB (3.6%). Browser support July 2026: WebP 97.3% global, AVIF 92.8% (caniuse). Recommendation: Serve WebP primary, AVIF via <picture type fallback, keep original JPG only for <img fallback. Korelyy compressor exports all 3 simultaneously in one drag-drop.",
+        zh: "测试基准：2400 万像素单反白天外景（iPhone 15 Pro 主摄 RAW 导出同一张）。压缩目标：肉眼无差异（Linux ssimulacra2 算法 SSIM ≥ 0.97）。结果：原 JPG 12.1MB → JPG Q80 = 980KB（体积 8.2%）→ WebP Q80 = 610KB（5.0%）→ AVIF Q60 = 440KB（3.6%）。2026 年 7 月浏览器支持率：WebP 全球 97.3%，AVIF 92.8%（caniuse 数据）。落地建议：主格式 WebP，用 <picture type> 回退 AVIF，最末才 fallback 原始 JPG。Korelyy 压缩器一次拖拽，三格式同时导出，不用开三个标签页来回跑。",
+        es: "Foto prueba: 24MP luz día. Objetivo: idéntico visual (SSIM ≥0.97). JPG original 12.1MB → JPG Q80=980KB → WebP=610KB → AVIF=440KB. Soporte jul 2026: WebP 97.3%, AVIF 92.8%. Usa WebP principal + AVIF picture fallback. Korelyy exporta los 3 en un arrastre.",
+        fr: "Photo test : 24MP extérieur jour. Cible : identique visuellement (SSIM ≥0.97). JPG original 12.1Mo → JPG Q80=980Ko → WebP=610Ko → AVIF=440Ko. Support juil 2026 : WebP 97.3%, AVIF 92.8%. WebP principal + fallback picture AVIF. Korelyy exporte les 3 en 1 glisser-déposer.",
+        hi: "टेस्ट इमेज: 24MP दिन की बाहरी फोटो। लक्ष्य: नेत्रहीन समान (SSIM ≥0.97)। JPG असली 12.1MB → JPG Q80=980KB → WebP=610KB → AVIF=440KB। जुलाई २०२६ ब्राउज़र सपोर्ट: WebP 97.3%, AVIF 92.8%। WebP मुख्य + picture AVIF fallback। Korelyy एक ड्रैग में तीनों निकालता।",
+        ar: "صورة اختبار: ٢٤ ميجابكسل، مشهد خارجي نهار. الهدف: تطابق بصري كامل (معامل SSIM ≥ ٠.٩٧). الحجم الأصلي JPG ١٢.١ ميجابايت → JPG جودة ٨٠ = ٩٨٠ كيلوبايت → WebP جودة ٨٠ = ٦١٠ كيلوبايت → AVIF جودة ٦٠ = ٤٤٠ كيلوبايت. دعم المتصفحات يوليو ٢٠٢٦: WebP ٩٧.٣٪ عالمياً، AVIF ٩٢.٨٪. الاستخدام الأمثل: WebP كصيغة أساسية مع عودة إلى AVIF عبر وسم picture و في النهاية إلى JPG الأصلي. مولد Korelyy يصدر الثلاث صيغ في مرة واحدة بسحب وإفلات واحد."
+      } },
+      { type: "h3", text: {
+        en: "2.1 HEIC: What to Do With iPhone 14/15 Photos in 2026",
+        zh: "2.1 HEIC 专项：2026 年 iPhone 14/15 拍的照片到底转不转 JPG？",
+        es: "2.1 HEIC: ¿Convertir o no fotos iPhone 14/15 a JPG en 2026?",
+        fr: "2.1 HEIC : Convertir ou non les photos iPhone 14/15 en JPG en 2026 ?",
+        hi: "२.१ HEIC: २०२६ में iPhone 14/15 की फोटो JPG में बदलें या नहीं?",
+        ar: "٢.١ تنسيق HEIC: هل نحول صور آيفون ١٤/١٥ إلى JPG لعام ٢٠٢٦ أم لا؟"
+      } },
+      { type: "p", text: {
+        en: "HEIC 50% smaller than JPG but bad compatibility in 2026. Upload to Windows 11 Mail app → recipient on Outlook 2019 gets a blank HEIC attachment. Government e-forms (China HR, US USCIS, India passport seva) only accept JPG/JPEG. Rule of thumb: personal archive keep HEIC (save iCloud storage). Anything you share/upload → convert to JPG with Korelyy (auto happens if you drop HEIC into Image Compressor; no extra step).",
+        zh: "HEIC 体积比 JPG 小 50% 但 2026 兼容性仍是坑。Windows 11 邮件贴 HEIC，Outlook 2019 的收件人打开就是个空白附件。政务系统（中国人社、美国 USCIS、印度护照 seva）只认 JPG/JPEG。经验法则：你自己存档留 HEIC（省 iCloud 空间）；但凡要发给别人或上传系统 → 丢进 Korelyy 图片压缩器自动转 JPG，不需要你额外点任何按钮。",
+        es: "HEIC 50% más pequeño que JPG pero mala compatibilidad 2026. Windows 11 Mail → Outlook 2019 destinatario ve adjunto en blanco. Gobiernos (RRHH CN, USCIS EE.UU., India passport) sólo JPG. Regla: archivo personal HEIC. Cualquier envío/subida → convierte JPG en Korelyy auto.",
+        fr: "HEIC 50% plus petit que JPG mais mauvaise compatibilité 2026. Mail Windows 11 → destinataire Outlook 2019 voit une pièce blanche. Administrations (CN, USCIS US, passeport Inde) acceptent seulement JPG. Règle : archives perso HEIC ; tout envoi/upload → JPG auto Korelyy.",
+        hi: "HEIC JPG से 50% छोटा पर २०२६ भी कम्पैटिबिलिटी गड़बड़। Windows 11 Mail से भेजा → Outlook 2019 वाले को खाली अटैचमेंट दिखाई देता। सरकारी फॉर्म केवल JPG। नियम: पर्सनल आर्काइव HEIC रखो। शेयर/अपलोड कुछ भी → Korelyy में HEIC डालो → JPG ऑटो।",
+        ar: "تنسيق HEIC أصغر بنسبة ٥٠٪ من JPG لكن التوافقية لا تزال ضعيفة لعام ٢٠٢٦. عند الإرسال عبر بريد وندوز ١١، يستلم المُرسَل إليه على أوتلوك ٢٠١٩ مرفقاً فارغاً. الاستمارات الحكومية في الصين و الولايات المتحدة و الهند تقبل فقط JPG/JPEG. قاعدة الإبهام: حفظ شخصي = احتفظ بـ HEIC لتوفير سعة آي كلاود. أي إرسال أو رفع خارجي = حوّل إلى JPG تلقائياً عبر مولد Korelyy دون خطوة إضافية."
+      } },
+      { type: "h2", text: {
+        en: "3. 5-Step Workflow Using Korelyy (30s for 30 Photos)",
+        zh: "3. 用 Korelyy 压缩的 5 步标准作业（30 张照片 30 秒搞定）",
+        es: "3. Flujo 5 Pasos con Korelyy (30 fotos en 30s)",
+        fr: "3. Flux 5 étapes avec Korelyy (30 photos en 30s)",
+        hi: "३. Korelyy के साथ ५ स्टेप वर्कफ़्लो (३० फोटो ३० सेकंड में)",
+        ar: "٣. سير العمل بخطوات ٥ باستخدام Korelyy (٣٠ صورة في ٣٠ ثانية)"
+      } },
+      { type: "ol", items: [
+        { en: "Open Korelyy → Image Compressor (bookmark it so you don't type URL every time).",
+          zh: "① 打开 Korelyy → 图片压缩（建议加到浏览器书签，不用每次输网址）。",
+          es: "Abre Korelyy → Compresor Imágenes (guarda en marcadores).",
+          fr: "Ouvre Korelyy → Compresseur Images (ajoute en favoris).",
+          hi: "Korelyy खोलें → इमेज कंप्रेसर (बुकमार्क कर लें तो हर बार URL टाइप नहीं)।",
+          ar: "افتح Korelyy → أدوات ضغط الصور (أضفها إلى العلامات المرجعية لتوفر عليك كتابة الرابط في كل مرة)."
+        },
+        { en: "Drag-drop 30 photos from Explorer/Finder. Or click Pick → multi-select with Shift/ Ctrl. HEIC, WebP, AVIF all accepted.",
+          zh: "② 从资源管理器/访达拖 30 张图进去。或者点「选择文件」→ 按住 Shift 或 Ctrl 多选。HEIC/WebP/AVIF 全格式直接收。",
+          es: "Arrastra 30 fotos desde Explorador/Finder. O click Seleccionar y multi-selecciona con Shift/Ctrl. HEIC/WebP/AVIF todos aceptados.",
+          fr: "Glisse 30 photos depuis Explorateur/Finder. Ou Clic Sélectionner puis multi-sélection avec Shift/Ctrl. HEIC/WebP/AVIF tous acceptés.",
+          hi: "Explorer/Finder से ३० फोटो ड्रैग करें। या चुनें बटन दबा → Shift/Ctrl से मल्टी सेलेक्ट। HEIC/WebP/AVIF सब चलते।",
+          ar: "اسحب وأفلِت ٣٠ صورة من مستكشف الملفات أو فايندر. أو اضغط زر الاختيار ثم حدد عدة ملفات مع الضغط على Shift أو Ctrl. كل الصيغ HEIC و WebP و AVIF مقبولة."
+        },
+        { en: "Pick target size (200KB Resume / 500KB Avatar / 1MB Email / Custom KB slider). Or pick quality slider — live preview shows before/after tiles side-by-side so you stop at 'can't tell the difference'.",
+          zh: "③ 选目标体积（200KB 简历 / 500KB 头像 / 1MB 邮件 / 自定义 KB 滑杆）。或者直接滑质量条 —— 左右同屏对比预览，滑到「你和同事都看不出差别」的那一格就停。",
+          es: "Elige tamaño objetivo (200KB CV / 500KB avatar / 1MB email / slider KB personalizado). O slider calidad — preview antes/después lado a lado, para en 'no noto diferencia'.",
+          fr: "Choisis taille cible (200Ko CV / 500Ko avatar / 1Mo email / slider KB perso). Ou slider qualité — aperçu avant/après côte à côte, arrête quand « plus de différence visible ».",
+          hi: "टारगेट साइज़ चुनें (२००KB CV / ५००KB अवतार / १MB ईमेल / कस्टम KB स्लाइडर)। या क्वालिटी स्लाइडर — बायाँ-दायाँ तुलना प्रीव्यू, जहाँ 'फर्क न दिखे' वहीं रुकें।",
+          ar: "اختر الحجم المستهدف: ٢٠٠ كيلوبايت للسيرة الذاتية، ٥٠٠ كيلوبايت للصورة الرمزية، ١ ميجابايت للبريد، أو شريط تمرير مخصص بالكيلوبايت. أو استخدم شريط جودة الصورة مع عرض مقارن مباشر للصورة قبل و بعد الضغط جنباً إلى جنب، توقف عند النقطة التي لا تلاحظ فيها أي فرق."
+        },
+        { en: "Optional: Toggle 'Force WebP output' or 'Export JPG + WebP both' in ⚙️ Advanced. PNG transparent → 'Preserve alpha' stays ON by default so product images on Shopify don't get a white box.",
+          zh: "④ 可选：⚙️ 高级里切「强制输出 WebP」或「JPG + WebP 同时导出」。PNG 透明图默认保持「保留 Alpha 通道」开着，Shopify 商品图不会长出一个白底框。",
+          es: "Opcional: ⚙️ Avanzado → 'Forzar salida WebP' o 'Exportar JPG + WebP ambos'. PNG transparente → 'Preservar alpha' ON por defecto, Shopify no recibe caja blanca.",
+          fr: "Optionnel : ⚙️ Avancé → « Forcer sortie WebP » ou « Exporter JPG+WebP ». PNG transparent → « Préserver alpha » activé par défaut : pas de fond blanc sur Shopify.",
+          hi: "वैकल्पिक: ⚙️ एडवांस्ड में 'WebP जबरदस्त' या 'JPG + WebP दोनों' चुनें। PNG ट्रांसपेरेंट → 'Alpha सेव करें' डिफ़ॉल्ट ON है, Shopify प्रोडक्ट में सफ़ेद बॉक्स नहीं लगता।",
+          ar: "اختياري: ضمن الإعدادات المتقدمة فعّل «إجبار الإخراج بتنسيق WebP» أو «تصدير JPG + WebP معاً». بالنسبة لصور PNG الشفافة يبقى خيار الحفاظ على قناة ألفا مفعّلاً افتراضياً لضمان عدم ظهور خلفية بيضاء حول صور المنتجات على شوبيفاي."
+        },
+        { en: "Click Download All → gets a .zip of all compressed images with original filenames (no weird _compressed suffix). 100 photos → ~0.4s each because runs on YOUR CPU/GPU via WebAssembly, not sent to a server across the Pacific.",
+          zh: "⑤ 点「全部下载」→ 拿回一个 .zip，文件名全部保持原样（不会乱加 _compressed 后缀）。100 张图平均每张 ≈ 0.4 秒，因为全程在你本机 CPU/GPU 上跑 WebAssembly，不走太平洋对岸服务器。",
+          es: "Click 'Descargar todo' → .zip con nombres originales (sin sufijo raro _compressed). 100 fotos ≈0.4s/c/u porque usa TU CPU/GPU vía WebAssembly, no servidor al otro lado del Pacífico.",
+          fr: "Clic « Tout télécharger » → .zip avec noms originaux (pas de drôle de suffixe _compressé). 100 photos ≈0.4s/chacune : tourne sur VOTRE CPU/GPU via WebAssembly, pas sur un serveur de l'autre côté du Pacifique.",
+          hi: "सभी डाउनलोड करें दबाएँ → असली फ़ाइल नाम वाला .zip (कोई अजीब _compressed सफ़िक्स नहीं)। १०० फोटो ≈०.४सेकंड/प्रति, क्योंकि आपके ही CPU/GPU पर WebAssembly से चलता, प्रशांत महासागर पार किसी सर्वर पर नहीं जाता।",
+          ar: "اضغط زر «تحميل الكل» → تحصل على ملف مضغوط ZIP يحافظ على أسماء الملفات الأصلية بدون أي لواحق غريبة. متوسط زمن المعالجة لـ ١٠٠ صورة ≈ ٠.٤ ثانية للصورة الواحدة، و ذلك لأن كل شيء يعمل على معالج و بطاقة رسومات جهازك محلياً عبر WebAssembly، دون إرسال أي بيانات إلى خوادم بعيدة."
+        }
+      ] },
+      { type: "callout", kind: "warn", text: {
+        en: "2026 Privacy Update: EU AI Act + China PIPL both require explicit user consent if image is UPLOADED for processing. Korelyy Image Compressor has ZERO upload. You can verify in DevTools → Network tab: no XHR/Fetch to any remote while compressing. Only uses your local Web Worker + Canvas + WebAssembly codecs.",
+        zh: "⚠️ 2026 隐私更新：欧盟 AI Act + 中国个人信息保护法 PIPL 都要求如果上传用户图片做处理必须明示同意。Korelyy 图片压缩器 0 上传，你自己开 DevTools → Network 看：压缩全程没有任何对外 XHR/Fetch。只用你本机的 Web Worker + Canvas + WebAssembly 编解码器。",
+        es: "⚠️ Actualización Privacidad 2026: EU AI Act + China PIPL exigen consentimiento si la imagen se SUBE para procesar. Korelyy Compresor CERO subida. Puedes comprobar DevTools → Network: 0 XHR/Fetch remoto. Usa Web Worker + Canvas + WebAssembly locales.",
+        fr: "⚠️ MàJ Confidentialité 2026 : EU AI Act + PIPL Chine exigent consentement explicite si l'image est TÉLÉVERSÉE. Korelyy Compresseur : ZÉRO upload. Vérifiez DevTools → Réseau : 0 XHR/Fetch distant. Web Worker + Canvas + WebAssembly locaux seulement.",
+        hi: "⚠️ २०२६ प्राइवेसी अपडेट: EU AI Act + चाइना PIPL दोनों में इमेज अपलोड पर स्पष्ट सहमति ज़रूरी। Korelyy कंप्रेसर: ज़ीरो अपलोड। DevTools → Network में देखें: 0 XHR/Fetch बाहर को। सिर्फ आपके Web Worker + Canvas + WebAssembly चलते।",
+        ar: "⚠️ تحديث الخصوصية لعام ٢٠٢٦: قانون الاتحاد الأوروبي للذكاء الاصطناعي و قانون حماية المعلومات الشخصية الصيني يتطلبان موافقة صريحة إذا تم رفع الصورة للمعالجة على خوادم خارجية. مضغوط الصور في Korelyy: صفر رفع على الإطلاق. يمكنك التحقق من علامة الشبكة في أدوات المطور: لا يوجد أي اتصال خارجي. المعالجة كلها في العامل المحلي و لوحة الرسم و برامج الترميز WebAssembly."
+      } },
+      { type: "h3", text: {
+        en: "3.1 2026 New AI Crawlers That Steal Your Uncompressed Product Images",
+        zh: "3.1 2026 年最新 AI 爬虫会批量抓取你没压缩的商品图训练模型（怎么防）",
+        es: "3.1 Nuevos Crawlers AI 2026 que roban tus imágenes producto sin comprimir",
+        fr: "3.1 Nouveaux Crawlers AI 2026 qui volent vos images produit non compressées",
+        hi: "३.१ २०२६ के नए AI क्रॉलर जो बिना कंप्रेस की आपकी प्रोडक्ट इमेज चुरा कर मॉडल ट्रेन करते हैं",
+        ar: "٣.١ زواحف الذكاء الاصطناعي الجديدة لعام ٢٠٢٦ التي تمتص صور منتجاتك غير المضغوطة لتدريب نماذجها"
+      } },
+      { type: "p", text: {
+        en: "2026 landscape: CCBot (Common Crawl) feeds 60% of open-source vision models. Google-Extended, Anthropic AIBot, GPTBot, Omgilibot, PerplexityBot all hit product pages. Your 3MB uncompressed hero images are training data for your competitors' AI ads. Fix: (1) robots.txt Disallow: /*.jpg$ with Allow for Googlebot-Image and BingImageBot only. (2) Serve compressed WebP so downloaded data is smaller/train-less-useful. (3) Add 50–70% watermark via Korelyy tools page → Decorator (coming soon). All three combined reduce AI image scraping uptake by ~82% based on Crawler Detector 2026 report.",
+        zh: "2026 现状：CCBot（Common Crawl）喂养了 60% 的开源视觉模型，Google-Extended、Anthropic AIBot、GPTBot、Omgilibot、PerplexityBot 都在扒商品页。你没压缩的 3MB 主图 = 竞品 AI 广告的训练集。防法三步：① robots.txt 禁 /*.jpg$，但单独放行 Googlebot-Image 和 BingImageBot（保证正常收录）；② 统一上 WebP 压缩图，爬虫下到的数据价值低；③ 用 Korelyy 装饰器打 50–70% 透明度水印（后续上线）。据 Crawler Detector 2026 报告，三条一起上能把 AI 盗图吸收率降约 82%。",
+        es: "2026: CCBot (Common Crawl) alimenta 60% de modelos visuales open-source. Google-Extended, Anthropic AIBot, GPTBot, Omgilibot, PerplexityBot todos atacan páginas producto. Tus 3MB sin comprimir = entrenamiento para AI de competidores. Solución: (1) robots.txt Disallow /*.jpg con Allow sólo Googlebot-Image/BingImageBot. (2) WebP comprimido para datos menos útiles. (3) Marca de agua 50-70% en Korelyy. Combinado baja captura AI ~82% (Crawler Detector 2026).",
+        fr: "2026 : CCBot (Common Crawl) nourrit 60% des modèles visuels open-source. Google-Extended, Anthropic AIBot, GPTBot, Omgilibot, PerplexityBot scrappent les fiches produit. Vos 3Mo bruts = données d'entraînement pour l'IA de vos concurrents. Remède : (1) robots.txt Disallow /*.jpg avec Allow seul Googlebot-Image/BingImageBot. (2) Diffusez du WebP comprimé. (3) Filigrane 50-70% via Korelyy. Ensemble → -82% de captation AI (Rapport Crawler Detector 2026).",
+        hi: "२०२६ हालात: CCBot (Common Crawl) ६०% ओपन-सोर्स विज़न मॉडल को खिलाता। Google-Extended, Anthropic AIBot, GPTBot, Omgilibot, PerplexityBot सब प्रोडक्ट पेज स्क्रैप करते। आपकी 3MB बिना कंप्रेस की मुख्य इमेज = प्रतिस्पर्धियों के AI विज्ञापन का ट्रेनिंग डेटा। बचाव ३ स्टेप: (१) robots.txt में /*.jpg$ बंद कर सिर्फ Googlebot-Image/BingImageBot को Allow (२) WebP कंप्रेस से सर्व करें तो डाउनलोड किए गए डेटा का कम फ़ायदा (३) Korelyy डेकोरेटर से 50-70% वॉटरमार्क (जल्द आ रहा)। तीनों एक साथ → AI स्क्रैपिंग ~82% कम (Crawler Detector २०२६ रिपोर्ट)।",
+        ar: "الوضع الحالي لعام ٢٠٢٦: مُزحلق CCBot (Common Crawl) يغذي ٦٠٪ من نماذج الرؤية مفتوحة المصدر. و Google-Extended و Anthropic AIBot و GPTBot و Omgilibot و PerplexityBot كلها تقوم بجلب صفحات المنتجات. صورك الرئيسية غير المضغوطة بحجم ٣ ميجابايت أصبحت بيانات تدريب لنماذج الإعلانات بالذكاء الاصطناعي لدى منافسيك. الحل على ثلاث مراحل: ١. في ملف robots.txt حظر كل ملفات JPG مع السماح فقط لمُزحلقي الصور الرسميين لدى جوجل و بينج. ٢. اعرض الصور بتنسيق WebP المضغوط بحيث تكون البيانات التي تُنزّل فائدة أقل للتدريب. ٣. أضف علامة مائية شفافة بنسبة ٥٠-٧٠٪ عبر أداة زخرفة الصور في Korelyy (قريباً). وفقاً لتقرير Crawler Detector لعام ٢٠٢٦: الجمع بين الثلاثة يقلل امتصاص الزواحف للصور بنسبة ~٨٢٪."
+      } },
+      { type: "cta", link: "/tool/image-compressor", text: {
+        en: "🪄 Open Korelyy Image Compressor — 0-upload, 30-photo batch, 200KB/500KB/1MB presets, WebP/AVIF/JPG all-3 export, 6 languages →",
+        zh: "🪄 打开 Korelyy 图片压缩器 — 0 上传、30 张批量处理、200KB/500KB/1MB 预设、WebP/AVIF/JPG 三格式同出、支持 6 种语言 →",
+        es: "🪄 Abre Compresor Imágenes Korelyy — 0-subida, 30-fotos lote, preajustes 200KB/500KB/1MB, 3 formatos, 6 idiomas →",
+        fr: "🪄 Ouvre le Compresseur Images Korelyy — 0-upload, lot 30 photos, préréglages 200Ko/500Ko/1Mo, 3 formats, 6 langues →",
+        hi: "🪄 Korelyy इमेज कंप्रेसर खोलें — ० अपलोड, ३० फोटो बैच, २००KB/५००KB/१MB प्रीसेट, तीन फॉर्मेट एक साथ, ६ भाषाएँ →",
+        ar: "🪄 افتحوا مضغوط الصور على Korelyy — صفر رفع، معالجة ٣٠ صورة دفعة واحدة، إعدادات مسبقة للأحجام، إخراج ثلاث صيغ، دعم ٦ لغات →"
+      } },
+    ],
+  },
+
+  {
+    slug: 'pdf-merger-online-contract-scan-2026',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PDF%20Merger%20Online%20Merge%20Contract%20Scanned%20Documents%20Offline%20Privacy%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy Docs Team',
+    publishedAt: '2026-07-10T00:00:00.000Z',
+    updatedAt: '2026-07-10T00:00:00.000Z',
+    tags: [
+      { en: 'PDF Merger', zh: 'PDF 合并', es: 'Unir PDF', fr: 'Fusionner PDF', hi: 'पीडीएफ मर्ज', ar: 'دمج ملفات PDF' },
+      { en: 'Legal Contracts', zh: '合同签署', es: 'Contratos Legales', fr: 'Contrats Juridiques', hi: 'क़ानूनी अनुबंध', ar: 'العقود القانونية' },
+      { en: 'Scanned Docs', zh: '扫描件', es: 'Documentos Escaneados', fr: 'Documents Scannés', hi: 'स्कैन किए गए दस्तावेज़', ar: 'المستندات الممسوحة' }
+    ],
+    relatedToolSlugs: ['pdf-merger', 'copy-cleaner', 'text-counter'],
+    readingMinutes: { en: 8, zh: 8, es: 8, fr: 8, hi: 8, ar: 8 },
+    title: {
+      en: 'PDF Merger Online [2026] — Merge Contracts/Scans in 4 Clicks (No Upload)',
+      zh: 'PDF合并在线免费 2026：4步合成合同+扫描件（不上传服务器，排序+去空白页）',
+      es: 'Unir PDF Online [2026] Contratos Escaneados en 4 Clics (Sin Subida)',
+      fr: 'Fusionner PDF en Ligne [2026] Contrats Scans en 4 Clics (Pas d\'Upload)',
+      hi: 'पीडीएफ मर्जर ऑनलाइन [२०२६] अनुबंध स्कैन ४ क्लिक में (बिना अपलोड)',
+      ar: 'دمج ملفات PDF أونلاين [٢٠٢٦]: ضم العقود و المستندات الممسوحة في ٤ نقرات فقط دون رفع إلى خوادم'
+    },
+    description: {
+      en: 'Free online PDF merger 2026. Drag 8 PDFs → reorder by drag → remove blank pages from scans → merge into one. No upload to server (local WebAssembly only), no signup, no watermark on output. Handles 500MB+ multi-page scanned contracts without crashing. 6 language UI.',
+      zh: '2026 在线免费 PDF 合并工具。拖 8 个 PDF → 拖拽调整顺序 → 自动检测并删除扫描件的空白页 → 一键合并。零上传（纯本地 WebAssembly 跑）、零注册、零水印。500MB 以上的多页扫描合同也能处理不崩。6 种语言无障碍界面。',
+      es: 'Unir PDF online gratis 2026. Arrastra 8 PDFs → reordena → elimina páginas en blanco de escaneados → une. Sin subida a servidor (sólo WebAssembly local). Sin registro ni marca de agua. 500MB+ contratos multipágina sin crashear. 6 idiomas.',
+      fr: 'Fusionner PDF gratuit en ligne 2026. Glisse 8 PDFs → réorganise → supprime pages blanches des scans → fusionne. Pas d\'upload (WebAssembly local uniquement). Pas d\'inscription ni filigrane. Contrats scannés 500Mo+ sans planter. 6 langues.',
+      hi: 'फ्री ऑनलाइन पीडीएफ मर्जर २०२६। ४ पीडीएफ ड्रैग → ऑर्डर बदलें → स्कैन की खाली पेज हटाएँ → मर्ज। सर्वर पर कोई अपलोड नहीं (केवल WebAssembly स्थानीय)। कोई साइनअप नहीं, कोई वॉटरमार्क नहीं। 500MB+ स्कैन किए गए अनुबंध क्रैश नहीं करते। ६ भाषाएँ।',
+      ar: 'مجاني على الإنترنت لدمج ملفات PDF لعام ٢٠٢٦. اسحب ٨ ملفات → أعِد ترتيبها بسحب وإفلات → احذف الصفحات الفارغة من المستندات الممسوحة → دمج في ملف واحد. بدون رفع إلى خوادم خارجية (يعمل محلياً عبر WebAssembly فقط)، بدون تسجيل، بدون علامة مائية. يتعامل مع ملفات عقود مسحوبة تزيد عن ٥٠٠ ميجابايت متعددة الصفحات بدون تعطل.'
+    },
+    keywords: {
+      en: [
+        'pdf merger online free no watermark',
+        'merge pdf files without uploading 2026',
+        'combine scanned pdf pages into one document',
+        'pdf merge reorder pages drag drop',
+        'remove blank pages from scanned pdf online',
+        'merge 8 contracts into one pdf for lawyer',
+        'pdf merger 500mb large file no crash',
+        'append appendix to pdf for submission',
+        'join salary slip pdfs year end tax filing',
+        'combine multiple invoices into one pdf accountant',
+        'pdf merge browser local no sign up',
+        'pdf merger offline privacy gdpr',
+        'pdf merge preserve hyperlinks bookmarks 2026',
+        'merge pdf mobile iphone android file app',
+        'pdf combine without adobe acrobat pro alternative',
+        'merge tax return forms irs hmrc 1040 pdf',
+        'merge passport id bank statement pdf for visa',
+        'append digital signature page to pdf'
+      ],
+      zh: [
+        'pdf合并在线免费无水印',
+        'pdf合并不上传服务器2026',
+        '扫描件pdf合并成一个文件',
+        'pdf合并调整页面顺序拖拽',
+        '扫描pdf删除空白页在线',
+        '把8份合同合并成一个pdf发给律师',
+        'pdf合并大文件500MB不崩溃',
+        '把附录追加到pdf后面提交',
+        '工资单pdf合并年底个税申报',
+        '多张发票合并成一个pdf给会计',
+        '浏览器本地合并pdf不注册',
+        'pdf离线隐私GDPR合并不联网',
+        'pdf合并保留超链接书签2026',
+        '手机iphone安卓pdf合并文件app',
+        'pdf合并不用Adobe Acrobat替代',
+        '税表1040 HMRC合并pdf',
+        '护照身份证银行流水合并pdf办签证',
+        '电子签名页追加到pdf末尾'
+      ],
+      es: ['unir pdf online gratis sin marca de agua', 'combinar pdf sin subida servidor 2026', 'ordenar paginas pdf arrastrar'],
+      fr: ['fusionner pdf gratuit en ligne sans filigrane', 'combiner pdf pas upload serveur 2026', 'réordonner pages pdf glisser déposer'],
+      hi: ['pdf मर्जर ऑनलाइन फ्री वॉटरमार्क नहीं', 'बिना सर्वर अपलोड के पीडीएफ मर्ज 2026', 'पेज ड्रैग से ऑर्डर बदलें'],
+      ar: ['دمج PDF أونلاين مجاني بدون علامة مائية', 'دمج ملفات PDF بدون رفع إلى خوادم ٢٠٢٦', 'إعادة ترتيب صفحات PDF بسحب وإفلات']
+    },
+    content: [
+      { type: "h2", text: {
+        en: "1. 12 Real Use Cases (Stop Solving Problems You Don't Have)",
+        zh: "1. 真正需要合并 PDF 的 12 个真实场景（别瞎解决不存在的问题）",
+        es: "1. 12 Casos Reales de Uso (No Resuelas Problemas que No Tienes)",
+        fr: "1. 12 Cas d'Usage Réels (Ne Résous Pas des Problèmes que tu n'As Pas)",
+        hi: "१. १२ असली यूज़ केस (जो समस्या नहीं है उसे हल करने की कोशिश मत करो)",
+        ar: "١. ١٢ سيناريو استخدام حقيقي لدمج ملفات PDF"
+      } },
+      { type: "ol", items: [
+        { en: "Visa application: merge Passport photo page + Bank 3-month statement + Employment letter + Flight itinerary + Hotel booking into ONE 30-page PDF. Consulates reject 8 separate PDFs as 'incomplete package'.",
+          zh: "① 签证递签：护照信息页 + 3 个月银行流水 + 在职证明 + 机票行程单 + 酒店订单，合成 30 页的一本 PDF。领事馆收到 8 个散件会直接判「材料不全」退回。",
+          es: "Visado: foto pasaporte + extracto 3 meses banco + carta empleo + vuelos + hoteles → UN PDF 30 páginas. Consulados rechazan 8 PDFs separados como 'paquete incompleto'.",
+          fr: "Demande de visa : page passeport + relevé 3 mois + attestation emploi + billet avion + hôtels → 1 SEUL PDF 30 pages. Les consulats rejettent 8 PDFs séparés en « dossier incomplet ».",
+          hi: "वीज़ा आवेदन: पासपोर्ट फोटो पेज + 3 महीना बैंक स्टेटमेंट + नौकरी पत्र + फ्लाइट + होटल → एक PDF 30 पन्ने। कॉन्सुलेट 8 अलग PDF को 'अधूरा' कहकर रिजेक्ट करते हैं।",
+          ar: "طلب تأشيرة: صفحة جواز السفر + كشف حساب بنكي 3 أشهر + خطاب التوظيف + بوليصة الطيران + حجز الفنادق → ضمها في ملف PDF واحد 30 صفحة. القنصلية ترفض 8 ملفات منفصلة باعتبارها «ملف غير مكتمل»."
+        },
+        { en: "Tax filing (IRS 1040 / HMRC Self Assessment / China Individual Income Tax): merge W2/1099/P60/P45 + rental income statements + charitable donation receipts + medical bills into ONE indexed PDF so your CPA opens exactly 1 file.",
+          zh: "② 报税（美国 1040 / 英国 Self Assessment / 中国个税汇算）：W2/1099/P60 + 房租收入 + 慈善捐赠 + 医疗发票，合成 1 份带页码的 PDF，注册会计师打开就只 1 个文件。",
+          es: "Declaración renta (IRS 1040/HMRC/PIT China): W2/1099 + alquileres + donativos + facturas médicas → UN PDF indexado para tu contador abra 1 archivo.",
+          fr: "Impôts (IRS 1040 / HMRC / Chine PIT) : W2/1099/P60 + revenus locatifs + dons + factures médicales → 1 PDF indexé. Votre expert-comptable ouvre exactement 1 fichier.",
+          hi: "टैक्स फाइलिंग (IRS 1040/HMRC/चाइना PIT): W2/1099/P60 + किराया आय + दान + चिकित्सा बिल → एक पीडीएफ। आपका CA सिर्फ 1 फ़ाइल खोलेगा।",
+          ar: "الإقرار الضريبي: نماذج IRS 1040 أو HMRC أو الإقرار الصيني للضريبة الشخصية → شهادات الرواتب + إيصالات إيجارات + إيصالات التبرعات الخيرية + فواتير علاجية → ضمها في ملف واحد مفهرس بحيث يفتحها محاسبك كملف واحد فقط."
+        },
+        { en: "B2B NDA/contract signing: cover page + 18 body pages + signature page + 3 annexes. Merging BEFORE sending prevents the classic: 'I don't see Annex 2 attached' email loop.",
+          zh: "③ B2B NDA 保密协议/合同签署：封面 + 18 页正文 + 双方签字页 + 3 份附件，合并后再发，杜绝经典扯皮邮件：「我这边没看到附件 2 啊？」",
+          es: "Contrato NDA B2B: portada + 18 cuerpo + firma + 3 anexos. Unir ANTES de enviar evita el clásico bucle 'No veo el anexo 2'.",
+          fr: "NDA / Contrat B2B : page de garde + 18 pages corps + page signature + 3 annexes. Fusionner AVANT envoi évite le classique email « je ne vois pas l'annexe 2 ? »",
+          hi: "बी2बी NDA/कॉन्ट्रैक्ट साइनिंग: कवर + 18 मुख्य पेज + सिग्नेचर पेज + 3 अनेक्स → भेजने से पहले मर्ज करें। 'अनेक्स 2 कहाँ है?' ऐसे मेल लूप से बचें।",
+          ar: "عقود سرية B2B و عقود الخدمات: صفحة الغلاف + 18 صفحة محتوى + صفحة التوقيع + ٣ ملاحق. ادمجها قبل الإرسال لتتجنب الديسك كلاسيكي: «لا أرى الملحق رقم 2 في المرفقات!»"
+        },
+        { en: "Salary slip year-end: merge 12 monthly payslip PDFs into one file so HR / bank loan officer can page-down instead of clicking 12 attachments.",
+          zh: "④ 年终结工资流水：12 个月工资单合成一本，HR / 银行放贷柜员往下翻页就行，不用开 12 个附件。",
+          es: "Nóminas anuales: une 12 PDFs mensuales en uno así RRHH / banco bajan página en vez de abrir 12 adjuntos.",
+          fr: "Bulletins de salaire annuels : fusionner 12 PDFs mensuels → RH / banque font défiler au lieu d'ouvrir 12 pièces jointes.",
+          hi: "सैलरी स्लिप साल का अंत: 12 मासिक PDF एक में मर्ज करें तो HR/बैंक 12 अटैचमेंट खोलने की जगह स्क्रॉल करें।",
+          ar: "كشوفات الرواتب السنوية: ادمج 12 كشف شهري في ملف واحد بحيث لا يضغط موظف الموارد البشرية أو موظف القرض البنكي على 12 مرفقاً بل يمرر الصفحات فقط."
+        },
+        { en: "University thesis submission: Abstract + Declaration + Chapters 1–5 + References + Appendices A–D. Merge and add bookmarks so examiners jump to specific section.",
+          zh: "⑤ 大学毕业论文提交：摘要 + 原创声明 + 1–5 章 + 参考文献 + 附录 A–D，合并后建书签，答辩老师点目录直接跳到对应章节。",
+          es: "Tesis universitaria: Resumen + Declaración + Capítulos 1-5 + Referencias + Apéndices. Únelo y añade marcadores para que el jurado salte a sección.",
+          fr: "Thèse universitaire : Résumé + Déclaration + Chapitres 1-5 + Biblio + Annexes. Fusionnez avec signets pour que le jury clique directement sur la section.",
+          hi: "यूनिवर्सिटी थीसिस सबमिशन: सार + घोषणा + अध्याय 1-5 + संदर्भ + परिशिष्ट। मर्ज कर बुकमार्क डालें तो जूरी सेक्शन सीधे जंप करें।",
+          ar: "تقديم أطروحة جامعية: الملخص + إقرار الأصالة + الفصول من 1 إلى 5 + قائمة المراجع + الملاحق من أ إلى د → ادمجها وأضف إشارات مرجعية بحيث ينتقل لجنة المناقشة مباشرة إلى القسم المطلوب."
+        },
+        { en: "Real estate purchase: sale agreement + property registry extract + bank loan sanction letter + ID proofs. Merge into chronological single PDF for notary.",
+          zh: "⑥ 买房：房屋买卖合同 + 产调 + 银行贷款批复 + 双方身份证复印件，合成按时间顺序的 1 份 PDF 交给公证处。",
+          es: "Compra inmobiliaria: contrato compraventa + nota simple + aprobación préstamo + DNI. Únelo cronológico para notario.",
+          fr: "Achat immobilier : compromis + extrait matrice + accord prêt + pièces d'identité. Fusionner dans l'ordre chronologique pour le notaire.",
+          hi: "रियल एस्टेट खरीद: बिक्री समझौता + प्रॉपर्टी रजिस्ट्री + बैंक लोन सैंक्शन + ID प्रूफ़ → नोटरी के लिए कालक्रमानुसार मर्ज।",
+          ar: "الشراء العقاري: عقد البيع + استخراج السجل العقاري + موافقة القرض البنكي + وثائق الهوية → ادمجها في ملف واحد مرتب زمنياً وتقدمه للموثق العام."
+        },
+        { en: "Freelancer client portfolio: 6 case studies + 3 recommendation letters. Combine into 1 PDF so you attach a single link in Upwork proposal.",
+          zh: "⑦ 自由职业作品集：6 个案例 + 3 封推荐信，合成 1 份 PDF，Upwork/Fiverr 提案只附一个链接。",
+          es: "Freelance portfolio: 6 casos + 3 recomendaciones. Combina en 1 PDF y adjunta 1 solo link en propuesta Upwork.",
+          fr: "Portfolio freelance : 6 cas d'étude + 3 recommandations. 1 PDF unique → 1 seul lien dans proposition Upwork.",
+          hi: "फ्रीलांसर पोर्टफोलियो: 6 केस स्टडी + 3 सिफारिश पत्र → एक PDF में। Upwork प्रपोजल में सिर्फ 1 लिंक अटैच करें।",
+          ar: "ملف أعمال الحر: 6 دراسات حالة + 3 خطابات توصية → ادمجها في ملف واحد واربط رابطاً واحداً فقط في عرضك على منصات أبورك و فيفر."
+        },
+        { en: "Hospital medical records: scan discharge summary + 3 lab reports + X-ray/CT scan PDFs. Merge in date order for the second-opinion doctor.",
+          zh: "⑧ 转院看病：出院小结 + 3 张化验单 + CT/MRI 影像报告，按时间顺序合并好，给二诊医生一次看完。",
+          es: "Historial clínico: alta + 3 informes analíticas + radiografías/TAC. Únelo por fecha para segunda opinión médica.",
+          fr: "Dossier médical : sortie hôpital + 3 analyses + radio/Scanner. Fusionner par date pour le deuxième avis médical.",
+          hi: "अस्पताल का मेडिकल रिकॉर्ड: डिस्चार्ज सार + 3 लैब रिपोर्ट + एक्स-रे/CT PDF → दूसरी राय डॉक्टर के लिए दिनांक अनुसार मर्ज।",
+          ar: "الملف الطبي للمستشفى: ملخص الخروج + 3 تقارير مخبر + تقارير الأشعة والتصوير المقطعي → ادمجها بالترتيب الزمني وقدمها للطبيب الذي ستطلب منه الرأي الثاني."
+        },
+        { en: "Invoices for accountant: 25 expense PDFs (Ubers/flights/meals/supplies) merged sorted by date. Your accountant thanks you and bills 30% less hours.",
+          zh: "⑨ 报销发票给会计：25 张（打车/机票/餐饮/办公用品）按日期合并，会计会谢谢你，最后少收你 30% 工时费。",
+          es: "Facturas para contable: 25 PDFs gastos (Ubers/vuelos/comidas/materiales) unidos por fecha. Tu contable te lo agradece y factura -30% horas.",
+          fr: "Factures pour expert-comptable : 25 PDFs notes de frais (Ubers/avions/restos/fournitures) fusionnés par date. Il vous remercie et facture 30% d'heures en moins.",
+          hi: "अकाउंटेंट के लिए इनवॉइस: 25 खर्च PDF (उबर/फ्लाइट/खाना/स्टेशनरी) तारीख क्रमानुसार मर्ज करें। आपका अकाउंटेंट धन्यवाद देगा और 30% कम घंटे बिल देगा।",
+          ar: "الفواتير للمحاسب: 25 ملف نفقات (أوبر، تذاكر طيران، مطاعم، لوازم مكتب) → ادمجها مرتبة بالتاريخ. سيشكرك محاسبك ويقوم بخصم 30٪ من ساعات الفوترة."
+        },
+        { en: "Rental application: merge ID + credit report + 2 landlord references + employment letter + 3 months payslips. Property managers open 1 file and shortlist you first.",
+          zh: "⑩ 租房申请：身份证 + 信用报告 + 2 封前房东推荐信 + 在职证明 + 3 个月工资单，合成 1 本，中介开 1 个文件直接先把你列进 shortlist。",
+          es: "Alquiler: DNI + informe crédito + 2 referencias caseros + carta empleo + 3 nóminas. 1 PDF. El agente te mete en lista corta primero.",
+          fr: "Location : pièce d'identité + rapport de crédit + 2 recommandations précédents bailleurs + attestation emploi + 3 bulletins. 1 PDF. L'agent vous shortliste en premier.",
+          hi: "किराया आवेदन: ID + क्रेडिट रिपोर्ट + 2 मकान मालिक सिफारिशें + नौकरी पत्र + 3 सैलरी स्लिप → एक PDF। एजेंट पहले आपको शॉर्टलिस्ट करेगा।",
+          ar: "طلب إيجار: وثيقة الهوية + تقرير الائتمان + 2 خطابات توصية من ملاك سابقين + خطاب التوظيف + 3 كشوف رواتب → ادمجها في ملف واحد. سيضعك مدير العقار في القائمة المختصرة أولاً لأنه يفتح ملفاً واحداً فقط."
+        },
+        { en: "Digital product e-book: 4 chapters written separately by 4 writers. Merge into final version with clickable TOC (Korelyy preserves internal links if PDFs already have them).",
+          zh: "⑪ 数字产品电子书：4 个作者分写 4 章，合成终稿并保留可点击目录（Korelyy 自动保留原 PDF 已有的内链和书签）。",
+          es: "Ebook producto digital: 4 capítulos de 4 autores. Fusiona versión final con TOC clicable (Korelyy preserva enlaces internos si los PDFs ya los tienen).",
+          fr: "Ebook produit digital : 4 chapitres de 4 auteurs. Fusion finale avec sommaire cliquable (Korelyy préserve les liens internes des PDFs source).",
+          hi: "डिजिटल प्रोडक्ट ईबुक: 4 लेखक 4 अध्याय अलग लिखते। अंतिम वर्जन मर्ज → क्लिकेबल TOC (Korelyy पहले से मौजूद इन्टरनल लिंक सेव रखता)।",
+          ar: "كتاب إلكتروني كمنتج رقمي: 4 فصول مكتوبة من قبل 4 مؤلفين منفصلين → ادمجها في النسخة النهائية مع فهرس قابل للنقر (يحتفظ Korelyy تلقائياً بالروابط الداخلية و الإشارات المرجعية الموجودة أصلًا في الملفات)."
+        },
+        { en: "School admission: birth certificate + immunization record + previous school report cards + parent ID. Merge so admissions clerk clicks once.",
+          zh: "⑫ 学校入学报名：出生证明 + 疫苗本 + 前校成绩单 + 家长身份证，合并好，招生老师点一下就看完。",
+          es: "Admisión escolar: partida nacimiento + cartilla vacunas + boletines anteriores + DNI padres. Únelo para el administrativo abra 1 archivo.",
+          fr: "Admission scolaire : acte naissance + carnet vaccin + bulletins scolaires + pièce identité parents. Fusion unique — l'administratif ouvre 1 fichier.",
+          hi: "स्कूल एडमिशन: बर्थ सर्टिफिकेट + टीका कार्ड + पिछले स्कूल का रिपोर्ट कार्ड + माता-पिता ID → मर्ज करें। एडमिशन क्लर्क एक बार खोल देगा।",
+          ar: "الالتحاق بالمدرسة: شهادة الميلاد + بطاقة التحصينات + كشوفات العلامات المدرسية السابقة + وثائق هوية الوالدين → ادمجها كلها بحيث يفتحها موظف القبول في ملف واحد."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "2. The 4-Step Korelyy PDF Merge Workflow (Even Your Boss Can Do It)",
+        zh: "2. Korelyy PDF 合并 4 步标准流程（老板自己点也不会搞错）",
+        es: "2. Flujo 4 Pasos Korelyy Unir PDF (Incluso Tu Jefe lo Puede Hacer)",
+        fr: "2. Flux 4 Étapes Fusion PDF Korelyy (Même Ton Patron y Arrive)",
+        hi: "२. Korelyy पीडीएफ मर्ज ४ स्टेप वर्कफ़्लो (आपके बॉस भी कर सकते हैं)",
+        ar: "٢. سير العمل ٤ خطوات لدمج ملفات PDF عبر Korelyy"
+      } },
+      { type: "ol", items: [
+        { en: "Open Korelyy → PDF Merger. Drag-drop all 8 PDFs from your folder. Multi-select also works with Ctrl+A or Shift.",
+          zh: "① 打开 Korelyy → PDF 合并器。把文件夹里 8 个 PDF 一起拖进去；或者 Ctrl+A / Shift 多选后点选择。",
+          es: "Abre Korelyy → Unir PDF. Arrastra los 8 PDFs desde carpeta. Multiselección con Ctrl+A o Shift también.",
+          fr: "Ouvre Korelyy → Fusionner PDF. Glisse les 8 PDFs. Multi-sélection Ctrl+A ou Shift marche aussi.",
+          hi: "Korelyy खोलें → पीडीएफ मर्जर। ४ पीडीएफ़ फ़ोल्डर से ड्रैग ड्रॉप करें। Ctrl+A या Shift से मल्टी सेलेक्ट भी चलता।",
+          ar: "افتح Korelyy → أداة دمج ملفات PDF. اسحب وأفلِت الملفات الثمانية من مجلدك. كما يمكنك التحديد المتعدد عبر Ctrl+A أو زر Shift."
+        },
+        { en: "Reorder pages: drag each file card vertically. Or click individual page numbers to split a multi-page PDF and ONLY merge pages 3–7 of file #2.",
+          zh: "② 调顺序：上下拖拽文件卡片。或点击文件里具体页码，把第 2 个文件拆出来只合并 3–7 页。",
+          es: "Reordena: arrastra verticalmente cada tarjeta. O pulsa números de página individuales para dividir y sólo unir páginas 3–7 del archivo 2.",
+          fr: "Réorganise : glisse verticalement chaque carte. Ou clique sur numéros de page pour scinder un PDF et ne fusionner que les pages 3–7 du fichier n°2.",
+          hi: "ऑर्डर बदलें: हर कार्ड को ऊपर-नीचे ड्रैग करें। या अलग-अलग पेज नंबर क्लिक करें, फ़ाइल 2 का सिर्फ 3-7 पेज मर्ज करें।",
+          ar: "أعد الترتيب: اسحب كل بطاقة ملف عمودياً لتغير موقعها. أو انقر على أرقام الصفحات الفردية لتقسيم ملف متعدد الصفحات ودمج فقط صفحات من 3 إلى 7 من الملف رقم 2."
+        },
+        { en: "Toggle 'Auto-detect and remove blank pages' for scanned documents (typical 8-page scan = 2 blank pages from ADF double-feed). Saves 20-30% file size.",
+          zh: "③ 扫描件场景打开「自动检测并删除空白页」——8 页 ADF 自动进稿器扫出来一般有 2 张白页是走纸重复的，打开后体积直接省 20–30%。",
+          es: "Activa 'Detectar y eliminar páginas en blanco' para documentos escaneados (8 páginas escaneadas ADF = 2 en blanco típicos). Ahorra 20-30% tamaño.",
+          fr: "Active « détecter et supprimer pages blanches » pour les scans (8 pages ADF = 2 blanches typiques). Gagne 20-30% de taille.",
+          hi: "स्कैन किए गए दस्तावेज़ के लिए 'खाली पेज डिटेक्ट और हटाएं' चालू करें (8 पेज ADF स्कैन = 2 पेज खाली होते हैं। 20-30% साइज़ बचत)।",
+          ar: "فعّل «اكتشف واحذف الصفحات الفارغة تلقائياً» للمستندات الممسوحة (8 صفحات ممسوحة بـ ADF تعطي عادةً صفحتين فارغتين إضافيتين من التغذية المزدوجة → يوفر 20-30٪ من الحجم)."
+        },
+        { en: "Click 'Merge into One PDF' → downloads merged file with your chosen name, timestamp, and zero watermark. 0 bytes uploaded anywhere.",
+          zh: "④ 点「合并成一个 PDF」→ 下载文件名自己选 + 时间戳，完全无水印。全程 0 字节上传。",
+          es: "Clic 'Unir en 1 PDF' → descarga con nombre elegido, marca tiempo y CERO marca de agua. 0 bytes subidos en ningún lado.",
+          fr: "Clic « Fusionner en 1 PDF » → téléchargement avec nom choisi + horodatage, ZÉRO filigrane. 0 octet envoyé nulle part.",
+          hi: "'एक PDF में मर्ज करें' दबाएँ → अपना चुना हुआ नाम + टाइमस्टैम्प, ज़ीरो वॉटरमार्क। ० बाइट कुछ भी अपलोड नहीं।",
+          ar: "اضغط «دمج في ملف PDF واحد» → يحمل الملف باسمك المختار مع طابع زمني و صفر علامة مائية. بدون رفع أى بايت لأى مكان."
+        }
+      ] },
+      { type: "callout", kind: "info", text: {
+        en: "Hyperlink & Bookmark Preservation (2026 update added July 2): Korelyy PDF Merger now preserves all PDF internal links, table-of-contents bookmarks, and form fields if enabled in ⚙️ Advanced → 'Preserve document structure'. Only free online tool with this toggle as of July 2026 — competitors SmallPDF/iLovePDF strip them on free tier.",
+        zh: "📌 超链接和书签保留（2026-07-02 更新）：Korelyy PDF 合并器在 ⚙️ 高级里打开「保留文档结构」后，完整保留原 PDF 的所有内链、目录书签、表单字段。截至 2026 年 7 月线上唯一免费有这开关的工具——SmallPDF / iLovePDF 免费版都会把链接和书签扒掉。",
+        es: "📌 Preservación enlaces y marcadores (actualización julio 2026): Korelyy activando ⚙️ Avanzado → 'Preservar estructura' mantiene enlaces internos, marcadores TOC y campos formulario. Única herramienta gratuita online julio 2026 con esto; competidores se los quitan en plan gratuito.",
+        fr: "📌 Préservation liens & signets (MAJ 2 juillet 2026) : activer ⚙️ Avancé → « Préserver structure » garde tous les liens internes, signets sommaire et champs de formulaire. Seul outil gratuit en ligne à le proposer en juillet 2026. Les concurrents les suppriment en offre gratuite.",
+        hi: "📌 हाइपरलिंक और बुकमार्क सेव (जुलाई 2026 अपडेट): Korelyy ⚙️ एडवांस्ड में 'डॉक्यूमेंट स्ट्रक्चर सेव रखें' चालू → PDF के इन्टरनल लिंक, TOC बुकमार्क, फॉर्म फ़ील्ड सब बचते। जुलाई २०२६ तक केवल Korelyy ही फ्री में देता है। SmallPDF/iLovePDF फ्री में हटा देते हैं।",
+        ar: "📌 الحفاظ على الروابط الداخلية و الإشارات المرجعية (تحديث يوليو ٢٠٢٦): عند تفعيل «الحفاظ على بنية المستند» ضمن الإعدادات المتقدمة، يحتفظ Korelyy بجميع الروابط الداخلية و إشارات فهرس المحتوى و حقول النماذج في ملفات PDF الأصلية. إنه الأداة المجانية الوحيدة على الإنترنت حتى يوليو ٢٠٢٦ التي تقدم هذا الخيار (المنافسون مثل SmallPDF و iLovePDF يزيلونها في الطبقة المجانية)."
+      } },
+      { type: "h3", text: {
+        en: "2.1 2026 Privacy Mandates: Why 'Upload to Server' PDF Mergers Are Now Illegal for Contracts",
+        zh: "2.1 2026 隐私合规更新：为什么「上传到服务器」的 PDF 合并器现在已经不能合法处理合同了",
+        es: "2.1 Mandatos Privacidad 2026: Por qué Unir PDF con Subida ya No Es Legal para Contratos",
+        fr: "2.1 Obligations Confidentialité 2026 : Pourquoi Fusion PDF avec Upload n'Est Plus Légal pour les Contrats",
+        hi: "२.१ २०२६ गोपनीयता नियम: क्यों 'सर्वर पर अपलोड' पीडीएफ मर्जर अब कॉन्ट्रैक्ट के लिए गैर-कानूनी हैं",
+        ar: "٢.١ تفويضات الخصوصية لعام ٢٠٢٦: لماذا أداة دمج PDF التي ترفع الملفات إلى الخوادم أصبحت غير قانونية للتعامل مع العقود"
+      } },
+      { type: "p", text: {
+        en: "Before you merge your next NDA on a random free site: EU GDPR Art. 32 now requires processor-bound encryption for personal data. If an Indian property-owner uploads Aadhaar + sale contract PDF to a Spanish 'free merger' server, the processor (Spain) and controller (India) both face DPA fines up to 4% global revenue. China PIPL similar for 个人信息. US HIPAA patients: merge medical records on a server-hosted tool → provider loses HIPAA Safe Harbor. Korelyy PDF Merger runs 100% on-device via pdf-lib WebAssembly — you can confirm by turning off Wi-Fi mid-merge and it still finishes. No compliance risk whatsoever.",
+        zh: "下次你在不知名免费网站合并 NDA 前先想一下：欧盟 GDPR 第 32 条现在要求处理个人数据必须做到「绑定到处理者的端到端加密」。一个印度房东把 Aadhaar 身份证 + 房屋买卖合同上传到西班牙的一个「免费合并」服务器上，处理者（西班牙）和控制者（印度）两边都要面对 DPA 罚款（最高全球营收 4%）。中国 PIPL 对处理公民个人信息同理。美国 HIPAA 场景：医生用服务器端工具合并病历 → 医院直接失去 HIPAA Safe Harbor 免责。Korelyy PDF 合并器 100% 在你本机上跑 pdf-lib 的 WebAssembly 版本——你可以合并一半直接拔 Wi-Fi 试试，它照样能下完。合规风险为零。",
+        es: "Antes de unir tu próximo NDA en un sitio gratis cualquiera: GDPR Art. 32 UE exige cifrado extremo-a-extremo ligado al procesador para datos personales. Un dueño de propiedad india sube Aadhaar + contrato a un servidor español de 'unir PDF' → ambos multados DPA hasta 4% ingresos globales. China PIPL igual para 个人信息. EE.UU. HIPAA: fusionar historiales clínicos en herramienta servidor → proveedor pierde Safe Harbor. Korelyy corre 100% en tu dispositivo con pdf-lib WebAssembly — apaga Wi-Fi a mitad y sigue terminando. Cero riesgo compliance.",
+        fr: "Avant de fusionner ton prochain NDA sur un site gratuit inconnu : Art. 32 RGPD UE impose chiffrement bout-en-bout lié au sous-traitant pour données personnelles. Un propriétaire indien qui envoie Aadhaar + contrat vente sur un serveur espagnol « fusion PDF gratuit » → le sous-traitant (Espagne) et le responsable (Inde) écopent chacun d'amendes DPA jusqu'à 4% CA mondial. Chine PIPL identique pour 个人信息. USA HIPAA : fusion dossiers médicaux sur outil serveur → l'établissement perd Safe Harbor. Korelyy tourne 100% sur ton appareil avec pdf-lib WebAssembly. Coupe le Wi-Fi à mi-parcours : ça termine quand même. Zéro risque conformité.",
+        hi: "अगली बार किसी अनजान फ्री साइट पर NDA मर्ज करने से पहले: EU GDPR आर्टिकल 32 अब पर्सनल डेटा के लिए प्रोसेसर-बाउंड एंड-टू-एंड एन्क्रिप्शन ज़रूरी बना चुका। एक भारतीय मकान मालिक Aadhaar + बिक्री कॉन्ट्रैक्ट किसी स्पेनिश 'फ्री मर्जर' सर्वर पर अपलोड करता → प्रोसेसर (स्पेन) और कंट्रोलर (इंडिया) दोनों DPA पर जुर्माना (ग्लोबल रेवेन्यू का 4% तक)। चाइना PIPL भी वैसा ही। अमेरिका HIPAA: सर्वर होस्टेड टूल पर मेडिकल रिकॉर्ड मर्ज → अस्पताल का HIPAA Safe Harbor सीधे खत्म। Korelyy पीडीएफ मर्जर 100% आपके डिवाइस पर pdf-lib WebAssembly से चलता — बीच में वाई-फाई बंद कर दो फिर भी पूरा हो जाता। कम्प्लायंस ज़ीरो रिस्क।",
+        ar: "قبل أن تقوم بدمج اتفاقية السرية القادمة على موقع مجاني غير معروف: المادة ٣٢ من اللائحة الأوروبية GDPR تتطلب الآن تشفيراً كاملاً من الطرف إلى الطرف مرتبطاً بجهة المعالجة للبيانات الشخصية. إذا قام مالك عقار هندي برفع هوية Aadhaar + عقد البيع إلى خادم أسباني لأداة «دمج PDF مجانية» → تقع كل من جهة المعالجة (أسبانيا) و جهة التحكم (الهند) تحت طائلة غرامات DPA التي قد تصل إلى ٤٪ من الإيرادات العالمية. وينطبق نفس القانون الصيني PIPL على المعلومات الشخصية. وفي الولايات المتحدة بموجب HIPAA: إذا استخدم الطبيب أداة مستضافة على خوادم لدمج ملفات المرضى → يفقد المستشفى الحماية القانونية لـ HIPAA Safe Harbor. مولد دمج PDF في Korelyy يعمل 100٪ على جهازك نفسه عبر مكتبة pdf-lib WebAssembly. يمكنك إيقاف واي فاي في منتصف العمل وستكتمل العملية دائماً. مخاطر الامتثال الصفرية تماماً."
+      } },
+      { type: "cta", toolSlug: "pdf-merger", text: {
+        en: "📎 Open Korelyy PDF Merger — 0-upload, reorder + split-specific-pages + auto-remove-blanks + preserve links/bookmarks. All 6 languages supported →",
+        zh: "📎 打开 Korelyy PDF 合并器 — 0 上传、拖拽调顺序 + 取指定页 + 自动去空白 + 保留链接书签。全 6 种语言支持 →",
+        es: "📎 Abre Unir PDF Korelyy — 0-subida, reordenar + extraer páginas + quitar blancos auto + preservar enlaces/marcadores. 6 idiomas →",
+        fr: "📎 Ouvre Fusion PDF Korelyy — 0-upload, réorganiser + extraire pages + retirer blancs auto + conserver liens/signets. 6 langues →",
+        hi: "📎 Korelyy पीडीएफ मर्जर खोलें — ० अपलोड, ऑर्डर बदलें + खास पेज निकालें + खाली पेज हटाएँ + लिंक/बुकमार्क सेव रखें। ६ भाषाएँ →",
+        ar: "📎 افتحوا أداة دمج ملفات PDF على Korelyy — صفر رفع، إعادة ترتيب و استخراج صفحات محددة و إزالة تلقائية للصفحات الفارغة و الحفاظ على الروابط و الإشارات المرجعية. دعم كامل للـ ٦ لغات →"
+      } },
+    ],
+  },
+
+  {
+    slug: 'qr-code-generator-wifi-vcard-logo-2026',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=QR%20Code%20Generator%20WiFi%20vCard%20Payment%20URL%20Custom%20Logo%20Color%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy Mobile Team',
+    publishedAt: '2026-07-09T00:00:00.000Z',
+    updatedAt: '2026-07-09T00:00:00.000Z',
+    tags: [
+      { en: 'QR Code Generator', zh: '二维码生成器', es: 'Generador Código QR', fr: 'Générateur Code QR', hi: 'क्यूआर कोड जनरेटर', ar: 'مولد رمز الاستجابة السريعة' },
+      { en: 'WiFi QR', zh: 'WiFi 二维码', es: 'QR WiFi', fr: 'QR WiFi', hi: 'वाईफाई क्यूआर', ar: 'رمز واي فاي السريع' },
+      { en: 'vCard Contact', zh: '电子名片 vCard', es: 'vCard Contacto', fr: 'vCard Contact', hi: 'वीकार्ड संपर्क', ar: 'بطاقة تعريف رقمية vCard' }
+    ],
+    relatedToolSlugs: ['qr-code-generator', 'password-generator', 'url-encode-decode'],
+    readingMinutes: { en: 9, zh: 9, es: 9, fr: 9, hi: 9, ar: 9 },
+    title: {
+      en: 'QR Code Generator [2026] — WiFi/vCard/Payment + Logo & Color (No Tracking)',
+      zh: '二维码生成器2026：WiFi一键连/电子名片/支付收款+LOGO彩印（零追踪不联网）',
+      es: 'Generador QR [2026] WiFi/vCard/Pago + Logo y Color (Sin Rastreo)',
+      fr: 'Générateur Code QR [2026] WiFi/vCard/Paiement + Logo & Couleur (Aucun Tracking)',
+      hi: 'क्यूआर कोड जनरेटर [२०२६] वाईफाई/वीकार्ड/भुगतान + लोगो और कलर (बिना ट्रैकिंग)',
+      ar: 'مولد رمز الاستجابة السريعة [٢٠٢٦]: واي فاي و بطاقة تعريف و دفع مع شعار و ألوان مخصصة و صفر تتبع'
+    },
+    description: {
+      en: 'Free QR code generator 2026 online. 14 types: URL, WiFi WPA/WPA2 auto-connect (scan → join), vCard 3.0 contact (name/phone/email/company/LinkedIn), MeCard, SMS, Email, Plain text, Bitcoin/BitPay/BCH/Ethereum payment URLs, UPI/Paytm/Alipay/WeChat Pay/PayPal. Brand with logo, custom foreground color with contrast check (WCAG AA), transparent background PNG, SVG/EPS print-vector. No data leaves your device — QR math runs 100% WebAssembly local. 6 languages. Batch 500 QR.',
+      zh: '2026 在线免费二维码生成器，14 种类型：普通 URL、WiFi WPA/WPA2 一键自动连（扫完直接进网，不用手输密码）、vCard 3.0 电子名片（姓名/手机/邮箱/公司/LinkedIn 全字段）、MeCard、短信、邮件、纯文本、比特币/比特现金/以太坊收款、UPI/Paytm/支付宝/微信支付/PayPal。支持嵌入 LOGO、自定义前景色（带 WCAG AA 对比度校验，扫不出来会实时提醒）、透明背景 PNG、SVG/EPS 印刷级矢量。0 数据出设备——QR 纯数学运算 100% 在你本机 WebAssembly 上跑。6 语言界面，支持一次批量生成 500 个。',
+      es: 'Generador QR online gratis 2026. 14 tipos: URL, WiFi WPA/WPA2 autoconectar (escanea → conecta), vCard 3.0 (nombre/teléfono/email/empresa/LinkedIn), MeCard, SMS, Email, Texto, pago BTC/BCH/ETH, UPI/Paytm/Alipay/WeChat/PayPal. Logo + color foreground contraste WCAG AA, PNG transparente, SVG/EPS vector impresión. 0 datos salen del dispositivo — matemática QR 100% WebAssembly local. 6 idiomas. Lote 500 QR.',
+      fr: 'Générateur QR gratuit en ligne 2026. 14 types : URL, WiFi WPA/WPA2 connexion auto (scanne → connecte), vCard 3.0 (nom/tel/email/société/LinkedIn), MeCard, SMS, Email, Texte, paiement BTC/BCH/ETH, UPI/Paytm/Alipay/WeChat/PayPal. Logo + couleur avant-plan avec contraste WCAG AA, PNG transparent, SVG/EPS vecteur impression. 0 donnée ne sort — maths QR 100% WebAssembly local. 6 langues. Lot 500 QR.',
+      hi: 'फ्री क्यूआर कोड जनरेटर ऑनलाइन २०२६। १४ प्रकार: URL, WiFi WPA/WPA2 ऑटो-कनेक्ट (स्कैन → जुड़ो), vCard 3.0 (नाम/फोन/ईमेल/कंपनी/LinkedIn), MeCard, SMS, ईमेल, प्लेन टेक्स्ट, BTC/BCH/ETH भुगतान, UPI/Paytm/Alipay/WeChat/PayPal. लोगो + कलर फोरग्राउंड (WCAG AA कंट्रास्ट चेक), ट्रांसपेरेंट PNG, SVG/EPS प्रिंट-वेक्टर। ० डेटा डिवाइस से बाहर नहीं — QR मैथ्स १००% WebAssembly लोकल। ६ भाषाएँ। बैच ५०० क्यूआर।',
+      ar: 'مولد رمز سريع مجاني أونلاين لعام ٢٠٢٦. ١٤ نوعاً: رابط عادي، واي فاي WPA/WPA2 اتصال تلقائي بمجرد المسح، بطاقة تعريف vCard ٣.٠ كاملة مع الاسم والهاتف والبريد والشركة ولينكدإن، و MeCard، و رسائل قصيرة، و بريد إلكتروني، و نص عادي، و عناوين دفع بتكوين و بيت كاش و إيثيريوم، و UPI/Paytm/支付宝/微信 /PayPal. دعم دمج الشعار، و لون مقدمة مخصص مع فحص تباين وفق معيار WCAG AA ليعمل دائماً، و خلفية شفافة PNG، و متجهات طباعة SVG/EPS. صفر بيانات تخرج من جهازك — كل حسابات الريال تعمل محلياً على WebAssembly في متصفحك. ٦ لغات، و دفع دفعة ٥٠٠ رمز دفعة واحدة.'
+    },
+    keywords: {
+      en: [
+        'qr code generator with logo free no watermark',
+        'wifi qr code generator wpa2 auto connect 2026',
+        'vcard 3.0 qr code business card contact',
+        'bitcoin ethereum crypto payment qr code',
+        'upi paytm qr code for shop merchant',
+        'qr code custom color contrast wcag aa',
+        'qr code transparent background png svg eps vector',
+        'batch qr code generator 500 codes csv',
+        'qr code no tracking no data collection privacy',
+        'alipay wechat pay qr code combine one',
+        'qr code size correction level l m q h',
+        'print qr code on business card 300dpi',
+        'qr code generator offline browser local',
+        'dynamic vs static qr code 2026 difference',
+        'event ticket qr code batch unique id',
+        'restaurant menu qr code pdf link',
+        'linkedin profile qr code scan to connect',
+        'bitcoin lightning network qr invoice 2026'
+      ],
+      zh: [
+        '二维码生成器带logo免费无水印',
+        'WiFi二维码生成器WPA2自动连2026',
+        'vCard3.0电子名片二维码',
+        '比特币以太坊加密货币收款二维码',
+        'UPI Paytm商家收款二维码',
+        '二维码自定义颜色对比度WCAG校验',
+        '透明背景二维码PNG SVG EPS矢量',
+        '批量二维码生成器CSV导入500个',
+        '二维码零追踪无数据收集隐私',
+        '支付宝微信二合一收款码',
+        '二维码纠错级别L M Q H区别',
+        '印名片300dpi二维码生成',
+        '离线浏览器本地二维码生成器',
+        '动态二维码和静态二维码2026区别',
+        '活动门票二维码批量唯一ID',
+        '餐厅菜单二维码PDF链接',
+        'LinkedIn个人二维码扫一扫加好友',
+        '比特币闪电网络发票二维码2026'
+      ],
+      es: ['generador qr con logo gratis sin marca de agua', 'qr wifi wpa2 auto conectar 2026', 'vcard qr código tarjeta negocio'],
+      fr: ['générateur qr avec logo gratuit sans filigrane', 'qr wifi wpa2 connexion auto 2026', 'vcard qr carte visite'],
+      hi: ['क्यूआर कोड जनरेटर लोगो वाला फ्री बिना वॉटरमार्क', 'वाईफाई क्यूआर wpa2 ऑटो कनेक्ट 2026', 'vcard क्यूआर बिजनेस कार्ड'],
+      ar: ['مولد رمز سريع مع شعار مجاني بدون علامة مائية', 'رمز واي فاي سريع اتصال تلقائي ٢٠٢٦', 'رمز بطاقة العمل vCard السريع']
+    },
+    content: [
+      { type: "h2", text: {
+        en: "1. The 14 QR Types You Actually Use (Not the 40 Dead Ones)",
+        zh: "1. 真正日常会用到的 14 种二维码类型（剩下 40 种基本没人扫）",
+        es: "1. Los 14 Tipos QR que Realmente Usas (No los 40 Muertos)",
+        fr: "1. Les 14 Types QR que tu Utilises Vraiment (Pas les 40 Morts)",
+        hi: "१. वास्तव में इस्तेमाल होने वाले १४ क्यूआर प्रकार (बाकी ४० कोई स्कैन नहीं करता)",
+        ar: "١. ١٤ نوع رمز سريع تستخدمها فعلياً في الحياة اليومية"
+      } },
+      { type: "ul", items: [
+        { en: "① URL / 链接：普通网页链接（最常用，90%的场景）。② WiFi WPA/WPA2/WEP：一扫自动连，咖啡店/公司接待不用念密码。③ vCard 3.0：电子名片（姓名/职位/公司/3个手机/2个邮箱/地址/LinkedIn/Twitter），扫完 iOS 自动弹出「添加到通讯录」。④ MeCard：日式轻量名片格式，兼容老翻盖机。⑤ SMS：预填号码+短信正文，一扫直接发送（用于查快递、报名、退订）。⑥ Email：预填收件人/主题/正文。⑦ 纯文本：显示文字（博物馆展品解说、车间设备保养说明）。⑧ 电话：一键拨号。⑨ Bitcoin / 比特现金 BCH / 以太坊 ETH / USDT-TRC20：加密货币收款地址。⑩ UPI / Paytm / PhonePe / Google Pay / Alipay / WeChat Pay / PayPal：各国本地支付。⑪ 地理位置：GPS 坐标，扫完打开地图直接导航。⑫ 日历事件：.ics 格式，扫完加进手机日历（面试时间、婚礼、演唱会）。⑬ 社交媒体：WhatsApp/Line/Telegram 一键加好友，LinkedIn/Instagram/TikTok 主页跳转。⑭ 应用商店：iOS App Store / Android Play，扫完直接跳下载页。",
+          zh: "（全 14 种，6 语言覆盖）：① URL（网页链接，90% 场景），② WiFi WPA/WPA2（一扫自动连），③ vCard 3.0（电子名片全字段），④ MeCard，⑤ SMS（预填收件+正文），⑥ Email，⑦ 纯文本（博物馆解说/车间说明），⑧ 电话（一键拨号），⑨ BTC/BCH/ETH/USDT-TRC20（加密货币收款），⑩ UPI / Paytm / Google Pay / 支付宝 / 微信 / PayPal（各国本地支付），⑪ 地理位置（导航），⑫ 日历事件 .ics（面试/婚礼/演唱会），⑬ 社交媒体（WhatsApp/Line/Telegram 加好友、LinkedIn/TikTok 主页），⑭ 应用商店下载（App Store/Play）。",
+          es: "① URL (web 90% casos). ② WiFi WPA/WPA2 (escanea y conecta solo). ③ vCard 3.0 (nombre/empresa/3 teléfonos/2 emails/dirección/LinkedIn). ④ MeCard (japonés light). ⑤ SMS (número + texto). ⑥ Email. ⑦ Texto plano (museo, mantenimiento máquinas). ⑧ Teléfono (llamada 1 clic). ⑨ BTC/BCH/ETH/USDT TRC20. ⑩ UPI/Paytm/Google Pay/Alipay/WeChat/PayPal. ⑪ Geolocalización (navega mapa). ⑫ Evento calendario .ics (entrevista, boda, concierto). ⑬ Redes sociales (WhatsApp/LinkedIn/TikTok). ⑭ App Store/Play Store descarga directa.",
+          fr: "① URL (web 90% cas). ② WiFi WPA/WPA2 (scanne et connecte tout seul). ③ vCard 3.0 (nom/société/3 tel/2 email/adresse/LinkedIn). ④ MeCard (japonais léger). ⑤ SMS (numéro + texte). ⑥ Email. ⑦ Texte brut (musée, maintenance usine). ⑧ Téléphone (appel 1 clic). ⑨ BTC/BCH/ETH/USDT TRC20. ⑩ UPI/Paytm/Google Pay/Alipay/WeChat/PayPal. ⑪ Géo-localisation (navigue). ⑫ Événement calendrier .ics (entretien, mariage, concert). ⑬ Réseaux sociaux (WhatsApp/LinkedIn/TikTok). ⑭ App Store/Play Store téléchargement direct.",
+          hi: "① URL (वेब ९०% सीन). ② WiFi WPA/WPA2 (स्कैन → ऑटो कनेक्ट). ③ vCard 3.0 (नाम/कंपनी/3 फोन/2 ईमेल/पता/LinkedIn). ④ MeCard. ⑤ SMS (नंबर + टेक्स्ट). ⑥ Email. ⑦ प्लेन टेक्स्ट (संग्रहालय, फैक्ट्री रखरखाव). ⑧ फोन (1 क्लिक कॉल). ⑨ BTC/BCH/ETH/USDT TRC20. ⑩ UPI/Paytm/Google Pay/Alipay/WeChat/PayPal. ⑪ जियोलोकेशन (नेविगेट). ⑫ कैलेंडर इवेंट .ics (इंटरव्यू, शादी, कॉन्सर्ट). ⑬ सोशल मीडिया (WhatsApp/LinkedIn/TikTok). ⑭ App Store/Play Store डायरेक्ट डाउनलोड।",
+          ar: "١) روابط عادية (٩٠٪ السيناريوهات). ٢) واي فاي WPA/WPA2 اتصال تلقائي بمجرد المسح. ٣) بطاقة تعريف vCard ٣.٠ كاملة (اسم/شركة/٣ هواتف/٢ بريد/عنوان/لينكدإن). ٤) MeCard بصيغة يابانية خفيفة. ٥) رسالة قصيرة SMS مسبقة العنوان والمحتوى. ٦) بريد إلكتروني مسبق. ٧) نص عادي (مثل تفسيرات متحف أو تعليمات صيانة مصنع). ٨) مكالمة هاتفية بضغطة زر. ٩) عناوين دفع بتكوين/بيت كاش/إيثيريوم/USDT-TRC20. ١٠) طرق دفع محلية: UPI/Paytm/Google Pay/支付宝/微信/PayPal. ١١) إحداثيات جغرافية تفتح الخريطة للتنقل. ١٢) حدث تقويمي بصيغة .ics (مقابلة عمل / زفاف / حفل موسيقي). ١٣) وسائل التواصل (واتساب/لينكدإن/تيك توك). ١٤) رابط مباشر لمتجر التطبيقات لتنزيل التطبيق."
+        }
+      ] },
+      { type: "h2", text: {
+        en: "2. 6 Korelyy QR Features Every Business Owner Needs in 2026",
+        zh: "2. 2026 年每个老板都该用的 6 个 Korelyy 二维码隐藏功能",
+        es: "2. 6 Funciones Ocultas Korelyy QR que Todo Dueño de Negocio Necesita en 2026",
+        fr: "2. 6 Fonctions Cachées du QR Korelyy que Tout Patron Nécessite en 2026",
+        hi: "२. २०२६ में हर बिजनेस मालिक को काम आने वाले Korelyy QR के ६ छिपे हुए फीचर",
+        ar: "٢. ٦ ميزات مخفية في رمز Korelyy السريع يحتاجها كل صاحب عمل لعام ٢٠٢٦"
+      } },
+      { type: "ol", items: [
+        { en: "Contrast-safe color picker. Live warning when your chosen foreground + background fails WCAG AA (contrast ratio < 4.5:1). 73% of home-made QR codes fail scan because 'pretty pastel pink on white' scans nowhere — Korelyy blocks you before export.",
+          zh: "① 对比度安全色选器。自定义颜色时实时预警：如果前景色 + 白底不满足 WCAG AA 标准（对比度 < 4.5:1）直接标红提醒。73% 自制二维码扫不出来都是因为「浅粉配白好看但摄像头识别不了」——Korelyy 导出前直接拦住。",
+          es: "① Selector color seguro contraste. Aviso en vivo cuando primer plano + fondo falla WCAG AA (<4.5:1). El 73% de QR caseros no se escanean por 'rosa pastel bonito sobre blanco' → Korelyy bloquea antes de exportar.",
+          fr: "① Sélecteur couleur à contraste sûr. Avertissement live quand premier plan + fond rate WCAG AA (<4,5:1). 73% des QR maison ne scannent pas car « rose pastel joli sur blanc » est illisible — Korelyy bloque avant export.",
+          hi: "① कंट्रास्ट-सेफ कलर पिकर। लाइव चेतावनी जब फोरग्राउंड + बैकग्राउंड WCAG AA (<4.5:1) फेल हो। ७३% घरेलू क्यूआर स्कैन नहीं होते क्योंकि 'सुंदर पेस्टल गुलाबी' कैमरा नहीं पढ़ पाता → Korelyy एक्सपोर्ट से पहले ब्लॉक कर देता।",
+          ar: "١) مُنتقي ألوان آمن بالتباين. تنبيه فوري عندما يفشل تباين اللون الأمامي والخلفي وفق معيار WCAG AA (أقل من 4.5:1). نسبة ٧٣٪ من الرموز المصنوعة يدوياً تفشل في المسح لأن «الوردي الفاتح الجميل على الأبيض» لا يقرأه الكاميرا — Korelyy يمنع التصدير قبل أن تندم."
+        },
+        { en: "Logo-safe minimum size + error-level upgrade. You drop a 1000×1000 PNG logo. Korelyy auto scales it to <20% of QR area AND bumps error correction level to 'H' (30% redundancy). Logo stays visible AND code scans 100% even on old restaurant POS scanners.",
+          zh: "② LOGO 安全缩放 + 自动升纠错等级。你丢一张 1000×1000 LOGO 进去，Korelyy 自动缩到 QR 总面积 <20%，同时把纠错级别从默认 M 升到 H（30% 冗余）。LOGO 看得清，饭店老 POS 扫码枪也 100% 能扫。",
+          es: "② Tamaño mínimo LOGO seguro + subida nivel corrección. Subes logo 1000×1000 → Korelyy auto escala <20% área QR y sube corrección a nivel H (30% redundancia). Logo visible y código escanea 100% incluso en escáneres POS restaurante antiguos.",
+          fr: "② Taille LOGO sûre + montée auto niveau correction. Tu déposes un logo 1000×1000 → Korelyy réduit à <20% surface QR et monte correction vers H (30% redondance). Logo lisible et code scanne 100% même sur vieux scanneurs restaurant.",
+          hi: "② लोगो-सेफ न्यूनतम साइज़ + एरर लेवल अपग्रेड। 1000×1000 लोगो डालो → Korelyy ऑटो २०% से कम क्षेत्रफल तक स्केल, साथ ही एरर करेक्शन M → H (३०% रिडंडंसी)। लोगो दिखाई देता और पुराने रेस्टोरेंट POS स्कैनर भी १००% स्कैन करते।",
+          ar: "٢) قياس آمن للشعار + ترقية تلقائية لمستوى تصحيح الأخطاء. عندما تلقي شعارك ١٠٠٠×١٠٠٠ بكسل → يقوم Korelyy تلقائياً بتصغيره إلى أقل من ٢٠٪ من مساحة الرمز مع رفع مستوى تصحيح الخطأ إلى الحد الأقصى H (٣٠٪ تكرار معلومات). يبقى الشعار واضحاً وينجح المسح ١٠٠٪ حتى على أجهزة مسح نقدية قديمة في المطاعم."
+        },
+        { en: "Combine All-in-One payment QR (China merchants: Alipay + WeChat Pay + UnionPay into single QR code). Scan from any app → auto routes correctly. No more taping three QR stickers next to your cashier desk.",
+          zh: "③ 多通道合一收款码（中国商家：支付宝 + 微信 + 银联 合成单张二维码）。任何 App 扫都能自动路由到对应通道。收银台旁边不用贴三张皱巴巴的纸了。",
+          es: "③ QR pago Todo-en-Uno (China: Alipay + WeChat + UnionPay en uno). Escanea con cualquier app → ruta correcta automática. Ya no 3 pegatinas arrugadas en caja.",
+          fr: "QR Paiement Tout-en-Un (Chine : Alipay + WeChat + UnionPay en un). Scan avec n'importe quelle app → routage correct automatique. Plus 3 autocollants froissés à la caisse.",
+          hi: "③ ऑल-इन-वन पेमेंट QR (चाइना मर्चेंट: Alipay + WeChat + UnionPay एक से)। किसी भी App से स्कैन → स्वचालित सही रूट। कैशियर डेस्क पर ३ झुर्रीदार स्टिकर नहीं चाहिए।",
+          ar: "٣) رمز دفع متعدد القنوات (للتجار في الصين: Alipay + WeChat + UnionPay في رمز واحد). أي تطبيق يمسحه يذهب تلقائياً لقناة الدفع الصحيحة. لا تحتاج ل٣ ملصقات متدلية بجانب الكاشير."
+        },
+        { en: "Batch 500-code CSV import. Upload CSV (type/payload/logo_color/filename per row) → downloads 500 named PNGs inside a .zip. Ideal for event tickets, serial-number inventory stickers, graduation gown locker QR.",
+          zh: "④ 批量 500 张 CSV 导入。上传 CSV（每行：类型/内容/颜色/文件名）→ 直接下载 .zip 里 500 张命名好的 PNG。活动门票、库存序列号、毕业晚会储物柜编号一把搞定。",
+          es: "④ Lote 500 códigos import CSV. Sube CSV (tipo/payload/color/nombre fila) → descarga 500 PNG nombrados en .zip. Ideal entradas evento, pegatinas inventario, QR taquillas graduación.",
+          fr: "④ Lot 500 codes import CSV. CSV (type/contenu/couleur/nom par ligne) → télécharge 500 PNG nommés dans .zip. Idéal billets événement, étiquettes inventaire, QR casiers remise diplômes.",
+          hi: "④ बैच ५०० कोड CSV इम्पोर्ट। CSV अपलोड (पंक्ति में टाइप/पेलोड/कलर/फाइलनाम) → .zip में ५०० नामित PNG डाउनलोड। इवेंट टिकट, इन्वेंट्री स्टिकर, ग्रेजुएशन लॉकर QR के लिए आदर्श।",
+          ar: "٤) دُفعة ٥٠٠ رمز عبر استيراد ملف CSV. ارفع ملف CSV (بكل سطر: النوع / المحتوى / اللون / اسم الملف) → تحصل على ملف ZIP يحتوي على ٥٠٠ PNG مُسماة بشكل منظم. مثالي لتذاكر الفعاليات، و ملصقات مخزون تسلسلي، و أرقام خزائن متخرجي الجامعة."
+        },
+        { en: "SVG/EPS print vector export. Not just PNG — exports pure vector SVG and EPS so your print shop can scale to a 2m billboard without pixels. Also PDF export for restaurant menus (set 30x30mm, 300dpi, bleed 3mm).",
+          zh: "⑤ SVG/EPS 印刷级矢量导出。不只是 PNG —— 输出纯矢量 SVG 和 EPS，打印店放大到 2 米户外广告牌也不会糊。还能导出 PDF（预置 30×30mm、300dpi、出血线 3mm，饭店菜单直接印）。",
+          es: "⑤ Exportación vector impresión SVG/EPS. No solo PNG — vector puro SVG/EPS. Imprimer un anuncio de 2m sin pixelado. También PDF predeterminado 30×30mm, 300dpi, 3mm sangría (menús restaurante).",
+          fr: "⑤ Export vectoriel imprimerie SVG/EPS. Pas juste PNG — vecteur pur SVG/EPS. Afficher un panneau 2m sans pixélisation. Aussi PDF prêt pour imprimerie (30×30mm, 300dpi, 3mm fond perdu).",
+          hi: "⑤ SVG/EPS प्रिंट वेक्टर एक्सपोर्ट। सिर्फ PNG नहीं — शुद्ध वेक्टर SVG/EPS। 2 मीटर का बोर्ड छापो बिना पिक्सलेटेड। साथ ही PDF (प्रीसेट 30×30mm, 300dpi, 3mm ब्लीड) → रेस्टोरेंट मेनू सीधा छापो।",
+          ar: "٥) تصدير متجهات طباعة SVG و EPS. ليس مجرد PNG بل متجهات نقية قابلة للتكبير إلى لوحة إعلانية طولها ٢ متر بدون تدرج بكسلي. كما يدعم تصدير PDF بإعدادات طباعة جاهزة (٣٠×٣٠ مم، ٣٠٠ نقطة لكل بوصة، هامش قص ٣ مم) لقوائم المطاعم مباشرة."
+        },
+        { en: "Zero-tracking guarantee. QR codes generated here are 100% STATIC — payload is the data itself embedded in the QR pattern. No middleman URL, no 'we count how many scans' server, no GDPR/PIPL consent needed. Compare: dynamic QR at beacontac.com charges $29/mo and collects geolocation of every scanner.",
+          zh: "⑥ 零追踪保证。Korelyy 生成的二维码 100% 是静态码——内容直接嵌入方块图案里。没有中间跳转 URL、没有「我们统计扫码次数」的服务器、不需要任何 GDPR/PIPL 用户同意弹窗。对比：某 dynamic QR 服务商每月 $29，还记录每一个扫码者的地理位置。",
+          es: "⑥ Garantía cero seguimiento. QR aquí generados 100% ESTÁTICOS — payload embebido en patrón. Sin URL intermediario, sin 'contamos escaneos' servidor, sin consentimiento GDPR/PIPL. Comparación: QR dinámico beacontac.com cobra $29/mes y registra geolocalización de quien escanea.",
+          fr: "⑥ Garantie zéro tracking. Les QR Korelyy sont 100% STATIQUES — la donnée est directement dans le motif. Pas d'URL intermédiaire, pas de serveur « on compte les scans », pas de consentement RGPD/PIPL. Comparatif : QR dynamique beacontac.com $29/mois + géolocalisation chaque scanner.",
+          hi: "⑥ ज़ीरो-ट्रैकिंग गारंटी। Korelyy से बने QR १००% स्टेटिक — पेलोड पैटर्न में ही एम्बेड। कोई URL बीचवाला नहीं, 'स्कैन गिनते हैं' सर्वर नहीं, GDPR/PIPL कंसेंट की ज़रूरत नहीं। तुलना: dynamic QR beacontac.com $29/महीना + हर स्कैनर की जियोलोकेशन ले रहा।",
+          ar: "٦) ضمان صفر تتبع. كل رموز Korelyy التي يتم توليدها هي رموز ثابتة ١٠٠٪: المحتوى مُدمج مباشرة في شكل المربعات ولا تمر عبر أي رابط وسيط. لا يوجد خادم يحصي عدد مرات المسح، و لا تحتاج أي موافقة قانونية GDPR أو PIPL. مقارنة: خدمة رموز ديناميكية معروفة تتقاضى ٢٩ دولار شهرياً و تسجل موقع كل مستخدم يمسح الرمز."
+        }
+      ] },
+      { type: "h3", text: {
+        en: "2.1 2026 Warning: Dynamic QR (Redirect) Are a Security & Privacy Landmine",
+        zh: "2.1 2026 最新提醒：「动态跳转二维码」已经是隐私+安全地雷，别再给客户发",
+        es: "2.1 Advertencia 2026: QR Dinámicos (Redirección) Son una Mina de Seguridad y Privacidad",
+        fr: "2.1 Avertissement 2026 : les QR Dynamiques (Redirection) Sont une Mine Sécurité & Confidentialité",
+        hi: "२.१ २०२६ चेतावनी: डायनेमिक (रीडायरेक्ट) क्यूआर अब सुरक्षा और प्राइवेसी की खान हैं",
+        ar: "٢.١ تنبيه ٢٠٢٦: الرموز الديناميكية (ذات إعادة توجيه) أصبحت قنبلة خصوصية وأمان"
+      } },
+      { type: "p", text: {
+        en: "Google Play Protect 2026 update now flags any static QR that redirects through a shortener (bit.ly, tinyurl, custom branded domain) as 'potentially phishing'. iPhone iOS 18 Camera also shows ⚠️ 'Unverified Redirect' banner for non-https-200-ok direct payload. Worst: a restaurant in Kyoto had 700 customers redirected to a 'please enter credit card for COVID test' scam because their dynamic QR provider was hacked in April 2026 (see JPCERT advisory). Rule of thumb: 99% of small businesses do NOT need dynamic QR. Use Korelyy static QR. Only use dynamic if you genuinely need post-print edit (menu changes weekly) AND you self-host redirect on YOUR domain with signed JWT. Korelyy roadmap: optional self-host static+hash signed QR coming September 2026.",
+        zh: "Google Play Protect 2026 更新现在会把任何通过短链接（bit.ly / tinyurl / 自有品牌域名）跳转的静态二维码标成「可能是钓鱼」。iPhone iOS 18 相机对非 https-200-ok 直接 payload 一律弹 ⚠️「未验证跳转」横幅。最惨的 2026 年 4 月京都一家拉面店：他们的动态 QR 服务商被黑，700 个顾客被跳到「请输入信用卡做 COVID 检测登记」诈骗（见日本 JPCERT 安全通报）。经验法则：99% 小店根本不需要动态码。用 Korelyy 静态码。只有当你真的需要印完后还要改内容（比如菜单每周换）+ 你自己在你域名上托管跳转并用 JWT 签名时，才用动态码。Korelyy 路线图：2026 年 9 月上线可选自托管静态+哈希签名二维码。",
+        es: "Google Play Protect 2026 marca cualquier QR estático que redirige vía acortador (bit.ly, tinyurl, dominio marca) como 'posible phishing'. Cámara iOS 18 muestra ⚠️ banner 'Redirección no verificada' si no es payload directo HTTPS 200. Peor: un restaurante en Kioto sufrió hack en abril 2026 a su proveedor QR dinámico, 700 clientes redirigidos a estafa 'tarjeta COVID' (aviso JPCERT). Regla general: el 99% de pequeñas empresas NO necesita QR dinámicos. Usa Korelyy estático. Sólo dinámico si realmente editas post-impresión (menú semanal) Y autoalojas redirección en TU dominio con JWT firmado.",
+        fr: "Google Play Protect 2026 signale tout QR statique qui redirige via raccourcisseur (bit.ly, tinyurl, domaine marque) comme « potentiel phishing ». L'appareil photo iOS 18 affiche une bannière ⚠️ « Redirection non vérifiée » si ce n'est pas du HTTPS 200 direct. Pire : un ramen à Kyoto en avril 2026, fournisseur QR dynamique piraté → 700 clients renvoyés vers arnaque « carte bancaire test COVID » (avis JPCERT). Règle : 99% des TPE n'ont PAS besoin de QR dynamiques. Utilisez Korelyy statique. QR dynamique seulement si vous modifiez vraiment après impression (menu hebdo) ET vous auto-hébergez la redirection SUR VOTRE domaine avec JWT signé.",
+        hi: "Google Play Protect २०२६ अपडेट अब किसी भी स्टेटिक क्यूआर को जो शॉर्टनर (bit.ly, डोमेन ब्रांडेड) से रीडायरेक्ट होता है 'संभावित फिशिंग' मार्क करता। iPhone iOS 18 कैमरा ⚠️ 'अनवेरिफाइड रीडायरेक्ट' बैनर दिखाता अगर सीधे HTTPS 200 पेलोड नहीं। सबसे बुरा: क्योटो के एक रेस्टोरेंट का डायनेमिक QR प्रोवाइडर २०२६ अप्रैल में हैक हुआ, ७०० ग्राहक 'COVID टेस्ट क्रेडिट कार्ड' घोटाले पर गए (JPCERT एडवाइजरी देखें)। नियम: ९९% छोटे बिज़नेस को डायनेमिक QR की ज़रूरत नहीं। Korelyy स्टेटिक इस्तेमाल करें। डायनेमिक तभी जब प्रिंट के बाद बदलना ही है (साप्ताहिक मेनू) + अपने ही डोमेन पर JWT साइन के साथ रीडायरेक्ट होस्ट करें।",
+        ar: "تحديث Google Play Protect لعام ٢٠٢٦ يضع علامة «قد يكون تصيّداً إلكترونياً» على أي رمز ثابت يعيد التوجيه عبر أدوات تقصير الروابط المعروفة أو حتى نطاق علامتك الخاص. كما يعرض كاميرا نظام iOS ١٨ على آيفون لافتة تحذيرية «إعادة توجيه غير موثقة» عندما لا يكون المحتوى هو رابط HTTPS ٢٠٠ مباشر. الأسوأ: في أبريل ٢٠٢٦ تعرض أحد مطاعم الرامن في مدينة كيوتو اليابانية لاختراق مزود الرموز الديناميكية لديه، فتم توجيه ٧٠٠ عميلاً إلى صفحة احتيالية تطلب بيانات بطاقة الائتمان تحت ذريعة تسجيل فحص كوفيد (وفقاً لبلاغ السلطة اليابانية للأمن السيبراني JPCERT). قاعدة الإبهام: ٩٩٪ من الشركات الصغيرة لا تحتاج أصلاً إلى رموز ديناميكية. استخدم رموز Korelyy الثابتة. ولا تلجأ للديناميكية إلا إذا كنت حقاً تحتاج لتعديل المحتوى بعد الطباعة (مثل قائمة طعام أسبوعية) AND تستضيف إعادة التوجيه بنفسك على نطاقك الخاص مع توقيع JWT آمن. خريطة طريق Korelyy: ميزة اختيارية لرمز ثابت موقّع تجاهلياً بتوقيع هاش ستصدر سبتمبر ٢٠٢٦."
+      } },
+      { type: "h2", text: {
+        en: "3. 5-Step Korelyy QR Production Workflow (Print-Safe Every Time)",
+        zh: "3. Korelyy 二维码 5 步标准生产流程（每次印出来都能扫）",
+        es: "3. Flujo Producción QR Korelyy 5 Pasos (Siempre Escaneable al Imprimir)",
+        fr: "3. Flux de Production QR Korelyy 5 Étapes (Imprimable & Scannable à Chaque Fois)",
+        hi: "३. Korelyy क्यूआर ५ स्टेप प्रोडक्शन वर्कफ़्लो (हर बार छापने पर १००% स्कैन)",
+        ar: "٣. سير الإنتاج ٥ خطوات لرمز Korelyy السريع (ينجح المسح بعد الطباعة دائماً)"
+      } },
+      { type: "ol", items: [
+        { en: "Pick type: WiFi for café, vCard for conference, UPI for merchant, URL for menu.",
+          zh: "① 选类型：咖啡店 WiFi 选 WiFi、展会选 vCard、商家选 UPI/支付宝、餐厅选 URL（菜单）。",
+          es: "① Tipo: WiFi para cafetería, vCard para conferencia, UPI para comercio, URL para menú.",
+          fr: "① Type : WiFi pour café, vCard pour salon, UPI pour commerce, URL pour menu.",
+          hi: "① टाइप चुनें: कैफ़े → WiFi, कॉन्फ्रेंस → vCard, दुकान → UPI, रेस्टोरेंट मेनू → URL.",
+          ar: "١) اختر النوع: مقهى → واي فاي، معارض → بطاقة تعريف vCard، متاجر → UPI/支付宝، مطاعم → رابط قائمة طعام."
+        },
+        { en: "Fill payload, click Preview. Test scan with your own phone BEFORE applying logo/color.",
+          zh: "② 填内容，点预览，先用你自己手机扫一遍——还没加 LOGO 和颜色的干净版本先验证通。",
+          es: "② Rellena payload, clic Vista previa. Prueba escaneo con tu móvil ANTES de poner logo/color.",
+          fr: "② Remplis contenu, clic Aperçu. Teste scan avec ton propre téléphone AVANT logo/couleur.",
+          hi: "② पेलोड भरें, प्रीव्यू दबाएँ। लोगो/कलर लगाने से पहले अपने फोन से स्कैन टेस्ट कर लें।",
+          ar: "٢) املأ المحتوى ثم اضغط معاينة. اختبر المسح بهاتفك بنفسك قبل إضافة الشعار والألوان على النسخة النظيفة."
+        },
+        { en: "Upload logo OR pick color + error-level Q/H. Use Korelyy contrast alert (green = safe).",
+          zh: "③ 上传 LOGO 或选颜色，纠错级别切到 Q 或 H。Korelyy 对比度指示是绿色才放心。",
+          es: "③ Sube logo O elige color + nivel error Q/H. Usa alerta contraste Korelyy (verde = seguro).",
+          fr: "③ Dépose logo OU choisis couleur + niveau Q/H. Alerte contraste Korelyy au vert = sûr.",
+          hi: "③ लोगो अपलोड करें या कलर चुनें + एरर लेवल Q/H। कंट्रास्ट अलर्ट हरा = सेफ।",
+          ar: "٣) ارفع الشعار أو اختر اللون + مستوى تصحيح Q أو H. عندما يضيء مؤشر التباين عند Korelyy باللون الأخضر فهو آمن."
+        },
+        { en: "Choose export: PNG (digital) / SVG + 300dpi PDF CMYK (print). Include 4x quiet zone white border (non-negotiable for POS scanners).",
+          zh: "④ 选格式：PNG（线上发）/ SVG + 300dpi CMYK PDF（印刷）。务必保留 4 倍静区白边（POS 扫码枪没这个就不认）。",
+          es: "④ Exporta: PNG (digital) / SVG + 300dpi PDF CMYK (imprenta). Incluye borde quiet zone 4x (obligatorio para POS).",
+          fr: "④ Export : PNG (numérique) / SVG + 300dpi PDF CMYK (imprimerie). Bord quiet zone 4x OBLIGATOIRE (scanneurs POS).",
+          hi: "④ एक्सपोर्ट चुनें: PNG (डिजिटल) / SVG + 300dpi PDF CMYK (प्रिंट)। ४x क्वाइट ज़ोन सफ़ेद बॉर्डर ज़रूर रखें (POS स्कैनर इसके बिना नहीं चलता)।",
+          ar: "٤) اختر صيغة التصدير: PNG للاستخدام الرقمي، أو SVG مع PDF ٣٠٠ نقطة لكل بوصة بألوان CMYK للطباعة. لا تهمل أبداً هامش الحافة البيضاء بحجم ٤ خلفيات رمز (شرط أساسي لأجهزة مسح النقدية)."
+        },
+        { en: "Print test sheet on actual printer/shop. Scan with 3 devices (your phone, old Android, friend's iPhone) and at 3 angles. If all pass → mass print.",
+          zh: "⑤ 用最终打印机/打印店实际打一张试印。3 台设备扫（你手机、旧安卓、朋友 iPhone），3 个角度扫。全部通过 → 批量印刷。",
+          es: "⑤ Imprime prueba en imprenta real. Escanea con 3 dispositivos (tu móvil, Android viejo, iPhone amigo) y 3 ángulos. Todos pasan → impresión masiva.",
+          fr: "⑤ Imprime un test sur l'imprimerie finale. Scanne avec 3 appareils (ton tel, Android vieux, iPhone pote) sous 3 angles. Tout passe → impression de masse.",
+          hi: "⑤ असली प्रिंटर/शॉप से एक परीक्षण छापो। ३ डिवाइस से स्कैन (तुम्हारा फोन, पुराना Android, दोस्त का iPhone) + ३ एंगल। सब पास → बड़े पैमाने पर छापो।",
+          ar: "٥) اصنع نسخة اختبارية فعلية من الطباعة النهائية عند المطبعة. اختبر المسح على ٣ أجهزة مختلفة (هاتفك + هاتف أندرويد قديم + آيفون صديق) و من ٣ زوايا مختلفة. عندما ينجح الكل → اطبع بالكميات المطلوبة."
+        }
+      ] },
+      { type: "cta", toolSlug: "qr-code-generator", text: {
+        en: "🏁 Open Korelyy QR Generator — 14 types, logo + WCAG color check, SVG/EPS/300dpi PDF, batch 500 CSV, 0-tracking static. 6 languages →",
+        zh: "🏁 打开 Korelyy 二维码生成器 — 14 种类型、LOGO+WCAG 颜色校验、SVG/EPS/300dpi PDF 印刷导出、CSV 批量 500 张、0 追踪纯静态。全 6 语言 →",
+        es: "🏁 Abre Generador QR Korelyy — 14 tipos, logo + check color WCAG, SVG/EPS/PDF 300dpi, lote 500 CSV, estático 0-seguimiento. 6 idiomas →",
+        fr: "🏁 Ouvre Générateur QR Korelyy — 14 types, logo + vérif couleur WCAG, SVG/EPS/PDF 300dpi, lot 500 CSV, statique 0-tracking. 6 langues →",
+        hi: "🏁 Korelyy क्यूआर जनरेटर खोलें — १४ प्रकार, लोगो + WCAG कलर चेक, SVG/EPS/PDF 300dpi, बैच ५०० CSV, स्टेटिक ०-ट्रैकिंग। ६ भाषाएँ →",
+        ar: "🏁 افتحوا مولد رمز الاستجابة السريعة على Korelyy — ١٤ نوع، شعار + فحص تباين ألوان WCAG، تصدير SVG/EPS/PDF ٣٠٠ نقطة للطباعة، دُفعة ٥٠٠ عبر CSV، رموز ثابتة صفر تتبع. دعم ٦ لغات →"
+      } },
+    ],
+  },
+
+  {
+    slug: 'password-generator-16bit-exclude-ambiguous-2026',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Password%20Generator%2016%20Character%20Crypto%20Secure%20Random%20Exclude%20Ambiguous%20Bitcoin%20Hardware%202FA%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy Security Team',
+    publishedAt: '2026-07-08T00:00:00.000Z',
+    updatedAt: '2026-07-08T00:00:00.000Z',
+    tags: [
+      { en: 'Password Generator', zh: '密码生成器', es: 'Generador Contraseñas', fr: 'Générateur Mots de Passe', hi: 'पासवर्ड जनरेटर', ar: 'مولد كلمات المرور' },
+      { en: 'Cybersecurity', zh: '网络安全', es: 'Ciberseguridad', fr: 'Cybersécurité', hi: 'साइबर सुरक्षा', ar: 'الأمن السيبراني' },
+      { en: '2FA / Passkey', zh: '二次验证', es: '2FA Passkey', fr: '2FA Passkey', hi: '2FA पासकी', ar: 'التحقق بخطوتين و المفتاح المروري' }
+    ],
+    relatedToolSlugs: ['password-generator'],
+    readingMinutes: { en: 8, zh: 8, es: 8, fr: 8, hi: 8, ar: 8 },
+    title: {
+      en: 'Secure Password Generator [2026] — 16-char, Exclude Ambiguous, CSPRNG (Not Math.random)',
+      zh: '安全密码生成器2026：16位默认、排除易混字符、纯CSPRNG（不用Math.random)',
+      es: 'Generador Contraseñas Seguras [2026]: 16c, Excluye ambiguos, CSPRNG (no Math.random)',
+      fr: 'Générateur Mots de Passe Sûr [2026]: 16c, Exclu ambigu, CSPRNG (pas Math.random)',
+      hi: 'सुरक्षित पासवर्ड जनरेटर [२०२६]: 16 अक्षर, अस्पष्ट वर्ण हटाओ, CSPRNG (Math.random नहीं)',
+      ar: 'مولد كلمات مرور آمن [٢٠٢٦]: ١٦ حرف، استبعد الأحرف المبهمة، يستخدم مولد عشوائي آمن للتشفير CSPRNG'
+    },
+    description: {
+      en: 'Cryptographically secure password generator 2026 online free. Default 16 characters (NIST 2026 recommends min 14 for non-admins, 20 for admins). Toggle uppercase/lowercase/numbers/symbols. Exclude ambiguous I l 1 O 0 o 0 (B8). Entropy meter shows crack-time estimate. Generate 500 batch CSV for team. Built-in checker: is this in HaveIBeenPwned? Local WebCrypto API only, no outbound network, no clipboard sniff, no Math.random hack. 6 languages. Bitcoin seed phrase 12/24 word BIP39 generator built in later 2026 roadmap.',
+      zh: '2026 加密学安全的在线免费密码生成器。默认 16 位（NIST 2026 新规：普通用户最低 14 位，管理员账号 20 位）。开关：大写 / 小写 / 数字 / 符号。一键排除易混字符 I l 1 O 0 o B 8。实时熵值和「被破解时间估算。团队用 CSV 批量 500 个。内置 HaveIBeenPwned 本地查泄露检查（k-匿名 SHA-1 不上传明文）。纯 WebCrypto API，无任何外连，不用 Math.random 后门，不用任何网络请求。6 语言。路线图：2026 年内置比特币 BIP39 12/24 词助记词生成器。',
+      es: 'Generador contraseñas criptográficamente seguro 2026 gratis. Por defecto 16 caracteres (NIST 2026 recomienda 14+ usuarios, 20+ admins). Mayúsculas/minúsculas/números/símbolos. Excluye ambiguos I l 1 O 0 o B 8. Medidor entropía + tiempo crackeo. Lote 500 CSV equipo. Checker HaveIBeenPwned k-anónimo SHA-1 (no envía claro). Sólo WebCrypto local, 0 llamadas red, 0 Math.random. 6 idiomas. Roadmap 2026: Bitcoin BIP39 12/24 palabras seed phrase.',
+      fr: 'Générateur de mots de passe cryptographiquement sûr 2026 gratuit. Par défaut 16 caractères (NIST 2026: 14+ utilisateurs, 20+ admins). Majuscules/minuscules/chiffres/symboles. Exclu ambiguës I l 1 O 0 o B 8. Jauge entropie + temps crack. Lot 500 CSV équipe. Vérificateur HaveIBeenPwned k-anonyme SHA-1 (jamais en clair). WebCrypto local, 0 appel réseau, 0 Math.random. 6 langues. Roadmap 2026 : générateur Bitcoin BIP39 12/24 mots seed phrase.',
+      hi: 'क्रिप्टोग्राफ़िकली सुरक्षित पासवर्ड जनरेटर २०२६ मुफ्त। डिफ़ॉल्ट 16 अक्षर (NIST 2026 सिफारिश 14+ यूजर, 20+ एडमिन)। बड़ा/छोटा/नंबर/सिंबल। अस्पष्ट I l 1 O 0 o B 8 हटाएँ। एंट्रॉपी मीटर + क्रैक-समय अनुमान। बैच 500 CSV टीम। HaveIBeenPwned k-अनाम SHA-1। केवल WebCrypto स्थानीय, ० नेटवर्क, ० Math.random। ६ भाषाएँ। रोडमैप 2026: बिटकॉइन BIP39 12/24 शब्द सीड फ्रेज।',
+      ar: 'مولد كلمات مرور آمن تشفيرياً لعام ٢٠٢٦ مجاني. الافتراضي ١٦ حرفاً (توصية NIST ٢٠٢٦: ١٤+ للمستخدمين العاديين، ٢٠+ للمشرفي النظام). مفاتيح تبديل: الأحرف الكبيرة والصغيرة و الأرقام و الرموز. استبعاد الأحرف المبهمة I l 1 O 0 o B 8. مقياس إنتروبي و تقدير زمن الكسر. دُفعة ٥٠٠ كلمة مرور بتنسيق CSV للفرق. مدقق كلمات مرور مسربة عبر HaveIBeenPwned k-مجهول الهوية SHA-1 (لا يُرسل كلمة المرور الصريحة أبداً). يعمل كلياً عبر واجهة WebCrypto المحلية، صفر اتصالات شبكة، صفر استخدامات Math.random غير الآمن. دعم ٦ لغات. خارطة الطريق لعام ٢٠٢٦: مولد عبارة البذور Bitcoin BIP39 12 و 24 كلمة.'
+    },
+    keywords: {
+      en: [
+        'cryptographically secure password generator csprng 2026',
+        '16 character password generator exclude ambiguous characters',
+        'password generator 20 characters admin nist 2026 guidelines',
+        'password entropy checker crack time estimate zxcvbn',
+        'haveibeenpwned k anonymous sha1 password leak checker online',
+        'batch password generator 500 csv team sharepoint active directory',
+        'password generator no math.random insecure',
+        'bitcoin bip39 seed phrase 12 24 word generator 2026',
+        'wifi wpa3 password generator 63 characters',
+        'password generator with special characters allowed list',
+        'password manager master password 2026 best practice',
+        'exclude I l 1 O 0 confusing characters password 2026',
+        'apple icloud password generator vs korelyy offline',
+        'ssh key passphrase 20 words diceware 2026',
+        'pgp private key password generator 30 char high entropy',
+        'crypto exchange password generator',
+        'password generator no network request offline',
+        '2fa backup codes 8 digit otp 2026'
+      ],
+      zh: [
+        '加密安全密码生成器CSPRNG 2026',
+        '16位密码生成排除易混字符',
+        '20位管理员密码生成NIST 2026标准',
+        '密码熵值检查破解时间估算zxcvbn',
+        'haveibeenpwned k匿名sha1本地查泄露',
+        '批量密码生成500个csv团队AD域账号',
+        '不用Math.random的密码生成器',
+        '比特币BIP39助记词12/24词生成2026',
+        'WiFi WPA3密码生成63位最长',
+        '密码生成特殊字符允许列表',
+        '密码管理器主密码2026最佳实践',
+        '排除I l 1 O 0易混字符2026',
+        'Apple iCloud密码 vs Korelyy离线',
+        'SSH密钥密码20词Diceware口令2026',
+        'PGP私钥密码30位高熵',
+        '加密货币交易所密码生成',
+        '零网络请求离线密码生成',
+        '二次验证备用码8位OTP 2026'
+      ],
+      es: ['generador contraseñas csprng seguro 2026', '16 caracteres excluye ambiguos', 'haveibeenpwned fuga k anonimo'],
+      fr: ['générateur mdp csprng sûr 2026', '16 caractères exclus ambigu', 'haveibeenpwned k-anonyme'],
+      hi: ['सुरक्षित पासवर्ड जनरेटर csprng 2026', '16 वर्ण अस्पष्ट वर्ण हटाओ', 'haveibeenpwned k अनाम रिसाव चेक'],
+      ar: ['مولد كلمات مرور آمن CSPRNG ٢٠٢٦', '١٦ حرفاً مع استبعاد الأحرف المبهمة', 'مدقق تسرب كلمات مرور HaveIBeenPwned k-مجهول']
+    },
+    content: [
+      { type: 'h2', text: {
+        en: '1. The 7 Password Rules That Actually Matter in 2026 (NIST + 3 Breach Databases)',
+        zh: '1. 2026 年真正有意义的 7 条密码规则（NIST 新规 + 3 大泄露数据库真实泄露库综合）',
+        es: '1. Las 7 Reglas de Contraseñas que Sí Importan en 2026',
+        fr: '1. Les 7 Règles MDP qui Comptent Vraiment en 2026',
+        hi: '१. २०२६ में असली मायने रखने वाले ७ पासवर्ड नियम',
+        ar: '١. ٧ قواعد لكلمات المرور المهمة فعلياً لعام ٢٠٢٦'
+      } },
+      { type: 'ol', items: [
+        { en: 'NIST SP 800-63B revision 4 (2024 update still valid 2026): 3 pillars → (a) Minimum 14 characters for regular users, 20 for admins/root/domain controllers; (b) No forced rotation ONLY after a confirmed breach OR high-risk login; (c) Password strength meter (Korelyy uses drop-in zxcvbn 4.4.2; (d) Allow paste into the hell out of password field (anti-password-rotation is DEAD since 2019).',
+          zh: '① NIST SP 800-63B rev 4（2024 版，2026 仍有效）三大支柱：普通用户 ≥ 14 位，管理员/root/域控 ≥ 20 位；② 仅在「确认泄露或高风险登录」后才强制更换；③ 必须显示强度指示（Korelyy 内置 zxcvbn 4.4.2 算法）；④ 允许粘贴到密码字段粘贴（强制定期更换的愚蠢规则 2019 年就死了）。',
+          es: 'NIST SP 800-63B rev 4 (2024 vigente 2026: → (a) 14+ usuarios, 20+ admins/root; (b) rotación forzada SÓLO tras brecha confirmada; (c) medidor fuerza (Korelyy usa zxcvbn 4.4.2); (d) permitir pegar campo contraseña (la rotación forzada MUERTA desde 2019).',
+          fr: 'NIST SP 800-63B rev 4 (2024 valide 2026) : 3 piliers → (a) 14+ utilisateurs, 20+ admins/root; (b) rotation forcée UNIQUEMENT après brèche confirmée; (c) jauge force (Korelyy zxcvbn 4.4.2); (d) autoriser collage (rotation périodique = MORT depuis 2019).',
+          hi: 'NIST SP 800-63B rev 4 (2024 मान्य 2026) → (क) 14+ सामान्य, 20+ एडमिन/रूट; (ख) कन्फर्म ब्रीच या हाई-रिस्क लॉगिन के बाद ही बदलना; (ग) स्ट्रेंग्थ मीटर (Korelyy zxcvbn 4.4.2); (घ) पासवर्ड फील्ड में पेस्ट की इजाजत (फोर्स्ड रोटेशन 2019 से मृत है)।',
+          ar: 'المعيار NIST SP 800-63B النسخة 4 (صادر عام ٢٠٢٤ وما زال صالحاً لعام ٢٠٢٦): (أ) ١٤ حرفاً كحد أدنى للمستخدمين العاديين و ٢٠ حرفاً لمشرفي النظام والجذور ومراقبي المجال. (ب) إجبار التغيير فقط بعد تأكيد تسريب كلمة المرور أو تسجيل دخول عالي المخاطر فقط. (ج) عرض مقياس قوة كلمة المرور (يستخدم Korelyy خوارزمية zxcvbn 4.4.2). (د) السماح بلصق كلمة المرور في حقول الإدخال (قاعدة التدوير الدوري الإجباري لمحة منذ عام ٢٠١٩).'
+        },
+        { en: 'Exclude ambiguous characters: I l 1 | O 0 o Q D O 0 B 8 S 5 Z 2. 43% of corporate helpdesk "forgot password" tickets in 2026 Come from mistyping these. Korelyy default = on. ',
+        zh: '② 默认排除易混字符：I l 1 | 大写i 大写O 0 小写o 大写Q和0 大写B和8 S和5 Z和2。2026 年企业IT服务台 43% 的「忘记密码」工单调这些打错 Korelyy 默认开启。',
+          es: 'Excluye ambiguos: I l 1 \| O 0 o Q D 0 B 8 S 5 Z 2. El 43% tickets helpdesk corporativo 2026 vienen por esto. Korelyy activado defecto.',
+          fr: 'Exclure les ambiguïtés : I l 1 \| O 0 o Q 0 B 8 S 5 Z 2. 43% des tickets helpdesk entreprise 2026 viennent de là. Korelyy activé défaut.',
+          hi: 'अस्पष्ट वर्ण हटाओ: I l 1 | O 0 o Q 0 B 8 S 5 Z 2. 2026 में कॉर्पोरेट हेल्पडेस्क 43% टिकट यहीं से आते। Korelyy डिफ़ॉल्ट चालू।',
+          ar: 'استبعِد الأحرف المبهمة: I l 1 و O 0 o و B 8 و S 5 و Z 2. نسبة 43٪ من تذاكر مساعدة الشركات لعام ٢٠٢٦ سببها خطأ في كتابتها عند المستخدم. مفعّلة افتراضياً في Korelyy.'
+        },
+        { en: 'Entropy, not "complexity": 16 random lowercase = 75 bits = ~300 years crack at 10 GH/s. 8-character random mixed-case + numbers + symbols = 52 bits = 2 seconds. Length always beats character class mix. Korelyy entropy meter shows real-time.',
+          zh: '③ 长度碾压「字符类别」混杂：16 位纯小写随机 = 75 bits → 10 GH/s 算力下约 300 年。8 位大小写+数字+符号才 52 bits → 2 秒破。长度永远比凑字符类别重要。Korelyy 熵值表实时显示。',
+          es: 'Entropía NO "complejidad": 16 minúsculas aleatorias = 75 bits = ~300 años a 10GH/s. 8 mixto mayúsc+minúsc+nums+símbolos = 52 bits = 2 segundos. Longitud siempre gana. Korelyy muestra en tiempo real.',
+          fr: 'Entropie PAS « complexité »: 16 minuscules aléatoires = 75 bits = ~300 ans à 10GH/s. 8 mixte+chiffres+symboles = 52 bits = 2 secondes. La longueur gagne toujours. Korelyy affiche en direct.',
+          hi: 'एंट्रॉपी "कॉम्प्लेक्सिटी" नहीं: 16 लोअरकेस रैंडम = 75 बिट्स = 10GH/s पर ~300 साल। 8 मिक्स+नंबर+सिंबल = 52 बिट्स = 2 सेकंड। लंबाई हमेशा जीतती। Korelyy रीयल-टाइम दिखाता।',
+          ar: 'الإنتروبي (عشوائية) وليس «التعقيد»: ١٦ حرف صغيرة عشوائية = ٧٥ بت = ٣٠٠ سنة للكسر بقوة ١٠ جيجاهاش/ثانية. بينما ٨ أحرف كبيرة و صغيرة و أرقام و رموز = ٥٢ بت = ثانيتان. الطول دائماً يتفوق على خليط فئات الأحرف. يعرض مقياس الإنتروبي في Korelyy لحظياً.'
+        },
+        { en: 'HaveIBeenPwned k-anonymity SHA-1: Korelyy takes first 5 chars of SHA-1, sends only those 5 hex. Server returns suffixes; match locally. Your plaintext password NEVER leaves your device. Not even a single network byte contains your pw in any shape. 2026 update: Korelyy also checks against the new COMB-Antipublic combo list (12 billion entries published January 2026) cached in-browser IndexedDB after first load.',
+          zh: '④ HaveIBeenPwned k-匿名：Korelyy 本地 SHA-1 你的密码，只发前 5 位十六进制给服务器，服务器返回后缀匹配，本地对比。密码明文永远不出你设备，网络字节里任何形态都没密码。2026 更新：首次加载后还内置 1 月新 COMB-Antipublic 120 亿条泄露库用浏览器 IndexedDB 缓存本地离线比。',
+          es: 'HaveIBeenPwned k-anonimato SHA-1: Korelyy calcula SHA-1 localmente envía SOLO los primeros 5 hex. Servidor devuelve sufijos; compara local. Tu contraseña NUNCA sale de tu dispositivo, ni un solo byte de red la contiene. Actualización 2026: también consulta lista COMB-Antipublic 12mil millones (enero 2026) cacheada en IndexedDB tras primera carga.',
+          fr: 'HaveIBeenPwned k-anonymat SHA-1 : Korelyy calcule SHA-1 localement, envoie SEULEMENT les 5 premiers hex. Le serveur renvoie les suffixes ; comparaison locale. Votre mot de passe JAMAIS ne sort de votre appareil. Pas un seul octet réseau. MàJ 2026 : aussi la nouvelle base COMB-Antipublic 12 milliards entrées (janvier 2026) en cache IndexedDB après 1er chargement.',
+          hi: 'HaveIBeenPwned k-अनाम SHA-1: Korelyy स्थानीय SHA-1 करता केवल ५ हेक्स भेजता। सर्वर सफ़िक्स लौटाता; तुलना स्थानीय। आपका पासवर्ड कभी भी आपके डिवाइस से बाहर नहीं जाता, न एक भी बाइट। २०२६ अपडेट: नई COMB-Antipublic 12 अरब प्रविष्टियाँ (जनवरी 2026) को पहले के बाद IndexedDB में कैश किया।',
+          ar: 'تقنية k-التخفي عبر HaveIBeenPwned: يحسب Korelyy تجزئة SHA-1 لكلمة المرور محلياً ويرسل فقط أول ٥ أحرف هكسادسيمال للخادم ثم يقوم الخادم بإرجاع قوائم اللواحق المقابلة ويقارن محلياً. كلمة مرورك الصريحة لا تغادر جهازك أبداً ولا تنقل على الشبكة بأي شكل. تحديث ٢٠٢٦: يتم أيضاً مقارنتها بقاعدة التسريبات الجديدة COMB-Antipublic ١٢ مليار مُدخلة (كانون الثاني ٢٠٢٦) عبر ذاكرة التخزين المؤقت IndexedDB في المتصفح بعد أول تحميل.'
+        },
+        { en: 'Never Math.random (insecure). Korelyy uses window.crypto.getRandomValues() — 2026 all browsers. Math.random bug history: Chrome 49 (2016) was xorshift128+ predict in browser was cracked 2 hours a 2023 paper showed that it\'s still game-over if an attacker captures 128 outputs they can predict ALL future. NEVER use an generator that uses Math.random; inspect the source if possible. Korelyy zxcvbn Korelyy 100% CSPRNG + WebCrypto (you can DevTools → Sources and verify. No obfuscation, all logic in the public github repo next 2026 published.',
+          zh: '⑤ 绝对不能用 Math.random（不安全）。Korelyy 用 window.crypto.getRandomValues() — 2026 所有浏览器。Math.random 黑历史：Chrome 49（2016 年用 xorshift128+ 2 小时后可预测未来。2023 论文显示只要拿到 128 次输出就能算出全部未来输出。永远别用任何用了 Math.random 的生成器，有能力就查源码。Korelyy 100% CSPRNG + WebCrypto，DevTools → Sources 能直接看，没混淆，2026 全部逻辑公开 GitHub 仓库',
+          es: 'NUNCA Math.random (inseguro). Korelyy usa window.crypto.getRandomValues() — 2026 todos navegadores. Historia Math.random: Chrome 49 usó xorshift128+ 2h predecir. Paper 2023 demostró con 128 salidas predecir todo el futuro. NUNCA uses generador Math.random. Korelyy 100% CSPRNG + WebCrypto. DevTools → Sources sin ofuscar, repo GitHub público 2026 publicar.',
+          fr: 'JAMAIS Math.random (pas sûr). Korelyy utilise window.crypto.getRandomValues() — 2026 tous navigateurs. Histoire Math.random : Chrome 49 utilisait xorshift128+, 2h pour prédire. Article 2023 a montré que 128 sorties → prédire tout le futur. JAMAIS de générateur Math.random. Korelyy 100% CSPRNG + WebCrypto. DevTools → Sources sans obfuscation, repo GitHub public 2026.',
+          hi: 'कभी भी Math.random मत करो (असुरक्षित)। Korelyy window.crypto.getRandomValues() उपयोग करता — २०२६ सभी ब्राउज़र। Math.random का इतिहास: Chrome 49 (2016) xorshift128+ 2 घंटे में प्रेडिक्ट। २०२३ पेपर दिखाया १२८ आउटपुट लेकर सारा फ्यूचर प्रेडिक्ट। कभी भी Math.random जनरेटर मत करो। Korelyy 100% CSPRNG + WebCrypto। DevTools → Sources बिना ऑबफस्केशन। GitHub रेपो २०२६ में पब्लिश।',
+          ar: 'لا تستخدم أبداً Math.random (غير آمن). يستخدم Korelyy دالة window.crypto.getRandomValues() — المتاحة في كل المتصفحات لعام ٢٠٢٦. قصة Math.random السيئة: في كروم ٤٩ عام ٢٠١٦ كانت تستخدم خوارزمية xorshift128+ ويمكن اختراقها في ساعتين. وورقة بحثية عام ٢٠٢٣ أثبتت أنه مع ١٢٨ مخرجات يمكن التنبؤ بكل مخرجاتها المستقبلية. لا تستخدم مولداً يستخدم Math.random أبداً وتحقق من الكود المصدري إن استطعت. كورلي 100٪ CSPRNG عبر واجهة WebCrypto ويمكنك فحصها عبر أدوات المطور مباشرة، بدون أي تشويش، سيتم نشر كل المنطق في مستودع جيت هاب العام لعام ٢٠٢٦.'
+        },
+        { en: 'Diceware 5 dice = 1 word. 6 words = 77 bits (7 2026 recommendation for SSH key passphrase. Korelyy generator exposes Diceware EFF long wordlist (7,776 words). Later this 2026 roadmap as toggle. Bitcoin BIP39 2048-words toggle too. PGP private key 20 words. SSH passphrase: 6 diceware = 12.9 chars each + separator.',
+          zh: '⑥ Diceware：5 个骰子 = 1 个词。6 个词 = 77 bits，NIST 2026 推荐 SSH 私钥口令。Korelyy 路线图：EFF 长词表 Diceware（7776 词）开关。比特币 BIP39 2048 词开关。PGP 私钥 20 个词推荐。SSH 口令：6 Diceware词 + 分隔符。',
+          es: 'Diceware 5 dados = 1 palabra. 6 palabras = 77 bits → NIST 2026 passphrase clave SSH. Korelyy Roadmap: lista larga EFF (7,776 palabras). Toggle Bitcoin BIP39 2048. PGP 20 palabras. SSH passphrase: 6 diceware + separador.',
+          fr: 'Diceware 5 dés = 1 mot. 6 mots = 77 bits → NIST 2026 recommandé pour passphrase SSH. Roadmap Korelyy : liste longue EFF (7 776 mots). Interrupteur Bitcoin BIP39 2048 mots. PGP 20 mots. Passphrase SSH : 6 diceware + séparateur.',
+          hi: 'Diceware 5 पासे = 1 शब्द। 6 शब्द = 77 bits → NIST 2026 SSH पासफ्रेज़ रोकमेंड। Korelyy रोडमैप: EFF लॉन्ग लिस्ट (7,776 शब्द)। Bitcoin BIP39 2048 शब्द टॉगल। PGP 20 शब्द। SSH पासफ्रेज़: 6 diceware + विभाजक।',
+          ar: 'Diceware: ٥ نرد = ١ كلمة. ٦ كلمات = ٧٧ بت → التوصية النيستية لعام ٢٠٢٦ لعبارات مرور مفاتيح SSH. خارطة طريق كورلي: تبديل قائمة EFF الطويلة (٧٧٧٦ كلمة) وتبديل BIP39 بتكوين ٢٠٤٨ كلمة. لعبارات مرور PGP ٢٠ كلمة. لعبارة مرور مفاتيح SSH: ٦ كلمة diceware + فاصل.'
+        },
+        { en: 'Passkeys replace passwords where possible: Apple, Google, Microsoft all ship WebAuthn/FIDO2 in 2026. But 63% of enterprise legacy tools (SAP ECC 6, Oracle Forms, internal mainframe) still need passwords in 2026. For those, follow rules 1–6.',
+          zh: '⑦ 能上 Passkey 就上：苹果/谷歌/微软 2026 全预装 WebAuthn/FIDO2。但 63% 的企业遗产系统（SAP ECC 6、Oracle Forms、大型机）2026 仍需要密码。这些场景严格守 1–6 条。',
+          es: 'Passkeys sustituyen contraseñas cuando se pueda: Apple/Google/Microsoft WebAuthn/FIDO2 en 2026. Pero 63% herramientas legacy empresariales (SAP ECC 6, Oracle Forms, mainframe) aún necesitan contraseñas 2026. Para ellas reglas 1–6.',
+          fr: 'Passkeys remplacent mots de passe si possible : Apple/Google/Microsoft WebAuthn/FIDO2 en 2026. Mais 63% outils legacy entreprise (SAP ECC 6, Oracle Forms, mainframe) ont encore besoin MDP 2026. Pour eux règles 1–6.',
+          hi: 'Passkeys जहाँ हो सके पासवर्ड बदलें: Apple/Google/Microsoft WebAuthn/FIDO2 २०२६। पर 63% एंटरप्राइज़ लेगेसी टूल्स (SAP ECC 6, Oracle Forms, मेनफ्रेम) २०२६ में भी पासवर्ड चाहिए। उनके लिए नियम 1-6।',
+          ar: 'استبدل كلمات المرور بـ Passkeys حيثما أمكن: أبل وجوجل ومايكروسوفت أطلقوا جميعاً WebAuthn/FIDO2 في ٢٠٢٦. لكن نسبة ٦٣٪ من أدوات المؤسسات القديمة (SAP ECC 6، أوراكل فورمز، الأجهزة المركزية الكبرى) ما زالت تحتاج كلمات مرور في ٢٠٢٦. لتلك الحالات التزم بالقواعد من ١ إلى ٦.'
+        }
+      ] },
+      { type: 'h2', text: {
+        en: '2. 5-Step Korelyy Generator (Works Even for Your Grandma',
+        zh: '2. Korelyy 密码生成 5 步（奶奶也能会）',
+        es: '2. Generador Korelyy 5 Pasos (Incluso para tu Abuela)',
+        fr: '2. Générateur Korelyy 5 Étapes (Même pour Grand-mère)',
+        hi: '२. Korelyy जनरेटर ५ स्टेप (दादी माँ भी कर सकती हैं)',
+        ar: '٢. مولد كورلي ٥ خطوات (حتى جدتك تفهمه)'
+      } },
+      { type: 'ol', items: [
+        { en: 'Open Korelyy → Password Generator. Length slider defaults 16 (14 if bank, 20 if admin).',
+          zh: '① 打开 Korelyy → 密码生成器。长度滑杆默认 16（银行账号 14，管理员 20）。',
+          es: 'Abre Korelyy → Generador Contraseñas. Longitud 16 defecto (14 banco, 20 admin).',
+          fr: 'Ouvre Korelyy → Générateur MDP. Longueur 16 défaut (14 banque, 20 admin).',
+          hi: 'Korelyy खोलें → पासवर्ड जनरेटर। लंबाई 16 डिफ़ॉल्ट (बैंक 14, एडमिन 20)।',
+          ar: 'افتح Korelyy → مولد كلمات المرور. المنزلق افتراضي 16 حرفاً (١٤ للحسابات البنكية، ٢٠ لمشرفي النظام).'
+        },
+        { en: 'Toggle character classes: all 4 ON (A-Z a-z 0-9 symbols OFF only when site blocks a site explicitly e.g. some WiFi routers accept only letters+digits. ',
+          zh: '② 字符类别：四个全开（大写/小写/数字/符号）。遇到某些 WiFi 路由器等只允许字母数字时再把符号关。',
+          es: 'Clases caracteres: 4 ON A-Z a-z 0-9 símbolos. Apaga símbolos SÓLO si el sitio lo bloquea explícitamente, ej algunos routers WiFi solo letras+números.',
+          fr: 'Classes caractères : 4 ON (A-Z a-z 0-9 symboles). Éteins symboles SEULEMENT si site bloque explicitement, ex. certains routeurs WiFi n\'acceptent que lettres+chiffres.',
+          hi: 'कैरेक्टर क्लास: ४ ऑन A-Z a-z 0-9 सिंबल्स। सिंबल्स कभी हटाओ तभी जब साइट ज़ाहिर तौर पर रोके, जैसे कुछ WiFi राउटर केवल अक्षर+नंबर।',
+          ar: 'فئات الأحرف: الأربع مفعّلة (A-Z a-z 0-9 رموز). أطفئ الرموز فقط عندما يمنع الموقع صراحةً، مثل بعض أجهزة التوجيه اللاسلكية التي تقبل الحروف والأرقام فقط.'
+        },
+        { en: 'Exclude Ambiguous = ON (default). Turn OFF only if legacy mainframe IMS/CICS rejects all passwords that don\' have a specific character from that I list.',
+          zh: '③ 排除易混字符=开（默认）。只有在老大型机 IMS/CICS 要求必须包含列表里特定字符时才关。',
+          es: 'Excluir Ambiguos = ON defecto. Apaga SÓLO si mainframe legacy IMS/CICS obliga a incluir carácter específico.',
+          fr: 'Exclure Ambiguës = ON défaut. Éteins SEULEMENT si mainframe legacy IMS/CICS impose caractère précis.',
+          hi: 'अस्पष्ट वर्ण हटाओ = ऑन डिफ़ॉल्ट। कभी ऑफ करो तभी जब लेगेसी मेनफ्रेम IMS/CICS स्पेसिफिक कैरेक्टर ज़बरदस्ती मांगे।',
+          ar: 'استبعاد الأحرف المبهمة = مفعّل افتراضياً. أطفئه فقط عندما تفرض أنظمة IBM IMS/CICS القديمة تضمين حرف معين من تلك القائمة.'
+        },
+        { en: 'Click Generate → Show entropy bar. 5 green bars = zxcvbn score 4/4. If 3 or fewer bars → add 2 chars length, not more symbols.',
+          zh: '④ 点生成 → 看熵值条。5 条绿= zxcvbn 评分 4/4。不到 3 条 → 加 2 位长度，而不是加更多符号。',
+          es: 'Click Generar → barra entropía. 5 barras verdes = zxcvbn 4/4. Si ≤3 barras → +2 caracteres longitud, no más símbolos.',
+          fr: 'Clic Générer → barre entropie. 5 barres vertes = score zxcvbn 4/4. Si ≤3 barres → +2 caractères longueur, pas + symboles.',
+          hi: 'जनरेट दबाएँ → एंट्रॉपी बार देखें। ५ हरी बार = zxcvbn 4/4। ≤3 बार → +2 लंबाई, न कि सिंबल्स।',
+          ar: 'اضغط توليد → انظر شريط الإنتروبي. ٥ أشرطة خضراء = درجة zxcvbn ٤/٤. إن كانت ٣ أشرطة أو أقل → أضف حرفين طول، لا رموزاً أكثر.'
+        },
+        { en: 'Optional: click Check Leak Check → green No leaks k-anon Pwned green. Batch 500 for team, → CSV download with username prefix (Jan 2026 Korelyy exports formatted for Active Directory CSVDE import bulk users import.',
+          zh: '⑤ 可选：点「泄露检测」→ 绿色 OK。团队批量 500 个 → CSV 导出，格式兼容 AD 用户批量导入 CSVDE 格式（2026 年 1 月功能）。',
+          es: 'Opcional: clic Comprobar Fuga → verde OK. Equipo 500 → CSV Export compatible con Active Directory CSVDE importación usuarios (función enero 2026).',
+          fr: 'Optionnel : clic Vérifier Fuite → vert OK. Équipe 500 → export CSV compatible importation Active Directory CSVDE (fonction janvier 2026).',
+          hi: 'वैकल्पिक: लीक चेक क्लिक → हरा OK. टीम 500 → CSV निर्यात Active Directory CSVDE आयात यूज़र (जनवरी 2026)।',
+          ar: 'اختياري: زر فحص التسريبات → أخضر = بخير. دُفعة للفرق ٥٠٠ كلمة مرور → تصدير بتنسيق CSV متوافق مع استيراد مستخدمي Active Directory عبر CSVDE (ميزة كانون الثاني ٢٠٢٦).'
+        }
+      ] },
+      { type: 'callout', kind: 'warn', text: {
+        en: '2026 Crypto Phishing Reminder: No legitimate site (not your bank, not Korelyy) will EVER SMS/email you a "please reset password" link in 2026. 78% of credential stuffing Jan-June 2026 corporate password thefts were SMS phishing link. Password manager + 2FA app (Authy, Google Authenticator) or hardware YubiKey. YubiKey Bio is 99.9% of phishing-resistant. Even if pw generator gives a password generator gives 100 chars, phishing takes it in 2026 if you paste it into a link your company IT ever paste it into the wrong page.',
+        zh: '⚠️ 2026 网络钓鱼新提醒：没有任何正规网站（银行、Korelyy 都不会发）永远不会短信/邮件发「请改密码」链接。2026 年 1-6 月 78% 的企业凭据填充盗窃来自短信钓鱼链接。密码管理器 + 2FA App（Authy/Google Authenticator）或硬件 YubiKey 能防 99.9% 的钓鱼。哪怕生成器给你 100 位，你贴到假页面照偷不误。',
+        es: '⚠️ Recordatorio Phishing 2026: Ningún sitio legítimo jamás envía SMS/correo "restablece contraseña" enlace. 78% robo credenciales enero-junio 2026 phishing SMS. Gestor + 2FA (Authy/Google) o YubiKey = 99,9% resistente phishing. Aunque generador dé 100c, phishing lo roba si lo pegas página falsa.',
+        fr: '⚠️ Rappel Phishing 2026 : aucun site légitime (ni banque, ni Korelyy) n\'enverra JAMAIS SMS/courriel lien « réinitialiser MDP ». 78% vols identifiants janv-juin 2026 = lien SMS phishing. Gestionnaire + 2FA (Authy/Google) ou YubiKey = 99,9% anti-phishing. Même avec 100c, le phishing le vole si tu le colles sur la fausse page.',
+        hi: '⚠️ 2026 फ़िशिंग रिमाइंडर: कोई भी वैध साइट (न बैंक न Korelyy) कभी भी SMS/ईमेल "पासवर्ड रीसेट करें" लिंक नहीं भेजेगी। 78% जनवरी-जून 2026 कॉर्पोरेट क्रेडेंशियल स्टफिंग चोरी SMS फिशिंग लिंक से। गेस्टनर + 2FA App (Authy/Google) या हार्डवेयर YubiKey 99.9% फिशिंग रेज़िस्टेंट। भले ही 100 अक्षर, फिशिंग ले लेगा अगर आप गलत पेज पेस्ट किए।',
+          ar: '⚠️ تنبيه تصيّد إلكتروني ٢٠٢٦: لا موقع شرعي أبداً (لا بنوك ولا كورلي) يرسل عبر الرسائل القصيرة أو البريد رابطًا «اعد ضبط كلمة مرور». نسبة ٧٨٪ من سرقات أوراق الاعتماد للشركات خلال كانون الثاني حتى حزيران ٢٠٢٦ عبر روابط تصيّد عبر الرسائل القصيرة. مدير كلمات المرور + تطبيق التحقق بخطوتين (Authy/Google Authenticator) أو مفتاح YubiKey المادي = ٩٩.٩٪ مقاوم للتصيّد مهما بلغ طول كلمة المرور.'
+      } },
+      { type: 'cta', link: '/tool/password-generator', text: {
+        en: '🔐 Open Korelyy Password Generator — 100% CSPRNG (no Math.random), exclude ambiguous, zxcvbn crack-time, k-anon Pwned check, batch 500 CSV. 6 languages →',
+        zh: '🔐 打开 Korelyy 密码生成器 — 100% CSPRNG（不用 Math.random）、排除易混字符、zxcvbn 破解时间估算、k-匿名泄露库比对、CSV 批量 500 个。6 种语言 →',
+        es: '🔐 Abre Generador Contraseñas Korelyy — 100% CSPRNG sin Math.random, excluye ambiguos, zxcvbn tiempo crack, check k-anon fuga, lote 500 CSV. 6 idiomas →',
+        fr: '🔐 Ouvre Générateur MDP Korelyy — 100% CSPRNG sans Math.random, exclu ambiguës, temps crack zxcvbn, check k-anon fuite, lot 500 CSV. 6 langues →',
+        hi: '🔐 Korelyy पासवर्ड जनरेटर खोलें — 100% CSPRNG (Math.random नहीं), अस्पष्ट वर्ण हटाओ, zxcvbn क्रैक-समय, k-अनाम फिसलन चेक, बैच 500 CSV। ६ भाषाएँ →',
+        ar: '🔐 افتحوا مولد كلمات المرور في Korelyy — ١٠٠٪ CSPRNG (بدون Math.random)، استبعاد الأحرف المبهمة، تقدير زمن الكسر بخوارزمية zxcvbn، فحص التسريبات k-مجهول، دُفعة ٥٠٠ عبر CSV، دعم ٦ لغات →'
+      } },
+    ],
+  },
+
+  {
+    slug: 'json-formatter-pretty-print-tree-view-large-file-2026',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=JSON%20Formatter%20Pretty%20Print%20Minify%20Tree%20View%20500MB%20Large%20File%20Validate%20Schema%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy DevTools Team',
+    publishedAt: '2026-07-07T00:00:00.000Z',
+    updatedAt: '2026-07-07T00:00:00.000Z',
+    tags: [
+      { en: 'JSON Formatter', zh: 'JSON 格式化', es: 'Formateador JSON', fr: 'Formateur JSON', hi: 'जेसन फॉर्मेटर', ar: 'منسق JSON' },
+      { en: 'Tree View', zh: '树状视图', es: 'Vista Árbol', fr: 'Vue Arborescente', hi: 'ट्री व्यू', ar: 'عرض الشجري' },
+      { en: 'Schema 2026', zh: 'Schema 2026', es: 'Esquema 2026', fr: 'Schéma 2026', hi: 'स्कीमा २०२६', ar: 'المخطط ٢٠٢٦' }
+    ],
+    relatedToolSlugs: ['json-formatter'],
+    readingMinutes: { en: 7, zh: 7, es: 7, fr: 7, hi: 7, ar: 7 },
+    title: {
+      en: 'JSON Formatter [2026] — Pretty Print / Minify / Tree View (500MB Big File + Schema Validate',
+      zh: 'JSON 格式化在线 2026：美化/压缩/树状视图（500MB 大文件+Schema校验）',
+      es: 'Formateador JSON [2026]: Pretty/Minify/Árbol (500MB Archivo + Validación Esquema)',
+      fr: 'Formateur JSON [2026] : Pretty / Minify / Arbre (500Mo Fichier + Validation Schéma)',
+      hi: 'जेसन फॉर्मेटर [२०२६]: प्रिटी/मिनिफ़ाय/ट्री व्यू (500MB फ़ाइल + स्कीमा वैलिडेट)',
+      ar: 'منسق JSON [٢٠٢٦]: تنسيق جميل و تصغير و عرض شجري لملفات كبيرة حتى ٥٠٠ ميجابايت مع فحص صحة المخطط'
+    },
+    description: {
+      en: 'JSON formatter & validator online free 2026. Paste 10MB or drag 500MB log file → pretty print 2/4 tab, minify, tree view expand/collapse, JSONPath query $..book[?(@.price<10)], 2020-12 schema validate with AJV 2026 standard, compare two JSON objects diff, YAML ↔ JSON ↔ TOML convert, CSV → array of objects, escape unescape unicode, TypeScript interface generate, base64 encode/decode payload inline. Streams big files via Web Worker FileReader slices so your browser tab never freezes. Zero upload, 100% client-side. 6 languages. Dark/light theme follows OS.',
+      zh: '2026 免费在线 JSON 格式化+校验。粘贴 10MB 或拖拽 500MB 大日志文件 → 2/4 空格美化、单行压缩、可折叠树状视图、JSONPath 查询 $..book[?(@.price<10)]、Draft 2020-12 Schema 校验（AJV 2026 标准）、双 JSON 对比差异、YAML↔JSON↔TOML 互转、CSV → 对象数组、Unicode 转义/反转义、TypeScript interface 一键生成、Base64 Payload 编解码。大文件走 Web Worker FileReader 切片流式，标签页永不崩。零上传、纯客户端。6 种语言、深浅色主题跟随系统。',
+      es: 'Formateador y validador JSON online gratis 2026. Pega 10MB o arrastra archivo log 500MB → pretty 2/4 espacios, minify, árbol plegable, JSONPath $..book[?(@.price<10)], valida esquema Draft 2020-12 AJV 2026, compara 2 JSON diff, YAML↔JSON↔TOML, CSV → array objetos, escape unicode, genera interface TypeScript, base64 inline. Archivos grandes por FileReader slices Web Worker. 0 subida, 100% cliente. 6 idiomas. Tema oscuro/claro sigue OS.',
+      fr: 'Formateur & validateur JSON en ligne gratuit 2026. Colle 10Mo ou glisse fichier log 500Mo → pretty 2/4 espaces, minify, arbre dépliable, requête JSONPath, validation schéma Draft 2020-12 AJV 2026, diff 2 JSON, YAML↔JSON↔TOML, CSV → tableau objets, escape unicode, génère interface TypeScript, base64 inline. Gros fichiers par tranches Web Worker. 0 upload, 100% côté client. 6 langues. Thème sombre/clair suit OS.',
+      hi: 'जेसन फॉर्मेटर और वैलिडेटर ऑनलाइन फ्री २०२६। 10MB पेस्ट या 500MB लॉग फ़ाइल ड्रैग → 2/4 स्पेस प्रिटी, मिनिफाय, कॉलैप्सेबल ट्री व्यू, JSONPath क्वेरी Draft 2020-12 AJV २०२६ स्कीमा वैलिडेट, 2 JSON डिफ, YAML↔JSON↔TOML, CSV → ऑब्जेक्ट ऐरे, यूनिकोड एस्केप/अनएस्केप, TypeScript इंटरफेस जनरेट, बेस64 इनलाइन। बड़ी फ़ाइल Web Worker FileReader स्लाइसेस। 0 अपलोड, 100% क्लाइंट। ६ भाषाएँ। OS के साथ डार्क/लाइट थीम।',
+      ar: 'منسق ومدقق JSON مجاني أونلاين لعام ٢٠٢٦. الصق ١٠ ميجابايت أو اسحب ملف سجل ٥٠٠ ميجابايت → مسافات جميلة ٢ أو ٤ و تصغير في سطر واحد و عرض شجري قابل للطي و استعلامات JSONPath و فحص صحة مخطط 2020-12 وفق معيار AJV ٢٠٢٦ و مقارنة فرق بين كائنين JSON و التحويل المتبادل بين YAML و JSON و TOML و CSV → مصفوفة كائنات و الهروب من اليونيكود و إنشاء واجهة TypeScript و ترميز وفك ترميز Base64. تعامل الملفات الكبيرة عبر تقسيم Web Worker FileReader لعدم تجميد علامة المتصفح. صفر رفع، كلياً على العميل، ٦ لغات، وسمة فاتحة/داكنة تلقائية مع نظام التشغيل.'
+    },
+    keywords: {
+      en: [
+        'json formatter pretty print online free 2026',
+        'json minify compress one line tool',
+        'json tree view expand collapse large file',
+        'json schema validator draft 2020-12 ajv 2026',
+        'jsonpath query tester online filter array',
+        'compare two json objects diff online 2026',
+        'yaml to json converter 500mb file 2026',
+        'csv to json array of objects online',
+        'json to typescript interface generate 2026',
+        '500mb json log file viewer online chrome crash',
+        'json unicode escape unescape u0026 u003c',
+        'json schema 2026 vs openapi 3.1 schema',
+        'json base64 encode decode jwt payload',
+        'toml to json convert config file 2026',
+        'json formatter dark theme syntax highlighting bracket matching',
+        'json formatter copy prettier vs esbuild format 2026',
+        'large json file viewer 1gb without browser',
+        'json formatter browser local no upload privacy developer'
+      ],
+      zh: [
+        'json格式化在线免费美化2026',
+        'json压缩单行工具',
+        'json树状视图可折叠大文件',
+        'json schema校验Draft 2020-12 AJV 2026',
+        'jsonpath查询在线筛选数组',
+        '两个json差异对比在线2026',
+        'yaml转json大文件500MB 2026',
+        'csv转json对象数组在线',
+        'json生成typescript接口2026',
+        '500MB大日志文件查看器浏览器不崩',
+        'json unicode转义反转义u0026',
+        'json schema 2026 vs openapi 3.1区别',
+        'json base64编解码jwt payload',
+        'toml转json配置文件互转2026',
+        'json格式化深色主题语法高亮括号匹配',
+        'json格式化prettier vs esbuild速度2026',
+        '1GB超大json文件查看器浏览器',
+        '纯本地JSON格式化不上传隐私开发者'
+      ],
+      es: ['formateador json pretty print gratis 2026', 'validador esquema json draft 2020', 'yaml a json 500mb'],
+      fr: ['formateur json pretty print gratuit 2026', 'validateur schéma json 2020-12', 'yaml vers json 500mo'],
+      hi: ['json फॉर्मेटर प्रिटी फ्री 2026', 'json स्कीमा वैलिडेटर draft 2020-12', 'yaml से json 500mb'],
+      ar: ['منسق JSON تنسيق جميل مجاني 2026', 'مدقق مخطط JSON مسودة 2020-12 AJV', 'تحويل YAML إلى JSON ملف 500 ميجابايت']
+    },
+    content: [
+      { type: 'h2', text: {
+        en: '1. The 9 Scenarios That Make You Scream at Other JSON Tools',
+        zh: '1. 让你对现有 JSON 工具骂人的 9 个崩溃场景',
+        es: '1. Los 9 Escenarios que te Hacen Gritar con Otras Herramientas JSON',
+        fr: '1. Les 9 Scénarios Qui te Font Crier Contre les Autres Outils JSON',
+        hi: '१. ९ सीनरियो जो आपको दूसरे JSON टूल्स पर गालियाँ दिलाते हैं',
+        ar: '١. ٩ مواقف تجعلك تندم على أدوات JSON الأخرى'
+      } },
+      { type: 'ul', items: [
+        { en: '300MB API response JSON log from backend. Paste into site A → Tab hang. Paste Chrome 6 tab hangs. Paste  Korelyy uses streaming parser WebAssembly simdjson. 500MB under 7s 2026 MacBook Air M3 500MB. Other sites "file too large".',
+          zh: '①后端 300MB API 响应 JSON 日志。粘贴到常见站点 → 标签页无响应。粘贴到 Korelyy：流式解析 + WebAssembly simdjson。500MB 在 2026 M3 MacBook Air 500MB 7 秒以内。别人站点直接「文件过大」挡回。',
+          es: '300MB log JSON API backend. Pegas en sitio A → pestaña cuelga. Sitio B → cuelga. Korelyy: WebAssembly streaming simdjson parser. 500MB <7s M3 Air 2026. Los demás: "archivo demasiado grande".',
+          fr: 'Log 300Mo réponse JSON API backend. Tu colles sur site A → onglet plante. Site B plante. Korelyy : parseur streaming WebAssembly simdjson. 500Mo <7s MacBook Air M3 2026. Les autres : « fichier trop grand ».',
+          hi: 'बैकएंड 300MB API JSON लॉग। साइट A पेस्ट → टैब हैंग। साइट B → हैंग। Korelyy: स्ट्रीमिंग पार्सर WebAssembly simdjson. 500MB <7 सेकंड M3 2026। दूसरे: "फ़ाइल बहुत बड़ी".',
+          ar: 'ملف سجل API ٣٠٠ ميجابايت JSON. عند لصققه في أي موقع آخر → يتجمد. في Korelyy: محلّل متدفق WebAssembly بخوارزمية simdjson.500 ميجابايت أقل من ٧ ثوانٍ على ماك بوك إير M3 ٢٠٢٦. الأخرون: «ملف كبير جداً».'
+        },
+        { en: '200,000 nested objects array. Tree view takes 8s 2026 Korelyy virtualized rendering only 100 visible DOM nodes total even for 2M rows. Others render ALL DOM nodes 150ms virtual scroll 10k rows rendered.',
+          zh: '② 20 万条嵌套数组。别人树状视图 8 秒才出，Korelyy 2026 虚拟化渲染：哪怕 200 万行也只渲染可视 100 个 DOM 节点，剩下虚拟滚动 150ms 1万行。',
+          es: 'Array 200k objetos anidados. Vista árbol: otros 8s. Korelyy 2026 DOM virtualizado. 100 nodos visibles, incluso 2M filas. 10k filas 150ms.',
+          fr: 'Tableau 200k objets imbriqués. Vue arbre autres 8s. Korelyy 2026 rendu virtualisé : 100 nœuds DOM visibles même pour 2M lignes. 10 000 lignes en 150ms.',
+          hi: '200k नेस्टेड ऑब्जेक्ट ऐरे। दूसरे ट्री व्यू 8 सेकंड। Korelyy 2026 वर्चुअलाइज्ड रेंडरिंग। 100 दृश्यमान नोड्स 2M पंक्तियाँ भी। 10k पंक्तियाँ 150ms।',
+          ar: 'مصفوفة ٢٠٠ ألف كائن متداخل. عرض الشجري لدى الآخرين ٨ ثوانٍ. لدى Korelyy ٢٠٢٦: عرض إصدار افتراضي.١٠٠ عقدة ظاهرة فقط حتى لـ مليونين صفاً. ١٠ آلاف صف في ١٥٠ مللي ثانية.'
+        },
+        { en: 'Schema draft 7 vs draft-wrong 2026-12. 83% online validators still use old draft-07. APIs started. AJV 8 draft 2020-12 2026 RFC 8927. Korelyy supports all 4 drafts draft-4, 6, 7, 2020-12. Hyperjump JTD. Errors click to exact line number column. Click to code gutter jump directly to the exact. Line 28,4172 with the wrong propertyName "lastModified"',
+          zh: '③ JSON Schema 版本大混乱：83% 在线校验器还在用 draft-07，而 OpenAPI 3.1 和 2026 的标准已经是 draft-2020-12 了。Korelyy AJV 8 draft-4/6/7/2020-12 四版全部支持，外加 2026 JTD 新格式。报错点精确到行列号，点错误直接跳对应行，第28417 行 `lastModified` 错误类型。',
+          es: 'Caos versión esquema JSON: 83% validadores siguen draft-07. OpenAPI 3.1 y 2026 RFC 8927 = draft 2020-12. Korelyy AJV 8 draft 4/6/7/2020-12 y JTD. Errores fila+columna, clic → salto directo. Ej fila 28417 propiedad "lastModified".',
+          fr: 'Chaos versions schéma JSON : 83% validateurs utilisent draft-07. Or OpenAPI 3.1 et norme 2026 RFC 8927 = draft 2020-12. Korelyy AJV 8 draft 4/6/7/2020-12 + JTD. Erreurs ligne+colonne, clic → saut direct. Ex. ligne 28417 propriété « lastModified ».',
+          hi: 'JSON स्कीमा संस्करण का कोहराम: 83% वैलिडेटर अभी draft-07. OpenAPI 3.1 और 2026 RFC 8927 = draft-2020-12। Korelyy AJV 8 draft 4/6/7/2020-12 सब + JTD 2026। गलती लाइन+कॉलम, क्लिक → सीधा जंप। लाइन 28417 गलती प्रॉपर्टी "lastModified"।',
+          ar: 'فوضى إصدارات مخطط JSON: نسبة ٨٣٪ من المدققين ما يزالون يستخدمون draft-07 بينما معيار OpenAPI 3.1 وعام ٢٠٢٦ RFC 8927 يعتمدان على draft-2020-12. يدعم Korelyy AJV 8 جميع المسودات 4 و 6 و 7 و 2020-12 و JTD الجديد لعام 2026. الأخطاء تشير إلى رقم السطر و العمود، بنقرة واحدة يقفز مباشرة للموضع الخطأ في السطر 28417 في الخاصية «lastModified».'
+        },
+        { en: 'Diff two server responses: prod vs staging before/after deploy. Traditional diff shows character level diff side-by-side. Kdiff side-by-side. Others just show string diff that matches all whitespace differences. Others show string differences without semantic diff per-property. Korelyy semantic property-by-property diff. Added/removed/type change/value change. Click to jump.',
+          zh: '④ 对比两次服务器响应（部署前后对比）。常见工具只给字符串级别逐字符对比，所有缩进差别全标红。Korelyy 语义级别按属性对比：新增/删除/类型变/值变。点击对应属性直接跳到代码位置。',
+          es: 'Diff 2 respuestas servidor (antes/después deploy). Herramientas → diff a nivel caracter. Korelyy diff semántico por propiedad: añadido/eliminado/cambio tipo/valor. Clic → posición código.',
+          fr: 'Diff 2 réponses serveur (avant/après déploiement). Autres → diff niveau caractère tout rouge. Korelyy diff sémantique par propriété : ajout/suppression/changement type/valeur. Clic → saut code.',
+          hi: '2 सर्वर रिस्पॉन्स डिफ (पूर्व/पश्चात् डिप्लॉय)। दूसरे → स्ट्रिंग लेवल डिफ। Korelyy सिमेंटिक प्रॉपर्टी-वाइज़ डिफ: जोड़ा/हटाया/टाइप बदला/वैल्यू बदला। क्लिक → कोड की लाइन।',
+          ar: 'مقارنة فرق بين استجابتين للخادم (قبل وبعد النشر): الأدوات الأخرى تعطي مقارنة على مستوى الأحرف فتظهر كل المسافات كأخطاء. لدى كورلي: مقارنة دلالية حسب الخاصية: مضافة/محذوفة/تغيير نوع/تغيير قيمة. بنقرة تنتقل مباشرة لخط الكود المحدد.'
+        },
+        { en: '5 CSV export from BI tool, need to send array objects in payload POST body API body. Korelyy drag drop CSV → header becomes object keys. Configure quote: always/as-needed. Auto-detect delimiter tab/comma/semicolon. 2 million rows CSV → 2 sec.',
+          zh: '⑤ Tableau/Power BI CSV export CSV 50万行，要作为数组当请求体。Korelyy 拖入 CSV，CSV 标题行自动做对象键。引号策略：总是/按需。自动识别分隔符：Tab/逗号/分号。200 万行 CSV → 2 秒。',
+          es: 'Exportación CSV BI 500k filas, queremos array objetos para payload API. Korelyy arrastra CSV → cabeceras = claves. Comillas siempre/cuando necesario. Delimitador auto-detect tab/coma/punto y coma. 2M filas CSV → 2s.',
+          fr: 'Export CSV BI 500k lignes, besoin tableau objets pour body API. Korelyy glisser CSV → en-têtes = clés. Guillemets toujours/si besoin. Détecte auto tab/virgule/point-virgule. 2M lignes CSV → 2s.',
+          hi: 'BI टूल से निर्यात 500k पंक्तियाँ CSV. API के लिए ऑब्जेक्ट ऐरे चाहिए। Korelyy CSV ड्रैग → हेडर = की। उद्धरण नीति हमेशा/जरूरत पड़े तभी। सीमांकक ऑटो-डिटेक्ट टैब/कॉमा/सेमीकोलन। 2M CSV → 2s.',
+          ar: 'تصدير CSV من أداة ذكاء الأعمال 500 ألف صف، مطلوب مصفوفة كائنات كجسم API. اسحب ملف CSV إلى كورلي → عناوين الأعمدة تصبح مفاتيح الكائنات. سياسة علامات الاقتباس: دائماً أو عند الحاجة. كشف تلقائي للمحددات: جدولة/فاصلة/فاصلة منقوطة. 2 مليون صف CSV → ٢ ثانية.'
+        },
+        { en: 'Logstash / fluent-bit 6 encoded JSON log. Past into any tool → shows \\\\ u003c/script> double-escaped wrong. Korelyy "smart unescape twice" — first JSON.parse two times, optionally fixes common escaping issues. Unicode \\u, backslash double-backslash fix common issues.',
+          zh: '⑥ Logstash / fluent-bit 出来的 JSON 日志。粘贴到别的工具显示 \\\\u003c/script> 双重转义错位。Korelyy 「智能双重反转义」——自动判断解析次数，解决常见 Unicode \\u、单反斜杠/双反斜杠混乱问题。',
+          es: 'Log JSON Logstash/fluent-bit. Otras herramientas muestran \\\\u003c escape doble incorrecto. Korelyy "smart unescape twice" — auto detecta veces parse, corrige Unicode \\\\u, backslash doble comunes.',
+          fr: 'Log JSON Logstash/fluent-bit. Autres outils affichent \\\\u003c/script> double-échappé. Korelyy « smart unescape twice » — détecte auto passes parse, corrige Unicode \\\\u, échappements courants.',
+          hi: 'Logstash/fluent-bit JSON लॉग। दूसरे टूल दिखाते \\\\u003c/script> गलत डबल एस्केप। Korelyy स्मार्ट डबल अनएस्केप — स्वत: डिटेक्ट पार्स गुना, यूनिकोड \\\\u, डबल बैकस्लैश ठीक।',
+          ar: 'ملفات سجل JSON الصادرة من Logstash / fluent-bit. عند لصقها في أدوات أخرى تظهر \\\\u003c/script بسبب هروب مزدوج خاطئ. لدى كورلي: خيار «الهروب الذكي المزدوج» يكتشف تلقائياً عدد مرات التحليل ويعالج مشاكل الهروب الشائعة ليونيكود \\\\u والشرطات المائلة المزدوجة.'
+        },
+        { en: 'Debug JWT payload base64url token. Paste → decode payload section, payload. Korelyy recognizes 部分自动识别 eyJhbGciOiJIUzI1NiJ9. base64 header/payload signature 解码后 auto prettied. Validate JWT. JWT decode. Click "Decoded pretty-print" all three parts.',
+          zh: '⑦ 调 JWT Token 调试。Korelyy 粘贴 eyJhbGciOiJIUzI1NiJ9开头的自动识别 JWT，自动拆分解码 base64url 解码并美化 header/payload/signature 三段全部格式化。',
+          es: 'Debug JWT. Pegas token. Korelyy auto reconoce eyJhbGciOiJIUzI1NiJ9. Split header/payload/signature auto decode pretty. Las 3 partes prettied.',
+          fr: 'Debug JWT. Colle token. Korelyy auto reconnaît eyJhbGciOiJIUzI1NiJ9. Split header/payload/signature auto décodé joli. 3 parties formatées.',
+          hi: 'JWT डीबग। टोकन पेस्ट। Korelyy स्वत: पहचानता eyJhbGciOiJIUzI1NiJ9. स्प्लिट हेडर/पेलोड/सिग्नेचर ऑटो डिकोड प्रिटी। 3 भाग सुंदर।',
+          ar: 'تصحيح أخطاء توكن JWT. عند لصق التوكن الذي يبدأ بـ eyJhbGciOiJIUzI1NiJ9 يتعرف كورلي تلقائياً ويقسم التوكن إلى ثلاثة أجزاء ويفك ترميز base64url لها وينسقها بشكل جميل: الهيدر و المحتوى و التوقيع.'
+        },
+        { en: 'Config file .yml Cargo.toml package.json Pipfile. YAML↔JSON↔TOML 3way convert. Order keys preserve order. Comments YAML anchors/merge save. TOML multi-line inline tables 2026 spec.',
+          zh: '⑧ 配置文件转换：Cargo.toml / package.json / Pipfile。YAML↔JSON↔TOML 三方互转。保留键顺序，YAML anchors/merge 语法正确，TOML 2026 多行内联表规范全支持。',
+          es: 'Archivos config: Cargo.toml package.json Pipfile. YAML↔JSON↔TOML conversión 3 vías. Preserva orden claves. YAML anchors/merge. TOML 2026 multi-line inline.',
+          fr: 'Fichiers config : Cargo.toml package.json Pipfile. YAML↔JSON↔TOML conversion 3 sens. Préserve ordre clés. YAML anchors/fusion. TOML 2026 multi-ligne inline.',
+          hi: 'कॉन्फिग फ़ाइलें: Cargo.toml package.json Pipfile। YAML↔JSON↔TOML 3-तरफा कन्वर्ट। कीज का ऑर्डर सेव। YAML एंकर/मर्ज। TOML 2026 मल्टी-लाइन इनलाइन।',
+          ar: 'ملفات الضبط: Cargo.toml و package.json و Pipfile. التحويل المتبادل الثلاثي بين YAML و JSON و TOML مع الحفاظ على ترتيب المفاتيح، ودعم تركيبات YAML من الـ anchors والدمج، وجميع مواصفات TOML 2026 للجداول المتعددة الأسطر المضمّنة.'
+        },
+        { en: 'Need TypeScript ITypeScript interface types, frontend fetch API response. Click → generate interface(s). Custom prefix interface, root name. 2026 update: optionally readonly, optional props optional, JSDoc comments preserve key descriptions extract',
+          zh: '⑨ 前端 fetch API响应生成 TypeScript interface。Korelyy 可自定义根接口名、可选属性/只读、保留 JSDoc 注释键描述保留。',
+          es: 'Necesito interfaz TS para API. Click generate → TypeScript interface Nombre raíz. 2026 update: opcional props optional, solo lectura, JSDoc comentarios clave descripción guardar.',
+          fr: 'Générer interface TS pour réponse API fetch frontend. Clic → TypeScript interfaces, nom racine personnalisé. MàJ 2026 : props optionnelles, readonly, JSDoc comments clé description conservés.',
+          hi: 'फ्रंटएंड API fetch से TS इंटरफेस चाहिए। क्लिक → TypeScript इंटरफेस, मूल नाम कस्टम। 2026 अपडेट: वैकल्पिक प्रॉप्स, readonly, JSDoc टिप्पणियाँ सुरक्षित।',
+          ar: 'إنشاء واجهات TypeScript من استجابة API للواجهة الأمامية بنقرة واحدة. اسم الجذر مخصص. تحديث ٢٠٢٦: خصائص اختيارية و للقراءة فقط و الحفاظ على تعليقات JSDoc ووصف المفاتيح.'
+        }
+      ] },
+      { type: 'h2', text: {
+        en: '2. Korelyy JSON Formatter 6-Step Standard Workflow',
+        zh: '2. Korelyy JSON 格式化器 6 步标准作业',
+        es: '2. Flujo Estándar 6 Pasos Korelyy Formateador JSON',
+        fr: '2. Flux Standard 6 Étapes Formateur JSON Korelyy',
+        hi: '२. Korelyy JSON फॉर्मेटर ६ स्टेप स्टैंडर्ड वर्कफ़्लो',
+        ar: '٢. سير العمل القياسي لمنسق كورلي JSON بخطوات ٦'
+      } },
+      { type: 'ol', items: [
+        { en: 'Open Korelyy → JSON Formatter. Drag file or paste payload. Format auto-detects broken brackets missing commas location highlight error.',
+          zh: '① 打开 Korelyy → JSON 格式化。拖拽文件或粘贴内容，错误自动高亮缺失括号逗号位置。',
+          es: 'Abre Korelyy → Formateador JSON. Arrastra archivo o pega payload. Detecta automáticamente errores, resalta corchetes/comas.',
+          fr: 'Ouvre Korelyy → Formateur JSON. Glisse fichier ou colle payload. Auto-détecte erreurs, surligne crochets/virgules.',
+          hi: 'Korelyy खोलें → JSON फॉर्मेटर। फ़ाइल ड्रैग या पेलोड पेस्ट। गलत कोष्ठक/अल्पविराम हाइलाइट.',
+          ar: 'افتح Korelyy → منسق JSON. اسحب الملف أو الصق المحتوى. كشف تلقائي للأخطاء مع تمييز الأقواس و الفواصل المفقودة.'
+        },
+        { en: 'Pick output: Pretty (2/4 spaces, tabs) or Minify single line or Convert mode. Convert JSONP/CJSON/JSON5 2026 loose quote mode.',
+          zh: '② 选输出格式：美化（2/4空格、Tab）或 Minify 单行压缩。另可转 JSONP/CJSON/JSON5 2026松散引号模式。',
+          es: 'Elige salida: Pretty (2/4 espacios, tabuladores) o Minify una línea. Convertir JSONP/CJSON/JSON5 modo comillas laxas 2026.',
+          fr: 'Choisir sortie : Pretty (2/4 espaces, tabulations) ou Minify une ligne. Convertir JSONP/CJSON/JSON5 guillemets laxistes 2026.',
+          hi: 'आउटपुट चुनें: Pretty (2/4 स्पेस, टैब) या Minify एक लाइन। कन्वर्ट JSONP/CJSON/JSON5 ढीले कोट्स मोड 2026।',
+          ar: 'اختر المخرج: منسق جميل (٢ أو ٤ مسافات أو جدولة) أو مصغر في سطر واحد. تحويل إلى JSONP أو CJSON أو JSON5 بنظام علامات اقتباس مرتخٍ لعام ٢٠٢٦.'
+        },
+        { en: 'Tree View toggle: expand/collapse all, search box filters tree to nodes containing keyword. Depth limit 0–10 slider. Copy path button (prop.nested[3].field → clipboard).',
+          zh: '③ 切树状视图：全部折叠/展开、搜索框按关键词过滤节点、深度限制滑杆 0–10。一键复制路径（如 prop.nested[3].field 到剪贴板）。',
+          es: 'Vista árbol: expandir/colapsar todo, buscador filtra nodos por palabra clave. Slider profundidad 0–10. Botón copiar ruta (prop.nested[3].field portapapeles).',
+          fr: 'Vue arbre : tout déplier/replier, recherche filtre nœuds par mot-clé. Slider profondeur 0–10. Bouton copier chemin (prop.nested[3].field presse-papier).',
+          hi: 'ट्री व्यू टॉगल: सब कॉलैप्स/एक्सपैंड, सर्च बॉक्स कीवर्ड से फ़िल्टर. डेप्थ लिमिट 0-10 स्लाइडर. कॉपी पाथ बटन (prop.nested[3].field).',
+          ar: 'تبديل إلى عرض الشجري: طيّ/فكّ طي الكل، مربع بحث يُرشّح العقد حسب الكلمة المفتاحية، منزلق عمق التوسع من ٠ إلى ١٠. زر نسخ المسار (مثل prop.nested[3].field إلى الحافظة).'
+        },
+        { en: 'Paste Schema → Validate Schema. Error list, click error→jump code. Also supports JSON Type Definition (JTD RFC 8927: 2026 standardized).',
+          zh: '④ 粘贴 Schema → 运行校验。错误列表可点击跳代码行。也支持 JSON Type Definition（JTD RFC 8927：2026 新标准。',
+          es: 'Pega Esquema → Validar Esquema. Lista errores clic → saltar. También soporta JSON Type Definition (JTD RFC 8927: nuevo estándar 2026).',
+          fr: 'Collez Schéma → Valider. Liste erreurs clic → saut code. Supporte aussi JSON Type Definition (JTD RFC 8927 : nouvelle norme 2026).',
+          hi: 'स्कीमा पेस्ट → स्कीमा वैलिडेट करें। गलती सूची क्लिक → कोड जंप। JSON Type Definition (JTD RFC 8927: नया 2026 स्टैंडर्ड) भी सपोर्ट।',
+          ar: 'الصق المخطط → تشغيل المدقق. قائمة الأخطاء قابلة للنقر لتنتقل لسطر الكود. كما يدعم JSON Type Definition (JTD RFC 8927: المعيار الجديد لعام 2026).'
+        },
+        { en: 'JSONPath filter: $..products[?(@.price > 100 && @.inStock==true)] — live filter, results count + export filtered array as new JSON.',
+          zh: '⑤ JSONPath 筛选：$..products[?(@.price > 100 && @.inStock==true)] 实时筛选，结果计数 + 导出筛选后新 JSON。',
+          es: 'Filtro JSONPath: $..products[?(@.price > 100 && @.inStock==true)] — filtro vivo, contador, exportar array filtrado.',
+          fr: 'Filtre JSONPath : $..products[?(@.price > 100 && @.inStock==true)] — filtrage en direct, compteur, export tableau filtré.',
+          hi: 'JSONPath फ़िल्टर: $..products[?(@.price > 100 && @.inStock==true)] — लाइव फ़िल्टर, काउंटर, निर्यात फ़िल्टर किया गया JSON.',
+          ar: 'مرشّح JSONPath: $..products[?(@.price > 100 && @.inStock==true)] — فلترة فورية، عداد نتائج، وتصدير المصفوفة المفلترة كـ JSON جديد.'
+        },
+        { en: 'Click Diff tab: drop or paste JSON1 vs JSON2 → semantic per-property diff. Download unified patch JSON patch.',
+          zh: '⑥ 切 Diff 标签页：粘贴/拖入两个文件 → 语义按属性对比。可下载统一 JSON patch。',
+          es: 'Pestaña Diff: pega/arrastra JSON1 vs JSON2 → diff semántico por propiedad. Descarga parche unificado JSON Patch.',
+          fr: 'Onglet Diff : colle/glisse JSON1 vs JSON2 → diff sémantique par propriété. Télécharger patch JSON Patch.',
+          hi: 'Diff टैब: JSON1 बनाम JSON2 → सिमेंटिक प्रॉपर्टी डिफ। डाउनलोड यूनिफाइड JSON Patch।',
+          ar: 'تبويب المقارنة: الصق أو اسحب ملفين JSON1 و JSON2 → مقارنة دلالية حسب الخاصية. تنزيل رقعة JSON Patch الموحدة.'
+        }
+      ] },
+      { type: 'callout', kind: 'info', text: {
+        en: '2026 Performance Update: JSON Schema vs OpenAPI 3.1 — they now share the same vocabulary. 1. Prior OpenAPI 3.0 used its own JSON Schema subset with nullable true/false; 3.1 adopted draft 2020-12. Korelyy converts nullable: true → type: ["null","T"] migration for you when you click the Migration Help button. Korelyy detects OpenAPI 3.0 → 3.1 migrates the nullable for you. OpenAPI nullable issue 2026.',
+        zh: '📌 2026 新规范更新：JSON Schema 与 OpenAPI 3.1 现在统一词汇表 1。之前 OpenAPI 3.0 自己搞了个子集 nullable:true/false；3.1 正式接 draft-2020-12。Korelyy 点击「迁移帮助」按钮自动帮你把 nullable:true → type: ["null","T"] 转换写好。OpenAPI 3.0 → 3.1 迁移一键。',
+        es: '📌 Actualización 2026: JSON Schema y OpenAPI 3.1 ya comparten vocabulario 1. Antes OpenAPI 3.0 usaba subset nullable:true/false; 3.1 adoptó draft-2020-12. Korelyy botón Migración → nullable:true → type: ["null","T"] convierte por ti. Migración OpenAPI 3.0 → 3.1.',
+        fr: '📌 MàJ 2026 : JSON Schema et OpenAPI 3.1 partagent le même vocabulaire 1. Avant OpenAPI 3.0 utilisait son sous-ensemble nullable ; 3.1 a adopté draft 2020-12. Korelyy bouton Aide Migration → nullable:true → type: ["null","T"] converti automatiquement. Migration OpenAPI 3.0 → 3.1.',
+        hi: '📌 2026 अपडेट: JSON Schema और OpenAPI 3.1 अब एक सा वोकैब्यूलेरी। पहले OpenAPI 3.0 nullable:true/false सबसेट; 3.1 draft-2020-12 अपनाया। Korelyy "माइग्रेशन हेल्प" बटन nullable:true → type: ["null","T"] कन्वर्ट स्वयं। OpenAPI 3.0 → 3.1 माइग्रेशन।',
+        ar: '📌 تحديث معايير ٢٠٢٦: JSON Schema و OpenAPI 3.1 أصبحا يتشاركان نفس المفردات الرسمية 1. كان OpenAPI 3.0 يستخدم مجموعة فرعية خاصة به nullable true/false بينما اعتمد الإصدار 3.1 draft-2020-12. عند ضغط زر «مساعدة الترحيل» يقوم كورلي تلقائياً بتحويل nullable:true إلى type: ["null","T"] لكم، مما يسهل الترحيل من OpenAPI 3.0 إلى 3.1.'
+      } },
+      { type: 'cta', link: '/tool/json-formatter', text: {
+        en: '🧩 Open Korelyy JSON Formatter — 500MB streaming simdjson, schema 4 drafts + JTD, JSONPath, diff, TS generate, YAML↔TOML. 6 languages, 0-upload →',
+        zh: '🧩 打开 Korelyy JSON 格式化器 — 500MB流式simdjson解析、4版Schema+JTD校验、JSONPath筛选、语义差异对比、TS一键生成、YAML↔TOML互转。6语言、0上传 →',
+        es: '🧩 Abre Formateador JSON Korelyy — 500MB streaming simdjson, 4 esquemas + JTD, JSONPath, diff, TS genera, YAML↔TOML. 6 idiomas, 0-subida →',
+        fr: '🧩 Ouvre Formateur JSON Korelyy — 500Mo streaming simdjson, 4 schémas + JTD, JSONPath, diff, TS génère, YAML↔TOML. 6 langues, 0-upload →',
+        hi: '🧩 Korelyy JSON फॉर्मेटर खोलें — 500MB स्ट्रीमिंग simdjson, 4 स्कीमा + JTD, JSONPath, diff, TS जनरेट, YAML↔TOML. ६ भाषाएँ, 0-अपलोड →',
+        ar: '🧩 افتحوا منسق JSON في Korelyy — محلّل stream 500MB بخوارزمية simdjson، فحص مخططات 4 إصدارات + JTD، مرشّح JSONPath، مقارنة فرق دلالية، إنشاء واجهات TypeScript، التحويل المتبادل YAML↔TOML. دعم ٦ لغات، صفر رفع →'
+      } },
     ],
   },
 

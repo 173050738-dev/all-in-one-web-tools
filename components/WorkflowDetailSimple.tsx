@@ -33,6 +33,7 @@ import { getToolBySlug } from '@/data/tools';
 import { resolveToolLink, isExternalTool, getToolDisplayLabel } from '@/lib/toolLinks';
 import { translateWorkflow } from '@/lib/workflowTranslations';
 import type { Locale } from '@/lib/workflowTranslations';
+import SupportButton from '@/components/SupportButton';
 
 const KofiUnlockBanner = dynamic(() => import('@/components/KofiUnlockBanner'), { ssr: false });
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
@@ -426,6 +427,7 @@ export default function WorkflowDetailSimple({
               />
             </div>
           )}
+          <SupportButton locale={locale} />
           {showKofi && <KofiUnlockBanner slug={'workflow-'+workflowId} locale={locale} variant="bottom" />}
         </div>
       </div>

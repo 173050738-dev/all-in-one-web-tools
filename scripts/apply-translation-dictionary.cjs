@@ -701,6 +701,13 @@ const FULLNAME_DICT = {
   'Monkeytype (Typing)': { es: 'Typing Monkeytype', fr: 'Typage',            ar: 'كتابة',             hi: 'मंकीटाइप' },
   'Keybr (Touch Typing)':{ es: 'Mecanografía',      fr: 'Frappe Tactile',    ar: 'الطباعة',           hi: 'कीबीआर' },
   'TypingClub (K-12)':   { es: 'Escuela de Tecla.', fr: 'École de Frappe',   ar: 'مدرسة الكتابة',     hi: 'टाइपिंग क्लब' },
+  // ---- CUR_BETTER 反向补入 (2026-07-12) ----
+  'Timestamp Converter':  { es: 'Convertidor de marca de tiempo',      fr: 'Convertisseur d\'horodatage', ar: 'محول الطابع الزمني',       hi: 'समय स्टाम्प कनवर्टर' },
+  'Password Generator':  { es: 'Generador de Contraseñas',      fr: 'Générateur de Mots de Passe', ar: 'مولد كلمات المرور',       hi: 'पासवर्ड जनरेटर' },
+  'Online Converter':  { es: 'en línea convertidor',      fr: 'en ligne convertisseur', ar: 'عبر الإنترنت محول',       hi: 'ऑनलाइन कनवर्टर' },
+  'Online Password Generator':  { es: 'en línea contraseña generador',      fr: 'en ligne mot de passe générateur', ar: 'عبر الإنترنت كلمة المرور مولد',       hi: 'ऑनलाइन पासवर्ड जेनरेटर' },
+  'Baidu OCR Service':  { es: 'Servicio OCR Baidu',      fr: 'Service OCR Baidu', ar: 'خدمة Baidu للتعرف البصري',       hi: 'Baidu OCR सेवा' },
+  'Magisto AI Video Editor':  { es: 'Magisto Editor de Vídeo IA',      fr: 'Magisto Éditeur Vidéo IA', ar: 'Magisto محرر فيديو بالذكاء الاصطناعي',       hi: 'Magisto AI वीडियो एडिटर' },
 };
 
 // ============================================================

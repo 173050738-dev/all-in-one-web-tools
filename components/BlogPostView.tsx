@@ -12,6 +12,7 @@ import BlogPostCard from '@/components/BlogPostCard';
 import BlogToc from '@/components/BlogToc';
 import ReadingProgress from '@/components/ReadingProgress';
 import ShareButton from '@/components/ShareButton';
+import SupportButton from '@/components/SupportButton';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
   ssr: false,
@@ -279,6 +280,8 @@ export default function BlogPostView({ locale, slug }: Props) {
           </div>
         )}
       </article>
+
+      <SupportButton locale={locale} />
 
       {(prevPost || nextPost) && (
         <nav aria-label="Post navigation" className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">

@@ -320,7 +320,7 @@
       "description": "وداعاً لحدود الإبداع! 8 فئات: سفر، طعام، رومانسية، عمل… مئات النصوص الجاهزة بنقرة واحدة."
     },
     "case-converter": {
-      "name": "محول حالة الأحرف",
+      "name": "تحويل الحروف",
       "description": "تحويل حالة نص بنقرة واحدة، يدعم PascalCase و camelCase و snake_case و kebab-case، أحرف كبيرة/صغيرة، حالة العنوان، الحرف الأول كبير."
     },
     "color-picker": {
@@ -472,11 +472,11 @@
       "description": "عبر الإنترنت timezone محول for timezone, time, convert. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "base64-encoder": {
-      "name": "بيس ٦٤ Encoder",
+      "name": "مشفر Base64",
       "description": "عبر الإنترنت بيس ٦٤ encoder for AI, headline, generate. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "url-encoder": {
-      "name": "رابط Encoder",
+      "name": "مشفر روابط",
       "description": "عبر الإنترنت رابط encoder for كيو آر كود, generate, scan. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "photopea": {
@@ -792,11 +792,11 @@
       "description": "عبر الإنترنت عبر الإنترنت محول for convert, format, مجاني, عبر الإنترنت. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "image-converter": {
-      "name": "صورة محول",
+      "name": "محول الصور",
       "description": "عبر الإنترنت صورة محول for صورة, convert, format, عبر الإنترنت. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "video-converter": {
-      "name": "فيديو محول",
+      "name": "محول الفيديو",
       "description": "عبر الإنترنت فيديو محول for فيديو, convert, format, عبر الإنترنت. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "evernote": {
@@ -2592,7 +2592,7 @@
       "description": "عبر الإنترنت آلة حاسبة آلة حاسبة for آلة حاسبة, scientific, unit conversion, عبر الإنترنت. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "unit-converter": {
-      "name": "Unit محول",
+      "name": "محول الوحدات",
       "description": "عبر الإنترنت unit محول for unit, conversion, length, وزن. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "dictionary": {
@@ -3548,7 +3548,7 @@
       "description": "عبر الإنترنت calendar app for calendar, schedule, reminder, management. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "pomodoro-timer": {
-      "name": "Pomodoro مؤقت",
+      "name": "مؤقت بومودورو",
       "description": "عبر الإنترنت pomodoro مؤقت for pomodoro, focus, time, efficiency. Works right in your متصفح — مجاني, آمن, and لا install required."
     },
     "simplenote": {
@@ -4216,7 +4216,7 @@
       "description": "المنصة الرائدة لتصحيح أخطاء واجهات البرمجة API والتعاون عليها. اختبر نقاط نهاية REST وGraphQL، وأنشئ خدمات محاكاة، وأتمت الاختبارات ومزامن فريقك."
     },
     "swagger-ui": {
-      "name": "وثائق واجهات Swagger API",
+      "name": "Swagger API وثائق",
       "description": "أداة تصور OpenAPI والتجربة المباشرة لواجهات REST. تولد تلقائيًا وثائق تفاعلية لنقاط النهاية حتى يتقدم الفريقان الأمامي والخلفي بشكل أسرع."
     },
     "sentry-io": {

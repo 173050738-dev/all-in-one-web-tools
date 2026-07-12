@@ -78,8 +78,8 @@ export default function BlogIndexView({ locale }: Props) {
     switch (locale) {
       case 'zh':
         return {
-          h1: 'Korelyy 博客',
-          subtitle: '工具实战教程、可复制的模板、真实性能基准测试。每周更新。',
+          h1: '工具教程',
+          subtitle: '免费工具实战教程、可复制的模板、真实性能基准测试。无需注册，开箱即用。每周更新。',
           backHome: '← 返回首页',
           empty: '暂无文章，更新中。',
           searchCta: '想找哪个工具的教程？',
@@ -99,7 +99,7 @@ export default function BlogIndexView({ locale }: Props) {
       case 'hi':
         return {
           h1: 'Korelyy ब्लॉग',
-          subtitle: 'टूल के लिए स्टेप-बाय-स्टेप ट्यूटोरियल, कॉपी-पेस्ट पैटर्न और असली बेंचमार्क। हर सप्ताह अपडेट।',
+          subtitle: 'निःशुल्क टूल्स के स्टेप-बाय-स्टेप ट्यूटोरियल, कॉपी-पेस्ट पैटर्न और असली बेंचमार्क। कोई रजिस्ट्रेशन नहीं, सीधा इस्तेमाल। हर सप्ताह अपडेट।',
           backHome: '← होम पर वापस',
           empty: 'अभी कोई पोस्ट नहीं, जल्दी आ रहा है।',
           searchCta: 'किस टूल का ट्यूटोरियल ढूंढ रहे हैं?',
@@ -119,7 +119,7 @@ export default function BlogIndexView({ locale }: Props) {
       case 'es':
         return {
           h1: 'Blog de Korelyy',
-          subtitle: 'Tutoriales paso a paso, patrones copiar-pegar y benchmarks reales. Actualizado semanalmente.',
+          subtitle: 'Tutoriales paso a paso de herramientas gratuitas, patrones copiar-pegar y benchmarks reales. Sin registro, listo para usar. Actualizado semanalmente.',
           backHome: '← Volver al inicio',
           empty: 'Aún no hay publicaciones. Próximamente.',
           searchCta: '¿Tutorial de qué herramienta buscas?',
@@ -139,7 +139,7 @@ export default function BlogIndexView({ locale }: Props) {
       case 'fr':
         return {
           h1: 'Blog Korelyy',
-          subtitle: 'Tutoriels pas à pas, modèles copier-coller et benchmarks réels. Mis à jour chaque semaine.',
+          subtitle: 'Tutoriels pas à pas d\'outils gratuits, modèles copier-coller et benchmarks réels. Pas d\'inscription, prêt à l\'emploi. Mis à jour chaque semaine.',
           backHome: '← Retour à l\'accueil',
           empty: 'Aucun article pour le moment. À venir.',
           searchCta: 'Quel tutoriel d\'outil recherchez-vous ?',
@@ -159,7 +159,7 @@ export default function BlogIndexView({ locale }: Props) {
       case 'ar':
         return {
           h1: 'مدونة Korelyy',
-          subtitle: 'دروس خطوة بخطوة، نماذج جاهزة للنسخ، واختبارات أداء حقيقية. تحديث أسبوعي.',
+          subtitle: 'دروس خطوة بخطوة لأدوات مجانية، نماذج جاهزة للنسخ، واختبارات أداء حقيقية. لا تسجيل مطلوب، جاهز للاستخدام فوراً. تحديث أسبوعي.',
           backHome: '← العودة للرئيسية',
           empty: 'لا توجد مقالات حتى الآن. قريباً.',
           searchCta: 'ما هو درس الأداة الذي تبحث عنه؟',
@@ -179,7 +179,7 @@ export default function BlogIndexView({ locale }: Props) {
       default:
         return {
           h1: 'Korelyy Blog',
-          subtitle: 'Step-by-step tool tutorials, copy-paste patterns, and real-world performance benchmarks. Updated weekly.',
+          subtitle: 'Step-by-step free tool tutorials, copy-paste patterns, and real-world performance benchmarks. No signup, ready to use. Updated weekly.',
           backHome: '← Back to home',
           empty: 'No articles yet. Coming soon.',
           searchCta: 'Which tool tutorial are you looking for?',

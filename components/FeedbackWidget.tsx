@@ -8,7 +8,7 @@ import { useLocale } from 'next-intl';
 // 注册后把下面这行替换成你的 endpoint，例如：
 //   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xxxxxxxx';
 // 留空时组件仍显示，但提交会提示"暂未开放"。
-const FORMSPREE_ENDPOINT = '';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xpqvadqb';
 // ============================================================
 
 type FeedbackType = 'bug' | 'idea' | 'praise' | 'other';

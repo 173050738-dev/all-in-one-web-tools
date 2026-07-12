@@ -360,7 +360,7 @@
       "description": "इमेज को स्थानीय रूप से कंप्रेस करें, बैच क्वालिटी कंट्रोल और रियल-टाइम प्रीव्यू के साथ। 100% ब्राउज़र में — सर्वर पर कुछ नहीं भेजा जाता।"
     },
     "image-to-base64": {
-      "name": "इमेज से Base64",
+      "name": "इमेज → Base64",
       "description": "लोकल इमेज ड्रैग-ड्रॉप Base64 में तुरंत कनवर्ट, केवल फ्रंटएंड प्रोसेसिंग सर्वर अपलोड नहीं, JPG/PNG/WebP/SVG बैच कन्वर्जन।"
     },
     "json-formatter": {
@@ -376,7 +376,7 @@
       "description": "5 प्लेटफ़ॉर्म नियम, #हैशटैग/खाली पंक्तियाँ/उद्धरण/लिपि टेबल/कोड डाउनग्रेड, एक क्लिक कॉपी"
     },
     "markdown-preview": {
-      "name": "Markdown प्रीव्यू",
+      "name": "मार्कडाउन पूर्वावलोकन",
       "description": "ऑनलाइन Markdown रीयल-टाइम प्रीव्यू एडिटर, स्प्लिट पेन, टेबल, कोड हाइलाइट, टास्क लिस्ट, एक क्लिक HTML निर्यात।"
     },
     "mortgage-calculator": {
@@ -396,7 +396,7 @@
       "description": "ज्ञान ट्यूटर्स के लिए, दुर्लभ/बहुध्र्वी अक्षरों पर पिनयिन, अनेक अर्थ वाले शब्द (बैंक/चल), निर्यात पिनयिन लेआउट"
     },
     "qr-code-generator": {
-      "name": "QR कोड जनरेटर",
+      "name": "क्यूआर जेनरेटर",
       "description": "कस्टम QR कोड बनाएं: रंग, लोगो, साइज़। एक क्लिक में हाई-रेज़ PNG डाउनलोड — URLs, टेक्स्ट, WiFi और बहुत कुछ।"
     },
     "random-number": {
@@ -404,7 +404,7 @@
       "description": "कस्टम रेंज में रैंडम पूर्णांक/दशमलव बनाएं, बैच में अनोखे नंबर, लॉटरी ग्रुपिंग, रैफल, पासवर्ड अंकों के लिए बेहतर।"
     },
     "regex-tester": {
-      "name": "Regex परीक्षक",
+      "name": "रीजेक्स टेस्टर",
       "description": "ऑनलाइन रेगेक्स डीबगर, रीयल-टाइम मैच हाइलाइटिंग, g/i/m फ्लैग सपोर्ट, मैच ग्रुप और स्पष्टीकरण, कॉमन टेम्पलेट वन-क्लिक।"
     },
     "script-splitter": {
@@ -792,7 +792,7 @@
       "description": "ऑनलाइन ऑनलाइन कनवर्टर for convert, format, निःशुल्क, ऑनलाइन. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "image-converter": {
-      "name": "छवि कनवर्टर",
+      "name": "इमेज कनवर्टर",
       "description": "ऑनलाइन छवि कनवर्टर for छवि, convert, format, ऑनलाइन. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "video-converter": {
@@ -2592,7 +2592,7 @@
       "description": "ऑनलाइन कैलकुलेटर कैलकुलेटर for कैलकुलेटर, scientific, unit conversion, ऑनलाइन. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "unit-converter": {
-      "name": "Unit कनवर्टर",
+      "name": "इकाई कनवर्टर",
       "description": "ऑनलाइन unit कनवर्टर for unit, conversion, length, वेट. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "dictionary": {
@@ -3548,7 +3548,7 @@
       "description": "ऑनलाइन calendar app for calendar, schedule, reminder, management. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "pomodoro-timer": {
-      "name": "Pomodoro टाइमर",
+      "name": "पोमोडोरो टाइमर",
       "description": "ऑनलाइन pomodoro टाइमर for pomodoro, focus, time, efficiency. Works right in your ब्राउज़र — निःशुल्क, सुरक्षित, and नहीं install required."
     },
     "simplenote": {

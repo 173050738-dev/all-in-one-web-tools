@@ -129,7 +129,10 @@ export default function BlogContentRenderer({ blocks, locale, className = '' }: 
           case 'cta': {
             const text = getLocalizedText(block.text, locale);
             const sub = getLocalizedText(block.sub, locale);
-            const href = block.link.startsWith('/') ? `/${locale}${block.link}` : block.link;
+            let rawLink = block.link;
+            if (!rawLink && block.toolSlug) rawLink = `/tool/${block.toolSlug}`;
+            if (!rawLink) rawLink = `/${locale}/blog`;
+            const href = rawLink.startsWith('/') ? `/${locale}${rawLink}` : rawLink;
             renderedNodes.push(
               <div
                 key={`cta-${i}`}

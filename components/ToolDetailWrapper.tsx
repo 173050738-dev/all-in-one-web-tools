@@ -10,6 +10,7 @@ import ToolCard from '@/components/ToolCard';
 import { englishTags } from '@/data/english-tags';
 import { shouldShowKofiBanner } from '@/lib/monetization';
 import ToolSeoContent from '@/components/ToolSeoContent';
+import SupportButton from '@/components/SupportButton';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
   ssr: false,
@@ -179,6 +180,7 @@ export default function ToolDetailWrapper({ locale, slug, children }: ToolDetail
             </div>
           )}
           {children}
+          {tool?.localProcessing && <SupportButton locale={locale} />}
           {showKofi && <KofiUnlockBanner slug={slug} locale={locale} variant="bottom" />}
           <ToolRelatedGuides
             toolSlug={slug}

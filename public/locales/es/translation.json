@@ -376,7 +376,7 @@
       "description": "5 plataformas, #hashtag/líneas/citas/tablas/código degradado, copiar en un clic."
     },
     "markdown-preview": {
-      "name": "Vista previa Markdown",
+      "name": "Vista Previa MD",
       "description": "Editor de vista previa Markdown en tiempo real en línea, vista de paneles divididos, soporta tablas, resaltado de código, listas de tareas, exportación HTML con un clic."
     },
     "mortgage-calculator": {
@@ -404,7 +404,7 @@
       "description": "Genera enteros/decimales aleatorios en rango personalizado, soporta números únicos por lotes, ideal para sorteos, rifas, dígitos de contraseña."
     },
     "regex-tester": {
-      "name": "Probador Regex",
+      "name": "Pruebas Regex",
       "description": "Depurador regex en línea, resaltado de coincidencias en tiempo real, soporta banderas g/i/m, muestra grupos de coincidencia y explicaciones, aplicación con un clic de plantilla común."
     },
     "script-splitter": {
@@ -792,11 +792,11 @@
       "description": "en línea en línea convertidor for convert, format, gratuito, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "image-converter": {
-      "name": "imagen convertidor",
+      "name": "Convertidor Img.",
       "description": "en línea imagen convertidor for imagen, convert, format, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "video-converter": {
-      "name": "vídeo convertidor",
+      "name": "Convertidor Vídeo",
       "description": "en línea vídeo convertidor for vídeo, convert, format, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "evernote": {
@@ -2592,7 +2592,7 @@
       "description": "en línea calculadora calculadora for calculadora, scientific, unit conversion, en línea. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "unit-converter": {
-      "name": "Unit convertidor",
+      "name": "Convertidor Unid.",
       "description": "en línea unit convertidor for unit, conversion, length, peso. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "dictionary": {
@@ -3548,7 +3548,7 @@
       "description": "en línea calendar app for calendar, schedule, reminder, management. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "pomodoro-timer": {
-      "name": "Pomodoro temporizador",
+      "name": "Temporizador Pom.",
       "description": "en línea pomodoro temporizador for pomodoro, focus, time, efficiency. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "simplenote": {
