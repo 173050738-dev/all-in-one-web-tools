@@ -59,6 +59,7 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'wc-name-decorator',
   'wc-poster-generator',
   'wc-scoreboard-simulator',
+  'excel-formula-generator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

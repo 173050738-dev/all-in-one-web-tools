@@ -399,6 +399,10 @@
       "name": "QR Code Generator",
       "description": "Create custom QR codes online with colors, logos and size options. One-click high-res PNG download — ideal for URLs, text, WiFi and more."
     },
+    "excel-formula-generator": {
+      "name": "Excel Formula Generator",
+      "description": "Turn natural language into Excel / Google Sheets formulas instantly. Paste a plain-English request, get the exact formula, step-by-step explanation and usage notes — free, no sign-up."
+    },
     "random-number": {
       "name": "Random Number Generator",
       "description": "Generate random integers/decimals in custom range, support batch unique numbers, perfect for lottery grouping, raffle, password digits."

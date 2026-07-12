@@ -14,6 +14,12 @@ export type BlogContentBlock =
       link: string;
       text: Partial<Record<SeoLocale, string>>;
       sub?: Partial<Record<SeoLocale, string>>;
+    }
+  | {
+      type: 'image';
+      src: string;
+      alt?: Partial<Record<SeoLocale, string>>;
+      caption?: Partial<Record<SeoLocale, string>>;
     };
 
 export interface BlogPost {
@@ -40078,6 +40084,584 @@ export const BLOG_POSTS: BlogPost[] = [
         ar: '🧩 افتحوا منسق JSON في Korelyy — محلّل stream 500MB بخوارزمية simdjson، فحص مخططات 4 إصدارات + JTD، مرشّح JSONPath، مقارنة فرق دلالية، إنشاء واجهات TypeScript، التحويل المتبادل YAML↔TOML. دعم ٦ لغات، صفر رفع →'
       } },
     ],
+  },
+
+  {
+    slug: 'meccha-chameleon-complete-guide-2026',
+    coverImage: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Meccha%20Chameleon%20hide%20and%20seek%20paint%20camouflage%20party%20game%20guide%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+    author: 'Korelyy Team',
+    publishedAt: '2026-07-12T00:00:00.000Z',
+    updatedAt: '2026-07-12T00:00:00.000Z',
+    tags: [
+      { en: 'Meccha Chameleon', zh: 'Meccha Chameleon', es: 'Meccha Chameleon', fr: 'Meccha Chameleon', hi: 'Meccha Chameleon', ar: 'Meccha Chameleon' },
+      { en: 'Game Guide', zh: '游戏攻略', es: 'Guía de Juegos', fr: 'Guide de Jeu', hi: 'गेम गाइड', ar: 'دليل الألعاب' },
+      { en: 'Hide and Seek', zh: '捉迷藏', es: 'Escondite', fr: 'Cache-cache', hi: 'छुपाना', ar: 'اختبأ واطلب' },
+      { en: 'Tips and Tricks', zh: '技巧攻略', es: 'Consejos y Trucos', fr: 'Astuces et Conseils', hi: 'टिप्स और ट्रिक्स', ar: 'نصائح وحيل' }
+    ],
+    relatedToolSlugs: ['color-picker'],
+    readingMinutes: { en: 12, zh: 13, es: 12, fr: 12, hi: 12, ar: 12 },
+    title: {
+      en: 'Meccha Chameleon Complete Guide 2026: Best Hiding Spots, Paint Tricks and How to Win',
+      zh: 'Meccha Chameleon 完全攻略 2026：最佳藏点、涂装取色技巧与制胜打法',
+      es: 'Guía Completa Meccha Chameleon 2026: Mejores Escondites, Trucos de Pintura y Cómo Ganar',
+      fr: 'Guide Complet Meccha Chameleon 2026 : Meilleures Caches, Astuces Peinture et Comment Gagner',
+      hi: 'Meccha Chameleon संपूर्ण गाइड 2026: सबसे अच्छे छिपने की जगहें, पेंट ट्रिक्स और कैसे जीतें',
+      ar: 'الدليل الشامل لـ Meccha Chameleon 2026: أفضل أماكن الاختباء، خدع التلوين، وكيفية الفوز'
+    },
+    description: {
+      en: 'Master Meccha Chameleon with our full 2026 guide: hider and seeker strategy, best hiding spots for all 7 maps, eyedropper paint tricks, settings to fix low FPS, and common mistakes to avoid.',
+      zh: 'Meccha Chameleon 全攻略 2026：躲藏方与搜寻方策略、7 张地图最佳藏点、吸管取色涂装技巧、低帧率优化设置，以及新手常见错误。',
+      es: 'Domina Meccha Chameleon con nuestra guía completa 2026: estrategia Hider y Seeker, mejores escondites en los 7 mapas, trucos de pintura Eyedropper, ajustes para arreglar FPS bajo y errores comunes.',
+      fr: 'Maîtrisez Meccha Chameleon grâce à notre guide complet 2026 : stratégie Hider et Seeker, meilleures caches sur les 7 cartes, astuces peinture Eyedropper, réglages pour corriger les FPS bas et erreurs à éviter.',
+      hi: 'Meccha Chameleon में महारत हासिल करें हमारी पूरी 2026 गाइड के साथ: Hider और Seeker रणनीति, सभी 7 नक्शों के सबसे अच्छे छिपने की जगहें, Eyedropper पेंट ट्रिक्स, कम FPS ठीक करने के लिए सेटिंग्स और सामान्य गलतियाँ।',
+      ar: 'أتقن لعبة Meccha Chameleon مع دليلنا الشامل لعام 2026: استراتيجيات المختبئ والباحث، أفضل أماكن الاختباء في الخرائط السبع كلها، خدع تلوين Eyedropper، إعدادات إصلاح انخفاض الإطارات، والأخطاء الشائعة التي يجب تجنبها.'
+    },
+    keywords: {
+      en: [
+        'meccha chameleon guide',
+        'meccha chameleon tips',
+        'best hiding spots meccha chameleon',
+        'hider guide meccha chameleon',
+        'seeker guide meccha chameleon',
+        'eyedropper paint trick',
+        'meccha chameleon settings',
+        'meccha chameleon how to win',
+        'meccha chameleon map hiding spots 2026',
+        'meccha chameleon low fps fix',
+        'meccha chameleon beginner mistakes',
+        'meccha chameleon color match paint',
+        'meccha chameleon v shadow toggle',
+        'meccha chameleon all maps guide'
+      ],
+      zh: [
+        'meccha chameleon 攻略',
+        'meccha chameleon 技巧',
+        'meccha chameleon 最佳藏点',
+        'meccha chameleon 躲藏技巧',
+        'meccha chameleon 搜寻技巧',
+        'meccha chameleon 涂装取色',
+        'meccha chameleon 低帧率优化',
+        'meccha chameleon 怎么赢',
+        'meccha chameleon 地图藏点 2026',
+        'meccha chameleon 新手错误',
+        'meccha chameleon 颜色匹配',
+        'meccha chameleon V键关阴影',
+        'meccha chameleon 全地图攻略'
+      ],
+      es: [
+        'guía meccha chameleon 2026',
+        'mejores escondites meccha chameleon',
+        'truco pintura eyedropper meccha',
+        'cómo ganar meccha chameleon'
+      ],
+      fr: [
+        'guide meccha chameleon 2026',
+        'meilleures caches meccha chameleon',
+        'astuce peinture eyedropper',
+        'comment gagner meccha chameleon'
+      ],
+      hi: [
+        'meccha chameleon गाइड 2026',
+        'सबसे अच्छे छिपने की जगहें',
+        'eyedropper पेंट ट्रिक',
+        'meccha chameleon कैसे जीतें'
+      ],
+      ar: [
+        'دليل meccha chameleon 2026',
+        'أفضل أماكن الاختباء',
+        'خدعة التلوين Eyedropper',
+        'كيفية الفوز في Meccha Chameleon'
+      ]
+    },
+    content: [
+      { type: 'cta', link: '/tool/color-picker', text: {
+        en: '🎨 Want to nail your camouflage colors? Try our free online Color Picker to grab exact HEX/HSV values →',
+        zh: '🎨 想精准调出涂装颜色？用 Korelyy 免费在线取色器，一键复制精确 HEX/HSV 色值 →',
+        es: '🎨 ¿Quieres dominar los colores de camuflaje? Prueba nuestro Selector de Color online gratis para sacar valores HEX/HSV exactos →',
+        fr: '🎨 Vous voulez maîtriser vos couleurs de camouflage ? Essayez notre Color Picker en ligne gratuit pour récupérer les valeurs HEX/HSV exactes →',
+        hi: '🎨 क्या आप कैमफ्लाज रंगों को परफेक्ट करना चाहते हैं? हमारा फ्री ऑनलाइन Color Picker आज़माएं, सटीक HEX/HSV वैल्यू कॉपी करें →',
+        ar: '🎨 هل تريد إتقان ألوان تمويهك؟ جرّب منتقي الألوان المجاني عبر الإنترنت لاستخراج قيم HEX/HSV الدقيقة →'
+      }, sub: {
+        en: 'More free tools on Korelyy — no signup, runs in your browser.',
+        zh: 'Korelyy 还有更多免费工具 — 免注册，全部浏览器本地运行。',
+        es: 'Más herramientas gratuitas en Korelyy — sin registro, funcionan en tu navegador.',
+        fr: 'Plus d\'outils gratuits sur Korelyy — pas d\'inscription, tout se passe dans votre navigateur.',
+        hi: 'Korelyy पर और भी फ्री टूल्स — कोई साइनअप नहीं, सब आपके ब्राउज़र में चलते हैं।',
+        ar: 'المزيد من الأدوات المجانية على Korelyy — بدون تسجيل، تعمل داخل متصفحك.'
+      } },
+
+      { type: 'p', text: {
+        en: 'Meccha Chameleon exploded in mid-2026, selling over 10 million copies in 16 days and hitting a Steam peak of 340,000+ concurrent players. Made by a tiny 2-person Japanese team for about USD 6, it reinvents hide-and-seek: you paint your blank white body to blend into the scenery while a Seeker hunts you down. This complete 2026 guide covers everything — hider/seeker strategy, best hiding spots on all 7 maps, eyedropper paint tricks, FPS fixes, and mistakes that get you caught.',
+        zh: 'Meccha Chameleon 在 2026 年中爆火，16 天狂卖 1000 万份，Steam 峰值同时在线突破 34 万人。这款游戏由日本一个仅有 2 人的小团队开发，售价约 6 美元，彻底重制了"捉迷藏"玩法：你把空白白色身体涂装成和周围环境完全一致，Seeker 则要在倒计时结束前把你揪出来。这篇 2026 完全攻略覆盖一切：躲藏/搜寻双方策略、全部 7 张地图最佳藏点、Eyedropper 吸管取色涂装技巧、低帧率优化，以及新手最容易犯的致命错误。',
+        es: 'Meccha Chameleon explotó a mediados de 2026: vendió más de 10 millones de copias en 16 días y alcanzó un pico de más de 340.000 jugadores simultáneos en Steam. Hecho por un pequeño equipo japonés de 2 personas por unos 6 USD, reinventa el escondite: pintas tu cuerpo blanco vacío para mezclarte con el escenario mientras un Seeker te da caza. Esta guía completa 2026 lo cubre todo: estrategia Hider/Seeker, mejores escondites en los 7 mapas, trucos de pintura Eyedropper, arreglos de FPS y errores que te delatan.',
+        fr: 'Meccha Chameleon a explosé mi-2026, avec plus de 10 millions d\'exemplaires vendus en 16 jours et un pic Steam à plus de 340 000 joueurs simultanés. Créé par une toute petite équipe japonaise de 2 personnes pour environ 6 USD, il réinvente le cache-cache : vous repeignez votre corps blanc vierge pour vous fondre dans le décor pendant qu\'un Seeker vous traque. Ce guide complet 2026 couvre tout : stratégie Hider/Seeker, meilleures caches sur les 7 cartes, astuces peinture Eyedropper, correctifs FPS et erreurs qui vous font attraper.',
+        hi: 'Meccha Chameleon 2026 के मध्य में धमाल मचा दिया: 16 दिनों में 10 मिलियन से ज़्यादा कॉपी बिकी और Steam पर पीक 340,000+ समवर्ती खिलाड़ी दर्ज किए गए। यह जापान के 2 लोगों की छोटी टीम द्वारा लगभग 6 USD में बनाया गया है, और हाइड-एंड-सीक को पूरी तरह से रीइनवेंट करता है: आप अपने खाली सफेद शरीर को पेंट करके माहौल में घुल जाते हैं, जबकि Seeker आपको ढूंढता है। यह 2026 की पूरी गाइड सब कुछ कवर करती है: Hider/Seeker दोनों की रणनीति, सभी 7 मैप्स के सबसे अच्छे छिपने की जगहें, Eyedropper पेंट ट्रिक्स, कम FPS के उपाय, और वो गलतियाँ जो आपको पकड़वा देती हैं।',
+        ar: 'انفجرت شعبية لعبة Meccha Chameleon في منتصف عام ٢٠٢٦، حيث باعت أكثر من ١٠ ملايين نسخة خلال ١٦ يوماً وبلغت ذروتها على Steam بأكثر من ٣٤٠ ألف لاعب متزامن. طورتها فريق ياباني صغير مكون من شخصين بسعر حوالي ٦ دولارات، وأعادت ابتكار لعبة الاختباء: تقوم بتلوين جسدك الأبيض الفارغ لتمتزج مع المشهد بينما يلاحظك الباحث. يغطي هذا الدليل الشامل لعام ٢٠٢٦ كل شيء: استراتيجيات المختبئ والباحث، أفضل أماكن الاختباء في جميع الخرائط السبع، خدع تلوين Eyedropper، إصلاحات انخفاض الإطارات، والأخطاء التي تكشف مكانك.'
+      } },
+
+      { type: 'image',
+        src: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Meccha%20Chameleon%20game%20cover%20art%20party%20hide%20and%20seek%20camouflage%20paint%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+        alt: {
+          en: 'Meccha Chameleon game cover art showing hiders blending into a room with paint eyedropper UI',
+          zh: 'Meccha Chameleon 游戏封面图，展示躲藏方用吸管取色融入房间场景',
+          es: 'Portada del juego Meccha Chameleon mostrando Hiders mezclándose en una habitación con UI de gotero de pintura',
+          fr: 'Jaquette du jeu Meccha Chameleon montrant des Hiders se fondant dans une pièce avec l\'interface du pipette à peinture',
+          hi: 'Meccha Chameleon गेम कवर आर्ट, जिसमें Hiders पेंट आईड्रॉपर UI के साथ कमरे में घुले हुए दिख रहे हैं',
+          ar: 'غلاف لعبة Meccha Chameleon يُظهر المختبئين يندمجون في غرفة مع واجهة مستخدم مُقطر التلوين'
+        },
+        caption: {
+          en: 'Meccha Chameleon — paint yourself invisible. (Illustrative guide cover)',
+          zh: 'Meccha Chameleon — 把自己涂成隐形人（攻略插图）',
+          es: 'Meccha Chameleon — píntate para ser invisible. (Portada ilustrativa de la guía)',
+          fr: 'Meccha Chameleon — peignez-vous pour devenir invisible. (Couverture illustrative du guide)',
+          hi: 'Meccha Chameleon — खुद को पेंट करके अदृश्य बनाएं। (गाइड इलस्ट्रेशन)',
+          ar: 'Meccha Chameleon — اطبع نفسك لتصبح غير مرئي. (غلاف دليل توضيحي)'
+        }
+      },
+
+      { type: 'h2', text: {
+        en: 'What Is Meccha Chameleon?',
+        zh: 'Meccha Chameleon 到底是什么游戏',
+        es: '¿Qué es Meccha Chameleon?',
+        fr: 'Qu\'est-ce que Meccha Chameleon ?',
+        hi: 'Meccha Chameleon क्या है?',
+        ar: 'ما هي لعبة Meccha Chameleon؟'
+      } },
+      { type: 'p', text: {
+        en: 'It is an online hide-and-seek party game built around camouflage painting. Hiders disguise themselves as props; Seekers try to find everyone before time runs out. It supports up to 24 players per lobby (developers recommend 2-10 for the best experience).',
+        zh: '这是一款围绕"伪装涂装"核心玩法的多人在线派对捉迷藏游戏。Hider 把自己伪装成地图上的摆件，Seeker 则要在时间结束前把所有人都找出来。每个房间最多支持 24 人（开发者推荐 2-10 人体验最佳）。',
+        es: 'Es un juego de fiesta de escondite online centrado en la pintura de camuflaje. Los Hiders se disfrazan de accesorios; los Seekers intentan encontrar a todos antes de que se acabe el tiempo. Soporta hasta 24 jugadores por sala (los desarrolladores recomiendan 2-10 para la mejor experiencia).',
+        fr: 'C\'est un jeu de party cache-cache en ligne axé sur la peinture de camouflage. Les Hiders se déguisent en props ; les Seekers essaient de trouver tout le monde avant la fin du temps. Il prend en charge jusqu\'à 24 joueurs par lobby (les développeurs recommandent 2-10 pour la meilleure expérience).',
+        hi: 'यह एक ऑनलाइन हाइड-एंड-सीक पार्टी गेम है जिसका मुख्य खेल है कैमफ्लाज पेंटिंग। Hiders खुद को प्रॉप्स की तरह बदल लेते हैं; Seekers समय खत्म होने से पहले सबको ढूंढने की कोशिश करते हैं। प्रति लॉबी 24 खिलाड़ियों तक का सपोर्ट है (डेवलपर्स सबसे बेहतरीन अनुभव के लिए 2-10 लोगों की सलाह देते हैं)।',
+        ar: 'إنها لعبة حفلات اختباء عبر الإنترنت تتمحور حول تلوين التمويه. يتنكر المختبئون كقطع ديكور؛ ويحاول الباحثون العثور على الجميع قبل نفاد الوقت. تدعم حتى ٢٤ لاعبًا لكل غرفة (يوصي المطورون بـ ٢ إلى ١٠ لاعبين للحصول على أفضل تجربة).'
+      } },
+      { type: 'ul', items: [
+        { en: 'Genre: Online Hide and Seek / prop-hunt style party game', zh: '类型：在线捉迷藏 / 道具猎取类派对游戏', es: 'Género: Escondite Online / juego de fiesta estilo prop-hunt', fr: 'Genre : Cache-cache en ligne / jeu de party style prop-hunt', hi: 'शैली: ऑनलाइन हाइड एंड सीक / प्रॉप-हंट स्टाइल पार्टी गेम', ar: 'النوع: اختباء عبر الإنترنت / لعبة حفلات بأسلوب البحث عن القطع المزيفة' },
+        { en: 'Developer: lemorion_1224 (Japan, 2-person team, built in ~2 months)', zh: '开发者：lemorion_1224（日本，2人小团队，约2个月开发）', es: 'Desarrollador: lemorion_1224 (Japón, equipo de 2 personas, hecho en ~2 meses)', fr: 'Développeur : lemorion_1224 (Japon, équipe de 2 personnes, développé en ~2 mois)', hi: 'डेवलपर: lemorion_1224 (जापान, 2 व्यक्तियों की टीम, ~2 महीने में बनाया)', ar: 'المطور: lemorion_1224 (اليابان، فريق مكون من شخصين، تم تطويره خلال شهرين تقريباً)' },
+        { en: 'Released: June 9, 2026 on Steam (App ID 4704690)', zh: '发售时间：2026年6月9日 Steam平台（App ID 4704690）', es: 'Lanzamiento: 9 de junio de 2026 en Steam (App ID 4704690)', fr: 'Sortie : 9 juin 2026 sur Steam (App ID 4704690)', hi: 'रिलीज़: 9 जून 2026 Steam पर (App ID 4704690)', ar: 'تاريخ الإصدار: ٩ يونيو ٢٠٢٦ على منصة Steam (رقم التطبيق ٤٧٠٤٦٩٠)' },
+        { en: 'Price: about USD 5.99', zh: '价格：约 5.99 美元', es: 'Precio: unos 5,99 USD', fr: 'Prix : environ 5,99 USD', hi: 'कीमत: लगभग 5.99 USD', ar: 'السعر: حوالي ٥٫٩٩ دولار أمريكي' },
+        { en: 'Core mechanics: Eyedropper color pick + HSV sliders + metallic/roughness sliders + poses + stay frozen', zh: '核心玩法：Eyedropper 吸管取色 + HSV 滑块 + 金属度/粗糙度滑块 + 姿势系统 + 冻结不动', es: 'Mecánicas principales: Selector de color Eyedropper + sliders HSV + sliders metálico/rugosidad + poses + quedarse inmóvil', fr: 'Mécaniques de base : Pipette à couleur Eyedropper + sliders HSV + sliders métal/rugosité + poses + rester gelé', hi: 'कोर मैकेनिक्स: Eyedropper कलर पिक + HSV स्लाइडर्स + मेटैलिक/रफ़नेस स्लाइडर्स + पोज़ सिस्टम + फ्रीज़ रहना', ar: 'الميكانيكا الأساسية: منتقي ألوان Eyedropper + مؤشرات HSV + مؤشرات المعدنية/الخشونة + نظام الوضعيات + البقاء متجمداً' },
+        { en: 'Steam tags: Multiplayer, Casual, Social, Hidden Object, Hand-drawn, Stealth, Indie', zh: 'Steam标签：多人、休闲、社交、找东西、手绘、潜行、独立', es: 'Etiquetas Steam: Multijugador, Casual, Social, Objeto Oculto, Dibujado a mano, Sigilo, Indie', fr: 'Tags Steam : Multijoueur, Décontracté, Social, Objet caché, Dessiné à la main, Infiltration, Indie', hi: 'Steam टैग्स: मल्टीप्लेयर, कैजुअल, सोशल, हिडन ऑब्जेक्ट, हैंड-ड्रॉन, स्टेल्थ, इंडी', ar: 'علامات Steam: متعدد اللاعبين، عرضي، اجتماعي، ألعاب البحث عن الأشياء، مرسوم يدوياً، التسلل، مستقل' }
+      ] },
+
+      { type: 'h2', text: {
+        en: 'How a Round Works (3 Phases)',
+        zh: '一局怎么打（3 阶段完整流程）',
+        es: 'Cómo Funciona una Ronda (3 Fases)',
+        fr: 'Comment se déroule un round (3 phases)',
+        hi: 'एक राउंड कैसे चलता है (3 फेज़)',
+        ar: 'كيف تسير الجولة (٣ مراحل)'
+      } },
+      { type: 'ol', items: [
+        { en: 'Lobby: the host picks a map and mode; players gather. Host can set max players (up to 24).', zh: '① 大厅阶段：房主选地图和模式，玩家就位；房主可设置最大人数（上限24）。', es: 'Lobby: el anfitrión elige mapa y modo; los jugadores se reúnen. El anfitrión puede fijar el máximo de jugadores (hasta 24).', fr: 'Lobby : l\'hôte choisit une carte et un mode ; les joueurs se rassemblent. L\'hôte peut définir le nombre max de joueurs (jusqu\'à 24).', hi: 'लॉबी: होस्ट मैप और मोड चुनता है; खिलाड़ी इकट्ठा होते हैं। होस्ट अधिकतम खिलाड़ियों की संख्या सेट कर सकता है (24 तक)।', ar: 'الردهة: يختار المضيف الخريطة والوضع؛ ويجتمع اللاعبون. يستطيع المضيف ضبط الحد الأقصى للاعبين (حتى ٢٤).' },
+        { en: 'Prep: Hiders can walk around, choose a spot, paint their body, and lock a pose. Seekers wait during this countdown.', zh: '② 准备阶段：Hider 可以自由走动选点、涂装身体、锁定姿势；Seeker 在这段倒计时中等待。', es: 'Preparación: los Hiders pueden caminar, elegir un lugar, pintar su cuerpo y bloquear una pose. Los Seekers esperan durante esta cuenta atrás.', fr: 'Préparation : les Hiders peuvent marcher, choisir un spot, peindre leur corps et verrouiller une pose. Les Seekers attendent pendant ce compte à rebours.', hi: 'प्रेप फेज़: Hiders घूम सकते हैं, जगह चुन सकते हैं, शरीर पेंट कर सकते हैं और पोज़ लॉक कर सकते हैं। Seekers इस काउंटडाउन के दौरान इंतज़ार करते हैं।', ar: 'التحضير: يستطيع المختبئون التجول، اختيار الموقع، تلوين أجسادهم، وقفل الوضعية. ينتظر الباحثون خلال هذا العد التنازلي.' },
+        { en: 'Hunt: Seekers are released and Hiders must stay completely still. Hiders survive to the timer for a win; Seekers win by finding everyone. The reveal screen at the end shows where each Hider was hiding.', zh: '③ 搜猎阶段：Seeker 被释放抓人，Hider 必须全程纹丝不动。Hider 撑到倒计时结束即获胜；Seeker 抓完所有人即获胜。结算画面会展示每个 Hider 的藏点。', es: 'Caza: los Seekers son liberados y los Hiders deben quedarse completamente quietos. Los Hiders sobreviven al temporizador para ganar; los Seekers ganan encontrando a todos. La pantalla final de revelado muestra dónde se escondía cada Hider.',
+          fr: 'Chasse : les Seekers sont libérés et les Hiders doivent rester complètement immobiles. Les Hiders survivent jusqu\'au timer pour gagner ; les Seekers gagnent en trouvant tout le monde. L\'écran de révélation final montre où chaque Hider s\'est caché.',
+          hi: 'हंट फेज़: Seekers रिहा हो जाते हैं और Hiders को पूरी तरह स्थिर रहना चाहिए। टाइमर तक बचे रहने पर Hiders जीतते हैं; सबको ढूंढने पर Seekers जीतते हैं। अंतिम रिवील स्क्रीन दिखाती है कि हर Hider कहां छिपा था।',
+          ar: 'الاصطياد: يُفرج عن الباحثين ويجب على المختبئين البقاء بلا حراك تماماً. يفوز المختبئون ببقائهم حتى نهاية المؤقت؛ ويفوز الباحثون بالعثور على الجميع. تُظهر شاشة الكشف النهائي مكان اختباء كل مختبئ.' }
+      ] },
+
+      { type: 'h2', text: {
+        en: 'Hider Guide: How to Not Get Caught',
+        zh: '躲藏方 Hider 完全攻略：如何不被抓到',
+        es: 'Guía de Hider: Cómo no ser Atrapado',
+        fr: 'Guide Hider : Comment ne pas se faire attraper',
+        hi: 'Hider गाइड: कैसे न पकड़े जाएं',
+        ar: 'دليل المختبئ: كيف لا يتم القبض عليك'
+      } },
+
+      { type: 'image',
+        src: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Meccha%20Chameleon%20hider%20eyedropper%20color%20picker%20paint%20tool%20UI%20screenshot%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+        alt: {
+          en: 'Meccha Chameleon Hider using Eyedropper paint tool to match a wall color',
+          zh: 'Meccha Chameleon 躲藏方使用 Eyedropper 吸管取色匹配墙面颜色',
+          es: 'Hider de Meccha Chameleon usando la herramienta de pintura Eyedropper para igualar el color de una pared',
+          fr: 'Hider Meccha Chameleon utilisant l\'outil de peinture Eyedropper pour matcher la couleur d\'un mur',
+          hi: 'Meccha Chameleon Hider Eyedropper पेंट टूल का उपयोग करके दीवार के रंग से मैच कर रहा है',
+          ar: 'مختبئ في Meccha Chameleon يستخدم أداة التلوين Eyedropper لمطابقة لون الجدار'
+        },
+        caption: {
+          en: 'Eyedropper in action — sample the exact surface you lean against.',
+          zh: 'Eyedropper 实操技巧：吸你紧贴的那一面，而不是旁边那面。',
+          es: 'Eyedropper en acción — muestrea la superficie exacta contra la que te apoyas.',
+          fr: 'Eyedropper en action — échantillonnez la surface exacte contre laquelle vous êtes collé.',
+          hi: 'Eyedropper कार्य में — जिस सतह के साथ आप टिके होते हैं, ठीक उसी का सैंपल लें।',
+          ar: 'Eyedropper قيد الاستخدام — خذ عينة من السطح الذي تتلصق به بالضبط.'
+        }
+      },
+
+      { type: 'h3', text: {
+        en: 'Get Your Colors Right',
+        zh: '颜色取准是第一要务',
+        es: 'Acierta con tus Colores',
+        fr: 'Obtenez les bonnes couleurs',
+        hi: 'अपने रंग सही लें',
+        ar: 'احصل على ألوانك الصحيحة'
+      } },
+      { type: 'ul', items: [
+        { en: 'Pick your spot first, then start painting — do not paint blindly at spawn.', zh: '先选藏点再吸色，绝对不要在出生点瞎涂一通再跑。', es: 'Elige tu lugar primero y luego empieza a pintar — no pintes a ciegas en el spawn.', fr: 'Choisissez votre spot d\'abord, puis commencez à peindre — ne peignez pas à l\'aveugle au spawn.', hi: 'पहले अपना स्पॉट चुनें, फिर पेंट करना शुरू करें — स्पॉन पर आंख मूंदकर पेंट मत करें।', ar: 'اختر مكانك أولاً ثم ابدأ التلوين — لا تلوّن بشكل أعمى في نقطة الظهور.' },
+        { en: 'Use the Eyedropper (paint mode, key F) to sample the exact surface you lean against, not the wall next to it.', zh: '用 Eyedropper（涂装模式下 F 键）吸你紧贴的那一面，而不是旁边那面墙。', es: 'Usa el Eyedropper (modo pintura, tecla F) para muestrear la superficie exacta contra la que te apoyas, no la pared de al lado.', fr: 'Utilisez l\'Eyedropper (mode peinture, touche F) pour échantillonner la surface exacte contre laquelle vous êtes, pas le mur d\'à côté.', hi: 'Eyedropper (पेंट मोड, कुंजी F) का उपयोग उस सटीक सतह के लिए करें जिसके साथ आप टिके हैं, पड़ोस की दीवार का नहीं।', ar: 'استخدم Eyedropper (وضع التلوين، المفتاح F) لأخذ عينة من السطح الذي تتلصق به بالضبط، ليس الجدار المجاور.' },
+        { en: 'Fine-tune brightness with HSV sliders — the same color looks different in shadow vs highlight.', zh: '用 HSV 滑块微调亮度 — 同一个颜色在阴影和高光下看起来完全不一样。', es: 'Ajusta el brillo con los sliders HSV — el mismo color se ve distinto en sombra frente a resaltado.', fr: 'Ajustez finement la luminosité avec les sliders HSV — la même couleur rend différemment à l\'ombre vs en surbrillance.', hi: 'HSV स्लाइडर्स से ब्राइटनेस फाइन-ट्यून करें — एक ही रंग शैडो और हाईलाइट में अलग दिखता है।', ar: 'اضبط السطوع بدقة باستخدام مؤشرات HSV — نفس اللون يبدو مختلفاً في الظل مقابل الإبراز.' }
+      ] },
+
+      { type: 'h3', text: {
+        en: 'Match Light and Material',
+        zh: '光照材质也要对上',
+        es: 'Coincide Luz y Material',
+        fr: 'Assortissez lumière et matière',
+        hi: 'लाइट और मटेरियल का भी मिलान करें',
+        ar: 'طابق الإضاءة والمادة'
+      } },
+      { type: 'ul', items: [
+        { en: 'Adjust the metallic and roughness sliders to match the surface — wrong gloss gives you away even with perfect color. (90% of players ignore this.)', zh: '金属度和粗糙度滑块要跟表面匹配 — 哪怕颜色完全对，光泽不对照样露馅（90% 的玩家都忽略这一步）。', es: 'Ajusta los sliders metálico y rugosidad para coincidir con la superficie — un brillo equivocado te delata incluso con el color perfecto. (El 90% de los jugadores lo ignoran.)', fr: 'Ajustez les sliders métal et rugosité pour matcher la surface — un mauvais brillant vous trahit même avec une couleur parfaite. (90 % des joueurs ignorent ça.)', hi: 'मेटैलिक और रफ़नेस स्लाइडर्स को सतह के अनुसार एडजस्ट करें — गलत ग्लॉस पूर्ण रंग के बावजूद भी आपको पकड़वा देता है। (90% खिलाड़ी इसे अनदेखा करते हैं।)', ar: 'اضبط مؤشرات المعدنية والخشونة لتطابق السطح — فإن اللمعان الخاطئ يكشفك حتى مع اللون المثالي. (٩٠٪ من اللاعبين يتجاهلون هذا.)' },
+        { en: 'Align the texture/pattern on your body with the object.', zh: '身体上的纹理/图案方向要和旁边的物体对齐。', es: 'Alinea la textura/patrón de tu cuerpo con el objeto.', fr: 'Alignez la texture / le motif sur votre corps avec l\'objet.', hi: 'अपने शरीर पर टेक्सचर/पैटर्न को वस्तु के साथ संरेखित करें।', ar: 'قم بمحاذاة الملمس/النمط على جسدك مع القطعة المجاورة.' }
+      ] },
+      { type: 'h3', text: {
+        en: 'Pose and Positioning',
+        zh: '姿势与位置摆放',
+        es: 'Pose y Posicionamiento',
+        fr: 'Pose et positionnement',
+        hi: 'पोज़ और पोजीशनिंग',
+        ar: 'الوضعية والتحديد المكاني'
+      } },
+      { type: 'ul', items: [
+        { en: 'Use a Pose to break your human silhouette so your body reads as an object.', zh: '用姿势打破人的剪影，让身体看起来像个物件而不是人。', es: 'Usa una Pose para romper tu silueta humana y que tu cuerpo se lea como un objeto.', fr: 'Utilisez une Pose pour casser votre silhouette humaine afin que votre corps soit lu comme un objet.', hi: 'मानव सिल्हूट को तोड़ने के लिए पोज़ का उपयोग करें, जिससे शरीर एक वस्तु जैसा दिखे।', ar: 'استخدم وضعية لكسر ملامحك البشرية ليبدو جسدك كقطعة ديكور وليس إنساناً.' },
+        { en: 'Hide in shadow, next to bumpy or cluttered objects, and blend into a group of props.', zh: '躲在阴影里、凹凸不平或杂物堆旁边，混在一组道具中间。', es: 'Escóndete en la sombra, junto a objetos irregulares o desordenados, y mézclate en un grupo de accesorios.', fr: 'Cachez-vous à l\'ombre, à côté d\'objets bosselés ou encombrés, et fondrez-vous dans un groupe de props.', hi: 'शैडो में, उभरे हुए या बिखरे हुए ऑब्जेक्ट्स के बगल में छिपें, और प्रॉप्स के समूह में घुल जाएं।', ar: 'اختبأ في الظل، بجوار أجسام غير مستوية أو مزدحمة، وامزج نفسك في مجموعة من قطع الديكور.' },
+        { en: 'Use height and viewing angles — hide where the Seeker\'s line of sight rarely scans.', zh: '利用高度差和视角盲区 — 躲在 Seeker 视线很少扫到的地方。', es: 'Usa altura y ángulos de visión — escóndete donde la línea de visión del Seeker rara vez escanea.', fr: 'Utilisez la hauteur et les angles de vue — cachez-vous là où la ligne de vue du Seeker balaie rarement.', hi: 'ऊंचाई और देखने के एंगल का फायदा उठाएं — Seeker की लाइन ऑफ साइट कम स्कैन करने वाली जगहों पर छिपें।', ar: 'استخدم الارتفاع وزوايا الرؤية — اختبأ حيث نادراً ما يمسح خط بصر الباحث.' },
+        { en: 'Do not be too perfect — an unnaturally clean box can look suspicious.', zh: '不要过于完美 — 干净得太假的方块反而会引人怀疑。', es: 'No seas demasiado perfecto — una caja limpia de forma antinatural puede parecer sospechosa.', fr: 'Ne soyez pas trop parfait — une boîte anormalement propre peut sembler suspecte.', hi: 'बहुत परफेक्ट मत बनें — अस्वाभाविक रूप से साफ बॉक्स संदेहास्पद लग सकता है।', ar: 'لا تكن مثالياً بشكل مفرط — فالصندوق النظيف بشكل غير طبيعي قد يبدو مثيراً للشك.' },
+        { en: 'Once the hunt begins, do not move, no matter what.', zh: '搜猎阶段开始后，无论发生什么都绝对别动。', es: 'Una vez empieza la caza, no te muevas, pase lo que pase.', fr: 'Une fois la chasse commencée, ne bougez pas, quoi qu\'il arrive.', hi: 'हंट शुरू होने के बाद, चाहे कुछ भी हो जाए, हिलें मत।', ar: 'بمجرد بدء الصيد، لا تتحرك مهما حدث.' }
+      ] },
+      { type: 'callout', kind: 'tip', text: {
+        en: 'In paint mode you can turn your shadow OFF by pressing V. Some hiding spots only work if your shadow is not visible — this single trick wins a lot of rounds.',
+        zh: '涂装模式下按 V 键可以关闭自己的阴影。有些藏点只有关掉阴影才成立 — 这一个小技巧就能赢下大半局。',
+        es: 'En modo pintura puedes apagar tu sombra pulsando V. Algunos escondites solo funcionan si tu sombra no es visible — este único truco gana muchísimas rondas.',
+        fr: 'En mode peinture, vous pouvez éteindre votre ombre en appuyant sur V. Certaines caches ne marchent que si votre ombre n\'est pas visible — ce simple truc fait gagner énormément de rounds.',
+        hi: 'पेंट मोड में V दबाकर आप अपनी शैडो बंद कर सकते हैं। कुछ छिपने की जगहें केवल तभी काम करती हैं जब आपकी शैडो दिखाई न दे — यह एक ही ट्रिक बहुत सारे राउंड जीता देता है।',
+        ar: 'في وضع التلوين، يمكنك إيقاف ظلك بالضغط على V. بعض أماكن الاختباء لا تعمل إلا إذا لم يكن ظلك مرئياً — هذه الخدعة وحدها تفوز بالكثير من الجولات.'
+      } },
+
+      { type: 'h2', text: {
+        en: 'Seeker Guide: How to Find Everyone',
+        zh: '搜寻方 Seeker 攻略：如何把所有人揪出来',
+        es: 'Guía de Seeker: Cómo Encontrar a Todos',
+        fr: 'Guide Seeker : Comment trouver tout le monde',
+        hi: 'Seeker गाइड: कैसे सभी को खोजें',
+        ar: 'دليل الباحث: كيف تجد الجميع'
+      } },
+      { type: 'ul', items: [
+        { en: 'Search room by room in blocks, not randomly.', zh: '按房间分块逐个搜索，不要无规律乱跑。', es: 'Busca habitación por habitación en bloques, no al azar.', fr: 'Cherchez pièce par pièce par blocs, pas au hasard.', hi: 'कमरे दर कमरे ब्लॉक में खोजें, बेतरतीब न भागें।', ar: 'ابحث غرفة غرفة في كتل، لا بشكل عشوائي.' },
+        { en: 'Look for visual errors, not just wrong color — unnatural shapes, gloss, repeated textures.', zh: '找视觉异常，不只是颜色错 — 奇怪的形状、不对的光泽、重复的纹理。', es: 'Busca errores visuales, no solo color equivocado — formas antinaturales, brillo, texturas repetidas.', fr: 'Cherchez des erreurs visuelles, pas juste une mauvaise couleur — formes non naturelles, brillant, textures répétées.', hi: 'सिर्फ गलत रंग नहीं, विजुअल एरर ढूंढें — अस्वाभाविक आकार, ग्लॉस, दोहराया गया टेक्सचर।', ar: 'ابحث عن أخطاء بصرية، لا مجرد لون خاطئ — أشكال غير طبيعية، لمعان، وملمس متكرر.' },
+        { en: 'Spot the extra object — a prop that should not be there.', zh: '多出来的那个就是 — 不该在这的东西一定是人。', es: 'Detecta el objeto extra — un accesorio que no debería estar ahí.', fr: 'Repérez l\'objet en trop — un prop qui ne devrait pas être là.', hi: 'एक्स्ट्रा ऑब्जेक्ट पकड़ें — वह प्रॉप जो वहां नहीं होना चाहिए।', ar: 'تعرف على الجسم الزائد — قطعة ديكور لا ينبغي أن تكون هناك.' }
+      ] },
+
+      { type: 'image',
+        src: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Meccha%20Chameleon%207%20maps%20best%20hiding%20spots%20map%20overview%20hide%20and%20seek%20guide%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9',
+        alt: {
+          en: 'Meccha Chameleon 7 maps overview with recommended hiding spots for each map',
+          zh: 'Meccha Chameleon 7 张地图总览，每张地图的推荐藏点',
+          es: 'Visión general de los 7 mapas de Meccha Chameleon con los mejores escondites recomendados',
+          fr: 'Aperçu des 7 cartes Meccha Chameleon avec les meilleures caches recommandées',
+          hi: 'Meccha Chameleon 7 मैप्स ओवरव्यू, हर मैप के बेहतरीन छिपने की जगहें',
+          ar: 'نظرة عامة على خرائط Meccha Chameleon السبع مع أفضل أماكن الاختباء لكل خريطة'
+        },
+        caption: {
+          en: '7 maps, 7 playstyles — pick low-traffic corners and match the dominant color.',
+          zh: '7 张地图，7 种打法 — 选人少角落，做主色系涂装。',
+          es: '7 mapas, 7 estilos — esquinas poco transitadas y color dominante coincidente.',
+          fr: '7 cartes, 7 styles — coins peu fréquentés et couleur dominante assortie.',
+          hi: '7 मैप्स, 7 खेल शैली — कम आवाज़ वाले कोने और मुख्य रंग का मिलान।',
+          ar: '٧ خرائط، ٧ أساليب لعب — اختر الزوايا قليلة الحركة واطابق اللون السائد.'
+        }
+      },
+
+      { type: 'h2', text: {
+        en: 'Best Hiding Spots on All 7 Maps',
+        zh: '全部 7 张地图最佳藏点',
+        es: 'Mejores Escondites en los 7 Mapas',
+        fr: 'Meilleures Caches sur les 7 Cartes',
+        hi: 'सभी 7 मैप्स के सबसे अच्छे छिपने की जगहें',
+        ar: 'أفضل أماكن الاختباء في جميع الخرائط السبع'
+      } },
+      { type: 'h3', text: {
+        en: 'Backrooms',
+        zh: 'Backrooms（后室）',
+        es: 'Backrooms',
+        fr: 'Backrooms',
+        hi: 'Backrooms',
+        ar: 'Backrooms'
+      } },
+      { type: 'p', text: {
+        en: 'Yellowish monotone palette — the simplest but the most unforgiving if your shadow is on.',
+        zh: '整张图是发黄单调配色，简单但最不留情面——阴影没关直接完蛋。',
+        es: 'Paleta amarillenta monótona — la más sencilla, pero la más implacable si tu sombra está activada.',
+        fr: 'Palette jaunâtre monotone — la plus simple, mais la plus impitoyable si votre ombre est allumée.',
+        hi: 'पीला मोनोटोन पैलेट — सबसे सरल, लेकिन अगर शैडो ऑन है तो सबसे बेरहम।',
+        ar: 'لوحة أحادية صفراء مائلة — الأبسط ولكنها الأكثر قسوة إذا كان ظلك مفعّلاً.'
+      } },
+      { type: 'ul', items: [
+        { en: 'Hug walls and door frames — sample the yellow paint 10cm above the baseboard, then stand pressed flat in shadow.', zh: '贴墙和门框躲 — 踢脚线以上 10cm 处吸黄漆色，然后紧贴墙面站在阴影里。', es: 'Agarra las paredes y los marcos de puerta — muestrea la pintura amarilla 10cm sobre el zócalo y pégate a la pared en la sombra.', fr: 'Collez-vous aux murs et aux encadrements de porte — échantillonnez la peinture jaune 10 cm au-dessus de la plinthe, puis collez-vous au mur à l\'ombre.', hi: 'दीवारों और दरवाजे के फ्रेम से चिपकें — बेसबोर्ड से 10cm ऊपर का पीला रंग चुनें, फिर शैडो में दीवार से चिपके खड़े हों।', ar: 'التصق بالجدران وأطراف الأبواب — خذ عينة من الطلاء الأصفر على بعد ١٠ سم فوق الحائط السفلي، ثم التصق بالجدار في الظل.' },
+        { en: 'Killing your shadow matters most here — with shadow on, even a perfect paint job sticks out against the flat yellow room.', zh: '关阴影是这张图的命门 — 阴影开着，哪怕涂得再完美，在单调黄房里也一眼显眼。', es: 'Apagar tu sombra es lo más importante aquí — con sombra activada, incluso un trabajo perfecto resalta en la habitación amarilla plana.', fr: 'Éteindre son ombre est primordial — avec l\'ombre allumée, même une peinture parfaite ressort dans la salle jaune plate.', hi: 'यहाँ शैडो बंद करना सबसे मायने रखता है — शैडो ऑन होने पर, परफेक्ट पेंट भी सपीली पीली कमरे में चमकता है।', ar: 'إيقاف ظلك هو الأهم هنا — مع تشغيل الظل، يبرز حتى التلوين المثالي في الغرفة الصفراء المسطحة.' }
+      ] },
+      { type: 'h3', text: {
+        en: 'Hide-and-Seek Mansion',
+        zh: 'Hide-and-Seek Mansion（捉迷藏豪宅）',
+        es: 'Hide-and-Seek Mansion',
+        fr: 'Hide-and-Seek Mansion',
+        hi: 'Hide-and-Seek Mansion',
+        ar: 'Hide-and-Seek Mansion'
+      } },
+      { type: 'p', text: {
+        en: 'Classic multi-room mansion with decorative clusters — reward for blending into a group.',
+        zh: '经典多房间豪宅，到处是装饰簇，最适合混在装饰堆里躲。',
+        es: 'Mansión clásica de varias habitaciones con grupos decorativos — recompensa por mezclarte en un grupo.',
+        fr: 'Manoir classique multi-pièces avec groupes de décor — récompensé si vous vous fondrez dans un groupe.',
+        hi: 'क्लासिक मल्टी-रूम हवेली, डेकोरेशन के ग्रुप भरे हैं — ग्रुप में घुलने वाले को इनाम मिलता है।',
+        ar: 'قصر كلاسيكي متعدد الغرف بمجموعات زخرفية — مكافأة لمن يندمج في مجموعة.'
+      } },
+      { type: 'ul', items: [
+        { en: 'Crouch inside the kitchen shelving units; sample the dark wood interior or white dishware depending on your shelf.', zh: '蹲进厨房的开放格子柜；看你蹲哪一层，吸里面深色木纹或白色餐具色。', es: 'Agáchate dentro de las estanterías de la cocina; muestra la madera oscura interior o vajilla blanca según tu estante.', fr: 'Accroupissez-vous à l\'intérieur des étagères de cuisine ; échantillonnez le bois sombre intérieur ou la vaisselle blanche selon l\'étage.', hi: 'किचन के शेल्फ यूनिट के अंदर बैठ जाएं; अपने शेल्फ के अनुसार अंदर का डार्क वुड या सफ़ेद बर्तन का रंग चुनें।', ar: 'اجلس منخفضاً داخل أرفف المطبخ؛ وخذ عينة من الخشب الداكن الداخلي أو الأطباق البيضاء وفقاً لرفك.' },
+        { en: 'Blend into clusters of decor — never be a single chair; always be the third chair in a line of two.', zh: '混进装饰堆里，永远别当孤零零一张椅子 — 要当两张椅子排里的"第三张"。', es: 'Mézclate en grupos de decoración — nunca seas una silla sola; sé siempre la tercera silla en una fila de dos.', fr: 'Fondez-vous dans des groupes de décor — ne soyez jamais une seule chaise ; soyez systématiquement la 3e chaise dans une rangée de 2.', hi: 'डेकोर के समूह में घुलें — कभी भी अकेली कुर्सी मत बनो; हमेशा दो की पंक्ति में तीसरी कुर्सी बनो।', ar: 'اندمج في مجموعات الزينة — لا تكن أبداً كرسياً وحيداً؛ كن دائماً الكرسي الثالث في صف مكوّن من كرسيين.' }
+      ] },
+      { type: 'h3', text: {
+        en: 'Indoor Country',
+        zh: 'Indoor Country（田园室内）',
+        es: 'Indoor Country',
+        fr: 'Indoor Country',
+        hi: 'Indoor Country',
+        ar: 'Indoor Country'
+      } },
+      { type: 'p', text: {
+        en: 'Warm muddy floor palette with lots of low farm clutter — you want to be low.',
+        zh: '暖色调泥土地面，低矮农家杂物堆满，越趴越安全。',
+        es: 'Paleta cálida de suelo embarrado con muchos objetos bajos de granja — querrás estar bajo.',
+        fr: 'Palette de sol boueux chaud, plein de petits encombrants de ferme — il faut rester bas.',
+        hi: 'गरम मिट्टी जैसा फर्श, कम ऊंचाई के खेत के कचरे भरे — नीचे लेटना ही सुरक्षित है।',
+        ar: 'لوحة أرضية طينية دافئة مع الكثير من الفلاحات المنخفضة — كلما انخفضت كان ذلك أفضل.'
+      } },
+      { type: 'ul', items: [
+        { en: 'Camouflage low on muddy ground, pick a mud patch surrounded by clutter to distract the Seeker\'s glance.', zh: '趴在泥地上做低姿伪装，挑一块周围被杂物包围的泥地，分散 Seeker 视线。', es: 'Camuflaje bajo en el suelo embarrado; elige un parche de lodo rodeado de desorden para distraer la mirada del Seeker.', fr: 'Camouflage bas sur le sol boueux ; choisissez une parcelle de boue entourée d\'encombrants pour distraire le regard du Seeker.', hi: 'नीचे मिट्टी पर कैमफ्लाज करें, कचरे से घिरा हुआ मिट्टी का पैच चुनें ताकि Seeker की नज़र भटके।', ar: 'خفّ نفسك منخفضاً على الأرض الطينية، واختر بقعة طين محاطة بالفوضى لصرف نظر الباحث.' },
+        { en: 'Roughness slider cranked 90%+ here — mud is never glossy; this single change catches 90% of new Hiders out.', zh: '粗糙度拉满到 90%+ — 泥巴永远不是亮面；这一步就抓出 90% 的新手 Hider。', es: 'Slider de rugosidad al 90%+ aquí — el lodo nunca es brillante; este ajuste sólo delata al 90% de los Hiders nuevos.', fr: 'Slider rugosité à +90 % ici — la boue n\'est jamais brillante ; ce seul réglage démasque 90 % des nouveaux Hiders.', hi: 'रफ़नेस स्लाइडर 90%+ पे रखें — कीचड़ कभी चमकदार नहीं होता; यही बदलाव 90% नए Hider को पकड़ लेता है।', ar: 'مؤشر الخشونة عند ٩٠٪ فما فوق هنا — الوحل أبداً لامع؛ هذا التعديل الواحد يكشف ٩٠٪ من المختبئين المبتدئين.' }
+      ] },
+      { type: 'h3', text: {
+        en: 'Osaka',
+        zh: 'Osaka（大阪）',
+        es: 'Osaka',
+        fr: 'Osaka',
+        hi: 'Osaka',
+        ar: 'Osaka'
+      } },
+      { type: 'p', text: {
+        en: 'Japanese streetscape packed with shop displays — heaven for props that fit into storefronts.',
+        zh: '日本大阪街景，商店陈列密密麻麻 — 假扮门面摆件的天堂。',
+        es: 'Paisaje callejero japonés lleno de escaparates — para disfrazarte de accesorio en las tiendas.',
+        fr: 'Paysage de rue japonais fourni en étalages — le paradis pour se déguiser en prop de vitrine.',
+        hi: 'जापानी स्ट्रीटस्केप, दुकानों के डिस्प्ले से भरा — स्टोर फ्रंट के प्रॉप बनने का स्वर्ग।',
+        ar: 'مشهد شارع ياباني مليء بمعارض المحلات — جنة لمن يتنكر كقطعة ديكور في واجهات المحلات.'
+      } },
+      { type: 'ul', items: [
+        { en: 'Blend into shop displays — sample the display mat color, then shrink to match the height of your neighboring signage or figurine.', zh: '混进店铺陈列 — 吸陈列垫颜色，再缩成和旁边招牌或手办一样高。', es: 'Mézclate en los escaparates — muestrea el color de la alfombra de exposición y luego encoge para igualar la altura del letrero o figura vecina.', fr: 'Fondez-vous dans les étalages — échantillonnez la couleur du tapis d\'exposition, puis rétrécissez pour matcher la hauteur de l\'enseigne ou figurine voisine.', hi: 'शॉप डिस्प्ले में घुलें — डिस्प्ले मैट का रंग चुनें, फिर सिकुड़कर पड़ोस के साइनेज या फिगरीन की हाइट के बराबर हो जाएं।', ar: 'اندمج في معارض المحلات — خذ عينة من لون بطانة العرض، ثم اصغر حجمك لتطابق ارتفاع اللافتة أو الدمى المجاورة.' },
+        { en: 'Never stand in the middle of the crosswalks — Seekers sweep those lanes on every pass.', zh: '绝对别站在斑马线中央 — Seeker 每次都会扫横道线。', es: 'Nunca te quedes en medio de los pasos de cebra — los Seekers barren esos carriles en cada pasada.', fr: 'Ne restez jamais au milieu des passages piétons — les Seekers balayent ces couloirs à chaque passage.', hi: 'कभी भी क्रॉस वॉक के बीच में मत खड़े हों — Seeker हर बार उन लेनों को स्कैन करते हैं।', ar: 'لا تقف أبداً في وسط الممرات المشاة — فالباحثون يمسحون تلك الممرات في كل مرة يمرون بها.' }
+      ] },
+      { type: 'h3', text: {
+        en: 'Penguin Hotel',
+        zh: 'Penguin Hotel（企鹅酒店）',
+        es: 'Penguin Hotel',
+        fr: 'Penguin Hotel',
+        hi: 'Penguin Hotel',
+        ar: 'Penguin Hotel'
+      } },
+      { type: 'p', text: {
+        en: 'Frosty hotel with large uniformly colored furniture — reward for "big solid object" poses.',
+        zh: '冷色调酒店，到处是大面积单色家具 — 最考验"大件纯色物体"的姿势。',
+        es: 'Hotel helado con muebles grandes de color uniforme — premia las poses de "objeto grande sólido".',
+        fr: 'Hôtel givré avec de gros meubles de couleur uniforme — récompense les poses de « grand objet solide ».', hi: 'ठंडा होटल, बड़े मोनोक्रोम फर्नीचर से भरा — "बड़े सॉलिड ऑब्जेक्ट" पोज़ का इनाम।', ar: 'فندق بارد مليء بأثاث كبير بلون موحد — يكافئ وضعيات «الجسم الصلب الكبير».'
+      } },
+      { type: 'ul', items: [
+        { en: 'Look for uniformly colored furniture areas — the white bed panel and dark wardrobe fronts are famously safe.', zh: '找大面积单色家具区 — 白色床头板和深色衣柜正面是公认的神仙藏点。', es: 'Busca zonas de muebles de color uniforme — el panel blanco de la cama y los frentes oscuros del armario son seguros.', fr: 'Cherchez des zones de meubles de couleur uniforme — le panneau blanc du lit et les faces sombres de l\'armoire sont des valeurs sûres.', hi: 'मोनोक्रोम फर्नीचर की जगहें तलाशें — सफ़ेद बेड पैनल और डार्क कपड़े की अलमारी के सामने प्रसिद्ध सुरक्षित छिपने की जगह हैं।', ar: 'ابحث عن مناطق أثاث ذات لون موحد — لوحة السرير البيضاء ووجوه الخزائن الداكنة أماكن آمنة معروفة.' },
+        { en: 'Match the slight blue tint on every white surface — pure white reads as a bright Hider instantly.', zh: '所有白色表面都带一点点蓝调，纯白会立刻被识破是刚涂的 Hider。', es: 'Coincide con el ligero tinte azul en todas las superficies blancas — el blanco puro se lee como Hider brillante instantáneamente.', fr: 'Assortissez la légère teinte bleue de toutes les surfaces blanches — un blanc pur saute aux yeux immédiatement.', hi: 'हर सफ़ेद सतह पर हल्का ब्लू टिंट है — प्योर व्हाइट तुरंत Hider की तरह चमकता है।', ar: 'طابق تدرجات الأزرق الطفيفة على كل سطح أبيض — فإن الأبيض النقي يبدو فوراً كمختبئ مشرق.' }
+      ] },
+      { type: 'h3', text: {
+        en: 'Sewer',
+        zh: 'Sewer（下水道）',
+        es: 'Sewer',
+        fr: 'Sewer',
+        hi: 'Sewer',
+        ar: 'Sewer'
+      } },
+      { type: 'p', text: {
+        en: 'Dark wet industrial map with strong overhead pipe shadows — the map where shadow discipline matters most.',
+        zh: '阴暗潮湿工业图，头顶管道投下重阴影 — 最考验阴影纪律的一张图。',
+        es: 'Mapa industrial oscuro y húmedo con fuertes sombras de tuberías aéreas — donde más importa la disciplina de sombras.',
+        fr: 'Carte industrielle sombre et humide, avec des ombres marquées des tuyaux au plafond — la carte où la discipline ombre compte le plus.',
+        hi: 'गहरा गीला औद्योगिक मैप, ऊपर के पाइप से भारी शैडो — शैडो अनुशासन सबसे मायने रखता है।', ar: 'خريطة صناعية مظلمة رطبة بظلال كثيفة من الأنابيب العلوية — الخريطة التي يهم فيها ضبط الظلال أكثر من أي مكان آخر.'
+      } },
+      { type: 'ul', items: [
+        { en: 'Darkest section behind ceiling pipes — paint that deep grey-black, lie flat between two parallel ceiling beams.', zh: '头顶管道背后最暗区 — 吸那个深灰黑色，平躺夹在两条平行顶梁之间。', es: 'Zona más oscura tras las tuberías del techo — píntate de ese gris-negro profundo, tumbado entre dos vigas paralelas del techo.', fr: 'Zone la plus sombre derrière les tuyaux au plafond — peignez ce gris-noir profond, allongez-vous à plat entre deux poutres parallèles du plafond.', hi: 'सीलिंग पाइप्स के पीछे का सबसे डार्क हिस्सा — गहरे ग्रे-ब्लैक रंग में, दो समानांतर सीलिंग बीम्स के बीच लेट जाएं।', ar: 'أظلم قسم خلف أنابيب السقف — اطبع بنفس اللون الرمادي الأسود العميق، واستلقِ مستوياً بين عارضتين متوازيتين للسقف.' },
+        { en: 'Lie on top of oil barrels — sample the barrel band, match the metallic slider to around 60%.', zh: '躺在油桶桶顶上 — 吸桶箍颜色，金属度滑块调到大约 60%。', es: 'Túmbate encima de los barriles de aceite — muestrea la banda del barril y ajusta el slider metálico al 60% aproximadamente.', fr: 'Allongez-vous sur des barils de pétrole — échantillonnez la bande du baril, réglez le slider métallique aux alentours de 60 %.', hi: 'ऑयल बैरल्स के ऊपर लेटें — बैरल की पट्टी का रंग चुनें, मेटैलिक स्लाइडर लगभग 60% पर रखें।', ar: 'استلقِ فوق براميل النفط — خذ عينة من حلقة البرميل، واضبط مؤشر المعدنية إلى حوالي ٦٠٪.' },
+        { en: 'In the muck under a board without stepping into shadow — lie flat, sample the dark muck, keep roughness max.', zh: '木板下的淤泥里但别走进阴影区 — 平躺吸深泥色，粗糙度拉满。', es: 'En el lodo bajo una tabla sin pisar la sombra — tumbado plano, muestrea el lodo oscuro, rugosidad al máximo.', fr: 'Dans la boue sous une planche sans entrer dans l\'ombre — allongé à plat, échantillonnez la boue sombre, rugosité à fond.', hi: 'किसी बोर्ड के नीचे कीचड़ में पर शैडो में न जाएं — लेटकर गहरे कीचड़ का रंग चुनें, रफ़नेस पूरी।', ar: 'في الوحل تحت لوح خشبي دون الدخول في منطقة ظل — استلقِ مستوياً، وخذ عينة من لون الوحل الداكن، واترك الخشونة عند أقصى حد.' }
+      ] },
+      { type: 'h3', text: {
+        en: 'Sugar Land',
+        zh: 'Sugar Land（糖果国）',
+        es: 'Sugar Land',
+        fr: 'Sugar Land',
+        hi: 'Sugar Land',
+        ar: 'Sugar Land'
+      } },
+      { type: 'p', text: {
+        en: 'High-saturation candy map where color matching has to be pixel-perfect — the hardest beginner map.',
+        zh: '高饱和糖果地图，必须像素级精准对色 — 新手最难的一张。',
+        es: 'Mapa de caramelos de alta saturación donde el color debe ser píxel perfecto — el mapa más difícil para principiantes.',
+        fr: 'Carte aux bonbons haute saturation où la correspondance des couleurs doit être pixel parfaite — la carte la plus dure pour les débutants.',
+        hi: 'हाई सैचुरेशन कैंडी मैप, जहां रंग मिलान पिक्सेल-परफेक्ट होना चाहिए — शुरुआती लोगों के लिए सबसे कठिन।', ar: 'خريطة حلويات عالية التشبع حيث يجب أن تكون مطابقة الألوان مثالية للبكسل — أصعب خريطة للمبتدئين.'
+      } },
+      { type: 'ul', items: [
+        { en: 'Get your color exactly right — a 5% shift in pink / blue / purple shows up instantly against the saturated backdrop.', zh: '颜色必须吸到像素级准确 — 粉/蓝/紫 5% 偏差在高饱和背景上立刻露馅。', es: 'Acierta el color al píxel — un desvío del 5% en rosa / azul / morado resalta instantáneamente sobre el fondo saturado.', fr: 'Couleur au pixel exact — un décalage de 5 % sur rose / bleu / violet saute aux yeux immédiatement sur le fond saturé.', hi: 'रंग पिक्सेल-परफेक्ट चुनें — गुलाबी/नीला/बैंगनी में 5% की गड़बड़ भी हाई सैचुरेशन बैकग्राउंड पर तुरंत पकड़ी जाती है।', ar: 'احصل على اللون الصحيح بالضبط — فإن انحراف ٥٪ في الوردي / الأزرق / البنفسجي يبرز فوراً على الخلفية عالية التشبع.' },
+        { en: 'Blend into candy piles — never be the only pink lollipop; always the 4th one in a row of 3.', zh: '混进糖果堆 — 永远别当孤零零那根粉棒棒糖，要当三根一排里的"第四根"。', es: 'Mézclate en pilas de caramelos — nunca seas el único palo de caramelo rosa; sé siempre el 4º en una fila de 3.', fr: 'Fondez-vous dans les piles de bonbons — ne soyez jamais la seule sucette rose ; soyez systématiquement la 4e dans une rangée de 3.', hi: 'कैंडी के ढेर में घुलें — कभी भी अकेला गुलाबी लॉलीपॉप मत बनो; 3 की पंक्ति में हमेशा चौथा बनो।', ar: 'اندمج في أكوام الحلويات — لا تكن أبداً المصاصة الوردية الوحيدة؛ كن دائماً الرابعة في صف مكوّن من ثلاث مصاصات.' }
+      ] },
+      { type: 'p', text: {
+        en: 'Every map: pick low-traffic corners, match the dominant color, kill your shadow, blend into clusters.',
+        zh: '所有地图通用原则：选人少角落、匹配主色系、关掉阴影、混进物件堆。',
+        es: 'En todos los mapas: esquinas poco transitadas, color dominante coincidente, sombra desactivada, mezclarte en grupos.',
+        fr: 'Pour toutes les cartes : coins peu fréquentés, couleur dominante assortie, ombre éteinte, fondre dans des groupes.',
+        hi: 'हर मैप में सामान्य सिद्धांत: कम आवाज़ वाले कोने, मुख्य रंग से मेल, शैडो बंद, समूहों में घुलना।',
+        ar: 'في كل الخرائط: اختر الزوايا قليلة الحركة، واطابق اللون السائد، وأوقف ظلك، وامزج نفسك في المجموعات.'
+      } },
+
+      { type: 'h2', text: {
+        en: 'Best Settings and Fixing Low FPS',
+        zh: '最佳画面设置与低帧率优化',
+        es: 'Mejores Ajustes y Cómo Arreglar FPS Bajo',
+        fr: 'Meilleurs Réglages et Corriger un FPS Bas',
+        hi: 'सर्वश्रेष्ठ सेटिंग्स और कम FPS को ठीक करें',
+        ar: 'أفضل الإعدادات وإصلاح انخفاض الإطارات'
+      } },
+      { type: 'ul', items: [
+        { en: 'Low FPS is common on integrated-GPU PCs; lower resolution scale and shadows first.', zh: '集显 PC 上低帧率很常见；先降分辨率缩放和阴影质量。', es: 'Bajo FPS es común en PCs con GPU integrada; primero baja escala de resolución y sombras.', fr: 'Faible FPS fréquent sur PC avec GPU intégrée ; baissez d\'abord l\'échelle de résolution et les ombres.', hi: 'इंटीग्रेटेड-GPU PC पर कम FPS आम है; पहले रिज़ॉल्यूशन स्केल और शैडो कम करें।', ar: 'انخفاض الإطارات شائع في الحواسيب بشريحات رسومات مدمجة؛ خفض أولاً مقياس الدقة والظلال.' },
+        { en: 'Close background apps; update GPU drivers.', zh: '关掉后台占用；更显卡驱动。', es: 'Cierra aplicaciones en segundo plano; actualiza drivers GPU.', fr: 'Fermez les applications d\'arrière-plan ; mettez à jour les pilotes GPU.', hi: 'बैकग्राउंड ऐप्स बंद करें; GPU ड्राइवर अपडेट करें।', ar: 'أغلق التطبيقات الخلفية؛ حدّث برامج تشغيل وحدة معالجة الرسومات.' },
+        { en: 'Cap or unlock FPS depending on your monitor; disable V-Sync if you see input lag.', zh: '按显示器刷新率锁帧或解锁；如果感觉输入延迟大就关垂直同步。', es: 'Limita o desbloquea FPS según tu monitor; desactiva V-Sync si notas input lag.', fr: 'Plafonnez ou débloquez les FPS selon votre moniteur ; désactivez V-Sync si vous voyez de l\'input lag.', hi: 'अपने मॉनिटर के अनुसार FPS कैप या अनलॉक करें; इनपुट लैग दिखे तो V-Sync बंद करें।', ar: 'قيّد الإطارات أو أزل القيد وفقاً لشاشتك؛ وأوقف مزامنة V-Sync إذا لاحظت تأخراً في الإدخال.' }
+      ] },
+
+      { type: 'h2', text: {
+        en: 'Common Mistakes That Get You Caught',
+        zh: '一抓一个准的新手常见错误',
+        es: 'Errores Comunes que te Hacen Atrapar',
+        fr: 'Erreurs Courantes qui vous Font Attraper',
+        hi: 'सामान्य गलतियाँ जो आपको पकड़ा देती हैं',
+        ar: 'الأخطاء الشائعة التي تكشف مكانك'
+      } },
+      { type: 'ul', items: [
+        { en: 'Painting before choosing a spot, then not matching the final surface.', zh: '先涂完色再找藏点，结果最终位置的颜色完全不匹配。', es: 'Pintar antes de elegir lugar, luego no coincidir con la superficie final.', fr: 'Peindre avant de choisir son spot, puis ne pas matcher la surface finale.', hi: 'जगह चुनने से पहले ही रंग भर लेना, फिर अंतिम सतह से रंग मेल न खाना।', ar: 'التلوين قبل اختيار المكان، ثم عدم مطابقة السطح النهائي.' },
+        { en: 'Ignoring metallic/roughness so your body reflects light wrong.', zh: '金属度/粗糙度完全不调，身体反光方式一眼假。', es: 'Ignorar metálico/rugosidad así tu cuerpo refleja mal la luz.', fr: 'Ignorer métal/rugosité, donc votre corps réfléchit mal la lumière.', hi: 'मेटैलिक/रफ़नेस न रखना, जिससे शरीर का लाइट रिफ्लेक्शन गलत दिखे।', ar: 'تجاهل المعدنية/الخشونة فتعكس جسدك للضوء بطريقة خاطئة.' },
+        { en: 'Leaving your shadow on in a spot that needs it off.', zh: '藏点本来需要关阴影，结果阴影还开着。', es: 'Dejar tu sombra activada en un lugar donde hay que apagarla.', fr: 'Laisser son ombre allumée sur un spot qui exige qu\'elle soit éteinte.', hi: 'जगह पर शैडो बंद करना चाहिए, पर आप शैडो ऑन ही छोड़ दें।', ar: 'ترك ظلك مفعّلاً في مكان يتطلب إيقافه.' },
+        { en: 'Standing alone in the open instead of blending into clutter.', zh: '在开阔地单独杵着，不混进旁边杂物堆。', es: 'Estar solo en el claro en vez de mezclarte en el desorden.', fr: 'Rester seul au lieu de se fondre dans le désordre.', hi: 'खुली जगह पर अकेला खड़ा रहना, बगल के कचरे में न घुलना।', ar: 'الوقوف وحيداً في مكان مكشوف بدلاً من الاندماج في الفوضى المجاورة.' },
+        { en: 'Twitching or moving after the hunt starts.', zh: '搜猎阶段开始后还小动作抽搐或挪位置。', es: 'Moverte o dar tirones una vez empieza la caza.', fr: 'Faire des mouvements brusques ou bouger une fois la chasse commencée.', hi: 'हंट शुरू होने के बाद भी हल्के से हिलना-डुलना या पोज़ बदलना।', ar: 'الارتعاش أو الحركة بعد بدء مرحلة الصيد.' }
+      ] },
+      { type: 'callout', kind: 'warn', text: {
+        en: 'You cannot hunt or interact while you can see other players as a Hider — stay disciplined and just hold still.',
+        zh: '⚠️ 铁律：作为 Hider 只要你还能看见其他玩家就不能动、不能互动 — 纪律第一，钉住不动。',
+        es: 'No puedes cazar ni interactuar mientras veas a otros jugadores siendo Hider — mantén la disciplina y quédate quieto.',
+        fr: 'Vous ne pouvez ni chasser ni interagir tant que vous voyez les autres joueurs en Hider — discipline et immobilité.',
+        hi: 'Hider होने पर जब तक आप दूसरे खिलाड़ियों को देख सकते हैं, तब तक इंटरैक्ट या मूव नहीं कर सकते — अनुशासन रखें, बस जमकर ठहरें।', ar: 'لا يمكنك الصيد أو التفاعل طالما ترى اللاعبين الآخرين وأنت مختبئ — التزم بالانضباط وابقَ بلا حراك.'
+      } },
+
+      { type: 'h2', text: {
+        en: 'Frequently Asked Questions',
+        zh: 'FAQ 常见问题',
+        es: 'Preguntas Frecuentes',
+        fr: 'Questions Fréquentes',
+        hi: 'अक्सर पूछे जाने वाले प्रश्न',
+        ar: 'الأسئلة الشائعة'
+      } },
+      { type: 'h3', text: {
+        en: 'How many players can join?',
+        zh: '一局最多支持多少人？',
+        es: '¿Cuántos jugadores pueden unirse?',
+        fr: 'Combien de joueurs peuvent rejoindre ?',
+        hi: 'कितने खिलाड़ी शामिल हो सकते हैं?',
+        ar: 'كم عدد اللاعبين الذين يمكنهم الانضمام؟'
+      } },
+      { type: 'p', text: {
+        en: 'There is no hard cap in code, hosts can set up to 24, but developers recommend 2-10 for the best experience.',
+        zh: '代码层面没有硬上限，房主最高可设 24 人，但开发者推荐 2-10 人体验最佳。',
+        es: 'No hay límite estricto en el código; los anfitriones pueden configurar hasta 24, pero los desarrolladores recomiendan 2-10 para la mejor experiencia.',
+        fr: 'Aucune limite stricte dans le code ; les hôtes peuvent monter à 24, mais les développeurs recommandent 2-10 joueurs pour la meilleure expérience.',
+        hi: 'कोड में कोई हार्ड कैप नहीं है, होस्ट अधिकतम 24 तक सेट कर सकते हैं, लेकिन डेवलपर्स सर्वोत्तम अनुभव के लिए 2-10 की सलाह देते हैं।', ar: 'لا يوجد حد صارم في الكود؛ يستطيع المضيف ضبط العدد حتى ٢٤ لاعباً، لكن المطورون يوصون بـ ٢ إلى ١٠ لاعبين للحصول على أفضل تجربة.'
+      } },
+      { type: 'h3', text: {
+        en: 'How do I turn off my shadow?',
+        zh: '怎么关掉我自己的阴影？',
+        es: '¿Cómo apago mi sombra?',
+        fr: 'Comment éteindre mon ombre ?',
+        hi: 'मैं अपनी शैडो कैसे बंद करूं?',
+        ar: 'كيف أوقف ظلي؟'
+      } },
+      { type: 'p', text: {
+        en: 'Enter paint mode and press V.',
+        zh: '先进入涂装模式，然后按 V 键。',
+        es: 'Entra en modo pintura y pulsa V.',
+        fr: 'Entrez en mode peinture et appuyez sur V.',
+        hi: 'पेंट मोड में जाएं और V दबाएं।',
+        ar: 'ادخل وضع التلوين ثم اضغط على V.'
+      } },
+      { type: 'h3', text: {
+        en: 'Why does the eyedropper pick the wrong color?',
+        zh: '为什么 Eyedropper 吸的颜色不对？',
+        es: '¿Por qué el eyedropper toma un color equivocado?',
+        fr: 'Pourquoi l\'Eyedropper récupère-t-il la mauvaise couleur ?',
+        hi: 'Eyedropper गलत रंग क्यों चुन लेता है?',
+        ar: 'لماذا يختار أداة Eyedropper لوناً خاطئاً؟'
+      } },
+      { type: 'p', text: {
+        en: 'You are likely sampling a face lit differently from the one you lean on; sample the exact touching surface and fine-tune with HSV.',
+        zh: '八成是你吸的那面和你最终贴的那面光照不一样 — 一定要吸身体紧贴的那个精确面，再用 HSV 滑块微调。',
+        es: 'Probablemente muestreas una cara con distinta iluminación a la que te apoyas; muestrea la superficie exacta de contacto y ajusta con HSV.',
+        fr: 'Vous échantillonnez probablement une face dont l\'éclairage diffère de celle contre laquelle vous êtes collés ; échantillonnez la surface exacte de contact, puis affinez avec HSV.',
+        hi: 'ज़्यादातर आप जिस सतह से रंग चुनते हैं उसकी लाइटिंग, जिस पर आप टिकते हैं, उससे अलग होती है — शरीर जिस सटीक सतह से चिपकता है, सिर्फ़ उसी से रंग लें, फिर HSV से फाइन-ट्यून करें।',
+        ar: 'من المرجح أنك تُأخذ عينة من وجه بإضاءة مختلفة عن الوجه الذي تتلصق به؛ خذ العينة من سطح التلامس الدقيق، ثم أضف التعديلات الدقيقة باستخدام HSV.'
+      } },
+      { type: 'h3', text: {
+        en: 'How much does it cost?',
+        zh: '游戏卖多少钱？',
+        es: '¿Cuánto cuesta?',
+        fr: 'Quel est le prix ?',
+        hi: 'इसकी कीमत कितनी है?',
+        ar: 'كم تكلف اللعبة؟'
+      } },
+      { type: 'p', text: {
+        en: 'About USD 5.99 on Steam.',
+        zh: 'Steam 上约 5.99 美元。',
+        es: 'Unos 5,99 USD en Steam.',
+        fr: 'Environ 5,99 USD sur Steam.',
+        hi: 'Steam पर लगभग 5.99 USD।',
+        ar: 'حوالي ٥٫٩٩ دولار على منصة Steam.'
+      } },
+
+      { type: 'cta', link: '/tool/color-picker', text: {
+        en: '🎨 Want to nail your camouflage colors? Try our free online Color Picker to grab exact HEX/HSV values →',
+        zh: '🎨 想精准调出涂装颜色？用 Korelyy 免费在线取色器，一键复制精确 HEX/HSV 色值 →',
+        es: '🎨 ¿Quieres dominar los colores de camuflaje? Prueba nuestro Selector de Color online gratis para sacar valores HEX/HSV exactos →',
+        fr: '🎨 Vous voulez maîtriser vos couleurs de camouflage ? Essayez notre Color Picker en ligne gratuit pour récupérer les valeurs HEX/HSV exactes →',
+        hi: '🎨 क्या आप कैमफ्लाज रंगों को परफेक्ट करना चाहते हैं? हमारा फ्री ऑनलाइन Color Picker आज़माएं, सटीक HEX/HSV वैल्यू कॉपी करें →',
+        ar: '🎨 هل تريد إتقان ألوان تمويهك؟ جرّب منتقي الألوان المجاني عبر الإنترنت لاستخراج قيم HEX/HSV الدقيقة →'
+      }, sub: {
+        en: 'More free tools on Korelyy — no signup, runs in your browser.',
+        zh: 'Korelyy 还有更多免费工具 — 免注册，全部浏览器本地运行。',
+        es: 'Más herramientas gratuitas en Korelyy — sin registro, funcionan en tu navegador.',
+        fr: 'Plus d\'outils gratuits sur Korelyy — pas d\'inscription, tout se passe dans votre navigateur.',
+        hi: 'Korelyy पर और भी फ्री टूल्स — कोई साइनअप नहीं, सब आपके ब्राउज़र में चलते हैं।',
+        ar: 'المزيد من الأدوات المجانية على Korelyy — بدون تسجيل، تعمل داخل متصفحك.'
+      } },
+
+      { type: 'p', text: {
+        en: 'Meccha Chameleon rewards patience and observation more than reflexes. Lock your spot early, match color plus light plus material, kill your shadow, strike a non-human pose, and freeze. Do that consistently and you will outlast almost any Seeker. Good luck.',
+        zh: 'Meccha Chameleon 拼的是耐心和观察力，而不是手速。早点锁定藏点、同时对好颜色+光照+材质三项、关掉阴影、摆出非人姿势、然后焊死不动。做到这一套，你基本能熬过任何 Seeker。祝好运。',
+        es: 'Meccha Chameleon premia la paciencia y la observación más que los reflejos. Bloquea tu lugar pronto, coincide color, luz y material, apaga tu sombra, haz una pose no humana y quédate congelado. Hazlo constante y sobrevivirás a casi cualquier Seeker. Mucha suerte.',
+        fr: 'Meccha Chameleon récompense davantage la patience et l\'observation que les réflexes. Verrouillez votre spot tôt, assortissez couleur + lumière + matière, éteignez votre ombre, prenez une pose non humaine, puis gèle. Faites-le systématiquement et vous survivrez à quasiment tous les Seekers. Bonne chance.',
+        hi: 'Meccha Chameleon में रिफ्लेक्स से ज़्यादा धैर्य और निरीक्षण का इनाम मिलता है। जल्दी से जगह लॉक करें, रंग+लाइट+मटेरियल तीनों का मिलान करें, शैडो बंद करें, गैर-मानव पोज़ लें, और फिर एकदम स्थिर रहें। ऐसा लगातार करें और आप लगभग किसी भी Seeker से लंबे समय तक बचे रहेंगे। शुभकामनाएं।',
+        ar: 'تكافئ لعبة Meccha Chameleon الصبر والملاحظة أكثر من ردود الفعل السريعة. أقفل مكانك مبكراً، واطابق اللون والإضاءة والمادة معاً، وأوقف ظلك، واتخذ وضعية غير بشرية، ثم تجمد. افعل ذلك بانتظام وستدوم لفترة أطول من أي باحث تقريباً. حظاً سعيداً.'
+      } }
+    ]
   },
 
 ];

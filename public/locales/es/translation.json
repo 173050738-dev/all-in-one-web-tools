@@ -399,6 +399,10 @@
       "name": "Generador de Códigos QR",
       "description": "Crea códigos QR personalizados: colores, logotipos, tamaños. Descarga PNG de alta resolución en un clic — URLs, texto, WiFi y más."
     },
+    "excel-formula-generator": {
+      "name": "Generador de Fórmulas Excel",
+      "description": "Convierte lenguaje natural en fórmulas de Excel / Google Sheets al instante. Describe tu necesidad, obtén la fórmula exacta, explicación paso a paso y notas de uso — gratis, sin registro."
+    },
     "random-number": {
       "name": "Generador de números aleatorios",
       "description": "Genera enteros/decimales aleatorios en rango personalizado, soporta números únicos por lotes, ideal para sorteos, rifas, dígitos de contraseña."

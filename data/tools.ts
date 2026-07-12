@@ -21960,6 +21960,24 @@ export const tools: Tool[] = [
     difficulty: 'easy',
     complianceLevel: 'green',
   },
+{
+    id: 'excel-formula-generator',
+    slug: 'excel-formula-generator',
+    name: 'Excel公式生成器',
+    description: '自然语言一句话转 Excel / Google Sheets 公式。输入需求描述，一键生成可直接复制的公式，附逐步解释、示例用法与注意事项，零基础也能写复杂函数。',
+    category: 'productivity',
+    tags: ['Excel', '公式', 'Sheets', '表格', '函数'],
+    nameEn: 'Excel Formula Generator', descriptionEn: 'Turn natural language into Excel / Google Sheets formulas in one click. Describe what you need, get a ready-to-copy formula with step-by-step explanation, usage example and caveats — perfect for beginners and pros alike.', tagsEn: ['Excel', 'Formula', 'Sheets', 'Spreadsheet', 'Functions'],
+    isFree: true,
+    icon: 'Table',
+    relatedTools: ['json-formatter', 'markdown-preview', 'text-tools'],
+    accessTag: 'direct',
+    signup: ['no-signup'],
+    localProcessing: false,
+    likes: 9100,
+    difficulty: 'easy',
+    complianceLevel: 'green',
+  },
 ];
 
 export const getToolBySlug = (slug: string): Tool | undefined => {

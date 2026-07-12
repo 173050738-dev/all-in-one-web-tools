@@ -11,6 +11,8 @@ import {
   Search,
   TrendingUp,
   CheckCircle2,
+  Wand2,
+  Loader2,
   Clock3,
   Star,
   Trophy,
@@ -108,6 +110,16 @@ const translations: Record<string, Record<string, string>> = {
     'label.openTool': '打开工具',
     'label.completeStep': '标记完成',
     'placeholder.search': '搜索工作流标题、描述、标签...',
+    'placeholder.aiSearch': '描述你的场景，AI帮你选工作流...',
+    'ai.btn': 'AI',
+    'ai.back': '返回',
+    'ai.thinking': 'AI正在思考中...',
+    'ai.recommend': 'AI 推荐',
+    'ai.smartDesc': '描述你的场景，AI为你匹配最合适的工作流',
+    'ai.example1': '做跨境电商选品',
+    'ai.example2': '短视频批量剪辑',
+    'ai.example3': '写论文+降重',
+    'ai.example4': '独立开发者上线SOP',
     'filter.title': '高级筛选',
     'filter.difficulty': '难度',
     'filter.estimatedTime': '预估耗时',
@@ -170,6 +182,16 @@ const translations: Record<string, Record<string, string>> = {
     'label.openTool': 'Open Tool',
     'label.completeStep': 'Mark Done',
     'placeholder.search': 'Search by title, description, tags...',
+    'placeholder.aiSearch': 'Describe your scenario, AI matches workflows...',
+    'ai.btn': 'AI',
+    'ai.back': 'Back',
+    'ai.thinking': 'AI is thinking...',
+    'ai.recommend': 'AI Recommendation',
+    'ai.smartDesc': 'Describe what you need to do, AI picks the best workflows',
+    'ai.example1': 'E-commerce product research',
+    'ai.example2': 'Short-form video batch editing',
+    'ai.example3': 'Research paper + plagiarism reduction',
+    'ai.example4': 'Indie dev launch SOP',
     'filter.title': 'Advanced Filters',
     'filter.difficulty': 'Difficulty',
     'filter.estimatedTime': 'Est. Time',
@@ -232,6 +254,16 @@ const translations: Record<string, Record<string, string>> = {
     'label.openTool': 'ऐप खोलें',
     'label.completeStep': 'हो गया मार्क करें',
     'placeholder.search': 'खोजें...',
+    'placeholder.aiSearch': 'अपना सीनारियो बताएं, AI वर्कफ़्लो चुनता है...',
+    'ai.btn': 'AI',
+    'ai.back': 'वापस',
+    'ai.thinking': 'AI सोच रहा है...',
+    'ai.recommend': 'AI सुझाव',
+    'ai.smartDesc': 'अपनी ज़रूरत बताएं, AI सबसे बेहतरीन वर्कफ़्लो चुनता है',
+    'ai.example1': 'ईकॉमर्स प्रोडक्ट रिसर्च',
+    'ai.example2': 'शॉर्ट वीडियो बैच एडिटिंग',
+    'ai.example3': 'रिसर्च पेपर + यूनिक',
+    'ai.example4': 'इंडी डेवलपर लॉन्च SOP',
     'filter.title': 'उन्नत फ़िल्टर',
     'filter.difficulty': 'कठिनाई',
     'filter.estimatedTime': 'अनुमानित समय',
@@ -294,6 +326,16 @@ const translations: Record<string, Record<string, string>> = {
     'label.openTool': 'Ouvrir',
     'label.completeStep': 'Terminé',
     'placeholder.search': 'Rechercher workflows...',
+    'placeholder.aiSearch': 'Décrivez votre scénario, IA trouve les workflows...',
+    'ai.btn': 'IA',
+    'ai.back': 'Retour',
+    'ai.thinking': 'L\'IA réfléchit...',
+    'ai.recommend': 'Recommandation IA',
+    'ai.smartDesc': 'Décrivez votre besoin, l\'IA sélectionne les meilleurs workflows',
+    'ai.example1': 'Recherche produit e-commerce',
+    'ai.example2': 'Montage vidéo lot court',
+    'ai.example3': 'Mémoire + anti-plagiat',
+    'ai.example4': 'SOP lancement indie dev',
     'filter.title': 'Filtres Avancés',
     'filter.difficulty': 'Difficulté',
     'filter.estimatedTime': 'Durée Est.',
@@ -356,6 +398,16 @@ const translations: Record<string, Record<string, string>> = {
     'label.openTool': 'Abrir',
     'label.completeStep': 'Marcar Hecho',
     'placeholder.search': 'Buscar flujos...',
+    'placeholder.aiSearch': 'Describe tu escenario, IA encuentra flujos...',
+    'ai.btn': 'IA',
+    'ai.back': 'Volver',
+    'ai.thinking': 'La IA está pensando...',
+    'ai.recommend': 'Recomendación IA',
+    'ai.smartDesc': 'Describe tu necesidad, la IA selecciona los mejores flujos',
+    'ai.example1': 'Investigación producto ecommerce',
+    'ai.example2': 'Edición lote videos cortos',
+    'ai.example3': 'Tesis + antiplagio',
+    'ai.example4': 'SOP lanzamiento indie dev',
     'filter.title': 'Filtros Avanzados',
     'filter.difficulty': 'Dificultad',
     'filter.estimatedTime': 'Tiempo Est.',
@@ -418,6 +470,16 @@ const translations: Record<string, Record<string, string>> = {
     'label.openTool': 'فتح التطبيق',
     'label.completeStep': 'تم التحديد',
     'placeholder.search': 'ابحث في سير العمل...',
+    'placeholder.aiSearch': 'صف سيناريوك، الذكاء الاصطناعي يختار سير العمل...',
+    'ai.btn': 'ذكاء',
+    'ai.back': 'رجوع',
+    'ai.thinking': 'الذكاء الاصطناعي يفكّر...',
+    'ai.recommend': 'توصية الذكاء الاصطناعي',
+    'ai.smartDesc': 'صف احتياجك، يختار لك الذكاء الاصطناعي أفضل سير العمل',
+    'ai.example1': 'بحث منتج التجارة الإلكترونية',
+    'ai.example2': 'تحرير دفعة الفيديوهات القصيرة',
+    'ai.example3': 'ورقة بحث + خفض الاقتباس',
+    'ai.example4': 'SOP إطلاق مطور مستقل',
     'filter.title': 'فلاتر متقدمة',
     'filter.difficulty': 'الصعوبة',
     'filter.estimatedTime': 'الوقت المقدر',
@@ -618,6 +680,10 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   // ============================================================
   const [activeTab, setActiveTab] = useState<TabType>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isAiMode, setIsAiMode] = useState(false);
+  const [isAiLoading, setIsAiLoading] = useState(false);
+  const [aiResult, setAiResult] = useState<any>(null);
+  const [aiOpen, setAiOpen] = useState(false);
   const [showCreator, setShowCreator] = useState(false);
   const [showCreatorCanvas, setShowCreatorCanvas] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
@@ -793,6 +859,69 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
     }
     return out;
   };
+
+  const fetchAiRecommend = useCallback(async () => {
+    if (!searchQuery.trim()) return;
+    setIsAiLoading(true);
+    setAiResult(null);
+    try {
+      const res = await fetch('/api/ai-recommend', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: searchQuery, locale }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setAiResult(data);
+      }
+    } catch (error) {
+      if (error && typeof error === 'object' && (error as { name?: string }).name === 'AbortError') return;
+      console.error('AI recommend error:', error);
+    } finally {
+      setIsAiLoading(false);
+    }
+  }, [searchQuery, locale]);
+
+  const handleAiClick = () => {
+    if (!searchQuery.trim()) {
+      setIsAiMode(true);
+      setAiOpen(true);
+      return;
+    }
+    setIsAiMode(true);
+    setAiOpen(true);
+    fetchAiRecommend();
+  };
+
+  const handleBackToSearch = () => {
+    setIsAiMode(false);
+    setAiResult(null);
+  };
+
+  const handleClear = () => {
+    setSearchQuery('');
+    setAiResult(null);
+  };
+
+  const handleAiKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      if (isAiMode && searchQuery.trim()) {
+        fetchAiRecommend();
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const el = document.getElementById('wf-ai-panel');
+      const input = document.getElementById('wf-search-input');
+      if (el && !el.contains(event.target as Node) && input && !input.contains(event.target as Node)) {
+        setAiOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const displayedWorkflows = filterByAdvanced(filterBySearch(filterByTab(getAllWorkflows())));
 
@@ -1028,6 +1157,210 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
         </div>
       </div>
 
+      {/* ===== 搜索栏（置顶+AI 模式） ===== */}
+      <div className='relative mb-4 sm:mb-5'>
+        <div className='relative'>
+          <Search className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 ${isAiMode ? 'text-purple-400' : 'text-gray-400'}`} />
+          <input
+            id='wf-search-input'
+            type='text'
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onFocus={() => setAiOpen(true)}
+            onKeyDown={handleAiKeyDown}
+            placeholder={isAiMode ? t('placeholder.aiSearch') : t('placeholder.search')}
+            className={`w-full pl-10 pr-32 py-2.5 rounded-xl border bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-0 transition-all ${
+              isAiMode
+                ? 'border-purple-300 dark:border-purple-700 focus:ring-purple-500'
+                : 'border-gray-200 dark:border-gray-700 focus:ring-[#5461A8]/40'
+            }`}
+          />
+          <div className='absolute right-1.5 top-1/2 -translate-y-1/2 flex items-center gap-1'>
+            {searchQuery && (
+              <button
+                onClick={handleClear}
+                className='w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 active:bg-gray-200 dark:active:bg-gray-600 transition-colors'
+                aria-label={t('ai.back')}
+              >
+                <X className='h-4 w-4 text-gray-500 dark:text-gray-400' />
+              </button>
+            )}
+            <button
+              onClick={isAiMode ? handleBackToSearch : handleAiClick}
+              className={`min-h-[34px] min-w-[56px] px-2.5 flex items-center justify-center gap-1 rounded-lg text-xs font-medium transition-all ${
+                isAiMode
+                  ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
+                  : 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 active:scale-[0.98] shadow-sm'
+              }`}
+            >
+              {isAiLoading ? (
+                <Loader2 className='h-3.5 w-3.5 animate-spin flex-shrink-0' />
+              ) : (
+                <Wand2 className='h-3.5 w-3.5 flex-shrink-0' />
+              )}
+              <span>{isAiMode ? t('ai.back') : t('ai.btn')}</span>
+            </button>
+          </div>
+        </div>
+
+        {aiOpen && (
+          <div
+            id='wf-ai-panel'
+            className='absolute left-0 right-0 top-full mt-2 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden z-[55] animate-in fade-in slide-in-from-top-2 duration-200'
+          >
+            {isAiMode ? (
+              <div className='py-2 max-h-[66vh] overflow-y-auto overscroll-contain'>
+                {isAiLoading ? (
+                  <div className='px-4 py-10 text-center'>
+                    <Loader2 className='w-7 h-7 text-purple-500 mx-auto mb-3 animate-spin' />
+                    <p className='text-sm text-gray-500 dark:text-gray-400'>{t('ai.thinking')}</p>
+                  </div>
+                ) : aiResult && aiResult.tools && aiResult.tools.length > 0 ? (
+                  <>
+                    <div className='px-4 py-3 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border-b border-purple-100 dark:border-purple-900/30'>
+                      <div className='flex items-center gap-2 mb-1'>
+                        <Wand2 className='w-4 h-4 text-purple-500' />
+                        <span className='text-xs font-medium text-purple-700 dark:text-purple-300 uppercase tracking-wider'>
+                          {t('ai.recommend')}
+                        </span>
+                      </div>
+                      <p className='text-sm text-gray-600 dark:text-gray-300'>{aiResult.reason}</p>
+                    </div>
+                    {aiResult.tools.map((tool: any) => {
+                      const link = resolveToolLink(tool.slug || tool.id, locale);
+                      const isExt = link.type === 'external';
+                      const displayName =
+                        (locale === 'zh' ? tool.name : (tool.nameEn || tool.name)) || tool.name;
+                      const displayDesc =
+                        (locale === 'zh' ? tool.description : (tool.descriptionEn || tool.description)) || tool.description;
+                      return (
+                        <a
+                          key={tool.id}
+                          href={link.url}
+                          target={isExt ? '_blank' : undefined}
+                          rel={isExt ? 'noopener noreferrer' : undefined}
+                          className='flex items-start gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 active:bg-gray-100 dark:active:bg-gray-700 transition-colors'
+                        >
+                          <div className='flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 flex items-center justify-center'>
+                            <Wand2 className='w-4 h-4 text-purple-500' />
+                          </div>
+                          <div className='min-w-0 flex-1'>
+                            <p className='text-sm font-medium text-gray-900 dark:text-gray-100 truncate'>{displayName}</p>
+                            <p className='text-xs text-purple-600 dark:text-purple-400 mt-1'>{tool.aiReason}</p>
+                            {displayDesc && (
+                              <p className='text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5'>{displayDesc}</p>
+                            )}
+                          </div>
+                          {tool.isFree && (
+                            <span className='flex-shrink-0 px-2 py-0.5 text-[10px] font-medium bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full'>
+                              {t('filter.anyTime').startsWith('不') || t('filter.anyTime').startsWith('任') || t('filter.anyTime').startsWith('Any') || t('filter.anyTime').startsWith('कोई') || t('filter.anyTime').startsWith('Toute') || t('filter.anyTime').startsWith('Cua') || t('filter.anyTime').startsWith('أي') ? 'Free' : 'Free'}
+                            </span>
+                          )}
+                        </a>
+                      );
+                    })}
+                    <div className='px-4 py-2 border-t border-gray-100 dark:border-gray-700'>
+                      <button
+                        onClick={handleBackToSearch}
+                        className='text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+                      >
+                        ← {t('ai.back')}
+                      </button>
+                    </div>
+                  </>
+                ) : !searchQuery.trim() ? (
+                  <div className='px-4 py-7 text-center'>
+                    <Wand2 className='w-9 h-9 text-purple-400 mx-auto mb-3' />
+                    <p className='text-sm font-medium text-gray-700 dark:text-gray-300 mb-1'>{t('ai.recommend')}</p>
+                    <p className='text-xs text-gray-500 dark:text-gray-400 mb-4'>{t('ai.smartDesc')}</p>
+                    <div className='flex flex-wrap gap-1.5 justify-center'>
+                      {[t('ai.example1'), t('ai.example2'), t('ai.example3'), t('ai.example4')].map((q) => (
+                        <button
+                          key={q}
+                          onClick={() => { setSearchQuery(q); fetchAiRecommend(); }}
+                          className='px-3 py-1.5 min-h-[36px] inline-flex items-center text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors active:scale-[0.98]'
+                        >
+                          {q}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className='py-2 max-h-[60vh] overflow-y-auto'>
+                    <div className='px-4 py-3 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border-b border-purple-100 dark:border-purple-900/30'>
+                      <div className='flex items-center gap-2 mb-1'>
+                        <Wand2 className='w-4 h-4 text-purple-500' />
+                        <span className='text-xs font-medium text-purple-700 dark:text-purple-300 uppercase tracking-wider'>
+                          {t('ai.recommend')}
+                        </span>
+                      </div>
+                    </div>
+                    {displayedWorkflows.slice(0, 5).length > 0 ? (
+                      displayedWorkflows.slice(0, 5).map((wf) => (
+                        <a
+                          key={wf.id}
+                          href={getWorkflowDetailUrl(locale, wf)}
+                          onClick={() => setAiOpen(false)}
+                          className='flex items-start gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 active:bg-gray-100 dark:active:bg-gray-700 transition-colors'
+                        >
+                          <div className='flex-shrink-0 w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center'>
+                            <Search className='w-4 h-4 text-gray-400' />
+                          </div>
+                          <div className='min-w-0 flex-1'>
+                            <p className='text-sm font-medium text-gray-900 dark:text-gray-100 truncate'>{wf.title}</p>
+                            <p className='text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5'>{wf.description}</p>
+                          </div>
+                        </a>
+                      ))
+                    ) : (
+                      <div className='px-4 py-8 text-center'>
+                        <Search className='w-7 h-7 text-gray-300 dark:text-gray-600 mx-auto mb-2' />
+                        <p className='text-sm text-gray-500 dark:text-gray-400'>{t('empty.all')}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className='py-2 max-h-[60vh] overflow-y-auto'>
+                {searchQuery.trim() ? (
+                  <>
+                    <div className='px-4 py-2 border-b border-gray-100 dark:border-gray-700'>
+                      <p className='text-[11px] text-gray-500 dark:text-gray-400 font-medium'>{displayedWorkflows.length > 0 ? `${displayedWorkflows.length} workflows` : t('empty.all')}</p>
+                    </div>
+                    {displayedWorkflows.slice(0, 6).map((wf) => (
+                      <a
+                        key={wf.id}
+                        href={getWorkflowDetailUrl(locale, wf)}
+                        onClick={() => setAiOpen(false)}
+                        className='flex items-start gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 active:bg-gray-100 dark:active:bg-gray-700 transition-colors'
+                      >
+                        <div className='flex-shrink-0 w-10 h-10 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
+                          {(iconMap as any)[wf.icon] ? ((iconMap as any)[wf.icon] ? (((iconMap as any)[wf.icon] as any) && React.createElement((iconMap as any)[wf.icon] as any, { className: 'w-4 h-4 text-[#5461A8]' })) : <Search className='w-4 h-4 text-gray-400' />) : <Search className='w-4 h-4 text-gray-400' />}
+                        </div>
+                        <div className='min-w-0 flex-1'>
+                          <p className='text-sm font-medium text-gray-900 dark:text-gray-100 truncate'>{wf.title}</p>
+                          <p className='text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5'>{wf.description}</p>
+                        </div>
+                      </a>
+                    ))}
+                  </>
+                ) : (
+                  <div className='px-4 py-7 text-center'>
+                    <Search className='w-9 h-9 text-gray-300 dark:text-gray-600 mx-auto mb-3' />
+                    <p className='text-xs text-gray-500 dark:text-gray-400'>
+                      {locale === 'zh'
+                        ? '输入关键词查找工作流，或点击右侧「AI」描述你的场景'
+                        : 'Type keywords to search, or click AI → to describe your scenario'}
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
       {/* ===== A) Trigger-Action 场景卡（Zapier 风格） ===== */}
       <div className='mb-5 sm:mb-6'>
         <h2 className='text-[13px] sm:text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2 sm:mb-2.5 flex items-center gap-2'>
@@ -1232,17 +1565,6 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
             </div>
           </div>
         )}
-      </div>
-
-      <div className='relative mb-3 sm:mb-4'>
-        <Search className='absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400' />
-        <input
-          type='text'
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder={t('placeholder.search')}
-          className='w-full pl-10 pr-3 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-[11px] sm:text-xs text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5461A8]/40 focus:border-[#5461A8]/60 transition-all'
-        />
       </div>
 
       {/* ===== C) 角色 Persona Tabs ===== */}

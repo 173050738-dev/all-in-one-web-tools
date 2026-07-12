@@ -399,6 +399,10 @@
       "name": "二维码生成器",
       "description": "在线生成二维码，支持自定义颜色、Logo、尺寸，一键下载高清PNG图片，适用于网址、文本、WiFi等多种场景。"
     },
+    "excel-formula-generator": {
+      "name": "Excel公式生成器",
+      "description": "自然语言一句话转 Excel / Google Sheets 公式。描述你的计算需求，自动输出正确公式、逐步解释、示例用法与注意事项，免费免注册直接用。"
+    },
     "random-number": {
       "name": "随机数生成器",
       "description": "自定义范围生成随机整数/小数，支持批量生成不重复号码，抽奖分组、摇号、密码数字直接用。"

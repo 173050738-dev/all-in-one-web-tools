@@ -160,6 +160,31 @@ export default function BlogContentRenderer({ blocks, locale, className = '' }: 
             );
             break;
           }
+          case 'image': {
+            const alt = getLocalizedText(block.alt, locale, '');
+            const caption = getLocalizedText(block.caption, locale);
+            renderedNodes.push(
+              <figure
+                key={`img-${i}`}
+                className="not-prose mt-6 sm:mt-8 mb-4 sm:mb-6"
+              >
+                <div className="overflow-hidden rounded-2xl border border-gray-200/70 dark:border-gray-700/50 bg-gray-100/50 dark:bg-gray-800/40 shadow-sm">
+                  <img
+                    src={block.src}
+                    alt={alt}
+                    loading="lazy"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                {caption && (
+                  <figcaption className="mt-2 sm:mt-3 text-center text-[12px] sm:text-[13px] text-gray-500 dark:text-gray-400 leading-6">
+                    {caption}
+                  </figcaption>
+                )}
+              </figure>,
+            );
+            break;
+          }
           default:
             break;
         }
