@@ -217,6 +217,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://lf-cdn.trae.com.cn" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://trae-api-cn.mchost.guru" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://lf-cdn.trae.com.cn" />
+      </head>
       <body className="min-h-screen flex flex-col bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
         {isProd && (
           <>

@@ -3,8 +3,8 @@
 import React, { useMemo } from 'react';
 import Link from 'next/link';
 import type { SeoLocale } from '@/components/seo';
-import type { BlogPost } from '@/data/blog';
-import { getLocalizedText, getBlogReadingTime } from '@/data/blog';
+import type { BlogPost } from '@/data/blog-shared';
+import { getLocalizedText, getBlogReadingTime } from '@/data/blog-shared';
 import { getCoverGradient, getCoverInitial } from '@/lib/blogCover';
 
 interface Props {

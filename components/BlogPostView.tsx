@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { SeoLocale } from '@/components/seo';
-import { getBlogPostBySlug, getBlogPostsList } from '@/data/blog';
-import { getLocalizedText, getBlogReadingTime } from '@/data/blog';
+import { getLocalizedText, getBlogReadingTime } from '@/data/blog-shared';
+import type { BlogPost, BlogContentBlock } from '@/data/blog-shared';
 import BlogContentRenderer from '@/components/BlogContentRenderer';
 import BlogPostCard from '@/components/BlogPostCard';
 import BlogToc from '@/components/BlogToc';
@@ -26,30 +26,87 @@ interface Props {
   slug: string;
 }
 
-export default function BlogPostView({ locale, slug }: Props) {
-  const post = getBlogPostBySlug(slug);
-  if (!post) notFound();
+type Helpers = typeof import('@/data/blog-shared');
 
-  const title = getLocalizedText(post.title, locale, post.slug);
-  const description = getLocalizedText(post.description, locale, '');
-  const readMin = getBlogReadingTime(post, locale);
+/** 合并薄索引 + 懒加载正文 → BlogPost */
+function buildPost(
+  idx: any,
+  content: BlogContentBlock[] | undefined,
+): BlogPost {
+  return { ...idx, content: content || [] };
+}
+
+export default function BlogPostView({ locale, slug }: Props) {
+  const [post, setPost] = useState<BlogPost | null>(null);
+  const [helpers, setHelpers] = useState<Helpers | null>(null);
+  const [sortedIndex, setSortedIndex] = useState<any[]>([]);
+
+  /* 懒加载索引 + 正文：blog-index ~500KB, blog-detail ~2.5MB。避免 ~3MB 打进首屏 hydrate */
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      const [idxMod, detailMod, shared] = await Promise.all([
+        import('@/data/blog-index'),
+        import('@/data/blog-detail'),
+        import('@/data/blog-shared'),
+      ]);
+      if (!alive) return;
+
+      const INDEX: any[] = (idxMod as any).BLOG_POSTS_INDEX || [];
+      const CONTENT_MAP: Record<string, BlogContentBlock[]> =
+        (detailMod as any).BLOG_CONTENT_MAP || {};
+      const getBlogPostsListFn =
+        (idxMod as any).getBlogPostsList ||
+        ((_l: SeoLocale, n?: number) =>
+          [...INDEX]
+            .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
+            .slice(0, typeof n === 'number' ? n : INDEX.length));
+
+      const match = INDEX.find((p) => p.slug === slug);
+      if (!match) {
+        /* 404：抛 notFound 会触发 Next 的 not-found 边界（如果有），否则默认 404 */
+        setPost(undefined as any);
+        return;
+      }
+      const content = CONTENT_MAP[slug] || [];
+      const merged = buildPost(match, content);
+      const allSorted = getBlogPostsListFn(locale, Number.POSITIVE_INFINITY) as any[];
+      setPost(merged);
+      setHelpers(shared);
+      setSortedIndex(allSorted.map((p) => buildPost(p, [])));
+    })();
+    return () => { alive = false; };
+  }, [locale, slug]);
+
+  /* 未命中 post（slug 非法）→ 触发 404 */
+  if (post === undefined) notFound();
+
+  const loaded = !!post && !!helpers && sortedIndex.length > 0;
+
+  const title = post ? getLocalizedText(post.title, locale, post.slug) : '';
+  const description = post ? getLocalizedText(post.description, locale, '') : '';
+  const readMin = post ? getBlogReadingTime(post, locale) : 5;
   const tags = useMemo(
-    () => post.tags.map((t) => getLocalizedText(t, locale, '')).filter(Boolean),
+    () => (post ? post.tags.map((t) => getLocalizedText(t, locale, '')).filter(Boolean) : []),
     [post, locale],
   );
-  const related = useMemo(
-    () => getBlogPostsList(locale, 10).filter((p) => p.slug !== slug).slice(0, 3),
-    [locale, slug],
-  );
+
+  const related = useMemo(() => {
+    if (!loaded) return [] as BlogPost[];
+    return sortedIndex.filter((p) => p.slug !== slug).slice(0, 3) as BlogPost[];
+  }, [loaded, sortedIndex, slug]);
+
   const { prevPost, nextPost } = useMemo(() => {
-    const all = getBlogPostsList(locale, Number.POSITIVE_INFINITY);
-    const idx = all.findIndex((p) => p.slug === slug);
+    if (!loaded) return { prevPost: null, nextPost: null };
+    const idx = sortedIndex.findIndex((p) => p.slug === slug);
     return {
-      prevPost: idx > 0 ? all[idx - 1] : null,
-      nextPost: idx >= 0 && idx < all.length - 1 ? all[idx + 1] : null,
+      prevPost: idx > 0 ? (sortedIndex[idx - 1] as BlogPost) : null,
+      nextPost: idx >= 0 && idx < sortedIndex.length - 1 ? (sortedIndex[idx + 1] as BlogPost) : null,
     };
-  }, [locale, slug]);
+  }, [loaded, sortedIndex, slug]);
+
   const date = useMemo(() => {
+    if (!post) return '';
     try {
       return new Date(post.updatedAt || post.publishedAt).toLocaleDateString(
         locale === 'zh' ? 'zh-CN' : locale === 'hi' ? 'hi-IN' : locale,
@@ -58,7 +115,7 @@ export default function BlogPostView({ locale, slug }: Props) {
     } catch {
       return (post.updatedAt || post.publishedAt).slice(0, 10);
     }
-  }, [post.updatedAt, post.publishedAt, locale]);
+  }, [post, locale]);
 
   const i18n = useMemo(() => {
     switch (locale) {
@@ -155,6 +212,38 @@ export default function BlogPostView({ locale, slug }: Props) {
     }
   }, [locale]);
 
+  /* -------------------- Skeleton -------------------- */
+  if (!loaded) {
+    return (
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+        <div className="mb-4 sm:mb-5 flex items-center justify-between gap-3">
+          <div className="h-4 w-32 rounded bg-gray-200 dark:bg-gray-800 animate-pulse" />
+          <div className="h-8 w-20 rounded-full bg-gray-200 dark:bg-gray-800 animate-pulse" />
+        </div>
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-8 xl:gap-10">
+          <div className="min-w-0">
+            <div className="border-b border-gray-200/70 dark:border-gray-800/70 pb-6 sm:pb-8 mb-6 sm:mb-8">
+              <div className="h-5 w-40 rounded-full bg-gray-200 dark:bg-gray-800 animate-pulse mb-4" />
+              <div className="h-7 sm:h-9 w-11/12 rounded bg-gray-300 dark:bg-gray-700 animate-pulse mb-3" />
+              <div className="h-5 w-9/12 rounded bg-gray-200 dark:bg-gray-800 animate-pulse mb-5" />
+              <div className="h-10 w-72 rounded-full bg-gray-200 dark:bg-gray-800 animate-pulse" />
+            </div>
+            <div className="space-y-4">
+              <div className="h-5 w-1/3 rounded bg-gray-200 dark:bg-gray-800 animate-pulse" />
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="h-4 w-full rounded bg-gray-200 dark:bg-gray-800 animate-pulse" />
+              ))}
+            </div>
+          </div>
+          <aside className="hidden lg:block">
+            <div className="h-72 rounded-2xl bg-gray-200 dark:bg-gray-800 animate-pulse" />
+          </aside>
+        </div>
+      </div>
+    );
+  }
+
+  /* -------------------- Loaded -------------------- */
   return (
     <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
       <ReadingProgress />
@@ -171,7 +260,7 @@ export default function BlogPostView({ locale, slug }: Props) {
 
       <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_220px] lg:gap-8 xl:gap-10">
       <div className="min-w-0">
-      <BlogToc blocks={post.content} locale={locale} variant="mobile" />
+      <BlogToc blocks={post!.content} locale={locale} variant="mobile" />
       <article>
         <header className="mb-6 sm:mb-8 border-b border-gray-200/70 dark:border-gray-800/70 pb-6 sm:pb-8">
           {tags.length > 0 && (
@@ -184,7 +273,7 @@ export default function BlogPostView({ locale, slug }: Props) {
                   {t}
                 </span>
               ))}
-              {post.updatedAt && (
+              {post!.updatedAt && (
                 <span className="text-[10px] sm:text-[11px] font-medium rounded-full px-2 py-0.5 sm:px-2.5 sm:py-1 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-100/70 dark:border-emerald-900/60">
                   {i18n.updatedTag}
                 </span>
@@ -208,14 +297,14 @@ export default function BlogPostView({ locale, slug }: Props) {
                 aria-hidden="true"
                 className="w-7 h-7 rounded-full bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-amber-400 flex items-center justify-center text-white font-bold text-[11px]"
               >
-                {post.author.slice(0, 1).toUpperCase()}
+                {post!.author.slice(0, 1).toUpperCase()}
               </div>
               <div className="leading-5">
                 <div className="font-semibold text-gray-700 dark:text-gray-300">
-                  {i18n.by} {post.author}
+                  {i18n.by} {post!.author}
                 </div>
                 <div>
-                  <time dateTime={post.updatedAt || post.publishedAt}>{date}</time>
+                  <time dateTime={post!.updatedAt || post!.publishedAt}>{date}</time>
                   <span aria-hidden="true" className="mx-1.5">
                     ·
                   </span>
@@ -228,23 +317,23 @@ export default function BlogPostView({ locale, slug }: Props) {
           </div>
         </header>
 
-        <BlogContentRenderer blocks={post.content} locale={locale} />
+        <BlogContentRenderer blocks={post!.content} locale={locale} />
 
         <div className="not-prose mt-8 sm:mt-10">
           <AdSlot
-            slot={`blog-bottom-${post.slug}-${locale}`}
+            slot={`blog-bottom-${slug}-${locale}`}
             size="banner"
             showPlaceholder={true}
           />
         </div>
 
-        {post.relatedToolSlugs && post.relatedToolSlugs.length > 0 && (
+        {post!.relatedToolSlugs && post!.relatedToolSlugs.length > 0 && (
           <div className="mt-6 sm:mt-8 rounded-2xl border border-indigo-200/70 dark:border-indigo-500/30 bg-gradient-to-br from-indigo-50 via-white to-white dark:from-indigo-950/60 dark:via-gray-900 dark:to-gray-900 p-4 sm:p-5 shadow-sm">
             <h2 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white tracking-tight mb-2.5 sm:mb-3">
               {i18n.ctaTitle}
             </h2>
             <div className="mt-3 sm:mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
-              {post.relatedToolSlugs.map((toolSlug) => {
+              {post!.relatedToolSlugs.map((toolSlug) => {
                 const toolLink = `/${locale}/tool/${toolSlug}/`;
                 return (
                   <Link
@@ -321,7 +410,7 @@ export default function BlogPostView({ locale, slug }: Props) {
       </div>
 
       <aside className="hidden lg:block">
-        <BlogToc blocks={post.content} locale={locale} variant="desktop" />
+        <BlogToc blocks={post!.content} locale={locale} variant="desktop" />
       </aside>
       </div>
     </div>

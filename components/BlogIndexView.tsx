@@ -3,7 +3,8 @@
 import React, { useMemo, useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import type { SeoLocale } from '@/components/seo';
-import { getLocalizedText, type BlogPost } from '@/data/blog';
+import { getLocalizedText } from '@/data/blog-shared';
+import type { BlogPost } from '@/data/blog-shared';
 import BlogPostCard from '@/components/BlogPostCard';
 import { Search, SlidersHorizontal } from 'lucide-react';
 
@@ -22,13 +23,16 @@ export default function BlogIndexView({ locale }: Props) {
   const sentinelRef = useRef<HTMLDivElement | null>(null);
   const loadingRef = useRef<boolean>(false);
 
-  // 懒加载 blog 数据：避免 SSR HTML 内联 ~300KB blog 内容导致 TTFB 7s+
+  // 懒加载 blog 薄索引（blog-index ~500KB），正文 blog-detail ~2.5MB 等用户点详情再加载
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const mod = await import('@/data/blog');
+      const mod = await import('@/data/blog-index');
       if (cancelled) return;
-      const list = (mod.getBlogPostsList || (() => []))(locale, Number.POSITIVE_INFINITY) as BlogPost[];
+      const listFn = (mod as any).getBlogPostsList || (() => []);
+      const raw = listFn(locale, Number.POSITIVE_INFINITY) as any[];
+      /* 把薄索引转成 BlogPost 兼容对象（content 留空，列表页不用读正文） */
+      const list: BlogPost[] = raw.map((p) => ({ ...p, content: [] }));
       setAllPosts(list);
       setLoaded(true);
     })();

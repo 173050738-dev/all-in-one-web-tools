@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import createNextIntlPlugin from "next-intl/plugin";
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.tsx");
 
@@ -101,6 +101,18 @@ const nextConfig = {
       },
       {
         source: "/(zh|en|es|fr|hi|ar)/tools/:slug*",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
+      },
+      {
+        source: "/(zh|en|es|fr|hi|ar)/blog",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
+      },
+      {
+        source: "/(zh|en|es|fr|hi|ar)/blog/",
+        headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
+      },
+      {
+        source: "/(zh|en|es|fr|hi|ar)/blog/:path*",
         headers: [{ key: "Cache-Control", value: HTML_SOFT_CACHE }],
       },
     ];

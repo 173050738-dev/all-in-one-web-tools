@@ -168,12 +168,17 @@ export default function BlogContentRenderer({ blocks, locale, className = '' }: 
                 key={`img-${i}`}
                 className="not-prose mt-6 sm:mt-8 mb-4 sm:mb-6"
               >
-                <div className="overflow-hidden rounded-2xl border border-gray-200/70 dark:border-gray-700/50 bg-gray-100/50 dark:bg-gray-800/40 shadow-sm">
+                {/* 16:9 占位 + 明确尺寸，防止 CLS（即使图片还在加载也不会撑高布局抖动） */}
+                <div className="overflow-hidden rounded-2xl border border-gray-200/70 dark:border-gray-700/50 bg-gray-100/50 dark:bg-gray-800/40 shadow-sm aspect-[16/9]">
                   <img
                     src={block.src}
                     alt={alt}
+                    width={1600}
+                    height={900}
                     loading="lazy"
-                    className="w-full h-auto object-cover"
+                    decoding="async"
+                    fetchPriority="low"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 {caption && (
