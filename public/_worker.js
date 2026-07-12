@@ -248,6 +248,86 @@ async function seoMinerRequest(request, env) {
 }
 
 // ============================================================
+// ===== 模块 1.1：Excel/Sheets 公式生成器（内嵌 DeepSeek）
+// ============================================================
+function isExcelFormulaPath(pathname) {
+  var p = (pathname || '').replace(/\/+$/, '');
+  if (!p) return false;
+  if (/\/api\/excel-formula$/.test(p)) return true;
+  if (/^\/(en|zh|es|fr|hi|ar)\/api\/excel-formula$/.test(p)) return true;
+  return false;
+}
+
+async function excelFormulaRequest(request, env) {
+  if (request.method === 'OPTIONS') return seoCorsPreflight();
+  if (request.method !== 'POST') return seoErrJson('Method Not Allowed (use POST)', 405);
+
+  var payload;
+  try { payload = await request.json(); } catch (e) { return seoErrJson('Invalid JSON body', 400); }
+
+  var reqText = typeof payload.request === 'string' ? payload.request.trim() : '';
+  var platform = payload.platform === 'sheets' ? 'sheets' : 'excel';
+  var locale = payload.locale === 'zh' ? 'zh' : 'en';
+  if (!reqText) return seoErrJson('Request is required', 400);
+
+  var apiKey = env && env.DEEPSEEK_API_KEY ? env.DEEPSEEK_API_KEY : '';
+  var apiUrl = env && env.DEEPSEEK_API_URL ? env.DEEPSEEK_API_URL : 'https://api.deepseek.com/v1/chat/completions';
+  var model = env && env.DEEPSEEK_MODEL ? env.DEEPSEEK_MODEL : 'deepseek-chat';
+  if (!apiKey) return seoErrJson('API key not configured', 500);
+
+  var platformLabel = platform === 'sheets' ? 'Google Sheets' : 'Microsoft Excel';
+  var langLabel = locale === 'zh' ? 'Simplified Chinese' : 'English';
+
+  var systemPrompt = 'You are an expert formula generator for ' + platformLabel + '. Based on the user\'s natural language requirement, output a correct formula.\n'
+    + 'Return STRICTLY follow these rules:\n'
+    + '1. Platform syntax: Use ONLY ' + platformLabel + ' function names and syntax.\n'
+    + '2. Return a VALID JSON object with this EXACT shape: {"formula": string, "explanation": string[], "example": string, "notes": string[]}\n'
+    + '3. formula: the raw formula string starting with =, NO extra spaces or markdown backticks.\n'
+    + '4. explanation: step-by-step explanation as an array of short strings.\n'
+    + '5. example: one concrete usage example with sample cell references.\n'
+    + '6. notes: 2-4 practical caveats or tips as a string array.\n'
+    + '7. The user locale is ' + (locale === 'zh' ? 'Chinese' : 'English') + ', so write explanation/example/notes in ' + langLabel + '.\n'
+    + 'DO NOT wrap the JSON in markdown code fences.';
+
+  var userPrompt = locale === 'zh'
+    ? ('平台：' + platformLabel + '\n用户需求：' + reqText + '\n\n请生成正确公式。')
+    : ('Platform: ' + platformLabel + '\nUser requirement: ' + reqText + '\n\nGenerate the correct formula.');
+
+  var response;
+  try {
+    response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey },
+      body: JSON.stringify({
+        model: model,
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt },
+        ],
+        temperature: 0.2,
+        max_tokens: 800,
+        response_format: { type: 'json_object' },
+      }),
+    });
+  } catch (e) { return seoErrJson('AI service unavailable', 502); }
+
+  if (!response.ok) return seoErrJson('AI service unavailable', 502);
+
+  var data;
+  try { data = await response.json(); } catch (e) { return seoErrJson('AI service unavailable', 502); }
+  var content = (data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) || '{}';
+  var result;
+  try { result = JSON.parse(content); } catch (e) { result = {}; }
+
+  return seoOkJson({
+    formula: result.formula || '',
+    explanation: Array.isArray(result.explanation) ? result.explanation : [],
+    example: result.example || '',
+    notes: Array.isArray(result.notes) ? result.notes : [],
+  });
+}
+
+// ============================================================
 // ===== 模块 2：语言重定向（原有逻辑）
 // ============================================================
 const SUPPORTED_LOCALES = new Set(['en', 'zh', 'es', 'hi', 'fr', 'ar']);
@@ -333,6 +413,11 @@ export default {
     // 0.1) SEO 关键词矿工 API：优先拦截（在任何 static bypass 检查前）
     if (seoIsSeoMinerPath(pathname)) {
       return seoMinerRequest(request, env);
+    }
+
+    // 0.2) Excel/Sheets 公式生成器 API
+    if (isExcelFormulaPath(pathname)) {
+      return excelFormulaRequest(request, env);
     }
 
     // 1) 静态资源白名单：直接放行
