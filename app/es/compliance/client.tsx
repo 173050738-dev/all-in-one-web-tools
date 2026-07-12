@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations } from 'next-intl';
 import { useState, useMemo, useEffect } from 'react';
@@ -54,7 +54,7 @@ export default function CompliancePage() {
     if (!tool) return null;
     return {
       ...tool,
-      complianceLevel: bundle.bundle.computeComplianceLevel(tool),
+      complianceLevel: bundle.computeComplianceLevel(tool),
       complianceDetails: getComplianceDetails(tool.externalUrl || '', tool.name),
     };
   }, [selectedTool, bundle]);
@@ -145,7 +145,7 @@ export default function CompliancePage() {
                   >
                     <div className={`w-2 h-2 rounded-full ${level === 'red' ? 'bg-red-500' : 'bg-emerald-500'}`} />
                     <div className="flex-1 min-w-0">
-                      <p className="font-medium text-sm sm:text-base text-gray-900 dark:text-gray-100 truncate">{'es' === 'zh' ? tool.name : (((tool as any).nameEn ?? '') || tool.name)}</p>
+                      <p className="font-medium text-sm sm:text-base text-gray-900 dark:text-gray-100 truncate">{((tool as any).nameEn ?? "") || tool.name}</p>
                       <p className="text-xs text-gray-500 dark:text-gray-400">{details.description}</p>
                     </div>
                     <span className={`text-xs px-2 py-1 rounded ${level === 'red' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400'}`}>
@@ -171,7 +171,7 @@ export default function CompliancePage() {
                 )}
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 dark:text-gray-100">{'es' === 'zh' ? selectedToolData.name : (((selectedToolData as any).nameEn ?? '') || selectedToolData.name)}</h3>
+                <h3 className="font-bold text-gray-900 dark:text-gray-100">{((selectedToolData as any).nameEn ?? "") || selectedToolData.name}</h3>
                 <p className={`text-sm ${selectedToolData.complianceLevel === 'red' ? 'text-red-500' : 'text-emerald-600 dark:text-emerald-400'}`}>
                   {selectedToolData.complianceLevel === 'red' ? t('pending') : t('verified')}
                 </p>

@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { Folder, X, Search, Star, Trash2, ExternalLink, ArrowRight } from 'lucide-react';
-import { tools } from '@/data/tools';
+import { Folder, X, Search, Star, Trash2, ExternalLink, ArrowRight, Loader2 } from 'lucide-react';
+import type { ToolIndexItem } from '@/data/tools-shared';
 import { useFavoritesStore } from '@/stores/favorites';
 import SafeLink from './SafeLink';
 import { safeNavigate } from '@/lib/url-whitelist';
@@ -21,8 +21,19 @@ export default function ToolBox({ locale, isOpen, onClose }: ToolBoxProps) {
   const toggleFavorite = useFavoritesStore((s) => s.toggleFavorite);
   const removeFromHistory = useFavoritesStore((s) => s.removeFromHistory);
   const clearFavorites = useFavoritesStore((s) => s.clearFavorites);
+  const [tools, setTools] = useState<ToolIndexItem[] | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const panelRef = useRef<HTMLDivElement>(null);
+
+  /* 懒加载 tools-index（963KB）：ToolBox 点击才展开，没必要首屏同步加载 */
+  useEffect(() => {
+    let cancelled = false;
+    void import('@/data/tools-index').then((mod) => {
+      if (cancelled) return;
+      setTools(mod.TOOLS_INDEX);
+    });
+    return () => { cancelled = true; };
+  }, []);
 
   const safeTranslate = (key: string, fallback: string) => {
     try {
@@ -32,10 +43,10 @@ export default function ToolBox({ locale, isOpen, onClose }: ToolBoxProps) {
     return fallback;
   };
 
-  const translateField = (tool: typeof tools[0], field: 'name' | 'description') => {
+  const translateField = (tool: ToolIndexItem, field: 'name' | 'description') => {
     const zh = field === 'name' ? tool.name : tool.description;
     if (locale === 'zh') return zh;
-    const en = field === 'name' ? ((tool as any).nameEn || zh) : ((tool as any).descriptionEn || zh);
+    const en = field === 'name' ? (tool.nameEn || zh) : (tool.descriptionEn || zh);
     const slug = tool.slug || tool.id || '';
     const altId = tool.id && tool.id !== tool.slug ? tool.id : '';
     const v = safeTranslate(`${slug}.${field}`, altId ? safeTranslate(`${altId}.${field}`, '') : '');
@@ -55,7 +66,10 @@ export default function ToolBox({ locale, isOpen, onClose }: ToolBoxProps) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen, onClose]);
 
-  const favoriteToolList = tools.filter(tool => favoriteTools.includes(tool.id));
+  const favoriteToolList = useMemo(() => {
+    if (!tools) return [];
+    return tools.filter(tool => favoriteTools.includes(tool.id));
+  }, [tools, favoriteTools]);
   
   const filteredTools = favoriteToolList.filter(tool => {
     const n = translateField(tool, 'name').toLowerCase();
@@ -64,7 +78,7 @@ export default function ToolBox({ locale, isOpen, onClose }: ToolBoxProps) {
     return n.includes(q) || d.includes(q);
   });
 
-  const handleNavigate = (tool: typeof tools[0]) => {
+  const handleNavigate = (tool: ToolIndexItem) => {
     if (tool.externalUrl) {
       safeNavigate(tool.externalUrl, '_blank');
     } else {

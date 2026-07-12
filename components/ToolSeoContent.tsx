@@ -15,31 +15,73 @@ export default function ToolSeoContent({ locale, slug }: { locale: string; slug:
     catch { return undefined; }
   }, [slug]);
 
-  const { faqs, toolName, toolDescription } = useMemo(() => {
+  const { faqs, toolName, toolDescription, seo } = useMemo(() => {
     const baseTool: ToolLike = tool || { slug, name: slug, nameEn: slug };
     const nm = resolveToolNameClient(locale, baseTool, toolsT);
     const ds = resolveToolDescriptionClient(locale, baseTool, toolsT);
-    const items: FaqItem[] = buildToolFaqsFromTranslator(locale, baseTool, toolsT);
-    return { faqs: items, toolName: nm, toolDescription: ds };
+
+    /* ===========================================================
+       per-slug 专属 SEO：try toolsT.raw('{slug}.seo')
+       结构：{ intro, scenarios, tutorial, advantages, faqs }
+       取不到 → undefined，下方所有渲染走旧 fallback（保证39个模板工具不变）
+       =========================================================== */
+    let seoRaw: any = undefined;
+    try {
+      const rawFromSlug = (toolsT as any).raw?.(`${slug}.seo`);
+      if (rawFromSlug && typeof rawFromSlug === 'object') seoRaw = rawFromSlug;
+    } catch { /* ignore */ }
+    if (!seoRaw && String(baseTool.id || '') !== slug) {
+      try {
+        const rawFromId = (toolsT as any).raw?.(`${String(baseTool.id)}.seo`);
+        if (rawFromId && typeof rawFromId === 'object') seoRaw = rawFromId;
+      } catch { /* ignore */ }
+    }
+
+    /* faqs：有专属就用专属（保证是 FaqItem[]），否则 buildToolFaqsFromTranslator */
+    let items: FaqItem[];
+    if (Array.isArray(seoRaw?.faqs) && seoRaw.faqs.length > 0) {
+      items = seoRaw.faqs
+        .filter((x: any) => x && typeof x.q === 'string' && typeof x.a === 'string')
+        .map((x: any) => ({ q: String(x.q), a: String(x.a) }));
+    } else {
+      items = buildToolFaqsFromTranslator(locale, baseTool, toolsT);
+    }
+
+    return { faqs: items, toolName: nm, toolDescription: ds, seo: seoRaw };
   }, [locale, slug, tool, toolsT]);
 
-  const hasGuide = Boolean(toolName && toolDescription);
+  /* intro 优先 seo.intro，没有就用原 description（保持原 hasGuide 兼容） */
+  const introText = seo?.intro && typeof seo.intro === 'string' ? seo.intro : toolDescription;
+  const hasGuide = Boolean(introText && (toolName || seo?.intro));
+
   let scenarios: string[] = [];
   let tutorial: string[] = [];
   let advantages: string[] = [];
   try {
-    scenarios = Array.from({ length: 3 }, (_, i) => {
-      try { const v = toolT(`fallback-scenario-${i + 1}`); if (v && v !== `fallback-scenario-${i + 1}`) return v; } catch { /* ignore */ }
-      return '';
-    }).filter(Boolean);
-    tutorial = Array.from({ length: 4 }, (_, i) => {
-      try { const v = toolT(`fallback-tutorial-${i + 1}`); if (v && v !== `fallback-tutorial-${i + 1}`) return v; } catch { /* ignore */ }
-      return '';
-    }).filter(Boolean);
-    advantages = Array.from({ length: 3 }, (_, i) => {
-      try { const v = toolT(`fallback-advantage-${i + 1}`); if (v && v !== `fallback-advantage-${i + 1}`) return v; } catch { /* ignore */ }
-      return '';
-    }).filter(Boolean);
+    /* scenarios/tutorial/advantages：先走 seo，没走旧 fallback */
+    if (seo) {
+      if (Array.isArray(seo.scenarios)) scenarios = seo.scenarios.map(String).filter(Boolean);
+      if (Array.isArray(seo.tutorial)) tutorial = seo.tutorial.map(String).filter(Boolean);
+      if (Array.isArray(seo.advantages)) advantages = seo.advantages.map(String).filter(Boolean);
+    }
+    if (scenarios.length === 0) {
+      scenarios = Array.from({ length: 3 }, (_, i) => {
+        try { const v = toolT(`fallback-scenario-${i + 1}`); if (v && v !== `fallback-scenario-${i + 1}`) return v; } catch { /* ignore */ }
+        return '';
+      }).filter(Boolean);
+    }
+    if (tutorial.length === 0) {
+      tutorial = Array.from({ length: 4 }, (_, i) => {
+        try { const v = toolT(`fallback-tutorial-${i + 1}`); if (v && v !== `fallback-tutorial-${i + 1}`) return v; } catch { /* ignore */ }
+        return '';
+      }).filter(Boolean);
+    }
+    if (advantages.length === 0) {
+      advantages = Array.from({ length: 3 }, (_, i) => {
+        try { const v = toolT(`fallback-advantage-${i + 1}`); if (v && v !== `fallback-advantage-${i + 1}`) return v; } catch { /* ignore */ }
+        return '';
+      }).filter(Boolean);
+    }
   } catch { /* ignore */ }
 
   const sectionTitleKey = (k: string) => {
@@ -60,7 +102,7 @@ export default function ToolSeoContent({ locale, slug }: { locale: string; slug:
             {sectionTitleKey('features')}
           </h2>
           <p className="mb-4 sm:mb-5 text-gray-600 dark:text-gray-400">
-            {toolDescription}
+            {introText}
           </p>
         </>
       )}

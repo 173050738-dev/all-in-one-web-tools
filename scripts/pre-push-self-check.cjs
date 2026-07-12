@@ -29,40 +29,57 @@ function section(title) {
 }
 
 /* =========================================================================
-   HARD 1：工具数量一致性校验（≥1500 + tools.ts唯一ID == _static-counts数字）
-   拦截场景：上次漏提交tools.ts导致线上1320条而不是1500+
+   HARD 1：工具数量一致性校验（≥1500 + tools-index.json唯一ID == _static-counts数字）
+   拦截场景：上次漏提交tools导致线上1320条而不是1500+
+   注意：tools.ts 已拆分为 tools-index.json（薄索引） + tools-detail.json（详情）
    ========================================================================== */
 section('HARD 1/3 · 工具卡片数量一致性（≥ 1500）');
 try {
-  const toolsSrc = fs.readFileSync(path.join(ROOT, 'data', 'tools.ts'), 'utf8');
-  const idMatches = toolsSrc.match(/^\s*id:\s*['"]([^'"]+)['"]/gm) || [];
-  const ids = idMatches.map(m => {
-    const mm = m.match(/['"]([^'"]+)['"]/);
-    return mm ? mm[1] : null;
-  }).filter(Boolean);
+  let countTools = 0;
+  let dupCount = 0;
+  const ids = [];
+
+  const indexJsonPath = path.join(ROOT, 'data', 'tools-index.json');
+  const toolsTsPath = path.join(ROOT, 'data', 'tools.ts');
+
+  if (fs.existsSync(indexJsonPath)) {
+    const indexJson = JSON.parse(fs.readFileSync(indexJsonPath, 'utf8'));
+    for (const item of indexJson) {
+      if (item && item.id) ids.push(item.id);
+    }
+  } else if (fs.existsSync(toolsTsPath)) {
+    // 兼容旧版未拆分结构
+    const toolsSrc = fs.readFileSync(toolsTsPath, 'utf8');
+    const idMatches = toolsSrc.match(/^\s*id:\s*['"]([^'"]+)['"]/gm) || [];
+    for (const m of idMatches) {
+      const mm = m.match(/['"]([^'"]+)['"]/);
+      if (mm && mm[1]) ids.push(mm[1]);
+    }
+  }
+
   const uniqueIds = new Set(ids);
-  const countTools = uniqueIds.size;
-  const dupCount = ids.length - countTools;
+  countTools = uniqueIds.size;
+  dupCount = ids.length - countTools;
 
   const countsSrc = fs.readFileSync(path.join(ROOT, 'data', '_static-counts.generated.ts'), 'utf8');
   const countMatch = countsSrc.match(/STATIC_TOTAL_TOOLS_COUNT:\s*number\s*=\s*(\d+)/);
   const countStatic = countMatch ? parseInt(countMatch[1], 10) : -1;
 
   if (dupCount > 0) {
-    console.error(`  ${FAIL_HARD}  data/tools.ts 存在 ${dupCount} 个重复ID！唯一ID=${countTools}，总行数=${ids.length}`);
+    console.error(`  ${FAIL_HARD}  工具数据存在 ${dupCount} 个重复ID！唯一ID=${countTools}，总行数=${ids.length}`);
     const c = {};
     ids.forEach(id => c[id] = (c[id] || 0) + 1);
     const dups = Object.entries(c).filter(([k, v]) => v > 1).slice(0, 15);
     console.error(`     重复ID样例:`, dups.map(d => `${d[0]}×${d[1]}`).join(', '));
     hasHardFail = true;
   } else if (countTools < 1500) {
-    console.error(`  ${FAIL_HARD}  唯一工具ID数 ${countTools} < 最低阈值 1500！疑似新增工具未提交或 data/tools.ts 被回退`);
+    console.error(`  ${FAIL_HARD}  唯一工具ID数 ${countTools} < 最低阈值 1500！疑似新增工具未提交或 data/tools-index.json 被回退`);
     hasHardFail = true;
   } else if (countStatic !== countTools) {
-    console.error(`  ${FAIL_HARD}  _static-counts数字不一致！tools.ts唯一=${countTools}，_static-counts.generated.ts=${countStatic}。请重新运行 node scripts/build-data-bundles.cjs`);
+    console.error(`  ${FAIL_HARD}  _static-counts数字不一致！tools-index唯一=${countTools}，_static-counts.generated.ts=${countStatic}。请重新运行 node scripts/build-data-bundles.cjs`);
     hasHardFail = true;
   } else {
-    console.log(`  ${PASS}  tools.ts唯一ID=${countTools}，_static-counts=${countStatic}，重复ID=${dupCount}`);
+    console.log(`  ${PASS}  tools-index唯一ID=${countTools}，_static-counts=${countStatic}，重复ID=${dupCount}`);
   }
 } catch (e) {
   console.error(`  ${FAIL_HARD}  读取文件异常: ${e.message}`);
@@ -165,15 +182,35 @@ try {
 /* =========================================================================
    SOFT 2：EN 首页工具卡片翻译 fallback 有效性快速扫
    预警场景：EN/ES/FR 页工具卡片大片中文（非ZH locale零CJK）
-   扫描方式：读取 tools.ts 中 nameEn 字段空值比例 > 5% 则 WARNING
+   扫描方式：读取 tools-index.json 中 nameEn 字段空值比例 > 5% 则 WARNING
+   兼容旧版：若 tools-index.json 不存在则回退扫 tools.ts
    ========================================================================== */
 section('SOFT 2/2 · 非ZH工具翻译覆盖率（nameEn空值率）');
 try {
-  const toolsSrc = fs.readFileSync(path.join(ROOT, 'data', 'tools.ts'), 'utf8');
-  const nameEnEmptyMatches = toolsSrc.match(/nameEn:\s*['"]\s*['"]/g) || [];
-  const hasIdMatches = toolsSrc.match(/^\s*id:\s*['"]/gm) || [];
-  const emptyRate = hasIdMatches.length ? (nameEnEmptyMatches.length / hasIdMatches.length * 100).toFixed(1) : 'N/A';
-  console.log(`  nameEn空字段: ${C_CYAN}${nameEnEmptyMatches.length}${C_RESET} / 工具总数 ${hasIdMatches.length} → 空值率 ${emptyRate}%`);
+  let nameEnEmptyCount = 0;
+  let totalCount = 0;
+
+  const indexJsonPath = path.join(ROOT, 'data', 'tools-index.json');
+  const toolsTsPath = path.join(ROOT, 'data', 'tools.ts');
+
+  if (fs.existsSync(indexJsonPath)) {
+    const indexJson = JSON.parse(fs.readFileSync(indexJsonPath, 'utf8'));
+    totalCount = indexJson.length;
+    for (const item of indexJson) {
+      if (!item.nameEn || String(item.nameEn).trim() === '') {
+        nameEnEmptyCount++;
+      }
+    }
+  } else if (fs.existsSync(toolsTsPath)) {
+    const toolsSrc = fs.readFileSync(toolsTsPath, 'utf8');
+    const nameEnEmptyMatches = toolsSrc.match(/nameEn:\s*['"]\s*['"]/g) || [];
+    const hasIdMatches = toolsSrc.match(/^\s*id:\s*['"]/gm) || [];
+    nameEnEmptyCount = nameEnEmptyMatches.length;
+    totalCount = hasIdMatches.length;
+  }
+
+  const emptyRate = totalCount ? (nameEnEmptyCount / totalCount * 100).toFixed(1) : 'N/A';
+  console.log(`  nameEn空字段: ${C_CYAN}${nameEnEmptyCount}${C_RESET} / 工具总数 ${totalCount} → 空值率 ${emptyRate}%`);
   if (parseFloat(emptyRate) > 5) {
     console.warn(`  ${WARN_SOFT}  nameEn 空值率 ${emptyRate}% > 5%，非ZH页面容易出现中文回退，请补全 nameEn/descriptionEn 字段`);
     hasSoftWarn = true;

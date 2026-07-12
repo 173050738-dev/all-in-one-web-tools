@@ -17,20 +17,22 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  return newsIssueGenerateMetadata(LOCALE, params.slug);
+  const { slug } = await params;
+  return newsIssueGenerateMetadata(LOCALE, slug);
 }
 
-export default function NewsIssuePage({ params }: { params: { slug: string } }) {
-  const issue = getNewsIssueBySlug(params.slug);
+export default async function NewsIssuePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const issue = getNewsIssueBySlug(slug);
   if (!issue) {
     notFound();
   }
   return (
     <>
-      <NewsIssueJsonLd locale={LOCALE} slug={params.slug} />
-      <NewsPostView locale={LOCALE} slug={params.slug} />
+      <NewsIssueJsonLd locale={LOCALE} slug={slug} />
+      <NewsPostView locale={LOCALE} slug={slug} />
     </>
   );
 }

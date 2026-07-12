@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useState, useEffect, useMemo, useCallback } from 'react';
+import { Fragment, useState, useEffect, useMemo, useCallback, ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 import {
   Zap,
@@ -44,7 +44,7 @@ import { workflows, type Workflow } from '@/data/workflows';
 import { resolveToolLink, isExternalTool, getToolDisplayLabel } from '@/lib/toolLinks';
 import { translateWorkflow } from '@/lib/workflowTranslations';
 import type { Locale } from '@/lib/workflowTranslations';
-import { tools, type Tool } from '@/data/tools';
+import type { ToolIndexItem } from '@/data/tools-shared';
 import WorkflowCreator from './WorkflowCreator';
 import { safeNavigate } from '@/lib/url-whitelist';
 import { isTopWorkflowSlug } from '@/lib/topSlugs';
@@ -64,6 +64,30 @@ const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default
     />
   ),
 });
+
+function WorkflowCardSkeleton() {
+  return (
+    <div
+      aria-hidden="true"
+      className="w-full min-h-[200px] rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 sm:p-5 flex flex-col gap-3 animate-pulse"
+    >
+      <div className="flex items-center gap-3">
+        <div className="h-10 w-10 rounded-xl bg-gray-200 dark:bg-gray-700" />
+        <div className="flex-1 space-y-2">
+          <div className="h-4 w-2/3 bg-gray-200 dark:bg-gray-700 rounded" />
+          <div className="h-3 w-1/2 bg-gray-200 dark:bg-gray-700 rounded" />
+        </div>
+      </div>
+      <div className="h-3 w-full bg-gray-200 dark:bg-gray-700 rounded" />
+      <div className="h-3 w-5/6 bg-gray-200 dark:bg-gray-700 rounded" />
+      <div className="mt-auto flex gap-2 pt-1">
+        <div className="h-6 w-16 rounded-full bg-gray-200 dark:bg-gray-700" />
+        <div className="h-6 w-16 rounded-full bg-gray-200 dark:bg-gray-700" />
+        <div className="ml-auto h-6 w-16 rounded-full bg-gray-200 dark:bg-gray-700" />
+      </div>
+    </div>
+  );
+}
 
 const translations: Record<string, Record<string, string>> = {
   zh: {
@@ -673,11 +697,11 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   const t = getT(locale);
 
   // ============================================================
-  // 懒加载 workflows + tools 两大数组：
-  // SSR/首屏 HTML 不再内联 300KB+workflows + 200KB+tools 大常量，
-  // 水合完成后动态 import，避免 TTFB 飙升到 4~7s。
+  // 懒加载 workflows(249KB) + tools(原1.1MB → 拆后606KB) 两大数组：
+  // SSR/首屏 HTML 不再内联大常量，水合完成后动态 import。
   // 变量名故意保持 workflows/tools 不变，下游所有 .filter/.find/.map 零改动。
   // ============================================================
+  const [tools, setTools] = useState<ToolIndexItem[] | null>(null);
   const [activeTab, setActiveTab] = useState<TabType>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [isAiMode, setIsAiMode] = useState(false);
@@ -698,7 +722,13 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   const sentinelCallback = useCallback((el: HTMLDivElement | null) => { setSentinelEl(el); }, []);
 
   useEffect(() => {
+    let cancelled = false;
     setMounted(true);
+    void import('@/data/tools-index').then((mod) => {
+      if (cancelled) return;
+      setTools(mod.TOOLS_INDEX);
+    });
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {
@@ -999,6 +1029,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   }, [workflowProgress, customWorkflows]);
 
   const topApps = useMemo(() => {
+    if (!tools) return [];
     const topIds = [
       'amazon', 'shopify', 'chatgpt', 'notion', 'github', 'canva', 'figma', 'google-docs',
       'google-sheets', 'whatsapp-business', 'tiktok', 'instagram', 'youtube', 'linkedin',
@@ -1006,10 +1037,10 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
       'hubspot', 'ga4', 'mailchimp', 'quickbooks', 'capcut', 'grammarly', 'elevenlabs',
       'midjourney', 'dall-e-3', 'vercel', 'postman', 'mysql',
     ];
-    const map = new Map<string, any>();
+    const map = new Map<string, ToolIndexItem>();
     tools.forEach(tl => map.set(tl.id, tl));
     return topIds.map(id => map.get(id)).filter(Boolean).slice(0, 30);
-  }, [mounted]);
+  }, [tools]);
 
   const handleStartWorkflow = (wf: any) => {
     if (wf && wf.steps && wf.steps.length && !getProgressInfo(wf.id)) {
@@ -1336,7 +1367,10 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
                         className='flex items-start gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 active:bg-gray-100 dark:active:bg-gray-700 transition-colors'
                       >
                         <div className='flex-shrink-0 w-10 h-10 rounded-lg bg-[#F5F6FB] dark:bg-[#3a406a]/30 flex items-center justify-center'>
-                          {(iconMap as any)[wf.icon] ? ((iconMap as any)[wf.icon] ? (((iconMap as any)[wf.icon] as any) && React.createElement((iconMap as any)[wf.icon] as any, { className: 'w-4 h-4 text-[#5461A8]' })) : <Search className='w-4 h-4 text-gray-400' />) : <Search className='w-4 h-4 text-gray-400' />}
+                          {(() => {
+                            const IconCmp = (iconMap as Record<string, React.ComponentType<{ className?: string }>>)[wf.icon] || Search;
+                            return <IconCmp className='w-4 h-4 text-[#5461A8]' />;
+                          })()}
                         </div>
                         <div className='min-w-0 flex-1'>
                           <p className='text-sm font-medium text-gray-900 dark:text-gray-100 truncate'>{wf.title}</p>
@@ -1431,6 +1465,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
         </div>
         <div className='flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide'>
           {topApps.map(tl => {
+            if (!tl) return null;
             const Icon = iconMap['Zap'] || Zap;
             return (
               <a

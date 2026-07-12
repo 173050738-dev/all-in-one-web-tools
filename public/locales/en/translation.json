@@ -313,7 +313,33 @@
     },
     "base64-tool": {
       "name": "Base64 Encoder/Decoder",
-      "description": "Online Base64 encoding and decoding with text↔image conversion. Fully local processing for safety and privacy."
+      "description": "Online Base64 encoding and decoding with text↔image conversion. Fully local processing for safety and privacy.",
+      "seo": {
+        "intro": "This Base64 encoder and decoder converts text and files to and from Base64 directly in your browser. Encode UTF-8 text without garbled characters, decode a Base64 string back to readable text, or turn a small image into a data URI you can embed in HTML or CSS. Because it runs locally, nothing you paste or upload is sent to a server. It's a quick helper for developers working with APIs, config files and inline assets.",
+        "scenarios": [
+          "Turn a small icon or image into a data URI to embed it inline in CSS or HTML.",
+          "Inspect or decode a Base64 field returned by an API or stored in a token.",
+          "Encode text containing special characters so it survives transport safely."
+        ],
+        "tutorial": [
+          "Choose encode or decode.",
+          "Paste your text, or select a file such as an image.",
+          "Confirm UTF-8 so non-ASCII characters are handled correctly.",
+          "Copy the encoded string or the decoded result."
+        ],
+        "advantages": [
+          "Handles both text and files, including image-to-data-URI.",
+          "UTF-8 aware, so Chinese and other non-ASCII text won't be corrupted.",
+          "Processes locally in the browser — your data is never uploaded."
+        ],
+        "faqs": [
+          {"q":"Does it support non-ASCII text like Chinese?","a":"Yes. It encodes and decodes as UTF-8, so multilingual text is preserved without garbled output."},
+          {"q":"Can it convert an image to Base64?","a":"Yes. Select an image file and it returns a Base64 string or data URI you can embed directly in your markup."},
+          {"q":"Is there a size limit?","a":"There's no hard limit, but large files depend on your browser's memory since encoding happens locally."},
+          {"q":"What's the difference between Base64 and URL encoding?","a":"Base64 represents binary data as ASCII text; URL (percent) encoding escapes characters that are unsafe in URLs. They solve different problems."},
+          {"q":"Is my data uploaded?","a":"No. Encoding and decoding run entirely in your browser, so nothing leaves your device."}
+        ]
+      }
     },
     "caption-generator": {
       "name": "Social Captions",
@@ -321,7 +347,33 @@
     },
     "case-converter": {
       "name": "Case Converter",
-      "description": "One-click text case conversion, supports PascalCase, camelCase, snake_case, kebab-case, UPPER/lower, Title Case, capitalize first letter."
+      "description": "One-click text case conversion, supports PascalCase, camelCase, snake_case, kebab-case, UPPER/lower, Title Case, capitalize first letter.",
+      "seo": {
+        "intro": "This case converter transforms text between UPPERCASE, lowercase, Title Case, Sentence case, and programming styles like camelCase and snake_case. Paste your text, pick the target format, and copy the result. It preserves line breaks so you can convert whole lists at once, which is useful for cleaning up headings, normalising imported data, or renaming variables. It works entirely in your browser.",
+        "scenarios": [
+          "Normalise a set of headings to consistent Title Case.",
+          "Convert variable names between camelCase and snake_case while coding.",
+          "Clean up imported data where capitalisation is inconsistent across rows."
+        ],
+        "tutorial": [
+          "Paste your text, one item per line if converting a list.",
+          "Choose the target format such as UPPERCASE, Title Case or snake_case.",
+          "Apply the conversion.",
+          "Copy the converted text."
+        ],
+        "advantages": [
+          "Includes programming naming styles (camelCase, snake_case), not just upper/lower.",
+          "Keeps line breaks so you can batch-convert multiple lines.",
+          "Runs client-side with no upload."
+        ],
+        "faqs": [
+          {"q":"Does it support camelCase and snake_case?","a":"Yes. Besides UPPERCASE, lowercase, Title Case and Sentence case, it converts to programming styles like camelCase and snake_case."},
+          {"q":"Does Title Case skip small words?","a":"Title Case capitalises the first letter of words; simple implementations capitalise every word, so review short words like 'of' or 'the' if you need strict style rules."},
+          {"q":"Does it work with non-Latin text like Chinese?","a":"Case conversion only affects letters that have upper/lower forms. Chinese characters have no case, so they pass through unchanged."},
+          {"q":"Is there a character limit?","a":"There's no hard limit; large blocks of text are processed locally in your browser."},
+          {"q":"Can I convert multiple lines at once?","a":"Yes. Line breaks are preserved, so paste a list and every line is converted together."}
+        ]
+      }
     },
     "color-picker": {
       "name": "Color Picker",
@@ -333,7 +385,33 @@
     },
     "countdown": {
       "name": "Countdown & Anniversary",
-      "description": "Track important dates with real-time second-accurate countdowns. Never miss a birthday, holiday or anniversary. Supports yearly repeats."
+      "description": "Track important dates with real-time second-accurate countdowns. Never miss a birthday, holiday or anniversary. Supports yearly repeats.",
+      "seo": {
+        "intro": "This online countdown timer counts down to a target date and time, or for a set duration, and displays the remaining days, hours, minutes and seconds. Set your target, start it, and optionally switch to a large full-screen view for events, launches, exams or livestreams. It runs in your browser with no account required, so you can spin one up in seconds.",
+        "scenarios": [
+          "Build hype for a product launch, sale or webinar with a live countdown.",
+          "Track a deadline, exam date or project due date at a glance.",
+          "Show a 'starting soon' countdown before a livestream or presentation begins."
+        ],
+        "tutorial": [
+          "Set the target date and time, or a fixed duration.",
+          "Choose a display style and, if you want, full-screen mode.",
+          "Press start to begin the countdown.",
+          "When it reaches zero, the timer shows it has finished."
+        ],
+        "advantages": [
+          "Large, readable full-screen display suited to presentations and streams.",
+          "No sign-up needed — set it and go.",
+          "Runs client-side, so it works even on a simple shared screen."
+        ],
+        "faqs": [
+          {"q":"Will it keep counting if I close the page?","a":"The timer runs while the page is open. If you close or reload the tab, re-open it and the remaining time to a fixed target date will recalculate automatically."},
+          {"q":"Can I show it full screen?","a":"Yes. Switch to full-screen mode for a large display that's easy to read from a distance on a projector or stream."},
+          {"q":"Is there a sound alert when it ends?","a":"When the countdown reaches zero the display updates to a finished state; sound depends on the selected style and your browser's autoplay settings."},
+          {"q":"Can I run more than one countdown?","a":"Each open tab runs its own countdown, so you can open the tool in several tabs for multiple timers."},
+          {"q":"Does it work on mobile?","a":"Yes. It's responsive and works in mobile browsers, though keeping the screen awake depends on your device settings."}
+        ]
+      }
     },
     "danmaku": {
       "name": "Handheld LED Banner",
@@ -341,7 +419,33 @@
     },
     "decision-wheel": {
       "name": "Decision Wheel",
-      "description": "Say goodbye to decision fatigue! Let the wheel decide what to eat for lunch, where to go on weekends — just give it a spin."
+      "description": "Say goodbye to decision fatigue! Let the wheel decide what to eat for lunch, where to go on weekends — just give it a spin.",
+      "seo": {
+        "intro": "This spinning decision wheel makes a random choice from a list of options you enter. Type in names, tasks or ideas, spin the wheel, and it lands on one at random — great for breaking decision paralysis, picking a winner, or choosing who goes next. It's visual and fun, works with no sign-up, and runs entirely in your browser so you can use it live on a shared screen or stream.",
+        "scenarios": [
+          "Draw a name for turn-taking, chores or team stand-ups.",
+          "Settle 'what should we eat' or any either-or choice when nobody can decide.",
+          "Pick a giveaway winner live during a stream or class."
+        ],
+        "tutorial": [
+          "Enter your options, one per line.",
+          "Spin the wheel.",
+          "Read the option it lands on.",
+          "Spin again, or remove the picked option to draw without repeats."
+        ],
+        "advantages": [
+          "Visual spinning wheel that's engaging for live audiences.",
+          "No sign-up — enter options and spin immediately.",
+          "Runs client-side, so it works on a projector, shared screen or stream."
+        ],
+        "faqs": [
+          {"q":"How many options can I add?","a":"You can add many; the wheel stays readable with a moderate list, and very large lists simply show thinner segments."},
+          {"q":"Is the result truly random and fair?","a":"Yes. Each spin uses the browser's random number generator, giving every option an equal chance unless you set weights."},
+          {"q":"Can I set weights so some options win more?","a":"If weighting is enabled, you can make certain options larger; otherwise every option has an equal probability."},
+          {"q":"Can I save my options?","a":"Options stay while the page is open. To reuse a list later, keep it in a note and paste it back in."},
+          {"q":"Does it work on mobile?","a":"Yes. The wheel is touch-friendly and spins in mobile browsers, so you can use it on a phone or tablet."}
+        ]
+      }
     },
     "emoji-mixer": {
       "name": "Emoji Mixer",
@@ -381,7 +485,33 @@
     },
     "mortgage-calculator": {
       "name": "Mortgage Calculator",
-      "description": "Precise monthly mortgage payment calculation. Supports equal principal-and-interest and equal-principal repayment plans with real-time breakdowns."
+      "description": "Precise monthly mortgage payment calculation. Supports equal principal-and-interest and equal-principal repayment plans with real-time breakdowns.",
+      "seo": {
+        "intro": "This free mortgage calculator estimates your monthly home loan payment and shows a full amortization breakdown. Enter the loan amount, annual interest rate (APR) and term in years, and it instantly returns your monthly payment, total interest paid over the life of the loan, and a schedule of how each payment splits between principal and interest. It supports both the standard equal monthly payment method (amortizing / equal principal-and-interest) and the equal-principal method where the principal portion stays fixed and payments shrink over time. Everything runs in your browser, so none of your financial figures are uploaded or stored.",
+        "scenarios": [
+          "Before buying a home, check whether the monthly payment fits your budget at different loan amounts and rates.",
+          "Compare a 15-year versus a 30-year term to see how much extra total interest a longer loan costs.",
+          "Test how a larger down payment or a lower rate changes your monthly payment and lifetime interest."
+        ],
+        "tutorial": [
+          "Enter the total loan amount (home price minus your down payment).",
+          "Type the annual interest rate (APR), not the monthly rate.",
+          "Choose the repayment term in years, e.g. 15, 20 or 30.",
+          "Switch between equal payment and equal-principal to compare, then read the payment and interest breakdown."
+        ],
+        "advantages": [
+          "Shows a full month-by-month amortization schedule, not just a single number.",
+          "Supports both equal-payment and equal-principal repayment methods for direct comparison.",
+          "Runs entirely in your browser — your income and loan figures never leave your device."
+        ],
+        "faqs": [
+          {"q":"What is the difference between equal payment and equal principal?","a":"With equal monthly payment, you pay the same amount every month and the interest share is higher early on. With equal principal, the principal repaid each month is fixed, so early payments are larger and total interest paid is lower."},
+          {"q":"Should I enter a monthly or an annual interest rate?","a":"Enter the annual rate (APR). The calculator divides it internally to compute the monthly interest, so you do not need to convert it yourself."},
+          {"q":"Can it account for early or extra repayments?","a":"The base calculation assumes fixed scheduled payments. Any extra payment reduces your remaining principal, which lowers total interest — you can approximate this by lowering the loan amount or shortening the term."},
+          {"q":"Does the result include taxes, insurance or fees?","a":"No. It calculates principal and interest only. Property tax, home insurance and loan fees vary by location and lender, so add them separately for a full monthly cost."},
+          {"q":"Is my financial data uploaded anywhere?","a":"No. All calculations happen locally in your browser. Nothing you type is sent to a server or saved."}
+        ]
+      }
     },
     "password-generator": {
       "name": "Password Generator",
@@ -389,7 +519,33 @@
     },
     "pdf-merger": {
       "name": "PDF Merger",
-      "description": "Combine multiple PDFs right in your browser. Drag-and-drop reordering. Nothing is uploaded to servers — 100% private."
+      "description": "Combine multiple PDFs right in your browser. Drag-and-drop reordering. Nothing is uploaded to servers — 100% private.",
+      "seo": {
+        "intro": "This free online PDF merger combines multiple PDF files into a single document, right inside your browser. Add the files you want, drag them into the order you need, and download the merged PDF in one click. Because the merging happens locally on your device, your documents are never uploaded to any server — which matters when the files are invoices, contracts, or anything private. There is no watermark and no sign-up.",
+        "scenarios": [
+          "Combine separate invoices, receipts or contracts into one file for accounting or archiving.",
+          "Merge multi-chapter reports, scanned pages or exported slides into a single deliverable.",
+          "Bundle a resume with a portfolio or cover letter into one PDF before sending it out."
+        ],
+        "tutorial": [
+          "Add two or more PDF files from your device.",
+          "Drag the files to arrange them in the order you want them merged.",
+          "Click merge to build the combined document.",
+          "Download the resulting single PDF."
+        ],
+        "advantages": [
+          "Files stay in your browser and are never uploaded, protecting private documents.",
+          "No watermark is added to the merged output.",
+          "No file-count or sign-up limits for normal use."
+        ],
+        "faqs": [
+          {"q":"Are my files uploaded to a server?","a":"No. The merge runs entirely in your browser, so your PDFs never leave your device."},
+          {"q":"Is there a file size limit?","a":"There is no hard limit, but very large files depend on your device's memory since everything is processed locally in the browser."},
+          {"q":"Can I change the page or file order?","a":"Yes. Drag the files into the sequence you want before merging, and they will be combined in that order."},
+          {"q":"Will the merged PDF have a watermark?","a":"No. The output is a clean merged PDF with no added watermark or branding."},
+          {"q":"Can I split a PDF back apart later?","a":"This tool only merges. To break a PDF into pieces, use a dedicated PDF split tool."}
+        ]
+      }
     },
     "pinyin-annotator": {
       "name": "Polyphonic Pinyin Annotator",
@@ -429,7 +585,33 @@
     },
     "text-to-speech": {
       "name": "Text to Speech",
-      "description": "Free text-to-speech tool, supports multiple languages and voices."
+      "description": "Free text-to-speech tool, supports multiple languages and voices.",
+      "seo": {
+        "intro": "This online text-to-speech tool reads any text aloud directly in your browser using the built-in Web Speech API. Paste or type your text, pick a language and voice, adjust the speaking rate and pitch, and press play. Because it uses the voices already installed on your device and operating system, there is no upload, no account, and no fixed character quota. It is handy for proofreading, drafting voiceovers, language pronunciation practice, and accessibility.",
+        "scenarios": [
+          "Proofread a long article by listening to it — your ears catch awkward wording and typos your eyes skip.",
+          "Generate a quick voiceover draft for a video or presentation before recording a real one.",
+          "Practise pronunciation while learning a language, or use it as a screen reader for accessibility."
+        ],
+        "tutorial": [
+          "Paste or type the text you want spoken.",
+          "Select the language and one of the available voices.",
+          "Adjust the speaking rate and pitch sliders to taste.",
+          "Press play, and use pause or stop to control playback."
+        ],
+        "advantages": [
+          "Free with no hard character limit — read short notes or long articles.",
+          "Runs locally via your browser and system voices; the text is not sent to a server.",
+          "Multiple languages and voices, depending on what your device has installed."
+        ],
+        "faqs": [
+          {"q":"Which languages are supported?","a":"It offers whatever voices your operating system and browser provide. Most systems include English plus several other languages; the available list is populated automatically from your device."},
+          {"q":"Can I download the audio as a file?","a":"The Web Speech API plays audio but does not expose a direct download in most browsers, so saving an MP3 is generally not possible without extra recording software."},
+          {"q":"Is there a character limit?","a":"There is no fixed quota, but very long text may be split or pause between chunks depending on your browser's speech engine."},
+          {"q":"Why can't I select a certain voice?","a":"Voices come from your operating system. If a language or voice is missing, install it in your OS speech settings and it will appear in the list."},
+          {"q":"Is my text sent to a server?","a":"No. Speech is synthesised locally by your browser and device, so the text you enter stays on your machine."}
+        ]
+      }
     },
     "text-tools": {
       "name": "Text Toolbox",
@@ -437,7 +619,33 @@
     },
     "timestamp-converter": {
       "name": "Timestamp Converter",
-      "description": "Online timestamp converter, bidirectional conversion between Unix timestamp and readable date, support ms/s/ISO formats, multi-timezone switch."
+      "description": "Online timestamp converter, bidirectional conversion between Unix timestamp and readable date, support ms/s/ISO formats, multi-timezone switch.",
+      "seo": {
+        "intro": "This Unix timestamp converter turns epoch timestamps into human-readable dates and back again. Paste a timestamp in seconds or milliseconds and it shows the corresponding date and time; paste a date and it returns the epoch value. It handles time zones and auto-detects whether your input is in seconds or milliseconds, which makes it a fast helper when debugging logs, database records or API responses. Everything is computed instantly in your browser.",
+        "scenarios": [
+          "Debug a log line or API response that stores time as a raw epoch number.",
+          "Verify a database datetime field by converting it to a readable date.",
+          "Convert a scheduled time across time zones when planning releases or meetings."
+        ],
+        "tutorial": [
+          "Paste a Unix timestamp, or a date, into the input.",
+          "Confirm whether it is in seconds or milliseconds (auto-detected).",
+          "Pick the time zone you want the result shown in.",
+          "Copy the converted date or timestamp."
+        ],
+        "advantages": [
+          "Auto-detects seconds vs milliseconds so you don't misread the value.",
+          "Supports multiple time zones for cross-region work.",
+          "Instant, client-side conversion with no server round trip."
+        ],
+        "faqs": [
+          {"q":"How do I tell seconds from milliseconds?","a":"A seconds timestamp is usually 10 digits, milliseconds is 13 digits. The tool auto-detects the length, but you can override it if your value is unusual."},
+          {"q":"Does it support time zones?","a":"Yes. You can choose the time zone for the output, and it accounts for the offset when converting between a timestamp and a date."},
+          {"q":"Can I convert many values at once?","a":"You can convert values one at a time quickly; for bulk lists, paste and convert each line as needed."},
+          {"q":"Does it support ISO 8601 dates?","a":"Yes, standard ISO 8601 date strings are recognised as input and can be converted to an epoch timestamp."},
+          {"q":"Is the result in local time or UTC?","a":"It depends on the time zone you select. Choose UTC for a universal value, or your local zone for a local reading."}
+        ]
+      }
     },
     "title-weight-checker": {
       "name": "Multi-Platform Title Weight Checker",
@@ -445,11 +653,63 @@
     },
     "url-encode-decode": {
       "name": "URL Encode/Decode",
-      "description": "Online URL encode/decode tool, standard percent-encoding, also supports Base64 encode/decode and HTML entity conversion."
+      "description": "Online URL encode/decode tool, standard percent-encoding, also supports Base64 encode/decode and HTML entity conversion.",
+      "seo": {
+        "intro": "This URL encoder and decoder converts text to and from percent-encoding (URL encoding) directly in your browser. Encode query parameters that contain spaces, non-ASCII characters or reserved symbols so they travel safely in a URL, or decode a %XX-escaped string back to readable text. It distinguishes the two common needs — encoding a whole URL versus encoding a single component — which mirrors JavaScript's encodeURI and encodeURIComponent. All processing is local, nothing is uploaded.",
+        "scenarios": [
+          "Build a query string with values that contain spaces or Chinese characters.",
+          "Debug a redirect or callback URL that isn't matching because of encoding.",
+          "Decode a %XX-escaped string copied from a log or address bar to read it."
+        ],
+        "tutorial": [
+          "Paste the URL or the parameter value.",
+          "Choose encode or decode.",
+          "Pick whole-URL mode or single-component mode.",
+          "Copy the result."
+        ],
+        "advantages": [
+          "Separates full-URL and component encoding to avoid over- or under-escaping.",
+          "Handles non-ASCII input correctly.",
+          "Instant, local conversion with no server call."
+        ],
+        "faqs": [
+          {"q":"What's the difference between encodeURI and encodeURIComponent?","a":"encodeURI keeps URL structure characters like : / ? & intact, so it's for a full URL. encodeURIComponent escapes those too, so it's for a single value you'll insert into a URL."},
+          {"q":"Is a space encoded as %20 or +?","a":"Percent-encoding uses %20. The + form is specific to application/x-www-form-urlencoded form data, not general URL encoding."},
+          {"q":"Does it support non-ASCII characters?","a":"Yes. Characters such as Chinese are encoded as UTF-8 percent sequences and decoded back correctly."},
+          {"q":"Can I process multiple values?","a":"Yes, encode or decode values one at a time; paste each string and convert as needed."},
+          {"q":"Will it change my original text?","a":"Only by applying the encoding or decoding you choose. Decoding an already-decoded string, or encoding twice, can produce unexpected results, so apply the operation once."}
+        ]
+      }
     },
     "uuid-generator": {
       "name": "UUID Generator",
-      "description": "Generate UUIDs online, support v1/v4/v7, batch generate, one-click copy, pure local processing."
+      "description": "Generate UUIDs online, support v1/v4/v7, batch generate, one-click copy, pure local processing.",
+      "seo": {
+        "intro": "This UUID generator creates version 4 (random) UUIDs — also called GUIDs — instantly in your browser. Generate one or many at once, with or without hyphens, and in upper or lower case. UUIDs are 128-bit identifiers used as database keys, request IDs and unique references where a central counter isn't practical. Generation happens locally, so the values are produced on your device and not fetched from a server.",
+        "scenarios": [
+          "Batch-generate UUIDs to seed database primary keys during development.",
+          "Create unique identifiers for test data or fixtures.",
+          "Produce an idempotency key or request ID for an API call."
+        ],
+        "tutorial": [
+          "Choose the version (v4 random is the common default).",
+          "Set how many UUIDs you need.",
+          "Pick the format: with or without hyphens, upper or lower case.",
+          "Generate and copy them in bulk."
+        ],
+        "advantages": [
+          "Generates in bulk, not one at a time.",
+          "Flexible formatting: hyphens and letter case options.",
+          "Produced locally in your browser — nothing is requested from a server."
+        ],
+        "faqs": [
+          {"q":"What is the difference between v4 and v1?","a":"v4 UUIDs are random, offering privacy and simplicity. v1 UUIDs are based on timestamp and machine info, which makes them time-ordered but can leak generation time and host."},
+          {"q":"Can UUIDs collide?","a":"In theory yes, but the probability for v4 is astronomically small — you'd need to generate billions before a collision becomes remotely likely."},
+          {"q":"How many can I generate at once?","a":"You can request many in a single batch; the practical limit depends on your browser's memory since generation is local."},
+          {"q":"Can I remove the hyphens?","a":"Yes. Choose the no-hyphen format to get a compact 32-character string, useful for some database or URL contexts."},
+          {"q":"Are v4 UUIDs good as database primary keys?","a":"They work well for distributed systems, but being random they can fragment index locality. If insert order matters, consider a time-ordered scheme instead."}
+        ]
+      }
     },
     "vertical-chinese-generator": {
       "name": "Vertical Chinese Vertical Layout Generator",

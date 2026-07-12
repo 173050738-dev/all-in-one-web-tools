@@ -9,8 +9,14 @@ export type BlogContentBlock =
   | { type: 'code'; lang?: string; text: Partial<Record<SeoLocale, string>> }
   | { type: 'callout'; kind: 'tip' | 'info' | 'warn'; text: Partial<Record<SeoLocale, string>> }
   | {
+      type: 'table';
+      headers: Partial<Record<SeoLocale, string[]>>;
+      rows: Array<Partial<Record<SeoLocale, string[]>>>;
+    }
+  | {
       type: 'cta';
-      link: string;
+      link?: string;
+      toolSlug?: string;
       text: Partial<Record<SeoLocale, string>>;
       sub?: Partial<Record<SeoLocale, string>>;
     }

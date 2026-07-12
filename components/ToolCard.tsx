@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Code, Image, FileText, Binary, Link, Palette, Type, Video, Terminal, Zap, Heart, Star, ShieldCheck, Key, Smartphone, Home, Shuffle, Volume2, Calendar, Grid3X3, User, MessageCircle, Dices, Shield, Globe, CreditCard, UserPlus } from 'lucide-react';
-import type { Tool, PaymentMethod, SignupType } from '@/data/tools';
+import type { ToolIndexItem } from '@/data/tools-shared';
 import { usePreferencesStore } from '@/stores/preferences';
 import SafeLink from './SafeLink';
 import { logLike, logFavorite } from '@/utils/audit-log';
@@ -42,7 +42,7 @@ function formatLikes(count: number): string {
   return count.toString();
 }
 
-export default function ToolCard({ tool, locale, selectable = false }: { tool: Tool; locale: string; selectable?: boolean }) {
+export default function ToolCard({ tool, locale, selectable = false }: { tool: ToolIndexItem; locale: string; selectable?: boolean }) {
   const t = useTranslations('dashboard');
   const toolsT = useTranslations('tools');
   const tcT = useTranslations('toolcard');
@@ -145,23 +145,7 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
   const getAccessText = (tag?: string) =>
     tag === 'direct' ? tcT('access-direct') : tcT('access-vpn-required');
 
-  const paymentStyle = 'bg-indigo-50 text-indigo-700 dark:bg-indigo-900/25 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/40';
-  const signupStyle = 'bg-amber-50 text-amber-700 dark:bg-amber-900/25 dark:text-amber-400 border border-amber-100 dark:border-amber-900/40';
   const localProcessingStyle = 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-900/50';
-
-  const paymentLabel: Record<PaymentMethod, string> = {
-    alipay: tcT('payment-alipay'),
-    wechat: tcT('payment-wechat'),
-    visa: tcT('payment-visa'),
-    mastercard: tcT('payment-mastercard'),
-  };
-  const signupLabel: Record<SignupType, string> = {
-    'no-signup': tcT('signup-no-signup'),
-    email: tcT('signup-email'),
-    'cn-phone': tcT('signup-cn-phone'),
-    'global-phone': tcT('signup-global-phone'),
-    'cc-required': tcT('signup-cc-required'),
-  };
 
   const extraBadges: Array<{ text: string; style: string }> = [];
   if (locale === 'zh' && tool.accessTag) {
@@ -258,7 +242,7 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
         {/* 底部信息行：左侧关键词标签 */}
         <div className='mt-1.5 sm:mt-2 flex-shrink-0'>
           <div className='flex flex-wrap gap-1 h-5 overflow-hidden'>
-            {toolTags.slice(0, 2).map((tag) => (
+            {toolTags.slice(0, 2).map((tag: string) => (
               <span key={tag} className='px-1.5 py-0.5 rounded-md text-[10px] font-medium bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400 truncate max-w-[80px] sm:max-w-none'>
                 {tag}
               </span>

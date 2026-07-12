@@ -1,4 +1,4 @@
-import { Tool } from './tools';
+import type { ToolIndexItem } from './tools-shared';
 
 const synonymMap: Record<string, string[]> = {
   '图片压缩': ['压缩图片', '图片变小', '照片压缩', '减小图片', '图片优化', '压图', 'compress image', 'image compress', 'reduce image size'],
@@ -98,7 +98,7 @@ const synonymMap: Record<string, string[]> = {
   'psd': ['psd查看', 'photoshop文件', 'psd转换', 'psd编辑器'],
 };
 
-export function searchTools(tools: Tool[], query: string): Tool[] {
+export function searchTools<T extends ToolIndexItem>(tools: T[], query: string): T[] {
   if (!query.trim()) return tools;
 
   const q = query.toLowerCase().trim();

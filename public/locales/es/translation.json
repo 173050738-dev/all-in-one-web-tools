@@ -313,7 +313,33 @@
     },
     "base64-tool": {
       "name": "Codificador/Decodificador Base64",
-      "description": "Codificación y decodificación Base64 online con conversión texto↔imagen. Procesamiento 100% local, seguro y privado."
+      "description": "Codificación y decodificación Base64 online con conversión texto↔imagen. Procesamiento 100% local para seguridad y privacidad.",
+      "seo": {
+        "intro": "Este codificador y decodificador Base64 convierte texto y archivos hacia y desde Base64 directamente en tu navegador. Codifica texto UTF-8 sin caracteres ilegibles, decodifica una cadena Base64 de vuelta a texto legible, o convierte una imagen pequeña en un data URI que puedes incrustar en HTML o CSS. Como funciona localmente, nada de lo que pegues o subas se envía a un servidor. Es una ayuda rápida para desarrolladores que trabajan con APIs, archivos de configuración y recursos en línea.",
+        "scenarios": [
+          "Convierte un icono pequeño o imagen en un data URI para incrustarlo en línea en CSS o HTML.",
+          "Inspecciona o decodifica un campo Base64 devuelto por una API o almacenado en un token.",
+          "Codifica texto que contenga caracteres especiales para que sobreviva al transporte de forma segura."
+        ],
+        "tutorial": [
+          "Elige codificar o decodificar.",
+          "Pega tu texto, o selecciona un archivo como una imagen.",
+          "Confirma UTF-8 para que los caracteres no ASCII se gestionen correctamente.",
+          "Copia la cadena codificada o el resultado decodificado."
+        ],
+        "advantages": [
+          "Gestiona tanto texto como archivos, incluida la conversión de imagen a data URI.",
+          "Reconoce UTF-8, por lo que el texto en chino y otros no ASCII no se corromperá.",
+          "Procesa localmente en el navegador: tus datos nunca se suben."
+        ],
+        "faqs": [
+          {"q":"¿Soporta texto no ASCII como el chino?","a":"Sí. Codifica y decodifica como UTF-8, por lo que el texto multilingüe se conserva sin salidas ilegibles."},
+          {"q":"¿Puede convertir una imagen a Base64?","a":"Sí. Selecciona un archivo de imagen y devuelve una cadena Base64 o data URI que puedes incrustar directamente en tu marcado."},
+          {"q":"¿Hay un límite de tamaño?","a":"No hay límite estricto, pero los archivos grandes dependen de la memoria de tu navegador, ya que la codificación ocurre localmente."},
+          {"q":"¿Cuál es la diferencia entre Base64 y codificación URL?","a":"Base64 representa datos binarios como texto ASCII; la codificación URL (por porcentaje) escapa caracteres no seguros en URLs. Resuelven problemas distintos."},
+          {"q":"¿Se suben mis datos?","a":"No. La codificación y decodificación se ejecutan íntegramente en tu navegador, por lo que nada sale de tu dispositivo."}
+        ]
+      }
     },
     "caption-generator": {
       "name": "Pies de foto Sociales",
@@ -321,7 +347,33 @@
     },
     "case-converter": {
       "name": "Convertidor de mayúsculas y minúsculas",
-      "description": "Conversión de texto con un clic, soporta PascalCase, camelCase, snake_case, kebab-case, MAYÚSCULAS/minúsculas, Título, primera letra mayúscula."
+      "description": "Conversión de texto con un clic, soporta PascalCase, camelCase, snake_case, kebab-case, MAYÚSCULAS/minúsculas, Título, primera letra mayúscula.",
+      "seo": {
+        "intro": "Este convertidor de mayúsculas y minúsculas transforma texto entre MAYÚSCULAS, minúsculas, Title Case, Sentence case y estilos de programación como camelCase y snake_case. Pega tu texto, elige el formato de destino y copia el resultado. Conserva los saltos de línea para que puedas convertir listas enteras de una vez, lo cual es útil para ordenar encabezados, normalizar datos importados o renombrar variables. Funciona íntegramente en tu navegador.",
+        "scenarios": [
+          "Normaliza un conjunto de encabezados a un Title Case coherente.",
+          "Convierte nombres de variables entre camelCase y snake_case mientras programas.",
+          "Limpia datos importados donde la capitalización es inconsistente entre filas."
+        ],
+        "tutorial": [
+          "Pega tu texto, un elemento por línea si conviertes una lista.",
+          "Elige el formato de destino como MAYÚSCULAS, Title Case o snake_case.",
+          "Aplica la conversión.",
+          "Copia el texto convertido."
+        ],
+        "advantages": [
+          "Incluye estilos de nomenclatura de programación (camelCase, snake_case), no solo mayúsculas/minúsculas.",
+          "Mantiene los saltos de línea para que puedas convertir varias líneas por lotes.",
+          "Se ejecuta del lado del cliente sin subir nada."
+        ],
+        "faqs": [
+          {"q":"¿Soporta camelCase y snake_case?","a":"Sí. Además de MAYÚSCULAS, minúsculas, Title Case y Sentence case, convierte a estilos de programación como camelCase y snake_case."},
+          {"q":"¿Title Case omite las palabras pequeñas?","a":"Title Case pone en mayúscula la primera letra de las palabras; las implementaciones simples ponen en mayúscula cada palabra, así que revisa palabras cortas como 'of' o 'the' si necesitas reglas de estilo estrictas."},
+          {"q":"¿Funciona con texto no latino como el chino?","a":"La conversión de mayúsculas solo afecta a letras que tienen formas mayúscula/minúscula. Los caracteres chinos no tienen mayúsculas, así que pasan sin cambios."},
+          {"q":"¿Hay un límite de caracteres?","a":"No hay límite estricto; los bloques de texto grandes se procesan localmente en tu navegador."},
+          {"q":"¿Puedo convertir varias líneas a la vez?","a":"Sí. Los saltos de línea se conservan, así que pega una lista y cada línea se convierte juntas."}
+        ]
+      }
     },
     "color-picker": {
       "name": "Selector de color",
@@ -333,7 +385,33 @@
     },
     "countdown": {
       "name": "Cuenta Regresiva & Aniversarios",
-      "description": "Controla tus fechas importantes con cuentas regresivas precisas al segundo. Nunca pierdas un cumpleaños o festivo. Admite repetición anual."
+      "description": "Controla tus fechas importantes con cuentas regresivas precisas al segundo. Nunca pierdas un cumpleaños o festivo. Admite repetición anual.",
+      "seo": {
+        "intro": "Este temporizador de cuenta regresiva online cuenta hasta una fecha y hora objetivo, o durante una duración establecida, y muestra los días, horas, minutos y segundos restantes. Establece tu objetivo, inícialo y, si quieres, cambia a una vista de pantalla completa grande para eventos, lanzamientos, exámenes o retransmisiones en directo. Funciona en tu navegador sin necesidad de cuenta, así que puedes montarlo en segundos.",
+        "scenarios": [
+          "Genera expectación para un lanzamiento de producto, oferta o webinar con una cuenta regresiva en vivo.",
+          "Sigue de un vistazo una fecha límite, un examen o la entrega de un proyecto.",
+          "Muestra una cuenta regresiva de “empieza pronto” antes de que comience una retransmisión o presentación."
+        ],
+        "tutorial": [
+          "Establece la fecha y hora objetivo, o una duración fija.",
+          "Elige un estilo de visualización y, si quieres, el modo pantalla completa.",
+          "Pulsa inicio para arrancar la cuenta regresiva.",
+          "Cuando llega a cero, el temporizador indica que ha finalizado."
+        ],
+        "advantages": [
+          "Pantalla completa grande y legible, ideal para presentaciones y retransmisiones.",
+          "Sin registro necesario: configúralo y listo.",
+          "Funciona en el lado del cliente, así que funciona incluso en una pantalla compartida sencilla."
+        ],
+        "faqs": [
+          {"q":"¿Sigue contando si cierro la página?","a":"El temporizador funciona mientras la página esté abierta. Si cierras o recargas la pestaña, vuélvela a abrir y el tiempo restante hasta una fecha objetivo fija se recalculará automáticamente."},
+          {"q":"¿Puedo mostrarlo en pantalla completa?","a":"Sí. Cambia al modo pantalla completa para obtener una visualización grande, fácil de leer a distancia en un proyector o retransmisión."},
+          {"q":"¿Hay una alerta sonora al finalizar?","a":"Cuando la cuenta regresiva llega a cero, la pantalla cambia a estado finalizado; el sonido depende del estilo elegido y de la configuración de reproducción automática de tu navegador."},
+          {"q":"¿Puedo ejecutar más de una cuenta regresiva?","a":"Cada pestaña abierta ejecuta su propia cuenta regresiva, así que puedes abrir la herramienta en varias pestañas para tener varios temporizadores."},
+          {"q":"¿Funciona en móvil?","a":"Sí. Es responsive y funciona en navegadores móviles, aunque mantener la pantalla activa depende de la configuración de tu dispositivo."}
+        ]
+      }
     },
     "danmaku": {
       "name": "Pancarta LED Portátil",
@@ -341,7 +419,33 @@
     },
     "decision-wheel": {
       "name": "Rueda de la Decisión",
-      "description": "¡Fin de la fatiga decisional! Deja que la rueda elija tu almuerzo o tu plan de fin de semana con solo girarla."
+      "description": "¡Fin de la fatiga decisional! Deja que la rueda elija tu almuerzo o tu plan de fin de semana con solo girarla.",
+      "seo": {
+        "intro": "Esta rueda de decisión giratoria realiza una elección aleatoria a partir de una lista de opciones que introduces. Escribe nombres, tareas o ideas, haz girar la rueda y se detendrá en una al azar — ideal para romper la parálisis decisional, elegir a un ganador o decidir a quién le toca el siguiente turno. Es visual y divertida, funciona sin registro y se ejecuta íntegramente en tu navegador para que puedas usarla en vivo en una pantalla compartida o transmisión.",
+        "scenarios": [
+          "Extrae un nombre para turnos, tareas del hogar o reuniones breves de equipo.",
+          "Resuelve '¿qué comemos?' o cualquier elección de dos opciones cuando nadie puede decidir.",
+          "Elige a un ganador de sorteo en vivo durante una transmisión o clase."
+        ],
+        "tutorial": [
+          "Introduce tus opciones, una por línea.",
+          "Haz girar la rueda.",
+          "Lee la opción en la que se detiene.",
+          "Vuelve a girar, o elimina la opción elegida para extraer sin repeticiones."
+        ],
+        "advantages": [
+          "Rueda giratoria visual que resulta atractiva para audiencias en vivo.",
+          "Sin registro — introduce opciones y gira inmediatamente.",
+          "Se ejecuta del lado del cliente, así que funciona en proyector, pantalla compartida o transmisión."
+        ],
+        "faqs": [
+          {"q":"¿Cuántas opciones puedo añadir?","a":"Puedes añadir muchas; la rueda sigue siendo legible con una lista moderada, y listas muy grandes simplemente muestran segmentos más finos."},
+          {"q":"¿El resultado es realmente aleatorio y justo?","a":"Sí. Cada giro usa el generador de números aleatorios del navegador, dando a cada opción la misma oportunidad a menos que establezcas pesos."},
+          {"q":"¿Puedo establecer pesos para que algunas opciones ganen más?","a":"Si la ponderación está activada, puedes hacer que ciertas opciones sean más grandes; de lo contrario cada opción tiene la misma probabilidad."},
+          {"q":"¿Puedo guardar mis opciones?","a":"Las opciones se mantienen mientras la página esté abierta. Para reutilizar una lista más tarde, guárdala en una nota y pégala de nuevo."},
+          {"q":"¿Funciona en móvil?","a":"Sí. La rueda es táctil y gira en navegadores móviles, así que puedes usarla en un teléfono o tableta."}
+        ]
+      }
     },
     "emoji-mixer": {
       "name": "Mezclador de Emoji",
@@ -381,7 +485,33 @@
     },
     "mortgage-calculator": {
       "name": "Calculadora de Hipoteca",
-      "description": "Cálculo preciso de pagos mensuales de hipoteca. Admite amortización constante y cuota constante con desgloses en tiempo real."
+      "description": "Cálculo preciso de pagos mensuales de hipoteca. Admite amortización constante y cuota constante con desgloses en tiempo real.",
+      "seo": {
+        "intro": "Esta calculadora de hipotecas gratuita calcula tu cuota mensual de préstamo para vivienda y muestra un desglose completo de amortización. Introduce el importe del préstamo, el tipo de interés anual (APR) y el plazo en años, y obtendrás al instante tu cuota mensual, los intereses totales pagados durante la vida del préstamo y un calendario de cómo se reparte cada pago entre capital e intereses. Admite tanto el método estándar de cuota mensual igual (amortización / cuota igual de capital e intereses) como el método de capital igual, en el que la parte de capital se mantiene fija y las cuotas disminuyen con el tiempo. Todo funciona en tu navegador, por lo que ninguno de tus datos financieros se sube ni se almacena.",
+        "scenarios": [
+          "Antes de comprar una vivienda, comprueba si la cuota mensual se ajusta a tu presupuesto con distintos importes y tipos de interés.",
+          "Compara un plazo de 15 años frente a uno de 30 para ver cuántos intereses totales extra cuesta un préstamo más largo.",
+          "Prueba cómo una entrada mayor o un tipo de interés más bajo cambian tu cuota mensual y los intereses a lo largo de la vida del préstamo."
+        ],
+        "tutorial": [
+          "Introduce el importe total del préstamo (precio de la vivienda menos tu entrada).",
+          "Escribe el tipo de interés anual (APR), no el tipo mensual.",
+          "Elige el plazo de amortización en años, por ejemplo 15, 20 o 30.",
+          "Cambia entre cuota igual y capital igual para comparar, y luego lee el desglose de cuotas e intereses."
+        ],
+        "advantages": [
+          "Muestra un calendario de amortización completo mes a mes, no solo un número aislado.",
+          "Admite tanto cuotas iguales como capital igual para comparar directamente ambos métodos.",
+          "Funciona íntegramente en tu navegador: tus ingresos y datos del préstamo nunca salen de tu dispositivo."
+        ],
+        "faqs": [
+          {"q":"¿Cuál es la diferencia entre cuota igual y capital igual?","a":"Con cuota mensual igual pagas la misma cantidad cada mes y la parte de intereses es mayor al principio. Con capital igual, el capital amortizado cada mes es fijo, por lo que las primeras cuotas son mayores y los intereses totales pagados son menores."},
+          {"q":"¿Debo introducir un tipo de interés mensual o anual?","a":"Introduce el tipo anual (APR). La calculadora lo divide internamente para calcular el interés mensual, por lo que no necesitas convertirlo tú mismo."},
+          {"q":"¿Puede tener en cuenta amortizaciones anticipadas o pagos extra?","a":"El cálculo base asume pagos fijos programados. Cualquier pago extra reduce tu capital pendiente, lo que baja los intereses totales: puedes aproximarlo reduciendo el importe del préstamo o acortando el plazo."},
+          {"q":"¿El resultado incluye impuestos, seguros o comisiones?","a":"No. Solo calcula capital e intereses. El impuesto de bienes inmuebles, el seguro de hogar y las comisiones del préstamo varían según ubicación y entidad, así que súmalos por separado para obtener el coste mensual completo."},
+          {"q":"¿Mis datos financieros se envían a algún sitio?","a":"No. Todos los cálculos ocurren localmente en tu navegador. Nada de lo que escribes se envía a un servidor ni se guarda."}
+        ]
+      }
     },
     "password-generator": {
       "name": "Generador de Contraseñas",
@@ -389,7 +519,33 @@
     },
     "pdf-merger": {
       "name": "Fusionador PDF",
-      "description": "Combina múltiples PDFs directamente en tu navegador. Reordenar por arrastrar y soltar. Nada se sube al servidor, 100% privado."
+      "description": "Combina múltiples PDFs directamente en tu navegador. Reordenar por arrastrar y soltar. Nada se sube al servidor, 100% privado.",
+      "seo": {
+        "intro": "Este fusionador PDF online gratuito combina varios archivos PDF en un único documento, directamente en tu navegador. Añade los archivos que quieras, arrástralos en el orden que necesites y descarga el PDF fusionado con un clic. Como la fusión se produce localmente en tu dispositivo, tus documentos nunca se suben a ningún servidor, algo fundamental cuando se trata de facturas, contratos o cualquier contenido privado. Sin marca de agua y sin registro.",
+        "scenarios": [
+          "Combina facturas, recibos o contratos separados en un único archivo para contabilidad o archivo.",
+          "Fusiona informes de varios capítulos, páginas escaneadas o diapositivas exportadas en un único entregable.",
+          "Agrupa un currículum con un portafolio o carta de presentación en un solo PDF antes de enviarlo."
+        ],
+        "tutorial": [
+          "Añade dos o más archivos PDF desde tu dispositivo.",
+          "Arrastra los archivos para ordenarlos en la secuencia en que quieras fusionarlos.",
+          "Haz clic en fusionar para generar el documento combinado.",
+          "Descarga el PDF resultante."
+        ],
+        "advantages": [
+          "Los archivos permanecen en tu navegador y nunca se suben, protegiendo los documentos privados.",
+          "No se añade ninguna marca de agua al resultado fusionado.",
+          "Sin límites de número de archivos ni de registro para uso normal."
+        ],
+        "faqs": [
+          {"q":"¿Mis archivos se suben a un servidor?","a":"No. La fusión se ejecuta íntegramente en tu navegador, por lo que tus PDFs nunca salen de tu dispositivo."},
+          {"q":"¿Hay un límite de tamaño de archivo?","a":"No hay límite estricto, pero los archivos muy grandes dependen de la memoria de tu dispositivo, ya que todo se procesa localmente en el navegador."},
+          {"q":"¿Puedo cambiar el orden de las páginas o de los archivos?","a":"Sí. Arrastra los archivos a la secuencia que quieras antes de fusionar y se combinarán en ese orden."},
+          {"q":"¿El PDF fusionado llevará una marca de agua?","a":"No. El resultado es un PDF fusionado limpio, sin marca de agua ni marca añadida."},
+          {"q":"¿Puedo volver a dividir un PDF más adelante?","a":"Esta herramienta solo fusiona. Para dividir un PDF en partes, usa una herramienta de división de PDF dedicada."}
+        ]
+      }
     },
     "pinyin-annotator": {
       "name": "Anotador Pinyin",
@@ -429,7 +585,33 @@
     },
     "text-to-speech": {
       "name": "Texto a Voz",
-      "description": "Convierte cualquier texto en voz natural. Ajusta velocidad, tono y volumen. Perfecto para escuchar novelas y noticias en movimiento."
+      "description": "Convierte cualquier texto en voz natural. Ajusta velocidad, tono y volumen. Perfecto para escuchar novelas y noticias en movimiento.",
+      "seo": {
+        "intro": "Esta herramienta online de texto a voz lee en voz alta cualquier texto directamente en tu navegador mediante la API Web Speech integrada. Pega o escribe tu texto, elige un idioma y una voz, ajusta la velocidad y el tono, y pulsa reproducir. Como usa las voces ya instaladas en tu dispositivo y sistema operativo, no hay subidas de archivos, no hay cuenta y no hay cuota fija de caracteres. Es muy útil para corregir textos, redactar guiones de voz, practicar pronunciación de idiomas y accesibilidad.",
+        "scenarios": [
+          "Corrige un artículo largo escuchándolo: el oído detecta frases raras y erratas que los ojos pasan por alto.",
+          "Genera rápido un borrador de locución para un vídeo o presentación antes de grabar la versión definitiva.",
+          "Practica pronunciación mientras aprendes un idioma, o úsalo como lector de pantalla por accesibilidad."
+        ],
+        "tutorial": [
+          "Pega o escribe el texto que quieras que se lea en voz alta.",
+          "Selecciona el idioma y una de las voces disponibles.",
+          "Ajusta a tu gusto los deslizadores de velocidad y tono.",
+          "Pulsa reproducir y usa pausar o detener para controlar la reproducción."
+        ],
+        "advantages": [
+          "Gratis, sin límite estricto de caracteres: lee notas cortas o artículos enteros.",
+          "Funciona localmente a través de tu navegador y voces del sistema; el texto no se envía a un servidor.",
+          "Múltiples idiomas y voces, según las que tengas instaladas en tu dispositivo."
+        ],
+        "faqs": [
+          {"q":"¿Qué idiomas admite?","a":"Ofrece todas las voces que proporcionen tu sistema operativo y navegador. La mayoría incluye inglés y varios otros idiomas; la lista disponible se carga automáticamente desde tu dispositivo."},
+          {"q":"¿Puedo descargar el audio como archivo?","a":"La API Web Speech reproduce audio pero no ofrece descarga directa en la mayoría de los navegadores, por lo que generalmente no se puede guardar un MP3 sin un programa de grabación adicional."},
+          {"q":"¿Hay un límite de caracteres?","a":"No hay cuota fija, pero los textos muy largos pueden dividirse o pausarse entre fragmentos según el motor de voz de tu navegador."},
+          {"q":"¿Por qué no puedo seleccionar una voz concreta?","a":"Las voces provienen de tu sistema operativo. Si falta un idioma o una voz, instálalo en la configuración de voz del sistema y aparecerá automáticamente en la lista."},
+          {"q":"¿Mi texto se envía a un servidor?","a":"No. La voz se sintetiza localmente por tu navegador y dispositivo, por lo que el texto que introduces se queda en tu máquina."}
+        ]
+      }
     },
     "text-tools": {
       "name": "Caja de Herramientas de Texto",
@@ -437,7 +619,33 @@
     },
     "timestamp-converter": {
       "name": "Convertidor de marca de tiempo",
-      "description": "Convertidor de marca de tiempo en línea, conversión bidireccional entre marca de tiempo Unix y fecha legible, formatos ms/s/ISO, cambio de zona horaria."
+      "description": "Convertidor de marca de tiempo en línea, conversión bidireccional entre marca de tiempo Unix y fecha legible, formatos ms/s/ISO, cambio de zonas horarias múltiples.",
+      "seo": {
+        "intro": "Este convertidor de marcas de tiempo Unix convierte marcas epoch en fechas legibles por personas y viceversa. Pega una marca de tiempo en segundos o milisegundos y muestra la fecha y hora correspondientes; pega una fecha y devuelve el valor epoch. Gestiona zonas horarias y detecta automáticamente si tu entrada está en segundos o milisegundos, lo que lo convierte en una ayuda rápida al depurar registros, registros de bases de datos o respuestas de API. Todo se calcula al instante en tu navegador.",
+        "scenarios": [
+          "Depura una línea de registro o respuesta de API que almacena el tiempo como un número epoch bruto.",
+          "Verifica un campo datetime de base de datos convirtiéndolo a una fecha legible.",
+          "Convierte una hora programada entre zonas horarias al planificar lanzamientos o reuniones."
+        ],
+        "tutorial": [
+          "Pega una marca de tiempo Unix o una fecha en la entrada.",
+          "Confirma si está en segundos o milisegundos (detección automática).",
+          "Elige la zona horaria en la que quieres que se muestre el resultado.",
+          "Copia la fecha o la marca de tiempo convertida."
+        ],
+        "advantages": [
+          "Detecta automáticamente segundos frente a milisegundos para que no malinterpretes el valor.",
+          "Soporta varias zonas horarias para el trabajo entre regiones.",
+          "Conversión instantánea en el lado del cliente, sin viaje de ida y vuelta al servidor."
+        ],
+        "faqs": [
+          {"q":"¿Cómo distinguir segundos de milisegundos?","a":"Una marca de tiempo en segundos suele tener 10 dígitos, en milisegundos 13. La herramienta detecta la longitud automáticamente, pero puedes anularlo si tu valor es inusual."},
+          {"q":"¿Soporta zonas horarias?","a":"Sí. Puedes elegir la zona horaria de la salida, y tiene en cuenta el desplazamiento al convertir entre marca de tiempo y fecha."},
+          {"q":"¿Puedo convertir muchos valores a la vez?","a":"Puedes convertir valores de uno en uno rápidamente; para listas masivas, pega y convierte cada línea según sea necesario."},
+          {"q":"¿Soporta fechas ISO 8601?","a":"Sí, las cadenas de fecha estándar ISO 8601 se reconocen como entrada y pueden convertirse a marca epoch."},
+          {"q":"¿El resultado está en hora local o UTC?","a":"Depende de la zona horaria que selecciones. Elige UTC para un valor universal, o tu zona local para una lectura local."}
+        ]
+      }
     },
     "title-weight-checker": {
       "name": "Comprobador de Peso de Título Multiplataforma",
@@ -445,11 +653,63 @@
     },
     "url-encode-decode": {
       "name": "Codificador/Decodificador URL",
-      "description": "Herramienta de codificación/decodificación de URL en línea, codificación porcentual estándar, también soporta codificación Base64 y conversión de entidades HTML."
+      "description": "Herramienta de codificación/decodificación de URL en línea, codificación porcentual estándar, también soporta codificación Base64 y conversión de entidades HTML.",
+      "seo": {
+        "intro": "Este codificador y decodificador de URL convierte texto hacia y desde la codificación porcentual (codificación URL) directamente en tu navegador. Codifica parámetros de consulta que contengan espacios, caracteres no ASCII o símbolos reservados para que viajen de forma segura en una URL, o decodifica una cadena escapada con %XX de vuelta a texto legible. Distingue las dos necesidades comunes — codificar una URL completa frente a codificar un solo componente — lo que refleja encodeURI y encodeURIComponent de JavaScript. Todo el procesamiento es local, nada se sube.",
+        "scenarios": [
+          "Construye una cadena de consulta con valores que contengan espacios o caracteres chinos.",
+          "Depura una URL de redirección o devolución de llamada que no coincide debido a la codificación.",
+          "Decodifica una cadena escapada con %XX copiada de un registro o de la barra de direcciones para leerla."
+        ],
+        "tutorial": [
+          "Pega la URL o el valor del parámetro.",
+          "Elige codificar o decodificar.",
+          "Selecciona el modo URL completa o modo componente único.",
+          "Copia el resultado."
+        ],
+        "advantages": [
+          "Separa la codificación de URL completa y de componente para evitar un exceso o defecto de escapes.",
+          "Maneja correctamente la entrada no ASCII.",
+          "Conversión instantánea y local sin llamada al servidor."
+        ],
+        "faqs": [
+          {"q":"¿Cuál es la diferencia entre encodeURI y encodeURIComponent?","a":"encodeURI mantiene intactos los caracteres de estructura de URL como : / ? &, por lo que sirve para una URL completa. encodeURIComponent también escapa esos, por lo que se usa para un valor individual que insertarás en una URL."},
+          {"q":"¿Un espacio se codifica como %20 o +?","a":"La codificación porcentual usa %20. La forma + es específica de los datos de formulario application/x-www-form-urlencoded, no de la codificación URL general."},
+          {"q":"¿Soporta caracteres no ASCII?","a":"Sí. Caracteres como el chino se codifican como secuencias porcentuales UTF-8 y se decodifican correctamente de vuelta."},
+          {"q":"¿Puedo procesar varios valores?","a":"Sí, codifica o decodifica valores de uno en uno; pega cada cadena y convierte según sea necesario."},
+          {"q":"¿Cambiará mi texto original?","a":"Solo al aplicar la codificación o decodificación que elijas. Decodificar una cadena ya decodificada, o codificar dos veces, puede producir resultados inesperados, así que aplica la operación una sola vez."}
+        ]
+      }
     },
     "uuid-generator": {
       "name": "Generador UUID",
-      "description": "Genera UUIDs en línea, soporta versiones v1/v4/v7, generación por lotes, copia con un clic, procesamiento puramente local."
+      "description": "Genera UUIDs en línea, soporta versiones v1/v4/v7, generación por lotes, copia con un clic, procesamiento puramente local.",
+      "seo": {
+        "intro": "Este generador de UUID crea UUIDs de versión 4 (aleatorios) — también llamados GUIDs — al instante en tu navegador. Genera uno o muchos a la vez, con o sin guiones, en mayúsculas o minúsculas. Los UUIDs son identificadores de 128 bits usados como claves de base de datos, IDs de solicitud y referencias únicas donde no es práctico un contador central. La generación ocurre localmente, así que los valores se producen en tu dispositivo y no se obtienen de un servidor.",
+        "scenarios": [
+          "Genera UUIDs por lotes para sembrar claves primarias de base de datos durante el desarrollo.",
+          "Crea identificadores únicos para datos de prueba o fixtures.",
+          "Genera una clave de idempotencia o ID de solicitud para una llamada a una API."
+        ],
+        "tutorial": [
+          "Elige la versión (v4 aleatorio es el valor predeterminado común).",
+          "Establece cuántos UUIDs necesitas.",
+          "Selecciona el formato: con o sin guiones, mayúsculas o minúsculas.",
+          "Genéralos y cópialos por lotes."
+        ],
+        "advantages": [
+          "Genera por lotes, no de uno en uno.",
+          "Formato flexible: opciones de guiones y mayúsculas/minúsculas.",
+          "Producidos localmente en tu navegador — no se solicita nada a un servidor."
+        ],
+        "faqs": [
+          {"q":"¿Cuál es la diferencia entre v4 y v1?","a":"Los UUIDs v4 son aleatorios, ofreciendo privacidad y sencillez. Los UUIDs v1 se basan en la marca de tiempo y la información de la máquina, lo que los hace ordenados por tiempo, pero puede filtrar el momento de generación y el host."},
+          {"q":"¿Pueden colisionar los UUIDs?","a":"En teoría sí, pero la probabilidad para v4 es astronómicamente pequeña — necesitarías generar miles de millones antes de que una colisión sea remotamente probable."},
+          {"q":"¿Cuántos puedo generar a la vez?","a":"Puedes solicitar muchos en un solo lote; el límite práctico depende de la memoria de tu navegador ya que la generación es local."},
+          {"q":"¿Puedo quitar los guiones?","a":"Sí. Elige el formato sin guiones para obtener una cadena compacta de 32 caracteres, útil para algunos contextos de base de datos o URL."},
+          {"q":"¿Son buenos los UUIDs v4 como claves primarias de base de datos?","a":"Funcionan bien para sistemas distribuidos, pero al ser aleatorios pueden fragmentar la localidad del índice. Si importa el orden de inserción, considera un esquema ordenado por tiempo en su lugar."}
+        ]
+      }
     },
     "vertical-chinese-generator": {
       "name": "Generador Chino Vertical",

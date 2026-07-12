@@ -88,5 +88,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootRedirectPage() {
-  redirect(DEFAULT_LANG, 'replace');
+  redirect(DEFAULT_LANG);
 }

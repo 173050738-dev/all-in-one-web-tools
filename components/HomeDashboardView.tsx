@@ -1,11 +1,13 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { useState, useMemo, useEffect, useRef } from 'react';
+import type { ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 import Sidebar from '@/components/Sidebar';
 import ToolCard from '@/components/ToolCard';
 import SearchDropdown from '@/components/SearchDropdown';
-import { tools, computeComplianceLevel, type Tool, type ComplianceLevel } from '@/data/tools';
+import { computeComplianceLevel } from '@/data/tools-shared';
+import type { ToolIndexItem, ComplianceLevel } from '@/data/tools-shared';
 import { searchTools } from '@/data/search';
 import { categories, setDynamicCategoryCounts, getCategoryCount } from '@/data/categories';
 import { usePreferencesStore } from '@/stores/preferences';
@@ -23,6 +25,31 @@ const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default
     />
   ),
 });
+
+function ToolCardSkeleton({ className = '' }: { className?: string }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`relative overflow-hidden rounded-xl border border-gray-200/70 dark:border-gray-800 p-3 sm:p-4 bg-white dark:bg-gray-900 ${className}`}
+    >
+      <div className="flex items-start gap-3 mb-3">
+        <div className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl bg-gray-100 dark:bg-gray-800 animate-pulse" />
+        <div className="flex-1 min-w-0 space-y-2">
+          <div className="h-4 w-2/3 rounded bg-gray-100 dark:bg-gray-800 animate-pulse" />
+          <div className="h-3 w-5/6 rounded bg-gray-100/70 dark:bg-gray-800/70 animate-pulse" />
+        </div>
+      </div>
+      <div className="space-y-2">
+        <div className="h-3 w-full rounded bg-gray-100/80 dark:bg-gray-800/80 animate-pulse" />
+        <div className="h-3 w-4/5 rounded bg-gray-100/60 dark:bg-gray-800/60 animate-pulse" />
+      </div>
+      <div className="mt-3 flex items-center justify-between">
+        <div className="h-6 w-16 rounded-full bg-gray-100 dark:bg-gray-800 animate-pulse" />
+        <div className="h-8 w-8 rounded-lg bg-gray-100 dark:bg-gray-800 animate-pulse" />
+      </div>
+    </div>
+  );
+}
 
 const INITIAL_COUNT = 30;
 const LOAD_MORE_COUNT = 30;
@@ -50,13 +77,13 @@ const CATEGORY_CHIP_BASE = [
 ].join(' ');
 
 function applyFilterAndSort(
-  pool: Tool[],
+  pool: ToolIndexItem[],
   selectedCategory: string,
   sortBy: SortMode,
   searchQuery: string,
-): Tool[] {
+): ToolIndexItem[] {
   let result = [...pool];
-  if (searchQuery.trim()) result = searchTools(result, searchQuery);
+  if (searchQuery.trim()) result = searchTools(result as any[], searchQuery) as ToolIndexItem[];
   if (selectedCategory !== 'all') result = result.filter((tool) => tool.category === selectedCategory);
   if (sortBy === 'popular') {
     result = [...result].sort((a, b) => (b.likes || 0) - (a.likes || 0));
@@ -74,6 +101,7 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   const tSidebar = useTranslations('sidebar');
   const tcT = useTranslations('toolcard');
   const tNav2 = useTranslations('nav2');
+  const [tools, setTools] = useState<ToolIndexItem[] | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const authedStatus = useAuthStore((s) => s.status);
   const isAuthed = authedStatus === 'authed';
@@ -86,6 +114,17 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   const sortBySetRef = useRef(false);
   const categoryCountInitRef = useRef(false);
   const allToolsInitRef = useRef(false);
+
+  /* 核心懒加载：避免把 600KB tools-index 打进首屏 bundle */
+  useEffect(() => {
+    let cancelled = false;
+    void import('@/data/tools-index').then((mod) => {
+      if (cancelled) return;
+      setTools(mod.TOOLS_INDEX);
+    });
+    return () => { cancelled = true; };
+  }, []);
+
   useEffect(() => {
     if (sortBySetRef.current) return;
     sortBySetRef.current = true;
@@ -93,7 +132,7 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   }, [isAuthed]);
 
   useEffect(() => {
-    if (categoryCountInitRef.current) return;
+    if (!tools || categoryCountInitRef.current) return;
     categoryCountInitRef.current = true;
     const countTable: Record<string, number> = {};
     for (const t of tools) {
@@ -102,17 +141,18 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
       countTable[t.category] = (countTable[t.category] || 0) + 1;
     }
     setDynamicCategoryCounts(countTable);
-  }, []);
+  }, [tools]);
 
   useEffect(() => {
-    if (allToolsInitRef.current) return;
+    if (!tools || allToolsInitRef.current) return;
     allToolsInitRef.current = true;
     try {
       useFavoritesStore.getState().initializeAllTools(tools as any[]);
     } catch { /* ignore */ }
-  }, []);
+  }, [tools]);
 
-  const filteredTools = useMemo(() => {
+  const filteredTools = useMemo<ToolIndexItem[]>(() => {
+    if (!tools) return [];
     const effectiveSort: SortMode = sortBy === 'recommended' ? 'newest' : sortBy;
     const base = applyFilterAndSort(tools, selectedCategory, effectiveSort, searchQuery);
     if (sortBy !== 'recommended') return base;
@@ -144,8 +184,8 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
       isAuthed,
       preferredLocale: locale,
     };
-    return buildRecommendedOrder(base, profile);
-  }, [selectedCategory, sortBy, searchQuery, favs, authHistory, isAuthed, locale]);
+    return buildRecommendedOrder(base as any[], profile) as ToolIndexItem[];
+  }, [tools, selectedCategory, sortBy, searchQuery, favs, authHistory, isAuthed, locale]);
 
   useEffect(() => {
     setDisplayCount(INITIAL_COUNT);
@@ -170,11 +210,12 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
 
   // 空态的热门 5 推荐
   const top5ForEmpty = useMemo(() => {
+    if (!tools) return [];
     return [...tools]
       .filter((tool) => computeComplianceLevel(tool) !== 'red')
       .sort((a, b) => (b.likes || 0) - (a.likes || 0))
       .slice(0, 5);
-  }, []);
+  }, [tools]);
 
   return (
     <div className='max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8'>
@@ -253,36 +294,42 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
               </div>
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-3 lg:gap-4'>
-              {(() => {
-                const nodes: React.ReactNode[] = [];
-                let adCount = 0;
-                const MAX_ADS = 3;
-                const AD_INTERVAL = 8;
-                for (let i = 0; i < displayedTools.length; i++) {
-                  const tool = displayedTools[i];
-                  nodes.push(
-                    <ToolCard
-                      key={tool.id}
-                      tool={tool as any}
-                      locale={locale}
-                      selectable={selectedCategory !== 'all' || searchQuery.trim() !== ''}
-                    />
-                  );
-                  const pos = i + 1;
-                  if (adCount < MAX_ADS && pos % AD_INTERVAL === 0 && pos < displayedTools.length) {
-                    adCount++;
+              {!tools ? (
+                Array.from({ length: 16 }).map((_, i) => (
+                  <ToolCardSkeleton key={i} />
+                ))
+              ) : (
+                (() => {
+                  const nodes: ReactNode[] = [];
+                  let adCount = 0;
+                  const MAX_ADS = 3;
+                  const AD_INTERVAL = 8;
+                  for (let i = 0; i < displayedTools.length; i++) {
+                    const tool = displayedTools[i];
                     nodes.push(
-                      <AdSlot
-                        key={`infeed-ad-${adCount}-${pos}-${selectedCategory}-${sortBy}`}
-                        slot={`home-infeed-${adCount}-${locale}`}
-                        size="in-feed"
-                        showPlaceholder={true}
+                      <ToolCard
+                        key={tool.id}
+                        tool={tool as any}
+                        locale={locale}
+                        selectable={selectedCategory !== 'all' || searchQuery.trim() !== ''}
                       />
                     );
+                    const pos = i + 1;
+                    if (adCount < MAX_ADS && pos % AD_INTERVAL === 0 && pos < displayedTools.length) {
+                      adCount++;
+                      nodes.push(
+                        <AdSlot
+                          key={`infeed-ad-${adCount}-${pos}-${selectedCategory}-${sortBy}`}
+                          slot={`home-infeed-${adCount}-${locale}`}
+                          size="in-feed"
+                          showPlaceholder={true}
+                        />
+                      );
+                    }
                   }
-                }
-                return nodes;
-              })()}
+                  return nodes;
+                })()
+              )}
             </div>
             {filteredTools.length === 0 && (
               <div className='text-center py-12'>

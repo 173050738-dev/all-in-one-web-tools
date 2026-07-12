@@ -129,10 +129,10 @@ export default function BlogContentRenderer({ blocks, locale, className = '' }: 
           case 'cta': {
             const text = getLocalizedText(block.text, locale);
             const sub = getLocalizedText(block.sub, locale);
-            let rawLink = block.link;
+            let rawLink: string | undefined = block.link;
             if (!rawLink && block.toolSlug) rawLink = `/tool/${block.toolSlug}`;
             if (!rawLink) rawLink = `/${locale}/blog`;
-            const href = rawLink.startsWith('/') ? `/${locale}${rawLink}` : rawLink;
+            const href = rawLink?.startsWith('/') ? `/${locale}${rawLink}` : rawLink;
             renderedNodes.push(
               <div
                 key={`cta-${i}`}
@@ -163,15 +163,15 @@ export default function BlogContentRenderer({ blocks, locale, className = '' }: 
           case 'image': {
             const alt = getLocalizedText(block.alt, locale, '');
             const caption = getLocalizedText(block.caption, locale);
+            const imgSrc = block.src || 'data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201600%20900%22%3E%3Crect%20width%3D%221600%22%20height%3D%22900%22%20fill%3D%22%23f3f4f6%22%2F%3E%3C%2Fsvg%3E';
             renderedNodes.push(
               <figure
                 key={`img-${i}`}
                 className="not-prose mt-6 sm:mt-8 mb-4 sm:mb-6"
               >
-                {/* 16:9 占位 + 明确尺寸，防止 CLS（即使图片还在加载也不会撑高布局抖动） */}
                 <div className="overflow-hidden rounded-2xl border border-gray-200/70 dark:border-gray-700/50 bg-gray-100/50 dark:bg-gray-800/40 shadow-sm aspect-[16/9]">
                   <img
-                    src={block.src}
+                    src={imgSrc}
                     alt={alt}
                     width={1600}
                     height={900}
@@ -187,6 +187,42 @@ export default function BlogContentRenderer({ blocks, locale, className = '' }: 
                   </figcaption>
                 )}
               </figure>,
+            );
+            break;
+          }
+          case 'table': {
+            const heads = (block.headers?.[locale] || block.headers?.['en'] || []) as string[];
+            const rows = (block.rows || []).map(
+              (r) => (r?.[locale] || r?.['en'] || []) as string[]
+            );
+            if (!heads.length && !rows.length) break;
+            renderedNodes.push(
+              <div key={`table-${i}`} className="not-prose mt-6 sm:mt-8 overflow-x-auto rounded-2xl border border-gray-200/70 dark:border-gray-700/50">
+                <table className="w-full text-left text-[13px] sm:text-[14px] border-collapse">
+                  {heads.length > 0 && (
+                    <thead className="bg-gray-50 dark:bg-gray-800/60">
+                      <tr>
+                        {heads.map((h, hj) => (
+                          <th key={`th-${i}-${hj}`} className="px-3 py-2 sm:px-4 sm:py-3 font-semibold text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 whitespace-nowrap">
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                  )}
+                  <tbody>
+                    {rows.map((cells, rj) => (
+                      <tr key={`tr-${i}-${rj}`} className="odd:bg-white even:bg-gray-50/50 dark:odd:bg-gray-900 dark:even:bg-gray-800/30">
+                        {cells.map((cell, cj) => (
+                          <td key={`td-${i}-${rj}-${cj}`} className="px-3 py-2 sm:px-4 sm:py-3 text-gray-700 dark:text-gray-300 border-b border-gray-100 dark:border-gray-800 align-top">
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             );
             break;
           }

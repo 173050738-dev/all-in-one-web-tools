@@ -3,7 +3,7 @@
 import { Search, Sparkles, Code, Palette, GraduationCap, Briefcase, Video, X, ArrowRight, Wand2, Loader2 } from 'lucide-react';
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import { tools } from '@/data/tools';
+import type { ToolIndexItem } from '@/data/tools-shared';
 import { searchTools } from '@/data/search';
 import { scenes } from '@/data/scenes';
 import { usePreferencesStore } from '@/stores/preferences';
@@ -230,6 +230,7 @@ const sceneDescs: Record<string, Record<string, string>> = {
 export default function SearchDropdown({ locale, isMobile = false }: SearchDropdownProps) {
   const s = getStrings(locale);
   const { searchQuery, setSearchQuery } = usePreferencesStore();
+  const [tools, setTools] = useState<ToolIndexItem[] | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [_isAiModeRaw, _setIsAiModeRaw] = useState(false);
   const [isAiLoading, setIsAiLoading] = useState(false);
@@ -238,6 +239,16 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const toolsT = useTranslations('tools');
+
+  /* 懒加载 tools-index（963KB）：避免 Header 首屏同步拉大数据 */
+  useEffect(() => {
+    let cancelled = false;
+    void import('@/data/tools-index').then((mod) => {
+      if (cancelled) return;
+      setTools(mod.TOOLS_INDEX);
+    });
+    return () => { cancelled = true; };
+  }, []);
 
   const safeTranslate = (key: string, fallback: string) => {
     try {
@@ -301,9 +312,9 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
   };
 
   const results = useMemo(() => {
-    if (!searchQuery.trim()) return [];
+    if (!tools || !searchQuery.trim()) return [];
     return searchTools(tools, searchQuery).slice(0, 6);
-  }, [searchQuery]);
+  }, [tools, searchQuery]);
 
   const fetchAiRecommend = useCallback(async () => {
     if (!ENABLE_AI_FEATURES) return;
@@ -367,7 +378,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
 
   const handleSceneClick = (sceneId: string) => {
     const scene = scenes.find(s => s.id === sceneId);
-    if (scene) {
+    if (scene && tools) {
       const firstTool = tools.find(t => t.slug === scene.toolSlugs[0]);
       if (firstTool) {
         setSearchQuery(sceneNames[sceneId]?.[locale] || sceneNames[sceneId]?.['en'] || sceneId);

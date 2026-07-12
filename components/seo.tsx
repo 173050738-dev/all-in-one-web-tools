@@ -816,7 +816,36 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
   const featureList = [...localFeatures, ...tagFeatures].slice(0, 8);
 
   const json = loadMessagesSync(l);
-  const faqs = buildToolFaqsFromJson(l, tool as ToolLike, json as any);
+
+  /* ===========================================================
+     per-slug 专属 FAQ：先从 json.tools[slug|id].seo.faqs 取
+     取不到 → 保持旧逻辑 buildToolFaqsFromJson（通用4条 free/signup/privacy/device）
+     保证页面可见 FAQ 与结构化数据 FAQ JSON-LD 一致
+     =========================================================== */
+  let faqs: FaqItem[];
+  try {
+    const slugKey = String(tool.slug || tool.id || '');
+    const idKey = String(tool.id || '');
+    let seoObj: any = undefined;
+    const toolsNs = (json as any)?.tools as Record<string, any> | undefined;
+    if (toolsNs) {
+      if (slugKey && toolsNs[slugKey]?.seo && typeof toolsNs[slugKey].seo === 'object') {
+        seoObj = toolsNs[slugKey].seo;
+      } else if (idKey && idKey !== slugKey && toolsNs[idKey]?.seo && typeof toolsNs[idKey].seo === 'object') {
+        seoObj = toolsNs[idKey].seo;
+      }
+    }
+    if (Array.isArray(seoObj?.faqs) && seoObj.faqs.length > 0) {
+      faqs = seoObj.faqs
+        .filter((x: any) => x && typeof x.q === 'string' && typeof x.a === 'string')
+        .map((x: any) => ({ q: String(x.q), a: String(x.a) }));
+    } else {
+      faqs = buildToolFaqsFromJson(l, tool as ToolLike, json as any);
+    }
+  } catch {
+    faqs = buildToolFaqsFromJson(l, tool as ToolLike, json as any);
+  }
+
   const faqPage = buildFaqJsonLd(faqs);
 
   const softwareApp = {
@@ -859,8 +888,8 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     processorRequirements: 'Any modern CPU',
     storageRequirements: '50MB browser storage',
     permissions: 'No special permissions required; browser storage used only for user preferences',
-    dateModified: tool.updatedAt || tool.publishedAt,
-    datePublished: tool.publishedAt || '2026-01-01T00:00:00Z',
+    dateModified: (tool as any).updatedAt || (tool as any).publishedAt,
+    datePublished: (tool as any).publishedAt || '2026-01-01T00:00:00Z',
     privacyPolicy: `${SITE_URL}/${l}/privacy/`,
     termsOfService: `${SITE_URL}/${l}/terms/`,
     isFamilyFriendly: true,

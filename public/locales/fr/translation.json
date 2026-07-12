@@ -313,7 +313,33 @@
     },
     "base64-tool": {
       "name": "Encodeur/Décodeur Base64",
-      "description": "Encodage et décodage Base64 en ligne avec conversion texte↔image. Traitement 100% local, sûr et privé."
+      "description": "Encodage et décodage Base64 en ligne avec conversion texte↔image. Traitement 100% local, sûr et privé.",
+      "seo": {
+        "intro": "Cet encodeur et décodeur Base64 convertit texte et fichiers vers et depuis Base64 directement dans votre navigateur. Encodez du texte UTF-8 sans caractères illisibles, décodez une chaîne Base64 pour retrouver du texte lisible, ou transformez une petite image en data URI que vous pouvez intégrer dans HTML ou CSS. Comme il fonctionne localement, rien de ce que vous collez ou téléchargez n'est envoyé à un serveur. C'est une aide rapide pour les développeurs qui travaillent avec des APIs, des fichiers de configuration et des ressources intégrées.",
+        "scenarios": [
+          "Transformez une petite icône ou image en data URI pour l'intégrer en ligne dans CSS ou HTML.",
+          "Inspectez ou décodez un champ Base64 renvoyé par une API ou stocké dans un jeton.",
+          "Encodez du texte contenant des caractères spéciaux pour qu'il survive au transport en toute sécurité."
+        ],
+        "tutorial": [
+          "Choisissez encoder ou décoder.",
+          "Collez votre texte, ou sélectionnez un fichier comme une image.",
+          "Confirmez UTF-8 pour que les caractères non ASCII soient traités correctement.",
+          "Copiez la chaîne encodée ou le résultat décodé."
+        ],
+        "advantages": [
+          "Gère à la fois texte et fichiers, y compris image vers data URI.",
+          "Reconnaît UTF-8, donc le texte chinois et autres textes non ASCII ne seront pas corrompus.",
+          "Traite localement dans le navigateur : vos données ne sont jamais téléchargées."
+        ],
+        "faqs": [
+          {"q":"Prend-il en charge le texte non ASCII comme le chinois ?","a":"Oui. Il encode et décode en UTF-8, donc le texte multilingue est préservé sans sortie illisible."},
+          {"q":"Peut-il convertir une image en Base64 ?","a":"Oui. Sélectionnez un fichier image et il renvoie une chaîne Base64 ou un data URI que vous pouvez intégrer directement dans votre balisage."},
+          {"q":"Y a-t-il une limite de taille ?","a":"Aucune limite stricte, mais les fichiers volumineux dépendent de la mémoire de votre navigateur car l'encodage se fait localement."},
+          {"q":"Quelle est la différence entre Base64 et encodage URL ?","a":"Base64 représente des données binaires sous forme de texte ASCII ; l'encodage URL (pourcentage) échappe les caractères non sûrs dans les URLs. Elles résolvent des problèmes différents."},
+          {"q":"Mes données sont-elles téléchargées ?","a":"Non. L'encodage et le décodage s'exécutent entièrement dans votre navigateur, donc rien ne sort de votre appareil."}
+        ]
+      }
     },
     "caption-generator": {
       "name": "Textes pour Réseaux",
@@ -321,7 +347,33 @@
     },
     "case-converter": {
       "name": "Convertir Casse",
-      "description": "Conversion de casse de texte en un clic, prend en charge PascalCase, camelCase, snake_case, kebab-case, MAJUSCULES/minuscules, Casse de Titre, première lettre en majuscule."
+      "description": "Conversion de casse de texte en un clic, prend en charge PascalCase, camelCase, snake_case, kebab-case, MAJUSCULES/minuscules, Casse de Titre, première lettre en majuscule.",
+      "seo": {
+        "intro": "Ce convertisseur de casse transforme le texte entre MAJUSCULES, minuscules, Title Case, Sentence case et les styles de programmation comme camelCase et snake_case. Collez votre texte, choisissez le format cible et copiez le résultat. Il conserve les sauts de ligne afin que vous puissiez convertir des listes entières d'un coup, ce qui est utile pour ranger les en-têtes, normaliser des données importées ou renommer des variables. Il fonctionne entièrement dans votre navigateur.",
+        "scenarios": [
+          "Normalisez un ensemble d'en-têtes vers un Title Case cohérent.",
+          "Convertissez des noms de variables entre camelCase et snake_case pendant le codage.",
+          "Nettoyez des données importées dont la casse est incohérente entre les lignes."
+        ],
+        "tutorial": [
+          "Collez votre texte, un élément par ligne si vous convertissez une liste.",
+          "Choisissez le format cible comme MAJUSCULES, Title Case ou snake_case.",
+          "Appliquez la conversion.",
+          "Copiez le texte converti."
+        ],
+        "advantages": [
+          "Inclut les styles de nommage de programmation (camelCase, snake_case), pas seulement majuscules/minuscules.",
+          "Conserve les sauts de ligne pour que vous puissiez convertir plusieurs lignes par lots.",
+          "S'exécute côté client sans téléchargement."
+        ],
+        "faqs": [
+          {"q":"Prend-il en charge camelCase et snake_case ?","a":"Oui. En plus des MAJUSCULES, minuscules, Title Case et Sentence case, il convertit vers des styles de programmation comme camelCase et snake_case."},
+          {"q":"Est-ce que Title Case omet les petits mots ?","a":"Title Case met en majuscule la première lettre des mots ; les implémentations simples mettent en majuscule chaque mot, donc vérifiez les mots courts comme 'of' ou 'the' si vous avez besoin de règles de style strictes."},
+          {"q":"Cela fonctionne-t-il avec du texte non latin comme le chinois ?","a":"La conversion de casse n'affecte que les lettres qui ont des formes majuscule/minuscule. Les caractères chinois n'ont pas de casse, donc ils passent sans changement."},
+          {"q":"Y a-t-il une limite de caractères ?","a":"Aucune limite stricte ; les grands blocs de texte sont traités localement dans votre navigateur."},
+          {"q":"Puis-je convertir plusieurs lignes à la fois ?","a":"Oui. Les sauts de ligne sont conservés, donc collez une liste et chaque ligne sera convertie ensemble."}
+        ]
+      }
     },
     "color-picker": {
       "name": "Sélecteur de couleurs",
@@ -333,7 +385,33 @@
     },
     "countdown": {
       "name": "Compte à Rebours & Anniversaires",
-      "description": "Suivez vos dates importantes avec compte à rebours précis à la seconde. Aucun anniversaire ni fête raté. Répétition annuelle possible."
+      "description": "Suivez vos dates importantes avec compte à rebours précis à la seconde. Aucun anniversaire ni fête raté. Répétition annuelle possible.",
+      "seo": {
+        "intro": "Ce minuteur de compte à rebours en ligne compte à rebours jusqu'à une date et une heure cibles, ou pendant une durée définie, et affiche les jours, heures, minutes et secondes restants. Définissez votre cible, lancez-le et, si vous le souhaitez, passez en mode plein écran grand format pour des événements, des lancements, des examens ou des diffusions en direct. Il fonctionne dans votre navigateur sans compte requis, vous pouvez en mettre un en place en quelques secondes.",
+        "scenarios": [
+          "Créez de l'attente pour un lancement de produit, une vente ou un webinaire avec un compte à rebours en direct.",
+          "Suivez d'un coup d'œil une date limite, un examen ou une livraison de projet.",
+          "Affichez un compte à rebours “démarrage imminent” avant le début d'une diffusion ou d'une présentation."
+        ],
+        "tutorial": [
+          "Définissez la date et l'heure cibles, ou une durée fixe.",
+          "Choisissez un style d'affichage et, si vous le voulez, le mode plein écran.",
+          "Appuyez sur démarrer pour lancer le compte à rebours.",
+          "Quand il atteint zéro, le minuteur indique qu'il est terminé."
+        ],
+        "advantages": [
+          "Affichage plein écran grand format et lisible, adapté aux présentations et diffusions.",
+          "Aucune inscription nécessaire — configurez et c'est parti.",
+          "Fonctionne côté client, donc il fonctionne même sur un simple écran partagé."
+        ],
+        "faqs": [
+          {"q":"Le compte continue-t-il si je ferme la page ?","a":"Le minuteur fonctionne tant que la page est ouverte. Si vous fermez ou rechargez l'onglet, rouvrez-le et le temps restant jusqu'à une date cible fixe est recalculé automatiquement."},
+          {"q":"Puis-je l'afficher en plein écran ?","a":"Oui. Passez en mode plein écran pour un affichage grand format, lisible de loin sur un projecteur ou une diffusion."},
+          {"q":"Y a-t-il une alerte sonore à la fin ?","a":"Quand le compte à rebours atteint zéro, l'affichage passe à l'état terminé ; le son dépend du style sélectionné et des paramètres de lecture automatique de votre navigateur."},
+          {"q":"Puis-je lancer plusieurs comptes à rebours ?","a":"Chaque onglet ouvert exécute son propre compte à rebours, vous pouvez donc ouvrir l'outil dans plusieurs onglets pour plusieurs minuteurs."},
+          {"q":"Ça fonctionne sur mobile ?","a":"Oui. Le site est adaptatif et fonctionne dans les navigateurs mobiles, même si le maintien de l'écran allumé dépend des paramètres de votre appareil."}
+        ]
+      }
     },
     "danmaku": {
       "name": "Bannière LED Portable",
@@ -341,7 +419,33 @@
     },
     "decision-wheel": {
       "name": "Roue de la Décision",
-      "description": "Plus d'indécision ! Laissez la roue choisir votre déjeuner, votre sortie du week-end… il suffit de la tourner."
+      "description": "Plus d'indécision ! Laissez la roue choisir votre déjeuner, votre sortie du week-end… il suffit de la tourner.",
+      "seo": {
+        "intro": "Cette roue de décision tournante effectue un choix aléatoire à partir d'une liste d'options que vous saisissez. Tapez des noms, des tâches ou des idées, faites tourner la roue et elle s'arrête sur une option au hasard — idéal pour briser la paralysie décisionnelle, désigner un gagnant ou choisir à qui vient le tour. C'est visuel et amusant, fonctionne sans inscription et s'exécute entièrement dans votre navigateur pour que vous puissiez l'utiliser en direct sur un écran partagé ou une diffusion.",
+        "scenarios": [
+          "Tirez un nom pour des tours, des tâches ménagères ou des stand-ups d'équipe.",
+          "Réglez 'que mangeons-nous ?' ou tout choix binaire quand personne ne peut décider.",
+          "Désignez un gagnant de tirage au sort en direct pendant une diffusion ou une classe."
+        ],
+        "tutorial": [
+          "Saisissez vos options, une par ligne.",
+          "Faites tourner la roue.",
+          "Lisez l'option sur laquelle elle s'arrête.",
+          "Faites tourner à nouveau, ou supprimez l'option choisie pour tirer sans répétition."
+        ],
+        "advantages": [
+          "Roue tournante visuelle qui engage les audiences en direct.",
+          "Sans inscription — saisissez les options et tournez immédiatement.",
+          "S'exécute côté client, donc fonctionne sur projecteur, écran partagé ou diffusion."
+        ],
+        "faqs": [
+          {"q":"Combien d'options puis-je ajouter ?","a":"Vous pouvez en ajouter beaucoup ; la roue reste lisible avec une liste modérée, et les très grandes listes affichent simplement des segments plus fins."},
+          {"q":"Le résultat est-il vraiment aléatoire et équitable ?","a":"Oui. Chaque tour utilise le générateur de nombres aléatoires du navigateur, donnant à chaque option la même chance à moins que vous ne définissiez des poids."},
+          {"q":"Puis-je définir des poids pour que certaines options gagnent plus ?","a":"Si la pondération est activée, vous pouvez agrandir certaines options ; sinon chaque option a la même probabilité."},
+          {"q":"Puis-je sauvegarder mes options ?","a":"Les options restent tant que la page est ouverte. Pour réutiliser une liste plus tard, conservez-la dans une note et collez-la à nouveau."},
+          {"q":"Cela fonctionne-t-il sur mobile ?","a":"Oui. La roue est tactile et tourne dans les navigateurs mobiles, donc vous pouvez l'utiliser sur un téléphone ou une tablette."}
+        ]
+      }
     },
     "emoji-mixer": {
       "name": "Mixeur d'Emoji",
@@ -381,7 +485,33 @@
     },
     "mortgage-calculator": {
       "name": "Calculateur de Crédit Immobilier",
-      "description": "Calcul mensuel précis de vos mensualités. Supporte échéances constantes ou amortissement constant. Ventilation détaillée en temps réel."
+      "description": "Calcul mensuel précis de vos mensualités. Supporte échéances constantes ou amortissement constant. Ventilation détaillée en temps réel.",
+      "seo": {
+        "intro": "Cette calculatrice de prêt hypothécaire gratuite estime votre mensualité de prêt immobilier et affiche un échéancier d'amortissement complet. Saisissez le montant du prêt, le taux d'intérêt annuel (TAEG / APR) et la durée en années, et elle vous donne instantanément votre mensualité, le total des intérêts payés sur toute la durée du prêt et un calendrier de répartition de chaque paiement entre capital et intérêts. Elle prend en charge à la fois le mode standard de mensualités égales (amortissement / capital et intérêts constants) et le mode à capital constant, où la part de capital reste fixe et les mensualités diminuent au fil du temps. Tout s'exécute entièrement dans votre navigateur, donc aucun de vos chiffres financiers n'est téléchargé ni stocké.",
+        "scenarios": [
+          "Avant d'acheter un logement, vérifiez si la mensualité correspond à votre budget pour différents montants de prêt et taux d'intérêt.",
+          "Comparez une durée de 15 ans contre 30 ans pour voir combien d'intérêts totaux supplémentaires coûte un prêt plus long.",
+          "Testez comment un apport plus important ou un taux inférieur modifient votre mensualité et les intérêts sur toute la durée."
+        ],
+        "tutorial": [
+          "Saisissez le montant total du prêt (prix du bien moins votre apport personnel).",
+          "Indiquez le taux d'intérêt annuel (TAEG / APR), pas le taux mensuel.",
+          "Choisissez la durée de remboursement en années, par exemple 15, 20 ou 30.",
+          "Basculez entre mensualités égales et capital constant pour comparer, puis lisez le détail des paiements et intérêts."
+        ],
+        "advantages": [
+          "Affiche un calendrier d'amortissement complet mois par mois, pas seulement un chiffre isolé.",
+          "Prend en charge à la fois les mensualités égales et le capital constant pour une comparaison directe.",
+          "S'exécute entièrement dans votre navigateur : vos revenus et vos données de prêt ne sortent jamais de votre appareil."
+        ],
+        "faqs": [
+          {"q":"Quelle est la différence entre mensualités égales et capital constant ?","a":"Avec des mensualités égales, vous payez la même somme chaque mois, la part d'intérêts est plus importante en début de prêt. Avec un capital constant, le capital remboursé chaque mois est fixe, les premières mensualités sont donc plus élevées et le total des intérêts payés est moins important."},
+          {"q":"Faut-il saisir un taux d'intérêt mensuel ou annuel ?","a":"Saisissez le taux annuel (TAEG / APR). La calculatrice le divise en interne pour calculer les intérêts mensuels, inutile de le convertir vous-même."},
+          {"q":"Peut-on prendre en compte des remboursements anticipés ou des paiements supplémentaires ?","a":"Le calcul de base suppose des paiements programmés fixes. Tout paiement supplémentaire réduit votre capital restant, ce qui diminue le total des intérêts : vous pouvez l'approximer en baissant le montant du prêt ou en raccourcissant la durée."},
+          {"q":"Le résultat inclut-il les impôts, l'assurance ou les frais ?","a":"Non. Il ne calcule que le capital et les intérêts. La taxe foncière, l'assurance habitation et les frais de prêt varient selon le lieu et l'établissement prêteur, ajoutez-les séparément pour obtenir le coût mensuel complet."},
+          {"q":"Mes données financières sont-elles envoyées quelque part ?","a":"Non. Tous les calculs s'effectuent localement dans votre navigateur. Rien de ce que vous saisissez n'est envoyé à un serveur ni enregistré."}
+        ]
+      }
     },
     "password-generator": {
       "name": "Générateur de Mots de Passe",
@@ -389,7 +519,33 @@
     },
     "pdf-merger": {
       "name": "Fusionneur PDF",
-      "description": "Fusionnez plusieurs PDF directement dans votre navigateur. Réorganisation par glisser-déposer. Aucun envoi serveur, 100% privé."
+      "description": "Fusionnez plusieurs PDF directement dans votre navigateur. Réorganisation par glisser-déposer. Aucun envoi serveur, 100% privé.",
+      "seo": {
+        "intro": "Cet outil en ligne gratuit de fusion de PDF combine plusieurs fichiers PDF en un seul document, directement dans votre navigateur. Ajoutez les fichiers souhaités, glissez-les dans l'ordre dont vous avez besoin et téléchargez le PDF fusionné en un clic. Comme la fusion s'effectue localement sur votre appareil, vos documents ne sont jamais téléchargés sur aucun serveur — ce qui compte quand les fichiers sont des factures, des contrats ou tout contenu privé. Aucun filigrane, aucune inscription.",
+        "scenarios": [
+          "Combinez des factures, reçus ou contrats distincts en un seul fichier pour la comptabilité ou l'archivage.",
+          "Fusionnez des rapports multichapitres, des pages numérisées ou des diapositives exportées en un livrable unique.",
+          "Regroupez un CV avec un portfolio ou une lettre de motivation dans un seul PDF avant l'envoi."
+        ],
+        "tutorial": [
+          "Ajoutez deux fichiers PDF ou plus depuis votre appareil.",
+          "Glissez les fichiers pour les classer dans l'ordre de fusion souhaité.",
+          "Cliquez sur fusionner pour générer le document combiné.",
+          "Téléchargez le PDF résultant."
+        ],
+        "advantages": [
+          "Les fichiers restent dans votre navigateur et ne sont jamais téléchargés, protégeant les documents privés.",
+          "Aucun filigrane n'est ajouté au résultat fusionné.",
+          "Aucune limite de nombre de fichiers ni d'inscription pour une utilisation normale."
+        ],
+        "faqs": [
+          {"q":"Mes fichiers sont-ils téléchargés sur un serveur ?","a":"Non. La fusion s'exécute entièrement dans votre navigateur, donc vos PDFs ne sortent jamais de votre appareil."},
+          {"q":"Y a-t-il une limite de taille de fichier ?","a":"Aucune limite stricte, mais les très gros fichiers dépendent de la mémoire de votre appareil, car tout est traité localement dans le navigateur."},
+          {"q":"Puis-je modifier l'ordre des pages ou des fichiers ?","a":"Oui. Glissez les fichiers dans la séquence souhaitée avant la fusion, ils seront combinés dans cet ordre."},
+          {"q":"Le PDF fusionné comportera-t-il un filigrane ?","a":"Non. Le résultat est un PDF fusionné propre, sans filigrane ni marque ajoutée."},
+          {"q":"Puis-je re-diviser un PDF plus tard ?","a":"Cet outil ne fait que fusionner. Pour découper un PDF en plusieurs parties, utilisez un outil dédié de séparation de PDF."}
+        ]
+      }
     },
     "pinyin-annotator": {
       "name": "Annotateur Pinyin",
@@ -429,7 +585,33 @@
     },
     "text-to-speech": {
       "name": "Texte en Parole",
-      "description": "Transformez tout texte en voix naturelle. Ajustez vitesse, hauteur et volume. Idéal pour écouter romans et infos partout."
+      "description": "Transformez tout texte en voix naturelle. Ajustez vitesse, hauteur et volume. Idéal pour écouter romans et infos partout.",
+      "seo": {
+        "intro": "Cet outil en ligne de synthèse vocale lit n'importe quel texte à voix haute directement dans votre navigateur à l'aide de l'API Web Speech intégrée. Collez ou saisissez votre texte, choisissez une langue et une voix, ajustez la vitesse de lecture et la hauteur tonale, puis appuyez sur lecture. Puisqu'il utilise les voix déjà installées sur votre appareil et votre système d'exploitation, aucun téléchargement, aucun compte, aucun quota fixe de caractères. Il est pratique pour la relecture, la rédaction de brouillons de voix off, la pratique de la prononciation en langue et l'accessibilité.",
+        "scenarios": [
+          "Relisez un long article en l'écoutant : l'oreille repère les formulations maladroites et les fautes d'orthographe que l'œil oublie.",
+          "Générez rapidement un brouillon de voix off pour une vidéo ou une présentation avant d'enregistrer une version définitive.",
+          "Pratiquez la prononciation tout en apprenant une langue, ou utilisez-le comme lecteur d'écran pour l'accessibilité."
+        ],
+        "tutorial": [
+          "Collez ou saisissez le texte que vous voulez faire lire.",
+          "Sélectionnez la langue et l'une des voix disponibles.",
+          "Ajustez à votre guise les curseurs de vitesse et de hauteur tonale.",
+          "Appuyez sur lecture, et utilisez pause ou stop pour contrôler la lecture."
+        ],
+        "advantages": [
+          "Gratuit, sans limite stricte de caractères : lisez de courtes notes ou de longs articles.",
+          "Fonctionne localement via votre navigateur et les voix système ; le texte n'est pas envoyé à un serveur.",
+          "Plusieurs langues et voix, selon ce qui est installé sur votre appareil."
+        ],
+        "faqs": [
+          {"q":"Quelles langues sont prises en charge ?","a":"Il propose toutes les voix fournies par votre système d'exploitation et votre navigateur. La plupart des systèmes incluent l'anglais et plusieurs autres langues ; la liste disponible est renseignée automatiquement depuis votre appareil."},
+          {"q":"Puis-je télécharger l'audio sous forme de fichier ?","a":"L'API Web Speech lit l'audio mais n'offre pas de téléchargement direct dans la plupart des navigateurs, donc il n'est généralement pas possible de sauvegarder un MP3 sans logiciel d'enregistrement supplémentaire."},
+          {"q":"Y a-t-il une limite de caractères ?","a":"Aucun quota fixe, mais les textes très longs peuvent être segmentés ou marquer des pauses entre les blocs selon le moteur vocal de votre navigateur."},
+          {"q":"Pourquoi ne puis-je pas sélectionner une voix en particulier ?","a":"Les voix proviennent de votre système d'exploitation. Si une langue ou une voix manque, installez-la dans les paramètres vocaux du système, elle apparaîtra automatiquement dans la liste."},
+          {"q":"Mon texte est-il envoyé à un serveur ?","a":"Non. La voix est synthétisée localement par votre navigateur et votre appareil, donc le texte que vous saisissez reste sur votre machine."}
+        ]
+      }
     },
     "text-tools": {
       "name": "Boîte à Outils Texte",
@@ -437,7 +619,33 @@
     },
     "timestamp-converter": {
       "name": "Convertisseur d'horodatage",
-      "description": "Convertisseur d'horodatage en ligne, conversion bidirectionnelle entre horodatage Unix et date lisible, formats ms/s/ISO, changement de fuseau horaire."
+      "description": "Convertisseur d'horodatage en ligne, conversion bidirectionnelle entre horodatage Unix et date lisible, formats ms/s/ISO, changement de fuseau horaire.",
+      "seo": {
+        "intro": "Ce convertisseur d'horodatage Unix transforme les marques epoch en dates lisibles par l'homme et inversement. Collez un horodatage en secondes ou millisecondes et il affiche la date et l'heure correspondantes ; collez une date et il renvoie la valeur epoch. Il gère les fuseaux horaires et détecte automatiquement si votre saisie est en secondes ou en millisecondes, ce qui en fait une aide rapide lors du débogage de journaux, d'enregistrements de base de données ou de réponses d'API. Tout est calculé instantanément dans votre navigateur.",
+        "scenarios": [
+          "Déboguer une ligne de journal ou une réponse d'API qui stocke le temps sous forme de nombre epoch brut.",
+          "Vérifier un champ datetime de base de données en le convertissant en date lisible.",
+          "Convertir une heure planifiée entre fuseaux horaires lors de la planification de lancements ou de réunions."
+        ],
+        "tutorial": [
+          "Collez un horodatage Unix, ou une date, dans le champ de saisie.",
+          "Confirmez s'il est en secondes ou en millisecondes (détection automatique).",
+          "Choisissez le fuseau horaire dans lequel vous voulez afficher le résultat.",
+          "Copiez la date ou l'horodatage converti."
+        ],
+        "advantages": [
+          "Détecte automatiquement secondes et millisecondes pour éviter toute erreur de lecture.",
+          "Prend en charge plusieurs fuseaux horaires pour le travail interrégional.",
+          "Conversion instantanée côté client, sans aller-retour serveur."
+        ],
+        "faqs": [
+          {"q":"Comment distinguer secondes et millisecondes ?","a":"Un horodatage en secondes comporte généralement 10 chiffres, en millisecondes 13 chiffres. L'outil détecte la longueur automatiquement, mais vous pouvez la remplacer si votre valeur est inhabituelle."},
+          {"q":"Prend-il en charge les fuseaux horaires ?","a":"Oui. Vous pouvez choisir le fuseau horaire de sortie, et il tient compte du décalage lors de la conversion entre horodatage et date."},
+          {"q":"Puis-je convertir beaucoup de valeurs en même temps ?","a":"Vous pouvez convertir les valeurs une par une rapidement ; pour des listes en masse, collez et convertissez chaque ligne selon vos besoins."},
+          {"q":"Prend-il en charge les dates ISO 8601 ?","a":"Oui, les chaînes de date standard ISO 8601 sont reconnues en entrée et peuvent être converties en horodatage epoch."},
+          {"q":"Le résultat est-il en heure locale ou UTC ?","a":"Cela dépend du fuseau horaire que vous sélectionnez. Choisissez UTC pour une valeur universelle, ou votre fuseau local pour une lecture locale."}
+        ]
+      }
     },
     "title-weight-checker": {
       "name": "Vérificateur de Poids de Titre",
@@ -445,11 +653,63 @@
     },
     "url-encode-decode": {
       "name": "Encodage/Décodage URL",
-      "description": "Outil d'encodage/décodage URL en ligne, encodage en pourcentage standard, prend également en charge l'encodage/décodage Base64 et la conversion d'entités HTML."
+      "description": "Outil d'encodage/décodage URL en ligne, encodage en pourcentage standard, prend également en charge l'encodage/décodage Base64 et la conversion d'entités HTML.",
+      "seo": {
+        "intro": "Cet encodeur et décodeur d'URL convertit du texte vers et depuis l'encodage en pourcentage (encodage URL) directement dans votre navigateur. Encodez des paramètres de requête contenant des espaces, des caractères non ASCII ou des symboles réservés pour qu'ils voyagent en toute sécurité dans une URL, ou décodez une chaîne échappée en %XX pour retrouver un texte lisible. Il distingue les deux besoins courants — encoder une URL complète ou encoder un seul composant — ce qui reflète encodeURI et encodeURIComponent de JavaScript. Tout le traitement est local, rien n'est téléchargé.",
+        "scenarios": [
+          "Construisez une chaîne de requête avec des valeurs contenant des espaces ou des caractères chinois.",
+          "Déboguer une URL de redirection ou de rappel qui ne correspond pas à cause de l'encodage.",
+          "Décodez une chaîne échappée en %XX copiée d'un journal ou de la barre d'adresse pour la lire."
+        ],
+        "tutorial": [
+          "Collez l'URL ou la valeur du paramètre.",
+          "Choisissez encoder ou décoder.",
+          "Sélectionnez le mode URL complète ou le mode composant unique.",
+          "Copiez le résultat."
+        ],
+        "advantages": [
+          "Sépare l'encodage d'URL complète et celui de composant pour éviter un échappement excessif ou insuffisant.",
+          "Gère correctement les entrées non ASCII.",
+          "Conversion instantanée et locale sans appel au serveur."
+        ],
+        "faqs": [
+          {"q":"Quelle est la différence entre encodeURI et encodeURIComponent ?","a":"encodeURI conserve les caractères de structure d'URL comme : / ? & intacts, donc c'est pour une URL complète. encodeURIComponent échappe aussi ceux-ci, donc c'est pour une valeur unique que vous insérerez dans une URL."},
+          {"q":"Un espace est-il encodé en %20 ou en + ?","a":"L'encodage en pourcentage utilise %20. La forme + est spécifique aux données de formulaire application/x-www-form-urlencoded, pas à l'encodage URL général."},
+          {"q":"Prend-il en charge les caractères non ASCII ?","a":"Oui. Les caractères comme le chinois sont encodés sous forme de séquences en pourcentage UTF-8 et décodés correctement en retour."},
+          {"q":"Puis-je traiter plusieurs valeurs ?","a":"Oui, encodez ou décodez les valeurs une par une ; collez chaque chaîne et convertissez selon vos besoins."},
+          {"q":"Cela va-t-il changer mon texte original ?","a":"Uniquement en appliquant l'encodage ou le décodage que vous choisissez. Décoder une chaîne déjà décodée, ou encoder deux fois, peut produire des résultats inattendus, donc appliquez l'opération une seule fois."}
+        ]
+      }
     },
     "uuid-generator": {
       "name": "Générateur UUID",
-      "description": "Générez des UUID en ligne, prenez en charge les versions v1/v4/v7, génération par lots, copie en un clic, traitement purement local."
+      "description": "Générez des UUID en ligne, prenez en charge les versions v1/v4/v7, génération par lots, copie en un clic, traitement purement local.",
+      "seo": {
+        "intro": "Ce générateur d'UUID crée des UUIDs de version 4 (aléatoires) — aussi appelés GUIDs — instantanément dans votre navigateur. Générez-en un ou plusieurs à la fois, avec ou sans tirets, en majuscules ou en minuscules. Les UUIDs sont des identifiants de 128 bits utilisés comme clés de base de données, IDs de requête et références uniques lorsqu'un compteur central n'est pas pratique. La génération se fait localement, donc les valeurs sont produites sur votre appareil et ne sont pas récupérées depuis un serveur.",
+        "scenarios": [
+          "Générez des UUIDs par lots pour amorcer les clés primaires d'une base de données pendant le développement.",
+          "Créez des identifiants uniques pour des données de test ou des fixtures.",
+          "Produisez une clé d'idempotence ou un ID de requête pour un appel d'API."
+        ],
+        "tutorial": [
+          "Choisissez la version (v4 aléatoire est la valeur par défaut courante).",
+          "Définissez le nombre d'UUIDs dont vous avez besoin.",
+          "Sélectionnez le format : avec ou sans tirets, majuscules ou minuscules.",
+          "Générez-les et copiez-les par lots."
+        ],
+        "advantages": [
+          "Génère par lots, pas un par un.",
+          "Formatage flexible : options de tirets et de casse des lettres.",
+          "Produits localement dans votre navigateur — rien n'est demandé à un serveur."
+        ],
+        "faqs": [
+          {"q":"Quelle est la différence entre v4 et v1 ?","a":"Les UUIDs v4 sont aléatoires, offrant confidentialité et simplicité. Les UUIDs v1 sont basés sur l'horodatage et les informations de la machine, ce qui les rend ordonnés par temps mais peut divulguer le moment de génération et l'hôte."},
+          {"q":"Les UUIDs peuvent-ils entrer en collision ?","a":"En théorie oui, mais la probabilité pour v4 est astronomiquement faible — il faudrait en générer des milliards avant qu'une collision ne soit vaguement probable."},
+          {"q":"Combien puis-je en générer à la fois ?","a":"Vous pouvez en demander beaucoup dans un seul lot ; la limite pratique dépend de la mémoire de votre navigateur car la génération est locale."},
+          {"q":"Puis-je supprimer les tirets ?","a":"Oui. Choisissez le format sans tirets pour obtenir une chaîne compacte de 32 caractères, utile pour certains contextes de base de données ou d'URL."},
+          {"q":"Les UUIDs v4 sont-ils bons comme clés primaires de base de données ?","a":"Ils fonctionnent bien pour les systèmes distribués, mais étant aléatoires ils peuvent fragmenter la localité de l'index. Si l'ordre d'insertion compte, envisagez plutôt un schéma ordonné par temps."}
+        ]
+      }
     },
     "vertical-chinese-generator": {
       "name": "Générateur Chinois Vertical",

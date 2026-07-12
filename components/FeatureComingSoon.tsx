@@ -6,7 +6,7 @@ import { useParams, useRouter } from 'next/navigation';
 type FeatureKey = 'workflows' | 'ideas';
 
 const FEATURE_CONFIG: Record<FeatureKey, {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<any>;
   gradient: string;
   titles: Record<string, string>;
   subtitles: Record<string, string>;

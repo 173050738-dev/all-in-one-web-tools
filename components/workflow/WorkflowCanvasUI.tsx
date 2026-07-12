@@ -384,6 +384,10 @@ const INITIAL_NODES: WorkflowNodeData[] = [
 export interface WorkflowCanvasUIProps {
   locale?: string;
   initialLoading?: boolean;
+  initialNodes?: unknown[];
+  initialEdges?: unknown[];
+  workflowId?: string;
+  onSave?: (data: { nodes: unknown[]; edges: unknown[] }) => void;
 }
 
 /**
