@@ -39,7 +39,7 @@ import Sidebar from '@/components/Sidebar';
 import { usePreferencesStore } from '@/stores/preferences';
 import { logLike, logFavorite } from '@/utils/audit-log';
 import type { Workflow } from '@/data/workflows';
-import { getToolBySlug, tools } from '@/data/tools';
+import { getToolIndexBySlug, searchToolIndex, type ToolIndexItem } from '@/data/tools';
 import { resolveToolLink, isExternalTool, getToolDisplayLabel } from '@/lib/toolLinks';
 import { translateWorkflow } from '@/lib/workflowTranslations';
 import type { Locale } from '@/lib/workflowTranslations';
@@ -619,7 +619,7 @@ export default function WorkflowDetail({
   };
 
   const addStep = (toolSlug: string) => {
-    const tool = getToolBySlug(toolSlug);
+    const tool = getToolIndexBySlug(toolSlug);
     if (!tool) return;
     setEditSteps([
       ...editSteps,
@@ -645,12 +645,7 @@ export default function WorkflowDetail({
     setEditSteps(newSteps);
   };
 
-  const filteredTools = tools
-    .filter(t =>
-      t.name.toLowerCase().includes(toolSearchQuery.toLowerCase()) ||
-      t.tags.some(tag => tag.toLowerCase().includes(toolSearchQuery.toLowerCase()))
-    )
-    .slice(0, 20);
+  const filteredTools: ToolIndexItem[] = searchToolIndex(toolSearchQuery, 20);
 
   if (!currentWorkflow) {
     return (
@@ -825,7 +820,7 @@ export default function WorkflowDetail({
             </h2>
 
             {currentWorkflow.steps.map((step: CustomWorkflowStep, index: number) => {
-              const tool = getToolBySlug(step.toolSlug);
+              const tool = getToolIndexBySlug(step.toolSlug);
               const isLast = index === currentWorkflow.steps.length - 1;
               const isStepCompleted = progress?.completedSteps.includes(index);
 
@@ -1113,7 +1108,7 @@ export default function WorkflowDetail({
                   </div>
                   <div className='space-y-2'>
                     {editSteps.map((step, index) => {
-                      const tool = getToolBySlug(step.toolSlug);
+                      const tool = getToolIndexBySlug(step.toolSlug);
                       return (
                         <div key={index} className='flex items-start gap-2 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-xl'>
                           <div className='flex flex-col items-center gap-0.5 flex-shrink-0 pt-1'>

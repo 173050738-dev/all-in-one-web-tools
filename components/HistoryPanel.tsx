@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { History, X, Clock, Trash2, ExternalLink, ArrowRight } from 'lucide-react';
-import { tools } from '@/data/tools';
+import { getToolIndexById, type ToolIndexItem } from '@/data/tools';
 import { useFavoritesStore, HistoryItem } from '@/stores/favorites';
 import SafeLink from './SafeLink';
 import { resolveToolLink } from '@/lib/toolLinks';
@@ -56,7 +56,7 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
     return fallback;
   };
 
-  const getToolDisplayName = (tool: (typeof tools)[number]): string => {
+  const getToolDisplayName = (tool: ToolIndexItem): string => {
     if (locale === 'zh') return tool.name;
     const slug = tool.slug || tool.id || '';
     const keyAlt = tool.id && tool.id !== slug ? tool.id : '';
@@ -65,7 +65,7 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
     return v || en;
   };
 
-  const getToolDisplayDesc = (tool: (typeof tools)[number]): string => {
+  const getToolDisplayDesc = (tool: ToolIndexItem): string => {
     if (locale === 'zh') return tool.description;
     const slug = tool.slug || tool.id || '';
     const keyAlt = tool.id && tool.id !== slug ? tool.id : '';
@@ -88,9 +88,9 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
   }, [isOpen, onClose]);
 
   const historyWithTools = history.map(item => {
-    const tool = tools.find(t => t.id === item.toolId);
+    const tool = getToolIndexById(item.toolId);
     return { ...item, tool };
-  }).filter(item => item.tool);
+  }).filter(item => item.tool) as Array<HistoryItem & { tool: ToolIndexItem }>;
 
   const filteredHistory = historyWithTools.filter(item => {
     const q = searchQuery.toLowerCase();
@@ -115,7 +115,7 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
   }, {} as Record<string, typeof filteredHistory>);
 
   const handleNavigate = (toolId: string) => {
-    const tool = tools.find(t => t.id === toolId);
+    const tool = getToolIndexById(toolId);
     if (tool) {
       const link = resolveToolLink(tool.slug || tool.id, locale);
       if (link.type === 'external') {

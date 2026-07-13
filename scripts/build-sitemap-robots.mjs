@@ -25,7 +25,19 @@ if (internalBlock) {
 const homeSrc = fs.readFileSync(path.join(ROOT, 'data', '_initial-home.generated.ts'), 'utf-8');
 const homeSlugs = [...homeSrc.matchAll(/slug:\s*['"`]([^'"`]+)['"`]/g)].map(x => x[1]).slice(0, 20);
 for (const s of homeSlugs) toolSlugs.add(s);
-console.log(`[sitemap-build] Found ${toolSlugs.size} tool slugs`);
+console.log(`[sitemap-build] Found ${toolSlugs.size} pre-filter tool slugs`);
+
+// ---------------- 只保留自研工具（无 externalUrl），过滤外链薄页，保护抓取预算 ----------------
+const toolsIndexPath = path.join(ROOT, 'data', 'tools-index.json');
+const toolsIndex = JSON.parse(fs.readFileSync(toolsIndexPath, 'utf8'));
+const selfToolSlugs = new Set();
+Object.values(toolsIndex).forEach(t => {
+  if (!t.externalUrl && t.slug) selfToolSlugs.add(t.slug);
+});
+const preCount = toolSlugs.size;
+const filteredToolSlugs = [...toolSlugs].filter(s => selfToolSlugs.has(s));
+console.log(`[sitemap-build] 过滤外链薄页: ${preCount} → ${filteredToolSlugs.length} (移除外链=${preCount - filteredToolSlugs.length})`);
+const finalToolSlugs = filteredToolSlugs;
 
 // ---------------- Extract blog slugs from data/blog.ts via regex ----------------
 const blogPath = path.join(ROOT, 'data', 'blog.ts');
@@ -61,7 +73,7 @@ const staticPages = [
   { path: '/news', changeFreq: 'weekly', priority: 0.85 },
 ];
 
-const toolEntries = [...toolSlugs].map((slug) => ({
+const toolEntries = [...finalToolSlugs].map((slug) => ({
   path: `/tool/${slug}`,
   changeFreq: 'weekly',
   priority: 0.8,

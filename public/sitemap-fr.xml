@@ -2,493 +2,367 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://korelyy.com/fr/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.92</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/about/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.37</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/compliance/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.46</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/workflows/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.55</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/workflow/canvas/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.37</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/workflow/custom/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.37</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/blog/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.78</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/news/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.78</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/audio-bpm-detector/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/avatar-decorator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/base64-tool/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/caption-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/case-converter/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/color-picker/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/copy-cleaner/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/countdown/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/danmaku/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/decision-wheel/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/emoji-mixer/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/fortune-sticks/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/grid-cutter/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/image-compressor/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/image-to-base64/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/json-formatter/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/keyword-spinoff-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/markdown-platform-adapter/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/markdown-platform-converter/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/markdown-preview/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/mortgage-calculator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/multi-timezone-publish-time/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/password-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/pdf-merger/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/pinyin-annotator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/polyphonic-pinyin-annotator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/qr-code-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/random-number/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/regex-tester/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/script-splitter/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/seo-keyword-miner/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/sentiment-analyzer/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/srt-subtitle-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/text-counter/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/text-tools/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/text-to-speech/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/timestamp-converter/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/title-weight-checker/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/url-encode-decode/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/uuid-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/vertical-chinese-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/wallpaper-maker/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/wc-2026-schedule/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/wc-ascii-art/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/wc-champion-predictor/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/wc-fan-avatar/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/wc-name-decorator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/wc-poster-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/wc-scoreboard-simulator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/tool/excel-formula-generator/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/amazon/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/wechat/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/douyin/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/xiaohongshu/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/bilibili/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/google-translate/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/meituan-waimai/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/github/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/google-docs/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/zhihu/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/google-sheets/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/apple-watch/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/starbucks/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/figma/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/notion/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/canva/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/deepl/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/slack/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/trello/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.74</priority>
-  </url>
-  <url>
-    <loc>https://korelyy.com/fr/tool/github-dev/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/news/weekly-issue-004/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.83</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/news/weekly-issue-003/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.83</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/news/weekly-issue-002/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.83</priority>
   </url>
   <url>
     <loc>https://korelyy.com/fr/news/weekly-issue-001/</loc>
-    <lastmod>2026-07-12T20:35:51.594Z</lastmod>
+    <lastmod>2026-07-13T05:48:06.967Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.83</priority>
   </url>

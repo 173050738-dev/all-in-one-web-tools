@@ -1,10 +1,12 @@
 import type { StepConfig } from '@/types/workflow-canvas';
-import { tools, getToolBySlug, type Tool } from '@/data/tools';
+import { TOOLS_INDEX, type ToolIndexItem } from '@/data/tools';
 
 export interface ToolExecutorMeta {
   slug: string;
   name: string;
   category: string;
+  description: string;
+  tags: string[];
   icon?: string;
   executionType: 'external' | 'builtin';
   config: StepConfig;
@@ -39,13 +41,15 @@ const DEFAULT_EXTERNAL_CONFIG: StepConfig = {
   values: {},
 };
 
-function buildExternalMeta(tool: Tool): ToolExecutorMeta {
-  const url = tool.externalUrl || '';
+function buildExternalMeta(idx: ToolIndexItem): ToolExecutorMeta {
+  const url = idx.externalUrl || '';
   return {
-    slug: tool.slug,
-    name: tool.name,
-    category: tool.category,
-    icon: (tool as any).icon,
+    slug: idx.slug,
+    name: idx.name,
+    category: idx.category,
+    description: idx.description || '',
+    tags: idx.tags || [],
+    icon: idx.icon,
     executionType: 'external',
     config: {
       ...DEFAULT_EXTERNAL_CONFIG,
@@ -57,8 +61,8 @@ function buildExternalMeta(tool: Tool): ToolExecutorMeta {
 
 export const toolRegistry: Record<string, ToolExecutorMeta> = {};
 
-tools.forEach((tool) => {
-  toolRegistry[tool.slug] = buildExternalMeta(tool);
+TOOLS_INDEX.forEach((idx) => {
+  toolRegistry[idx.slug] = buildExternalMeta(idx);
 });
 
 export function getToolMeta(slug: string): ToolExecutorMeta | undefined {
@@ -79,14 +83,15 @@ export function searchTools(query: string, limit = 30): ToolExecutorMeta[] {
   if (!q) return Object.values(toolRegistry).slice(0, limit);
   return Object.values(toolRegistry)
     .filter((m) => {
-      const t = getToolBySlug(m.slug);
-      if (!t) return false;
-      return (
-        t.name.toLowerCase().includes(q) ||
-        t.slug.toLowerCase().includes(q) ||
-        t.description.toLowerCase().includes(q) ||
-        t.tags.some((tag) => tag.toLowerCase().includes(q))
-      );
+      if (m.name.toLowerCase().includes(q)) return true;
+      if (m.slug.toLowerCase().includes(q)) return true;
+      if (m.description && m.description.toLowerCase().includes(q)) return true;
+      if (m.tags && m.tags.length) {
+        for (const t of m.tags) {
+          if (t.toLowerCase().includes(q)) return true;
+        }
+      }
+      return false;
     })
     .slice(0, limit);
 }

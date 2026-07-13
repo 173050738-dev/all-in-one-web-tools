@@ -14,105 +14,51 @@ const fs = require('fs');
 const path = require('path');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const TOOLS_TS = path.join(PROJECT_ROOT, 'data', 'tools.ts');
+const TOOLS_INDEX_JSON = path.join(PROJECT_ROOT, 'data', 'tools-index.json');
+const TOOLS_DETAIL_JSON = path.join(PROJECT_ROOT, 'data', 'tools-detail.json');
 const CATEGORIES_TS = path.join(PROJECT_ROOT, 'data', 'categories.ts');
 const OUT_COUNTS = path.join(PROJECT_ROOT, 'data', '_static-counts.generated.ts');
 const OUT_INITIAL = path.join(PROJECT_ROOT, 'data', '_initial-home.generated.ts');
 
-function parseToolsFromSource(src) {
-  // 提取 Tool 对象数组块，逐个解析
-  // 简化策略：按对象的 id/slug/name/description/category/tags/isFree/icon/relatedTools/likes/difficulty/complianceLevel/... 字段解析
-  // 先用正则匹配从 "export const tools: Tool[] = [" 开始到 "];\nexport" 结束的文本
-  const startRe = /export\s+const\s+tools\s*:\s*Tool\[\]\s*=\s*\[/;
-  const startMatch = src.match(startRe);
-  if (!startMatch) throw new Error('tools.ts: tools array start not found');
-  const startPos = startMatch.index + startMatch[0].length;
-  // 找到平衡闭合：第一个对象开始，计数 {}，到达 0 后读下一个... 直到读够 1056 个或到达 ;\n
-  const body = src.slice(startPos);
-  // 更简单：正则提取 {id:'x',slug:'x', ... complianceLevel:'x',\n  },
-  // 逐个读取对象块
-  const objects = [];
-  let i = 0;
-  const len = body.length;
-  // 跳过前导空白
-  while (i < len && /\s/.test(body[i])) i++;
-  while (i < len && body[i] === '{') {
-    // 找平衡闭合
-    let depth = 0;
-    let start = i;
-    let inStr = '';
-    let escape = false;
-    while (i < len) {
-      const c = body[i];
-      if (inStr) {
-        if (escape) { escape = false; i++; continue; }
-        if (c === '\\') { escape = true; i++; continue; }
-        if (c === inStr) { inStr = ''; i++; continue; }
-        i++; continue;
-      }
-      if (c === '"' || c === "'" || c === '`') { inStr = c; i++; continue; }
-      if (c === '{') depth++;
-      else if (c === '}') {
-        depth--;
-        if (depth === 0) { i++; break; }
-      }
-      i++;
-    }
-    objects.push(body.slice(start, i));
-    // 跳过逗号和空白
-    while (i < len && (body[i] === ',' || /\s/.test(body[i]))) i++;
-  }
+function parseToolsFromSource(_srcUnused) {
+  // 直接从真源 JSON 读取（tools-index.json = 薄索引，tools-detail.json = 详情），
+  // 不再正则解析 data/tools.ts 的字面量数组，重构 tools.ts 不会破坏 prebuild。
+  const indexArr = JSON.parse(fs.readFileSync(TOOLS_INDEX_JSON, 'utf8'));
+  const detailMap = JSON.parse(fs.readFileSync(TOOLS_DETAIL_JSON, 'utf8'));
+  if (!Array.isArray(indexArr)) throw new Error(`tools-index.json: expected array, got ${typeof indexArr}`);
+  if (typeof detailMap !== 'object' || detailMap === null) throw new Error(`tools-detail.json: expected object, got ${typeof detailMap}`);
 
-  // 从每个对象块中解析需要的字段
-  function pickField(block, field, isString = true, defaultVal = undefined) {
-    // 匹配:  field: 'xxx' | "xxx" | true | false | 123 | [...]
-    const re = new RegExp(`(^|,|\\{)\\s*${field}\\s*:\\s*([\\s\\S]*?)(?=,\\s*[a-zA-Z_][a-zA-Z0-9_]*\\s*:|\\}\\s*$)`, 'm');
-    const m = block.match(re);
-    if (!m) return defaultVal;
-    let raw = m[2].trim();
-    if (raw.endsWith(',')) raw = raw.slice(0, -1).trim();
-    if (!isString) {
-      try { return JSON.parse(raw); } catch { return defaultVal; }
-    }
-    // 字符串：匹配首末 'xxx' / "xxx"
-    const sm = raw.match(/^(['"`])([\s\S]*)\1$/);
-    return sm ? sm[2] : defaultVal;
-  }
-
-  function pickArray(block, field) {
-    const re = new RegExp(`(^|,|\\{)\\s*${field}\\s*:\\s*\\[([^\\]]*)\\]`, 'm');
-    const m = block.match(re);
-    if (!m) return [];
-    return m[2].split(',').map(s => {
-      s = s.trim();
-      const sm = s.match(/^(['"`])(.*)\1$/);
-      return sm ? sm[2] : s;
-    }).filter(Boolean);
-  }
-
-  return objects.map(block => {
-    const likesStr = pickField(block, 'likes', false, 0);
-    return {
-      id: pickField(block, 'id', true, '') || '',
-      slug: pickField(block, 'slug', true, '') || '',
-      name: pickField(block, 'name', true, '') || '',
-      description: pickField(block, 'description', true, '') || '',
-      category: pickField(block, 'category', true, '') || '',
-      tags: pickArray(block, 'tags'),
-      isFree: !!pickField(block, 'isFree', false, false),
-      isLimitedFree: pickField(block, 'isLimitedFree', false, undefined),
-      icon: pickField(block, 'icon', true, '') || '',
-      relatedTools: pickArray(block, 'relatedTools'),
-      externalUrl: pickField(block, 'externalUrl', true, undefined),
-      likes: typeof likesStr === 'number' ? likesStr : parseInt(String(likesStr || '0'), 10) || 0,
-      difficulty: pickField(block, 'difficulty', true, undefined),
-      complianceLevel: pickField(block, 'complianceLevel', true, undefined),
-      platform: pickField(block, 'platform', true, undefined),
-      accessTag: pickField(block, 'accessTag', true, undefined),
-      localProcessing: pickField(block, 'localProcessing', false, undefined),
-      // 原始块用于生成 initial-home 的完整对象
-      _rawBlock: block,
+  return indexArr.map((idx) => {
+    const det = detailMap[idx.slug] || { relatedTools: [] };
+    const t = {
+      id: idx.id || '',
+      slug: idx.slug || '',
+      name: idx.name || '',
+      description: idx.description || '',
+      category: idx.category || '',
+      tags: Array.isArray(idx.tags) ? idx.tags : [],
+      isFree: !!idx.isFree,
+      isLimitedFree: idx.isLimitedFree !== undefined ? idx.isLimitedFree : undefined,
+      icon: idx.icon || '',
+      relatedTools: Array.isArray(det.relatedTools) ? det.relatedTools : [],
+      externalUrl: idx.externalUrl !== undefined ? idx.externalUrl : undefined,
+      likes: typeof idx.likes === 'number' ? idx.likes : 0,
+      difficulty: idx.difficulty !== undefined ? idx.difficulty : undefined,
+      complianceLevel: idx.complianceLevel !== undefined ? idx.complianceLevel : undefined,
+      platform: idx.platform !== undefined ? idx.platform : undefined,
+      accessTag: idx.accessTag !== undefined ? idx.accessTag : undefined,
+      localProcessing: idx.localProcessing !== undefined ? idx.localProcessing : undefined,
+      signup: Array.isArray(det.signup) ? det.signup : undefined,
+      payment: Array.isArray(det.payment) ? det.payment : undefined,
     };
+    // 兼容原先 parseToolsFromSource 返回的 _rawBlock（给下游生成 TS 字面量用）
+    const parts = [];
+    for (const [k, v] of Object.entries(t)) {
+      if (v === undefined) continue;
+      parts.push(`${k}:${JSON.stringify(v)}`);
+    }
+    t._rawBlock = '{' + parts.join(',') + '}';
+    return t;
   });
 }
 
@@ -207,9 +153,9 @@ function toolToTsLiteral(t, includeRawBlockLevel = 'medium') {
 }
 
 function main() {
-  const toolsSrc = fs.readFileSync(TOOLS_TS, 'utf8');
+  // parseToolsFromSource 现在直接从真源 JSON 读（TOOLS_INDEX_JSON + TOOLS_DETAIL_JSON），不再解析 tools.ts 字面量
+  const tools = parseToolsFromSource(null);
   const catsSrc = fs.readFileSync(CATEGORIES_TS, 'utf8');
-  const tools = parseToolsFromSource(toolsSrc);
   const categoryIds = parseCategories(catsSrc);
 
   // 计算每个分类计数（预计算常量）

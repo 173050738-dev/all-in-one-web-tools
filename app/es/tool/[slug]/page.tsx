@@ -20,7 +20,12 @@ export const revalidate = 3600;
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   try {
-    return toolGenerateMetadata(LOCALE, slug);
+    const base = toolGenerateMetadata(LOCALE, slug);
+    const tool = getToolBySlug(slug);
+    if (tool && tool.externalUrl) {
+      return { ...base, robots: { index: false, follow: true } };
+    }
+    return base;
   } catch {
     return {
       title: `${slug} - Herramientas Korelyy`,
