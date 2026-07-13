@@ -1,13 +1,13 @@
 'use client';
+
 import { useTranslations } from 'next-intl';
-import { ArrowLeft, Upload, FileText, Download, Home, ChevronRight } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { ArrowLeft } from 'lucide-react';
 import { getToolBySlug, getRelatedTools } from '@/data/tools';
 import ToolCard from '@/components/ToolCard';
 import { usePreferencesStore } from '@/stores/preferences';
-import { categories } from '@/data/categories';
 
 import { useParams, usePathname } from 'next/navigation';
+import PdfToolbox from '@/components/PdfToolbox';
 const VALID_LOCALES = ['zh', 'en', 'hi', 'fr', 'es', 'ar'];
 export default function PdfMergerPage() {
   const resolvedParams = useParams() as unknown as { locale: string; slug?: string };
@@ -23,57 +23,8 @@ const pathLocale = (() => {
 const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolvedParams.locale)) ? resolvedParams.locale : pathLocale;
   const t = useTranslations('tool');
   const tool = getToolBySlug((resolvedParams?.slug ?? pathSlug) as string);
-  // ===== Korelyy: i18n for tool name/description (auto-injected) =====
-  const __toolsT = useTranslations('tools');
-  const __i18nSlug = (resolvedParams?.slug ?? pathSlug) as string;
-  const __i18nName = (() => {
-    const fb = tool?.name ?? '';
-    if (resolvedLocale === 'zh' || !tool) return fb;
-    const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
-    return tryKey(__i18nSlug + '.name')
-      ?? (tool.id && tool.id !== __i18nSlug ? tryKey(tool.id + '.name') : null)
-      ?? fb;
-  })();
-  const __i18nDesc = (() => {
-    const fb = tool?.description ?? '';
-    if (resolvedLocale === 'zh' || !tool) return fb;
-    const tryKey = (k: string) => { try { const v = __toolsT(k); if (v && v !== k) return v; } catch {} return null; };
-    return tryKey(__i18nSlug + '.description')
-      ?? (tool.id && tool.id !== __i18nSlug ? tryKey(tool.id + '.description') : null)
-      ?? fb;
-  })();
-
   const relatedTools = tool ? getRelatedTools(tool) : [];
   const { addToHistory } = usePreferencesStore();
-  useEffect(() => {
-    if (tool) {
-      addToHistory(tool.id);
-      document.title = `${__i18nName} - Korelyy Tools`;
-      let metaDesc = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
-      if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.name = 'description';
-        document.head.appendChild(metaDesc);
-      }
-      metaDesc.setAttribute('content', __i18nDesc);
-    }
-  }, [tool]);
-  const [files, setFiles] = useState<File[]>([]);
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newFiles = Array.from(e.target.files || []);
-    setFiles([...files, ...newFiles]);
-  };
-
-  useEffect(() => {
-    if (tool) {
-      document.title = `${__i18nName} - Korelyy Tools`;
-    }
-  }, [tool]);
-
-  if (!tool) {
-    return <div className='max-w-4xl mx-auto px-4 py-8'>Tool not found.</div>;
-  }
 
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -89,60 +40,15 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           {relatedTools.map((t) => <ToolCard key={t.id} tool={t} locale={resolvedLocale} />)}
         </aside>
         <main className='lg:col-span-7'>
-          <div className='card p-4 sm:p-6'>
-            <div className='flex items-center gap-3 mb-4 sm:mb-6'>
-              <div className='p-2 sm:p-3 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400'>
-                <FileText className='h-5 w-5 sm:h-6 sm:w-6' />
-              </div>
-              <div>
-                <h1 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100'>{__i18nName}</h1>
-                <p className='text-sm text-gray-600 dark:text-gray-400'>{__i18nDesc}</p>
-              </div>
-            </div>
-            <div className='border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 sm:p-12 text-center'>
-              <Upload className='h-8 w-8 sm:h-12 sm:w-12 text-gray-400 mx-auto mb-3 sm:mb-4' />
-              <p className='text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4'>Drag and drop PDF files here</p>
-              <input type='file' accept='application/pdf' multiple onChange={handleFileUpload} className='hidden' id='pdf-upload' />
-              <label htmlFor='pdf-upload' className='btn-primary cursor-pointer'>
-                Select PDF Files
-              </label>
-            </div>
-            {files.length > 0 && (
-              <div className='mt-4 sm:mt-6 space-y-2'>
-                {files.map((file, index) => (
-                  <div key={index} className='flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg'>
-                    <FileText className='h-5 w-5 text-gray-500' />
-                    <span className='flex-1 text-sm text-gray-700 dark:text-gray-300 truncate'>{file.name}</span>
-                    <span className='text-xs text-gray-500 dark:text-gray-500 flex-shrink-0'>{(file.size / 1024).toFixed(1)} KB</span>
-                  </div>
-                ))}
-                <button className='mt-4 btn-primary w-full'>
-                  <Download className='h-4 w-4' />
-                  Merge PDFs
-                </button>
-              </div>
-            )}
-          </div>
+          <PdfToolbox locale={resolvedLocale} />
         </main>
         <aside className='lg:col-span-3'>
           <div className='card p-4 sm:p-6'>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('guide')}</h3>
-            <p className='text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4'>Select multiple PDF files and merge them into a single document.</p>
-            <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('features')}</h3>
-            <ul className='space-y-2'>
-              <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
-                <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                Multi-file support
-              </li>
-              <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
-                <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                Drag and drop
-              </li>
-            </ul>
+            <p className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>{t('features')}</p>
           </div>
         </aside>
       </div>
     </div>
   );
 }
-
