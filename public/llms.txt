@@ -1,0 +1,33 @@
+# Korelyy Tools
+
+> Korelyy (korelyy.com) is a free, privacy-first online tools hub. All tools run 100% in the browser, no upload, no signup required. Available in 6 languages: English, 中文, Español, Français, हिन्दी, العربية.
+
+## About
+- Free to use, no registration, no watermark.
+- Client-side processing: files never leave your device.
+- 40+ original tools plus curated external tools and multi-step workflows.
+
+## Core Tools
+- `https://korelyy.com/en/tool/password-generator/` : Create strong random passwords in the browser.
+- `https://korelyy.com/en/tool/image-compressor/` : Compress JPG/PNG/WebP locally without quality loss.
+- `https://korelyy.com/en/tool/color-picker/` : Pick colors, get HEX/RGB/HSL codes.
+- `https://korelyy.com/en/tool/regex-tester/` : Test and debug regular expressions live.
+- `https://korelyy.com/en/tool/json-formatter/` : Format, validate and minify JSON.
+- `https://korelyy.com/en/tool/mortgage-calculator/` : Estimate monthly payments and amortization.
+- `https://korelyy.com/en/tool/text-to-speech/` : Convert text to natural speech in the browser.
+- `https://korelyy.com/en/tool/pdf-merger/` : Merge multiple PDF files locally.
+- `https://korelyy.com/en/tool/timestamp-converter/` : Convert Unix timestamps to dates.
+- `https://korelyy.com/en/tool/base64-tool/` : Encode/decode Base64 text and files.
+- `https://korelyy.com/en/tool/url-encode-decode/` : Encode or decode URL strings.
+- `https://korelyy.com/en/tool/case-converter/` : Convert text case (upper/lower/camel/snake).
+- `https://korelyy.com/en/tool/uuid-generator/` : Generate UUID v4 identifiers.
+- `https://korelyy.com/en/tool/countdown/` : Create countdown timers for events.
+- `https://korelyy.com/en/tool/decision-wheel/` : Spin a wheel to make random choices.
+
+## Sections
+- All Tools: `https://korelyy.com/en/tools/`
+- Workflows (multi-step tool chains): `https://korelyy.com/en/workflows/`
+- Blog (guides & tutorials): `https://korelyy.com/en/blog/`
+
+## Contact
+- Site: `https://korelyy.com`

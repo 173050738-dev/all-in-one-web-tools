@@ -208,6 +208,95 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /*?_rsc=
 
+# ======== 海外 AI 引擎爬虫（GEO 核心：决定 ChatGPT/Claude/Perplexity/Gemini 是否引用本站）========
+# OpenAI ChatGPT 搜索实时抓取（最关键，决定 ChatGPT 回答时引不引用）
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# OpenAI GPTBot（训练+ChatGPT 浏览）
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# OpenAI ChatGPT 用户插件访问
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Perplexity（AI 搜索引擎，GEO 流量大头）
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Google Gemini / AI Overviews（Google-Extended 控制 AI 训练引用）
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Apple 智能（Siri/Apple Intelligence）
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Common Crawl（多数开源大模型的训练语料来源）
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# ======== 国内 AI 引擎爬虫（豆包已在上方；补 Kimi/文心/智谱等）========
+# 月之暗面 Kimi
+User-agent: Moonshot-AI
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# 百度文心（除已有 Baiduspider，补 AI 专用变体）
+User-agent: Baiduspider-render
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# 智谱清言 / 通用国产 AI
+User-agent: ZhipuAI
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
 User-agent: Googlebot
 Allow: /
 Allow: /blog/
