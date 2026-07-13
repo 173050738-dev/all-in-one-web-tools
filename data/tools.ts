@@ -56,7 +56,7 @@ export function getToolById(id: string): Tool | undefined {
 }
 
 export const getToolsByCategory = (category: string): Tool[] =>
-  ensureTools().filter((tool) => tool.category === category && tool.complianceLevel !== 'red');
+  ensureTools().filter((tool) => tool.category === category && tool.complianceLevel !== 'red' && !tool.externalUrl);
 
 export const getRelatedTools = (tool: Tool): Tool[] =>
   tool.relatedTools
@@ -65,6 +65,7 @@ export const getRelatedTools = (tool: Tool): Tool[] =>
 
 export const getFilteredTools = (complianceFilter?: 'green' | 'yellow' | 'all'): Tool[] => {
   let filtered = ensureTools().filter((tool) => {
+    if (tool.externalUrl) return false;
     const level = tool.complianceLevel || computeComplianceLevel(tool);
     return level !== 'red';
   });
@@ -87,14 +88,15 @@ export function getToolIndexById(id: string): ToolIndexItem | undefined {
 }
 
 export function getToolsIndexByCategory(category: string): ToolIndexItem[] {
-  return TOOLS_INDEX.filter((t) => t.category === category);
+  return TOOLS_INDEX.filter((t) => t.category === category && !t.externalUrl);
 }
 
 export function searchToolIndex(query: string, limit = 30): ToolIndexItem[] {
   const q = query.trim().toLowerCase();
-  if (!q) return TOOLS_INDEX.slice(0, limit);
+  if (!q) return TOOLS_INDEX.filter((t) => !t.externalUrl).slice(0, limit);
   return TOOLS_INDEX
     .filter((t) => {
+      if (t.externalUrl) return false;
       if (t.name && t.name.toLowerCase().includes(q)) return true;
       if (t.description && t.description.toLowerCase().includes(q)) return true;
       if (t.slug && t.slug.toLowerCase().includes(q)) return true;

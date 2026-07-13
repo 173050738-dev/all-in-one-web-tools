@@ -116,11 +116,12 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
   const allToolsInitRef = useRef(false);
 
   /* 核心懒加载：避免把 600KB tools-index 打进首屏 bundle */
+  /* 同时过滤 externalUrl 外链卡片：AdSense 不接受 97% 页面是薄页 */
   useEffect(() => {
     let cancelled = false;
     void import('@/data/tools-index').then((mod) => {
       if (cancelled) return;
-      setTools(mod.TOOLS_INDEX);
+      setTools(mod.TOOLS_INDEX.filter((t) => !t.externalUrl));
     });
     return () => { cancelled = true; };
   }, []);
@@ -136,6 +137,7 @@ export default function HomeDashboardView({ locale }: { locale: string }) {
     categoryCountInitRef.current = true;
     const countTable: Record<string, number> = {};
     for (const t of tools) {
+      if (t.externalUrl) continue;
       const lv = computeComplianceLevel(t);
       if (lv === 'red') continue;
       countTable[t.category] = (countTable[t.category] || 0) + 1;

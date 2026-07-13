@@ -241,11 +241,12 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
   const toolsT = useTranslations('tools');
 
   /* 懒加载 tools-index（963KB）：避免 Header 首屏同步拉大数据 */
+  /* 同时过滤 externalUrl 外链卡片：AdSense 不接受 97% 页面是薄页 */
   useEffect(() => {
     let cancelled = false;
     void import('@/data/tools-index').then((mod) => {
       if (cancelled) return;
-      setTools(mod.TOOLS_INDEX);
+      setTools(mod.TOOLS_INDEX.filter((t) => !t.externalUrl));
     });
     return () => { cancelled = true; };
   }, []);
