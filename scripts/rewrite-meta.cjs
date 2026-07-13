@@ -262,9 +262,35 @@ function buildOgImageBlock() {
   );
 }
 
+// FIX(2026-07-14 codex): high-intent, localized title/description for static-injected tool meta
+// (legacy static-export path uses this instead of components/seo.tsx toolGenerateMetadataSync)
+const TOOL_INTENT_MAP = {
+  en: { free: 'Free', online: 'Online', tag: 'No signup, private and secure \u2014 works instantly in your browser, on desktop and mobile.' },
+  zh: { free: '\u514d\u8d39', online: '\u5728\u7ebf', tag: '\u65e0\u9700\u6ce8\u518c\uff0c\u9690\u79c1\u5b89\u5168\uff0c\u6d4f\u89c8\u5668\u5185\u5373\u523b\u4f7f\u7528\uff0c\u652f\u6301\u7535\u8111\u548c\u624b\u673a\u3002' },
+  es: { free: 'Gratis', online: 'en l\u00ednea', tag: 'Sin registro, privado y seguro: funciona al instante en tu navegador, en escritorio y m\u00f3vil.' },
+  hi: { free: '\u092e\u0941\u092b\u093c\u094d\u0924', online: '\u0911\u0928\u0932\u093e\u0907\u0928', tag: '\u0915\u094b\u0908 \u0938\u093e\u0907\u0928\u0905\u092a \u0928\u0939\u0940\u0902, \u0928\u093f\u091c\u0940 \u0914\u0930 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u2014 \u0915\u093f\u0938\u0940 \u092d\u0940 \u092c\u094d\u0930\u093e\u0909\u091c\u093c\u0930 \u092e\u0947\u0902 \u0921\u0947\u0938\u094d\u0915\u091f\u0949\u092a \u0914\u0930 \u092e\u094b\u092c\u093e\u0907\u0932 \u092a\u0930 \u0924\u0941\u0930\u0902\u0924 \u0915\u093e\u092e \u0915\u0930\u0924\u093e \u0939\u0948\u0964' },
+  fr: { free: 'Gratuit', online: 'en ligne', tag: 'Sans inscription, priv\u00e9 et s\u00e9curis\u00e9 : fonctionne instantan\u00e9ment dans votre navigateur, sur ordinateur et mobile.' },
+  ar: { free: '\u0645\u062c\u0627\u0646\u064a', online: '\u0639\u0628\u0631 \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a', tag: '\u0628\u062f\u0648\u0646 \u062a\u0633\u062c\u064a\u0644\u060c \u062e\u0627\u0635 \u0648\u0622\u0645\u0646 \u2014 \u064a\u0639\u0645\u0644 \u0641\u0648\u0631\u0627\u064b \u0641\u064a \u0645\u062a\u0635\u0641\u062d\u0643 \u0639\u0644\u0649 \u0627\u0644\u0643\u0645\u0628\u064a\u0648\u062a\u0631 \u0648\u0627\u0644\u062c\u0648\u0627\u0644.' },
+};
+
+function buildHighIntentTitle(locale, name) {
+  const it = TOOL_INTENT_MAP[locale] || TOOL_INTENT_MAP.en;
+  const free = `${it.free} ${name} ${it.online} - Korelyy Tools`;
+  if (free.length <= 62) return free;
+  const online = `${name} ${it.online} - Korelyy Tools`;
+  if (online.length <= 66) return online;
+  return `${name} - Korelyy Tools`;
+}
+function buildEnrichedDesc(locale, name, description) {
+  const it = TOOL_INTENT_MAP[locale] || TOOL_INTENT_MAP.en;
+  const base = (description && description.trim()) ? description.trim() : name;
+  if (base.length >= 120) return base.slice(0, 300);
+  return `${base} ${it.tag}`.trim().slice(0, 300);
+}
+
 function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt }) {
-  const title = name + ' - Korelyy Tools';
-  const desc = description || name;
+  const title = buildHighIntentTitle(locale || 'en', name);
+  const desc = buildEnrichedDesc(locale || 'en', name, description);
   const t = escapeForHtml(title);
   const d = escapeForHtml(desc);
   const c = escapeForHtml(canonical);
