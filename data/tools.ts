@@ -17,9 +17,22 @@ function ensureTools(): Tool[] {
   return _tools;
 }
 
+/* ========================= 单工具 merge 缓存：稳定引用，防止 useEffect 无限循环 ========================= */
+const _mergeCacheBySlug = new Map<string, Tool>();
+const _mergeCacheById = new Map<string, Tool>();
 function mergeToolFromIndexAndDetail(idx: ToolIndexItem): Tool {
+  const bySlug = _mergeCacheBySlug.get(idx.slug);
+  if (bySlug) return bySlug;
+  const byId = _mergeCacheById.get(idx.id);
+  if (byId) {
+    _mergeCacheBySlug.set(idx.slug, byId);
+    return byId;
+  }
   const det = TOOLS_DETAIL_MAP[idx.slug] || { relatedTools: [] };
-  return { ...(idx as any), ...(det as any) };
+  const merged: Tool = { ...(idx as any), ...(det as any) };
+  _mergeCacheBySlug.set(idx.slug, merged);
+  _mergeCacheById.set(idx.id, merged);
+  return merged;
 }
 
 const _toolsProxy: Tool[] = new Proxy<Tool[]>([] as unknown as Tool[], {

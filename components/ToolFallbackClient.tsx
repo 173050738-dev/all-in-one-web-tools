@@ -63,7 +63,18 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
   const tool = getToolBySlug(resolvedSlug);
   const relatedTools = tool ? getRelatedTools(tool) : [];
   const category = tool ? categories.find((c) => c.id === tool.category) : undefined;
-  const { addToHistory, toggleLike, isLiked, toggleFavorite, isFavorite } = usePreferencesStore();
+
+  /* 【P0 修复】 Zustand selector 订阅：
+   * - 函数引用稳定（zustand useStore 下函数不会因 state 变化变引用），
+   *   所以 selector 仅抽单个字段，避免 addToHistory 引起 store state 变化 →
+   *   ToolFallbackClient 整组件重渲染 → 老 getToolBySlug 产生新对象引用 →
+   *   useEffect deps 触发 addToHistory → 死循环 Error #185
+   */
+  const addToHistory = usePreferencesStore((s) => s.addToHistory);
+  const toggleLike = usePreferencesStore((s) => s.toggleLike);
+  const isLiked = usePreferencesStore((s) => s.isLiked);
+  const toggleFavorite = usePreferencesStore((s) => s.toggleFavorite);
+  const isFavorite = usePreferencesStore((s) => s.isFavorite);
 
   const safeTranslate = (key: string, fallback: string) => {
     try {
