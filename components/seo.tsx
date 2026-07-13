@@ -392,6 +392,16 @@ export async function homeGenerateMetadata(locale: SeoLocale): Promise<Metadata>
   return homeGenerateMetadataSync(locale);
 }
 
+// FIX(2026-07-14 codex): high-intent, localized title/description for tool pages
+const TOOL_INTENT_BAREMAP: Record<SeoLocale, { free: string; online: string; dash: string; tag: string }> = {
+  en: { free: "Free", online: "Online", dash: "\u2013", tag: "No signup, private and secure \u2014 works instantly in your browser, on desktop and mobile." },
+  zh: { free: "\u514d\u8d39", online: "\u5728\u7ebf", dash: "\u2013", tag: "\u65e0\u9700\u6ce8\u518c\uff0c\u9690\u79c1\u5b89\u5168\uff0c\u6d4f\u89c8\u5668\u5185\u5373\u523b\u4f7f\u7528\uff0c\u652f\u6301\u7535\u8111\u548c\u624b\u673a\u3002" },
+  es: { free: "Gratis", online: "en l\u00ednea", dash: "\u2013", tag: "Sin registro, privado y seguro: funciona al instante en tu navegador, en escritorio y m\u00f3vil." },
+  hi: { free: "\u092e\u0941\u092b\u093c\u094d\u0924", online: "\u0911\u0928\u0932\u093e\u0907\u0928", dash: "\u2013", tag: "\u0915\u094b\u0908 \u0938\u093e\u0907\u0928\u0905\u092a \u0928\u0939\u0940\u0902, \u0928\u093f\u091c\u0940 \u0914\u0930 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u2014 \u0915\u093f\u0938\u0940 \u092d\u0940 \u092c\u094d\u0930\u093e\u0909\u091c\u093c\u0930 \u092e\u0947\u0902 \u0921\u0947\u0938\u094d\u0915\u091f\u0949\u092a \u0914\u0930 \u092e\u094b\u092c\u093e\u0907\u0932 \u092a\u0930 \u0924\u0941\u0930\u0902\u0924 \u0915\u093e\u092e \u0915\u0930\u0924\u093e \u0939\u0948\u0964" },
+  fr: { free: "Gratuit", online: "en ligne", dash: "\u2013", tag: "Sans inscription, priv\u00e9 et s\u00e9curis\u00e9 : fonctionne instantan\u00e9ment dans votre navigateur, sur ordinateur et mobile." },
+  ar: { free: "\u0645\u062c\u0627\u0646\u064a", online: "\u0639\u0628\u0631 \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a", dash: "\u2013", tag: "\u0628\u062f\u0648\u0646 \u062a\u0633\u062c\u064a\u0644\u060c \u062e\u0627\u0635 \u0648\u0622\u0645\u0646 \u2014 \u064a\u0639\u0645\u0644 \u0641\u0648\u0631\u0627\u064b \u0641\u064a \u0645\u062a\u0635\u0641\u062d\u0643 \u0639\u0644\u0649 \u0627\u0644\u0643\u0645\u0628\u064a\u0648\u062a\u0631 \u0648\u0627\u0644\u062c\u0648\u0627\u0644." },
+};
+
 export function toolGenerateMetadataSync(
   locale: SeoLocale,
   slug: string,
@@ -419,8 +429,15 @@ export function toolGenerateMetadataSync(
     `${tool.slug || tool.id}.description`,
     tool.descriptionEn || tool.description,
   );
+  // FIX(2026-07-14 codex): pad short descriptions toward ~150 chars + high-intent title
+  const intent = TOOL_INTENT_BAREMAP[l];
+  const enrichedDescription = (description && description.length >= 120)
+    ? description
+    : `${description} ${intent.tag}`.trim().slice(0, 300);
   const categoryName = translateFromJson(json, 'sidebar', tool.category, categories.find((c) => c.id === tool.category)?.name || tool.category);
-  const title = `${name} — ${categoryName} | ${baseMeta.siteName}`;
+  const baseTitle = `${name} ${intent.online} ${intent.dash} ${categoryName} | ${baseMeta.siteName}`;
+  const freeTitle = `${intent.free} ${name} ${intent.online} ${intent.dash} ${categoryName} | ${baseMeta.siteName}`;
+  const title = freeTitle.length <= 62 ? freeTitle : (baseTitle.length <= 66 ? baseTitle : `${name} | ${baseMeta.siteName}`);
   const keywords = Array.from(
     new Set([
       ...baseMeta.homeKeywords.slice(0, 4),
@@ -432,7 +449,7 @@ export function toolGenerateMetadataSync(
 
   return {
     title: { absolute: title },
-    description,
+    description: enrichedDescription,
     keywords,
     alternates: alt,
     metadataBase: new URL(SITE_URL),
@@ -445,7 +462,7 @@ export function toolGenerateMetadataSync(
       url: `${SITE_URL}${alt.canonical}`,
       siteName: baseMeta.siteName,
       title,
-      description,
+      description: enrichedDescription,
       locale: LOCALE_OPEN_GRAPH[l],
       alternateLocale: KNOWN_LOCALES.filter((x) => x !== l).map((x) => LOCALE_OPEN_GRAPH[x]),
       images: [
@@ -462,7 +479,7 @@ export function toolGenerateMetadataSync(
       card: 'summary_large_image',
       site: '@korelyy',
       title,
-      description,
+      description: enrichedDescription,
       images: [OG_IMAGE_ABS],
     },
     robots: {

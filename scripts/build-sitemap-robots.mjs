@@ -29,7 +29,7 @@ console.log(`[sitemap-build] Found ${toolSlugs.size} pre-filter tool slugs`);
 
 // ---------------- 只保留自研工具（无 externalUrl），过滤外链薄页，保护抓取预算 ----------------
 const toolsIndexPath = path.join(ROOT, 'data', 'tools-index.json');
-const toolsIndex = JSON.parse(fs.readFileSync(toolsIndexPath, 'utf8'));
+const toolsIndex = JSON.parse(fs.readFileSync(toolsIndexPath, 'utf8').replace(/^\uFEFF/, '')); // FIX(2026-07-14 codex): strip UTF-8 BOM to avoid JSON.parse crash
 const selfToolSlugs = new Set();
 Object.values(toolsIndex).forEach(t => {
   if (!t.externalUrl && t.slug) selfToolSlugs.add(t.slug);
@@ -40,15 +40,30 @@ console.log(`[sitemap-build] 过滤外链薄页: ${preCount} → ${filteredToolS
 const finalToolSlugs = filteredToolSlugs;
 
 // ---------------- Extract blog slugs from data/blog.ts via regex ----------------
-const blogPath = path.join(ROOT, 'data', 'blog.ts');
+const blogPath = path.join(ROOT, 'data', 'blog-index.ts'); // FIX(2026-07-14 codex): 数据源重构后 slug 在 blog-index.ts
 const blogSrc = fs.existsSync(blogPath) ? fs.readFileSync(blogPath, 'utf-8') : '';
-const blogSlugRegex = /slug:\s*['"`]([^'"`]+)['"`]/g;
+const blogSlugRegex = /["\x27`]?slug["\x27`]?\s*:\s*[\x27"`]([^\x27"`]+)[\x27"`]/g; // FIX(2026-07-14 codex): 兼容 JSON 风格带引号 key
 const blogSlugs = new Set();
 let mb;
 while ((mb = blogSlugRegex.exec(blogSrc)) !== null) {
   if (mb[1]) blogSlugs.add(mb[1]);
 }
-console.log(`[sitemap-build] Found ${blogSlugs.size} blog slugs`);
+console.log(`[sitemap-build] Found ${blogSlugs.size} blog slugs (pre-filter)`);
+
+// FIX(2026-07-14 codex): 排除与"在线工具"主题无关的运动健身内容，避免稀释站点主题权威度。
+// 页面本身仍在线（不删除），仅不进 sitemap、不主动推送给搜索引擎。可随时移除本清单恢复。
+const OFF_TOPIC_BLOG_PATTERNS = [
+  /^cadence-/, /^marathon-/, /^trail-/, /^hrm-/, /^zwift-/, /^bike-/, /^power-meter-/,
+  /^tdf-/, /^three-peak-/, /^altitude-/, /^100km-hike-/, /^trekking-/,
+  /neck-yoga$/, /^yin-yoga-/, /^pilates-/, /^postpartum-yoga-/, /^beginner-5x5-/,
+  /^big-three-/, /^functional-training-/, /^dumbbell-home-/,
+  /^swimming-tutorial-/, /^rehab-tutorial-/, /^nutrition-tutorial-/,
+  /^racing-tutorial-/, /^mental-tutorial-/,
+];
+for (const slug of [...blogSlugs]) {
+  if (OFF_TOPIC_BLOG_PATTERNS.some((re) => re.test(slug))) blogSlugs.delete(slug);
+}
+console.log(`[sitemap-build] Found ${blogSlugs.size} blog slugs (after off-topic filter)`);
 
 // ---------------- Extract news slugs from data/news.ts via regex ----------------
 const newsPath = path.join(ROOT, 'data', 'news.ts');
