@@ -1,12 +1,13 @@
 /// <reference types="@cloudflare/workers-types" />
 
 export interface Env {
+  DB?: D1Database;
   DEEPSEEK_API_KEY?: string;
   DEEPSEEK_API_URL?: string;
   DEEPSEEK_MODEL?: string;
 }
 
-function okJson(data: unknown, status = 200): Response {
+function json(data: unknown, status = 200): Response {
   return new Response(JSON.stringify(data), {
     status,
     headers: {
@@ -20,19 +21,7 @@ function okJson(data: unknown, status = 200): Response {
 }
 
 function errJson(error: string, status: number): Response {
-  return okJson({ error }, status);
-}
-
-function corsPreflight(): Response {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Max-Age': '86400',
-    },
-  });
+  return json({ error }, status);
 }
 
 const langLabel = (locale: string): string => {
@@ -40,79 +29,30 @@ const langLabel = (locale: string): string => {
 };
 
 const toneMap: Record<string, Record<string, string>> = {
-  zh: {
-    formal: '正式/商务',
-    friendly: '友好/亲切',
-    concise: '简洁/精炼',
-    humorous: '幽默/风趣',
-    persuasive: '说服/营销',
-    academic: '学术/专业',
-  },
-  en: {
-    formal: 'formal/business',
-    friendly: 'friendly/casual',
-    concise: 'concise/to-the-point',
-    humorous: 'humorous/funny',
-    persuasive: 'persuasive/marketing',
-    academic: 'academic/professional',
-  },
-  es: {
-    formal: 'formal',
-    friendly: 'amigable',
-    concise: 'conciso',
-    humorous: 'humorístico',
-    persuasive: 'persuasivo',
-    academic: 'académico',
-  },
-  fr: {
-    formal: 'formel',
-    friendly: 'amiable',
-    concise: 'concis',
-    humorous: 'humoristique',
-    persuasive: 'persuasif',
-    academic: 'académique',
-  },
-  hi: {
-    formal: 'औपचारिक',
-    friendly: 'दोस्ताना',
-    concise: 'संक्षिप्त',
-    humorous: 'हास्यपूर्ण',
-    persuasive: 'प्रेरणादायक',
-    academic: 'अकादमिक',
-  },
-  ar: {
-    formal: 'رسمي',
-    friendly: 'ودود',
-    concise: 'مختصر',
-    humorous: 'مزح',
-    persuasive: 'قائل',
-    academic: 'أكاديمي',
-  },
+  zh: { formal: '正式/商务', friendly: '友好/亲切', concise: '简洁/精炼', humorous: '幽默/风趣', persuasive: '说服/营销', academic: '学术/专业' },
+  en: { formal: 'formal/business', friendly: 'friendly/casual', concise: 'concise/to-the-point', humorous: 'humorous/funny', persuasive: 'persuasive/marketing', academic: 'academic/professional' },
+  es: { formal: 'formal', friendly: 'amigable', concise: 'conciso', humorous: 'humorístico', persuasive: 'persuasivo', academic: 'académico' },
+  fr: { formal: 'formel', friendly: 'amiable', concise: 'concis', humorous: 'humoristique', persuasive: 'persuasif', academic: 'académique' },
+  hi: { formal: 'औपचारिक', friendly: 'दोस्ताना', concise: 'संक्षिप्त', humorous: 'हास्यपूर्ण', persuasive: 'प्रेरणादायक', academic: 'अकादमिक' },
+  ar: { formal: 'رسمي', friendly: 'ودود', concise: 'مختصر', humorous: 'مزح', persuasive: 'قائل', academic: 'أكاديمي' },
 };
 
-async function callDeepseek(env: Env, systemPrompt: string, userPrompt: string): Promise<string> {
+async function callDeepseek(env: Env, systemPrompt: string, userPrompt: string, jsonResponse = false): Promise<string> {
   const apiKey = env.DEEPSEEK_API_KEY;
   const apiUrl = env.DEEPSEEK_API_URL || 'https://api.deepseek.com/v1/chat/completions';
   const model = env.DEEPSEEK_MODEL || 'deepseek-chat';
 
-  if (!apiKey) {
-    throw new Error('API key not configured');
-  }
+  if (!apiKey) throw new Error('API key not configured');
 
   const response = await fetch(apiUrl, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`,
-    },
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
     body: JSON.stringify({
       model,
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt },
-      ],
+      messages: [{ role: 'system', content: systemPrompt }, { role: 'user', content: userPrompt }],
       temperature: 0.7,
-      max_tokens: 1500,
+      max_tokens: 2000,
+      response_format: jsonResponse ? { type: 'json_object' } : undefined,
     }),
   });
 
@@ -126,278 +66,203 @@ async function callDeepseek(env: Env, systemPrompt: string, userPrompt: string):
   return data.choices?.[0]?.message?.content || '';
 }
 
-export const onRequest: PagesFunction<Env> = async (context) => {
-  const { request, env, params } = context;
-  const path = params.path?.join('/') || '';
-
-  if (request.method === 'OPTIONS') {
-    return corsPreflight();
-  }
-
-  if (request.method !== 'POST') {
-    return errJson('Method not allowed', 405);
-  }
-
-  let payload: Record<string, unknown> = {};
+async function checkRateLimit(env: Env, request: Request, limit: number = 5): Promise<{ remaining: number | null; blocked: boolean; message: string }> {
+  if (!env.DB) return { remaining: null, blocked: false, message: '' };
+  
   try {
-    payload = (await request.json()) as Record<string, unknown>;
-  } catch {
-    return errJson('Invalid JSON body', 400);
+    const ip = request.headers.get('cf-connecting-ip') || 'unknown';
+    const day = new Date().toISOString().split('T')[0];
+    const key = `${ip}:${day}`;
+
+    const result = await env.DB.prepare('SELECT count FROM ai_usage WHERE k = ?')
+      .bind(key)
+      .first();
+
+    const used = result?.count || 0;
+    if (used >= limit) {
+      return { remaining: 0, blocked: true, message: 'Daily free limit exceeded' };
+    }
+
+    await env.DB.prepare('INSERT INTO ai_usage (k, count, day) VALUES (?, 1, ?) ON CONFLICT(k) DO UPDATE SET count = count + 1')
+      .bind(key, day)
+      .run();
+
+    return { remaining: Math.max(0, limit - used - 1), blocked: false, message: '' };
+  } catch (dbError) {
+    console.error('D1 rate limit error:', dbError);
+    return { remaining: null, blocked: false, message: '' };
   }
+}
 
-  const locale = (payload.locale as string) || 'zh';
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    if (request.method === 'OPTIONS') {
+      return new Response(null, {
+        status: 204,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+          'Access-Control-Allow-Methods': 'POST, OPTIONS',
+          'Access-Control-Max-Age': '86400',
+        },
+      });
+    }
 
-  try {
-    switch (path) {
-      case 'tone-changer':
-      case 'tone-changer/': {
-        const text = payload.text as string;
-        const tone = (payload.tone as string) || 'friendly';
+    if (request.method !== 'POST') {
+      return errJson('Method not allowed', 405);
+    }
 
-        if (!text?.trim()) {
-          return errJson('Text is required', 400);
+    const url = new URL(request.url);
+    const path = url.pathname.replace(/\/+$/, '');
+
+    let payload: Record<string, unknown> = {};
+    try {
+      payload = (await request.json()) as Record<string, unknown>;
+    } catch {
+      return errJson('Invalid JSON body', 400);
+    }
+
+    const locale = (payload.locale as string) || 'zh';
+
+    try {
+      switch (path) {
+        case '/api/tone-changer':
+        case '/api/tone-changer/': {
+          const text = payload.text as string;
+          const tone = (payload.tone as string) || 'friendly';
+          if (!text?.trim()) return errJson('Text is required', 400);
+          const targetTone = toneMap[locale]?.[tone] || toneMap[locale]?.friendly || 'friendly';
+          const systemPrompt = `你是一个专业的语气转换助手。根据用户提供的文本和目标语气，重写文本使其符合指定的语气风格。语气类型说明：正式/商务、友好/亲切、简洁/精炼、幽默/风趣、说服/营销、学术/专业。请用 ${langLabel(locale)} 输出。保持原文的核心意思不变。`;
+          const userPrompt = locale === 'zh' ? `原始文本：${text}\n\n目标语气：${targetTone}\n\n请转换语气并重写。` : locale === 'es' ? `Texto original: ${text}\n\nTono objetivo: ${targetTone}\n\nReescribe con el tono especificado.` : locale === 'fr' ? `Texte original: ${text}\n\nTon cible: ${targetTone}\n\nRéécrivez avec le ton spécifié.` : locale === 'hi' ? `मूल पाठ: ${text}\n\nलक्ष्य टोन: ${targetTone}\n\nनिर्दिष्ट टोन के साथ फिर से लिखें।` : locale === 'ar' ? `النص الأصلي: ${text}\n\nالنبرة المستهدفة: ${targetTone}\n\nأعد كتابته بالنبرة المحددة.` : `Original text: ${text}\n\nTarget tone: ${targetTone}\n\nRewrite with the specified tone.`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt);
+          return json({ original: text, rewritten: content, tone, explanation: '' });
         }
 
-        const targetTone = toneMap[locale]?.[tone] || toneMap[locale]?.friendly || 'friendly';
-
-        const systemPrompt = `你是一个专业的语气转换助手。根据用户提供的文本和目标语气，重写文本使其符合指定的语气风格。
-
-语气类型说明：
-- 正式/商务：适合商务邮件、正式报告等场合
-- 友好/亲切：适合朋友交流、社交媒体等场合
-- 简洁/精炼：去除冗余，直接表达核心内容
-- 幽默/风趣：添加轻松幽默的表达方式
-- 说服/营销：具有说服力，适合营销文案
-- 学术/专业：严谨专业，适合学术写作
-
-请用 ${langLabel(locale)} 输出。保持原文的核心意思不变。`;
-
-        const userPrompt = locale === 'zh'
-          ? `原始文本：${text}\n\n目标语气：${targetTone}\n\n请转换语气并重写。`
-          : locale === 'es'
-          ? `Texto original: ${text}\n\nTono objetivo: ${targetTone}\n\nReescribe con el tono especificado.`
-          : locale === 'fr'
-          ? `Texte original: ${text}\n\nTon cible: ${targetTone}\n\nRéécrivez avec le ton spécifié.`
-          : locale === 'hi'
-          ? `मूल पाठ: ${text}\n\nलक्ष्य टोन: ${targetTone}\n\nनिर्दिष्ट टोन के साथ फिर से लिखें।`
-          : locale === 'ar'
-          ? `النص الأصلي: ${text}\n\nالنبرة المستهدفة: ${targetTone}\n\nأعد كتابته بالنبرة المحددة.`
-          : `Original text: ${text}\n\nTarget tone: ${targetTone}\n\nRewrite with the specified tone.`;
-
-        const content = await callDeepseek(env, systemPrompt, userPrompt);
-
-        return okJson({
-          original: text,
-          rewritten: content,
-          tone: tone,
-          explanation: '',
-        });
-      }
-
-      case 'task-breakdown':
-      case 'task-breakdown/': {
-        const task = payload.task as string;
-
-        if (!task?.trim()) {
-          return errJson('Task is required', 400);
+        case '/api/task-breakdown':
+        case '/api/task-breakdown/': {
+          const task = payload.task as string;
+          if (!task?.trim()) return errJson('Task is required', 400);
+          const systemPrompt = `你是一个高效的任务分解助手。根据用户提供的任务描述，将其分解为具体的、可执行的步骤。分解原则：步骤清晰具体、按逻辑顺序排列、考虑依赖关系、给出时间估算。请用 ${langLabel(locale)} 输出。`;
+          const userPrompt = locale === 'zh' ? `任务描述：${task}\n\n请将此任务分解为具体步骤。` : locale === 'es' ? `Descripción de la tarea: ${task}\n\nDescomponga esta tarea en pasos específicos.` : locale === 'fr' ? `Description de la tâche: ${task}\n\nDécomposez cette tâche en étapes spécifiques.` : locale === 'hi' ? `कार्य विवरण: ${task}\n\nइस कार्य को विशिष्ट चरणों में विभाजित करें।` : locale === 'ar' ? `وصف المهمة: ${task}\n\nقم بتفكيك هذه المهمة إلى خطوات محددة.` : `Task description: ${task}\n\nBreak down this task into specific steps.`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt);
+          return json({ task, steps: content, explanation: '' });
         }
 
-        const systemPrompt = `你是一个高效的任务分解助手。根据用户提供的任务描述，将其分解为具体的、可执行的步骤。
-
-分解原则：
-1. 步骤清晰、具体，每个步骤都是一个独立的动作
-2. 按照逻辑顺序排列
-3. 考虑到可能的依赖关系
-4. 给出合理的时间估算
-
-请用 ${langLabel(locale)} 输出。`;
-
-        const userPrompt = locale === 'zh'
-          ? `任务描述：${task}\n\n请将此任务分解为具体步骤。`
-          : locale === 'es'
-          ? `Descripción de la tarea: ${task}\n\nDescomponga esta tarea en pasos específicos.`
-          : locale === 'fr'
-          ? `Description de la tâche: ${task}\n\nDécomposez cette tâche en étapes spécifiques.`
-          : locale === 'hi'
-          ? `कार्य विवरण: ${task}\n\nइस कार्य को विशिष्ट चरणों में विभाजित करें।`
-          : locale === 'ar'
-          ? `وصف المهمة: ${task}\n\nقم بتفكيك هذه المهمة إلى خطوات محددة.`
-          : `Task description: ${task}\n\nBreak down this task into specific steps.`;
-
-        const content = await callDeepseek(env, systemPrompt, userPrompt);
-
-        return okJson({
-          task: task,
-          steps: content,
-        });
-      }
-
-      case 'concept-explain':
-      case 'concept-explain/': {
-        const concept = payload.concept as string;
-
-        if (!concept?.trim()) {
-          return errJson('Concept is required', 400);
+        case '/api/concept-explain':
+        case '/api/concept-explain/': {
+          const concept = payload.concept as string;
+          const depth = (payload.depth as string) || 'simple';
+          if (!concept?.trim()) return errJson('Concept is required', 400);
+          const depthDesc = depth === 'simple' ? '简单易懂，适合初学者' : depth === 'medium' ? '中等深度，适合有一定基础' : '深入详细，适合专业人士';
+          const systemPrompt = `你是一个专业的知识讲解助手。根据用户提供的概念和深度要求，用通俗易懂的方式解释复杂概念。解释原则：从基础定义开始、结合实例说明、使用比喻帮助理解、结构清晰有条理。请用 ${langLabel(locale)} 输出。`;
+          const userPrompt = locale === 'zh' ? `概念：${concept}\n\n讲解深度：${depthDesc}\n\n请解释这个概念。` : locale === 'es' ? `Concepto: ${concept}\n\nProfundidad de explicación: ${depth === 'simple' ? 'simple para principiantes' : depth === 'medium' ? 'medio para con conocimientos básicos' : 'profundo para profesionales'}\n\nExplica este concepto.` : locale === 'fr' ? `Concept: ${concept}\n\nProfondeur d'explication: ${depth === 'simple' ? 'simple pour débutants' : depth === 'medium' ? 'moyen pour personnes avec des bases' : 'profond pour professionnels'}\n\nExpliquez ce concept.` : locale === 'hi' ? `संकल्पना: ${concept}\n\nव्याख्या की गहराई: ${depth === 'simple' ? 'शुरुआती के लिए सरल' : depth === 'medium' ? 'कुछ आधार के साथ मध्यम' : 'पेशेवरों के लिए गहरा'}\n\nइस अवधारणा की व्याख्या करें।` : locale === 'ar' ? `المفهوم: ${concept}\n\nعمق الشرح: ${depth === 'simple' ? 'بسيط للمبتدئين' : depth === 'medium' ? 'متوسط للأشخاص ذوي الأساس' : 'عميق للمحترفين'}\n\nشرح هذا المفهوم.` : `Concept: ${concept}\n\nExplanation depth: ${depth === 'simple' ? 'simple for beginners' : depth === 'medium' ? 'medium for those with basic knowledge' : 'deep for professionals'}\n\nExplain this concept.`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt);
+          return json({ concept, explanation: content, depth });
         }
 
-        const systemPrompt = `你是一个耐心的知识讲解助手。根据用户提供的概念，用通俗易懂的方式进行解释。
-
-讲解原则：
-1. 使用简单明了的语言，避免过多专业术语
-2. 提供实际例子帮助理解
-3. 结构清晰，层次分明
-4. 必要时给出对比或类比
-
-请用 ${langLabel(locale)} 输出。`;
-
-        const userPrompt = locale === 'zh'
-          ? `概念：${concept}\n\n请用通俗易懂的方式解释这个概念。`
-          : locale === 'es'
-          ? `Concepto: ${concept}\n\nExplique este concepto de manera sencilla y comprensible.`
-          : locale === 'fr'
-          ? `Concept: ${concept}\n\nExpliquez ce concept de manière simple et compréhensible.`
-          : locale === 'hi'
-          ? `अवधारणा: ${concept}\n\nइस अवधारणा को सरल और समझने योग्य तरीके से समझाएं।`
-          : locale === 'ar'
-          ? `المفهوم: ${concept}\n\nأشرح هذا المفهوم بطريقة بسيطة ومفهومة.`
-          : `Concept: ${concept}\n\nExplain this concept in a simple and understandable way.`;
-
-        const content = await callDeepseek(env, systemPrompt, userPrompt);
-
-        return okJson({
-          concept: concept,
-          explanation: content,
-        });
-      }
-
-      case 'idea-to-action':
-      case 'idea-to-action/': {
-        const idea = payload.idea as string;
-
-        if (!idea?.trim()) {
-          return errJson('Idea is required', 400);
+        case '/api/idea-to-action':
+        case '/api/idea-to-action/': {
+          const idea = payload.idea as string;
+          if (!idea?.trim()) return errJson('Idea is required', 400);
+          const systemPrompt = `你是一个高效的行动规划助手。根据用户提供的创意想法，帮助制定可执行的行动计划。规划原则：目标明确、步骤具体、时间合理、资源可行、风险可控。请用 ${langLabel(locale)} 输出。`;
+          const userPrompt = locale === 'zh' ? `创意想法：${idea}\n\n请制定一个可执行的行动计划。` : locale === 'es' ? `Idea creativa: ${idea}\n\nDesarrolla un plan de acción ejecutable.` : locale === 'fr' ? `Idée créative: ${idea}\n\nÉlaborez un plan d'action exécutable.` : locale === 'hi' ? `रचनात्मक विचार: ${idea}\n\nएक निष्पादन योग्य कार्य योजना बनाएं।` : locale === 'ar' ? `فكرة إبداعية: ${idea}\n\nقم بإعداد خطة عمل يمكن تنفيذها.` : `Creative idea: ${idea}\n\nDevelop an actionable plan.`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt);
+          return json({ idea, plan: content, steps: [] });
         }
 
-        const systemPrompt = `你是一个行动导向的创意助手。根据用户提供的想法，帮助制定具体的行动计划。
+        case '/api/ai-copywriter':
+        case '/api/ai-copywriter/': {
+          const product = payload.product as string;
+          const selling = payload.selling as string;
+          const type = (payload.type as string) || 'ad-headline';
+          const tone = (payload.tone as string) || 'persuasive';
+          const platform = (payload.platform as string) || 'general';
+          if (!product?.trim() || !selling?.trim()) return errJson('Product and selling points are required', 400);
 
-行动计划应包含：
-1. 明确的目标
-2. 具体的步骤
-3. 时间安排建议
-4. 潜在挑战和应对策略
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
 
-请用 ${langLabel(locale)} 输出。`;
-
-        const userPrompt = locale === 'zh'
-          ? `想法：${idea}\n\n请为这个想法制定具体的行动计划。`
-          : locale === 'es'
-          ? `Idea: ${idea}\n\nDesarrolle un plan de acción específico para esta idea.`
-          : locale === 'fr'
-          ? `Idée: ${idea}\n\nDéveloppez un plan d'action spécifique pour cette idée.`
-          : locale === 'hi'
-          ? `विचार: ${idea}\n\nइस विचार के लिए एक विशिष्ट क्रिया योजना तैयार करें।`
-          : locale === 'ar'
-          ? `الفكرة: ${idea}\n\nقم بإعداد خطة عمل محددة لهذه الفكرة.`
-          : `Idea: ${idea}\n\nDevelop a specific action plan for this idea.`;
-
-        const content = await callDeepseek(env, systemPrompt, userPrompt);
-
-        return okJson({
-          idea: idea,
-          plan: content,
-        });
-      }
-
-      case 'ai-copywriter':
-      case 'ai-copywriter/': {
-        const product = payload.product as string;
-        const selling = payload.selling as string;
-        const type = (payload.type as string) || 'sales';
-        const tone = (payload.tone as string) || 'friendly';
-        const platform = (payload.platform as string) || 'general';
-
-        if (!product?.trim() || !selling?.trim()) {
-          return errJson('Product and selling points are required', 400);
-        }
-
-        const targetTone = toneMap[locale]?.[tone] || toneMap[locale]?.friendly || 'friendly';
-
-        const systemPrompt = `你是一个专业的文案撰写助手。根据用户提供的产品信息和卖点，撰写高质量的营销文案。
+          const targetTone = toneMap[locale]?.[tone] || toneMap[locale]?.persuasive || 'persuasive';
+          const systemPrompt = `你是一个专业的营销文案生成专家。根据用户提供的产品信息和需求，生成高质量的营销文案。
 
 文案类型：
-- sales：销售文案，强调产品优势和购买理由
-- social：社交媒体文案，活泼有趣，易于传播
-- email：邮件营销文案，专业正式，转化率高
-- ad：广告文案，简洁有力，吸引眼球
+- 广告标题：吸引眼球的短标题，适合投放广告
+- 产品描述：详细介绍产品特点和优势
+- 社媒帖子：适合社交媒体平台的文案
+- 邮件主题：吸引打开的邮件标题
+- 落地页首屏：落地页顶部的核心文案
 
-请用 ${langLabel(locale)} 输出，语气：${targetTone}。`;
+目标平台：
+- 通用：适用于多个平台
+- 独立站：电商独立站
+- Instagram：图片社交平台
+- Facebook：社交网络
+- X：原Twitter，短文本平台
 
-        const userPrompt = locale === 'zh'
-          ? `产品：${product}\n\n卖点：${selling}\n\n文案类型：${type}\n\n平台：${platform}\n\n请撰写营销文案。`
-          : locale === 'es'
-          ? `Producto: ${product}\n\nPuntos de venta: ${selling}\n\nTipo de copia: ${type}\n\nPlataforma: ${platform}\n\nEscriba el texto publicitario.`
-          : locale === 'fr'
-          ? `Produit: ${product}\n\nPoints de vente: ${selling}\n\nType de copie: ${type}\n\nPlateforme: ${platform}\n\nÉcrivez le texte publicitaire.`
-          : locale === 'hi'
-          ? `उत्पाद: ${product}\n\nबिक्री बिंदु: ${selling}\n\nप्रतिलिपि प्रकार: ${type}\n\nप्लेटफॉर्म: ${platform}\n\nविपणन प्रतिलिपि लिखें।`
-          : locale === 'ar'
-          ? `المنتج: ${product}\n\nنقاط البيع: ${selling}\n\nنوع النص: ${type}\n\nالمنصة: ${platform}\n\nأكتب النص التسويقي.`
-          : `Product: ${product}\n\nSelling points: ${selling}\n\nCopy type: ${type}\n\nPlatform: ${platform}\n\nWrite the marketing copy.`;
+语气风格：
+- 正式/商务：专业严谨
+- 友好/亲切：轻松随和
+- 简洁/精炼：言简意赅
+- 幽默/风趣：轻松有趣
+- 说服/营销：有说服力
+- 学术/专业：专业权威
 
-        const content = await callDeepseek(env, systemPrompt, userPrompt);
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "copy": "生成的文案内容",
+      "why": "为什么这样写（一句话说明）"
+    }
+  ]
+}
 
-        return okJson({
-          product: product,
-          selling: selling,
-          copy: content,
-        });
-      }
+请生成【3条】候选文案。用 ${langLabel(locale)} 输出。文案要真实可信，不夸大不吹牛，不编造虚假数据。`;
 
-      case 'seo-miner':
-      case 'seo-miner/': {
-        const keyword = payload.keyword as string;
-        const domain = payload.domain as string;
+          const userPrompt = locale === 'zh'
+            ? `产品名：${product}\n\n核心卖点：${selling}\n\n文案类型：${type}\n\n目标平台：${platform}\n\n语气风格：${targetTone}\n\n请生成3条营销文案。`
+            : locale === 'es'
+            ? `Nombre del producto: ${product}\n\nPuntos de venta: ${selling}\n\nTipo de texto: ${type}\n\nPlataforma objetivo: ${platform}\n\nEstilo de tono: ${targetTone}\n\nGenera 3 copys de marketing.`
+            : locale === 'fr'
+            ? `Nom du produit: ${product}\n\nPoints de vente: ${selling}\n\nType de texte: ${type}\n\nPlateforme cible: ${platform}\n\nStyle de ton: ${targetTone}\n\nGénérez 3 copies marketing.`
+            : locale === 'hi'
+            ? `उत्पाद का नाम: ${product}\n\nबिक्री बिंदु: ${selling}\n\nपाठ प्रकार: ${type}\n\nलक्ष्य प्लेटफॉर्म: ${platform}\n\nटोन शैली: ${targetTone}\n\n3 मार्केटिंग कॉपी बनाएं।`
+            : locale === 'ar'
+            ? `اسم المنتج: ${product}\n\nنقاط البيع: ${selling}\n\nنوع النص: ${type}\n\nالمنصة المستهدفة: ${platform}\n\nأسلوب النبرة: ${targetTone}\n\nأنشئ 3 نسخ تسويقية.`
+            : `Product name: ${product}\n\nSelling points: ${selling}\n\nCopy type: ${type}\n\nTarget platform: ${platform}\n\nTone style: ${targetTone}\n\nGenerate 3 marketing copies.`;
 
-        if (!keyword?.trim()) {
-          return errJson('Keyword is required', 400);
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.items || !Array.isArray(result.items)) {
+            return errJson('No copy generated', 500);
+          }
+          return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
         }
 
-        const systemPrompt = `你是一个专业的SEO分析助手。根据用户提供的关键词，分析SEO优化建议。
+        case '/api/seo-miner':
+        case '/api/seo-miner/': {
+          const url = payload.url as string;
+          const keywords = (payload.keywords as string) || '';
+          if (!url?.trim()) return errJson('URL is required', 400);
+          const systemPrompt = `你是一个专业的SEO分析助手。根据用户提供的URL和关键词，分析该网页的SEO优化情况。分析内容包括：页面标题、元描述、关键词密度、内容质量、内部链接、外部链接、移动端适配、页面速度等。请用 ${langLabel(locale)} 输出。`;
+          const userPrompt = locale === 'zh' ? `分析URL：${url}\n\n目标关键词：${keywords || '无'}\n\n请进行全面的SEO分析。` : locale === 'es' ? `URL a analizar: ${url}\n\nPalabras clave objetivo: ${keywords || 'ninguna'}\n\nRealiza un análisis SEO completo.` : locale === 'fr' ? `URL à analyser: ${url}\n\nMots-clés cibles: ${keywords || 'aucune'}\n\nEffectuez une analyse SEO complète.` : locale === 'hi' ? `विश्लेषण URL: ${url}\n\nलक्ष्य कीवर्ड: ${keywords || 'कोई नहीं'}\n\nपूर्ण SEO विश्लेषण करें।` : locale === 'ar' ? `URL لتحليله: ${url}\n\nالكلمات الرئيسية المستهدفة: ${keywords || 'لا يوجد'}\n\nقم بإجراء تحليل SEO شامل.` : `URL to analyze: ${url}\n\nTarget keywords: ${keywords || 'none'}\n\nPerform a comprehensive SEO analysis.`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt);
+          return json({ url, keywords, analysis: content });
+        }
 
-分析内容包括：
-1. 关键词难度评估
-2. 相关关键词建议
-3. 内容优化建议
-4. 页面标题和描述建议
-
-请用 ${langLabel(locale)} 输出。`;
-
-        const userPrompt = locale === 'zh'
-          ? `关键词：${keyword}\n\n目标网站：${domain || '不限'}\n\n请分析SEO优化建议。`
-          : locale === 'es'
-          ? `Palabra clave: ${keyword}\n\nSitio web objetivo: ${domain || 'cualquiera'}\n\nAnalice las recomendaciones de SEO.`
-          : locale === 'fr'
-          ? `Mot-clé: ${keyword}\n\nSite web cible: ${domain || 'n'importe lequel'}\n\nAnalysez les recommandations SEO.`
-          : locale === 'hi'
-          ? `कीवर्ड: ${keyword}\n\nलक्ष्य वेबसाइट: ${domain || 'कोई भी'}\n\nSEO अनुशंसाओं का विश्लेषण करें।`
-          : locale === 'ar'
-          ? `الكلمة المفتاحية: ${keyword}\n\nالموقع الهدف: ${domain || 'أي'}\n\nقم بتحليل مقترحات SEO.`
-          : `Keyword: ${keyword}\n\nTarget website: ${domain || 'any'}\n\nAnalyze SEO optimization suggestions.`;
-
-        const content = await callDeepseek(env, systemPrompt, userPrompt);
-
-        return okJson({
-          keyword: keyword,
-          domain: domain,
-          analysis: content,
-        });
+        default:
+          return errJson('Not found', 404);
       }
-
-      default:
-        return errJson('API endpoint not found', 404);
+    } catch (error) {
+      console.error('API error:', path, error);
+      return errJson('Internal server error', 500);
     }
-  } catch (error) {
-    console.error('API error:', error);
-    return errJson('Internal server error', 500);
-  }
+  },
 };
