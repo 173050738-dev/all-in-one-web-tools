@@ -38,8 +38,8 @@ function corsPreflight(): Response {
 export const onRequestOptions: PagesFunction<Env> = async () => corsPreflight();
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
+  const env = context.env;
   try {
-    const env = context.env;
     let payload: { text?: string; tone?: string; locale?: string } = {};
     try {
       payload = (await context.request.json()) as { text?: string; tone?: string; locale?: string };
@@ -126,8 +126,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('DeepSeek API error:', response.status, errorText);
-      return errJson('AI service unavailable', 502);
+      console.error('API error:', response.status, errorText);
+      return okJson({ error: 'AI service unavailable', status: response.status, detail: errorText.substring(0, 300), apiUrl, model }, 502);
     }
 
     const data = await response.json();
@@ -151,7 +151,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       explanation: result.explanation || '',
     });
   } catch (error) {
-    console.error('Tone changer error:', error);
-    return errJson('Internal server error', 500);
+    const msg = error instanceof Error ? error.message : String(error);
+    console.error('Tone changer error:', msg);
+    return okJson({ error: 'Internal server error', detail: msg, hasKey: !!env?.DEEPSEEK_API_KEY, hasUrl: !!env?.DEEPSEEK_API_URL }, 500);
   }
 };
