@@ -7758,6 +7758,276 @@
           }
         ]
       }
+    },
+    "task-breakdown": {
+      "name": "Décomposeur de Tâches",
+      "description": "Décomposez les objectifs vagues en étapes exécutables avec une analyse alimentée par IA.",
+      "seo": {
+        "intro": "Décomposeur de Tâches est un outil de planification intelligent qui décompose automatiquement tout objectif vague ou tâche complexe en étapes claires et exécutables. Entrez simplement votre objectif, et l'IA analysera les différentes dimensions de la tâche, générant un plan d'exécution structuré pour vous aider à passer de l'idée à l'action.",
+        "scenarios": [
+          "Lorsque vous faites face à un objectif de projet ambitieux et que vous ne savez pas par où commencer",
+          "Avant d'écrire une thèse ou un rapport, décomposez-le en chapitres et jalons",
+          "Lors de la collaboration d'équipe, décomposez les objectifs en tâches spécifiques assignables"
+        ],
+        "tutorial": [
+          "Entrez votre objectif ou la description de la tâche dans la zone de saisie",
+          "Cliquez sur le bouton de décomposition, l'IA analysera automatiquement et générera les étapes",
+          "Consultez la liste des étapes générées et exécutez-les dans l'ordre",
+          "Copiez les étapes dans votre liste de tâches ou partagez-les avec votre équipe"
+        ],
+        "advantages": [
+          "L'IA identifie automatiquement les nœuds clés et les dépendances des tâches",
+          "Les étapes générées sont claires et spécifiques, prêtes à être exécutées",
+          "Prend en charge divers types de tâches, de l'apprentissage personnel aux projets d'équipe"
+        ],
+        "faqs": [
+          {
+            "q": "Les étapes peuvent-elles être ajustées ?",
+            "a": "Oui, les étapes générées sont des suggestions, vous pouvez ajuster l'ordre ou ajouter/supprimer des étapes selon les situations réelles."
+          },
+          {
+            "q": "Quels types de tâches sont pris en charge ?",
+            "a": "Prend en charge divers types de tâches, y compris les plans d'études, la gestion de projets, les plans d'écriture, les arrangements de voyage, etc."
+          },
+          {
+            "q": "Internet est-il nécessaire ?",
+            "a": "Oui, cet outil doit appeler des services IA pour l'analyse et nécessite une connexion internet."
+          },
+          {
+            "q": "Les étapes générées seront-elles enregistrées ?",
+            "a": "L'outil n'enregistre pas automatiquement vos tâches. Il est recommandé de copier les étapes dans votre outil de gestion de tâches."
+          },
+          {
+            "q": "La description de tâches multilingue est-elle prise en charge ?",
+            "a": "Prend en charge la saisie en chinois et en anglais, et génère des étapes dans la langue correspondante."
+          }
+        ]
+      }
+    },
+    "tone-changer": {
+      "name": "Transformateur de Ton",
+      "description": "Changez instantanément le ton du texte, prend en charge les tons formel, amical, concis, humoristique.",
+      "seo": {
+        "intro": "Transformateur de Ton est un outil d'ajustement de style de texte qui peut convertir instantanément votre texte en différents styles de ton. Il prend en charge les tons formel, amical, concis, humoristique, persuasif, professionnel, etc., vous aidant à transmettre les émotions et attitudes appropriées dans différentes situations.",
+        "scenarios": [
+          "Lors de la rédaction de courriels, ajustez les brouillons du style décontracté au style d'affaires formel",
+          "Lors de la publication sur les réseaux sociaux, rendez le contenu plus humoristique ou plus persuasif",
+          "Lors de la réponse aux clients, ajustez le ton pour correspondre à leur style de communication"
+        ],
+        "tutorial": [
+          "Collez le texte dont vous voulez ajuster le ton dans la zone de saisie",
+          "Sélectionnez le style de ton cible",
+          "Cliquez sur le bouton de conversion pour voir le texte converti",
+          "Copiez le résultat ou continuez à ajuster jusqu'à satisfaction"
+        ],
+        "advantages": [
+          "Prend en charge 6 styles de ton courants, couvrant les scénarios professionnels, sociaux, académiques, etc.",
+          "La conversion intelligente de l'IA préserve le sens original tout en ajustant le ton",
+          "Vitesse de conversion rapide, pas d'attente nécessaire"
+        ],
+        "faqs": [
+          {
+            "q": "La conversion changera-t-elle le sens original ?",
+            "a": "Non, l'outil essaiera de préserver le sens original et ne ajustera que le ton et l'expression."
+          },
+          {
+            "q": "Quelles langues sont prises en charge ?",
+            "a": "Prend principalement en charge la conversion de ton pour les textes chinois et anglais."
+          },
+          {
+            "q": "Puis-je personnaliser le style de ton ?",
+            "a": "Actuellement, 6 styles prédéfinis sont fournis. Des options de personnalisation seront considérées à l'avenir."
+          },
+          {
+            "q": "Y a-t-il une limite de longueur de texte ?",
+            "a": "Il est recommandé de ne pas dépasser 1000 caractères par conversion. Un texte trop long peut affecter les résultats de conversion."
+          },
+          {
+            "q": "Le résultat de conversion peut-il être édité ?",
+            "a": "Oui, le texte converti peut être directement édité et modifié."
+          }
+        ]
+      }
+    },
+    "focus-timer": {
+      "name": "Minuteur de Concentration",
+      "description": "Minuteur de technique Pomodoro avec des intervalles de travail/repos personnalisables pour une meilleure concentration.",
+      "seo": {
+        "intro": "Minuteur de Concentration adopte la technique Pomodoro classique pour vous aider à maintenir une concentration efficace. Réglez la durée de travail et la durée de repos, concentrez-vous pendant 25 minutes, reposez-vous 5 minutes, et répétez. Cela maintient votre cerveau dans un état optimal entre concentration et relaxation.",
+        "scenarios": [
+          "Utilisez le minuteur Pomodoro pour rester concentré lors de la codification ou de la rédaction de documents",
+          "Lors de la préparation aux examens, organisez le contenu d'étude par périodes",
+          "Pendant les pauses entre réunions, utilisez de courtes périodes pour traiter les tâches urgentes"
+        ],
+        "tutorial": [
+          "Réglez la durée de travail (par défaut 25 minutes) et la durée de repos (par défaut 5 minutes)",
+          "Cliquez sur le bouton de démarrage et concentrez-vous sur le travail jusqu'à la fin du minuteur",
+          "Après la fin du temps de repos, vous serez automatiquement rappelé de commencer la prochaine ronde",
+          "Vous pouvez mettre en pause ou réinitialiser le minuteur à tout moment"
+        ],
+        "advantages": [
+          "Fonctionne purement localement, pas d'internet nécessaire, ne divulgue pas votre contenu de travail",
+          "Prend en charge les durées personnalisées pour s'adapter à différents rythmes de travail",
+          "Design d'interface simple qui ne distrait pas"
+        ],
+        "faqs": [
+          {
+            "q": "Qu'est-ce que la technique Pomodoro ?",
+            "a": "La technique Pomodoro est une méthode de gestion du temps qui divise le temps de travail en sessions Pomodoro de 25 minutes, avec une pause de 5 minutes après chaque session, et une pause plus longue après 4 sessions."
+          },
+          {
+            "q": "Le minuteur fera-t-il un son à la fin ?",
+            "a": "Oui, il y aura un son de notification à la fin du minuteur pour vous rappeler de passer à l'état suivant."
+          },
+          {
+            "q": "Peut-il fonctionner en arrière-plan ?",
+            "a": "Il peut fonctionner en arrière-plan, mais le minuteur s'arrêtera lorsque le navigateur sera fermé."
+          },
+          {
+            "q": "Prend-il en charge le mode boucle ?",
+            "a": "Oui, il bouclera automatiquement les périodes de travail et de repos."
+          },
+          {
+            "q": "Les données seront-elles enregistrées ?",
+            "a": "Les données du minuteur ne sont enregistrées que dans la session actuelle et ne seront pas conservées après fermeture de la page."
+          }
+        ]
+      }
+    },
+    "concept-explain": {
+      "name": "Simplificateur de Concepts",
+      "description": "Expliquez les concepts complexes en termes simples avec des analogies et des exemples.",
+      "seo": {
+        "intro": "Simplificateur de Concepts est un outil de vulgarisation des connaissances qui explique les concepts complexes en langage facile à comprendre. Que ce soit de la terminologie de programmation, des théories scientifiques ou des concepts commerciaux, après saisie, l'IA utilisera des analogies de la vie quotidienne et des exemples pratiques pour vous aider à comprendre.",
+        "scenarios": [
+          "Lors de l'apprentissage de nouvelles technologies, utilisez-le pour expliquer des termes professionnels difficiles",
+          "Expliquez les concepts de votre travail à des non-professionnels",
+          "Lors de l'aide aux enfants, simplifiez les connaissances complexes"
+        ],
+        "tutorial": [
+          "Entrez le concept complexe ou le terme que vous voulez comprendre",
+          "Cliquez sur le bouton d'explication, l'IA générera une explication facile à comprendre",
+          "Lisez les analogies et les exemples pour approfondir votre compréhension",
+          "Vous pouvez continuer à poser des questions ou essayer d'autres concepts"
+        ],
+        "advantages": [
+          "L'IA simplifie intelligemment la terminologie professionnelle en langage de tous les jours",
+          "Fournit des analogies de la vie quotidienne pour une compréhension plus facile",
+          "Prend en charge les explications de concepts dans divers domaines"
+        ],
+        "faqs": [
+          {
+            "q": "Quels domaines de concepts sont pris en charge ?",
+            "a": "Prend en charge les explications de concepts en programmation, science, commerce, droit, médecine et autres domaines."
+          },
+          {
+            "q": "Comment l'exactitude de l'explication est-elle assurée ?",
+            "a": "Basée sur les connaissances du modèle IA, elle essaiera de fournir des explications précises. Cependant, il est recommandé de référencer des matériaux professionnels pour les concepts importants."
+          },
+          {
+            "q": "Les concepts chinois peuvent-ils être expliqués ?",
+            "a": "Oui, prend en charge l'explication de concepts chinois et anglais."
+          },
+          {
+            "q": "L'explication inclura-t-elle des exemples ?",
+            "a": "Oui, elle inclura généralement des analogies de la vie quotidienne et des exemples pratiques."
+          },
+          {
+            "q": "Internet est-il nécessaire ?",
+            "a": "Oui, les services IA doivent être appelés pour les explications, nécessitant une connexion internet."
+          }
+        ]
+      }
+    },
+    "idea-to-action": {
+      "name": "Activateur d'Idées",
+      "description": "Transformez les idées en plans d'action avec des listes d'actions triées par priorité.",
+      "seo": {
+        "intro": "Activateur d'Idées vous aide à transformer les idées de votre esprit en plans d'action concrets. Entrez votre idée créative, et l'IA analysera sa faisabilité, la décomposera en étapes exécutables, et la triera par priorité, afin que vos idées ne restent plus à l'état d'imagination.",
+        "scenarios": [
+          "Après une séance de brainstorming, organisez les idées dispersées en plans d'action",
+          "Lorsque les idées de démarrage doivent être concrétisées, générez les étapes de mise en œuvre",
+          "Lorsque les objectifs personnels doivent être décomposés en tâches exécutables"
+        ],
+        "tutorial": [
+          "Entrez votre idée créative ou sa description",
+          "Cliquez sur le bouton de conversion, l'IA analysera et générera les étapes d'action",
+          "Consultez la liste d'actions triée par priorité",
+          "Copiez les étapes ou commencez l'exécution"
+        ],
+        "advantages": [
+          "L'IA analyse intelligemment la faisabilité et les étapes clés des idées",
+          "Trie automatiquement par priorité, faites les choses les plus importantes en premier",
+          "Prend en charge divers types d'idées et de concepts"
+        ],
+        "faqs": [
+          {
+            "q": "Les étapes d'action générées peuvent-elles être ajustées ?",
+            "a": "Oui, vous pouvez ajuster l'ordre des étapes ou ajouter/supprimer des étapes selon les situations réelles."
+          },
+          {
+            "q": "Comment la priorité est-elle déterminée ?",
+            "a": "Basée sur l'analyse de l'IA de l'importance des étapes et des dépendances, elle trie automatiquement."
+          },
+          {
+            "q": "La collaboration multi-personnelle est-elle prise en charge ?",
+            "a": "Actuellement, c'est un outil personnel. Il est recommandé de copier les étapes dans des outils de collaboration d'équipe pour partager."
+          },
+          {
+            "q": "Les idées seront-elles enregistrées ?",
+            "a": "Elles ne sont pas enregistrées automatiquement. Il est recommandé de copier les résultats dans votre outil de prise de notes."
+          },
+          {
+            "q": "Peut-il traiter des projets de démarrage complexes ?",
+            "a": "Il peut les traiter, mais les projets complexes peuvent nécessiter plusieurs décompositions et ajustements."
+          }
+        ]
+      }
+    },
+    "time-estimator": {
+      "name": "Estimateur de Temps",
+      "description": "Estimez la durée des tâches avec des scénarios optimistes, réalistes et pessimistes.",
+      "seo": {
+        "intro": "Estimateur de Temps vous aide à estimer plus précisément le temps nécessaire pour compléter une tâche. Basé sur la méthode d'estimation à trois points, il fournit des estimations de temps optimistes, les plus probables et pessimistes, et calcule une moyenne pondérée, vous aidant à établir des plans et des attentes plus raisonnables.",
+        "scenarios": [
+          "Lors de la planification de projets, estimez la durée de chaque tâche",
+          "Lors de la soumission de devis aux clients, fournissez des estimations de temps raisonnables",
+          "Lors de la planification personnelle, comprenez le temps nécessaire pour compléter les tâches"
+        ],
+        "tutorial": [
+          "Entrez la description de la tâche",
+          "Entrez respectivement le temps optimiste, le temps le plus probable et le temps pessimiste",
+          "Cliquez sur le bouton de calcul pour voir les résultats d'estimation",
+          "Utilisez le temps moyen pondéré comme référence"
+        ],
+        "advantages": [
+          "Basé sur la méthode d'estimation à trois points classique, plus scientifique et précis",
+          "Fournit trois scénarios d'estimation pour vous aider à évaluer de manière complète",
+          "Calcul purement local, pas d'internet nécessaire"
+        ],
+        "faqs": [
+          {
+            "q": "Qu'est-ce que l'estimation à trois points ?",
+            "a": "L'estimation à trois points est une méthode d'estimation du temps couramment utilisée en gestion de projet. Elle calcule un temps moyen pondéré à travers trois valeurs : temps optimiste, temps le plus probable et temps pessimiste."
+          },
+          {
+            "q": "Quelle est l'unité de temps ?",
+            "a": "Vous pouvez utiliser n'importe quelle unité de temps (heures, jours, etc.), mais les trois valeurs doivent utiliser la même unité."
+          },
+          {
+            "q": "Le résultat est-il précis ?",
+            "a": "Le résultat d'estimation est basé sur les valeurs que vous entrez. La précision dépend de votre expérience et de votre jugement."
+          },
+          {
+            "q": "Les enregistrements d'estimation peuvent-ils être sauvegardés ?",
+            "a": "Actuellement non pris en charge. Il est recommandé de prendre une capture d'écran ou d'enregistrer dans votre outil de gestion de projet."
+          },
+          {
+            "q": "Internet est-il nécessaire ?",
+            "a": "Non, calcul purement local, les données ne seront pas téléchargées."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

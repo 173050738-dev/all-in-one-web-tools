@@ -60,6 +60,12 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'wc-poster-generator',
   'wc-scoreboard-simulator',
   'excel-formula-generator',
+  'task-breakdown',
+  'tone-changer',
+  'focus-timer',
+  'concept-explain',
+  'idea-to-action',
+  'time-estimator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

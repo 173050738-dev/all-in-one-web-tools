@@ -1,4 +1,4 @@
-﻿export interface WorkflowStep {
+﻿﻿﻿﻿export interface WorkflowStep {
   toolSlug: string;
   title: string;
   description: string;
@@ -65,7 +65,7 @@ export const workflows: Workflow[] = [
     difficulty: 'easy',
     steps: [
       { toolSlug: 'pdf-merger', title: 'PDF基础处理', description: '合并、拆分、压缩PDF' },
-      { toolSlug: 'smallpdf', title: '格式转换', description: 'PDF转Word/Excel/PPT' },
+      { toolSlug: 'pdf-merger', title: '格式转换', description: 'PDF转Word/Excel/PPT' },
       { toolSlug: 'deepl', title: '文档翻译', description: '翻译PDF文档内容' },
     ],
   },
@@ -119,7 +119,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'deepl', title: '翻译文献', description: '快速翻译外文文献' },
       { toolSlug: 'wikipedia', title: '查资料', description: '查找背景知识' },
       { toolSlug: 'pdf-merger', title: 'PDF处理', description: '合并参考文献PDF' },
-      { toolSlug: 'smallpdf', title: '格式转换', description: 'PDF转Word编辑' },
+      { toolSlug: 'pdf-merger', title: '格式转换', description: 'PDF转Word编辑' },
       { toolSlug: 'image-compressor', title: '压缩图片', description: '压缩论文中的图片' },
     ],
   },
@@ -155,7 +155,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'notion', title: '知识管理', description: '搭建Notion知识库' },
       { toolSlug: 'trello', title: '任务管理', description: '看板式任务管理' },
       { toolSlug: 'google-docs', title: '文档协作', description: '在线文档协作编辑' },
-      { toolSlug: 'pomodoro-timer', title: '番茄工作法', description: '专注计时工具' },
+      { toolSlug: 'countdown', title: '番茄工作法', description: '专注计时工具' },
       { toolSlug: 'grammarly', title: '写作助手', description: '英文写作校对' },
     ],
   },
@@ -281,7 +281,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'copy-ai', title: '简历文案', description: 'AI生成简历描述文案' },
       { toolSlug: 'grammarly', title: '英文校对', description: '英文简历语法检查' },
       { toolSlug: 'canva', title: '简历设计', description: '使用简历模板美化排版' },
-      { toolSlug: 'smallpdf', title: 'PDF转换', description: '导出为PDF格式' },
+      { toolSlug: 'pdf-merger', title: 'PDF转换', description: '导出为PDF格式' },
       { toolSlug: 'pdf-merger', title: 'PDF压缩', description: '压缩PDF文件大小' },
     ],
   },
@@ -569,7 +569,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'chatgpt', title: '世界观设定', description: '与 ChatGPT 一起构思世界观与人物' },
       { toolSlug: 'copy-ai', title: '撰写大纲', description: '生成全书分卷分章大纲' },
       { toolSlug: 'claude', title: '章节撰写', description: 'Claude 长文写作章节初稿' },
-      { toolSlug: 'hemingway', title: '润色优化', description: 'Hemingway 精简语句与节奏' },
+      { toolSlug: 'text-tools', title: '文案润色', description: '精简语句与节奏优化' },
       { toolSlug: 'elevenlabs', title: '有声化', description: '导出章节做 AI 有声书' },
     ],
   },
@@ -660,7 +660,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'copy-ai', title: '文案撰写', description: '15 页 BP 各页文案逐页撰写' },
       { toolSlug: 'color-picker', title: '品牌配色', description: '设定专业可靠的配色方案' },
       { toolSlug: 'canva', title: 'PPT 设计', description: 'Canva BP 模板排版美化' },
-      { toolSlug: 'smallpdf', title: 'PDF 导出', description: '压缩 PDF 便于邮件发送' },
+      { toolSlug: 'pdf-merger', title: 'PDF 导出', description: '压缩 PDF 便于邮件发送' },
     ],
   },
   {
@@ -1756,7 +1756,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: 'copy-ai', title: 'SOW 初稿', description: '工作说明书 Statement of Work 大纲' },
       { toolSlug: 'grammarly', title: '法律用语校对', description: '合同条款英文精确无歧义' },
-      { toolSlug: 'smallpdf', title: 'Word→PDF 合同', description: '转为 PDF 防止篡改' },
+      { toolSlug: 'pdf-merger', title: 'Word→PDF 合同', description: '转为 PDF 防止篡改' },
       { toolSlug: 'pdf-merger', title: '合同 + NDA 合并', description: '主合同 + NDA 附件合并为一份' },
       { toolSlug: 'cloudconvert', title: '压缩合同 PDF', description: '邮件发送友好 < 5MB' },
     ],
@@ -1792,7 +1792,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: 'copy-ai', title: '4 封催款邮件', description: '友好提醒→正式→强硬→转交催收 4 段语气' },
       { toolSlug: 'grammarly', title: '语气专业', description: '强硬但不损伤关系的语气把控' },
-      { toolSlug: 'smallpdf', title: '发票 PDF 生成', description: 'HTML 发票模板转 PDF' },
+      { toolSlug: 'pdf-merger', title: '发票 PDF 生成', description: 'HTML 发票模板转 PDF' },
       { toolSlug: 'pdf-merger', title: '发票+工作单', description: '发票 + 工作验收单合并 PDF' },
       { toolSlug: 'cloudconvert', title: '邮件附件格式', description: 'DOCX→PDF 确保格式不乱' },
     ],
@@ -1880,7 +1880,7 @@ export const workflows: Workflow[] = [
     estimatedTime: '每天自动',
     difficulty: 'easy',
     steps: [
-      { toolSlug: 'pomodoro-timer', title: '番茄钟专注', description: '每 25 分钟一个番茄钟追踪工时' },
+      { toolSlug: 'countdown', title: '番茄钟专注', description: '每 25 分钟一个番茄钟追踪工时' },
       { toolSlug: 'json-formatter', title: '工时 JSON 导出', description: 'Toggl 格式工时数据标准化' },
       { toolSlug: 'copy-ai', title: '周报英文撰写', description: '完成事项/风险/下周计划客户周报' },
       { toolSlug: 'grammarly', title: '周报英语润色', description: '周报语气正式而透明' },
@@ -2548,7 +2548,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: 'regex-tester', title: '统一社会信用代码', description: 'GB 32100 18 位编码正则校验' },
       { toolSlug: 'cloudconvert', title: '资质 PDF 归档', description: '营业执照/税务表 PDF→PNG 看板预览' },
-      { toolSlug: 'smallpdf', title: '合同电子签名', description: '供应商合同 PDF 签名 + 盖章位' },
+      { toolSlug: 'pdf-merger', title: '合同电子签名', description: '供应商合同 PDF 签名 + 盖章位' },
       { toolSlug: 'pdf-merger', title: '合同 + 资质合并', description: '主合同+所有附件合并一份 PDF' },
       { toolSlug: 'json-formatter', title: '供应商主数据', description: 'ERP 供应商 JSON 导入模板' },
     ],
@@ -2568,7 +2568,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'remove-bg', title: '票据去阴影', description: '手机拍摄票据背景纯白处理' },
       { toolSlug: 'image-compressor', title: '批量压缩', description: '压缩 50 张发票单张 < 300KB' },
       { toolSlug: 'regex-tester', title: '发票号提取', description: '发票号码/金额正则提取' },
-      { toolSlug: 'smallpdf', title: '报销单合并 PDF', description: '报销单 + 所有票据合并 PDF' },
+      { toolSlug: 'pdf-merger', title: '报销单合并 PDF', description: '报销单 + 所有票据合并 PDF' },
     ],
   },
   {
@@ -2603,7 +2603,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'cloudconvert', title: 'DOCX→TXT', description: '纯文本用于差异对比程序' },
       { toolSlug: 'regex-tester', title: '关键字段提取', description: '金额/日期/期限正则提取改前改后' },
       { toolSlug: 'grammarly', title: '英文合同语法', description: '涉外合同用词精准性检查' },
-      { toolSlug: 'smallpdf', title: '合同 PDF 加水印', description: 'CONFIDENTIAL 水印 + 日期' },
+      { toolSlug: 'pdf-merger', title: '合同 PDF 加水印', description: 'CONFIDENTIAL 水印 + 日期' },
       { toolSlug: 'base64-tool', title: '版本摘要编码', description: '内容哈希 Base64 存审批链' },
     ],
   },
@@ -2639,7 +2639,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'cloudconvert', title: '银行对账单 CSV', description: 'PDF 对账单 → CSV 导入' },
       { toolSlug: 'regex-tester', title: '交易摘要匹配', description: '摘要正则匹配对应会计科目' },
       { toolSlug: 'json-formatter', title: '科目映射 JSON', description: '摘要→科目映射表配置' },
-      { toolSlug: 'smallpdf', title: '报表合并 PDF', description: 'BS/PL/CF 三份合并 PDF 导出' },
+      { toolSlug: 'pdf-merger', title: '报表合并 PDF', description: 'BS/PL/CF 三份合并 PDF 导出' },
       { toolSlug: 'grafana', title: '费用趋势图', description: '各部门月度费用趋势仪表盘' },
     ],
   },
@@ -2854,7 +2854,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: 'notion', title: '备考计划数据库', description: '科目/章节/进度/错题四视图' },
       { toolSlug: 'wikipedia', title: '知识点权威补充', description: '财报/经济学词条查阅' },
-      { toolSlug: 'pomodoro-timer', title: '番茄钟专注', description: '每天 4 个番茄 = 2 小时' },
+      { toolSlug: 'countdown', title: '番茄钟专注', description: '每天 4 个番茄 = 2 小时' },
       { toolSlug: 'cloudconvert', title: 'Notes PDF 合并', description: '10 科手写笔记合并复习' },
       { toolSlug: 'json-formatter', title: '错题 JSON 导出', description: '错题号/解析/考点结构化' },
     ],
@@ -2874,7 +2874,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'grammarly', title: '英文润色高级版', description: 'PS 学术地道表达校对' },
       { toolSlug: 'canva', title: 'Academic CV 模板', description: '欧美教授偏好的 LaTeX 风格 CV' },
       { toolSlug: 'cloudconvert', title: '成绩单 PDF 压缩', description: '中英文成绩单 < 2MB 上传' },
-      { toolSlug: 'smallpdf', title: '申请包 PDF', description: 'CV/PS/成绩单/RL 合并一份' },
+      { toolSlug: 'pdf-merger', title: '申请包 PDF', description: 'CV/PS/成绩单/RL 合并一份' },
     ],
   },
   {
@@ -2927,7 +2927,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'notion', title: '4 年规划模板', description: 'GPA/实习/科研/交换 4 条支线' },
       { toolSlug: 'copy-ai', title: '社团简历初稿', description: '无经验学生简历模板写法' },
       { toolSlug: 'canva', title: '课程表美化', description: '每周课表可视化海报' },
-      { toolSlug: 'pomodoro-timer', title: '自习番茄钟', description: '图书馆每天 6 个番茄' },
+      { toolSlug: 'countdown', title: '自习番茄钟', description: '图书馆每天 6 个番茄' },
       { toolSlug: 'color-picker', title: '笔记颜色体系', description: '4 色笔记法颜色固定统一' },
     ],
   },
@@ -2982,7 +2982,7 @@ export const workflows: Workflow[] = [
       { toolSlug: 'image-compressor', title: 'PPT 截图压缩', description: '每节课重点 PPT 截图 < 200KB' },
       { toolSlug: 'notion', title: 'Notion 笔记模板', description: '概念/示例/FAQ/作业 4 栏' },
       { toolSlug: 'remove-music', title: '讲师声音提取', description: '通勤路上纯音频复习' },
-      { toolSlug: 'smallpdf', title: '证书 PDF 合并', description: '5 门课程证书合并成求职作品集' },
+      { toolSlug: 'pdf-merger', title: '证书 PDF 合并', description: '5 门课程证书合并成求职作品集' },
     ],
   },
   {
@@ -2997,7 +2997,7 @@ export const workflows: Workflow[] = [
     difficulty: 'medium',
     steps: [
       { toolSlug: 'notion', title: '倒计时看板', description: '每日任务 + 完成进度跟踪' },
-      { toolSlug: 'pomodoro-timer', title: '45/15 节奏', description: '学习 45 分钟休息 15 分钟' },
+      { toolSlug: 'countdown', title: '45/15 节奏', description: '学习 45 分钟休息 15 分钟' },
       { toolSlug: 'copy-ai', title: '费曼复述草稿', description: '每章用自己话讲一遍的脚本' },
       { toolSlug: 'json-formatter', title: '错题库 JSON', description: '题号/章节/错因/解析字段' },
       { toolSlug: 'color-picker', title: '学科颜色标识', description: '5 门科目颜色区分便利贴' },
@@ -3124,7 +3124,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: 'canva', title: '合同封面模板', description: '统一企业合同封面设计' },
       { toolSlug: 'grammarly', title: '英文合同条款校对', description: '跨境合同英文术语准确性检查' },
-      { toolSlug: 'smallpdf', title: 'PDF 版本比对', description: '合同修改前后版本差异对比' },
+      { toolSlug: 'pdf-merger', title: 'PDF 版本比对', description: '合同修改前后版本差异对比' },
       { toolSlug: 'cloudconvert', title: 'Word 转 PDF 锁定', description: '终版合同转不可编辑 PDF' },
       { toolSlug: 'pdf-merger', title: '多附件合并归档', description: '合同+附件+审批单一份归档' },
     ],
@@ -3160,7 +3160,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: 'notion', title: '预算模板数据库', description: '收入/成本/费用/资本支出 4 大模块' },
       { toolSlug: 'json-formatter', title: '预算维度结构化', description: '部门/项目/月份三维度 JSON' },
-      { toolSlug: 'smallpdf', title: '历史报表 PDF 提取', description: '过去 3 年财务报表数据提取' },
+      { toolSlug: 'pdf-merger', title: '历史报表 PDF 提取', description: '过去 3 年财务报表数据提取' },
       { toolSlug: 'color-picker', title: '预算仪表盘配色', description: '达成率红黄绿三色预警体系' },
       { toolSlug: 'cloudconvert', title: 'Excel 转 PDF 分发', description: '各部门预算表 PDF 加密分发' },
     ],
@@ -3302,7 +3302,7 @@ export const workflows: Workflow[] = [
     estimatedTime: "14 天",
     difficulty: "medium",
     steps: [
-      { toolSlug: "smallpdf", title: "执照翻译公证", description: "资料PDF合并压缩" },
+      { toolSlug: 'pdf-merger', title: "执照翻译公证", description: "资料PDF合并压缩" },
       { toolSlug: "photopea", title: "商品白底图", description: "批量做800x800白底" },
       { toolSlug: "deepl", title: "商品资料翻译", description: "中文→英文合规描述" },
       { toolSlug: 'pdf-merger', title: "资质文件合并", description: "营业执照+身份证+商标合并" },
@@ -3338,7 +3338,7 @@ export const workflows: Workflow[] = [
     estimatedTime: "21 天",
     difficulty: "advanced",
     steps: [
-      { toolSlug: "smallpdf", title: "资质PDF翻译", description: "营业执照/EIN/地址证明翻译公证" },
+      { toolSlug: 'pdf-merger', title: "资质PDF翻译", description: "营业执照/EIN/地址证明翻译公证" },
       { toolSlug: "canva", title: "品牌主页装修", description: "头像Banner品牌故事" },
       { toolSlug: "copy-ai", title: "英文商家自我介绍", description: "品牌故事+售后政策文案" },
       { toolSlug: "deepl", title: "客服模板", description: "10条常用回复英西双语" },
@@ -3360,7 +3360,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "photopea", title: "样品拍图修图", description: "6张角度图+细节图" },
       { toolSlug: "copy-ai", title: "工厂介绍PPT", description: "英文工厂能力介绍" },
       { toolSlug: "deepl", title: "验厂资料翻译", description: "社会责任文件英翻" },
-      { toolSlug: "smallpdf", title: "报价单盖章签名", description: "Excel转PDF加水印" },
+      { toolSlug: 'pdf-merger', title: "报价单盖章签名", description: "Excel转PDF加水印" },
     ],
   },
   {
@@ -3392,7 +3392,7 @@ export const workflows: Workflow[] = [
     estimatedTime: "7 天",
     difficulty: "advanced",
     steps: [
-      { toolSlug: "smallpdf", title: "退货政策整理PDF", description: "隐私/退货/运费政策3页合并" },
+      { toolSlug: 'pdf-merger', title: "退货政策整理PDF", description: "隐私/退货/运费政策3页合并" },
       { toolSlug: "copy-ai", title: "英文隐私政策", description: "Shopify独立站用隐私模板" },
       { toolSlug: "deepl", title: "隐私翻译4语", description: "英法西葡4语" },
       { toolSlug: "photopea", title: "产品页合规图", description: "添加联系方式+地址合规截图" },
@@ -3414,7 +3414,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "邮件文案框架", description: "6个自动化流英文文案" },
       { toolSlug: "canva", title: "邮件Banner", description: "节日/新品Banner图" },
       { toolSlug: "deepl", title: "4语邮件模板", description: "法语西语葡语德语" },
-      { toolSlug: "smallpdf", title: "素材压缩", description: "邮件图片≤500KB" },
+      { toolSlug: 'pdf-merger', title: "素材压缩", description: "邮件图片≤500KB" },
     ],
   },
   {
@@ -3467,7 +3467,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文售后主模板", description: "16条场景核心英文模板" },
       { toolSlug: "deepl", title: "西/俄/葡/法4语", description: "逐条翻译保持语气专业" },
       { toolSlug: "canva", title: "好评卡设计", description: "包裹卡感谢卡双面PDF" },
-      { toolSlug: "smallpdf", title: "模板PDF合并", description: "16模板一本PDF手册" },
+      { toolSlug: 'pdf-merger', title: "模板PDF合并", description: "16模板一本PDF手册" },
       { toolSlug: 'pdf-merger', title: "模板加水印", description: "店铺Logo水印防抄袭" },
     ],
   },
@@ -3486,7 +3486,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "10款数字产品", description: "Planner/WallArt/Checklist" },
       { toolSlug: "copy-ai", title: "Listing英文文案", description: "Title/13Tags/Description模板" },
       { toolSlug: "image-compressor", title: "Mockup图压缩", description: "≤1MB Etsy上传要求" },
-      { toolSlug: "smallpdf", title: "数字包打包PDF", description: "PDF加页加密码" },
+      { toolSlug: 'pdf-merger', title: "数字包打包PDF", description: "PDF加页加密码" },
     ],
   },
   {
@@ -3502,7 +3502,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: "klaviyo", title: "邮件营销", description: "弃购挽回自动化" },
       { toolSlug: "loox", title: "照片评论", description: "批量导入亚马逊评价" },
-      { toolSlug: "smallpdf", title: "隐私政策合并", description: "各插件要求的隐私条款" },
+      { toolSlug: 'pdf-merger', title: "隐私政策合并", description: "各插件要求的隐私条款" },
       { toolSlug: "canva", title: "弹窗素材", description: "弹窗15%优惠图" },
       { toolSlug: "deepl", title: "弹窗4语翻译", description: "英法西葡4语" },
     ],
@@ -3520,7 +3520,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: "base64-tool", title: "货代报价单编码", description: "敏感报价加密存证" },
       { toolSlug: "mortgage-calculator", title: "重量体积计算器", description: "体积重/实重对比计费" },
-      { toolSlug: "smallpdf", title: "商业发票PDF", description: "商业发票模板PDF盖章" },
+      { toolSlug: 'pdf-merger', title: "商业发票PDF", description: "商业发票模板PDF盖章" },
       { toolSlug: "deepl", title: "清关文件翻译", description: "报关单中→英" },
       { toolSlug: "copy-ai", title: "英文报价邮件", description: "报价邮件专业模板" },
     ],
@@ -3536,7 +3536,7 @@ export const workflows: Workflow[] = [
     estimatedTime: "14 天",
     difficulty: "advanced",
     steps: [
-      { toolSlug: "smallpdf", title: "商标证书PDF合成", description: "商标证+营业执照合成" },
+      { toolSlug: 'pdf-merger', title: "商标证书PDF合成", description: "商标证+营业执照合成" },
       { toolSlug: "photopea", title: "品牌官网截图", description: "制作.com店铺截图" },
       { toolSlug: "copy-ai", title: "品牌官网About us", description: "品牌故事英文文案" },
       { toolSlug: 'pdf-merger', title: "资料签名盖章", description: "品牌授权书" },
@@ -3573,7 +3573,7 @@ export const workflows: Workflow[] = [
     difficulty: "medium",
     steps: [
       { toolSlug: "copy-ai", title: "英文售后安抚邮件", description: "36条自动回复模板" },
-      { toolSlug: "smallpdf", title: "已发货凭证PDF", description: "物流截图+签收证明合并" },
+      { toolSlug: 'pdf-merger', title: "已发货凭证PDF", description: "物流截图+签收证明合并" },
       { toolSlug: "deepl", title: "法语西语邮件", description: "非英语国家客诉回复" },
       { toolSlug: "canva", title: "物流页面图", description: "物流查询页Banner说明" },
       { toolSlug: 'pdf-merger', title: "申诉包PDF", description: "所有证据加签名合并" },
@@ -3612,7 +3612,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "Title满140字符", description: "包含主词+属性+场景" },
       { toolSlug: "deepl", title: "英文母语化", description: "Title读起来自然" },
       { toolSlug: "photopea", title: "首图视频首帧", description: "首帧高点击高清封面" },
-      { toolSlug: "smallpdf", title: "竞品导出PDF", description: "TOP10竞品词频分析PDF" },
+      { toolSlug: 'pdf-merger', title: "竞品导出PDF", description: "TOP10竞品词频分析PDF" },
     ],
   },
   {
@@ -3629,7 +3629,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "base64-tool", title: "Token编码", description: "访问Token本地加密存" },
       { toolSlug: "copy-ai", title: "事件英文注释", description: "Purchase/AddToCart命名" },
       { toolSlug: "canva", title: "漏斗流程图", description: "事件埋点清单图" },
-      { toolSlug: "smallpdf", title: "审计PDF", description: "上线前测试结果汇总" },
+      { toolSlug: 'pdf-merger', title: "审计PDF", description: "上线前测试结果汇总" },
       { toolSlug: "deepl", title: "埋点文档翻译", description: "技术文档中译英" },
     ],
   },
@@ -3648,7 +3648,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "A+6张图", description: "每张1920×600规范" },
       { toolSlug: "photopea", title: "图注文字改英文", description: "母语化自然表达" },
       { toolSlug: "image-compressor", title: "压缩≤3MB", description: "A+图片提交要求" },
-      { toolSlug: "smallpdf", title: "6图打包PDF", description: "设计稿+文案一起存档" },
+      { toolSlug: 'pdf-merger', title: "6图打包PDF", description: "设计稿+文案一起存档" },
     ],
   },
   {
@@ -3683,7 +3683,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "门店海报", description: "取货点指引双面海报" },
       { toolSlug: "copy-ai", title: "邮件/短信自提文案", description: "英/西两语" },
       { toolSlug: "deepl", title: "自提提醒4语", description: "英法西葡4语" },
-      { toolSlug: "smallpdf", title: "门店清单PDF", description: "地址+营业时间+电话" },
+      { toolSlug: 'pdf-merger', title: "门店清单PDF", description: "地址+营业时间+电话" },
       { toolSlug: "base64-tool", title: "取货码编码", description: "自提验证码加密存" },
     ],
   },
@@ -3702,7 +3702,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "photopea", title: "50×30外箱贴", description: "矢量高清CMYK可打印" },
       { toolSlug: "canva", title: "产品小吊牌", description: "对折卡吊牌设计稿" },
       { toolSlug: "deepl", title: "多语警告语", description: "英法德西意5语警告" },
-      { toolSlug: "smallpdf", title: "打印稿PDF", description: "拼A4一版10个" },
+      { toolSlug: 'pdf-merger', title: "打印稿PDF", description: "拼A4一版10个" },
     ],
   },
   {
@@ -3720,7 +3720,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "素材版AB", description: "3套不同创意" },
       { toolSlug: "deepl", title: "英语语法校对", description: "文案母语化润色" },
       { toolSlug: "photopea", title: "不同尺寸切割", description: "Feed/Reels/Stories三套" },
-      { toolSlug: "smallpdf", title: "测试矩阵PDF", description: "20组矩阵存档PDF" },
+      { toolSlug: 'pdf-merger', title: "测试矩阵PDF", description: "20组矩阵存档PDF" },
     ],
   },
   {
@@ -3736,7 +3736,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: "image-compressor", title: "首屏图压缩", description: "首图WebP 100KB以内" },
       { toolSlug: "image-format-converter", title: "格式转WebP", description: "全站PNG→WebP" },
-      { toolSlug: "smallpdf", title: "速度报告PDF", description: "GTMetrix优化前后对比" },
+      { toolSlug: 'pdf-merger', title: "速度报告PDF", description: "GTMetrix优化前后对比" },
       { toolSlug: "photopea", title: "首屏Hero图尺寸", description: "桌面/移动不同尺寸裁剪" },
       { toolSlug: "base64-tool", title: "CSS图标编码", description: "小图标Base64减少HTTP" },
     ],
@@ -3756,7 +3756,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "中→韩商务翻译", description: "客服模板韩语版" },
       { toolSlug: "photopea", title: "500×500主图", description: "符合Coupang规范" },
       { toolSlug: 'pdf-merger', title: "资质PDF合并", description: "营业执照+护照+对公户" },
-      { toolSlug: "smallpdf", title: "韩文合规文档", description: "电子消费法条款PDF" },
+      { toolSlug: 'pdf-merger', title: "韩文合规文档", description: "电子消费法条款PDF" },
     ],
   },
   {
@@ -3773,7 +3773,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "西语/葡语模板", description: "Listing/售后双语模板" },
       { toolSlug: "deepl", title: "中→西+中→葡", description: "合规条款翻译" },
       { toolSlug: "photopea", title: "产品图600×600", description: "美客多标准图" },
-      { toolSlug: "smallpdf", title: "资质签名PDF", description: "公证文件合并盖章" },
+      { toolSlug: 'pdf-merger', title: "资质签名PDF", description: "公证文件合并盖章" },
       { toolSlug: "canva", title: "巴西站点节日素材", description: "巴西狂欢节/圣诞节素材包" },
     ],
   },
@@ -3792,7 +3792,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "中→印地语", description: "印地语Listing翻译" },
       { toolSlug: "photopea", title: "方图", description: "印度用户习惯方图" },
       { toolSlug: "canva", title: "节日素材", description: "排灯节/洒红节素材" },
-      { toolSlug: "smallpdf", title: "卖家手册PDF", description: "英文操作指南存档" },
+      { toolSlug: 'pdf-merger', title: "卖家手册PDF", description: "英文操作指南存档" },
     ],
   },
   {
@@ -3810,7 +3810,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "越/泰/马来语翻译", description: "3国本地化翻译" },
       { toolSlug: "photopea", title: "产品主图", description: "平台标准尺寸" },
       { toolSlug: "canva", title: "9.9/11.11大促图", description: "东南亚大促模板" },
-      { toolSlug: "smallpdf", title: "多店运营SOP", description: "每个店铺运营节奏表PDF" },
+      { toolSlug: 'pdf-merger', title: "多店运营SOP", description: "每个店铺运营节奏表PDF" },
     ],
   },
   {
@@ -3827,7 +3827,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文达人邀请邮件", description: "10种风格开场白模板" },
       { toolSlug: "canva", title: "产品卡", description: "产品单页PDF介绍" },
       { toolSlug: "deepl", title: "美/英/澳母语化", description: "英语母语化达人邮件" },
-      { toolSlug: "smallpdf", title: "达人资料表PDF", description: "100位达人名单存档" },
+      { toolSlug: 'pdf-merger', title: "达人资料表PDF", description: "100位达人名单存档" },
       { toolSlug: "image-compressor", title: "产品图邮件版", description: "邮件内图片≤200KB" },
     ],
   },
@@ -3846,7 +3846,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文促销邮件", description: "粉丝促销邮件模板" },
       { toolSlug: "canva", title: "A+促销图", description: "Deal促销期间主图打标" },
       { toolSlug: "deepl", title: "欧洲5语", description: "英法德意西促销文案" },
-      { toolSlug: "smallpdf", title: "排期PDF", description: "Q4促销日历表分发团队" },
+      { toolSlug: 'pdf-merger', title: "排期PDF", description: "Q4促销日历表分发团队" },
     ],
   },
   {
@@ -3862,7 +3862,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: "copy-ai", title: "英文政策5篇", description: "GDPR/CCPA合规模板" },
       { toolSlug: "deepl", title: "欧盟4语翻译", description: "英法德意西语政策" },
-      { toolSlug: "smallpdf", title: "政策PDF", description: "签字盖章存档" },
+      { toolSlug: 'pdf-merger', title: "政策PDF", description: "签字盖章存档" },
       { toolSlug: "canva", title: "政策页Icon", description: "5页Icon插图" },
       { toolSlug: 'pdf-merger', title: "政策合并PDF", description: "5页合并成一份可下载" },
     ],
@@ -3882,7 +3882,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文Overview文案", description: "150字以内职业概述" },
       { toolSlug: "photopea", title: "作品集封面", description: "5个过往项目封面900×600" },
       { toolSlug: "deepl", title: "英语母语润色", description: "所有文案母语级别修正" },
-      { toolSlug: "smallpdf", title: "简历PDF", description: "简历PDF英文无错字" },
+      { toolSlug: 'pdf-merger', title: "简历PDF", description: "简历PDF英文无错字" },
     ],
   },
   {
@@ -3900,7 +3900,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "Gig缩略图", description: "3张不同卖点1280×769" },
       { toolSlug: "image-compressor", title: "图片≤5MB", description: "Fiverr可压缩" },
       { toolSlug: "erank", title: "关键词灵感", description: "平台TOP10卖家标签" },
-      { toolSlug: "smallpdf", title: "FAQ文档PDF", description: "20条常问问题回答模板" },
+      { toolSlug: 'pdf-merger', title: "FAQ文档PDF", description: "20条常问问题回答模板" },
     ],
   },
   {
@@ -3918,7 +3918,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "photopea", title: "作品集PDF封面", description: "封面品牌化设计" },
       { toolSlug: "copy-ai", title: "英文面试话术", description: "20个常见问题答案" },
       { toolSlug: "deepl", title: "德语/法语翻译", description: "欧企岗位小语种简历" },
-      { toolSlug: "smallpdf", title: "全套PDF合并", description: "简历+作品+推荐信合成" },
+      { toolSlug: 'pdf-merger', title: "全套PDF合并", description: "简历+作品+推荐信合成" },
     ],
   },
   {
@@ -3934,7 +3934,7 @@ export const workflows: Workflow[] = [
     steps: [
       { toolSlug: "copy-ai", title: "英文合同模板", description: "Scope+付款+版权完整条款" },
       { toolSlug: "deepl", title: "客户母语版本", description: "西语/法语/德语版本" },
-      { toolSlug: "smallpdf", title: "合同PDF加密", description: "加水印+签名密码" },
+      { toolSlug: 'pdf-merger', title: "合同PDF加密", description: "加水印+签名密码" },
       { toolSlug: "canva", title: "发票模板", description: "每月发票PDF模板" },
       { toolSlug: 'pdf-merger', title: "多文件合并", description: "合同+SOW+报价单1份" },
     ],
@@ -3953,7 +3953,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文催款邮件5条", description: "3天/7天/14天/最终通知" },
       { toolSlug: "canva", title: "发票设计", description: "A4带品牌Logo" },
       { toolSlug: "deepl", title: "客户母语发票", description: "西/法语客户发票" },
-      { toolSlug: "smallpdf", title: "发票PDF加密", description: "防篡改+水印" },
+      { toolSlug: 'pdf-merger', title: "发票PDF加密", description: "防篡改+水印" },
       { toolSlug: "base64-tool", title: "发票号编码", description: "发票号规则加密存" },
     ],
   },
@@ -3971,7 +3971,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文10封提案", description: "10种岗位提案模板" },
       { toolSlug: "deepl", title: "母语润色", description: "自然地道英语" },
       { toolSlug: "canva", title: "作品集缩略卡", description: "提案附作品集PDF" },
-      { toolSlug: "smallpdf", title: "作品PDF合并", description: "≤5MB可邮件发" },
+      { toolSlug: 'pdf-merger', title: "作品PDF合并", description: "≤5MB可邮件发" },
       { toolSlug: "image-compressor", title: "作品封面", description: "邮件封面图≤200KB" },
     ],
   },
@@ -3989,7 +3989,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文欢迎邮件", description: "5步客户上岗流程说明" },
       { toolSlug: "canva", title: "问卷图", description: "Airtable表单封面" },
       { toolSlug: "deepl", title: "客户母语翻译", description: "非英语客户问卷" },
-      { toolSlug: "smallpdf", title: "NDA合同PDF", description: "保密协议+合同一起签" },
+      { toolSlug: 'pdf-merger', title: "NDA合同PDF", description: "保密协议+合同一起签" },
       { toolSlug: 'pdf-merger', title: "欢迎包合并", description: "所有资料一份PDF" },
     ],
   },
@@ -4008,7 +4008,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "30张配图", description: "不同品牌色统一" },
       { toolSlug: "image-compressor", title: "图片压缩", description: "各平台最佳尺寸" },
       { toolSlug: "deepl", title: "西/法语客群", description: "欧洲客户双语内容" },
-      { toolSlug: "smallpdf", title: "日历PDF", description: "30天排期表PDF下载" },
+      { toolSlug: 'pdf-merger', title: "日历PDF", description: "30天排期表PDF下载" },
     ],
   },
   {
@@ -4026,7 +4026,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "photopea", title: "过往项目封面", description: "统一尺寸项目卡" },
       { toolSlug: "copy-ai", title: "英文About页", description: "自我介绍专业文案" },
       { toolSlug: "image-compressor", title: "作品封面压缩", description: "快速加载" },
-      { toolSlug: "smallpdf", title: "作品备份PDF", description: "作品集备份离线版" },
+      { toolSlug: 'pdf-merger', title: "作品备份PDF", description: "作品集备份离线版" },
     ],
   },
   {
@@ -4044,7 +4044,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "周报图表", description: "周报图表设计" },
       { toolSlug: "copy-ai", title: "英文周报说明", description: "进度+风险+下周计划" },
       { toolSlug: "deepl", title: "法语/西语客户", description: "周报小语种版本" },
-      { toolSlug: "smallpdf", title: "周报签名PDF", description: "盖章确认工作" },
+      { toolSlug: 'pdf-merger', title: "周报签名PDF", description: "盖章确认工作" },
     ],
   },
   {
@@ -4062,7 +4062,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "mortgage-calculator", title: "新工时报价", description: "变更工时+费用预估" },
       { toolSlug: "canva", title: "变更单图", description: "Scope Change单张PDF" },
       { toolSlug: "deepl", title: "客户母语版本", description: "欧洲客户本地语" },
-      { toolSlug: "smallpdf", title: "变更单PDF签名", description: "客户确认签字归档" },
+      { toolSlug: 'pdf-merger', title: "变更单PDF签名", description: "客户确认签字归档" },
     ],
   },
   {
@@ -4080,7 +4080,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "Logo设计", description: "矢量Logo 2版" },
       { toolSlug: "photopea", title: "邮件签名图", description: "600×200签名图" },
       { toolSlug: "copy-ai", title: "品牌口号Slogan", description: "英文Slogan 3版" },
-      { toolSlug: "smallpdf", title: "VI手册PDF", description: "Logo/色/字体使用规范" },
+      { toolSlug: 'pdf-merger', title: "VI手册PDF", description: "Logo/色/字体使用规范" },
     ],
   },
   {
@@ -4098,7 +4098,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文拒接邮件", description: "礼貌拒绝不匹配岗位" },
       { toolSlug: "deepl", title: "英语润色", description: "自然" },
       { toolSlug: "canva", title: "打分卡片图", description: "给自己团队的流程" },
-      { toolSlug: "smallpdf", title: "筛选标准PDF", description: "未来招聘参考" },
+      { toolSlug: 'pdf-merger', title: "筛选标准PDF", description: "未来招聘参考" },
     ],
   },
   {
@@ -4116,7 +4116,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "母语润色", description: "地道英语语气" },
       { toolSlug: "canva", title: "个人资料Banner", description: "1584×396 LinkedIn Banner" },
       { toolSlug: "photopea", title: "案例缩略图", description: "置顶项目案例封面" },
-      { toolSlug: "smallpdf", title: "客户名单PDF", description: "已开发客户跟进表" },
+      { toolSlug: 'pdf-merger', title: "客户名单PDF", description: "已开发客户跟进表" },
     ],
   },
   {
@@ -4134,7 +4134,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "mortgage-calculator", title: "套餐报价算", description: "多档位价格表" },
       { toolSlug: "canva", title: "套餐图", description: "3档套餐对比图" },
       { toolSlug: "deepl", title: "非英语客户", description: "小语种套餐邮件" },
-      { toolSlug: "smallpdf", title: "Retainer合同", description: "月度长期合同签" },
+      { toolSlug: 'pdf-merger', title: "Retainer合同", description: "月度长期合同签" },
     ],
   },
   {
@@ -4152,7 +4152,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "感谢卡", description: "项目结束感谢卡片" },
       { toolSlug: "deepl", title: "客户母语邮件", description: "小语种客户版本" },
       { toolSlug: "photopea", title: "好评截图卡", description: "截图做社媒卡片" },
-      { toolSlug: "smallpdf", title: "好评本PDF", description: "所有好评合并PDF作品集" },
+      { toolSlug: 'pdf-merger', title: "好评本PDF", description: "所有好评合并PDF作品集" },
     ],
   },
   {
@@ -4170,7 +4170,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "配图AI", description: "一键生成设计" },
       { toolSlug: "deepl", title: "翻译AI", description: "多语言翻译校对" },
       { toolSlug: "image-compressor", title: "压缩AI", description: "图片视频" },
-      { toolSlug: "smallpdf", title: "工具栈手册", description: "15款工具使用说明PDF" },
+      { toolSlug: 'pdf-merger', title: "工具栈手册", description: "15款工具使用说明PDF" },
     ],
   },
   {
@@ -4187,7 +4187,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "mortgage-calculator", title: "年度收入/税算", description: "阶梯税率算预估" },
       { toolSlug: "copy-ai", title: "英文税局邮件模板", description: "税局沟通邮件" },
       { toolSlug: "canva", title: "汇总仪表盘图", description: "可视化收入图" },
-      { toolSlug: "smallpdf", title: "12个月发票合并", description: "PDF归档按序" },
+      { toolSlug: 'pdf-merger', title: "12个月发票合并", description: "PDF归档按序" },
       { toolSlug: 'pdf-merger', title: "合同+发票总PDF", description: "一本总档加密" },
     ],
   },
@@ -4206,7 +4206,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "奖励海报", description: "社交平台分享图" },
       { toolSlug: "deepl", title: "客户母语", description: "双语客户说明" },
       { toolSlug: "base64-tool", title: "推荐码编码", description: "每位客户专属推荐码" },
-      { toolSlug: "smallpdf", title: "计划PDF", description: "条款+合同+佣金表" },
+      { toolSlug: 'pdf-merger', title: "计划PDF", description: "条款+合同+佣金表" },
     ],
   },
   {
@@ -4223,7 +4223,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文3阶段邮件", description: "每30天报告邮件" },
       { toolSlug: "canva", title: "报告图", description: "交付可视化" },
       { toolSlug: "deepl", title: "德语/法语报告", description: "欧洲客户报告翻译" },
-      { toolSlug: "smallpdf", title: "验收报告签名", description: "客户签PDF" },
+      { toolSlug: 'pdf-merger', title: "验收报告签名", description: "客户签PDF" },
       { toolSlug: 'pdf-merger', title: "所有报告合并", description: "项目总记录PDF" },
     ],
   },
@@ -4242,7 +4242,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "服务矩阵图", description: "3×3定位矩阵" },
       { toolSlug: "photopea", title: "个人介绍长图", description: "社交平台简介长图" },
       { toolSlug: "deepl", title: "英语润色", description: "专业" },
-      { toolSlug: "smallpdf", title: "定位文件PDF", description: "品牌定位档案" },
+      { toolSlug: 'pdf-merger', title: "定位文件PDF", description: "品牌定位档案" },
     ],
   },
   {
@@ -4260,7 +4260,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文发票说明", description: "发票款项邮件" },
       { toolSlug: "canva", title: "发票设计", description: "符合欧盟/IRS规范" },
       { toolSlug: "deepl", title: "欧盟语言", description: "德法西语版本" },
-      { toolSlug: "smallpdf", title: "发票PDF", description: "加密+签名" },
+      { toolSlug: 'pdf-merger', title: "发票PDF", description: "加密+签名" },
     ],
   },
   {
@@ -4278,7 +4278,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "嘉宾卡", description: "嘉宾社媒宣传图" },
       { toolSlug: "deepl", title: "英语母语润色", description: "采访提纲润色" },
       { toolSlug: "copy-ai", title: "采访回答要点", description: "10个常见问题稿" },
-      { toolSlug: "smallpdf", title: "媒体资料包PDF", description: "Media Kit下载" },
+      { toolSlug: 'pdf-merger', title: "媒体资料包PDF", description: "Media Kit下载" },
     ],
   },
   {
@@ -4296,7 +4296,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文报价邮件", description: "新客户报价信" },
       { toolSlug: "canva", title: "价格表图", description: "官网/社媒价格表" },
       { toolSlug: "deepl", title: "非英语客户", description: "西/法语翻译" },
-      { toolSlug: "smallpdf", title: "报价单签名", description: "客户确认存档" },
+      { toolSlug: 'pdf-merger', title: "报价单签名", description: "客户确认存档" },
     ],
   },
   {
@@ -4314,7 +4314,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "photopea", title: "案例缩略卡", description: "10案例卡片图" },
       { toolSlug: "copy-ai", title: "英文案例介绍", description: "每个案例200字内说明" },
       { toolSlug: "image-compressor", title: "图片压缩", description: "站点加载快" },
-      { toolSlug: "smallpdf", title: "作品本PDF", description: "离线作品集下载" },
+      { toolSlug: 'pdf-merger', title: "作品本PDF", description: "离线作品集下载" },
     ],
   },
   {
@@ -4332,7 +4332,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "母语润色", description: "自然地道英语" },
       { toolSlug: "canva", title: "话术卡片", description: "电话前提醒卡" },
       { toolSlug: "copy-ai", title: "后续跟进邮件", description: "24小时内邮件" },
-      { toolSlug: "smallpdf", title: "话术本PDF", description: "打印随身带" },
+      { toolSlug: 'pdf-merger', title: "话术本PDF", description: "打印随身带" },
     ],
   },
   {
@@ -4350,7 +4350,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "mortgage-calculator", title: "套餐价格梯度", description: "Basic/Pro/Agency报价" },
       { toolSlug: "canva", title: "套餐对比图", description: "3档对比视觉图" },
       { toolSlug: "deepl", title: "德法语", description: "欧洲客户套餐" },
-      { toolSlug: "smallpdf", title: "服务合同签", description: "客户确认长期" },
+      { toolSlug: 'pdf-merger', title: "服务合同签", description: "客户确认长期" },
     ],
   },
   {
@@ -4367,7 +4367,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "CRM封面", description: "Notion数据库Page封面" },
       { toolSlug: "copy-ai", title: "英文字段提示", description: "属性字段说明语" },
       { toolSlug: "base64-tool", title: "客户ID编码", description: "客户唯一编号生成" },
-      { toolSlug: "smallpdf", title: "操作指南PDF", description: "新人手册" },
+      { toolSlug: 'pdf-merger', title: "操作指南PDF", description: "新人手册" },
       { toolSlug: 'pdf-merger', title: "模板备份PDF", description: "Notion离线备份" },
     ],
   },
@@ -4386,7 +4386,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "Landing配图", description: "Hero图/截图/Mockup" },
       { toolSlug: "image-compressor", title: "图片压缩", description: "Landing页加载快" },
       { toolSlug: "base64-tool", title: "优惠码编码", description: "首发优惠码生成" },
-      { toolSlug: "smallpdf", title: "产品路线图PDF", description: "Roadmap 12个月" },
+      { toolSlug: 'pdf-merger', title: "产品路线图PDF", description: "Roadmap 12个月" },
     ],
   },
   {
@@ -4404,7 +4404,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "仪表盘图", description: "7指标可视化" },
       { toolSlug: "copy-ai", title: "英文复盘邮件", description: "给自己或合伙人" },
       { toolSlug: "deepl", title: "欧洲合作方", description: "外语月度复盘" },
-      { toolSlug: "smallpdf", title: "存档PDF", description: "每季度合并一本" },
+      { toolSlug: 'pdf-merger', title: "存档PDF", description: "每季度合并一本" },
     ],
   },
   {
@@ -4422,7 +4422,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文催评邮件", description: "订单后24h催评" },
       { toolSlug: "canva", title: "升级里程碑图", description: "每月进度图" },
       { toolSlug: "deepl", title: "英语润色", description: "专业邮件" },
-      { toolSlug: "smallpdf", title: "升级手册", description: "TRS条件清单PDF" },
+      { toolSlug: 'pdf-merger', title: "升级手册", description: "TRS条件清单PDF" },
     ],
   },
   {
@@ -4440,7 +4440,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "英语母语润色", description: "无销售感" },
       { toolSlug: "canva", title: "邮件签名图", description: "带社媒链接" },
       { toolSlug: "image-compressor", title: "邮件图片≤100KB", description: "不进垃圾箱" },
-      { toolSlug: "smallpdf", title: "邮件脚本PDF", description: "团队分享存档" },
+      { toolSlug: 'pdf-merger', title: "邮件脚本PDF", description: "团队分享存档" },
     ],
   },
   {
@@ -4458,7 +4458,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "案例故事英文", description: "最近成功案例" },
       { toolSlug: "deepl", title: "母语润色", description: "友好温暖语气" },
       { toolSlug: "canva", title: "节日贺卡图", description: "节日祝福图片" },
-      { toolSlug: "smallpdf", title: "客户名单PDF", description: "跟进状态PDF存档" },
+      { toolSlug: 'pdf-merger', title: "客户名单PDF", description: "跟进状态PDF存档" },
     ],
   },
   {
@@ -4494,7 +4494,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "30张封面", description: "9:16封面文字" },
       { toolSlug: "photopea", title: "9:16裁切", description: "标准竖屏" },
       { toolSlug: "image-compressor", title: "压缩封面", description: "IG最佳" },
-      { toolSlug: "smallpdf", title: "排期PDF", description: "30天排期本" },
+      { toolSlug: 'pdf-merger', title: "排期PDF", description: "30天排期本" },
     ],
   },
   {
@@ -4512,7 +4512,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "字幕卡片", description: "10套字幕模板" },
       { toolSlug: "deepl", title: "英语自然化", description: "口语化表达" },
       { toolSlug: "photopea", title: "9:16截图", description: "封面截图设计" },
-      { toolSlug: "smallpdf", title: "脚本本PDF", description: "50条Hook打印" },
+      { toolSlug: 'pdf-merger', title: "脚本本PDF", description: "50条Hook打印" },
     ],
   },
   {
@@ -4530,7 +4530,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "母语校对", description: "英语/西语校对" },
       { toolSlug: "canva", title: "文章配图", description: "Pillar文章Hero图" },
       { toolSlug: "image-compressor", title: "图片压缩", description: "页面加载速度" },
-      { toolSlug: "smallpdf", title: "外链计划PDF", description: "Outreach名单+话术" },
+      { toolSlug: 'pdf-merger', title: "外链计划PDF", description: "Outreach名单+话术" },
     ],
   },
   {
@@ -4547,7 +4547,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "Notion封面图", description: "数据库封面设计" },
       { toolSlug: "copy-ai", title: "字段标签", description: "内容字段英文标签" },
       { toolSlug: "base64-tool", title: "内容ID编码", description: "内容唯一编号" },
-      { toolSlug: "smallpdf", title: "操作指南PDF", description: "团队使用手册" },
+      { toolSlug: 'pdf-merger', title: "操作指南PDF", description: "团队使用手册" },
       { toolSlug: 'pdf-merger', title: "备份PDF", description: "Notion离线备份" },
     ],
   },
@@ -4566,7 +4566,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "Landing Hero图", description: "邮箱订阅首屏图" },
       { toolSlug: "copy-ai", title: "Welcome邮件", description: "欢迎序列3封" },
       { toolSlug: "deepl", title: "西/法语版本", description: "双语Newsletter" },
-      { toolSlug: "smallpdf", title: "首期PDF", description: "第一期Newsletter存档" },
+      { toolSlug: 'pdf-merger', title: "首期PDF", description: "第一期Newsletter存档" },
     ],
   },
   {
@@ -4584,7 +4584,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "播客封面", description: "3000×3000封面图" },
       { toolSlug: "copy-ai", title: "Shownotes英文", description: "每集Shownotes" },
       { toolSlug: "photopea", title: "嘉宾封面", description: "嘉宾分享卡" },
-      { toolSlug: "smallpdf", title: "10期Shownotes", description: "Shownotes本PDF" },
+      { toolSlug: 'pdf-merger', title: "10期Shownotes", description: "Shownotes本PDF" },
     ],
   },
   {
@@ -4602,7 +4602,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文Listing文案", description: "Title/Tags/说明" },
       { toolSlug: "erank", title: "Etsy关键词", description: "Etsy搜索词推荐" },
       { toolSlug: "photopea", title: "Mockup预览", description: "每套模板预览图" },
-      { toolSlug: "smallpdf", title: "使用说明PDF", description: "顾客下载指南" },
+      { toolSlug: 'pdf-merger', title: "使用说明PDF", description: "顾客下载指南" },
     ],
   },
   {
@@ -4620,7 +4620,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "英文母语润色", description: "语法+表达" },
       { toolSlug: "canva", title: "每篇Hero图", description: "1920×1080" },
       { toolSlug: "image-compressor", title: "图片压缩", description: "快速加载" },
-      { toolSlug: "smallpdf", title: "4篇合并", description: "存档PDF每季度一本" },
+      { toolSlug: 'pdf-merger', title: "4篇合并", description: "存档PDF每季度一本" },
     ],
   },
   {
@@ -4638,7 +4638,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "10张配图", description: "数据可视化图表" },
       { toolSlug: "deepl", title: "英语润色", description: "商务英语" },
       { toolSlug: "photopea", title: "长文封面", description: "LinkedIn文章封面" },
-      { toolSlug: "smallpdf", title: "30天排期", description: "日历PDF打印" },
+      { toolSlug: 'pdf-merger', title: "30天排期", description: "日历PDF打印" },
     ],
   },
   {
@@ -4656,7 +4656,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "西/法语", description: "欧洲市场字幕" },
       { toolSlug: "canva", title: "字幕模板", description: "10套风格化字幕" },
       { toolSlug: "photopea", title: "字幕卡片图", description: "封面字幕卡" },
-      { toolSlug: "smallpdf", title: "SRT包PDF", description: "10条SRT打包" },
+      { toolSlug: 'pdf-merger', title: "SRT包PDF", description: "10条SRT打包" },
     ],
   },
   {
@@ -4674,7 +4674,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "10版缩略图", description: "5标题×2风格" },
       { toolSlug: "photopea", title: "1280×720裁切", description: "YT标准" },
       { toolSlug: "image-compressor", title: "压缩≤2MB", description: "上传要求" },
-      { toolSlug: "smallpdf", title: "对比PDF", description: "10版并排对比会" },
+      { toolSlug: 'pdf-merger', title: "对比PDF", description: "10版并排对比会" },
     ],
   },
   {
@@ -4692,7 +4692,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "Meta描述", description: "20条Meta Description" },
       { toolSlug: "canva", title: "关键词簇图", description: "思维导图可视化" },
       { toolSlug: "deepl", title: "英语校对", description: "标题自然" },
-      { toolSlug: "smallpdf", title: "关键词PDF", description: "簇词库打印给团队" },
+      { toolSlug: 'pdf-merger', title: "关键词PDF", description: "簇词库打印给团队" },
     ],
   },
   {
@@ -4710,7 +4710,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "完整Thread", description: "每条10个连续推文" },
       { toolSlug: "canva", title: "配图5张", description: "配合推文5张图" },
       { toolSlug: "deepl", title: "英语母语", description: "口语化自然" },
-      { toolSlug: "smallpdf", title: "Thread模板", description: "10版收藏PDF" },
+      { toolSlug: 'pdf-merger', title: "Thread模板", description: "10版收藏PDF" },
     ],
   },
   {
@@ -4728,7 +4728,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "mortgage-calculator", title: "报价算", description: "阅读量×CPM×时长" },
       { toolSlug: "canva", title: "Media Kit", description: "2页媒体资料包" },
       { toolSlug: "deepl", title: "品牌母语", description: "欧洲客户德语/法语" },
-      { toolSlug: "smallpdf", title: "合同签PDF", description: "盖章签名归档" },
+      { toolSlug: 'pdf-merger', title: "合同签PDF", description: "盖章签名归档" },
     ],
   },
   {
@@ -4764,7 +4764,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "7套尺寸", description: "横图/方图/竖图" },
       { toolSlug: "photopea", title: "尺寸裁切", description: "平台最佳尺寸" },
       { toolSlug: "image-compressor", title: "图片压缩", description: "各平台大小" },
-      { toolSlug: "smallpdf", title: "7端矩阵PDF", description: "复用指南存档" },
+      { toolSlug: 'pdf-merger', title: "7端矩阵PDF", description: "复用指南存档" },
     ],
   },
   {
@@ -4782,7 +4782,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "mortgage-calculator", title: "定价梯度", description: "每档广告价格算" },
       { toolSlug: "canva", title: "Sponsor Kit", description: "2页广告资料包" },
       { toolSlug: "deepl", title: "欧洲语言", description: "欧洲赞助商介绍" },
-      { toolSlug: "smallpdf", title: "Sponsor合同", description: "年度赞助合同签" },
+      { toolSlug: 'pdf-merger', title: "Sponsor合同", description: "年度赞助合同签" },
     ],
   },
   {
@@ -4836,7 +4836,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "分镜卡", description: "9格分镜表图" },
       { toolSlug: "deepl", title: "英语/西班牙语", description: "团队外籍成员用" },
       { toolSlug: "copy-ai", title: "拍摄说明", description: "每个镜头一句话" },
-      { toolSlug: "smallpdf", title: "打印版", description: "拍摄现场PDF随身" },
+      { toolSlug: 'pdf-merger', title: "打印版", description: "拍摄现场PDF随身" },
     ],
   },
   {
@@ -4853,7 +4853,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文指南6000字", description: "4部分完整" },
       { toolSlug: "canva", title: "指南封面", description: "A4可打印封面" },
       { toolSlug: "deepl", title: "法/德语", description: "欧洲团队成员" },
-      { toolSlug: "smallpdf", title: "PDF签名", description: "团队确认" },
+      { toolSlug: 'pdf-merger', title: "PDF签名", description: "团队确认" },
       { toolSlug: 'pdf-merger', title: "附件合并", description: "指南+模板+例" },
     ],
   },
@@ -4872,7 +4872,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "邮件Banner", description: "3张节日/新品Banner" },
       { toolSlug: "deepl", title: "法语/西语", description: "双语序列" },
       { toolSlug: "image-compressor", title: "Banner压缩", description: "≤300KB" },
-      { toolSlug: "smallpdf", title: "邮件脚本", description: "7封存档PDF" },
+      { toolSlug: 'pdf-merger', title: "邮件脚本", description: "7封存档PDF" },
     ],
   },
   {
@@ -4890,7 +4890,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "英文使用说明", description: "1000字使用指南" },
       { toolSlug: "copy-ai", title: "Listing标题", description: "Etsy/Shopify标题" },
       { toolSlug: "photopea", title: "预览Mockup", description: "产品预览图5张" },
-      { toolSlug: "smallpdf", title: "使用指南PDF", description: "随下载附赠" },
+      { toolSlug: 'pdf-merger', title: "使用指南PDF", description: "随下载附赠" },
     ],
   },
   {
@@ -4908,7 +4908,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "逼单话术", description: "10条逼单节奏点" },
       { toolSlug: "canva", title: "直播间贴片", description: "背景板/优惠券图" },
       { toolSlug: "deepl", title: "东南亚语言", description: "马来/越南/泰语" },
-      { toolSlug: "smallpdf", title: "直播流程PDF", description: "团队人手一份" },
+      { toolSlug: 'pdf-merger', title: "直播流程PDF", description: "团队人手一份" },
     ],
   },
   {
@@ -4926,7 +4926,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "清单卡片", description: "18项可视化卡片" },
       { toolSlug: "base64-tool", title: "文章ID编码", description: "发布编号生成" },
       { toolSlug: "deepl", title: "法/德语", description: "欧洲团队" },
-      { toolSlug: "smallpdf", title: "打印清单", description: "发布前逐项勾" },
+      { toolSlug: 'pdf-merger', title: "打印清单", description: "发布前逐项勾" },
     ],
   },
   {
@@ -4962,7 +4962,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "deepl", title: "西语/法语脚本", description: "双语频道版本" },
       { toolSlug: "canva", title: "封面3000×3000", description: "Podcast封面设计" },
       { toolSlug: "photopea", title: "每集方形卡片", description: "社交平台分享图" },
-      { toolSlug: "smallpdf", title: "Shownotes PDF", description: "10集Shownotes本" },
+      { toolSlug: 'pdf-merger', title: "Shownotes PDF", description: "10集Shownotes本" },
     ],
   },
   {
@@ -4980,7 +4980,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "mortgage-calculator", title: "价格梯度", description: "个人/团队/企业3档" },
       { toolSlug: "canva", title: "销售页", description: "Hero/定价/FAQ 3屏" },
       { toolSlug: "copy-ai", title: "销售页文案", description: "长页销售文案" },
-      { toolSlug: "smallpdf", title: "产品手册PDF", description: "交付内容+MRR条款" },
+      { toolSlug: 'pdf-merger', title: "产品手册PDF", description: "交付内容+MRR条款" },
     ],
   },
   {
@@ -4998,7 +4998,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "客户引言", description: "Pull Quote引言" },
       { toolSlug: "canva", title: "数据卡片", description: "关键成果数字图" },
       { toolSlug: "photopea", title: "Logo拼图", description: "客户Logo墙" },
-      { toolSlug: "smallpdf", title: "Case PDF下载", description: "可公开下载版" },
+      { toolSlug: 'pdf-merger', title: "Case PDF下载", description: "可公开下载版" },
     ],
   },
   {
@@ -5016,7 +5016,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "5页Canva模板", description: "A4品牌色" },
       { toolSlug: "copy-ai", title: "英文自我介绍", description: "About us + 数据说明" },
       { toolSlug: "photopea", title: "账号数据截图", description: "粉丝/播放马赛克" },
-      { toolSlug: "smallpdf", title: "资料包PDF", description: "发给品牌方2MB内" },
+      { toolSlug: 'pdf-merger', title: "资料包PDF", description: "发给品牌方2MB内" },
     ],
   },
   {
@@ -5034,7 +5034,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "canva", title: "食谱卡片", description: "IG/Pinterest食谱图" },
       { toolSlug: "photopea", title: "步骤拼图", description: "步骤1-9拼图长图" },
       { toolSlug: "remove-bg", title: "美食抠图", description: "菜品纯净背景" },
-      { toolSlug: "smallpdf", title: "食谱PDF下载", description: "Newsletter用户免费" },
+      { toolSlug: 'pdf-merger', title: "食谱PDF下载", description: "Newsletter用户免费" },
     ],
   },
   {
@@ -5052,7 +5052,7 @@ export const workflows: Workflow[] = [
       { toolSlug: "copy-ai", title: "免费报告", description: "20页PDF英文报告" },
       { toolSlug: "copy-ai", title: "英文销售页", description: "长页销售文案3版" },
       { toolSlug: "mortgage-calculator", title: "3档定价", description: "免费/7/97三档" },
-      { toolSlug: "smallpdf", title: "PDF全套", description: "报告+手册+销售页文案" },
+      { toolSlug: 'pdf-merger', title: "PDF全套", description: "报告+手册+销售页文案" },
     ],
   },
 ];

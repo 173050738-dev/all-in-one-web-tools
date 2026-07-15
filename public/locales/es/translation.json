@@ -7758,6 +7758,276 @@
           }
         ]
       }
+    },
+    "task-breakdown": {
+      "name": "Descomponedor de Tareas",
+      "description": "Divide metas vagas en pasos accionables con análisis impulsado por IA.",
+      "seo": {
+        "intro": "Descomponedor de Tareas es una herramienta de planificación inteligente que divide automáticamente cualquier meta vaga o tarea compleja en pasos claros y accionables. Simplemente ingresa tu meta, y la IA analizará las diferentes dimensiones de la tarea, generando un plan de ejecución estructurado para ayudarte a pasar de la idea a la acción.",
+        "scenarios": [
+          "Cuando te enfrentas a una meta de proyecto ambiciosa y no sabes por dónde empezar",
+          "Antes de escribir una tesis o informe, divídelo en capítulos pequeños y hitos",
+          "Durante la colaboración en equipo, divide las metas del proyecto en tareas específicas asignables"
+        ],
+        "tutorial": [
+          "Ingresa tu meta o descripción de la tarea en el cuadro de entrada",
+          "Haz clic en el botón de descomposición, la IA analizará automáticamente y generará pasos",
+          "Ver la lista de pasos generados y ejecútalos en orden",
+          "Copia los pasos a tu lista de tareas o compártelos con tu equipo"
+        ],
+        "advantages": [
+          "El análisis inteligente de la IA identifica automáticamente los nodos clave y las dependencias de las tareas",
+          "Los pasos generados son claros y específicos, listos para ejecutarse directamente",
+          "Admite varios tipos de tareas, desde el aprendizaje personal hasta los proyectos de equipo"
+        ],
+        "faqs": [
+          {
+            "q": "¿Se pueden ajustar los pasos?",
+            "a": "Sí, los pasos generados son sugerencias, y puedes ajustar el orden o agregar/eliminar pasos según las situaciones reales."
+          },
+          {
+            "q": "¿Qué tipos de tareas se admiten?",
+            "a": "Admite varios tipos de tareas, incluidos planes de estudio, gestión de proyectos, planes de escritura, arreglos de viaje, etc."
+          },
+          {
+            "q": "¿Se necesita internet?",
+            "a": "Sí, esta herramienta necesita llamar a servicios de IA para el análisis y requiere conexión a internet."
+          },
+          {
+            "q": "¿Se guardarán los pasos generados?",
+            "a": "La herramienta no guarda automáticamente tus tareas. Se recomienda copiar los pasos a tu herramienta de gestión de tareas."
+          },
+          {
+            "q": "¿Se admite la descripción de tareas multilingüe?",
+            "a": "Admite entrada en chino e inglés, y genera pasos en el idioma correspondiente."
+          }
+        ]
+      }
+    },
+    "tone-changer": {
+      "name": "Cambiador de Tono",
+      "description": "Cambia el tono del texto instantáneamente, admite tonos formal, amigable, conciso, humorístico.",
+      "seo": {
+        "intro": "Cambiador de Tono es una herramienta de ajuste de estilo de texto que puede convertir instantáneamente tu texto a diferentes estilos de tono. Admite tonos formal, amigable, conciso, humorístico, persuasivo, profesional, etc., ayudándote a transmitir emociones y actitudes apropiadas en diferentes ocasiones.",
+        "scenarios": [
+          "Al escribir correos electrónicos, ajusta los borradores del estilo informal al estilo de negocios formal",
+          "Al publicar en redes sociales, haz que el contenido sea más humorístico o persuasivo",
+          "Al responder a clientes, ajusta el tono para que coincida con su estilo de comunicación"
+        ],
+        "tutorial": [
+          "Pega el texto que necesita ajuste de tono en el cuadro de entrada",
+          "Selecciona el estilo de tono objetivo",
+          "Haz clic en el botón de conversión para ver el texto convertido",
+          "Copia el resultado o sigue ajustando hasta estar satisfecho"
+        ],
+        "advantages": [
+          "Admite 6 estilos de tono comunes, cubriendo escenarios profesionales, sociales, académicos, etc.",
+          "La conversión inteligente de la IA mantiene el significado original mientras ajusta el tono",
+          "Velocidad de conversión rápida, no se necesita esperar"
+        ],
+        "faqs": [
+          {
+            "q": "¿La conversión cambiará el significado original?",
+            "a": "No, la herramienta intentará mantener el significado original y solo ajustará el tono y la expresión."
+          },
+          {
+            "q": "¿Qué idiomas se admiten?",
+            "a": "Principalmente admite la conversión de tono para textos en chino e inglés."
+          },
+          {
+            "q": "¿Puedo personalizar el estilo de tono?",
+            "a": "Actualmente se proporcionan 6 estilos predefinidos. Se considerarán opciones de personalización en el futuro."
+          },
+          {
+            "q": "¿Hay un límite de longitud de texto?",
+            "a": "Se recomienda no superar los 1000 caracteres por conversión. Un texto demasiado largo puede afectar los resultados de la conversión."
+          },
+          {
+            "q": "¿Se puede editar el resultado de la conversión?",
+            "a": "Sí, el texto convertido se puede editar y modificar directamente."
+          }
+        ]
+      }
+    },
+    "focus-timer": {
+      "name": "Temporizador de Enfoque",
+      "description": "Temporizador de la técnica Pomodoro con intervalos de trabajo/descanso personalizables para mayor enfoque.",
+      "seo": {
+        "intro": "Temporizador de Enfoque adopta la técnica Pomodoro clásica para ayudarte a mantener un enfoque eficiente. Establece la duración del trabajo y la duración del descanso, enfócate en el trabajo durante 25 minutos, descansa 5 minutos y repite. Esto mantiene tu cerebro en un estado óptimo entre enfoque y relajación.",
+        "scenarios": [
+          "Usa el temporizador Pomodoro para mantener el enfoque al codificar o escribir documentos",
+          "Al prepararte para exámenes, organiza el contenido de estudio por períodos",
+          "Durante los intervalos entre reuniones, usa períodos cortos para manejar tareas urgentes"
+        ],
+        "tutorial": [
+          "Establece la duración del trabajo (predeterminado 25 minutos) y la duración del descanso (predeterminado 5 minutos)",
+          "Haz clic en el botón de inicio y enfócate en el trabajo hasta que termine el temporizador",
+          "Después de que termine el tiempo de descanso, se te recordará automáticamente iniciar la próxima ronda",
+          "Puedes pausar o reiniciar el temporizador en cualquier momento"
+        ],
+        "advantages": [
+          "Funciona puramente localmente, no se necesita internet, no divulga tu contenido de trabajo",
+          "Admite duraciones personalizables para adaptarse a diferentes ritmos de trabajo",
+          "Diseño de interfaz simple que no distrae"
+        ],
+        "faqs": [
+          {
+            "q": "¿Qué es la técnica Pomodoro?",
+            "a": "La técnica Pomodoro es un método de gestión del tiempo que divide el tiempo de trabajo en sesiones Pomodoro de 25 minutos, con un descanso de 5 minutos después de cada sesión y un descanso más largo después de 4 sesiones."
+          },
+          {
+            "q": "¿Hará el temporizador un sonido al finalizar?",
+            "a": "Sí, habrá un sonido de notificación cuando termine el temporizador para recordarte cambiar de estado."
+          },
+          {
+            "q": "¿Puede funcionar en segundo plano?",
+            "a": "Puede funcionar en segundo plano, pero el temporizador se detendrá cuando se cierre el navegador."
+          },
+          {
+            "q": "¿Admite modo de bucle?",
+            "a": "Sí, circulará automáticamente por los períodos de trabajo y descanso."
+          },
+          {
+            "q": "¿Se guardarán los datos?",
+            "a": "Los datos del temporizador solo se guardan en la sesión actual y no se conservarán después de cerrar la página."
+          }
+        ]
+      }
+    },
+    "concept-explain": {
+      "name": "Simplificador de Conceptos",
+      "description": "Explica conceptos complejos en términos simples con analogías y ejemplos.",
+      "seo": {
+        "intro": "Simplificador de Conceptos es una herramienta de popularización del conocimiento que explica conceptos complejos en lenguaje fácil de entender. Ya sea terminología de programación, teorías científicas o conceptos comerciales, después de ingresarlos, la IA usará analogías de la vida cotidiana y ejemplos prácticos para ayudarte a entender.",
+        "scenarios": [
+          "Al aprender nuevas tecnologías, úsalo para explicar términos profesionales difíciles",
+          "Explica conceptos de tu trabajo a personas no profesionales",
+          "Al tutorizar a niños, simplifica el conocimiento complejo"
+        ],
+        "tutorial": [
+          "Ingresa el concepto complejo o término que quieres entender",
+          "Haz clic en el botón de explicación, la IA generará una explicación fácil de entender",
+          "Lee las analogías y ejemplos para profundizar tu comprensión",
+          "Puedes seguir haciendo preguntas o probar otros conceptos"
+        ],
+        "advantages": [
+          "La IA simplifica inteligentemente la terminología profesional en lenguaje cotidiano",
+          "Proporciona analogías de la vida cotidiana para una comprensión más fácil",
+          "Admite explicaciones de conceptos en varios campos"
+        ],
+        "faqs": [
+          {
+            "q": "¿Qué campos de conceptos se admiten?",
+            "a": "Admite explicaciones de conceptos en programación, ciencia, comercio, derecho, medicina y otros campos."
+          },
+          {
+            "q": "¿Cómo se garantiza la precisión de la explicación?",
+            "a": "Basada en el conocimiento del modelo de IA, intentará proporcionar explicaciones precisas. Sin embargo, se recomienda consultar materiales profesionales para conceptos importantes."
+          },
+          {
+            "q": "¿Se pueden explicar conceptos chinos?",
+            "a": "Sí, admite la explicación de conceptos chinos e ingleses."
+          },
+          {
+            "q": "¿La explicación incluirá ejemplos?",
+            "a": "Sí, generalmente incluirá analogías de la vida cotidiana y ejemplos prácticos."
+          },
+          {
+            "q": "¿Se necesita internet?",
+            "a": "Sí, se necesitan llamar a servicios de IA para las explicaciones, requiriendo conexión a internet."
+          }
+        ]
+      }
+    },
+    "idea-to-action": {
+      "name": "Activador de Ideas",
+      "description": "Convierte ideas en planes de acción con listas de acciones ordenadas por prioridad.",
+      "seo": {
+        "intro": "Activador de Ideas te ayuda a convertir las ideas de tu mente en planes de acción concretos. Ingresa tu idea creativa, y la IA analizará su viabilidad, la dividirá en pasos ejecutables y la ordenará por prioridad, para que tus ideas no se queden en la etapa de imaginación.",
+        "scenarios": [
+          "Después de una lluvia de ideas, organiza las ideas dispersas en planes de acción",
+          "Cuando las ideas de inicio necesitan concretizarse, genera pasos de implementación",
+          "Cuando los objetivos personales necesitan dividirse en tareas ejecutables"
+        ],
+        "tutorial": [
+          "Ingresa tu idea creativa o su descripción",
+          "Haz clic en el botón de conversión, la IA analizará y generará pasos de acción",
+          "Ver la lista de acciones ordenada por prioridad",
+          "Copia los pasos o comienza la ejecución"
+        ],
+        "advantages": [
+          "La IA analiza inteligentemente la viabilidad y los pasos clave de las ideas",
+          "Ordena automáticamente por prioridad, haz las cosas más importantes primero",
+          "Admite varios tipos de ideas y conceptos"
+        ],
+        "faqs": [
+          {
+            "q": "¿Se pueden ajustar los pasos de acción generados?",
+            "a": "Sí, puedes ajustar el orden de los pasos o agregar/eliminar pasos según las situaciones reales."
+          },
+          {
+            "q": "¿Cómo se determina la prioridad?",
+            "a": "Basado en el análisis de la IA de la importancia de los pasos y las dependencias, ordena automáticamente."
+          },
+          {
+            "q": "¿Se admite colaboración multipersonal?",
+            "a": "Actualmente es una herramienta personal. Se recomienda copiar los pasos a herramientas de colaboración en equipo para compartir."
+          },
+          {
+            "q": "¿Se guardarán las ideas?",
+            "a": "No se guardan automáticamente. Se recomienda copiar los resultados a tu herramienta de notas."
+          },
+          {
+            "q": "¿Puede manejar proyectos de inicio complejos?",
+            "a": "Puede manejarlos, pero los proyectos complejos pueden requerir varias divisiones y ajustes."
+          }
+        ]
+      }
+    },
+    "time-estimator": {
+      "name": "Estimador de Tiempo",
+      "description": "Estima la duración de las tareas con escenarios optimistas, realistas y pesimistas.",
+      "seo": {
+        "intro": "Estimador de Tiempo te ayuda a estimar más precisamente el tiempo necesario para completar una tarea. Basado en el método de estimación de tres puntos, proporciona estimaciones de tiempo optimistas, más probables y pesimistas, y calcula un promedio ponderado, ayudándote a hacer planes y expectativas más razonables.",
+        "scenarios": [
+          "Al programar proyectos, estima la duración de cada tarea",
+          "Al cotizar a clientes, proporciona estimaciones de tiempo razonables",
+          "Al hacer planes personales, entiende el tiempo necesario para completar tareas"
+        ],
+        "tutorial": [
+          "Ingresa la descripción de la tarea",
+          "Ingresa respectivamente el tiempo optimista, el tiempo más probable y el tiempo pesimista",
+          "Haz clic en el botón de cálculo para ver los resultados de la estimación",
+          "Usa el tiempo promedio ponderado como referencia"
+        ],
+        "advantages": [
+          "Basado en el método clásico de estimación de tres puntos, más científico y preciso",
+          "Proporciona tres escenarios de estimación para ayudarte a evaluar de manera integral",
+          "Cálculo puramente local, no se necesita internet"
+        ],
+        "faqs": [
+          {
+            "q": "¿Qué es la estimación de tres puntos?",
+            "a": "La estimación de tres puntos es un método de estimación de tiempo comúnmente utilizado en la gestión de proyectos. Calcula un tiempo promedio ponderado a través de tres valores: tiempo optimista, tiempo más probable y tiempo pesimista."
+          },
+          {
+            "q": "¿Cuál es la unidad de tiempo?",
+            "a": "Puedes usar cualquier unidad de tiempo (horas, días, etc.), pero los tres valores deben usar la misma unidad."
+          },
+          {
+            "q": "¿Es preciso el resultado?",
+            "a": "El resultado de la estimación se basa en los valores que ingresas. La precisión depende de tu experiencia y juicio."
+          },
+          {
+            "q": "¿Se pueden guardar los registros de estimación?",
+            "a": "Actualmente no se admite. Se recomienda tomar una captura de pantalla o registrar en tu herramienta de gestión de proyectos."
+          },
+          {
+            "q": "¿Se necesita internet?",
+            "a": "No, cálculo puramente local, los datos no se cargarán."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

@@ -4,6 +4,7 @@ import {
   BlogIndexJsonLd,
   type SeoLocale,
 } from '@/components/seo';
+import { getBlogPostsList } from '@/data/blog-index';
 import BlogIndexView from '@/components/BlogIndexView';
 
 const LOCALE: SeoLocale = 'es';
@@ -13,10 +14,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function BlogIndexPage() {
+  const initialPosts = getBlogPostsList(LOCALE, 30);
   return (
     <>
       <BlogIndexJsonLd locale={LOCALE} />
-      <BlogIndexView locale={LOCALE} />
+      <BlogIndexView locale={LOCALE} initialPosts={initialPosts} />
     </>
   );
 }

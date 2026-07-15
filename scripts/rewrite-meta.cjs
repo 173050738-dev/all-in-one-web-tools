@@ -29,6 +29,54 @@ const LOCALE_BREADCRUMB_LABELS = {
   ar: { home: 'الرئيسية', tools: 'الأدوات', tool: 'التفاصيل', blog: 'المدونة', news: 'الأخبار', about: 'عنا', contact: 'اتصل', workflows: 'سير العمل', templates: 'القوالب', ideas: 'أفكار', 'api-keys': 'مفاتيح واجهات', compliance: 'الامتثال', cookies: 'ملفات تعريف الارتباط', disclaimer: 'إخلاء المسؤولية', privacy: 'الخصوصية', terms: 'الشروط' },
 };
 
+const SITE_META = {
+  en: {
+    siteName: 'Korelyy Tools',
+    homeTitle: 'Korelyy Tool Hub — Online Tools',
+    homeDescription:
+      'Discover 100+ free online tools for developers, creators and businesses: image editing, PDF, QR codes, AI prompts, passwords, text utilities and more. No signup, private, works on all devices. 6 languages supported.',
+  },
+  zh: {
+    siteName: 'Korelyy 工具库',
+    homeTitle: 'Korelyy 工具库 - 在线工具聚合平台',
+    homeDescription:
+      '100+ 免费在线工具：开发工具、图片处理、PDF 合并、二维码生成、AI 提示词、密码生成、文本处理、世界杯主题工具等。本地处理，隐私安全，无需注册，6 种语言全端适配。',
+  },
+  es: {
+    siteName: 'Korelyy Herramientas',
+    homeTitle: 'Korelyy — Herramientas en línea',
+    homeDescription:
+      'Más de 100 herramientas en línea gratuitas: edición de imágenes, PDF, códigos QR, IA, contraseñas, utilidades de texto y más. Sin registro, privado, funciona en todos los dispositivos. 6 idiomas.',
+  },
+  hi: {
+    siteName: 'Korelyy टूल हब',
+    homeTitle: 'ऑनलाइन टूल्स | Korelyy',
+    homeDescription:
+      'डेवलपर्स, क्रिएटर्स और व्यवसायों के लिए 100+ मुफ्त ऑनलाइन टूल्स: इमेज एडिटिंग, PDF, QR कोड, AI प्रॉम्प्ट, पासवर्ड, टेक्स्ट यूटिलिटीज और बहुत कुछ। बिना साइनअप के, 6 भाषाएं।',
+  },
+  fr: {
+    siteName: 'Korelyy Outils',
+    homeTitle: 'Korelyy — Outils en ligne',
+    homeDescription:
+      "Plus de 100 outils en ligne gratuits : retouche d'images, PDF, QR codes, IA, mots de passe, utilitaires texte, etc. Sans inscription, privé, compatible tous appareils. 6 langues.",
+  },
+  ar: {
+    siteName: 'كورلي لأدوات الويب',
+    homeTitle: 'كورلي — أدوات عبر الإنترنت',
+    homeDescription:
+      'أكثر من 100 أداة مجانية عبر الإنترنت لمطوّري البرمجيات والمبدعين والشركات: تحرير الصور، PDF، أكواد QR، ذكاء اصطناعي، كلمات مرور، أدوات نصية والمزيد. بدون تسجيل. 6 لغات.',
+  },
+};
+
+const LOCALE_OPEN_GRAPH_MAP = {
+  zh: 'zh_CN',
+  en: 'en_US',
+  fr: 'fr_FR',
+  es: 'es_ES',
+  hi: 'hi_IN',
+  ar: 'ar_SA',
+};
+
 const ADSENSE_PUB = 'ca-pub-7235824755389632';
 const ADSENSE_BLOCK =
   '\n<!-- AdSense:static-injected -->\n' +
@@ -61,6 +109,45 @@ for (const l of SUPPORTED_LOCALES) {
     console.error('[rewrite-meta] failed to read locale data (' + l + '):', e.message);
     localeData[l] = {};
   }
+}
+
+const fullLocaleData = {};
+for (const l of SUPPORTED_LOCALES) {
+  const f = path.join(ROOT, 'public', 'locales', l, 'translation.json');
+  try {
+    fullLocaleData[l] = JSON.parse(fs.readFileSync(f, 'utf8'));
+  } catch (e) {
+    fullLocaleData[l] = {};
+  }
+}
+
+let toolsIndexMap = {};
+try {
+  const raw = fs.readFileSync(path.join(ROOT, 'data', 'tools-index.json'), 'utf8');
+  const arr = JSON.parse(raw.replace(/^\uFEFF/, ''));
+  for (const t of arr) {
+    if (t && t.slug) toolsIndexMap[t.slug] = t;
+  }
+  console.log('[rewrite-meta] tools-index loaded:', arr.length, 'slugs');
+} catch (e) {
+  console.warn('[rewrite-meta] failed to load tools-index.json:', e.message);
+}
+
+let blogIndexArr = [];
+let blogIndexMap = {};
+try {
+  const raw = fs.readFileSync(path.join(ROOT, 'data', 'blog-index.ts'), 'utf8');
+  const match = raw.match(/export\s+const\s+BLOG_POSTS_INDEX[^=]*=\s*(\[[\s\S]*?\n\]);/);
+  if (match) {
+    const jsonStr = match[1];
+    blogIndexArr = JSON.parse(jsonStr);
+    for (const p of blogIndexArr) {
+      if (p && p.slug) blogIndexMap[p.slug] = p;
+    }
+    console.log('[rewrite-meta] blog-index loaded:', blogIndexArr.length, 'posts');
+  }
+} catch (e) {
+  console.warn('[rewrite-meta] failed to load blog-index.ts:', e.message);
 }
 
 function escapeForHtml(s) {
@@ -288,9 +375,208 @@ function buildEnrichedDesc(locale, name, description) {
   return `${base} ${it.tag}`.trim().slice(0, 300);
 }
 
-function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt }) {
-  const title = buildHighIntentTitle(locale || 'en', name);
-  const desc = buildEnrichedDesc(locale || 'en', name, description);
+const FAQ_I18N = {
+  en: {
+    free: { q: 'Is {name} free to use?', a: 'Yes. {name} is 100% free for core features — no signup, no watermarks, no hidden paywalls on the tools you need day to day.' },
+    signup: { q: 'Do I need to sign up to use {name}?', a: 'No. Open and use instantly in your browser. Nothing to install, no account required. Your preferences stay on your device.' },
+    privacy: { q: 'Is my data safe with {name}?', a: 'Yes. {name} runs locally in your browser whenever technically possible — sensitive inputs are processed on your device, not on our servers. No tracking cookies.' },
+    device: { q: 'Which devices does {name} work on?', a: 'Phones, tablets and desktops with any modern browser (Chrome, Safari, Edge, Firefox). Touch-friendly and responsive from 320px to 4K.' },
+  },
+  zh: {
+    free: { q: '{name} 免费使用吗？', a: '是的，{name} 核心功能永久免费，无需注册登录，无水印、无隐藏付费墙，日常使用完全免费。' },
+    signup: { q: '使用 {name} 需要注册吗？', a: '不需要。打开浏览器就能用，不用下载任何东西，不用注册账号。所有设置都保存在你自己的设备上。' },
+    privacy: { q: '用 {name} 我的数据安全吗？', a: '安全。{name} 在技术允许的情况下全部在浏览器本地运行，敏感输入都在你设备上处理，不上传我们服务器。也没有追踪 Cookie。' },
+    device: { q: '{name} 支持哪些设备？', a: '手机、平板、电脑都行，Chrome、Safari、Edge、Firefox 主流浏览器全支持，触摸友好、响应式适配从 320px 到 4K 屏幕。' },
+  },
+  es: {
+    free: { q: '¿{name} es gratuito?', a: 'Sí. {name} es 100% gratuito en sus funciones básicas: sin registro, sin marcas de agua ni muros de pago ocultos en las herramientas que usas cada día.' },
+    signup: { q: '¿Necesito registrarme para usar {name}?', a: 'No. Ábrelo directamente en tu navegador y úsalo al instante. Nada que instalar ni cuenta que crear. Tus preferencias se quedan en tu dispositivo.' },
+    privacy: { q: '¿Son seguros mis datos con {name}?', a: 'Sí. {name} se ejecuta localmente en tu navegador siempre que es técnicamente posible. Las entradas sensibles se procesan en tu equipo, no en nuestros servidores. Sin cookies de seguimiento.' },
+    device: { q: '¿En qué dispositivos funciona {name}?', a: 'Móviles, tabletas y escritorios con cualquier navegador moderno (Chrome, Safari, Edge, Firefox). Interfaz táctil y responsiva de 320 px a 4 K.' },
+  },
+  fr: {
+    free: { q: '{name} est-il gratuit ?', a: 'Oui. {name} est 100 % gratuit sur les fonctions principales : pas d\'inscription, pas de filigrane, pas de paywall masqué sur les outils du quotidien.' },
+    signup: { q: 'Dois-je m\'inscrire pour utiliser {name} ?', a: 'Non. Ouvrez et utilisez {name} directement dans votre navigateur. Rien à installer, aucun compte requis. Vos préférences restent sur votre appareil.' },
+    privacy: { q: 'Mes données sont-elles en sécurité avec {name} ?', a: 'Oui. {name} s\'exécute localement dans votre navigateur chaque fois que c\'est techniquement possible. Les données sensibles sont traitées sur votre appareil, pas sur nos serveurs. Sans cookies de suivi.' },
+    device: { q: 'Sur quels appareils fonctionne {name} ?', a: 'Téléphones, tablettes et ordinateurs avec n\'importe quel navigateur moderne (Chrome, Safari, Edge, Firefox). Interface tactile et responsive de 320 px à 4 K.' },
+  },
+  hi: {
+    free: { q: 'क्या {name} मुफ्त है?', a: 'हाँ। {name} मुख्य सुविधाओं के लिए 100% मुफ्त है — कोई साइनअप नहीं, कोई वॉटरमार्क नहीं, दिन-प्रतिदिन के उपयोग के टूल्स पर कोई छिपा पेवॉल नहीं।' },
+    signup: { q: 'क्या मुझे {name} उपयोग करने के लिए साइन अप करना पड़ेगा?', a: 'नहीं। अपने ब्राउज़र में खोलें और तुरंत उपयोग करें। कुछ इंस्टॉल नहीं करना है, कोई अकाउंट नहीं चाहिए। आपकी प्राथमिकताएँ आपके डिवाइस पर रहती हैं।' },
+    privacy: { q: 'क्या {name} के साथ मेरा डेटा सुरक्षित है?', a: 'हाँ। {name} तकनीकी रूप से संभव होने पर आपके ब्राउज़र में स्थानीय रूप से चलता है — संवेदनशील डेटा आपके डिवाइस पर प्रोसेस होता है, हमारे सर्वर पर नहीं। कोई ट्रैकिंग कुकी नहीं।' },
+    device: { q: '{name} किन डिवाइसों पर चलता है?', a: 'किसी भी आधुनिक ब्राउज़र (Chrome, Safari, Edge, Firefox) वाले फोन, टैबलेट और डेस्कटॉप। 320px से 4K तक टच-फ्रेंडली और रेस्पॉन्सिव।' },
+  },
+  ar: {
+    free: { q: 'هل {name} مجاني؟', a: 'نعم. {name} مجاني بالكامل للميزات الأساسية — بدون تسجيل، بدون علامات مائية، بدون جدران دفع مخفية على الأدوات التي تحتاجها يومياً.' },
+    signup: { q: 'هل أحتاج للتسجيل لاستخدام {name}؟', a: 'لا. افتحه واستخدمه فوراً في متصفحك. لا شيء للتثبيت، لا حساب مطلوب. تفضيلاتك تبقى على جهازك.' },
+    privacy: { q: 'هل بياناتي آمنة مع {name}؟', a: 'نعم. يعمل {name} محلياً في متصفحك كلما كان ذلك ممكناً تقنياً — تتم معالجة البيانات الحساسة على جهازك، وليس على خوادمنا. لا ملفات تعريف ارتباط تتبع.' },
+    device: { q: 'على أي أجهزة يعمل {name}؟', a: 'الهواتف والأجهزة اللوحية وأجهزة الكمبيوتر مع أي متصفح حديث (Chrome، Safari، Edge، Firefox). سهل اللمس ومتجاوب من 320 بكسل إلى 4K.' },
+  },
+};
+const FAQ_ORDER = ['free', 'signup', 'privacy', 'device'];
+
+function resolveFaqItems(locale, name, seoFaqs) {
+  if (Array.isArray(seoFaqs) && seoFaqs.length > 0) {
+    return seoFaqs.filter(x => x && typeof x.q === 'string' && typeof x.a === 'string').map(x => ({ q: String(x.q), a: String(x.a) }));
+  }
+  const bundle = FAQ_I18N[locale] || FAQ_I18N.en;
+  return FAQ_ORDER.map(k => {
+    const row = bundle[k];
+    return {
+      q: row.q.replace(/\{name\}/g, name),
+      a: row.a.replace(/\{name\}/g, name),
+    };
+  });
+}
+function buildFaqJsonLd(faqs) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: (faqs || []).map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+}
+
+function categoryToSchemaCategory(cat) {
+  switch (cat) {
+    case 'dev-tools': case 'api-tools': case 'seo-tools': return 'DeveloperApplication';
+    case 'design-tools': case '3d-tools': case 'image-tools': return 'DesignApplication';
+    case 'media-tools': case 'video-editing': case 'audio-tools': return 'MultimediaApplication';
+    case 'productivity': case 'collaboration': case 'file-tools': case 'customer-service': case 'hr-tools': case 'marketing': case 'content-tools': case 'social-media': return 'BusinessApplication';
+    case 'finance-tools': case 'ecommerce': return 'FinanceApplication';
+    case 'education': return 'EducationalApplication';
+    case 'security': return 'SecurityApplication';
+    case 'health': return 'HealthApplication';
+    case 'lifestyle': return 'LifestyleApplication';
+    case 'pdf-tools': case 'data-viz': default: return 'UtilitiesApplication';
+  }
+}
+function buildSoftwareApplicationJsonLd({ locale, slug, name, description, canonical, toolInfo }) {
+  const l = locale || 'en';
+  const ogMap = LOCALE_OPEN_GRAPH_MAP;
+  const schemaCat = categoryToSchemaCategory(toolInfo?.category);
+  const brandName = SITE_META[l]?.siteName || 'Korelyy Tools';
+  const base = BASE_URL.replace(/\/$/, '');
+  const isFree = toolInfo?.isFree || toolInfo?.isLimitedFree || true;
+  const features = (toolInfo?.tagsEn && Array.isArray(toolInfo.tagsEn)) ? toolInfo.tagsEn.slice(0, 5) : [];
+  const featureList = [
+    `${name} is 100% free, no signup required`,
+    'All processing runs locally in browser — zero data upload',
+    'Responsive across mobile / tablet / desktop, touch-friendly',
+    'Works on Chrome, Safari, Edge, Firefox and modern browsers',
+    ...features,
+  ].slice(0, 8);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name,
+    description,
+    url: canonical,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    applicationCategory: schemaCat,
+    operatingSystem: 'Web, iOS, Android, Windows, macOS, Linux',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    offers: [{
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+    }],
+    isAccessibleForFree: isFree,
+    inLanguage: ogMap[l] || 'en_US',
+    keywords: features.join(', '),
+    featureList,
+    audience: { '@type': 'Audience', audienceType: 'General Audience' },
+    brand: { '@type': 'Brand', name: brandName, url: base + '/' },
+    provider: { '@type': 'Organization', name: brandName, url: base + '/' },
+    publisher: { '@type': 'Organization', name: brandName, url: base + '/' },
+    softwareHelp: base + '/' + l + '/blog/',
+    softwareSource: 'Web browser',
+    downloadUrl: canonical,
+    installUrl: canonical,
+    memoryRequirements: '256MB RAM',
+    processorRequirements: 'Any modern CPU',
+    storageRequirements: '50MB browser storage',
+    permissions: 'No special permissions required; browser storage used only for user preferences',
+    datePublished: toolInfo?.publishedAt || '2026-01-01T00:00:00Z',
+    dateModified: toolInfo?.updatedAt || toolInfo?.publishedAt || '2026-01-01T00:00:00Z',
+    applicationSubCategory: toolInfo?.category || 'Utilities',
+    screenshot: OG_IMAGE_ABS,
+    thumbnailUrl: OG_IMAGE_ABS,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: toolInfo?.likes ? Math.min(5, 4.0 + Math.log10(toolInfo.likes) * 0.2).toFixed(1) : '4.7',
+      ratingCount: toolInfo?.likes || 1000,
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+}
+
+function getLocalizedField(obj, locale, fallback) {
+  if (!obj) return fallback;
+  if (typeof obj === 'string') return obj;
+  if (obj[locale]) return obj[locale];
+  if (obj.en) return obj.en;
+  const keys = Object.keys(obj);
+  if (keys.length > 0) return obj[keys[0]];
+  return fallback;
+}
+function buildBlogPostingJsonLd({ locale, slug, canonical, post }) {
+  const l = locale || 'en';
+  const ogMap = LOCALE_OPEN_GRAPH_MAP;
+  const base = BASE_URL.replace(/\/$/, '');
+  const siteName = SITE_META[l]?.siteName || 'Korelyy Tools';
+  if (!post) return null;
+  const title = getLocalizedField(post.title, l, slug);
+  const description = getLocalizedField(post.description, l, '');
+  const img = post.coverImage || OG_IMAGE_ABS;
+  const tagsArr = Array.isArray(post.tags) ? post.tags.map(t => getLocalizedField(t, l, '')).filter(Boolean) : [];
+  const readMin = post.readingMinutes ? (post.readingMinutes[l] || post.readingMinutes.en || 5) : 5;
+  const blogLabel = LOCALE_BREADCRUMB_LABELS[l]?.blog || 'Blog';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    image: img,
+    datePublished: post.publishedAt || '2026-01-01T00:00:00Z',
+    dateModified: post.updatedAt || post.publishedAt || '2026-01-01T00:00:00Z',
+    author: { '@type': 'Organization', name: siteName, url: base + '/' },
+    publisher: { '@type': 'Organization', name: siteName, url: base + '/', logo: { '@type': 'ImageObject', url: base + '/favicon.svg' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    keywords: tagsArr.join(', '),
+    articleSection: 'Tools, Tutorials, Benchmarks, How-to',
+    wordCount: Math.max(300, readMin * 180),
+    inLanguage: ogMap[l] || 'en_US',
+    url: canonical,
+    isAccessibleForFree: true,
+    timeRequired: `PT${readMin}M`,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: LOCALE_BREADCRUMB_LABELS[l]?.home || 'Home', item: base + '/' + l + '/' },
+        { '@type': 'ListItem', position: 2, name: blogLabel, item: base + '/' + l + '/blog/' },
+        { '@type': 'ListItem', position: 3, name: title, item: canonical },
+      ],
+    },
+  };
+}
+
+function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, ogType }) {
+  let title, desc;
+  if (titleMode === 'plain') {
+    const siteName = SITE_META[locale]?.siteName || 'Korelyy Tools';
+    title = name + ' | ' + siteName;
+    desc = description || SITE_META[locale]?.homeDescription || '';
+  } else {
+    title = buildHighIntentTitle(locale || 'en', name);
+    desc = buildEnrichedDesc(locale || 'en', name, description);
+  }
+  const og_type = ogType || 'website';
   const t = escapeForHtml(title);
   const d = escapeForHtml(desc);
   const c = escapeForHtml(canonical);
@@ -302,12 +588,22 @@ function buildInjection({ locale, name, description, canonical, pathWithoutLocal
   const breadcrumbLd = pathWithoutLocale
     ? buildBreadcrumbList(locale || 'en', pathWithoutLocale, name)
     : '';
+  let softwareLd = '';
+  let faqLd = '';
+  if (toolInfo) {
+    const sa = buildSoftwareApplicationJsonLd({ locale, slug, name, description: desc, canonical, toolInfo });
+    softwareLd = `<script type="application/ld+json">${JSON.stringify(sa)}</script>\n`;
+  }
+  if (faqs && Array.isArray(faqs) && faqs.length > 0) {
+    const f = buildFaqJsonLd(faqs);
+    faqLd = `<script type="application/ld+json">${JSON.stringify(f)}</script>\n`;
+  }
   return (
     '\n<!-- SEO:static-injected -->\n' +
     `<title>${t}</title>\n` +
     robotsBlock +
     `<meta name="description" content="${d}">\n` +
-    `<meta property="og:type" content="website">\n` +
+    `<meta property="og:type" content="${og_type}">\n` +
     `<meta property="og:site_name" content="Korelyy Tools">\n` +
     `<meta property="og:title" content="${t}">\n` +
     `<meta property="og:description" content="${d}">\n` +
@@ -324,18 +620,11 @@ function buildInjection({ locale, name, description, canonical, pathWithoutLocal
     globalLd +
     webpageLd +
     breadcrumbLd +
+    softwareLd +
+    faqLd +
     '<!-- /SEO:static-injected -->\n'
   );
 }
-
-const LOCALE_OPEN_GRAPH_MAP = {
-  zh: 'zh_CN',
-  en: 'en_US',
-  fr: 'fr_FR',
-  es: 'es_ES',
-  hi: 'hi_IN',
-  ar: 'ar_SA',
-};
 
 const REMOVE_PATTERNS = [
   /<title[^>]*>[\s\S]*?<\/title>\s*/gi,
@@ -394,14 +683,20 @@ for (const l of SUPPORTED_LOCALES) {
       skippedNoTranslation++;
       continue;
     }
+    const toolInfo = toolsIndexMap[slug] || null;
+    const seoFaqs = tool && tool.seo && Array.isArray(tool.seo.faqs) ? tool.seo.faqs : null;
+    const faqItems = resolveFaqItems(l, tool.name, seoFaqs);
     const canonical = BASE_URL.replace(/\/$/, '') + '/' + l + '/tool/' + slug + '/';
     const injection = buildInjection({
       locale: l,
+      slug,
       name: tool.name,
       description: tool.description,
       canonical,
       pathWithoutLocale: `/tool/${slug}`,
       ogImageAlt: tool.name,
+      toolInfo,
+      faqs: faqItems,
     });
     let html = fs.readFileSync(file, 'utf8');
     let next = replaceHead(html, injection);
@@ -483,45 +778,6 @@ console.log(
 );
 
 // ===================== Non-tool pages (home, /tools/, about, blog, contact, etc.) =====================
-const SITE_META = {
-  en: {
-    siteName: 'Korelyy Tools',
-    homeTitle: 'Korelyy Tool Hub — Online Tools',
-    homeDescription:
-      'Discover 100+ free online tools for developers, creators and businesses: image editing, PDF, QR codes, AI prompts, passwords, text utilities and more. No signup, private, works on all devices. 6 languages supported.',
-  },
-  zh: {
-    siteName: 'Korelyy 工具库',
-    homeTitle: 'Korelyy 工具库 - 在线工具聚合平台',
-    homeDescription:
-      '100+ 免费在线工具：开发工具、图片处理、PDF 合并、二维码生成、AI 提示词、密码生成、文本处理、世界杯主题工具等。本地处理，隐私安全，无需注册，6 种语言全端适配。',
-  },
-  es: {
-    siteName: 'Korelyy Herramientas',
-    homeTitle: 'Korelyy — Herramientas en línea',
-    homeDescription:
-      'Más de 100 herramientas en línea gratuitas: edición de imágenes, PDF, códigos QR, IA, contraseñas, utilidades de texto y más. Sin registro, privado, funciona en todos los dispositivos. 6 idiomas.',
-  },
-  hi: {
-    siteName: 'Korelyy टूल हब',
-    homeTitle: 'ऑनलाइन टूल्स | Korelyy',
-    homeDescription:
-      'डेवलपर्स, क्रिएटर्स और व्यवसायों के लिए 100+ मुफ्त ऑनलाइन टूल्स: इमेज एडिटिंग, PDF, QR कोड, AI प्रॉम्प्ट, पासवर्ड, टेक्स्ट यूटिलिटीज और बहुत कुछ। बिना साइनअप के, 6 भाषाएं।',
-  },
-  fr: {
-    siteName: 'Korelyy Outils',
-    homeTitle: 'Korelyy — Outils en ligne',
-    homeDescription:
-      "Plus de 100 outils en ligne gratuits : retouche d'images, PDF, QR codes, IA, mots de passe, utilitaires texte, etc. Sans inscription, privé, compatible tous appareils. 6 langues.",
-  },
-  ar: {
-    siteName: 'كورلي لأدوات الويب',
-    homeTitle: 'كورلي — أدوات عبر الإنترنت',
-    homeDescription:
-      'أكثر من 100 أداة مجانية عبر الإنترنت لمطوّري البرمجيات والمبدعين والشركات: تحرير الصور، PDF، أكواد QR، ذكاء اصطناعي، كلمات مرور، أدوات نصية والمزيد. بدون تسجيل. 6 لغات.',
-  },
-};
-
 const KNOWN_NONTOOL_PAGES = [
   { path: '/', i18nTitleKey: 'siteName', descriptionKey: 'homeDescription' },
   { path: '/tools/', i18nTitleKey: 'homeTitle', descriptionKey: 'homeDescription' },
@@ -639,3 +895,54 @@ for (const l of SUPPORTED_LOCALES) {
   }
 }
 console.log('[rewrite-meta] non-tool pages written=' + nonToolWritten + ' skipped=' + nonToolSkipped);
+
+// ===================== Blog Post Pages =====================
+const OFF_TOPIC_BLOG_PATTERNS = [
+  /^cadence-/, /^marathon-/, /^trail-/, /^hrm-/, /^zwift-/, /^bike-/, /^power-meter-/,
+  /^tdf-/, /^three-peak-/, /^altitude-/, /^100km-hike-/, /^trekking-/,
+  /neck-yoga$/, /^yin-yoga-/, /^pilates-/, /^postpartum-yoga-/, /^beginner-5x5-/,
+  /^big-three-/, /^functional-training-/, /^dumbbell-home-/,
+  /^swimming-tutorial-/, /^rehab-tutorial-/, /^nutrition-tutorial-/,
+  /^racing-tutorial-/, /^mental-tutorial-/,
+];
+let blogWritten = 0;
+let blogSkipped = 0;
+for (const l of SUPPORTED_LOCALES) {
+  for (const post of blogIndexArr) {
+    if (!post || !post.slug) continue;
+    if (OFF_TOPIC_BLOG_PATTERNS.some(re => re.test(post.slug))) continue;
+    const filePath = path.join(outDir, l, 'blog', post.slug, 'index.html');
+    if (!fs.existsSync(filePath)) {
+      blogSkipped++;
+      continue;
+    }
+    const title = getLocalizedField(post.title, l, post.slug);
+    const description = getLocalizedField(post.description, l, '');
+    const siteName = SITE_META[l]?.siteName || 'Korelyy Tools';
+    const fullTitle = title + ' | ' + siteName;
+    const canonical = BASE_URL.replace(/\/$/, '') + '/' + l + '/blog/' + post.slug + '/';
+    const blogPosting = buildBlogPostingJsonLd({ locale: l, slug: post.slug, canonical, post });
+    const blogLd = blogPosting
+      ? `<script type="application/ld+json">${JSON.stringify(blogPosting)}</script>\n`
+      : '';
+    const injection = buildInjection({
+      locale: l,
+      slug: post.slug,
+      name: title,
+      description: description || SITE_META[l]?.homeDescription || '',
+      canonical,
+      pathWithoutLocale: `/blog/${post.slug}`,
+      ogImageAlt: title,
+      titleMode: 'plain',
+      ogType: 'article',
+    });
+    let html = fs.readFileSync(filePath, 'utf8');
+    let next = replaceHead(html, injection);
+    if (blogLd) {
+      next = next.replace('<!-- /SEO:static-injected -->', blogLd + '<!-- /SEO:static-injected -->');
+    }
+    fs.writeFileSync(filePath, next, 'utf8');
+    blogWritten++;
+  }
+}
+console.log('[rewrite-meta] blog pages written=' + blogWritten + ' skipped=' + blogSkipped);

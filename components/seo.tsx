@@ -771,7 +771,7 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
-      { '@type': 'ListItem', position: 2, name: categoryName },
+      { '@type': 'ListItem', position: 2, name: categoryName, item: `${SITE_URL}/${l}/tools/` },
       { '@type': 'ListItem', position: 3, name },
     ],
   };

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { SeoLocale } from '@/components/seo';
 import { getLocalizedText } from '@/data/blog-shared';
 import type { BlogPost } from '@/data/blog-shared';
+import type { BlogPostIndex } from '@/data/blog-index';
 import BlogPostCard from '@/components/BlogPostCard';
 import { Search, SlidersHorizontal } from 'lucide-react';
 
@@ -12,18 +13,25 @@ const PAGE_SIZE = 15;
 
 interface Props {
   locale: SeoLocale;
+  initialPosts?: BlogPostIndex[];
 }
 
-export default function BlogIndexView({ locale }: Props) {
-  const [allPosts, setAllPosts] = useState<BlogPost[]>([]);
-  const [loaded, setLoaded] = useState(false);
+function indexToBlogPost(p: BlogPostIndex): BlogPost {
+  return { ...p, content: [] };
+}
+
+export default function BlogIndexView({ locale, initialPosts }: Props) {
+  const hasInitial = Array.isArray(initialPosts) && initialPosts.length > 0;
+  const [allPosts, setAllPosts] = useState<BlogPost[]>(hasInitial ? initialPosts.map(indexToBlogPost) : []);
+  const [loaded, setLoaded] = useState(hasInitial);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
   const sentinelRef = useRef<HTMLDivElement | null>(null);
   const loadingRef = useRef<boolean>(false);
 
-  // 懒加载 blog 薄索引（blog-index ~500KB），正文 blog-detail ~2.5MB 等用户点详情再加载
+  // 懒加载完整 blog 薄索引（blog-index ~500KB）；若 SSR 已传入 initialPosts，
+  // 首屏已可渲染，这里后台补全全量数据用于搜索/过滤/加载更多
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -31,9 +39,10 @@ export default function BlogIndexView({ locale }: Props) {
       if (cancelled) return;
       const listFn = (mod as any).getBlogPostsList || (() => []);
       const raw = listFn(locale, Number.POSITIVE_INFINITY) as any[];
-      /* 把薄索引转成 BlogPost 兼容对象（content 留空，列表页不用读正文） */
       const list: BlogPost[] = raw.map((p) => ({ ...p, content: [] }));
-      setAllPosts(list);
+      if (list.length > 0) {
+        setAllPosts(list);
+      }
       setLoaded(true);
     })();
     return () => { cancelled = true; };

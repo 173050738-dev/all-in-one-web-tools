@@ -140,6 +140,17 @@ for (const target of targets) {
       catch (e) { console.warn('[post-build] skip copy', f, '→', target, e.code || e.message); }
     }
   }
+  // Copy all sitemap-*.xml and sitemap-index.xml from public/ to overwrite Next.js generated ones
+  // (build-sitemap-robots.mjs filters off-topic blogs and external tool thin pages)
+  const pubFiles = fs.existsSync(PUB) ? fs.readdirSync(PUB) : [];
+  for (const f of pubFiles) {
+    if (/^sitemap(-index|-[a-z]{2})?\.xml$/.test(f)) {
+      const src = path.join(PUB, f);
+      const dst = path.join(target, f);
+      try { fs.copyFileSync(src, dst); copied++; }
+      catch (e) { console.warn('[post-build] skip copy', f, '→', target, e.code || e.message); }
+    }
+  }
   if (fs.existsSync(path.join(PUB, 'favicon.svg'))) {
     try { fs.copyFileSync(path.join(PUB, 'favicon.svg'), path.join(target, 'favicon.ico')); copied++; }
     catch (e) { console.warn('[post-build] skip favicon.ico →', target, e.code || e.message); }
