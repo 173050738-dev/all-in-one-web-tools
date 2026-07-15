@@ -20,6 +20,7 @@ export interface Env {
   JWT_SECRET: string;
   JWT_ISSUER?: string;
   KOFI_ACTIVATION_HMAC_SECRET: string;
+  KOFI_VERIFICATION_TOKEN: string;
   KOFI_MONTHLY_DAYS?: string;
   KOFI_COMMERCIAL_DAYS?: string;
   KOFI_LIFETIME_DAYS?: string;
@@ -390,6 +391,74 @@ async function handleMe(request: Request, env: Env): Promise<Response> {
   });
 }
 
+// ============= Ko-fi Webhook =============
+
+async function handleWebhook(request: Request, env: Env): Promise<Response> {
+  try {
+    await ensureTables(env.DB);
+
+    const form = await request.formData();
+    const raw = form.get('data');
+    if (!raw) return json({ ok: false, error: 'BAD_DATA' }, 400);
+
+    const payload = JSON.parse(raw as string);
+
+    // 安全校验：verification_token 必须匹配
+    if (payload.verification_token !== env.KOFI_VERIFICATION_TOKEN) {
+      return json({ ok: false, error: 'BAD_TOKEN' }, 401);
+    }
+
+    const tx = payload.kofi_transaction_id || '';
+    const type = payload.type || '';
+    const tierName = payload.tier_name || '';
+    const amount = parseFloat(payload.amount || '0');
+    const email = payload.email || '';
+    const isSubscriptionPayment = payload.is_subscription_payment === true || payload.is_subscription_payment === 'true';
+
+    // 档位映射：tier_name 优先，金额兜底
+    const tierMap: Record<string, string> = { 'Monthly Pro': 'monthly' };
+    let tier = tierMap[tierName] || null;
+    if (!tier) {
+      if (amount >= 19) tier = 'commercial';
+      else if (amount >= 9) tier = 'one_time';
+      else if (amount >= 3) tier = 'monthly';
+      else tier = 'monthly';
+    }
+
+    // 去重：同一 tx_id 已存在则幂等返回
+    if (tx) {
+      const dup = await env.DB.prepare(`SELECT id FROM memberships WHERE tx_id = ?`).bind(tx).first<any>();
+      if (dup) {
+        return json({ ok: true, duplicated: true });
+      }
+    }
+
+    // 写库
+    const now = Math.floor(Date.now() / 1000);
+    const durationDays = tierDurationDays(env, tier);
+    const expiresAt = now + durationDays * 86400;
+    const id = await uid();
+    const emailNorm = email && isValidEmail(email) ? normalizeEmail(email) : null;
+    const ip = ipOf(request);
+    const source = isSubscriptionPayment ? 'kofi_webhook_sub' : 'kofi_webhook';
+
+    await env.DB
+      .prepare(
+        `INSERT INTO memberships (id, user_id, email, tier, tx_id, source, activated_at, expires_at, created_at, updated_at, ip, notes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`
+      )
+      .bind(id, null, emailNorm, tier, tx || null, source, now, expiresAt, now, now, ip, `type=${type};amount=${payload.amount || ''};tier_name=${tierName}`)
+      .run();
+
+    console.log('[kofi webhook] created membership', id, 'tier=', tier, 'tx=', tx, 'email=', emailNorm);
+
+    return json({ ok: true });
+  } catch (e: any) {
+    // 异常也返回 200 避免 Ko-fi 疯狂重试，但记录错误
+    console.error('[kofi webhook] error', e?.stack || e?.message || String(e));
+    return json({ ok: true, error: 'INTERNAL' });
+  }
+}
+
 export const onRequest: PagesFunction<Env> = async (context) => {
   const request = context.request;
   const env = context.env as Env;
@@ -412,6 +481,10 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   }
 
   try {
+    if (subpath === 'webhook') {
+      if (method === 'POST') return handleWebhook(request, env);
+      return errJson('METHOD_NOT_ALLOWED', 405);
+    }
     if (subpath === 'activate' || (!subpath && url.searchParams.get('op') === 'activate')) {
       if (method !== 'POST') return errJson('METHOD_NOT_ALLOWED', 405);
       return handleActivate(request, env);
