@@ -94,38 +94,39 @@ async function checkRateLimit(env: Env, request: Request, limit: number = 5): Pr
   }
 }
 
-export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
-    if (request.method === 'OPTIONS') {
-      return new Response(null, {
-        status: 204,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-          'Access-Control-Allow-Methods': 'POST, OPTIONS',
-          'Access-Control-Max-Age': '86400',
-        },
-      });
-    }
+export const onRequestOptions: PagesFunction<Env> = async () => {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Max-Age': '86400',
+    },
+  });
+};
 
-    if (request.method !== 'POST') {
-      return errJson('Method not allowed', 405);
-    }
+export const onRequest: PagesFunction<Env> = async (context) => {
+  const { request, env } = context;
 
-    const url = new URL(request.url);
-    const path = url.pathname.replace(/\/+$/, '');
+  if (request.method !== 'POST') {
+    return errJson('Method not allowed', 405);
+  }
 
-    let payload: Record<string, unknown> = {};
-    try {
-      payload = (await request.json()) as Record<string, unknown>;
-    } catch {
-      return errJson('Invalid JSON body', 400);
-    }
+  const url = new URL(request.url);
+  const path = url.pathname.replace(/\/+$/, '');
 
-    const locale = (payload.locale as string) || 'zh';
+  let payload: Record<string, unknown> = {};
+  try {
+    payload = (await request.json()) as Record<string, unknown>;
+  } catch {
+    return errJson('Invalid JSON body', 400);
+  }
 
-    try {
-      switch (path) {
+  const locale = (payload.locale as string) || 'zh';
+
+  try {
+    switch (path) {
         case '/api/tone-changer':
         case '/api/tone-changer/': {
           const text = payload.text as string;
@@ -264,5 +265,4 @@ export default {
       console.error('API error:', path, error);
       return errJson('Internal server error', 500);
     }
-  },
 };
