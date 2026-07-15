@@ -187,7 +187,7 @@ export default function IdeaToAction({ locale = 'zh' }: IdeaToActionProps) {
     setResult(null);
 
     try {
-      const response = await fetch('/api/idea-to-action', {
+      const response = await fetch('/api/idea-to-action/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ idea: input.trim(), locale: resolvedLocale }),

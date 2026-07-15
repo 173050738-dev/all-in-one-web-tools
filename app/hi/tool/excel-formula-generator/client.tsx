@@ -157,7 +157,7 @@ export default function ToolPage() {
     setError(null);
     setResult(null);
     try {
-      const r = await fetch('/api/excel-formula', {
+      const r = await fetch('/api/excel-formula/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ request: request.trim(), platform, locale: resolvedLocale }),

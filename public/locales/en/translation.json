@@ -8028,6 +8028,51 @@
           }
         ]
       }
+    },
+    "ai-copywriter": {
+      "name": "AI Copywriter",
+      "description": "Generate high-quality marketing copy with AI",
+      "seo": {
+        "intro": "AI Copywriter is a powerful copywriting tool that leverages advanced artificial intelligence to help you quickly generate professional marketing copy. Whether you need ad headlines, product descriptions, social media posts, or email subjects, simply enter your product name and selling points, and you will receive 3 optimized high-quality copy suggestions. AI will generate the most suitable copy based on your chosen tone style and target platform, making your marketing more persuasive and engaging.",
+        "scenarios": [
+          "E-commerce sellers can quickly generate professional copy when writing product descriptions",
+          "Social media operators can let AI help write engaging copy before posting",
+          "Marketers can generate multiple versions of ad headlines for testing"
+        ],
+        "tutorial": [
+          "Enter your product name in the product name input field",
+          "Describe your product advantages and features in detail in the selling points input field",
+          "Select the appropriate copy type, tone style, and target platform",
+          "Click the generate button and AI will generate 3 high-quality copies for you"
+        ],
+        "advantages": [
+          "Powered by advanced AI technology, generating high-quality, persuasive copy",
+          "Supports multiple copy types and tone styles to meet different scenario needs",
+          "One-click copy function for quick and easy use of generated copy"
+        ],
+        "faqs": [
+          {
+            "q": "Can the generated copy be used directly?",
+            "a": "Yes, the generated copy is optimized and can be directly used for marketing. You can also make adjustments as needed."
+          },
+          {
+            "q": "Which target platforms are supported?",
+            "a": "Supports copy generation for general platforms, Shopify, Instagram, Facebook, X, and more."
+          },
+          {
+            "q": "How many times can I use it per day?",
+            "a": "Free users can use it 5 times per day. More usage is coming soon."
+          },
+          {
+            "q": "Will my product information be leaked?",
+            "a": "No. Your input is only used to generate copy and will not be saved or used for other purposes."
+          },
+          {
+            "q": "Which languages are supported?",
+            "a": "Currently supports Chinese, English, French, Spanish, Hindi, and Arabic."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

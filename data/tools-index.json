@@ -44613,6 +44613,36 @@
     "localProcessing": false
   },
   {
+    "id": "ai-copywriter",
+    "slug": "ai-copywriter",
+    "name": "AI 营销文案生成器",
+    "description": "输入产品信息，AI 一键生成高质量营销文案，支持广告标题、产品描述、社媒帖子等多种类型。",
+    "category": "writing-tools",
+    "tags": [
+      "文案",
+      "营销",
+      "AI",
+      "写作",
+      "广告"
+    ],
+    "nameEn": "AI Copywriter",
+    "descriptionEn": "Generate high-quality marketing copy with AI, supports ad headlines, product descriptions, social posts.",
+    "tagsEn": [
+      "Copywriting",
+      "Marketing",
+      "AI",
+      "Writing",
+      "Advertising"
+    ],
+    "isFree": true,
+    "icon": "PenLine",
+    "likes": 0,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": false
+  },
+  {
     "id": "focus-timer",
     "slug": "focus-timer",
     "name": "专注计时器",

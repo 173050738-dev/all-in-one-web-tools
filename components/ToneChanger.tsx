@@ -181,7 +181,7 @@ export default function ToneChanger({ locale = 'zh' }: ToneChangerProps) {
     setResult(null);
 
     try {
-      const response = await fetch('/api/tone-changer', {
+      const response = await fetch('/api/tone-changer/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: input.trim(), tone: selectedTone, locale: resolvedLocale }),

@@ -155,7 +155,7 @@ export default function TaskBreakdown({ locale = 'zh' }: TaskBreakdownProps) {
     setResult(null);
 
     try {
-      const response = await fetch('/api/task-breakdown', {
+      const response = await fetch('/api/task-breakdown/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: input.trim(), locale: resolvedLocale }),

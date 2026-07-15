@@ -323,7 +323,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
     setIsAiLoading(true);
     setAiResult(null);
     try {
-      const res = await fetch('/api/ai-recommend', {
+      const res = await fetch('/api/ai-recommend/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: searchQuery, locale }),

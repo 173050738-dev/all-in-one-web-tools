@@ -8028,6 +8028,51 @@
           }
         ]
       }
+    },
+    "ai-copywriter": {
+      "name": "Redactor AI",
+      "description": "Genera contenido marketing de alta calidad con AI",
+      "seo": {
+        "intro": "Redactor AI es una herramienta potente de redacción que aprovecha la inteligencia artificial avanzada para ayudarte a generar rápidamente contenido marketing profesional. Ya sea que necesites títulos de anuncios, descripciones de productos, publicaciones en redes sociales o asuntos de correo electrónico, simplemente ingresa el nombre de tu producto y tus puntos de venta, y recibirás 3 sugerencias de contenido de alta calidad optimizadas. La AI generará el contenido más adecuado según el estilo de tono y la plataforma objetivo que elijas, haciendo que tu marketing sea más persuasivo y atractivo.",
+        "scenarios": [
+          "Los vendedores de comercio electrónico pueden generar rápidamente contenido profesional al escribir descripciones de productos",
+          "Los operadores de redes sociales pueden dejar que la AI les ayude a escribir contenido atractivo antes de publicar",
+          "Los profesionales del marketing pueden generar múltiples versiones de títulos de anuncios para probarlos"
+        ],
+        "tutorial": [
+          "Ingresa el nombre de tu producto en el campo de entrada",
+          "Describe en detalle las ventajas y características de tu producto en el campo de puntos de venta",
+          "Selecciona el tipo de contenido, estilo de tono y plataforma objetivo apropiados",
+          "Haz clic en el botón generar y la AI te generará 3 contenidos de alta calidad"
+        ],
+        "advantages": [
+          "Alimentado por tecnología AI avanzada, genera contenido de alta calidad y persuasivo",
+          "Soporta múltiples tipos de contenido y estilos de tono para satisfacer necesidades de diferentes escenarios",
+          "Función de copia en un solo clic para usar rápidamente el contenido generado"
+        ],
+        "faqs": [
+          {
+            "q": "¿El contenido generado se puede usar directamente?",
+            "a": "Sí, el contenido generado está optimizado y se puede usar directamente para marketing. También puedes hacer ajustes según sea necesario."
+          },
+          {
+            "q": "¿Qué plataformas objetivo se admiten?",
+            "a": "Admite la generación de contenido para plataformas generales, Shopify, Instagram, Facebook, X y más."
+          },
+          {
+            "q": "¿Cuántas veces puedo usarlo por día?",
+            "a": "Los usuarios gratuitos pueden usarlo 5 veces por día. Más usos estarán disponibles pronto."
+          },
+          {
+            "q": "¿Se filtrarán mis datos del producto?",
+            "a": "No. Tu entrada solo se usa para generar contenido y no se guardará ni se usará para otros fines."
+          },
+          {
+            "q": "¿Qué idiomas se admiten?",
+            "a": "Actualmente admite chino, inglés, francés, español, hindi y árabe."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

@@ -143,7 +143,7 @@ export default function ConceptExplainer({ locale = 'zh' }: ConceptExplainerProp
     setResult(null);
 
     try {
-      const response = await fetch('/api/concept-explain', {
+      const response = await fetch('/api/concept-explain/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ concept: input.trim(), locale: resolvedLocale }),
