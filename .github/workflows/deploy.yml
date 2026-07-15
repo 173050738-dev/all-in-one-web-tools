@@ -528,6 +528,11 @@ jobs:
           else
             DEPLOY_DIR=".vercel/output/static"
           fi
+          # Remove _worker.js if it exists - it overrides Pages Functions
+          if [ -f "$DEPLOY_DIR/_worker.js" ]; then
+            rm -f "$DEPLOY_DIR/_worker.js" "$DEPLOY_DIR/_worker.js.map"
+            echo "⚠️  Removed _worker.js (would override Pages Functions)"
+          fi
           if [ -d "functions" ]; then
             rm -rf "$DEPLOY_DIR/functions"
             cp -r "functions" "$DEPLOY_DIR/functions"

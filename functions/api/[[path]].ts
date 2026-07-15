@@ -262,7 +262,14 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           return errJson('Not found', 404);
       }
     } catch (error) {
-      console.error('API error:', path, error);
-      return errJson('Internal server error', 500);
+      const msg = error instanceof Error ? error.message : String(error);
+      console.error('API error:', path, msg);
+      if (msg.includes('API key not configured')) {
+        return errJson('AI service not configured (missing API key)', 503);
+      }
+      if (msg.includes('AI service unavailable')) {
+        return errJson('AI service temporarily unavailable. Please try again later.', 503);
+      }
+      return errJson(`Internal server error: ${msg}`, 500);
     }
 };
