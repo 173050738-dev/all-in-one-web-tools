@@ -537,6 +537,9 @@ jobs:
           else
             echo "⚠️  functions directory not found"
           fi
+          # Create _routes.json so Cloudflare Pages routes /api/* to Functions
+          echo '{"version":1,"include":["/api/*"],"exclude":[]}' > "$DEPLOY_DIR/_routes.json"
+          echo "✅ Created $DEPLOY_DIR/_routes.json"
 
       - name: Deploy to Cloudflare Pages
         env:
