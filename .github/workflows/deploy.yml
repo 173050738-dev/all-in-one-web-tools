@@ -520,23 +520,7 @@ jobs:
             fi
           done
 
-      - name: Copy Functions to deploy directory (for API routes)
-        run: |
-          set -e
-          if [ "$MODE" = "legacy" ]; then
-            DEPLOY_DIR="out"
-          else
-            DEPLOY_DIR=".vercel/output/static"
-          fi
-          if [ -d "functions" ]; then
-            cp -r "functions" "$DEPLOY_DIR/functions"
-            echo "✅ Copied functions/ to $DEPLOY_DIR/functions"
-            ls -la "$DEPLOY_DIR/functions/api/"
-          else
-            echo "⚠️  functions directory not found"
-          fi
-
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Pages (root dir, auto-detects functions/)
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -560,7 +544,7 @@ jobs:
           echo "================================================================"
           # [HARD] pipefail 防止 wrangler 失败被 tail 吞掉 exit code
           set +e
-          pnpm exec wrangler pages deploy "$DEPLOY_DIR" \
+          pnpm exec wrangler pages deploy . \
             --project-name="$PROJECT" \
             --branch="$BRANCH" \
             --commit-dirty=true > /tmp/wrangler_deploy.log 2>&1
