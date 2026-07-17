@@ -295,6 +295,39 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           return json({ ...result, remaining: rateLimitResult.remaining });
         }
 
+        case '/api/prompt-refine':
+        case '/api/prompt-refine/': {
+          const prompt = payload.prompt as string;
+          const kind = (payload.kind as string) || 'image';
+          const lang = (payload.lang as string) || 'en';
+          if (!prompt?.trim()) return errJson('Prompt is required', 400);
+          if (prompt.length > 2000) return errJson('Prompt too long (max 2000 chars)', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 10);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const isImage = kind === 'image';
+          const langLabelStr = lang === 'zh' ? '中文' : 'English';
+          const systemPrompt = `你是一个专业的 AI ${isImage ? '图像' : '视频'} 提示词优化专家。把用户提供的原始 prompt 优化成更专业、更出效果的高质量提示词。
+优化要点：补充细节让画面更丰富；调整描述顺序，主体在前细节在后；保留原始 prompt 的核心意思不偏离主题；用 ${langLabelStr} 输出；只返回优化后的提示词文本，不要任何解释、不要 markdown、不要用引号包裹。
+返回格式（必须是有效的 JSON）：{"refined": "优化后的提示词"}`;
+
+          const userPrompt = lang === 'zh'
+            ? `原始提示词：\n${prompt}\n\n请优化成更专业的${isImage ? '图像' : '视频'}生成提示词。`
+            : `Original prompt:\n${prompt}\n\nRefine it into a more professional ${isImage ? 'image' : 'video'} generation prompt.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return json({ refined: prompt, remaining: rateLimitResult.remaining });
+          }
+          return json({ refined: result.refined || prompt, remaining: rateLimitResult.remaining });
+        }
+
         case '/api/seo-miner':
         case '/api/seo-miner/': {
           const url = payload.url as string;
