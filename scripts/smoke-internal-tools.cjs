@@ -25,8 +25,10 @@ const RETRY = parseInt(process.env.RETRY || '2', 10);
 
 const LOCALES = ['zh', 'en', 'es', 'fr', 'hi', 'ar'];
 
-// === 与 deploy.yml 保持一致的自研工具白名单（48 个）===
+// === 与 deploy.yml 保持一致的自研工具白名单（49 个）===
 const INTERNAL_SLUGS = [
+  'ai-copywriter',
+  'ai-grammar-checker',
   'avatar-decorator',
   'audio-bpm-detector',
   'base64-tool',
@@ -64,6 +66,7 @@ const INTERNAL_SLUGS = [
   'text-tools',
   'timestamp-converter',
   'title-weight-checker',
+  'tone-changer',
   'url-encode-decode',
   'uuid-generator',
   'vertical-chinese-generator',

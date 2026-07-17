@@ -237,7 +237,7 @@ jobs:
             echo "::warning::⚠️  [Legacy SOFT] 抽样详情页 $small_size 个体积偏小（不阻断部署）"
           fi
           # ====== HARD 自研强校验（保持阻断 exit11/12）：36 个自研工具白名单 × 6 语言 必须 100% 存在且 > 10KB ======
-          INTERNAL_SLUGS="avatar-decorator base64-tool caption-generator case-converter color-picker copy-cleaner countdown danmaku decision-wheel emoji-mixer fortune-sticks grid-cutter image-compressor image-to-base64 json-formatter keyword-spinoff-generator markdown-platform-adapter markdown-preview mortgage-calculator password-generator pdf-merger pinyin-annotator qr-code-generator random-number regex-tester script-splitter sentiment-analyzer text-counter text-tools text-to-speech timestamp-converter title-weight-checker url-encode-decode uuid-generator vertical-chinese-generator wallpaper-maker"
+          INTERNAL_SLUGS="ai-copywriter ai-grammar-checker avatar-decorator audio-bpm-detector base64-tool caption-generator case-converter color-picker copy-cleaner countdown danmaku decision-wheel emoji-mixer fortune-sticks grid-cutter image-compressor image-to-base64 json-formatter keyword-spinoff-generator markdown-platform-adapter markdown-platform-converter markdown-preview mortgage-calculator multi-timezone-publish-time password-generator pdf-merger pinyin-annotator polyphonic-pinyin-annotator qr-code-generator random-number regex-tester script-splitter sentiment-analyzer srt-subtitle-generator text-counter text-tools text-to-speech timestamp-converter title-weight-checker tone-changer url-encode-decode uuid-generator vertical-chinese-generator wallpaper-maker wc-2026-schedule wc-ascii-art wc-champion-predictor wc-fan-avatar wc-name-decorator wc-poster-generator wc-scoreboard-simulator"
           INTERNAL_MISSING=0
           INTERNAL_SMALL=0
           INTERNAL_TOTAL=0
@@ -358,8 +358,10 @@ jobs:
           FILE_LIMIT_HARD=18000
           KEEP_TOOL_SLUGS_PER_LOCALE=200
 
-          # === 47 自研工具白名单：永不删除，即使裁剪也要完整保留 ===
+          # === 49 自研工具白名单：永不删除，即使裁剪也要完整保留 ===
           INTERNAL_SLUGS=(
+            "ai-copywriter"
+            "ai-grammar-checker"
             "avatar-decorator"
             "audio-bpm-detector"
             "base64-tool"
@@ -397,6 +399,7 @@ jobs:
             "text-tools"
             "timestamp-converter"
             "title-weight-checker"
+            "tone-changer"
             "url-encode-decode"
             "uuid-generator"
             "vertical-chinese-generator"
