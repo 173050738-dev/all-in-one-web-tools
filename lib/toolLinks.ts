@@ -68,6 +68,10 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'time-estimator',
   'ai-copywriter',
   'ai-grammar-checker',
+  'ai-prompt-generator',
+  'sora-prompt-generator',
+  'midjourney-prompt-generator',
+  'video-prompt-generator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {
