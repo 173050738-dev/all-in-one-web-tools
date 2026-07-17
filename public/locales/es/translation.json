@@ -274,7 +274,8 @@
     "collector-desc": "Guarda 5 herramientas en tu caja de herramientas",
     "first-search-name": "Primera búsqueda",
     "first-search-desc": "Busca tu primera herramienta",
-    "first-history-name": "Explorador",
+    "first-history-name": "Primera utilización",
+    "first-history-desc": "Usa tu primera herramienta",
     "explorer-desc": "Usa 10 herramientas diferentes",
     "explorer-name": "Explorador",
     "social-name": "Mariposa social",
@@ -8070,6 +8071,54 @@
           {
             "q": "¿Qué idiomas se admiten?",
             "a": "Actualmente admite chino, inglés, francés, español, hindi y árabe."
+          }
+        ]
+      }
+    },
+    "ai-grammar-checker": {
+      "name": "Verificador AI de gramática y escritura",
+      "description": "Verifica gramática, ortografía y redacción con AI, obtén sugerencias de reescritura y puntuación de legibilidad",
+      "seo": {
+        "intro": "El Verificador AI de gramática y escritura es tu entrenador de escritura inteligente que va más allá de un simple corrector de gramática. Detecta errores de gramática, ortografía, puntuación y redacción con explicaciones claras, reescribe todo el pasaje para mejorar la fluidez, puntúa la legibilidad, analiza el tono y se adapta a tus objetivos de escritura. Ya sea que escribas trabajos académicos, correos corporativos, publicaciones en redes sociales, currículums o mensajes informales, esta herramienta te ayuda a comunicarte de manera más efectiva en 6 idiomas.",
+        "scenarios": [
+          "Los estudiantes pueden revisar errores de gramática en sus trabajos académicos antes de la entrega",
+          "Los profesionales pueden pulir sus correos corporativos para sonar más profesionales",
+          "Los creadores de contenido pueden optimizar sus publicaciones en redes sociales para mejorar la interacción",
+          "Los buscadores de empleo pueden mejorar la redacción de su currículum para causar una mejor impresión"
+        ],
+        "tutorial": [
+          "Pega tu texto en el campo de entrada",
+          "Selecciona tu objetivo de escritura: General, Académico, Correo corporativo, Redes sociales, Currículum o Informal",
+          "Haz clic en el botón Verificar gramática",
+          "Revisa las correcciones, el texto reescrito, la puntuación de legibilidad y el análisis de tono"
+        ],
+        "advantages": [
+          "Detecta errores de gramática, ortografía, puntuación y redacción con explicaciones",
+          "Reescribe todo el pasaje para mejorar la fluidez y claridad",
+          "Puntúa la legibilidad de 0 a 100 con comentarios accionables",
+          "Analiza el tono y proporciona sugerencias de mejora",
+          "Se adapta a 6 objetivos de escritura para diferentes escenarios"
+        ],
+        "faqs": [
+          {
+            "q": "¿Es gratuito?",
+            "a": "Sí, es completamente gratuito con un límite diario. No se requiere registro."
+          },
+          {
+            "q": "¿Qué idiomas se admiten?",
+            "a": "Admite inglés, chino, español, francés, hindi y árabe."
+          },
+          {
+            "q": "¿Se almacena mi texto?",
+            "a": "No. Tu texto solo se envía a la AI para análisis y no se guarda en ninguna cuenta o base de datos."
+          },
+          {
+            "q": "¿Cómo es diferente de Grammarly?",
+            "a": "Además de detectar errores, explica por qué, reescribe todo el pasaje, puntúa la legibilidad, se adapta a tu objetivo de escritura y funciona en 6 idiomas."
+          },
+          {
+            "q": "¿Cuál es el límite de uso diario?",
+            "a": "Los usuarios gratuitos pueden usarlo 10 veces al día. Es más que ai-copywriter porque la reescritura a menudo requiere varios intentos."
           }
         ]
       }

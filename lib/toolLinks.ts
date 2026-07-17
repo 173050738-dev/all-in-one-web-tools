@@ -67,6 +67,7 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'idea-to-action',
   'time-estimator',
   'ai-copywriter',
+  'ai-grammar-checker',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

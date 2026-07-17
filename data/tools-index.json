@@ -44643,6 +44643,36 @@
     "localProcessing": false
   },
   {
+    "id": "ai-grammar-checker",
+    "slug": "ai-grammar-checker",
+    "name": "AI 写作校对器",
+    "description": "粘贴文本，AI 检测语法/拼写/用词问题并解释原因，给出整段改写、可读性评分和语气建议，支持六种语言。",
+    "category": "writing-tools",
+    "tags": [
+      "写作",
+      "校对",
+      "语法",
+      "润色",
+      "AI"
+    ],
+    "nameEn": "AI Grammar & Writing Checker",
+    "descriptionEn": "Paste your text and let AI catch grammar, spelling and wording issues with explanations, plus a full rewrite, readability score and tone advice. Supports 6 languages.",
+    "tagsEn": [
+      "Writing",
+      "Grammar",
+      "Proofreading",
+      "Rewrite",
+      "AI"
+    ],
+    "isFree": true,
+    "icon": "SpellCheck",
+    "likes": 0,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": false
+  },
+  {
     "id": "focus-timer",
     "slug": "focus-timer",
     "name": "专注计时器",

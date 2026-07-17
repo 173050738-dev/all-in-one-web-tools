@@ -274,7 +274,8 @@
     "collector-desc": "Save 5 tools to your toolbox",
     "first-search-name": "First Search",
     "first-search-desc": "Search for your first tool",
-    "first-history-name": "Explorer",
+    "first-history-name": "First Use",
+    "first-history-desc": "Use your first tool",
     "explorer-desc": "Use 10 different tools",
     "explorer-name": "Explorer",
     "social-name": "Social Butterfly",
@@ -8070,6 +8071,54 @@
           {
             "q": "Which languages are supported?",
             "a": "Currently supports Chinese, English, French, Spanish, Hindi, and Arabic."
+          }
+        ]
+      }
+    },
+    "ai-grammar-checker": {
+      "name": "AI Grammar & Writing Checker",
+      "description": "Check grammar, spelling, and wording with AI, get rewrite suggestions and readability score",
+      "seo": {
+        "intro": "AI Grammar & Writing Checker is your intelligent writing coach that goes beyond simple grammar checking. It detects grammar, spelling, punctuation, and wording issues with clear explanations, rewrites the entire passage to improve flow, scores readability, analyzes tone, and adapts to your writing goals. Whether you're writing academic papers, business emails, social media posts, resumes, or casual messages, this tool helps you communicate more effectively in 6 languages.",
+        "scenarios": [
+          "Students can check academic papers for grammar errors before submission",
+          "Professionals can polish business emails to sound more polished and professional",
+          "Content creators can optimize social media posts for better engagement",
+          "Job seekers can improve resume wording to make a stronger impression"
+        ],
+        "tutorial": [
+          "Paste your text into the input box",
+          "Select your writing goal: General, Academic, Business Email, Social Media, Resume, or Casual",
+          "Click the Check Grammar button",
+          "Review corrections, rewritten text, readability score, and tone analysis"
+        ],
+        "advantages": [
+          "Detects grammar, spelling, punctuation, and wording issues with explanations",
+          "Rewrites the entire passage to improve flow and clarity",
+          "Scores readability from 0-100 with actionable feedback",
+          "Analyzes tone and provides suggestions for improvement",
+          "Adapts to 6 writing goals for different scenarios"
+        ],
+        "faqs": [
+          {
+            "q": "Is it free to use?",
+            "a": "Yes, it's completely free with a daily limit. No signup required."
+          },
+          {
+            "q": "Which languages are supported?",
+            "a": "Supports English, 中文, Español, Français, हिन्दी, and العربية."
+          },
+          {
+            "q": "Is my text stored or saved?",
+            "a": "No. Your text is only sent to the AI for analysis and is not saved to any account or database."
+          },
+          {
+            "q": "How is this different from Grammarly?",
+            "a": "Besides catching errors, it explains why, rewrites the whole passage, scores readability, adapts to your writing goal, and works in 6 languages."
+          },
+          {
+            "q": "What's the daily usage limit?",
+            "a": "Free users can use it 10 times per day. This is more than ai-copywriter because rewriting often requires multiple attempts."
           }
         ]
       }

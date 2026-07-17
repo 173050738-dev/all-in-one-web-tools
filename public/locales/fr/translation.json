@@ -274,7 +274,8 @@
     "collector-desc": "Sauvegarder 5 outils dans votre boîte à outils",
     "first-search-name": "Première recherche",
     "first-search-desc": "Rechercher votre premier outil",
-    "first-history-name": "Explorateur",
+    "first-history-name": "Première utilisation",
+    "first-history-desc": "Utilisez votre premier outil",
     "explorer-desc": "Utiliser 10 outils différents",
     "explorer-name": "Explorateur",
     "social-name": "Papillon social",
@@ -8070,6 +8071,54 @@
           {
             "q": "Quelles langues sont prises en charge ?",
             "a": "Prend actuellement en charge le chinois, l'anglais, le français, l'espagnol, l'hindi et l'arabe."
+          }
+        ]
+      }
+    },
+    "ai-grammar-checker": {
+      "name": "Vérificateur AI de grammaire et d'écriture",
+      "description": "Vérifiez la grammaire, l'orthographe et la formulation avec l'AI, obtenez des suggestions de réécriture et un score de lisibilité",
+      "seo": {
+        "intro": "Le Vérificateur AI de grammaire et d'écriture est votre coach d'écriture intelligent qui va au-delà d'un simple correcteur de grammaire. Il détecte les erreurs de grammaire, d'orthographe, de ponctuation et de formulation avec des explications claires, réécrit le passage entier pour améliorer la fluidité, note la lisibilité, analyse le ton et s'adapte à vos objectifs d'écriture. Que vous écriviez des articles académiques, des emails professionnels, des publications sur les réseaux sociaux, des CV ou des messages informels, cet outil vous aide à communiquer plus efficacement en 6 langues.",
+        "scenarios": [
+          "Les étudiants peuvent vérifier les erreurs de grammaire dans leurs travaux académiques avant la soumission",
+          "Les professionnels peuvent polir leurs emails professionnels pour paraître plus élaborés",
+          "Les créateurs de contenu peuvent optimiser leurs publications sur les réseaux sociaux pour améliorer l'engagement",
+          "Les demandeurs d'emploi peuvent améliorer la formulation de leur CV pour faire une meilleure impression"
+        ],
+        "tutorial": [
+          "Collez votre texte dans la zone de saisie",
+          "Sélectionnez votre objectif d'écriture : Général, Académique, Email professionnel, Réseaux sociaux, CV ou Décontracté",
+          "Cliquez sur le bouton Vérifier la grammaire",
+          "Consultez les corrections, le texte réécrit, le score de lisibilité et l'analyse du ton"
+        ],
+        "advantages": [
+          "Détecte les erreurs de grammaire, d'orthographe, de ponctuation et de formulation avec explications",
+          "Réécrit le passage entier pour améliorer la fluidité et la clarté",
+          "Note la lisibilité de 0 à 100 avec des retours exploitables",
+          "Analyse le ton et fournit des suggestions d'amélioration",
+          "S'adapte à 6 objectifs d'écriture pour différents scénarios"
+        ],
+        "faqs": [
+          {
+            "q": "C'est gratuit ?",
+            "a": "Oui, c'est complètement gratuit avec une limite quotidienne. Aucune inscription requise."
+          },
+          {
+            "q": "Quelles langues sont prises en charge ?",
+            "a": "Prend en charge l'anglais, le chinois, l'espagnol, le français, l'hindi et l'arabe."
+          },
+          {
+            "q": "Mon texte est-il stocké ?",
+            "a": "Non. Votre texte n'est envoyé à l'AI que pour analyse et n'est pas enregistré dans aucun compte ou base de données."
+          },
+          {
+            "q": "Comment ça diffère de Grammarly ?",
+            "a": "Outre la détection des erreurs, il explique pourquoi, réécrit tout le passage, note la lisibilité, s'adapte à votre objectif d'écriture et fonctionne en 6 langues."
+          },
+          {
+            "q": "Quelle est la limite d'utilisation quotidienne ?",
+            "a": "Les utilisateurs gratuits peuvent l'utiliser 10 fois par jour. C'est plus que l'ai-copywriter car la réécriture nécessite souvent plusieurs tentatives."
           }
         ]
       }

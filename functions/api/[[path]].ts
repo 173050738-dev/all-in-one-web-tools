@@ -247,6 +247,54 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
         }
 
+        case '/api/ai-grammar-checker':
+        case '/api/ai-grammar-checker/': {
+          const text = payload.text as string;
+          const goal = (payload.goal as string) || 'general';
+          if (!text?.trim()) return errJson('Text is required', 400);
+          if (text.length > 4000) return errJson('Text too long (max 4000 chars)', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 10);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const systemPrompt = `你是专业的多语言写作校对与润色专家。分析用户文本，检测语法/拼写/标点/用词问题，给出改写与评分。
+必须只返回有效 JSON，不要任何解释文字、不要用\`\`\`包裹。结构：
+{
+  "corrections":[{"original":"错误片段","suggestion":"改后","type":"grammar|spelling|punctuation|wording","reason":"为什么(一句话)"}],
+  "rewritten":"整段改写后的通顺全文",
+  "score": 0-100 的整数,
+  "scoreComment":"一句话可读性评价",
+  "tone":"检测到的当前语气(如 formal/neutral/stiff/friendly)",
+  "toneSuggestion":"若语气不佳给出调整建议，否则空字符串",
+  "stats":{"words":字数,"sentences":句数,"issues":问题数}
+}
+按【写作目标 goal】调整改写风格(academic学术严谨/business-email商务礼貌/social社媒轻快/resume简历有力/casual日常/general通用)。
+所有文字输出用 ${langLabel(locale)}。corrections 最多返回 20 条。若无错误，corrections 返回空数组、rewritten 返回原文。`;
+
+          const userPrompt = locale === 'zh'
+            ? `待校对文本：\n${text}\n\n写作目标：${goal}\n\n请按 JSON 结构返回校对结果。`
+            : locale === 'es'
+            ? `Texto para revisar:\n${text}\n\nObjetivo de escritura: ${goal}\n\nDevuelve el resultado en formato JSON.`
+            : locale === 'fr'
+            ? `Texte à corriger:\n${text}\n\nObjectif d'écriture: ${goal}\n\nRetournez le résultat au format JSON.`
+            : locale === 'hi'
+            ? `प्रूफ़रीडिंग के लिए टेक्स्ट:\n${text}\n\nलेखन लक्ष्य: ${goal}\n\nJSON प्रारूप में परिणाम लौटाएं।`
+            : locale === 'ar'
+            ? `نص للمراجعة:\n${text}\n\nهدف الكتابة: ${goal}\n\nأرجِع النتيجة بصيغة JSON.`
+            : `Text to proofread:\n${text}\n\nWriting goal: ${goal}\n\nReturn the result as the required JSON.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('AI response parse error', 502);
+          }
+          return json({ ...result, remaining: rateLimitResult.remaining });
+        }
+
         case '/api/seo-miner':
         case '/api/seo-miner/': {
           const url = payload.url as string;
