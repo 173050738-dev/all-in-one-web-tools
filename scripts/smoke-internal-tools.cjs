@@ -25,23 +25,25 @@ const RETRY = parseInt(process.env.RETRY || '2', 10);
 
 const LOCALES = ['zh', 'en', 'es', 'fr', 'hi', 'ar'];
 
-// === 与 deploy.yml 保持一致的自研工具白名单（49 个）===
+// === 与 deploy.yml 保持一致的自研工具白名单（58 个）===
 const INTERNAL_SLUGS = [
-  'ai-copywriter',
-  'ai-grammar-checker',
-  'avatar-decorator',
   'audio-bpm-detector',
+  'avatar-decorator',
   'base64-tool',
   'caption-generator',
   'case-converter',
   'color-picker',
+  'concept-explain',
   'copy-cleaner',
   'countdown',
   'danmaku',
   'decision-wheel',
   'emoji-mixer',
+  'excel-formula-generator',
+  'focus-timer',
   'fortune-sticks',
   'grid-cutter',
+  'idea-to-action',
   'image-compressor',
   'image-to-base64',
   'json-formatter',
@@ -59,11 +61,14 @@ const INTERNAL_SLUGS = [
   'random-number',
   'regex-tester',
   'script-splitter',
+  'seo-keyword-miner',
   'sentiment-analyzer',
   'srt-subtitle-generator',
+  'task-breakdown',
   'text-counter',
-  'text-to-speech',
   'text-tools',
+  'text-to-speech',
+  'time-estimator',
   'timestamp-converter',
   'title-weight-checker',
   'tone-changer',
@@ -78,6 +83,8 @@ const INTERNAL_SLUGS = [
   'wc-name-decorator',
   'wc-poster-generator',
   'wc-scoreboard-simulator',
+  'ai-copywriter',
+  'ai-grammar-checker',
 ];
 
 function buildUrls() {
