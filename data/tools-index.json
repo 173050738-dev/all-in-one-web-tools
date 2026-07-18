@@ -23653,13 +23653,14 @@
       "命名"
     ],
     "nameEn": "Case Converter",
-    "descriptionEn": "One-click text case conversion, supports PascalCase, camelCase, snake_case, kebab-case, UPPER/lower, Title Case, capitalize first letter.",
+    "descriptionEn": "Free Online Case Converter - Convert text between camelCase, PascalCase, snake_case, kebab-case, UPPERCASE, lowercase, Title Case and more. Perfect for coding and content formatting.",
     "tagsEn": [
-      "Convert",
-      "文本",
-      "大小写",
-      "驼峰",
-      "命名"
+      "Case Converter",
+      "camelCase",
+      "PascalCase",
+      "snake_case",
+      "kebab-case",
+      "Text Formatting"
     ],
     "isFree": true,
     "icon": "Type",
