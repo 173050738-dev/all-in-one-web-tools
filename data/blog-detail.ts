@@ -35864,4 +35864,3565 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
       }
     }
   ]
+,
+  "ai-grammar-checker-beginner-guide": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. What Is an AI Grammar Checker and Why Do You Need One?",
+      zh: "1. 什么是AI语法检查器，为什么你需要它？",
+      es: "1. What Is an AI Grammar Checker and Why Do You Need One?",
+      fr: "1. What Is an AI Grammar Checker and Why Do You Need One?",
+      hi: "1. What Is an AI Grammar Checker and Why Do You Need One?",
+      ar: "1. What Is an AI Grammar Checker and Why Do You Need One?"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "An AI grammar checker is a powerful tool that uses artificial intelligence to analyze your writing for grammatical errors, spelling mistakes, punctuation issues, and stylistic improvements. Unlike traditional grammar checkers, AI-powered tools can understand context, suggest better word choices, and even improve sentence structure to make your writing more polished and professional.",
+      zh: "AI语法检查器是一个强大的工具，它使用人工智能来分析你的写作，检查语法错误、拼写错误、标点问题和文体改进。与传统语法检查器不同，AI驱动的工具能够理解上下文，建议更好的词汇选择，甚至改进句子结构，使你的写作更加流畅和专业。",
+      es: "An AI grammar checker is a powerful tool that uses artificial intelligence to analyze your writing for grammatical errors, spelling mistakes, punctuation issues, and stylistic improvements. Unlike traditional grammar checkers, AI-powered tools can understand context, suggest better word choices, and even improve sentence structure to make your writing more polished and professional.",
+      fr: "An AI grammar checker is a powerful tool that uses artificial intelligence to analyze your writing for grammatical errors, spelling mistakes, punctuation issues, and stylistic improvements. Unlike traditional grammar checkers, AI-powered tools can understand context, suggest better word choices, and even improve sentence structure to make your writing more polished and professional.",
+      hi: "An AI grammar checker is a powerful tool that uses artificial intelligence to analyze your writing for grammatical errors, spelling mistakes, punctuation issues, and stylistic improvements. Unlike traditional grammar checkers, AI-powered tools can understand context, suggest better word choices, and even improve sentence structure to make your writing more polished and professional.",
+      ar: "An AI grammar checker is a powerful tool that uses artificial intelligence to analyze your writing for grammatical errors, spelling mistakes, punctuation issues, and stylistic improvements. Unlike traditional grammar checkers, AI-powered tools can understand context, suggest better word choices, and even improve sentence structure to make your writing more polished and professional."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    text: {
+      en: "Pro Tip: Korelyy AI Grammar Checker supports 6 languages - English, Chinese, Spanish, French, Hindi, and Arabic. Check your writing in any language with a single click!",
+      zh: "高手技巧：Korelyy AI语法检查器支持6种语言——英语、中文、西班牙语、法语、印地语和阿拉伯语。一键检查任意语言的写作！",
+      es: "Pro Tip: Korelyy AI Grammar Checker supports 6 languages - English, Chinese, Spanish, French, Hindi, and Arabic. Check your writing in any language with a single click!",
+      fr: "Pro Tip: Korelyy AI Grammar Checker supports 6 languages - English, Chinese, Spanish, French, Hindi, and Arabic. Check your writing in any language with a single click!",
+      hi: "Pro Tip: Korelyy AI Grammar Checker supports 6 languages - English, Chinese, Spanish, French, Hindi, and Arabic. Check your writing in any language with a single click!",
+      ar: "Pro Tip: Korelyy AI Grammar Checker supports 6 languages - English, Chinese, Spanish, French, Hindi, and Arabic. Check your writing in any language with a single click!"
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Getting Started with Korelyy AI Grammar Checker",
+      zh: "2. 开始使用Korelyy AI语法检查器",
+      es: "2. Getting Started with Korelyy AI Grammar Checker",
+      fr: "2. Getting Started with Korelyy AI Grammar Checker",
+      hi: "2. Getting Started with Korelyy AI Grammar Checker",
+      ar: "2. Getting Started with Korelyy AI Grammar Checker"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Copy and paste your text into the input area",
+        zh: "将你的文本复制粘贴到输入区域",
+        es: "Copy and paste your text into the input area",
+        fr: "Copy and paste your text into the input area",
+        hi: "Copy and paste your text into the input area",
+        ar: "Copy and paste your text into the input area"
+      },
+      {
+        en: "Select your target language from the dropdown menu",
+        zh: "从下拉菜单中选择目标语言",
+        es: "Select your target language from the dropdown menu",
+        fr: "Select your target language from the dropdown menu",
+        hi: "Select your target language from the dropdown menu",
+        ar: "Select your target language from the dropdown menu"
+      },
+      {
+        en: "Click the Check Grammar button",
+        zh: "点击检查语法按钮",
+        es: "Click the Check Grammar button",
+        fr: "Click the Check Grammar button",
+        hi: "Click the Check Grammar button",
+        ar: "Click the Check Grammar button"
+      },
+      {
+        en: "Review suggestions and apply corrections with one click",
+        zh: "查看建议并一键应用更正",
+        es: "Review suggestions and apply corrections with one click",
+        fr: "Review suggestions and apply corrections with one click",
+        hi: "Review suggestions and apply corrections with one click",
+        ar: "Review suggestions and apply corrections with one click"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Key Features You Will Love",
+      zh: "3. 你会喜欢的关键功能",
+      es: "3. Key Features You Will Love",
+      fr: "3. Key Features You Will Love",
+      hi: "3. Key Features You Will Love",
+      ar: "3. Key Features You Will Love"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Real-time suggestions as you type",
+        zh: "输入时实时建议",
+        es: "Real-time suggestions as you type",
+        fr: "Real-time suggestions as you type",
+        hi: "Real-time suggestions as you type",
+        ar: "Real-time suggestions as you type"
+      },
+      {
+        en: "Detailed explanations for each correction",
+        zh: "每个更正都有详细解释",
+        es: "Detailed explanations for each correction",
+        fr: "Detailed explanations for each correction",
+        hi: "Detailed explanations for each correction",
+        ar: "Detailed explanations for each correction"
+      },
+      {
+        en: "Rewrite suggestions for awkward sentences",
+        zh: "对别扭句子的重写建议",
+        es: "Rewrite suggestions for awkward sentences",
+        fr: "Rewrite suggestions for awkward sentences",
+        hi: "Rewrite suggestions for awkward sentences",
+        ar: "Rewrite suggestions for awkward sentences"
+      },
+      {
+        en: "Readability score and improvement tips",
+        zh: "可读性评分和改进建议",
+        es: "Readability score and improvement tips",
+        fr: "Readability score and improvement tips",
+        hi: "Readability score and improvement tips",
+        ar: "Readability score and improvement tips"
+      },
+      {
+        en: "Full multilingual support for global communication",
+        zh: "完整的多语言支持，助力全球沟通",
+        es: "Full multilingual support for global communication",
+        fr: "Full multilingual support for global communication",
+        hi: "Full multilingual support for global communication",
+        ar: "Full multilingual support for global communication"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Advanced Tips for Better Writing",
+      zh: "4. 提升写作水平的进阶技巧",
+      es: "4. Advanced Tips for Better Writing",
+      fr: "4. Advanced Tips for Better Writing",
+      hi: "4. Advanced Tips for Better Writing",
+      ar: "4. Advanced Tips for Better Writing"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "To get the most out of your AI grammar checker, consider these best practices: Always review suggestions critically - AI is smart but not perfect. Use the readability score to ensure your content is accessible to your target audience. Try different languages to see how your message translates across cultures.",
+      zh: "为了充分利用AI语法检查器，请遵循以下最佳实践：始终批判性地审查建议——AI很聪明但并不完美。使用可读性评分确保你的内容对目标受众来说易于理解。尝试不同语言，看看你的信息在不同文化中如何传达。",
+      es: "To get the most out of your AI grammar checker, consider these best practices: Always review suggestions critically - AI is smart but not perfect. Use the readability score to ensure your content is accessible to your target audience. Try different languages to see how your message translates across cultures.",
+      fr: "To get the most out of your AI grammar checker, consider these best practices: Always review suggestions critically - AI is smart but not perfect. Use the readability score to ensure your content is accessible to your target audience. Try different languages to see how your message translates across cultures.",
+      hi: "To get the most out of your AI grammar checker, consider these best practices: Always review suggestions critically - AI is smart but not perfect. Use the readability score to ensure your content is accessible to your target audience. Try different languages to see how your message translates across cultures.",
+      ar: "To get the most out of your AI grammar checker, consider these best practices: Always review suggestions critically - AI is smart but not perfect. Use the readability score to ensure your content is accessible to your target audience. Try different languages to see how your message translates across cultures."
+    }
+  },
+  {
+    "type": "cta",
+    "link": "/tool/ai-grammar-checker",
+    text: {
+      en: "Try Korelyy AI Grammar Checker Now",
+      zh: "立即尝试Korelyy AI语法检查器",
+      es: "Try Korelyy AI Grammar Checker Now",
+      fr: "Try Korelyy AI Grammar Checker Now",
+      hi: "Try Korelyy AI Grammar Checker Now",
+      ar: "Try Korelyy AI Grammar Checker Now"
+    },
+    sub: {
+      en: "Free, No signup, 6 languages supported",
+      zh: "免费，无需注册，支持6种语言",
+      es: "Free, No signup, 6 languages supported",
+      fr: "Free, No signup, 6 languages supported",
+      hi: "Free, No signup, 6 languages supported",
+      ar: "Free, No signup, 6 languages supported"
+    }
+  }
+],
+  "prompt-engineering-basics-2026": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. What Is Prompt Engineering?",
+      zh: "1. 什么是提示词工程？",
+      es: "1. What Is Prompt Engineering?",
+      fr: "1. What Is Prompt Engineering?",
+      hi: "1. What Is Prompt Engineering?",
+      ar: "1. What Is Prompt Engineering?"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "Prompt engineering is the art and science of crafting effective instructions for AI models. A well-designed prompt can mean the difference between getting a generic response and receiving a highly specific, useful output. In 2026, mastering prompt engineering has become essential for anyone working with AI tools.",
+      zh: "提示词工程是为AI模型编写有效指令的艺术和科学。一个设计良好的提示词可以决定你得到的是一个通用响应还是一个高度具体、有用的输出。在2026年，掌握提示词工程已经成为任何使用AI工具的人的必备技能。",
+      es: "Prompt engineering is the art and science of crafting effective instructions for AI models. A well-designed prompt can mean the difference between getting a generic response and receiving a highly specific, useful output. In 2026, mastering prompt engineering has become essential for anyone working with AI tools.",
+      fr: "Prompt engineering is the art and science of crafting effective instructions for AI models. A well-designed prompt can mean the difference between getting a generic response and receiving a highly specific, useful output. In 2026, mastering prompt engineering has become essential for anyone working with AI tools.",
+      hi: "Prompt engineering is the art and science of crafting effective instructions for AI models. A well-designed prompt can mean the difference between getting a generic response and receiving a highly specific, useful output. In 2026, mastering prompt engineering has become essential for anyone working with AI tools.",
+      ar: "Prompt engineering is the art and science of crafting effective instructions for AI models. A well-designed prompt can mean the difference between getting a generic response and receiving a highly specific, useful output. In 2026, mastering prompt engineering has become essential for anyone working with AI tools."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    text: {
+      en: "Stat: 80% of AI users report better results when using well-crafted prompts. Learning prompt engineering can significantly boost your productivity and creativity.",
+      zh: "统计数据：80%的AI用户报告使用精心设计的提示词时获得更好的结果。学习提示词工程可以显著提升你的生产力和创造力。",
+      es: "Stat: 80% of AI users report better results when using well-crafted prompts. Learning prompt engineering can significantly boost your productivity and creativity.",
+      fr: "Stat: 80% of AI users report better results when using well-crafted prompts. Learning prompt engineering can significantly boost your productivity and creativity.",
+      hi: "Stat: 80% of AI users report better results when using well-crafted prompts. Learning prompt engineering can significantly boost your productivity and creativity.",
+      ar: "Stat: 80% of AI users report better results when using well-crafted prompts. Learning prompt engineering can significantly boost your productivity and creativity."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. The Fundamentals of Effective Prompts",
+      zh: "2. 有效提示词的基本要素",
+      es: "2. The Fundamentals of Effective Prompts",
+      fr: "2. The Fundamentals of Effective Prompts",
+      hi: "2. The Fundamentals of Effective Prompts",
+      ar: "2. The Fundamentals of Effective Prompts"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Be clear and specific about what you want",
+        zh: "明确具体地说明你想要什么",
+        es: "Be clear and specific about what you want",
+        fr: "Be clear and specific about what you want",
+        hi: "Be clear and specific about what you want",
+        ar: "Be clear and specific about what you want"
+      },
+      {
+        en: "Provide context and background information",
+        zh: "提供上下文和背景信息",
+        es: "Provide context and background information",
+        fr: "Provide context and background information",
+        hi: "Provide context and background information",
+        ar: "Provide context and background information"
+      },
+      {
+        en: "Specify the format of the output",
+        zh: "指定输出格式",
+        es: "Specify the format of the output",
+        fr: "Specify the format of the output",
+        hi: "Specify the format of the output",
+        ar: "Specify the format of the output"
+      },
+      {
+        en: "Include examples when necessary",
+        zh: "必要时包含示例",
+        es: "Include examples when necessary",
+        fr: "Include examples when necessary",
+        hi: "Include examples when necessary",
+        ar: "Include examples when necessary"
+      },
+      {
+        en: "Set constraints and boundaries",
+        zh: "设定约束和边界",
+        es: "Set constraints and boundaries",
+        fr: "Set constraints and boundaries",
+        hi: "Set constraints and boundaries",
+        ar: "Set constraints and boundaries"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Types of Prompts You Should Know",
+      zh: "3. 你应该了解的提示词类型",
+      es: "3. Types of Prompts You Should Know",
+      fr: "3. Types of Prompts You Should Know",
+      hi: "3. Types of Prompts You Should Know",
+      ar: "3. Types of Prompts You Should Know"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Instruction prompts: Direct commands telling AI what to do",
+        zh: "指令提示词：直接告诉AI做什么的命令",
+        es: "Instruction prompts: Direct commands telling AI what to do",
+        fr: "Instruction prompts: Direct commands telling AI what to do",
+        hi: "Instruction prompts: Direct commands telling AI what to do",
+        ar: "Instruction prompts: Direct commands telling AI what to do"
+      },
+      {
+        en: "Role prompts: Assigning a persona or expertise level",
+        zh: "角色提示词：分配一个角色或专业水平",
+        es: "Role prompts: Assigning a persona or expertise level",
+        fr: "Role prompts: Assigning a persona or expertise level",
+        hi: "Role prompts: Assigning a persona or expertise level",
+        ar: "Role prompts: Assigning a persona or expertise level"
+      },
+      {
+        en: "Chain-of-thought prompts: Encouraging step-by-step reasoning",
+        zh: "思维链提示词：鼓励逐步推理",
+        es: "Chain-of-thought prompts: Encouraging step-by-step reasoning",
+        fr: "Chain-of-thought prompts: Encouraging step-by-step reasoning",
+        hi: "Chain-of-thought prompts: Encouraging step-by-step reasoning",
+        ar: "Chain-of-thought prompts: Encouraging step-by-step reasoning"
+      },
+      {
+        en: "Few-shot prompts: Providing examples for context",
+        zh: "少样本提示词：提供示例作为上下文",
+        es: "Few-shot prompts: Providing examples for context",
+        fr: "Few-shot prompts: Providing examples for context",
+        hi: "Few-shot prompts: Providing examples for context",
+        ar: "Few-shot prompts: Providing examples for context"
+      },
+      {
+        en: "Refinement prompts: Iteratively improving output",
+        zh: "优化提示词：迭代改进输出",
+        es: "Refinement prompts: Iteratively improving output",
+        fr: "Refinement prompts: Iteratively improving output",
+        hi: "Refinement prompts: Iteratively improving output",
+        ar: "Refinement prompts: Iteratively improving output"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Common Mistakes to Avoid",
+      zh: "4. 要避免的常见错误",
+      es: "4. Common Mistakes to Avoid",
+      fr: "4. Common Mistakes to Avoid",
+      hi: "4. Common Mistakes to Avoid",
+      ar: "4. Common Mistakes to Avoid"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Being too vague or ambiguous",
+        zh: "过于模糊或含糊不清",
+        es: "Being too vague or ambiguous",
+        fr: "Being too vague or ambiguous",
+        hi: "Being too vague or ambiguous",
+        ar: "Being too vague or ambiguous"
+      },
+      {
+        en: "Providing too much irrelevant information",
+        zh: "提供过多无关信息",
+        es: "Providing too much irrelevant information",
+        fr: "Providing too much irrelevant information",
+        hi: "Providing too much irrelevant information",
+        ar: "Providing too much irrelevant information"
+      },
+      {
+        en: "Not specifying the desired output format",
+        zh: "未指定期望的输出格式",
+        es: "Not specifying the desired output format",
+        fr: "Not specifying the desired output format",
+        hi: "Not specifying the desired output format",
+        ar: "Not specifying the desired output format"
+      },
+      {
+        en: "Assuming AI understands implicit requests",
+        zh: "假设AI理解隐含的请求",
+        es: "Assuming AI understands implicit requests",
+        fr: "Assuming AI understands implicit requests",
+        hi: "Assuming AI understands implicit requests",
+        ar: "Assuming AI understands implicit requests"
+      },
+      {
+        en: "Not iterating and refining your prompts",
+        zh: "没有迭代和优化你的提示词",
+        es: "Not iterating and refining your prompts",
+        fr: "Not iterating and refining your prompts",
+        hi: "Not iterating and refining your prompts",
+        ar: "Not iterating and refining your prompts"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "link": "/tool/ai-prompt-generator",
+    text: {
+      en: "Generate Perfect Prompts with Korelyy",
+      zh: "使用Korelyy生成完美提示词",
+      es: "Generate Perfect Prompts with Korelyy",
+      fr: "Generate Perfect Prompts with Korelyy",
+      hi: "Generate Perfect Prompts with Korelyy",
+      ar: "Generate Perfect Prompts with Korelyy"
+    },
+    sub: {
+      en: "Free, No signup, Boost your AI productivity",
+      zh: "免费，无需注册，提升你的AI生产力",
+      es: "Free, No signup, Boost your AI productivity",
+      fr: "Free, No signup, Boost your AI productivity",
+      hi: "Free, No signup, Boost your AI productivity",
+      ar: "Free, No signup, Boost your AI productivity"
+    }
+  }
+],
+  "advanced-sora-video-prompts-techniques": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. Understanding Sora Capabilities",
+      zh: "1. 了解Sora的能力",
+      es: "1. Understanding Sora Capabilities",
+      fr: "1. Understanding Sora Capabilities",
+      hi: "1. Understanding Sora Capabilities",
+      ar: "1. Understanding Sora Capabilities"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "OpenAI Sora is a revolutionary AI video generator that can create realistic videos from text prompts. Before diving into advanced techniques, it is important to understand what Sora does best: generating coherent scenes, understanding camera movements, and creating realistic characters and environments.",
+      zh: "OpenAI Sora是一款革命性的AI视频生成器，可以从文本提示词创建逼真的视频。在深入高级技巧之前，了解Sora最擅长的事情很重要：生成连贯的场景、理解摄像机运动、创建逼真的角色和环境。",
+      es: "OpenAI Sora is a revolutionary AI video generator that can create realistic videos from text prompts. Before diving into advanced techniques, it is important to understand what Sora does best: generating coherent scenes, understanding camera movements, and creating realistic characters and environments.",
+      fr: "OpenAI Sora is a revolutionary AI video generator that can create realistic videos from text prompts. Before diving into advanced techniques, it is important to understand what Sora does best: generating coherent scenes, understanding camera movements, and creating realistic characters and environments.",
+      hi: "OpenAI Sora is a revolutionary AI video generator that can create realistic videos from text prompts. Before diving into advanced techniques, it is important to understand what Sora does best: generating coherent scenes, understanding camera movements, and creating realistic characters and environments.",
+      ar: "OpenAI Sora is a revolutionary AI video generator that can create realistic videos from text prompts. Before diving into advanced techniques, it is important to understand what Sora does best: generating coherent scenes, understanding camera movements, and creating realistic characters and environments."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    text: {
+      en: "Key Insight: Sora works best with detailed prompts that describe the visual elements, actions, camera angles, lighting, and style of your desired video.",
+      zh: "关键见解：Sora最适合使用详细描述视觉元素、动作、摄像机角度、光线和风格的提示词。",
+      es: "Key Insight: Sora works best with detailed prompts that describe the visual elements, actions, camera angles, lighting, and style of your desired video.",
+      fr: "Key Insight: Sora works best with detailed prompts that describe the visual elements, actions, camera angles, lighting, and style of your desired video.",
+      hi: "Key Insight: Sora works best with detailed prompts that describe the visual elements, actions, camera angles, lighting, and style of your desired video.",
+      ar: "Key Insight: Sora works best with detailed prompts that describe the visual elements, actions, camera angles, lighting, and style of your desired video."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Advanced Prompt Structure for Sora",
+      zh: "2. Sora的高级提示词结构",
+      es: "2. Advanced Prompt Structure for Sora",
+      fr: "2. Advanced Prompt Structure for Sora",
+      hi: "2. Advanced Prompt Structure for Sora",
+      ar: "2. Advanced Prompt Structure for Sora"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Subject: Who or what is the main focus?",
+        zh: "主体：谁或什么是主要焦点？",
+        es: "Subject: Who or what is the main focus?",
+        fr: "Subject: Who or what is the main focus?",
+        hi: "Subject: Who or what is the main focus?",
+        ar: "Subject: Who or what is the main focus?"
+      },
+      {
+        en: "Action: What is happening in the scene?",
+        zh: "动作：场景中发生了什么？",
+        es: "Action: What is happening in the scene?",
+        fr: "Action: What is happening in the scene?",
+        hi: "Action: What is happening in the scene?",
+        ar: "Action: What is happening in the scene?"
+      },
+      {
+        en: "Camera: What angle, movement, and framing?",
+        zh: "摄像机：什么角度、运动和构图？",
+        es: "Camera: What angle, movement, and framing?",
+        fr: "Camera: What angle, movement, and framing?",
+        hi: "Camera: What angle, movement, and framing?",
+        ar: "Camera: What angle, movement, and framing?"
+      },
+      {
+        en: "Lighting: Time of day, mood, and quality?",
+        zh: "光线：一天中的时间、情绪和质量？",
+        es: "Lighting: Time of day, mood, and quality?",
+        fr: "Lighting: Time of day, mood, and quality?",
+        hi: "Lighting: Time of day, mood, and quality?",
+        ar: "Lighting: Time of day, mood, and quality?"
+      },
+      {
+        en: "Style: Realistic, cinematic, animated?",
+        zh: "风格：写实、电影感、动画？",
+        es: "Style: Realistic, cinematic, animated?",
+        fr: "Style: Realistic, cinematic, animated?",
+        hi: "Style: Realistic, cinematic, animated?",
+        ar: "Style: Realistic, cinematic, animated?"
+      },
+      {
+        en: "Duration: How long should the video be?",
+        zh: "时长：视频应该多长？",
+        es: "Duration: How long should the video be?",
+        fr: "Duration: How long should the video be?",
+        hi: "Duration: How long should the video be?",
+        ar: "Duration: How long should the video be?"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Camera Movement Techniques",
+      zh: "3. 摄像机运动技巧",
+      es: "3. Camera Movement Techniques",
+      fr: "3. Camera Movement Techniques",
+      hi: "3. Camera Movement Techniques",
+      ar: "3. Camera Movement Techniques"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Static shot: No movement, perfect for establishing scenes",
+        zh: "静态镜头：无运动，适合建立场景",
+        es: "Static shot: No movement, perfect for establishing scenes",
+        fr: "Static shot: No movement, perfect for establishing scenes",
+        hi: "Static shot: No movement, perfect for establishing scenes",
+        ar: "Static shot: No movement, perfect for establishing scenes"
+      },
+      {
+        en: "Slow pan: Gentle horizontal movement for wide shots",
+        zh: "缓慢摇摄：适合广角镜头的平缓水平运动",
+        es: "Slow pan: Gentle horizontal movement for wide shots",
+        fr: "Slow pan: Gentle horizontal movement for wide shots",
+        hi: "Slow pan: Gentle horizontal movement for wide shots",
+        ar: "Slow pan: Gentle horizontal movement for wide shots"
+      },
+      {
+        en: "Tracking shot: Following a subject in motion",
+        zh: "跟拍镜头：跟随运动中的主体",
+        es: "Tracking shot: Following a subject in motion",
+        fr: "Tracking shot: Following a subject in motion",
+        hi: "Tracking shot: Following a subject in motion",
+        ar: "Tracking shot: Following a subject in motion"
+      },
+      {
+        en: "Dolly zoom: Changing focal length while moving (cinematic effect)",
+        zh: "推拉变焦：移动时改变焦距（电影效果）",
+        es: "Dolly zoom: Changing focal length while moving (cinematic effect)",
+        fr: "Dolly zoom: Changing focal length while moving (cinematic effect)",
+        hi: "Dolly zoom: Changing focal length while moving (cinematic effect)",
+        ar: "Dolly zoom: Changing focal length while moving (cinematic effect)"
+      },
+      {
+        en: "Bird eye view: Overhead perspective for dramatic effect",
+        zh: "鸟瞰视角：用于戏剧性效果的俯视视角",
+        es: "Bird eye view: Overhead perspective for dramatic effect",
+        fr: "Bird eye view: Overhead perspective for dramatic effect",
+        hi: "Bird eye view: Overhead perspective for dramatic effect",
+        ar: "Bird eye view: Overhead perspective for dramatic effect"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Style Modifiers for Stunning Results",
+      zh: "4. 实现惊艳效果的风格修饰符",
+      es: "4. Style Modifiers for Stunning Results",
+      fr: "4. Style Modifiers for Stunning Results",
+      hi: "4. Style Modifiers for Stunning Results",
+      ar: "4. Style Modifiers for Stunning Results"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Cinematic: Film-like quality with dramatic lighting",
+        zh: "电影感：戏剧性光线的电影质感",
+        es: "Cinematic: Film-like quality with dramatic lighting",
+        fr: "Cinematic: Film-like quality with dramatic lighting",
+        hi: "Cinematic: Film-like quality with dramatic lighting",
+        ar: "Cinematic: Film-like quality with dramatic lighting"
+      },
+      {
+        en: "Photorealistic: Ultra-realistic visuals",
+        zh: "照片写实：超逼真视觉效果",
+        es: "Photorealistic: Ultra-realistic visuals",
+        fr: "Photorealistic: Ultra-realistic visuals",
+        hi: "Photorealistic: Ultra-realistic visuals",
+        ar: "Photorealistic: Ultra-realistic visuals"
+      },
+      {
+        en: "Artistic: Stylized, painterly look",
+        zh: "艺术感：风格化、绘画感外观",
+        es: "Artistic: Stylized, painterly look",
+        fr: "Artistic: Stylized, painterly look",
+        hi: "Artistic: Stylized, painterly look",
+        ar: "Artistic: Stylized, painterly look"
+      },
+      {
+        en: "Broadcast quality: Television-standard production",
+        zh: "广播级质量：电视标准制作",
+        es: "Broadcast quality: Television-standard production",
+        fr: "Broadcast quality: Television-standard production",
+        hi: "Broadcast quality: Television-standard production",
+        ar: "Broadcast quality: Television-standard production"
+      },
+      {
+        en: "Animated: Cartoon or anime style",
+        zh: "动画：卡通或动漫风格",
+        es: "Animated: Cartoon or anime style",
+        fr: "Animated: Cartoon or anime style",
+        hi: "Animated: Cartoon or anime style",
+        ar: "Animated: Cartoon or anime style"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "link": "/tool/sora-prompt-generator",
+    text: {
+      en: "Generate Sora Prompts in Seconds",
+      zh: "秒级生成Sora提示词",
+      es: "Generate Sora Prompts in Seconds",
+      fr: "Generate Sora Prompts in Seconds",
+      hi: "Generate Sora Prompts in Seconds",
+      ar: "Generate Sora Prompts in Seconds"
+    },
+    sub: {
+      en: "Free, No signup, Professional video prompts",
+      zh: "免费，无需注册，专业视频提示词",
+      es: "Free, No signup, Professional video prompts",
+      fr: "Free, No signup, Professional video prompts",
+      hi: "Free, No signup, Professional video prompts",
+      ar: "Free, No signup, Professional video prompts"
+    }
+  }
+],
+  "midjourney-v6-new-features-2026": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. What Is New in Midjourney v6",
+      zh: "1. Midjourney v6的新功能",
+      es: "1. What Is New in Midjourney v6",
+      fr: "1. What Is New in Midjourney v6",
+      hi: "1. What Is New in Midjourney v6",
+      ar: "1. What Is New in Midjourney v6"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "Midjourney v6 represents a major leap forward in AI image generation. With improved prompt understanding, better image quality, and new features that give users more control, v6 is set to revolutionize how we create AI art in 2026.",
+      zh: "Midjourney v6代表了AI图像生成的重大飞跃。凭借改进的提示词理解、更好的图像质量和让用户获得更多控制的新功能，v6将在2026年彻底改变我们创建AI艺术的方式。",
+      es: "Midjourney v6 represents a major leap forward in AI image generation. With improved prompt understanding, better image quality, and new features that give users more control, v6 is set to revolutionize how we create AI art in 2026.",
+      fr: "Midjourney v6 represents a major leap forward in AI image generation. With improved prompt understanding, better image quality, and new features that give users more control, v6 is set to revolutionize how we create AI art in 2026.",
+      hi: "Midjourney v6 represents a major leap forward in AI image generation. With improved prompt understanding, better image quality, and new features that give users more control, v6 is set to revolutionize how we create AI art in 2026.",
+      ar: "Midjourney v6 represents a major leap forward in AI image generation. With improved prompt understanding, better image quality, and new features that give users more control, v6 is set to revolutionize how we create AI art in 2026."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    text: {
+      en: "Key Upgrade: Midjourney v6 has significantly improved text rendering, better image consistency across variations, and more precise control over composition and lighting.",
+      zh: "关键升级：Midjourney v6显著改进了文本渲染，变体之间的图像一致性更好，对构图和光线的控制更精确。",
+      es: "Key Upgrade: Midjourney v6 has significantly improved text rendering, better image consistency across variations, and more precise control over composition and lighting.",
+      fr: "Key Upgrade: Midjourney v6 has significantly improved text rendering, better image consistency across variations, and more precise control over composition and lighting.",
+      hi: "Key Upgrade: Midjourney v6 has significantly improved text rendering, better image consistency across variations, and more precise control over composition and lighting.",
+      ar: "Key Upgrade: Midjourney v6 has significantly improved text rendering, better image consistency across variations, and more precise control over composition and lighting."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. New Features You Need to Know",
+      zh: "2. 你需要了解的新功能",
+      es: "2. New Features You Need to Know",
+      fr: "2. New Features You Need to Know",
+      hi: "2. New Features You Need to Know",
+      ar: "2. New Features You Need to Know"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Improved text understanding: Better prompts yield better results",
+        zh: "改进的文本理解：更好的提示词产生更好的结果",
+        es: "Improved text understanding: Better prompts yield better results",
+        fr: "Improved text understanding: Better prompts yield better results",
+        hi: "Improved text understanding: Better prompts yield better results",
+        ar: "Improved text understanding: Better prompts yield better results"
+      },
+      {
+        en: "Style consistency: Maintain visual style across multiple generations",
+        zh: "风格一致性：在多次生成中保持视觉风格",
+        es: "Style consistency: Maintain visual style across multiple generations",
+        fr: "Style consistency: Maintain visual style across multiple generations",
+        hi: "Style consistency: Maintain visual style across multiple generations",
+        ar: "Style consistency: Maintain visual style across multiple generations"
+      },
+      {
+        en: "Advanced settings: More control over aspect ratio, quality, and style",
+        zh: "高级设置：对宽高比、质量和风格有更多控制",
+        es: "Advanced settings: More control over aspect ratio, quality, and style",
+        fr: "Advanced settings: More control over aspect ratio, quality, and style",
+        hi: "Advanced settings: More control over aspect ratio, quality, and style",
+        ar: "Advanced settings: More control over aspect ratio, quality, and style"
+      },
+      {
+        en: "Variation modes: New ways to explore and refine your images",
+        zh: "变体模式：探索和优化图像的新方法",
+        es: "Variation modes: New ways to explore and refine your images",
+        fr: "Variation modes: New ways to explore and refine your images",
+        hi: "Variation modes: New ways to explore and refine your images",
+        ar: "Variation modes: New ways to explore and refine your images"
+      },
+      {
+        en: "Upscale options: Enhanced resolution and detail",
+        zh: "放大选项：增强的分辨率和细节",
+        es: "Upscale options: Enhanced resolution and detail",
+        fr: "Upscale options: Enhanced resolution and detail",
+        hi: "Upscale options: Enhanced resolution and detail",
+        ar: "Upscale options: Enhanced resolution and detail"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Prompt Strategies for v6",
+      zh: "3. v6的提示词策略",
+      es: "3. Prompt Strategies for v6",
+      fr: "3. Prompt Strategies for v6",
+      hi: "3. Prompt Strategies for v6",
+      ar: "3. Prompt Strategies for v6"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Be more descriptive: v6 understands complex prompts better",
+        zh: "更具描述性：v6更好地理解复杂提示词",
+        es: "Be more descriptive: v6 understands complex prompts better",
+        fr: "Be more descriptive: v6 understands complex prompts better",
+        hi: "Be more descriptive: v6 understands complex prompts better",
+        ar: "Be more descriptive: v6 understands complex prompts better"
+      },
+      {
+        en: "Use style keywords: Specify artistic movements and techniques",
+        zh: "使用风格关键词：指定艺术流派和技巧",
+        es: "Use style keywords: Specify artistic movements and techniques",
+        fr: "Use style keywords: Specify artistic movements and techniques",
+        hi: "Use style keywords: Specify artistic movements and techniques",
+        ar: "Use style keywords: Specify artistic movements and techniques"
+      },
+      {
+        en: "Control composition: Use terms like rule of thirds and symmetry",
+        zh: "控制构图：使用三分法和对称等术语",
+        es: "Control composition: Use terms like rule of thirds and symmetry",
+        fr: "Control composition: Use terms like rule of thirds and symmetry",
+        hi: "Control composition: Use terms like rule of thirds and symmetry",
+        ar: "Control composition: Use terms like rule of thirds and symmetry"
+      },
+      {
+        en: "Experiment with weights: Use parentheses and colons for emphasis",
+        zh: "尝试权重：使用括号和冒号进行强调",
+        es: "Experiment with weights: Use parentheses and colons for emphasis",
+        fr: "Experiment with weights: Use parentheses and colons for emphasis",
+        hi: "Experiment with weights: Use parentheses and colons for emphasis",
+        ar: "Experiment with weights: Use parentheses and colons for emphasis"
+      },
+      {
+        en: "Iterate deliberately: Use variations to explore creative directions",
+        zh: "有意迭代：使用变体探索创意方向",
+        es: "Iterate deliberately: Use variations to explore creative directions",
+        fr: "Iterate deliberately: Use variations to explore creative directions",
+        hi: "Iterate deliberately: Use variations to explore creative directions",
+        ar: "Iterate deliberately: Use variations to explore creative directions"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Best Practices for Midjourney v6",
+      zh: "4. Midjourney v6的最佳实践",
+      es: "4. Best Practices for Midjourney v6",
+      fr: "4. Best Practices for Midjourney v6",
+      hi: "4. Best Practices for Midjourney v6",
+      ar: "4. Best Practices for Midjourney v6"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Start simple: Test basic prompts before adding complexity",
+        zh: "从简单开始：在增加复杂性之前测试基本提示词",
+        es: "Start simple: Test basic prompts before adding complexity",
+        fr: "Start simple: Test basic prompts before adding complexity",
+        hi: "Start simple: Test basic prompts before adding complexity",
+        ar: "Start simple: Test basic prompts before adding complexity"
+      },
+      {
+        en: "Save your favorites: Keep track of successful prompts",
+        zh: "保存你的收藏：跟踪成功的提示词",
+        es: "Save your favorites: Keep track of successful prompts",
+        fr: "Save your favorites: Keep track of successful prompts",
+        hi: "Save your favorites: Keep track of successful prompts",
+        ar: "Save your favorites: Keep track of successful prompts"
+      },
+      {
+        en: "Learn from others: Explore Midjourney galleries for inspiration",
+        zh: "向他人学习：浏览Midjourney画廊获取灵感",
+        es: "Learn from others: Explore Midjourney galleries for inspiration",
+        fr: "Learn from others: Explore Midjourney galleries for inspiration",
+        hi: "Learn from others: Explore Midjourney galleries for inspiration",
+        ar: "Learn from others: Explore Midjourney galleries for inspiration"
+      },
+      {
+        en: "Practice regularly: Prompt engineering improves with practice",
+        zh: "定期练习：提示词工程随着练习而提高",
+        es: "Practice regularly: Prompt engineering improves with practice",
+        fr: "Practice regularly: Prompt engineering improves with practice",
+        hi: "Practice regularly: Prompt engineering improves with practice",
+        ar: "Practice regularly: Prompt engineering improves with practice"
+      },
+      {
+        en: "Have fun: AI art should be creative and enjoyable!",
+        zh: "享受乐趣：AI艺术应该是有创意和令人愉快的！",
+        es: "Have fun: AI art should be creative and enjoyable!",
+        fr: "Have fun: AI art should be creative and enjoyable!",
+        hi: "Have fun: AI art should be creative and enjoyable!",
+        ar: "Have fun: AI art should be creative and enjoyable!"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "link": "/tool/midjourney-prompt-generator",
+    text: {
+      en: "Create Stunning Midjourney Art",
+      zh: "创建惊艳的Midjourney艺术",
+      es: "Create Stunning Midjourney Art",
+      fr: "Create Stunning Midjourney Art",
+      hi: "Create Stunning Midjourney Art",
+      ar: "Create Stunning Midjourney Art"
+    },
+    sub: {
+      en: "Free, No signup, Professional prompts for v6",
+      zh: "免费，无需注册，v6专业提示词",
+      es: "Free, No signup, Professional prompts for v6",
+      fr: "Free, No signup, Professional prompts for v6",
+      hi: "Free, No signup, Professional prompts for v6",
+      ar: "Free, No signup, Professional prompts for v6"
+    }
+  }
+],
+  "ai-video-generator-comparison-2026": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. The AI Video Generation Landscape in 2026",
+      zh: "1. 2026年的AI视频生成格局",
+      es: "1. The AI Video Generation Landscape in 2026",
+      fr: "1. The AI Video Generation Landscape in 2026",
+      hi: "1. The AI Video Generation Landscape in 2026",
+      ar: "1. The AI Video Generation Landscape in 2026"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "The AI video generation field has exploded in 2026, with major players like OpenAI Sora, Pika, and Runway leading the charge. Each tool offers unique capabilities and caters to different use cases. Understanding their strengths and weaknesses is essential for choosing the right tool for your project.",
+      zh: "2026年，AI视频生成领域迅猛发展，OpenAI Sora、Pika和Runway等主要参与者引领潮流。每个工具都提供独特的功能，满足不同的使用场景。了解它们的优缺点对于为你的项目选择正确的工具至关重要。",
+      es: "The AI video generation field has exploded in 2026, with major players like OpenAI Sora, Pika, and Runway leading the charge. Each tool offers unique capabilities and caters to different use cases. Understanding their strengths and weaknesses is essential for choosing the right tool for your project.",
+      fr: "The AI video generation field has exploded in 2026, with major players like OpenAI Sora, Pika, and Runway leading the charge. Each tool offers unique capabilities and caters to different use cases. Understanding their strengths and weaknesses is essential for choosing the right tool for your project.",
+      hi: "The AI video generation field has exploded in 2026, with major players like OpenAI Sora, Pika, and Runway leading the charge. Each tool offers unique capabilities and caters to different use cases. Understanding their strengths and weaknesses is essential for choosing the right tool for your project.",
+      ar: "The AI video generation field has exploded in 2026, with major players like OpenAI Sora, Pika, and Runway leading the charge. Each tool offers unique capabilities and caters to different use cases. Understanding their strengths and weaknesses is essential for choosing the right tool for your project."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    text: {
+      en: "Decision Tip: Consider your use case, budget, and desired output quality when choosing an AI video generator. No single tool is perfect for every scenario.",
+      zh: "决策技巧：选择AI视频生成器时，考虑你的使用场景、预算和期望的输出质量。没有一个工具是完美适用于所有场景的。",
+      es: "Decision Tip: Consider your use case, budget, and desired output quality when choosing an AI video generator. No single tool is perfect for every scenario.",
+      fr: "Decision Tip: Consider your use case, budget, and desired output quality when choosing an AI video generator. No single tool is perfect for every scenario.",
+      hi: "Decision Tip: Consider your use case, budget, and desired output quality when choosing an AI video generator. No single tool is perfect for every scenario.",
+      ar: "Decision Tip: Consider your use case, budget, and desired output quality when choosing an AI video generator. No single tool is perfect for every scenario."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Sora: OpenAI Video Generation Breakthrough",
+      zh: "2. Sora：OpenAI的视频生成突破",
+      es: "2. Sora: OpenAI Video Generation Breakthrough",
+      fr: "2. Sora: OpenAI Video Generation Breakthrough",
+      hi: "2. Sora: OpenAI Video Generation Breakthrough",
+      ar: "2. Sora: OpenAI Video Generation Breakthrough"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Strengths: Best text-to-video, realistic scenes, long videos",
+        zh: "优点：最佳文本转视频，逼真场景，长视频",
+        es: "Strengths: Best text-to-video, realistic scenes, long videos",
+        fr: "Strengths: Best text-to-video, realistic scenes, long videos",
+        hi: "Strengths: Best text-to-video, realistic scenes, long videos",
+        ar: "Strengths: Best text-to-video, realistic scenes, long videos"
+      },
+      {
+        en: "Weaknesses: Limited availability, high cost for commercial use",
+        zh: "缺点：可用性有限，商业使用成本高",
+        es: "Weaknesses: Limited availability, high cost for commercial use",
+        fr: "Weaknesses: Limited availability, high cost for commercial use",
+        hi: "Weaknesses: Limited availability, high cost for commercial use",
+        ar: "Weaknesses: Limited availability, high cost for commercial use"
+      },
+      {
+        en: "Best for: Professional video production, creative projects",
+        zh: "最适合：专业视频制作，创意项目",
+        es: "Best for: Professional video production, creative projects",
+        fr: "Best for: Professional video production, creative projects",
+        hi: "Best for: Professional video production, creative projects",
+        ar: "Best for: Professional video production, creative projects"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Pika: The Rising Star of AI Video",
+      zh: "3. Pika：AI视频的新星",
+      es: "3. Pika: The Rising Star of AI Video",
+      fr: "3. Pika: The Rising Star of AI Video",
+      hi: "3. Pika: The Rising Star of AI Video",
+      ar: "3. Pika: The Rising Star of AI Video"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Strengths: Fast generation, stylized outputs, user-friendly",
+        zh: "优点：生成速度快，风格化输出，用户友好",
+        es: "Strengths: Fast generation, stylized outputs, user-friendly",
+        fr: "Strengths: Fast generation, stylized outputs, user-friendly",
+        hi: "Strengths: Fast generation, stylized outputs, user-friendly",
+        ar: "Strengths: Fast generation, stylized outputs, user-friendly"
+      },
+      {
+        en: "Weaknesses: Less realistic than Sora, shorter videos",
+        zh: "缺点：不如Sora逼真，视频较短",
+        es: "Weaknesses: Less realistic than Sora, shorter videos",
+        fr: "Weaknesses: Less realistic than Sora, shorter videos",
+        hi: "Weaknesses: Less realistic than Sora, shorter videos",
+        ar: "Weaknesses: Less realistic than Sora, shorter videos"
+      },
+      {
+        en: "Best for: Social media content, quick prototypes, stylized videos",
+        zh: "最适合：社交媒体内容，快速原型，风格化视频",
+        es: "Best for: Social media content, quick prototypes, stylized videos",
+        fr: "Best for: Social media content, quick prototypes, stylized videos",
+        hi: "Best for: Social media content, quick prototypes, stylized videos",
+        ar: "Best for: Social media content, quick prototypes, stylized videos"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Runway: The All-in-One Creative Platform",
+      zh: "4. Runway：一体化创意平台",
+      es: "4. Runway: The All-in-One Creative Platform",
+      fr: "4. Runway: The All-in-One Creative Platform",
+      hi: "4. Runway: The All-in-One Creative Platform",
+      ar: "4. Runway: The All-in-One Creative Platform"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Strengths: Comprehensive toolset, video editing features, established platform",
+        zh: "优点：全面的工具集，视频编辑功能，成熟平台",
+        es: "Strengths: Comprehensive toolset, video editing features, established platform",
+        fr: "Strengths: Comprehensive toolset, video editing features, established platform",
+        hi: "Strengths: Comprehensive toolset, video editing features, established platform",
+        ar: "Strengths: Comprehensive toolset, video editing features, established platform"
+      },
+      {
+        en: "Weaknesses: Learning curve, subscription-based pricing",
+        zh: "缺点：学习曲线，订阅制定价",
+        es: "Weaknesses: Learning curve, subscription-based pricing",
+        fr: "Weaknesses: Learning curve, subscription-based pricing",
+        hi: "Weaknesses: Learning curve, subscription-based pricing",
+        ar: "Weaknesses: Learning curve, subscription-based pricing"
+      },
+      {
+        en: "Best for: Professional creators, integrated workflow, advanced editing",
+        zh: "最适合：专业创作者，集成工作流，高级编辑",
+        es: "Best for: Professional creators, integrated workflow, advanced editing",
+        fr: "Best for: Professional creators, integrated workflow, advanced editing",
+        hi: "Best for: Professional creators, integrated workflow, advanced editing",
+        ar: "Best for: Professional creators, integrated workflow, advanced editing"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "5. Choosing the Right Tool for You",
+      zh: "5. 为你选择正确的工具",
+      es: "5. Choosing the Right Tool for You",
+      fr: "5. Choosing the Right Tool for You",
+      hi: "5. Choosing the Right Tool for You",
+      ar: "5. Choosing the Right Tool for You"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "When choosing between Sora, Pika, and Runway, consider your specific needs. If you need the most realistic long-form videos, Sora is the best choice. For quick, stylized content, Pika excels. If you need a complete creative suite with video editing capabilities, Runway is the way to go.",
+      zh: "在Sora、Pika和Runway之间选择时，考虑你的具体需求。如果你需要最逼真的长视频，Sora是最佳选择。对于快速、风格化的内容，Pika表现出色。如果你需要一个具有视频编辑功能的完整创意套件，Runway是首选。",
+      es: "When choosing between Sora, Pika, and Runway, consider your specific needs. If you need the most realistic long-form videos, Sora is the best choice. For quick, stylized content, Pika excels. If you need a complete creative suite with video editing capabilities, Runway is the way to go.",
+      fr: "When choosing between Sora, Pika, and Runway, consider your specific needs. If you need the most realistic long-form videos, Sora is the best choice. For quick, stylized content, Pika excels. If you need a complete creative suite with video editing capabilities, Runway is the way to go.",
+      hi: "When choosing between Sora, Pika, and Runway, consider your specific needs. If you need the most realistic long-form videos, Sora is the best choice. For quick, stylized content, Pika excels. If you need a complete creative suite with video editing capabilities, Runway is the way to go.",
+      ar: "When choosing between Sora, Pika, and Runway, consider your specific needs. If you need the most realistic long-form videos, Sora is the best choice. For quick, stylized content, Pika excels. If you need a complete creative suite with video editing capabilities, Runway is the way to go."
+    }
+  },
+  {
+    "type": "cta",
+    "link": "/tool/video-prompt-generator",
+    text: {
+      en: "Generate Video Prompts for Any AI Tool",
+      zh: "为任何AI工具生成视频提示词",
+      es: "Generate Video Prompts for Any AI Tool",
+      fr: "Generate Video Prompts for Any AI Tool",
+      hi: "Generate Video Prompts for Any AI Tool",
+      ar: "Generate Video Prompts for Any AI Tool"
+    },
+    sub: {
+      en: "Free, No signup, Works with Sora, Pika, Runway",
+      zh: "免费，无需注册，适用于Sora、Pika、Runway",
+      es: "Free, No signup, Works with Sora, Pika, Runway",
+      fr: "Free, No signup, Works with Sora, Pika, Runway",
+      hi: "Free, No signup, Works with Sora, Pika, Runway",
+      ar: "Free, No signup, Works with Sora, Pika, Runway"
+    }
+  }
+],
+  "multilingual-writing-tips-2026": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. The Importance of Multilingual Writing in 2026",
+      zh: "1. 2026年多语言写作的重要性",
+      es: "1. The Importance of Multilingual Writing in 2026",
+      fr: "1. The Importance of Multilingual Writing in 2026",
+      hi: "1. The Importance of Multilingual Writing in 2026",
+      ar: "1. The Importance of Multilingual Writing in 2026"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "In today's globalized world, multilingual writing has become essential for businesses, content creators, and professionals. Whether you are communicating with international clients, creating content for a global audience, or expanding your reach across borders, the ability to write effectively in multiple languages is a valuable skill.",
+      zh: "在当今全球化的世界中，多语言写作已经成为企业、内容创作者和专业人士的必备技能。无论你是与国际客户沟通、为全球受众创建内容，还是跨越国界扩大影响力，用多种语言有效写作的能力都是一项宝贵的技能。",
+      es: "In today's globalized world, multilingual writing has become essential for businesses, content creators, and professionals. Whether you are communicating with international clients, creating content for a global audience, or expanding your reach across borders, the ability to write effectively in multiple languages is a valuable skill.",
+      fr: "In today's globalized world, multilingual writing has become essential for businesses, content creators, and professionals. Whether you are communicating with international clients, creating content for a global audience, or expanding your reach across borders, the ability to write effectively in multiple languages is a valuable skill.",
+      hi: "In today's globalized world, multilingual writing has become essential for businesses, content creators, and professionals. Whether you are communicating with international clients, creating content for a global audience, or expanding your reach across borders, the ability to write effectively in multiple languages is a valuable skill.",
+      ar: "In today's globalized world, multilingual writing has become essential for businesses, content creators, and professionals. Whether you are communicating with international clients, creating content for a global audience, or expanding your reach across borders, the ability to write effectively in multiple languages is a valuable skill."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    text: {
+      en: "Global Stat: Over 60% of internet users prefer content in their native language. Multilingual writing can significantly increase your reach and engagement.",
+      zh: "全球统计：超过60%的互联网用户更喜欢母语内容。多语言写作可以显著增加你的覆盖面和参与度。",
+      es: "Global Stat: Over 60% of internet users prefer content in their native language. Multilingual writing can significantly increase your reach and engagement.",
+      fr: "Global Stat: Over 60% of internet users prefer content in their native language. Multilingual writing can significantly increase your reach and engagement.",
+      hi: "Global Stat: Over 60% of internet users prefer content in their native language. Multilingual writing can significantly increase your reach and engagement.",
+      ar: "Global Stat: Over 60% of internet users prefer content in their native language. Multilingual writing can significantly increase your reach and engagement."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Key Languages to Master",
+      zh: "2. 需要掌握的关键语言",
+      es: "2. Key Languages to Master",
+      fr: "2. Key Languages to Master",
+      hi: "2. Key Languages to Master",
+      ar: "2. Key Languages to Master"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "English: Global business and tech language",
+        zh: "英语：全球商务和科技语言",
+        es: "English: Global business and tech language",
+        fr: "English: Global business and tech language",
+        hi: "English: Global business and tech language",
+        ar: "English: Global business and tech language"
+      },
+      {
+        en: "Chinese: Largest native speaker population",
+        zh: "中文：最大的母语使用者群体",
+        es: "Chinese: Largest native speaker population",
+        fr: "Chinese: Largest native speaker population",
+        hi: "Chinese: Largest native speaker population",
+        ar: "Chinese: Largest native speaker population"
+      },
+      {
+        en: "Spanish: Second most spoken language worldwide",
+        zh: "西班牙语：全球第二大语言",
+        es: "Spanish: Second most spoken language worldwide",
+        fr: "Spanish: Second most spoken language worldwide",
+        hi: "Spanish: Second most spoken language worldwide",
+        ar: "Spanish: Second most spoken language worldwide"
+      },
+      {
+        en: "French: International diplomacy and culture",
+        zh: "法语：国际外交和文化",
+        es: "French: International diplomacy and culture",
+        fr: "French: International diplomacy and culture",
+        hi: "French: International diplomacy and culture",
+        ar: "French: International diplomacy and culture"
+      },
+      {
+        en: "Hindi: Major language in rapidly growing markets",
+        zh: "印地语：快速增长市场中的主要语言",
+        es: "Hindi: Major language in rapidly growing markets",
+        fr: "Hindi: Major language in rapidly growing markets",
+        hi: "Hindi: Major language in rapidly growing markets",
+        ar: "Hindi: Major language in rapidly growing markets"
+      },
+      {
+        en: "Arabic: Key language for Middle Eastern markets",
+        zh: "阿拉伯语：中东市场的关键语言",
+        es: "Arabic: Key language for Middle Eastern markets",
+        fr: "Arabic: Key language for Middle Eastern markets",
+        hi: "Arabic: Key language for Middle Eastern markets",
+        ar: "Arabic: Key language for Middle Eastern markets"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Tips for Effective Multilingual Writing",
+      zh: "3. 有效多语言写作的技巧",
+      es: "3. Tips for Effective Multilingual Writing",
+      fr: "3. Tips for Effective Multilingual Writing",
+      hi: "3. Tips for Effective Multilingual Writing",
+      ar: "3. Tips for Effective Multilingual Writing"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Understand your audience: Know who you are writing for",
+        zh: "了解你的受众：知道你在为谁写作",
+        es: "Understand your audience: Know who you are writing for",
+        fr: "Understand your audience: Know who you are writing for",
+        hi: "Understand your audience: Know who you are writing for",
+        ar: "Understand your audience: Know who you are writing for"
+      },
+      {
+        en: "Use appropriate tone: Adjust formality based on culture",
+        zh: "使用适当的语气：根据文化调整正式程度",
+        es: "Use appropriate tone: Adjust formality based on culture",
+        fr: "Use appropriate tone: Adjust formality based on culture",
+        hi: "Use appropriate tone: Adjust formality based on culture",
+        ar: "Use appropriate tone: Adjust formality based on culture"
+      },
+      {
+        en: "Keep it simple: Avoid idioms that do not translate",
+        zh: "保持简单：避免无法翻译的习语",
+        es: "Keep it simple: Avoid idioms that do not translate",
+        fr: "Keep it simple: Avoid idioms that do not translate",
+        hi: "Keep it simple: Avoid idioms that do not translate",
+        ar: "Keep it simple: Avoid idioms that do not translate"
+      },
+      {
+        en: "Be culturally sensitive: Avoid topics that may offend",
+        zh: "文化敏感：避免可能冒犯的话题",
+        es: "Be culturally sensitive: Avoid topics that may offend",
+        fr: "Be culturally sensitive: Avoid topics that may offend",
+        hi: "Be culturally sensitive: Avoid topics that may offend",
+        ar: "Be culturally sensitive: Avoid topics that may offend"
+      },
+      {
+        en: "Use AI tools: Leverage grammar checkers and translators",
+        zh: "使用AI工具：利用语法检查器和翻译工具",
+        es: "Use AI tools: Leverage grammar checkers and translators",
+        fr: "Use AI tools: Leverage grammar checkers and translators",
+        hi: "Use AI tools: Leverage grammar checkers and translators",
+        ar: "Use AI tools: Leverage grammar checkers and translators"
+      },
+      {
+        en: "Get native feedback: Have native speakers review your work",
+        zh: "获取母语者反馈：让母语者审查你的作品",
+        es: "Get native feedback: Have native speakers review your work",
+        fr: "Get native feedback: Have native speakers review your work",
+        hi: "Get native feedback: Have native speakers review your work",
+        ar: "Get native feedback: Have native speakers review your work"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Tools to Support Multilingual Writing",
+      zh: "4. 支持多语言写作的工具",
+      es: "4. Tools to Support Multilingual Writing",
+      fr: "4. Tools to Support Multilingual Writing",
+      hi: "4. Tools to Support Multilingual Writing",
+      ar: "4. Tools to Support Multilingual Writing"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "AI Grammar Checkers: Ensure correctness in any language",
+        zh: "AI语法检查器：确保任何语言的正确性",
+        es: "AI Grammar Checkers: Ensure correctness in any language",
+        fr: "AI Grammar Checkers: Ensure correctness in any language",
+        hi: "AI Grammar Checkers: Ensure correctness in any language",
+        ar: "AI Grammar Checkers: Ensure correctness in any language"
+      },
+      {
+        en: "Translation Tools: Bridge language gaps",
+        zh: "翻译工具：弥合语言差距",
+        es: "Translation Tools: Bridge language gaps",
+        fr: "Translation Tools: Bridge language gaps",
+        hi: "Translation Tools: Bridge language gaps",
+        ar: "Translation Tools: Bridge language gaps"
+      },
+      {
+        en: "Prompt Generators: Create content in multiple languages",
+        zh: "提示词生成器：用多种语言创建内容",
+        es: "Prompt Generators: Create content in multiple languages",
+        fr: "Prompt Generators: Create content in multiple languages",
+        hi: "Prompt Generators: Create content in multiple languages",
+        ar: "Prompt Generators: Create content in multiple languages"
+      },
+      {
+        en: "Style Guides: Maintain consistency across languages",
+        zh: "风格指南：跨语言保持一致性",
+        es: "Style Guides: Maintain consistency across languages",
+        fr: "Style Guides: Maintain consistency across languages",
+        hi: "Style Guides: Maintain consistency across languages",
+        ar: "Style Guides: Maintain consistency across languages"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "link": "/tool/ai-grammar-checker",
+    text: {
+      en: "Write Perfectly in 6 Languages",
+      zh: "用6种语言完美写作",
+      es: "Write Perfectly in 6 Languages",
+      fr: "Write Perfectly in 6 Languages",
+      hi: "Write Perfectly in 6 Languages",
+      ar: "Write Perfectly in 6 Languages"
+    },
+    sub: {
+      en: "Free, No signup, AI-powered multilingual support",
+      zh: "免费，无需注册，AI驱动的多语言支持",
+      es: "Free, No signup, AI-powered multilingual support",
+      fr: "Free, No signup, AI-powered multilingual support",
+      hi: "Free, No signup, AI-powered multilingual support",
+      ar: "Free, No signup, AI-powered multilingual support"
+    }
+  }
+],
+  "ai-prompt-generator-use-cases": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. Introduction to AI Prompt Generator",
+      zh: "1. AI提示词生成器简介",
+      es: "1. Introduction to AI Prompt Generator",
+      fr: "1. Introduction to AI Prompt Generator",
+      hi: "1. Introduction to AI Prompt Generator",
+      ar: "1. Introduction to AI Prompt Generator"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "An AI prompt generator is a tool that helps you create effective prompts for AI models. It takes your basic ideas and transforms them into detailed, well-structured prompts that yield better results. Korelyy AI Prompt Generator is designed to save you time and improve your AI interactions.",
+      zh: "AI提示词生成器是一个帮助你为AI模型创建有效提示词的工具。它接受你的基本想法，并将它们转化为详细、结构良好的提示词，从而产生更好的结果。Korelyy AI提示词生成器旨在为你节省时间并改善你的AI交互体验。",
+      es: "An AI prompt generator is a tool that helps you create effective prompts for AI models. It takes your basic ideas and transforms them into detailed, well-structured prompts that yield better results. Korelyy AI Prompt Generator is designed to save you time and improve your AI interactions.",
+      fr: "An AI prompt generator is a tool that helps you create effective prompts for AI models. It takes your basic ideas and transforms them into detailed, well-structured prompts that yield better results. Korelyy AI Prompt Generator is designed to save you time and improve your AI interactions.",
+      hi: "An AI prompt generator is a tool that helps you create effective prompts for AI models. It takes your basic ideas and transforms them into detailed, well-structured prompts that yield better results. Korelyy AI Prompt Generator is designed to save you time and improve your AI interactions.",
+      ar: "An AI prompt generator is a tool that helps you create effective prompts for AI models. It takes your basic ideas and transforms them into detailed, well-structured prompts that yield better results. Korelyy AI Prompt Generator is designed to save you time and improve your AI interactions."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    text: {
+      en: "Time Saver: Using a prompt generator can reduce your prompt engineering time by up to 80%. Focus on creativity, not formatting!",
+      zh: "时间节省器：使用提示词生成器可以将你的提示词工程时间减少80%。专注于创意，而不是格式化！",
+      es: "Time Saver: Using a prompt generator can reduce your prompt engineering time by up to 80%. Focus on creativity, not formatting!",
+      fr: "Time Saver: Using a prompt generator can reduce your prompt engineering time by up to 80%. Focus on creativity, not formatting!",
+      hi: "Time Saver: Using a prompt generator can reduce your prompt engineering time by up to 80%. Focus on creativity, not formatting!",
+      ar: "Time Saver: Using a prompt generator can reduce your prompt engineering time by up to 80%. Focus on creativity, not formatting!"
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. 10 Creative Use Cases",
+      zh: "2. 10个创意使用场景",
+      es: "2. 10 Creative Use Cases",
+      fr: "2. 10 Creative Use Cases",
+      hi: "2. 10 Creative Use Cases",
+      ar: "2. 10 Creative Use Cases"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Digital Art Creation: Generate prompts for AI image generators like Midjourney and DALL-E",
+        zh: "数字艺术创作：为Midjourney和DALL-E等AI图像生成器生成提示词",
+        es: "Digital Art Creation: Generate prompts for AI image generators like Midjourney and DALL-E",
+        fr: "Digital Art Creation: Generate prompts for AI image generators like Midjourney and DALL-E",
+        hi: "Digital Art Creation: Generate prompts for AI image generators like Midjourney and DALL-E",
+        ar: "Digital Art Creation: Generate prompts for AI image generators like Midjourney and DALL-E"
+      },
+      {
+        en: "Content Writing: Create blog post outlines, social media captions, and marketing copy",
+        zh: "内容写作：创建博客文章大纲、社交媒体标题和营销文案",
+        es: "Content Writing: Create blog post outlines, social media captions, and marketing copy",
+        fr: "Content Writing: Create blog post outlines, social media captions, and marketing copy",
+        hi: "Content Writing: Create blog post outlines, social media captions, and marketing copy",
+        ar: "Content Writing: Create blog post outlines, social media captions, and marketing copy"
+      },
+      {
+        en: "Video Scripts: Generate prompts for AI video tools like Sora and Pika",
+        zh: "视频脚本：为Sora和Pika等AI视频工具生成提示词",
+        es: "Video Scripts: Generate prompts for AI video tools like Sora and Pika",
+        fr: "Video Scripts: Generate prompts for AI video tools like Sora and Pika",
+        hi: "Video Scripts: Generate prompts for AI video tools like Sora and Pika",
+        ar: "Video Scripts: Generate prompts for AI video tools like Sora and Pika"
+      },
+      {
+        en: "Chatbot Development: Create training prompts for custom chatbots",
+        zh: "聊天机器人开发：为自定义聊天机器人创建训练提示词",
+        es: "Chatbot Development: Create training prompts for custom chatbots",
+        fr: "Chatbot Development: Create training prompts for custom chatbots",
+        hi: "Chatbot Development: Create training prompts for custom chatbots",
+        ar: "Chatbot Development: Create training prompts for custom chatbots"
+      },
+      {
+        en: "Data Analysis: Generate prompts for AI-powered data analysis tools",
+        zh: "数据分析：为AI驱动的数据分析工具生成提示词",
+        es: "Data Analysis: Generate prompts for AI-powered data analysis tools",
+        fr: "Data Analysis: Generate prompts for AI-powered data analysis tools",
+        hi: "Data Analysis: Generate prompts for AI-powered data analysis tools",
+        ar: "Data Analysis: Generate prompts for AI-powered data analysis tools"
+      },
+      {
+        en: "Game Development: Create prompts for game narratives and character descriptions",
+        zh: "游戏开发：为游戏叙事和角色描述创建提示词",
+        es: "Game Development: Create prompts for game narratives and character descriptions",
+        fr: "Game Development: Create prompts for game narratives and character descriptions",
+        hi: "Game Development: Create prompts for game narratives and character descriptions",
+        ar: "Game Development: Create prompts for game narratives and character descriptions"
+      },
+      {
+        en: "Role-Playing: Generate immersive prompts for AI role-playing experiences",
+        zh: "角色扮演：为AI角色扮演体验生成沉浸式提示词",
+        es: "Role-Playing: Generate immersive prompts for AI role-playing experiences",
+        fr: "Role-Playing: Generate immersive prompts for AI role-playing experiences",
+        hi: "Role-Playing: Generate immersive prompts for AI role-playing experiences",
+        ar: "Role-Playing: Generate immersive prompts for AI role-playing experiences"
+      },
+      {
+        en: "Education: Create prompts for AI tutors and learning assistants",
+        zh: "教育：为AI导师和学习助手创建提示词",
+        es: "Education: Create prompts for AI tutors and learning assistants",
+        fr: "Education: Create prompts for AI tutors and learning assistants",
+        hi: "Education: Create prompts for AI tutors and learning assistants",
+        ar: "Education: Create prompts for AI tutors and learning assistants"
+      },
+      {
+        en: "Business Strategy: Generate prompts for AI-powered business analysis",
+        zh: "商业策略：为AI驱动的商业分析生成提示词",
+        es: "Business Strategy: Generate prompts for AI-powered business analysis",
+        fr: "Business Strategy: Generate prompts for AI-powered business analysis",
+        hi: "Business Strategy: Generate prompts for AI-powered business analysis",
+        ar: "Business Strategy: Generate prompts for AI-powered business analysis"
+      },
+      {
+        en: "Music Generation: Create prompts for AI music composition tools",
+        zh: "音乐生成：为AI音乐创作工具创建提示词",
+        es: "Music Generation: Create prompts for AI music composition tools",
+        fr: "Music Generation: Create prompts for AI music composition tools",
+        hi: "Music Generation: Create prompts for AI music composition tools",
+        ar: "Music Generation: Create prompts for AI music composition tools"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Getting the Most Out of Your Prompt Generator",
+      zh: "3. 充分利用提示词生成器",
+      es: "3. Getting the Most Out of Your Prompt Generator",
+      fr: "3. Getting the Most Out of Your Prompt Generator",
+      hi: "3. Getting the Most Out of Your Prompt Generator",
+      ar: "3. Getting the Most Out of Your Prompt Generator"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Start with a clear goal: Know what you want to achieve",
+        zh: "从明确的目标开始：知道你想要实现什么",
+        es: "Start with a clear goal: Know what you want to achieve",
+        fr: "Start with a clear goal: Know what you want to achieve",
+        hi: "Start with a clear goal: Know what you want to achieve",
+        ar: "Start with a clear goal: Know what you want to achieve"
+      },
+      {
+        en: "Provide context: Give the generator background information",
+        zh: "提供上下文：给生成器背景信息",
+        es: "Provide context: Give the generator background information",
+        fr: "Provide context: Give the generator background information",
+        hi: "Provide context: Give the generator background information",
+        ar: "Provide context: Give the generator background information"
+      },
+      {
+        en: "Refine iteratively: Use suggestions to improve your prompts",
+        zh: "迭代优化：使用建议改进你的提示词",
+        es: "Refine iteratively: Use suggestions to improve your prompts",
+        fr: "Refine iteratively: Use suggestions to improve your prompts",
+        hi: "Refine iteratively: Use suggestions to improve your prompts",
+        ar: "Refine iteratively: Use suggestions to improve your prompts"
+      },
+      {
+        en: "Save your favorites: Keep track of successful prompts",
+        zh: "保存你的收藏：跟踪成功的提示词",
+        es: "Save your favorites: Keep track of successful prompts",
+        fr: "Save your favorites: Keep track of successful prompts",
+        hi: "Save your favorites: Keep track of successful prompts",
+        ar: "Save your favorites: Keep track of successful prompts"
+      },
+      {
+        en: "Experiment freely: Try different approaches and styles",
+        zh: "自由实验：尝试不同的方法和风格",
+        es: "Experiment freely: Try different approaches and styles",
+        fr: "Experiment freely: Try different approaches and styles",
+        hi: "Experiment freely: Try different approaches and styles",
+        ar: "Experiment freely: Try different approaches and styles"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "link": "/tool/ai-prompt-generator",
+    text: {
+      en: "Generate Perfect Prompts Instantly",
+      zh: "立即生成完美提示词",
+      es: "Generate Perfect Prompts Instantly",
+      fr: "Generate Perfect Prompts Instantly",
+      hi: "Generate Perfect Prompts Instantly",
+      ar: "Generate Perfect Prompts Instantly"
+    },
+    sub: {
+      en: "Free, No signup, 100+ templates available",
+      zh: "免费，无需注册，100+模板可用",
+      es: "Free, No signup, 100+ templates available",
+      fr: "Free, No signup, 100+ templates available",
+      hi: "Free, No signup, 100+ templates available",
+      ar: "Free, No signup, 100+ templates available"
+    }
+  }
+],
+  "video-workflow-optimization-2026": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. The Evolving Video Creation Workflow",
+      zh: "1. 不断发展的视频创作工作流",
+      es: "1. The Evolving Video Creation Workflow",
+      fr: "1. The Evolving Video Creation Workflow",
+      hi: "1. The Evolving Video Creation Workflow",
+      ar: "1. The Evolving Video Creation Workflow"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "Video creation has undergone a revolution with the advent of AI tools. In 2026, the workflow has become more efficient than ever, with AI assisting at every stage from concept to final output. Understanding and optimizing this workflow is key to creating high-quality videos efficiently.",
+      zh: "随着AI工具的出现，视频创作发生了革命。在2026年，工作流比以往任何时候都更加高效，AI从概念到最终输出的每个阶段都提供帮助。理解和优化这个工作流是高效创建高质量视频的关键。",
+      es: "Video creation has undergone a revolution with the advent of AI tools. In 2026, the workflow has become more efficient than ever, with AI assisting at every stage from concept to final output. Understanding and optimizing this workflow is key to creating high-quality videos efficiently.",
+      fr: "Video creation has undergone a revolution with the advent of AI tools. In 2026, the workflow has become more efficient than ever, with AI assisting at every stage from concept to final output. Understanding and optimizing this workflow is key to creating high-quality videos efficiently.",
+      hi: "Video creation has undergone a revolution with the advent of AI tools. In 2026, the workflow has become more efficient than ever, with AI assisting at every stage from concept to final output. Understanding and optimizing this workflow is key to creating high-quality videos efficiently.",
+      ar: "Video creation has undergone a revolution with the advent of AI tools. In 2026, the workflow has become more efficient than ever, with AI assisting at every stage from concept to final output. Understanding and optimizing this workflow is key to creating high-quality videos efficiently."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    text: {
+      en: "Efficiency Stat: AI-powered video creation can reduce production time by 50-70% compared to traditional methods.",
+      zh: "效率统计：与传统方法相比，AI驱动的视频创作可以将制作时间减少50-70%。",
+      es: "Efficiency Stat: AI-powered video creation can reduce production time by 50-70% compared to traditional methods.",
+      fr: "Efficiency Stat: AI-powered video creation can reduce production time by 50-70% compared to traditional methods.",
+      hi: "Efficiency Stat: AI-powered video creation can reduce production time by 50-70% compared to traditional methods.",
+      ar: "Efficiency Stat: AI-powered video creation can reduce production time by 50-70% compared to traditional methods."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. The Complete AI Video Workflow",
+      zh: "2. 完整的AI视频工作流",
+      es: "2. The Complete AI Video Workflow",
+      fr: "2. The Complete AI Video Workflow",
+      hi: "2. The Complete AI Video Workflow",
+      ar: "2. The Complete AI Video Workflow"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Concept Development: Brainstorm ideas and define your video purpose",
+        zh: "概念开发：头脑风暴想法并定义视频的目的",
+        es: "Concept Development: Brainstorm ideas and define your video purpose",
+        fr: "Concept Development: Brainstorm ideas and define your video purpose",
+        hi: "Concept Development: Brainstorm ideas and define your video purpose",
+        ar: "Concept Development: Brainstorm ideas and define your video purpose"
+      },
+      {
+        en: "Prompt Generation: Create detailed prompts for AI video tools",
+        zh: "提示词生成：为AI视频工具创建详细提示词",
+        es: "Prompt Generation: Create detailed prompts for AI video tools",
+        fr: "Prompt Generation: Create detailed prompts for AI video tools",
+        hi: "Prompt Generation: Create detailed prompts for AI video tools",
+        ar: "Prompt Generation: Create detailed prompts for AI video tools"
+      },
+      {
+        en: "AI Generation: Use tools like Sora, Pika, or Runway to create footage",
+        zh: "AI生成：使用Sora、Pika或Runway等工具创建素材",
+        es: "AI Generation: Use tools like Sora, Pika, or Runway to create footage",
+        fr: "AI Generation: Use tools like Sora, Pika, or Runway to create footage",
+        hi: "AI Generation: Use tools like Sora, Pika, or Runway to create footage",
+        ar: "AI Generation: Use tools like Sora, Pika, or Runway to create footage"
+      },
+      {
+        en: "Editing and Refinement: Trim, enhance, and add effects to your video",
+        zh: "编辑和优化：剪辑、增强并为视频添加效果",
+        es: "Editing and Refinement: Trim, enhance, and add effects to your video",
+        fr: "Editing and Refinement: Trim, enhance, and add effects to your video",
+        hi: "Editing and Refinement: Trim, enhance, and add effects to your video",
+        ar: "Editing and Refinement: Trim, enhance, and add effects to your video"
+      },
+      {
+        en: "Post-Production: Add music, voiceover, and final touches",
+        zh: "后期制作：添加音乐、旁白和最后润色",
+        es: "Post-Production: Add music, voiceover, and final touches",
+        fr: "Post-Production: Add music, voiceover, and final touches",
+        hi: "Post-Production: Add music, voiceover, and final touches",
+        ar: "Post-Production: Add music, voiceover, and final touches"
+      },
+      {
+        en: "Distribution: Export and publish your video to your chosen platforms",
+        zh: "分发：导出并发布到你选择的平台",
+        es: "Distribution: Export and publish your video to your chosen platforms",
+        fr: "Distribution: Export and publish your video to your chosen platforms",
+        hi: "Distribution: Export and publish your video to your chosen platforms",
+        ar: "Distribution: Export and publish your video to your chosen platforms"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Optimization Tips for Each Stage",
+      zh: "3. 每个阶段的优化技巧",
+      es: "3. Optimization Tips for Each Stage",
+      fr: "3. Optimization Tips for Each Stage",
+      hi: "3. Optimization Tips for Each Stage",
+      ar: "3. Optimization Tips for Each Stage"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Concept: Use AI to brainstorm and refine ideas quickly",
+        zh: "概念：使用AI快速头脑风暴和优化想法",
+        es: "Concept: Use AI to brainstorm and refine ideas quickly",
+        fr: "Concept: Use AI to brainstorm and refine ideas quickly",
+        hi: "Concept: Use AI to brainstorm and refine ideas quickly",
+        ar: "Concept: Use AI to brainstorm and refine ideas quickly"
+      },
+      {
+        en: "Prompt: Use prompt generators for consistent, high-quality prompts",
+        zh: "提示词：使用提示词生成器获得一致、高质量的提示词",
+        es: "Prompt: Use prompt generators for consistent, high-quality prompts",
+        fr: "Prompt: Use prompt generators for consistent, high-quality prompts",
+        hi: "Prompt: Use prompt generators for consistent, high-quality prompts",
+        ar: "Prompt: Use prompt generators for consistent, high-quality prompts"
+      },
+      {
+        en: "Generation: Batch generate multiple versions to choose from",
+        zh: "生成：批量生成多个版本供选择",
+        es: "Generation: Batch generate multiple versions to choose from",
+        fr: "Generation: Batch generate multiple versions to choose from",
+        hi: "Generation: Batch generate multiple versions to choose from",
+        ar: "Generation: Batch generate multiple versions to choose from"
+      },
+      {
+        en: "Editing: Use AI tools for automatic editing and enhancement",
+        zh: "编辑：使用AI工具进行自动编辑和增强",
+        es: "Editing: Use AI tools for automatic editing and enhancement",
+        fr: "Editing: Use AI tools for automatic editing and enhancement",
+        hi: "Editing: Use AI tools for automatic editing and enhancement",
+        ar: "Editing: Use AI tools for automatic editing and enhancement"
+      },
+      {
+        en: "Post-Production: Leverage AI for music and voiceover generation",
+        zh: "后期制作：利用AI生成音乐和旁白",
+        es: "Post-Production: Leverage AI for music and voiceover generation",
+        fr: "Post-Production: Leverage AI for music and voiceover generation",
+        hi: "Post-Production: Leverage AI for music and voiceover generation",
+        ar: "Post-Production: Leverage AI for music and voiceover generation"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Tools to Optimize Your Workflow",
+      zh: "4. 优化工作流的工具",
+      es: "4. Tools to Optimize Your Workflow",
+      fr: "4. Tools to Optimize Your Workflow",
+      hi: "4. Tools to Optimize Your Workflow",
+      ar: "4. Tools to Optimize Your Workflow"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Prompt Generators: Create effective prompts quickly",
+        zh: "提示词生成器：快速创建有效提示词",
+        es: "Prompt Generators: Create effective prompts quickly",
+        fr: "Prompt Generators: Create effective prompts quickly",
+        hi: "Prompt Generators: Create effective prompts quickly",
+        ar: "Prompt Generators: Create effective prompts quickly"
+      },
+      {
+        en: "AI Video Tools: Generate footage from text",
+        zh: "AI视频工具：从文本生成素材",
+        es: "AI Video Tools: Generate footage from text",
+        fr: "AI Video Tools: Generate footage from text",
+        hi: "AI Video Tools: Generate footage from text",
+        ar: "AI Video Tools: Generate footage from text"
+      },
+      {
+        en: "Video Editors: Refine and polish your videos",
+        zh: "视频编辑器：优化和润色你的视频",
+        es: "Video Editors: Refine and polish your videos",
+        fr: "Video Editors: Refine and polish your videos",
+        hi: "Video Editors: Refine and polish your videos",
+        ar: "Video Editors: Refine and polish your videos"
+      },
+      {
+        en: "AI Audio Tools: Generate music and voiceovers",
+        zh: "AI音频工具：生成音乐和旁白",
+        es: "AI Audio Tools: Generate music and voiceovers",
+        fr: "AI Audio Tools: Generate music and voiceovers",
+        hi: "AI Audio Tools: Generate music and voiceovers",
+        ar: "AI Audio Tools: Generate music and voiceovers"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "link": "/tool/video-prompt-generator",
+    text: {
+      en: "Optimize Your Video Workflow",
+      zh: "优化你的视频工作流",
+      es: "Optimize Your Video Workflow",
+      fr: "Optimize Your Video Workflow",
+      hi: "Optimize Your Video Workflow",
+      ar: "Optimize Your Video Workflow"
+    },
+    sub: {
+      en: "Free, No signup, Streamline your video creation",
+      zh: "免费，无需注册，简化你的视频创作",
+      es: "Free, No signup, Streamline your video creation",
+      fr: "Free, No signup, Streamline your video creation",
+      hi: "Free, No signup, Streamline your video creation",
+      ar: "Free, No signup, Streamline your video creation"
+    }
+  }
+],
+  "ai-tools-update-july-2026": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. Welcome to the July 2026 AI Tools Update",
+      zh: "1. 欢迎阅读2026年7月AI工具更新",
+      es: "1. Welcome to the July 2026 AI Tools Update",
+      fr: "1. Welcome to the July 2026 AI Tools Update",
+      hi: "1. Welcome to the July 2026 AI Tools Update",
+      ar: "1. Welcome to the July 2026 AI Tools Update"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "Korelyy is thrilled to announce our latest round of AI tools updates for July 2026. This update brings exciting new features, improved performance, and expanded capabilities to help you create better content faster. Let us dive into what is new!",
+      zh: "Korelyy很高兴宣布我们2026年7月的最新一轮AI工具更新。此更新带来了令人兴奋的新功能、改进的性能和扩展的能力，帮助你更快地创建更好的内容。让我们深入了解有哪些新内容！",
+      es: "Korelyy is thrilled to announce our latest round of AI tools updates for July 2026. This update brings exciting new features, improved performance, and expanded capabilities to help you create better content faster. Let us dive into what is new!",
+      fr: "Korelyy is thrilled to announce our latest round of AI tools updates for July 2026. This update brings exciting new features, improved performance, and expanded capabilities to help you create better content faster. Let us dive into what is new!",
+      hi: "Korelyy is thrilled to announce our latest round of AI tools updates for July 2026. This update brings exciting new features, improved performance, and expanded capabilities to help you create better content faster. Let us dive into what is new!",
+      ar: "Korelyy is thrilled to announce our latest round of AI tools updates for July 2026. This update brings exciting new features, improved performance, and expanded capabilities to help you create better content faster. Let us dive into what is new!"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    text: {
+      en: "Exciting News: This update includes 5 new AI tools and significant improvements to existing ones. Korelyy now offers over 50 AI-powered tools for content creators!",
+      zh: "令人兴奋的消息：此更新包括5个新的AI工具和对现有工具的重大改进。Korelyy现在为内容创作者提供超过50个AI驱动的工具！",
+      es: "Exciting News: This update includes 5 new AI tools and significant improvements to existing ones. Korelyy now offers over 50 AI-powered tools for content creators!",
+      fr: "Exciting News: This update includes 5 new AI tools and significant improvements to existing ones. Korelyy now offers over 50 AI-powered tools for content creators!",
+      hi: "Exciting News: This update includes 5 new AI tools and significant improvements to existing ones. Korelyy now offers over 50 AI-powered tools for content creators!",
+      ar: "Exciting News: This update includes 5 new AI tools and significant improvements to existing ones. Korelyy now offers over 50 AI-powered tools for content creators!"
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. New AI Grammar Checker",
+      zh: "2. 新AI语法检查器",
+      es: "2. New AI Grammar Checker",
+      fr: "2. New AI Grammar Checker",
+      hi: "2. New AI Grammar Checker",
+      ar: "2. New AI Grammar Checker"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "6-language support: English, Chinese, Spanish, French, Hindi, Arabic",
+        zh: "6种语言支持：英语、中文、西班牙语、法语、印地语、阿拉伯语",
+        es: "6-language support: English, Chinese, Spanish, French, Hindi, Arabic",
+        fr: "6-language support: English, Chinese, Spanish, French, Hindi, Arabic",
+        hi: "6-language support: English, Chinese, Spanish, French, Hindi, Arabic",
+        ar: "6-language support: English, Chinese, Spanish, French, Hindi, Arabic"
+      },
+      {
+        en: "Real-time grammar and spelling checking",
+        zh: "实时语法和拼写检查",
+        es: "Real-time grammar and spelling checking",
+        fr: "Real-time grammar and spelling checking",
+        hi: "Real-time grammar and spelling checking",
+        ar: "Real-time grammar and spelling checking"
+      },
+      {
+        en: "Style and readability suggestions",
+        zh: "风格和可读性建议",
+        es: "Style and readability suggestions",
+        fr: "Style and readability suggestions",
+        hi: "Style and readability suggestions",
+        ar: "Style and readability suggestions"
+      },
+      {
+        en: "Rewrite suggestions for improved clarity",
+        zh: "提高清晰度的重写建议",
+        es: "Rewrite suggestions for improved clarity",
+        fr: "Rewrite suggestions for improved clarity",
+        hi: "Rewrite suggestions for improved clarity",
+        ar: "Rewrite suggestions for improved clarity"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Enhanced AI Prompt Generator",
+      zh: "3. 增强的AI提示词生成器",
+      es: "3. Enhanced AI Prompt Generator",
+      fr: "3. Enhanced AI Prompt Generator",
+      hi: "3. Enhanced AI Prompt Generator",
+      ar: "3. Enhanced AI Prompt Generator"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "100+ prompt templates for different use cases",
+        zh: "100+不同使用场景的提示词模板",
+        es: "100+ prompt templates for different use cases",
+        fr: "100+ prompt templates for different use cases",
+        hi: "100+ prompt templates for different use cases",
+        ar: "100+ prompt templates for different use cases"
+      },
+      {
+        en: "Image, video, and text prompt support",
+        zh: "图像、视频和文本提示词支持",
+        es: "Image, video, and text prompt support",
+        fr: "Image, video, and text prompt support",
+        hi: "Image, video, and text prompt support",
+        ar: "Image, video, and text prompt support"
+      },
+      {
+        en: "Customizable prompt parameters",
+        zh: "可自定义的提示词参数",
+        es: "Customizable prompt parameters",
+        fr: "Customizable prompt parameters",
+        hi: "Customizable prompt parameters",
+        ar: "Customizable prompt parameters"
+      },
+      {
+        en: "Export and save your favorite prompts",
+        zh: "导出并保存你喜欢的提示词",
+        es: "Export and save your favorite prompts",
+        fr: "Export and save your favorite prompts",
+        hi: "Export and save your favorite prompts",
+        ar: "Export and save your favorite prompts"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. New Video Prompt Generators",
+      zh: "4. 新视频提示词生成器",
+      es: "4. New Video Prompt Generators",
+      fr: "4. New Video Prompt Generators",
+      hi: "4. New Video Prompt Generators",
+      ar: "4. New Video Prompt Generators"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Sora Prompt Generator: Optimized for OpenAI Sora",
+        zh: "Sora提示词生成器：为OpenAI Sora优化",
+        es: "Sora Prompt Generator: Optimized for OpenAI Sora",
+        fr: "Sora Prompt Generator: Optimized for OpenAI Sora",
+        hi: "Sora Prompt Generator: Optimized for OpenAI Sora",
+        ar: "Sora Prompt Generator: Optimized for OpenAI Sora"
+      },
+      {
+        en: "Midjourney Prompt Generator: Perfect for v6",
+        zh: "Midjourney提示词生成器：完美适配v6",
+        es: "Midjourney Prompt Generator: Perfect for v6",
+        fr: "Midjourney Prompt Generator: Perfect for v6",
+        hi: "Midjourney Prompt Generator: Perfect for v6",
+        ar: "Midjourney Prompt Generator: Perfect for v6"
+      },
+      {
+        en: "Video Prompt Generator: Universal video prompts",
+        zh: "视频提示词生成器：通用视频提示词",
+        es: "Video Prompt Generator: Universal video prompts",
+        fr: "Video Prompt Generator: Universal video prompts",
+        hi: "Video Prompt Generator: Universal video prompts",
+        ar: "Video Prompt Generator: Universal video prompts"
+      },
+      {
+        en: "Advanced camera and style controls",
+        zh: "高级摄像机和风格控制",
+        es: "Advanced camera and style controls",
+        fr: "Advanced camera and style controls",
+        hi: "Advanced camera and style controls",
+        ar: "Advanced camera and style controls"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "5. What Is Next for Korelyy AI Tools",
+      zh: "5. Korelyy AI工具的下一步计划",
+      es: "5. What Is Next for Korelyy AI Tools",
+      fr: "5. What Is Next for Korelyy AI Tools",
+      hi: "5. What Is Next for Korelyy AI Tools",
+      ar: "5. What Is Next for Korelyy AI Tools"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "We are constantly working to improve our AI tools and add new capabilities. In the coming months, look forward to more language support, enhanced AI models, and new tools for creative professionals. Stay tuned!",
+      zh: "我们一直在努力改进我们的AI工具并添加新功能。在未来几个月，期待更多语言支持、增强的AI模型和面向创意专业人士的新工具。敬请期待！",
+      es: "We are constantly working to improve our AI tools and add new capabilities. In the coming months, look forward to more language support, enhanced AI models, and new tools for creative professionals. Stay tuned!",
+      fr: "We are constantly working to improve our AI tools and add new capabilities. In the coming months, look forward to more language support, enhanced AI models, and new tools for creative professionals. Stay tuned!",
+      hi: "We are constantly working to improve our AI tools and add new capabilities. In the coming months, look forward to more language support, enhanced AI models, and new tools for creative professionals. Stay tuned!",
+      ar: "We are constantly working to improve our AI tools and add new capabilities. In the coming months, look forward to more language support, enhanced AI models, and new tools for creative professionals. Stay tuned!"
+    }
+  },
+  {
+    "type": "cta",
+    "link": "/tool/ai-prompt-generator",
+    text: {
+      en: "Explore All New AI Tools",
+      zh: "探索所有新AI工具",
+      es: "Explore All New AI Tools",
+      fr: "Explore All New AI Tools",
+      hi: "Explore All New AI Tools",
+      ar: "Explore All New AI Tools"
+    },
+    sub: {
+      en: "Free, No signup, 50+ AI tools available",
+      zh: "免费，无需注册，50+AI工具可用",
+      es: "Free, No signup, 50+ AI tools available",
+      fr: "Free, No signup, 50+ AI tools available",
+      hi: "Free, No signup, 50+ AI tools available",
+      ar: "Free, No signup, 50+ AI tools available"
+    }
+  }
+],
+  "how-to-write-perfect-ai-prompts-for-sora": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. Understanding Sora Prompt Requirements",
+      zh: "1. 了解Sora的提示词要求",
+      es: "1. Understanding Sora Prompt Requirements",
+      fr: "1. Understanding Sora Prompt Requirements",
+      hi: "1. Understanding Sora Prompt Requirements",
+      ar: "1. Understanding Sora Prompt Requirements"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "OpenAI Sora has specific requirements for prompts to generate the best results. Unlike text models, Sora needs detailed visual descriptions, camera instructions, and style guidance. Learning how to write prompts that Sora understands is key to creating stunning videos.",
+      zh: "OpenAI Sora对提示词有特定要求，以生成最佳结果。与文本模型不同，Sora需要详细的视觉描述、摄像机指令和风格指导。学习如何编写Sora能够理解的提示词是创建惊艳视频的关键。",
+      es: "OpenAI Sora has specific requirements for prompts to generate the best results. Unlike text models, Sora needs detailed visual descriptions, camera instructions, and style guidance. Learning how to write prompts that Sora understands is key to creating stunning videos.",
+      fr: "OpenAI Sora has specific requirements for prompts to generate the best results. Unlike text models, Sora needs detailed visual descriptions, camera instructions, and style guidance. Learning how to write prompts that Sora understands is key to creating stunning videos.",
+      hi: "OpenAI Sora has specific requirements for prompts to generate the best results. Unlike text models, Sora needs detailed visual descriptions, camera instructions, and style guidance. Learning how to write prompts that Sora understands is key to creating stunning videos.",
+      ar: "OpenAI Sora has specific requirements for prompts to generate the best results. Unlike text models, Sora needs detailed visual descriptions, camera instructions, and style guidance. Learning how to write prompts that Sora understands is key to creating stunning videos."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    text: {
+      en: "Pro Insight: Sora prompts work best when they include specific visual details, camera movements, lighting descriptions, and style references.",
+      zh: "专业见解：当Sora提示词包含特定的视觉细节、摄像机运动、光线描述和风格参考时，效果最佳。",
+      es: "Pro Insight: Sora prompts work best when they include specific visual details, camera movements, lighting descriptions, and style references.",
+      fr: "Pro Insight: Sora prompts work best when they include specific visual details, camera movements, lighting descriptions, and style references.",
+      hi: "Pro Insight: Sora prompts work best when they include specific visual details, camera movements, lighting descriptions, and style references.",
+      ar: "Pro Insight: Sora prompts work best when they include specific visual details, camera movements, lighting descriptions, and style references."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. The Anatomy of a Perfect Sora Prompt",
+      zh: "2. 完美Sora提示词的结构",
+      es: "2. The Anatomy of a Perfect Sora Prompt",
+      fr: "2. The Anatomy of a Perfect Sora Prompt",
+      hi: "2. The Anatomy of a Perfect Sora Prompt",
+      ar: "2. The Anatomy of a Perfect Sora Prompt"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Subject: Who or what is the video about?",
+        zh: "主体：视频关于谁或什么？",
+        es: "Subject: Who or what is the video about?",
+        fr: "Subject: Who or what is the video about?",
+        hi: "Subject: Who or what is the video about?",
+        ar: "Subject: Who or what is the video about?"
+      },
+      {
+        en: "Setting: Where does the scene take place?",
+        zh: "场景：场景发生在哪里？",
+        es: "Setting: Where does the scene take place?",
+        fr: "Setting: Where does the scene take place?",
+        hi: "Setting: Where does the scene take place?",
+        ar: "Setting: Where does the scene take place?"
+      },
+      {
+        en: "Action: What is happening?",
+        zh: "动作：发生了什么？",
+        es: "Action: What is happening?",
+        fr: "Action: What is happening?",
+        hi: "Action: What is happening?",
+        ar: "Action: What is happening?"
+      },
+      {
+        en: "Camera: What angle and movement?",
+        zh: "摄像机：什么角度和运动？",
+        es: "Camera: What angle and movement?",
+        fr: "Camera: What angle and movement?",
+        hi: "Camera: What angle and movement?",
+        ar: "Camera: What angle and movement?"
+      },
+      {
+        en: "Lighting: Time of day and mood?",
+        zh: "光线：一天中的时间和情绪？",
+        es: "Lighting: Time of day and mood?",
+        fr: "Lighting: Time of day and mood?",
+        hi: "Lighting: Time of day and mood?",
+        ar: "Lighting: Time of day and mood?"
+      },
+      {
+        en: "Style: What visual style?",
+        zh: "风格：什么视觉风格？",
+        es: "Style: What visual style?",
+        fr: "Style: What visual style?",
+        hi: "Style: What visual style?",
+        ar: "Style: What visual style?"
+      },
+      {
+        en: "Duration: How long should the video be?",
+        zh: "时长：视频应该多长？",
+        es: "Duration: How long should the video be?",
+        fr: "Duration: How long should the video be?",
+        hi: "Duration: How long should the video be?",
+        ar: "Duration: How long should the video be?"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Writing Effective Subject Descriptions",
+      zh: "3. 编写有效的主体描述",
+      es: "3. Writing Effective Subject Descriptions",
+      fr: "3. Writing Effective Subject Descriptions",
+      hi: "3. Writing Effective Subject Descriptions",
+      ar: "3. Writing Effective Subject Descriptions"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "The subject is the main focus of your video. Be specific about who or what your subject is, including details like appearance, clothing, and actions. The more specific you are, the better Sora can render your vision.",
+      zh: "主体是视频的主要焦点。具体说明你的主体是谁或什么，包括外观、服装和动作等细节。你越具体，Sora就能越好地呈现你的愿景。",
+      es: "The subject is the main focus of your video. Be specific about who or what your subject is, including details like appearance, clothing, and actions. The more specific you are, the better Sora can render your vision.",
+      fr: "The subject is the main focus of your video. Be specific about who or what your subject is, including details like appearance, clothing, and actions. The more specific you are, the better Sora can render your vision.",
+      hi: "The subject is the main focus of your video. Be specific about who or what your subject is, including details like appearance, clothing, and actions. The more specific you are, the better Sora can render your vision.",
+      ar: "The subject is the main focus of your video. Be specific about who or what your subject is, including details like appearance, clothing, and actions. The more specific you are, the better Sora can render your vision."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Mastering Camera Movements",
+      zh: "4. 掌握摄像机运动",
+      es: "4. Mastering Camera Movements",
+      fr: "4. Mastering Camera Movements",
+      hi: "4. Mastering Camera Movements",
+      ar: "4. Mastering Camera Movements"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Static: No movement - great for establishing shots",
+        zh: "静态：无运动——适合定场镜头",
+        es: "Static: No movement - great for establishing shots",
+        fr: "Static: No movement - great for establishing shots",
+        hi: "Static: No movement - great for establishing shots",
+        ar: "Static: No movement - great for establishing shots"
+      },
+      {
+        en: "Slow pan: Gentle horizontal movement",
+        zh: "缓慢摇摄：平缓的水平运动",
+        es: "Slow pan: Gentle horizontal movement",
+        fr: "Slow pan: Gentle horizontal movement",
+        hi: "Slow pan: Gentle horizontal movement",
+        ar: "Slow pan: Gentle horizontal movement"
+      },
+      {
+        en: "Tracking: Following a moving subject",
+        zh: "跟拍：跟随运动的主体",
+        es: "Tracking: Following a moving subject",
+        fr: "Tracking: Following a moving subject",
+        hi: "Tracking: Following a moving subject",
+        ar: "Tracking: Following a moving subject"
+      },
+      {
+        en: "Zoom: Changing focal length for emphasis",
+        zh: "变焦：改变焦距以强调",
+        es: "Zoom: Changing focal length for emphasis",
+        fr: "Zoom: Changing focal length for emphasis",
+        hi: "Zoom: Changing focal length for emphasis",
+        ar: "Zoom: Changing focal length for emphasis"
+      },
+      {
+        en: "Arc: Circling around the subject",
+        zh: "弧形运动：围绕主体旋转",
+        es: "Arc: Circling around the subject",
+        fr: "Arc: Circling around the subject",
+        hi: "Arc: Circling around the subject",
+        ar: "Arc: Circling around the subject"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "5. Style and Lighting Tips",
+      zh: "5. 风格和光线技巧",
+      es: "5. Style and Lighting Tips",
+      fr: "5. Style and Lighting Tips",
+      hi: "5. Style and Lighting Tips",
+      ar: "5. Style and Lighting Tips"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Cinematic: Film-like quality with dramatic lighting",
+        zh: "电影感：戏剧性光线的电影质感",
+        es: "Cinematic: Film-like quality with dramatic lighting",
+        fr: "Cinematic: Film-like quality with dramatic lighting",
+        hi: "Cinematic: Film-like quality with dramatic lighting",
+        ar: "Cinematic: Film-like quality with dramatic lighting"
+      },
+      {
+        en: "Photorealistic: Ultra-realistic visuals",
+        zh: "照片写实：超逼真视觉效果",
+        es: "Photorealistic: Ultra-realistic visuals",
+        fr: "Photorealistic: Ultra-realistic visuals",
+        hi: "Photorealistic: Ultra-realistic visuals",
+        ar: "Photorealistic: Ultra-realistic visuals"
+      },
+      {
+        en: "Golden hour: Warm, beautiful lighting",
+        zh: "黄金时刻：温暖、美丽的光线",
+        es: "Golden hour: Warm, beautiful lighting",
+        fr: "Golden hour: Warm, beautiful lighting",
+        hi: "Golden hour: Warm, beautiful lighting",
+        ar: "Golden hour: Warm, beautiful lighting"
+      },
+      {
+        en: "Night scene: Moody, atmospheric lighting",
+        zh: "夜景：情绪化、有氛围感的光线",
+        es: "Night scene: Moody, atmospheric lighting",
+        fr: "Night scene: Moody, atmospheric lighting",
+        hi: "Night scene: Moody, atmospheric lighting",
+        ar: "Night scene: Moody, atmospheric lighting"
+      },
+      {
+        en: "Stylized: Creative, artistic interpretations",
+        zh: "风格化：创意、艺术化的诠释",
+        es: "Stylized: Creative, artistic interpretations",
+        fr: "Stylized: Creative, artistic interpretations",
+        hi: "Stylized: Creative, artistic interpretations",
+        ar: "Stylized: Creative, artistic interpretations"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "link": "/tool/sora-prompt-generator",
+    text: {
+      en: "Generate Perfect Sora Prompts",
+      zh: "生成完美Sora提示词",
+      es: "Generate Perfect Sora Prompts",
+      fr: "Generate Perfect Sora Prompts",
+      hi: "Generate Perfect Sora Prompts",
+      ar: "Generate Perfect Sora Prompts"
+    },
+    sub: {
+      en: "Free, No signup, Professional prompts for Sora",
+      zh: "免费，无需注册，Sora专业提示词",
+      es: "Free, No signup, Professional prompts for Sora",
+      fr: "Free, No signup, Professional prompts for Sora",
+      hi: "Free, No signup, Professional prompts for Sora",
+      ar: "Free, No signup, Professional prompts for Sora"
+    }
+  }
+],
+  "midjourney-prompt-guide-2026-master-art": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. Mastering Midjourney Prompts in 2026",
+      zh: "1. 2026年掌握Midjourney提示词",
+      es: "1. Mastering Midjourney Prompts in 2026",
+      fr: "1. Mastering Midjourney Prompts in 2026",
+      hi: "1. Mastering Midjourney Prompts in 2026",
+      ar: "1. Mastering Midjourney Prompts in 2026"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "Midjourney has evolved significantly since its launch, and v6 represents the most capable version yet. Mastering Midjourney prompts requires understanding the platform capabilities, learning prompt engineering techniques, and practicing consistently. This guide will help you create stunning AI art.",
+      zh: "Midjourney自推出以来已经有了显著发展，v6代表了迄今为止最强大的版本。掌握Midjourney提示词需要了解平台的能力、学习提示词工程技术并持续练习。本指南将帮助你创建惊艳的AI艺术。",
+      es: "Midjourney has evolved significantly since its launch, and v6 represents the most capable version yet. Mastering Midjourney prompts requires understanding the platform capabilities, learning prompt engineering techniques, and practicing consistently. This guide will help you create stunning AI art.",
+      fr: "Midjourney has evolved significantly since its launch, and v6 represents the most capable version yet. Mastering Midjourney prompts requires understanding the platform capabilities, learning prompt engineering techniques, and practicing consistently. This guide will help you create stunning AI art.",
+      hi: "Midjourney has evolved significantly since its launch, and v6 represents the most capable version yet. Mastering Midjourney prompts requires understanding the platform capabilities, learning prompt engineering techniques, and practicing consistently. This guide will help you create stunning AI art.",
+      ar: "Midjourney has evolved significantly since its launch, and v6 represents the most capable version yet. Mastering Midjourney prompts requires understanding the platform capabilities, learning prompt engineering techniques, and practicing consistently. This guide will help you create stunning AI art."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    text: {
+      en: "Creative Tip: The best Midjourney artists spend time refining their prompts, experimenting with different styles, and learning from the community. Do not be afraid to iterate!",
+      zh: "创意技巧：最好的Midjourney艺术家会花时间优化他们的提示词，尝试不同的风格，并向社区学习。不要害怕迭代！",
+      es: "Creative Tip: The best Midjourney artists spend time refining their prompts, experimenting with different styles, and learning from the community. Do not be afraid to iterate!",
+      fr: "Creative Tip: The best Midjourney artists spend time refining their prompts, experimenting with different styles, and learning from the community. Do not be afraid to iterate!",
+      hi: "Creative Tip: The best Midjourney artists spend time refining their prompts, experimenting with different styles, and learning from the community. Do not be afraid to iterate!",
+      ar: "Creative Tip: The best Midjourney artists spend time refining their prompts, experimenting with different styles, and learning from the community. Do not be afraid to iterate!"
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Basic Prompt Structure",
+      zh: "2. 基本提示词结构",
+      es: "2. Basic Prompt Structure",
+      fr: "2. Basic Prompt Structure",
+      hi: "2. Basic Prompt Structure",
+      ar: "2. Basic Prompt Structure"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Subject: What are you creating?",
+        zh: "主体：你在创建什么？",
+        es: "Subject: What are you creating?",
+        fr: "Subject: What are you creating?",
+        hi: "Subject: What are you creating?",
+        ar: "Subject: What are you creating?"
+      },
+      {
+        en: "Style: What artistic style?",
+        zh: "风格：什么艺术风格？",
+        es: "Style: What artistic style?",
+        fr: "Style: What artistic style?",
+        hi: "Style: What artistic style?",
+        ar: "Style: What artistic style?"
+      },
+      {
+        en: "Medium: What medium is it?",
+        zh: "媒介：是什么媒介？",
+        es: "Medium: What medium is it?",
+        fr: "Medium: What medium is it?",
+        hi: "Medium: What medium is it?",
+        ar: "Medium: What medium is it?"
+      },
+      {
+        en: "Composition: How is it framed?",
+        zh: "构图：如何构图？",
+        es: "Composition: How is it framed?",
+        fr: "Composition: How is it framed?",
+        hi: "Composition: How is it framed?",
+        ar: "Composition: How is it framed?"
+      },
+      {
+        en: "Lighting: How is it lit?",
+        zh: "光线：如何照明？",
+        es: "Lighting: How is it lit?",
+        fr: "Lighting: How is it lit?",
+        hi: "Lighting: How is it lit?",
+        ar: "Lighting: How is it lit?"
+      },
+      {
+        en: "Details: Any specific details?",
+        zh: "细节：有任何特定细节吗？",
+        es: "Details: Any specific details?",
+        fr: "Details: Any specific details?",
+        hi: "Details: Any specific details?",
+        ar: "Details: Any specific details?"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Advanced Prompt Techniques",
+      zh: "3. 高级提示词技术",
+      es: "3. Advanced Prompt Techniques",
+      fr: "3. Advanced Prompt Techniques",
+      hi: "3. Advanced Prompt Techniques",
+      ar: "3. Advanced Prompt Techniques"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Weighting: Use parentheses and colons to emphasize elements",
+        zh: "权重：使用括号和冒号来强调元素",
+        es: "Weighting: Use parentheses and colons to emphasize elements",
+        fr: "Weighting: Use parentheses and colons to emphasize elements",
+        hi: "Weighting: Use parentheses and colons to emphasize elements",
+        ar: "Weighting: Use parentheses and colons to emphasize elements"
+      },
+      {
+        en: "Negative prompts: Use no to exclude unwanted elements",
+        zh: "负面提示词：使用no排除不需要的元素",
+        es: "Negative prompts: Use no to exclude unwanted elements",
+        fr: "Negative prompts: Use no to exclude unwanted elements",
+        hi: "Negative prompts: Use no to exclude unwanted elements",
+        ar: "Negative prompts: Use no to exclude unwanted elements"
+      },
+      {
+        en: "Aspect ratio: Use ar to specify dimensions",
+        zh: "宽高比：使用ar指定尺寸",
+        es: "Aspect ratio: Use ar to specify dimensions",
+        fr: "Aspect ratio: Use ar to specify dimensions",
+        hi: "Aspect ratio: Use ar to specify dimensions",
+        ar: "Aspect ratio: Use ar to specify dimensions"
+      },
+      {
+        en: "Quality: Use q to control output quality",
+        zh: "质量：使用q控制输出质量",
+        es: "Quality: Use q to control output quality",
+        fr: "Quality: Use q to control output quality",
+        hi: "Quality: Use q to control output quality",
+        ar: "Quality: Use q to control output quality"
+      },
+      {
+        en: "Style reference: Use image URLs for style transfer",
+        zh: "风格参考：使用图像URL进行风格迁移",
+        es: "Style reference: Use image URLs for style transfer",
+        fr: "Style reference: Use image URLs for style transfer",
+        hi: "Style reference: Use image URLs for style transfer",
+        ar: "Style reference: Use image URLs for style transfer"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Popular Style Keywords",
+      zh: "4. 流行风格关键词",
+      es: "4. Popular Style Keywords",
+      fr: "4. Popular Style Keywords",
+      hi: "4. Popular Style Keywords",
+      ar: "4. Popular Style Keywords"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Digital art: Modern, clean digital aesthetics",
+        zh: "数字艺术：现代、简洁的数字美学",
+        es: "Digital art: Modern, clean digital aesthetics",
+        fr: "Digital art: Modern, clean digital aesthetics",
+        hi: "Digital art: Modern, clean digital aesthetics",
+        ar: "Digital art: Modern, clean digital aesthetics"
+      },
+      {
+        en: "Oil painting: Classic brush strokes and texture",
+        zh: "油画：经典笔触和纹理",
+        es: "Oil painting: Classic brush strokes and texture",
+        fr: "Oil painting: Classic brush strokes and texture",
+        hi: "Oil painting: Classic brush strokes and texture",
+        ar: "Oil painting: Classic brush strokes and texture"
+      },
+      {
+        en: "Photography: Realistic, photo-like quality",
+        zh: "摄影：逼真、照片般的质感",
+        es: "Photography: Realistic, photo-like quality",
+        fr: "Photography: Realistic, photo-like quality",
+        hi: "Photography: Realistic, photo-like quality",
+        ar: "Photography: Realistic, photo-like quality"
+      },
+      {
+        en: "Anime: Japanese animation style",
+        zh: "动漫：日本动画风格",
+        es: "Anime: Japanese animation style",
+        fr: "Anime: Japanese animation style",
+        hi: "Anime: Japanese animation style",
+        ar: "Anime: Japanese animation style"
+      },
+      {
+        en: "Watercolor: Soft, translucent washes",
+        zh: "水彩：柔和、半透明的水洗效果",
+        es: "Watercolor: Soft, translucent washes",
+        fr: "Watercolor: Soft, translucent washes",
+        hi: "Watercolor: Soft, translucent washes",
+        ar: "Watercolor: Soft, translucent washes"
+      },
+      {
+        en: "Impressionism: Loose brushwork, vibrant colors",
+        zh: "印象派：松散的笔触，鲜艳的色彩",
+        es: "Impressionism: Loose brushwork, vibrant colors",
+        fr: "Impressionism: Loose brushwork, vibrant colors",
+        hi: "Impressionism: Loose brushwork, vibrant colors",
+        ar: "Impressionism: Loose brushwork, vibrant colors"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "5. Tips for Consistent Results",
+      zh: "5. 获得一致结果的技巧",
+      es: "5. Tips for Consistent Results",
+      fr: "5. Tips for Consistent Results",
+      hi: "5. Tips for Consistent Results",
+      ar: "5. Tips for Consistent Results"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Start with proven prompts: Use templates as a base",
+        zh: "从已验证的提示词开始：使用模板作为基础",
+        es: "Start with proven prompts: Use templates as a base",
+        fr: "Start with proven prompts: Use templates as a base",
+        hi: "Start with proven prompts: Use templates as a base",
+        ar: "Start with proven prompts: Use templates as a base"
+      },
+      {
+        en: "Keep variations small: Make incremental changes",
+        zh: "保持小幅度变化：进行渐进式修改",
+        es: "Keep variations small: Make incremental changes",
+        fr: "Keep variations small: Make incremental changes",
+        hi: "Keep variations small: Make incremental changes",
+        ar: "Keep variations small: Make incremental changes"
+      },
+      {
+        en: "Save successful prompts: Build your prompt library",
+        zh: "保存成功的提示词：建立你的提示词库",
+        es: "Save successful prompts: Build your prompt library",
+        fr: "Save successful prompts: Build your prompt library",
+        hi: "Save successful prompts: Build your prompt library",
+        ar: "Save successful prompts: Build your prompt library"
+      },
+      {
+        en: "Learn from others: Study top Midjourney artists",
+        zh: "向他人学习：研究顶级Midjourney艺术家",
+        es: "Learn from others: Study top Midjourney artists",
+        fr: "Learn from others: Study top Midjourney artists",
+        hi: "Learn from others: Study top Midjourney artists",
+        ar: "Learn from others: Study top Midjourney artists"
+      },
+      {
+        en: "Practice regularly: Prompt engineering improves with practice",
+        zh: "定期练习：提示词工程随着练习而提高",
+        es: "Practice regularly: Prompt engineering improves with practice",
+        fr: "Practice regularly: Prompt engineering improves with practice",
+        hi: "Practice regularly: Prompt engineering improves with practice",
+        ar: "Practice regularly: Prompt engineering improves with practice"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "link": "/tool/midjourney-prompt-generator",
+    text: {
+      en: "Generate Midjourney Prompts Now",
+      zh: "立即生成Midjourney提示词",
+      es: "Generate Midjourney Prompts Now",
+      fr: "Generate Midjourney Prompts Now",
+      hi: "Generate Midjourney Prompts Now",
+      ar: "Generate Midjourney Prompts Now"
+    },
+    sub: {
+      en: "Free, No signup, Perfect for Midjourney v6",
+      zh: "免费，无需注册，完美适配Midjourney v6",
+      es: "Free, No signup, Perfect for Midjourney v6",
+      fr: "Free, No signup, Perfect for Midjourney v6",
+      hi: "Free, No signup, Perfect for Midjourney v6",
+      ar: "Free, No signup, Perfect for Midjourney v6"
+    }
+  }
+],
+  "ai-video-prompt-best-practices-2026": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. The Importance of Quality Video Prompts",
+      zh: "1. 高质量视频提示词的重要性",
+      es: "1. The Importance of Quality Video Prompts",
+      fr: "1. The Importance of Quality Video Prompts",
+      hi: "1. The Importance of Quality Video Prompts",
+      ar: "1. The Importance of Quality Video Prompts"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "In 2026, AI video generation has become mainstream, but the quality of your output still depends heavily on the quality of your prompts. Writing effective video prompts is a skill that can significantly improve your results. This guide covers the best practices for creating video prompts that work.",
+      zh: "2026年，AI视频生成已经成为主流，但输出质量仍然很大程度上取决于提示词的质量。编写有效的视频提示词是一项可以显著提高结果的技能。本指南涵盖了创建有效视频提示词的最佳实践。",
+      es: "In 2026, AI video generation has become mainstream, but the quality of your output still depends heavily on the quality of your prompts. Writing effective video prompts is a skill that can significantly improve your results. This guide covers the best practices for creating video prompts that work.",
+      fr: "In 2026, AI video generation has become mainstream, but the quality of your output still depends heavily on the quality of your prompts. Writing effective video prompts is a skill that can significantly improve your results. This guide covers the best practices for creating video prompts that work.",
+      hi: "In 2026, AI video generation has become mainstream, but the quality of your output still depends heavily on the quality of your prompts. Writing effective video prompts is a skill that can significantly improve your results. This guide covers the best practices for creating video prompts that work.",
+      ar: "In 2026, AI video generation has become mainstream, but the quality of your output still depends heavily on the quality of your prompts. Writing effective video prompts is a skill that can significantly improve your results. This guide covers the best practices for creating video prompts that work."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    text: {
+      en: "Success Rate: Well-crafted video prompts produce results that match the user vision 70-80% of the time, compared to 30-40% with generic prompts.",
+      zh: "成功率：精心设计的视频提示词产生的结果70-80%符合用户的愿景，而通用提示词只有30-40%。",
+      es: "Success Rate: Well-crafted video prompts produce results that match the user vision 70-80% of the time, compared to 30-40% with generic prompts.",
+      fr: "Success Rate: Well-crafted video prompts produce results that match the user vision 70-80% of the time, compared to 30-40% with generic prompts.",
+      hi: "Success Rate: Well-crafted video prompts produce results that match the user vision 70-80% of the time, compared to 30-40% with generic prompts.",
+      ar: "Success Rate: Well-crafted video prompts produce results that match the user vision 70-80% of the time, compared to 30-40% with generic prompts."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Core Principles of Video Prompt Writing",
+      zh: "2. 视频提示词写作的核心原则",
+      es: "2. Core Principles of Video Prompt Writing",
+      fr: "2. Core Principles of Video Prompt Writing",
+      hi: "2. Core Principles of Video Prompt Writing",
+      ar: "2. Core Principles of Video Prompt Writing"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Be specific: Vague prompts lead to generic results",
+        zh: "具体：模糊的提示词导致通用结果",
+        es: "Be specific: Vague prompts lead to generic results",
+        fr: "Be specific: Vague prompts lead to generic results",
+        hi: "Be specific: Vague prompts lead to generic results",
+        ar: "Be specific: Vague prompts lead to generic results"
+      },
+      {
+        en: "Use visual language: Describe what you see, not just what happens",
+        zh: "使用视觉语言：描述你看到的，而不仅仅是发生的事情",
+        es: "Use visual language: Describe what you see, not just what happens",
+        fr: "Use visual language: Describe what you see, not just what happens",
+        hi: "Use visual language: Describe what you see, not just what happens",
+        ar: "Use visual language: Describe what you see, not just what happens"
+      },
+      {
+        en: "Include context: Set the scene and environment",
+        zh: "包含上下文：设置场景和环境",
+        es: "Include context: Set the scene and environment",
+        fr: "Include context: Set the scene and environment",
+        hi: "Include context: Set the scene and environment",
+        ar: "Include context: Set the scene and environment"
+      },
+      {
+        en: "Specify camera: Describe angles, movements, and framing",
+        zh: "指定摄像机：描述角度、运动和构图",
+        es: "Specify camera: Describe angles, movements, and framing",
+        fr: "Specify camera: Describe angles, movements, and framing",
+        hi: "Specify camera: Describe angles, movements, and framing",
+        ar: "Specify camera: Describe angles, movements, and framing"
+      },
+      {
+        en: "Define style: Set the visual tone and mood",
+        zh: "定义风格：设置视觉基调与情绪",
+        es: "Define style: Set the visual tone and mood",
+        fr: "Define style: Set the visual tone and mood",
+        hi: "Define style: Set the visual tone and mood",
+        ar: "Define style: Set the visual tone and mood"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Structuring Your Video Prompt",
+      zh: "3. 构建你的视频提示词",
+      es: "3. Structuring Your Video Prompt",
+      fr: "3. Structuring Your Video Prompt",
+      hi: "3. Structuring Your Video Prompt",
+      ar: "3. Structuring Your Video Prompt"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Opening: Establish the scene and setting",
+        zh: "开场：建立场景和环境",
+        es: "Opening: Establish the scene and setting",
+        fr: "Opening: Establish the scene and setting",
+        hi: "Opening: Establish the scene and setting",
+        ar: "Opening: Establish the scene and setting"
+      },
+      {
+        en: "Subject: Introduce the main character or focus",
+        zh: "主体：介绍主要角色或焦点",
+        es: "Subject: Introduce the main character or focus",
+        fr: "Subject: Introduce the main character or focus",
+        hi: "Subject: Introduce the main character or focus",
+        ar: "Subject: Introduce the main character or focus"
+      },
+      {
+        en: "Action: Describe what happens in the video",
+        zh: "动作：描述视频中发生的事情",
+        es: "Action: Describe what happens in the video",
+        fr: "Action: Describe what happens in the video",
+        hi: "Action: Describe what happens in the video",
+        ar: "Action: Describe what happens in the video"
+      },
+      {
+        en: "Camera: Detail camera movements and angles",
+        zh: "摄像机：详细说明摄像机运动和角度",
+        es: "Camera: Detail camera movements and angles",
+        fr: "Camera: Detail camera movements and angles",
+        hi: "Camera: Detail camera movements and angles",
+        ar: "Camera: Detail camera movements and angles"
+      },
+      {
+        en: "Style: Define the visual aesthetic",
+        zh: "风格：定义视觉美学",
+        es: "Style: Define the visual aesthetic",
+        fr: "Style: Define the visual aesthetic",
+        hi: "Style: Define the visual aesthetic",
+        ar: "Style: Define the visual aesthetic"
+      },
+      {
+        en: "Closing: Describe the ending or final shot",
+        zh: "结尾：描述结尾或最后镜头",
+        es: "Closing: Describe the ending or final shot",
+        fr: "Closing: Describe the ending or final shot",
+        hi: "Closing: Describe the ending or final shot",
+        ar: "Closing: Describe the ending or final shot"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Common Mistakes to Avoid",
+      zh: "4. 要避免的常见错误",
+      es: "4. Common Mistakes to Avoid",
+      fr: "4. Common Mistakes to Avoid",
+      hi: "4. Common Mistakes to Avoid",
+      ar: "4. Common Mistakes to Avoid"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Being too vague: A person walking is not enough",
+        zh: "过于模糊：一个人走路是不够的",
+        es: "Being too vague: A person walking is not enough",
+        fr: "Being too vague: A person walking is not enough",
+        hi: "Being too vague: A person walking is not enough",
+        ar: "Being too vague: A person walking is not enough"
+      },
+      {
+        en: "Ignoring camera: Without camera direction, results are unpredictable",
+        zh: "忽略摄像机：没有摄像机方向，结果不可预测",
+        es: "Ignoring camera: Without camera direction, results are unpredictable",
+        fr: "Ignoring camera: Without camera direction, results are unpredictable",
+        hi: "Ignoring camera: Without camera direction, results are unpredictable",
+        ar: "Ignoring camera: Without camera direction, results are unpredictable"
+      },
+      {
+        en: "Overcomplicating: Too many elements confuse the AI",
+        zh: "过于复杂：太多元素会让AI困惑",
+        es: "Overcomplicating: Too many elements confuse the AI",
+        fr: "Overcomplicating: Too many elements confuse the AI",
+        hi: "Overcomplicating: Too many elements confuse the AI",
+        ar: "Overcomplicating: Too many elements confuse the AI"
+      },
+      {
+        en: "Forgetting style: Without style guidance, results are generic",
+        zh: "忘记风格：没有风格指导，结果是通用的",
+        es: "Forgetting style: Without style guidance, results are generic",
+        fr: "Forgetting style: Without style guidance, results are generic",
+        hi: "Forgetting style: Without style guidance, results are generic",
+        ar: "Forgetting style: Without style guidance, results are generic"
+      },
+      {
+        en: "Not iterating: One prompt rarely produces perfect results",
+        zh: "不迭代：一个提示词很少能产生完美结果",
+        es: "Not iterating: One prompt rarely produces perfect results",
+        fr: "Not iterating: One prompt rarely produces perfect results",
+        hi: "Not iterating: One prompt rarely produces perfect results",
+        ar: "Not iterating: One prompt rarely produces perfect results"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "5. Testing and Refining Your Prompts",
+      zh: "5. 测试和优化你的提示词",
+      es: "5. Testing and Refining Your Prompts",
+      fr: "5. Testing and Refining Your Prompts",
+      hi: "5. Testing and Refining Your Prompts",
+      ar: "5. Testing and Refining Your Prompts"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "The best way to improve your video prompts is through testing and iteration. Start with a basic prompt, generate a video, analyze the results, and refine your prompt accordingly. Keep track of what works and what does not. Over time, you will develop an intuition for writing effective prompts.",
+      zh: "改进视频提示词的最佳方法是通过测试和迭代。从基本提示词开始，生成视频，分析结果，并相应地优化你的提示词。跟踪什么有效，什么无效。随着时间的推移，你会培养出编写有效提示词的直觉。",
+      es: "The best way to improve your video prompts is through testing and iteration. Start with a basic prompt, generate a video, analyze the results, and refine your prompt accordingly. Keep track of what works and what does not. Over time, you will develop an intuition for writing effective prompts.",
+      fr: "The best way to improve your video prompts is through testing and iteration. Start with a basic prompt, generate a video, analyze the results, and refine your prompt accordingly. Keep track of what works and what does not. Over time, you will develop an intuition for writing effective prompts.",
+      hi: "The best way to improve your video prompts is through testing and iteration. Start with a basic prompt, generate a video, analyze the results, and refine your prompt accordingly. Keep track of what works and what does not. Over time, you will develop an intuition for writing effective prompts.",
+      ar: "The best way to improve your video prompts is through testing and iteration. Start with a basic prompt, generate a video, analyze the results, and refine your prompt accordingly. Keep track of what works and what does not. Over time, you will develop an intuition for writing effective prompts."
+    }
+  },
+  {
+    "type": "cta",
+    "link": "/tool/video-prompt-generator",
+    text: {
+      en: "Create Professional Video Prompts",
+      zh: "创建专业视频提示词",
+      es: "Create Professional Video Prompts",
+      fr: "Create Professional Video Prompts",
+      hi: "Create Professional Video Prompts",
+      ar: "Create Professional Video Prompts"
+    },
+    sub: {
+      en: "Free, No signup, Consistent, high-quality results",
+      zh: "免费，无需注册，一致、高质量的结果",
+      es: "Free, No signup, Consistent, high-quality results",
+      fr: "Free, No signup, Consistent, high-quality results",
+      hi: "Free, No signup, Consistent, high-quality results",
+      ar: "Free, No signup, Consistent, high-quality results"
+    }
+  }
+],
+  "from-text-to-video-ai-workflow-2026": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. The Complete Text-to-Video Journey",
+      zh: "1. 完整的文本到视频之旅",
+      es: "1. The Complete Text-to-Video Journey",
+      fr: "1. The Complete Text-to-Video Journey",
+      hi: "1. The Complete Text-to-Video Journey",
+      ar: "1. The Complete Text-to-Video Journey"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "Transforming a text idea into a finished video has never been easier with AI tools. In 2026, the workflow has been streamlined to make professional video creation accessible to everyone. This guide walks you through the complete process from concept to final video.",
+      zh: "使用AI工具将文本创意转化为成品视频从未如此简单。2026年，工作流已经简化，使专业视频创作对每个人都可访问。本指南将带你完成从概念到最终视频的完整过程。",
+      es: "Transforming a text idea into a finished video has never been easier with AI tools. In 2026, the workflow has been streamlined to make professional video creation accessible to everyone. This guide walks you through the complete process from concept to final video.",
+      fr: "Transforming a text idea into a finished video has never been easier with AI tools. In 2026, the workflow has been streamlined to make professional video creation accessible to everyone. This guide walks you through the complete process from concept to final video.",
+      hi: "Transforming a text idea into a finished video has never been easier with AI tools. In 2026, the workflow has been streamlined to make professional video creation accessible to everyone. This guide walks you through the complete process from concept to final video.",
+      ar: "Transforming a text idea into a finished video has never been easier with AI tools. In 2026, the workflow has been streamlined to make professional video creation accessible to everyone. This guide walks you through the complete process from concept to final video."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    text: {
+      en: "Game Changer: AI has reduced the time to create a professional video from days to hours. You can now go from idea to published video in a single afternoon!",
+      zh: "游戏规则改变者：AI将创建专业视频的时间从几天减少到几小时。你现在可以在一个下午内从创意到发布视频！",
+      es: "Game Changer: AI has reduced the time to create a professional video from days to hours. You can now go from idea to published video in a single afternoon!",
+      fr: "Game Changer: AI has reduced the time to create a professional video from days to hours. You can now go from idea to published video in a single afternoon!",
+      hi: "Game Changer: AI has reduced the time to create a professional video from days to hours. You can now go from idea to published video in a single afternoon!",
+      ar: "Game Changer: AI has reduced the time to create a professional video from days to hours. You can now go from idea to published video in a single afternoon!"
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Step 1: Concept Development",
+      zh: "2. 第一步：概念开发",
+      es: "2. Step 1: Concept Development",
+      fr: "2. Step 1: Concept Development",
+      hi: "2. Step 1: Concept Development",
+      ar: "2. Step 1: Concept Development"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Define your goal: What message do you want to convey?",
+        zh: "定义你的目标：你想传达什么信息？",
+        es: "Define your goal: What message do you want to convey?",
+        fr: "Define your goal: What message do you want to convey?",
+        hi: "Define your goal: What message do you want to convey?",
+        ar: "Define your goal: What message do you want to convey?"
+      },
+      {
+        en: "Know your audience: Who are you creating for?",
+        zh: "了解你的受众：你为谁创作？",
+        es: "Know your audience: Who are you creating for?",
+        fr: "Know your audience: Who are you creating for?",
+        hi: "Know your audience: Who are you creating for?",
+        ar: "Know your audience: Who are you creating for?"
+      },
+      {
+        en: "Outline key scenes: Break your video into segments",
+        zh: "概述关键场景：将视频分成片段",
+        es: "Outline key scenes: Break your video into segments",
+        fr: "Outline key scenes: Break your video into segments",
+        hi: "Outline key scenes: Break your video into segments",
+        ar: "Outline key scenes: Break your video into segments"
+      },
+      {
+        en: "Use AI to brainstorm: Get ideas and refine concepts",
+        zh: "使用AI进行头脑风暴：获取想法并优化概念",
+        es: "Use AI to brainstorm: Get ideas and refine concepts",
+        fr: "Use AI to brainstorm: Get ideas and refine concepts",
+        hi: "Use AI to brainstorm: Get ideas and refine concepts",
+        ar: "Use AI to brainstorm: Get ideas and refine concepts"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Step 2: Prompt Generation",
+      zh: "3. 第二步：提示词生成",
+      es: "3. Step 2: Prompt Generation",
+      fr: "3. Step 2: Prompt Generation",
+      hi: "3. Step 2: Prompt Generation",
+      ar: "3. Step 2: Prompt Generation"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Write detailed prompts for each scene",
+        zh: "为每个场景编写详细提示词",
+        es: "Write detailed prompts for each scene",
+        fr: "Write detailed prompts for each scene",
+        hi: "Write detailed prompts for each scene",
+        ar: "Write detailed prompts for each scene"
+      },
+      {
+        en: "Include visual descriptions, camera angles, and style",
+        zh: "包含视觉描述、摄像机角度和风格",
+        es: "Include visual descriptions, camera angles, and style",
+        fr: "Include visual descriptions, camera angles, and style",
+        hi: "Include visual descriptions, camera angles, and style",
+        ar: "Include visual descriptions, camera angles, and style"
+      },
+      {
+        en: "Use prompt generators for consistency",
+        zh: "使用提示词生成器保持一致性",
+        es: "Use prompt generators for consistency",
+        fr: "Use prompt generators for consistency",
+        hi: "Use prompt generators for consistency",
+        ar: "Use prompt generators for consistency"
+      },
+      {
+        en: "Review and refine each prompt",
+        zh: "审查和优化每个提示词",
+        es: "Review and refine each prompt",
+        fr: "Review and refine each prompt",
+        hi: "Review and refine each prompt",
+        ar: "Review and refine each prompt"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Step 3: AI Video Generation",
+      zh: "4. 第三步：AI视频生成",
+      es: "4. Step 3: AI Video Generation",
+      fr: "4. Step 3: AI Video Generation",
+      hi: "4. Step 3: AI Video Generation",
+      ar: "4. Step 3: AI Video Generation"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Choose your AI tool: Sora, Pika, Runway, or others",
+        zh: "选择你的AI工具：Sora、Pika、Runway或其他",
+        es: "Choose your AI tool: Sora, Pika, Runway, or others",
+        fr: "Choose your AI tool: Sora, Pika, Runway, or others",
+        hi: "Choose your AI tool: Sora, Pika, Runway, or others",
+        ar: "Choose your AI tool: Sora, Pika, Runway, or others"
+      },
+      {
+        en: "Generate multiple versions: Create options to choose from",
+        zh: "生成多个版本：创建选项供选择",
+        es: "Generate multiple versions: Create options to choose from",
+        fr: "Generate multiple versions: Create options to choose from",
+        hi: "Generate multiple versions: Create options to choose from",
+        ar: "Generate multiple versions: Create options to choose from"
+      },
+      {
+        en: "Review results: Compare and select the best takes",
+        zh: "审查结果：比较并选择最佳素材",
+        es: "Review results: Compare and select the best takes",
+        fr: "Review results: Compare and select the best takes",
+        hi: "Review results: Compare and select the best takes",
+        ar: "Review results: Compare and select the best takes"
+      },
+      {
+        en: "Iterate as needed: Regenerate with improved prompts",
+        zh: "根据需要迭代：用改进的提示词重新生成",
+        es: "Iterate as needed: Regenerate with improved prompts",
+        fr: "Iterate as needed: Regenerate with improved prompts",
+        hi: "Iterate as needed: Regenerate with improved prompts",
+        ar: "Iterate as needed: Regenerate with improved prompts"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "5. Step 4: Editing and Post-Production",
+      zh: "5. 第四步：编辑和后期制作",
+      es: "5. Step 4: Editing and Post-Production",
+      fr: "5. Step 4: Editing and Post-Production",
+      hi: "5. Step 4: Editing and Post-Production",
+      ar: "5. Step 4: Editing and Post-Production"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Trim and arrange: Cut and organize your footage",
+        zh: "剪辑和排列：剪切并组织你的素材",
+        es: "Trim and arrange: Cut and organize your footage",
+        fr: "Trim and arrange: Cut and organize your footage",
+        hi: "Trim and arrange: Cut and organize your footage",
+        ar: "Trim and arrange: Cut and organize your footage"
+      },
+      {
+        en: "Add transitions: Smooth between scenes",
+        zh: "添加转场：场景之间平滑过渡",
+        es: "Add transitions: Smooth between scenes",
+        fr: "Add transitions: Smooth between scenes",
+        hi: "Add transitions: Smooth between scenes",
+        ar: "Add transitions: Smooth between scenes"
+      },
+      {
+        en: "Add audio: Music, voiceover, and sound effects",
+        zh: "添加音频：音乐、旁白和音效",
+        es: "Add audio: Music, voiceover, and sound effects",
+        fr: "Add audio: Music, voiceover, and sound effects",
+        hi: "Add audio: Music, voiceover, and sound effects",
+        ar: "Add audio: Music, voiceover, and sound effects"
+      },
+      {
+        en: "Color grading: Adjust colors and lighting",
+        zh: "色彩分级：调整颜色和光线",
+        es: "Color grading: Adjust colors and lighting",
+        fr: "Color grading: Adjust colors and lighting",
+        hi: "Color grading: Adjust colors and lighting",
+        ar: "Color grading: Adjust colors and lighting"
+      },
+      {
+        en: "Final review: Check for quality and consistency",
+        zh: "最终审查：检查质量和一致性",
+        es: "Final review: Check for quality and consistency",
+        fr: "Final review: Check for quality and consistency",
+        hi: "Final review: Check for quality and consistency",
+        ar: "Final review: Check for quality and consistency"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "6. Step 5: Export and Distribute",
+      zh: "6. 第五步：导出和分发",
+      es: "6. Step 5: Export and Distribute",
+      fr: "6. Step 5: Export and Distribute",
+      hi: "6. Step 5: Export and Distribute",
+      ar: "6. Step 5: Export and Distribute"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "Once your video is complete, export it in the appropriate format for your target platform. Whether you are publishing to YouTube, TikTok, Instagram, or your website, make sure your video is optimized for that platform. Then share it with the world!",
+      zh: "视频完成后，以适合目标平台的格式导出。无论你是发布到YouTube、TikTok、Instagram还是你的网站，确保你的视频针对该平台进行了优化。然后与世界分享！",
+      es: "Once your video is complete, export it in the appropriate format for your target platform. Whether you are publishing to YouTube, TikTok, Instagram, or your website, make sure your video is optimized for that platform. Then share it with the world!",
+      fr: "Once your video is complete, export it in the appropriate format for your target platform. Whether you are publishing to YouTube, TikTok, Instagram, or your website, make sure your video is optimized for that platform. Then share it with the world!",
+      hi: "Once your video is complete, export it in the appropriate format for your target platform. Whether you are publishing to YouTube, TikTok, Instagram, or your website, make sure your video is optimized for that platform. Then share it with the world!",
+      ar: "Once your video is complete, export it in the appropriate format for your target platform. Whether you are publishing to YouTube, TikTok, Instagram, or your website, make sure your video is optimized for that platform. Then share it with the world!"
+    }
+  },
+  {
+    "type": "cta",
+    "link": "/tool/video-prompt-generator",
+    text: {
+      en: "Start Your Text-to-Video Journey",
+      zh: "开始你的文本到视频之旅",
+      es: "Start Your Text-to-Video Journey",
+      fr: "Start Your Text-to-Video Journey",
+      hi: "Start Your Text-to-Video Journey",
+      ar: "Start Your Text-to-Video Journey"
+    },
+    sub: {
+      en: "Free, No signup, Complete workflow support",
+      zh: "免费，无需注册，完整工作流支持",
+      es: "Free, No signup, Complete workflow support",
+      fr: "Free, No signup, Complete workflow support",
+      hi: "Free, No signup, Complete workflow support",
+      ar: "Free, No signup, Complete workflow support"
+    }
+  }
+],
+  "ai-writing-assistant-2026-productivity-tips": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. The Rise of AI Writing Assistants",
+      zh: "1. AI写作助手的兴起",
+      es: "1. The Rise of AI Writing Assistants",
+      fr: "1. The Rise of AI Writing Assistants",
+      hi: "1. The Rise of AI Writing Assistants",
+      ar: "1. The Rise of AI Writing Assistants"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "AI writing assistants have become essential tools for content creators, professionals, and students in 2026. These tools can help you write faster, improve your grammar, generate ideas, and even create entire drafts. Learning to use AI writing assistants effectively can significantly boost your productivity.",
+      zh: "2026年，AI写作助手已经成为内容创作者、专业人士和学生的必备工具。这些工具可以帮助你更快地写作、提高语法水平、生成创意，甚至创建完整的草稿。学会有效使用AI写作助手可以显著提高你的生产力。",
+      es: "AI writing assistants have become essential tools for content creators, professionals, and students in 2026. These tools can help you write faster, improve your grammar, generate ideas, and even create entire drafts. Learning to use AI writing assistants effectively can significantly boost your productivity.",
+      fr: "AI writing assistants have become essential tools for content creators, professionals, and students in 2026. These tools can help you write faster, improve your grammar, generate ideas, and even create entire drafts. Learning to use AI writing assistants effectively can significantly boost your productivity.",
+      hi: "AI writing assistants have become essential tools for content creators, professionals, and students in 2026. These tools can help you write faster, improve your grammar, generate ideas, and even create entire drafts. Learning to use AI writing assistants effectively can significantly boost your productivity.",
+      ar: "AI writing assistants have become essential tools for content creators, professionals, and students in 2026. These tools can help you write faster, improve your grammar, generate ideas, and even create entire drafts. Learning to use AI writing assistants effectively can significantly boost your productivity."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    text: {
+      en: "Productivity Boost: Users report a 40-60% increase in writing productivity when using AI writing assistants effectively.",
+      zh: "生产力提升：用户报告有效使用AI写作助手时，写作生产力提高40-60%。",
+      es: "Productivity Boost: Users report a 40-60% increase in writing productivity when using AI writing assistants effectively.",
+      fr: "Productivity Boost: Users report a 40-60% increase in writing productivity when using AI writing assistants effectively.",
+      hi: "Productivity Boost: Users report a 40-60% increase in writing productivity when using AI writing assistants effectively.",
+      ar: "Productivity Boost: Users report a 40-60% increase in writing productivity when using AI writing assistants effectively."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Key Features of AI Writing Assistants",
+      zh: "2. AI写作助手的关键功能",
+      es: "2. Key Features of AI Writing Assistants",
+      fr: "2. Key Features of AI Writing Assistants",
+      hi: "2. Key Features of AI Writing Assistants",
+      ar: "2. Key Features of AI Writing Assistants"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Grammar and spelling checking",
+        zh: "语法和拼写检查",
+        es: "Grammar and spelling checking",
+        fr: "Grammar and spelling checking",
+        hi: "Grammar and spelling checking",
+        ar: "Grammar and spelling checking"
+      },
+      {
+        en: "Style and tone suggestions",
+        zh: "风格和语气建议",
+        es: "Style and tone suggestions",
+        fr: "Style and tone suggestions",
+        hi: "Style and tone suggestions",
+        ar: "Style and tone suggestions"
+      },
+      {
+        en: "Idea generation and brainstorming",
+        zh: "创意生成和头脑风暴",
+        es: "Idea generation and brainstorming",
+        fr: "Idea generation and brainstorming",
+        hi: "Idea generation and brainstorming",
+        ar: "Idea generation and brainstorming"
+      },
+      {
+        en: "Draft generation and completion",
+        zh: "草稿生成和完成",
+        es: "Draft generation and completion",
+        fr: "Draft generation and completion",
+        hi: "Draft generation and completion",
+        ar: "Draft generation and completion"
+      },
+      {
+        en: "Rewriting and paraphrasing",
+        zh: "重写和改写",
+        es: "Rewriting and paraphrasing",
+        fr: "Rewriting and paraphrasing",
+        hi: "Rewriting and paraphrasing",
+        ar: "Rewriting and paraphrasing"
+      },
+      {
+        en: "Multilingual support",
+        zh: "多语言支持",
+        es: "Multilingual support",
+        fr: "Multilingual support",
+        hi: "Multilingual support",
+        ar: "Multilingual support"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. Tips for Maximizing Productivity",
+      zh: "3. 最大化生产力的技巧",
+      es: "3. Tips for Maximizing Productivity",
+      fr: "3. Tips for Maximizing Productivity",
+      hi: "3. Tips for Maximizing Productivity",
+      ar: "3. Tips for Maximizing Productivity"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "Start with a clear outline: AI works better with structure",
+        zh: "从清晰的大纲开始：AI在有结构的情况下工作得更好",
+        es: "Start with a clear outline: AI works better with structure",
+        fr: "Start with a clear outline: AI works better with structure",
+        hi: "Start with a clear outline: AI works better with structure",
+        ar: "Start with a clear outline: AI works better with structure"
+      },
+      {
+        en: "Use AI for first drafts: Let AI do the heavy lifting",
+        zh: "使用AI进行初稿：让AI做繁重的工作",
+        es: "Use AI for first drafts: Let AI do the heavy lifting",
+        fr: "Use AI for first drafts: Let AI do the heavy lifting",
+        hi: "Use AI for first drafts: Let AI do the heavy lifting",
+        ar: "Use AI for first drafts: Let AI do the heavy lifting"
+      },
+      {
+        en: "Edit and refine manually: Add your personal touch",
+        zh: "手动编辑和优化：添加你的个人风格",
+        es: "Edit and refine manually: Add your personal touch",
+        fr: "Edit and refine manually: Add your personal touch",
+        hi: "Edit and refine manually: Add your personal touch",
+        ar: "Edit and refine manually: Add your personal touch"
+      },
+      {
+        en: "Learn prompt techniques: Get better results from AI",
+        zh: "学习提示词技术：从AI获得更好的结果",
+        es: "Learn prompt techniques: Get better results from AI",
+        fr: "Learn prompt techniques: Get better results from AI",
+        hi: "Learn prompt techniques: Get better results from AI",
+        ar: "Learn prompt techniques: Get better results from AI"
+      },
+      {
+        en: "Use templates: Save time with pre-built structures",
+        zh: "使用模板：使用预构建的结构节省时间",
+        es: "Use templates: Save time with pre-built structures",
+        fr: "Use templates: Save time with pre-built structures",
+        hi: "Use templates: Save time with pre-built structures",
+        ar: "Use templates: Save time with pre-built structures"
+      },
+      {
+        en: "Review carefully: Always fact-check AI-generated content",
+        zh: "仔细审查：始终对AI生成的内容进行事实核查",
+        es: "Review carefully: Always fact-check AI-generated content",
+        fr: "Review carefully: Always fact-check AI-generated content",
+        hi: "Review carefully: Always fact-check AI-generated content",
+        ar: "Review carefully: Always fact-check AI-generated content"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Common Use Cases",
+      zh: "4. 常见使用场景",
+      es: "4. Common Use Cases",
+      fr: "4. Common Use Cases",
+      hi: "4. Common Use Cases",
+      ar: "4. Common Use Cases"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Blog writing: Generate drafts and ideas",
+        zh: "博客写作：生成草稿和创意",
+        es: "Blog writing: Generate drafts and ideas",
+        fr: "Blog writing: Generate drafts and ideas",
+        hi: "Blog writing: Generate drafts and ideas",
+        ar: "Blog writing: Generate drafts and ideas"
+      },
+      {
+        en: "Email writing: Craft professional emails",
+        zh: "电子邮件写作：撰写专业邮件",
+        es: "Email writing: Craft professional emails",
+        fr: "Email writing: Craft professional emails",
+        hi: "Email writing: Craft professional emails",
+        ar: "Email writing: Craft professional emails"
+      },
+      {
+        en: "Report writing: Create structured documents",
+        zh: "报告写作：创建结构化文档",
+        es: "Report writing: Create structured documents",
+        fr: "Report writing: Create structured documents",
+        hi: "Report writing: Create structured documents",
+        ar: "Report writing: Create structured documents"
+      },
+      {
+        en: "Social media: Write engaging captions",
+        zh: "社交媒体：写吸引人的标题",
+        es: "Social media: Write engaging captions",
+        fr: "Social media: Write engaging captions",
+        hi: "Social media: Write engaging captions",
+        ar: "Social media: Write engaging captions"
+      },
+      {
+        en: "Marketing copy: Create persuasive content",
+        zh: "营销文案：创建有说服力的内容",
+        es: "Marketing copy: Create persuasive content",
+        fr: "Marketing copy: Create persuasive content",
+        hi: "Marketing copy: Create persuasive content",
+        ar: "Marketing copy: Create persuasive content"
+      },
+      {
+        en: "Academic writing: Improve essays and papers",
+        zh: "学术写作：改进论文",
+        es: "Academic writing: Improve essays and papers",
+        fr: "Academic writing: Improve essays and papers",
+        hi: "Academic writing: Improve essays and papers",
+        ar: "Academic writing: Improve essays and papers"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "5. Best Practices for Ethical AI Use",
+      zh: "5. 道德使用AI的最佳实践",
+      es: "5. Best Practices for Ethical AI Use",
+      fr: "5. Best Practices for Ethical AI Use",
+      hi: "5. Best Practices for Ethical AI Use",
+      ar: "5. Best Practices for Ethical AI Use"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "While AI writing assistants are powerful tools, it is important to use them ethically. Always credit AI assistance when required, fact-check all generated content, and use AI as a tool to enhance your skills, not replace them. Remember, AI is a collaborator, not a replacement.",
+      zh: "虽然AI写作助手是强大的工具，但重要的是要道德地使用它们。在需要时始终归功于AI帮助，对所有生成的内容进行事实核查，并将AI作为增强技能的工具，而不是取代它们。记住，AI是合作者，不是替代品。",
+      es: "While AI writing assistants are powerful tools, it is important to use them ethically. Always credit AI assistance when required, fact-check all generated content, and use AI as a tool to enhance your skills, not replace them. Remember, AI is a collaborator, not a replacement.",
+      fr: "While AI writing assistants are powerful tools, it is important to use them ethically. Always credit AI assistance when required, fact-check all generated content, and use AI as a tool to enhance your skills, not replace them. Remember, AI is a collaborator, not a replacement.",
+      hi: "While AI writing assistants are powerful tools, it is important to use them ethically. Always credit AI assistance when required, fact-check all generated content, and use AI as a tool to enhance your skills, not replace them. Remember, AI is a collaborator, not a replacement.",
+      ar: "While AI writing assistants are powerful tools, it is important to use them ethically. Always credit AI assistance when required, fact-check all generated content, and use AI as a tool to enhance your skills, not replace them. Remember, AI is a collaborator, not a replacement."
+    }
+  },
+  {
+    "type": "cta",
+    "link": "/tool/ai-grammar-checker",
+    text: {
+      en: "Boost Your Writing Productivity",
+      zh: "提升你的写作生产力",
+      es: "Boost Your Writing Productivity",
+      fr: "Boost Your Writing Productivity",
+      hi: "Boost Your Writing Productivity",
+      ar: "Boost Your Writing Productivity"
+    },
+    sub: {
+      en: "Free, No signup, AI-powered writing assistance",
+      zh: "免费，无需注册，AI驱动的写作帮助",
+      es: "Free, No signup, AI-powered writing assistance",
+      fr: "Free, No signup, AI-powered writing assistance",
+      hi: "Free, No signup, AI-powered writing assistance",
+      ar: "Free, No signup, AI-powered writing assistance"
+    }
+  }
+],
+  "future-of-ai-content-creation-2026-trends": [
+  {
+    "type": "h2",
+    text: {
+      en: "1. The Current State of AI Content Creation",
+      zh: "1. AI内容创作的现状",
+      es: "1. The Current State of AI Content Creation",
+      fr: "1. The Current State of AI Content Creation",
+      hi: "1. The Current State of AI Content Creation",
+      ar: "1. The Current State of AI Content Creation"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "AI content creation has evolved rapidly in recent years, and 2026 marks a significant milestone. AI tools are now capable of creating high-quality text, images, videos, and even interactive content. The creative industry is being transformed, and staying ahead of trends is essential for content creators.",
+      zh: "近年来，AI内容创作发展迅速，2026年标志着一个重要里程碑。AI工具现在能够创建高质量的文本、图像、视频甚至交互式内容。创意产业正在被改变，跟上趋势对内容创作者至关重要。",
+      es: "AI content creation has evolved rapidly in recent years, and 2026 marks a significant milestone. AI tools are now capable of creating high-quality text, images, videos, and even interactive content. The creative industry is being transformed, and staying ahead of trends is essential for content creators.",
+      fr: "AI content creation has evolved rapidly in recent years, and 2026 marks a significant milestone. AI tools are now capable of creating high-quality text, images, videos, and even interactive content. The creative industry is being transformed, and staying ahead of trends is essential for content creators.",
+      hi: "AI content creation has evolved rapidly in recent years, and 2026 marks a significant milestone. AI tools are now capable of creating high-quality text, images, videos, and even interactive content. The creative industry is being transformed, and staying ahead of trends is essential for content creators.",
+      ar: "AI content creation has evolved rapidly in recent years, and 2026 marks a significant milestone. AI tools are now capable of creating high-quality text, images, videos, and even interactive content. The creative industry is being transformed, and staying ahead of trends is essential for content creators."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    text: {
+      en: "Future Insight: AI content creation is not about replacing human creativity, but augmenting it. The most successful creators in 2026 are those who know how to collaborate effectively with AI.",
+      zh: "未来洞察：AI内容创作不是取代人类创造力，而是增强它。2026年最成功的创作者是那些知道如何与AI有效协作的人。",
+      es: "Future Insight: AI content creation is not about replacing human creativity, but augmenting it. The most successful creators in 2026 are those who know how to collaborate effectively with AI.",
+      fr: "Future Insight: AI content creation is not about replacing human creativity, but augmenting it. The most successful creators in 2026 are those who know how to collaborate effectively with AI.",
+      hi: "Future Insight: AI content creation is not about replacing human creativity, but augmenting it. The most successful creators in 2026 are those who know how to collaborate effectively with AI.",
+      ar: "Future Insight: AI content creation is not about replacing human creativity, but augmenting it. The most successful creators in 2026 are those who know how to collaborate effectively with AI."
+    }
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "2. Key Trends for 2026",
+      zh: "2. 2026年的关键趋势",
+      es: "2. Key Trends for 2026",
+      fr: "2. Key Trends for 2026",
+      hi: "2. Key Trends for 2026",
+      ar: "2. Key Trends for 2026"
+    }
+  },
+  {
+    "type": "ol",
+    items: [
+      {
+        en: "AI Video Generation: Text-to-video tools are becoming mainstream",
+        zh: "AI视频生成：文本转视频工具正在成为主流",
+        es: "AI Video Generation: Text-to-video tools are becoming mainstream",
+        fr: "AI Video Generation: Text-to-video tools are becoming mainstream",
+        hi: "AI Video Generation: Text-to-video tools are becoming mainstream",
+        ar: "AI Video Generation: Text-to-video tools are becoming mainstream"
+      },
+      {
+        en: "Real-time AI Art: Instant generation and refinement",
+        zh: "实时AI艺术：即时生成和优化",
+        es: "Real-time AI Art: Instant generation and refinement",
+        fr: "Real-time AI Art: Instant generation and refinement",
+        hi: "Real-time AI Art: Instant generation and refinement",
+        ar: "Real-time AI Art: Instant generation and refinement"
+      },
+      {
+        en: "AI Voice and Audio: Realistic voiceovers and music generation",
+        zh: "AI语音和音频：逼真的旁白和音乐生成",
+        es: "AI Voice and Audio: Realistic voiceovers and music generation",
+        fr: "AI Voice and Audio: Realistic voiceovers and music generation",
+        hi: "AI Voice and Audio: Realistic voiceovers and music generation",
+        ar: "AI Voice and Audio: Realistic voiceovers and music generation"
+      },
+      {
+        en: "Multimodal AI: Tools that handle text, images, and video together",
+        zh: "多模态AI：同时处理文本、图像和视频的工具",
+        es: "Multimodal AI: Tools that handle text, images, and video together",
+        fr: "Multimodal AI: Tools that handle text, images, and video together",
+        hi: "Multimodal AI: Tools that handle text, images, and video together",
+        ar: "Multimodal AI: Tools that handle text, images, and video together"
+      },
+      {
+        en: "Personalized Content: AI that adapts to individual preferences",
+        zh: "个性化内容：适应个人偏好的AI",
+        es: "Personalized Content: AI that adapts to individual preferences",
+        fr: "Personalized Content: AI that adapts to individual preferences",
+        hi: "Personalized Content: AI that adapts to individual preferences",
+        ar: "Personalized Content: AI that adapts to individual preferences"
+      },
+      {
+        en: "Interactive AI: AI that responds to user input in real-time",
+        zh: "交互式AI：实时响应用户输入的AI",
+        es: "Interactive AI: AI that responds to user input in real-time",
+        fr: "Interactive AI: AI that responds to user input in real-time",
+        hi: "Interactive AI: AI that responds to user input in real-time",
+        ar: "Interactive AI: AI that responds to user input in real-time"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "3. How AI Is Transforming Content Creation",
+      zh: "3. AI如何改变内容创作",
+      es: "3. How AI Is Transforming Content Creation",
+      fr: "3. How AI Is Transforming Content Creation",
+      hi: "3. How AI Is Transforming Content Creation",
+      ar: "3. How AI Is Transforming Content Creation"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Speed: Content creation is faster than ever",
+        zh: "速度：内容创作比以往任何时候都快",
+        es: "Speed: Content creation is faster than ever",
+        fr: "Speed: Content creation is faster than ever",
+        hi: "Speed: Content creation is faster than ever",
+        ar: "Speed: Content creation is faster than ever"
+      },
+      {
+        en: "Quality: AI can produce professional-level results",
+        zh: "质量：AI可以产生专业水平的结果",
+        es: "Quality: AI can produce professional-level results",
+        fr: "Quality: AI can produce professional-level results",
+        hi: "Quality: AI can produce professional-level results",
+        ar: "Quality: AI can produce professional-level results"
+      },
+      {
+        en: "Cost: Reduced production costs and barriers to entry",
+        zh: "成本：降低生产成本和进入门槛",
+        es: "Cost: Reduced production costs and barriers to entry",
+        fr: "Cost: Reduced production costs and barriers to entry",
+        hi: "Cost: Reduced production costs and barriers to entry",
+        ar: "Cost: Reduced production costs and barriers to entry"
+      },
+      {
+        en: "Accessibility: Anyone can create professional content",
+        zh: "可访问性：任何人都可以创建专业内容",
+        es: "Accessibility: Anyone can create professional content",
+        fr: "Accessibility: Anyone can create professional content",
+        hi: "Accessibility: Anyone can create professional content",
+        ar: "Accessibility: Anyone can create professional content"
+      },
+      {
+        en: "Customization: Tailored content for specific audiences",
+        zh: "定制化：为特定受众量身定制的内容",
+        es: "Customization: Tailored content for specific audiences",
+        fr: "Customization: Tailored content for specific audiences",
+        hi: "Customization: Tailored content for specific audiences",
+        ar: "Customization: Tailored content for specific audiences"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "4. Preparing for the Future",
+      zh: "4. 为未来做准备",
+      es: "4. Preparing for the Future",
+      fr: "4. Preparing for the Future",
+      hi: "4. Preparing for the Future",
+      ar: "4. Preparing for the Future"
+    }
+  },
+  {
+    "type": "ul",
+    items: [
+      {
+        en: "Learn AI tools: Master the latest AI content creation tools",
+        zh: "学习AI工具：掌握最新的AI内容创作工具",
+        es: "Learn AI tools: Master the latest AI content creation tools",
+        fr: "Learn AI tools: Master the latest AI content creation tools",
+        hi: "Learn AI tools: Master the latest AI content creation tools",
+        ar: "Learn AI tools: Master the latest AI content creation tools"
+      },
+      {
+        en: "Develop prompt engineering skills: Learn to communicate effectively with AI",
+        zh: "发展提示词工程技能：学会与AI有效沟通",
+        es: "Develop prompt engineering skills: Learn to communicate effectively with AI",
+        fr: "Develop prompt engineering skills: Learn to communicate effectively with AI",
+        hi: "Develop prompt engineering skills: Learn to communicate effectively with AI",
+        ar: "Develop prompt engineering skills: Learn to communicate effectively with AI"
+      },
+      {
+        en: "Focus on creativity: AI handles execution, you handle vision",
+        zh: "专注于创造力：AI处理执行，你处理愿景",
+        es: "Focus on creativity: AI handles execution, you handle vision",
+        fr: "Focus on creativity: AI handles execution, you handle vision",
+        hi: "Focus on creativity: AI handles execution, you handle vision",
+        ar: "Focus on creativity: AI handles execution, you handle vision"
+      },
+      {
+        en: "Build your brand: Stand out with unique voice and perspective",
+        zh: "建立你的品牌：以独特的声音和视角脱颖而出",
+        es: "Build your brand: Stand out with unique voice and perspective",
+        fr: "Build your brand: Stand out with unique voice and perspective",
+        hi: "Build your brand: Stand out with unique voice and perspective",
+        ar: "Build your brand: Stand out with unique voice and perspective"
+      },
+      {
+        en: "Stay curious: Continuously learn and adapt to new technologies",
+        zh: "保持好奇心：不断学习并适应新技术",
+        es: "Stay curious: Continuously learn and adapt to new technologies",
+        fr: "Stay curious: Continuously learn and adapt to new technologies",
+        hi: "Stay curious: Continuously learn and adapt to new technologies",
+        ar: "Stay curious: Continuously learn and adapt to new technologies"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    text: {
+      en: "5. The Future Is Collaborative",
+      zh: "5. 未来是协作的",
+      es: "5. The Future Is Collaborative",
+      fr: "5. The Future Is Collaborative",
+      hi: "5. The Future Is Collaborative",
+      ar: "5. The Future Is Collaborative"
+    }
+  },
+  {
+    "type": "p",
+    text: {
+      en: "The future of AI content creation is not about AI replacing humans, but about humans and AI collaborating to create better content. In 2026, the most successful content creators are those who understand how to leverage AI as a creative partner. The tools are here - it is up to you to use them creatively.",
+      zh: "AI内容创作的未来不是AI取代人类，而是人类和AI协作创建更好的内容。2026年，最成功的内容创作者是那些懂得如何将AI作为创意伙伴的人。工具已经在这里——取决于你如何创造性地使用它们。",
+      es: "The future of AI content creation is not about AI replacing humans, but about humans and AI collaborating to create better content. In 2026, the most successful content creators are those who understand how to leverage AI as a creative partner. The tools are here - it is up to you to use them creatively.",
+      fr: "The future of AI content creation is not about AI replacing humans, but about humans and AI collaborating to create better content. In 2026, the most successful content creators are those who understand how to leverage AI as a creative partner. The tools are here - it is up to you to use them creatively.",
+      hi: "The future of AI content creation is not about AI replacing humans, but about humans and AI collaborating to create better content. In 2026, the most successful content creators are those who understand how to leverage AI as a creative partner. The tools are here - it is up to you to use them creatively.",
+      ar: "The future of AI content creation is not about AI replacing humans, but about humans and AI collaborating to create better content. In 2026, the most successful content creators are those who understand how to leverage AI as a creative partner. The tools are here - it is up to you to use them creatively."
+    }
+  },
+  {
+    "type": "cta",
+    "link": "/tool/ai-prompt-generator",
+    text: {
+      en: "Embrace the Future of AI Content Creation",
+      zh: "拥抱AI内容创作的未来",
+      es: "Embrace the Future of AI Content Creation",
+      fr: "Embrace the Future of AI Content Creation",
+      hi: "Embrace the Future of AI Content Creation",
+      ar: "Embrace the Future of AI Content Creation"
+    },
+    sub: {
+      en: "Free, No signup, 50+ AI tools at your fingertips",
+      zh: "免费，无需注册，50+AI工具触手可及",
+      es: "Free, No signup, 50+ AI tools at your fingertips",
+      fr: "Free, No signup, 50+ AI tools at your fingertips",
+      hi: "Free, No signup, 50+ AI tools at your fingertips",
+      ar: "Free, No signup, 50+ AI tools at your fingertips"
+    }
+  }
+]
 };
