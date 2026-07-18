@@ -872,23 +872,27 @@
         "faqs": [
           {
             "q": "Les photos que je télécharge ici sont-elles envoyées à un serveur distant ?",
-            "a": "Non. Le décodage, le redimensionnement et la compression s'exécutent tous dans votre navigateur grâce à WebAssembly. Rien ne sort de votre appareil : photos intimes, scans de pièces d'identité et captures d'écran internes restent entièrement confidentiels."
+            "a": "Non. Le décodage, le redimensionnement et la compression s'exécutent tous dans votre navigateur. Rien ne sort de votre appareil : photos intimes, scans de pièces d'identité et captures d'écran internes restent entièrement confidentiels."
           },
           {
-            "q": "Quels formats d'image ce compresseur prend-il en charge ?",
-            "a": "Il prend en charge JPG, PNG, WebP et HEIC en entrée sur la plupart des navigateurs récents. Le format de sortie reprend celui de l'entrée par défaut, mais vous pouvez aussi forcer une exportation WebP ou JPG pour coller à un flux de publication précis."
+            "q": "Comment compresser une image à une taille précise comme 100KB ?",
+            "a": "Passez en mode 'Taille cible', entrez le KB souhaité (par exemple, 100), et l'outil trouvera automatiquement le niveau de qualité optimal grâce à une recherche binaire. Idéal pour les photos de passeport, les formulaires gouvernementaux et les limites d'upload sur les réseaux sociaux."
           },
           {
-            "q": "Une compression forte détériore-t-elle la qualité visuelle de mes photos ?",
-            "a": "La prévisualisation comparative en direct et le curseur de qualité par image vous permettent de vérifier exactement le rendu de chaque réglage. Pour la plupart des usages web et réseaux sociaux, une qualité de 70–80 réduit fortement le poids sans différence visible à l'œil nu."
+            "q": "Quels formats de sortie sont disponibles ? JPG, PNG ou WebP ?",
+            "a": "Vous pouvez conserver le format original ou convertir en JPG, PNG ou WebP. WebP produit généralement les fichiers les plus petits tout en conservant une bonne qualité, ce qui le rend idéal pour la publication web et les réseaux sociaux."
           },
           {
-            "q": "Y a-t-il une limite de taille ou de nombre de fichiers par session ?",
-            "a": "Il n'y a pas de plafond artificiel. Les limites pratiques dépendent de votre navigateur et de la RAM disponible ; la plupart des ordinateurs portables peuvent traiter 50 à 100 photos de résolution moyenne dans une session sans ralentissement."
+            "q": "Puis-je compresser plusieurs images à la fois ?",
+            "a": "Oui. Téléchargez plusieurs images et l'outil les traitera toutes. Chaque image affiche sa taille originale, sa taille compressée et son pourcentage de compression. Vous pouvez télécharger les fichiers individuellement ou tous à la fois."
           },
           {
-            "q": "Puis-je redimensionner les images en pixels en même temps que je les compresse ?",
-            "a": "Oui. Chaque image dispose d'un curseur de dimension maximale qui réduit le côté le plus long au nombre de pixels souhaité avant réencodage. Vous pouvez donc redimensionner et recompresser en une seule étape sans passer par un éditeur d'images séparé."
+            "q": "Y a-t-il une fonction de comparaison avant/après ?",
+            "a": "Oui. Après compression, utilisez le curseur pour comparer les images originale et compressée côte à côte. Cela vous aide à vérifier la qualité avant téléchargement et à trouver le bon équilibre entre taille et qualité visuelle."
+          },
+          {
+            "q": "Devrais-je supprimer les métadonnées EXIF de mes photos ?",
+            "a": "Les données EXIF contiennent les paramètres de l'appareil photo, la position GPS et d'autres métadonnées. Les supprimer réduit légèrement la taille du fichier et protège votre vie privée en ne révélant pas quand et où les photos ont été prises. Cela est particulièrement utile pour les uploads publics sur le web."
           }
         ]
       }

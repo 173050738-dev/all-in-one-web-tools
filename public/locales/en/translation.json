@@ -872,23 +872,27 @@
         "faqs": [
           {
             "q": "Are the photos I upload here ever sent to a remote server?",
-            "a": "No. Image decoding, resizing, and compression all happen in your browser with WebAssembly. Nothing leaves your device, so private photos, ID scans, and internal screenshots remain fully confidential end-to-end."
+            "a": "No. Image decoding, resizing, and compression all happen in your browser. Nothing leaves your device, so private photos, ID scans, and internal screenshots remain fully confidential end-to-end."
           },
           {
-            "q": "Which image formats does this compressor support?",
-            "a": "It supports JPG, PNG, WebP, and HEIC input in most modern browsers. The output format follows the input by default; you can also force WebP or JPG export for better compatibility with specific publishing workflows."
+            "q": "How do I compress an image to exactly 100KB or a specific size?",
+            "a": "Switch to 'Target Size' mode, enter your desired KB (e.g., 100), and the tool will automatically find the optimal quality level through binary search. Perfect for passport photos, government forms, and social media upload limits."
           },
           {
-            "q": "Will heavy compression ruin the visual quality of my photos?",
-            "a": "The live before/after preview and per-image quality slider let you test exactly how the output looks at each setting. For most web and social publishing use cases, a quality of 70–80 delivers a dramatic size reduction with no visible difference to the naked eye."
+            "q": "Which output formats are available? JPG, PNG, or WebP?",
+            "a": "You can choose to keep the original format or convert to JPG, PNG, or WebP. WebP typically produces the smallest file sizes while maintaining good quality, making it ideal for web publishing and social media."
           },
           {
-            "q": "Is there a file size or quantity limit per session?",
-            "a": "There is no artificial hard cap. The practical limits depend on your browser and available RAM; most laptops can comfortably handle 50–100 medium-resolution photos in one session without slowdowns."
+            "q": "Can I compress multiple images at once?",
+            "a": "Yes. Upload multiple images and the tool will process them all. Each image shows its original size, compressed size, and compression percentage. You can download files individually or all at once."
           },
           {
-            "q": "Can I resize images in pixels at the same time as compressing them?",
-            "a": "Yes. Each image exposes a max-dimension slider that scales the longest side down to your chosen pixel count before re-encoding, so you can resize and recompress in one step without a separate image editor."
+            "q": "Is there a before/after comparison feature?",
+            "a": "Yes. After compression, use the slider to compare the original and compressed images side by side. This helps you verify quality before downloading and find the perfect balance between size and visual quality."
+          },
+          {
+            "q": "Should I remove EXIF metadata from my photos?",
+            "a": "EXIF data contains camera settings, GPS location, and other metadata. Removing it reduces file size slightly and protects your privacy by not revealing when and where photos were taken. This is especially useful for public web uploads."
           }
         ]
       }

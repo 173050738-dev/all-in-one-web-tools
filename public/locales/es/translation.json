@@ -872,23 +872,27 @@
         "faqs": [
           {
             "q": "¿Las fotos que subo aquí se envían alguna vez a un servidor remoto?",
-            "a": "No. La decodificación, el redimensionado y la compresión se ejecutan todos en tu navegador con WebAssembly. Nada sale de tu dispositivo, de modo que las fotos privadas, los escaneos de documentos y las capturas internas se mantienen totalmente confidenciales de principio a fin."
+            "a": "No. La decodificación, el redimensionado y la compresión se ejecutan todos en tu navegador. Nada sale de tu dispositivo, de modo que las fotos privadas, los escaneos de documentos y las capturas internas se mantienen totalmente confidenciales de principio a fin."
           },
           {
-            "q": "¿Qué formatos de imagen admite este compresor?",
-            "a": "Admite entrada JPG, PNG, WebP y HEIC en la mayoría de navegadores modernos. El formato de salida sigue al de entrada por defecto, aunque también puedes forzar la exportación a WebP o JPG para adaptarte mejor a flujos de publicación concretos."
+            "q": "¿Cómo comprimo una imagen a un tamaño específico como 100KB?",
+            "a": "Cambia al modo 'Tamaño objetivo', introduce el KB deseado (por ejemplo, 100), y la herramienta buscará automáticamente el nivel óptimo de calidad mediante búsqueda binaria. Ideal para fotos de pasaporte, formularios gubernamentales y límites de subida en redes sociales."
           },
           {
-            "q": "¿Una compresión fuerte arruina la calidad visual de mis fotos?",
-            "a": "La vista previa comparativa en vivo y el control deslizante por imagen te permiten comprobar exactamente cómo queda el resultado en cada ajuste. Para casi todos los usos web y sociales, una calidad de 70–80 reduce mucho el peso sin diferencias apreciables a simple vista."
+            "q": "¿Qué formatos de salida están disponibles? JPG, PNG o WebP?",
+            "a": "Puedes mantener el formato original o convertir a JPG, PNG o WebP. WebP suele producir los archivos más pequeños manteniendo una buena calidad, siendo ideal para publicación web y redes sociales."
           },
           {
-            "q": "¿Existe algún límite de tamaño o de cantidad por sesión?",
-            "a": "No hay un límite artificial estricto. Los límites prácticos dependen de tu navegador y de la RAM disponible; la mayoría de portátiles pueden trabajar sin problemas con 50–100 fotos de resolución media en una misma sesión."
+            "q": "¿Puedo comprimir varias imágenes a la vez?",
+            "a": "Sí. Sube múltiples imágenes y la herramienta las procesará todas. Cada imagen muestra su tamaño original, tamaño comprimido y porcentaje de compresión. Puedes descargar los archivos individualmente o todos a la vez."
           },
           {
-            "q": "¿Puedo redimensionar las imágenes en píxeles a la vez que las comprimo?",
-            "a": "Sí. Cada imagen incluye un control deslizante de dimensión máxima que reduce el lado más largo al número de píxeles que elijas antes de volver a codificarla, de modo que puedes redimensionar y volver a comprimir en un solo paso sin usar un editor aparte."
+            "q": "¿Hay una función de comparación antes/después?",
+            "a": "Sí. Después de la compresión, utiliza el control deslizante para comparar las imágenes original y comprimida lado a lado. Esto te ayuda a verificar la calidad antes de descargar y encontrar el equilibrio perfecto entre tamaño y calidad visual."
+          },
+          {
+            "q": "¿Debo eliminar los metadatos EXIF de mis fotos?",
+            "a": "Los datos EXIF contienen configuración de cámara, ubicación GPS y otros metadatos. Eliminarlos reduce ligeramente el tamaño del archivo y protege tu privacidad al no revelar cuándo y dónde se tomaron las fotos. Es especialmente útil para subidas públicas a la web."
           }
         ]
       }
