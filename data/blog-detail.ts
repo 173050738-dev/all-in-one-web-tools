@@ -39424,5 +39424,351 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
       ar: "Free, No signup, 50+ AI tools at your fingertips"
     }
   }
+],
+"how-to-combine-emojis": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "1. What Is Emoji Mixing and Why It's So Much Fun",
+      "zh": "1. 什么是表情符号合成，为什么它如此有趣",
+      "es": "1. ¿Qué es Mezclar Emojis y Por Qué Es Tan Divertido",
+      "fr": "1. Qu'est-ce que le Mixage d'Emojis et Pourquoi C'est Si Amusant",
+      "hi": "1. इमोजी मिक्सिंग क्या है और यह इतना मज़ेदार क्यों है",
+      "ar": "١. ما هو مزج الإيموجيات ولماذا هو متعة كبيرة"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Emoji mixing is the creative process of combining two or more emojis to create a new, unique expression. It's like digital art meets communication — you take familiar symbols and blend them to convey something entirely new. Whether you want to express \"cat wearing sunglasses,\" \"pizza with extra cheese,\" or \"robot riding a unicorn,\" emoji mixing lets you bring your imagination to life in a fun, visual way.",
+      "zh": "表情符号合成是将两个或多个表情符号组合在一起创造新的独特表达的创意过程。它就像数字艺术与沟通的结合——你使用熟悉的符号并将它们融合来传达全新的含义。无论你想表达\"戴墨镜的猫\"、\"加双倍芝士的披萨\"还是\"骑独角兽的机器人\"，表情符号合成都能让你以有趣的视觉方式将想象力变为现实。",
+      "es": "Mezclar emojis es el proceso creativo de combinar dos o más emojis para crear una expresión nueva y única. Es como el arte digital se une a la comunicación: tomas símbolos familiares y los fusionas para transmitir algo completamente nuevo. Ya sea que quieras expresar \"gato con gafas de sol\", \"pizza con queso extra\" o \"robot montando un unicornio\", mezclar emojis te permite dar vida a tu imaginación de una manera divertida y visual.",
+      "fr": "Le mixage d'emojis est le processus créatif consistant à combiner deux ou plusieurs emojis pour créer une expression nouvelle et unique. C'est comme l'art numérique rencontre la communication : vous prenez des symboles familiers et vous les fusionnez pour exprimer quelque chose de complètement nouveau. Que vous vouliez exprimer \"chat avec des lunettes de soleil\", \"pizza avec extra de fromage\" ou \"robot chevauchant un licorne\", le mixage d'emojis vous permet de donner vie à votre imagination de manière amusante et visuelle.",
+      "hi": "इमोजी मिक्सिंग दो या अधिक इमोजी को मिलाकर एक नया, अनोखा अभिव्यक्ति बनाने की रचनात्मक प्रक्रिया है। यह डिजिटल आर्ट और संचार का मिलन है - आप परिचित प्रतीक लेते हैं और उन्हें मिलाकर पूरी तरह से नया कुछ व्यक्त करते हैं। चाहे आप \"सनग्लासेस पहने हुए बिल्ली\"、\"अतिरिक्त पनीर वाला पिज्जा\" या \"यूनिकॉर्न पर सवार रोबोट\" व्यक्त करना चाहते हों, इमोजी मिक्सिंग आपको अपनी कल्पना को मज़ेदार, दृश्य तरीके से जीवंत करने की अनुमति देती है।",
+      "ar": "مزج الإيموجيات هو العملية الإبداعية التي تجمع بين إيموجيين أو أكثر لإنشاء تعبير جديد وفريد. هو كما لو كان الفن الرقمي يلتقي بالاتصال - تأخذ رموزاً معروفة وتدمجها لنقل شيء جديد تماماً. سواء كنت تريد التعبير عن \"قطة ترتدي نظارات شمسية\" أو \"بيتزا مع جبن إضافي\" أو \"روبوت يتركب على يونيكورن\"، فإن مزج الإيموجيات يسمح لك بإحياء تخيلك بطريقة ممتعة وبصرية."
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "The best part? Emoji mixing isn't just for fun — it's a powerful way to enhance your digital communication. Whether you're texting friends, creating social media posts, designing custom stickers, or adding personality to your work messages, mixed emojis help you stand out and convey nuance that plain emojis can't capture.",
+      "zh": "最棒的是什么？表情符号合成不仅仅是为了好玩——它是增强数字沟通的有力方式。无论是给朋友发短信、创建社交媒体帖子、设计自定义贴纸，还是为工作消息增添个性，合成表情符号都能帮助你脱颖而出，传达普通表情符号无法捕捉的细微差别。",
+      "es": "¿La mejor parte? Mezclar emojis no es solo divertido: es una forma poderosa de mejorar tu comunicación digital. Ya sea que estés enviando mensajes a amigos, creando publicaciones en redes sociales, diseñando pegatinas personalizadas o agregando personalidad a tus mensajes de trabajo, los emojis mezclados te ayudan a destacarte y transmitir matices que los emojis simples no pueden capturar.",
+      "fr": "La meilleure partie ? Le mixage d'emojis n'est pas seulement amusant : c'est une façon puissante d'améliorer votre communication numérique. Que vous envoyiez des messages à des amis, créiez des publications sur les réseaux sociaux, conceviez des autocollants personnalisés ou ajoutiez de la personnalité à vos messages professionnels, les emojis mixtes vous aident à vous démarquer et à transmettre des nuances que les emojis simples ne peuvent pas capturer.",
+      "hi": "सबसे अच्छा क्या है? इमोजी मिक्सिंग सिर्फ मज़े के लिए नहीं है - यह आपके डिजिटल संचार को बढ़ाने का एक शक्तिशाली तरीका है। चाहे आप दोस्तों को टेक्स्टिंग कर रहे हों, सोशल मीडिया पोस्ट बना रहे हों, कस्टम स्टिकर्स डिजाइन कर रहे हों या अपने काम के संदेशों में व्यक्तित्व जोड़ रहे हों, मिश्रित इमोजी आपको अलग खड़े होने में मदद करते हैं और सादे इमोजी नहीं पकड़ पाते हैं वाले सूक्ष्म अंतर को व्यक्त करते हैं।",
+      "ar": "أفضل جزء؟ مزج الإيموجيات ليس فقط لمساعدة على المرح - بل هو طريقة قوية لتحسين اتصالاتك الرقمية. سواء كنت ترسل رسائل إلى الأصدقاء، أو تُنشئ منشورات على المنصات الاجتماعية، أو تصميم ملصقات مخصصة، أو تضيف شخصية إلى رسائل العمل، فإن الإيموجيات الممزوجة تساعدك في التميز ونقل الدقة التي لا يمكن للإيموجيات العادية التقاطها."
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "2. How to Use Korelyy Emoji Mixer: Step-by-Step Guide",
+      "zh": "2. 如何使用Korelyy表情符号合成器：分步指南",
+      "es": "2. Cómo Usar el Mezclador de Emojis de Korelyy: Guía Paso a Paso",
+      "fr": "2. Comment Utiliser le Mélangeur d'Emojis Korelyy : Guide Étape par Étape",
+      "hi": "2. Korelyy इमोजी मिक्सर का उपयोग कैसे करें: स्टेप-बाय-स्टेप गाइड",
+      "ar": "٢. كيفية استخدام مزيج الإيموجيات في Korelyy: دليل خطوة بخطوة"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Our free online emoji mixer makes it easy to create custom emoji combinations. No downloads, no registration, no limits — just your creativity and a few clicks. Here's how to get started:",
+      "zh": "我们的免费在线表情符号合成器让创建自定义表情组合变得简单。无需下载、无需注册、无限制——只需你的创意和几次点击。开始方法如下：",
+      "es": "Nuestro mezclador de emojis en línea gratuito hace que sea fácil crear combinaciones de emojis personalizadas. Sin descargas, sin registro, sin límites: solo tu creatividad y unos pocos clics. Así es como empezar:",
+      "fr": "Notre mélangeur d'emojis en ligne gratuit facilite la création de combinaisons d'emojis personnalisées. Pas de téléchargement, pas d'inscription, pas de limites : juste votre créativité et quelques clics. Voici comment commencer :",
+      "hi": "हमारा मुफ्त ऑनलाइन इमोजी मिक्सर कस्टम इमोजी संयोजन बनाना आसान बनाता है। कोई डाउनलोड नहीं, कोई पंजीकरण नहीं, कोई सीमा नहीं - बस आपकी रचनात्मकता और कुछ क्लिक। यहां से शुरुआत करने का तरीका:",
+      "ar": "مزيج الإيموجيات المجاني عبر الإنترنت لدينا يجعل من السهل إنشاء مزيجات إيموجي مخصصة. بدون تنزيل، بدون تسجيل، بدون حدود - فقط إبداعك وبعض النقرات. إليك كيفية البدء:"
+    }
+  },
+  {
+    "type": "ol",
+    "items": [
+      {
+        "en": "Go to the Korelyy Emoji Mixer tool — you can access it directly from our tools page or click the button below.",
+        "zh": "访问Korelyy表情符号合成器工具——你可以从我们的工具页面直接访问，或点击下方按钮。",
+        "es": "Ve a la herramienta Mezclador de Emojis de Korelyy: puedes acceder directamente desde nuestra página de herramientas o hacer clic en el botón a continuación.",
+        "fr": "Allez sur l'outil Mélangeur d'Emojis Korelyy : vous pouvez y accéder directement depuis notre page d'outils ou cliquer sur le bouton ci-dessous.",
+        "hi": "Korelyy इमोजी मिक्सर टूल पर जाएं - आप हमारे टूल पेज से सीधे एक्सेस कर सकते हैं या नीचे दिए गए बटन पर क्लिक कर सकते हैं।",
+        "ar": "اذهب إلى أداة مزيج الإيموجيات في Korelyy: يمكنك الوصول إليها مباشرة من صفحة الأدوات لدينا أو النقر على الزر أدناه."
+      },
+      {
+        "en": "Select your base emoji — this will be the main character or object in your creation. Choose from hundreds of options including animals, food, objects, faces, and symbols.",
+        "zh": "选择你的基础表情符号——这将是你创作中的主要角色或对象。从数百个选项中选择，包括动物、食物、物品、面部表情和符号。",
+        "es": "Selecciona tu emoji base: este será el personaje principal u objeto en tu creación. Elige entre cientos de opciones que incluyen animales, comida, objetos, caras y símbolos.",
+        "fr": "Sélectionnez votre emoji de base : ce sera le personnage principal ou l'objet de votre création. Choisissez parmi des centaines d'options incluant des animaux, de la nourriture, des objets, des visages et des symboles.",
+        "hi": "अपना बेस इमोजी चुनें - यह आपकी रचना में मुख्य पात्र या वस्तु होगा। जानवरों, भोजन, वस्तुओं, चेहरों और प्रतीकों सहित सैकड़ों विकल्पों में से चुनें।",
+        "ar": "حدد إيموجي الأساس: سيكون هذا الشخصية الرئيسية أو الكائن في إبداعك. اختر من مئات الخيارات بما في ذلك الحيوانات والطعام والكائنات والوجوه والرموز."
+      },
+      {
+        "en": "Pick a second emoji to overlay — this could be an accessory, a companion, or something that adds context. For example, if your base is a 🐶 dog, you might add 🎩 hat, 🕶️ sunglasses, or 🍖 bone.",
+        "zh": "选择第二个要叠加的表情符号——这可以是配饰、同伴或增加背景的东西。例如，如果你的基础是🐶狗，你可以添加🎩帽子、🕶️墨镜或🍖骨头。",
+        "es": "Elige un segundo emoji para superponer: esto podría ser un accesorio, un compañero o algo que agregue contexto. Por ejemplo, si tu base es un 🐶 perro, podrías agregar 🎩 sombrero, 🕶️ gafas de sol o 🍖 hueso.",
+        "fr": "Choisissez un deuxième emoji à superposer : cela peut être un accessoire, un compagnon ou quelque chose qui ajoute du contexte. Par exemple, si votre base est un 🐶 chien, vous pouvez ajouter 🎩 chapeau, 🕶️ lunettes de soleil ou 🍖 os.",
+        "hi": "ओवरले के लिए दूसरा इमोजी चुनें - यह एक एक्सेसरी, एक साथी या कुछ ऐसा हो सकता है जो संदर्भ जोड़ता है। उदाहरण के लिए, यदि आपका बेस 🐶 कुत्ता है, तो आप 🎩 टोपी, 🕶️ सनग्लासेस या 🍖 हड्डी जोड़ सकते हैं।",
+        "ar": "اختر إيموجي ثاني لتعليقه: قد يكون هذا ملحقاً أو رفيقاً أو شيئاً يضيف سياقاً. على سبيل المثال، إذا كان أساسك 🐶 كلب، يمكنك إضافة 🎩 قبعة أو 🕶️ نظارات شمسية أو 🍖 عظم."
+      },
+      {
+        "en": "Adjust the size and position — use the size slider to make the overlay emoji bigger or smaller, and drag to position it exactly where you want. Our tool gives you full control over how your mix looks.",
+        "zh": "调整大小和位置——使用大小滑块使叠加表情符号变大或变小，并拖动到你想要的精确位置。我们的工具让你完全控制合成效果的外观。",
+        "es": "Ajusta el tamaño y la posición: usa el control deslizante de tamaño para hacer el emoji superpuesto más grande o más pequeño, y arrastra para colocarla exactamente donde quieras. Nuestra herramienta te da control total sobre cómo se ve tu mezcla.",
+        "fr": "Ajustez la taille et la position : utilisez le curseur de taille pour rendre l'emoji superposé plus grand ou plus petit, et faites-le glisser pour le placer exactement où vous voulez. Notre outil vous donne un contrôle total sur l'apparence de votre mix.",
+        "hi": "आकार और स्थिति को समायोजित करें - आकार स्लाइडर का उपयोग करके ओवरले इमोजी को बड़ा या छोटा बनाएं, और इसे ठीक वहां स्थित करने के लिए ड्रैग करें जहां आप चाहते हैं। हमारा टूल आपको यह नियंत्रण देता है कि आपका मिश्रण कैसा दिखता है।",
+        "ar": "ضبط الحجم والموضع: استخدم شريط التمرير لتغيير حجم الإيموجي المعلوّق لتصبح أكبر أو أصغر، واسحبه لوضعه في المكان الذي تريد. أداة لدينا تعطيكم التحكم الكامل في مظهر مزيجكم."
+      },
+      {
+        "en": "Choose your output size — select from 256px, 512px, or 1024px depending on your needs. Small sizes are perfect for messaging, while larger sizes work great for social media posts or custom stickers.",
+        "zh": "选择输出尺寸——根据需要从256px、512px或1024px中选择。小尺寸非常适合消息传递，而大尺寸则非常适合社交媒体帖子或自定义贴纸。",
+        "es": "Elige tu tamaño de salida: selecciona entre 256px, 512px o 1024px según tus necesidades. Los tamaños pequeños son perfectos para mensajería, mientras que los tamaños más grandes funcionan muy bien para publicaciones en redes sociales o pegatinas personalizadas.",
+        "fr": "Choisissez votre taille de sortie : sélectionnez entre 256px, 512px ou 1024px selon vos besoins. Les tailles petites sont parfaites pour la messagerie, tandis que les tailles plus grandes fonctionnent très bien pour les publications sur les réseaux sociaux ou les autocollants personnalisés.",
+        "hi": "आउटपुट आकार चुनें - अपनी जरूरतों के आधार पर 256px, 512px या 1024px में से चुनें। छोटे आकार मैसेजिंग के लिए उत्तम हैं, जबकि बड़े आकार सोशल मीडिया पोस्ट या कस्टम स्टिकर्स के लिए बहुत अच्छे काम करते हैं।",
+        "ar": "اختر حجم المخرجات: اختر بين 256 بكسل أو 512 بكسل أو 1024 بكسل حسب احتياجاتك. الأحجام الصغيرة مثالية للمراسلة، بينما الأحجام الأكبر تناسب المنشورات على الشبكات الاجتماعية أو الملصقات المخصصة."
+      },
+      {
+        "en": "Download and share — once you're happy with your creation, click download to save it as a PNG image. Then share it with friends, use it in your messages, or post it on social media!",
+        "zh": "下载并分享——一旦你对创作满意，点击下载将其保存为PNG图片。然后与朋友分享、在消息中使用或发布到社交媒体上！",
+        "es": "Descarga y comparte: una vez que estés satisfecho con tu creación, haz clic en descargar para guardarla como imagen PNG. Luego compártela con amigos, úsala en tus mensajes o publícala en redes sociales!",
+        "fr": "Téléchargez et partagez : une fois que vous êtes satisfait de votre création, cliquez sur télécharger pour l'enregistrer en tant qu'image PNG. Ensuite, partagez-la avec des amis, utilisez-la dans vos messages ou publiez-la sur les réseaux sociaux !",
+        "hi": "डाउनलोड करें और साझा करें - जब आप अपनी रचना से खुश हों, तो इसे PNG इमेज के रूप में सहेजने के लिए डाउनलोड पर क्लिक करें। फिर दोस्तों के साथ साझा करें, अपने संदेशों में उपयोग करें या सोशल मीडिया पर पोस्ट करें!",
+        "ar": "قم بالتنزيل والمشاركة: بمجرد رضاكم عن إبداعكم، انقر على التنزيل لحفظه كصورة PNG. ثم شاركها مع الأصدقاء، أو استخدمها في رسائلكم، أو نشرها على الشبكات الاجتماعية!"
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "toolSlug": "emoji-mixer",
+    "text": {
+      "en": "Try Korelyy Emoji Mixer Now",
+      "zh": "立即试用Korelyy表情符号合成器",
+      "es": "Prueba el Mezclador de Emojis Korelyy Ahora",
+      "fr": "Essayez le Mélangeur d'Emojis Korelyy Maintenant",
+      "hi": "अभी Korelyy इमोजी मिक्सर आज़माएं",
+      "ar": "جرب مزيج الإيموجيات Korelyy الآن"
+    },
+    "sub": {
+      "en": "Create unique emoji combinations for free, no registration required",
+      "zh": "免费创建独特的表情符号组合，无需注册",
+      "es": "Crea combinaciones únicas de emojis gratuitamente, sin registro",
+      "fr": "Créez des combinaisons d'emojis uniques gratuitement, sans inscription",
+      "hi": "मुफ्त में अनोखे इमोजी संयोजन बनाएं, पंजीकरण की जरूरत नहीं",
+      "ar": "أنشئ مزيجات إيموجي فريدة مجانًا، بدون تسجيل"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "3. Popular Emoji Combination Ideas to Inspire You",
+      "zh": "3. 热门表情符号组合灵感",
+      "es": "3. Ideas Populares de Combinaciones de Emojis para Inspirarte",
+      "fr": "3. Idées Populaires de Combinations d'Emojis pour Vous Inspirer",
+      "hi": "3. आपको प्रेरित करने के लिए लोकप्रिय इमोजी संयोजन विचार",
+      "ar": "٣. أفكار شائعة لمزيجات الإيموجيات لتهيئتك"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Looking for inspiration? Here are some popular emoji combinations that people love creating. Try these as a starting point, then let your creativity run wild!",
+      "zh": "寻找灵感？这里有一些人们喜欢创建的热门表情符号组合。以这些为起点尝试，然后让你的创意自由发挥！",
+      "es": "¿Buscas inspiración? Aquí tienes algunas combinaciones de emojis populares que a la gente le encanta crear. Prueba estas como punto de partida, luego deja que tu creatividad se libere!",
+      "fr": "À la recherche d'inspiration ? Voici quelques combinaisons d'emojis populaires que les gens adorent créer. Essayez-en quelques-unes comme point de départ, puis laissez libre cours à votre créativité !",
+      "hi": "प्रेरणा चाहते हैं? यहां कुछ लोकप्रिय इमोजी संयोजन हैं जो लोग बनाना पसंद करते हैं। इन्हें शुरुआती बिंदु के रूप में आज़माएं, फिर अपनी रचनात्मकता को बेकाबू छोड़ दें!",
+      "ar": "تبحث عن إلهام؟ إليك بعض مزيجات الإيموجيات الشائعة التي يحب الناس إنشاؤها. جربها كنقطة انطلاق، ثم أترك إبداعك يرتد حرة!"
+    }
+  },
+  {
+    "type": "table",
+    "headers": {
+      "en": ["Combination", "Base Emoji", "Overlay Emoji", "Description"],
+      "zh": ["组合", "基础表情", "叠加表情", "描述"],
+      "es": ["Combinación", "Emoji Base", "Emoji Superpuesto", "Descripción"],
+      "fr": ["Combinaison", "Emoji de Base", "Emoji Superposé", "Description"],
+      "hi": ["संयोजन", "बेस इमोजी", "ओवरले इमोजी", "वर्णन"],
+      "ar": ["المزيج", "الإيموجي الأساسي", "الإيموجي المعلوّق", "الوصف"]
+    },
+    "rows": [
+      {
+        "en": ["Cool Cat", "🐱", "🕶️", "A cat wearing sunglasses"],
+        "zh": ["酷猫", "🐱", "🕶️", "戴墨镜的猫"],
+        "es": ["Gato Genial", "🐱", "🕶️", "Un gato con gafas de sol"],
+        "fr": ["Chat Cool", "🐱", "🕶️", "Un chat avec des lunettes de soleil"],
+        "hi": ["कूल कैट", "🐱", "🕶️", "सनग्लासेस पहने हुए बिल्ली"],
+        "ar": ["قطة رائعة", "🐱", "🕶️", "قطة ترتدي نظارات شمسية"]
+      },
+      {
+        "en": ["Chef Dog", "🐶", "👩🍳", "A dog dressed as a chef"],
+        "zh": ["厨师狗", "🐶", "👩🍳", "打扮成厨师的狗"],
+        "es": ["Perro Chef", "🐶", "👩🍳", "Un perro vestido de chef"],
+        "fr": ["Chien Chef", "🐶", "👩🍳", "Un chien habillé en chef"],
+        "hi": ["शेफ डॉग", "🐶", "👩🍳", "शेफ के रूप में कपड़े पहने हुए कुत्ता"],
+        "ar": ["كلب طاهي", "🐶", "👩🍳", "كلب يرتدي ملابس الطهي"]
+      },
+      {
+        "en": ["Musician Panda", "🐼", "🎸", "A panda playing guitar"],
+        "zh": ["音乐家熊猫", "🐼", "🎸", "弹吉他的熊猫"],
+        "es": ["Panda Músico", "🐼", "🎸", "Un panda tocando la guitarra"],
+        "fr": ["Panda Musicien", "🐼", "🎸", "Un panda jouant de la guitare"],
+        "hi": ["संगीतकार पांडा", "🐼", "🎸", "गिटार बजाता हुआ पांडा"],
+        "ar": ["باندا موسيقي", "🐼", "🎸", "باندا يعزف على الجيتار"]
+      },
+      {
+        "en": ["Fairy Unicorn", "🦄", "✨", "A magical unicorn with sparkles"],
+        "zh": ["仙女独角兽", "🦄", "✨", "带有闪光的魔法独角兽"],
+        "es": ["Unicornio Hada", "🦄", "✨", "Un unicornio mágico con destellos"],
+        "fr": ["Licorne Fée", "🦄", "✨", "Une licorne magique avec des étincelles"],
+        "hi": ["फेयरी यूनिकॉर्न", "🦄", "✨", "चमक के साथ एक जादुई यूनिकॉर्न"],
+        "ar": ["يونيكورن حورية", "🦄", "✨", "يونيكورن سحري مع لمعان"]
+      },
+      {
+        "en": ["Astronaut Cat", "🐱", "🚀", "A cat exploring space"],
+        "zh": ["宇航员猫", "🐱", "🚀", "探索太空的猫"],
+        "es": ["Gato Astronauta", "🐱", "🚀", "Un gato explorando el espacio"],
+        "fr": ["Chat Astronaute", "🐱", "🚀", "Un chat explorant l'espace"],
+        "hi": ["अंतरिक्ष यात्री बिल्ली", "🐱", "🚀", "अंतरिक्ष का पता लगा रही बिल्ली"],
+        "ar": ["قطة فضائية", "🐱", "🚀", "قطة استكشاف الفضاء"]
+      },
+      {
+        "en": ["Coffee Lover", "☕", "❤️", "Coffee with love"],
+        "zh": ["咖啡爱好者", "☕", "❤️", "充满爱的咖啡"],
+        "es": ["Amante del Café", "☕", "❤️", "Café con amor"],
+        "fr": ["Amateur de Café", "☕", "❤️", "Café avec amour"],
+        "hi": ["कॉफी लवर", "☕", "❤️", "प्यार के साथ कॉफी"],
+        "ar": ["محبي القهوة", "☕", "❤️", "قهوة بالحب"]
+      },
+      {
+        "en": ["Sunset Palm", "🌴", "🌅", "Palm tree at sunset"],
+        "zh": ["日落棕榈", "🌴", "🌅", "日落时的棕榈树"],
+        "es": ["Palmera al Atardecer", "🌴", "🌅", "Palmera al atardecer"],
+        "fr": ["Palme au Coucher de Soleil", "🌴", "🌅", "Palmier au coucher de soleil"],
+        "hi": ["सनसेट पाम", "🌴", "🌅", "सूर्यास्त पर पाम ट्री"],
+        "ar": ["نخلة غروب", "🌴", "🌅", "نخلة عند غروب الشمس"]
+      },
+      {
+        "en": ["Bookworm Owl", "🦉", "📚", "An owl reading books"],
+        "zh": ["书虫猫头鹰", "🦉", "📚", "看书的猫头鹰"],
+        "es": ["Buho Lector", "🦉", "📚", "Un búho leyendo libros"],
+        "fr": ["Chouette Bibliophile", "🦉", "📚", "Une chouette lisant des livres"],
+        "hi": ["बुकवर्म उल्लू", "🦉", "📚", "किताबें पढ़ने वाला उल्लू"],
+        "ar": ["بومة محبة للكتب", "🦉", "📚", "بومة تقرأ كتب"]
+      },
+      {
+        "en": ["Rainbow Ice Cream", "🍦", "🌈", "Ice cream with rainbow"],
+        "zh": ["彩虹冰淇淋", "🍦", "🌈", "带彩虹的冰淇淋"],
+        "es": ["Helado Arcoíris", "🍦", "🌈", "Helado con arcoíris"],
+        "fr": ["Glace Arc-en-Ciel", "🍦", "🌈", "Glace avec arc-en-ciel"],
+        "hi": ["रेनबो आइस क्रीम", "🍦", "🌈", "इंद्रधनुष के साथ आइस क्रीम"],
+        "ar": ["آيس كريم قوس قزح", "🍦", "🌈", "آيس كريم مع قوس قزح"]
+      },
+      {
+        "en": ["Party Penguin", "🐧", "🎉", "A penguin celebrating"],
+        "zh": ["派对企鹅", "🐧", "🎉", "庆祝的企鹅"],
+        "es": ["Pingüino de Fiesta", "🐧", "🎉", "Un pingüino celebrando"],
+        "fr": ["Pingouin de Fête", "🐧", "🎉", "Un pingouin en fête"],
+        "hi": ["पार्टी पेंगुइन", "🐧", "🎉", "उत्सव मना रहा पेंगुइन"],
+        "ar": ["بنجوين حفلة", "🐧", "🎉", "بنجوين يحتفل"]
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "4. Can I Use Emoji Mixer on My Phone? (iOS & Android)",
+      "zh": "4. 我可以在手机上使用表情符号合成器吗？(iOS和Android)",
+      "es": "4. ¿Puedo Usar el Mezclador de Emojis en Mi Teléfono? (iOS y Android)",
+      "fr": "4. Puis-Je Utiliser le Mélangeur d'Emojis sur Mon Téléphone ? (iOS et Android)",
+      "hi": "4. क्या मैं अपने फोन पर इमोजी मिक्सर का उपयोग कर सकता हूं? (iOS और Android)",
+      "ar": "٤. هل يمكنني استخدام مزيج الإيموجيات على هاتفي؟ (iOS و Android)"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Absolutely! Korelyy Emoji Mixer is fully mobile-friendly and works great on both iOS and Android devices. Our tool is designed with touch screens in mind, so you can easily select emojis, adjust sizes, and drag overlays with your fingers. The interface adapts to different screen sizes, ensuring a smooth experience whether you're on a small phone or a large tablet.",
+      "zh": "当然可以！Korelyy表情符号合成器完全支持移动设备，在iOS和Android上都能很好地工作。我们的工具专为触摸屏设计，所以你可以轻松选择表情符号、调整大小，并用手指拖动叠加层。界面会适应不同屏幕尺寸，确保无论你使用小手机还是大平板都能获得流畅体验。",
+      "es": "¡Absolutamente! El Mezclador de Emojis de Korelyy es totalmente compatible con dispositivos móviles y funciona muy bien en dispositivos iOS y Android. Nuestra herramienta está diseñada pensando en las pantallas táctiles, así que puedes seleccionar emojis, ajustar tamaños y arrastrar superposiciones con tus dedos fácilmente. La interfaz se adapta a diferentes tamaños de pantalla, garantizando una experiencia fluida tanto en un teléfono pequeño como en una tableta grande.",
+      "fr": "Absolument ! Le Mélangeur d'Emojis Korelyy est entièrement adapté aux mobiles et fonctionne très bien sur iOS et Android. Notre outil est conçu pour les écrans tactiles, vous pouvez donc sélectionner des emojis, ajuster les tailles et faire glisser les superpositions avec vos doigts. L'interface s'adapte aux différentes tailles d'écran, garantissant une expérience fluide que ce soit sur un petit téléphone ou une grande tablette.",
+      "hi": "बिल्कुल! Korelyy इमोजी मिक्सर पूरी तरह से मोबाइल-फ्रेंडली है और iOS और Android दोनों डिवाइस पर बहुत अच्छा काम करता है। हमारा टूल टच स्क्रीन को ध्यान में रखकर डिज़ाइन किया गया है, इसलिए आप आसानी से इमोजी चुन सकते हैं, आकार समायोजित कर सकते हैं, और अपनी उंगलियों से ओवरले को ड्रैग कर सकते हैं। इंटरफ़ेस विभिन्न स्क्रीन आकारों के अनुसार अनुकूलित होता है, सुनिश्चित करते हुए कि आप एक छोटे फोन या बड़े टैबलेट पर हों, एक सुचारू अनुभव हो।",
+      "ar": "بالطبع! مزيج الإيموجيات Korelyy متوافق تماماً مع الأجهزة المحمولة ويعمل بشكل رائع على الأجهزة iOS و Android. أداة لدينا مصممة مع مراعاة الشاشات اللمس، لذا يمكنك بسهولة اختيار الإيموجيات، وتعديل الأحجام، والسحب بالاصطدامات بأصابعك. الواجهة تتكيف مع أحجام الشاشات المختلفة، مما يضمن تجربة سلسة سواء كنت على هاتف صغير أو جهاز لوحي كبير."
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Here are some tips for the best mobile experience:\n\n- Use two fingers to pinch and zoom if you need a closer look at your creation\n- Tap and hold to select emojis from the grid\n- Swipe left or right to see more emoji categories\n- When dragging overlays, use slow, deliberate movements for precise positioning\n- Download your creations directly to your phone's photo gallery",
+      "zh": "以下是获得最佳移动体验的一些技巧：\n\n- 如果需要仔细查看创作，请使用双指捏合和缩放\n- 点击并按住以从网格中选择表情符号\n- 向左或向右滑动查看更多表情符号类别\n- 拖动叠加层时，使用缓慢、刻意的动作进行精确定位\n- 将创作直接下载到手机的相册中",
+      "es": "Aquí tienes algunos consejos para la mejor experiencia móvil:\n\n- Usa dos dedos para hacer zoom si necesitas ver tu creación más de cerca\n- Toca y mantén presionado para seleccionar emojis de la cuadrícula\n- Desliza hacia la izquierda o derecha para ver más categorías de emojis\n- Al arrastrar superposiciones, usa movimientos lentos y deliberados para una posición precisa\n- Descarga tus creaciones directamente a la galería de fotos de tu teléfono",
+      "fr": "Voici quelques conseils pour la meilleure expérience mobile :\n\n- Utilisez deux doigts pour zoomer si vous avez besoin de voir votre création plus de près\n- Appuyez longuement pour sélectionner des emojis dans la grille\n- Faites glisser vers la gauche ou la droite pour voir plus de catégories d'emojis\n- Lors du déplacement des superpositions, utilisez des mouvements lents et délibérés pour un positionnement précis\n- Téléchargez vos créations directement dans la galerie de photos de votre téléphone",
+      "hi": "मोबाइल अनुभव के लिए कुछ टिप्स यहां दिए गए हैं:\n\n- यदि आप अपनी रचना को करीब से देखने की जरूरत है तो ज़ूम करने के लिए दो उंगलियों का उपयोग करें\n- ग्रिड से इमोजी चुनने के लिए टैप और होल्ड करें\n- अधिक इमोजी श्रेणियां देखने के लिए बाएं या दाएं स्वाइप करें\n- ओवरले को ड्रैग करते समय, सटीक स्थिति के लिए धीमे, जानबूझकर आंदोलन का उपयोग करें\n- अपनी रचनाओं को सीधे अपने फोन के फोटो गैलरी में डाउनलोड करें",
+      "ar": "إليك بعض النصائح للحصول على أفضل تجربة محمولة:\n\n- استخدم اصبعين للتصغير والتصعيد إذا كنت بحاجة لرؤية إبداعك منقارباً\n- اضغط واضغط لاختيار الإيموجيات من الشبكة\n- انزلق إلى اليسار أو اليمين لرؤية المزيد من فئات الإيموجيات\n- عند سحب الاصطدامات، استخدم حركات بطيئة ومتعمدة للتعيين الدقيق\n- قم بتنزيل إبداعاتك مباشرة إلى معرض الصور على هاتفك"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "5. FAQ: Your Emoji Mixing Questions Answered",
+      "zh": "5. 常见问题：你的表情符号合成问题解答",
+      "es": "5. Preguntas Frecuentes: Respuestas a Tus Preguntas sobre Mezclar Emojis",
+      "fr": "5. FAQ : Réponses à Vos Questions sur le Mixage d'Emojis",
+      "hi": "5. FAQ: आपके इमोजी मिक्सिंग प्रश्नों के जवाब",
+      "ar": "٥. أسئلة شائعة: إجابات على أسئلتك حول مزج الإيموجيات"
+    }
+  },
+  {
+    "type": "ul",
+    "items": [
+      {
+        "en": "❓ **Can I mix more than two emojis?** Currently, our tool supports combining two emojis at a time. This keeps the interface simple and ensures your creations look clean and professional. For more complex designs, you can create multiple mixes and combine them in an image editor.",
+        "zh": "❓ **我可以混合两个以上的表情符号吗？** 目前，我们的工具支持一次组合两个表情符号。这保持了界面简洁，并确保你的创作看起来干净专业。对于更复杂的设计，你可以创建多个合成效果并在图像编辑器中组合它们。",
+        "es": "❓ **¿Puedo mezclar más de dos emojis?** Actualmente, nuestra herramienta admite combinar dos emojis a la vez. Esto mantiene la interfaz simple y asegura que tus creaciones luzcan limpias y profesionales. Para diseños más complejos, puedes crear múltiples mezclas y combinarlas en un editor de imágenes.",
+        "fr": "❓ **Puis-je mélanger plus de deux emojis ?** Actuellement, notre outil prend en charge la combinaison de deux emojis à la fois. Cela maintient l'interface simple et garantit que vos créations paraissent propres et professionnelles. Pour des designs plus complexes, vous pouvez créer plusieurs mixes et les combiner dans un éditeur d'images.",
+        "hi": "❓ **क्या मैं दो से अधिक इमोजी मिला सकता हूं?** वर्तमान में, हमारा टूल एक समय में दो इमोजी को जोड़ने का समर्थन करता है। यह इंटरफ़ेस को सरल रखता है और यह सुनिश्चित करता है कि आपकी रचनाएं साफ और पेशेवर दिखती हैं। अधिक जटिल डिजाइनों के लिए, आप कई मिश्रण बना सकते हैं और उन्हें एक इमेज एडिटर में जोड़ सकते हैं।",
+        "ar": "❓ **هل يمكنني مزج أكثر من إيموجيين؟** حالياً، أداة لدينا تدعم مزج إيموجيين في وقت واحد. هذا يبقي الواجهة بسيطة ويمسح أن إبداعاتك تبدو نقية ومحترفة. للتصميمات الأكثر تعقيداً، يمكنك إنشاء مزيجات متعددة ودمجها في محرر الصور."
+      },
+      {
+        "en": "❓ **What file formats can I download?** All emoji mixes are downloaded as high-quality PNG images with transparent backgrounds. PNG is the best format for stickers, social media, and messaging apps because it preserves transparency and has universal compatibility.",
+        "zh": "❓ **我可以下载什么文件格式？** 所有表情符号合成效果都以高质量PNG图片下载，带有透明背景。PNG是贴纸、社交媒体和消息应用的最佳格式，因为它保留透明度且具有通用兼容性。",
+        "es": "❓ **¿Qué formatos de archivo puedo descargar?** Todas las mezclas de emojis se descargan como imágenes PNG de alta calidad con fondos transparentes. PNG es el mejor formato para pegatinas, redes sociales y aplicaciones de mensajería porque preserva la transparencia y tiene compatibilidad universal.",
+        "fr": "❓ **Quels formats de fichier puis-je télécharger ?** Tous les mixes d'emojis sont téléchargés sous forme d'images PNG de haute qualité avec des fonds transparents. PNG est le meilleur format pour les autocollants, les réseaux sociaux et les applications de messagerie car il préserve la transparence et a une compatibilité universelle.",
+        "hi": "❓ **मैं कौन से फाइल फॉर्मेट डाउनलोड कर सकता हूं?** सभी इमोजी मिश्रण उच्च गुणवत्ता वाली PNG इमेज के रूप में ट्रांसपेरेंट बैकग्राउंड के साथ डाउनलोड होते हैं। PNG स्टिकर्स, सोशल मीडिया और मैसेजिंग ऐप्स के लिए सबसे अच्छा फॉर्मेट है क्योंकि यह पारदर्शिता को बनाए रखता है और सार्वभौमिक संगतता है।",
+        "ar": "❓ **أي تنسيقات الملفات أ могу تنزيل؟** يتم تنزيل جميع مزيجات الإيموجيات كصور PNG عالية الجودة مع خلفيات شفافة. PNG هو الأفضل للملصقات والمنصات الاجتماعية وتطبيقات المراسلة لأنه يحافظ على الشفافية ولديه توافق عالمي."
+      },
+      {
+        "en": "❓ **Is there a limit to how many emoji mixes I can create?** No limits at all! You can create as many emoji combinations as you want, completely free of charge. Whether you're making one mix or a hundred, our tool is always ready.",
+        "zh": "❓ **我可以创建的表情符号合成数量有限制吗？** 完全没有限制！你可以根据需要创建任意数量的表情符号组合，完全免费。无论你制作一个还是一百个合成效果，我们的工具随时准备就绪。",
+        "es": "❓ **¿Hay un límite de cuántas mezclas de emojis puedo crear?** ¡Sin límites en absoluto! Puedes crear tantas combinaciones de emojis como quieras, completamente gratuitamente. Ya sea que estés haciendo una mezcla o cien, nuestra herramienta siempre está lista.",
+        "fr": "❓ **Y a-t-il une limite au nombre de mixes d'emojis que je peux créer ?** Aucune limite ! Vous pouvez créer autant de combinaisons d'emojis que vous voulez, entièrement gratuitement. Que vous fassiez un mix ou cent, notre outil est toujours prêt.",
+        "hi": "❓ **मैं कितने इमोजी मिश्रण बना सकता हूं इसकी कोई सीमा है?** बिल्कुल कोई सीमा नहीं! आप जितना चाहें उतने इमोजी संयोजन बना सकते हैं, पूरी तरह से मुफ्त में। चाहे आप एक मिश्रण बना रहे हों या सौ, हमारा टूल हमेशा तैयार है।",
+        "ar": "❓ **هل هناك حد لعدد مزيجات الإيموجيات التي أ могу أنشئها?** لا حدود على الإطلاق! يمكنك إنشاء أي عدد من مزيجات الإيموجيات التي ترغب، مجانية تماماً. سواء كنت تصنع مزيجاً واحداً أو مائة، أداة لدينا دائماً جاهزة."
+      },
+      {
+        "en": "❓ **Can I use emoji mixes for commercial purposes?** Yes! All creations you make with Korelyy Emoji Mixer are yours to use however you like — for personal projects, social media, stickers, merchandise, or any commercial use. There are no usage restrictions.",
+        "zh": "❓ **我可以将表情符号合成效果用于商业目的吗？** 是的！你使用Korelyy表情符号合成器制作的所有创作都归你所有，可以随意使用——用于个人项目、社交媒体、贴纸、商品或任何商业用途。没有使用限制。",
+        "es": "❓ **¿Puedo usar mezclas de emojis con fines comerciales?** ¡Sí! Todas las creaciones que hagas con el Mezclador de Emojis de Korelyy son tuyas para usar como quieras: para proyectos personales, redes sociales, pegatinas, mercancías o cualquier uso comercial. No hay restricciones de uso.",
+        "fr": "❓ **Puis-je utiliser des mixes d'emojis à des fins commerciales ?** Oui ! Toutes les créations que vous faites avec le Mélangeur d'Emojis Korelyy vous appartiennent et peuvent être utilisées comme vous le souhaitez : pour des projets personnels, des réseaux sociaux, des autocollants, des produits ou tout usage commercial. Il n'y a pas de restrictions d'utilisation.",
+        "hi": "❓ **क्या मैं व्यावसायिक उद्देश्यों के लिए इमोजी मिश्रण का उपयोग कर सकता हूं?** हाँ! Korelyy इमोजी मिक्सर से आप जो भी रचनाएं बनाते हैं वे आपकी हैं और आप जिस तरह चाहें उपयोग कर सकते हैं - व्यक्तिगत परियोजनाओं, सोशल मीडिया, स्टिकर्स, व्यापारिक माल या किसी भी व्यावसायिक उपयोग के लिए। कोई उपयोग प्रतिबंध नहीं है।",
+        "ar": "❓ **هل يمكنني استخدام مزيجات الإيموجيات لأغراض تجارية؟** نعم! جميع الإبداعات التي تقوم بها مع مزيج الإيموجيات Korelyy ملكك لتستخدمها كما تشاء - لأغراض شخصية أو منصات اجتماعية أو ملصقات أو بضائع أو أي استعمال تجاري. لا يوجد قيود على الاستخدام."
+      },
+      {
+        "en": "❓ **Why do some emojis look different on different devices?** Emojis are rendered by your device's operating system, so 🐱 might look slightly different on iOS vs. Android vs. Windows. Our tool uses standard Unicode emojis, but the final appearance depends on the emoji font installed on your device.",
+        "zh": "❓ **为什么某些表情符号在不同设备上看起来不同？** 表情符号由设备的操作系统渲染，所以🐱在iOS、Android和Windows上可能看起来略有不同。我们的工具使用标准Unicode表情符号，但最终外观取决于设备上安装的表情符号字体。",
+        "es": "❓ **¿Por qué algunos emojis se ven diferentes en diferentes dispositivos?** Los emojis se renderizan por el sistema operativo de tu dispositivo, así que 🐱 puede verse ligeramente diferente en iOS vs. Android vs. Windows. Nuestra herramienta usa emojis Unicode estándar, pero la apariencia final depende de la fuente de emojis instalada en tu dispositivo.",
+        "fr": "❓ **Pourquoi certains emojis ont-ils l'air différents sur différents appareils ?** Les emojis sont rendus par le système d'exploitation de votre appareil, donc 🐱 peut sembler légèrement différent sur iOS vs. Android vs. Windows. Notre outil utilise des emojis Unicode standard, mais l'apparence finale dépend de la police d'emojis installée sur votre appareil.",
+        "hi": "❓ **क्यों कुछ इमोजी विभिन्न डिवाइस पर अलग दिखते हैं?** इमोजी आपके डिवाइस के ऑपरेटिंग सिस्टम द्वारा रेंडर किए जाते हैं, इसलिए 🐱 iOS vs Android vs Windows पर थोड़ा अलग दिख सकता है। हमारा टूल मानक Unicode इमोजी का उपयोग करता है, लेकिन अंतिम उपस्थिति आपके डिवाइस पर इंस्टॉल किए गए इमोजी फ़ॉन्ट पर निर्भर करती है।",
+        "ar": "❓ **لماذا تبدو بعض الإيموجيات مختلفة على الأجهزة المختلفة؟** الإيموجيات يتم عرضها بواسطة نظام التشغيل على جهازك، لذلك قد تبدو 🐱 مختلفة قليلاً على iOS مقابل Android مقابل Windows. أداة لدينا تستخدم إيموجيات Unicode القياسية، ولكن المظهر النهائي يعتمد على خط الإيموجيات المثبت على جهازك."
+      }
+    ]
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    "text": {
+      "en": "💡 **Pro Tip:** Save your favorite emoji combinations by taking screenshots or downloading them to your device. Create a collection of custom stickers for different moods and occasions — they're perfect for adding personality to your messages!",
+      "zh": "💡 **高手技巧：** 通过截图或将其下载到设备来保存你最喜欢的表情符号组合。为不同情绪和场合创建自定义贴纸集合——非常适合为你的消息增添个性！",
+      "es": "💡 **Consejo Profesional:** Guarda tus combinaciones de emojis favoritas tomando capturas de pantalla o descargándolas a tu dispositivo. Crea una colección de pegatinas personalizadas para diferentes estados de ánimo y ocasiones: son perfectas para agregar personalidad a tus mensajes!",
+      "fr": "💡 **Astuce Pro :** Sauvegardez vos combinaisons d'emojis préférées en prenant des captures d'écran ou en les téléchargeant sur votre appareil. Créez une collection d'autocollants personnalisés pour différentes humeurs et occasions : ils sont parfaits pour ajouter de la personnalité à vos messages !",
+      "hi": "💡 **प्रो टिप:** स्क्रीनशॉट लेकर या अपने डिवाइस पर डाउनलोड करके अपने पसंदीदा इमोजी संयोजन सहेजें। विभिन्न मूड और अवसरों के लिए कस्टम स्टिकर्स का संग्रह बनाएं - वे आपके संदेशों में व्यक्तित्व जोड़ने के लिए उत्तम हैं!",
+      "ar": "💡 **نصيحة احترافية:** احفظ مزيجات الإيموجيات المفضلة لديك عن طريق التقاط لقطات شاشة أو تنزيلها على جهازك. أنشئ مجموعة من الملصقات المخصصة لمزاجات ومناسبات مختلفة - هذه مثالية لإضافة شخصية إلى رسائلك!"
+    }
+  }
 ]
 };

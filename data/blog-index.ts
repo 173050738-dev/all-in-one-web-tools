@@ -12355,6 +12355,22 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "title": {"en": "Future of AI Content Creation: 2026 Trends to Watch", "zh": "AI内容创作的未来：2026年值得关注的趋势", "es": "Futuro de la Creación de Contenido AI: Tendencias para Vigilar en 2026", "fr": "Futur de la Création de Contenu IA : Tendances à Suivre en 2026", "hi": "AI कंटेंट क्रिएशन का भविष्य: 2026 में देखने योग्य ट्रेंड्स", "ar": "مستقبل إنشاء المحتوى AI: اتجاهات لمراقبة في 2026"},
 "description": {"en": "Explore the future of AI content creation in 2026. Discover emerging trends, new tools, and how AI is transforming the creative industry. Stay ahead of the curve with Korelyy.", "zh": "探索2026年AI内容创作的未来。发现新兴趋势、新工具以及AI如何改变创意产业。与Korelyy一起保持领先。", "es": "Explora el futuro de la creación de contenido AI en 2026. Descubre tendencias emergentes, nuevas herramientas y cómo AI está transformando la industria creativa. Mantente por delante con Korelyy.", "fr": "Explorez le futur de la création de contenu IA en 2026. Découvrez les tendances émergentes, les nouveaux outils et comment l'IA transforme l'industrie créative. Restez à la pointe avec Korelyy.", "hi": "2026 में AI कंटेंट क्रिएशन का भविष्य खोजें। उभरती हुई ट्रेंड्स, नई टूल्स और AI क्रिएटिव इंडस्ट्री को कैसे बदल रहा है यह जानें। Korelyy के साथ आगे रहें।", "ar": "استكشف مستقبل إنشاء المحتوى AI في 2026. اكتشف الاتجاهات الناشئة، والأدوات الجديدة، وكيف يحول AI الصناعة الإبداعية. ابقى متقدمًا مع Korelyy."},
 "keywords": {"en": ["ai content creation", "2026 trends", "ai future", "creative ai", "ai tools", "content trends"], "zh": ["AI内容创作", "2026趋势", "AI未来", "创意AI", "AI工具", "内容趋势"], "es": ["creación de contenido AI", "tendencias 2026", "futuro AI", "AI creativo", "herramientas AI", "tendencias de contenido"], "fr": ["création de contenu IA", "tendances 2026", "avenir IA", "IA créative", "outils IA", "tendances contenu"], "hi": ["ai कंटेंट क्रिएशन", "2026 ट्रेंड्स", "ai भविष्य", "रचनात्मक ai", "ai टूल्स", "कंटेंट ट्रेंड्स"], "ar": ["إنشاء المحتوى AI", "اتجاهات 2026", "مستقبل AI", "AI إبداعية", "أدوات AI", "اتجاهات المحتوى"]}
+},
+{
+"slug": "how-to-combine-emojis",
+"coverImage": "https://picsum.photos/800/450?random=921&grayscale=false",
+"author": "Korelyy Team",
+"publishedAt": "2026-07-18T00:00:00.000Z",
+"tags": [
+{"en": "Emoji", "zh": "表情符号", "es": "Emoji", "fr": "Emoji", "hi": "इमोजी", "ar": "إيموجي"},
+{"en": "Guide", "zh": "教程", "es": "Guía", "fr": "Guide", "hi": "गाइड", "ar": "دليل"},
+{"en": "Fun", "zh": "趣味", "es": "Diversión", "fr": "Divertissement", "hi": "मज़ा", "ar": "مرح"}
+],
+"relatedToolSlugs": ["emoji-mixer", "avatar-decorator", "wallpaper-maker"],
+"readingMinutes": {"en": 8, "zh": 9, "es": 8, "fr": 8, "hi": 10, "ar": 9},
+"title": {"en": "How to Combine Emojis: Create Unique Emoji Mixes Online for Free", "zh": "如何合成表情符号：在线免费创建独特的emoji混合效果", "es": "Cómo Combinar Emojis: Crea Mezclas Únicas en Línea Gratis", "fr": "Comment Combiner des Emojis : Créez des Mixes Uniques en Ligne Gratuitement", "hi": "इमोजी को कैसे मिलाएं: ऑनलाइन मुफ्त में अनोखे इमोजी मिश्रण बनाएं", "ar": "كيفية دمج الإيموجيات: أنشئ مزيجات إيموجي فريدة عبر الإنترنت مجانًا"},
+"description": {"en": "Learn how to combine two emojis to create fun, unique expressions. Our free online emoji mixer lets you mix emojis and generate custom images in seconds. Perfect for social media, messaging, and creative projects.", "zh": "学习如何将两个表情符号合成为有趣独特的效果。我们的免费在线emoji合成器让您在几秒钟内混合表情符号并生成自定义图片。非常适合社交媒体、消息传递和创意项目。", "es": "Aprende a combinar dos emojis para crear expresiones divertidas y únicas. Nuestro mezclador de emojis en línea gratuito te permite mezclar emojis y generar imágenes personalizadas en segundos. Perfecto para redes sociales, mensajería y proyectos creativos.", "fr": "Apprenez à combiner deux emojis pour créer des expressions amusantes et uniques. Notre mélangeur d'emojis en ligne gratuit vous permet de mélanger des emojis et de générer des images personnalisées en quelques secondes. Idéal pour les réseaux sociaux, les messageries et les projets créatifs.", "hi": "दो इमोजी को कैसे मिलाकर मजेदार, अनोखे अभिव्यक्तियां बनाएं सीखें। हमारा मुफ्त ऑनलाइन इमोजी मिक्सर आपको इमोजी मिलाने और सेकंडों में कस्टम इमेजें बनाने की अनुमति देता है। सोशल मीडिया, मैसेजिंग और रचनात्मक परियोजनाओं के लिए उत्तम।", "ar": "تعلم كيفية دمج إيموجيين لإنشاء تعابير ممتعة وفريدة. مزيج الإيموجيات المجاني عبر الإنترنت يتيح لك مزج الإيموجيات وتوليد صور مخصصة في ثوانٍ. مثالي للمنصات الاجتماعية، والمراسلات، والمشاريع الإبداعية."},
+"keywords": {"en": ["how to combine emojis", "emoji mixer online", "mix emojis to make new", "emoji combiner", "free emoji generator", "custom emoji"], "zh": ["如何合成emoji", "emoji合成器", "表情符号混合", "在线emoji工具", "免费emoji生成", "自定义emoji"], "es": ["cómo combinar emojis", "mezclador de emojis en línea", "mezclar emojis para crear nuevos", "combinador de emojis", "generador de emojis gratuito", "emoji personalizado"], "fr": ["comment combiner des emojis", "mélangeur d'emojis en ligne", "mélanger des emojis pour créer de nouveaux", "combinateur d'emojis", "générateur d'emojis gratuit", "emoji personnalisé"], "hi": ["इमोजी को कैसे मिलाएं", "ऑनलाइन इमोजी मिक्सर", "नया बनाने के लिए इमोजी मिलाएं", "इमोजी कॉम्बाइनर", "मुफ्त इमोजी जेनरेटर", "कस्टम इमोजी"], "ar": ["كيفية دمج الإيموجيات", "مزيج إيموجيات عبر الإنترنت", "مزج الإيموجيات لإنشاء جديدة", "مجمع الإيموجيات", "مولد إيموجيات مجاني", "إيموجي مخصص"]}
 }
 ];
 
@@ -12385,4 +12401,4 @@ return sortedAll().slice(0, limit);
 
 export function getBlogPostsByTag(locale: SeoLocale, tag: string, limit = 20): BlogPostIndex[] {
 return sortedAll().filter((p) => p.tags.some((t) => t[locale] === tag)).slice(0, limit);
-}
+}
