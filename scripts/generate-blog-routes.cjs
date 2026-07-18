@@ -56,13 +56,18 @@ import {
   type SeoLocale,
 } from '@/components/seo';
 import { getAllBlogSlugs } from '@/data/blog';
+import { TOP_BLOG_SLUGS } from '@/lib/topSlugs';
 import BlogPostView from '@/components/BlogPostView';
 
 const LOCALE: SeoLocale = '${locale}';
+const USE_STATIC_EXPORT = process.env.USE_STATIC_EXPORT === 'true' || process.env.USE_STATIC_EXPORT === '1';
 
 export function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({ slug }));
+  const list = USE_STATIC_EXPORT ? getAllBlogSlugs() : TOP_BLOG_SLUGS;
+  return list.map((slug) => ({ slug }));
 }
+
+export const revalidate = 86400;
 
 export async function generateMetadata({
   params,

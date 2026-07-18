@@ -5,29 +5,32 @@ import {
   type SeoLocale,
 } from '@/components/seo';
 import { getAllBlogSlugs } from '@/data/blog';
+import { TOP_BLOG_SLUGS } from '@/lib/topSlugs';
 import BlogPostView from '@/components/BlogPostView';
 
 const LOCALE: SeoLocale = 'zh';
+const USE_STATIC_EXPORT = process.env.USE_STATIC_EXPORT === 'true' || process.env.USE_STATIC_EXPORT === '1';
 
 export function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({ slug }));
+  const list = USE_STATIC_EXPORT ? getAllBlogSlugs() : TOP_BLOG_SLUGS;
+  return list.map((slug) => ({ slug }));
 }
+
+export const revalidate = 86400;
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }): Promise<Metadata> {
-  const { slug } = await params;
-  return blogPostGenerateMetadata(LOCALE, slug);
+  return blogPostGenerateMetadata(LOCALE, params.slug);
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <>
-      <BlogPostJsonLd locale={LOCALE} slug={slug} />
-      <BlogPostView locale={LOCALE} slug={slug} />
+      <BlogPostJsonLd locale={LOCALE} slug={params.slug} />
+      <BlogPostView locale={LOCALE} slug={params.slug} />
     </>
   );
 }
