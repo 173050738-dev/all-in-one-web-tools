@@ -40111,7 +40111,7 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
         "es": "❓ **¿Puedo comprimir varias imágenes a la vez?** ¡Sí! Nuestra herramienta admite compresión por lotes. Sube múltiples imágenes, establece tu tamaño objetivo para cada una y las comprimiremos todas. Puedes descargar cada imagen individualmente o todas a la vez.",
         "fr": "❓ **Puis-je compresser plusieurs images à la fois ?** Oui ! Notre outil prend en charge la compression par lots. Téléchargez plusieurs images, définissez votre taille cible pour chacune, et nous les comprimerons toutes. Vous pouvez télécharger chaque image individuellement ou toutes à la fois.",
         "hi": "❓ **क्या मैं एक साथ कई इमेजें कम्प्रेस कर सकता हूं?** हाँ! हमारा टूल बैच कंप्रेशन का समर्थन करता है। कई इमेजें अपलोड करें， प्रत्येक के लिए अपना लक्ष्य आकार सेट करें， और हम सभी को कम्प्रेस करेंगे। आप प्रत्येक इमेज को व्यक्तिगत रूप से या एक साथ डाउनलोड कर सकते हैं।",
-        "ar": "❓ **هل يمكنني ضغط多张 صور في آن واحد؟** نعم! أداة لدينا تدعم الضغط الدفعة. قم بتحميل多张 صور， أضف حجمك المستهدف لكل، وسنضغطها جميعاً. يمكنك تنزيل كل صورة بشكل منفرد أو جميعها في آن واحد."
+        "ar": "❓ **هل يمكنني ضغط عدة صور في آن واحد؟** نعم! أداة لدينا تدعم الضغط الدفعة. قم بتحميل عدة صور， أضف حجمك المستهدف لكل، وسنضغطها جميعاً. يمكنك تنزيل كل صورة بشكل منفرد أو جميعها في آن واحد."
       },
       {
         "en": "❓ **Is there a file size limit for uploads?** No artificial limits! You can upload images of any size. The practical limit depends on your browser's memory, but most modern browsers can handle images up to several hundred megabytes.",
@@ -40119,7 +40119,7 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
         "es": "❓ **¿Hay un límite de tamaño de archivo para cargas?** ¡Sin límites artificiales! Puedes subir imágenes de cualquier tamaño. El límite práctico depende de la memoria de tu navegador, pero la mayoría de los navegadores modernos pueden manejar imágenes de hasta varios cientos de megabytes.",
         "fr": "❓ **Y a-t-il une limite de taille de fichier pour les téléversements ?** Aucune limite artificielle ! Vous pouvez télécharger des images de n'importe quelle taille. La limite pratique dépend de la mémoire de votre navigateur, mais la plupart des navigateurs modernes peuvent gérer des images allant jusqu'à plusieurs centaines de mégaoctets.",
         "hi": "❓ **अपलोड के लिए कोई फाइल आकार सीमा है?** कोई कृत्रिम सीमा नहीं! आप किसी भी आकार की इमेजें अपलोड कर सकते हैं। व्यावहारिक सीमा आपके ब्राउज़र की मेमोरी पर निर्भर करती है, लेकिन अधिकांश आधुनिक ब्राउज़र सैकड़ों मेगाबाइट तक की इमेजें हैंडल कर सकते हैं।",
-        "ar": "❓ **هل هناك حد لحجم الملف للuploads?** لا حدود صناعية! يمكنك تحميل صور بأي حجم. الحد العملي يعتمد على ذاكرة متصفحك، ولكن معظم المتصفحات الحديثة يمكنها التعامل مع صور重达数百 ميغابايت."
+        "ar": "❓ **هل هناك حد لحجم الملف للuploads?** لا حدود صناعية! يمكنك تحميل صور بأي حجم. الحد العملي يعتمد على ذاكرة متصفحك، ولكن معظم المتصفحات الحديثة يمكنها التعامل مع صور إلى مئات الميجابايت."
       },
       {
         "en": "❓ **Will compressing reduce image quality?** Some quality loss is inevitable with lossy compression (JPG/WebP), but our tool finds the optimal balance. The before/after preview lets you verify quality before downloading.",
