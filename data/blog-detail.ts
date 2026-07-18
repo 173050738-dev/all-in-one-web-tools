@@ -39770,5 +39770,382 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
       "ar": "💡 **نصيحة احترافية:** احفظ مزيجات الإيموجيات المفضلة لديك عن طريق التقاط لقطات شاشة أو تنزيلها على جهازك. أنشئ مجموعة من الملصقات المخصصة لمزاجات ومناسبات مختلفة - هذه مثالية لإضافة شخصية إلى رسائلك!"
     }
   }
+],
+"compress-image-to-100kb": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "1. Why You Need to Compress Images to a Specific Size",
+      "zh": "1. 为什么需要将图片压缩到指定大小",
+      "es": "1. ¿Por Qué Necesitas Comprimir Imágenes a un Tamaño Específico",
+      "fr": "1. Pourquoi Vous Devez Compresser des Images à une Taille Spécifique",
+      "hi": "1. आपको इमेज को विशिष्ट आकार तक क्यों कम्प्रेस करना चाहिए",
+      "ar": "١. لماذا تحتاج إلى ضغط الصور إلى حجم محدد"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Many online forms, applications, and platforms have strict file size limits for image uploads. Whether you're applying for a passport, submitting a visa application, filling out government forms, or uploading photos to social media, hitting the right file size is crucial. A photo that's too large will get rejected, while one that's too small might lose quality or fail verification.",
+      "zh": "许多在线表单、申请和平台对图片上传有严格的文件大小限制。无论是申请护照、提交签证申请、填写政府表格还是上传照片到社交媒体，达到正确的文件大小至关重要。太大的照片会被拒绝，而太小的照片可能会丢失质量或无法通过验证。",
+      "es": "Muchos formularios, aplicaciones y plataformas en línea tienen límites estrictos de tamaño de archivo para cargas de imágenes. Ya sea que estés solicitando un pasaporte, enviando una solicitud de visa, llenando formularios gubernamentales o subiendo fotos a redes sociales, alcanzar el tamaño de archivo correcto es crucial. Una foto demasiado grande será rechazada, mientras que una demasiado pequeña puede perder calidad o fallar la verificación.",
+      "fr": "De nombreux formulaires en ligne, applications et plateformes ont des limites strictes de taille de fichier pour les téléversements d'images. Que vous demandiez un passeport, soumettiez une demande de visa, remplissiez des formulaires gouvernementaux ou téléchargiez des photos sur les réseaux sociaux, atteindre la bonne taille de fichier est crucial. Une photo trop grande sera rejetée, tandis qu'une trop petite peut perdre de la qualité ou échouer à la vérification.",
+      "hi": "कई ऑनलाइन फॉर्म, ऐप्लिकेशन और प्लेटफॉर्मों में इमेज अपलोड के लिए कड़े फाइल आकार की सीमाएं होती हैं। चाहे आप पासपोर्ट के लिए आवेदन कर रहे हों, वीजा आवेदन जमा कर रहे हों, सरकारी फॉर्म भर रहे हों या सोशल मीडिया पर फोटो अपलोड कर रहे हों, सही फाइल आकार प्राप्त करना महत्वपूर्ण है। बहुत बड़ी फोटो अस्वीकार हो जाएगी, जबकि बहुत छोटी फोटो गुणवत्ता खो सकती है या सत्यापन में विफल हो सकती है।",
+      "ar": "لديك العديد من النماذج والبرامج والتطبيقات والمنصات الحدود الصارمة لحجم الملفات لتحميل الصور. سواء كنت تطلب جواز سفر، أو تسلم استمارة تأشيرة، أو تملأ نماذج حكومية، أو تحمل صور على الشبكات الاجتماعية، فإن الوصول إلى حجم الملف الصحيح أمر أساسي. الصورة التي تكون كبيرة جدًا ستُرفض، بينما الصورة الصغيرة جدًا قد تفقد جودتها أو تفشل في التحقق."
+    }
+  },
+  {
+    "type": "ul",
+    "items": [
+      {
+        "en": "📄 **Passport and ID photos:** Most countries require passport photos between 20KB-100KB",
+        "zh": "📄 **护照和身份证照片：** 大多数国家要求护照照片在20KB-100KB之间",
+        "es": "📄 **Fotos de pasaporte y DNI:** La mayoría de los países requiere fotos de pasaporte entre 20KB-100KB",
+        "fr": "📄 **Photos de passeport et d'identité :** La plupart des pays exigent des photos de passeport entre 20KB-100KB",
+        "hi": "📄 **पासपोर्ट और आईडी फोटो:** अधिकांश देशों में पासपोर्ट फोटो के लिए 20KB-100KB की आवश्यकता होती है",
+        "ar": "📄 **صور جواز السفر والهوية:** معظم البلدان تتطلب صور جواز السفر بين ٢٠ كيلوبايت و ١٠٠ كيلوبايت"
+      },
+      {
+        "en": "📋 **Government forms:** Visa applications, tax forms, and official documents often limit images to 50KB-200KB",
+        "zh": "📋 **政府表格：** 签证申请、税务表格和官方文件通常限制图片在50KB-200KB之间",
+        "es": "📋 **Formularios gubernamentales:** Solicitudes de visa, formularios fiscales y documentos oficiales suelen limitar las imágenes a 50KB-200KB",
+        "fr": "📋 **Formulaires gouvernementaux :** Les demandes de visa, formulaires fiscaux et documents officiels limitent souvent les images à 50KB-200KB",
+        "hi": "📋 **सरकारी फॉर्म:** वीजा आवेदन, टैक्स फॉर्म और आधिकारिक दस्तावेज़ अक्सर इमेज को 50KB-200KB तक सीमित करते हैं",
+        "ar": "📋 **النماذج الحكومية:** عادةً ما تحد الطلبات على التأشيرة والنماذج الضريبية والوثائق الرسمية الصور إلى ٥٠ كيلوبايت و ٢٠٠ كيلوبايت"
+      },
+      {
+        "en": "📱 **Social media:** Platforms like Instagram, Facebook, and LinkedIn have specific limits for profile photos and posts",
+        "zh": "📱 **社交媒体：** Instagram、Facebook和LinkedIn等平台对个人资料照片和帖子有特定限制",
+        "es": "📱 **Redes sociales:** Plataformas como Instagram, Facebook y LinkedIn tienen límites específicos para fotos de perfil y publicaciones",
+        "fr": "📱 **Réseaux sociaux :** Des plateformes comme Instagram, Facebook et LinkedIn ont des limites spécifiques pour les photos de profil et les publications",
+        "hi": "📱 **सोशल मीडिया:** Instagram, Facebook और LinkedIn जैसे प्लेटफॉर्मों में प्रोफाइल फोटो और पोस्ट के लिए विशिष्ट सीमाएं होती हैं",
+        "ar": "📱 **المنصات الاجتماعية:** المنصات مثل Instagram و Facebook و LinkedIn لها حدود محددة لصور الملف الشخصي والمنشورات"
+      },
+      {
+        "en": "📧 **Email attachments:** Most email providers limit attachments to 10MB-25MB, but large images can cause delivery issues",
+        "zh": "📧 **电子邮件附件：** 大多数电子邮件提供商限制附件在10MB-25MB之间，但大图片可能导致传递问题",
+        "es": "📧 **Adjuntos de correo electrónico:** La mayoría de los proveedores de correo limitan los adjuntos a 10MB-25MB, pero las imágenes grandes pueden causar problemas de entrega",
+        "fr": "📧 **Pièces jointes par e-mail :** La plupart des fournisseurs de messagerie limitent les pièces jointes à 10MB-25MB, mais les images volumineuses peuvent causer des problèmes de livraison",
+        "hi": "📧 **ईमेल अटैचमेंट:** अधिकांश ईमेल प्रोवाइडर अटैचमेंट को 10MB-25MB तक सीमित करते हैं, लेकिन बड़ी इमेजें डिलीवरी में समस्या पैदा कर सकती हैं",
+        "ar": "📧 **المرفقات بالبريد الإلكتروني:** معظم مزودي البريد الإلكتروني يحدون المرفقات إلى ١٠ ميجابايت و ٢٥ ميجابايت، ولكن الصور الكبيرة قد تسبب مشكلات في التوصيل"
+      },
+      {
+        "en": "🌐 **Website optimization:** Smaller images load faster, improve user experience, and boost SEO rankings",
+        "zh": "🌐 **网站优化：** 更小的图片加载更快，改善用户体验，并提升SEO排名",
+        "es": "🌐 **Optimización de sitios web:** Las imágenes más pequeñas se cargan más rápido, mejoran la experiencia del usuario y aumentan el posicionamiento SEO",
+        "fr": "🌐 **Optimisation de site web :** Les images plus petites se chargent plus rapidement, améliorent l'expérience utilisateur et boostent le référencement SEO",
+        "hi": "🌐 **वेबसाइट ऑप्टिमाइज़ेशन:** छोटी इमेजें तेजी से लोड होती हैं, उपयोगकर्ता अनुभव में सुधार करती हैं और SEO रैंकिंग को बढ़ाती हैं",
+        "ar": "🌐 **تحسين الموقع الإلكتروني:** الصور الأصغر تحمل بسرعة أكبر، وتحسن تجربة المستخدم، وتعزز ترتيب SEO"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "2. How to Compress Images to Exact Size with Korelyy",
+      "zh": "2. 如何使用Korelyy将图片压缩到精确大小",
+      "es": "2. Cómo Comprimir Imágenes a Tamaño Exacto con Korelyy",
+      "fr": "2. Comment Compresser des Images à Taille Exacte avec Korelyy",
+      "hi": "2. Korelyy के साथ इमेज को सटीक आकार तक कैसे कम्प्रेस करें",
+      "ar": "٢. كيفية ضغط الصور إلى حجم دقيق مع Korelyy"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Our Image Compressor tool makes it easy to compress photos to any specific file size. Unlike other tools that just let you adjust quality blindly, our tool uses intelligent algorithms to automatically find the perfect compression level. Here's how it works:",
+      "zh": "我们的图片压缩工具让将照片压缩到任何特定文件大小变得简单。与其他仅允许盲目调整质量的工具不同，我们的工具使用智能算法自动找到完美的压缩级别。操作方法如下：",
+      "es": "Nuestra herramienta de compresión de imágenes hace que sea fácil comprimir fotos a cualquier tamaño de archivo específico. A diferencia de otras herramientas que solo te permiten ajustar la calidad a ciegas, nuestra herramienta utiliza algoritmos inteligentes para encontrar automáticamente el nivel de compresión perfecto. Así funciona:",
+      "fr": "Notre outil de compression d'images facilite la compression de photos à n'importe quelle taille de fichier spécifique. Contrairement à d'autres outils qui vous permettent simplement d'ajuster la qualité à l'aveugle, notre outil utilise des algorithmes intelligents pour trouver automatiquement le niveau de compression parfait. Voici comment cela fonctionne :",
+      "hi": "हमारा इमेज कंप्रेसर टूल किसी भी विशिष्ट फाइल आकार तक फोटो को कम्प्रेस करना आसान बनाता है। अन्य टूल्स के विपरीत जो केवल गुणवत्ता को आंख बंद करके समायोजित करते हैं, हमारा टूल इंटेलिजेंट एल्गोरिदम का उपयोग करके सही कम्प्रेशन लेवल को स्वचालित रूप से खोजता है। यहां यह कैसे काम करता है:",
+      "ar": "أداة ضغط الصور لدينا تجعل من السهل ضغط الصور إلى أي حجم ملف محدد. على عكس الأدوات الأخرى التي تسمح لك فقط بتعديل الجودة على صميم الأعين، تستخدم أداة لدينا خوارزميات ذكية لاكتشاف مستوى الضغط الأمثل تلقائيًا. إليك كيفية عملها:"
+    }
+  },
+  {
+    "type": "ol",
+    "items": [
+      {
+        "en": "Go to the Korelyy Image Compressor — access it from our tools page or click the button below.",
+        "zh": "访问Korelyy图片压缩器——从我们的工具页面访问或点击下方按钮。",
+        "es": "Ve al Compresor de Imágenes Korelyy: accede desde nuestra página de herramientas o haz clic en el botón a continuación.",
+        "fr": "Allez sur le Compresseur d'Images Korelyy : accédez-y depuis notre page d'outils ou cliquez sur le bouton ci-dessous.",
+        "hi": "Korelyy इमेज कंप्रेसर पर जाएं - हमारे टूल पेज से एक्सेस करें या नीचे दिए गए बटन पर क्लिक करें।",
+        "ar": "اذهب إلى مضغوط الصور Korelyy: الوصول إليه من صفحة الأدوات لدينا أو النقر على الزر أدناه."
+      },
+      {
+        "en": "Upload your image — you can drag and drop or click to select files. We support JPG, PNG, WebP, and GIF formats.",
+        "zh": "上传图片——你可以拖放或点击选择文件。我们支持JPG、PNG、WebP和GIF格式。",
+        "es": "Sube tu imagen: puedes arrastrar y soltar o hacer clic para seleccionar archivos. Soportamos formatos JPG, PNG, WebP y GIF.",
+        "fr": "Téléchargez votre image : vous pouvez glisser-déposer ou cliquer pour sélectionner des fichiers. Nous supportons les formats JPG, PNG, WebP et GIF.",
+        "hi": "अपनी इमेज अपलोड करें - आप ड्रैग एंड ड्रॉप कर सकते हैं या फाइलें चुनने के लिए क्लिक कर सकते हैं। हम JPG, PNG, WebP और GIF फॉर्मेट का समर्थन करते हैं।",
+        "ar": "قم بتحميل صورتك: يمكنك السحب والإفلات أو النقر لاختيار الملفات. نحن ندعم تنسيقات JPG و PNG و WebP و GIF."
+      },
+      {
+        "en": "Switch to 'Target Size' mode — this is where you specify exactly how big you want your compressed image to be.",
+        "zh": "切换到「目标大小」模式——在这里你可以精确指定压缩后的图片大小。",
+        "es": "Cambia al modo 'Tamaño Objetivo': aquí especificas exactamente qué tan grande quieres que sea tu imagen comprimida.",
+        "fr": "Passez en mode 'Taille Cible' : c'est ici que vous spécifiez exactement la taille souhaitée pour votre image compressée.",
+        "hi": "'टारगेट साइज़' मोड में स्विच करें - यहीं आप सटीक रूप से निर्दिष्ट करते हैं कि आप अपनी कम्प्रेस्ड इमेज कितनी बड़ी चाहते हैं।",
+        "ar": "قم بالتبديل إلى وضع 'الحجم المستهدف': هنا تحدد بدقة حجم الصورة المضغوطة التي ترغب فيها."
+      },
+      {
+        "en": "Enter your target size — type in the KB you need (e.g., 100 for passport, 20 for visa applications).",
+        "zh": "输入目标大小——输入你需要的KB数（例如，护照照片输入100，签证申请输入20）。",
+        "es": "Ingresa tu tamaño objetivo: escribe los KB que necesites (por ejemplo, 100 para pasaporte, 20 para solicitudes de visa).",
+        "fr": "Entrez votre taille cible : tapez le nombre de KB dont vous avez besoin (par exemple, 100 pour un passeport, 20 pour les demandes de visa).",
+        "hi": "अपना लक्ष्य आकार दर्ज करें - आप जितने KB चाहते हैं वह टाइप करें (उदाहरण के लिए, पासपोर्ट के लिए 100, वीजा आवेदन के लिए 20)।",
+        "ar": "أدخل حجمك المستهدف: اكتب الكيلوبايت التي تحتاجها (مثل ١٠٠ لجواز السفر، ٢٠ لطلبات التأشيرة)."
+      },
+      {
+        "en": "Select output format — choose between JPG, PNG, or WebP. WebP usually gives the smallest file size.",
+        "zh": "选择输出格式——在JPG、PNG或WebP之间选择。WebP通常提供最小的文件大小。",
+        "es": "Selecciona el formato de salida: elige entre JPG, PNG o WebP. WebP suele dar el tamaño de archivo más pequeño.",
+        "fr": "Sélectionnez le format de sortie : choisissez entre JPG, PNG ou WebP. WebP donne généralement le plus petit taille de fichier.",
+        "hi": "आउटपुट फॉर्मेट चुनें - JPG, PNG या WebP के बीच चुनें। WebP आमतौर पर सबसे छोटी फाइल आकार देता है।",
+        "ar": "حدد تنسيق المخرج: اختر بين JPG أو PNG أو WebP. عادةً ما ينتج WebP أصغر حجم ملف."
+      },
+      {
+        "en": "Click compress — our tool will automatically find the optimal quality level through binary search to get as close as possible to your target size.",
+        "zh": "点击压缩——我们的工具将通过二分搜索自动找到最佳质量级别，以尽可能接近你的目标大小。",
+        "es": "Haz clic en comprimir: nuestra herramienta encontrará automáticamente el nivel de calidad óptimo a través de una búsqueda binaria para acercarse lo más posible a tu tamaño objetivo.",
+        "fr": "Cliquez sur compresser : notre outil trouvera automatiquement le niveau de qualité optimal grâce à une recherche binaire pour se rapprocher au mieux de votre taille cible.",
+        "hi": "कम्प्रेस पर क्लिक करें - हमारा टूल बाइनरी सर्च के माध्यम से ऑप्टिमल गुणवत्ता स्तर को स्वचालित रूप से खोजेगा ताकि आपके लक्ष्य आकार के सबसे करीब जा सके।",
+        "ar": "انقر على الضغط: أداة لدينا ستجد تلقائيًا مستوى الجودة الأمثل من خلال البحث الثنائي للتقليل إلى أقصى حد ممكن من حجمك المستهدف."
+      },
+      {
+        "en": "Download your compressed image — once complete, you'll see the original size, compressed size, and percentage saved. Click download to save the image to your device.",
+        "zh": "下载压缩后的图片——完成后，你将看到原始大小、压缩后大小和节省的百分比。点击下载将图片保存到设备。",
+        "es": "Descarga tu imagen comprimida: una vez completado, verás el tamaño original, el tamaño comprimido y el porcentaje ahorrado. Haz clic en descargar para guardar la imagen en tu dispositivo.",
+        "fr": "Téléchargez votre image compressée : une fois terminé, vous verrez la taille originale, la taille compressée et le pourcentage économisé. Cliquez sur télécharger pour enregistrer l'image sur votre appareil.",
+        "hi": "अपनी कम्प्रेस्ड इमेज डाउनलोड करें - पूरा होने के बाद, आप मूल आकार, कम्प्रेस्ड आकार और बचाए गए प्रतिशत देखेंगे। इमेज को अपने डिवाइस पर सहेजने के लिए डाउनलोड पर क्लिक करें।",
+        "ar": "قم بتنزيل صورتك المضغوطة: بمجرد الانتهاء، سترى الحجم الأصلي والحجم المضغوط ونسبة التوفير. انقر على التنزيل لحفظ الصورة على جهازك."
+      }
+    ]
+  },
+  {
+    "type": "cta",
+    "toolSlug": "image-compressor",
+    "text": {
+      "en": "Try Korelyy Image Compressor Now",
+      "zh": "立即试用Korelyy图片压缩器",
+      "es": "Prueba el Compresor de Imágenes Korelyy Ahora",
+      "fr": "Essayez le Compresseur d'Images Korelyy Maintenant",
+      "hi": "अभी Korelyy इमेज कंप्रेसर आज़माएं",
+      "ar": "جرب مضغوط الصور Korelyy الآن"
+    },
+    "sub": {
+      "en": "Compress images to exact KB size, 100% browser-based, no upload required",
+      "zh": "将图片压缩到精确KB大小，100%基于浏览器，无需上传",
+      "es": "Comprime imágenes a tamaño KB exacto, 100% basado en navegador, sin carga requerida",
+      "fr": "Compressez des images à taille KB exacte, 100% basé sur le navigateur, aucun téléversement nécessaire",
+      "hi": "इमेज को सटीक KB आकार तक कम्प्रेस करें, 100% ब्राउज़र-आधारित, अपलोड की जरूरत नहीं",
+      "ar": "ضغط الصور إلى حجم كيلوبايت دقيق، ١٠٠٪ مقاسمة على المتصفح، لا حاجة لتحميل"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "3. JPG vs PNG vs WebP: Which Format Should You Choose?",
+      "zh": "3. JPG vs PNG vs WebP：应该选择哪种格式？",
+      "es": "3. JPG vs PNG vs WebP: ¿Qué Formato Debes Elegir?",
+      "fr": "3. JPG vs PNG vs WebP : Quel Format Devriez-Vous Choisir ?",
+      "hi": "3. JPG vs PNG vs WebP: आपको कौन सा फॉर्मेट चुनना चाहिए?",
+      "ar": "٣. JPG مقابل PNG مقابل WebP: أي تنسيق يجب أن تختاره؟"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Choosing the right format is just as important as choosing the right size. Each format has its strengths and weaknesses. Here's a comparison to help you decide:",
+      "zh": "选择正确的格式与选择正确的大小同样重要。每种格式都有其优缺点。以下是比较帮助你做出决定：",
+      "es": "Elegir el formato correcto es tan importante como elegir el tamaño correcto. Cada formato tiene sus ventajas y desventajas. Aquí tienes una comparación para ayudarte a decidir:",
+      "fr": "Choisir le bon format est aussi important que choisir la bonne taille. Chaque format a ses forces et ses faiblesses. Voici une comparaison pour vous aider à décider :",
+      "hi": "सही फॉर्मेट चुनना सही आकार चुनने जितना ही महत्वपूर्ण है। प्रत्येक फॉर्मेट के अपने दम और कमजोरियां हैं। यहां आपको निर्णय लेने में मदद करने के लिए एक तुलना दी गई है:",
+      "ar": "اختيار التنسيق الصحيح هو أمر هام بنفس القدر مثل اختيار الحجم الصحيح. لكل تنسيق نقاط قوة وضعف. إليك مقارنة لمساعدتك في اتخاذ القرار:"
+    }
+  },
+  {
+    "type": "table",
+    "headers": {
+      "en": ["Format", "Best For", "Compression", "Transparency", "Quality"],
+      "zh": ["格式", "最佳用途", "压缩率", "透明度", "质量"],
+      "es": ["Formato", "Mejor Para", "Compresión", "Transparencia", "Calidad"],
+      "fr": ["Format", "Meilleur Pour", "Compression", "Transparence", "Qualité"],
+      "hi": ["फॉर्मेट", "सबसे अच्छा लिए", "कंप्रेशन", "पारदर्शिता", "गुणवत्ता"],
+      "ar": ["التنسيق", "الأفضل لـ", "الضغط", "الشفافية", "الجودة"]
+    },
+    "rows": [
+      {
+        "en": ["JPG/JPEG", "Photos, portraits, natural scenes", "High (lossy)", "No", "Good (minor quality loss)"],
+        "zh": ["JPG/JPEG", "照片、人像、自然场景", "高（有损）", "否", "良好（轻微质量损失）"],
+        "es": ["JPG/JPEG", "Fotos, retratos, escenas naturales", "Alta (con pérdida)", "No", "Buena (pérdida menor de calidad)"],
+        "fr": ["JPG/JPEG", "Photos, portraits, scènes naturelles", "Haute (avec perte)", "Non", "Bonne (perte mineure de qualité)"],
+        "hi": ["JPG/JPEG", "फोटो、पोर्ट्रेट、प्राकृतिक दृश्य", "उच्च (लॉसी)", "नहीं", "अच्छी (गुणवत्ता की मामूली हानि)"],
+        "ar": ["JPG/JPEG", "الصور والمنحوتات والمناظر الطبيعية", "عالية (مع فقدان)", "لا", "جيدة (فقدان جودة طفيف)"]
+      },
+      {
+        "en": ["PNG", "Logos, icons, text graphics", "Medium (lossless)", "Yes", "Perfect (no quality loss)"],
+        "zh": ["PNG", "标志、图标、文字图形", "中等（无损）", "是", "完美（无质量损失）"],
+        "es": ["PNG", "Logos, iconos, gráficos de texto", "Media (sin pérdida)", "Sí", "Perfecta (sin pérdida de calidad)"],
+        "fr": ["PNG", "Logos, icônes, graphiques textuels", "Moyenne (sans perte)", "Oui", "Parfaite (pas de perte de qualité)"],
+        "hi": ["PNG", "लोगो、आइकन、टेक्स्ट ग्राफिक्स", "मध्यम (लॉसलेस)", "हाँ", "परफेक्ट (गुणवत्ता की कोई हानि नहीं)"],
+        "ar": ["PNG", "الشعارات والأيقونات والرسوم البيانية النصية", "متوسطة (بدون فقدان)", "نعم", "ممتازة (بدون فقدان جودة)"]
+      },
+      {
+        "en": ["WebP", "Web images, social media, general use", "Highest (lossy/lossless)", "Yes", "Excellent (best compression)"],
+        "zh": ["WebP", "网页图片、社交媒体、通用用途", "最高（有损/无损）", "是", "优秀（最佳压缩率）"],
+        "es": ["WebP", "Imágenes web, redes sociales, uso general", "Máxima (con/sin pérdida)", "Sí", "Excelente (mejor compresión)"],
+        "fr": ["WebP", "Images web, réseaux sociaux, utilisation générale", "La plus haute (avec/sans perte)", "Oui", "Excellente (meilleure compression)"],
+        "hi": ["WebP", "वेब इमेज、सोशल मीडिया、सामान्य उपयोग", "सबसे अधिक (लॉसी/लॉसलेस)", "हाँ", "उत्कृष्ट (सबसे अच्छी कंप्रेशन)"],
+        "ar": ["WebP", "صور الويب والمنصات الاجتماعية والاستخدام العام", "الأعلى (مع/بدون فقدان)", "نعم", "ممتازة (أفضل ضغط)"]
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "4. Tips for Compressing Without Losing Quality",
+      "zh": "4. 不损失质量的压缩技巧",
+      "es": "4. Consejos para Comprimir Sin Perder Calidad",
+      "fr": "4. Conseils pour Compresser Sans Perdre de Qualité",
+      "hi": "4. गुणवत्ता खोए बिना कम्प्रेस करने के लिए टिप्स",
+      "ar": "٤. نصائح للضغط دون فقدان الجودة"
+    }
+  },
+  {
+    "type": "ul",
+    "items": [
+      {
+        "en": "📊 **Start with high-quality originals:** Always begin with the highest resolution image you have. Compressing from a high-res source gives much better results than trying to upscale a low-res image.",
+        "zh": "📊 **从高质量原图开始：** 始终从你拥有的最高分辨率图片开始。从高分辨率源压缩比尝试放大低分辨率图片效果好得多。",
+        "es": "📊 **Empieza con originales de alta calidad:** Siempre comienza con la imagen de mayor resolución que tengas. Comprimir desde una fuente de alta resolución da resultados mucho mejores que intentar escalar una imagen de baja resolución.",
+        "fr": "📊 **Commencez avec des originaux de haute qualité :** Commencez toujours avec l'image de la plus haute résolution que vous avez. Compresser à partir d'une source haute résolution donne de bien meilleurs résultats que de tenter de redimensionner une image basse résolution.",
+        "hi": "📊 **उच्च गुणवत्ता वाले ओरिजिनल से शुरू करें:** हमेशा अपने पास वाली सबसे उच्च रिज़ॉल्यूशन वाली इमेज से शुरू करें। उच्च रिज़ॉल्यूशन स्रोत से कम्प्रेस करना निम्न रिज़ॉल्यूशन इमेज को अपस्केल करने की कोशिश करने की तुलना में बहुत बेहतर परिणाम देता है।",
+        "ar": "📊 **ابدأ مع الأصليات عالية الجودة:** دائمًا ابدأ بالصورة ذات الدقة الأعلى التي لديك. الضغط من مصدر عالي الدقة يعطي نتائج أفضل بكثير من محاولة تكبير صورة منخفضة الدقة."
+      },
+      {
+        "en": "🎯 **Resize before compressing:** If your image is much larger than needed (e.g., 4000px for a passport photo), resize it first. Reducing pixel dimensions is the most effective way to reduce file size.",
+        "zh": "🎯 **压缩前调整大小：** 如果你的图片比需要的大得多（例如，护照照片需要4000px），先调整大小。减小像素尺寸是减小文件大小最有效的方法。",
+        "es": "🎯 **Redimensiona antes de comprimir:** Si tu imagen es mucho más grande de lo necesario (por ejemplo, 4000px para una foto de pasaporte), redimensiona primero. Reducir las dimensiones de píxeles es la forma más efectiva de reducir el tamaño del archivo.",
+        "fr": "🎯 **Redimensionnez avant de compresser :** Si votre image est beaucoup plus grande que nécessaire (par exemple, 4000px pour une photo de passeport), redimensionnez-la d'abord. Réduire les dimensions de pixels est le moyen le plus efficace de réduire la taille du fichier.",
+        "hi": "🎯 **कम्प्रेस करने से पहले रिसाइज़ करें:** यदि आपकी इमेज जरूरत से बहुत बड़ी है (उदाहरण के लिए, पासपोर्ट फोटो के लिए 4000px)， तो पहले इसे रिसाइज़ करें। पिक्सेल आयामों को कम करना फाइल आकार को कम करने का सबसे प्रभावी तरीका है।",
+        "ar": "🎯 **قم بإعادة الحجم قبل الضغط:** إذا كانت صورتك أكبر بكثير مما هو مطلوب (مثل ٤٠٠٠ بكسل لصورة جواز سفر)، قم بإعادة الحجم أولاً. تقليل أبعاد البكسل هو الطريقة الأكثر فعالية لتقليل حجم الملف."
+      },
+      {
+        "en": "🎨 **Use the right format:** For photos, JPG or WebP is usually best. For graphics with text or transparency, PNG or WebP is better.",
+        "zh": "🎨 **使用正确的格式：** 对于照片，JPG或WebP通常最好。对于带文字或透明度的图形，PNG或WebP更好。",
+        "es": "🎨 **Usa el formato correcto:** Para fotos, JPG o WebP suele ser el mejor. Para gráficos con texto o transparencia, PNG o WebP es mejor.",
+        "fr": "🎨 **Utilisez le bon format :** Pour les photos, JPG ou WebP est généralement le meilleur. Pour les graphiques avec texte ou transparence, PNG ou WebP est préférable.",
+        "hi": "🎨 **सही फॉर्मेट का उपयोग करें:** फोटो के लिए, JPG या WebP आमतौर पर सबसे अच्छा है। टेक्स्ट या पारदर्शिता वाले ग्राफिक्स के लिए, PNG या WebP बेहतर है।",
+        "ar": "🎨 **استخدم التنسيق الصحيح:** للصور، عادةً ما يكون JPG أو WebP الأفضل. للرسوم البيانية النصية أو الشفافة، يكون PNG أو WebP أفضل."
+      },
+      {
+        "en": "🔍 **Preview before downloading:** Always check the before/after comparison to make sure the compressed image still looks good. Our tool shows you exactly what you'll get.",
+        "zh": "🔍 **下载前预览：** 始终检查压缩前后对比，确保压缩后的图片看起来仍然很好。我们的工具会准确显示你将获得的效果。",
+        "es": "🔍 **Previsualiza antes de descargar:** Siempre verifica la comparación antes/después para asegurarte de que la imagen comprimida todavía se vea bien. Nuestra herramienta te muestra exactamente lo que obtendrás.",
+        "fr": "🔍 **Prévisualisez avant de télécharger :** Vérifiez toujours la comparaison avant/après pour vous assurer que l'image compressée semble toujours bonne. Notre outil vous montre exactement ce que vous obtiendrez.",
+        "hi": "🔍 **डाउनलोड से पहले पूर्वावलोकन करें:** हमेशा कम्प्रेस्ड इमेज अभी भी अच्छी दिख रही है या नहीं यह सुनिश्चित करने के लिए पहले/बाद में तुलना की जांच करें। हमारा टूल आपको सटीक रूप से दिखाता है कि आपको क्या मिलेगा।",
+        "ar": "🔍 **اطلع على المعاينة قبل التنزيل:** دائمًا تحقق من المقارنة قبل/بعد للتأكد من أن الصورة المضغوطة لا تزال تبدو جيدة. أداة لدينا تُظهر لك بدقة ما ستحصل عليه."
+      },
+      {
+        "en": "🗑️ **Remove EXIF data:** EXIF metadata (camera settings, GPS location) adds to file size. Removing it can save 5-10% without affecting image quality.",
+        "zh": "🗑️ **移除EXIF数据：** EXIF元数据（相机设置、GPS位置）会增加文件大小。移除它可以节省5-10%的大小而不影响图像质量。",
+        "es": "🗑️ **Elimina los datos EXIF:** Los metadatos EXIF (configuración de cámara, ubicación GPS) aumentan el tamaño del archivo. Eliminarlos puede ahorrar 5-10% sin afectar la calidad de la imagen.",
+        "fr": "🗑️ **Supprimez les données EXIF :** Les métadonnées EXIF (paramètres de l'appareil photo, position GPS) ajoutent à la taille du fichier. Les supprimer peut économiser 5-10% sans affecter la qualité de l'image.",
+        "hi": "🗑️ **EXIF डेटा हटाएं:** EXIF मेटाडेटा (कैमरा सेटिंग्स, GPS स्थान) फाइल आकार में जोड़ता है। इसे हटाने से इमेज की गुणवत्ता को प्रभावित किए बिना 5-10% बचाया जा सकता है।",
+        "ar": "🗑️ **أزل بيانات EXIF:** بيانات EXIF (إعدادات الكاميرا وموقع GPS) تضيف إلى حجم الملف. إزالتها يمكن أن توفر ٥-١٠٪ دون التأثير على جودة الصورة."
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "5. Privacy First: Files Never Leave Your Browser",
+      "zh": "5. 隐私优先：文件永不出浏览器",
+      "es": "5. Privacidad Primero: Los Archivos Nunca Salen de Tu Navegador",
+      "fr": "5. Vie Privée en Premier : Les Fichiers Ne Quittent Jamais Votre Navigateur",
+      "hi": "5. गोपनीयता पहले: फाइलें कभी भी आपके ब्राउज़र को नहीं छोड़तीं",
+      "ar": "٥. الخصوصية أولاً: الملفات لا تترك متصفحك أبداً"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "This is the most important feature of our image compressor: **100% of the processing happens in your browser.** Your images are never uploaded to our servers, and we never see or store your files. This makes our tool completely private and secure, which is especially important when dealing with sensitive documents like passport photos, ID scans, or personal photos.",
+      "zh": "这是我们图片压缩器最重要的特性：**100%的处理在你的浏览器中完成。** 你的图片从未上传到我们的服务器，我们也从未查看或存储你的文件。这使我们的工具完全私密和安全，在处理护照照片、身份证扫描件或个人照片等敏感文档时尤其重要。",
+      "es": "Esta es la característica más importante de nuestro compresor de imágenes: **100% del procesamiento se realiza en tu navegador.** Tus imágenes nunca se suben a nuestros servidores, y nosotros nunca vemos ni almacenamos tus archivos. Esto hace que nuestra herramienta sea completamente privada y segura, lo que es especialmente importante al tratar con documentos sensibles como fotos de pasaporte, escaneos de DNI o fotos personales.",
+      "fr": "C'est la caractéristique la plus importante de notre compresseur d'images : **100% du traitement s'effectue dans votre navigateur.** Vos images ne sont jamais envoyées sur nos serveurs, et nous ne voyons jamais ni ne stockons vos fichiers. Cela rend notre outil complètement privé et sécurisé, ce qui est particulièrement important lorsque vous traitez des documents sensibles comme des photos de passeport, des scans d'identité ou des photos personnelles.",
+      "hi": "यह हमारे इमेज कंप्रेसर की सबसे महत्वपूर्ण विशेषता है: **100% प्रसंस्करण आपके ब्राउज़र में होता है।** आपकी इमेजें कभी भी हमारे सर्वरों पर अपलोड नहीं होतीं, और हम आपकी फाइलों को कभी नहीं देखते या स्टोर करते हैं। यह हमारे टूल को पूरी तरह से निजी और सुरक्षित बनाता है, जो पासपोर्ट फोटो, आईडी स्कैन या व्यक्तिगत फोटो जैसे संवेदनशील दस्तावेज़ों के साथ काम करते समय विशेष रूप से महत्वपूर्ण है।",
+      "ar": "هذه هي السمة الأكثر أهمية لمضغوط الصور لدينا: **100% من المعالجة تحدث في متصفحك.** صورك لا تُرفع أبداً إلى خوادمنا، ولا نرى أبداً أو نخزن ملفاتك. هذا يجعل أداة لدينا خاصة وآمنة تماماً، وهي أمر أساسي خاصة عند التعامل مع وثائق حساسة مثل صور جواز السفر ومسوحات الهوية أو الصور الشخصية."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    "text": {
+      "en": "🔒 **Security Guarantee:** Unlike online tools that upload your files to remote servers, Korelyy Image Compressor works entirely offline in your browser. Your photos stay on your device from start to finish. No upload, no tracking, no data collection.",
+      "zh": "🔒 **安全保障：** 与将文件上传到远程服务器的在线工具不同，Korelyy图片压缩器完全在你的浏览器中离线工作。你的照片从头到尾都保存在你的设备上。无上传、无跟踪、无数据收集。",
+      "es": "🔒 **Garantía de Seguridad:** A diferencia de las herramientas en línea que suben tus archivos a servidores remotos, el Compresor de Imágenes Korelyy funciona completamente sin conexión en tu navegador. Tus fotos permanecen en tu dispositivo de principio a fin. Sin carga, sin seguimiento, sin recopilación de datos.",
+      "fr": "🔒 **Garantie de Sécurité :** Contrairement aux outils en ligne qui téléversent vos fichiers sur des serveurs distants, le Compresseur d'Images Korelyy fonctionne entièrement hors ligne dans votre navigateur. Vos photos restent sur votre appareil de début à fin. Pas de téléversement, pas de suivi, pas de collecte de données.",
+      "hi": "🔒 **सुरक्षा गारंटी:** रिमोट सर्वरों पर आपकी फाइलें अपलोड करने वाले ऑनलाइन टूल्स के विपरीत， Korelyy इमेज कंप्रेसर पूरी तरह से आपके ब्राउज़र में ऑफलाइन काम करता है। आपकी फोटो शुरुआत से अंत तक आपके डिवाइस पर रहती हैं। कोई अपलोड नहीं， कोई ट्रैकिंग नहीं， कोई डेटा कलेक्शन नहीं।",
+      "ar": "🔒 **ضمان الأمان:** على عكس الأدوات عبر الإنترنت التي تحمل ملفاتك إلى خوادم بعيدة، يعمل مضغوط الصور Korelyy تماماً بدون اتصال في متصفحك. صورك تظل على جهازك من البداية إلى النهاية. بدون تحميل، بدون تتبع، بدون جمع بيانات."
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "6. FAQ: Your Image Compression Questions Answered",
+      "zh": "6. 常见问题：你的图片压缩问题解答",
+      "es": "6. Preguntas Frecuentes: Respuestas a Tus Preguntas sobre Compresión de Imágenes",
+      "fr": "6. FAQ : Réponses à Vos Questions sur la Compression d'Images",
+      "hi": "6. FAQ: आपके इमेज कंप्रेशन प्रश्नों के जवाब",
+      "ar": "٦. أسئلة شائعة: إجابات على أسئلتك حول ضغط الصور"
+    }
+  },
+  {
+    "type": "ul",
+    "items": [
+      {
+        "en": "❓ **Can I compress multiple images at once?** Yes! Our tool supports batch compression. Upload multiple images, set your target size for each, and we'll compress them all. You can download each image individually or all at once.",
+        "zh": "❓ **我可以同时压缩多张图片吗？** 是的！我们的工具支持批量压缩。上传多张图片，为每张设置目标大小，我们将全部压缩。你可以单独下载每张图片或全部一起下载。",
+        "es": "❓ **¿Puedo comprimir varias imágenes a la vez?** ¡Sí! Nuestra herramienta admite compresión por lotes. Sube múltiples imágenes, establece tu tamaño objetivo para cada una y las comprimiremos todas. Puedes descargar cada imagen individualmente o todas a la vez.",
+        "fr": "❓ **Puis-je compresser plusieurs images à la fois ?** Oui ! Notre outil prend en charge la compression par lots. Téléchargez plusieurs images, définissez votre taille cible pour chacune, et nous les comprimerons toutes. Vous pouvez télécharger chaque image individuellement ou toutes à la fois.",
+        "hi": "❓ **क्या मैं एक साथ कई इमेजें कम्प्रेस कर सकता हूं?** हाँ! हमारा टूल बैच कंप्रेशन का समर्थन करता है। कई इमेजें अपलोड करें， प्रत्येक के लिए अपना लक्ष्य आकार सेट करें， और हम सभी को कम्प्रेस करेंगे। आप प्रत्येक इमेज को व्यक्तिगत रूप से या एक साथ डाउनलोड कर सकते हैं।",
+        "ar": "❓ **هل يمكنني ضغط多张 صور في آن واحد؟** نعم! أداة لدينا تدعم الضغط الدفعة. قم بتحميل多张 صور， أضف حجمك المستهدف لكل، وسنضغطها جميعاً. يمكنك تنزيل كل صورة بشكل منفرد أو جميعها في آن واحد."
+      },
+      {
+        "en": "❓ **Is there a file size limit for uploads?** No artificial limits! You can upload images of any size. The practical limit depends on your browser's memory, but most modern browsers can handle images up to several hundred megabytes.",
+        "zh": "❓ **上传有文件大小限制吗？** 没有人为限制！你可以上传任意大小的图片。实际限制取决于浏览器内存，但大多数现代浏览器可以处理高达几百兆字节的图片。",
+        "es": "❓ **¿Hay un límite de tamaño de archivo para cargas?** ¡Sin límites artificiales! Puedes subir imágenes de cualquier tamaño. El límite práctico depende de la memoria de tu navegador, pero la mayoría de los navegadores modernos pueden manejar imágenes de hasta varios cientos de megabytes.",
+        "fr": "❓ **Y a-t-il une limite de taille de fichier pour les téléversements ?** Aucune limite artificielle ! Vous pouvez télécharger des images de n'importe quelle taille. La limite pratique dépend de la mémoire de votre navigateur, mais la plupart des navigateurs modernes peuvent gérer des images allant jusqu'à plusieurs centaines de mégaoctets.",
+        "hi": "❓ **अपलोड के लिए कोई फाइल आकार सीमा है?** कोई कृत्रिम सीमा नहीं! आप किसी भी आकार की इमेजें अपलोड कर सकते हैं। व्यावहारिक सीमा आपके ब्राउज़र की मेमोरी पर निर्भर करती है, लेकिन अधिकांश आधुनिक ब्राउज़र सैकड़ों मेगाबाइट तक की इमेजें हैंडल कर सकते हैं।",
+        "ar": "❓ **هل هناك حد لحجم الملف للuploads?** لا حدود صناعية! يمكنك تحميل صور بأي حجم. الحد العملي يعتمد على ذاكرة متصفحك، ولكن معظم المتصفحات الحديثة يمكنها التعامل مع صور重达数百 ميغابايت."
+      },
+      {
+        "en": "❓ **Will compressing reduce image quality?** Some quality loss is inevitable with lossy compression (JPG/WebP), but our tool finds the optimal balance. The before/after preview lets you verify quality before downloading.",
+        "zh": "❓ **压缩会降低图像质量吗？** 有损压缩（JPG/WebP）会不可避免地损失一些质量，但我们的工具会找到最佳平衡点。压缩前后预览让你在下载前验证质量。",
+        "es": "❓ **¿La compresión reducirá la calidad de la imagen?** Alguna pérdida de calidad es inevitable con la compresión con pérdida (JPG/WebP), pero nuestra herramienta encuentra el equilibrio óptimo. La previsualización antes/después te permite verificar la calidad antes de descargar.",
+        "fr": "❓ **La compression réduira-t-elle la qualité de l'image ?** Certaine perte de qualité est inévitable avec la compression avec perte (JPG/WebP), mais notre outil trouve l'équilibre optimal. La prévisualisation avant/après vous permet de vérifier la qualité avant téléchargement.",
+        "hi": "❓ **कम्प्रेसिंग से इमेज की गुणवत्ता कम होगी?** लॉसी कंप्रेशन (JPG/WebP) के साथ कुछ गुणवत्ता हानि अपरिहार्य है, लेकिन हमारा टूल इष्टतम संतुलन खोजता है। पहले/बाद में पूर्वावलोकन आपको डाउनलोड से पहले गुणवत्ता को सत्यापित करने की अनुमति देता है।",
+        "ar": "❓ **هل سيقلل الضغط من جودة الصورة?** بعض فقدان الجودة لا يمكن تجنبه مع الضغط المقصود (JPG/WebP)، ولكن أداة لدينا تجد التوازن الأمثل. المعاينة قبل/بعد تتيح لك التحقق من الجودة قبل التنزيل."
+      },
+      {
+        "en": "❓ **Can I convert between formats?** Yes! You can convert JPG to PNG, PNG to WebP, or any combination. Simply select your desired output format before compressing.",
+        "zh": "❓ **我可以在格式之间转换吗？** 是的！你可以将JPG转换为PNG，PNG转换为WebP，或任意组合。只需在压缩前选择所需的输出格式即可。",
+        "es": "❓ **¿Puedo convertir entre formatos?** ¡Sí! Puedes convertir JPG a PNG, PNG a WebP o cualquier combinación. Simplemente selecciona el formato de salida deseado antes de comprimir.",
+        "fr": "❓ **Puis-je convertir entre formats ?** Oui ! Vous pouvez convertir JPG en PNG, PNG en WebP ou toute combinaison. Il suffit de sélectionner le format de sortie souhaité avant compression.",
+        "hi": "❓ **क्या मैं फॉर्मेटों के बीच कन्वर्ट कर सकता हूं?** हाँ! आप JPG को PNG में， PNG को WebP में， या किसी भी संयोजन में कन्वर्ट कर सकते हैं। बस कम्प्रेस करने से पहले अपना वांछित आउटपुट फॉर्मेट चुनें।",
+        "ar": "❓ **هل يمكنني التحويل بين التنسيقات?** نعم! يمكنك تحويل JPG إلى PNG، PNG إلى WebP، أو أي مزيج. فقط اختر تنسيق المخرج المطلوب قبل الضغط."
+      },
+      {
+        "en": "❓ **Is this tool free to use?** 100% free! No registration, no ads, no hidden fees. Use it as much as you want, for any purpose.",
+        "zh": "❓ **这个工具免费使用吗？** 100%免费！无需注册、无广告、无隐藏费用。你可以根据需要任意使用，用于任何目的。",
+        "es": "❓ **¿Esta herramienta es gratuita?** 100% gratuita! Sin registro, sin anuncios, sin cargos ocultos. Úsala tanto como quieras, para cualquier propósito.",
+        "fr": "❓ **Cet outil est-il gratuit à utiliser ?** 100% gratuit ! Pas d'inscription, pas de publicité, pas de frais cachés. Utilisez-le autant que vous voulez, à toute fin.",
+        "hi": "❓ **यह टूल मुफ्त है?** 100% मुफ्त! कोई पंजीकरण नहीं， कोई विज्ञापन नहीं， कोई छिपा शुल्क नहीं। आप इसे जितना चाहें उतना इस्तेमाल कर सकते हैं， किसी भी उद्देश्य के लिए।",
+        "ar": "❓ **هل هذه الأداة مجانية الاستخدام?** 100% مجانية! لا تسجيل， لا إعلانات， لا رسوم خفية. استخدمها كلما أردت， لأي غرض."
+      }
+    ]
+  }
 ]
 };
