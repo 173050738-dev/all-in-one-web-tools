@@ -5,8 +5,9 @@ import {
   type SeoLocale,
 } from '@/components/seo';
 import ClientPage from './client';
-
 import ToolSeoContent from '@/components/ToolSeoContent';
+import ToolRelatedGuides from '@/components/ToolRelatedGuides';
+
 const LOCALE: SeoLocale = 'en';
 const SLUG = 'emoji-mixer';
 
@@ -19,7 +20,8 @@ export default function ToolDetailPage() {
     <>
       <ToolPageJsonLd locale={LOCALE} slug={SLUG} />
       <ClientPage />
-          <ToolSeoContent locale={LOCALE} slug={SLUG} />
+      <ToolSeoContent locale={LOCALE} slug={SLUG} />
+      <ToolRelatedGuides toolSlug={SLUG} locale={LOCALE} />
     </>
   );
 }

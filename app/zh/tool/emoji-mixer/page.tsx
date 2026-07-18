@@ -7,6 +7,7 @@ import {
 import ClientPage from './client';
 
 import ToolSeoContent from '@/components/ToolSeoContent';
+import ToolRelatedGuides from '@/components/ToolRelatedGuides';
 const LOCALE: SeoLocale = 'zh';
 const SLUG = 'emoji-mixer';
 
