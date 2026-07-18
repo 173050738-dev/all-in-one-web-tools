@@ -104,9 +104,9 @@ export const SITE_META_BAREMAP: Record<
 > = {
   en: {
     siteName: 'Korelyy Tools',
-    homeTitle: 'Korelyy Tool Hub — Online Tools',
+    homeTitle: 'Free Online Tools — Regex Tester, Emoji Mixer & More | Korelyy',
     homeDescription:
-      'Discover 100+ free online tools for developers, creators and businesses: image editing, PDF, QR codes, AI prompts, passwords, text utilities and more. No signup, private, works on all devices. 6 languages supported.',
+      'Free online tools for developers: Regex Tester, Emoji Mixer, Password Generator, QR Code Creator, JSON Formatter and more. No signup, private & secure, works instantly in your browser.',
     homeKeywords: [
       'free online tools',
       'web tools',
@@ -148,15 +148,16 @@ export const SITE_META_BAREMAP: Record<
   },
   es: {
     siteName: 'Korelyy Herramientas',
-    homeTitle: 'Korelyy — Herramientas en línea',
+    homeTitle: 'Herramientas en línea gratuitas — Mezclador de Emojis, Prueba de Regex | Korelyy',
     homeDescription:
-      'Más de 100 herramientas en línea gratuitas: edición de imágenes, PDF, códigos QR, IA, contraseñas, utilidades de texto y más. Sin registro, privado, funciona en todos los dispositivos. 6 idiomas.',
+      'Herramientas en línea gratuitas: Mezclador de Emojis, Prueba de Regex, Generador de Contraseñas, Creador de QR, Formateador JSON y más. Sin registro, privado y seguro.',
     homeKeywords: [
       'herramientas online gratis',
       'herramientas web',
       'herramientas de desarrollo',
       'herramientas IA',
-      'compresor de imágenes',
+      'mezclador de emojis',
+      'prueba de regex',
       'generador QR',
       'unir PDF',
       'generador de contraseñas',
@@ -205,15 +206,16 @@ export const SITE_META_BAREMAP: Record<
   },
   ar: {
     siteName: 'كورلي لأدوات الويب',
-    homeTitle: 'كورلي — أدوات عبر الإنترنت',
+    homeTitle: 'أدوات ويب مجانية — مزيج الرموز التعبيرية، اختبار التعبيرات العادية | كورلي',
     homeDescription:
-      'أكثر من 100 أداة مجانية عبر الإنترنت: تحرير الصور، وحدات PDF، رموز QR، أدوات الذكاء الاصطناعي، كلمات مرور، أدوات نصية، وغير ذلك. بدون تسجيل، خاص، يعمل على جميع الأجهزة. 6 لغات.',
+      'أدوات ويب مجانية: مزيج الرموز التعبيرية (Emoji Mixer)، اختبار التعبيرات العادية (Regex Tester)، مولد كلمات المرور، منشئ رموز QR، صياغة JSON والمزيد. بدون تسجيل، خاص وآمن.',
     homeKeywords: [
       'أدوات مجانية عبر الإنترنت',
       'أدوات ويب',
       'أدوات مطوري البرامج',
       'أدوات الذكاء الاصطناعي',
-      'ضاغط الصور',
+      'مزيج الرموز التعبيرية',
+      'اختبار التعبيرات العادية',
       'مولد رموز QR',
       'دمج ملفات PDF',
       'مولد كلمات المرور',

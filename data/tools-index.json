@@ -253,13 +253,13 @@
       "好玩"
     ],
     "nameEn": "Emoji Mixer",
-    "descriptionEn": "Mix two emojis into a brand-new one! An incredibly fun emoji factory with endless creativity. One-click copy & share.",
+    "descriptionEn": "Free Emoji Mixer Online - Combine two emojis to create unique new ones! Endless creative combinations for social media, messaging, and fun. One-click copy and share, no signup.",
     "tagsEn": [
-      "emoji",
       "Emoji",
-      "合成",
+      "Emoji Mixer",
+      "Emoji Combination",
       "Creative",
-      "好玩"
+      "Fun Tools"
     ],
     "isFree": true,
     "icon": "Sparkles",
@@ -23773,13 +23773,13 @@
       "调试"
     ],
     "nameEn": "Regex Tester",
-    "descriptionEn": "Online regex debugger, real-time match highlighting, supports g/i/m flags, shows match groups and explanations, common template one-click apply.",
+    "descriptionEn": "Free Online Regex Tester - Real-time matching with syntax highlighting. Test regular expressions instantly, see match groups, and validate patterns. Perfect for developers, no signup required.",
     "tagsEn": [
-      "正则",
       "Regex",
-      "Testing",
-      "匹配",
-      "Debugging"
+      "Regular Expression",
+      "Pattern Matching",
+      "Debugging",
+      "Developer Tools"
     ],
     "isFree": true,
     "icon": "Code",

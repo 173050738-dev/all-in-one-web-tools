@@ -75,12 +75,12 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "hi": 9
 },
 "title": {
-"en": "What Is a Regular Expression (RegEx)? A Beginner’s Complete Guide in 2026",
-"zh": "什么是正则表达式（RegEx）？2026 年新手完整入门指南",
+"en": "Regular Expressions (RegEx) Explained: Learn Regex in 10 Minutes for FREE",
+"zh": "正则表达式（RegEx）入门：10分钟学会正则，附在线测试器",
 "hi": "रेगुलर एक्सप्रेशन (RegEx) क्या है? 2026 में शुरुआती लोगों के लिए पूरी गाइड"
 },
 "description": {
-"en": "Learn what regular expressions are, when to use them, the 10 core patterns every developer should memorize, and test your regex live with the Korelyy online tester. No signup required.",
+"en": "Master regular expressions in 10 minutes! Learn the 10 essential regex patterns every developer needs, with live testing using our free online regex tester. Perfect for beginners.",
 "zh": "了解正则表达式是什么、什么时候用它、每个开发者都应该记住的 10 个核心语法，用 Korelyy 在线正则测试器实时验证结果。无需注册。",
 "hi": "जानें रेगुलर एक्सप्रेशन क्या हैं, कब उपयोग करें, 10 मुख्य पैटर्न जो हर डेवलपर को याद होने चाहिए, और Korelyy ऑनलाइन टेस्टर से लाइव टेस्ट करें। कोई साइनअप नहीं।"
 },
