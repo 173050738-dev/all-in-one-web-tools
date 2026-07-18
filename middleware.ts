@@ -55,6 +55,11 @@ function isVerificationBot(ua: string | null): boolean {
 export default function middleware(request: NextRequest) {
   const url = new URL(request.url);
 
+  if (/\/{2,}/.test(url.pathname)) {
+    url.pathname = url.pathname.replace(/\/{2,}/g, '/');
+    return NextResponse.redirect(url, 301);
+  }
+
   if (
     url.pathname === '/ByteDanceVerify.html' ||
     url.pathname === '/ByteDanceVerify' ||
