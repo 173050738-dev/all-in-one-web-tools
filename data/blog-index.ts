@@ -45,7 +45,7 @@ keywords: Partial<Record<SeoLocale, string[]>>;
 export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 {
 "slug": "what-is-regular-expression",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Regex%20What%20Is%20Regular%20Expression%20Beginner%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=576&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-06-28T00:00:00.000Z",
 "updatedAt": "2026-07-02T00:00:00.000Z",
@@ -112,7 +112,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "regex-email-phone-url-patterns",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Regex%20Email%20Phone%20URL%20Patterns%2060%20Countries%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=30&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-06-30T00:00:00.000Z",
 "tags": [
@@ -177,7 +177,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "regex-vs-string-match-performance",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Regex%20vs%20String%20Match%20Performance%20JS%20Benchmark%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=445&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-01T00:00:00.000Z",
 "tags": [
@@ -345,7 +345,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tools-ultimate-guide-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PDF%20Tools%20Merge%20Compress%20OCR%20Ultimate%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=25&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-02T00:00:00.000Z",
 "tags": [
@@ -451,7 +451,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "regex-tester-practical-use-cases",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Regex%20Tester%20Practical%20Use%20Cases%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=958&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-03T00:00:00.000Z",
 "tags": [
@@ -558,7 +558,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "qr-code-generator-business-use-cases",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=QR%20Code%20Generator%20Business%20Use%20Cases%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=361&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-03T00:00:00.000Z",
 "tags": [
@@ -664,7 +664,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "password-generator-security-myths-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Password%20Generator%20Security%20Myths%20Debunked%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=86&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-03T00:00:00.000Z",
 "tags": [
@@ -771,7 +771,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "base64-encoding-everyday-use-cases",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Base64%20Encoding%20Everyday%20Practical%20Use%20Cases%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=88&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-04T00:00:00.000Z",
 "tags": [
@@ -877,7 +877,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "word-counter-content-writers-guide",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Word%20Counter%20Content%20Writers%20SEO%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=600&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-04T00:00:00.000Z",
 "tags": [
@@ -1401,7 +1401,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "markdown-preview-writers-workflow",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Markdown%20Preview%20GFM%20Mermaid%20Writers%20Workflow%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=349&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-05T00:00:00.000Z",
 "tags": [
@@ -1506,7 +1506,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "cadence-180-step-rate-training",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Running%20180%20Steps%2FMin%20Cadence%20Training%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=478&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-07-05T00:00:00.000Z",
 "tags": [
@@ -1601,7 +1601,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "marathon-16-week-sub4-plan",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Running%2016-Week%20Sub-4%20Marathon%20Plan%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=6&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-07-03T00:00:00.000Z",
 "tags": [
@@ -1696,7 +1696,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "trail-gear-100km-ultra",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Running%20100km%20Ultra-Trail%20Gear%20Checklist%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=585&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-07-01T00:00:00.000Z",
 "tags": [
@@ -1791,7 +1791,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "hrm-chest-vs-optical",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Running%20Chest%20Strap%20vs%20Optical%20HR%20Watch%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=747&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-29T00:00:00.000Z",
 "tags": [
@@ -1886,7 +1886,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "zwift-12w-ftp-build",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Cycling%20Zwift%2012-Week%20FTP%20Builder%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=839&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-27T00:00:00.000Z",
 "tags": [
@@ -1981,7 +1981,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "bike-packing-light-setup",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Cycling%20Bikepacking%20Light%20Setup%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=832&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-25T00:00:00.000Z",
 "tags": [
@@ -2076,7 +2076,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "power-meter-buyers-guide",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Cycling%20Power%20Meter%20Buyer%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=869&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-23T00:00:00.000Z",
 "tags": [
@@ -2171,7 +2171,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "tdf-climbs-analytics",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Cycling%20Tour%20de%20France%20Climbs%202026%20Analytics%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=713&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-21T00:00:00.000Z",
 "tags": [
@@ -2266,7 +2266,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "three-peak-3000m-pack",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hiking%203-Peak%203000m%2B%20Packing%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=215&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-19T00:00:00.000Z",
 "tags": [
@@ -2361,7 +2361,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "altitude-sickness-ams",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hiking%20Altitude%20AMS%20Protocol%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=479&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-17T00:00:00.000Z",
 "tags": [
@@ -2456,7 +2456,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "100km-hike-nutrition",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hiking%20100km%20Hike%20Nutrition%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=294&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-15T00:00:00.000Z",
 "tags": [
@@ -2551,7 +2551,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "trekking-pole-technique",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hiking%20Trekking%20Pole%20Technique%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=741&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-13T00:00:00.000Z",
 "tags": [
@@ -2646,7 +2646,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "desk-5min-neck-yoga",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Yoga%205-Min%20Desk%20Neck%20Yoga%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=75&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-11T00:00:00.000Z",
 "tags": [
@@ -2741,7 +2741,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "yin-yoga-sequence-60min",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Yoga%2060-Min%20Yin%20Sequence%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=942&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-09T00:00:00.000Z",
 "tags": [
@@ -2836,7 +2836,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pilates-reformer-beginner",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Yoga%20Pilates%20Reformer%20Beginner%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=740&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-07T00:00:00.000Z",
 "tags": [
@@ -2931,7 +2931,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "postpartum-yoga-30day",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Yoga%20Postpartum%2030-Day%20Yoga%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=291&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-05T00:00:00.000Z",
 "tags": [
@@ -3026,7 +3026,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "beginner-5x5-linear",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Strength%20Novice%205%C3%975%20Linear%20Progression%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=760&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-03T00:00:00.000Z",
 "tags": [
@@ -3121,7 +3121,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "big-three-form-correction",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Strength%20Big%203%20Lift%20Form%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=84&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-06-01T00:00:00.000Z",
 "tags": [
@@ -3216,7 +3216,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "functional-training-8w",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Strength%208-Week%20Functional%20Block%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=852&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-30T00:00:00.000Z",
 "tags": [
@@ -3311,7 +3311,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "dumbbell-home-100",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Strength%20100%20Dumbbell%20Home%20Workouts%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=179&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-28T00:00:00.000Z",
 "tags": [
@@ -3406,7 +3406,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "swimming-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Swim%20Freestyle%20High-Elbow%20Catch%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=754&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-26T00:00:00.000Z",
 "tags": [
@@ -3501,7 +3501,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "swimming-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Swim%20Breaststroke%20Kick%20Timing%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=665&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-24T00:00:00.000Z",
 "tags": [
@@ -3596,7 +3596,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "swimming-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Swim%20Triathlon%20Open-Water%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=166&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-22T00:00:00.000Z",
 "tags": [
@@ -3691,7 +3691,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "swimming-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Swim%20Flip%20Turn%20Breakout%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=39&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-20T00:00:00.000Z",
 "tags": [
@@ -3786,7 +3786,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "rehab-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Rehab%20Runner's%20Knee%20ITBS%204-Phase%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=329&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-19T00:00:00.000Z",
 "tags": [
@@ -3881,7 +3881,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "rehab-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Rehab%20Shoulder%20Impingement%204-Phase%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=700&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-17T00:00:00.000Z",
 "tags": [
@@ -3976,7 +3976,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "rehab-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Rehab%20Ankle%20Sprain%20RTS%20Protocol%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=465&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-15T00:00:00.000Z",
 "tags": [
@@ -4071,7 +4071,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "rehab-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Rehab%20Low%20Back%20Core%20Stability%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=271&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-13T00:00:00.000Z",
 "tags": [
@@ -4166,7 +4166,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nutrition-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Nutrition%20Clean%20Bulk%20TDEE%20Calculator%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=949&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-12T00:00:00.000Z",
 "tags": [
@@ -4261,7 +4261,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nutrition-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Nutrition%20Contest%20Prep%20Water%20Cut%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=702&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-10T00:00:00.000Z",
 "tags": [
@@ -4356,7 +4356,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nutrition-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Nutrition%20BCAA%20vs%20Creatine%20Review%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=677&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-08T00:00:00.000Z",
 "tags": [
@@ -4451,7 +4451,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nutrition-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Nutrition%20Vegan%20Complete%20Protein%20Matrix%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=432&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-06T00:00:00.000Z",
 "tags": [
@@ -4546,7 +4546,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "racing-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Racing%20UTMB%20Lottery%20Strategy%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=151&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-05T00:00:00.000Z",
 "tags": [
@@ -4641,7 +4641,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "racing-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Racing%20Beijing%2FShanghai%20Marathon%20Entry%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=245&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-03T00:00:00.000Z",
 "tags": [
@@ -4736,7 +4736,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "racing-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Racing%20IRONMAN%2070.3%20Registration%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=240&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-05-01T00:00:00.000Z",
 "tags": [
@@ -4831,7 +4831,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "racing-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Racing%20Trail%20Points%20Accumulation%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=631&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-29T00:00:00.000Z",
 "tags": [
@@ -4926,7 +4926,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "mental-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Sports%20Psych%20Pre-Race%20Anxiety%20CBT%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=616&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-28T00:00:00.000Z",
 "tags": [
@@ -5021,7 +5021,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "mental-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Sports%20Psych%20Goal%20Periodization%20Pyramid%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=432&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-26T00:00:00.000Z",
 "tags": [
@@ -5116,7 +5116,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "mental-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Sports%20Psych%20Post-DNF%20Mental%20Recovery%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=81&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-24T00:00:00.000Z",
 "tags": [
@@ -5211,7 +5211,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "mental-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Sports%20Psych%20Flow%20State%20Zone%205%20Trigger%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=322&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-22T00:00:00.000Z",
 "tags": [
@@ -5306,7 +5306,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PDF%20Batch%20E-Sign%20100%20Contracts%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=77&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-21T00:00:00.000Z",
 "tags": [
@@ -5401,7 +5401,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PDF%20Scanned%20PDF%20OCR%20%2B%20Tables%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=27&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-19T00:00:00.000Z",
 "tags": [
@@ -5496,7 +5496,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PDF%20Shrink%20PDFs%20by%2080%25%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=409&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-17T00:00:00.000Z",
 "tags": [
@@ -5591,7 +5591,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PDF%20Build%20Fillable%20PDF%20Forms%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=18&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-15T00:00:00.000Z",
 "tags": [
@@ -5686,7 +5686,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Image%20ID%20Photo%20Background%20Swap%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=353&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-14T00:00:00.000Z",
 "tags": [
@@ -5781,7 +5781,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Image%20E-Commerce%20500%20SKU%20BG%20Remove%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=466&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-12T00:00:00.000Z",
 "tags": [
@@ -5876,7 +5876,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Image%20Long%20Screenshot%20Stitch%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=197&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-10T00:00:00.000Z",
 "tags": [
@@ -5971,7 +5971,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Image%201000%20Screenshots%20Resize%2BWM%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=425&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-08T00:00:00.000Z",
 "tags": [
@@ -6066,7 +6066,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "aioffice-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Office%20AI%20Chinese%20Email%20Polish%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=585&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-07T00:00:00.000Z",
 "tags": [
@@ -6161,7 +6161,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "aioffice-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Office%20AI%20Meeting%20Notes%20Summary%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=755&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-05T00:00:00.000Z",
 "tags": [
@@ -6256,7 +6256,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "aioffice-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Office%20AI%20Spreadsheet%20Data%20Cleaning%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=94&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-03T00:00:00.000Z",
 "tags": [
@@ -6351,7 +6351,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "aioffice-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Office%20AI%20PPT%20Outline%20%E2%86%92%20Deck%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=708&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-04-01T00:00:00.000Z",
 "tags": [
@@ -6446,7 +6446,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "timemanagement-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Time%20Mgmt%20GTD%20Inbox%20Zero%2090-Day%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=298&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-31T00:00:00.000Z",
 "tags": [
@@ -6541,7 +6541,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "timemanagement-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Time%20Mgmt%20Energy%2090min%20Ultradian%20Blocks%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=296&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-29T00:00:00.000Z",
 "tags": [
@@ -6636,7 +6636,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "timemanagement-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Time%20Mgmt%20Deep%20Work%20Cal%20Newport%204%20Steps%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=384&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-27T00:00:00.000Z",
 "tags": [
@@ -6731,7 +6731,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "timemanagement-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Time%20Mgmt%20Pomodoro%20Adapted%20for%20ADHD%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=849&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-25T00:00:00.000Z",
 "tags": [
@@ -6826,7 +6826,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "project-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PM%20Kanban%20vs%20Gantt%20Selection%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=193&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-24T00:00:00.000Z",
 "tags": [
@@ -6921,7 +6921,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "project-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PM%20Milestone%204-Level%20WBS%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=575&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-22T00:00:00.000Z",
 "tags": [
@@ -7016,7 +7016,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "project-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PM%20OKR%20%E2%86%94%20KPI%20Alignment%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=769&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-20T00:00:00.000Z",
 "tags": [
@@ -7111,7 +7111,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "project-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PM%20Async-First%203-Doc%20Rule%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=651&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-18T00:00:00.000Z",
 "tags": [
@@ -7206,7 +7206,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "css-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=CSS%20Container%20Queries%2011%20Patterns%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=617&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-17T00:00:00.000Z",
 "tags": [
@@ -7301,7 +7301,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "css-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=CSS%20%3Ahas()%20Selector%207%20Recipes%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=158&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-15T00:00:00.000Z",
 "tags": [
@@ -7396,7 +7396,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "css-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=CSS%20Native%20CSS%20Nesting%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=783&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-13T00:00:00.000Z",
 "tags": [
@@ -7491,7 +7491,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "css-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=CSS%20Subgrid%20Card%20Alignment%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=895&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-11T00:00:00.000Z",
 "tags": [
@@ -7586,7 +7586,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "jsperf-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=JS%20Perf%20Everyday%20JS%20Big-O%20Cheat%20Sheet%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=982&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-10T00:00:00.000Z",
 "tags": [
@@ -7681,7 +7681,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "jsperf-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=JS%20Perf%20Map%20vs%20Object%20Benchmark%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=486&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-08T00:00:00.000Z",
 "tags": [
@@ -7776,7 +7776,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "jsperf-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=JS%20Perf%207%20JS%20Memory%20Leak%20Patterns%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=671&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-06T00:00:00.000Z",
 "tags": [
@@ -7871,7 +7871,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "jsperf-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=JS%20Perf%20IdleCallback%20Non-Blocking%20Scheduler%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=569&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-04T00:00:00.000Z",
 "tags": [
@@ -7966,7 +7966,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "docker-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Docker%20Node%20Multi-Stage%20Dockerfile%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=711&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-03T00:00:00.000Z",
 "tags": [
@@ -8061,7 +8061,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "docker-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Docker%20Docker%20HEALTHCHECK%20Best%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=23&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-03-01T00:00:00.000Z",
 "tags": [
@@ -8156,7 +8156,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "docker-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Docker%20Volumes%20vs%20Bind%20Mounts%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=379&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-27T00:00:00.000Z",
 "tags": [
@@ -8251,7 +8251,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "docker-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Docker%20Sidecar%20Logging%20Pattern%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=381&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-25T00:00:00.000Z",
 "tags": [
@@ -8346,7 +8346,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nextssr-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Next.js%20RSC%20Boundary%20Design%205%20Antis%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=823&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-24T00:00:00.000Z",
 "tags": [
@@ -8441,7 +8441,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nextssr-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Next.js%20On-Demand%20ISR%20Revalidate%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=401&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-22T00:00:00.000Z",
 "tags": [
@@ -8536,7 +8536,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nextssr-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Next.js%20SearchParams%20Cache%20Keys%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=409&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-20T00:00:00.000Z",
 "tags": [
@@ -8631,7 +8631,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nextssr-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Next.js%20Parallel%20Routes%20Modal%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=267&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-18T00:00:00.000Z",
 "tags": [
@@ -8726,7 +8726,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "api-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=API%20Design%20REST%20vs%20GraphQL%20vs%20tRPC%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=646&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-17T00:00:00.000Z",
 "tags": [
@@ -8821,7 +8821,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "api-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=API%20Design%20Idempotency%204%20Patterns%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=646&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-15T00:00:00.000Z",
 "tags": [
@@ -8916,7 +8916,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "api-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=API%20Design%20Sliding-Window%20Rate%20Limiter%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=105&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-13T00:00:00.000Z",
 "tags": [
@@ -9011,7 +9011,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "api-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=API%20Design%20Webhook%20HMAC%20%2B%20Replay%20Guard%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=135&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-11T00:00:00.000Z",
 "tags": [
@@ -9106,7 +9106,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "seoonpage-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=On-page%20SEO%2012%20Structured%20Data%20Schemas%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=47&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-10T00:00:00.000Z",
 "tags": [
@@ -9201,7 +9201,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "seoonpage-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=On-page%20SEO%20Silo%20Internal%20Linking%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=602&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-08T00:00:00.000Z",
 "tags": [
@@ -9296,7 +9296,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "seoonpage-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=On-page%20SEO%20TF-IDF%20Semantic%20Density%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=616&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-06T00:00:00.000Z",
 "tags": [
@@ -9391,7 +9391,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "seoonpage-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=On-page%20SEO%20Core%20Web%20Vitals%20Tuning%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=720&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-04T00:00:00.000Z",
 "tags": [
@@ -9486,7 +9486,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "socialmatrix-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Social%20Matrix%20Xiaohongshu%20Content%203-3-3%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=143&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-03T00:00:00.000Z",
 "tags": [
@@ -9581,7 +9581,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "socialmatrix-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Social%20Matrix%20WeChat%20Article%20Pacing%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=215&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-02-01T00:00:00.000Z",
 "tags": [
@@ -9676,7 +9676,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "socialmatrix-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Social%20Matrix%20YouTube%20Shorts%20Hooks%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=880&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-30T00:00:00.000Z",
 "tags": [
@@ -9771,7 +9771,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "socialmatrix-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Social%20Matrix%20One%20Publish%20%E2%86%92%207%20Platforms%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=745&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-28T00:00:00.000Z",
 "tags": [
@@ -9866,7 +9866,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "korelyyops-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Korelyy%20Ops%20Tool%20Landing%20SEO%20Wrapper%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=47&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-27T00:00:00.000Z",
 "tags": [
@@ -9961,7 +9961,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "korelyyops-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Korelyy%20Ops%20Reviews%20%E2%86%92%20Conversion%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=79&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-25T00:00:00.000Z",
 "tags": [
@@ -10056,7 +10056,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "korelyyops-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Korelyy%20Ops%20Category%20Indexation%20Playbook%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=535&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-23T00:00:00.000Z",
 "tags": [
@@ -10151,7 +10151,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "korelyyops-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Korelyy%20Ops%20CTA%20Placement%20Heatmap%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=670&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-21T00:00:00.000Z",
 "tags": [
@@ -10246,7 +10246,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "indiemonetize-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Monetize%20Affiliate%207-Vertical%20Selection%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=241&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-20T00:00:00.000Z",
 "tags": [
@@ -10341,7 +10341,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "indiemonetize-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Monetize%20Freemium%20Conversion%20Funnel%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=984&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-18T00:00:00.000Z",
 "tags": [
@@ -10436,7 +10436,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "indiemonetize-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Monetize%20SaaS%20Annual%20Pricing%20Math%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=692&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-16T00:00:00.000Z",
 "tags": [
@@ -10531,7 +10531,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "indiemonetize-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Monetize%20Toolkit%20Bundle%20Subscription%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=109&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-14T00:00:00.000Z",
 "tags": [
@@ -10626,7 +10626,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compliance-tutorial-1-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Compliance%20GDPR%20Pseudonymization%20Flow%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=95&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-13T00:00:00.000Z",
 "tags": [
@@ -10721,7 +10721,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compliance-tutorial-2-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Compliance%20CCPA%20Data%20Deletion%20API%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=486&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-11T00:00:00.000Z",
 "tags": [
@@ -10816,7 +10816,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compliance-tutorial-3-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Compliance%20PCI%20SAQ-A%2012-Question%20Self%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=744&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-09T00:00:00.000Z",
 "tags": [
@@ -10911,7 +10911,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compliance-tutorial-4-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Compliance%20Cookie%20Banner%20CMP%20Setup%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=744&grayscale=false",
 "author": "Korelyy Editorial",
 "publishedAt": "2026-01-07T00:00:00.000Z",
 "tags": [
@@ -11006,7 +11006,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "robots-txt-generator-2026-tutorial",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=SEO%20Robots%20TXT%20Generator%20Complete%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=618&grayscale=false",
 "author": "Korelyy SEO Team",
 "publishedAt": "2026-07-12T00:00:00.000Z",
 "updatedAt": "2026-07-12T00:00:00.000Z",
@@ -11128,7 +11128,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "sitemap-generator-2026-guide-14-formats",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=SEO%20Sitemap%20Generator%20XML%20TXT%20Image%20News%20Video%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=299&grayscale=false",
 "author": "Korelyy SEO Team",
 "publishedAt": "2026-07-11T00:00:00.000Z",
 "updatedAt": "2026-07-11T00:00:00.000Z",
@@ -11253,7 +11253,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "meta-tags-generator-2026-og-twitter-schema",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=SEO%20Meta%20Tags%20Generator%20OpenGraph%20Twitter%20Card%20Schema.org%20JSON-LD%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=108&grayscale=false",
 "author": "Korelyy SEO Team",
 "publishedAt": "2026-07-10T00:00:00.000Z",
 "updatedAt": "2026-07-10T00:00:00.000Z",
@@ -11377,7 +11377,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-compressor-200kb-iphone-webp-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Image%20Compression%20JPG%20WebP%20AVIF%20iPhone%20200KB%20Batch%20Processing%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=620&grayscale=false",
 "author": "Korelyy Image Team",
 "publishedAt": "2026-07-11T00:00:00.000Z",
 "updatedAt": "2026-07-11T00:00:00.000Z",
@@ -11501,7 +11501,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-merger-online-contract-scan-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=PDF%20Merger%20Online%20Merge%20Contract%20Scanned%20Documents%20Offline%20Privacy%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=503&grayscale=false",
 "author": "Korelyy Docs Team",
 "publishedAt": "2026-07-10T00:00:00.000Z",
 "updatedAt": "2026-07-10T00:00:00.000Z",
@@ -11625,7 +11625,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "qr-code-generator-wifi-vcard-logo-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=QR%20Code%20Generator%20WiFi%20vCard%20Payment%20URL%20Custom%20Logo%20Color%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=648&grayscale=false",
 "author": "Korelyy Mobile Team",
 "publishedAt": "2026-07-09T00:00:00.000Z",
 "updatedAt": "2026-07-09T00:00:00.000Z",
@@ -11749,7 +11749,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "password-generator-16bit-exclude-ambiguous-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Password%20Generator%2016%20Character%20Crypto%20Secure%20Random%20Exclude%20Ambiguous%20Bitcoin%20Hardware%202FA%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=82&grayscale=false",
 "author": "Korelyy Security Team",
 "publishedAt": "2026-07-08T00:00:00.000Z",
 "updatedAt": "2026-07-08T00:00:00.000Z",
@@ -11871,7 +11871,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "json-formatter-pretty-print-tree-view-large-file-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=JSON%20Formatter%20Pretty%20Print%20Minify%20Tree%20View%20500MB%20Large%20File%20Validate%20Schema%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=490&grayscale=false",
 "author": "Korelyy DevTools Team",
 "publishedAt": "2026-07-07T00:00:00.000Z",
 "updatedAt": "2026-07-07T00:00:00.000Z",
@@ -11993,7 +11993,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "meccha-chameleon-complete-guide-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Meccha%20Chameleon%20hide%20and%20seek%20paint%20camouflage%20party%20game%20guide%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=153&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-12T00:00:00.000Z",
 "updatedAt": "2026-07-12T00:00:00.000Z",
@@ -12118,7 +12118,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-grammar-checker-beginner-guide",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Grammar%20Checker%20Beginner%20Guide%20Writing%20Tips%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=381&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12134,7 +12134,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "prompt-engineering-basics-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Prompt%20Engineering%20Basics%20AI%20Prompts%20Guide%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=3&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12150,7 +12150,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "sora-video-prompts-advanced-techniques",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Sora%20Video%20Prompts%20Advanced%20AI%20Video%20Generation%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=511&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12166,7 +12166,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "midjourney-v6-new-features-guide",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Midjourney%20v6%20New%20Features%20AI%20Art%20Generation%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=211&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12182,7 +12182,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-video-generator-comparison-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Video%20Generator%20Comparison%20Sora%20Pika%20Runway%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=446&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12198,7 +12198,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "multilingual-writing-tips-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Multilingual%20Writing%20Tips%20Global%20Communication%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=495&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12214,7 +12214,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-prompt-generator-use-cases",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Prompt%20Generator%20Use%20Cases%20Creative%20Workflows%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=683&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12230,7 +12230,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "video-workflow-optimization-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Video%20Workflow%20Optimization%20AI%20Content%20Creation%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=583&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12246,7 +12246,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-tools-update-july-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Tools%20Latest%20Updates%20July%202026%20News%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=91&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12262,7 +12262,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "how-to-write-perfect-ai-prompts-for-sora",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=How%20to%20Write%20Perfect%20AI%20Prompts%20for%20Sora%20Video%20Generation%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=715&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12278,7 +12278,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "midjourney-prompt-guide-2026-master-art",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Midjourney%20Prompt%20Guide%20Master%20AI%20Art%20Generation%202026%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=666&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12294,7 +12294,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-video-prompt-best-practices-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Video%20Prompt%20Best%20Practices%202026%20Creative%20Content%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=536&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12310,7 +12310,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "from-text-to-video-ai-workflow-2026",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=From%20Text%20to%20Video%20AI%20Workflow%202026%20Creative%20Process%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=620&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12326,7 +12326,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-writing-assistant-2026-productivity-tips",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20Writing%20Assistant%202026%20Productivity%20Tips%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=659&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
@@ -12342,7 +12342,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "future-of-ai-content-creation-2026-trends",
-"coverImage": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Future%20of%20AI%20Content%20Creation%202026%20Trends%20editorial%20illustration%20flat%20vector%202026%20trending&image_size=landscape_16_9",
+"coverImage": "https://picsum.photos/800/450?random=406&grayscale=false",
 "author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
