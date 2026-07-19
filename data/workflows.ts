@@ -1,4 +1,4 @@
-﻿﻿﻿﻿export interface WorkflowStep {
+﻿﻿﻿export interface WorkflowStep {
   toolSlug: string;
   title: string;
   description: string;
@@ -224,10 +224,10 @@ export const workflows: Workflow[] = [
     estimatedTime: '2小时',
     difficulty: 'easy',
     steps: [
+      { toolSlug: 'email-template-generator', title: '邮件模板', description: '选择邮件类型，一键生成专业邮件' },
       { toolSlug: 'copy-ai', title: '撰写文案', description: 'AI生成邮件营销文案' },
       { toolSlug: 'grammarly', title: '语法校对', description: '检查英文语法错误' },
       { toolSlug: 'canva', title: '邮件设计', description: '设计精美邮件模板' },
-      { toolSlug: 'unsplash', title: '配图素材', description: '添加高质量配图' },
       { toolSlug: 'image-compressor', title: '图片压缩', description: '压缩图片加快加载' },
     ],
   },
@@ -836,8 +836,8 @@ export const workflows: Workflow[] = [
     estimatedTime: '半天',
     difficulty: 'medium',
     steps: [
-      { toolSlug: 'google-sheets', title: '竞品清单', description: '列出 5-10 家直接竞品与间接竞品' },
-      { toolSlug: 'semrush', title: '流量分析', description: 'SEMrush 看流量来源与关键词' },
+      { toolSlug: 'competitor-analyzer', title: '竞品分析', description: '输入竞品信息，分析价格水平与优劣势' },
+      { toolSlug: 'keyword-analyzer', title: '关键词分析', description: '分析竞品关键词策略与搜索量' },
       { toolSlug: 'chatgpt', title: '排名对比', description: '让 AI 综合分析全球/区域排名与变化' },
       { toolSlug: 'figjam', title: '功能矩阵', description: 'FigJam 画功能对比矩阵与评分' },
       { toolSlug: 'copy-ai', title: '输出报告', description: 'AI 整理成正式竞品分析报告' },
@@ -908,9 +908,9 @@ export const workflows: Workflow[] = [
     estimatedTime: '半天',
     difficulty: 'medium',
     steps: [
+      { toolSlug: 'keyword-analyzer', title: '关键词分析', description: '分析搜索量、竞争度、建议出价' },
       { toolSlug: 'chatgpt', title: '词根拓展', description: '从核心词根扩展 100 个长尾词' },
-      { toolSlug: 'semrush', title: '关键词难度', description: '查搜索量与 KD 难度评分' },
-      { toolSlug: 'ahrefs', title: '竞争分析', description: '看竞品关键词策略' },
+      { toolSlug: 'competitor-analyzer', title: '竞品关键词', description: '分析竞品关键词策略' },
       { toolSlug: 'google-sheets', title: '矩阵分类', description: '按专题/产品/地区分组' },
       { toolSlug: 'google-analytics', title: '数据追踪', description: '埋到 GA 追踪关键词排名' },
     ],
@@ -926,8 +926,8 @@ export const workflows: Workflow[] = [
     estimatedTime: '半天',
     difficulty: 'advanced',
     steps: [
-      { toolSlug: 'semrush', title: '竞品关键词抓取', description: '抓取亚马逊/速卖通竞品 ASIN 关键词与流量词' },
-      { toolSlug: 'ahrefs', title: '难度与搜索量', description: 'AHREFS 校验关键词搜索量与 KD' },
+      { toolSlug: 'competitor-analyzer', title: '竞品分析', description: '分析竞品价格、关键词策略与优劣势' },
+      { toolSlug: 'keyword-analyzer', title: '关键词分析', description: '分析搜索量、竞争度、建议出价' },
       { toolSlug: 'chatgpt', title: '关键词清洗与分组', description: 'AI 清洗过滤无效词，按属性/场景/人群分组' },
       { toolSlug: 'copy-ai', title: '英/西/法/德 Listing', description: '一次性生成 4 语言标题、5 点描述、详情页' },
       { toolSlug: 'canva', title: '主图模板排版', description: '按平台规范批量排版 Listing 主图模板' },

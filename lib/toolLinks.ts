@@ -72,6 +72,10 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'sora-prompt-generator',
   'midjourney-prompt-generator',
   'video-prompt-generator',
+  'competitor-analyzer',
+  'keyword-analyzer',
+  'email-template-generator',
+  'review-generator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

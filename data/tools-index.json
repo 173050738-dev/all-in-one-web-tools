@@ -44912,5 +44912,125 @@
     "complianceLevel": "green",
     "accessTag": "direct",
     "localProcessing": false
+  },
+  {
+    "id": "competitor-analyzer",
+    "slug": "competitor-analyzer",
+    "name": "竞品分析器",
+    "description": "电商竞品分析工具，输入竞品信息，分析价格水平、关键词、优劣势，生成优化建议。",
+    "category": "ecommerce",
+    "tags": [
+      "竞品分析",
+      "电商",
+      "竞争对手",
+      "价格分析",
+      "关键词"
+    ],
+    "nameEn": "Competitor Analyzer",
+    "descriptionEn": "E-commerce competitor analysis tool. Analyze price levels, keywords, strengths and weaknesses, generate optimization recommendations.",
+    "tagsEn": [
+      "Competitor",
+      "Analysis",
+      "E-commerce",
+      "Price",
+      "Keywords"
+    ],
+    "isFree": true,
+    "icon": "TrendingUp",
+    "likes": 5234,
+    "difficulty": "medium",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": true
+  },
+  {
+    "id": "keyword-analyzer",
+    "slug": "keyword-analyzer",
+    "name": "关键词分析器",
+    "description": "电商关键词分析工具，输入关键词，分析搜索量、竞争度、建议出价，生成相关关键词列表。",
+    "category": "ecommerce",
+    "tags": [
+      "关键词",
+      "SEO",
+      "电商",
+      "搜索量",
+      "竞争度"
+    ],
+    "nameEn": "Keyword Analyzer",
+    "descriptionEn": "E-commerce keyword analysis tool. Analyze search volume, competition, suggested bid, generate related keywords.",
+    "tagsEn": [
+      "Keyword",
+      "SEO",
+      "E-commerce",
+      "Search",
+      "Analysis"
+    ],
+    "isFree": true,
+    "icon": "Search",
+    "likes": 4876,
+    "difficulty": "medium",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": true
+  },
+  {
+    "id": "email-template-generator",
+    "slug": "email-template-generator",
+    "name": "邮件模板生成器",
+    "description": "电商邮件营销模板生成器，支持欢迎邮件、促销邮件、弃购召回等多种类型，一键生成专业邮件。",
+    "category": "ecommerce",
+    "tags": [
+      "邮件",
+      "营销",
+      "模板",
+      "电商",
+      "邮件营销"
+    ],
+    "nameEn": "Email Template Generator",
+    "descriptionEn": "E-commerce email marketing template generator. Support welcome, promotion, abandoned cart emails. Generate professional emails in one click.",
+    "tagsEn": [
+      "Email",
+      "Marketing",
+      "Template",
+      "E-commerce",
+      "Newsletter"
+    ],
+    "isFree": true,
+    "icon": "Mail",
+    "likes": 3567,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": true
+  },
+  {
+    "id": "review-generator",
+    "slug": "review-generator",
+    "name": "评价生成器",
+    "description": "电商产品评价生成器，输入产品信息和特点，一键生成高质量的产品评价内容。",
+    "category": "ecommerce",
+    "tags": [
+      "评价",
+      "产品",
+      "电商",
+      "生成器",
+      "评论"
+    ],
+    "nameEn": "Review Generator",
+    "descriptionEn": "E-commerce product review generator. Generate high-quality product reviews based on product information and features.",
+    "tagsEn": [
+      "Review",
+      "Product",
+      "E-commerce",
+      "Generator",
+      "Rating"
+    ],
+    "isFree": true,
+    "icon": "MessageSquare",
+    "likes": 4123,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": true
   }
 ]

@@ -8126,6 +8126,22 @@
           }
         ]
       }
+    },
+    "competitor-analyzer": {
+      "name": "竞品分析器",
+      "description": "电商竞品分析工具，输入竞品信息，分析价格水平、关键词、优劣势，生成优化建议。"
+    },
+    "keyword-analyzer": {
+      "name": "关键词分析器",
+      "description": "电商关键词分析工具，分析搜索量、竞争度、建议出价，帮助优化SEO和广告投放。"
+    },
+    "email-template-generator": {
+      "name": "邮件模板生成器",
+      "description": "电商邮件营销模板生成工具，支持欢迎邮件、促销邮件、催单邮件等多种场景，一键生成可直接使用的邮件内容。"
+    },
+    "review-generator": {
+      "name": "评价生成器",
+      "description": "电商产品评价生成工具，输入产品名称和特点，自动生成多条不同风格的用户评价，帮助优化商品页面内容。"
     }
   },
   "sidebar2": {

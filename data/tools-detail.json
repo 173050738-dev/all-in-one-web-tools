@@ -7921,5 +7921,41 @@
     "signup": [
       "no-signup"
     ]
+  },
+  "competitor-analyzer": {
+    "relatedTools": [
+      "keyword-analyzer",
+      "email-template-generator"
+    ],
+    "signup": [
+      "no-signup"
+    ]
+  },
+  "keyword-analyzer": {
+    "relatedTools": [
+      "competitor-analyzer",
+      "ai-copywriter"
+    ],
+    "signup": [
+      "no-signup"
+    ]
+  },
+  "email-template-generator": {
+    "relatedTools": [
+      "ai-copywriter",
+      "review-generator"
+    ],
+    "signup": [
+      "no-signup"
+    ]
+  },
+  "review-generator": {
+    "relatedTools": [
+      "email-template-generator",
+      "ai-copywriter"
+    ],
+    "signup": [
+      "no-signup"
+    ]
   }
 }

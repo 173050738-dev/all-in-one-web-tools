@@ -8126,6 +8126,22 @@
           }
         ]
       }
+    },
+    "competitor-analyzer": {
+      "name": "Competitor Analyzer",
+      "description": "E-commerce competitor analysis tool. Input competitor info, analyze pricing, keywords, strengths/weaknesses, and generate optimization suggestions."
+    },
+    "keyword-analyzer": {
+      "name": "Keyword Analyzer",
+      "description": "E-commerce keyword analysis tool. Analyze search volume, competition, suggested bids to optimize SEO and ad campaigns."
+    },
+    "email-template-generator": {
+      "name": "Email Template Generator",
+      "description": "E-commerce email marketing template generator. Supports welcome emails, promotional emails, reminder emails and more. Generate ready-to-use email content in one click."
+    },
+    "review-generator": {
+      "name": "Review Generator",
+      "description": "E-commerce product review generator. Input product name and features, automatically generate multiple user reviews in different styles to optimize product page content."
     }
   },
   "sidebar2": {

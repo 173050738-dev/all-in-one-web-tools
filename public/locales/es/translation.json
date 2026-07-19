@@ -8126,6 +8126,22 @@
           }
         ]
       }
+    },
+    "competitor-analyzer": {
+      "name": "Analizador de Competidores",
+      "description": "Herramienta de análisis de competidores para comercio electrónico. Ingresa información del competidor, analiza precios, palabras clave, fortalezas/debilidades y genera sugerencias de optimización."
+    },
+    "keyword-analyzer": {
+      "name": "Analizador de Palabras Clave",
+      "description": "Herramienta de análisis de palabras clave para comercio electrónico. Analiza volumen de búsqueda, competencia, ofertas sugeridas para optimizar SEO y campañas publicitarias."
+    },
+    "email-template-generator": {
+      "name": "Generador de Plantillas de Correo",
+      "description": "Herramienta de generación de plantillas de correo para marketing electrónico. Admite correos de bienvenida, correos promocionales, recordatorios y más. Genera contenido de correo listo para usar con un clic."
+    },
+    "review-generator": {
+      "name": "Generador de Reseñas",
+      "description": "Herramienta de generación de reseñas de productos para comercio electrónico. Ingresa nombre y características del producto, genera automáticamente múltiples reseñas de usuarios en diferentes estilos para optimizar el contenido de la página del producto."
     }
   },
   "sidebar2": {

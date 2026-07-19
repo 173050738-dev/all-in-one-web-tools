@@ -8126,6 +8126,22 @@
           }
         ]
       }
+    },
+    "competitor-analyzer": {
+      "name": "Analyseur de Concurrents",
+      "description": "Outil d'analyse de concurrence e-commerce. Saisissez les informations du concurrent, analysez les prix, les mots-clés, les forces/faiblesses et générez des suggestions d'optimisation."
+    },
+    "keyword-analyzer": {
+      "name": "Analyseur de Mots-Clés",
+      "description": "Outil d'analyse de mots-clés e-commerce. Analyse le volume de recherche, la concurrence, les enchères suggérées pour optimiser le référencement et les campagnes publicitaires."
+    },
+    "email-template-generator": {
+      "name": "Générateur de Modèles Email",
+      "description": "Générateur de modèles d'email marketing e-commerce. Prend en charge les emails de bienvenue, emails promotionnels, rappels et plus. Générez du contenu email prêt à l'emploi en un clic."
+    },
+    "review-generator": {
+      "name": "Générateur d'Avis",
+      "description": "Générateur d'avis produits e-commerce. Saisissez le nom et les caractéristiques du produit, générez automatiquement plusieurs avis utilisateurs dans différents styles pour optimiser le contenu de la page produit."
     }
   },
   "sidebar2": {

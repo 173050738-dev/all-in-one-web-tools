@@ -4,8 +4,8 @@
 // 不必顶层 import tools（1056 条工具 ≈ 几百 KB）。
 // ============================================================
 
-export const STATIC_TOTAL_TOOLS_COUNT: number = 1549;
-export const STATIC_VERIFIED_TOOLS_COUNT: number = 1549;
+export const STATIC_TOTAL_TOOLS_COUNT: number = 1553;
+export const STATIC_VERIFIED_TOOLS_COUNT: number = 1553;
 export const STATIC_PENDING_TOOLS_COUNT: number = 0;
 
 export const STATIC_CATEGORY_COUNTS: Record<string, number> = {
@@ -16,7 +16,7 @@ export const STATIC_CATEGORY_COUNTS: Record<string, number> = {
   "media-tools": 64,
   "productivity": 209,
   "design-tools": 81,
-  "ecommerce": 11,
+  "ecommerce": 15,
   "content-tools": 24,
   "marketing": 23,
   "seo-tools": 14,
@@ -53,7 +53,7 @@ export interface StaticComplianceStats {
 }
 
 export const STATIC_COMPLIANCE_STATS: StaticComplianceStats = {
-  verifiedCount: 1549,
+  verifiedCount: 1553,
   pendingCount: 0,
-  totalCount: 1549,
+  totalCount: 1553,
 };
