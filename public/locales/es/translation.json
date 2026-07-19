@@ -897,6 +897,67 @@
         ]
       }
     },
+    "figma-json-exporter": {
+      "name": "Exportador JSON de Figma",
+      "description": "Pega JSON de página de Figma para exportar imágenes PNG/SVG/PDF por lotes. Procesamiento 100% en navegador, sin necesidad de subir archivos.",
+      "seo": {
+        "intro": "Exportador JSON de Figma es una herramienta online gratuita que analiza datos JSON de páginas de Figma directamente en tu navegador, extrae todas las capas visibles y las exporta como imágenes PNG o SVG. Puedes seleccionar todas las capas o específicas, elegir el formato de exportación y descargar archivos individualmente o en un paquete ZIP. Todo el proceso se ejecuta localmente: tus datos de diseño nunca dejan tu dispositivo ni se suben a ningún servidor.",
+        "scenarios": [
+          "Exportar iconos y componentes por lotes desde diseños de Figma para desarrollo y documentación",
+          "Exportar tableros de diseño para crear documentación de producto y presentaciones",
+          "Exportar capas de Figma como SVG para desarrollo de sitios web y aplicaciones"
+        ],
+        "tutorial": [
+          "Haz clic derecho en una página o tablero en Figma y selecciona 'Copiar'",
+          "Pega los datos JSON en la herramienta",
+          "Selecciona las capas que deseas exportar (selecciona todas o individualmente)",
+          "Elige el formato de exportación (PNG o SVG)",
+          "Haz clic para descargar imágenes individuales, o 'Descargar todo' para guardarlas en un ZIP"
+        ],
+        "advantages": [
+          "Procesamiento 100% en el navegador, sin subidas al servidor: tus datos de diseño permanecen seguros",
+          "Compatible con exportación por lotes y empaquetado ZIP para mayor productividad",
+          "Formatos PNG y SVG admitidos para satisfacer diferentes necesidades de desarrollo"
+        ],
+        "faqs": [
+          {
+            "q": "¿Necesito iniciar sesión en Figma?",
+            "a": "No. La herramienta solo analiza los datos JSON que pegas: no se comunica con los servidores de Figma en absoluto. Todo funciona sin conexión en tu navegador."
+          },
+          {
+            "q": "¿Qué formatos puedo exportar?",
+            "a": "Actualmente admite formatos PNG y SVG. PNG es ideal para previsualizaciones y presentaciones, mientras que SVG es perfecto para gráficos vectoriales y uso en desarrollo."
+          },
+          {
+            "q": "¿Puedo exportar capas ocultas?",
+            "a": "No. Solo se exportan capas visibles (visible: true). Las capas ocultas se filtran automáticamente y no aparecerán en la lista de exportación."
+          },
+          {
+            "q": "¿Mis datos se suben a servidores?",
+            "a": "No. Todo el análisis JSON, renderizado de capas y generación de archivos se realiza completamente en tu navegador. No se producen subidas a la red en ningún momento."
+          }
+        ]
+      },
+      "title": "Exportador JSON de Figma",
+      "subtitle": "Pega JSON de Figma, exporta imágenes por lotes",
+      "pastePlaceholder": "Pega datos JSON de página de Figma aquí...",
+      "exportPng": "Exportar PNG",
+      "exportSvg": "Exportar SVG",
+      "exportPdf": "Exportar PDF",
+      "selectAll": "Seleccionar Todo",
+      "deselectAll": "Deseleccionar Todo",
+      "noLayers": "No se encontraron capas visibles",
+      "exporting": "Exportando...",
+      "downloadAll": "Descargar Todo",
+      "format": "Formato",
+      "layerName": "Nombre de Capa",
+      "layerType": "Tipo de Capa",
+      "layerSize": "Tamaño",
+      "parseError": "Error al analizar JSON, verifica el formato de los datos",
+      "noFigmaData": "No se encontraron datos válidos de Figma",
+      "copySuccess": "Copiado al portapapeles",
+      "exportSuccess": "Exportación exitosa"
+    },
     "image-to-base64": {
       "name": "Imagen a Base64",
       "description": "Arrastra y suelta imágenes locales y conviértelas inmediatamente a Base64, procesamiento frontend sin subida al servidor, conversión por lotes JPG/PNG/WebP/SVG.",

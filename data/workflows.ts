@@ -1,4 +1,4 @@
-﻿﻿﻿export interface WorkflowStep {
+﻿﻿﻿﻿export interface WorkflowStep {
   toolSlug: string;
   title: string;
   description: string;

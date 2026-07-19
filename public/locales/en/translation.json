@@ -897,6 +897,67 @@
         ]
       }
     },
+    "figma-json-exporter": {
+      "name": "Figma JSON Exporter",
+      "description": "Paste Figma page JSON to batch export PNG/SVG/PDF images. 100% in-browser processing, no file upload required.",
+      "seo": {
+        "intro": "Figma JSON Exporter is a free online tool that parses Figma page JSON data directly in your browser, extracts all visible layers, and exports them as PNG or SVG images. You can select all layers or specific ones, choose export format, and download individual files or as a batch ZIP. The entire process runs locally — your design data never leaves your device and is never uploaded to any server.",
+        "scenarios": [
+          "Batch exporting icons and components from Figma designs for development and documentation",
+          "Exporting design artboards to create product documentation and presentations",
+          "Exporting Figma layers as SVG for website and application development"
+        ],
+        "tutorial": [
+          "Right-click on a page or artboard in Figma and select 'Copy'",
+          "Paste the JSON data into the tool",
+          "Select the layers you want to export (select all or individual)",
+          "Choose export format (PNG or SVG)",
+          "Click to download individual images, or 'Download all' to save as a ZIP"
+        ],
+        "advantages": [
+          "100% browser-side processing, no server uploads — your design data stays secure",
+          "Supports batch export and ZIP bundling for increased productivity",
+          "PNG and SVG formats supported to meet different development needs"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need to log in to Figma?",
+            "a": "No. The tool only parses the JSON data you paste — it doesn't communicate with Figma servers at all. Everything works offline in your browser."
+          },
+          {
+            "q": "What formats can I export to?",
+            "a": "Currently supports PNG and SVG formats. PNG is ideal for previews and presentations, while SVG is perfect for vector graphics and development use."
+          },
+          {
+            "q": "Can I export hidden layers?",
+            "a": "No. Only visible layers (visible: true) are exported. Hidden layers are automatically filtered out and won't appear in the export list."
+          },
+          {
+            "q": "Is my data uploaded to servers?",
+            "a": "No. All JSON parsing, layer rendering, and file generation happens entirely in your browser. No network uploads occur at any point."
+          }
+        ]
+      },
+      "title": "Figma JSON Exporter",
+      "subtitle": "Paste Figma JSON, batch export images",
+      "pastePlaceholder": "Paste Figma page JSON data here...",
+      "exportPng": "Export PNG",
+      "exportSvg": "Export SVG",
+      "exportPdf": "Export PDF",
+      "selectAll": "Select All",
+      "deselectAll": "Deselect All",
+      "noLayers": "No visible layers found",
+      "exporting": "Exporting...",
+      "downloadAll": "Download All",
+      "format": "Format",
+      "layerName": "Layer Name",
+      "layerType": "Layer Type",
+      "layerSize": "Size",
+      "parseError": "JSON parse error, please check data format",
+      "noFigmaData": "No valid Figma data found",
+      "copySuccess": "Copied to clipboard",
+      "exportSuccess": "Export successful"
+    },
     "image-to-base64": {
       "name": "Image to Base64",
       "description": "Drag-drop local images and convert to Base64 instantly, pure frontend processing no server upload, supports JPG/PNG/WebP/SVG batch conversion.",

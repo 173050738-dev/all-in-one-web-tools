@@ -897,6 +897,67 @@
         ]
       }
     },
+    "figma-json-exporter": {
+      "name": "Exportateur JSON Figma",
+      "description": "Collez le JSON d'une page Figma pour exporter des images PNG/SVG/PDF en lot. Traitement 100% navigateur, aucun téléchargement de fichier nécessaire.",
+      "seo": {
+        "intro": "Exportateur JSON Figma est un outil en ligne gratuit qui analyse les données JSON de pages Figma directement dans votre navigateur, extrait toutes les couches visibles et les exporte sous forme d'images PNG ou SVG. Vous pouvez sélectionner toutes les couches ou certaines spécifiquement, choisir le format d'exportation et télécharger les fichiers individuellement ou en paquet ZIP. Le processus complet s'exécute localement : vos données de conception ne quittent jamais votre appareil et ne sont jamais téléchargées sur aucun serveur.",
+        "scenarios": [
+          "Exporter des icônes et composants en lot depuis des designs Figma pour le développement et la documentation",
+          "Exporter des tableaux de bord de conception pour créer de la documentation produit et des présentations",
+          "Exporter des couches Figma au format SVG pour le développement de sites web et d'applications"
+        ],
+        "tutorial": [
+          "Cliquez droit sur une page ou un tableau de bord dans Figma et sélectionnez 'Copier'",
+          "Collez les données JSON dans l'outil",
+          "Sélectionnez les couches que vous souhaitez exporter (toutes ou individuellement)",
+          "Choisissez le format d'exportation (PNG ou SVG)",
+          "Cliquez pour télécharger des images individuelles, ou 'Tout télécharger' pour les enregistrer dans un ZIP"
+        ],
+        "advantages": [
+          "Traitement 100% côté navigateur, aucun téléchargement serveur : vos données de conception restent sécurisées",
+          "Prend en charge l'exportation en lot et l'emballage ZIP pour une productivité accrue",
+          "Formats PNG et SVG pris en charge pour répondre aux différents besoins de développement"
+        ],
+        "faqs": [
+          {
+            "q": "Ai-je besoin de me connecter à Figma ?",
+            "a": "Non. L'outil n'analyse que les données JSON que vous collez : il ne communique pas du tout avec les serveurs Figma. Tout fonctionne hors ligne dans votre navigateur."
+          },
+          {
+            "q": "Quels formats puis-je exporter ?",
+            "a": "Prend actuellement en charge les formats PNG et SVG. PNG est idéal pour les prévisualisations et les présentations, tandis que SVG est parfait pour les graphiques vectoriels et l'utilisation en développement."
+          },
+          {
+            "q": "Puis-je exporter des couches masquées ?",
+            "a": "Non. Seules les couches visibles (visible: true) sont exportées. Les couches masquées sont automatiquement filtrées et n'apparaîtront pas dans la liste d'exportation."
+          },
+          {
+            "q": "Mes données sont-elles téléchargées sur des serveurs ?",
+            "a": "Non. Toutes les opérations d'analyse JSON, de rendu des couches et de génération de fichiers s'exécutent complètement dans votre navigateur. Aucun téléchargement sur le réseau ne se produit à aucun moment."
+          }
+        ]
+      },
+      "title": "Exportateur JSON Figma",
+      "subtitle": "Collez JSON Figma, exportez des images en lot",
+      "pastePlaceholder": "Collez les données JSON de la page Figma ici...",
+      "exportPng": "Exporter PNG",
+      "exportSvg": "Exporter SVG",
+      "exportPdf": "Exporter PDF",
+      "selectAll": "Tout Sélectionner",
+      "deselectAll": "Désélectionner Tout",
+      "noLayers": "Aucune couche visible trouvée",
+      "exporting": "Exportation en cours...",
+      "downloadAll": "Télécharger Tout",
+      "format": "Format",
+      "layerName": "Nom de Couche",
+      "layerType": "Type de Couche",
+      "layerSize": "Taille",
+      "parseError": "Erreur d'analyse JSON, vérifiez le format des données",
+      "noFigmaData": "Aucune donnée Figma valide trouvée",
+      "copySuccess": "Copié dans le presse-papiers",
+      "exportSuccess": "Exportation réussie"
+    },
     "image-to-base64": {
       "name": "Image vers Base64",
       "description": "Glissez-déposez des images locales et convertissez-les immédiatement en Base64, traitement frontal uniquement sans téléchargement serveur, conversion par lots JPG/PNG/WebP/SVG.",

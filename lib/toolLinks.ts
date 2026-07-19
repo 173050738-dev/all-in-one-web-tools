@@ -76,6 +76,7 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'keyword-analyzer',
   'email-template-generator',
   'review-generator',
+  'figma-json-exporter',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {
@@ -159,6 +160,7 @@ export const SLUG_ALIAS: Record<string, string> = {
   'bullet-screen': 'danmaku',
   'countdown-timer': 'countdown',
   'deadline': 'countdown',
+  'figma-json-exporter': 'figma-json-exporter',
 };
 
 export const EXTERNAL_TOOL_URLS: Record<string, string> = {

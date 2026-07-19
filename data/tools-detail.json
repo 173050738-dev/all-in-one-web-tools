@@ -7957,5 +7957,15 @@
     "signup": [
       "no-signup"
     ]
+  },
+  "figma-json-exporter": {
+    "relatedTools": [
+      "image-compressor",
+      "svg-editor",
+      "font-preview"
+    ],
+    "signup": [
+      "no-signup"
+    ]
   }
 }

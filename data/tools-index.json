@@ -45032,5 +45032,37 @@
     "complianceLevel": "green",
     "accessTag": "direct",
     "localProcessing": true
+  },
+  {
+    "id": "figma-json-exporter",
+    "slug": "figma-json-exporter",
+    "name": "Figma JSON批量导出",
+    "description": "粘贴Figma页面JSON，批量导出PNG/SVG/PDF图片，纯浏览器端处理，无需上传文件。",
+    "category": "design-tools",
+    "tags": [
+      "Figma",
+      "JSON",
+      "导出",
+      "PNG",
+      "SVG",
+      "设计"
+    ],
+    "nameEn": "Figma JSON Exporter",
+    "descriptionEn": "Paste Figma page JSON, batch export PNG/SVG/PDF images, 100% browser-side processing, no file upload required.",
+    "tagsEn": [
+      "Figma",
+      "JSON",
+      "Export",
+      "PNG",
+      "SVG",
+      "Design"
+    ],
+    "isFree": true,
+    "icon": "Download",
+    "likes": 3856,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": true
   }
 ]

@@ -897,6 +897,67 @@
         ]
       }
     },
+    "figma-json-exporter": {
+      "name": "Figma JSON批量导出",
+      "description": "粘贴Figma页面JSON，批量导出PNG/SVG/PDF图片，纯浏览器端处理，无需上传文件。",
+      "seo": {
+        "intro": "Figma JSON批量导出是一款免费的在线工具，可以直接在浏览器里解析 Figma 页面 JSON 数据，提取所有可见图层并批量导出为 PNG、SVG 格式。你可以全选或选择特定图层，设置导出格式，单张下载或打包成 ZIP 一键导出。整个处理流程完全在本地浏览器内执行，数据不会上传到任何服务器，保护你的设计隐私。",
+        "scenarios": [
+          "从 Figma 设计稿中批量导出图标和组件，用于开发和文档",
+          "导出设计稿的各个画板，生成产品文档和演示材料",
+          "将 Figma 图层导出为 SVG，用于网站和应用开发"
+        ],
+        "tutorial": [
+          "在 Figma 中右键点击页面或画板，选择「复制」",
+          "在工具中粘贴 JSON 数据",
+          "选择需要导出的图层（可全选或单选）",
+          "选择导出格式（PNG 或 SVG）",
+          "点击下载单张图片，或点击「全部下载」打包成 ZIP"
+        ],
+        "advantages": [
+          "纯浏览器处理，不上传服务器，设计稿和数据安全",
+          "支持批量导出和 ZIP 打包，提高工作效率",
+          "支持 PNG 和 SVG 格式，满足不同开发需求"
+        ],
+        "faqs": [
+          {
+            "q": "需要登录 Figma 账号吗？",
+            "a": "不需要。工具只解析你粘贴的 JSON 数据，不与 Figma 服务器通信，完全离线使用。"
+          },
+          {
+            "q": "支持导出哪些格式？",
+            "a": "目前支持 PNG 和 SVG 格式。PNG 适合预览和演示，SVG 适合矢量图形和开发使用。"
+          },
+          {
+            "q": "可以导出隐藏的图层吗？",
+            "a": "默认只导出可见图层（visible: true）。隐藏的图层会被自动过滤，不会出现在导出列表中。"
+          },
+          {
+            "q": "数据会上传到服务器吗？",
+            "a": "不会。所有 JSON 解析、图层渲染和文件生成都在浏览器内完成，没有任何网络上传动作。"
+          }
+        ]
+      },
+      "title": "Figma JSON批量导出",
+      "subtitle": "粘贴 Figma JSON，批量导出图片",
+      "pastePlaceholder": "在此粘贴 Figma 页面 JSON 数据...",
+      "exportPng": "导出PNG",
+      "exportSvg": "导出SVG",
+      "exportPdf": "导出PDF",
+      "selectAll": "全选",
+      "deselectAll": "取消全选",
+      "noLayers": "没有找到可见图层",
+      "exporting": "正在导出...",
+      "downloadAll": "全部下载",
+      "format": "格式",
+      "layerName": "图层名称",
+      "layerType": "图层类型",
+      "layerSize": "尺寸",
+      "parseError": "JSON解析错误，请检查数据格式",
+      "noFigmaData": "未找到有效的Figma数据",
+      "copySuccess": "已复制到剪贴板",
+      "exportSuccess": "导出成功"
+    },
     "image-to-base64": {
       "name": "图片转Base64",
       "description": "本地拖拽上传图片立即转Base64编码，纯前端处理不上传服务器，支持JPG/PNG/WebP/SVG批量转换。",
