@@ -28,10 +28,10 @@ export default function ScreenRecorderSubtitle({ locale }: Props) {
   const [mediaStream, setMediaStream] = useState<MediaStream | null>(null);
   const [audioStream, setAudioStream] = useState<MediaStream | null>(null);
   const [mediaRecorder, setMediaRecorder] = useState<MediaRecorder | null>(null);
-  const [recordedChunks, setRecordedChunks] = useState<Blob[]>([]);
+  const recordedChunksRef = useRef<Blob[]>([]);
   const [videoUrl, setVideoUrl] = useState<string>('');
   const [duration, setDuration] = useState(0);
-  const [startTime, setStartTime] = useState(0);
+  const startTimeRef = useRef<number>(0);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [subtitles, setSubtitles] = useState<SubtitleItem[]>([]);
   const [activeSubtitleId, setActiveSubtitleId] = useState<number | null>(null);
@@ -176,12 +176,12 @@ export default function ScreenRecorderSubtitle({ locale }: Props) {
 
       recorder.ondataavailable = (e) => {
         if (e.data.size > 0) {
-          setRecordedChunks(prev => [...prev, e.data]);
+          recordedChunksRef.current.push(e.data);
         }
       };
 
       recorder.onstop = () => {
-        const blob = new Blob(recordedChunks, { type: 'video/webm' });
+        const blob = new Blob(recordedChunksRef.current, { type: 'video/webm' });
         const url = URL.createObjectURL(blob);
         setVideoUrl(url);
         setRecordingState('completed');
@@ -193,20 +193,21 @@ export default function ScreenRecorderSubtitle({ locale }: Props) {
         video.src = url;
       };
 
+      recordedChunksRef.current = [];
+      startTimeRef.current = Date.now();
+
       recorder.start();
 
       setMediaStream(screenStream);
       setAudioStream(audioStream);
       setMediaRecorder(recorder);
       setRecordingState('recording');
-      setStartTime(Date.now());
       setElapsedTime(0);
-      setRecordedChunks([]);
       setSubtitles([]);
       setScript('');
 
       intervalRef.current = window.setInterval(() => {
-        setElapsedTime(Math.floor((Date.now() - startTime) / 1000));
+        setElapsedTime(Math.floor((Date.now() - startTimeRef.current) / 1000));
       }, 100);
     } catch (err) {
       console.error('Error starting recording:', err);
