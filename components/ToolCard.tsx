@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useTranslations } from 'next-intl';
 import { Code, Image, FileText, Binary, Link, Palette, Type, Video, Terminal, Zap, Heart, Star, ShieldCheck, Key, Smartphone, Home, Shuffle, Volume2, Calendar, Grid3X3, User, MessageCircle, Dices, Shield, Globe, CreditCard, UserPlus } from 'lucide-react';
@@ -8,6 +8,7 @@ import SafeLink from './SafeLink';
 import { logLike, logFavorite } from '@/utils/audit-log';
 import { englishTags, tagZhToEn } from '@/data/english-tags';
 import { isTopToolSlug } from '@/lib/topSlugs';
+import { isInternalTool } from '@/lib/toolLinks';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Code,
@@ -261,7 +262,7 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
     );
   }
 
-  const toolPath = tool.slug && isTopToolSlug(tool.slug)
+  const toolPath = tool.slug && isInternalTool(tool.slug)
     ? `/${locale}/tool/${tool.slug}`
     : `/${locale}/tool/detail/?slug=${encodeURIComponent(tool.slug || '')}`;
 
