@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useTranslations } from 'next-intl';
 import { Code, Image, FileText, Binary, Link, Palette, Type, Video, Terminal, Zap, Heart, Star, ShieldCheck, Key, Smartphone, Home, Shuffle, Volume2, Calendar, Grid3X3, User, MessageCircle, Dices, Shield, Globe, CreditCard, UserPlus } from 'lucide-react';
@@ -254,7 +254,7 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
     </div>
   );
 
-  const toolPath = tool.slug
+  const toolPath = tool.slug && isInternalTool(tool.slug)
     ? `/${locale}/tool/${tool.slug}`
     : `/${locale}/tool/detail/?slug=${encodeURIComponent(tool.slug || '')}`;
 
