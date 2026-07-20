@@ -45064,5 +45064,76 @@
     "complianceLevel": "green",
     "accessTag": "direct",
     "localProcessing": true
+  },
+  {
+    "id": "document-formatter",
+    "slug": "document-formatter",
+    "name": "专业文档格式自动排版工具",
+    "description": "粘贴文档内容，一键切换格式模板，实时预览排版效果，导出 Word/PDF。支持党政公文、APA/MLA 论文格式、商业报告和简历模板。",
+    "category": "writing-tools",
+    "tags": [
+      "文档",
+      "排版",
+      "格式",
+      "Word",
+      "PDF",
+      "公文",
+      "论文",
+      "简历"
+    ],
+    "nameEn": "Document Formatter",
+    "descriptionEn": "Professional document formatting tool with real-time preview. Paste content, switch format templates, export to Word/PDF. Supports government documents, APA/MLA academic formats, business reports, and resume templates.",
+    "tagsEn": [
+      "Document",
+      "Formatting",
+      "Word",
+      "PDF",
+      "Government",
+      "Academic",
+      "Resume",
+      "Report"
+    ],
+    "isFree": true,
+    "icon": "FileText",
+    "likes": 0,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": true
+  },
+  {
+    "id": "screen-recorder-subtitle",
+    "slug": "screen-recorder-subtitle",
+    "name": "屏幕录制与字幕生成",
+    "description": "纯本地屏幕录制，AI 自动生成字幕，支持导出 MP4/SRT。所有处理都在浏览器中完成，零上传，保护隐私。",
+    "category": "media-tools",
+    "tags": [
+      "录屏",
+      "字幕",
+      "视频",
+      "AI",
+      "SRT",
+      "MP4",
+      "本地"
+    ],
+    "nameEn": "Screen Recorder with Subtitles",
+    "descriptionEn": "Local screen recording with AI-powered subtitle generation. Export MP4/SRT. All processing done in-browser, zero upload, privacy protected.",
+    "tagsEn": [
+      "Screen",
+      "Recording",
+      "Subtitles",
+      "Video",
+      "AI",
+      "SRT",
+      "MP4",
+      "Local"
+    ],
+    "isFree": true,
+    "icon": "Video",
+    "likes": 0,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": true
   }
 ]
