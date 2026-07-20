@@ -1,4 +1,4 @@
-export type Difficulty = 'easy' | 'medium' | 'advanced';
+﻿export type Difficulty = 'easy' | 'medium' | 'advanced';
 export type ComplianceLevel = 'green' | 'yellow' | 'red';
 export type Platform = 'desktop' | 'mobile' | 'all';
 export type AccessTag = 'direct' | 'vpn-required';
@@ -25,6 +25,7 @@ export interface ToolIndexItem {
   platform?: Platform;
   accessTag?: AccessTag;
   localProcessing?: boolean;
+  isSelfHosted?: boolean;
 }
 
 export interface ToolDetailItem {
