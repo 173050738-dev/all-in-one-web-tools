@@ -254,14 +254,6 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
     </div>
   );
 
-  if (tool.externalUrl) {
-    return (
-      <SafeLink href={tool.externalUrl} locale={locale} className='w-full block group'>
-        {cardContent}
-      </SafeLink>
-    );
-  }
-
   const toolPath = tool.slug && isInternalTool(tool.slug)
     ? `/${locale}/tool/${tool.slug}`
     : `/${locale}/tool/detail/?slug=${encodeURIComponent(tool.slug || '')}`;
