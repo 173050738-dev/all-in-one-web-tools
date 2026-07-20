@@ -254,7 +254,7 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
     </div>
   );
 
-  const toolPath = tool.slug && isInternalTool(tool.slug)
+  const toolPath = tool.slug
     ? `/${locale}/tool/${tool.slug}`
     : `/${locale}/tool/detail/?slug=${encodeURIComponent(tool.slug || '')}`;
 

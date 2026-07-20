@@ -40,9 +40,6 @@ export default async function ToolDynamicPage({ params }: { params: Promise<{ sl
   if (!tool) {
     notFound();
   }
-  if (tool.externalUrl) {
-    notFound();
-  }
   return (
     <>
       <ToolPageJsonLd locale={LOCALE} slug={slug} />
