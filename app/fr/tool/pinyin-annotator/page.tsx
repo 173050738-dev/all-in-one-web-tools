@@ -5,6 +5,7 @@ import {
   type SeoLocale,
 } from '@/components/seo';
 import ClientPage from './client';
+import ToolSeoContent from '@/components/ToolSeoContent';
 
 const LOCALE: SeoLocale = 'fr';
 const SLUG = 'pinyin-annotator';
@@ -18,6 +19,7 @@ export default function ToolDetailPage() {
     <>
       <ToolPageJsonLd locale={LOCALE} slug={SLUG} />
       <ClientPage />
+      <ToolSeoContent locale={LOCALE} slug={SLUG} />
     </>
   );
 }
