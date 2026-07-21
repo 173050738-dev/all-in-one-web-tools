@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { PenLine, RefreshCw, Copy, Check, Sparkles, Target, MessageSquare, Globe } from 'lucide-react';
+import { Star, RefreshCw, Copy, Check, Sparkles, ShoppingBag, MessageCircle, ThumbsUp, ThumbsDown } from 'lucide-react';
 
-interface AiCopywriterToolProps {
+interface AiReviewGeneratorToolProps {
   locale?: string;
 }
 
@@ -12,35 +12,34 @@ const VALID_LOCALES = ['zh', 'en', 'hi', 'fr', 'es', 'ar'];
 const i18n: Record<string, Record<string, string>> = {
   zh: {
     title: 'AI 评价生成器',
-    subtitle: '输入产品信息，一键生成高质量营销文案',
+    subtitle: '输入产品信息，一键生成外卖/电商好评',
     product: '产品名称',
-    productPlaceholder: '请输入你的产品名称...',
-    selling: '核心卖点',
-    sellingPlaceholder: '请输入产品的核心卖点，可多行输入...',
+    productPlaceholder: '请输入产品名称...',
+    selling: '产品特点',
+    sellingPlaceholder: '请描述产品特点，可多行输入...',
     type: '评价类型',
-    typeAdHeadline: '广告标题',
-    typeProductDesc: '商品名称',
-    typeSocialPost: '社媒帖子',
-    typeEmailSubject: '幽默评价',
-    typeLandingHero: '落地页首屏',
+    typePositive: '好评',
+    typeNegative: '差评',
+    typeNeutral: '中评',
+    typeHumorous: '幽默评价',
+    typeProfessional: '专业测评',
     tone: '语气风格',
-    formal: '正式/商务',
     friendly: '友好/亲切',
     concise: '简洁/精炼',
     humorous: '幽默/风趣',
-    persuasive: '说服/营销',
-    academic: '学术/专业',
+    detailed: '详细/走心',
+    emotional: '情感/共鸣',
     platform: '目标平台',
-    platformGeneral: '通用',
-    platformShopify: '独立站',
-    platformInstagram: 'Instagram',
-    platformFacebook: 'Facebook',
-    platformX: 'X',
+    platformTaobao: '淘宝',
+    platformJD: '京东',
+    platformAmazon: '亚马逊',
+    platformPinduoduo: '拼多多',
+    platformWaimai: '外卖平台',
     generate: '✨ 生成评价',
     loading: '正在生成...',
-    copy: '文案',
+    review: '评价',
     why: '创作思路',
-    copyCopy: '复制文案',
+    copyCopy: '复制评价',
     copied: '已复制',
     noResult: '请输入产品信息开始生成',
     error: '生成失败，请重试',
@@ -50,33 +49,32 @@ const i18n: Record<string, Record<string, string>> = {
   },
   en: {
     title: 'AI Review Generator',
-    subtitle: 'Enter product details and generate high-quality marketing copy',
+    subtitle: 'Enter product details and generate high-quality reviews',
     product: 'Product Name',
-    productPlaceholder: 'Enter your product name...',
-    selling: 'Selling Points',
-    sellingPlaceholder: 'Enter your product selling points, multi-line supported...',
-    type: 'Copy Type',
-    typeAdHeadline: 'Ad Headline',
-    typeProductDesc: 'Product Description',
-    typeSocialPost: 'Social Post',
-    typeEmailSubject: 'Email Subject',
-    typeLandingHero: 'Landing Hero',
+    productPlaceholder: 'Enter product name...',
+    selling: 'Product Features',
+    sellingPlaceholder: 'Describe product features, multi-line supported...',
+    type: 'Review Type',
+    typePositive: 'Positive',
+    typeNegative: 'Negative',
+    typeNeutral: 'Neutral',
+    typeHumorous: 'Humorous',
+    typeProfessional: 'Professional',
     tone: 'Tone Style',
-    formal: 'Formal/Business',
-    friendly: 'Friendly/Casual',
+    friendly: 'Friendly/Warm',
     concise: 'Concise/Direct',
     humorous: 'Humorous/Funny',
-    persuasive: 'Persuasive/Marketing',
-    academic: 'Academic/Professional',
+    detailed: 'Detailed/Heartfelt',
+    emotional: 'Emotional/Relatable',
     platform: 'Target Platform',
-    platformGeneral: 'General',
-    platformShopify: 'Shopify',
-    platformInstagram: 'Instagram',
-    platformFacebook: 'Facebook',
-    platformX: 'X',
-    generate: '✨ Generate Copy',
+    platformTaobao: 'Taobao',
+    platformJD: 'JD',
+    platformAmazon: 'Amazon',
+    platformPinduoduo: 'Pinduoduo',
+    platformWaimai: 'Food Delivery',
+    generate: '✨ Generate Review',
     loading: 'Generating...',
-    copy: 'Copy',
+    review: 'Review',
     why: 'Why This Works',
     copyCopy: 'Copy',
     copied: 'Copied',
@@ -87,34 +85,33 @@ const i18n: Record<string, Record<string, string>> = {
     required: 'Required field',
   },
   hi: {
-    title: 'AI कॉपीराइटर',
-    subtitle: 'उत्पाद विवरण दर्ज करें और उच्च गुणवत्ता वाली विपणन कॉपी बनाएं',
+    title: 'AI रिव्यू जेनरेटर',
+    subtitle: 'उत्पाद विवरण दर्ज करें और उच्च गुणवत्ता वाली समीक्षाएं बनाएं',
     product: 'उत्पाद का नाम',
-    productPlaceholder: 'अपने उत्पाद का नाम दर्ज करें...',
-    selling: 'बिक्री बिंदु',
-    sellingPlaceholder: 'उत्पाद के बिक्री बिंदु दर्ज करें, बहु-पंक्ति समर्थित...',
-    type: 'कॉपी प्रकार',
-    typeAdHeadline: 'विज्ञापन शीर्षक',
-    typeProductDesc: 'उत्पाद विवरण',
-    typeSocialPost: 'सोशल पोस्ट',
-    typeEmailSubject: 'ईमेल विषय',
-    typeLandingHero: 'लैंडिंग हीरो',
+    productPlaceholder: 'उत्पाद का नाम दर्ज करें...',
+    selling: 'उत्पाद की विशेषताएं',
+    sellingPlaceholder: 'उत्पाद की विशेषताओं का वर्णन करें, बहु-पंक्ति समर्थित...',
+    type: 'समीक्षा प्रकार',
+    typePositive: 'सकारात्मक',
+    typeNegative: 'नकारात्मक',
+    typeNeutral: 'तटस्थ',
+    typeHumorous: 'हास्यपूर्ण',
+    typeProfessional: 'पेशेवर',
     tone: 'टोन शैली',
-    formal: 'औपचारिक/व्यावसायिक',
-    friendly: 'दोस्ताना/आसान',
+    friendly: 'दोस्ताना/गर्म',
     concise: 'संक्षिप्त/प्रत्यक्ष',
     humorous: 'हास्यपूर्ण',
-    persuasive: 'प्रेरणादायक/विपणन',
-    academic: 'अकादमिक/पेशेवर',
+    detailed: 'विस्तृत/दिल से',
+    emotional: 'भावनात्मक/संबंधित',
     platform: 'लक्ष्य प्लेटफॉर्म',
-    platformGeneral: 'सामान्य',
-    platformShopify: 'शॉपिफाई',
-    platformInstagram: 'इंस्टाग्राम',
-    platformFacebook: 'फेसबुक',
-    platformX: 'X',
-    generate: '✨ कॉपी बनाएं',
+    platformTaobao: 'ताओबाओ',
+    platformJD: 'JD',
+    platformAmazon: 'अमेज़न',
+    platformPinduoduo: 'पिंदुओदुओ',
+    platformWaimai: 'फूड डिलीवरी',
+    generate: '✨ समीक्षा बनाएं',
     loading: 'बनाया जा रहा है...',
-    copy: 'कॉपी',
+    review: 'समीक्षा',
     why: 'यह क्यों काम करता है',
     copyCopy: 'कॉपी करें',
     copied: 'कॉपी किया',
@@ -125,34 +122,33 @@ const i18n: Record<string, Record<string, string>> = {
     required: 'आवश्यक क्षेत्र',
   },
   fr: {
-    title: 'Rédacteur AI',
-    subtitle: 'Saisissez les détails du produit et générez du marketing de haute qualité',
+    title: 'Générateur d\'avis AI',
+    subtitle: 'Saisissez les détails du produit et générez des avis de haute qualité',
     product: 'Nom du produit',
-    productPlaceholder: 'Entrez le nom de votre produit...',
-    selling: 'Points de vente',
-    sellingPlaceholder: 'Entrez les points de vente de votre produit, plusieurs lignes supportées...',
-    type: 'Type de texte',
-    typeAdHeadline: 'Titre publicitaire',
-    typeProductDesc: 'Description produit',
-    typeSocialPost: 'Publication sociale',
-    typeEmailSubject: 'Objet email',
-    typeLandingHero: 'Hero landing',
+    productPlaceholder: 'Entrez le nom du produit...',
+    selling: 'Caractéristiques',
+    sellingPlaceholder: 'Décrivez les caractéristiques, plusieurs lignes supportées...',
+    type: 'Type d\'avis',
+    typePositive: 'Positif',
+    typeNegative: 'Négatif',
+    typeNeutral: 'Neutre',
+    typeHumorous: 'Humouristique',
+    typeProfessional: 'Professionnel',
     tone: 'Style de ton',
-    formal: 'Formel/Affaires',
-    friendly: 'Amiable/Décontracté',
+    friendly: 'Amiable/Chaud',
     concise: 'Concis/Direct',
-    humorous: 'Humoristique',
-    persuasive: 'Persuasif/Marketing',
-    academic: 'Académique/Professionnel',
+    humorous: 'Humouristique',
+    detailed: 'Détaillé/Sincère',
+    emotional: 'Émotionnel/Accessible',
     platform: 'Plateforme cible',
-    platformGeneral: 'Générale',
-    platformShopify: 'Shopify',
-    platformInstagram: 'Instagram',
-    platformFacebook: 'Facebook',
-    platformX: 'X',
-    generate: '✨ Générer',
+    platformTaobao: 'Taobao',
+    platformJD: 'JD',
+    platformAmazon: 'Amazon',
+    platformPinduoduo: 'Pinduoduo',
+    platformWaimai: 'Livraison de nourriture',
+    generate: '✨ Générer avis',
     loading: 'Génération...',
-    copy: 'Texte',
+    review: 'Avis',
     why: 'Pourquoi ça marche',
     copyCopy: 'Copier',
     copied: 'Copié',
@@ -163,34 +159,33 @@ const i18n: Record<string, Record<string, string>> = {
     required: 'Champ requis',
   },
   es: {
-    title: 'Redactor AI',
-    subtitle: 'Ingresa detalles del producto y genera contenido de marketing de alta calidad',
+    title: 'Generador de Reseñas AI',
+    subtitle: 'Ingresa detalles del producto y genera reseñas de alta calidad',
     product: 'Nombre del producto',
-    productPlaceholder: 'Ingresa el nombre de tu producto...',
-    selling: 'Puntos de venta',
-    sellingPlaceholder: 'Ingresa los puntos de venta de tu producto, se admite varias líneas...',
-    type: 'Tipo de texto',
-    typeAdHeadline: 'Título de anuncio',
-    typeProductDesc: 'Descripción del producto',
-    typeSocialPost: 'Publicación social',
-    typeEmailSubject: 'Asunto de correo',
-    typeLandingHero: 'Hero landing',
+    productPlaceholder: 'Ingresa el nombre del producto...',
+    selling: 'Características',
+    sellingPlaceholder: 'Describe las características, se admite varias líneas...',
+    type: 'Tipo de reseña',
+    typePositive: 'Positiva',
+    typeNegative: 'Negativa',
+    typeNeutral: 'Neutral',
+    typeHumorous: 'Humorística',
+    typeProfessional: 'Profesional',
     tone: 'Estilo de tono',
-    formal: 'Formal/Negocios',
-    friendly: 'Amigable/Informal',
+    friendly: 'Amigable/Caluroso',
     concise: 'Conciso/Directo',
     humorous: 'Humorístico',
-    persuasive: 'Persuasivo/Marketing',
-    academic: 'Académico/Profesional',
+    detailed: 'Detallado/Sincero',
+    emotional: 'Emocional/Accesible',
     platform: 'Plataforma objetivo',
-    platformGeneral: 'General',
-    platformShopify: 'Shopify',
-    platformInstagram: 'Instagram',
-    platformFacebook: 'Facebook',
-    platformX: 'X',
-    generate: '✨ Generar',
+    platformTaobao: 'Taobao',
+    platformJD: 'JD',
+    platformAmazon: 'Amazon',
+    platformPinduoduo: 'Pinduoduo',
+    platformWaimai: 'Entrega de comida',
+    generate: '✨ Generar reseña',
     loading: 'Generando...',
-    copy: 'Texto',
+    review: 'Reseña',
     why: '¿Por qué funciona?',
     copyCopy: 'Copiar',
     copied: 'Copiado',
@@ -201,34 +196,33 @@ const i18n: Record<string, Record<string, string>> = {
     required: 'Campo obligatorio',
   },
   ar: {
-    title: 'مُنشئ النصوص التسويقية',
-    subtitle: 'أدخل تفاصيل المنتج وإنشاء نصوص تسويقية عالية الجودة',
+    title: 'مُنشئ التقييمات بالذكاء الاصطناعي',
+    subtitle: 'أدخل تفاصيل المنتج وإنشاء تقييمات عالية الجودة',
     product: 'اسم المنتج',
-    productPlaceholder: 'أدخل اسم منتجك...',
-    selling: 'نقاط البيع',
-    sellingPlaceholder: 'أدخل نقاط بيع منتجك، يدعم الأسطر المتعددة...',
-    type: 'نوع النص',
-    typeAdHeadline: 'عنوان الإعلان',
-    typeProductDesc: 'وصف المنتج',
-    typeSocialPost: 'منشور اجتماعي',
-    typeEmailSubject: 'موضوع البريد',
-    typeLandingHero: 'هيرو اللاندنج',
+    productPlaceholder: 'أدخل اسم المنتج...',
+    selling: 'الميزات',
+    sellingPlaceholder: 'صف الميزات، يدعم الأسطر المتعددة...',
+    type: 'نوع التقييم',
+    typePositive: 'إيجابي',
+    typeNegative: 'سلبي',
+    typeNeutral: 'محايد',
+    typeHumorous: 'مزح',
+    typeProfessional: 'مهني',
     tone: 'أسلوب النبرة',
-    formal: 'رسمي/تجاري',
-    friendly: 'ودود/غير رسمي',
+    friendly: 'ودود/دافئ',
     concise: 'مختصر/مباشر',
     humorous: 'مزح',
-    persuasive: 'قائل/تسويقي',
-    academic: 'أكاديمي/محترف',
+    detailed: 'مفصّل/صادق',
+    emotional: 'عاطفي/قابل للوصول',
     platform: 'المنصة المستهدفة',
-    platformGeneral: 'عام',
-    platformShopify: 'شوبيفاي',
-    platformInstagram: 'إنستغرام',
-    platformFacebook: 'فيسبوك',
-    platformX: 'X',
-    generate: '✨ إنشاء النص',
+    platformTaobao: 'تاوباو',
+    platformJD: 'JD',
+    platformAmazon: 'أمازون',
+    platformPinduoduo: 'بينغدو',
+    platformWaimai: 'التوصيلات',
+    generate: '✨ إنشاء تقييم',
     loading: 'جاري الإنشاء...',
-    copy: 'النص',
+    review: 'التقييم',
     why: 'لماذا هذا يعمل',
     copyCopy: 'نسخ',
     copied: 'تم النسخ',
@@ -241,41 +235,40 @@ const i18n: Record<string, Record<string, string>> = {
 };
 
 const TONES = [
-  { key: 'formal', color: 'from-blue-500 to-indigo-600' },
   { key: 'friendly', color: 'from-green-500 to-emerald-600' },
   { key: 'concise', color: 'from-gray-500 to-gray-700' },
   { key: 'humorous', color: 'from-pink-500 to-rose-600' },
-  { key: 'persuasive', color: 'from-orange-500 to-amber-600' },
-  { key: 'academic', color: 'from-purple-500 to-violet-600' },
+  { key: 'detailed', color: 'from-blue-500 to-indigo-600' },
+  { key: 'emotional', color: 'from-purple-500 to-violet-600' },
 ];
 
-const COPY_TYPES = [
-  { key: 'ad-headline', icon: MessageSquare },
-  { key: 'product-description', icon: PenLine },
-  { key: 'social-post', icon: Globe },
-  { key: 'email-subject', icon: Target },
-  { key: 'landing-hero', icon: Sparkles },
+const REVIEW_TYPES = [
+  { key: 'positive', icon: ThumbsUp },
+  { key: 'negative', icon: ThumbsDown },
+  { key: 'neutral', icon: MessageCircle },
+  { key: 'humorous', icon: Sparkles },
+  { key: 'professional', icon: Star },
 ];
 
 const PLATFORMS = [
-  { key: 'general', label: 'platformGeneral' },
-  { key: 'shopify', label: 'platformShopify' },
-  { key: 'instagram', label: 'platformInstagram' },
-  { key: 'facebook', label: 'platformFacebook' },
-  { key: 'x', label: 'platformX' },
+  { key: 'taobao', label: 'platformTaobao' },
+  { key: 'jd', label: 'platformJD' },
+  { key: 'amazon', label: 'platformAmazon' },
+  { key: 'pinduoduo', label: 'platformPinduoduo' },
+  { key: 'waimai', label: 'platformWaimai' },
 ];
 
-interface CopyItem {
+interface ReviewItem {
   copy: string;
   why: string;
 }
 
 interface GenerateResult {
-  items: CopyItem[];
+  items: ReviewItem[];
   remaining: number | null;
 }
 
-export default function AiCopywriterTool({ locale = 'zh' }: AiCopywriterToolProps) {
+export default function AiReviewGeneratorTool({ locale = 'zh' }: AiReviewGeneratorToolProps) {
   const resolvedLocale = VALID_LOCALES.includes(locale) ? locale : 'zh';
   const dict = i18n[resolvedLocale] || i18n.zh;
 
@@ -283,9 +276,9 @@ export default function AiCopywriterTool({ locale = 'zh' }: AiCopywriterToolProp
 
   const [product, setProduct] = useState('');
   const [selling, setSelling] = useState('');
-  const [selectedType, setSelectedType] = useState('ad-headline');
-  const [selectedTone, setSelectedTone] = useState('persuasive');
-  const [selectedPlatform, setSelectedPlatform] = useState('general');
+  const [selectedType, setSelectedType] = useState('positive');
+  const [selectedTone, setSelectedTone] = useState('friendly');
+  const [selectedPlatform, setSelectedPlatform] = useState('taobao');
   const [result, setResult] = useState<GenerateResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -364,7 +357,7 @@ export default function AiCopywriterTool({ locale = 'zh' }: AiCopywriterToolProp
       <div className='card p-4 sm:p-6'>
         <div className='flex items-center gap-3 mb-4 sm:mb-6'>
           <div className='p-2 sm:p-3 rounded-lg bg-gradient-to-br from-orange-500 to-red-500 text-white shadow-lg shadow-orange-500/25'>
-            <PenLine className='h-5 w-5 sm:h-6 sm:w-6' />
+            <Star className='h-5 w-5 sm:h-6 sm:w-6' />
           </div>
           <div>
             <h1 className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>{t('title')}</h1>
@@ -413,7 +406,7 @@ export default function AiCopywriterTool({ locale = 'zh' }: AiCopywriterToolProp
               {t('type')}
             </label>
             <div className='grid grid-cols-2 sm:grid-cols-5 gap-2'>
-              {COPY_TYPES.map((typeItem) => {
+              {REVIEW_TYPES.map((typeItem) => {
                 const Icon = typeItem.icon;
                 return (
                   <button
@@ -426,7 +419,7 @@ export default function AiCopywriterTool({ locale = 'zh' }: AiCopywriterToolProp
                     }`}
                   >
                     <Icon className='h-4 w-4' />
-                    {t(`type${typeItem.key.charAt(0).toUpperCase() + typeItem.key.slice(1).replace(/-/g, '')}`)}
+                    {t(`type${typeItem.key.charAt(0).toUpperCase() + typeItem.key.slice(1)}`)}
                   </button>
                 );
               })}
@@ -437,12 +430,12 @@ export default function AiCopywriterTool({ locale = 'zh' }: AiCopywriterToolProp
             <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
               {t('tone')}
             </label>
-            <div className='grid grid-cols-2 sm:grid-cols-3 gap-2'>
+            <div className='grid grid-cols-2 sm:grid-cols-5 gap-2'>
               {TONES.map((toneItem) => (
                 <button
                   key={toneItem.key}
                   onClick={() => setSelectedTone(toneItem.key)}
-                  className={`min-h-[44px] px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`min-h-[44px] px-3 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
                     selectedTone === toneItem.key
                       ? `text-white bg-gradient-to-br ${toneItem.color} shadow-md scale-[1.02]`
                       : 'bg-gray-50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700'
@@ -496,7 +489,7 @@ export default function AiCopywriterTool({ locale = 'zh' }: AiCopywriterToolProp
 
           {result && result.items.length > 0 && (
             <div className='space-y-4 sm:space-y-6'>
-              <h3 className='text-sm sm:text-base font-semibold text-gray-900 dark:text-gray-100'>{t('copy')}</h3>
+              <h3 className='text-sm sm:text-base font-semibold text-gray-900 dark:text-gray-100'>{t('review')}</h3>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6'>
                 {result.items.map((item, index) => (
                   <div
@@ -505,7 +498,7 @@ export default function AiCopywriterTool({ locale = 'zh' }: AiCopywriterToolProp
                   >
                     <div className='flex items-center justify-between mb-3'>
                       <span className='px-2 py-1 rounded-md bg-orange-100 dark:bg-orange-900/30 text-xs font-semibold text-orange-700 dark:text-orange-300'>
-                        {t('copy')} #{index + 1}
+                        {t('review')} #{index + 1}
                       </span>
                       <button
                         onClick={() => handleCopy(item.copy, index)}

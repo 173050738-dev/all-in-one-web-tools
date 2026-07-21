@@ -521,6 +521,254 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
         }
 
+        case '/api/competitor-analyzer':
+        case '/api/competitor-analyzer/': {
+          const competitors = payload.competitors as any[];
+          if (!competitors || !Array.isArray(competitors) || competitors.length === 0) return errJson('Competitors data is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const competitorText = competitors.map((c: any, i: number) => 
+            `${i + 1}. 名称: ${c.name || '未命名'}, 链接: ${c.url || '无'}, 价格: ${c.price || '未定价'}, 评分: ${c.rating || '无'}, 评价数: ${c.reviews || '无'}`
+          ).join('\n');
+
+          const systemPrompt = `你是一个专业的电商竞品分析专家。根据用户提供的竞品信息，进行全面的竞品分析。
+
+分析内容包括：
+1. 价格分析：对比各竞品的价格水平，判断价位等级（低价/中价/高价/高端）
+2. 评价分析：分析评分和评价数，判断好评率
+3. 关键词分析：从产品名称中提取核心关键词，找出Top 5关键词
+4. 卖点分析：分析各竞品的强势卖点和薄弱点
+5. 优化建议：基于分析结果，给出具体的优化建议
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "avgPrice": 平均价格数值,
+  "totalCompetitors": 竞品数量,
+  "competitors": [
+    {
+      "name": "竞品名称",
+      "price": "价格",
+      "rating": "评分",
+      "reviews": "评价数",
+      "priceLevel": "low|medium|high|premium",
+      "pricePosition": "priceAbove|priceBelow|priceAverage",
+      "positiveRate": "好评率",
+      "topKeywords": ["关键词1", "关键词2", "..."],
+      "strongPoints": ["强势点1", "强势点2", "..."],
+      "weakPoints": ["薄弱点1", "薄弱点2", "..."],
+      "recommendations": ["建议1", "建议2", "..."]
+    }
+  ],
+  "summary": "总体分析总结"
+}
+
+请用 ${langLabel(locale)} 输出。确保JSON格式正确，不要包含任何markdown代码块标记。`;
+
+          const userPrompt = locale === 'zh'
+            ? `竞品信息：\n${competitorText}\n\n请进行全面的竞品分析并按JSON格式返回。`
+            : locale === 'es'
+            ? `Información de competidores:\n${competitorText}\n\nRealice un análisis completo de competidores y devuelva en formato JSON.`
+            : locale === 'fr'
+            ? `Informations sur les concurrents:\n${competitorText}\n\nEffectuez une analyse complète des concurrents et retournez au format JSON.`
+            : locale === 'hi'
+            ? `प्रतिस्पर्धी की जानकारी:\n${competitorText}\n\nप्रतिस्पर्धियों का पूर्ण विश्लेषण करें और JSON प्रारूप में लौटाएं।`
+            : locale === 'ar'
+            ? `معلومات المنافسين:\n${competitorText}\n\nقم بإجراء تحليل شامل للمنافسين وارجع بالتنسيق JSON.`
+            : `Competitor information:\n${competitorText}\n\nPerform a comprehensive competitor analysis and return in JSON format.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          return json({ ...result, remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/keyword-analyzer':
+        case '/api/keyword-analyzer/': {
+          const keywords = payload.keywords as string[];
+          if (!keywords || !Array.isArray(keywords) || keywords.length === 0) return errJson('Keywords data is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const keywordsText = keywords.map((k: string, i: number) => `${i + 1}. ${k}`).join('\n');
+
+          const systemPrompt = `你是一个专业的电商SEO关键词分析专家。根据用户提供的关键词，进行全面的关键词分析。
+
+分析内容包括：
+1. 搜索量预估：根据关键词热度给出搜索量等级（高/中/低）
+2. 竞争度分析：评估关键词竞争程度（激烈/中等/低）
+3. 出价建议：根据竞争度给出建议出价范围
+4. 相关性分析：分析关键词之间的关联度
+5. 长尾词推荐：为每个关键词推荐3-5个相关长尾词
+6. 语义扩展：扩展相关语义关键词
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "totalKeywords": 关键词总数,
+  "keywords": [
+    {
+      "keyword": "关键词",
+      "searchVolume": "搜索量等级(low|medium|high)",
+      "competition": "竞争度(low|medium|high|veryHigh)",
+      "suggestedBid": "建议出价",
+      "difficulty": 难度分数(1-100),
+      "relatedKeywords": ["相关词1", "相关词2", "..."],
+      "longTailKeywords": ["长尾词1", "长尾词2", "..."],
+      "semanticKeywords": ["语义扩展词1", "..."],
+      "intention": "用户意图(informational|navigational|transactional|commercial)"
+    }
+  ],
+  "summary": "总体分析总结"
+}
+
+请用 ${langLabel(locale)} 输出。确保JSON格式正确，不要包含任何markdown代码块标记。`;
+
+          const userPrompt = locale === 'zh'
+            ? `关键词列表：\n${keywordsText}\n\n请进行全面的关键词分析并按JSON格式返回。`
+            : locale === 'es'
+            ? `Lista de palabras clave:\n${keywordsText}\n\nRealice un análisis completo de palabras clave y devuelva en formato JSON.`
+            : locale === 'fr'
+            ? `Liste de mots clés:\n${keywordsText}\n\nEffectuez une analyse complète des mots clés et retournez au format JSON.`
+            : locale === 'hi'
+            ? `कीवर्ड सूची:\n${keywordsText}\n\nकीवर्डों का पूर्ण विश्लेषण करें और JSON प्रारूप में लौटाएं।`
+            : locale === 'ar'
+            ? `قائمة الكلمات المفتاحية:\n${keywordsText}\n\nقم بإجراء تحليل شامل للكلمات المفتاحية وارجع بالتنسيق JSON.`
+            : `Keyword list:\n${keywordsText}\n\nPerform a comprehensive keyword analysis and return in JSON format.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          return json({ ...result, remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/email-template-generator':
+        case '/api/email-template-generator/': {
+          const { subject, product, audience, tone } = payload;
+          if (!subject || !product) return errJson('Subject and product are required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const systemPrompt = `你是一个专业的邮件营销专家。根据用户提供的主题、产品信息、目标受众和语气，生成高质量的邮件模板。
+
+生成内容包括：
+1. 邮件主题行（3个变体）
+2. 邮件正文（完整的HTML格式邮件内容）
+3. 邮件签名
+4. 行动号召（CTA）
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "subjects": ["主题1", "主题2", "主题3"],
+  "body": "邮件正文内容（包含段落、列表、加粗等格式）",
+  "signature": "邮件签名",
+  "cta": "行动号召文案",
+  "tips": ["优化建议1", "优化建议2", "..."]
+}
+
+请用 ${langLabel(locale)} 输出。确保JSON格式正确，不要包含任何markdown代码块标记。`;
+
+          const userPrompt = locale === 'zh'
+            ? `邮件主题：${subject}\n产品信息：${product}\n目标受众：${audience || '普通消费者'}\n语气风格：${tone || '专业友好'}\n\n请生成高质量的邮件模板并按JSON格式返回。`
+            : locale === 'es'
+            ? `Asunto del correo: ${subject}\nInformación del producto: ${product}\nPúblico objetivo: ${audience || 'consumidores generales'}\nTono: ${tone || 'profesional y amigable'}\n\nGenera una plantilla de correo de alta calidad y devuelve en formato JSON.`
+            : locale === 'fr'
+            ? `Objet du mail: ${subject}\nInformations sur le produit: ${product}\nPublic cible: ${audience || 'consommateurs généraux'}\nTonalité: ${tone || 'professionnelle et amicale'}\n\nGénérez un modèle de courrier électronique de haute qualité et retournez au format JSON.`
+            : locale === 'hi'
+            ? `ईमेल विषय: ${subject}\nउत्पाद जानकारी: ${product}\nलक्षित दर्शक: ${audience || 'सामान्य उपभोक्ता'}\nस्वर शैली: ${tone || 'पेशेवर और दोस्ताना'}\n\nउच्च गुणवत्ता का ईमेल टेम्पलेट उत्पन्न करें और JSON प्रारूप में लौटाएं।`
+            : locale === 'ar'
+            ? `موضوع البريد: ${subject}\nمعلومات المنتج: ${product}\nالجمهور المستهدف: ${audience || 'المستهلكون العاديون'}\nالنبرة: ${tone || 'محترفة ودружية'}\n\nقم بإنشاء قالب بريد إلكتروني عالي الجودة وارجع بالتنسيق JSON.`
+            : `Email subject: ${subject}\nProduct information: ${product}\nTarget audience: ${audience || 'general consumers'}\nTone: ${tone || 'professional and friendly'}\n\nGenerate a high-quality email template and return in JSON format.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          return json({ ...result, remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/time-estimator':
+        case '/api/time-estimator/': {
+          const task = payload.task as string;
+          const complexity = (payload.complexity as string) || 'medium';
+          const experience = (payload.experience as string) || 'medium';
+          if (!task?.trim()) return errJson('Task description is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const systemPrompt = `你是一个专业的项目管理和工时估算专家。根据用户提供的任务描述、复杂度和经验水平，进行准确的工时估算。
+
+估算内容包括：
+1. 总工时估算（小时）
+2. 分解任务步骤及每个步骤的工时
+3. 潜在风险和意外情况的缓冲时间
+4. 建议的进度安排
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "totalHours": 总工时数值,
+  "totalDays": 总工作日数,
+  "hoursPerDay": 每天工作小时数,
+  "breakdown": [
+    {
+      "step": "任务步骤",
+      "hours": 预估工时,
+      "description": "步骤描述"
+    }
+  ],
+  "bufferHours": 缓冲时间（小时）,
+  "bufferPercentage": 缓冲百分比,
+  "riskFactors": ["风险因素1", "风险因素2", "..."],
+  "recommendations": ["建议1", "建议2", "..."],
+  "summary": "估算总结"
+}
+
+请用 ${langLabel(locale)} 输出。确保JSON格式正确，不要包含任何markdown代码块标记。`;
+
+          const userPrompt = locale === 'zh'
+            ? `任务描述：${task}\n复杂度：${complexity}\n经验水平：${experience}\n\n请进行专业的工时估算并按JSON格式返回。`
+            : locale === 'es'
+            ? `Descripción de la tarea: ${task}\nComplejidad: ${complexity}\nNivel de experiencia: ${experience}\n\nRealice una estimación de horas profesional y devuelva en formato JSON.`
+            : locale === 'fr'
+            ? `Description de la tâche: ${task}\nComplexité: ${complexity}\nNiveau d'expérience: ${experience}\n\nEffectuez une estimation professionnelle du temps et retournez au format JSON.`
+            : locale === 'hi'
+            ? `कार्य विवरण: ${task}\nजटिलता: ${complexity}\nअनुभव स्तर: ${experience}\n\nपेशेवर टाइम एस्टीमेशन करें और JSON प्रारूप में लौटाएं।`
+            : locale === 'ar'
+            ? `وصف المهمة: ${task}\nالمعقدة: ${complexity}\nمستوى الخبرة: ${experience}\n\nقم بإجراء تقدير وقت احترافي وارجع بالتنسيق JSON.`
+            : `Task description: ${task}\nComplexity: ${complexity}\nExperience level: ${experience}\n\nPerform a professional time estimate and return in JSON format.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          return json({ ...result, remaining: rateLimitResult.remaining });
+        }
+
         default:
           return errJson('Not found', 404);
       }
