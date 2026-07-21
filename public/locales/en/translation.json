@@ -714,8 +714,8 @@
       }
     },
     "emoji-mixer": {
-      "name": "Emoji Mixer",
-      "description": "Mix two emojis into a brand-new one! An incredibly fun emoji factory with endless creativity. One-click copy & share.",
+      "name": "Emoji Mixer — Combine Two Emojis into One",
+      "description": "Mix any two emojis into a brand-new hybrid one! An incredibly fun emoji factory with endless creativity. Generate transparent PNG stickers instantly in your browser, one-click copy & share. No signup.",
       "seo": {
         "intro": "Emoji Mixer is a free fun in-browser creative tool that combines two standard emojis into a brand-new blended hybrid emoji sticker you can share as a transparent PNG. Pick any two emojis from the built-in picker — for example cat + 🎂 cake or 🐶 dog + 🚀 rocket — and the mixer will render a fused hybrid emoji mashup combining colors, shapes, and iconography of both inputs. The whole render happens client-side in Canvas, so no sign-in or upload needed and every new mashup is generated instantly right in the page.",
         "scenarios": [
@@ -1365,7 +1365,44 @@
     },
     "qr-code-generator": {
       "name": "QR Code Generator",
-      "description": "Create custom QR codes online with colors, logos and size options. One-click high-res PNG download — ideal for URLs, text, WiFi and more."
+      "description": "Create custom QR codes online with colors, logos and size options. One-click high-res PNG download — ideal for URLs, text, WiFi and more.",
+      "seo": {
+        "intro": "QR Code Generator is a free online tool that creates custom QR codes for URLs, text, WiFi credentials, contact info, and more. Customize foreground and background colors, embed a logo in the center, and choose from multiple sizes — then download a high-resolution PNG in one click. All generation runs locally in your browser, so your links and content never leave your device.",
+        "scenarios": [
+          "Sharing a restaurant menu, product page, or event registration link as a scannable QR code on printed materials",
+          "Embedding WiFi credentials into a QR code so guests can connect by scanning instead of typing a long password",
+          "Adding a branded QR code with a company logo to business cards, flyers, or packaging"
+        ],
+        "tutorial": [
+          "Choose the QR code type (URL, text, WiFi, email, etc.) and enter the destination content",
+          "Customize colors, size, and optionally upload a logo to place in the center",
+          "Preview the QR code in real time and scan-test it with your phone camera",
+          "Click Download to save a high-resolution PNG ready for print or web"
+        ],
+        "advantages": [
+          "Generates QR codes locally in the browser — no upload, no server log, fully private",
+          "Supports logo embedding and full color customization while keeping the code scannable",
+          "Exports high-resolution PNGs suitable for both digital displays and print materials"
+        ],
+        "faqs": [
+          {
+            "q": "Will my QR code still scan if I add a logo in the center?",
+            "a": "Yes. The tool keeps error-correction at a high level, so a small logo (about 15-20% of the code area) in the center does not prevent scanning. Always do a scan test before printing in bulk."
+          },
+          {
+            "q": "Do QR codes generated here expire?",
+            "a": "No. The QR code encodes your content directly — it does not pass through any redirect or shortener. As long as the destination URL or text is valid, the code will work forever."
+          },
+          {
+            "q": "Can I use the downloaded PNG for commercial print?",
+            "a": "Yes. The PNG is exported at high resolution with no watermark. You can use it on business cards, packaging, posters, or any commercial material without attribution."
+          },
+          {
+            "q": "Is there a limit on how many QR codes I can generate?",
+            "a": "No limit. Generate as many as you need, completely free, with no sign-up required."
+          }
+        ]
+      }
     },
     "excel-formula-generator": {
       "name": "Excel Formula Generator",
@@ -5869,8 +5906,8 @@
       }
     },
     "multi-timezone-publish-time": {
-      "name": "Multi-Timezone Publish Time Calculator",
-      "description": "Free multi-timezone publish time calculator: find the best time to post across LA, NYC, London, Tokyo, Sydney & 12+ zones with DST auto-correction. No signup, 100% in-browser.",
+      "name": "Multi-Timezone Publish Time Calculator — Best Time to Post",
+      "description": "Free multi-timezone publish time calculator: find the best time to post across LA, NYC, London, Tokyo, Sydney and 12+ zones with DST auto-correction. Visualize fan-active hour overlap to pick the optimal publish slot. No signup.",
       "seo": {
         "intro": "Timezone Timer (Multi-Timezone Publish Time Calculator) is a free browser-based tool for cross-border creators and brand social teams that converts a single ideal posting time slot into the exact wall-clock hour for 12+ common global timezones and major cities — including DST/夏令时 auto-correction. Pick a home timezone, choose your best-performing audience active hour, and the timer will show you when to press 'post' for followers in Los Angeles, New York, London, Paris, Berlin, Dubai, Mumbai, Singapore, Tokyo, Seoul, Beijing, Sydney, and São Paulo — with no API calls and no signup.",
         "scenarios": [
@@ -5914,8 +5951,8 @@
       }
     },
     "wc-2026-schedule": {
-      "name": "World Cup 2026 Schedule",
-      "description": "Free FIFA World Cup 2026 schedule: all 104 matches, kick-off times in 9 time zones, group tables & knockout bracket. Export to iCal/CSV, no signup.",
+      "name": "World Cup 2026 Schedule & Kick-off Times",
+      "description": "Free FIFA World Cup 2026 schedule: all 104 matches across USA, Canada and Mexico, kick-off times in 9 time zones, group tables, knockout bracket and team fixtures. Export to iCal/CSV, no signup.",
       "seo": {
         "intro": "2026 FIFA World Cup Schedule Browser is a free in-browser full 104-match fixture, kick-off time, venue, ticket, group-table and knockout bracket tool for the 2026 USA–Canada–Mexico World Cup, built for football fans, sports bettors, sports-bar managers, World Cup party planners and corporate office admin teams organising watch-parties & themed afternoon teas. No VPN to reach FIFA.com, no app to install, open-and-use. Supports all 16 host cities, all 48 teams, 9 time-zone toggles (ET / PT / your local zone + London / Berlin / Shanghai / Tokyo / New Delhi / Cairo / Mexico City / Toronto), stage filters (group / R16 / QF / SF / 3rd / Final), instant group tables, 'Save My Teams' favourites, one-click iCal export to phone calendar, and CSV/Markdown export to Notion or Excel — solving the real 'when/where is the match I care about, what's my local kick-off, should I book a day off' fan workflow.",
         "scenarios": [
@@ -8190,19 +8227,567 @@
     },
     "competitor-analyzer": {
       "name": "Competitor Analyzer",
-      "description": "E-commerce competitor analysis tool. Input competitor info, analyze pricing, keywords, strengths/weaknesses, and generate optimization suggestions."
+      "description": "E-commerce competitor analysis tool. Input competitor info, analyze pricing, keywords, strengths/weaknesses, and generate optimization suggestions.",
+      "seo": {
+        "intro": "Competitor Analyzer is a free online tool for e-commerce sellers to study rival products and stores. Enter a competitor's product link or store info, and the tool walks you through analyzing pricing strategy, keyword coverage, listing strengths and weaknesses, and review sentiment — then produces concrete optimization suggestions for your own listings. Everything runs in your browser, so sensitive store data never leaves your device.",
+        "scenarios": [
+          "Benchmarking a competing Amazon or Shopify listing before launching a similar product",
+          "Identifying pricing gaps and keyword opportunities when your listing underperforms a rival",
+          "Auditing a competitor's review themes to find weaknesses you can position against"
+        ],
+        "tutorial": [
+          "Paste the competitor's product URL or store info into the input field",
+          "Select the dimensions to analyze: price, keywords, listing copy, reviews, or all of the above",
+          "Review the generated analysis covering strengths, weaknesses, and gaps",
+          "Apply the suggested optimizations to your own listing copy, pricing, or keyword strategy"
+        ],
+        "advantages": [
+          "Structured analysis framework — covers pricing, keywords, copy, and reviews in one pass",
+          "Returns concrete optimization actions instead of vague observations",
+          "Runs locally in the browser — no store login, no API keys, no data upload"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need to connect my store account or API to use this tool?",
+            "a": "No. The tool works from publicly visible competitor info that you paste in. There is no store connection, OAuth login, or API key required."
+          },
+          {
+            "q": "Can it analyze competitors on any platform?",
+            "a": "It works with any e-commerce platform where you can view the product listing publicly — Amazon, Shopify, eBay, Etsy, Shopee, AliExpress and others. Paste the product URL and the analysis covers whatever is visible on the page."
+          },
+          {
+            "q": "How accurate is the keyword and pricing analysis?",
+            "a": "The tool uses the listing content you provide as input. The more complete the input (title, bullets, reviews, price history), the more accurate the analysis. Always validate suggestions against your own market data before acting."
+          },
+          {
+            "q": "Is my competitor data stored anywhere?",
+            "a": "No. All analysis runs in your browser session and is discarded when you close the tab. Nothing is uploaded to a server."
+          }
+        ]
+      }
     },
     "keyword-analyzer": {
       "name": "Keyword Analyzer",
-      "description": "E-commerce keyword analysis tool. Analyze search volume, competition, suggested bids to optimize SEO and ad campaigns."
+      "description": "E-commerce keyword analysis tool. Analyze search volume, competition, suggested bids to optimize SEO and ad campaigns.",
+      "seo": {
+        "intro": "Keyword Analyzer is a free online tool that helps e-commerce sellers and content creators evaluate search keywords before committing budget. Enter a list of target keywords and the tool analyzes search volume, competition level, and suggested bid to surface high-ROI opportunities and filter out saturated terms. Results are returned in a sortable table you can export for your SEO or ad planning workflow. All processing happens locally — no account, no API key, no data upload.",
+        "scenarios": [
+          "Filtering a long keyword list to find low-competition terms worth writing blog posts or product pages for",
+          "Comparing suggested bids across keywords to plan a Google Ads or shopping ad budget",
+          "Auditing your existing product page keywords against actual search demand before a listing refresh"
+        ],
+        "tutorial": [
+          "Paste your keyword list (one per line, or comma-separated) into the input box",
+          "Optionally add a target market or language to refine the analysis",
+          "Click Analyze and review the sortable table — search volume, competition, suggested bid, opportunity score",
+          "Filter or sort to shortlist the best keywords, then export the result as CSV or JSON"
+        ],
+        "advantages": [
+          "Returns volume, competition, and bid estimates in one view — no need to jump between multiple tools",
+          "Computes an opportunity score so you can prioritize without spreadsheet gymnastics",
+          "No sign-up, no API key — paste keywords and get results immediately, fully in-browser"
+        ],
+        "faqs": [
+          {
+            "q": "Where does the search volume and bid data come from?",
+            "a": "The tool uses public keyword indices and your inputs to estimate volume, competition, and suggested bid. For exact campaign-level numbers, always cross-check with Google Keyword Planner or your ad platform's official data before spending budget."
+          },
+          {
+            "q": "How many keywords can I analyze at once?",
+            "a": "You can analyze up to a few hundred keywords in a single batch. For very large lists, split into smaller batches for clearer results."
+          },
+          {
+            "q": "Can I export the analysis results?",
+            "a": "Yes. The shortlisted table can be exported as CSV for spreadsheets or JSON for piping into other tools and workflows."
+          },
+          {
+            "q": "Does this tool support non-English keywords?",
+            "a": "Yes. The analyzer accepts keywords in any language and supports major markets including English, Spanish, French, Arabic, Hindi, and Chinese."
+          }
+        ]
+      }
     },
     "email-template-generator": {
       "name": "Email Template Generator",
-      "description": "E-commerce email marketing template generator. Supports welcome emails, promotional emails, reminder emails and more. Generate ready-to-use email content in one click."
+      "description": "E-commerce email marketing template generator. Supports welcome emails, promotional emails, reminder emails and more. Generate ready-to-use email content in one click.",
+      "seo": {
+        "intro": "Email Template Generator is a free online tool that produces ready-to-send e-commerce email content in one click. Pick from welcome emails, promotional blasts, cart-abandonment reminders, post-purchase follow-ups, or re-engagement campaigns — fill in a few fields about your product and offer, and the tool generates a polished, on-brand email body with subject line, preview text, and call-to-action. Everything runs locally in your browser; no sign-up, no email service connection, no data leaves your device.",
+        "scenarios": [
+          "Drafting a welcome email for new newsletter subscribers without staring at a blank editor",
+          "Generating cart-abandonment reminder variants to A/B test subject lines and CTAs",
+          "Producing a promotional email for a flash sale in minutes when you have a product link and discount code"
+        ],
+        "tutorial": [
+          "Choose the email type: welcome, promotional, reminder, follow-up, or re-engagement",
+          "Fill in the product name, offer details, brand voice, and call-to-action link",
+          "Click Generate and review the subject line, preview text, and email body",
+          "Copy the HTML or plain-text output into your email service provider (Mailchimp, Klaviyo, Sendgrid, etc.)"
+        ],
+        "advantages": [
+          "Covers five high-ROI e-commerce email types in one tool — no need for a separate template pack",
+          "Generates subject line and preview text alongside the body, so the email is ready to send",
+          "No ESP connection or API key — output is plain text/HTML you can paste anywhere"
+        ],
+        "faqs": [
+          {
+            "q": "Can I edit the generated email before sending?",
+            "a": "Yes. The output is plain text and HTML in an editable field — tweak copy, swap CTAs, or restructure paragraphs before copying to your ESP."
+          },
+          {
+            "q": "Does this tool send emails on my behalf?",
+            "a": "No. The tool only generates the email content. Sending is handled by your own ESP (Mailchimp, Klaviyo, Sendgrid, etc.) — paste the generated content there."
+          },
+          {
+            "q": "Can I generate emails in multiple languages?",
+            "a": "Yes. The tool UI supports six languages (English, Chinese, Spanish, French, Hindi, Arabic) and the generated email body matches the selected interface language."
+          },
+          {
+            "q": "Is there a limit on how many emails I can generate?",
+            "a": "No limit. Generate as many variants as you need for A/B testing — completely free, no sign-up required."
+          }
+        ]
+      }
     },
     "review-generator": {
       "name": "Review Generator",
-      "description": "E-commerce product review generator. Input product name and features, automatically generate multiple user reviews in different styles to optimize product page content."
+      "description": "E-commerce product review generator. Input product name and features, automatically generate multiple user reviews in different styles to optimize product page content.",
+      "seo": {
+        "intro": "Review Generator is a free online tool that produces realistic product reviews for e-commerce listings. Enter the product name and a few key features, choose the review style (positive, neutral, critical, or mixed lengths), and the tool generates multiple review drafts that you can use to seed product page content, train review analysis models, or benchmark sentiment. All generation runs in your browser — no product data is uploaded.",
+        "scenarios": [
+          "Seeding a new product page with sample reviews before real buyers leave feedback",
+          "Generating test review datasets to train or benchmark sentiment analysis models",
+          "Drafting review-style social proof snippets for ad creative or landing pages"
+        ],
+        "tutorial": [
+          "Enter the product name and 2-3 key features or use cases",
+          "Choose the review style: positive, neutral, critical, or a mix of all three",
+          "Select how many reviews to generate in one batch",
+          "Copy the generated reviews to your product page, dataset, or marketing collateral"
+        ],
+        "advantages": [
+          "Produces multiple review variants in one click — useful for A/B testing product page content",
+          "Supports positive, neutral, and critical tones so you can model the full sentiment spectrum",
+          "No upload, no account — runs fully in your browser, sensitive product info stays private"
+        ],
+        "faqs": [
+          {
+            "q": "Is it ethical to use generated reviews on a live product page?",
+            "a": "Generated reviews should be used for internal testing, model training, or placeholder content during development. Posting fabricated reviews as real customer feedback on live stores violates the policies of most e-commerce platforms and may breach local consumer protection laws."
+          },
+          {
+            "q": "Can the generated reviews be detected as fake?",
+            "a": "Most modern review platforms use automated filters that flag synthetic content. The tool is intended for legitimate use cases — testing, training, mockups — not for deceiving real buyers."
+          },
+          {
+            "q": "How many reviews can I generate in one batch?",
+            "a": "You can generate up to 20 reviews per batch. For larger datasets, run multiple batches and deduplicate as needed."
+          },
+          {
+            "q": "Does the tool support reviews in languages other than English?",
+            "a": "Yes. The interface supports six languages and the generated reviews match the selected language, including right-to-left Arabic."
+          }
+        ]
+      }
+    },
+    "document-formatter": {
+      "name": "Document Formatter — Auto Layout for APA, MLA, Reports & Resumes",
+      "description": "Free online document formatter: paste your content, switch between APA, MLA, party-government official, business report and resume templates, preview layout in real time, export to Word/PDF. Runs in your browser, no upload.",
+      "seo": {
+        "intro": "Document Formatter is a free online tool that auto-formats pasted content into structured document templates. Switch between APA and MLA paper formats, party-government official documents, business reports, or resume templates, preview the layout in real time, then export to Word or PDF. All formatting runs locally in your browser — your draft, contract, or manuscript never leaves your device.",
+        "scenarios": [
+          "Formatting a school essay or journal submission to match APA 7th or MLA 9th edition guidelines",
+          "Drafting a party-government official document with the standard Chinese format (字体、行距、标题层级)",
+          "Polishing a resume or business report layout before exporting to PDF for submission"
+        ],
+        "tutorial": [
+          "Paste your raw text or draft content into the input area",
+          "Pick a template: APA, MLA, official document, business report, or resume",
+          "Preview the formatted layout in real time and tweak spacing or heading levels as needed",
+          "Click Export to download a Word (.docx) or PDF file ready for submission"
+        ],
+        "advantages": [
+          "Covers five common document formats in one tool — no need for separate Word templates",
+          "Real-time preview so you catch layout issues before exporting",
+          "Runs fully in the browser — sensitive drafts, contracts and personal info stay private"
+        ],
+        "faqs": [
+          {
+            "q": "Does this tool support APA 7th edition formatting?",
+            "a": "Yes. The APA template follows 7th edition guidelines including title page structure, running head, section headings, and reference list formatting. Always cross-check with your institution's specific requirements before submission."
+          },
+          {
+            "q": "Can I export the formatted document as Word or PDF?",
+            "a": "Yes. The tool exports to both .docx (editable in Word, Google Docs, Pages) and PDF (print-ready). Pick the format that matches your submission requirement."
+          },
+          {
+            "q": "Does it handle Chinese party-government official document format?",
+            "a": "Yes. The official document template follows the standard GB/T 9704 format including font (仿宋_GB2312 for body, 黑体 for headings), line spacing (28-30pt), and heading hierarchy (一、（一）、1.、（1）)."
+          },
+          {
+            "q": "Is my document content uploaded anywhere?",
+            "a": "No. All formatting runs locally in your browser. Your draft, contract, or manuscript is never sent to a server — close the tab and the content is gone."
+          }
+        ]
+      }
+    },
+    "screen-recorder-subtitle": {
+      "name": "Screen Recorder with AI Subtitles — Record & Export MP4/SRT",
+      "description": "Free in-browser screen recorder with AI auto-generated subtitles. Record screen + mic, burn captions into MP4, export SRT. 100% local processing, zero upload, full privacy.",
+      "seo": {
+        "intro": "Screen Recorder with AI Subtitles is a free online tool that captures your screen and microphone, auto-generates captions using on-device speech recognition, and exports both an MP4 with burned-in subtitles and a separate SRT file. All processing — recording, transcription, and export — happens locally in your browser, so sensitive walkthroughs, meetings, and demos never leave your device.",
+        "scenarios": [
+          "Recording a software demo or tutorial with captions for accessibility without installing OBS or Camtasia",
+          "Capturing a quick product walkthrough for a teammate with auto-transcribed subtitles burned into the video",
+          "Creating social-media-ready clips with subtitles for silent autoplay on LinkedIn, Twitter, or Instagram"
+        ],
+        "tutorial": [
+          "Click Start Recording and pick the screen or window to capture (optionally enable mic)",
+          "Perform your walkthrough or demo — the tool records screen + audio in real time",
+          "Stop recording and let the AI generate subtitles from the audio track",
+          "Review and edit the transcript if needed, then export MP4 with burned-in captions and/or SRT"
+        ],
+        "advantages": [
+          "All-in-one: recording, transcription, and subtitle burn-in happen in the browser — no install",
+          "Exports both MP4 with hard-coded captions and standalone SRT for editing in Premiere or DaVinci",
+          "Zero upload — sensitive demos, internal meetings, and customer recordings stay fully private"
+        ],
+        "faqs": [
+          {
+            "q": "Does the AI subtitle generation upload my audio?",
+            "a": "No. Speech recognition runs on-device using the browser's Web Speech API or local model. Your audio never leaves your computer — suitable for confidential meetings and internal demos."
+          },
+          {
+            "q": "Can I edit the auto-generated subtitles before exporting?",
+            "a": "Yes. After transcription the subtitle list is fully editable — fix misheard words, adjust timing, or remove sections before burning them into the MP4 or exporting SRT."
+          },
+          {
+            "q": "What video formats can I export?",
+            "a": "The primary export is MP4 (H.264) with optional burned-in captions. A separate SRT subtitle file can also be exported for use in Premiere, DaVinci Resolve, or YouTube's subtitle uploader."
+          },
+          {
+            "q": "Is there a recording time limit?",
+            "a": "No hard limit, but very long recordings (over 60 minutes) may hit browser memory limits on low-RAM devices. For hour-long sessions, record in segments and stitch them together."
+          }
+        ]
+      }
+    },
+    "ai-prompt-generator": {
+      "name": "AI Prompt Generator — Midjourney, Sora & Universal Prompts",
+      "description": "Free AI prompt generator: pick model and options, auto-build high-quality image and video prompts for Midjourney, Sora and more. One-click copy, AI polish, six-language UI. Runs in browser, no signup.",
+      "seo": {
+        "intro": "AI Prompt Generator is a free online tool that auto-builds high-quality prompts for AI image and video models. Pick the target model (Midjourney, Sora,通用 video), choose subject, style, lighting, composition and parameters, then copy the assembled prompt or use the AI polish button to refine it further. The tool runs in your browser with a six-language interface — no signup, no API key required.",
+        "scenarios": [
+          "Generating Midjourney prompts with --ar, --v, --style parameters without memorizing syntax",
+          "Building Sora video prompts with subject, motion, camera, and lighting fields pre-filled",
+          "Drafting universal AI image prompts for Stable Diffusion or DALL-E when you don't know where to start"
+        ],
+        "tutorial": [
+          "Select the target AI model: Midjourney, Sora, or universal image/video",
+          "Fill in the subject, style, lighting, composition, and parameter fields",
+          "Preview the auto-assembled prompt in real time as you tweak options",
+          "Click Copy to grab the prompt, or AI Polish to refine wording further"
+        ],
+        "advantages": [
+          "Covers Midjourney, Sora and universal prompts in one tool — no need to learn each model's syntax",
+          "Real-time prompt assembly so you see how each option changes the final output",
+          "AI polish button refines wording for clarity and detail beyond template assembly",
+          "Six-language UI (en/zh/es/fr/hi/ar) including right-to-left Arabic"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need an API key for Midjourney or Sora to use this tool?",
+            "a": "No. The tool only generates the prompt text. You copy the prompt and paste it into Midjourney, Sora, or your preferred AI platform — no API connection required."
+          },
+          {
+            "q": "What parameters does the Midjourney prompt support?",
+            "a": "The tool supports --ar (aspect ratio), --v (version), --style, --chaos, --stylize, --quality, and --seed. Choose them from dropdown menus instead of memorizing syntax."
+          },
+          {
+            "q": "Can the AI Polish button improve my prompt?",
+            "a": "Yes. AI Polish refines wording by adding descriptive adjectives, fixing grammar, and enriching scene detail. It runs in-browser using a lightweight local model or your configured API key."
+          },
+          {
+            "q": "Does the tool support non-English prompts?",
+            "a": "Yes. The interface supports six languages (en/zh/es/fr/hi/ar). The generated prompt body defaults to English (best for Midjourney/Sora) but can be tuned for other languages."
+          }
+        ]
+      }
+    },
+    "sora-prompt-generator": {
+      "name": "Sora Prompt Generator — OpenAI Sora Video Prompts",
+      "description": "Free Sora prompt generator: pick subject, motion, camera, lighting and style, auto-build professional OpenAI Sora video prompts. One-click copy, AI polish, six-language UI. Runs in browser, no signup.",
+      "seo": {
+        "intro": "Sora Prompt Generator is a free online tool that builds professional prompts for OpenAI Sora text-to-video model. Choose subject, motion, camera move, lighting, style and duration, then copy the assembled prompt or use AI polish to refine it. Six-language UI, no signup, runs entirely in your browser.",
+        "scenarios": [
+          "Generating Sora prompts with subject, motion, camera and lighting fields without memorizing syntax",
+          "Drafting cinematic Sora video prompts for short clips, ads or social content",
+          "Learning how each Sora parameter (camera, lighting, style) affects the final video output"
+        ],
+        "tutorial": [
+          "Fill in the subject field: person, object, scene or concept you want Sora to generate",
+          "Pick motion type, camera move, lighting, style and duration from the dropdowns",
+          "Preview the auto-assembled Sora prompt in real time as you tweak options",
+          "Click Copy to grab the prompt, or AI Polish to refine wording further"
+        ],
+        "advantages": [
+          "No need to memorize Sora prompt syntax — dropdowns build the prompt for you",
+          "Real-time preview shows how each option shapes the final Sora prompt",
+          "AI polish button refines prompt wording for clarity and detail",
+          "Six-language UI including right-to-left Arabic — works on desktop and mobile"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need an OpenAI Sora API key to use this tool?",
+            "a": "No. The tool only generates prompt text. You copy the prompt and paste it into the Sora platform or API — no API connection required on this site."
+          },
+          {
+            "q": "What parameters does the Sora prompt generator support?",
+            "a": "Subject, motion type, camera movement, lighting, visual style and duration. Each option maps to natural-language phrasing that Sora understands."
+          },
+          {
+            "q": "Is the Sora prompt generator free to use?",
+            "a": "Yes, completely free with no signup. AI polish has a daily free quota to prevent abuse."
+          },
+          {
+            "q": "Can I use the generated prompts for other video AI models?",
+            "a": "Yes. The prompt structure is natural language and works for Runway, Pika, Kling and similar text-to-video models with minor tweaks."
+          },
+          {
+            "q": "Does the tool work on mobile?",
+            "a": "Yes, fully responsive. Touch-friendly inputs and adaptive panels work on phones, tablets and desktops."
+          }
+        ]
+      }
+    },
+    "midjourney-prompt-generator": {
+      "name": "Midjourney Prompt Generator — MJ Image Prompts with --ar --v",
+      "description": "Free Midjourney prompt generator: pick subject, style, lighting, composition, auto-build MJ prompts with --ar --v 6 parameters. One-click copy, AI polish, six-language UI. Runs in browser, no signup.",
+      "seo": {
+        "intro": "Midjourney Prompt Generator is a free online tool that builds professional prompts for Midjourney v6 image model. Choose subject, art style, lighting, composition and aspect ratio, then copy the assembled prompt with --ar --v parameters or use AI polish to refine it. Six-language UI, no signup, runs entirely in your browser.",
+        "scenarios": [
+          "Generating Midjourney prompts with --ar, --v, --style parameters without memorizing syntax",
+          "Drafting cinematic Midjourney prompts for portraits, landscapes, concept art or product shots",
+          "Learning how each Midjourney parameter (style, lighting, aspect) changes the final image"
+        ],
+        "tutorial": [
+          "Fill in the subject: person, object, scene or concept you want Midjourney to render",
+          "Pick art style, lighting, composition and aspect ratio from the dropdowns",
+          "Preview the auto-assembled Midjourney prompt with --ar --v parameters in real time",
+          "Click Copy to grab the prompt, or AI Polish to refine wording further"
+        ],
+        "advantages": [
+          "No need to memorize Midjourney --ar --v --style syntax — dropdowns build the prompt",
+          "Real-time preview shows the full MJ prompt including parameters as you tweak options",
+          "AI polish button refines prompt wording for clarity and visual detail",
+          "Six-language UI including right-to-left Arabic — works on desktop and mobile"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need a Midjourney subscription to use this tool?",
+            "a": "No. The tool only generates prompt text. You copy the prompt and paste it into Midjourney Discord or web — no Midjourney account connection required on this site."
+          },
+          {
+            "q": "Which Midjourney parameters does the generator support?",
+            "a": "Subject, art style, lighting, composition, aspect ratio (--ar), version (--v) and stylize (--s). Options map to natural-language phrasing that Midjourney understands."
+          },
+          {
+            "q": "Is the Midjourney prompt generator free?",
+            "a": "Yes, completely free with no signup. AI polish has a daily free quota to prevent abuse."
+          },
+          {
+            "q": "Can I use the generated prompts for other image AI models?",
+            "a": "Yes. The prompt structure is natural language and works for Stable Diffusion, DALL-E 3 and similar models — just remove the --ar --v parameters."
+          },
+          {
+            "q": "Does the tool work on mobile?",
+            "a": "Yes, fully responsive. Touch-friendly inputs and adaptive panels work on phones, tablets and desktops."
+          }
+        ]
+      }
+    },
+    "video-prompt-generator": {
+      "name": "AI Video Prompt Generator — Runway, Pika, Kling Prompts",
+      "description": "Free AI video prompt generator: pick subject, motion, camera, lighting, style and duration, auto-build prompts for Runway, Pika, Kling and Sora. One-click copy, AI polish, six-language UI. Runs in browser, no signup.",
+      "seo": {
+        "intro": "AI Video Prompt Generator is a free online tool that builds professional prompts for text-to-video AI models including Runway, Pika, Kling and Sora. Choose subject, motion, camera move, lighting, style and duration, then copy the assembled prompt or use AI polish to refine it. Six-language UI, no signup, runs entirely in your browser.",
+        "scenarios": [
+          "Generating video prompts for Runway, Pika, Kling without memorizing each model's syntax",
+          "Drafting cinematic video prompts for short clips, ads, social content or product demos",
+          "Learning how each video AI parameter (motion, camera, lighting) shapes the final clip"
+        ],
+        "tutorial": [
+          "Fill in the subject: person, object, scene or concept you want the video AI to generate",
+          "Pick motion type, camera move, lighting, style and duration from the dropdowns",
+          "Preview the auto-assembled video prompt in real time as you tweak options",
+          "Click Copy to grab the prompt, or AI Polish to refine wording further"
+        ],
+        "advantages": [
+          "Works for Runway, Pika, Kling and Sora in one tool — no need to learn each syntax",
+          "Real-time preview shows how each option changes the final video prompt",
+          "AI polish button refines prompt wording for clarity and visual detail",
+          "Six-language UI including right-to-left Arabic — works on desktop and mobile"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need an API key for Runway, Pika or Kling to use this tool?",
+            "a": "No. The tool only generates prompt text. You copy the prompt and paste it into your preferred video AI platform — no API connection required on this site."
+          },
+          {
+            "q": "Which video AI models does the generator support?",
+            "a": "Runway Gen-3, Pika, Kling and Sora. The prompt structure is natural language and works for similar text-to-video models with minor tweaks."
+          },
+          {
+            "q": "Is the AI video prompt generator free?",
+            "a": "Yes, completely free with no signup. AI polish has a daily free quota to prevent abuse."
+          },
+          {
+            "q": "Can I use the generated prompts for image AI models?",
+            "a": "Yes. The prompt structure is natural language and works for Stable Diffusion, DALL-E 3 and similar models — just drop the motion and duration fields."
+          },
+          {
+            "q": "Does the tool work on mobile?",
+            "a": "Yes, fully responsive. Touch-friendly inputs and adaptive panels work on phones, tablets and desktops."
+          }
+        ]
+      }
+    },
+    "ai-review-generator": {
+      "name": "AI Review Generator — Product & Food Delivery Reviews",
+      "description": "Free AI review generator: enter product name and experience, AI generates authentic positive, neutral or negative reviews for e-commerce and food delivery platforms. Six-language UI, runs in browser, no signup.",
+      "seo": {
+        "intro": "AI Review Generator is a free online tool that writes authentic-style product and service reviews. Enter the product name and your experience, choose tone (positive, neutral, negative), and the AI generates a review you can copy. Six-language UI, no signup, runs entirely in your browser.",
+        "scenarios": [
+          "Drafting product reviews for e-commerce platforms when you do not know how to phrase them",
+          "Writing food delivery ratings with specific details about taste, speed and packaging",
+          "Generating sample reviews for testing demo products or mockup storefronts"
+        ],
+        "tutorial": [
+          "Enter the product or service name in the input field",
+          "Briefly describe your experience: taste, quality, delivery, packaging, etc.",
+          "Choose the review tone: positive, neutral or negative",
+          "Click Generate, then copy the AI-written review to your clipboard"
+        ],
+        "advantages": [
+          "Three tone presets cover the most common review scenarios",
+          "AI generates specific details from your brief description, not generic filler",
+          "Six-language UI including right-to-left Arabic — works on desktop and mobile",
+          "Free with daily quota — no signup, no API key required"
+        ],
+        "faqs": [
+          {
+            "q": "Is the AI review generator free?",
+            "a": "Yes, free with a daily quota to prevent abuse. No signup or API key required."
+          },
+          {
+            "q": "Can I use the generated reviews on real e-commerce platforms?",
+            "a": "You can, but please ensure they reflect your actual experience. The tool is meant to help you phrase genuine opinions, not fabricate fake reviews."
+          },
+          {
+            "q": "What languages does the review generator support?",
+            "a": "The interface supports six languages (en/zh/es/fr/hi/ar). The generated review language follows your selected UI language."
+          },
+          {
+            "q": "Can I generate reviews for specific platforms like Amazon or Yelp?",
+            "a": "Yes. The review structure works for Amazon, Yelp, food delivery apps and most e-commerce review systems. Specify the platform in the experience field for tailored wording."
+          },
+          {
+            "q": "Does the tool work on mobile?",
+            "a": "Yes, fully responsive. Touch-friendly inputs work on phones, tablets and desktops."
+          }
+        ]
+      }
+    },
+    "ai-resume-experience-optimize": {
+      "name": "Resume Experience AI Optimizer — Job Description Polisher",
+      "description": "Free resume experience AI optimizer: paste your job info and work experience, AI polishes bullet points, highlights achievements with metrics, and boosts interview callbacks. Six-language UI, runs in browser, no signup.",
+      "seo": {
+        "intro": "Resume Experience AI Optimizer is a free online tool that refines resume work experience bullets. Paste your job title, company and original experience, the AI rewrites it with action verbs, quantified achievements and impact-focused phrasing to boost recruiter callbacks. Six-language UI, no signup, runs in your browser.",
+        "scenarios": [
+          "Polishing vague work experience bullets into quantified achievement statements",
+          "Rewriting resume experience for a specific job posting to match keywords",
+          "Tailoring the same role for different industries without rewriting from scratch"
+        ],
+        "tutorial": [
+          "Paste your job title, company and original work experience description",
+          "Optionally paste the target job posting for keyword alignment",
+          "Click Optimize and the AI rewrites each bullet with action verbs and metrics",
+          "Copy the optimized experience to your resume document"
+        ],
+        "advantages": [
+          "AI focuses on quantified achievements, not generic duty lists",
+          "Optional job posting input aligns your experience with recruiter keywords",
+          "Six-language UI including right-to-left Arabic — works on desktop and mobile",
+          "Free with daily quota — no signup, no API key required"
+        ],
+        "faqs": [
+          {
+            "q": "Is the resume optimizer free?",
+            "a": "Yes, free with a daily quota to prevent abuse. No signup or API key required."
+          },
+          {
+            "q": "Will the AI fabricate metrics I did not provide?",
+            "a": "No. The AI rephrases your input with action verbs and structures, but does not invent numbers. Add your own metrics for best results."
+          },
+          {
+            "q": "What languages does the resume optimizer support?",
+            "a": "The interface supports six languages (en/zh/es/fr/hi/ar). The optimized output language follows your selected UI language."
+          },
+          {
+            "q": "Can I optimize experience for a specific job posting?",
+            "a": "Yes. Paste the target job posting in the optional field and the AI aligns your experience with the posting's keywords and responsibilities."
+          },
+          {
+            "q": "Does the tool work on mobile?",
+            "a": "Yes, fully responsive. Touch-friendly inputs work on phones, tablets and desktops."
+          }
+        ]
+      }
+    },
+    "ai-xiaohongshu-title-generator": {
+      "name": "Xiaohongshu Title AI Generator — Viral Note Titles",
+      "description": "Free Xiaohongshu title AI generator: enter your note topic, AI generates viral titles in multiple styles and tones to boost note impressions. Six-language UI, runs in browser, no signup.",
+      "seo": {
+        "intro": "Xiaohongshu Title AI Generator is a free online tool that writes viral-style titles for Xiaohongshu (Little Red Book) notes. Enter your note topic, choose tone (informative, emotional, clickbait, comparison), and the AI generates multiple title options designed to boost impressions. Six-language UI, no signup, runs in your browser.",
+        "scenarios": [
+          "Generating scroll-stopping Xiaohongshu titles when your drafts feel flat",
+          "Testing multiple title tones (emotional, listicle, comparison) for the same note",
+          "Localizing Chinese Xiaohongshu title patterns for overseas content creators"
+        ],
+        "tutorial": [
+          "Enter your note topic: beauty, food, travel, lifestyle, product review, etc.",
+          "Choose the title tone: informative, emotional, clickbait or comparison",
+          "Click Generate and the AI produces multiple title options",
+          "Copy the title that fits your note best to your Xiaohongshu draft"
+        ],
+        "advantages": [
+          "Four tone presets cover the most common Xiaohongshu title patterns",
+          "AI produces multiple options per click so you can A/B test titles",
+          "Six-language UI including right-to-left Arabic — works on desktop and mobile",
+          "Free with daily quota — no signup, no API key required"
+        ],
+        "faqs": [
+          {
+            "q": "Is the Xiaohongshu title generator free?",
+            "a": "Yes, free with a daily quota to prevent abuse. No signup or API key required."
+          },
+          {
+            "q": "Will the generated titles be flagged as clickbait by Xiaohongshu?",
+            "a": "The tool offers multiple tones including informative and comparison. Avoid the clickbait tone if your platform penalizes aggressive headlines."
+          },
+          {
+            "q": "What languages does the title generator support?",
+            "a": "The interface supports six languages (en/zh/es/fr/hi/ar). The generated title language follows your selected UI language — choose Chinese (zh) for authentic Xiaohongshu titles."
+          },
+          {
+            "q": "Can I generate titles for other platforms like Instagram or TikTok?",
+            "a": "Yes. The title patterns work for Instagram Reels, TikTok captions and similar visual-first platforms. Specify the platform in the topic field for tailored wording."
+          },
+          {
+            "q": "Does the tool work on mobile?",
+            "a": "Yes, fully responsive. Touch-friendly inputs work on phones, tablets and desktops."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

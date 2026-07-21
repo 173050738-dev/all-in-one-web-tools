@@ -714,8 +714,8 @@
       }
     },
     "emoji-mixer": {
-      "name": "Mixeur d'Emoji",
-      "description": "Mixez deux emojis pour en créer un nouveau ! Une usine à emojis incroyablement fun, créativité illimitée. Copier & partager en un clic.",
+      "name": "Mixeur d'Emoji — Combinez deux emojis en un",
+      "description": "Mixez deux emojis pour en créer un nouveau ! Une usine à emojis incroyablement fun, créativité illimitée. Générez des stickers PNG transparents instantanément dans votre navigateur, copier & partager en un clic. Sans inscription.",
       "seo": {
         "intro": "Mixeur d'Emojis est un outil créatif gratuit et ludique, directement dans le navigateur, qui combine deux emojis standard en un tout nouvel autocollant d'emoji hybride fusionné partageable au format PNG transparent. Choisissez deux emojis quelconques dans le sélecteur intégré — par exemple chat + gâteau 🎂 ou chien 🐶 + fusée 🚀 — et le mixeur génère un mashup d'emoji hybride qui fusionne les couleurs, les formes et l'iconographie des deux entrées. Tout le rendu s'effectue côté client via Canvas : aucune connexion, aucun téléversement, et chaque nouvelle combinaison apparaît instantanément dans la page.",
         "scenarios": [
@@ -1365,7 +1365,44 @@
     },
     "qr-code-generator": {
       "name": "Générateur QR",
-      "description": "Créez des QR codes personnalisés : couleurs, logos, tailles. Téléchargement PNG haute résolution en un clic — URLs, texte, WiFi et plus."
+      "description": "Créez des QR codes personnalisés : couleurs, logos, tailles. Téléchargement PNG haute résolution en un clic — URLs, texte, WiFi et plus.",
+      "seo": {
+        "intro": "QR Code Generator est un outil en ligne gratuit qui crée des codes QR personnalisés pour URLs, texte, identifiants WiFi, contacts et plus. Personnalisez les couleurs de premier plan et d'arrière-plan, intégrez un logo au centre et choisissez parmi plusieurs tailles — puis téléchargez un PNG haute résolution en un clic. Toute la génération s'exécute localement dans votre navigateur, vos liens et contenus ne quittent jamais votre appareil.",
+        "scenarios": [
+          "Partager un menu de restaurant, une page produit ou un lien d'inscription à un événement sous forme de QR code imprimable",
+          "Intégrer les identifiants WiFi dans un QR code pour que les invités scannent plutôt que de saisir un long mot de passe",
+          "Ajouter un QR code avec logo de marque aux cartes de visite, flyers ou emballages"
+        ],
+        "tutorial": [
+          "Choisissez le type de QR (URL, texte, WiFi, email, etc.) et saisissez le contenu de destination",
+          "Personnalisez les couleurs, la taille et, optionnellement, uploadez un logo pour le centre",
+          "Prévisualisez le QR en temps réel et faites un test de scan avec l'appareil photo du téléphone",
+          "Cliquez sur Télécharger pour sauvegarder un PNG haute résolution prêt pour l'impression ou le web"
+        ],
+        "advantages": [
+          "Génère les QR codes localement dans le navigateur — aucun upload, aucun log serveur, totalement privé",
+          "Supporte l'intégration de logo et la personnalisation complète des couleurs tout en restant scannable",
+          "Exporte des PNGs haute résolution adaptés à la fois au numérique et à l'impression"
+        ],
+        "faqs": [
+          {
+            "q": "Mon QR code restera-t-il scannable si j'ajoute un logo au centre ?",
+            "a": "Oui. L'outil maintient un niveau élevé de correction d'erreurs, donc un petit logo (15-20% de la zone) au centre n'empêche pas le scan. Faites toujours un test avant d'imprimer en masse."
+          },
+          {
+            "q": "Les QR codes générés ici expirent-ils ?",
+            "a": "Non. Le QR code encode votre contenu directement, sans passer par une redirection ou un raccourcisseur. Tant que l'URL ou le texte de destination est valide, le code fonctionnera pour toujours."
+          },
+          {
+            "q": "Puis-je utiliser le PNG téléchargé pour l'impression commerciale ?",
+            "a": "Oui. Le PNG est exporté en haute résolution sans filigrane. Vous pouvez l'utiliser sur cartes de visite, emballages, affiches ou tout matériel commercial sans attribution."
+          },
+          {
+            "q": "Y a-t-il une limite au nombre de QR codes que je peux générer ?",
+            "a": "Aucune limite. Générez autant de codes que nécessaire, totalement gratuitement, sans inscription."
+          }
+        ]
+      }
     },
     "excel-formula-generator": {
       "name": "Générateur de Formules Excel",
@@ -5869,8 +5906,8 @@
       }
     },
     "multi-timezone-publish-time": {
-      "name": "Timezone Minuteur",
-      "description": "Outil Timezone Minuteur en ligne avec fonctionnalités : Timezone, Time, Calculateur. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise.",
+      "name": "Calculateur d'Heure de Publication Multi-Fuseaux — Meilleur moment pour publier",
+      "description": "Calculateur gratuit d'heure de publication multi-fuseaux : trouvez la meilleure heure pour publier à LA, NYC, Londres, Tokyo, Sydney et plus de 12 zones avec correction automatique de l'heure d'été. Visualisez le chevauchement des heures actives des fans pour choisir le créneau optimal. Sans inscription.",
       "seo": {
         "intro": "Calculateur Multi-Fuseaux Horaires de Publication (Timezone Timer) est un outil gratuit, basé sur le navigateur, à l'usage des créateurs transfrontaliers et des équipes sociales de marques : il convertit un créneau de publication idéal en heures locales précises pour plus de douze fuseaux et grandes villes mondiales — avec ajustement automatique du passage à l'heure d'été et d'hiver. Choisissez votre fuseau de référence et l'heure de plus forte audience, puis le calculateur vous indique à quelle heure appuyer sur « publier » pour vos abonnés de Los Angeles, New York, Londres, Paris, Berlin, Dubaï, Bombay, Singapour, Tokyo, Séoul, Pékin, Sydney et São Paulo — aucun appel API, aucune inscription.",
         "scenarios": [
@@ -5914,8 +5951,8 @@
       }
     },
     "wc-2026-schedule": {
-      "name": "CM 2026 Calendrier",
-      "description": "Wc 2026 Schedule gratuit : prend en charge World cup, 2026 et plus. Traitement 100% local sur votre appareil pour une confidentialité maximale.",
+      "name": "Calendrier Coupe du Monde 2026 — Horaires de tous les matchs",
+      "description": "Calendrier gratuit de la Coupe du Monde FIFA 2026 : les 104 matchs aux USA, Canada et Mexique, horaires dans 9 fuseaux horaires, tableaux de groupes, tableau final et matchs par équipe. Export iCal/CSV, sans inscription.",
       "seo": {
         "intro": "2026 FIFA World Cup Schedule Browser est un outil gratuit dans le navigateur pour consulter l'intégralité des 104 matchs, horaires, stades, billets, tableaux de groupes et arbre éliminatoires de la Coupe du Monde 2026 États-Unis–Canada–Mexique, conçu pour les fans de football, parieurs sportifs, gérants de bars à sports, organisateurs de soirées Coupe du Monde et services administratifs d'entreprises qui organisent des soirées « foot » et goûters thématiques. Pas de VPN pour accéder à FIFA.com, aucune application à installer, il suffit de l'ouvrir. Prend en charge les 16 villes hôtes, les 48 sélections, 9 changements de fuseau horaire (ET / PT / fuseau local + Londres / Berlin / Shanghai / Tokyo / New Delhi / Le Caire / Mexico / Toronto), filtres par phase (poules / 8es / 4es / demies / match pour la 3e place / Finale), classements de groupe en temps réel, favoris « Mes sélections », export iCal en un clic vers le calendrier du téléphone et export CSV/Markdown vers Notion ou Excel — résout le vrai parcours du fan : « quand / où se joue mon match, à quelle heure locale, dois-je poser un congé ? ».",
         "scenarios": [
@@ -8190,19 +8227,567 @@
     },
     "competitor-analyzer": {
       "name": "Analyseur de Concurrents",
-      "description": "Outil d'analyse de concurrence e-commerce. Saisissez les informations du concurrent, analysez les prix, les mots-clés, les forces/faiblesses et générez des suggestions d'optimisation."
+      "description": "Outil d'analyse de concurrence e-commerce. Saisissez les informations du concurrent, analysez les prix, les mots-clés, les forces/faiblesses et générez des suggestions d'optimisation.",
+      "seo": {
+        "intro": "Competitor Analyzer est un outil en ligne gratuit pour les vendeurs e-commerce qui étudie les produits et boutiques concurrents. Saisissez le lien d'un produit concurrent ou les infos de la boutique, et l'outil vous guide dans l'analyse de la stratégie de prix, de la couverture de mots-clés, des forces et faiblesses du listing et du sentiment des avis — puis produit des suggestions d'optimisation concrètes pour vos propres listings. Tout s'exécute dans votre navigateur, les données sensibles de votre boutique ne quittent jamais votre appareil.",
+        "scenarios": [
+          "Comparer un listing concurrent sur Amazon ou Shopify avant de lancer un produit similaire",
+          "Identifier les écarts de prix et les opportunités de mots-clés quand votre listing sous-performe par rapport à un rival",
+          "Auditer les thèmes d'avis d'un concurrent pour trouver des faiblesses à exploiter"
+        ],
+        "tutorial": [
+          "Collez l'URL du produit concurrent ou les infos de la boutique dans le champ de saisie",
+          "Sélectionnez les dimensions à analyser : prix, mots-clés, copy du listing, avis, ou tout",
+          "Examinez l'analyse générée couvrant forces, faiblesses et écarts",
+          "Appliquez les optimisations suggérées à votre propre copy, prix ou stratégie de mots-clés"
+        ],
+        "advantages": [
+          "Cadre d'analyse structuré — couvre prix, mots-clés, copy et avis en une seule passe",
+          "Retourne des actions d'optimisation concrètes plutôt que des observations vagues",
+          "S'exécute localement dans le navigateur — pas de login boutique, pas de clés API, pas d'upload"
+        ],
+        "faqs": [
+          {
+            "q": "Dois-je connecter mon compte boutique ou API pour utiliser cet outil ?",
+            "a": "Non. L'outil fonctionne à partir des infos concurrentes visibles publiquement que vous collez. Aucune connexion de boutique, login OAuth ou clé API n'est requise."
+          },
+          {
+            "q": "Peut-il analyser des concurrents sur n'importe quelle plateforme ?",
+            "a": "Il fonctionne avec toute plateforme e-commerce où vous pouvez voir le listing publiquement — Amazon, Shopify, eBay, Etsy, Shopee, AliExpress et autres. Collez l'URL du produit et l'analyse couvre ce qui est visible sur la page."
+          },
+          {
+            "q": "Quelle est la précision de l'analyse des mots-clés et des prix ?",
+            "a": "L'outil utilise le contenu du listing que vous fournissez. Plus l'entrée est complète (titre, bullets, avis, historique des prix), plus l'analyse est précise. Validez toujours les suggestions avec vos propres données de marché avant d'agir."
+          },
+          {
+            "q": "Mes données concurrentes sont-elles stockées quelque part ?",
+            "a": "Non. Toute l'analyse s'exécute dans votre session de navigateur et est supprimée à la fermeture de l'onglet. Rien n'est uploadé sur un serveur."
+          }
+        ]
+      }
     },
     "keyword-analyzer": {
       "name": "Analyseur de Mots-Clés",
-      "description": "Outil d'analyse de mots-clés e-commerce. Analyse le volume de recherche, la concurrence, les enchères suggérées pour optimiser le référencement et les campagnes publicitaires."
+      "description": "Outil d'analyse de mots-clés e-commerce. Analyse le volume de recherche, la concurrence, les enchères suggérées pour optimiser le référencement et les campagnes publicitaires.",
+      "seo": {
+        "intro": "Keyword Analyzer est un outil en ligne gratuit qui aide les vendeurs e-commerce et créateurs de contenu à évaluer les mots-clés de recherche avant d'engager un budget. Saisissez une liste de mots-clés cibles et l'outil analyse le volume de recherche, le niveau de concurrence et l'enchère suggérée pour révéler les opportunités à fort ROI et filtrer les termes saturés. Les résultats sont renvoyés dans un tableau triable que vous pouvez exporter pour votre flux SEO ou planning publicitaire. Tout le traitement est local — pas de compte, pas de clé API, pas d'upload.",
+        "scenarios": [
+          "Filtrer une longue liste de mots-clés pour trouver des termes à faible concurrence méritant des articles de blog ou pages produit",
+          "Comparer les enchères suggérées entre mots-clés pour planifier un budget Google Ads ou Shopping",
+          "Auditer les mots-clés de vos pages produit existantes par rapport à la demande de recherche réelle avant un refresh de listing"
+        ],
+        "tutorial": [
+          "Collez votre liste de mots-clés (un par ligne ou séparés par virgules) dans la boîte de saisie",
+          "Optionnellement ajoutez un marché cible ou langue pour affiner l'analyse",
+          "Cliquez sur Analyser et examinez le tableau triable — volume, concurrence, enchère suggérée, score d'opportunité",
+          "Filtrez ou triez pour présélectionner les meilleurs mots-clés, puis exportez le résultat en CSV ou JSON"
+        ],
+        "advantages": [
+          "Renvoie les estimations de volume, concurrence et enchère en une seule vue — pas besoin de sauter entre plusieurs outils",
+          "Calcule un score d'opportunité pour que vous puissiez prioriser sans gymnastique de tableur",
+          "Pas d'inscription, pas de clé API — collez les mots-clés et obtenez les résultats immédiatement, entièrement dans le navigateur"
+        ],
+        "faqs": [
+          {
+            "q": "D'où viennent les données de volume de recherche et d'enchère ?",
+            "a": "L'outil utilise des indices publics de mots-clés et vos entrées pour estimer le volume, la concurrence et l'enchère suggérée. Pour des chiffres exacts au niveau campagne, vérifiez toujours avec Google Keyword Planner ou les données officielles de votre plateforme publicitaire avant de dépenser."
+          },
+          {
+            "q": "Combien de mots-clés puis-je analyser à la fois ?",
+            "a": "Vous pouvez analyser jusqu'à quelques centaines de mots-clés en un seul lot. Pour les très grandes listes, divisez en lots plus petits pour des résultats plus clairs."
+          },
+          {
+            "q": "Puis-je exporter les résultats d'analyse ?",
+            "a": "Oui. Le tableau présélectionné peut être exporté en CSV pour tableurs ou JSON pour alimenter d'autres outils et flux."
+          },
+          {
+            "q": "Cet outil supporte-t-il les mots-clés non anglais ?",
+            "a": "Oui. L'analyseur accepte les mots-clés dans n'importe quelle langue et supporte les marchés majeurs dont anglais, espagnol, français, arabe, hindi et chinois."
+          }
+        ]
+      }
     },
     "email-template-generator": {
       "name": "Générateur de Modèles Email",
-      "description": "Générateur de modèles d'email marketing e-commerce. Prend en charge les emails de bienvenue, emails promotionnels, rappels et plus. Générez du contenu email prêt à l'emploi en un clic."
+      "description": "Générateur de modèles d'email marketing e-commerce. Prend en charge les emails de bienvenue, emails promotionnels, rappels et plus. Générez du contenu email prêt à l'emploi en un clic.",
+      "seo": {
+        "intro": "Email Template Generator est un outil en ligne gratuit qui produit du contenu d'email e-commerce prêt à envoyer en un clic. Choisissez parmi emails de bienvenue, blasts promotionnels, rappels de panier abandonné, follow-ups post-achat ou campagnes de ré-engagement — remplissez quelques champs sur votre produit et offre, et l'outil génère un corps d'email soigné et aligné à la marque avec objet, texte de prévisualisation et appel à l'action. Tout s'exécute localement dans votre navigateur ; pas d'inscription, pas de connexion ESP, pas de données qui quittent votre appareil.",
+        "scenarios": [
+          "Rédiger un email de bienvenue pour les nouveaux abonnés sans fixer un éditeur vide",
+          "Générer des variantes de rappel de panier abandonné pour A/B tester objets et CTA",
+          "Produire un email promotionnel pour une vente flash en minutes quand vous avez un lien produit et un code de réduction"
+        ],
+        "tutorial": [
+          "Choisissez le type d'email : bienvenue, promotionnel, rappel, follow-up ou ré-engagement",
+          "Remplissez le nom du produit, les détails de l'offre, la voix de la marque et le lien CTA",
+          "Cliquez sur Générer et examinez l'objet, le texte de prévisualisation et le corps de l'email",
+          "Copiez la sortie HTML ou texte brut dans votre ESP (Mailchimp, Klaviyo, Sendgrid, etc.)"
+        ],
+        "advantages": [
+          "Couvre cinq types d'emails e-commerce à fort ROI dans un seul outil — pas besoin d'un pack de templates séparé",
+          "Génère l'objet et le texte de prévisualisation avec le corps, donc l'email est prêt à envoyer",
+          "Pas de connexion ESP ni clé API — la sortie est texte brut/HTML que vous pouvez coller partout"
+        ],
+        "faqs": [
+          {
+            "q": "Puis-je éditer l'email généré avant l'envoi ?",
+            "a": "Oui. La sortie est texte brut et HTML dans un champ éditable — ajustez le copy, changez les CTA ou restructurez les paragraphes avant de copier vers votre ESP."
+          },
+          {
+            "q": "Cet outil envoie-t-il des emails en mon nom ?",
+            "a": "Non. L'outil génère uniquement le contenu de l'email. L'envoi est géré par votre propre ESP (Mailchimp, Klaviyo, Sendgrid, etc.) — collez-y le contenu généré."
+          },
+          {
+            "q": "Puis-je générer des emails en plusieurs langues ?",
+            "a": "Oui. L'UI supporte six langues (anglais, chinois, espagnol, français, hindi, arabe) et le corps de l'email généré correspond à la langue de l'interface sélectionnée."
+          },
+          {
+            "q": "Y a-t-il une limite au nombre d'emails que je peux générer ?",
+            "a": "Aucune limite. Générez autant de variantes que nécessaire pour l'A/B testing — totalement gratuit, sans inscription."
+          }
+        ]
+      }
     },
     "review-generator": {
       "name": "Générateur d'Avis",
-      "description": "Générateur d'avis produits e-commerce. Saisissez le nom et les caractéristiques du produit, générez automatiquement plusieurs avis utilisateurs dans différents styles pour optimiser le contenu de la page produit."
+      "description": "Générateur d'avis produits e-commerce. Saisissez le nom et les caractéristiques du produit, générez automatiquement plusieurs avis utilisateurs dans différents styles pour optimiser le contenu de la page produit.",
+      "seo": {
+        "intro": "Review Generator est un outil en ligne gratuit qui produit des avis produit réalistes pour les listings e-commerce. Saisissez le nom du produit et quelques caractéristiques clés, choisissez le style d'avis (positif, neutre, critique, ou longueurs mixtes), et l'outil génère plusieurs brouillons d'avis que vous pouvez utiliser pour amorcer le contenu d'une page produit, entraîner des modèles d'analyse d'avis ou comparer le sentiment. Toute la génération s'exécute dans votre navigateur — aucune donnée produit n'est uploadée.",
+        "scenarios": [
+          "Amorcer une nouvelle page produit avec des avis d'exemple avant que les vrais acheteurs ne laissent un retour",
+          "Générer des jeux de données d'avis de test pour entraîner ou comparer des modèles d'analyse de sentiment",
+          "Rédiger des snippets de preuve sociale style avis pour des créas publicitaires ou landing pages"
+        ],
+        "tutorial": [
+          "Saisissez le nom du produit et 2-3 caractéristiques clés ou cas d'usage",
+          "Choisissez le style d'avis : positif, neutre, critique, ou un mélange des trois",
+          "Sélectionnez combien d'avis générer en un lot",
+          "Copiez les avis générés vers votre page produit, jeu de données ou support marketing"
+        ],
+        "advantages": [
+          "Produit plusieurs variantes d'avis en un clic — utile pour A/B tester le contenu de page produit",
+          "Supporte les tons positif, neutre et critique pour modéliser tout le spectre de sentiment",
+          "Pas d'upload, pas de compte — s'exécute entièrement dans votre navigateur, les infos produit sensibles restent privées"
+        ],
+        "faqs": [
+          {
+            "q": "Est-il éthique d'utiliser des avis générés sur une page produit en ligne ?",
+            "a": "Les avis générés doivent servir aux tests internes, à l'entraînement de modèles ou au contenu d'espace réservé pendant le développement. Publier des avis fabriqués comme de vrais retours clients sur des boutiques en ligne viole les politiques de la plupart des plateformes e-commerce et peut enfreindre les lois locales de protection des consommateurs."
+          },
+          {
+            "q": "Les avis générés peuvent-ils être détectés comme faux ?",
+            "a": "La plupart des plateformes d'avis modernes utilisent des filtres automatisés qui signalent le contenu synthétique. L'outil est destiné à des cas d'usage légitimes — tests, entraînement, maquettes — pas à tromper de vrais acheteurs."
+          },
+          {
+            "q": "Combien d'avis puis-je générer en un lot ?",
+            "a": "Vous pouvez générer jusqu'à 20 avis par lot. Pour des jeux de données plus vastes, exécutez plusieurs lots et dédupliquez selon les besoins."
+          },
+          {
+            "q": "L'outil supporte-t-il les avis dans d'autres langues que l'anglais ?",
+            "a": "Oui. L'interface supporte six langues et les avis générés correspondent à la langue sélectionnée, y compris l'arabe de droite à gauche."
+          }
+        ]
+      }
+    },
+    "document-formatter": {
+      "name": "Formateur de Document — Mise en page APA, MLA, Rapports & CV",
+      "description": "Formateur de document en ligne gratuit : collez votre contenu, basculez entre modèles APA, MLA, document officiel, rapport commercial et CV, prévisualisez la mise en page en temps réel, exportez en Word/PDF. S'exécute dans votre navigateur, sans upload.",
+      "seo": {
+        "intro": "Document Formatter est un outil en ligne gratuit qui formate automatiquement le contenu collé en modèles structurés. Basculez entre formats APA et MLA, documents officiels, rapports commerciaux ou modèles de CV, prévisualisez la mise en page en temps réel, puis exportez en Word ou PDF. Tout le formatage s'exécute localement dans votre navigateur — votre brouillon, contrat ou manuscrit ne quitte jamais votre appareil.",
+        "scenarios": [
+          "Formater un essai scolaire ou une soumission à une revue selon les lignes directrices APA 7e ou MLA 9e édition",
+          "Rédiger un document officiel avec le format standard (police, interligne, hiérarchie des titres)",
+          "Polir la mise en page d'un CV ou rapport commercial avant l'export PDF pour soumission"
+        ],
+        "tutorial": [
+          "Collez votre texte brut ou brouillon dans la zone de saisie",
+          "Choisissez un modèle : APA, MLA, document officiel, rapport commercial ou CV",
+          "Prévisualisez la mise en page en temps réel et ajustez l'interligne ou les niveaux de titre au besoin",
+          "Cliquez sur Exporter pour télécharger un fichier Word (.docx) ou PDF prêt à soumettre"
+        ],
+        "advantages": [
+          "Couvre cinq formats courants en un seul outil — pas besoin de modèles Word séparés",
+          "Aperçu en temps réel pour repérer les problèmes avant l'export",
+          "S'exécute entièrement dans le navigateur — brouillons sensibles, contrats et infos personnelles restent privés"
+        ],
+        "faqs": [
+          {
+            "q": "Cet outil supporte-t-il le formatage APA 7e édition ?",
+            "a": "Oui. Le modèle APA suit les lignes directrices de la 7e édition, y compris la structure de la page de titre, l'en-tête, les titres de section et le format de la liste de références. Vérifiez toujours avec les exigences spécifiques de votre institution avant la soumission."
+          },
+          {
+            "q": "Puis-je exporter le document en Word ou PDF ?",
+            "a": "Oui. L'outil exporte à la fois en .docx (éditable dans Word, Google Docs, Pages) et en PDF (prêt à imprimer). Choisissez le format qui correspond à votre exigence de soumission."
+          },
+          {
+            "q": "Gère-t-il le format de document officiel chinois ?",
+            "a": "Oui. Le modèle de document officiel suit le format standard GB/T 9704, y compris la police (仿宋_GB2312 pour le corps, 黑体 pour les titres), l'interligne (28-30pt) et la hiérarchie des titres."
+          },
+          {
+            "q": "Mon contenu est-il uploadé quelque part ?",
+            "a": "Non. Tout le formatage s'exécute localement dans votre navigateur. Votre brouillon, contrat ou manuscrit n'est jamais envoyé à un serveur — fermez l'onglet et le contenu disparaît."
+          }
+        ]
+      }
+    },
+    "screen-recorder-subtitle": {
+      "name": "Enregistreur d'Écran avec Sous-titres IA — Export MP4/SRT",
+      "description": "Enregistreur d'écran gratuit dans le navigateur avec sous-titres auto-générés par IA. Enregistre écran + micro, grave les sous-titres en MP4, exporte SRT. Traitement 100% local, zéro upload, confidentialité totale.",
+      "seo": {
+        "intro": "Screen Recorder with AI Subtitles est un outil en ligne gratuit qui capture votre écran et microphone, génère automatiquement des sous-titres avec reconnaissance vocale sur l'appareil, et exporte à la fois un MP4 avec sous-titres incrustés et un fichier SRT séparé. Tout le traitement — enregistrement, transcription et export — s'exécute localement dans votre navigateur, donc les démos sensibles, réunions et walkthroughs ne quittent jamais votre appareil.",
+        "scenarios": [
+          "Enregistrer une démo logicielle ou un tutoriel avec sous-titres d'accessibilité sans installer OBS ou Camtasia",
+          "Capturer un walkthrough produit rapide pour un collègue avec sous-titres auto-transcrits incrustés dans la vidéo",
+          "Créer des clips pour réseaux sociaux avec sous-titres adaptés à l'autoplay silencieux sur LinkedIn, Twitter ou Instagram"
+        ],
+        "tutorial": [
+          "Cliquez sur Démarrer l'enregistrement et choisissez l'écran ou la fenêtre à capturer (activez optionnellement le micro)",
+          "Réalisez votre walkthrough ou démo — l'outil enregistre écran + audio en temps réel",
+          "Arrêtez l'enregistrement et laissez l'IA générer les sous-titres depuis la piste audio",
+          "Vérifiez et éditez la transcription si nécessaire, puis exportez MP4 avec sous-titres incrustés et/ou SRT"
+        ],
+        "advantages": [
+          "Tout-en-un : enregistrement, transcription et incrustation des sous-titres dans le navigateur — sans installation",
+          "Exporte à la fois MP4 avec sous-titres codés et SRT indépendant pour édition dans Premiere ou DaVinci",
+          "Zéro upload — démos sensibles, réunions internes et enregistrements clients restent totalement privés"
+        ],
+        "faqs": [
+          {
+            "q": "La génération de sous-titres par IA upload-t-elle mon audio ?",
+            "a": "Non. La reconnaissance vocale s'exécute sur l'appareil via la Web Speech API du navigateur ou un modèle local. Votre audio ne quitte jamais votre ordinateur — adapté aux réunions confidentielles et démos internes."
+          },
+          {
+            "q": "Puis-je éditer les sous-titres auto-générés avant l'export ?",
+            "a": "Oui. Après transcription, la liste des sous-titres est entièrement éditable — corrigez les mots mal entendus, ajustez le timing ou supprimez des sections avant de les incruster dans le MP4 ou d'exporter le SRT."
+          },
+          {
+            "q": "Quels formats vidéo puis-je exporter ?",
+            "a": "L'export principal est MP4 (H.264) avec sous-titres incrustés optionnels. Un fichier SRT indépendant peut aussi être exporté pour Premiere, DaVinci Resolve ou l'upload de sous-titres YouTube."
+          },
+          {
+            "q": "Y a-t-il une limite de durée d'enregistrement ?",
+            "a": "Pas de limite stricte, mais les enregistrements très longs (plus de 60 minutes) peuvent atteindre les limites mémoire du navigateur sur les appareils à faible RAM. Pour les sessions d'une heure, enregistrez par segments puis assemblez."
+          }
+        ]
+      }
+    },
+    "ai-prompt-generator": {
+      "name": "Générateur de Prompts IA — Midjourney, Sora et Universel",
+      "description": "Générateur de prompts IA gratuit : choisissez modèle et options, construisez automatiquement des prompts d'image et vidéo de haute qualité pour Midjourney, Sora et plus. Copie en un clic, polish IA, UI en six langues. S'exécute dans le navigateur, sans inscription.",
+      "seo": {
+        "intro": "AI Prompt Generator est un outil en ligne gratuit qui construit automatiquement des prompts de haute qualité pour les modèles d'image et vidéo IA. Choisissez le modèle cible (Midjourney, Sora, vidéo universelle), sélectionnez sujet, style, éclairage, composition et paramètres, puis copiez le prompt assemblé ou utilisez le bouton AI Polish pour le raffiner. L'outil s'exécute dans votre navigateur avec interface en six langues — sans inscription, sans clé API.",
+        "scenarios": [
+          "Générer des prompts Midjourney avec paramètres --ar, --v, --style sans mémoriser la syntaxe",
+          "Construire des prompts vidéo Sora avec champs sujet, mouvement, caméra et éclairage pré-remplis",
+          "Rédiger des prompts universels d'image IA pour Stable Diffusion ou DALL-E quand vous ne savez pas par où commencer"
+        ],
+        "tutorial": [
+          "Sélectionnez le modèle IA cible : Midjourney, Sora, ou image/vidéo universelle",
+          "Remplissez les champs sujet, style, éclairage, composition et paramètres",
+          "Prévisualisez le prompt auto-assemblé en temps réel pendant que vous ajustez les options",
+          "Cliquez sur Copier pour prendre le prompt, ou AI Polish pour raffiner la formulation"
+        ],
+        "advantages": [
+          "Couvre Midjourney, Sora et prompts universels dans un seul outil — pas besoin d'apprendre la syntaxe de chaque modèle",
+          "Assemblage de prompt en temps réel pour voir comment chaque option change la sortie finale",
+          "Bouton AI Polish raffine la formulation au-delà de l'assemblage de template",
+          "UI en six langues (en/zh/es/fr/hi/ar) y compris l'arabe de droite à gauche"
+        ],
+        "faqs": [
+          {
+            "q": "Ai-je besoin d'une clé API pour Midjourney ou Sora pour utiliser cet outil ?",
+            "a": "Non. L'outil génère uniquement le texte du prompt. Vous copiez le prompt et le collez dans Midjourney, Sora ou votre plateforme IA préférée — aucune connexion API requise."
+          },
+          {
+            "q": "Quels paramètres le prompt Midjourney supporte-t-il ?",
+            "a": "L'outil supporte --ar (ratio d'aspect), --v (version), --style, --chaos, --stylize, --quality et --seed. Choisissez-les depuis des menus déroulants au lieu de mémoriser la syntaxe."
+          },
+          {
+            "q": "Le bouton AI Polish peut-il améliorer mon prompt ?",
+            "a": "Oui. AI Polish raffine la formulation en ajoutant des adjectifs descriptifs, corrigeant la grammaire et enrichissant les détails de la scène. Il s'exécute dans le navigateur via un modèle local léger ou votre clé API configurée."
+          },
+          {
+            "q": "L'outil supporte-t-il les prompts non anglais ?",
+            "a": "Oui. L'interface supporte six langues (en/zh/es/fr/hi/ar). Le corps du prompt généré est en anglais par défaut (mieux pour Midjourney/Sora) mais peut être ajusté pour d'autres langues."
+          }
+        ]
+      }
+    },
+    "sora-prompt-generator": {
+      "name": "Générateur de Prompts Sora — Prompts Vidéo OpenAI Sora",
+      "description": "Générateur gratuit de prompts Sora : choisissez sujet, mouvement, caméra, éclairage et style, générez des prompts professionnels pour OpenAI Sora. Copie en un clic, polissage IA, interface en 6 langues. Fonctionne dans le navigateur, sans inscription.",
+      "seo": {
+        "intro": "Le Générateur de Prompts Sora est un outil en ligne gratuit qui crée des prompts professionnels pour le modèle texte-vers-vidéo Sora d'OpenAI. Choisissez sujet, mouvement, caméra, éclairage, style et durée, copiez le prompt ou utilisez le polissage IA. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
+        "scenarios": [
+          "Générer des prompts Sora avec sujet, mouvement, caméra et éclairage sans mémoriser la syntaxe",
+          "Rédiger des prompts cinématographiques Sora pour clips courts, pubs ou contenu social",
+          "Comprendre comment chaque paramètre Sora (caméra, éclairage, style) affecte la vidéo finale"
+        ],
+        "tutorial": [
+          "Remplissez le champ sujet : personne, objet, scène ou concept que Sora doit générer",
+          "Choisissez type de mouvement, caméra, éclairage, style et durée dans les menus déroulants",
+          "Prévisualisez le prompt Sora assemblé en temps réel en ajustant les options",
+          "Cliquez sur Copier pour obtenir le prompt ou sur Polissage IA pour affiner la rédaction"
+        ],
+        "advantages": [
+          "Pas besoin de mémoriser la syntaxe Sora — les menus construisent le prompt pour vous",
+          "Aperçu en temps réel montre comment chaque option façonne le prompt final",
+          "Le bouton Polissage IA affine la rédaction pour plus de clarté et de détail",
+          "Interface en 6 langues incluant l'arabe RTL — fonctionne sur ordinateur et mobile"
+        ],
+        "faqs": [
+          {
+            "q": "Ai-je besoin d'une clé API OpenAI Sora pour utiliser cet outil ?",
+            "a": "Non. L'outil génère uniquement le texte du prompt. Vous copiez le prompt et le collez dans la plateforme ou l'API Sora — aucune connexion API requise sur ce site."
+          },
+          {
+            "q": "Quels paramètres le générateur de prompts Sora prend-il en charge ?",
+            "a": "Sujet, type de mouvement, mouvement de caméra, éclairage, style visuel et durée. Chaque option correspond à des phrases en langage naturel que Sora comprend."
+          },
+          {
+            "q": "Le générateur de prompts Sora est-il gratuit ?",
+            "a": "Oui, totalement gratuit sans inscription. Le polissage IA a un quota gratuit quotidien pour éviter les abus."
+          },
+          {
+            "q": "Puis-je utiliser les prompts générés pour d'autres modèles de vidéo IA ?",
+            "a": "Oui. La structure du prompt est en langage naturel et fonctionne pour Runway, Pika, Kling et modèles similaires avec des ajustements mineurs."
+          },
+          {
+            "q": "Fonctionne-t-il sur mobile ?",
+            "a": "Oui, entièrement responsive. Entrées tactiles et panneaux adaptatifs fonctionnent sur mobile, tablette et ordinateur."
+          }
+        ]
+      }
+    },
+    "midjourney-prompt-generator": {
+      "name": "Générateur de Prompts Midjourney — avec paramètres --ar --v",
+      "description": "Générateur gratuit de prompts Midjourney : choisissez sujet, style, éclairage, composition, générez des prompts MJ avec paramètres --ar --v 6. Copie en un clic, polissage IA, interface en 6 langues. Fonctionne dans le navigateur, sans inscription.",
+      "seo": {
+        "intro": "Le Générateur de Prompts Midjourney est un outil en ligne gratuit qui crée des prompts professionnels pour le modèle d'image Midjourney v6. Choisissez sujet, style artistique, éclairage, composition et ratio d'aspect, copiez le prompt avec paramètres --ar --v ou utilisez le polissage IA. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
+        "scenarios": [
+          "Générer des prompts Midjourney avec paramètres --ar, --v, --style sans mémoriser la syntaxe",
+          "Rédiger des prompts cinématographiques Midjourney pour portraits, paysages, concept art ou produits",
+          "Comprendre comment chaque paramètre Midjourney (style, éclairage, ratio) modifie l'image finale"
+        ],
+        "tutorial": [
+          "Remplissez le sujet : personne, objet, scène ou concept que Midjourney doit rendre",
+          "Choisissez style artistique, éclairage, composition et ratio d'aspect dans les menus déroulants",
+          "Prévisualisez le prompt Midjourney avec paramètres --ar --v en temps réel",
+          "Cliquez sur Copier pour obtenir le prompt ou sur Polissage IA pour affiner la rédaction"
+        ],
+        "advantages": [
+          "Pas besoin de mémoriser la syntaxe --ar --v --style de Midjourney — les menus construisent le prompt",
+          "Aperçu en temps réel montre le prompt MJ complet y compris les paramètres",
+          "Le bouton Polissage IA affine la rédaction pour plus de clarté et de détail visuel",
+          "Interface en 6 langues incluant l'arabe RTL — fonctionne sur ordinateur et mobile"
+        ],
+        "faqs": [
+          {
+            "q": "Ai-je besoin d'un abonnement Midjourney pour utiliser cet outil ?",
+            "a": "Non. L'outil génère uniquement le texte du prompt. Vous copiez le prompt et le collez dans Midjourney Discord ou web — aucune connexion de compte requise sur ce site."
+          },
+          {
+            "q": "Quels paramètres Midjourney le générateur prend-il en charge ?",
+            "a": "Sujet, style artistique, éclairage, composition, ratio d'aspect (--ar), version (--v) et stylize (--s). Chaque option correspond à des phrases en langage naturel que Midjourney comprend."
+          },
+          {
+            "q": "Le générateur de prompts Midjourney est-il gratuit ?",
+            "a": "Oui, totalement gratuit sans inscription. Le polissage IA a un quota gratuit quotidien pour éviter les abus."
+          },
+          {
+            "q": "Puis-je utiliser les prompts générés pour d'autres modèles d'image IA ?",
+            "a": "Oui. La structure du prompt est en langage naturel et fonctionne pour Stable Diffusion, DALL-E 3 et modèles similaires — supprimez simplement les paramètres --ar --v."
+          },
+          {
+            "q": "Fonctionne-t-il sur mobile ?",
+            "a": "Oui, entièrement responsive. Entrées tactiles et panneaux adaptatifs fonctionnent sur mobile, tablette et ordinateur."
+          }
+        ]
+      }
+    },
+    "video-prompt-generator": {
+      "name": "Générateur de Prompts Vidéo IA — Runway, Pika, Kling",
+      "description": "Générateur gratuit de prompts vidéo IA : choisissez sujet, mouvement, caméra, éclairage, style et durée, générez des prompts pour Runway, Pika, Kling et Sora. Copie en un clic, polissage IA, interface en 6 langues. Fonctionne dans le navigateur, sans inscription.",
+      "seo": {
+        "intro": "Le Générateur de Prompts Vidéo IA est un outil en ligne gratuit qui crée des prompts professionnels pour les modèles texte-vers-vidéo dont Runway, Pika, Kling et Sora. Choisissez sujet, mouvement, caméra, éclairage, style et durée, copiez le prompt ou utilisez le polissage IA. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
+        "scenarios": [
+          "Générer des prompts vidéo pour Runway, Pika, Kling sans mémoriser la syntaxe de chaque modèle",
+          "Rédiger des prompts cinématographiques pour clips courts, pubs, contenu social ou démos produit",
+          "Comprendre comment chaque paramètre vidéo IA (mouvement, caméra, éclairage) façonne le clip final"
+        ],
+        "tutorial": [
+          "Remplissez le sujet : personne, objet, scène ou concept que le modèle vidéo doit générer",
+          "Choisissez type de mouvement, caméra, éclairage, style et durée dans les menus déroulants",
+          "Prévisualisez le prompt vidéo assemblé en temps réel en ajustant les options",
+          "Cliquez sur Copier pour obtenir le prompt ou sur Polissage IA pour affiner la rédaction"
+        ],
+        "advantages": [
+          "Fonctionne pour Runway, Pika, Kling et Sora dans un seul outil — sans apprendre chaque syntaxe",
+          "Aperçu en temps réel montre comment chaque option change le prompt vidéo final",
+          "Le bouton Polissage IA affine la rédaction pour plus de clarté et de détail visuel",
+          "Interface en 6 langues incluant l'arabe RTL — fonctionne sur ordinateur et mobile"
+        ],
+        "faqs": [
+          {
+            "q": "Ai-je besoin d'une clé API Runway, Pika ou Kling pour utiliser cet outil ?",
+            "a": "Non. L'outil génère uniquement le texte du prompt. Vous copiez le prompt et le collez dans votre plateforme vidéo IA préférée — aucune connexion API requise sur ce site."
+          },
+          {
+            "q": "Quels modèles vidéo IA le générateur prend-il en charge ?",
+            "a": "Runway Gen-3, Pika, Kling et Sora. La structure du prompt est en langage naturel et fonctionne pour des modèles similaires avec des ajustements mineurs."
+          },
+          {
+            "q": "Le générateur de prompts vidéo IA est-il gratuit ?",
+            "a": "Oui, totalement gratuit sans inscription. Le polissage IA a un quota gratuit quotidien pour éviter les abus."
+          },
+          {
+            "q": "Puis-je utiliser les prompts générés pour des modèles d'image IA ?",
+            "a": "Oui. La structure du prompt est en langage naturel et fonctionne pour Stable Diffusion, DALL-E 3 et modèles similaires — supprimez simplement les champs mouvement et durée."
+          },
+          {
+            "q": "Fonctionne-t-il sur mobile ?",
+            "a": "Oui, entièrement responsive. Entrées tactiles et panneaux adaptatifs fonctionnent sur mobile, tablette et ordinateur."
+          }
+        ]
+      }
+    },
+    "ai-review-generator": {
+      "name": "Générateur d'Avis IA — Produit et Livraison de Repas",
+      "description": "Générateur gratuit d'avis IA : entrez le nom du produit et votre expérience, l'IA génère des avis positifs, neutres ou négatifs pour plateformes e-commerce et livraison de repas. Interface en 6 langues, fonctionne dans le navigateur, sans inscription.",
+      "seo": {
+        "intro": "Le Générateur d'Avis IA est un outil en ligne gratuit qui rédige des avis authentiques sur des produits et services. Entrez le nom du produit et votre expérience, choisissez le ton (positif, neutre, négatif) et l'IA génère un avis que vous pouvez copier. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
+        "scenarios": [
+          "Rédiger des avis produit pour plateformes e-commerce quand vous ne savez pas comment les formuler",
+          "Écrire des évaluations de livraison de repas avec détails spécifiques sur goût, rapidité et emballage",
+          "Générer des avis d'échantillon pour tester des produits démo ou des vitrines simulées"
+        ],
+        "tutorial": [
+          "Entrez le nom du produit ou service dans le champ de saisie",
+          "Décrivez brièvement votre expérience : goût, qualité, livraison, emballage, etc.",
+          "Choisissez le ton de l'avis : positif, neutre ou négatif",
+          "Cliquez sur Générer, puis copiez l'avis rédigé par l'IA dans le presse-papiers"
+        ],
+        "advantages": [
+          "Trois préréglages de ton couvrent les scénarios d'avis les plus courants",
+          "L'IA génère des détails spécifiques à partir de votre brève description, pas de remplissage générique",
+          "Interface en 6 langues incluant l'arabe RTL — fonctionne sur ordinateur et mobile",
+          "Gratuit avec quota quotidien — sans inscription, sans clé API"
+        ],
+        "faqs": [
+          {
+            "q": "Le générateur d'avis IA est-il gratuit ?",
+            "a": "Oui, gratuit avec un quota quotidien pour éviter les abus. Sans inscription ni clé API."
+          },
+          {
+            "q": "Puis-je utiliser les avis générés sur de vraies plateformes e-commerce ?",
+            "a": "Vous le pouvez, mais assurez-vous qu'ils reflètent votre expérience réelle. L'outil est conçu pour vous aider à formuler des opinions authentiques, pas à fabriquer de faux avis."
+          },
+          {
+            "q": "Quelles langues le générateur d'avis prend-il en charge ?",
+            "a": "L'interface prend en charge six langues (en/zh/es/fr/hi/ar). La langue de l'avis généré suit la langue d'interface sélectionnée."
+          },
+          {
+            "q": "Puis-je générer des avis pour des plateformes spécifiques comme Amazon ou Yelp ?",
+            "a": "Oui. La structure de l'avis fonctionne pour Amazon, Yelp, applications de livraison de repas et la plupart des systèmes d'avis e-commerce. Précisez la plateforme dans le champ d'expérience pour une rédaction adaptée."
+          },
+          {
+            "q": "Fonctionne-t-il sur mobile ?",
+            "a": "Oui, entièrement responsive. Entrées tactiles fonctionnent sur mobile, tablette et ordinateur."
+          }
+        ]
+      }
+    },
+    "ai-resume-experience-optimize": {
+      "name": "Optimisateur de CV IA — Expérience Professionnelle",
+      "description": "Optimisateur gratuit d'expérience professionnelle IA : collez vos informations professionnelles et expérience, l'IA polit les points, met en valeur les réalisations avec métriques et améliore les retours d'entretien. Interface en 6 langues, fonctionne dans le navigateur, sans inscription.",
+      "seo": {
+        "intro": "L'Optimisateur de CV IA est un outil en ligne gratuit qui affine les puces d'expérience professionnelle du CV. Collez votre poste, entreprise et expérience originale, l'IA réécrit avec verbes d'action, réalisations quantifiées et formulations axées sur l'impact pour améliorer les retours de recruteurs. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
+        "scenarios": [
+          "Polir des puces d'expérience professionnelles vagues en déclarations de réalisations quantifiées",
+          "Réécrire l'expérience du CV pour une offre d'emploi spécifique pour correspondre aux mots-clés",
+          "Adapter le même poste à différents secteurs sans tout réécrire"
+        ],
+        "tutorial": [
+          "Collez votre poste, entreprise et description d'expérience originale",
+          "Collez optionnellement l'offre d'emploi cible pour aligner les mots-clés",
+          "Cliquez sur Optimiser et l'IA réécrit chaque puce avec verbes d'action et métriques",
+          "Copiez l'expérience optimisée dans votre document de CV"
+        ],
+        "advantages": [
+          "L'IA se concentre sur les réalisations quantifiées, pas les listes de tâches génériques",
+          "L'entrée optionnelle d'offre aligne votre expérience avec les mots-clés du recruteur",
+          "Interface en 6 langues incluant l'arabe RTL — fonctionne sur ordinateur et mobile",
+          "Gratuit avec quota quotidien — sans inscription, sans clé API"
+        ],
+        "faqs": [
+          {
+            "q": "L'optimisateur de CV est-il gratuit ?",
+            "a": "Oui, gratuit avec un quota quotidien pour éviter les abus. Sans inscription ni clé API."
+          },
+          {
+            "q": "L'IA inventera-t-elle des métriques que je n'ai pas fournies ?",
+            "a": "Non. L'IA reformule votre entrée avec des verbes d'action et des structures, mais n'invente pas de chiffres. Ajoutez vos propres métriques pour de meilleurs résultats."
+          },
+          {
+            "q": "Quelles langues l'optimisateur de CV prend-il en charge ?",
+            "a": "L'interface prend en charge six langues (en/zh/es/fr/hi/ar). La langue de sortie optimisée suit la langue d'interface sélectionnée."
+          },
+          {
+            "q": "Puis-je optimiser l'expérience pour une offre d'emploi spécifique ?",
+            "a": "Oui. Collez l'offre cible dans le champ optionnel et l'IA aligne votre expérience avec les mots-clés et responsabilités de l'offre."
+          },
+          {
+            "q": "Fonctionne-t-il sur mobile ?",
+            "a": "Oui, entièrement responsive. Entrées tactiles fonctionnent sur mobile, tablette et ordinateur."
+          }
+        ]
+      }
+    },
+    "ai-xiaohongshu-title-generator": {
+      "name": "Générateur de Titres Xiaohongshu — Titres Viraux",
+      "description": "Générateur gratuit de titres Xiaohongshu avec IA : entrez le sujet de votre note, l'IA génère des titres viraux dans plusieurs styles et tons pour augmenter les impressions. Interface en 6 langues, fonctionne dans le navigateur, sans inscription.",
+      "seo": {
+        "intro": "Le Générateur de Titres Xiaohongshu est un outil en ligne gratuit qui rédige des titres de style viral pour les notes Xiaohongshu (Little Red Book). Entrez le sujet de votre note, choisissez le ton (informatif, émotionnel, clickbait, comparaison) et l'IA génère plusieurs options de titre conçues pour augmenter les impressions. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
+        "scenarios": [
+          "Générer des titres Xiaohongshu qui arrêtent le défilement quand vos brouillons semblent plats",
+          "Tester plusieurs tons de titre (émotionnel, liste, comparaison) pour la même note",
+          "Localiser les modèles de titres chinois Xiaohongshu pour les créateurs de contenu étrangers"
+        ],
+        "tutorial": [
+          "Entrez le sujet de votre note : beauté, cuisine, voyage, lifestyle, avis produit, etc.",
+          "Choisissez le ton du titre : informatif, émotionnel, clickbait ou comparaison",
+          "Cliquez sur Générer et l'IA produit plusieurs options de titre",
+          "Copiez le titre qui correspond le mieux à votre note dans votre brouillon Xiaohongshu"
+        ],
+        "advantages": [
+          "Quatre préréglages de ton couvrent les modèles de titre Xiaohongshu les plus courants",
+          "L'IA produit plusieurs options par clic pour des tests A/B de titres",
+          "Interface en 6 langues incluant l'arabe RTL — fonctionne sur ordinateur et mobile",
+          "Gratuit avec quota quotidien — sans inscription, sans clé API"
+        ],
+        "faqs": [
+          {
+            "q": "Le générateur de titres Xiaohongshu est-il gratuit ?",
+            "a": "Oui, gratuit avec un quota quotidien pour éviter les abus. Sans inscription ni clé API."
+          },
+          {
+            "q": "Les titres générés seront-ils marqués comme clickbait par Xiaohongshu ?",
+            "a": "L'outil offre plusieurs tons dont informatif et comparaison. Évitez le ton clickbait si votre plateforme pénalise les titres agressifs."
+          },
+          {
+            "q": "Quelles langues le générateur de titres prend-il en charge ?",
+            "a": "L'interface prend en charge six langues (en/zh/es/fr/hi/ar). La langue du titre généré suit la langue d'interface sélectionnée — choisissez chinois (zh) pour des titres Xiaohongshu authentiques."
+          },
+          {
+            "q": "Puis-je générer des titres pour d'autres plateformes comme Instagram ou TikTok ?",
+            "a": "Oui. Les modèles de titres fonctionnent pour Instagram Reels, légendes TikTok et plateformes similaires axées sur le visuel. Précisez la plateforme dans le champ de sujet pour une rédaction adaptée."
+          },
+          {
+            "q": "Fonctionne-t-il sur mobile ?",
+            "a": "Oui, entièrement responsive. Entrées tactiles fonctionnent sur mobile, tablette et ordinateur."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

@@ -714,8 +714,8 @@
       }
     },
     "emoji-mixer": {
-      "name": "Mezclador de Emojis",
-      "description": "Mezclador de emojis online gratis: combina dos emojis en uno nuevo e híbrido. Crea pegatinas PNG transparentes al instante, sin registro ni instalación. ¡Pruébalo ahora!",
+      "name": "Mezclador de Emojis — Combina dos emojis en uno",
+      "description": "Mezclador de emojis online gratis: combina cualquier par de emojis en uno nuevo e híbrido. Crea pegatinas PNG transparentes al instante en tu navegador, copia y comparte con un clic. Sin registro ni instalación.",
       "seo": {
         "intro": "Mezclador de Emojis es una herramienta creativa gratuita y divertida dentro del navegador que combina dos emojis estándar en una nueva pegatina de emoji híbrido fusionado que puedes compartir como PNG transparente. Elige dos emojis cualesquiera del selector integrado — por ejemplo gato + pastel 🎂 o perro 🐶 + cohete 🚀 — y el mezclador renderizará un mashup de emoji híbrido fusionando colores, formas e iconografía de ambas entradas. Todo el renderizado se realiza en el cliente mediante Canvas, por lo que no hace falta iniciar sesión ni subir nada y cada nueva combinación se genera al instante directamente en la página.",
         "scenarios": [
@@ -1365,7 +1365,44 @@
     },
     "qr-code-generator": {
       "name": "Generador de Códigos QR",
-      "description": "Crea códigos QR personalizados: colores, logotipos, tamaños. Descarga PNG de alta resolución en un clic — URLs, texto, WiFi y más."
+      "description": "Crea códigos QR personalizados: colores, logotipos, tamaños. Descarga PNG de alta resolución en un clic — URLs, texto, WiFi y más.",
+      "seo": {
+        "intro": "QR Code Generator es una herramienta online gratuita que crea códigos QR personalizados para URLs, texto, credenciales WiFi, contactos y más. Personaliza colores de fondo y primer plano, inserta un logotipo en el centro y elige entre varios tamaños — luego descarga un PNG de alta resolución con un clic. Toda la generación se ejecuta localmente en tu navegador, por lo que tus enlaces y contenido nunca salen de tu dispositivo.",
+        "scenarios": [
+          "Compartir el menú de un restaurante, página de producto o enlace de inscripción a un evento como código QR imprimible",
+          "Incrustar las credenciales WiFi en un QR para que los invitados escaneen en lugar de escribir una contraseña larga",
+          "Añadir un QR con logotipo de marca a tarjetas de presentación, flyers o empaques"
+        ],
+        "tutorial": [
+          "Elige el tipo de QR (URL, texto, WiFi, email, etc.) e introduce el contenido de destino",
+          "Personaliza colores, tamaño y, opcionalmente, sube un logotipo para el centro",
+          "Previsualiza el QR en tiempo real y haz una prueba de escaneo con la cámara del móvil",
+          "Pulsa Descargar para guardar un PNG de alta resolución listo para impresión o web"
+        ],
+        "advantages": [
+          "Genera códigos QR localmente en el navegador — sin subidas, sin logs en servidor, totalmente privado",
+          "Soporta inserción de logotipo y personalización completa de color manteniendo el código escaneable",
+          "Exporta PNGs de alta resolución válidos tanto para digital como para imprenta"
+        ],
+        "faqs": [
+          {
+            "q": "¿El QR sigue siendo escaneable si añado un logotipo en el centro?",
+            "a": "Sí. La herramienta mantiene un nivel alto de corrección de errores, por lo que un logotipo pequeño (15-20% del área) en el centro no impide el escaneo. Haz siempre una prueba antes de imprimir en grande."
+          },
+          {
+            "q": "¿Los códigos QR generados aquí caducan?",
+            "a": "No. El QR codifica tu contenido directamente, sin pasar por redireccionamientos ni acortadores. Mientras la URL o texto de destino siga siendo válido, el código funcionará para siempre."
+          },
+          {
+            "q": "¿Puedo usar el PNG descargado para impresión comercial?",
+            "a": "Sí. El PNG se exporta en alta resolución sin marca de agua. Puedes usarlo en tarjetas, empaques, pósters o cualquier material comercial sin atribución."
+          },
+          {
+            "q": "¿Hay límite de cuántos QR puedo generar?",
+            "a": "Sin límite. Genera los que necesites, totalmente gratis, sin registro."
+          }
+        ]
+      }
     },
     "excel-formula-generator": {
       "name": "Generador de Fórmulas Excel",
@@ -5869,8 +5906,8 @@
       }
     },
     "multi-timezone-publish-time": {
-      "name": "Timezone Temporizador",
-      "description": "Herramienta Timezone Temporizador en línea con funciones: Timezone, Time, Calculadora. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada.",
+      "name": "Calculadora de Hora de Publicación Multi-Zona — Mejor hora para publicar",
+      "description": "Calculadora gratuita de hora de publicación multi-zona: encuentra la mejor hora para publicar en LA, NYC, Londres, Tokio, Sídney y más de 12 zonas con corrección automática de DST. Visualiza la superposición de horas activas de fans para elegir el slot óptimo. Sin registro.",
       "seo": {
         "intro": "Calculadora Multi-Zona Horaria para Publicaciones (Timezone Timer) es una herramienta gratuita basada en el navegador para creadores transfronterizos y equipos sociales de marcas, que convierte una única franja horaria ideal de publicación en la hora exacta del reloj local para más de doce husos horarios y ciudades mundiales habituales, incluyendo corrección automática del horario de verano/ invierno. Elige un huso horario de origen, selecciona la hora de mayor audiencia activa y el temporizador te mostrará cuándo pulsar «publicar» para seguidores en Los Ángeles, Nueva York, Londres, París, Berlín, Dubái, Bombay, Singapur, Tokio, Seúl, Pekín, Sídney y São Paulo — sin llamadas a API ni registro.",
         "scenarios": [
@@ -5914,8 +5951,8 @@
       }
     },
     "wc-2026-schedule": {
-      "name": "WC 2026 Horario",
-      "description": "Wc 2026 Schedule gratuita: admite World cup, 2026 y más. Procesamiento 100% local en tu dispositivo para máxima privacidad.",
+      "name": "Calendario Copa Mundial 2026 — Horarios de Todos los partidos",
+      "description": "Calendario gratuito de la Copa Mundial FIFA 2026: los 104 partidos en EE.UU., Canadá y México, horarios en 9 zonas horarias, tablas de grupos, llave de eliminatorias y fixtures por equipo. Exporta a iCal/CSV, sin registro.",
       "seo": {
         "intro": "2026 FIFA World Cup Schedule Browser es una herramienta gratuita dentro del navegador para ver los 104 partidos completos, horarios, sedes, entradas, tabla de grupos y cuadro de eliminatorias del Mundial 2026 EE.UU.–Canadá–México, pensada para aficionados al fútbol, casas de apuestas, gerentes de bares deportivos, organizadores de fiestas del Mundial y equipos administrativos de empresas que organizan verbenas y meriendas temáticas. Sin VPN para entrar a FIFA.com, sin aplicación que instalar, ábrela y úsala. Soporta las 16 ciudades sedes, las 48 selecciones, 9 cambios de huso horario (ET / PT / tu zona local + Londres / Berlín / Shanghái / Tokio / Nueva Delhi / El Cairo / Ciudad de México / Toronto), filtros por fase (grupos / octavos / cuartos / semifinal / 3er puesto / Final), tablas de grupos instantáneas, favoritos «Mis selecciones», exportación iCal con un clic al calendario del teléfono y exportación CSV/Markdown a Notion o Excel — resuelve el auténtico flujo del aficionado: «cuándo / dónde juega mi partido, a qué hora empieza en mi país, ¿debo pedir el día libre?».",
         "scenarios": [
@@ -8190,19 +8227,567 @@
     },
     "competitor-analyzer": {
       "name": "Analizador de Competidores",
-      "description": "Herramienta de análisis de competidores para comercio electrónico. Ingresa información del competidor, analiza precios, palabras clave, fortalezas/debilidades y genera sugerencias de optimización."
+      "description": "Herramienta de análisis de competidores para comercio electrónico. Ingresa información del competidor, analiza precios, palabras clave, fortalezas/debilidades y genera sugerencias de optimización.",
+      "seo": {
+        "intro": "Competitor Analyzer es una herramienta online gratuita para vendedores de e-commerce que estudia productos y tiendas de la competencia. Introduce el enlace de un producto competidor o la información de la tienda, y la herramienta te guía para analizar la estrategia de precios, la cobertura de palabras clave, las fortalezas y debilidades del listing y el sentimiento de reseñas — luego produce sugerencias concretas de optimización para tus propios listings. Todo se ejecuta en tu navegador, por lo que los datos sensibles de tu tienda nunca salen de tu dispositivo.",
+        "scenarios": [
+          "Comparar un listing competidor en Amazon o Shopify antes de lanzar un producto similar",
+          "Identificar brechas de precio y oportunidades de palabras clave cuando tu listing rinde menos que un rival",
+          "Auditar los temas de reseñas de un competidor para encontrar debilidades que puedas explotar"
+        ],
+        "tutorial": [
+          "Pega la URL del producto competidor o la info de la tienda en el campo de entrada",
+          "Selecciona las dimensiones a analizar: precio, palabras clave, copy del listing, reseñas, o todo",
+          "Revisa el análisis generado que cubre fortalezas, debilidades y brechas",
+          "Aplica las optimizaciones sugeridas a tu propio copy, precios o estrategia de palabras clave"
+        ],
+        "advantages": [
+          "Marco de análisis estructurado — cubre precios, palabras clave, copy y reseñas en una pasada",
+          "Devuelve acciones de optimización concretas en lugar de observaciones vagas",
+          "Se ejecuta localmente en el navegador — sin login de tienda, sin API keys, sin subidas"
+        ],
+        "faqs": [
+          {
+            "q": "¿Necesito conectar mi cuenta de tienda o API para usar esta herramienta?",
+            "a": "No. La herramienta funciona con información visible públicamente del competidor que tú pegas. No requiere conexión de tienda, login OAuth ni API key."
+          },
+          {
+            "q": "¿Puede analizar competidores en cualquier plataforma?",
+            "a": "Funciona con cualquier plataforma de e-commerce donde puedas ver el listing públicamente — Amazon, Shopify, eBay, Etsy, Shopee, AliExpress y otras. Pega la URL del producto y el análisis cubre lo que sea visible en la página."
+          },
+          {
+            "q": "¿Qué tan preciso es el análisis de palabras clave y precios?",
+            "a": "La herramienta usa el contenido del listing que proporcionas. Cuanto más completo sea el input (título, bullets, reseñas, historial de precios), más preciso será el análisis. Valida siempre las sugerencias con tus propios datos de mercado antes de actuar."
+          },
+          {
+            "q": "¿Se almacena mi información de competidor en algún lugar?",
+            "a": "No. Todo el análisis se ejecuta en tu sesión del navegador y se descarta al cerrar la pestaña. Nada se sube a un servidor."
+          }
+        ]
+      }
     },
     "keyword-analyzer": {
       "name": "Analizador de Palabras Clave",
-      "description": "Herramienta de análisis de palabras clave para comercio electrónico. Analiza volumen de búsqueda, competencia, ofertas sugeridas para optimizar SEO y campañas publicitarias."
+      "description": "Herramienta de análisis de palabras clave para comercio electrónico. Analiza volumen de búsqueda, competencia, ofertas sugeridas para optimizar SEO y campañas publicitarias.",
+      "seo": {
+        "intro": "Keyword Analyzer es una herramienta online gratuita que ayuda a vendedores de e-commerce y creadores de contenido a evaluar palabras clave de búsqueda antes de comprometer presupuesto. Introduce una lista de palabras clave objetivo y la herramienta analiza el volumen de búsqueda, el nivel de competencia y la puja sugerida para revelar oportunidades de alto ROI y filtrar términos saturados. Los resultados se devuelven en una tabla ordenable que puedes exportar para tu flujo de SEO o planificación de anuncios. Todo el procesamiento es local — sin cuenta, sin API key, sin subidas.",
+        "scenarios": [
+          "Filtrar una lista larga de palabras clave para encontrar términos de baja competencia que valgan la pena para posts de blog o páginas de producto",
+          "Comparar pujas sugeridas entre palabras clave para planificar un presupuesto de Google Ads o Shopping",
+          "Auditar las palabras clave de tus páginas de producto existentes frente a la demanda real de búsqueda antes de un refresh de listing"
+        ],
+        "tutorial": [
+          "Pega tu lista de palabras clave (una por línea o separadas por comas) en la caja de entrada",
+          "Opcionalmente añade un mercado objetivo o idioma para refinar el análisis",
+          "Haz clic en Analizar y revisa la tabla ordenable — volumen, competencia, puja sugerida, puntuación de oportunidad",
+          "Filtra u ordena para preseleccionar las mejores palabras clave, luego exporta el resultado como CSV o JSON"
+        ],
+        "advantages": [
+          "Devuelve estimaciones de volumen, competencia y puja en una sola vista — sin saltar entre múltiples herramientas",
+          "Calcula una puntuación de oportunidad para que puedas priorizar sin gimnasia de hojas de cálculo",
+          "Sin registro, sin API key — pega palabras clave y obtén resultados al instante, todo en el navegador"
+        ],
+        "faqs": [
+          {
+            "q": "¿De dónde vienen los datos de volumen de búsqueda y puja?",
+            "a": "La herramienta usa índices públicos de palabras clave y tus entradas para estimar volumen, competencia y puja sugerida. Para números exactos a nivel de campaña, verifica siempre con Google Keyword Planner o los datos oficiales de tu plataforma de anuncios antes de gastar presupuesto."
+          },
+          {
+            "q": "¿Cuántas palabras clave puedo analizar a la vez?",
+            "a": "Puedes analizar hasta algunos cientos de palabras clave en un solo lote. Para listas muy grandes, divide en lotes más pequeños para resultados más claros."
+          },
+          {
+            "q": "¿Puedo exportar los resultados del análisis?",
+            "a": "Sí. La tabla preseleccionada se puede exportar como CSV para hojas de cálculo o JSON para conectar con otras herramientas y flujos."
+          },
+          {
+            "q": "¿Esta herramienta soporta palabras clave no inglesas?",
+            "a": "Sí. El analizador acepta palabras clave en cualquier idioma y soporta mercados principales incluyendo inglés, español, francés, árabe, hindi y chino."
+          }
+        ]
+      }
     },
     "email-template-generator": {
       "name": "Generador de Plantillas de Correo",
-      "description": "Herramienta de generación de plantillas de correo para marketing electrónico. Admite correos de bienvenida, correos promocionales, recordatorios y más. Genera contenido de correo listo para usar con un clic."
+      "description": "Herramienta de generación de plantillas de correo para marketing electrónico. Admite correos de bienvenida, correos promocionales, recordatorios y más. Genera contenido de correo listo para usar con un clic.",
+      "seo": {
+        "intro": "Email Template Generator es una herramienta online gratuita que produce contenido de email para e-commerce listo para enviar en un clic. Elige entre emails de bienvenida, blast promocionales, recordatorios de carrito abandonado, follow-ups post-compra o campañas de re-engagement — rellena unos campos sobre tu producto y oferta, y la herramienta genera un cuerpo de email pulido y on-brand con asunto, texto de previsualización y llamada a la acción. Todo se ejecuta localmente en tu navegador; sin registro, sin conexión a ESP, sin que los datos salgan de tu dispositivo.",
+        "scenarios": [
+          "Redactar un email de bienvenida para nuevos suscriptores del newsletter sin mirar un editor en blanco",
+          "Generar variantes de recordatorio de carrito abandonado para A/B testear asuntos y CTAs",
+          "Producir un email promocional para una flash sale en minutos cuando tienes un link de producto y código de descuento"
+        ],
+        "tutorial": [
+          "Elige el tipo de email: bienvenida, promocional, recordatorio, follow-up o re-engagement",
+          "Rellena el nombre del producto, detalles de la oferta, voz de marca y enlace de CTA",
+          "Haz clic en Generar y revisa el asunto, texto de previsualización y cuerpo del email",
+          "Copia el output HTML o texto plano a tu ESP (Mailchimp, Klaviyo, Sendgrid, etc.)"
+        ],
+        "advantages": [
+          "Cubre cinco tipos de email e-commerce de alto ROI en una sola herramienta — sin necesidad de un pack de plantillas separado",
+          "Genera asunto y texto de previsualización junto con el cuerpo, así el email está listo para enviar",
+          "Sin conexión ESP ni API key — el output es texto plano/HTML que puedes pegar en cualquier sitio"
+        ],
+        "faqs": [
+          {
+            "q": "¿Puedo editar el email generado antes de enviarlo?",
+            "a": "Sí. El output es texto plano y HTML en un campo editable — retoca el copy, cambia CTAs o reestructura párrafos antes de copiar a tu ESP."
+          },
+          {
+            "q": "¿Esta herramienta envía emails por mí?",
+            "a": "No. La herramienta solo genera el contenido del email. El envío lo gestiona tu propio ESP (Mailchimp, Klaviyo, Sendgrid, etc.) — pega ahí el contenido generado."
+          },
+          {
+            "q": "¿Puedo generar emails en varios idiomas?",
+            "a": "Sí. La UI soporta seis idiomas (inglés, chino, español, francés, hindi, árabe) y el cuerpo del email generado coincide con el idioma de interfaz seleccionado."
+          },
+          {
+            "q": "¿Hay límite de cuántos emails puedo generar?",
+            "a": "Sin límite. Genera todas las variantes que necesites para A/B testing — totalmente gratis, sin registro."
+          }
+        ]
+      }
     },
     "review-generator": {
       "name": "Generador de Reseñas",
-      "description": "Herramienta de generación de reseñas de productos para comercio electrónico. Ingresa nombre y características del producto, genera automáticamente múltiples reseñas de usuarios en diferentes estilos para optimizar el contenido de la página del producto."
+      "description": "Herramienta de generación de reseñas de productos para comercio electrónico. Ingresa nombre y características del producto, genera automáticamente múltiples reseñas de usuarios en diferentes estilos para optimizar el contenido de la página del producto.",
+      "seo": {
+        "intro": "Review Generator es una herramienta online gratuita que produce reseñas de producto realistas para listings de e-commerce. Introduce el nombre del producto y unas cuantas características clave, elige el estilo de reseña (positiva, neutral, crítica, o longitudes mixtas), y la herramienta genera múltiples borradores de reseña que puedes usar para seedear contenido de página de producto, entrenar modelos de análisis de reseñas o benchmarkear sentimiento. Toda la generación se ejecuta en tu navegador — no se sube ningún dato de producto.",
+        "scenarios": [
+          "Seedear una página de producto nueva con reseñas de ejemplo antes de que los compradores reales dejen feedback",
+          "Generar datasets de reseñas de test para entrenar o benchmarkear modelos de análisis de sentimiento",
+          "Redactar snippets de prueba social estilo reseña para creatividades de anuncios o landing pages"
+        ],
+        "tutorial": [
+          "Introduce el nombre del producto y 2-3 características clave o casos de uso",
+          "Elige el estilo de reseña: positiva, neutral, crítica o una mezcla de las tres",
+          "Selecciona cuántas reseñas generar en un lote",
+          "Copia las reseñas generadas a tu página de producto, dataset o material de marketing"
+        ],
+        "advantages": [
+          "Produce múltiples variantes de reseña en un clic — útil para A/B testear contenido de página de producto",
+          "Soporta tonos positivo, neutral y crítico para que puedas modelar todo el espectro de sentimiento",
+          "Sin subidas, sin cuenta — se ejecuta totalmente en tu navegador, la información sensible del producto se mantiene privada"
+        ],
+        "faqs": [
+          {
+            "q": "¿Es ético usar reseñas generadas en una página de producto en vivo?",
+            "a": "Las reseñas generadas deben usarse para testeo interno, entrenamiento de modelos o contenido placeholder durante el desarrollo. Publicar reseñas fabricadas como feedback real de clientes en tiendas en vivo viola las políticas de la mayoría de plataformas de e-commerce y puede infringir leyes locales de protección al consumidor."
+          },
+          {
+            "q": "¿Las reseñas generadas pueden detectarse como falsas?",
+            "a": "La mayoría de plataformas modernas de reseñas usan filtros automatizados que marcan contenido sintético. La herramienta está pensada para casos de uso legítimos — testeo, entrenamiento, mockups — no para engañar a compradores reales."
+          },
+          {
+            "q": "¿Cuántas reseñas puedo generar en un lote?",
+            "a": "Puedes generar hasta 20 reseñas por lote. Para datasets más grandes, ejecuta múltiples lotes y desduplica según necesites."
+          },
+          {
+            "q": "¿La herramienta soporta reseñas en idiomas además del inglés?",
+            "a": "Sí. La interfaz soporta seis idiomas y las reseñas generadas coinciden con el idioma seleccionado, incluyendo árabe de derecha a izquierda."
+          }
+        ]
+      }
+    },
+    "document-formatter": {
+      "name": "Formateador de Documentos — Diseño APA, MLA, Informes y CV",
+      "description": "Formateador de documentos online gratuito: pega tu contenido, cambia entre plantillas APA, MLA, documento oficial, informe de negocios y currículum, previsualiza el diseño en tiempo real, exporta a Word/PDF. Se ejecuta en tu navegador, sin subidas.",
+      "seo": {
+        "intro": "Document Formatter es una herramienta online gratuita que formatea automáticamente el contenido pegado en plantillas estructuradas. Cambia entre formatos APA y MLA, documentos oficiales, informes de negocios o plantillas de currículum, previsualiza el diseño en tiempo real y exporta a Word o PDF. Todo el formateo se ejecuta localmente en tu navegador — tu borrador, contrato o manuscrito nunca sale de tu dispositivo.",
+        "scenarios": [
+          "Formatear un ensayo escolar o envío a revista para cumplir con APA 7ª edición o MLA 9ª edición",
+          "Redactar un documento oficial con el formato estándar (fuente, interlineado, jerarquía de títulos)",
+          "Pulir el diseño de un currículum o informe de negocios antes de exportar a PDF para envío"
+        ],
+        "tutorial": [
+          "Pega tu texto sin formato o borrador en el área de entrada",
+          "Elige plantilla: APA, MLA, documento oficial, informe o currículum",
+          "Previsualiza el diseño en tiempo real y ajusta interlineado o niveles de título según necesites",
+          "Haz clic en Exportar para descargar un archivo Word (.docx) o PDF listo para envío"
+        ],
+        "advantages": [
+          "Cubre cinco formatos comunes en una sola herramienta — sin necesidad de plantillas Word separadas",
+          "Vista previa en tiempo real para detectar problemas antes de exportar",
+          "Se ejecuta completamente en el navegador — los borradores sensibles, contratos e información personal se mantienen privados"
+        ],
+        "faqs": [
+          {
+            "q": "¿Esta herramienta soporta el formato APA 7ª edición?",
+            "a": "Sí. La plantilla APA sigue las directrices de la 7ª edición incluyendo estructura de portada, encabezado, títulos de sección y formato de lista de referencias. Verifica siempre con los requisitos específicos de tu institución antes de enviar."
+          },
+          {
+            "q": "¿Puedo exportar el documento como Word o PDF?",
+            "a": "Sí. La herramienta exporta tanto a .docx (editable en Word, Google Docs, Pages) como a PDF (listo para imprimir). Elige el formato que coincida con tu requisito de envío."
+          },
+          {
+            "q": "¿Maneja formato de documento oficial chino?",
+            "a": "Sí. La plantilla de documento oficial sigue el formato estándar GB/T 9704 incluyendo fuente (仿宋_GB2312 para cuerpo, 黑体 para títulos), interlineado (28-30pt) y jerarquía de títulos."
+          },
+          {
+            "q": "¿Se sube mi contenido a algún sitio?",
+            "a": "No. Todo el formateo se ejecuta localmente en tu navegador. Tu borrador, contrato o manuscrito nunca se envía a un servidor — cierra la pestaña y el contenido desaparece."
+          }
+        ]
+      }
+    },
+    "screen-recorder-subtitle": {
+      "name": "Grabador de Pantalla con Subtítulos IA — Exporta MP4/SRT",
+      "description": "Grabador de pantalla gratuito en el navegador con subtítulos generados por IA. Graba pantalla + micro, graba subtítulos en MP4, exporta SRT. Procesamiento 100% local, cero subidas, privacidad total.",
+      "seo": {
+        "intro": "Screen Recorder with AI Subtitles es una herramienta online gratuita que captura tu pantalla y micrófono, genera subtítulos automáticamente con reconocimiento de voz en el dispositivo, y exporta tanto un MP4 con subtítulos grabados como un archivo SRT independiente. Todo el procesamiento — grabación, transcripción y exportación — se ejecuta localmente en tu navegador, por lo que demos sensibles, reuniones y walkthroughs nunca salen de tu dispositivo.",
+        "scenarios": [
+          "Grabar un demo de software o tutorial con subtítulos de accesibilidad sin instalar OBS o Camtasia",
+          "Capturar un walkthrough rápido de producto para un colega con subtítulos auto-transcritos grabados en el video",
+          "Crear clips para redes sociales con subtítulos listos para autoplay silenciado en LinkedIn, Twitter o Instagram"
+        ],
+        "tutorial": [
+          "Haz clic en Iniciar Grabación y elige la pantalla o ventana a capturar (opcionalmente activa el micro)",
+          "Realiza tu walkthrough o demo — la herramienta graba pantalla + audio en tiempo real",
+          "Detén la grabación y deja que la IA genere subtítulos desde la pista de audio",
+          "Revisa y edita la transcripción si hace falta, luego exporta MP4 con subtítulos grabados y/o SRT"
+        ],
+        "advantages": [
+          "Todo en uno: grabación, transcripción y grabado de subtítulos en el navegador — sin instalación",
+          "Exporta tanto MP4 con subtítulos codificados como SRT independiente para editar en Premiere o DaVinci",
+          "Cero subidas — demos sensibles, reuniones internas y grabaciones de clientes se mantienen totalmente privadas"
+        ],
+        "faqs": [
+          {
+            "q": "¿La generación de subtítulos por IA sube mi audio?",
+            "a": "No. El reconocimiento de voz se ejecuta en el dispositivo usando la Web Speech API del navegador o un modelo local. Tu audio nunca sale de tu computadora — adecuado para reuniones confidenciales y demos internos."
+          },
+          {
+            "q": "¿Puedo editar los subtítulos generados automáticamente antes de exportar?",
+            "a": "Sí. Tras la transcripción, la lista de subtítulos es totalmente editable — corrige palabras mal escuchadas, ajusta el timing o elimina secciones antes de grabarlas en el MP4 o exportar SRT."
+          },
+          {
+            "q": "¿Qué formatos de video puedo exportar?",
+            "a": "La exportación principal es MP4 (H.264) con subtítulos grabados opcionales. También se puede exportar un archivo SRT independiente para usar en Premiere, DaVinci Resolve o el cargador de subtítulos de YouTube."
+          },
+          {
+            "q": "¿Hay límite de tiempo de grabación?",
+            "a": "Sin límite estricto, pero grabaciones muy largas (más de 60 minutos) pueden alcanzar los límites de memoria del navegador en dispositivos con poca RAM. Para sesiones de una hora, graba en segmentos y únelos después."
+          }
+        ]
+      }
+    },
+    "ai-prompt-generator": {
+      "name": "Generador de Prompts IA — Midjourney, Sora y Universal",
+      "description": "Generador de prompts IA gratuito: elige modelo y opciones, construye automáticamente prompts de imagen y video de alta calidad para Midjourney, Sora y más. Copia con un clic, pulido por IA, UI en seis idiomas. Se ejecuta en el navegador, sin registro.",
+      "seo": {
+        "intro": "AI Prompt Generator es una herramienta online gratuita que construye automáticamente prompts de alta calidad para modelos de imagen y video IA. Elige el modelo objetivo (Midjourney, Sora, video universal), selecciona sujeto, estilo, iluminación, composición y parámetros, luego copia el prompt ensamblado o usa el botón AI Polish para refinarlo más. La herramienta se ejecuta en tu navegador con interfaz en seis idiomas — sin registro, sin API key.",
+        "scenarios": [
+          "Generar prompts de Midjourney con parámetros --ar, --v, --style sin memorizar sintaxis",
+          "Construir prompts de video Sora con campos de sujeto, movimiento, cámara e iluminación pre-rellenados",
+          "Borrador de prompts universales de imagen IA para Stable Diffusion o DALL-E cuando no sabes por dónde empezar"
+        ],
+        "tutorial": [
+          "Selecciona el modelo IA objetivo: Midjourney, Sora, o imagen/video universal",
+          "Rellena los campos de sujeto, estilo, iluminación, composición y parámetros",
+          "Previsualiza el prompt auto-ensamblado en tiempo real mientras ajustas opciones",
+          "Haz clic en Copiar para tomar el prompt, o AI Polish para refinar la redacción más aún"
+        ],
+        "advantages": [
+          "Cubre Midjourney, Sora y prompts universales en una sola herramienta — sin necesidad de aprender la sintaxis de cada modelo",
+          "Ensamblaje de prompt en tiempo real para ver cómo cada opción cambia el output final",
+          "Botón AI Polish refina la redacción más allá del ensamblaje de plantillas",
+          "UI en seis idiomas (en/zh/es/fr/hi/ar) incluyendo árabe de derecha a izquierda"
+        ],
+        "faqs": [
+          {
+            "q": "¿Necesito una API key de Midjourney o Sora para usar esta herramienta?",
+            "a": "No. La herramienta solo genera el texto del prompt. Copias el prompt y lo pegas en Midjourney, Sora o tu plataforma IA preferida — no se requiere conexión API."
+          },
+          {
+            "q": "¿Qué parámetros soporta el prompt de Midjourney?",
+            "a": "La herramienta soporta --ar (relación de aspecto), --v (versión), --style, --chaos, --stylize, --quality y --seed. Elígelos desde menús desplegables en lugar de memorizar sintaxis."
+          },
+          {
+            "q": "¿El botón AI Polish puede mejorar mi prompt?",
+            "a": "Sí. AI Polish refina la redacción añadiendo adjetivos descriptivos, corrigiendo gramática y enriqueciendo el detalle de la escena. Se ejecuta en el navegador usando un modelo local ligero o tu API key configurada."
+          },
+          {
+            "q": "¿La herramienta soporta prompts no ingleses?",
+            "a": "Sí. La interfaz soporta seis idiomas (en/zh/es/fr/hi/ar). El cuerpo del prompt generado por defecto es en inglés (mejor para Midjourney/Sora) pero puede ajustarse a otros idiomas."
+          }
+        ]
+      }
+    },
+    "sora-prompt-generator": {
+      "name": "Generador de Prompts para Sora — Prompts de Video OpenAI Sora",
+      "description": "Generador gratuito de prompts para Sora: elige sujeto, movimiento, cámara, iluminación y estilo, genera prompts profesionales para OpenAI Sora. Copia con un clic, pulido con IA, interfaz en 6 idiomas. Funciona en el navegador, sin registro.",
+      "seo": {
+        "intro": "El Generador de Prompts para Sora es una herramienta online gratuita que crea prompts profesionales para el modelo de texto a video Sora de OpenAI. Elige sujeto, movimiento, cámara, iluminación, estilo y duración, copia el prompt o usa el pulido con IA. Interfaz en 6 idiomas, sin registro, funciona en tu navegador.",
+        "scenarios": [
+          "Generar prompts de Sora con sujeto, movimiento, cámara e iluminación sin memorizar sintaxis",
+          "Redactar prompts cinematográficos de Sora para clips cortos, anuncios o contenido social",
+          "Aprender cómo cada parámetro de Sora (cámara, iluminación, estilo) afecta el video final"
+        ],
+        "tutorial": [
+          "Rellena el campo de sujeto: persona, objeto, escena o concepto que Sora debe generar",
+          "Elige tipo de movimiento, cámara, iluminación, estilo y duración en los menús desplegables",
+          "Previsualiza el prompt de Sora ensamblado en tiempo real al ajustar las opciones",
+          "Haz clic en Copiar para obtener el prompt o en Pulido IA para refinar la redacción"
+        ],
+        "advantages": [
+          "No necesitas memorizar la sintaxis de Sora — los menús construyen el prompt por ti",
+          "Vista previa en tiempo real muestra cómo cada opción da forma al prompt final",
+          "El botón de pulido IA refina la redacción para mayor claridad y detalle",
+          "Interfaz en 6 idiomas incluido árabe RTL — funciona en escritorio y móvil"
+        ],
+        "faqs": [
+          {
+            "q": "¿Necesito una API key de OpenAI Sora para usar esta herramienta?",
+            "a": "No. La herramienta solo genera el texto del prompt. Copias el prompt y lo pegas en la plataforma o API de Sora — no se requiere conexión API en este sitio."
+          },
+          {
+            "q": "¿Qué parámetros soporta el generador de prompts de Sora?",
+            "a": "Sujeto, tipo de movimiento, movimiento de cámara, iluminación, estilo visual y duración. Cada opción se mapea a frases en lenguaje natural que Sora entiende."
+          },
+          {
+            "q": "¿El generador de prompts de Sora es gratis?",
+            "a": "Sí, totalmente gratis y sin registro. El pulido IA tiene una cuota diaria gratuita para evitar abusos."
+          },
+          {
+            "q": "¿Puedo usar los prompts generados para otros modelos de video IA?",
+            "a": "Sí. La estructura del prompt es lenguaje natural y funciona para Runway, Pika, Kling y modelos similares con ajustes menores."
+          },
+          {
+            "q": "¿Funciona en móvil?",
+            "a": "Sí, totalmente responsivo. Entradas táctiles y paneles adaptativos funcionan en móvil, tablet y escritorio."
+          }
+        ]
+      }
+    },
+    "midjourney-prompt-generator": {
+      "name": "Generador de Prompts para Midjourney — con parámetros --ar --v",
+      "description": "Generador gratuito de prompts para Midjourney: elige sujeto, estilo, iluminación, composición, genera prompts MJ con parámetros --ar --v 6. Copia con un clic, pulido con IA, interfaz en 6 idiomas. Funciona en el navegador, sin registro.",
+      "seo": {
+        "intro": "El Generador de Prompts para Midjourney es una herramienta online gratuita que crea prompts profesionales para el modelo de imagen Midjourney v6. Elige sujeto, estilo artístico, iluminación, composición y relación de aspecto, copia el prompt con parámetros --ar --v o usa el pulido con IA. Interfaz en 6 idiomas, sin registro, funciona en tu navegador.",
+        "scenarios": [
+          "Generar prompts de Midjourney con parámetros --ar, --v, --style sin memorizar sintaxis",
+          "Redactar prompts cinematográficos de Midjourney para retratos, paisajes, arte conceptual o productos",
+          "Aprender cómo cada parámetro de Midjourney (estilo, iluminación, aspecto) cambia la imagen final"
+        ],
+        "tutorial": [
+          "Rellena el sujeto: persona, objeto, escena o concepto que quieres que Midjourney renderice",
+          "Elige estilo artístico, iluminación, composición y relación de aspecto en los menús desplegables",
+          "Previsualiza el prompt de Midjourney con parámetros --ar --v en tiempo real",
+          "Haz clic en Copiar para obtener el prompt o en Pulido IA para refinar la redacción"
+        ],
+        "advantages": [
+          "No necesitas memorizar la sintaxis --ar --v --style de Midjourney — los menús construyen el prompt",
+          "Vista previa en tiempo real muestra el prompt completo de MJ incluyendo parámetros",
+          "El botón de pulido IA refina la redacción para mayor claridad y detalle visual",
+          "Interfaz en 6 idiomas incluido árabe RTL — funciona en escritorio y móvil"
+        ],
+        "faqs": [
+          {
+            "q": "¿Necesito una suscripción a Midjourney para usar esta herramienta?",
+            "a": "No. La herramienta solo genera el texto del prompt. Copias el prompt y lo pegas en Midjourney Discord o web — no se requiere conexión de cuenta en este sitio."
+          },
+          {
+            "q": "¿Qué parámetros de Midjourney soporta el generador?",
+            "a": "Sujeto, estilo artístico, iluminación, composición, relación de aspecto (--ar), versión (--v) y stylize (--s). Cada opción se mapea a frases en lenguaje natural que Midjourney entiende."
+          },
+          {
+            "q": "¿El generador de prompts de Midjourney es gratis?",
+            "a": "Sí, totalmente gratis y sin registro. El pulido IA tiene una cuota diaria gratuita para evitar abusos."
+          },
+          {
+            "q": "¿Puedo usar los prompts generados para otros modelos de imagen IA?",
+            "a": "Sí. La estructura del prompt es lenguaje natural y funciona para Stable Diffusion, DALL-E 3 y modelos similares — solo quita los parámetros --ar --v."
+          },
+          {
+            "q": "¿Funciona en móvil?",
+            "a": "Sí, totalmente responsivo. Entradas táctiles y paneles adaptativos funcionan en móvil, tablet y escritorio."
+          }
+        ]
+      }
+    },
+    "video-prompt-generator": {
+      "name": "Generador de Prompts de Video IA — Runway, Pika, Kling",
+      "description": "Generador gratuito de prompts de video IA: elige sujeto, movimiento, cámara, iluminación, estilo y duración, genera prompts para Runway, Pika, Kling y Sora. Copia con un clic, pulido con IA, interfaz en 6 idiomas. Funciona en el navegador, sin registro.",
+      "seo": {
+        "intro": "El Generador de Prompts de Video IA es una herramienta online gratuita que crea prompts profesionales para modelos de texto a video incluyendo Runway, Pika, Kling y Sora. Elige sujeto, movimiento, cámara, iluminación, estilo y duración, copia el prompt o usa el pulido con IA. Interfaz en 6 idiomas, sin registro, funciona en tu navegador.",
+        "scenarios": [
+          "Generar prompts de video para Runway, Pika, Kling sin memorizar la sintaxis de cada modelo",
+          "Redactar prompts cinematográficos de video para clips cortos, anuncios, contenido social o demos",
+          "Aprender cómo cada parámetro de video IA (movimiento, cámara, iluminación) da forma al clip final"
+        ],
+        "tutorial": [
+          "Rellena el sujeto: persona, objeto, escena o concepto que quieres que el video IA genere",
+          "Elige tipo de movimiento, cámara, iluminación, estilo y duración en los menús desplegables",
+          "Previsualiza el prompt de video ensamblado en tiempo real al ajustar las opciones",
+          "Haz clic en Copiar para obtener el prompt o en Pulido IA para refinar la redacción"
+        ],
+        "advantages": [
+          "Funciona para Runway, Pika, Kling y Sora en una sola herramienta — sin aprender cada sintaxis",
+          "Vista previa en tiempo real muestra cómo cada opción cambia el prompt de video final",
+          "El botón de pulido IA refina la redacción para mayor claridad y detalle visual",
+          "Interfaz en 6 idiomas incluido árabe RTL — funciona en escritorio y móvil"
+        ],
+        "faqs": [
+          {
+            "q": "¿Necesito una API key de Runway, Pika o Kling para usar esta herramienta?",
+            "a": "No. La herramienta solo genera el texto del prompt. Copias el prompt y lo pegas en tu plataforma de video IA preferida — no se requiere conexión API en este sitio."
+          },
+          {
+            "q": "¿Qué modelos de video IA soporta el generador?",
+            "a": "Runway Gen-3, Pika, Kling y Sora. La estructura del prompt es lenguaje natural y funciona para modelos similares con ajustes menores."
+          },
+          {
+            "q": "¿El generador de prompts de video IA es gratis?",
+            "a": "Sí, totalmente gratis y sin registro. El pulido IA tiene una cuota diaria gratuita para evitar abusos."
+          },
+          {
+            "q": "¿Puedo usar los prompts generados para modelos de imagen IA?",
+            "a": "Sí. La estructura del prompt es lenguaje natural y funciona para Stable Diffusion, DALL-E 3 y modelos similares — solo quita los campos de movimiento y duración."
+          },
+          {
+            "q": "¿Funciona en móvil?",
+            "a": "Sí, totalmente responsivo. Entradas táctiles y paneles adaptativos funcionan en móvil, tablet y escritorio."
+          }
+        ]
+      }
+    },
+    "ai-review-generator": {
+      "name": "Generador de Reseñas IA — Producto y Comida a Domicilio",
+      "description": "Generador gratuito de reseñas IA: introduce el nombre del producto y tu experiencia, la IA genera reseñas positivas, neutras o negativas para plataformas de ecommerce y comida a domicilio. Interfaz en 6 idiomas, funciona en el navegador, sin registro.",
+      "seo": {
+        "intro": "El Generador de Reseñas IA es una herramienta online gratuita que redacta reseñas auténticas de productos y servicios. Introduce el nombre del producto y tu experiencia, elige el tono (positivo, neutro, negativo) y la IA genera una reseña que puedes copiar. Interfaz en 6 idiomas, sin registro, funciona en tu navegador.",
+        "scenarios": [
+          "Redactar reseñas de productos para plataformas de ecommerce cuando no sabes cómo expresarlas",
+          "Escribir valoraciones de comida a domicilio con detalles específicos sobre sabor, velocidad y embalaje",
+          "Generar reseñas de muestra para probar productos demo o tiendas simuladas"
+        ],
+        "tutorial": [
+          "Introduce el nombre del producto o servicio en el campo de entrada",
+          "Describe brevemente tu experiencia: sabor, calidad, entrega, embalaje, etc.",
+          "Elige el tono de la reseña: positivo, neutro o negativo",
+          "Haz clic en Generar y copia la reseña redactada por IA al portapapeles"
+        ],
+        "advantages": [
+          "Tres presets de tono cubren los escenarios de reseña más comunes",
+          "La IA genera detalles específicos a partir de tu breve descripción, no relleno genérico",
+          "Interfaz en 6 idiomas incluido árabe RTL — funciona en escritorio y móvil",
+          "Gratis con cuota diaria — sin registro, sin API key"
+        ],
+        "faqs": [
+          {
+            "q": "¿El generador de reseñas IA es gratis?",
+            "a": "Sí, gratis con una cuota diaria para evitar abusos. Sin registro ni API key."
+          },
+          {
+            "q": "¿Puedo usar las reseñas generadas en plataformas reales de ecommerce?",
+            "a": "Puedes, pero asegúrate de que reflejen tu experiencia real. La herramienta está pensada para ayudarte a expresar opiniones genuinas, no fabricar reseñas falsas."
+          },
+          {
+            "q": "¿Qué idiomas soporta el generador de reseñas?",
+            "a": "La interfaz soporta seis idiomas (en/zh/es/fr/hi/ar). El idioma de la reseña generada sigue el idioma de interfaz seleccionado."
+          },
+          {
+            "q": "¿Puedo generar reseñas para plataformas específicas como Amazon o Yelp?",
+            "a": "Sí. La estructura de la reseña funciona para Amazon, Yelp, apps de comida a domicilio y la mayoría de sistemas de reseñas de ecommerce. Especifica la plataforma en el campo de experiencia para una redacción adaptada."
+          },
+          {
+            "q": "¿Funciona en móvil?",
+            "a": "Sí, totalmente responsivo. Entradas táctiles funcionan en móvil, tablet y escritorio."
+          }
+        ]
+      }
+    },
+    "ai-resume-experience-optimize": {
+      "name": "Optimizador de Currículum IA — Experiencia Laboral",
+      "description": "Optimizador gratuito de experiencia laboral con IA: pega tu información laboral y experiencia, la IA pule los puntos, destaca logros con métricas y mejora las respuestas de entrevista. Interfaz en 6 idiomas, funciona en el navegador, sin registro.",
+      "seo": {
+        "intro": "El Optimizador de Currículum IA es una herramienta online gratuita que refina los puntos de experiencia laboral del currículum. Pega tu puesto, empresa y experiencia original, la IA reescribe con verbos de acción, logros cuantificados y frases centradas en impacto para mejorar respuestas de reclutadores. Interfaz en 6 idiomas, sin registro, funciona en tu navegador.",
+        "scenarios": [
+          "Pulir puntos vagos de experiencia laboral en declaraciones de logros cuantificados",
+          "Reescribir experiencia de currículum para una oferta específica y coincidir con palabras clave",
+          "Adaptar el mismo rol para diferentes industrias sin reescribir desde cero"
+        ],
+        "tutorial": [
+          "Pega tu puesto, empresa y descripción original de experiencia laboral",
+          "Opcionalmente pega la oferta de trabajo objetivo para alinear palabras clave",
+          "Haz clic en Optimizar y la IA reescribe cada punto con verbos de acción y métricas",
+          "Copia la experiencia optimizada a tu documento de currículum"
+        ],
+        "advantages": [
+          "La IA se centra en logros cuantificados, no listas genéricas de deberes",
+          "La entrada opcional de oferta alinea tu experiencia con palabras clave del reclutador",
+          "Interfaz en 6 idiomas incluido árabe RTL — funciona en escritorio y móvil",
+          "Gratis con cuota diaria — sin registro, sin API key"
+        ],
+        "faqs": [
+          {
+            "q": "¿El optimizador de currículum es gratis?",
+            "a": "Sí, gratis con una cuota diaria para evitar abusos. Sin registro ni API key."
+          },
+          {
+            "q": "¿La IA fabricará métricas que no proporcioné?",
+            "a": "No. La IA reformula tu entrada con verbos de acción y estructuras, pero no inventa números. Añade tus propias métricas para mejores resultados."
+          },
+          {
+            "q": "¿Qué idiomas soporta el optimizador de currículum?",
+            "a": "La interfaz soporta seis idiomas (en/zh/es/fr/hi/ar). El idioma de salida optimizado sigue el idioma de interfaz seleccionado."
+          },
+          {
+            "q": "¿Puedo optimizar la experiencia para una oferta de trabajo específica?",
+            "a": "Sí. Pega la oferta objetivo en el campo opcional y la IA alinea tu experiencia con las palabras clave y responsabilidades de la oferta."
+          },
+          {
+            "q": "¿Funciona en móvil?",
+            "a": "Sí, totalmente responsivo. Entradas táctiles funcionan en móvil, tablet y escritorio."
+          }
+        ]
+      }
+    },
+    "ai-xiaohongshu-title-generator": {
+      "name": "Generador de Títulos para Xiaohongshu — Títulos Virales",
+      "description": "Generador gratuito de títulos para Xiaohongshu con IA: introduce el tema de tu nota, la IA genera títulos virales en múltiples estilos y tonos para aumentar las impresiones. Interfaz en 6 idiomas, funciona en el navegador, sin registro.",
+      "seo": {
+        "intro": "El Generador de Títulos para Xiaohongshu es una herramienta online gratuita que redacta títulos estilo viral para notas de Xiaohongshu (Little Red Book). Introduce el tema de tu nota, elige el tono (informativo, emocional, clickbait, comparación) y la IA genera múltiples opciones de título diseñadas para aumentar impresiones. Interfaz en 6 idiomas, sin registro, funciona en tu navegador.",
+        "scenarios": [
+          "Generar títulos de Xiaohongshu que detengan el scroll cuando tus borradores parecen planos",
+          "Probar múltiples tonos de título (emocional, lista, comparación) para la misma nota",
+          "Localizar patrones de títulos chinos de Xiaohongshu para creadores de contenido extranjeros"
+        ],
+        "tutorial": [
+          "Introduce el tema de tu nota: belleza, comida, viajes, estilo de vida, reseña de producto, etc.",
+          "Elige el tono del título: informativo, emocional, clickbait o comparación",
+          "Haz clic en Generar y la IA produce múltiples opciones de título",
+          "Copia el título que mejor se adapte a tu nota al borrador de Xiaohongshu"
+        ],
+        "advantages": [
+          "Cuatro presets de tono cubren los patrones de título más comunes de Xiaohongshu",
+          "La IA produce múltiples opciones por clic para que puedas hacer pruebas A/B",
+          "Interfaz en 6 idiomas incluido árabe RTL — funciona en escritorio y móvil",
+          "Gratis con cuota diaria — sin registro, sin API key"
+        ],
+        "faqs": [
+          {
+            "q": "¿El generador de títulos de Xiaohongshu es gratis?",
+            "a": "Sí, gratis con una cuota diaria para evitar abusos. Sin registro ni API key."
+          },
+          {
+            "q": "¿Los títulos generados serán marcados como clickbait por Xiaohongshu?",
+            "a": "La herramienta ofrece múltiples tonos incluido informativo y comparación. Evita el tono clickbait si tu plataforma penaliza titulares agresivos."
+          },
+          {
+            "q": "¿Qué idiomas soporta el generador de títulos?",
+            "a": "La interfaz soporta seis idiomas (en/zh/es/fr/hi/ar). El idioma del título generado sigue el idioma de interfaz seleccionado — elige chino (zh) para títulos auténticos de Xiaohongshu."
+          },
+          {
+            "q": "¿Puedo generar títulos para otras plataformas como Instagram o TikTok?",
+            "a": "Sí. Los patrones de título funcionan para Instagram Reels, captions de TikTok y plataformas similares centradas en lo visual. Especifica la plataforma en el campo del tema para una redacción adaptada."
+          },
+          {
+            "q": "¿Funciona en móvil?",
+            "a": "Sí, totalmente responsivo. Entradas táctiles funcionan en móvil, tablet y escritorio."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {
