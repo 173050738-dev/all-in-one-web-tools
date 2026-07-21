@@ -1,15 +1,15 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Copy, Check, Info, Regex } from 'lucide-react';
+import { Copy, Check, Info, Regex, Star, StarOff, Bookmark, Trash2, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface RegexTesterProps {
   locale?: string;
 }
 
 const i18n = {
-  zh: { title:"正则表达式测试器", subtitle:"在线调试 + 高亮匹配 + 模板库", regexInput:"正则表达式 (regex)", flags:"标志 (flags)", flagG:"全局 (g)", flagI:"忽略大小写 (i)", flagM:"多行 (m)", flagS:"点号匹配换行 (s)", flagU:"Unicode (u)", testText:"测试文本", matches:"匹配结果", matchCount:"匹配 {n} 处", noMatch:"无匹配", groups:"捕获分组 ($1,$2...)", replaceMode:"替换模式", replaceInput:"替换为 ($1 引用分组)", replaced:"替换结果", templates:"常用模板", sampleEmail:"邮箱 Email", samplePhone:"手机号", sampleUrl:"URL链接", sampleIp:"IPv4 地址", sampleIdCard:"身份证号", sampleDate:"日期 YYYY-MM-DD", sampleCn:"中文汉字", samplePassword:"强密码 8位+", copyMatch:"复制全部匹配", copied:"已复制", explain:"语法说明", errorInvalid:"正则语法错误: {msg}" },
-  en: { title:"Regex Tester", subtitle:"Live debug + highlight + template library", regexInput:"Regular expression", flags:"Flags", flagG:"Global (g)", flagI:"Case Insensitive (i)", flagM:"Multiline (m)", flagS:"Dotall (s)", flagU:"Unicode (u)", testText:"Test text", matches:"Matches", matchCount:"{n} matches", noMatch:"No matches", groups:"Capture groups ($1,$2...)", replaceMode:"Replace mode", replaceInput:"Replace with ($1 refs)", replaced:"Replaced result", templates:"Common templates", sampleEmail:"Email", samplePhone:"Phone (CN)", sampleUrl:"URL", sampleIp:"IPv4", sampleIdCard:"ID card (CN)", sampleDate:"Date YYYY-MM-DD", sampleCn:"Chinese chars", samplePassword:"Strong password 8+", copyMatch:"Copy all matches", copied:"Copied", explain:"Syntax reference", errorInvalid:"Invalid regex: {msg}" },
+  zh: { title:"正则表达式测试器", subtitle:"在线调试 + 高亮匹配 + 模板库", regexInput:"正则表达式 (regex)", flags:"标志 (flags)", flagG:"全局 (g)", flagI:"忽略大小写 (i)", flagM:"多行 (m)", flagS:"点号匹配换行 (s)", flagU:"Unicode (u)", testText:"测试文本", matches:"匹配结果", matchCount:"匹配 {n} 处", noMatch:"无匹配", groups:"捕获分组 ($1,$2...)", replaceMode:"替换模式", replaceInput:"替换为 ($1 引用分组)", replaced:"替换结果", templates:"常用模板", sampleEmail:"邮箱 Email", samplePhone:"手机号", sampleUrl:"URL链接", sampleIp:"IPv4 地址", sampleIdCard:"身份证号", sampleDate:"日期 YYYY-MM-DD", sampleCn:"中文汉字", samplePassword:"强密码 8位+", sampleUsername:"用户名", sampleHexColor:"十六进制颜色", sampleMacAddress:"MAC地址", sampleCreditCard:"信用卡号", sampleHtmlTag:"HTML标签", sampleIpv6:"IPv6 地址", sampleTime24h:"24小时时间", sampleTime12h:"12小时时间", sampleJsonKey:"JSON键名", sampleMarkdownLink:"Markdown链接", sampleCssClass:"CSS类名", copyMatch:"复制全部匹配", copied:"已复制", explain:"语法说明", errorInvalid:"正则语法错误: {msg}", favorites:"我的收藏", saveFavorite:"保存到收藏", removeFavorite:"从收藏移除", clearFavorites:"清空收藏", confirmClear:"确定清空所有收藏？", favoritesEmpty:"暂无收藏", name:"名称", pattern:"模式", addName:"输入收藏名称" },
+  en: { title:"Regex Tester", subtitle:"Live debug + highlight + template library", regexInput:"Regular expression", flags:"Flags", flagG:"Global (g)", flagI:"Case Insensitive (i)", flagM:"Multiline (m)", flagS:"Dotall (s)", flagU:"Unicode (u)", testText:"Test text", matches:"Matches", matchCount:"{n} matches", noMatch:"No matches", groups:"Capture groups ($1,$2...)", replaceMode:"Replace mode", replaceInput:"Replace with ($1 refs)", replaced:"Replaced result", templates:"Common templates", sampleEmail:"Email", samplePhone:"Phone (CN)", sampleUrl:"URL", sampleIp:"IPv4", sampleIdCard:"ID card (CN)", sampleDate:"Date YYYY-MM-DD", sampleCn:"Chinese chars", samplePassword:"Strong password 8+", sampleUsername:"Username", sampleHexColor:"Hex color", sampleMacAddress:"MAC address", sampleCreditCard:"Credit card", sampleHtmlTag:"HTML tag", sampleIpv6:"IPv6", sampleTime24h:"24h time", sampleTime12h:"12h time", sampleJsonKey:"JSON key", sampleMarkdownLink:"Markdown link", sampleCssClass:"CSS class", copyMatch:"Copy all matches", copied:"Copied", explain:"Syntax reference", errorInvalid:"Invalid regex: {msg}", favorites:"My Favorites", saveFavorite:"Save to favorites", removeFavorite:"Remove from favorites", clearFavorites:"Clear favorites", confirmClear:"Clear all favorites?", favoritesEmpty:"No favorites yet", name:"Name", pattern:"Pattern", addName:"Enter favorite name" },
   hi: { title:"रेगेक्स परीक्षक", subtitle:"लाइव डीबग + हाइलाइट + टेम्पलेट", regexInput:"नियमित अभिव्यक्ति", flags:"फ्लैग", flagG:"ग्लोबल (g)", flagI:"केस इग्नोर (i)", flagM:"मल्टीलाइन (m)", flagS:"डॉटॉल (s)", flagU:"यूनिकोड (u)", testText:"टेस्ट टेक्स्ट", matches:"मैच", matchCount:"{n} मैच", noMatch:"कोई मैच नहीं", groups:"ग्रुप", replaceMode:"रिप्लेस मोड", replaceInput:"से बदलें", replaced:"रिजल्ट", templates:"टेम्पलेट", sampleEmail:"ईमेल", samplePhone:"फ़ोन", sampleUrl:"URL", sampleIp:"IPv4", sampleIdCard:"आईडी", sampleDate:"दिनांक", sampleCn:"चीनी अक्षर", samplePassword:"पासवर्ड", copyMatch:"सभी मैच कॉपी", copied:"कॉपी हो गया", explain:"सिंटैक्स", errorInvalid:"गलत regex: {msg}" },
   fr: { title:"Testeur Regex", subtitle:"Debug en direct + surlignage", regexInput:"Expression régulière", flags:"Drapeaux", flagG:"Global (g)", flagI:"Insensible (i)", flagM:"Multiligne (m)", flagS:"Dotall (s)", flagU:"Unicode (u)", testText:"Texte test", matches:"Correspondances", matchCount:"{n} trouvés", noMatch:"Aucun", groups:"Groupes capturés", replaceMode:"Mode remplacement", replaceInput:"Remplacer par", replaced:"Résultat", templates:"Modèles courants", sampleEmail:"E-mail", samplePhone:"Téléphone", sampleUrl:"URL", sampleIp:"IPv4", sampleIdCard:"Carte ID", sampleDate:"Date", sampleCn:"Chinois", samplePassword:"Mot de passe", copyMatch:"Tout copier", copied:"Copié", explain:"Syntaxe", errorInvalid:"Regex invalide: {msg}" },
   es: { title:"Probador Regex", subtitle:"Depuración en vivo + resaltado", regexInput:"Expresión regular", flags:"Banderas", flagG:"Global (g)", flagI:"May/min (i)", flagM:"Multilínea (m)", flagS:"Dotall (s)", flagU:"Unicode (u)", testText:"Texto prueba", matches:"Coincidencias", matchCount:"{n} coincidencias", noMatch:"Ninguna", groups:"Grupos captura", replaceMode:"Modo reemplazo", replaceInput:"Reemplazar con", replaced:"Resultado", templates:"Plantillas", sampleEmail:"Correo", samplePhone:"Teléfono", sampleUrl:"URL", sampleIp:"IPv4", sampleIdCard:"DNI", sampleDate:"Fecha", sampleCn:"Chino", samplePassword:"Contraseña", copyMatch:"Copiar todo", copied:"Copiado", explain:"Sintaxis", errorInvalid:"Regex no válida: {msg}" },
@@ -25,6 +25,17 @@ const templates = {
   date: /\d{4}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12]\d|3[01])/.source,
   cn: /[\u4e00-\u9fff]+/.source,
   password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.source,
+  username: /^[a-zA-Z][a-zA-Z0-9_]{2,15}$/.source,
+  hexColor: /#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})/.source,
+  macAddress: /([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})/.source,
+  creditCard: /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})$/.source,
+  htmlTag: /<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)/i.source,
+  ipv6: /([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}/.source,
+  time24h: /([01]\d|2[0-3]):[0-5]\d/.source,
+  time12h: /([01]?\d):([0-5]\d)\s*(AM|PM|am|pm)/.source,
+  jsonKey: /"([^"]+)":/.source,
+  markdownLink: /\[([^\]]+)\]\(([^)]+)\)/.source,
+  cssClass: /\.[a-zA-Z_-][a-zA-Z0-9_-]*/.source,
 };
 
 const syntaxTokens = [
@@ -55,7 +66,14 @@ IP地址：192.168.1.100, 10.0.0.1
 中文内容：这是一段中文测试文本，用于正则匹配测试。
 密码示例：MyP@ssw0rd!`;
 
-export default function RegexTester({ locale = 'zh' }: RegexTesterProps) {
+interface FavoriteItem {
+    id: string;
+    name: string;
+    pattern: string;
+    flags: string;
+  }
+
+  export default function RegexTester({ locale = 'zh' }: RegexTesterProps) {
   const [regexStr, setRegexStr] = useState('');
   const [flagsStr, setFlagsStr] = useState('g');
   const [testStr, setTestStr] = useState(sampleTextZh);
@@ -63,6 +81,9 @@ export default function RegexTester({ locale = 'zh' }: RegexTesterProps) {
   const [replaceMode, setReplaceMode] = useState(false);
   const [copiedMatches, setCopiedMatches] = useState(false);
   const [copiedReplaced, setCopiedReplaced] = useState(false);
+  const [favorites, setFavorites] = useState<FavoriteItem[]>([]);
+  const [showFavorites, setShowFavorites] = useState(false);
+  const [favoriteName, setFavoriteName] = useState('');
 
   const t = (key: keyof typeof i18n.zh, vars?: Record<string, string | number>) => {
     const dict = (i18n as Record<string, Record<string, string>>)[locale] || i18n.zh;
@@ -197,6 +218,34 @@ export default function RegexTester({ locale = 'zh' }: RegexTesterProps) {
     }
   };
 
+  const saveCurrentToFavorites = () => {
+    if (!regexStr.trim()) return;
+    const name = favoriteName.trim() || `${t('pattern')} ${favorites.length + 1}`;
+    const newFavorite: FavoriteItem = {
+      id: Date.now().toString(),
+      name,
+      pattern: regexStr,
+      flags: flagsStr,
+    };
+    setFavorites(prev => [newFavorite, ...prev]);
+    setFavoriteName('');
+  };
+
+  const loadFavorite = (item: FavoriteItem) => {
+    setRegexStr(item.pattern);
+    setFlagsStr(item.flags);
+  };
+
+  const removeFavorite = (id: string) => {
+    setFavorites(prev => prev.filter(item => item.id !== id));
+  };
+
+  const clearAllFavorites = () => {
+    if (confirm(t('confirmClear'))) {
+      setFavorites([]);
+    }
+  };
+
   const templateButtons = [
     { key: 'email', tpl: templates.email, labelKey: 'sampleEmail' as const },
     { key: 'phone', tpl: templates.phone, labelKey: 'samplePhone' as const },
@@ -206,6 +255,17 @@ export default function RegexTester({ locale = 'zh' }: RegexTesterProps) {
     { key: 'date', tpl: templates.date, labelKey: 'sampleDate' as const },
     { key: 'cn', tpl: templates.cn, labelKey: 'sampleCn' as const },
     { key: 'password', tpl: templates.password, labelKey: 'samplePassword' as const },
+    { key: 'username', tpl: templates.username, labelKey: 'sampleUsername' as const },
+    { key: 'hexColor', tpl: templates.hexColor, labelKey: 'sampleHexColor' as const },
+    { key: 'macAddress', tpl: templates.macAddress, labelKey: 'sampleMacAddress' as const },
+    { key: 'creditCard', tpl: templates.creditCard, labelKey: 'sampleCreditCard' as const },
+    { key: 'htmlTag', tpl: templates.htmlTag, labelKey: 'sampleHtmlTag' as const },
+    { key: 'ipv6', tpl: templates.ipv6, labelKey: 'sampleIpv6' as const },
+    { key: 'time24h', tpl: templates.time24h, labelKey: 'sampleTime24h' as const },
+    { key: 'time12h', tpl: templates.time12h, labelKey: 'sampleTime12h' as const },
+    { key: 'jsonKey', tpl: templates.jsonKey, labelKey: 'sampleJsonKey' as const },
+    { key: 'markdownLink', tpl: templates.markdownLink, labelKey: 'sampleMarkdownLink' as const },
+    { key: 'cssClass', tpl: templates.cssClass, labelKey: 'sampleCssClass' as const },
   ];
 
   return (
@@ -274,7 +334,7 @@ export default function RegexTester({ locale = 'zh' }: RegexTesterProps) {
 
           <div className='card p-4 sm:p-6'>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('templates')}</h3>
-            <div className='grid grid-cols-2 gap-2'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 gap-2'>
               {templateButtons.map((tb) => (
                 <button
                   key={tb.key}
@@ -285,6 +345,93 @@ export default function RegexTester({ locale = 'zh' }: RegexTesterProps) {
                 </button>
               ))}
             </div>
+          </div>
+
+          <div className='card p-4 sm:p-6'>
+            <button
+              onClick={() => setShowFavorites(!showFavorites)}
+              className={`w-full flex items-center justify-between px-2 py-1.5 rounded-lg font-semibold text-gray-900 dark:text-gray-100 transition-colors ${
+                showFavorites ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400' : ''
+              }`}
+            >
+              <div className='flex items-center gap-2'>
+                <Bookmark className='h-4 w-4' />
+                {t('favorites')}
+                {favorites.length > 0 && (
+                  <span className='px-1.5 py-0.5 rounded-full text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'>
+                    {favorites.length}
+                  </span>
+                )}
+              </div>
+              {showFavorites ? <ChevronUp className='h-4 w-4' /> : <ChevronDown className='h-4 w-4' />}
+            </button>
+
+            {showFavorites && (
+              <div className='mt-4 space-y-3'>
+                {regexStr && (
+                  <div className='flex gap-2'>
+                    <input
+                      type='text'
+                      value={favoriteName}
+                      onChange={(e) => setFavoriteName(e.target.value)}
+                      placeholder={t('addName')}
+                      className='flex-1 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                    />
+                    <button
+                      onClick={saveCurrentToFavorites}
+                      className='flex items-center gap-1 px-3 py-2 rounded-lg btn-primary text-sm font-medium'
+                    >
+                      <Star className='h-4 w-4' />
+                      {t('saveFavorite')}
+                    </button>
+                  </div>
+                )}
+
+                {favorites.length === 0 ? (
+                  <p className='text-sm text-gray-500 dark:text-gray-400 text-center py-4'>
+                    {t('favoritesEmpty')}
+                  </p>
+                ) : (
+                  <>
+                    <div className='flex justify-end'>
+                      <button
+                        onClick={clearAllFavorites}
+                        className='flex items-center gap-1 px-2 py-1 rounded-lg text-xs text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20'
+                      >
+                        <Trash2 className='h-3 w-3' />
+                        {t('clearFavorites')}
+                      </button>
+                    </div>
+                    <div className='space-y-2 max-h-[250px] overflow-auto'>
+                      {favorites.map((item) => (
+                        <div
+                          key={item.id}
+                          className='flex items-center gap-2 p-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700'
+                        >
+                          <button
+                            onClick={() => loadFavorite(item)}
+                            className='flex-1 text-left'
+                          >
+                            <div className='text-sm font-medium text-gray-900 dark:text-gray-100'>
+                              {item.name}
+                            </div>
+                            <div className='text-xs text-gray-500 dark:text-gray-400 font-mono truncate'>
+                              /{item.pattern}/{item.flags}
+                            </div>
+                          </button>
+                          <button
+                            onClick={() => removeFavorite(item.id)}
+                            className='p-1.5 rounded-lg text-gray-400 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors'
+                          >
+                            <StarOff className='h-4 w-4' />
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
           </div>
         </div>
 

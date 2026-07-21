@@ -45,8 +45,6 @@ keywords: Partial<Record<SeoLocale, string[]>>;
 export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 {
 "slug": "what-is-regular-expression",
-"coverImage": "https://picsum.photos/800/450?random=576&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-06-28T00:00:00.000Z",
 "updatedAt": "2026-07-02T00:00:00.000Z",
 "tags": [
@@ -112,8 +110,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "regex-email-phone-url-patterns",
-"coverImage": "https://picsum.photos/800/450?random=30&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-06-30T00:00:00.000Z",
 "tags": [
 {
@@ -177,8 +173,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "regex-vs-string-match-performance",
-"coverImage": "https://picsum.photos/800/450?random=445&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-01T00:00:00.000Z",
 "tags": [
 {
@@ -345,8 +339,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tools-ultimate-guide-2026",
-"coverImage": "https://picsum.photos/800/450?random=25&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-02T00:00:00.000Z",
 "tags": [
 {
@@ -451,8 +443,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "regex-tester-practical-use-cases",
-"coverImage": "https://picsum.photos/800/450?random=958&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-03T00:00:00.000Z",
 "tags": [
 {
@@ -558,8 +548,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "qr-code-generator-business-use-cases",
-"coverImage": "https://picsum.photos/800/450?random=361&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-03T00:00:00.000Z",
 "tags": [
 {
@@ -664,8 +652,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "password-generator-security-myths-2026",
-"coverImage": "https://picsum.photos/800/450?random=86&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-03T00:00:00.000Z",
 "tags": [
 {
@@ -771,8 +757,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "base64-encoding-everyday-use-cases",
-"coverImage": "https://picsum.photos/800/450?random=88&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-04T00:00:00.000Z",
 "tags": [
 {
@@ -877,8 +861,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "word-counter-content-writers-guide",
-"coverImage": "https://picsum.photos/800/450?random=600&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-04T00:00:00.000Z",
 "tags": [
 {
@@ -1401,8 +1383,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "markdown-preview-writers-workflow",
-"coverImage": "https://picsum.photos/800/450?random=349&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-05T00:00:00.000Z",
 "tags": [
 {
@@ -1506,8 +1486,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "cadence-180-step-rate-training",
-"coverImage": "https://picsum.photos/800/450?random=478&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-07-05T00:00:00.000Z",
 "tags": [
 {
@@ -1601,8 +1579,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "marathon-16-week-sub4-plan",
-"coverImage": "https://picsum.photos/800/450?random=6&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-07-03T00:00:00.000Z",
 "tags": [
 {
@@ -1696,8 +1672,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "trail-gear-100km-ultra",
-"coverImage": "https://picsum.photos/800/450?random=585&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-07-01T00:00:00.000Z",
 "tags": [
 {
@@ -1791,8 +1765,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "hrm-chest-vs-optical",
-"coverImage": "https://picsum.photos/800/450?random=747&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-29T00:00:00.000Z",
 "tags": [
 {
@@ -1886,8 +1858,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "zwift-12w-ftp-build",
-"coverImage": "https://picsum.photos/800/450?random=839&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-27T00:00:00.000Z",
 "tags": [
 {
@@ -1981,8 +1951,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "bike-packing-light-setup",
-"coverImage": "https://picsum.photos/800/450?random=832&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-25T00:00:00.000Z",
 "tags": [
 {
@@ -2076,8 +2044,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "power-meter-buyers-guide",
-"coverImage": "https://picsum.photos/800/450?random=869&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-23T00:00:00.000Z",
 "tags": [
 {
@@ -2171,8 +2137,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "tdf-climbs-analytics",
-"coverImage": "https://picsum.photos/800/450?random=713&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-21T00:00:00.000Z",
 "tags": [
 {
@@ -2266,8 +2230,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "three-peak-3000m-pack",
-"coverImage": "https://picsum.photos/800/450?random=215&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-19T00:00:00.000Z",
 "tags": [
 {
@@ -2361,8 +2323,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "altitude-sickness-ams",
-"coverImage": "https://picsum.photos/800/450?random=479&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-17T00:00:00.000Z",
 "tags": [
 {
@@ -2456,8 +2416,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "100km-hike-nutrition",
-"coverImage": "https://picsum.photos/800/450?random=294&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-15T00:00:00.000Z",
 "tags": [
 {
@@ -2551,8 +2509,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "trekking-pole-technique",
-"coverImage": "https://picsum.photos/800/450?random=741&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-13T00:00:00.000Z",
 "tags": [
 {
@@ -2646,8 +2602,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "desk-5min-neck-yoga",
-"coverImage": "https://picsum.photos/800/450?random=75&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-11T00:00:00.000Z",
 "tags": [
 {
@@ -2741,8 +2695,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "yin-yoga-sequence-60min",
-"coverImage": "https://picsum.photos/800/450?random=942&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-09T00:00:00.000Z",
 "tags": [
 {
@@ -2836,8 +2788,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pilates-reformer-beginner",
-"coverImage": "https://picsum.photos/800/450?random=740&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-07T00:00:00.000Z",
 "tags": [
 {
@@ -2931,8 +2881,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "postpartum-yoga-30day",
-"coverImage": "https://picsum.photos/800/450?random=291&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-05T00:00:00.000Z",
 "tags": [
 {
@@ -3026,8 +2974,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "beginner-5x5-linear",
-"coverImage": "https://picsum.photos/800/450?random=760&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-03T00:00:00.000Z",
 "tags": [
 {
@@ -3121,8 +3067,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "big-three-form-correction",
-"coverImage": "https://picsum.photos/800/450?random=84&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-06-01T00:00:00.000Z",
 "tags": [
 {
@@ -3216,8 +3160,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "functional-training-8w",
-"coverImage": "https://picsum.photos/800/450?random=852&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-30T00:00:00.000Z",
 "tags": [
 {
@@ -3311,8 +3253,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "dumbbell-home-100",
-"coverImage": "https://picsum.photos/800/450?random=179&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-28T00:00:00.000Z",
 "tags": [
 {
@@ -3406,8 +3346,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "swimming-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=754&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-26T00:00:00.000Z",
 "tags": [
 {
@@ -3501,8 +3439,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "swimming-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=665&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-24T00:00:00.000Z",
 "tags": [
 {
@@ -3596,8 +3532,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "swimming-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=166&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-22T00:00:00.000Z",
 "tags": [
 {
@@ -3691,8 +3625,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "swimming-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=39&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-20T00:00:00.000Z",
 "tags": [
 {
@@ -3786,8 +3718,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "rehab-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=329&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-19T00:00:00.000Z",
 "tags": [
 {
@@ -3881,8 +3811,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "rehab-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=700&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-17T00:00:00.000Z",
 "tags": [
 {
@@ -3976,8 +3904,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "rehab-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=465&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-15T00:00:00.000Z",
 "tags": [
 {
@@ -4071,8 +3997,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "rehab-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=271&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-13T00:00:00.000Z",
 "tags": [
 {
@@ -4166,8 +4090,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nutrition-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=949&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-12T00:00:00.000Z",
 "tags": [
 {
@@ -4261,8 +4183,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nutrition-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=702&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-10T00:00:00.000Z",
 "tags": [
 {
@@ -4356,8 +4276,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nutrition-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=677&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-08T00:00:00.000Z",
 "tags": [
 {
@@ -4451,8 +4369,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nutrition-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=432&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-06T00:00:00.000Z",
 "tags": [
 {
@@ -4546,8 +4462,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "racing-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=151&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-05T00:00:00.000Z",
 "tags": [
 {
@@ -4641,8 +4555,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "racing-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=245&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-03T00:00:00.000Z",
 "tags": [
 {
@@ -4736,8 +4648,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "racing-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=240&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-05-01T00:00:00.000Z",
 "tags": [
 {
@@ -4831,8 +4741,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "racing-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=631&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-29T00:00:00.000Z",
 "tags": [
 {
@@ -4926,8 +4834,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "mental-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=616&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-28T00:00:00.000Z",
 "tags": [
 {
@@ -5021,8 +4927,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "mental-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=432&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-26T00:00:00.000Z",
 "tags": [
 {
@@ -5116,8 +5020,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "mental-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=81&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-24T00:00:00.000Z",
 "tags": [
 {
@@ -5211,8 +5113,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "mental-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=322&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-22T00:00:00.000Z",
 "tags": [
 {
@@ -5306,8 +5206,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=77&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-21T00:00:00.000Z",
 "tags": [
 {
@@ -5401,8 +5299,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=27&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-19T00:00:00.000Z",
 "tags": [
 {
@@ -5496,8 +5392,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=409&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-17T00:00:00.000Z",
 "tags": [
 {
@@ -5591,8 +5485,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=18&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-15T00:00:00.000Z",
 "tags": [
 {
@@ -5686,8 +5578,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=353&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-14T00:00:00.000Z",
 "tags": [
 {
@@ -5781,8 +5671,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=466&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-12T00:00:00.000Z",
 "tags": [
 {
@@ -5876,8 +5764,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=197&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-10T00:00:00.000Z",
 "tags": [
 {
@@ -5971,8 +5857,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=425&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-08T00:00:00.000Z",
 "tags": [
 {
@@ -6066,8 +5950,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "aioffice-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=585&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-07T00:00:00.000Z",
 "tags": [
 {
@@ -6161,8 +6043,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "aioffice-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=755&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-05T00:00:00.000Z",
 "tags": [
 {
@@ -6256,8 +6136,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "aioffice-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=94&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-03T00:00:00.000Z",
 "tags": [
 {
@@ -6351,8 +6229,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "aioffice-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=708&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-04-01T00:00:00.000Z",
 "tags": [
 {
@@ -6446,8 +6322,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "timemanagement-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=298&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-31T00:00:00.000Z",
 "tags": [
 {
@@ -6541,8 +6415,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "timemanagement-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=296&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-29T00:00:00.000Z",
 "tags": [
 {
@@ -6636,8 +6508,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "timemanagement-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=384&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-27T00:00:00.000Z",
 "tags": [
 {
@@ -6731,8 +6601,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "timemanagement-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=849&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-25T00:00:00.000Z",
 "tags": [
 {
@@ -6826,8 +6694,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "project-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=193&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-24T00:00:00.000Z",
 "tags": [
 {
@@ -6921,8 +6787,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "project-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=575&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-22T00:00:00.000Z",
 "tags": [
 {
@@ -7016,8 +6880,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "project-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=769&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-20T00:00:00.000Z",
 "tags": [
 {
@@ -7111,8 +6973,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "project-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=651&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-18T00:00:00.000Z",
 "tags": [
 {
@@ -7206,8 +7066,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "css-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=617&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-17T00:00:00.000Z",
 "tags": [
 {
@@ -7301,8 +7159,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "css-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=158&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-15T00:00:00.000Z",
 "tags": [
 {
@@ -7396,8 +7252,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "css-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=783&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-13T00:00:00.000Z",
 "tags": [
 {
@@ -7491,8 +7345,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "css-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=895&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-11T00:00:00.000Z",
 "tags": [
 {
@@ -7586,8 +7438,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "jsperf-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=982&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-10T00:00:00.000Z",
 "tags": [
 {
@@ -7681,8 +7531,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "jsperf-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=486&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-08T00:00:00.000Z",
 "tags": [
 {
@@ -7776,8 +7624,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "jsperf-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=671&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-06T00:00:00.000Z",
 "tags": [
 {
@@ -7871,8 +7717,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "jsperf-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=569&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-04T00:00:00.000Z",
 "tags": [
 {
@@ -7966,8 +7810,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "docker-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=711&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-03T00:00:00.000Z",
 "tags": [
 {
@@ -8061,8 +7903,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "docker-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=23&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-03-01T00:00:00.000Z",
 "tags": [
 {
@@ -8156,8 +7996,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "docker-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=379&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-27T00:00:00.000Z",
 "tags": [
 {
@@ -8251,8 +8089,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "docker-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=381&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-25T00:00:00.000Z",
 "tags": [
 {
@@ -8346,8 +8182,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nextssr-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=823&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-24T00:00:00.000Z",
 "tags": [
 {
@@ -8441,8 +8275,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nextssr-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=401&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-22T00:00:00.000Z",
 "tags": [
 {
@@ -8536,8 +8368,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nextssr-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=409&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-20T00:00:00.000Z",
 "tags": [
 {
@@ -8631,8 +8461,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "nextssr-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=267&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-18T00:00:00.000Z",
 "tags": [
 {
@@ -8726,8 +8554,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "api-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=646&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-17T00:00:00.000Z",
 "tags": [
 {
@@ -8821,8 +8647,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "api-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=646&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-15T00:00:00.000Z",
 "tags": [
 {
@@ -8916,8 +8740,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "api-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=105&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-13T00:00:00.000Z",
 "tags": [
 {
@@ -9011,8 +8833,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "api-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=135&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-11T00:00:00.000Z",
 "tags": [
 {
@@ -9106,8 +8926,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "seoonpage-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=47&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-10T00:00:00.000Z",
 "tags": [
 {
@@ -9201,8 +9019,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "seoonpage-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=602&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-08T00:00:00.000Z",
 "tags": [
 {
@@ -9296,8 +9112,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "seoonpage-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=616&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-06T00:00:00.000Z",
 "tags": [
 {
@@ -9391,8 +9205,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "seoonpage-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=720&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-04T00:00:00.000Z",
 "tags": [
 {
@@ -9486,8 +9298,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "socialmatrix-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=143&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-03T00:00:00.000Z",
 "tags": [
 {
@@ -9581,8 +9391,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "socialmatrix-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=215&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-02-01T00:00:00.000Z",
 "tags": [
 {
@@ -9676,8 +9484,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "socialmatrix-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=880&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-30T00:00:00.000Z",
 "tags": [
 {
@@ -9771,8 +9577,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "socialmatrix-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=745&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-28T00:00:00.000Z",
 "tags": [
 {
@@ -9866,8 +9670,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "korelyyops-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=47&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-27T00:00:00.000Z",
 "tags": [
 {
@@ -9961,8 +9763,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "korelyyops-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=79&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-25T00:00:00.000Z",
 "tags": [
 {
@@ -10056,8 +9856,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "korelyyops-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=535&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-23T00:00:00.000Z",
 "tags": [
 {
@@ -10151,8 +9949,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "korelyyops-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=670&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-21T00:00:00.000Z",
 "tags": [
 {
@@ -10246,8 +10042,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "indiemonetize-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=241&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-20T00:00:00.000Z",
 "tags": [
 {
@@ -10341,8 +10135,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "indiemonetize-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=984&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-18T00:00:00.000Z",
 "tags": [
 {
@@ -10436,8 +10228,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "indiemonetize-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=692&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-16T00:00:00.000Z",
 "tags": [
 {
@@ -10531,8 +10321,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "indiemonetize-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=109&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-14T00:00:00.000Z",
 "tags": [
 {
@@ -10626,8 +10414,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compliance-tutorial-1-2026",
-"coverImage": "https://picsum.photos/800/450?random=95&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-13T00:00:00.000Z",
 "tags": [
 {
@@ -10721,8 +10507,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compliance-tutorial-2-2026",
-"coverImage": "https://picsum.photos/800/450?random=486&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-11T00:00:00.000Z",
 "tags": [
 {
@@ -10816,8 +10600,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compliance-tutorial-3-2026",
-"coverImage": "https://picsum.photos/800/450?random=744&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-09T00:00:00.000Z",
 "tags": [
 {
@@ -10911,8 +10693,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compliance-tutorial-4-2026",
-"coverImage": "https://picsum.photos/800/450?random=744&grayscale=false",
-"author": "Korelyy Editorial",
 "publishedAt": "2026-01-07T00:00:00.000Z",
 "tags": [
 {
@@ -11006,8 +10786,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "robots-txt-generator-2026-tutorial",
-"coverImage": "https://picsum.photos/800/450?random=618&grayscale=false",
-"author": "Korelyy SEO Team",
 "publishedAt": "2026-07-12T00:00:00.000Z",
 "updatedAt": "2026-07-12T00:00:00.000Z",
 "tags": [
@@ -11128,8 +10906,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "sitemap-generator-2026-guide-14-formats",
-"coverImage": "https://picsum.photos/800/450?random=299&grayscale=false",
-"author": "Korelyy SEO Team",
 "publishedAt": "2026-07-11T00:00:00.000Z",
 "updatedAt": "2026-07-11T00:00:00.000Z",
 "tags": [
@@ -11253,8 +11029,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "meta-tags-generator-2026-og-twitter-schema",
-"coverImage": "https://picsum.photos/800/450?random=108&grayscale=false",
-"author": "Korelyy SEO Team",
 "publishedAt": "2026-07-10T00:00:00.000Z",
 "updatedAt": "2026-07-10T00:00:00.000Z",
 "tags": [
@@ -11377,8 +11151,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "image-compressor-200kb-iphone-webp-2026",
-"coverImage": "https://picsum.photos/800/450?random=620&grayscale=false",
-"author": "Korelyy Image Team",
 "publishedAt": "2026-07-11T00:00:00.000Z",
 "updatedAt": "2026-07-11T00:00:00.000Z",
 "tags": [
@@ -11501,8 +11273,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "pdf-merger-online-contract-scan-2026",
-"coverImage": "https://picsum.photos/800/450?random=503&grayscale=false",
-"author": "Korelyy Docs Team",
 "publishedAt": "2026-07-10T00:00:00.000Z",
 "updatedAt": "2026-07-10T00:00:00.000Z",
 "tags": [
@@ -11625,8 +11395,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "qr-code-generator-wifi-vcard-logo-2026",
-"coverImage": "https://picsum.photos/800/450?random=648&grayscale=false",
-"author": "Korelyy Mobile Team",
 "publishedAt": "2026-07-09T00:00:00.000Z",
 "updatedAt": "2026-07-09T00:00:00.000Z",
 "tags": [
@@ -11749,8 +11517,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "password-generator-16bit-exclude-ambiguous-2026",
-"coverImage": "https://picsum.photos/800/450?random=82&grayscale=false",
-"author": "Korelyy Security Team",
 "publishedAt": "2026-07-08T00:00:00.000Z",
 "updatedAt": "2026-07-08T00:00:00.000Z",
 "tags": [
@@ -11871,8 +11637,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "json-formatter-pretty-print-tree-view-large-file-2026",
-"coverImage": "https://picsum.photos/800/450?random=490&grayscale=false",
-"author": "Korelyy DevTools Team",
 "publishedAt": "2026-07-07T00:00:00.000Z",
 "updatedAt": "2026-07-07T00:00:00.000Z",
 "tags": [
@@ -11993,8 +11757,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "meccha-chameleon-complete-guide-2026",
-"coverImage": "https://picsum.photos/800/450?random=153&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-12T00:00:00.000Z",
 "updatedAt": "2026-07-12T00:00:00.000Z",
 "tags": [
@@ -12118,8 +11880,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-grammar-checker-beginner-guide",
-"coverImage": "https://picsum.photos/800/450?random=381&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Writing", "zh": "AI写作", "es": "Escritura AI", "fr": "Écriture IA", "hi": "AI लेखन", "ar": "كتابة ذكاء"},
@@ -12134,8 +11894,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "prompt-engineering-basics-2026",
-"coverImage": "https://picsum.photos/800/450?random=3&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Tools", "zh": "AI工具", "es": "Herramientas AI", "fr": "Outils IA", "hi": "AI टूल्स", "ar": "أدوات AI"},
@@ -12150,8 +11908,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "sora-video-prompts-advanced-techniques",
-"coverImage": "https://picsum.photos/800/450?random=511&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Video", "zh": "AI视频", "es": "Video AI", "fr": "Vidéo IA", "hi": "AI वीडियो", "ar": "فيديو AI"},
@@ -12166,8 +11922,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "midjourney-v6-new-features-guide",
-"coverImage": "https://picsum.photos/800/450?random=211&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Art", "zh": "AI艺术", "es": "Arte AI", "fr": "Art IA", "hi": "AI आर्ट", "ar": "فن AI"},
@@ -12182,8 +11936,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-video-generator-comparison-2026",
-"coverImage": "https://picsum.photos/800/450?random=446&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Video", "zh": "AI视频", "es": "Video AI", "fr": "Vidéo IA", "hi": "AI वीडियो", "ar": "فيديو AI"},
@@ -12198,8 +11950,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "multilingual-writing-tips-2026",
-"coverImage": "https://picsum.photos/800/450?random=495&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "Writing", "zh": "写作", "es": "Escritura", "fr": "Écriture", "hi": "लेखन", "ar": "كتابة"},
@@ -12214,8 +11964,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-prompt-generator-use-cases",
-"coverImage": "https://picsum.photos/800/450?random=683&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Tools", "zh": "AI工具", "es": "Herramientas AI", "fr": "Outils IA", "hi": "AI टूल्स", "ar": "أدوات AI"},
@@ -12230,8 +11978,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "video-workflow-optimization-2026",
-"coverImage": "https://picsum.photos/800/450?random=583&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "Video", "zh": "视频", "es": "Video", "fr": "Vidéo", "hi": "वीडियो", "ar": "فيديو"},
@@ -12246,8 +11992,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-tools-update-july-2026",
-"coverImage": "https://picsum.photos/800/450?random=91&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI News", "zh": "AI新闻", "es": "Noticias AI", "fr": "Actualités IA", "hi": "AI न्यूज़", "ar": "أخبار AI"},
@@ -12262,8 +12006,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "how-to-write-perfect-ai-prompts-for-sora",
-"coverImage": "https://picsum.photos/800/450?random=715&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Video", "zh": "AI视频", "es": "Video AI", "fr": "Vidéo IA", "hi": "AI वीडियो", "ar": "فيديو AI"},
@@ -12278,8 +12020,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "midjourney-prompt-guide-2026-master-art",
-"coverImage": "https://picsum.photos/800/450?random=666&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Art", "zh": "AI艺术", "es": "Arte AI", "fr": "Art IA", "hi": "AI आर्ट", "ar": "فن AI"},
@@ -12294,8 +12034,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-video-prompt-best-practices-2026",
-"coverImage": "https://picsum.photos/800/450?random=536&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Video", "zh": "AI视频", "es": "Video AI", "fr": "Vidéo IA", "hi": "AI वीडियो", "ar": "فيديو AI"},
@@ -12310,8 +12048,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "from-text-to-video-ai-workflow-2026",
-"coverImage": "https://picsum.photos/800/450?random=620&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Workflow", "zh": "AI工作流", "es": "Flujo de Trabajo AI", "fr": "Flux de Travail IA", "hi": "AI वर्कफ्लो", "ar": "سير العمل AI"},
@@ -12326,8 +12062,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "ai-writing-assistant-2026-productivity-tips",
-"coverImage": "https://picsum.photos/800/450?random=659&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Writing", "zh": "AI写作", "es": "Escritura AI", "fr": "Écriture IA", "hi": "AI लेखन", "ar": "كتابة AI"},
@@ -12342,8 +12076,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "future-of-ai-content-creation-2026-trends",
-"coverImage": "https://picsum.photos/800/450?random=406&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "AI Trends", "zh": "AI趋势", "es": "Tendencias AI", "fr": "Tendances IA", "hi": "AI ट्रेंड्स", "ar": "اتجاهات AI"},
@@ -12358,8 +12090,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "how-to-combine-emojis",
-"coverImage": "https://picsum.photos/800/450?random=921&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "Emoji", "zh": "表情符号", "es": "Emoji", "fr": "Emoji", "hi": "इमोजी", "ar": "إيموجي"},
@@ -12374,8 +12104,6 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 },
 {
 "slug": "compress-image-to-100kb",
-"coverImage": "https://picsum.photos/800/450?random=922&grayscale=false",
-"author": "Korelyy Team",
 "publishedAt": "2026-07-18T00:00:00.000Z",
 "tags": [
 {"en": "Image Compression", "zh": "图片压缩", "es": "Compresión de Imágenes", "fr": "Compression d'Images", "hi": "इमेज कंप्रेशन", "ar": "ضغط الصور"},

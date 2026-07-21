@@ -56,6 +56,11 @@ const i18n: Record<string, Record<string, string>> = {
     loading: '正在估算...',
     error: '估算失败，请重试',
     dailyLimit: '今日免费次数已用完',
+    tips: '优化建议',
+    tip1: '提供详细的任务描述可获得更准确的估算',
+    tip2: '缓冲时间用于应对意外情况，建议预留10-20%',
+    tip3: '经验水平越高，完成任务的速度越快',
+    tip4: '建议使用总工时作为计划依据',
   },
   en: {
     title: 'Time Estimator',
@@ -90,6 +95,11 @@ const i18n: Record<string, Record<string, string>> = {
     loading: 'Estimating...',
     error: 'Estimation failed, please retry',
     dailyLimit: 'Daily free limit exceeded',
+    tips: 'Tips',
+    tip1: 'Provide detailed task descriptions for more accurate estimates',
+    tip2: 'Buffer time accounts for unexpected issues, suggest reserving 10-20%',
+    tip3: 'Higher experience level leads to faster task completion',
+    tip4: 'Use total hours for planning purposes',
   },
   hi: {
     title: 'टाइम एस्टीमेटर',
@@ -124,6 +134,11 @@ const i18n: Record<string, Record<string, string>> = {
     loading: 'अनुमान लगाया जा रहा है...',
     error: 'अनुमान विफल, कृपया पुनः प्रयास करें',
     dailyLimit: 'दैनिक मुफ्त सीमा पार हो गई',
+    tips: 'सुझाव',
+    tip1: 'अधिक सटीक अनुमान के लिए विस्तृत कार्य विवरण प्रदान करें',
+    tip2: 'अप्रत्याशित मुद्दों के लिए बफर समय होता है, 10-20% आरक्षित करने का सुझाव देते हैं',
+    tip3: 'उच्च अनुभव स्तर से कार्य पूर्ण करने की गति तेज होती है',
+    tip4: 'योजना बनाने के लिए कुल घंटों का उपयोग करें',
   },
   fr: {
     title: 'Estimateur de Temps',
@@ -158,6 +173,11 @@ const i18n: Record<string, Record<string, string>> = {
     loading: 'Estimation en cours...',
     error: 'Échec de l\'estimation, veuillez réessayer',
     dailyLimit: 'Limite gratuite quotidienne atteinte',
+    tips: 'Conseils',
+    tip1: 'Fournissez des descriptions de tâches détaillées pour des estimations plus précises',
+    tip2: 'Le temps de tampon compte pour les problèmes inattendus, réservez 10-20%',
+    tip3: 'Un niveau d\'expérience plus élevé entraîne une réalisation plus rapide',
+    tip4: 'Utilisez les heures totales pour la planification',
   },
   es: {
     title: 'Estimador de Tiempo',
@@ -192,6 +212,11 @@ const i18n: Record<string, Record<string, string>> = {
     loading: 'Estimando...',
     error: 'Estimación fallida, por favor reintente',
     dailyLimit: 'Límite gratuito diario superado',
+    tips: 'Consejos',
+    tip1: 'Proporciona descripciones de tareas detalladas para estimaciones más precisas',
+    tip2: 'El tiempo de buffer cubre problemas inesperados, sugiere reservar 10-20%',
+    tip3: 'Un nivel de experiencia más alto conduce a una finalización más rápida',
+    tip4: 'Utilice las horas totales para la planificación',
   },
   ar: {
     title: 'مُقدّر الوقت',
@@ -226,6 +251,11 @@ const i18n: Record<string, Record<string, string>> = {
     loading: 'جارٍ التقدير...',
     error: 'فشل التقدير، يرجى المحاولة مرة أخرى',
     dailyLimit: 'تم تجاوز الحد اليومي المجاني',
+    tips: 'نصائح',
+    tip1: 'قدم وصفات مهام مفصلة للحصول على تقديرات أكثر دقة',
+    tip2: 'وقت الاحتياط يغطي المشكلات غير المتوقعة، يُنصح بالاحتفاظ بـ 10-20%',
+    tip3: 'مستوى الخبرة الأعلى يؤدي إلى إنهاء المهمة بسرعة أكبر',
+    tip4: 'استخدم الساعات الكلية لأغراض التخطيط',
   },
 };
 
@@ -525,19 +555,19 @@ export default function TimeEstimator({ locale = 'zh' }: TimeEstimatorProps) {
             <ul className='space-y-2 text-sm text-gray-700 dark:text-gray-300'>
               <li className='flex items-start gap-2'>
                 <TrendingUp className='h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5' />
-                {locale === 'zh' ? '提供详细的任务描述可获得更准确的估算' : 'Provide detailed task descriptions for more accurate estimates'}
+                {t('tip1')}
               </li>
               <li className='flex items-start gap-2'>
                 <TrendingUp className='h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5' />
-                {locale === 'zh' ? '缓冲时间用于应对意外情况，建议预留10-20%' : 'Buffer time accounts for unexpected issues, suggest reserving 10-20%'}
+                {t('tip2')}
               </li>
               <li className='flex items-start gap-2'>
                 <TrendingUp className='h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5' />
-                {locale === 'zh' ? '经验水平越高，完成任务的速度越快' : 'Higher experience level leads to faster task completion'}
+                {t('tip3')}
               </li>
               <li className='flex items-start gap-2'>
                 <TrendingUp className='h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5' />
-                {locale === 'zh' ? '建议使用总工时作为计划依据' : 'Use total hours for planning purposes'}
+                {t('tip4')}
               </li>
             </ul>
           </div>

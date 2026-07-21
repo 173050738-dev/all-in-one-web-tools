@@ -769,6 +769,68 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           return json({ ...result, remaining: rateLimitResult.remaining });
         }
 
+        case '/api/caption-generator':
+        case '/api/caption-generator/': {
+          const theme = payload.theme as string;
+          const emotion = (payload.emotion as string) || '';
+          const keywords = (payload.keywords as string[]) || [];
+          if (!theme?.trim()) return errJson('Theme is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const systemPrompt = `你是一个专业的社交媒体文案创作助手，擅长创作各种风格的朋友圈文案、小红书文案等。`;
+
+          const userPrompt = locale === 'zh'
+            ? `请为我生成5条${theme}主题的${emotion || '轻松'}风格朋友圈文案，每条文案要简短有趣，适合社交媒体发布。${keywords.length > 0 ? '包含关键词：' + keywords.join('、') : ''}不要太长，每条不超过40个字。`
+            : locale === 'es'
+            ? `Genera 5 leyendas para redes sociales sobre ${theme} con tono ${emotion || 'relajado'}. ${keywords.length > 0 ? 'Incluir palabras clave: ' + keywords.join(', ') : ''} Manténgalas breves y atractivas, cada una con menos de 60 caracteres.`
+            : locale === 'fr'
+            ? `Générez 5 légendes pour les réseaux sociaux sur ${theme} avec un ton ${emotion || 'détendu'}. ${keywords.length > 0 ? 'Inclure les mots-clés: ' + keywords.join(', ') : ''} Gardez-les courtes et engageantes, chaque légende moins de 60 caractères.`
+            : locale === 'hi'
+            ? `${theme} विषय के लिए 5 सोशल मीडिया कैप्शन बनाएं ${emotion || 'आराम'} टोन के साथ। ${keywords.length > 0 ? 'कुंजी शब्द शामिल करें: ' + keywords.join(', ') : ''} उन्हें छोटा और आकर्षक रखें, प्रत्येक 60 कैरेक्टर से कम।`
+            : locale === 'ar'
+            ? `أنشئ 5 تسميات لمواقع التواصل الاجتماعي حول ${theme} بلغة ${emotion || 'هادئة'}. ${keywords.length > 0 ? 'شمل الكلمات المفتاحية: ' + keywords.join(', ') : ''} ابقىها مختصرة وجذابة، كل تسمية أقل من 60 حرفًا.`
+            : `Generate 5 social media captions about ${theme} with ${emotion || 'casual'} tone. ${keywords.length > 0 ? 'Include keywords: ' + keywords.join(', ') : ''} Keep them short and engaging, each caption under 60 characters.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt);
+          const captions = content.split('\n').filter(line => line.trim()).map(line => line.replace(/^\d+\.\s*/, '').trim()).slice(0, 5);
+          return json({ success: true, captions, remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/copy-cleaner':
+        case '/api/copy-cleaner/': {
+          const text = payload.text as string;
+          const level = (payload.level as string) || 'mid';
+          if (!text?.trim()) return errJson('Text is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const levelDesc = level === 'strong' ? '深度清洗，只保留核心信息，大幅度精简' : level === 'mid' ? '中等清洗，去除重复和空洞词，适当精简' : '轻度清洗，去除重复内容';
+
+          const systemPrompt = `你是一个专业的文案优化专家，擅长去除冗余、精简表达、提升文案质量。`;
+
+          const userPrompt = locale === 'zh'
+            ? `请对以下文案进行${levelDesc}，保留核心信息的同时优化表达，使文案更加精炼、专业：\n\n${text}\n\n请直接返回清洗后的文案，不要添加任何解释。`
+            : locale === 'es'
+            ? `Por favor, limpie el siguiente texto con ${level === 'strong' ? 'limpieza profunda, manteniendo solo la información esencial, reduciendo drásticamente' : level === 'mid' ? 'limpieza media, eliminando repeticiones y palabras vacías, reduciendo adecuadamente' : 'limpieza ligera, eliminando contenido repetido'}, optimice la expresión mientras preserva la información esencial, haciéndola más concisa y profesional:\n\n${text}\n\nDevuelva el texto limpio directamente sin explicaciones.`
+            : locale === 'fr'
+            ? `Veuillez nettoyer le texte suivant avec ${level === 'strong' ? 'nettoyage profond, ne gardant que l\'information essentielle, réduisant considérablement' : level === 'mid' ? 'nettoyage moyen, éliminant les répétitions et les mots vides, réduisant适当' : 'nettoyage léger, éliminant le contenu répété'}, optimisez l'expression tout en préservant l'information essentielle, la rendant plus concise et professionnelle:\n\n${text}\n\nVeuillez retourner le texte nettoyé directement sans explications.`
+            : locale === 'hi'
+            ? `कृपया निम्नलिखित पाठ को ${level === 'strong' ? 'गहरी सफाई के साथ, केवल मुख्य जानकारी को बनाए रखते हुए, बड़े पैमाने पर छोटा करें' : level === 'mid' ? 'मध्यम सफाई के साथ, दोहराव और खाली शब्दों को हटाते हुए, उपयुक्त रूप से छोटा करें' : 'हल्की सफाई के साथ, दोहराव सामग्री को हटाते हुए'} साफ़ करें, मुख्य जानकारी को बनाए रखते हुए अभिव्यक्ति को अनुकूलित करें, पाठ को अधिक संक्षिप्त और पेशेवर बनाएं:\n\n${text}\n\nकृपया सीधे साफ़ पाठ लौटाएं, बिना किसी व्याख्या के।`
+            : locale === 'ar'
+            ? `يرجى تنظيف النص التالي بـ ${level === 'strong' ? 'تنظيف عميق، الاحتفاظ بالمعلومات الأساسية فقط، تقليص كبير' : level === 'mid' ? 'تنظيف متوسط، إزالة التكرارات والكلمات الفارغة، تقليص مناسب' : 'تنظيف خفيف، إزالة المحتوى المتكرر'}, تحسين التعبير مع الحفاظ على المعلومات الأساسية، وجعل النص أكثر إيجازاً واحترافاً:\n\n${text}\n\nيرجى إرجاع النص المنظف مباشرة بدون أي تفسير.`
+            : `Please clean the following text with ${level === 'strong' ? 'deep cleaning, keeping only core information, drastically reducing' : level === 'mid' ? 'medium cleaning, removing repetitions and empty words, appropriately reducing' : 'light cleaning, removing repeated content'}, optimize the expression while preserving core information, making it more concise and professional:\n\n${text}\n\nPlease return the cleaned text directly without any explanations.`;
+
+          const cleaned = await callDeepseek(env, systemPrompt, userPrompt);
+          return json({ success: true, cleaned, remaining: rateLimitResult.remaining });
+        }
+
         default:
           return errJson('Not found', 404);
       }

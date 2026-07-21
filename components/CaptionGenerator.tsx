@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { Copy, Check, RotateCcw, RefreshCw, MessageCircle, Coffee, Briefcase, Heart, Plane, Camera, PartyPopper, BookOpen } from 'lucide-react';
+import { Copy, Check, RotateCcw, RefreshCw, MessageCircle, Coffee, Briefcase, Heart, Plane, Camera, PartyPopper, BookOpen, Sparkles } from 'lucide-react';
 
 interface CaptionGeneratorProps {
   locale?: string;
@@ -657,6 +657,13 @@ export default function CaptionGenerator({ locale = 'zh' }: CaptionGeneratorProp
   const [currentCaption, setCurrentCaption] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const [history, setHistory] = useState<string[]>([]);
+  const [aiMode, setAiMode] = useState(false);
+  const [aiTheme, setAiTheme] = useState('');
+  const [aiEmotion, setAiEmotion] = useState('');
+  const [aiKeywords, setAiKeywords] = useState('');
+  const [aiCaptions, setAiCaptions] = useState<string[]>([]);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState('');
 
   const generateCaption = useCallback(() => {
     const categoryCaptions = Array.from({ length: 10 }, (_, i) => t(`caption.${selectedCategory}.${i}`));
@@ -693,6 +700,44 @@ export default function CaptionGenerator({ locale = 'zh' }: CaptionGeneratorProp
     setTimeout(() => setCopied(false), 2000);
   }, [currentCaption, addEmoji]);
 
+  const generateAiCaption = useCallback(async () => {
+    if (!aiTheme.trim()) {
+      setAiError(locale === 'zh' ? '请输入主题' : 'Please enter a theme');
+      return;
+    }
+    setAiLoading(true);
+    setAiError('');
+    try {
+      const response = await fetch('/api/caption-generator', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          theme: aiTheme,
+          emotion: aiEmotion,
+          keywords: aiKeywords.split(',').map(k => k.trim()).filter(Boolean),
+          locale,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setAiCaptions(data.captions);
+        if (data.captions.length > 0) {
+          setCurrentCaption(data.captions[0]);
+          setHistory((prev) => {
+            const newHistory = [...data.captions, ...prev.filter(c => !data.captions.includes(c))];
+            return newHistory.slice(0, 10);
+          });
+        }
+      } else {
+        setAiError(data.message || (locale === 'zh' ? '生成失败' : 'Generation failed'));
+      }
+    } catch {
+      setAiError(locale === 'zh' ? '网络错误，请重试' : 'Network error, please retry');
+    } finally {
+      setAiLoading(false);
+    }
+  }, [aiTheme, aiEmotion, aiKeywords, locale]);
+
   const selectedCat = categories.find(c => c.id === selectedCategory);
 
   return (
@@ -718,7 +763,79 @@ export default function CaptionGenerator({ locale = 'zh' }: CaptionGeneratorProp
 
       <div className='space-y-6'>
         <div className='bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-200 dark:border-gray-700'>
-          <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3'>{t('category.title')}</h3>
+          <div className='flex items-center justify-center mb-4'>
+            <div className='inline-flex rounded-xl p-1 bg-gray-100 dark:bg-gray-700'>
+              <button
+                onClick={() => { setAiMode(false); setAiCaptions([]); setCurrentCaption(''); }}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${!aiMode ? 'bg-white dark:bg-gray-600 text-gray-900 dark:text-gray-100 shadow-sm' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'}`}
+              >
+                {locale === 'zh' ? '模板文案' : 'Template'}
+              </button>
+              <button
+                onClick={() => setAiMode(true)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${aiMode ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-sm' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'}`}
+              >
+                <Sparkles className='h-4 w-4 inline mr-1' />
+                {locale === 'zh' ? 'AI智能生成' : 'AI Generate'}
+              </button>
+            </div>
+          </div>
+
+          {aiMode ? (
+            <div className='space-y-4'>
+              <div>
+                <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+                  {locale === 'zh' ? '主题' : 'Theme'}
+                </label>
+                <input
+                  type='text'
+                  value={aiTheme}
+                  onChange={(e) => setAiTheme(e.target.value)}
+                  placeholder={locale === 'zh' ? '如：旅行、美食、生日...' : 'e.g., travel, food, birthday...'}
+                  className='w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                />
+              </div>
+              <div className='grid grid-cols-2 gap-3'>
+                <div>
+                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+                    {locale === 'zh' ? '风格' : 'Tone'}
+                  </label>
+                  <input
+                    type='text'
+                    value={aiEmotion}
+                    onChange={(e) => setAiEmotion(e.target.value)}
+                    placeholder={locale === 'zh' ? '如：幽默、浪漫...' : 'e.g., funny, romantic...'}
+                    className='w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                  />
+                </div>
+                <div>
+                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+                    {locale === 'zh' ? '关键词' : 'Keywords'}
+                  </label>
+                  <input
+                    type='text'
+                    value={aiKeywords}
+                    onChange={(e) => setAiKeywords(e.target.value)}
+                    placeholder={locale === 'zh' ? '用逗号分隔' : 'comma separated'}
+                    className='w-full px-3 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                  />
+                </div>
+              </div>
+              {aiError && (
+                <p className='text-sm text-red-500 dark:text-red-400'>{aiError}</p>
+              )}
+              <button
+                onClick={generateAiCaption}
+                disabled={aiLoading}
+                className='w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-xl hover:opacity-90 transition-all shadow-lg flex items-center justify-center gap-2 disabled:opacity-70'
+              >
+                <RefreshCw className={`h-5 w-5 ${aiLoading ? 'animate-spin' : ''}`} />
+                {aiLoading ? (locale === 'zh' ? '生成中...' : 'Generating...') : (locale === 'zh' ? 'AI生成文案' : 'AI Generate')}
+              </button>
+            </div>
+          ) : (
+            <>
+              <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3'>{t('category.title')}</h3>
           <div className='grid grid-cols-4 gap-2'>
             {categories.map((cat) => {
               const Icon = cat.icon;
@@ -742,6 +859,8 @@ export default function CaptionGenerator({ locale = 'zh' }: CaptionGeneratorProp
               );
             })}
           </div>
+            </>
+          )}
         </div>
 
         <div className='bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700'>
@@ -791,6 +910,32 @@ export default function CaptionGenerator({ locale = 'zh' }: CaptionGeneratorProp
           </div>
         </div>
 
+        {aiCaptions.length > 0 && (
+          <div className='bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-200 dark:border-gray-700'>
+            <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2'>
+              <Sparkles className='h-4 w-4 text-purple-500' />
+              {locale === 'zh' ? 'AI生成结果' : 'AI Results'}
+            </h3>
+            <div className='space-y-2'>
+              {aiCaptions.map((item, index) => (
+                <div
+                  key={`ai-${index}`}
+                  className='p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg flex items-start justify-between gap-3 cursor-pointer hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors'
+                  onClick={() => setCurrentCaption(item)}
+                >
+                  <p className='text-sm text-gray-700 dark:text-gray-300 flex-1'>{item}</p>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); copyCaption(item); }}
+                    className='p-1.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors flex-shrink-0'
+                  >
+                    <Copy className='h-4 w-4' />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {history.length > 0 && (
           <div className='bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-200 dark:border-gray-700'>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3'>{t('history.title')}</h3>
@@ -822,3 +967,5 @@ export default function CaptionGenerator({ locale = 'zh' }: CaptionGeneratorProp
     </div>
   );
 }
+
+

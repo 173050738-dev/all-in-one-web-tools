@@ -234,6 +234,8 @@ export default function CopyCleaner({ locale = 'zh' }: CopyCleanerProps) {
   const [processed, setProcessed] = useState(false);
   const [copied, setCopied] = useState(false);
   const [sentences, setSentences] = useState<SentenceInfo[]>([]);
+  const [aiCleaning, setAiCleaning] = useState(false);
+  const [aiError, setAiError] = useState('');
 
   const t = (key: keyof typeof i18n.zh, vars?: Record<string, string | number>) => {
     const dict = (i18n as Record<string, Record<string, string>>)[locale] || i18n.zh;
@@ -345,6 +347,31 @@ export default function CopyCleaner({ locale = 'zh' }: CopyCleanerProps) {
     if (/\d/.test(text)) return true;
     const nounPatterns = /[的了是在和与及或但却并而则也都就又还再已被把让使让叫称说看听读写学做工打跑跳走坐站睡吃喝买买卖卖去来回出入上下左右前后东西南北春夏秋冬年月日时分秒元角分个只条件把台辆艘架层次回合场顿杯瓶袋箱包桶盘碗勺筷刀叉针线布衣裙鞋帽袜书本纸笔字句段篇章节目部首封页期届次档位路号线条款项则例规法律条框架项科目项]/;
     return nounPatterns.test(text);
+  };
+
+  const processAi = async () => {
+    if (!inputText.trim()) return;
+    setAiCleaning(true);
+    setAiError('');
+    try {
+      const response = await fetch('/api/copy-cleaner', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: inputText, level, locale }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setCleanedText(data.cleaned);
+        setProcessed(true);
+        setSentences([]);
+      } else {
+        setAiError(data.message || (locale === 'zh' ? 'AI清洗失败' : 'AI cleaning failed'));
+      }
+    } catch {
+      setAiError(locale === 'zh' ? '网络错误，请重试' : 'Network error, please retry');
+    } finally {
+      setAiCleaning(false);
+    }
   };
 
   const process = () => {
@@ -574,13 +601,26 @@ export default function CopyCleaner({ locale = 'zh' }: CopyCleanerProps) {
             />
           </div>
 
-          <button
-            onClick={process}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 sm:py-4 rounded-lg btn-primary font-semibold text-base"
-          >
-            <Sparkles className="h-5 w-5" />
-            {t('compress')}
-          </button>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              onClick={process}
+              className="flex items-center justify-center gap-2 px-4 py-3 sm:py-4 rounded-lg btn-primary font-semibold text-sm sm:text-base"
+            >
+              <Shrink className="h-5 w-5" />
+              {t('compress')}
+            </button>
+            <button
+              onClick={processAi}
+              disabled={aiCleaning}
+              className="flex items-center justify-center gap-2 px-4 py-3 sm:py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold text-sm sm:text-base hover:opacity-90 transition-all shadow-lg disabled:opacity-70"
+            >
+              <Sparkles className={`h-5 w-5 ${aiCleaning ? 'animate-spin' : ''}`} />
+              {aiCleaning ? (locale === 'zh' ? 'AI清洗中...' : 'AI Cleaning...') : (locale === 'zh' ? 'AI深度清洗' : 'AI Deep Clean')}
+            </button>
+          </div>
+          {aiError && (
+            <p className="text-sm text-red-500 dark:text-red-400 mt-3">{aiError}</p>
+          )}
         </div>
 
         {processed && (

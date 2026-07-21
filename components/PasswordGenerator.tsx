@@ -11,13 +11,32 @@ import {
   ShieldCheck,
   Eye,
   EyeOff,
+  History,
+  Download,
+  Star,
+  StarOff,
+  Trash2,
 } from 'lucide-react';
 
 interface PasswordGeneratorProps {
   locale?: string;
 }
 
-export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorProps) {
+interface HistoryItem {
+    id: string;
+    password: string;
+    length: number;
+    timestamp: Date;
+    favorite: boolean;
+    options: {
+      uppercase: boolean;
+      lowercase: boolean;
+      numbers: boolean;
+      symbols: boolean;
+    };
+  }
+
+  export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorProps) {
   const [length, setLength] = useState(16);
   const [includeUppercase, setIncludeUppercase] = useState(true);
   const [includeLowercase, setIncludeLowercase] = useState(true);
@@ -26,6 +45,9 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
   const [password, setPassword] = useState('');
   const [copied, setCopied] = useState(false);
   const [showPassword, setShowPassword] = useState(true);
+  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [showHistory, setShowHistory] = useState(false);
+  const [exportFormat, setExportFormat] = useState<'plain' | 'csv' | 'json'>('plain');
 
   const translations: Record<string, Record<string, string>> = {
     zh: {
@@ -56,6 +78,20 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
       'f4': '一键复制到剪贴板',
       'f5': '本地生成，100%隐私安全',
       'f6': '完全免费，无使用限制',
+      'history': '历史记录',
+      'historyEmpty': '暂无历史记录',
+      'export': '导出密码',
+      'exportFormat': '导出格式',
+      'plainText': '纯文本',
+      'csv': 'CSV',
+      'json': 'JSON',
+      'favorite': '收藏',
+      'unfavorite': '取消收藏',
+      'delete': '删除',
+      'timestamp': '时间',
+      'length': '长度',
+      'clearHistory': '清空历史',
+      'confirmClear': '确定清空所有历史记录？',
     },
     en: {
       'action.generate': 'Regenerate',
@@ -85,6 +121,20 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
       'f4': 'One-click copy to clipboard',
       'f5': 'Local generation, 100% private',
       'f6': 'Completely free, no limits',
+      'history': 'History',
+      'historyEmpty': 'No history yet',
+      'export': 'Export',
+      'exportFormat': 'Export format',
+      'plainText': 'Plain text',
+      'csv': 'CSV',
+      'json': 'JSON',
+      'favorite': 'Favorite',
+      'unfavorite': 'Unfavorite',
+      'delete': 'Delete',
+      'timestamp': 'Time',
+      'length': 'Length',
+      'clearHistory': 'Clear history',
+      'confirmClear': 'Clear all history?',
     },
     hi: {
       'action.generate': 'फिर से बनाएं',
@@ -114,6 +164,20 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
       'f4': 'एक क्लिक में कॉपी',
       'f5': 'स्थानीय जनन, 100% निजी',
       'f6': 'पूरी तरह से मुफ्त, कोई सीमा नहीं',
+      'history': 'इतिहास',
+      'historyEmpty': 'अभी तक कोई इतिहास नहीं',
+      'export': 'निर्यात करें',
+      'exportFormat': 'निर्यात प्रारूप',
+      'plainText': 'सादा पाठ',
+      'csv': 'CSV',
+      'json': 'JSON',
+      'favorite': 'पसंदीदा',
+      'unfavorite': 'पसंदीदा हटाएं',
+      'delete': 'हटाएं',
+      'timestamp': 'समय',
+      'length': 'लंबाई',
+      'clearHistory': 'इतिहास साफ़ करें',
+      'confirmClear': 'सभी इतिहास साफ़ करें?',
     },
     fr: {
       'action.generate': 'Régénérer',
@@ -143,6 +207,20 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
       'f4': 'Copie en un clic',
       'f5': 'Génération locale, 100% privée',
       'f6': 'Entièrement gratuit, sans limites',
+      'history': 'Historique',
+      'historyEmpty': 'Aucun historique',
+      'export': 'Exporter',
+      'exportFormat': 'Format d\'export',
+      'plainText': 'Texte brut',
+      'csv': 'CSV',
+      'json': 'JSON',
+      'favorite': 'Favori',
+      'unfavorite': 'Retirer des favoris',
+      'delete': 'Supprimer',
+      'timestamp': 'Heure',
+      'length': 'Longueur',
+      'clearHistory': 'Vider l\'historique',
+      'confirmClear': 'Vider tout l\'historique ?',
     },
     es: {
       'action.generate': 'Regenerar',
@@ -172,6 +250,20 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
       'f4': 'Copiar con un clic',
       'f5': 'Generación local, 100% privada',
       'f6': 'Completamente gratis, sin límites',
+      'history': 'Historial',
+      'historyEmpty': 'Sin historial',
+      'export': 'Exportar',
+      'exportFormat': 'Formato de exportación',
+      'plainText': 'Texto plano',
+      'csv': 'CSV',
+      'json': 'JSON',
+      'favorite': 'Favorito',
+      'unfavorite': 'Quitar de favoritos',
+      'delete': 'Eliminar',
+      'timestamp': 'Hora',
+      'length': 'Longitud',
+      'clearHistory': 'Limpiar historial',
+      'confirmClear': '¿Limpiar todo el historial?',
     },
     ar: {
       'action.generate': 'إعادة إنشاء',
@@ -201,6 +293,20 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
       'f4': 'نسخ بنقرة واحدة',
       'f5': 'توليد محلي، خاص 100%',
       'f6': 'مجاني تماماً، بدون حدود',
+      'history': 'التاريخ',
+      'historyEmpty': 'لا يوجد تاريخ',
+      'export': 'تصدير',
+      'exportFormat': 'تنسيق التصدير',
+      'plainText': 'نص عادي',
+      'csv': 'CSV',
+      'json': 'JSON',
+      'favorite': 'مفضل',
+      'unfavorite': 'إزالة من المفضلة',
+      'delete': 'حذف',
+      'timestamp': 'الوقت',
+      'length': 'الطول',
+      'clearHistory': 'مسح التاريخ',
+      'confirmClear': 'هل ترغب في مسح جميع السجلات؟',
     },
   };
 
@@ -238,21 +344,37 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
     }
     setPassword(result);
     setCopied(false);
+
+    const newItem: HistoryItem = {
+      id: Date.now().toString(),
+      password: result,
+      length,
+      timestamp: new Date(),
+      favorite: false,
+      options: {
+        uppercase: includeUppercase,
+        lowercase: includeLowercase,
+        numbers: includeNumbers,
+        symbols: includeSymbols,
+      },
+    };
+    setHistory(prev => [newItem, ...prev].slice(0, 20));
   }, [length, includeUppercase, includeLowercase, includeNumbers, includeSymbols]);
 
   useEffect(() => {
     generatePassword();
   }, [generatePassword]);
 
-  const copyToClipboard = async () => {
-    if (!password) return;
+  const copyToClipboard = async (pwd?: string) => {
+    const textToCopy = pwd || password;
+    if (!textToCopy) return;
     try {
-      await navigator.clipboard.writeText(password);
+      await navigator.clipboard.writeText(textToCopy);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
       const textarea = document.createElement('textarea');
-      textarea.value = password;
+      textarea.value = textToCopy;
       document.body.appendChild(textarea);
       textarea.select();
       document.execCommand('copy');
@@ -260,6 +382,63 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
+  };
+
+  const toggleFavorite = (id: string) => {
+    setHistory(prev => prev.map(item => 
+      item.id === id ? { ...item, favorite: !item.favorite } : item
+    ));
+  };
+
+  const deleteHistoryItem = (id: string) => {
+    setHistory(prev => prev.filter(item => item.id !== id));
+  };
+
+  const clearHistory = () => {
+    if (confirm(t('confirmClear'))) {
+      setHistory([]);
+    }
+  };
+
+  const exportHistory = () => {
+    let content = '';
+    let filename = '';
+    
+    if (exportFormat === 'json') {
+      content = JSON.stringify(history.map(item => ({
+        password: item.password,
+        length: item.length,
+        timestamp: item.timestamp.toISOString(),
+        favorite: item.favorite,
+        options: item.options
+      })), null, 2);
+      filename = `passwords-${new Date().toISOString().split('T')[0]}.json`;
+    } else if (exportFormat === 'csv') {
+      content = [
+        '密码,长度,时间,收藏',
+        ...history.map(item => 
+          `"${item.password}",${item.length},"${item.timestamp.toLocaleString()}","${item.favorite ? '是' : '否'}"`
+        )
+      ].join('\n');
+      filename = `passwords-${new Date().toISOString().split('T')[0]}.csv`;
+    } else {
+      content = history.map(item => {
+        const timeStr = item.timestamp.toLocaleString();
+        const favStr = item.favorite ? '★ ' : '';
+        return `${favStr}[${timeStr}] ${item.password} (${item.length}位)`;
+      }).join('\n');
+      filename = `passwords-${new Date().toISOString().split('T')[0]}.txt`;
+    }
+    
+    const blob = new Blob([content], { type: exportFormat === 'json' ? 'application/json' : exportFormat === 'csv' ? 'text/csv' : 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   const getStrength = () => {
@@ -401,11 +580,11 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
                 </div>
               </div>
 
-              <div className='grid grid-cols-2 gap-3'>
+              <div className='grid grid-cols-2 sm:grid-cols-4 gap-3'>
                 <button
                   onClick={generatePassword}
                   disabled={noneSelected}
-                  className='flex items-center justify-center gap-2 px-4 py-3 sm:py-3.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium'
+                  className='flex items-center justify-center gap-2 px-4 py-3 sm:py-3.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium text-sm'
                 >
                   <RefreshCw className='h-4 w-4 sm:h-5 sm:w-5' />
                   {t('action.generate')}
@@ -413,12 +592,112 @@ export default function PasswordGenerator({ locale = 'zh' }: PasswordGeneratorPr
                 <button
                   onClick={copyToClipboard}
                   disabled={!password}
-                  className='flex items-center justify-center gap-2 px-4 py-3 sm:py-3.5 rounded-lg btn-primary disabled:opacity-50 disabled:cursor-not-allowed font-medium'
+                  className='flex items-center justify-center gap-2 px-4 py-3 sm:py-3.5 rounded-lg btn-primary disabled:opacity-50 disabled:cursor-not-allowed font-medium text-sm'
                 >
                   {copied ? <Check className='h-4 w-4 sm:h-5 sm:w-5' /> : <Copy className='h-4 w-4 sm:h-5 sm:w-5' />}
                   {copied ? t('action.copied') : t('action.copy')}
                 </button>
+                <button
+                  onClick={() => setShowHistory(!showHistory)}
+                  className={`flex items-center justify-center gap-2 px-4 py-3 sm:py-3.5 rounded-lg border font-medium text-sm transition-colors ${
+                    showHistory 
+                      ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400' 
+                      : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  <History className='h-4 w-4 sm:h-5 sm:w-5' />
+                  {t('history')}
+                  {history.length > 0 && (
+                    <span className='px-1.5 py-0.5 rounded-full text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400'>
+                      {history.length}
+                    </span>
+                  )}
+                </button>
+                <button
+                  onClick={exportHistory}
+                  disabled={history.length === 0}
+                  className='flex items-center justify-center gap-2 px-4 py-3 sm:py-3.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium text-sm'
+                >
+                  <Download className='h-4 w-4 sm:h-5 sm:w-5' />
+                  {t('export')}
+                </button>
               </div>
+
+              {showHistory && (
+                <div className='p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50'>
+                  <div className='flex items-center justify-between mb-3'>
+                    <h4 className='font-semibold text-gray-900 dark:text-gray-100'>{t('history')}</h4>
+                    <div className='flex items-center gap-2'>
+                      <select
+                        value={exportFormat}
+                        onChange={(e) => setExportFormat(e.target.value as 'plain' | 'csv' | 'json')}
+                        className='px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs focus:ring-2 focus:ring-purple-500'
+                      >
+                        <option value='plain'>{t('plainText')}</option>
+                        <option value='csv'>{t('csv')}</option>
+                        <option value='json'>{t('json')}</option>
+                      </select>
+                      <button
+                        onClick={clearHistory}
+                        disabled={history.length === 0}
+                        className='flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 disabled:opacity-50'
+                      >
+                        <Trash2 className='h-3 w-3' />
+                        {t('clearHistory')}
+                      </button>
+                    </div>
+                  </div>
+
+                  {history.length === 0 ? (
+                    <p className='text-sm text-gray-500 dark:text-gray-400 text-center py-4'>
+                      {t('historyEmpty')}
+                    </p>
+                  ) : (
+                    <div className='space-y-2 max-h-[300px] overflow-auto'>
+                      {history.map((item) => (
+                        <div
+                          key={item.id}
+                          className='flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700'
+                        >
+                          <button
+                            onClick={() => toggleFavorite(item.id)}
+                            className={`p-1.5 rounded-lg transition-colors ${
+                              item.favorite 
+                                ? 'text-yellow-500 bg-yellow-50 dark:bg-yellow-900/20' 
+                                : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'
+                            }`}
+                          >
+                            {item.favorite ? <Star className='h-4 w-4 fill-current' /> : <StarOff className='h-4 w-4' />}
+                          </button>
+                          <div className='flex-1 min-w-0'>
+                            <div className='font-mono text-sm text-gray-900 dark:text-gray-100 break-all'>
+                              {item.password}
+                            </div>
+                            <div className='flex items-center gap-3 mt-1 text-xs text-gray-500 dark:text-gray-400'>
+                              <span>{t('length')}: {item.length}</span>
+                              <span>{t('timestamp')}: {item.timestamp.toLocaleTimeString()}</span>
+                            </div>
+                          </div>
+                          <div className='flex items-center gap-1'>
+                            <button
+                              onClick={() => copyToClipboard(item.password)}
+                              className='p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors'
+                            >
+                              <Copy className='h-4 w-4' />
+                            </button>
+                            <button
+                              onClick={() => deleteHistoryItem(item.id)}
+                              className='p-1.5 rounded-lg text-gray-400 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors'
+                            >
+                              <Trash2 className='h-4 w-4' />
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
 
               <div className='p-3 sm:p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg'>
                 <p className='text-xs sm:text-sm text-purple-700 dark:text-purple-300'>
