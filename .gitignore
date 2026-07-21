@@ -52,3 +52,6 @@ middleware.ts.bak
 tsconfig.tsbuildinfo
 scripts/.indexnow-key
 .tmp-db-migrate.py
+*.backup-before-codex-fix
+fix-toolcard.js
+finchip-cli/
