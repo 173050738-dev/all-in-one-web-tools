@@ -339,6 +339,188 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           return json({ url, keywords, analysis: content });
         }
 
+        case '/api/ai-review-generator':
+        case '/api/ai-review-generator/': {
+          const product = payload.product as string;
+          const selling = payload.selling as string;
+          const type = (payload.type as string) || 'positive';
+          const tone = (payload.tone as string) || 'friendly';
+          const platform = (payload.platform as string) || 'general';
+          if (!product?.trim() || !selling?.trim()) return errJson('Product name and feelings are required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const targetTone = toneMap[locale]?.[tone] || toneMap[locale]?.friendly || 'friendly';
+          const systemPrompt = `你是一个专业的电商评价生成专家。根据用户提供的商品信息和简单感受，生成自然真实的评价。
+
+评价类型：
+- 好评：积极正面，突出优点
+- 中评：客观中立，优缺点都提
+- 差评：负面反馈，指出问题
+
+目标平台：
+- 淘宝：语气亲切，使用表情符号
+- 拼多多：接地气，强调性价比
+- 美团/饿了么：关注配送速度和服务
+- 京东：强调品质和物流
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "review": "生成的评价内容"
+    }
+  ]
+}
+
+请生成【3条】候选评价。用 ${langLabel(locale)} 输出。评价要口语化，像真实用户写的，不要太官方太生硬。`;
+
+          const userPrompt = locale === 'zh'
+            ? `产品名：${product}\n\n核心卖点：${selling}\n\n评价类型：${type}\n\n目标平台：${platform}\n\n语气风格：${targetTone}\n\n请生成3条评价。`
+            : locale === 'es'
+            ? `Nombre del producto: ${product}\n\nPuntos de venta: ${selling}\n\nTipo de texto: ${type}\n\nPlataforma objetivo: ${platform}\n\nEstilo de tono: ${targetTone}\n\nGenera 3 copys de marketing.`
+            : locale === 'fr'
+            ? `Nom du produit: ${product}\n\nPoints de vente: ${selling}\n\nType de texte: ${type}\n\nPlateforme cible: ${platform}\n\nStyle de ton: ${targetTone}\n\nGénérez 3 copies marketing.`
+            : locale === 'hi'
+            ? `उत्पाद का नाम: ${product}\n\nबिक्री बिंदु: ${selling}\n\nपाठ प्रकार: ${type}\n\nलक्ष्य प्लेटफॉर्म: ${platform}\n\nटोन शैली: ${targetTone}\n\n3 मार्केटिंग कॉपी बनाएं।`
+            : locale === 'ar'
+            ? `اسم المنتج: ${product}\n\nنقاط البيع: ${selling}\n\nنوع النص: ${type}\n\nالمنصة المستهدفة: ${platform}\n\nأسلوب النبرة: ${targetTone}\n\nأنشئ 3 نسخ تسويقية.`
+            : `Product name: ${product}\n\nFeelings: ${selling}\n\nReview type: ${type}\n\nTarget platform: ${platform}\n\nTone style: ${targetTone}\n\nGenerate 3 reviews.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.items || !Array.isArray(result.items)) {
+            return errJson('No reviews generated', 500);
+          }
+          return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-resume-experience-optimize':
+        case '/api/ai-resume-experience-optimize/': {
+          const experience = payload.experience as string;
+          const targetRole = (payload.targetRole as string) || '';
+          const industry = (payload.industry as string) || '';
+          const tone = (payload.tone as string) || 'professional';
+          if (!experience?.trim()) return errJson('Experience description is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const targetTone = toneMap[locale]?.[tone] || toneMap[locale]?.friendly || 'friendly';
+          const systemPrompt = `你是一个专业的简历优化专家。根据用户提供的工作经历描述，优化成更专业、更具吸引力的简历内容。
+
+优化原则：
+- 使用专业术语和关键词
+- 突出量化成果和业绩
+- 采用STAR法则（情境-任务-行动-结果）
+- 语气专业自信
+- 突出核心竞争力
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "optimized": "优化后的简历内容"
+    }
+  ]
+}
+
+请生成【3条】优化后的简历经历。用 ${langLabel(locale)} 输出。`;
+
+          const userPrompt = locale === 'zh'
+            ? `工作经历：${experience}\n\n目标职位：${targetRole || '无'}\n\n行业：${industry || '无'}\n\n语气风格：${targetTone}\n\n请优化这段简历经历。`
+            : locale === 'es'
+            ? `Experiencia laboral: ${experience}\n\nCargo objetivo: ${targetRole || 'ninguno'}\n\nIndustria: ${industry || 'ninguna'}\n\nEstilo de tono: ${targetTone}\n\nOptimiza esta experiencia laboral.`
+            : locale === 'fr'
+            ? `Expérience professionnelle: ${experience}\n\nPoste cible: ${targetRole || 'aucun'}\n\nIndustrie: ${industry || 'aucune'}\n\nStyle de ton: ${targetTone}\n\nOptimisez cette expérience professionnelle.`
+            : locale === 'hi'
+            ? `कार्य अनुभव: ${experience}\n\nलक्ष्य भूमिका: ${targetRole || 'कोई नहीं'}\n\nउद्योग: ${industry || 'कोई नहीं'}\n\nटोन शैली: ${targetTone}\n\nइस कार्य अनुभव को अनुकूलित करें।`
+            : locale === 'ar'
+            ? `الخبرة العملية: ${experience}\n\nالدور المستهدف: ${targetRole || 'لا يوجد'}\n\nالصناعة: ${industry || 'لا يوجد'}\n\nأسلوب النبرة: ${targetTone}\n\nقم بتحسين هذه الخبرة العملية.`
+            : `Work experience: ${experience}\n\nTarget role: ${targetRole || 'none'}\n\nIndustry: ${industry || 'none'}\n\nTone style: ${targetTone}\n\nOptimize this resume experience.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.items || !Array.isArray(result.items)) {
+            return errJson('No optimization generated', 500);
+          }
+          return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-xiaohongshu-title-generator':
+        case '/api/ai-xiaohongshu-title-generator/': {
+          const content = payload.content as string;
+          const category = (payload.category as string) || 'lifestyle';
+          const tone = (payload.tone as string) || 'friendly';
+          if (!content?.trim()) return errJson('Content description is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const targetTone = toneMap[locale]?.[tone] || toneMap[locale]?.friendly || 'friendly';
+          const systemPrompt = `你是一个专业的小红书标题生成专家。根据用户提供的内容描述，生成吸引人的小红书风格标题。
+
+小红书标题特点：
+- 使用表情符号吸引眼球
+- 使用数字增加说服力
+- 使用疑问句引发好奇心
+- 突出关键词和标签
+- 口语化、接地气
+- 使用热门词汇和话题标签
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "title": "生成的标题"
+    }
+  ]
+}
+
+请生成【3条】候选标题。用 ${langLabel(locale)} 输出。`;
+
+          const userPrompt = locale === 'zh'
+            ? `内容描述：${content}\n\n内容分类：${category}\n\n语气风格：${targetTone}\n\n请生成3条小红书标题。`
+            : locale === 'es'
+            ? `Descripción del contenido: ${content}\n\nCategoría: ${category}\n\nEstilo de tono: ${targetTone}\n\nGenera 3 títulos para Xiaohongshu.`
+            : locale === 'fr'
+            ? `Description du contenu: ${content}\n\nCatégorie: ${category}\n\nStyle de ton: ${targetTone}\n\nGénérez 3 titres pour Xiaohongshu.`
+            : locale === 'hi'
+            ? `सामग्री विवरण: ${content}\n\nश्रेणी: ${category}\n\nटोन शैली: ${targetTone}\n\nXiaohongshu के लिए 3 शीर्षक बनाएं।`
+            : locale === 'ar'
+            ? `وصف المحتوى: ${content}\n\nالفئة: ${category}\n\nأسلوب النبرة: ${targetTone}\n\nأنشئ 3 عناوين لـ Xiaohongshu.`
+            : `Content description: ${content}\n\nCategory: ${category}\n\nTone style: ${targetTone}\n\nGenerate 3 Xiaohongshu titles.`;
+
+          const aiContent = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(aiContent);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.items || !Array.isArray(result.items)) {
+            return errJson('No titles generated', 500);
+          }
+          return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
+        }
+
         default:
           return errJson('Not found', 404);
       }
