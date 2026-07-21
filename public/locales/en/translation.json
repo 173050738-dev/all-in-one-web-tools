@@ -5779,8 +5779,8 @@
       }
     },
     "audio-bpm-detector": {
-      "name": "Bpm Beat Analyzer",
-      "description": "Free Bpm Beat Analyzer: supports bpm, beat, and more. 100% local processing on your device for maximum privacy.",
+      "name": "BPM Analyzer & Detector",
+      "description": "Free online BPM analyzer & detector: find the tempo (beats per minute) of any MP3/WAV/FLAC song, or tap BPM via microphone & spacebar. Auto + manual modes, no upload, no signup.",
       "seo": {
         "intro": "Audio BPM Detector is a free local tool that calculates the beats-per-minute tempo of any music track directly in your browser. Drag in an MP3, WAV, or FLAC file from your desktop or tap the tempo manually with a microphone or spacebar, and the analyzer will output a stable BPM reading plus beat-tap markers you can export to your DAW or video editor. Everything runs client-side — audio files never leave your device and are never uploaded, so unreleased tracks and commercial stems stay fully private.",
         "scenarios": [
@@ -5869,8 +5869,8 @@
       }
     },
     "multi-timezone-publish-time": {
-      "name": "Timezone Timer",
-      "description": "Free Timezone Timer: supports timezone, time, and more. 100% local processing on your device for maximum privacy.",
+      "name": "Multi-Timezone Publish Time Calculator",
+      "description": "Free multi-timezone publish time calculator: find the best time to post across LA, NYC, London, Tokyo, Sydney & 12+ zones with DST auto-correction. No signup, 100% in-browser.",
       "seo": {
         "intro": "Timezone Timer (Multi-Timezone Publish Time Calculator) is a free browser-based tool for cross-border creators and brand social teams that converts a single ideal posting time slot into the exact wall-clock hour for 12+ common global timezones and major cities — including DST/夏令时 auto-correction. Pick a home timezone, choose your best-performing audience active hour, and the timer will show you when to press 'post' for followers in Los Angeles, New York, London, Paris, Berlin, Dubai, Mumbai, Singapore, Tokyo, Seoul, Beijing, Sydney, and São Paulo — with no API calls and no signup.",
         "scenarios": [
@@ -5914,8 +5914,8 @@
       }
     },
     "wc-2026-schedule": {
-      "name": "Wc 2026 Schedule",
-      "description": "Wc 2026 Schedule online editor. Customize world cup, tune 2026, export instantly. Cross-device, no signup.",
+      "name": "World Cup 2026 Schedule",
+      "description": "Free FIFA World Cup 2026 schedule: all 104 matches, kick-off times in 9 time zones, group tables & knockout bracket. Export to iCal/CSV, no signup.",
       "seo": {
         "intro": "2026 FIFA World Cup Schedule Browser is a free in-browser full 104-match fixture, kick-off time, venue, ticket, group-table and knockout bracket tool for the 2026 USA–Canada–Mexico World Cup, built for football fans, sports bettors, sports-bar managers, World Cup party planners and corporate office admin teams organising watch-parties & themed afternoon teas. No VPN to reach FIFA.com, no app to install, open-and-use. Supports all 16 host cities, all 48 teams, 9 time-zone toggles (ET / PT / your local zone + London / Berlin / Shanghai / Tokyo / New Delhi / Cairo / Mexico City / Toronto), stage filters (group / R16 / QF / SF / 3rd / Final), instant group tables, 'Save My Teams' favourites, one-click iCal export to phone calendar, and CSV/Markdown export to Notion or Excel — solving the real 'when/where is the match I care about, what's my local kick-off, should I book a day off' fan workflow.",
         "scenarios": [
@@ -5961,8 +5961,8 @@
       }
     },
     "wc-champion-predictor": {
-      "name": "World cup Predictor",
-      "description": "Free World cup Predictor: supports world cup, predictor, and more. 100% local processing on your device for maximum privacy.",
+      "name": "World Cup 2026 Champion Predictor",
+      "description": "Free World Cup 2026 champion predictor: pick the winner, Golden Boot & 12 awards with tamper-proof hash. Office pool scoring, no signup, 100% local.",
       "seo": {
         "intro": "2026 World Cup Champion Predictor Logbook is a free in-browser 'pick the winner / semi-finalists / Golden Boot' prediction archive + scoring comparison tool, built for football fans, sports bettors, corporate office World Cup prediction pools, sports-bar watch-night prediction votes, and football social-media influencers who want to log every prediction episode. No app install, no registration, 100% local runtime. Create up to 5 prediction snapshots (pre-group-stage / post-group adjustments / every KO round), fill each with Champion, Runner-up, 3rd, 4th, Full SF 4, Full QF 8, Golden Boot, Golden Ball, Golden Glove, Biggest Dark Horse, Highest-scoring team, Fewest goals conceded, and Biggest group-stage upset. The tool auto-generates a tamper-proof prediction HASH (no post-hoc cheating), shareable QR short-link, and post-tournament 'actual vs predicted' hit score (Champion 30 pts, Runner-up 20, each SF 10, Golden Boot 10, perfect 12/12 bonus +20). Solves the classic WC problems: 'Who DID I actually say would win back in June?', 'Who in our company pool actually got it right?', and 'Am I gonna get called out as a football influencer for editing my predictions after kick-off?'",
         "scenarios": [
@@ -6008,8 +6008,8 @@
       }
     },
     "wc-poster-generator": {
-      "name": "World cup Poster Creator",
-      "description": "Online World cup Poster Creator tool with features: world cup, poster, cover. Works right in your browser — free, secure, and no install required.",
+      "name": "World Cup 2026 Poster Maker",
+      "description": "Free World Cup 2026 poster maker: 15 templates, 48 team colors & flags, 4K PNG/SVG export. No Photoshop, no signup, 100% in-browser.",
       "seo": {
         "intro": "2026 World Cup Match Poster Generator is a free in-browser one-click design tool for football match / scoreline social media posters, built for football social-media editors, sports-bar watch-night promotional posters, betting-shop pre-match flyers, fan posts for Moments / Xiaohongshu / TikTok covers, and corporate internal World Cup themed event graphics. No Photoshop, no logo downloads from stock sites. Built-in: 48-team official colour palettes + national flags + 16 venue backgrounds + 12 professional font families + 15 poster templates (Preview, Score-line, Line-up, Knockout Bracket, Match Preview, Champion Celebration, Table Standings, Betting Rules, Bar Event, Betting Odds, Fan Personalised, Player Profile, Golden Boot, Golden Ball, Dark Horse + Blank canvas). Pick a template → edit text/score → export 4K PNG or SVG vector and post. 100% browser-local zero upload. Team logos are our own vector redraws (no copyright infringement).",
         "scenarios": [
@@ -6055,8 +6055,8 @@
       }
     },
     "wc-ascii-art": {
-      "name": "Wc Ascii Art",
-      "description": "Online Wc Ascii Art tool with features: ascii, text art, football. Works right in your browser — free, secure, and no install required.",
+      "name": "World Cup ASCII Art",
+      "description": "Free World Cup ASCII art generator: turn team names & flags into text art for chats & social posts. Copy-paste ready, no signup, 100% in-browser.",
       "seo": {
         "intro": "2026 World Cup Player & Flag ASCII Art Generator is a free in-browser tool that converts football player portraits, national flags, the World Cup Trophy, and club crests into pure-text ASCII character art, for football forum OPs (Hupu / Dongqiudi / Reddit r/soccer), programmer fans showing off in terminals (iTerm / Windows Terminal), BBS plain-text signatures, ASCII artists posting in Douyin/XHS comment sections, and betting-shop owners sending fun pre-match content to customer WeChat groups. Upload a player photo / flag / crest image; pick 1 of 3 character sets (@#$% high-contrast, · dot low-contrast, Unicode block chars); choose width (40 / 80 / 120 / 160 / 200 columns); one-click generate ASCII, copy-paste to any plain-text forum / BBS / terminal / group chat / comment thread. Supports invert, dithering, and edge sharpening. Output stays crisp forever — no forum JPEG compression, no app quality loss.",
         "scenarios": [
@@ -6102,8 +6102,8 @@
       }
     },
     "wc-fan-avatar": {
-      "name": "Avatar World cup Generator",
-      "description": "Online Avatar World cup Generator tool with features: avatar, world cup, fan. Works right in your browser — free, secure, and no install required.",
+      "name": "World Cup Fan Avatar Maker",
+      "description": "Free World Cup fan avatar maker: create personalized national-team avatars with flags & colors. Download PNG, no signup, 100% in-browser.",
       "seo": {
         "intro": "2026 World Cup Fan Avatar Maker is a free in-browser one-click frame tool for 'I support this team' social-media profile pictures, for fans of all 48 participating nations, corporate HR/dept team-building avatars, fan-club unified branding, betting-shop customer community avatars, and student-dorm watch-party squads matching profile pics. No app install, no registration. Upload your own real profile photo (100% local processing, zero upload, absolute privacy). Pick 1–2 supported teams (main frame + secondary 'CP' couple frame max 2 teams). Apply 16 types of national-flag borders, 144 variants of official-team-colour geometric frames (circle / square / hex × 48 teams = 144), WC Trophy watermark, fan face-paint decals, gold-foil champion commemorative frame, Qatar-desert palette frame, custom name / nickname / slogan text watermark (12 font families). Three render effects (rounded corners / drop-shadow / stroke). One-click export 400×400 / 800×800 / 2048×2048 hi-res transparent PNG, ready for WeChat / QQ / X / Discord / Instagram — no JPEG compression blurring from any platform.",
         "scenarios": [
@@ -6149,8 +6149,8 @@
       }
     },
     "wc-scoreboard-simulator": {
-      "name": "Wc Scoreboard Simulator",
-      "description": "Free Wc Scoreboard Simulator: supports scoreboard, score, and more. 100% local processing on your device for maximum privacy.",
+      "name": "World Cup Scoreboard Simulator",
+      "description": "Free World Cup scoreboard simulator: simulate live match scoreboards with team colors & timers. No signup, 100% in-browser, instant.",
       "seo": {
         "intro": "2026 World Cup Scoreboard Simulator is a free in-browser real broadcast-grade 16:9 football scoreboard / score-board simulator, for football social-media short-video editors, sports-bar big-screen live score displays, betting-shop match simulators, student-dorm watch-party fake-live score pranks, and corporate in-house WC-themed live event big screens. No OBS plugin installs, no pricey live-scoring SaaS licenses. Open browser → pick template (FIFA official broadcast style, ESPN US, BBC UK, BeIN MENA, CCTV Chinese, Douyin/Kuaishou 9:16 vertical) → fill home/away, goals, minutes, yellow/red cards, subs, extra-time, penalty shootout → one-toggle live display. Outputs 4K 16:9 / 1080×1920 vertical PNG/SVG real-time. Fullscreen mode for HDMI-out to bar screens; transparent-PNG export for OBS / CapCut / Premiere overlay editing. 2026 WC typography & colours, zero IP infringement risk.",
         "scenarios": [
@@ -6196,8 +6196,8 @@
       }
     },
     "wc-name-decorator": {
-      "name": "Wc Name Decorator",
-      "description": "Free Wc Name Decorator: supports decorator, fancy text, and more. 100% local processing on your device for maximum privacy.",
+      "name": "World Cup Name Decorator",
+      "description": "Free World Cup name decorator: style your name with national-team colors, flags & fancy fonts. Copy-paste ready, no signup, 100% in-browser.",
       "seo": {
         "intro": "2026 World Cup Fancy Player Name Decorator is a free in-browser World-Cup-themed fancy Unicode nickname / player-name artistic font generator, built for fans posting on Moments / X(Twitter) / Xiaohongshu / Discord, e-sports team tag renaming, streamer OBS overlays, clan YY vest-names, and forum signatures. Type any star player's name — Messi, Mbappé, Ronaldo, Neymar, Bellingham, Musiala, Foden, Gavi, Pedri, Saka, Son, Rodrigo, Vinícius, whatever — or your own QQ / WeChat / TikTok handle. The tool locally renders 80+ Unicode fancy-art font variants in one go: cursive script, blackletter fraktur, handwritten, double-stroke, sub/superscript, underlined & bold, emoji player-name + national-flag combos, WC winner gold-star decorations, team-color gradient letter blocks. Every font is verified compatible with WeChat / QQ / TikTok / Xiaohongshu / Bilibili / X / WhatsApp / Telegram / Discord / Tieba / forum signatures / in-game IDs / console gamer-tags — solving the two high-frequency WC-season pain points: 'I want to post a player tribute but the name looks plain' and 'I can't find a good fancy font for my new game ID / clan vest'.",
         "scenarios": [

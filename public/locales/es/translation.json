@@ -714,8 +714,8 @@
       }
     },
     "emoji-mixer": {
-      "name": "Mezclador de Emoji",
-      "description": "¡Mezcla dos emojis y crea uno nuevo! Una fábrica de emojis superdivertida con creatividad infinita. Copia y comparte en un clic.",
+      "name": "Mezclador de Emojis",
+      "description": "Mezclador de emojis online gratis: combina dos emojis en uno nuevo e híbrido. Crea pegatinas PNG transparentes al instante, sin registro ni instalación. ¡Pruébalo ahora!",
       "seo": {
         "intro": "Mezclador de Emojis es una herramienta creativa gratuita y divertida dentro del navegador que combina dos emojis estándar en una nueva pegatina de emoji híbrido fusionado que puedes compartir como PNG transparente. Elige dos emojis cualesquiera del selector integrado — por ejemplo gato + pastel 🎂 o perro 🐶 + cohete 🚀 — y el mezclador renderizará un mashup de emoji híbrido fusionando colores, formas e iconografía de ambas entradas. Todo el renderizado se realiza en el cliente mediante Canvas, por lo que no hace falta iniciar sesión ni subir nada y cada nueva combinación se genera al instante directamente en la página.",
         "scenarios": [
@@ -5779,8 +5779,8 @@
       }
     },
     "audio-bpm-detector": {
-      "name": "Bpm Beat Analizador",
-      "description": "Herramienta Bpm Beat Analizador en línea con funciones: Bpm, Beat, Tempo. Funciona directamente en tu navegador — gratis, seguro y sin necesidad de instalar nada.",
+      "name": "Analizador y Detector de BPM",
+      "description": "Analizador y detector de BPM online gratis: saca el tempo (pulsaciones por minuto) de cualquier canción MP3/WAV/FLAC, o toca el BPM con micrófono y barra espaciadora. Sin subir archivos, sin registro.",
       "seo": {
         "intro": "Detector de BPM de Audio es una herramienta local gratuita que calcula el tempo en pulsaciones por minuto de cualquier pista musical directamente en tu navegador. Arrastra un archivo MP3, WAV o FLAC desde tu escritorio o marca el tempo manualmente con el micrófono o la barra espaciadora, y el analizador mostrará una lectura estable de BPM además de marcadores de compás que podrás exportar a tu DAW o editor de vídeo. Todo funciona en el cliente: los archivos de audio nunca salen de tu dispositivo ni se suben, así que las pistas inéditas y los stems comerciales se mantienen totalmente privados.",
         "scenarios": [

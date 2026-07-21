@@ -5779,8 +5779,8 @@
       }
     },
     "audio-bpm-detector": {
-      "name": "Bpm Beat Analyseur",
-      "description": "Outil Bpm Beat Analyseur en ligne avec fonctionnalités : Bpm, Beat, Tempo. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise.",
+      "name": "Analyseur et Détecteur de BPM",
+      "description": "Analyseur et détecteur de BPM en ligne gratuit : trouvez le tempo (pulsations par minute) de toute chanson MP3/WAV/FLAC, ou tapez le BPM au microphone. Sans envoi de fichier, sans inscription.",
       "seo": {
         "intro": "Détecteur de BPM Audio est un outil local gratuit qui calcule le tempo en battements par minute de n'importe quelle piste musicale, directement dans votre navigateur. Glissez un fichier MP3, WAV ou FLAC depuis votre bureau, ou tapez le tempo manuellement avec le micro ou la barre d'espace, et l'analyseur affichera une lecture BPM stable ainsi que des repères de mesure exportables vers votre DAW ou votre éditeur vidéo. Tout est traité côté client : les fichiers audio ne sortent jamais de votre appareil et ne sont jamais envoyés, donc les démos inédites et les stems commerciaux restent totalement privés.",
         "scenarios": [
@@ -6008,8 +6008,8 @@
       }
     },
     "wc-poster-generator": {
-      "name": "World Cup Poster Créateur",
-      "description": "Éditeur World Cup Poster Créateur en ligne. Personnalisez World cup, ajustez Poster, exportez instantanément. Multi-appareils, aucune inscription.",
+      "name": "Créateur d'Affiches Coupe du Monde 2026",
+      "description": "Créateur d'affiches Coupe du Monde 2026 gratuit : 15 modèles, couleurs et drapeaux des 48 équipes, export PNG/SVG 4K. Sans inscription, 100% dans le navigateur.",
       "seo": {
         "intro": "2026 World Cup Match Poster Generator est un outil gratuit dans le navigateur pour concevoir en un clic des affiches de matchs / résultats de foot pour les réseaux sociaux, à destination des éditeurs de contenu sportif, des bars à sports pour leurs soirées matchs, des maisons de paris pour les flyers pré-match, des fans sur les réseaux et des affiches d'événements Coupe du Monde en entreprise. Pas de Photoshop, pas de téléchargement de logos sur des banques d'images. Inclus : palettes officielles des 48 sélections + drapeaux nationaux + 16 fonds de stades + 12 familles de polices professionnelles + 15 modèles d'affiches (Avant-match, Résultat, Composition XI, Duel éliminatoire, Célébration champion, Classement, Règles pronostics, Soirée bar, Fiche cotes maison de paris, Fan personnalisé, Profil joueur, Soulier d'Or, Ballon d'Or, Surprise, Canevas vierge). Choisir un modèle → modifier texte / score → exporter PNG 4K ou SVG vectoriel et publier. 100 % local dans le navigateur, zéro envoi. Les logos des sélections sont nos propres redessinés vectoriels (pas d'infraction).",
         "scenarios": [

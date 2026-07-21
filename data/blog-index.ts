@@ -75,12 +75,18 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "title": {
 "en": "Regular Expressions (RegEx) Explained: Learn Regex in 10 Minutes for FREE",
 "zh": "正则表达式（RegEx）入门：10分钟学会正则，附在线测试器",
-"hi": "रेगुलर एक्सप्रेशन (RegEx) क्या है? 2026 में शुरुआती लोगों के लिए पूरी गाइड"
+"hi": "रेगुलर एक्सप्रेशन (RegEx) क्या है? 2026 में शुरुआती लोगों के लिए पूरी गाइड",
+"fr": "Expressions Régulières (Regex) Expliquées : Apprenez en 10 Minutes Gratuitement",
+"es": "Expresiones Regulares (Regex) Explicadas: Aprende en 10 Minutos Gratis",
+"ar": "شرح التعبيرات النظامية (Regex): تعلم في 10 دقائق مجاناً"
 },
 "description": {
 "en": "Master regular expressions in 10 minutes! Learn the 10 essential regex patterns every developer needs, with live testing using our free online regex tester. Perfect for beginners.",
 "zh": "了解正则表达式是什么、什么时候用它、每个开发者都应该记住的 10 个核心语法，用 Korelyy 在线正则测试器实时验证结果。无需注册。",
-"hi": "जानें रेगुलर एक्सप्रेशन क्या हैं, कब उपयोग करें, 10 मुख्य पैटर्न जो हर डेवलपर को याद होने चाहिए, और Korelyy ऑनलाइन टेस्टर से लाइव टेस्ट करें। कोई साइनअप नहीं।"
+"hi": "जानें रेगुलर एक्सप्रेशन क्या हैं, कब उपयोग करें, 10 मुख्य पैटर्न जो हर डेवलपर को याद होने चाहिए, और Korelyy ऑनलाइन टेस्टर से लाइव टेस्ट करें। कोई साइनअप नहीं।",
+"fr": "Maîtrisez les expressions régulières en 10 minutes ! Apprenez les 10 motifs regex essentiels dont chaque développeur a besoin, avec test en direct sur notre testeur regex gratuit en ligne. Parfait pour les débutants.",
+"es": "¡Domina las expresiones regulares en 10 minutos! Aprende los 10 patrones regex esenciales que todo desarrollador necesita, con pruebas en vivo usando nuestro tester regex gratuito en línea. Perfecto para principiantes.",
+"ar": "أتقن التعبيرات النظامية في 10 دقائق! تعلم 10 أنماط regex أساسية يحتاجها كل مطور، مع اختبار مباشر باستخدام أداة فحص regex المجانية لدينا. مثالي للمبتدئين."
 },
 "keywords": {
 "en": [
@@ -105,6 +111,29 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "ऑनलाइन रेगेक्स टेस्टर",
 "रेगेक्स चीट शीट",
 "शुरुआती लोगों के लिए रेगेक्स"
+],
+"fr": [
+"expression régulière",
+"tutoriel regex débutant",
+"regex 101",
+"testeur regex en ligne",
+"antisèche regex",
+"apprendre regex"
+],
+"es": [
+"qué es expresión regular",
+"tutorial regex principiantes",
+"regex 101",
+"probador regex online",
+"hoja de referencia regex",
+"aprender regex"
+],
+"ar": [
+"ما هو التعبير النظامي",
+"شرح regex للمبتدئين",
+"اختبار regex اونلاين",
+"دليل regex المرجعي",
+"تعلم regex"
 ]
 }
 },
@@ -115,17 +144,26 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 {
 "en": "Regex Patterns",
 "zh": "正则模板",
-"hi": "रेगेक्स पैटर्न"
+"hi": "रेगेक्स पैटर्न",
+"fr": "Modèles Regex",
+"es": "Patrones Regex",
+"ar": "أنماط Regex"
 },
 {
 "en": "Practical",
 "zh": "实用工具",
-"hi": "व्यावहारिक"
+"hi": "व्यावहारिक",
+"fr": "Pratique",
+"es": "Práctico",
+"ar": "عملي"
 },
 {
 "en": "Cheat Sheet",
 "zh": "速查手册",
-"hi": "चीट शीट"
+"hi": "चीट शीट",
+"fr": "Aide-mémoire",
+"es": "Hoja de referencia",
+"ar": "ورقة مرجعية"
 }
 ],
 "relatedToolSlugs": [
@@ -134,17 +172,26 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "readingMinutes": {
 "en": 6,
 "zh": 7,
-"hi": 8
+"hi": 8,
+"fr": 6,
+"es": 6,
+"ar": 7
 },
 "title": {
 "en": "2026 Verified Regex Patterns for Emails, Phone Numbers (60+ Countries) & URLs with TLDs",
 "zh": "2026 验证版正则模板：邮箱、60+ 国家手机号、含新顶级域名的 URL",
-"hi": "2026 के सत्यापित रेगेक्स पैटर्न: ईमेल, फ़ोन नंबर (60+ देश) और नए TLD वाले URL"
+"hi": "2026 के सत्यापित रेगेक्स पैटर्न: ईमेल, फ़ोन नंबर (60+ देश) और नए TLD वाले URL",
+"fr": "Modèles Regex Vérifiés 2026 pour Emails, Numéros de Téléphone (60+ Pays) et URLs avec TLD",
+"es": "Patrones Regex Verificados 2026 para Correos, Números de Teléfono (60+ Países) y URLs con TLD",
+"ar": "أنماط Regex محققة لعام 2026 للبريد الإلكتروني وأرقام الهواتف (60+ دولة) وروابط URL مع TLD"
 },
 "description": {
 "en": "Copy-paste production-ready regex for email (RFC-compliant, no false positives), international phone numbers (E.164, spaces, dashes), and modern URLs (.ai, .io, .app, .xyz). All patterns tested live in the Korelyy Regex Tester.",
 "zh": "直接复制可用的生产级正则：邮箱（符合 RFC，低误报）、国际手机号（E.164 / 空格 / 短横线兼容）、现代 URL（.ai / .io / .app / .xyz 等新顶级域名）。所有模板均可在 Korelyy 正则测试器中实时调。",
-"hi": "प्रोडक्शन-रेडी रेगेक्स कॉपी-पेस्ट करें: ईमेल (RFC अनुरूप, गलत रिजल्ट नहीं), अंतर्राष्ट्रीय फ़ोन नंबर (E.164, स्पेस, डैश) और आधुनिक URL (.ai, .io, .app, .xyz)। सभी पैटर्न Korelyy रेगेक्स टेस्टर में लाइव टेस्ट किए गए।"
+"hi": "प्रोडक्शन-रेडी रेगेक्स कॉपी-पेस्ट करें: ईमेल (RFC अनुरूप, गलत रिजल्ट नहीं), अंतर्राष्ट्रीय फ़ोन नंबर (E.164, स्पेस, डैश) और आधुनिक URL (.ai, .io, .app, .xyz)। सभी पैटर्न Korelyy रेगेक्स टेस्टर में लाइव टेस्ट किए गए।",
+"fr": "Copiez-collez des regex prêts pour la production : email (conforme RFC, sans faux positifs), numéros de téléphone internationaux (E.164, espaces, tirets) et URLs modernes (.ai, .io, .app, .xyz). Tous les motifs testés en direct dans le testeur Regex Korelyy.",
+"es": "Copia y pega regex listos para producción: correo (cumple RFC, sin falsos positivos), números de teléfono internacionales (E.164, espacios, guiones) y URLs modernas (.ai, .io, .app, .xyz). Todos los patrones probados en vivo en el probador Regex de Korelyy.",
+"ar": "انسخ والصق أنماط regex جاهزة للإنتاج: البريد الإلكتروني (متوافق مع RFC، دون نتائج خاطئة)، أرقام الهواتف الدولية (E.164، مسافات، شرطات) وروابط URL الحديثة (.ai، .io، .app، .xyz). جميع الأنماط مختبرة مباشرة في مختبر Regex من Korelyy."
 },
 "keywords": {
 "en": [
@@ -168,6 +215,30 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "रेगेक्स फ़ोन नंबर",
 "रेगेक्स URL",
 "रेगेक्स भारतीय मोबाइल नंबर"
+],
+"fr": [
+"modèle regex email",
+"regex numéro de téléphone international",
+"regex url domaine",
+"regex valider email RFC",
+"regex mobile inde",
+"regex téléphone chine"
+],
+"es": [
+"patrón regex correo",
+"regex número de teléfono internacional",
+"regex url dominio",
+"regex validar correo RFC",
+"regex móvil india",
+"regex teléfono china"
+],
+"ar": [
+"نمط regex بريد إلكتروني",
+"regex رقم هاتف دولي",
+"regex url نطاق",
+"regex التحقق بريد RFC",
+"regex هاتف محمول الهند",
+"regex هاتف الصين"
 ]
 }
 },
@@ -178,17 +249,26 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 {
 "en": "Performance",
 "zh": "性能优化",
-"hi": "परफॉर्मेंस"
+"hi": "परफॉर्मेंस",
+"fr": "Performance",
+"es": "Rendimiento",
+"ar": "الأداء"
 },
 {
 "en": "JavaScript",
 "zh": "JavaScript",
-"hi": "जावास्क्रिप्ट"
+"hi": "जावास्क्रिप्ट",
+"fr": "JavaScript",
+"es": "JavaScript",
+"ar": "جافا سكريبت"
 },
 {
 "en": "Benchmark",
 "zh": "基准测试",
-"hi": "बेंचमार्क"
+"hi": "बेंचमार्क",
+"fr": "Benchmark",
+"es": "Benchmark",
+"ar": "معيار قياس"
 }
 ],
 "relatedToolSlugs": [
@@ -197,17 +277,26 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "readingMinutes": {
 "en": 9,
 "zh": 10,
-"hi": 11
+"hi": 11,
+"fr": 9,
+"es": 9,
+"ar": 10
 },
 "title": {
 "en": "Regex vs. String.indexOf / .includes: When Is Regex 10× Slower? (2026 JS Benchmark)",
 "zh": "正则 vs. String.indexOf / .includes：什么时候正则慢 10 倍？（2026 JS 基准测试）",
-"hi": "रेगेक्स बनाम String.indexOf / .includes: कब रेगेक्स 10× धीमा होता है? (2026 JS बेंचमार्क)"
+"hi": "रेगेक्स बनाम String.indexOf / .includes: कब रेगेक्स 10× धीमा होता है? (2026 JS बेंचमार्क)",
+"fr": "Regex vs. String.indexOf / .includes : Quand Regex est 10× plus lent ? (Benchmark JS 2026)",
+"es": "Regex vs. String.indexOf / .includes: ¿Cuándo es Regex 10× más lento? (Benchmark JS 2026)",
+"ar": "Regex مقابل String.indexOf / .includes: متى يكون Regex أبطأ 10×؟ (معيار JS 2026)"
 },
 "description": {
 "en": "We benchmarked 12 real-world string-matching scenarios across Chrome 126, Node 22, Bun 1.1 and Safari 18. Clear cut-off rules: when to use String methods (90% of cases) vs. when to reach for regex, plus 3 regex anti-patterns that cause 100× slowdowns.",
 "zh": "我们在 Chrome 126、Node 22、Bun 1.1、Safari 18 上实测了 12 个真实字符串匹配场景。结论清晰：90% 场景用 String 方法、什么阈值下切换到正则、以及 3 个会让正则慢 100 倍的反模式。",
-"hi": "हमने Chrome 126, Node 22, Bun 1.1 और Safari 18 पर 12 असली स्ट्रिंग-मैचिंग सीनरियो का बेंचमार्क किया। स्पष्ट नियम: 90% मामलों में String मेथड उपयोग करें, कब रेगेक्स चुनें, और 3 रेगेक्स एंटी-पैटर्न जो 100× धीमा करते हैं।"
+"hi": "हमने Chrome 126, Node 22, Bun 1.1 और Safari 18 पर 12 असली स्ट्रिंग-मैचिंग सीनरियो का बेंचमार्क किया। स्पष्ट नियम: 90% मामलों में String मेथड उपयोग करें, कब रेगेक्स चुनें, और 3 रेगेक्स एंटी-पैटर्न जो 100× धीमा करते हैं।",
+"fr": "Nous avons benchmarké 12 scénarios réels de correspondance de chaînes sur Chrome 126, Node 22, Bun 1.1 et Safari 18. Règles claires : quand utiliser les méthodes String (90% des cas) vs. quand passer au regex, plus 3 anti-patterns regex qui causent des ralentissements de 100×.",
+"es": "Hemos evaluado 12 escenarios reales de coincidencia de cadenas en Chrome 126, Node 22, Bun 1.1 y Safari 18. Reglas claras: cuándo usar métodos String (90% de los casos) vs. cuándo recurrir a regex, más 3 anti-patrones regex que causan ralentizaciones de 100×.",
+"ar": "اختبرنا 12 سيناريو حقيقي لمطابقة السلاسل على Chrome 126 وNode 22 وBun 1.1 وSafari 18. قواعد واضحة: متى تستخدم طرق String (90% من الحالات) مقابل متى تنتقل إلى regex، بالإضافة إلى 3 أنماط مضادة لـ regex تسبب تباطؤاً 100×."
 },
 "keywords": {
 "en": [
@@ -229,6 +318,27 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "रेगेक्स बनाम स्ट्रिंग",
 "रेगेक्स धीमा क्यों",
 "कटास्ट्रॉफिक बैकट्रैकिंग"
+],
+"fr": [
+"benchmark performance regex",
+"regex vs string match JavaScript",
+"regex lent",
+"retour en arrière catastrophique",
+"performance chaîne Node.js"
+],
+"es": [
+"benchmark rendimiento regex",
+"regex vs string match JavaScript",
+"regex lento",
+"backtracking catastrófico",
+"rendimiento cadena Node.js"
+],
+"ar": [
+"معيار أداء regex",
+"regex مقابل string match جافا سكريبت",
+"regex بطيء",
+"التراجع الكارثي",
+"أداء سلسلة Node.js"
 ]
 }
 },
