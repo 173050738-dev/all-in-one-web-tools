@@ -1,0 +1,92 @@
+import { redirect } from 'next/navigation';
+import { Metadata } from 'next';
+
+const SITE_URL = 'https://korelyy.com';
+const OG_IMAGE = '/og-image.png';
+const OG_IMAGE_TYPE = 'image/png';
+const DEFAULT_LANG = '/zh/';
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: 'Korelyy Tool Hub - Online Tools',
+  description:
+    'Discover 100% free online tools for productivity, creativity, image editing, PDF processing, AI workflows and more. No signup, works on all devices. 6 languages supported.',
+  keywords: [
+    'free online tools',
+    'productivity tools',
+    'image compressor',
+    'QR code generator',
+    'PDF merger',
+    'workflow automation',
+    'AI tools',
+    '在线工具',
+    '免费工具',
+    'Korelyy',
+  ],
+  authors: [{ name: 'Korelyy Team' }],
+  creator: 'Korelyy',
+  publisher: 'Korelyy',
+  alternates: {
+    canonical: DEFAULT_LANG,
+    languages: {
+      en: '/en/',
+      zh: '/zh/',
+      es: '/es/',
+      hi: '/hi/',
+      fr: '/fr/',
+      ar: '/ar/',
+      'x-default': '/zh/',
+    },
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: ['/favicon.svg'],
+    apple: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+  },
+  openGraph: {
+    type: 'website',
+    url: `https://korelyy.com/zh/`,
+    siteName: 'Korelyy Tools',
+    title: 'Korelyy Tool Hub — Online Tools (6 Languages)',
+    description:
+      'Free online tools for productivity, creativity, image editing, PDF processing and AI workflow automation. No signup required. Desktop and mobile friendly.',
+    locale: 'zh_CN',
+    alternateLocale: ['en_US', 'es_ES', 'hi_IN', 'fr_FR', 'ar_SA'],
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        type: OG_IMAGE_TYPE,
+        alt: 'Korelyy Tool Hub — Free online tools',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@korelyy',
+    title: 'Korelyy Tool Hub — Online Tools',
+    description:
+      'Free online tools for productivity, image editing, PDF processing & AI workflows. No signup, 6 languages, mobile friendly.',
+    images: [OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  category: 'technology',
+};
+
+export default function RootRedirectPage() {
+  redirect(DEFAULT_LANG);
+}
