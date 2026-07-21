@@ -7973,5 +7973,14 @@
     "signup": [
       "no-signup"
     ]
+  },
+  "ai-review-generator": {
+    "relatedTools": [
+      "ai-copywriter",
+      "review-generator"
+    ],
+    "signup": [
+      "no-signup"
+    ]
   }
 }

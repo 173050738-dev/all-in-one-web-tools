@@ -79,6 +79,7 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'email-template-generator',
   'review-generator',
   'figma-json-exporter',
+  'ai-review-generator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

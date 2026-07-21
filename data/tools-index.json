@@ -46691,5 +46691,36 @@
     "accessTag": "direct",
     "localProcessing": true,
     "isSelfHosted": true
+  },
+  {
+    "id": "ai-review-generator",
+    "slug": "ai-review-generator",
+    "name": "AI 评价生成器",
+    "description": "输入商品名称和使用体验，AI 一键生成真实的好评、中评或差评，支持外卖和电商平台评价。",
+    "category": "writing-tools",
+    "tags": [
+      "评价",
+      "电商",
+      "AI",
+      "写作",
+      "外卖"
+    ],
+    "nameEn": "AI Review Generator",
+    "descriptionEn": "Enter product name and experience, AI generates authentic positive, neutral, or negative reviews for e-commerce and food delivery platforms.",
+    "tagsEn": [
+      "Review",
+      "E-commerce",
+      "AI",
+      "Writing",
+      "Food Delivery"
+    ],
+    "isFree": true,
+    "icon": "MessageSquare",
+    "likes": 8888,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": false,
+    "isSelfHosted": true
   }
 ]
