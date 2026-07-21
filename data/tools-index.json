@@ -46722,5 +46722,67 @@
     "accessTag": "direct",
     "localProcessing": false,
     "isSelfHosted": true
+  },
+  {
+    "id": "ai-resume-experience-optimize",
+    "slug": "ai-resume-experience-optimize",
+    "name": "简历经历 AI 优化",
+    "description": "输入职位信息和工作经历，AI 帮你优化简历经历描述，突出核心竞争力，提升求职成功率。",
+    "category": "writing-tools",
+    "tags": [
+      "简历",
+      "求职",
+      "AI",
+      "写作",
+      "职场"
+    ],
+    "nameEn": "AI Resume Experience Optimizer",
+    "descriptionEn": "Enter position details and work experience, AI optimizes your resume experience description to highlight core competencies.",
+    "tagsEn": [
+      "Resume",
+      "Job Search",
+      "AI",
+      "Writing",
+      "Career"
+    ],
+    "isFree": true,
+    "icon": "Briefcase",
+    "likes": 8888,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": false,
+    "isSelfHosted": true
+  },
+  {
+    "id": "ai-xiaohongshu-title-generator",
+    "slug": "ai-xiaohongshu-title-generator",
+    "name": "小红书标题 AI 生成器",
+    "description": "输入笔记主题，AI 生成爆款小红书标题，支持多种风格和语气，提升笔记曝光率。",
+    "category": "writing-tools",
+    "tags": [
+      "小红书",
+      "标题",
+      "AI",
+      "写作",
+      "营销"
+    ],
+    "nameEn": "Xiaohongshu Title Generator",
+    "descriptionEn": "Enter note topic, AI generates viral Xiaohongshu titles with various styles to boost note exposure.",
+    "tagsEn": [
+      "Xiaohongshu",
+      "Title",
+      "AI",
+      "Writing",
+      "Marketing"
+    ],
+    "isFree": true,
+    "icon": "Sparkles",
+    "likes": 8888,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": false,
+    "isSelfHosted": true
   }
 ]

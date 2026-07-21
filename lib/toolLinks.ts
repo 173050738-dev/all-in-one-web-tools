@@ -80,6 +80,8 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'review-generator',
   'figma-json-exporter',
   'ai-review-generator',
+  'ai-resume-experience-optimize',
+  'ai-xiaohongshu-title-generator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

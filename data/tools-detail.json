@@ -7982,5 +7982,25 @@
     "signup": [
       "no-signup"
     ]
+  },
+  "ai-resume-experience-optimize": {
+    "relatedTools": [
+      "ai-copywriter",
+      "tone-changer",
+      "text-tools"
+    ],
+    "signup": [
+      "no-signup"
+    ]
+  },
+  "ai-xiaohongshu-title-generator": {
+    "relatedTools": [
+      "ai-copywriter",
+      "title-weight-checker",
+      "keyword-spinoff-generator"
+    ],
+    "signup": [
+      "no-signup"
+    ]
   }
 }
