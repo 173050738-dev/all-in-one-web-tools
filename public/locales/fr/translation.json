@@ -444,8 +444,8 @@
       }
     },
     "case-converter": {
-      "name": "Convertir Casse",
-      "description": "Conversion de casse de texte en un clic, prend en charge PascalCase, camelCase, snake_case, kebab-case, MAJUSCULES/minuscules, Casse de Titre, première lettre en majuscule.",
+      "name": "Convertisseur de Casse — Convertir la Casse du Texte en Ligne",
+      "description": "Convertir du texte en majuscules, minuscules, camelCase, PascalCase, snake_case, kebab-case et plus. Gratuit, sans inscription, instantané.",
       "seo": {
         "intro": "Ce convertisseur de casse transforme le texte entre MAJUSCULES, minuscules, Title Case, Sentence case et les styles de programmation comme camelCase et snake_case. Collez votre texte, choisissez le format cible et copiez le résultat. Il conserve les sauts de ligne afin que vous puissiez convertir des listes entières d'un coup, ce qui est utile pour ranger les en-têtes, normaliser des données importées ou renommer des variables. Il fonctionne entièrement dans votre navigateur.",
         "scenarios": [
@@ -714,8 +714,8 @@
       }
     },
     "emoji-mixer": {
-      "name": "Mixeur d'Emoji — Combinez deux emojis en un",
-      "description": "Mixez deux emojis pour en créer un nouveau ! Une usine à emojis incroyablement fun, créativité illimitée. Générez des stickers PNG transparents instantanément dans votre navigateur, copier & partager en un clic. Sans inscription.",
+      "name": "Mélangeur d'Emojis — Combinez et Créez de Nouveaux Emojis",
+      "description": "Mélangez deux emojis pour créer des combinaisons uniques. Voir des aperçus en temps réel des emojis fusionnés. Gratuit, sans inscription, fonctionne instantanément dans le navigateur.",
       "seo": {
         "intro": "Mixeur d'Emojis est un outil créatif gratuit et ludique, directement dans le navigateur, qui combine deux emojis standard en un tout nouvel autocollant d'emoji hybride fusionné partageable au format PNG transparent. Choisissez deux emojis quelconques dans le sélecteur intégré — par exemple chat + gâteau 🎂 ou chien 🐶 + fusée 🚀 — et le mixeur génère un mashup d'emoji hybride qui fusionne les couleurs, les formes et l'iconographie des deux entrées. Tout le rendu s'effectue côté client via Canvas : aucune connexion, aucun téléversement, et chaque nouvelle combinaison apparaît instantanément dans la page.",
         "scenarios": [
@@ -849,8 +849,8 @@
       }
     },
     "image-compressor": {
-      "name": "Compresseur d'Images en Ligne",
-      "description": "Compressez vos images localement, en lot avec contrôle qualité et prévisualisation en temps réel. 100% navigateur : aucun envoi serveur, vie privée protégée.",
+      "name": "Compresseur d'Images en Ligne Gratuit — JPG, PNG, WebP",
+      "description": "Compressez les images jusqu'à 90 % sans perte de qualité. Traitement par lots, aperçu en temps réel, 100 % dans le navigateur. Aucun téléchargement, confidentialité garantie. Outil gratuit.",
       "seo": {
         "intro": "Compresseur d'Images est un outil en ligne gratuit qui réduit le poids de vos photos JPG, PNG et WebP directement dans le navigateur. Réglez la qualité et les dimensions maximales pour chaque image individuellement, comparez le résultat compressé côte à côte avec l'original et téléchargez les fichiers réduits un par un ou sous forme d'archive ZIP. L'intégralité du traitement s'exécute localement dans votre navigateur : aucune photo n'est envoyée sur un serveur, vos clichés privés ou sensibles restent donc sous votre contrôle total.",
         "scenarios": [
@@ -1319,8 +1319,8 @@
       }
     },
     "pinyin-annotator": {
-      "name": "Annotateur Pinyin",
-      "description": "Pour tuteurs. Caractères rares/polyphoniques annotés. Distinguer lectures multiples. Export layout Pinyin.",
+      "name": "Annotateur de Pinyin Chinois — Ajoutez du Pinyin au Texte",
+      "description": "Ajoutez automatiquement des annotations de pinyin au texte chinois. Prend en charge les caractères polyphoniques et les marques de ton. Gratuit, sans inscription.",
       "seo": {
         "intro": "Pinyin Annotator est un outil gratuit de prononciation des hanzi dans le navigateur, destiné aux professeurs de mandarin, enseignants de chinois en primaire, auteurs d'albums jeunesse, autoéditeurs et équipes éditoriales. Collez un article en chinois contenant des caractères rares ou polyphoniques (plusieurs lectures), et l'outil place automatiquement le pinyin tonique au-dessus (ou à côté) de chaque hanzi. Il identifie intelligemment les lectures polyphoniques (par ex. « 重 » en zhòng dans 重要 « important », mais en chóng dans 重复 « répéter », en choisissant la prononciation la plus probable via la fréquence lexicale contextuelle), permet d'ignorer les caractères déjà annotés, et de choisir la position de l'annotation (exposant au-dessus / glose latérale dans le texte / parenthèses en fin). Exporte du texte enrichi copiable, PDF, Word ou une image avec pinyin : parfait pour des cartes flash enfants, des supports de lecture de chinois L2, ou des brouillons de chinois classique annotés en caractères rares.",
         "scenarios": [
@@ -1495,8 +1495,8 @@
       }
     },
     "regex-tester": {
-      "name": "Testeur Regex",
-      "description": "Débogueur regex en ligne, surlignage des correspondances en temps réel, prend en charge les drapeaux g/i/m, affiche les groupes de correspondances et les explications, application en un clic du modèle courant.",
+      "name": "Testeur de Regex — Testez les Expressions Régulières en Ligne",
+      "description": "Testez et débuggez les expressions régulières en temps réel. Prend en charge les variantes JavaScript, Python, Go. Gratuit, sans inscription, résultats instantanés.",
       "seo": {
         "intro": "Testeur d'Expressions Régulières est un outil en ligne gratuit pour construire, déboguer et valider des expressions régulières sur du texte d'exemple en temps réel. Collez ou saisissez votre motif, activez les drapeaux g, i ou m, et observez toutes les correspondances se surligner instantanément avec leurs groupes de capture et leurs indices affichés dans le panneau latéral. Une galerie de modèles courants vous permet d'appliquer en un clic des motifs éprouvés pour les e-mails, URL, dates, numéros de téléphone et mots de passe, afin de déployer vos regex en toute confiance dans n'importe quel langage ou pile technique.",
         "scenarios": [
@@ -5816,8 +5816,8 @@
       }
     },
     "audio-bpm-detector": {
-      "name": "Analyseur et Détecteur de BPM",
-      "description": "Analyseur et détecteur de BPM en ligne gratuit : trouvez le tempo (pulsations par minute) de toute chanson MP3/WAV/FLAC, ou tapez le BPM au microphone. Sans envoi de fichier, sans inscription.",
+      "name": "Détecteur de BPM — Analyse les Battements par Minute",
+      "description": "Détectez le BPM (battements par minute) à partir de fichiers audio. Téléchargez de la musique ou utilisez un microphone. Gratuit, sans inscription, résultats précis.",
       "seo": {
         "intro": "Détecteur de BPM Audio est un outil local gratuit qui calcule le tempo en battements par minute de n'importe quelle piste musicale, directement dans votre navigateur. Glissez un fichier MP3, WAV ou FLAC depuis votre bureau, ou tapez le tempo manuellement avec le micro ou la barre d'espace, et l'analyseur affichera une lecture BPM stable ainsi que des repères de mesure exportables vers votre DAW ou votre éditeur vidéo. Tout est traité côté client : les fichiers audio ne sortent jamais de votre appareil et ne sont jamais envoyés, donc les démos inédites et les stems commerciaux restent totalement privés.",
         "scenarios": [
@@ -5906,8 +5906,8 @@
       }
     },
     "multi-timezone-publish-time": {
-      "name": "Calculateur d'Heure de Publication Multi-Fuseaux — Meilleur moment pour publier",
-      "description": "Calculateur gratuit d'heure de publication multi-fuseaux : trouvez la meilleure heure pour publier à LA, NYC, Londres, Tokyo, Sydney et plus de 12 zones avec correction automatique de l'heure d'été. Visualisez le chevauchement des heures actives des fans pour choisir le créneau optimal. Sans inscription.",
+      "name": "Calculateur de Meilleure Heure de Publication — Planificateur Multizones",
+      "description": "Trouvez l'heure de publication optimale à l'échelle mondiale dans plus de 12 fuseaux horaires (LA, NYC, Londres, Tokyo, Sydney). Ajuste automatiquement pour l'heure d'été, visualise le chevauchement du public. Gratuit, sans inscription.",
       "seo": {
         "intro": "Calculateur Multi-Fuseaux Horaires de Publication (Timezone Timer) est un outil gratuit, basé sur le navigateur, à l'usage des créateurs transfrontaliers et des équipes sociales de marques : il convertit un créneau de publication idéal en heures locales précises pour plus de douze fuseaux et grandes villes mondiales — avec ajustement automatique du passage à l'heure d'été et d'hiver. Choisissez votre fuseau de référence et l'heure de plus forte audience, puis le calculateur vous indique à quelle heure appuyer sur « publier » pour vos abonnés de Los Angeles, New York, Londres, Paris, Berlin, Dubaï, Bombay, Singapour, Tokyo, Séoul, Pékin, Sydney et São Paulo — aucun appel API, aucune inscription.",
         "scenarios": [

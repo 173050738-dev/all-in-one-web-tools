@@ -36,6 +36,14 @@ http://www.korelyy.com/*     https://korelyy.com/:splat    308
 /hi /hi/ 301
 /ar /ar/ 301
 
+# ---------- 双斜杠规范化：消除重复URL（如 /es// → /es/） ----------
+/zh// /zh/ 301
+/en// /en/ 301
+/es// /es/ 301
+/fr// /fr/ 301
+/hi// /hi/ 301
+/ar// /ar/ 301
+
 # ---------- 语言下的核心页面URL规范化 ----------
 /zh/ideas /zh/ideas/ 301
 /zh/workflows /zh/workflows/ 301

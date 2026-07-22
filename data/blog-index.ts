@@ -73,7 +73,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "hi": 9
 },
 "title": {
-"en": "Regular Expressions (RegEx) Explained: Learn Regex in 10 Minutes for FREE",
+        "en": "Regex Tester: Test & Debug Regular Expressions Online for FREE",
 "zh": "正则表达式（RegEx）入门：10分钟学会正则，附在线测试器",
 "hi": "रेगुलर एक्सप्रेशन (RegEx) क्या है? 2026 में शुरुआती लोगों के लिए पूरी गाइड",
 "fr": "Expressions Régulières (Regex) Expliquées : Apprenez en 10 Minutes Gratuitement",
@@ -81,7 +81,7 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "ar": "شرح التعبيرات النظامية (Regex): تعلم في 10 دقائق مجاناً"
 },
 "description": {
-"en": "Master regular expressions in 10 minutes! Learn the 10 essential regex patterns every developer needs, with live testing using our free online regex tester. Perfect for beginners.",
+        "en": "Test and debug regular expressions in real-time. Free online regex tester with JavaScript, Python, Go support. No signup required.",
 "zh": "了解正则表达式是什么、什么时候用它、每个开发者都应该记住的 10 个核心语法，用 Korelyy 在线正则测试器实时验证结果。无需注册。",
 "hi": "जानें रेगुलर एक्सप्रेशन क्या हैं, कब उपयोग करें, 10 मुख्य पैटर्न जो हर डेवलपर को याद होने चाहिए, और Korelyy ऑनलाइन टेस्टर से लाइव टेस्ट करें। कोई साइनअप नहीं।",
 "fr": "Maîtrisez les expressions régulières en 10 minutes ! Apprenez les 10 motifs regex essentiels dont chaque développeur a besoin, avec test en direct sur notre testeur regex gratuit en ligne. Parfait pour les débutants.",

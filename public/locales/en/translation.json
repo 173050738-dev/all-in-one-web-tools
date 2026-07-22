@@ -444,8 +444,8 @@
       }
     },
     "case-converter": {
-      "name": "Case Converter",
-      "description": "One-click text case conversion, supports PascalCase, camelCase, snake_case, kebab-case, UPPER/lower, Title Case, capitalize first letter.",
+      "name": "Case Converter — Convert Text Case Online",
+      "description": "Convert text to uppercase, lowercase, camelCase, PascalCase, snake_case, kebab-case and more. Free, no signup, instant.",
       "seo": {
         "intro": "This case converter transforms text between UPPERCASE, lowercase, Title Case, Sentence case, and programming styles like camelCase and snake_case. Paste your text, pick the target format, and copy the result. It preserves line breaks so you can convert whole lists at once, which is useful for cleaning up headings, normalising imported data, or renaming variables. It works entirely in your browser.",
         "scenarios": [
@@ -714,8 +714,8 @@
       }
     },
     "emoji-mixer": {
-      "name": "Emoji Mixer — Combine Two Emojis into One",
-      "description": "Mix any two emojis into a brand-new hybrid one! An incredibly fun emoji factory with endless creativity. Generate transparent PNG stickers instantly in your browser, one-click copy & share. No signup.",
+      "name": "Emoji Mixer — Combine & Create New Emojis",
+      "description": "Mix two emojis together to create unique combinations. See real-time previews of merged emojis. Free, no signup, works instantly in browser.",
       "seo": {
         "intro": "Emoji Mixer is a free fun in-browser creative tool that combines two standard emojis into a brand-new blended hybrid emoji sticker you can share as a transparent PNG. Pick any two emojis from the built-in picker — for example cat + 🎂 cake or 🐶 dog + 🚀 rocket — and the mixer will render a fused hybrid emoji mashup combining colors, shapes, and iconography of both inputs. The whole render happens client-side in Canvas, so no sign-in or upload needed and every new mashup is generated instantly right in the page.",
         "scenarios": [
@@ -849,8 +849,8 @@
       }
     },
     "image-compressor": {
-      "name": "Online Image Compressor",
-      "description": "Compress images locally with batch quality control and real-time preview. 100% in-browser — nothing uploaded to servers, privacy guaranteed.",
+      "name": "Free Online Image Compressor — JPG, PNG, WebP",
+      "description": "Compress images up to 90% without quality loss. Batch processing, real-time preview, 100% in-browser. No uploads, privacy guaranteed. Free tool.",
       "seo": {
         "intro": "Image Compressor is a free online tool that lets you shrink JPG, PNG, and WebP photos directly in your browser. Adjust quality and size sliders per image, preview the compressed result side-by-side, and download smaller files individually or as a batch ZIP. Everything runs locally inside your browser — your images never leave your device and are never uploaded to any server, so private or sensitive photos stay fully under your control.",
         "scenarios": [
@@ -1319,8 +1319,8 @@
       }
     },
     "pinyin-annotator": {
-      "name": "Polyphonic Pinyin Annotator",
-      "description": "Must-have for knowledge tutors. Batch annotate rare characters/polyphones in full text. Distinguish multi-read scenes (银行/行走). Export top-bottom Pinyin layout. Prevents oral broadcast mistakes.",
+      "name": "Chinese Pinyin Annotator — Add Pinyin to Text",
+      "description": "Automatically add pinyin annotations to Chinese text. Support for polyphonic characters and tone marks. Free, no signup.",
       "seo": {
         "intro": "Pinyin Annotator is a free in-browser Hanzi pronunciation tool for Mandarin teachers, primary-school Chinese-language teachers, children's picture-book authors, self-publishers and editorial staff. Paste a Chinese article containing rare characters or polyphonic (multi-read) characters, and the tool automatically places toned pinyin above (or next to) each Hanzi. It intelligently identifies polyphonic readings (e.g. '重' as zhòng in 重要 'important' but as chóng in 重复 'repeat', choosing the most likely pronunciation via contextual word frequency), optionally skips already-annotated characters, and lets you pick annotation position (superscript above / side gloss inline / trailing parentheses). Outputs copyable rich text, PDF, Word, or pinyin-on-image — perfect for children's flashcards, CSL reading materials, or rare-character annotated classical-Chinese drafts.",
         "scenarios": [
@@ -1495,8 +1495,8 @@
       }
     },
     "regex-tester": {
-      "name": "Regex Tester",
-      "description": "Online regex debugger, real-time match highlighting, supports g/i/m flags, shows match groups and explanations, common template one-click apply.",
+      "name": "Regex Tester — Test Regular Expressions Online",
+      "description": "Test and debug regular expressions in real-time. Supports JavaScript, Python, Go regex flavors. Free, no signup, instant results.",
       "seo": {
         "intro": "Regex Tester is a free online tool for building, debugging, and validating regular expressions against sample text in real time. Paste or type your pattern, enable the g, i, or m flags, and watch all matches highlight instantly with group captures and indices shown on the side. A curated panel of common templates lets you apply battle-tested patterns for emails, URLs, dates, phone numbers, and passwords with one click, so you can ship regex confidently in any language or stack.",
         "scenarios": [
@@ -5816,8 +5816,8 @@
       }
     },
     "audio-bpm-detector": {
-      "name": "BPM Analyzer & Detector",
-      "description": "Free online BPM analyzer & detector: find the tempo (beats per minute) of any MP3/WAV/FLAC song, or tap BPM via microphone & spacebar. Auto + manual modes, no upload, no signup.",
+      "name": "BPM Detector — Analyze Beats Per Minute",
+      "description": "Detect BPM (beats per minute) from audio files. Upload music or use microphone. Free, no signup, accurate results.",
       "seo": {
         "intro": "Audio BPM Detector is a free local tool that calculates the beats-per-minute tempo of any music track directly in your browser. Drag in an MP3, WAV, or FLAC file from your desktop or tap the tempo manually with a microphone or spacebar, and the analyzer will output a stable BPM reading plus beat-tap markers you can export to your DAW or video editor. Everything runs client-side — audio files never leave your device and are never uploaded, so unreleased tracks and commercial stems stay fully private.",
         "scenarios": [
@@ -5906,8 +5906,8 @@
       }
     },
     "multi-timezone-publish-time": {
-      "name": "Multi-Timezone Publish Time Calculator — Best Time to Post",
-      "description": "Free multi-timezone publish time calculator: find the best time to post across LA, NYC, London, Tokyo, Sydney and 12+ zones with DST auto-correction. Visualize fan-active hour overlap to pick the optimal publish slot. No signup.",
+      "name": "Best Time to Post Calculator — Multi-Timezone Scheduler",
+      "description": "Find the optimal global publish time across 12+ timezones (LA, NYC, London, Tokyo, Sydney). Auto-adjusts for DST, visualizes audience overlap. Free, no signup.",
       "seo": {
         "intro": "Timezone Timer (Multi-Timezone Publish Time Calculator) is a free browser-based tool for cross-border creators and brand social teams that converts a single ideal posting time slot into the exact wall-clock hour for 12+ common global timezones and major cities — including DST/夏令时 auto-correction. Pick a home timezone, choose your best-performing audience active hour, and the timer will show you when to press 'post' for followers in Los Angeles, New York, London, Paris, Berlin, Dubai, Mumbai, Singapore, Tokyo, Seoul, Beijing, Sydney, and São Paulo — with no API calls and no signup.",
         "scenarios": [

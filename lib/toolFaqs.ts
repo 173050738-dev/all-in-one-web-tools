@@ -15,6 +15,106 @@ export type NsTranslator = (key: string) => string;
 const FAQ_ORDER = ['free', 'signup', 'privacy', 'device'] as const;
 type FaqKey = (typeof FAQ_ORDER)[number];
 
+// 工具特定的FAQ（高潜力工具）
+const TOOL_FAQ_I18N: Record<string, Record<SeoLocale, Array<{ q: string; a: string }>>> = {
+  'emoji-mixer': {
+    en: [
+      { q: 'Can I combine any two emojis?', a: 'Yes, you can mix any standard Unicode emojis. Our algorithm blends colors and features intelligently for the best visual result.' },
+      { q: 'How many emoji combinations are possible?', a: 'Over 10,000 unique combinations! Mix faces, animals, food, objects and more for endless creative possibilities.' },
+      { q: 'Can I download my emoji mix?', a: 'Yes, you can download your custom emoji as a PNG image with transparent background, perfect for messaging apps and social media.' },
+    ],
+    zh: [
+      { q: '可以组合任意两个表情符号吗？', a: '是的，你可以混合任意标准 Unicode 表情符号。我们的算法会智能融合颜色和特征，呈现最佳视觉效果。' },
+      { q: '有多少种表情组合可能？', a: '超过 10,000 种独特组合！混合人脸、动物、食物、物品等，创意无限。' },
+      { q: '可以下载我的表情混合结果吗？', a: '是的，你可以将自定义表情下载为带透明背景的 PNG 图片，非常适合聊天软件和社交媒体使用。' },
+    ],
+    es: [
+      { q: '¿Puedo combinar cualquier emoji?', a: 'Sí, puedes mezclar cualquier emoji estándar Unicode. Nuestro algoritmo fusiona colores y características inteligentemente para el mejor resultado visual.' },
+      { q: '¿Cuántas combinaciones de emoji son posibles?', a: '¡Más de 10.000 combinaciones únicas! Mezcla caras, animales, comida, objetos y más para posibilidades creativas infinitas.' },
+      { q: '¿Puedo descargar mi mezcla de emojis?', a: 'Sí, puedes descargar tu emoji personalizado como imagen PNG con fondo transparente, ideal para aplicaciones de mensajería y redes sociales.' },
+    ],
+    fr: [
+      { q: 'Puis-je combiner n\'importe quels emojis ?', a: 'Oui, vous pouvez mélanger n\'importe quels emojis Unicode standard. Notre algorithme fusionne intelligemment les couleurs et les caractéristiques pour le meilleur résultat visuel.' },
+      { q: 'Combien de combinaisons emoji sont possibles ?', a: 'Plus de 10 000 combinaisons uniques ! Mélangez des visages, des animaux, de la nourriture, des objets et plus encore pour des possibilités créatives infinies.' },
+      { q: 'Puis-je télécharger mon mélange d\'emojis ?', a: 'Oui, vous pouvez télécharger votre emoji personnalisé en PNG avec fond transparent, parfait pour les applications de messagerie et les réseaux sociaux.' },
+    ],
+    hi: [
+      { q: 'क्या मैं किसी भी दो इमोजी को मिला सकता हूँ?', a: 'हाँ, आप किसी भी मानक यूनिकोड इमोजी को मिला सकते हैं। हमारा एल्गोरिदम सबसे अच्छा दृश्य परिणाम पाने के लिए चतुराई से रंगों और विशेषताओं को मिलाता है।' },
+      { q: 'कितने इमोजी संयोजन संभव हैं?', a: '10,000 से अधिक अनोखे संयोजन! चेहरों, जानवरों, खाने-पीने की चीजों, वस्तुओं और बहुत कुछ को मिलाकर अनंत रचनात्मक संभावनाएँ प्राप्त करें।' },
+      { q: 'क्या मैं अपने इमोजी मिश्रण को डाउनलोड कर सकता हूँ?', a: 'हाँ, आप अपने कस्टम इमोजी को पारदर्शी बैकग्राउंड वाली PNG इमेज के रूप में डाउनलोड कर सकते हैं, जो मैसेजिंग ऐप्स और सोशल मीडिया के लिए उत्तम है।' },
+    ],
+    ar: [
+      { q: 'هل يمكنني الجمع بين أي ايموجيين؟', a: 'نعم، يمكنك مزج أي ايموجيين Unicode القياسية. خوارزميتنا تدمج الألوان والسمات بذكاء لأفضل نتيجة بصرية.' },
+      { q: 'كم عدد مجموعات الأيموجيين الممكنة؟', a: 'أكثر من 10.000 مزيج فريد! مزج الوجوه والحيوانات والأطعمة والأشياء وغيرها لاحتمالات إبداعية لا نهائية.' },
+      { q: 'هل يمكنني تنزيل مزيج الأيموجي الخاص بي؟', a: 'نعم، يمكنك تنزيل الأيموجي المخصص الخاص بك بصيغة PNG مع خلفية شفافة، مثالي لأجهزة المراسلة والوسائط الاجتماعية.' },
+    ],
+  },
+  'image-compressor': {
+    en: [
+      { q: 'How much can I compress an image?', a: 'Typically 50-80% reduction in file size with minimal quality loss. Results vary based on original image format and content.' },
+      { q: 'What image formats are supported?', a: 'JPG, PNG, WEBP, and GIF. We also support batch compression for multiple images at once.' },
+      { q: 'Is my image data safe?', a: 'Yes, all image processing happens locally in your browser. Your images never leave your device.' },
+    ],
+    zh: [
+      { q: '图片可以压缩多少？', a: '通常可以减少 50-80% 的文件大小，同时保持最小的质量损失。结果取决于原始图片格式和内容。' },
+      { q: '支持哪些图片格式？', a: '支持 JPG、PNG、WEBP 和 GIF 格式。我们还支持批量压缩多张图片。' },
+      { q: '我的图片数据安全吗？', a: '安全，所有图片处理都在浏览器本地进行，你的图片不会离开你的设备。' },
+    ],
+    es: [
+      { q: '¿Cuánto puedo comprimir una imagen?', a: 'Normalmente una reducción del 50-80% en el tamaño del archivo con pérdida mínima de calidad. Los resultados varían según el formato y el contenido de la imagen original.' },
+      { q: '¿Qué formatos de imagen se admiten?', a: 'JPG, PNG, WEBP y GIF. También admitimos compresión por lotes para varias imágenes a la vez.' },
+      { q: '¿Es seguro mi datos de imagen?', a: 'Sí, todo el procesamiento de imágenes se realiza localmente en tu navegador. Tus imágenes nunca dejan tu dispositivo.' },
+    ],
+    fr: [
+      { q: 'De combien puis-je compresser une image ?', a: 'Généralement une réduction de 50-80% de la taille du fichier avec une perte de qualité minimale. Les résultats varient selon le format et le contenu de l\'image originale.' },
+      { q: 'Quels formats d\'image sont pris en charge ?', a: 'JPG, PNG, WEBP et GIF. Nous prenons également en charge la compression par lots pour plusieurs images à la fois.' },
+      { q: 'Mes données d\'image sont-elles sûres ?', a: 'Oui, tout le traitement d\'image se fait localement dans votre navigateur. Vos images ne quittent jamais votre appareil.' },
+    ],
+    hi: [
+      { q: 'मैं एक छवि को कितना संपीड़ित कर सकता हूँ?', a: 'आमतौर पर गुणवत्ता में न्यूनतम हानि के साथ फ़ाइल आकार में 50-80% की कमी। परिणाम मूल छवि प्रारूप और सामग्री के आधार पर बदलते हैं।' },
+      { q: 'कौन से छवि प्रारूप समर्थित हैं?', a: 'JPG, PNG, WEBP और GIF। हम एक साथ कई छवियों के लिए बैच संपीड़न भी समर्थित करते हैं।' },
+      { q: 'क्या मेरी छवि डेटा सुरक्षित है?', a: 'हाँ, सभी छवि प्रसंस्करण आपके ब्राउज़र में स्थानीय रूप से होता है। आपकी छवियाँ कभी भी आपके डिवाइस को नहीं छोड़तीं।' },
+    ],
+    ar: [
+      { q: 'كم يمكنني ضغط الصورة؟', a: 'عادةً يتم تقليل حجم الملف بنسبة 50-80% مع فقدان جودة طفيف. النتائج تختلف بناءً على تنسيق الصورة الأصلية ومحتواها.' },
+      { q: 'ما تنسيقات الصور المدعومة؟', a: 'JPG، PNG، WEBP و GIF. نحن أيضًا ندعم الضغط الجماعي لعدة صور في وقت واحد.' },
+      { q: 'هل بيانات صوري آمنة؟', a: 'نعم، جميع معالجات الصور تحدث محلياً داخل متصفحك. صورك لا تترك جهازك أبداً.' },
+    ],
+  },
+  'regex-tester': {
+    en: [
+      { q: 'What regex flavors are supported?', a: 'JavaScript (ECMAScript) by default. We also support Python, Go, and Java regex syntax modes.' },
+      { q: 'Can I test regex against large text?', a: 'Yes, our tester handles large text inputs efficiently. Results are shown in real-time as you type.' },
+      { q: 'Does it support capture groups?', a: 'Yes, all capture groups are highlighted and numbered, making it easy to debug complex patterns.' },
+    ],
+    zh: [
+      { q: '支持哪些正则表达式语法？', a: '默认支持 JavaScript (ECMAScript)。我们还支持 Python、Go 和 Java 正则语法模式。' },
+      { q: '可以测试大文本吗？', a: '可以，我们的测试器能高效处理大文本输入。结果会实时显示。' },
+      { q: '支持捕获组吗？', a: '支持，所有捕获组都会高亮并编号，方便调试复杂模式。' },
+    ],
+    es: [
+      { q: '¿Qué variantes de regex se admiten?', a: 'JavaScript (ECMAScript) por defecto. También admitimos modos de sintaxis regex de Python, Go y Java.' },
+      { q: '¿Puedo probar regex contra texto largo?', a: 'Sí, nuestro probador maneja eficientemente entradas de texto largas. Los resultados se muestran en tiempo real mientras escribes.' },
+      { q: '¿Admite grupos de captura?', a: 'Sí, todos los grupos de captura se resaltan y numeran, facilitando la depuración de patrones complejos.' },
+    ],
+    fr: [
+      { q: 'Quels types de regex sont pris en charge ?', a: 'JavaScript (ECMAScript) par défaut. Nous prenons également en charge les modes de syntaxe regex Python, Go et Java.' },
+      { q: 'Puis-je tester des regex sur du texte long ?', a: 'Oui, notre testeur gère efficacement les entrées de texte longues. Les résultats sont affichés en temps réel lors de la saisie.' },
+      { q: 'Prend-il en charge les groupes de capture ?', a: 'Oui, tous les groupes de capture sont mis en évidence et numérotés, ce qui facilite le débogage de modèles complexes.' },
+    ],
+    hi: [
+      { q: 'कौन से regex फ्लेवर्स समर्थित हैं?', a: 'डिफ़ॉल्ट रूप से JavaScript (ECMAScript)। हम Python, Go और Java regex सिंटैक्स मोड भी समर्थित करते हैं।' },
+      { q: 'क्या मैं बड़े टेक्स्ट के खिलाफ regex का परीक्षण कर सकता हूँ?', a: 'हाँ, हमारा टेस्टर बड़े टेक्स्ट इनपुट को कुशलतापूर्वक संभालता है। परिणाम आपके टाइप करते समय वास्तविक समय में दिखाए जाते हैं।' },
+      { q: 'क्या यह कैप्चर ग्रुप्स का समर्थन करता है?', a: 'हाँ, सभी कैप्चर ग्रुप्स हाइलाइट और क्रमांकित होते हैं, जिससे जटिल पैटर्न को डिबग करना आसान होता है।' },
+    ],
+    ar: [
+      { q: 'ما أنماط regex المدعومة؟', a: 'JavaScript (ECMAScript) افتراضياً. نحن أيضاً ندعم أنماط بناء الجملة regex لـ Python و Go و Java.' },
+      { q: 'هل يمكنني اختبار regex على نص كبير؟', a: 'نعم، أداة الاختبار لدينا تتعامل بكفاءة مع مدخلات النص الطويلة. تظهر النتائج في الوقت الحقيقي أثناء الكتابة.' },
+      { q: 'هل تدعم مجموعات الالتقاط؟', a: 'نعم، يتم تسليط الضوء على جميع مجموعات الالتقاط وترقيمها، مما يسهل تصليح الأخطاء في الأنماط المعقدة.' },
+    ],
+  },
+};
+
 const FAQ_I18N: Record<SeoLocale, Record<FaqKey, { q: string; a: string }>> = {
   en: {
     free: {
@@ -205,26 +305,44 @@ export function buildToolFaqsFromJson(locale: SeoLocale, tool: ToolLike, _json: 
   const l = resolveLocale(locale);
   const name = resolveToolNameFromJson(locale, tool, _json);
   const bundle = FAQ_I18N[l] || FAQ_I18N.en;
-  return FAQ_ORDER.map((k) => {
+  
+  // 通用FAQ
+  const generalFaqs = FAQ_ORDER.map((k) => {
     const row = bundle[k];
     return {
       q: replaceName(row.q, name),
       a: replaceName(row.a, name),
     };
   });
+  
+  // 工具特定FAQ
+  const slug = String(tool.slug || tool.id || '');
+  const toolSpecificFaqs = TOOL_FAQ_I18N[slug]?.[l] || [];
+  
+  // 合并通用FAQ和工具特定FAQ
+  return [...generalFaqs, ...toolSpecificFaqs];
 }
 
 export function buildToolFaqsFromTranslator(locale: string, tool: ToolLike, translate: NsTranslator): FaqItem[] {
   const l = resolveLocale(locale);
   const name = resolveToolNameClient(locale, tool, translate);
   const bundle = FAQ_I18N[l] || FAQ_I18N.en;
-  return FAQ_ORDER.map((k) => {
+  
+  // 通用FAQ
+  const generalFaqs = FAQ_ORDER.map((k) => {
     const row = bundle[k];
     return {
       q: replaceName(row.q, name),
       a: replaceName(row.a, name),
     };
   });
+  
+  // 工具特定FAQ
+  const slug = String(tool.slug || tool.id || '');
+  const toolSpecificFaqs = TOOL_FAQ_I18N[slug]?.[l] || [];
+  
+  // 合并通用FAQ和工具特定FAQ
+  return [...generalFaqs, ...toolSpecificFaqs];
 }
 
 export function buildFaqJsonLd(faqs: FaqItem[]) {
