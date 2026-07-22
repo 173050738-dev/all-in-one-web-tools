@@ -91,10 +91,12 @@ export default function middleware(request: NextRequest) {
   const isLocalhost =
     url.hostname === 'localhost' ||
     url.hostname === '127.0.0.1' ||
-    url.hostname.endsWith('.localhost') ||
-    url.protocol === 'http:';
+    url.hostname.endsWith('.localhost');
 
-  if (!isLocalhost && url.protocol === 'http:') {
+  const forwardedProto = request.headers.get('x-forwarded-proto');
+  const isHttps = url.protocol === 'https:' || forwardedProto === 'https';
+
+  if (!isLocalhost && !isHttps) {
     url.protocol = 'https:';
     return NextResponse.redirect(url.toString(), 308);
   }
