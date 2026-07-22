@@ -1242,10 +1242,52 @@ export function BlogPostJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     ...(keywordList.length ? { about: keywordList.map((name) => ({ '@type': 'Thing', name })) } : {}),
   };
 
+  /* ===========================================================
+     FAQPage Schema for GEO optimization
+     Extract FAQ items from content blocks (h2 with FAQ title followed by q/a p pairs)
+     =========================================================== */
+  const faqItems = (() => {
+    const faqs: Array<{ q: string; a: string }> = [];
+    const content = post.content || [];
+    let inFaqSection = false;
+    let pendingQ = '';
+
+    for (const block of content) {
+      if (block.type === 'h2') {
+        const text = String(getLocalizedText(block.text, l, ''));
+        inFaqSection = text.toLowerCase().includes('faq') || text.includes('常见问题');
+        continue;
+      }
+      if (!inFaqSection || block.type !== 'p') continue;
+      
+      const text = String(getLocalizedText(block.text, l, '')).trim();
+      if (!text) continue;
+      
+      if (!pendingQ) {
+        pendingQ = text;
+      } else {
+        faqs.push({ q: pendingQ, a: text });
+        pendingQ = '';
+      }
+    }
+    return faqs;
+  })();
+
+  const faqPage = faqItems.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  } : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPosting) }} />
+      {faqPage && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }} />}
     </>
   );
 }
