@@ -131,33 +131,33 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           <div className='card p-4 sm:p-6'>
             <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('guide')}</h3>
             <p className='text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4'>
-              上传图片后选择压缩模式和输出格式，点击压缩即可快速减小图片文件大小，完全本地处理，不上传服务器。
+              {t('guideText')}
             </p>
-            <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('features')}</h3>
+            <h3 className='font-semibold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4'>{t('sidebarFeatures')}</h3>
             <ul className='space-y-2'>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                纯本地处理，保护隐私
+                {t('localProcessing')}
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                精确压到指定大小（KB）
+                {t('targetSizeCompress')}
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                支持批量压缩
+                {t('batchCompress')}
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                支持 JPG/PNG/WebP 输出
+                {t('formatConvert')}
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                实时前后对比预览
+                {t('comparePreview')}
               </li>
               <li className='flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
                 <span className='w-1.5 h-1.5 rounded-full bg-primary-500' />
-                支持移除 EXIF 元数据
+                {t('removeExif')}
               </li>
             </ul>
           </div>

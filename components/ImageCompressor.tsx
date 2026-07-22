@@ -1,7 +1,9 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { Download, Upload, Settings, Trash2, Image as ImageIcon, ArrowLeftRight, FileImage, X, Check, Sparkles } from 'lucide-react';
+
+const STORAGE_KEY_SETTINGS = 'korelyy-image-compressor-settings';
 
 interface ImageFile {
   id: string;
@@ -90,6 +92,9 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       totalSaved: '总共节省',
       file: '个文件',
       confirmClear: '确定清空所有图片？',
+      guide: '使用指南',
+      guideText: '上传图片后选择压缩模式和输出格式，点击压缩即可快速减小图片文件大小，完全本地处理，不上传服务器。',
+      sidebarFeatures: '功能特点',
     },
     en: {
       title: 'Image Compressor',
@@ -140,6 +145,9 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       totalSaved: 'Total Saved',
       file: 'files',
       confirmClear: 'Clear all images?',
+      guide: 'How to Use',
+      guideText: 'Upload images, select compression mode and output format, then click compress to reduce file size. All processing happens locally - no uploads.',
+      sidebarFeatures: 'Features',
     },
     es: {
       title: 'Compresor de Imágenes',
@@ -190,6 +198,9 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       totalSaved: 'Total ahorrado',
       file: 'archivos',
       confirmClear: '¿Limpiar todas las imágenes?',
+      guide: 'Cómo usar',
+      guideText: 'Sube imágenes, selecciona el modo de compresión y el formato de salida, luego haz clic en comprimir para reducir el tamaño del archivo.',
+      sidebarFeatures: 'Características',
     },
     fr: {
       title: 'Compresseur d\'Images',
@@ -240,6 +251,9 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       totalSaved: 'Total économisé',
       file: 'fichiers',
       confirmClear: 'Vider toutes les images ?',
+      guide: 'Guide d\'utilisation',
+      guideText: 'Téléchargez des images, sélectionnez le mode de compression et le format de sortie, puis cliquez sur compresser pour réduire la taille du fichier.',
+      sidebarFeatures: 'Caractéristiques',
     },
     hi: {
       title: 'इमेज कंप्रेसर',
@@ -290,6 +304,9 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       totalSaved: 'कुल बचाया',
       file: 'फाइलें',
       confirmClear: 'सभी चित्र साफ करना चाहते हैं?',
+      guide: 'उपयोग का मार्गदर्शन',
+      guideText: 'चित्र अपलोड करें, संपीड़न मोड और आउटपुट प्रारूप चुनें, फिर फ़ाइल आकार को कम करने के लिए संपीड़ित करें।',
+      sidebarFeatures: 'विशेषताएं',
     },
     ar: {
       title: 'مضاغط الصور',
@@ -340,6 +357,9 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       totalSaved: 'المجموع الموفور',
       file: 'ملفات',
       confirmClear: 'هل تريد مسح جميع الصور؟',
+      guide: 'دليل الاستخدام',
+      guideText: 'قم برفع الصور، اختر وضع الضغط ومنتج التنسيق، ثم انقر على الضغط لتقليل حجم الملف.',
+      sidebarFeatures: 'الميزات',
     },
   };
 
@@ -357,6 +377,43 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [showCompare, setShowCompare] = useState<boolean>(false);
   const [isBatchMode, setIsBatchMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY_SETTINGS);
+    if (stored) {
+      try {
+        const settings = JSON.parse(stored);
+        if (settings.quality !== undefined) setQuality(settings.quality);
+        if (settings.maxWidth !== undefined) setMaxWidth(settings.maxWidth);
+        if (settings.outputFormat !== undefined) setOutputFormat(settings.outputFormat as OutputFormat);
+        if (settings.compressionMode !== undefined) setCompressionMode(settings.compressionMode as CompressionMode);
+        if (settings.removeExif !== undefined) setRemoveExif(settings.removeExif);
+      } catch {
+        // ignore
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const settings = { quality, maxWidth, outputFormat, compressionMode, removeExif };
+    localStorage.setItem(STORAGE_KEY_SETTINGS, JSON.stringify(settings));
+  }, [quality, maxWidth, outputFormat, compressionMode, removeExif]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        if (!isProcessing && images.length > 0) {
+          const pendingImages = images.filter(img => img.status === 'pending');
+          if (pendingImages.length > 0) {
+            compressImages();
+          }
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isProcessing, images]);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);

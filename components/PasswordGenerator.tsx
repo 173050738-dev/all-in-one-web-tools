@@ -18,6 +18,9 @@ import {
   Trash2,
 } from 'lucide-react';
 
+const STORAGE_KEY_SETTINGS = 'korelyy-password-generator-settings';
+const STORAGE_KEY_HISTORY = 'korelyy-password-generator-history';
+
 interface PasswordGeneratorProps {
   locale?: string;
 }
@@ -48,6 +51,46 @@ interface HistoryItem {
   const [history, setHistory] = useState<HistoryItem[]>([]);
   const [showHistory, setShowHistory] = useState(false);
   const [exportFormat, setExportFormat] = useState<'plain' | 'csv' | 'json'>('plain');
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY_SETTINGS);
+    if (stored) {
+      try {
+        const settings = JSON.parse(stored);
+        if (settings.length !== undefined) setLength(settings.length);
+        if (settings.includeUppercase !== undefined) setIncludeUppercase(settings.includeUppercase);
+        if (settings.includeLowercase !== undefined) setIncludeLowercase(settings.includeLowercase);
+        if (settings.includeNumbers !== undefined) setIncludeNumbers(settings.includeNumbers);
+        if (settings.includeSymbols !== undefined) setIncludeSymbols(settings.includeSymbols);
+      } catch {
+        // ignore
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY_HISTORY);
+    if (stored) {
+      try {
+        const historyData = JSON.parse(stored);
+        setHistory(historyData.map((item: any) => ({
+          ...item,
+          timestamp: new Date(item.timestamp),
+        })));
+      } catch {
+        // ignore
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const settings = { length, includeUppercase, includeLowercase, includeNumbers, includeSymbols };
+    localStorage.setItem(STORAGE_KEY_SETTINGS, JSON.stringify(settings));
+  }, [length, includeUppercase, includeLowercase, includeNumbers, includeSymbols]);
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY_HISTORY, JSON.stringify(history));
+  }, [history]);
 
   const translations: Record<string, Record<string, string>> = {
     zh: {

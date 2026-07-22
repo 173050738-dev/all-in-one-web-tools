@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useMemo, useRef } from 'react';
-import { Copy, Check, FileText, Trash2, Download, Upload, Settings, ChevronDown, ChevronUp } from 'lucide-react';
+import { useState, useMemo, useRef, useEffect } from 'react';
+import { Copy, Check, FileText, Trash2, Download, Upload, Settings, ChevronDown, ChevronUp, Share2 } from 'lucide-react';
 
 interface TextCounterProps {
   locale?: string;
@@ -25,6 +25,9 @@ const sampleTexts: Record<string, string> = {
   ar: "الذكاء الاصطناعي يغير كل جوانب عالمنا.\n\nالتعلم العميق هو جزء من التعلم الآلي يستخدم الشبكات العصبية متعددة الطبقات.\n\nفي السنوات الأخيرة، حققت نماذج اللغة الكبرى (LLM) تقدماً ثورياً.\n\nThe quick brown fox jumps over the lazy dog! هذه الجملة مشهورة جداً."
 };
 
+const STORAGE_KEY = 'korelyy-text-counter';
+const STORAGE_KEY_SETTINGS = 'korelyy-text-counter-settings';
+
 export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
   const [text, setText] = useState('');
   const [copied, setCopied] = useState(false);
@@ -33,7 +36,82 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
   const [includePunctuation, setIncludePunctuation] = useState(true);
   const [ignoreNumbers, setIgnoreNumbers] = useState(false);
   const [exportFormat, setExportFormat] = useState<'plain' | 'csv' | 'json'>('plain');
+  const [shareCopied, setShareCopied] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      try {
+        setText(decodeURIComponent(stored));
+      } catch {
+        setText(stored);
+      }
+    }
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      try {
+        setText(decodeURIComponent(atob(hash)));
+      } catch {
+        // ignore
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY_SETTINGS);
+    if (stored) {
+      try {
+        const settings = JSON.parse(stored);
+        if (settings.includeSpaces !== undefined) setIncludeSpaces(settings.includeSpaces);
+        if (settings.includePunctuation !== undefined) setIncludePunctuation(settings.includePunctuation);
+        if (settings.ignoreNumbers !== undefined) setIgnoreNumbers(settings.ignoreNumbers);
+      } catch {
+        // ignore
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, encodeURIComponent(text));
+  }, [text]);
+
+  useEffect(() => {
+    const settings = { includeSpaces, includePunctuation, ignoreNumbers };
+    localStorage.setItem(STORAGE_KEY_SETTINGS, JSON.stringify(settings));
+  }, [includeSpaces, includePunctuation, ignoreNumbers]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        handleCopyStats();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [stats, locale]);
+
+  const handleShare = async () => {
+    if (!text.trim()) return;
+    const encoded = btoa(encodeURIComponent(text));
+    const url = `${window.location.origin}${window.location.pathname}#${encoded}`;
+    
+    try {
+      await navigator.clipboard.writeText(url);
+      setShareCopied(true);
+      setTimeout(() => setShareCopied(false), 2000);
+    } catch {
+      const textarea = document.createElement('textarea');
+      textarea.value = url;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      setShareCopied(true);
+      setTimeout(() => setShareCopied(false), 2000);
+    }
+  };
 
   const t = (key: string): string => {
     const dict = i18n[locale] || i18n.zh;
@@ -41,21 +119,42 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
   };
 
   const stats = useMemo(() => {
-    const chars = text.length;
+    let filteredText = text;
+    
+    if (!includeSpaces) {
+      filteredText = filteredText.replace(/\s/g, '');
+    }
+    
+    if (!includePunctuation) {
+      filteredText = filteredText.replace(/[.,;:!?。，；：！？、'"()[\]{}<>]/g, '');
+    }
+    
+    const chars = filteredText.length;
     const charsNoSpace = text.replace(/\s/g, '').length;
     const cjkChars = (text.match(/[\u4e00-\u9fff\u3400-\u4dbf]/g) || []).length;
-    const asciiWords = (text.trim().match(/[A-Za-z]+/g) || []).length;
+    
+    let asciiWords = 0;
+    if (!ignoreNumbers) {
+      asciiWords = (text.trim().match(/[A-Za-z]+/g) || []).length;
+    } else {
+      asciiWords = (text.trim().match(/[A-Za-z]+/g) || []).length;
+    }
+    
+    const wordPattern = ignoreNumbers ? /[A-Za-z]+/g : /[A-Za-z0-9]+/g;
+    const actualAsciiWords = (text.trim().match(wordPattern) || []).length;
+    
     const lines = text === '' ? 0 : text.split(/\r\n|\r|\n/).length;
     const nonEmptyLines = (text.match(/^.*\S+.*$/gm) || []).length;
     const paragraphs = text.trim() === '' ? 0 : text.trim().split(/\n\s*\n/).filter(s => s.length).length;
     const sentences = (text.match(/[^.!?。？！]*[.!?。？！]+|[^.!?。？！]+$/g) || []).filter(s => s.trim().length > 0).length;
     const bytes = typeof TextEncoder !== 'undefined' ? new TextEncoder().encode(text).byteLength : 0;
-    const avgWordLen = asciiWords > 0 ? Math.round((charsNoSpace / asciiWords) * 10) / 10 : 0;
-    const readTimeMin = Math.ceil((cjkChars + asciiWords) / 200);
+    const avgWordLen = actualAsciiWords > 0 ? Math.round((charsNoSpace / actualAsciiWords) * 10) / 10 : 0;
+    const readTimeMin = Math.ceil((cjkChars + actualAsciiWords) / 200);
 
     const freqMap = new Map<string, number>();
     for (const ch of text) {
       if (/\s/.test(ch)) continue;
+      if (!includePunctuation && /[.,;:!?。，；：！？、'"()[\]{}<>]/.test(ch)) continue;
       freqMap.set(ch, (freqMap.get(ch) || 0) + 1);
     }
     const totalNonSpace = charsNoSpace;
@@ -72,7 +171,7 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
       chars,
       charsNoSpace,
       cjkChars,
-      asciiWords,
+      asciiWords: actualAsciiWords,
       lines,
       nonEmptyLines,
       paragraphs,
@@ -82,7 +181,7 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
       readTimeMin,
       topFreq
     };
-  }, [text]);
+  }, [text, includeSpaces, includePunctuation, ignoreNumbers]);
 
   const handleClear = () => {
     setText('');
@@ -307,6 +406,14 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
                 className='flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-sm font-medium'
               >
                 {t('exportStats')}
+              </button>
+              <button
+                onClick={handleShare}
+                disabled={!text.trim()}
+                className='flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm font-medium'
+              >
+                {shareCopied ? <Check className='h-4 w-4' /> : <Share2 className='h-4 w-4' />}
+                {shareCopied ? (locale === 'zh' ? '已分享' : locale === 'en' ? 'Shared' : 'Shared') : (locale === 'zh' ? '分享' : locale === 'en' ? 'Share' : 'Share')}
               </button>
               <button
                 onClick={handleCopyStats}
