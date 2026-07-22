@@ -1,43 +1,28 @@
 # ============================================================
 # Cloudflare Pages Redirects
-# Next.js handles trailingSlash and locale detection internally
+# 注意：Cloudflare Pages 使用前缀匹配，非精确匹配
+# 因此所有不带 * 通配符的规则都会前缀匹配，可能导致死循环
+# 只保留使用 * 通配符的安全规则，URL 规范化交给 Next.js（trailingSlash:true + middleware）
 # ============================================================
 
 # ---------- www → non-www 308 redirect ----------
 https://www.korelyy.com/*    https://korelyy.com/:splat    308
 http://www.korelyy.com/*     https://korelyy.com/:splat    308
 
-# ---------- ByteDance verification file (bypass all redirects) ----------
+# ---------- ByteDance verification (bypass all redirects) ----------
 /ByteDanceVerify*    /ByteDanceVerify.html    200
 
-# ---------- Legacy dead links ----------
-/zh/compare    /zh/tools/          301
-/zh/compare/*  /zh/tool/:splat     301
-/zh/go         /zh/tools/          301
-/zh/go/*       /zh/tool/:splat     301
-
-/en/compare    /en/tools/          301
-/en/compare/*  /en/tool/:splat     301
-/en/go         /en/tools/          301
-/en/go/*       /en/tool/:splat     301
-
-/es/compare    /es/tools/          301
-/es/compare/*  /es/tool/:splat     301
-/es/go         /es/tools/          301
-/es/go/*       /es/tool/:splat     301
-
-/fr/compare    /fr/tools/          301
-/fr/compare/*  /fr/tool/:splat     301
-/fr/go         /fr/tools/          301
-/fr/go/*       /fr/tool/:splat     301
-
-/hi/compare    /hi/tools/          301
-/hi/compare/*  /hi/tool/:splat     301
-/hi/go         /hi/tools/          301
-/hi/go/*       /hi/tool/:splat     301
-
-/ar/compare    /ar/tools/          301
-/ar/compare/*  /ar/tool/:splat     301
-/ar/go         /ar/tools/          301
-/ar/go/*       /ar/tool/:splat     301
-
+# ---------- Legacy dead links (6 languages) ----------
+# compare / go 是旧外链跳转入口，已下线，转到工具列表
+/zh/compare*   /zh/tools/          301
+/zh/go*        /zh/tools/          301
+/en/compare*   /en/tools/          301
+/en/go*        /en/tools/          301
+/es/compare*   /es/tools/          301
+/es/go*        /es/tools/          301
+/fr/compare*   /fr/tools/          301
+/fr/go*        /fr/tools/          301
+/hi/compare*   /hi/tools/          301
+/hi/go*        /hi/tools/          301
+/ar/compare*   /ar/tools/          301
+/ar/go*        /ar/tools/          301
