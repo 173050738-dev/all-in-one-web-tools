@@ -1,5 +1,6 @@
 import LocaleShell from '@/components/LocaleShell';
 import { homeGenerateMetadata, type SeoLocale } from '@/components/seo';
+import { loadMessages } from '@/lib/load-messages';
 
 const LOCALE: SeoLocale = 'ar';
 
@@ -12,11 +13,7 @@ export default async function LocaleLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const enMessages = (await import('../../public/locales/en/translation.json'))
-    .default;
-  const localeMessages = (await import('../../public/locales/ar/translation.json'))
-    .default;
-  const messages = { ...enMessages, ...localeMessages };
+  const messages = await loadMessages(LOCALE);
 
   return (
     <LocaleShell locale={LOCALE} messages={messages} dir="rtl">
