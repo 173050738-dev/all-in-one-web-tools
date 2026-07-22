@@ -1,151 +1,43 @@
 # ============================================================
-# Cloudflare Pages 自动读取的重定向规则
-# 格式：[source] [destination] [HTTP status code]
-# 参考：https://developers.cloudflare.com/pages/configuration/redirects/
-#
-# trailingSlash: true 规范化（所有语言目录强制尾部斜杠，SEO统一URL）
+# Cloudflare Pages Redirects
+# Next.js handles trailingSlash and locale detection internally
 # ============================================================
 
-# ---------- TOP PRIORITY: 根路径直接 rewrite 到 /en/ 返回200（不再307空响应，解决Impact爬虫验证找不到meta的问题） ----------
-# Impact爬虫/头条爬虫不跟随重定向，必须直接返回带meta标签的HTML
-/                 /en/                200
-/index.html       /en/                200
-
-# ---------- 头条/豆包站长验证文件：强制不重定向（内部200重写，绕过Clean URLs + 多语言前缀逻辑） ----------
-# 匹配所有可能的路径变体（带/不带后缀、带/不带尾斜杠、带/不带语言前缀）
-/ByteDanceVerify*      /ByteDanceVerify.html    200
-/zh/ByteDanceVerify*   /ByteDanceVerify.html    200
-/en/ByteDanceVerify*   /ByteDanceVerify.html    200
-/es/ByteDanceVerify*   /ByteDanceVerify.html    200
-/fr/ByteDanceVerify*   /ByteDanceVerify.html    200
-/hi/ByteDanceVerify*   /ByteDanceVerify.html    200
-/ar/ByteDanceVerify*   /ByteDanceVerify.html    200
-
-# ---------- P1-A：根路径 / 不再强制308跳转/zh/ → 由客户端index.html根据Accept-Language动态选择语言 ----------
-# （移除之前的 / → /zh/ 308 规则，避免全球用户强制中文）
-
-# ---------- www.korelyy.com → korelyy.com（308 永久重定向 + 完整路径透传） ----------
+# ---------- www → non-www 308 redirect ----------
 https://www.korelyy.com/*    https://korelyy.com/:splat    308
 http://www.korelyy.com/*     https://korelyy.com/:splat    308
 
-# ---------- 6语言入口：不带斜杠 → 带斜杠（301永久重定向） ----------
-/zh /zh/ 301
-/en /en/ 301
-/es /es/ 301
-/fr /fr/ 301
-/hi /hi/ 301
-/ar /ar/ 301
+# ---------- ByteDance verification file (bypass all redirects) ----------
+/ByteDanceVerify*    /ByteDanceVerify.html    200
 
-# ---------- 双斜杠规范化：消除重复URL（如 /es// → /es/） ----------
-/zh// /zh/ 301
-/en// /en/ 301
-/es// /es/ 301
-/fr// /fr/ 301
-/hi// /hi/ 301
-/ar// /ar/ 301
-
-# ---------- 语言下的核心页面URL规范化 ----------
-/zh/ideas /zh/ideas/ 301
-/zh/workflows /zh/workflows/ 301
-/zh/contact /zh/contact/ 301
-/zh/privacy /zh/privacy/ 301
-/zh/terms /zh/terms/ 301
-/zh/compliance /zh/compliance/ 301
-/zh/cookies /zh/cookies/ 301
-/zh/disclaimer /zh/disclaimer/ 301
-
-/en/ideas /en/ideas/ 301
-/en/workflows /en/workflows/ 301
-/en/contact /en/contact/ 301
-/en/privacy /en/privacy/ 301
-/en/terms /en/terms/ 301
-/en/compliance /en/compliance/ 301
-/en/cookies /en/cookies/ 301
-/en/disclaimer /en/disclaimer/ 301
-
-/es/ideas /es/ideas/ 301
-/es/workflows /es/workflows/ 301
-/es/contact /es/contact/ 301
-/es/privacy /es/privacy/ 301
-/es/terms /es/terms/ 301
-/es/compliance /es/compliance/ 301
-/es/cookies /es/cookies/ 301
-/es/disclaimer /es/disclaimer/ 301
-
-/fr/ideas /fr/ideas/ 301
-/fr/workflows /fr/workflows/ 301
-/fr/contact /fr/contact/ 301
-/fr/privacy /fr/privacy/ 301
-/fr/terms /fr/terms/ 301
-/fr/compliance /fr/compliance/ 301
-/fr/cookies /fr/cookies/ 301
-/fr/disclaimer /fr/disclaimer/ 301
-
-/hi/ideas /hi/ideas/ 301
-/hi/workflows /hi/workflows/ 301
-/hi/contact /hi/contact/ 301
-/hi/privacy /hi/privacy/ 301
-/hi/terms /hi/terms/ 301
-/hi/compliance /hi/compliance/ 301
-/hi/cookies /hi/cookies/ 301
-/hi/disclaimer /hi/disclaimer/ 301
-
-/ar/ideas /ar/ideas/ 301
-/ar/workflows /ar/workflows/ 301
-/ar/contact /ar/contact/ 301
-/ar/privacy /ar/privacy/ 301
-/ar/terms /ar/terms/ 301
-/ar/compliance /ar/compliance/ 301
-/ar/cookies /ar/cookies/ 301
-/ar/disclaimer /ar/disclaimer/ 301
-
-# ---------- 根路径 / 默认语言页面（Next.js静态导出会生成 /index.html，不跳转） ----------
-# 注意：HTTPS 强制跳转请到 Cloudflare 后台 SSL/TLS → Edge Certificates → 开启 "Always Use HTTPS"
-
-# ---------- 3 个历史死链修复（compare/compare/* / go/go/*），避免用户收藏的旧 URL 出现 404 ----------
-#    /<lang>/compare/     → /<lang>/tools/           (对比页下线，统一跳工具列表)
-#    /<lang>/compare/<slug> → /<lang>/tool/<slug>    (单工具对比 → 工具详情)
-#    /<lang>/go/          → /<lang>/tools/           (跳转中心下线)
-#    /<lang>/go/<slug>    → /<lang>/tool/<slug>      (旧外链 → 对应工具详情)
+# ---------- Legacy dead links ----------
 /zh/compare    /zh/tools/          301
-/zh/compare/   /zh/tools/          301
 /zh/compare/*  /zh/tool/:splat     301
 /zh/go         /zh/tools/          301
-/zh/go/        /zh/tools/          301
 /zh/go/*       /zh/tool/:splat     301
 
 /en/compare    /en/tools/          301
-/en/compare/   /en/tools/          301
 /en/compare/*  /en/tool/:splat     301
 /en/go         /en/tools/          301
-/en/go/        /en/tools/          301
 /en/go/*       /en/tool/:splat     301
 
 /es/compare    /es/tools/          301
-/es/compare/   /es/tools/          301
 /es/compare/*  /es/tool/:splat     301
 /es/go         /es/tools/          301
-/es/go/        /es/tools/          301
 /es/go/*       /es/tool/:splat     301
 
 /fr/compare    /fr/tools/          301
-/fr/compare/   /fr/tools/          301
 /fr/compare/*  /fr/tool/:splat     301
 /fr/go         /fr/tools/          301
-/fr/go/        /fr/tools/          301
 /fr/go/*       /fr/tool/:splat     301
 
 /hi/compare    /hi/tools/          301
-/hi/compare/   /hi/tools/          301
 /hi/compare/*  /hi/tool/:splat     301
 /hi/go         /hi/tools/          301
-/hi/go/        /hi/tools/          301
 /hi/go/*       /hi/tool/:splat     301
 
 /ar/compare    /ar/tools/          301
-/ar/compare/   /ar/tools/          301
 /ar/compare/*  /ar/tool/:splat     301
 /ar/go         /ar/tools/          301
-/ar/go/        /ar/tools/          301
 /ar/go/*       /ar/tool/:splat     301
 
