@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useRef, useCallback, useEffect } from 'react';
-import { Download, Upload, Settings, Trash2, Image as ImageIcon, ArrowLeftRight, FileImage, X, Check, Sparkles, Archive, Zap } from 'lucide-react';
+import { Download, Upload, Settings, Trash2, Image as ImageIcon, ArrowLeftRight, FileImage, X, Check, Sparkles, Archive, Share2 } from 'lucide-react';
+import BuiltWithKorelyy from './BuiltWithKorelyy';
 
 const STORAGE_KEY_SETTINGS = 'korelyy-image-compressor-settings';
 
@@ -188,6 +189,12 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       zipReady: 'ZIP 已就绪',
       converting: '转换中...',
       converted: '已转换',
+      shareCard: '分享我的结果',
+      downloadShare: '下载分享图',
+      shareSaved: '节省',
+      builtWith: '基于 Korelyy 构建',
+      freeTools: '免费工具 · 六语言',
+      shareDesc: '用 Korelyy 压缩了图片，节省了',
     },
     en: {
       title: 'Image Compressor',
@@ -250,6 +257,12 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       zipReady: 'ZIP Ready',
       converting: 'Converting...',
       converted: 'Converted',
+      shareCard: 'Share My Result',
+      downloadShare: 'Download Share Card',
+      shareSaved: 'Saved',
+      builtWith: 'Built with Korelyy',
+      freeTools: 'Free Tools · 6 Languages',
+      shareDesc: 'Compressed with Korelyy, saved',
     },
     es: {
       title: 'Compresor de Imágenes',
@@ -312,6 +325,12 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       zipReady: 'ZIP Listo',
       converting: 'Convirtiendo...',
       converted: 'Convertido',
+      shareCard: 'Compartir Mi Resultado',
+      downloadShare: 'Descargar Tarjeta',
+      shareSaved: 'Ahorrado',
+      builtWith: 'Hecho con Korelyy',
+      freeTools: 'Herramientas Gratis · 6 Idiomas',
+      shareDesc: 'Comprimido con Korelyy, ahorrado',
     },
     fr: {
       title: 'Compresseur d\'Images',
@@ -374,6 +393,12 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       zipReady: 'ZIP Prêt',
       converting: 'Conversion...',
       converted: 'Converti',
+      shareCard: 'Partager Mon Résultat',
+      downloadShare: 'Télécharger la Carte',
+      shareSaved: 'Économisé',
+      builtWith: 'Fait avec Korelyy',
+      freeTools: 'Outils Gratuits · 6 Langues',
+      shareDesc: 'Compressé avec Korelyy, économisé',
     },
     hi: {
       title: 'इमेज कंप्रेसर',
@@ -436,6 +461,12 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       zipReady: 'ZIP तैयार',
       converting: 'कनवर्ट हो रहा है...',
       converted: 'कनवर्ट हुआ',
+      shareCard: 'अपना परिणाम साझा करें',
+      downloadShare: 'कार्ड डाउनलोड करें',
+      shareSaved: 'बचाया',
+      builtWith: 'Korelyy के साथ बनाया गया',
+      freeTools: 'मुफ्त उपकरण · 6 भाषाएं',
+      shareDesc: 'Korelyy के साथ कंप्रेस किया, बचाया',
     },
     ar: {
       title: 'مضاغط الصور',
@@ -498,6 +529,12 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       zipReady: 'ZIP جاهز',
       converting: 'جاري التحويل...',
       converted: 'تم التحويل',
+      shareCard: 'مشاركة نتيجتي',
+      downloadShare: 'تنزيل البطاقة',
+      shareSaved: 'الموفور',
+      builtWith: 'صنع مع Korelyy',
+      freeTools: 'أدوات مجانية · 6 لغات',
+      shareDesc: 'تم الضغط بواسطة Korelyy، تم توفير',
     },
   };
 
@@ -816,6 +853,168 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
     const x = clientX - rect.left;
     const percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
     setComparePosition(percent);
+  };
+
+  const [shareLoading, setShareLoading] = useState(false);
+  const [shareError, setShareError] = useState<string | null>(null);
+
+  const loadImage = (src: string): Promise<HTMLImageElement> => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = src;
+    });
+  };
+
+  const generateShareCard = async () => {
+    const doneImages = images.filter((i) => i.status === 'done' && i.compressedUrl);
+    if (doneImages.length === 0) return;
+
+    setShareLoading(true);
+    setShareError(null);
+
+    try {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1200;
+      canvas.height = 1400;
+      const ctx = canvas.getContext('2d')!;
+
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, 1200, 1400);
+
+      ctx.fillStyle = '#1f2937';
+      ctx.font = 'bold 36px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Korelyy Image Compressor', 600, 80);
+
+      ctx.font = '18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.fillStyle = '#6b7280';
+      ctx.fillText(t.subtitle.slice(0, 40), 600, 120);
+
+      const cardTop = 160;
+      const cardHeight = 480;
+      const cardWidth = 480;
+      const gap = 40;
+
+      const drawImageCard = (image: HTMLImageElement, x: number, label: string, size: string) => {
+        ctx.fillStyle = '#f3f4f6';
+        ctx.beginPath();
+        roundRect(ctx, x, cardTop, cardWidth, cardHeight, 16);
+        ctx.fill();
+
+        const padding = 20;
+        const imgSize = Math.min(cardWidth - padding * 2, cardHeight - 80);
+        const imgX = x + (cardWidth - imgSize) / 2;
+        const imgY = cardTop + padding;
+
+        const scale = imgSize / Math.max(image.width, image.height);
+        const drawW = image.width * scale;
+        const drawH = image.height * scale;
+        const drawX = imgX + (imgSize - drawW) / 2;
+        const drawY = imgY + (imgSize - drawH) / 2;
+
+        ctx.drawImage(image, drawX, drawY, drawW, drawH);
+
+        ctx.fillStyle = '#374151';
+        ctx.font = 'bold 20px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(label, x + cardWidth / 2, cardTop + cardHeight - 35);
+
+        ctx.fillStyle = '#6b7280';
+        ctx.font = '16px sans-serif';
+        ctx.fillText(size, x + cardWidth / 2, cardTop + cardHeight - 15);
+      };
+
+      const firstImage = doneImages[0];
+      const [originalImg, compressedImg] = await Promise.all([
+        loadImage(firstImage.originalUrl),
+        loadImage(firstImage.compressedUrl!),
+      ]);
+
+      const savedBytes = firstImage.originalSize - (firstImage.compressedSize || 0);
+      const savedPercent = Math.round((savedBytes / firstImage.originalSize) * 100);
+
+      drawImageCard(originalImg, 120, t.before, formatSize(firstImage.originalSize));
+      drawImageCard(compressedImg, 120 + cardWidth + gap, t.after, formatSize(firstImage.compressedSize || 0));
+
+      ctx.fillStyle = '#10b981';
+      ctx.font = 'bold 64px -apple-system, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(`↓ ${savedPercent}%`, 600, 740);
+
+      ctx.fillStyle = '#6b7280';
+      ctx.font = '24px sans-serif';
+      ctx.fillText(`${t.shareSaved} ${formatSize(savedBytes)}`, 600, 780);
+
+      if (doneImages.length > 1) {
+        ctx.fillStyle = '#9ca3af';
+        ctx.font = '18px sans-serif';
+        ctx.fillText(`+${doneImages.length - 1} more files compressed`, 600, 815);
+      }
+
+      ctx.fillStyle = '#e5e7eb';
+      ctx.fillRect(100, 860, 1000, 2);
+
+      ctx.fillStyle = '#1f2937';
+      ctx.font = 'bold 28px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Made with ❤️ by Korelyy.com', 600, 920);
+
+      ctx.fillStyle = '#6b7280';
+      ctx.font = '20px sans-serif';
+      ctx.fillText(t.freeTools, 600, 960);
+
+      ctx.fillStyle = '#f3f4f6';
+      ctx.beginPath();
+      roundRect(ctx, 350, 1000, 500, 140, 16);
+      ctx.fill();
+
+      ctx.fillStyle = '#374151';
+      ctx.font = 'bold 32px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('korelyy.com', 600, 1060);
+
+      ctx.font = '18px sans-serif';
+      ctx.fillStyle = '#6b7280';
+      ctx.fillText('Free Online Image Tools', 600, 1100);
+
+      ctx.font = '14px sans-serif';
+      ctx.fillStyle = '#9ca3af';
+      ctx.fillText('No upload · 100% local · 6 languages', 600, 1135);
+
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          const url = canvas.toDataURL('image/png');
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `korelyy_share_${Date.now()}.png`;
+          a.click();
+          return;
+        }
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `korelyy_share_${Date.now()}.png`;
+        a.click();
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    } catch (err) {
+      console.error('Failed to generate share card:', err);
+      setShareError('Failed to generate share card. Please try again.');
+    } finally {
+      setShareLoading(false);
+      setTimeout(() => setShareError(null), 3000);
+    }
+  };
+
+  const roundRect = (ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) => {
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
   };
 
   const totalOriginalSize = images.reduce((sum, i) => sum + i.originalSize, 0);
@@ -1267,7 +1466,7 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
           </div>
         )}
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-4 sm:mt-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-4 sm:mt-6'>
           <button
             onClick={processAllImages}
             disabled={isProcessing || images.length === 0}
@@ -1290,6 +1489,23 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
             {isBatchMode && images.filter(i => i.status === 'done').length > 1 ? t.zipDownload : isBatchMode ? t.downloadAll : t.download}
             {zipReady && <Check className='h-4 w-4 text-green-500' />}
           </button>
+          <button
+            onClick={generateShareCard}
+            disabled={!images.some((i) => i.status === 'done') || shareLoading}
+            className='w-full flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg border border-primary-300 dark:border-primary-700 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'
+          >
+            {shareLoading ? (
+              <span className='animate-spin h-4 w-4 border-2 border-primary-500 border-t-transparent rounded-full' />
+            ) : (
+              <Share2 className='h-4 w-4 sm:h-5 sm:w-5' />
+            )}
+            {shareLoading ? 'Generating...' : t.downloadShare}
+          </button>
+          {shareError && (
+            <div className='col-span-full text-center text-sm text-red-500 mt-2'>
+              {shareError}
+            </div>
+          )}
           {!isBatchMode && currentImage?.compressedUrl && !showCompare && (
             <button
               onClick={() => setShowCompare(true)}
@@ -1297,15 +1513,6 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
             >
               <ArrowLeftRight className='h-4 w-4 sm:h-5 sm:w-5' />
               {t.compare}
-            </button>
-          )}
-          {!isBatchMode && currentImage?.compressedUrl && showCompare && (
-            <button
-              onClick={() => downloadSingleImage(currentImage)}
-              className='w-full flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors'
-            >
-              <Download className='h-4 w-4 sm:h-5 sm:w-5' />
-              {t.download}
             </button>
           )}
         </div>
@@ -1341,6 +1548,7 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
         </div>
 
         <canvas ref={canvasRef} className='hidden' />
+        <BuiltWithKorelyy locale={locale} />
       </div>
     </div>
   );

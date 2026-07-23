@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, ChevronRight, ChevronDown, SlidersHorizontal, Search } from 'lucide-react';
+import { Home, ChevronRight, ChevronDown, SlidersHorizontal, Search, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { ReactNode, useEffect, useMemo } from 'react';
@@ -11,6 +11,7 @@ import { englishTags } from '@/data/english-tags';
 import { shouldShowKofiBanner } from '@/lib/monetization';
 import ToolSeoContent from '@/components/ToolSeoContent';
 import SupportButton from '@/components/SupportButton';
+import BuiltWithKorelyy from '@/components/BuiltWithKorelyy';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
   ssr: false,
@@ -187,6 +188,19 @@ export default function ToolDetailWrapper({ locale, slug, children }: ToolDetail
             locale={locale as any}
           />
           <ToolSeoContent locale={locale} slug={slug} />
+          <BuiltWithKorelyy locale={locale} />
+          {/* Toolpilot 互惠徽章 - 用于免费收录 */}
+          <div className="mt-3 text-center">
+            <a
+              href="https://www.toolpilot.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-[11px] text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <Sparkles className="h-3 w-3 text-purple-500" />
+              <span>Featured on Toolpilot.ai</span>
+            </a>
+          </div>
         </section>
 
         {/* 右：侧栏广告 + 相关工具（移动端移到底部） */}
