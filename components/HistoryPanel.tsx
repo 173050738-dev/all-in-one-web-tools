@@ -51,7 +51,7 @@ export default function HistoryPanel({ locale, isOpen, onClose }: HistoryPanelPr
   const safeTranslate = (key: string, fallback: string) => {
     try {
       const translated = toolsT(key);
-      if (translated && translated !== key) return translated;
+      if (translated && translated !== key && !translated.startsWith('tools.')) return translated;
     } catch { /* fallthrough */ }
     return fallback;
   };

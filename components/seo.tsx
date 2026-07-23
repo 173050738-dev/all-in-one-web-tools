@@ -244,7 +244,7 @@ export function translateToolName(tool: { id?: string; slug?: string; name: stri
     try {
       const full = toolKey(tool, 'name');
       const v = toolsT(full);
-      if (v && v !== full) return v;
+      if (v && v !== full && !v.startsWith('tools.')) return v;
     } catch {
       /* ignore */
     }
@@ -262,7 +262,7 @@ export function translateToolDescription(
     try {
       const full = toolKey(tool, 'description');
       const v = toolsT(full);
-      if (v && v !== full) return v;
+      if (v && v !== full && !v.startsWith('tools.')) return v;
     } catch {
       /* ignore */
     }

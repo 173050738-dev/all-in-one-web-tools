@@ -52,7 +52,7 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
   const safeTranslate = (key: string, altValue: string) => {
     try {
       const translated = toolsT(key);
-      if (translated && translated !== key) return translated;
+      if (translated && translated !== key && !translated.startsWith('tools.')) return translated;
     } catch { /* fallthrough */ }
     return altValue;
   };
