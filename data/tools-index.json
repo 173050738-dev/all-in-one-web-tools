@@ -1,5 +1,34 @@
 [
   {
+    "id": "watermark-remover",
+    "slug": "watermark-remover",
+    "name": "图片去水印",
+    "description": "在线免费去除图片水印，智能修复算法，涂抹即可去除，100%本地处理不上传服务器，保护隐私。",
+    "category": "image-tools",
+    "tags": [
+      "去水印",
+      "图片",
+      "本地处理",
+      "隐私",
+      "AI修复"
+    ],
+    "nameEn": "Watermark Remover",
+    "descriptionEn": "Free online watermark remover with smart inpainting algorithm. Paint to remove, 100% local processing, privacy first.",
+    "tagsEn": [
+      "Watermark Removal",
+      "Image",
+      "Local Processing",
+      "Privacy",
+      "AI Inpainting"
+    ],
+    "isFree": true,
+    "icon": "Eraser",
+    "likes": 0,
+    "accessTag": "direct",
+    "localProcessing": true,
+    "isSelfHosted": true
+  },
+  {
     "id": "password-generator",
     "slug": "password-generator",
     "name": "密码生成器",

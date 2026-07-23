@@ -8002,5 +8002,14 @@
     "signup": [
       "no-signup"
     ]
+  },
+  "watermark-remover": {
+    "relatedTools": [
+      "image-compressor",
+      "tinypng"
+    ],
+    "signup": [
+      "no-signup"
+    ]
   }
 }

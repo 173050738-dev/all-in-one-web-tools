@@ -73,7 +73,8 @@
     "signup-requirement": "Registro",
     "privacy-heading": "Procesamiento",
     "privacy-cloud-processing": "En la nube",
-    "apply-filter": "Aplicar e ir al inicio"
+    "apply-filter": "Aplicar e ir al inicio",
+    "faq-heading": "Preguntas frecuentes"
   },
   "sidebar": {
     "all-tools": "Todas las herramientas",
@@ -8793,6 +8794,50 @@
           {
             "q": "¿Funciona en móvil?",
             "a": "Sí, totalmente responsivo. Entradas táctiles funcionan en móvil, tablet y escritorio."
+          }
+        ]
+      }
+    },
+    "watermark-remover": {
+      "name": "Quitar Marcas de Agua Gratis — Relleno Inteligente",
+      "description": "Elimina marcas de agua de imágenes con relleno inteligente. Pinta para eliminar, procesamiento por lotes, descarga ZIP, 100% en el navegador. Herramienta gratuita",
+      "seo": {
+        "intro": "Esta es una herramienta gratuita en línea para quitar marcas de agua de imágenes. Elimina rápidamente marcas de texto, logos y más. Usando tecnología de relleno inteligente, simplemente pinta sobre el área que deseas eliminar y el algoritmo rellena automáticamente con los píxeles circundantes para un resultado natural. Compatible con carga por lotes, procesamiento por lotes y descarga ZIP con un clic. Todo el procesamiento ocurre localmente en tu navegador — las imágenes nunca se suben a ningún servidor, manteniendo tus datos privados y seguros.",
+        "scenarios": [
+          "Elimina marcas de agua de sitios web y logos de plataformas de las fotos",
+          "Procesa por lotes imágenes de productos quitando marcas de proveedores",
+          "Restaura fotos viejas eliminando sellos de fecha y anotaciones de texto",
+          "Elimina texto no deseado y marcas de agua de capturas de pantalla",
+          "Los diseñadores pueden quitar rápidamente marcas de agua de imágenes de referencia"
+        ],
+        "advantages": [
+          "Procesamiento 100% local en el navegador — sin subida de imágenes, privacidad absoluta",
+          "Algoritmo de relleno inteligente que coincide automáticamente con los píxeles vecinos",
+          "Procesamiento por lotes de múltiples imágenes con descarga ZIP de un clic",
+          "Tamaño de pincel ajustable, pintura precisa, con deshacer/rehacer",
+          "Mantén presionado para comparar con la imagen original",
+          "Completamente gratuito, sin marcas de agua, sin límites de uso"
+        ],
+        "faqs": [
+          {
+            "q": "¿Quitar la marca de agua afectará la calidad de la imagen?",
+            "a": "Para fondos simples (colores sólidos, degradados), el resultado es excelente. Para fondos complejos, el algoritmo intenta coincidir con los píxeles circundantes pero puede tener ligero desenfoque. Recomendamos pintar con precisión solo sobre el área de la marca de agua."
+          },
+          {
+            "q": "¿Se subirán mis imágenes a un servidor?",
+            "a": "No. Todo el procesamiento se hace localmente en tu navegador — los datos de la imagen nunca se suben a ningún servidor. Incluso puedes usarlo sin conexión."
+          },
+          {
+            "q": "¿Qué formatos de imagen son compatibles?",
+            "a": "Formatos comunes como JPG, PNG y WebP. Las descargas son en formato PNG para la mejor calidad."
+          },
+          {
+            "q": "¿Puedo procesar varias imágenes por lotes?",
+            "a": "Sí. Puedes subir varias imágenes a la vez, pintar las áreas de marca de agua en cada una, hacer clic en \"Quitar Todas\" para procesar por lotes, y luego descargar todo como ZIP."
+          },
+          {
+            "q": "¿Qué pasa si pinto por error?",
+            "a": "Usa el borrador para eliminar trazos incorrectos, o haz clic en el botón deshacer para retroceder un paso. También puedes borrar todos los trazos y empezar de nuevo."
           }
         ]
       }

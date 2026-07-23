@@ -73,7 +73,8 @@
     "signup-requirement": "Inscription",
     "privacy-heading": "Traitement des données",
     "privacy-cloud-processing": "Traitement cloud",
-    "apply-filter": "Appliquer et retour à l'accueil"
+    "apply-filter": "Appliquer et retour à l'accueil",
+    "faq-heading": "Questions fréquentes"
   },
   "sidebar": {
     "all-tools": "Tous les outils",
@@ -8793,6 +8794,50 @@
           {
             "q": "Fonctionne-t-il sur mobile ?",
             "a": "Oui, entièrement responsive. Entrées tactiles fonctionnent sur mobile, tablette et ordinateur."
+          }
+        ]
+      }
+    },
+    "watermark-remover": {
+      "name": "Supprimer Filigrane Gratuit — Retouche Intelligente",
+      "description": "Supprimez les filigranes des images avec retouche intelligente. Peignez pour supprimer, traitement par lots, téléchargement ZIP, 100% dans le navigateur. Outil gratuit",
+      "seo": {
+        "intro": "Ceci est un outil en ligne gratuit pour supprimer les filigranes des images. Éliminez rapidement les filigranes de texte, les logos et plus encore. Grâce à la technologie de retouche intelligente, il suffit de peindre sur la zone à supprimer, et l'algorithme remplit automatiquement avec les pixels environnants pour un résultat naturel. Prend en charge le téléchargement par lots, le traitement par lots et le téléchargement ZIP en un clic. Tout le traitement se fait localement dans votre navigateur — les images ne sont jamais téléchargées sur un serveur, gardant vos données privées et sécurisées.",
+        "scenarios": [
+          "Supprimez les filigranes de sites web et les logos de plateforme des photos",
+          "Traitez par lots les images de produits en retirant les filigranes des fournisseurs",
+          "Restaurez de vieilles photos en enlevant les tampons de date et annotations",
+          "Supprimez le texte indésirable et les filigranes des captures d'écran",
+          "Les designers peuvent rapidement retirer les filigranes des images de référence"
+        ],
+        "advantages": [
+          "Traitement 100% local dans le navigateur — aucun téléchargement, vie privée absolue",
+          "Algorithme de retouche intelligente qui correspond automatiquement aux pixels voisins",
+          "Traitement par lots de plusieurs images avec téléchargement ZIP en un clic",
+          "Taille de pinceau réglable, peinture précise, avec annuler/rétablir",
+          "Maintenez enfoncé pour comparer avec l'image originale",
+          "Entièrement gratuit, sans filigrane, sans limite d'utilisation"
+        ],
+        "faqs": [
+          {
+            "q": "La suppression du filigrane affecte-t-elle la qualité de l'image ?",
+            "a": "Pour les fonds simples (couleurs unies, dégradés), le résultat est excellent. Pour les fonds complexes, l'algorithme essaie de correspondre aux pixels environnants mais peut avoir un léger flou. Nous recommandons de peindre précisément sur la zone du filigrane uniquement."
+          },
+          {
+            "q": "Mes images seront-elles téléchargées sur un serveur ?",
+            "a": "Non. Tout le traitement se fait localement dans votre navigateur — les données d'image ne sont jamais téléchargées sur un serveur. Vous pouvez même l'utiliser hors ligne."
+          },
+          {
+            "q": "Quels formats d'image sont pris en charge ?",
+            "a": "Les formats courants comme JPG, PNG et WebP. Les téléchargements sont au format PNG pour une qualité optimale."
+          },
+          {
+            "q": "Puis-je traiter plusieurs images par lots ?",
+            "a": "Oui. Vous pouvez télécharger plusieurs images à la fois, peindre les zones de filigrane sur chacune, cliquer sur \"Tout supprimer\" pour traiter par lots, puis tout télécharger en ZIP."
+          },
+          {
+            "q": "Que faire si je peins par erreur ?",
+            "a": "Utilisez la gomme pour effacer les traits incorrects, ou cliquez sur le bouton annuler pour revenir en arrière d'une étape. Vous pouvez aussi effacer tous les traits et recommencer."
           }
         ]
       }

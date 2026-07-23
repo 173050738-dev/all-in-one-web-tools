@@ -1,6 +1,6 @@
 /**
  * lib/load-messages.ts
- * 服务端加载翻译消息，剥离 tools 命名空间（229KB）以减少 RSC payload。
+ * 服务端加载翻译消息，保留 tools 命名空间以确保工具详情页翻译正确。
  * 非英文语言会与英文做深度合并 fallback，保证缺失 key 有值。
  */
 
@@ -38,12 +38,9 @@ export async function loadMessages(locale: string): Promise<Messages> {
   const localeMessages = (await loader()).default;
 
   if (locale === 'en') {
-    const { tools: _tools, ...rest } = localeMessages;
-    return rest;
+    return localeMessages;
   }
 
   const enMessages = (await LOADERS.en()).default;
-  const { tools: _enTools, ...enCore } = enMessages;
-  const { tools: _localeTools, ...localeCore } = localeMessages;
-  return deepMergeFallback(localeCore, enCore);
+  return deepMergeFallback(localeMessages, enMessages);
 }

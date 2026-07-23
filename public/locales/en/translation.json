@@ -73,7 +73,8 @@
     "signup-requirement": "Signup",
     "privacy-heading": "Data processing",
     "privacy-cloud-processing": "Cloud processing",
-    "apply-filter": "Apply filter & go home"
+    "apply-filter": "Apply filter & go home",
+    "faq-heading": "Frequently Asked Questions"
   },
   "sidebar": {
     "all-tools": "All Tools",
@@ -8793,6 +8794,50 @@
           {
             "q": "Does the tool work on mobile?",
             "a": "Yes, fully responsive. Touch-friendly inputs work on phones, tablets and desktops."
+          }
+        ]
+      }
+    },
+    "watermark-remover": {
+      "name": "Free Watermark Remover — Smart Inpainting",
+      "description": "Remove watermarks from images with smart inpainting. Brush to remove, batch processing, ZIP download, 100% browser-based, no upload needed. Free tool",
+      "seo": {
+        "intro": "This is a free online watermark remover tool that quickly removes text watermarks, logo watermarks, and more from images. Using smart image inpainting technology, simply brush over the area you want to remove, and the algorithm automatically fills in surrounding pixels for a natural result. Supports batch upload, batch processing, and one-click ZIP download. All processing happens locally in your browser — images are never uploaded to any server, keeping your data private and secure.",
+        "scenarios": [
+          "Remove website watermarks and platform logos from photos to restore the original look",
+          "Batch process product images by removing supplier watermarks before listing on e-commerce sites",
+          "Fix old photos by removing date stamps and text annotations for a cleaner appearance",
+          "Remove unwanted text and watermarks from screenshots for easy sharing",
+          "Designers can quickly remove watermarks from reference images to boost workflow efficiency"
+        ],
+        "advantages": [
+          "100% browser-based local processing — no image upload, absolute privacy",
+          "Smart inpainting algorithm automatically matches surrounding pixels for natural results",
+          "Batch process multiple images with one-click ZIP download",
+          "Adjustable brush size, precise painting, with undo/redo support",
+          "Hold to compare with original image, see results in real time",
+          "Completely free, no watermarks, no usage limits"
+        ],
+        "faqs": [
+          {
+            "q": "Will removing the watermark affect image quality?",
+            "a": "For simple backgrounds (solid colors, gradients), the repair effect is excellent with barely visible traces. For complex backgrounds, the algorithm tries to match surrounding pixels but may have slight blurring. We recommend painting precisely over only the watermark area."
+          },
+          {
+            "q": "Will my images be uploaded to a server?",
+            "a": "No. All processing is done locally in your browser — image data is never uploaded to any server. You can even use it offline, with complete privacy protection."
+          },
+          {
+            "q": "What image formats are supported?",
+            "a": "Common formats like JPG, PNG, and WebP are supported. Downloads are in PNG format for the best quality."
+          },
+          {
+            "q": "Can I batch process multiple images?",
+            "a": "Yes. You can upload multiple images at once, paint the watermark areas on each, click \"Remove All\" to batch process, then download everything as a ZIP file."
+          },
+          {
+            "q": "What if I paint by mistake?",
+            "a": "Use the eraser to remove incorrect strokes, or click the undo button to go back one step. You can also clear all strokes and start over."
           }
         ]
       }
