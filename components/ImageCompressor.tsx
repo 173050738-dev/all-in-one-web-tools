@@ -1,9 +1,93 @@
 'use client';
 
 import { useState, useRef, useCallback, useEffect } from 'react';
-import { Download, Upload, Settings, Trash2, Image as ImageIcon, ArrowLeftRight, FileImage, X, Check, Sparkles } from 'lucide-react';
+import { Download, Upload, Settings, Trash2, Image as ImageIcon, ArrowLeftRight, FileImage, X, Check, Sparkles, Archive, Zap } from 'lucide-react';
 
 const STORAGE_KEY_SETTINGS = 'korelyy-image-compressor-settings';
+
+function crc32(buf: ArrayBuffer): number {
+  const bytes = new Uint8Array(buf);
+  let crc = -1;
+  for (let i = 0; i < bytes.length; i++) {
+    crc ^= bytes[i];
+    for (let j = 0; j < 8; j++) {
+      crc = (crc >>> 1) ^ (crc & 1 ? 0xEDB88320 : 0);
+    }
+  }
+  return (crc ^ -1) >>> 0;
+}
+
+function createZipBlob(files: { name: string; data: ArrayBuffer }[]): Blob {
+  const parts: ArrayBuffer[] = [];
+  const centralDir: ArrayBuffer[] = [];
+  let offset = 0;
+  const dosDate = 0x4A21;
+  const dosTime = 0x4B62;
+
+  for (const file of files) {
+    const nameBytes = new TextEncoder().encode(file.name);
+    const crc = crc32(file.data);
+    const size = file.data.byteLength;
+
+    const local = new ArrayBuffer(30 + nameBytes.length);
+    const localView = new DataView(local);
+    localView.setUint32(0, 0x04034b50, true);
+    localView.setUint16(4, 20, true);
+    localView.setUint16(6, 0x0800, true);
+    localView.setUint16(8, 0, true);
+    localView.setUint16(10, dosTime, true);
+    localView.setUint16(12, dosDate, true);
+    localView.setUint32(14, crc, true);
+    localView.setUint32(18, size, true);
+    localView.setUint32(22, size, true);
+    localView.setUint16(26, nameBytes.length, true);
+    localView.setUint16(28, 0, true);
+    new Uint8Array(local, 30).set(nameBytes);
+
+    parts.push(local, file.data);
+
+    const central = new ArrayBuffer(46 + nameBytes.length);
+    const centralView = new DataView(central);
+    centralView.setUint32(0, 0x02014b50, true);
+    centralView.setUint16(4, 20, true);
+    centralView.setUint16(6, 20, true);
+    centralView.setUint16(8, 0x0800, true);
+    centralView.setUint16(10, 0, true);
+    centralView.setUint16(12, dosTime, true);
+    centralView.setUint16(14, dosDate, true);
+    centralView.setUint32(16, crc, true);
+    centralView.setUint32(20, size, true);
+    centralView.setUint32(24, size, true);
+    centralView.setUint16(28, nameBytes.length, true);
+    centralView.setUint16(30, 0, true);
+    centralView.setUint16(32, 0, true);
+    centralView.setUint16(34, 0, true);
+    centralView.setUint16(36, 0, true);
+    centralView.setUint32(38, 0, true);
+    centralView.setUint32(42, offset, true);
+    new Uint8Array(central, 46).set(nameBytes);
+
+    centralDir.push(central);
+    offset += 30 + nameBytes.length + size;
+  }
+
+  const centralDirStart = offset;
+  let centralDirSize = 0;
+  for (const c of centralDir) centralDirSize += c.byteLength;
+
+  const endRecord = new ArrayBuffer(22);
+  const endView = new DataView(endRecord);
+  endView.setUint32(0, 0x06054b50, true);
+  endView.setUint16(4, 0, true);
+  endView.setUint16(6, 0, true);
+  endView.setUint16(8, files.length, true);
+  endView.setUint16(10, files.length, true);
+  endView.setUint32(12, centralDirSize, true);
+  endView.setUint32(16, centralDirStart, true);
+  endView.setUint16(20, 0, true);
+
+  return new Blob([...parts, ...centralDir, endRecord], { type: 'application/zip' });
+}
 
 interface ImageFile {
   id: string;
@@ -19,7 +103,7 @@ interface ImageFile {
 
 type OutputFormat = 'original' | 'jpeg' | 'png' | 'webp';
 
-type CompressionMode = 'quality' | 'targetSize';
+type CompressionMode = 'quality' | 'targetSize' | 'convert';
 
 interface PresetSize {
   name: Record<string, string>;
@@ -95,6 +179,15 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       guide: '使用指南',
       guideText: '上传图片后选择压缩模式和输出格式，点击压缩即可快速减小图片文件大小，完全本地处理，不上传服务器。',
       sidebarFeatures: '功能特点',
+      modeConvert: '仅转换格式',
+      compressionPreset: '压缩预设',
+      presetSmall: '小体积',
+      presetBalanced: '均衡',
+      presetHigh: '高质量',
+      zipDownload: '打包下载 ZIP',
+      zipReady: 'ZIP 已就绪',
+      converting: '转换中...',
+      converted: '已转换',
     },
     en: {
       title: 'Image Compressor',
@@ -148,6 +241,15 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       guide: 'How to Use',
       guideText: 'Upload images, select compression mode and output format, then click compress to reduce file size. All processing happens locally - no uploads.',
       sidebarFeatures: 'Features',
+      modeConvert: 'Convert Only',
+      compressionPreset: 'Compression Preset',
+      presetSmall: 'Small',
+      presetBalanced: 'Balanced',
+      presetHigh: 'High Quality',
+      zipDownload: 'Download ZIP',
+      zipReady: 'ZIP Ready',
+      converting: 'Converting...',
+      converted: 'Converted',
     },
     es: {
       title: 'Compresor de Imágenes',
@@ -201,6 +303,15 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       guide: 'Cómo usar',
       guideText: 'Sube imágenes, selecciona el modo de compresión y el formato de salida, luego haz clic en comprimir para reducir el tamaño del archivo.',
       sidebarFeatures: 'Características',
+      modeConvert: 'Solo Convertir',
+      compressionPreset: 'Preajuste de Compresión',
+      presetSmall: 'Pequeño',
+      presetBalanced: 'Equilibrado',
+      presetHigh: 'Alta Calidad',
+      zipDownload: 'Descargar ZIP',
+      zipReady: 'ZIP Listo',
+      converting: 'Convirtiendo...',
+      converted: 'Convertido',
     },
     fr: {
       title: 'Compresseur d\'Images',
@@ -254,6 +365,15 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       guide: 'Guide d\'utilisation',
       guideText: 'Téléchargez des images, sélectionnez le mode de compression et le format de sortie, puis cliquez sur compresser pour réduire la taille du fichier.',
       sidebarFeatures: 'Caractéristiques',
+      modeConvert: 'Convertir Seulement',
+      compressionPreset: 'Préréglage de Compression',
+      presetSmall: 'Petit',
+      presetBalanced: 'Équilibré',
+      presetHigh: 'Haute Qualité',
+      zipDownload: 'Télécharger ZIP',
+      zipReady: 'ZIP Prêt',
+      converting: 'Conversion...',
+      converted: 'Converti',
     },
     hi: {
       title: 'इमेज कंप्रेसर',
@@ -307,6 +427,15 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       guide: 'उपयोग का मार्गदर्शन',
       guideText: 'चित्र अपलोड करें, संपीड़न मोड और आउटपुट प्रारूप चुनें, फिर फ़ाइल आकार को कम करने के लिए संपीड़ित करें।',
       sidebarFeatures: 'विशेषताएं',
+      modeConvert: 'केवल कनवर्ट करें',
+      compressionPreset: 'कंप्रेशन प्रीसेट',
+      presetSmall: 'छोटा',
+      presetBalanced: 'संतुलित',
+      presetHigh: 'उच्च गुणवत्ता',
+      zipDownload: 'ZIP डाउनलोड',
+      zipReady: 'ZIP तैयार',
+      converting: 'कनवर्ट हो रहा है...',
+      converted: 'कनवर्ट हुआ',
     },
     ar: {
       title: 'مضاغط الصور',
@@ -360,6 +489,15 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       guide: 'دليل الاستخدام',
       guideText: 'قم برفع الصور، اختر وضع الضغط ومنتج التنسيق، ثم انقر على الضغط لتقليل حجم الملف.',
       sidebarFeatures: 'الميزات',
+      modeConvert: 'تحويل فقط',
+      compressionPreset: 'إعداد مسبق للضغط',
+      presetSmall: 'صغير',
+      presetBalanced: 'متوازن',
+      presetHigh: 'جودة عالية',
+      zipDownload: 'تنزيل ZIP',
+      zipReady: 'ZIP جاهز',
+      converting: 'جاري التحويل...',
+      converted: 'تم التحويل',
     },
   };
 
@@ -377,6 +515,8 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [showCompare, setShowCompare] = useState<boolean>(false);
   const [isBatchMode, setIsBatchMode] = useState<boolean>(false);
+  const [qualityPreset, setQualityPreset] = useState<'small' | 'balanced' | 'high'>('balanced');
+  const [zipReady, setZipReady] = useState<boolean>(false);
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY_SETTINGS);
@@ -388,6 +528,7 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
         if (settings.outputFormat !== undefined) setOutputFormat(settings.outputFormat as OutputFormat);
         if (settings.compressionMode !== undefined) setCompressionMode(settings.compressionMode as CompressionMode);
         if (settings.removeExif !== undefined) setRemoveExif(settings.removeExif);
+        if (settings.qualityPreset !== undefined) setQualityPreset(settings.qualityPreset);
       } catch {
         // ignore
       }
@@ -395,9 +536,9 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
   }, []);
 
   useEffect(() => {
-    const settings = { quality, maxWidth, outputFormat, compressionMode, removeExif };
+    const settings = { quality, maxWidth, outputFormat, compressionMode, removeExif, qualityPreset };
     localStorage.setItem(STORAGE_KEY_SETTINGS, JSON.stringify(settings));
-  }, [quality, maxWidth, outputFormat, compressionMode, removeExif]);
+  }, [quality, maxWidth, outputFormat, compressionMode, removeExif, qualityPreset]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -406,7 +547,7 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
         if (!isProcessing && images.length > 0) {
           const pendingImages = images.filter(img => img.status === 'pending');
           if (pendingImages.length > 0) {
-            compressImages();
+            processAllImages();
           }
         }
       }
@@ -482,6 +623,15 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
     return { dataUrl: finalDataUrl, size: finalSize };
   }, []);
 
+  const applyPreset = (preset: 'small' | 'balanced' | 'high') => {
+    setQualityPreset(preset);
+    switch (preset) {
+      case 'small': setQuality(0.3); setMaxWidth(1280); break;
+      case 'balanced': setQuality(0.7); setMaxWidth(1920); break;
+      case 'high': setQuality(0.92); setMaxWidth(3840); break;
+    }
+  };
+
   const compressImage = useCallback(async (imageFile: ImageFile): Promise<{ compressedUrl: string; compressedSize: number }> => {
     return new Promise((resolve) => {
       const img = new Image();
@@ -495,7 +645,7 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
         let width = img.width;
         let height = img.height;
 
-        if (width > maxWidth) {
+        if (compressionMode !== 'convert' && width > maxWidth) {
           height = (height * maxWidth) / width;
           width = maxWidth;
         }
@@ -513,7 +663,12 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
 
         const mimeType = getOutputMimeType(imageFile.file.type);
 
-        if (compressionMode === 'targetSize' && targetSizeKB) {
+        if (compressionMode === 'convert') {
+          const convertedDataUrl = canvas.toDataURL(mimeType, 1.0);
+          const base64Length = convertedDataUrl.split(',')[1].length;
+          const estimatedSize = Math.floor((base64Length * 3) / 4);
+          resolve({ compressedUrl: convertedDataUrl, compressedSize: estimatedSize });
+        } else if (compressionMode === 'targetSize' && targetSizeKB) {
           const targetBytes = parseInt(targetSizeKB) * 1024;
           compressToTargetSize(img, canvas, targetBytes, mimeType).then((result) => {
             resolve({ compressedUrl: result.dataUrl, compressedSize: result.size });
@@ -632,10 +787,26 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
       return;
     }
 
+    const filesForZip: { name: string; data: ArrayBuffer }[] = [];
     for (const img of doneImages) {
-      await new Promise((resolve) => setTimeout(resolve, 300));
-      downloadSingleImage(img);
+      const base64 = img.compressedUrl!.split(',')[1];
+      const binary = atob(base64);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      const ext = getOutputExtension(img.name);
+      const baseName = img.name.replace(/\.[^/.]+$/, '');
+      filesForZip.push({ name: `${baseName}${ext}`, data: bytes.buffer });
     }
+
+    const zipBlob = createZipBlob(filesForZip);
+    const url = URL.createObjectURL(zipBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `compressed_images_${Date.now()}.zip`;
+    link.click();
+    URL.revokeObjectURL(url);
+    setZipReady(true);
+    setTimeout(() => setZipReady(false), 3000);
   };
 
   const handleCompareMove = (e: React.MouseEvent | React.TouchEvent) => {
@@ -715,7 +886,7 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
             <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>{t.settings}</span>
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4'>
             <div>
               <label className='block text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-1.5'>
                 {t.compressionMode}
@@ -741,16 +912,26 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
                 >
                   {t.modeSize}
                 </button>
+                <button
+                  onClick={() => setCompressionMode('convert')}
+                  className={`flex-1 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm transition-colors ${
+                    compressionMode === 'convert'
+                      ? 'bg-primary-500 text-white'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  {t.modeConvert}
+                </button>
               </div>
             </div>
 
             <div>
               <label className='block text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-1.5'>
-                {compressionMode === 'quality' ? t.quality : t.targetSize}
+                {compressionMode === 'quality' ? t.quality : compressionMode === 'convert' ? t.modeConvert : t.targetSize}
               </label>
               {compressionMode === 'quality' ? (
                 <div>
-                  <div className='flex items-center justify-between mb-1'>
+                  <div className='flex items-center justify-between mb-1.5'>
                     <span className='text-xs sm:text-sm text-primary-600 dark:text-primary-400 font-medium'>
                       {Math.round(quality * 100)}%
                     </span>
@@ -764,6 +945,42 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
                     onChange={(e) => setQuality(parseFloat(e.target.value))}
                     className='w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-primary-500'
                   />
+                  <div className='flex gap-1 mt-2'>
+                    <button
+                      onClick={() => applyPreset('small')}
+                      className={`flex-1 px-2 py-1 rounded text-xs transition-colors ${
+                        qualityPreset === 'small'
+                          ? 'bg-primary-500 text-white'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                      }`}
+                    >
+                      {t.presetSmall}
+                    </button>
+                    <button
+                      onClick={() => applyPreset('balanced')}
+                      className={`flex-1 px-2 py-1 rounded text-xs transition-colors ${
+                        qualityPreset === 'balanced'
+                          ? 'bg-primary-500 text-white'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                      }`}
+                    >
+                      {t.presetBalanced}
+                    </button>
+                    <button
+                      onClick={() => applyPreset('high')}
+                      className={`flex-1 px-2 py-1 rounded text-xs transition-colors ${
+                        qualityPreset === 'high'
+                          ? 'bg-primary-500 text-white'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                      }`}
+                    >
+                      {t.presetHigh}
+                    </button>
+                  </div>
+                </div>
+              ) : compressionMode === 'convert' ? (
+                <div className='flex items-center h-8 px-3 rounded-lg bg-gray-100 dark:bg-gray-700 text-xs sm:text-sm text-gray-500 dark:text-gray-400'>
+                  {t.converting}
                 </div>
               ) : (
                 <div className='flex gap-1'>
@@ -799,6 +1016,7 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
               </select>
             </div>
 
+            {compressionMode !== 'convert' && (
             <div>
               <label className='block text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-1.5'>
                 {t.maxWidth}
@@ -815,6 +1033,7 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
                 ))}
               </select>
             </div>
+            )}
 
             <div className='flex items-end'>
               <label className='flex items-center gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors w-full'>
@@ -906,13 +1125,13 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
                         )}
                         {image.status === 'processing' && (
                           <span className='inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'>
-                            {t.processing}
+                            {compressionMode === 'convert' ? t.converting : t.processing}
                           </span>
                         )}
                         {image.status === 'done' && (
                           <span className='inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400'>
                             <Check className='h-3 w-3 mr-1' />
-                            {t.compressed}
+                            {compressionMode === 'convert' ? t.converted : t.compressed}
                           </span>
                         )}
                         {image.status === 'error' && (
@@ -1067,8 +1286,9 @@ export default function ImageCompressor({ locale = 'zh' }: ImageCompressorProps)
             disabled={!images.some((i) => i.status === 'done')}
             className='w-full flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'
           >
-            <Download className='h-4 w-4 sm:h-5 sm:w-5' />
-            {isBatchMode ? t.downloadAll : t.download}
+            {isBatchMode && images.filter(i => i.status === 'done').length > 1 ? <Archive className='h-4 w-4 sm:h-5 sm:w-5' /> : <Download className='h-4 w-4 sm:h-5 sm:w-5' />}
+            {isBatchMode && images.filter(i => i.status === 'done').length > 1 ? t.zipDownload : isBatchMode ? t.downloadAll : t.download}
+            {zipReady && <Check className='h-4 w-4 text-green-500' />}
           </button>
           {!isBatchMode && currentImage?.compressedUrl && !showCompare && (
             <button
