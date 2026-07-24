@@ -310,7 +310,12 @@
     "fallback-tutorial-4": "Copy, download or share the output — everything runs locally in your browser",
     "fallback-advantage-1": "100% browser-based — nothing installs, nothing tracks you",
     "fallback-advantage-2": "Mobile & desktop with touch-optimized UI, 6 languages supported",
-    "fallback-advantage-3": "Instant results with no watermarks, no hidden paywalls on core features"
+    "fallback-advantage-3": "Instant results with no watermarks, no hidden paywalls on core features",
+    "section-money-making": "Monetize With This Tool",
+    "money-making-hint": "Turn this tool into a side income stream",
+    "fallback-money-making-1": "Use this tool to speed up your freelance work and take on more paying clients",
+    "fallback-money-making-2": "Create polished content faster for your blog, YouTube channel, or social media and grow your audience",
+    "fallback-money-making-3": "Offer this tool's capabilities as a service on Fiverr, Upwork, or to your local business clients"
   },
   "tools": {
     "163": {
@@ -454,7 +459,7 @@
     },
     "case-converter": {
       "name": "Case Converter — Convert Text Case Online",
-      "description": "Convert text to uppercase, lowercase, camelCase, PascalCase, snake_case, kebab-case and more. Free, no signup, instant.",
+      "description": "Convert text between 10+ case formats: UPPER, lower, camelCase, PascalCase, snake_case, kebab-case, Title Case and more. Free, instant, no signup.",
       "seo": {
         "intro": "This case converter transforms text between UPPERCASE, lowercase, Title Case, Sentence case, and programming styles like camelCase and snake_case. Paste your text, pick the target format, and copy the result. It preserves line breaks so you can convert whole lists at once, which is useful for cleaning up headings, normalising imported data, or renaming variables. It works entirely in your browser.",
         "scenarios": [
@@ -724,7 +729,7 @@
     },
     "emoji-mixer": {
       "name": "Emoji Mixer — Combine & Create New Emojis",
-      "description": "Mix two emojis together to create unique combinations. See real-time previews of merged emojis. Free, no signup, works instantly in browser.",
+      "description": "Blend any two emojis into a unique hybrid sticker. Real-time Canvas rendering, transparent PNG export. Perfect for social media, chats, and custom reactions. Free — no signup.",
       "seo": {
         "intro": "Emoji Mixer is a free fun in-browser creative tool that combines two standard emojis into a brand-new blended hybrid emoji sticker you can share as a transparent PNG. Pick any two emojis from the built-in picker — for example cat + 🎂 cake or 🐶 dog + 🚀 rocket — and the mixer will render a fused hybrid emoji mashup combining colors, shapes, and iconography of both inputs. The whole render happens client-side in Canvas, so no sign-in or upload needed and every new mashup is generated instantly right in the page.",
         "scenarios": [
@@ -1329,7 +1334,7 @@
     },
     "pinyin-annotator": {
       "name": "Chinese Pinyin Annotator — Add Pinyin to Text",
-      "description": "Automatically add pinyin annotations to Chinese text. Support for polyphonic characters and tone marks. Free, no signup.",
+      "description": "Add pinyin with tone marks to Chinese text automatically. Smart polyphonic detection, browser-local. Free for teachers, authors, and learners — no signup needed.",
       "seo": {
         "intro": "Pinyin Annotator is a free in-browser Hanzi pronunciation tool for Mandarin teachers, primary-school Chinese-language teachers, children's picture-book authors, self-publishers and editorial staff. Paste a Chinese article containing rare characters or polyphonic (multi-read) characters, and the tool automatically places toned pinyin above (or next to) each Hanzi. It intelligently identifies polyphonic readings (e.g. '重' as zhòng in 重要 'important' but as chóng in 重复 'repeat', choosing the most likely pronunciation via contextual word frequency), optionally skips already-annotated characters, and lets you pick annotation position (superscript above / side gloss inline / trailing parentheses). Outputs copyable rich text, PDF, Word, or pinyin-on-image — perfect for children's flashcards, CSL reading materials, or rare-character annotated classical-Chinese drafts.",
         "scenarios": [
@@ -1505,7 +1510,7 @@
     },
     "regex-tester": {
       "name": "Regex Tester — Test Regular Expressions Online",
-      "description": "Test and debug regular expressions in real-time. Supports JavaScript, Python, Go regex flavors. Free, no signup, instant results.",
+      "description": "Test and debug regular expressions with real-time matching. Supports JavaScript, Python, Go regex flavors with cheat sheet. Free, instant, no signup.",
       "seo": {
         "intro": "Regex Tester is a free online tool for building, debugging, and validating regular expressions against sample text in real time. Paste or type your pattern, enable the g, i, or m flags, and watch all matches highlight instantly with group captures and indices shown on the side. A curated panel of common templates lets you apply battle-tested patterns for emails, URLs, dates, phone numbers, and passwords with one click, so you can ship regex confidently in any language or stack.",
         "scenarios": [
@@ -5780,7 +5785,7 @@
     },
     "polyphonic-pinyin-annotator": {
       "name": "Polyphonic Pinyin Annotator",
-      "description": "Free Polyphonic Pinyin Annotator: supports pinyin, polyphone, and more. 100% local processing on your device for maximum privacy.",
+      "description": "Annotate polyphonic characters with correct contextual pinyin. Smart CRF-based detection for 银行/行走/重庆/音乐. 100% browser-local, free — no signup.",
       "seo": {
         "intro": "Polyphonic Pinyin Annotator is a free in-browser automatic pinyin annotation tool for polyphonic (multi-read) Hanzi, built for primary-school Mandarin teachers, TCFL / CSL (Teaching Chinese as a Foreign / Second Language) educators, children's picture-book editors, audiobook narrators, classical-text proofreaders, and fansub teams. Paste any Chinese text containing polyphonic characters (simplified, traditional, punctuation-heavy, classical Chinese — all supported) in. The tool uses CRF word-segmentation + part-of-speech tagging + a curated 14 000+ entry polyphonic-collocation dictionary (not naive per-character lookup) to output toned pinyin above every character. Polyphonic readings are highlighted in ORANGE (monophonic characters = faint grey) alongside the decision rationale for each polyphonic reading (collocation word, POS, fixed phrase) ; one-click export to HTML, PDF, DOCX, CSV, TXT, solving the real annotation pain point of 'which reading is correct here for teaching / dubbing scripts'.",
         "scenarios": [
@@ -5826,7 +5831,7 @@
     },
     "audio-bpm-detector": {
       "name": "BPM Detector — Analyze Beats Per Minute",
-      "description": "Detect BPM (beats per minute) from audio files. Upload music or use microphone. Free, no signup, accurate results.",
+      "description": "Detect BPM (beats per minute) from any audio file or microphone tap. Auto spectrum analysis + manual tap-tempo. Free, browser-local, accurate.",
       "seo": {
         "intro": "Audio BPM Detector is a free local tool that calculates the beats-per-minute tempo of any music track directly in your browser. Drag in an MP3, WAV, or FLAC file from your desktop or tap the tempo manually with a microphone or spacebar, and the analyzer will output a stable BPM reading plus beat-tap markers you can export to your DAW or video editor. Everything runs client-side — audio files never leave your device and are never uploaded, so unreleased tracks and commercial stems stay fully private.",
         "scenarios": [
@@ -6243,7 +6248,7 @@
     },
     "wc-name-decorator": {
       "name": "World Cup Name Decorator",
-      "description": "Free World Cup name decorator: style your name with national-team colors, flags & fancy fonts. Copy-paste ready, no signup, 100% in-browser.",
+      "description": "Style your name with World Cup team colors, flags, and fancy fonts. Copy-paste ready for social profiles. 100% browser-local, free — no signup.",
       "seo": {
         "intro": "2026 World Cup Fancy Player Name Decorator is a free in-browser World-Cup-themed fancy Unicode nickname / player-name artistic font generator, built for fans posting on Moments / X(Twitter) / Xiaohongshu / Discord, e-sports team tag renaming, streamer OBS overlays, clan YY vest-names, and forum signatures. Type any star player's name — Messi, Mbappé, Ronaldo, Neymar, Bellingham, Musiala, Foden, Gavi, Pedri, Saka, Son, Rodrigo, Vinícius, whatever — or your own QQ / WeChat / TikTok handle. The tool locally renders 80+ Unicode fancy-art font variants in one go: cursive script, blackletter fraktur, handwritten, double-stroke, sub/superscript, underlined & bold, emoji player-name + national-flag combos, WC winner gold-star decorations, team-color gradient letter blocks. Every font is verified compatible with WeChat / QQ / TikTok / Xiaohongshu / Bilibili / X / WhatsApp / Telegram / Discord / Tieba / forum signatures / in-game IDs / console gamer-tags — solving the two high-frequency WC-season pain points: 'I want to post a player tribute but the name looks plain' and 'I can't find a good fancy font for my new game ID / clan vest'.",
         "scenarios": [

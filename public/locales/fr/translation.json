@@ -310,7 +310,12 @@
     "fallback-tutorial-4": "Copie, télécharge ou partage — tout s'exécute localement dans ton navigateur",
     "fallback-advantage-1": "100% dans le navigateur — rien ne s'installe, rien ne te piste",
     "fallback-advantage-2": "Mobile & bureau avec UI tactile optimisée, 6 langues supportées",
-    "fallback-advantage-3": "Résultats immédiats, sans filigrane, sans paiement caché sur l'essentiel"
+    "fallback-advantage-3": "Résultats immédiats, sans filigrane, sans paiement caché sur l'essentiel",
+    "section-money-making": "Monétisez avec cet outil",
+    "money-making-hint": "Transformez cet outil en source de revenus complémentaire",
+    "fallback-money-making-1": "Utilisez cet outil pour accélérer votre travail freelance et prendre plus de clients payants",
+    "fallback-money-making-2": "Créez du contenu de qualité plus rapidement pour votre blog, chaîne YouTube ou réseaux sociaux",
+    "fallback-money-making-3": "Proposez les capacités de cet outil en tant que service sur Fiverr, Upwork ou à vos clients locaux"
   },
   "tools": {
     "163": {
@@ -454,7 +459,7 @@
     },
     "case-converter": {
       "name": "Convertisseur de Casse — Convertir la Casse du Texte en Ligne",
-      "description": "Convertir du texte en majuscules, minuscules, camelCase, PascalCase, snake_case, kebab-case et plus. Gratuit, sans inscription, instantané.",
+      "description": "Convertissez le texte entre plus de 10 formats : MAJ, min, camelCase, PascalCase, snake_case, kebab-case et plus. Gratuit, instantané.",
       "seo": {
         "intro": "Ce convertisseur de casse transforme le texte entre MAJUSCULES, minuscules, Title Case, Sentence case et les styles de programmation comme camelCase et snake_case. Collez votre texte, choisissez le format cible et copiez le résultat. Il conserve les sauts de ligne afin que vous puissiez convertir des listes entières d'un coup, ce qui est utile pour ranger les en-têtes, normaliser des données importées ou renommer des variables. Il fonctionne entièrement dans votre navigateur.",
         "scenarios": [
@@ -724,7 +729,7 @@
     },
     "emoji-mixer": {
       "name": "Mélangeur d'Emojis — Combinez et Créez de Nouveaux Emojis",
-      "description": "Mélangez deux emojis pour créer des combinaisons uniques. Voir des aperçus en temps réel des emojis fusionnés. Gratuit, sans inscription, fonctionne instantanément dans le navigateur.",
+      "description": "Mélangez deux emojis en un sticker hybride unique. Rendu en temps réel, export PNG transparent. Parfait pour réseaux sociaux et chats. Gratuit — sans inscription.",
       "seo": {
         "intro": "Mixeur d'Emojis est un outil créatif gratuit et ludique, directement dans le navigateur, qui combine deux emojis standard en un tout nouvel autocollant d'emoji hybride fusionné partageable au format PNG transparent. Choisissez deux emojis quelconques dans le sélecteur intégré — par exemple chat + gâteau 🎂 ou chien 🐶 + fusée 🚀 — et le mixeur génère un mashup d'emoji hybride qui fusionne les couleurs, les formes et l'iconographie des deux entrées. Tout le rendu s'effectue côté client via Canvas : aucune connexion, aucun téléversement, et chaque nouvelle combinaison apparaît instantanément dans la page.",
         "scenarios": [
@@ -1329,7 +1334,7 @@
     },
     "pinyin-annotator": {
       "name": "Annotateur de Pinyin Chinois — Ajoutez du Pinyin au Texte",
-      "description": "Ajoutez automatiquement des annotations de pinyin au texte chinois. Prend en charge les caractères polyphoniques et les marques de ton. Gratuit, sans inscription.",
+      "description": "Ajoutez automatiquement le pinyin avec tons au texte chinois. Détection polyphonique intelligente, traitement local. Gratuit pour enseignants, auteurs et apprenants — sans inscription.",
       "seo": {
         "intro": "Pinyin Annotator est un outil gratuit de prononciation des hanzi dans le navigateur, destiné aux professeurs de mandarin, enseignants de chinois en primaire, auteurs d'albums jeunesse, autoéditeurs et équipes éditoriales. Collez un article en chinois contenant des caractères rares ou polyphoniques (plusieurs lectures), et l'outil place automatiquement le pinyin tonique au-dessus (ou à côté) de chaque hanzi. Il identifie intelligemment les lectures polyphoniques (par ex. « 重 » en zhòng dans 重要 « important », mais en chóng dans 重复 « répéter », en choisissant la prononciation la plus probable via la fréquence lexicale contextuelle), permet d'ignorer les caractères déjà annotés, et de choisir la position de l'annotation (exposant au-dessus / glose latérale dans le texte / parenthèses en fin). Exporte du texte enrichi copiable, PDF, Word ou une image avec pinyin : parfait pour des cartes flash enfants, des supports de lecture de chinois L2, ou des brouillons de chinois classique annotés en caractères rares.",
         "scenarios": [
@@ -1505,7 +1510,7 @@
     },
     "regex-tester": {
       "name": "Testeur de Regex — Testez les Expressions Régulières en Ligne",
-      "description": "Testez et débuggez les expressions régulières en temps réel. Prend en charge les variantes JavaScript, Python, Go. Gratuit, sans inscription, résultats instantanés.",
+      "description": "Testez et déboguez les expressions régulières avec mise en correspondance en temps réel. Compatible JavaScript, Python, Go. Gratuit, instantané, sans inscription.",
       "seo": {
         "intro": "Testeur d'Expressions Régulières est un outil en ligne gratuit pour construire, déboguer et valider des expressions régulières sur du texte d'exemple en temps réel. Collez ou saisissez votre motif, activez les drapeaux g, i ou m, et observez toutes les correspondances se surligner instantanément avec leurs groupes de capture et leurs indices affichés dans le panneau latéral. Une galerie de modèles courants vous permet d'appliquer en un clic des motifs éprouvés pour les e-mails, URL, dates, numéros de téléphone et mots de passe, afin de déployer vos regex en toute confiance dans n'importe quel langage ou pile technique.",
         "scenarios": [
@@ -5780,7 +5785,7 @@
     },
     "polyphonic-pinyin-annotator": {
       "name": "Polyphonique Pinyin Annotateur",
-      "description": "Outil Polyphonic Pinyin Annotator en ligne avec fonctionnalités : Pinyin, Polyphone, Annotation. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise.",
+      "description": "Annotez les caractères polyphoniques avec le pinyin contextuel correct. Détection CRF intelligente pour 银行/行走/重庆. Traitement local 100%, gratuit — sans inscription.",
       "seo": {
         "intro": "Le Polyphonic Pinyin Annotator est un outil gratuit d'annotation automatique de pinyin pour caractères hanzi polyphoniques (à plusieurs lectures) dans le navigateur, conçu pour les professeurs de chinois du primaire, les éducateurs en chinois langue étrangère / seconde langue (CLE / CSL), les éditeurs de livres illustrés pour enfants, les narrateurs de livres audio, les correcteurs de textes classiques et les équipes de fansub. Collez n'importe quel texte chinois contenant des polyphonies (simplifié, traditionnel, très ponctué, chinois classique — tout est pris en charge). L'outil utilise une segmentation lexicale CRF + étiquetage grammatical + un lexique curé de plus de 14 000 entrées de collocations polyphoniques (ce n'est PAS une simple recherche caractère par caractère) pour sortir le pinyin toné au-dessus de chaque caractère. Les lectures polyphoniques sont surlignées en ORANGE (monophoniques en gris pâle) avec, pour chacune, le motif de décision (mot de collocation, catégorie grammaticale, phrase figée) ; export en un clic vers HTML, PDF, DOCX, CSV, TXT — il résout le vrai problème concret : « quelle lecture est correcte ici pour l'enseignement / les scripts de doublage ? ».",
         "scenarios": [
@@ -5826,7 +5831,7 @@
     },
     "audio-bpm-detector": {
       "name": "Détecteur de BPM — Analyse les Battements par Minute",
-      "description": "Détectez le BPM (battements par minute) à partir de fichiers audio. Téléchargez de la musique ou utilisez un microphone. Gratuit, sans inscription, résultats précis.",
+      "description": "Détectez le BPM (battements par minute) depuis n'importe quel fichier audio ou microphone. Analyse de spectre automatique + tap-tempo manuel. Gratuit, précis.",
       "seo": {
         "intro": "Détecteur de BPM Audio est un outil local gratuit qui calcule le tempo en battements par minute de n'importe quelle piste musicale, directement dans votre navigateur. Glissez un fichier MP3, WAV ou FLAC depuis votre bureau, ou tapez le tempo manuellement avec le micro ou la barre d'espace, et l'analyseur affichera une lecture BPM stable ainsi que des repères de mesure exportables vers votre DAW ou votre éditeur vidéo. Tout est traité côté client : les fichiers audio ne sortent jamais de votre appareil et ne sont jamais envoyés, donc les démos inédites et les stems commerciaux restent totalement privés.",
         "scenarios": [
@@ -6243,7 +6248,7 @@
     },
     "wc-name-decorator": {
       "name": "CM Nom Décorateur",
-      "description": "Éditeur Wc Name Decorator en ligne. Personnalisez Decorator, ajustez Fancy text, exportez instantanément. Multi-appareils, aucune inscription.",
+      "description": "Décodez votre nom avec les couleurs des équipes de la Coupe du Monde, drapeaux et polices stylées. Prêt à coller. 100% local, gratuit.",
       "seo": {
         "intro": "Décorateur de Noms de Joueurs Fantaisie Coupe du Monde 2026 est un outil gratuit dans le navigateur pour générer des pseudos artistiques Unicode / des noms de joueurs en polices fantaisie sur le thème de la Coupe du Monde. Conçu pour les fans postant sur Moments / X (Twitter) / Xiaohongshu / Discord, les changements de tags d'équipes e-sport, les calques OBS des streamers, les noms de clan YY et les signatures de forums. Tapez le nom de n'importe quelle star — Messi, Mbappé, Ronaldo, Neymar, Bellingham, Musiala, Foden, Gavi, Pedri, Saka, Son, Rodrigo, Vinícius, n'importe lequel — ou votre propre identifiant QQ / WeChat / TikTok. L'outil rend localement plus de 80 variantes de polices artistiques Unicode en une seule passe : écriture cursive, fraktur gothique, manuscrite, double trait, indice/exposant, soulignée & gras, combinaisons nom-joueur + drapeau national emoji, ornements d'étoiles d'or champion, blocs de lettres dégradés aux couleurs des équipes. Chaque police est vérifiée compatible avec WeChat / QQ / TikTok / Xiaohongshu / Bilibili / X / WhatsApp / Telegram / Discord / Tieba / signatures de forums / ID en jeu / tags de joueur console — résout les deux points de douleur haute fréquence de la saison CDM : « je veux poster un hommage à un joueur mais le nom a l'air plat » et « je ne trouve pas de bonne police fantaisie pour mon nouvel ID en jeu / nom de clan ».",
         "scenarios": [

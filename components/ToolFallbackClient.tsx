@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Home, ChevronRight, ExternalLink, ArrowLeft, ShieldCheck, Star, Heart, Lightbulb, ListChecks, Award, CheckCircle2, Wrench } from 'lucide-react';
+import { Home, ChevronRight, ExternalLink, ArrowLeft, ShieldCheck, Star, Heart, Lightbulb, ListChecks, Award, CheckCircle2, Wrench, Rocket } from 'lucide-react';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { getToolBySlug, getRelatedTools } from '@/data/tools';
@@ -448,6 +448,33 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
                   return (
                     <li key={i} className="flex gap-3 items-start">
                       <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-emerald-500 dark:text-emerald-400" />
+                      <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">{text}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+
+            <section className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-amber-200 dark:border-amber-800/40 p-5 sm:p-6">
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center shrink-0">
+                  <Rocket className="w-[18px] h-[18px] text-amber-600 dark:text-amber-400" />
+                </div>
+                <div>
+                  <h2 className="text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100 leading-tight">
+                    {t('section-money-making')}
+                  </h2>
+                  <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5">{t('money-making-hint')}</p>
+                </div>
+              </div>
+              <ul className="space-y-3">
+                {[1, 2, 3].map((i) => {
+                  const key = `${resolvedSlug}.money-making-${i}`;
+                  const fallback = t(`fallback-money-making-${i}`);
+                  const text = safeTranslate(key, fallback);
+                  return (
+                    <li key={`mm-${i}`} className="flex gap-3 items-start">
+                      <Rocket className="w-4 h-4 mt-0.5 shrink-0 text-amber-500 dark:text-amber-400" />
                       <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">{text}</p>
                     </li>
                   );

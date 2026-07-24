@@ -1,15 +1,12 @@
-﻿﻿﻿﻿'use client';
+import type { Metadata } from 'next';
+import DetailClient from './DetailClient';
 
-import { Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import ToolFallbackClient from '@/components/ToolFallbackClient';
-
-function DetailContent() {
-  const sp = useSearchParams();
-  const slug = sp.get('slug') || '';
-  return <ToolFallbackClient localeParam="zh" slugParam={slug} />;
-}
+export const metadata: Metadata = {
+  title: 'Tool - Korelyy',
+  robots: { index: false, follow: false },
+  alternates: { canonical: undefined },
+};
 
 export default function ToolDetailPage() {
-  return <Suspense fallback={null}><DetailContent /></Suspense>;
+  return <DetailClient />;
 }

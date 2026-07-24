@@ -57,12 +57,14 @@ export default function ToolSeoContent({ locale, slug }: { locale: string; slug:
   let scenarios: string[] = [];
   let tutorial: string[] = [];
   let advantages: string[] = [];
+  let moneyMaking: string[] = [];
   try {
-    /* scenarios/tutorial/advantages：先走 seo，没走旧 fallback */
+    /* scenarios/tutorial/advantages/moneyMaking：先走 seo，没走旧 fallback */
     if (seo) {
       if (Array.isArray(seo.scenarios)) scenarios = seo.scenarios.map(String).filter(Boolean);
       if (Array.isArray(seo.tutorial)) tutorial = seo.tutorial.map(String).filter(Boolean);
       if (Array.isArray(seo.advantages)) advantages = seo.advantages.map(String).filter(Boolean);
+      if (Array.isArray(seo.moneyMaking)) moneyMaking = seo.moneyMaking.map(String).filter(Boolean);
     }
     if (scenarios.length === 0) {
       scenarios = Array.from({ length: 3 }, (_, i) => {
@@ -79,6 +81,12 @@ export default function ToolSeoContent({ locale, slug }: { locale: string; slug:
     if (advantages.length === 0) {
       advantages = Array.from({ length: 3 }, (_, i) => {
         try { const v = toolT(`fallback-advantage-${i + 1}`); if (v && v !== `fallback-advantage-${i + 1}`) return v; } catch { /* ignore */ }
+        return '';
+      }).filter(Boolean);
+    }
+    if (moneyMaking.length === 0) {
+      moneyMaking = Array.from({ length: 3 }, (_, i) => {
+        try { const v = toolT(`fallback-money-making-${i + 1}`); if (v && v !== `fallback-money-making-${i + 1}`) return v; } catch { /* ignore */ }
         return '';
       }).filter(Boolean);
     }
@@ -156,6 +164,24 @@ export default function ToolSeoContent({ locale, slug }: { locale: string; slug:
           <ol className="mb-4 sm:mb-5 space-y-2 list-decimal list-inside pl-1">
             {advantages.map((s, i) => (
               <li key={'av-' + i}>{s}</li>
+            ))}
+          </ol>
+        </>
+      )}
+
+      {moneyMaking.length > 0 && (
+        <>
+          <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 sm:mb-3 mt-6 sm:mt-7">
+            {sectionTitleKey('section-money-making')}
+          </h2>
+          {hintKey('money-making-hint') && (
+            <p className="mb-2 text-[12px] sm:text-xs text-gray-500 dark:text-gray-500">
+              {hintKey('money-making-hint')}
+            </p>
+          )}
+          <ol className="mb-4 sm:mb-5 space-y-2 list-decimal list-inside pl-1">
+            {moneyMaking.map((s, i) => (
+              <li key={'mm-' + i}>{s}</li>
             ))}
           </ol>
         </>

@@ -11,7 +11,14 @@ const LOCALE: SeoLocale = 'ar';
 const SLUG = 'keyword-spinoff-generator';
 
 export async function generateMetadata(): Promise<Metadata> {
-  return toolGenerateMetadata(LOCALE, SLUG);
+  const meta = await toolGenerateMetadata(LOCALE, SLUG);
+  return {
+    ...meta,
+    robots: {
+      index: false,
+      follow: false,
+    },
+  };
 }
 
 export default function ToolDetailPage() {
