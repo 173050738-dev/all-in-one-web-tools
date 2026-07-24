@@ -134,11 +134,15 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
       return;
     }
     if (!tool) return;
+    const isExternalTool = !!tool.externalUrl;
     addToHistory(tool.id);
     const title = toolName ? `${toolName} - Korelyy Tools` : 'Korelyy Tools';
     document.title = title;
     const desc = toolDescription || tool.description;
-    const canonical = `${window.location.origin}${window.location.pathname}`;
+    const canonical = isExternalTool ? tool.externalUrl! : `${window.location.origin}${window.location.pathname}`;
+    if (isExternalTool) {
+      setMeta('name', 'robots', 'noindex, nofollow');
+    }
     setMeta('name', 'description', desc);
     setMeta('property', 'og:type', 'website');
     setMeta('property', 'og:site_name', 'Korelyy Tools');

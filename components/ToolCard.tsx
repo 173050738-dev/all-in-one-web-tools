@@ -254,12 +254,26 @@ export default function ToolCard({ tool, locale, selectable = false }: { tool: T
     </div>
   );
 
-  const toolPath = tool.slug && isInternalTool(tool.slug)
+  const isInternal = tool.slug && isInternalTool(tool.slug);
+  const extUrl = tool.externalUrl || '';
+  const isExternal = !isInternal && !!extUrl;
+
+  const toolHref = isInternal
     ? `/${locale}/tool/${tool.slug}`
+    : isExternal
+    ? extUrl
     : `/${locale}/tool/detail/?slug=${encodeURIComponent(tool.slug || '')}`;
 
+  const linkRel = isExternal ? 'nofollow sponsored noopener noreferrer' : undefined;
+  const linkTarget = isExternal ? '_blank' : undefined;
+
   return (
-    <a href={toolPath} className='w-full block group'>
+    <a
+      href={toolHref}
+      className='w-full block group'
+      {...(linkRel ? { rel: linkRel } : {})}
+      {...(linkTarget ? { target: linkTarget } : {})}
+    >
       {cardContent}
     </a>
   );

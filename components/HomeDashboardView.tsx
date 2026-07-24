@@ -14,6 +14,7 @@ import { usePreferencesStore } from '@/stores/preferences';
 import { useAuthStore } from '@/stores/auth';
 import { useFavoritesStore } from '@/stores/favorites';
 import { buildRecommendedOrder, type RecommendProfile } from '@/lib/recommend';
+import { isInternalTool } from '@/lib/toolLinks';
 import { Layers, Search, Sparkles, Flame, BookOpen } from 'lucide-react';
 
 const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default), {
@@ -93,6 +94,12 @@ function applyFilterAndSort(
     result = result.filter((tool) => tool.isFree);
   }
   result = result.filter((tool) => computeComplianceLevel(tool) !== 'red');
+  result = [...result].sort((a, b) => {
+    const aInternal = isInternalTool(a.slug) ? 0 : 1;
+    const bInternal = isInternalTool(b.slug) ? 0 : 1;
+    if (aInternal !== bInternal) return aInternal - bInternal;
+    return 0;
+  });
   return result;
 }
 
