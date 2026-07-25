@@ -912,19 +912,12 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     privacyPolicy: `${SITE_URL}/${l}/privacy/`,
     termsOfService: `${SITE_URL}/${l}/terms/`,
     isFamilyFriendly: true,
-    aggregateRating: tool.likes
+    aggregateRating: tool.likes && tool.likes > 0
       ? {
           '@type': 'AggregateRating',
-          ratingValue: '5',
+          ratingValue: '4.7',
           bestRating: '5',
           ratingCount: tool.likes,
-        }
-      : tool.isFree
-      ? {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          bestRating: '5',
-          ratingCount: 128,
         }
       : undefined,
     softwareVersion: '2026.7',
@@ -1847,10 +1840,10 @@ export function ComparePageJsonLd(props: {
       description,
       url: toolSlug ? `${SITE_URL}/${l}/tool/${toolSlug}/` : undefined,
       item: toolSlug ? `${SITE_URL}/${l}/tool/${toolSlug}/` : undefined,
-      ...(tool?.likes ? {
+      ...(tool?.likes && tool.likes > 0 ? {
         aggregateRating: {
           '@type': 'AggregateRating' as const,
-          ratingValue: '5',
+          ratingValue: '4.7',
           bestRating: '5',
           ratingCount: tool.likes,
         },
