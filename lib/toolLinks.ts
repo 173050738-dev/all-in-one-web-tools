@@ -82,6 +82,7 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'ai-review-generator',
   'ai-resume-experience-optimize',
   'ai-xiaohongshu-title-generator',
+  'watermark-remover',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {
