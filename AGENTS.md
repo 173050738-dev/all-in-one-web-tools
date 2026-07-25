@@ -106,3 +106,38 @@
 
 ### 诚实边界（不画饼）
 - 【自动赚钱工具】不是一个能力，是产品+流量+变现的完整生意，任何 AI 都无法一键生成。Korelyy 的 SEO+AdSense 才是真路子。
+
+---
+
+## 十二、X（Twitter）引流运营进度与计划（每次会话读此节，主动提醒 Carson 推进）
+> 【AI 自我指令】每个新会话读到此节，若发现有【待办】未完成，主动提醒 Carson：现在该做哪一步。Codex 无定时能力，靠此节做跨会话记忆。
+
+### 账号
+- X 账号：@Korelyybusiness（展示名 Carson | Korelyy），2026年6月注册的新号
+- 人设：工具/独立开发者（走 #buildinpublic #indiehackers），已定死
+- 连号方式：Node 脚本用 chromium.connectOverCDP('http://127.0.0.1:9222') 连 Carson 真实 Edge。
+  启动：node -e 用 cmd 执行 'start msedge --remote-debugging-port=9222 --profile-directory=Default'，Carson 手动登录。
+  脚本放 D:\codex-tools（playwright 模块在那），不能放 D:\pw-temp（无模块）。
+
+### 已完成（2026-07-25）
+1. 简介改造：Building free online tools for everyone；外链 korelyy.com/en/；城市 Guangzhou —— 已生效
+2. 第1条养号推已发：【made 50 free tools on my site so far lol...】（口语风、去AI味、无链接）
+3. 账号已【解锁曝光权限】(graduated-access)，新号限流期已过
+4. 关注同赛道 18 个号（levelsio/theo/swyx/shadcn/rauchg/arvidkahl/tibo_maker 等 indie hacker 圈）
+5. 发了 4 条针对性留言（tibo_maker/arvidkahl/gregisenberg/theo），含 1 条抛问题钩子
+
+### 待办计划（按天推进，Carson 来了就提醒）
+- 【待办·D+1 明天】发第2条养号推（口语风、无链接）+ 可选再留 2-3 条评论。
+  第2条草稿参考：building a tool site is easy. getting people to actually use it is the hard part 类，口语化重写。
+- 【待办·D+2 后天】发 emoji-mixer 引流视频（用 Jenny 版 D:\codex-tools\videos\emoji-mixer-jenny.mp4）。
+  硬规则：正文【不放链接】(X 打压站外链)，链接 korelyy.com 放【第一条评论】，正文写 link in replies。
+  文案已备好（趣味钩子版），发布时间选北京时间晚9点-凌晨（美国白天）。
+- 每次发完隔几小时看互动（赞/评/涨粉），有互动的风格就是对的，后续多用。养号忌一天动作太密。
+
+### 引流视频资产（已产出，D:\codex-tools\remotion-studio + videos）
+- 通用模板 ToolPromo.tsx（配置表驱动，加新工具只改 Root.tsx 的 CONFIGS 数组）
+- 已出片：emoji-mixer-ARIA版.mp4 / emoji-mixer-JENNY版.mp4（1080x1920/18s/带女声配音+BGM）
+- 配音：Edge-TTS（免费神经女声，en-US-JennyNeural / AriaNeural），支持六语言女声
+- BGM：Python 合成的无版权音乐 public/bgm.wav
+- 下一步可扩：六语言配音版、横版 YouTube 版、给第2个自研工具套模板出片
+
