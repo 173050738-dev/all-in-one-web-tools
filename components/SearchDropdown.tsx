@@ -350,10 +350,12 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
   const handleAiClick = () => {
     if (!searchQuery.trim()) {
       setIsAiMode(true);
+      setIsOpen(true);
       inputRef.current?.focus();
       return;
     }
     setIsAiMode(true);
+    setIsOpen(true);
     fetchAiRecommend();
   };
 
@@ -390,7 +392,7 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
 
   const handleClear = () => {
     setSearchQuery('');
-    inputRef.current?.focus();
+    setIsOpen(false);
   };
 
   const placeholder = isAiMode
@@ -417,8 +419,16 @@ export default function SearchDropdown({ locale, isMobile = false }: SearchDropd
           type='text'
           placeholder={placeholder}
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          onFocus={() => setIsOpen(true)}
+          onChange={(e) => {
+            const val = e.target.value;
+            setSearchQuery(val);
+            if (!val.trim()) {
+              setIsOpen(false);
+            } else {
+              setIsOpen(true);
+            }
+          }}
+          onFocus={() => { if (searchQuery.trim()) setIsOpen(true); }}
           onKeyDown={handleKeyDown}
           className={`w-full pl-10 pr-28 rounded-xl border bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-0 transition-shadow ${
             isMobile ? 'min-h-[48px] text-[15px]' : 'min-h-[46px] sm:min-h-[44px] text-sm'
