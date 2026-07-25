@@ -12,17 +12,7 @@ const SLUG = 'keyword-spinoff-generator';
 
 export async function generateMetadata(): Promise<Metadata> {
   const meta = await toolGenerateMetadata(LOCALE, SLUG);
-  return {
-    ...meta,
-    robots: {
-      index: false,
-      follow: false,
-      googleBot: {
-        index: false,
-        follow: false,
-      },
-    },
-  };
+  return { ...meta };
 }
 
 export default function ToolDetailPage() {

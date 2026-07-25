@@ -5,24 +5,13 @@ import {
   type SeoLocale,
 } from '@/components/seo';
 import ClientPage from './client';
-
 import ToolSeoContent from '@/components/ToolSeoContent';
 const LOCALE: SeoLocale = 'ar';
 const SLUG = 'seo-keyword-miner';
 
 export async function generateMetadata(): Promise<Metadata> {
   const meta = await toolGenerateMetadata(LOCALE, SLUG);
-  return {
-    ...meta,
-    robots: {
-      index: false,
-      follow: false,
-      googleBot: {
-        index: false,
-        follow: false,
-      },
-    },
-  };
+  return { ...meta };
 }
 
 export default function ToolDetailPage() {
