@@ -82,3 +82,27 @@
 8. 未在 C 盘生成文件
 9. 线上验证(带尾斜杠抓 korelyy.com)已确认部署
 10. git 已 push + Cloudflare 部署完成
+
+---
+
+## 十一、Codex 的能力与装备现状（每次会话读此节恢复认知）
+> 我（Codex）不是只会写文档。已在本机实测打通以下能力，新会话务必按此认知行事，别再说【做不到】。
+
+### 已打通（可直接用）
+- 【网页自动化】Playwright + Chromium 内核已装在 D:\codex-tools（内核在 D:\codex-tools\playwright-browsers，环境变量 PLAYWRIGHT_BROWSERS_PATH 指向它）。
+  - 用法：cd D:\codex-tools; $env:PLAYWRIGHT_BROWSERS_PATH='D:\codex-tools\playwright-browsers'; 写 node 脚本 require('playwright') 跑。
+  - 能做：自动打开页面/点击/填表/抓动态渲染内容/批量截图/线上部署核验。已实测打开 korelyy.com 抓标题+截图成功。
+- 【写/跑脚本】PowerShell、Node v24、Python 3.14、Git 均可用。
+- 【网页抓取/查证】Invoke-WebRequest + Playwright 双路可用（korelyy 记得带尾斜杠）。
+
+### 差一步就能用（缺钥匙/需授权）
+- 【AI 生图】imagegen CLI 脚本齐全：C:\Users\Administrator\.codex\skills\.system\imagegen\scripts\image_gen.py（模型 gpt-image-2），openai SDK 2.38 + Pillow 已装。
+  - 唯一缺口：环境变量 OPENAI_API_KEY 未配（脚本只认此变量，无自定义 base_url，第三方中转接不上，需真 OpenAI key）。
+  - 启用：开梯子 + 配 OPENAI_API_KEY 后，python image_gen.py generate 即可出图/去背景（remove_chroma_key.py 也在）。付费 API 按图计费，需 Carson 确认成本。
+
+### 环境注意
+- 外网需开梯子（Anycast VPN）才能连 OpenAI/海外站；不开则超时。
+- 一律不在 C 盘生成产物；工具/产物放 D:\codex-tools 或 D:\pw-temp。
+
+### 诚实边界（不画饼）
+- 【自动赚钱工具】不是一个能力，是产品+流量+变现的完整生意，任何 AI 都无法一键生成。Korelyy 的 SEO+AdSense 才是真路子。
