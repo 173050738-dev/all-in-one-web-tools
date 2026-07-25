@@ -42,6 +42,12 @@ const i18n: Record<string, Record<string, string>> = {
     keywordBankTip: '内置 5 行业模板库：美妆(30模板)/美食(28)/家居(25)/数码(26)/母婴(27)，共 136 套基础模板',
     showSeed: '显示种子词 (调试)',
     placeHolder: '示例：口红  螺蛳粉  沙发  耳机  奶粉',
+    feat1: '5 大行业词库 精选爆款模板',
+    feat2: '4 类标题公式 覆盖主流风格',
+    feat3: '谐音梗算法 自动同音替换',
+    feat4: '随机数字 emoji 保证不重复',
+    feat5: '纯本地运算 不上传任何数据',
+    feat6: '一键复制小红书带标签版',
   },
   en: {
     title: 'Pun & Viral Keyword Generator',
@@ -71,6 +77,12 @@ const i18n: Record<string, Record<string, string>> = {
     keywordBankTip: 'Built-in banks: Beauty 30 / Food 28 / Home 25 / Digital 26 / Baby 27',
     showSeed: 'Show seeds (debug)',
     placeHolder: 'Ex: lipstick, ramen, sofa, earbuds, formula',
+    feat1: '5 industry templates with viral titles',
+    feat2: '4 title formulas for every style',
+    feat3: 'Pun algorithm with auto homophone swap',
+    feat4: 'Random numbers & emojis for variety',
+    feat5: '100% local — no data uploaded',
+    feat6: 'One-click Xiaohongshu copy with hashtags',
   },
   hi: {
     title: 'श्लेष वायरल कीवर्ड जनरेटर',
@@ -100,6 +112,12 @@ const i18n: Record<string, Record<string, string>> = {
     keywordBankTip: 'बैंक: Beauty 30 / Food 28 / Home 25 / Digital 26 / Baby 27',
     showSeed: 'बीज दिखाएं',
     placeHolder: 'लिपस्टिक, नूडल्स, सोफा, इयरबड्स, फॉर्मूला',
+    feat1: '5 उद्योग टेम्पलेट वायरल शीर्षकों के साथ',
+    feat2: 'हर शैली के लिए 4 शीर्षक सूत्र',
+    feat3: 'ऑटो होमोफोन स्वैप के साथ श्लेष एल्गोरिदम',
+    feat4: 'विविधता के लिए यादृच्छिक संख्याएं और इमोजी',
+    feat5: '100% स्थानीय — कोई डेटा अपलोड नहीं',
+    feat6: 'हैशटैग के साथ एक-क्लिक XHS कॉपी',
   },
   fr: {
     title: 'Générateur de Jeux de Mots Viraux',
@@ -129,6 +147,12 @@ const i18n: Record<string, Record<string, string>> = {
     keywordBankTip: 'Banques: Beauté 30 / Nourriture 28 / Maison 25 / Numérique 26 / Bébé 27',
     showSeed: 'Montrer graines',
     placeHolder: 'rouge à lèvres, ramen, sofa, écouteurs, lait',
+    feat1: '5 modèles industriels avec titres viraux',
+    feat2: '4 formules de titre pour chaque style',
+    feat3: 'Algorithme de calembour avec échange homophone auto',
+    feat4: 'Nombres et emojis aléatoires pour la variété',
+    feat5: '100% local — aucune donnée téléchargée',
+    feat6: 'Copie XHS en un clic avec hashtags',
   },
   es: {
     title: 'Generador de Títulos Virales',
@@ -158,6 +182,12 @@ const i18n: Record<string, Record<string, string>> = {
     keywordBankTip: 'Bancos: Belleza 30 / Comida 28 / Hogar 25 / Digital 26 / Bebé 27',
     showSeed: 'Mostrar semillas',
     placeHolder: 'labial, ramen, sofá, auriculares, leche',
+    feat1: '5 plantillas industriales con títulos virales',
+    feat2: '4 fórmulas de título para cada estilo',
+    feat3: 'Algoritmo de juego de palabras con cambio homófono auto',
+    feat4: 'Números y emojis aleatorios para variedad',
+    feat5: '100% local — sin subir datos',
+    feat6: 'Copia XHS con hashtags en un clic',
   },
   ar: {
     title: 'مولد العناوين الفيروسية والتورية',
@@ -187,6 +217,12 @@ const i18n: Record<string, Record<string, string>> = {
     keywordBankTip: 'البنوك: جمال 30 / طعام 28 / منزل 25 / رقمي 26 / رضيع 27',
     showSeed: 'إظهار البذور',
     placeHolder: 'أحمر الشفاه، رامين، أريكة، سماعات، حليب',
+    feat1: '5 قوالب صناعية بعناوين فيروسية',
+    feat2: '4 صيغ عناوين لكل أسلوب',
+    feat3: 'خوارزمية لعب كلمات مع تبديل تجانس تلقائي',
+    feat4: 'أرقام وإيموجي عشوائية للتنوع',
+    feat5: '100% محلي — لا رفع بيانات',
+    feat6: 'نسخ XHS بنقرة واحدة مع هاشتاجات',
   },
 };
 
@@ -586,7 +622,6 @@ export default function KeywordSpinoffGenerator({ locale = 'zh' }: KeywordSpinof
   const [copiedAll, setCopiedAll] = useState(false);
   const [copiedXhs, setCopiedXhs] = useState(false);
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
-  const [showSeed, setShowSeed] = useState(false);
 
   const effectiveIndustryKeys = useMemo<IndustryKey[]>(() => {
     if (industry === 'all') return ['beauty', 'food', 'home', 'digital', 'baby'];
@@ -915,13 +950,6 @@ export default function KeywordSpinoffGenerator({ locale = 'zh' }: KeywordSpinof
                     <p className="text-sm sm:text-[0.95rem] leading-relaxed text-gray-800 dark:text-gray-200 font-medium">
                       {item.title}
                     </p>
-                    {showSeed && (
-                      <div className="mt-2 pt-2 border-t border-gray-100 dark:border-gray-700 text-[10px] text-gray-400 font-mono space-y-0.5">
-                        <div>ind: {item.industry} | mode: {item.mode}</div>
-                        <div className="truncate">tpl: {item.template}</div>
-                        <div>punW: {item.punW} | emoji: {item.emoji}</div>
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
@@ -960,12 +988,12 @@ export default function KeywordSpinoffGenerator({ locale = 'zh' }: KeywordSpinof
             </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
               {[
-                ['🏭', '5 大行业词库 精选爆款模板'],
-                ['🎨', '4 类标题公式 覆盖主流风格'],
-                ['🧠', '谐音梗算法 自动同音替换'],
-                ['🎲', '随机数字 emoji 保证不重复'],
-                ['⚡', '纯本地运算 不上传任何数据'],
-                ['📱', '一键复制小红书带标签版'],
+                ['🏭', t('feat1')],
+                ['🎨', t('feat2')],
+                ['🧠', t('feat3')],
+                ['🎲', t('feat4')],
+                ['⚡', t('feat5')],
+                ['📱', t('feat6')],
               ].map(([icon, text], i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="text-base flex-shrink-0">{icon}</span>
@@ -973,20 +1001,6 @@ export default function KeywordSpinoffGenerator({ locale = 'zh' }: KeywordSpinof
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className="card p-4 sm:p-6">
-            <label className="flex items-center gap-2 cursor-pointer select-none">
-              <input
-                type="checkbox"
-                checked={showSeed}
-                onChange={(e) => setShowSeed(e.target.checked)}
-                className="w-4 h-4 rounded border-gray-300 text-pink-600 focus:ring-pink-500"
-              />
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                {t('showSeed')}
-              </span>
-            </label>
           </div>
         </aside>
       </div>

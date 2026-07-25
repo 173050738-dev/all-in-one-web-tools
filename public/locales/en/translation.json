@@ -1648,27 +1648,27 @@
       "name": "SEO Keyword Miner",
       "description": "Long-tail keyword miner based on Google Autocomplete + DeepSeek. Enter a seed keyword and generate 60+ highly-related long-tail terms with estimated heat / competition, search intent, and content topic suggestions. Copy and CSV export supported.",
       "seo": {
-        "intro": "SEO Keyword Miner is a free in-browser keyword research tool for Chinese and global content creators, solo site owners, and Amazon / e-commerce copywriters. Type one core seed keyword or topic (Chinese or English, short or long-tail), pick a channel (Baidu, Google, YouTube, Amazon, TikTok/抖音, Xiaohongshu/小红书, Bing), and the miner expands it into dozens of real user search intents — autocomplete phrases, related searches, people-also-ask style questions, and buying-intent modifiers you can actually plug into H1s, H2s, alt text, product listing titles, and short-video titles. 100% client-side after the suggestions come back, no signup.",
+        "intro": "SEO Keyword Miner is a free in-browser keyword research tool for content creators, solo site owners, and e-commerce copywriters. Type one core seed keyword or topic, pick a channel (Google, YouTube, Amazon, TikTok, Xiaohongshu, Bing), and the miner expands it into dozens of real user search intents — autocomplete phrases, related searches, people-also-ask style questions, and buying-intent modifiers you can plug into H1s, H2s, alt text, product listing titles, and short-video titles. 100% client-side after the suggestions come back, no signup.",
         "scenarios": [
           "A solo DTC brand owner in Shenzhen who runs an Amazon store + a Shopify site enters 'portable blender' and expands both on Amazon US and Google to collect long-tail modifiers for listing titles, bullet points, and blog H2s — differentiating search words that users type on Amazon vs. Google so title copy does not waste characters",
-          "A Xiaohongshu beauty KOL assistant types 5 core Chinese seed words like 油皮粉底液 夏天 (oily-skin foundation summer) into the miner channeled to Xiaohongshu autocomplete + Baidu zhidao Q&A, exports the keyword pool, and uses them to write 12 note titles + 80 hashtags for a weekly batch plan without repetitive 'summer foundation' copy",
+          "A Xiaohongshu beauty KOL assistant types 5 core seed words like 'oily skin foundation summer' into the miner channeled to Xiaohongshu autocomplete + Baidu Q&A, exports the keyword pool, and uses them to write 12 note titles + 80 hashtags for a weekly batch plan without repetitive 'summer foundation' copy",
           "An SEO intern at a B2B SaaS team types 3 industry seed terms into the Google channel and mines 150 related questions, then clusters them into FAQ H2s and a long-form pillar outline covering every real user question their sales team hears on demos — without paying Ahrefs / SEMrush credits for one small task."
         ],
         "tutorial": [
-          "Enter 1–3 Chinese or English seed keywords in the main input; for phrases keep them natural — how a real user would type the topic",
-          "Pick the channel and region you care about: Baidu / Xiaohongshu / 抖音 autocomplete for CN domestic, Google / YouTube / Bing for overseas, Amazon for e-commerce listing words, and match your country variant (US/UK/JP/DE where applicable)",
+          "Enter 1–3 seed keywords in the main input; for phrases keep them natural — how a real user would type the topic",
+          "Pick the channel and region you care about: Xiaohongshu / TikTok autocomplete for CN domestic, Google / YouTube / Bing for overseas, Amazon for e-commerce listing words",
           "Click mine or generate and let the tool pull live autocomplete + related-intent phrases for that seed. You can re-run on sub-phrases you like to branch deeper (2nd-level mining)",
           "Filter by word length or intent type if available, then copy all or export the keyword pool as plain text / table. Drop them into your title list, H2 outline, or e-commerce listing keyword field directly."
         ],
         "advantages": [
-          "Channels wired for both China domestic (Baidu autocomplete, Xiaohongshu phrase suggestions, 抖音 search suggestions, 知乎-style question intents) and global (Google, YouTube, Bing, Amazon multi-region) — so one miner works for 小红书运营 and Amazon Listing and Google blog SEO teams instead of siloed CN vs. global tools",
+          "Channels wired for both China domestic (Baidu autocomplete, Xiaohongshu phrase suggestions, TikTok search suggestions) and global (Google, YouTube, Bing, Amazon multi-region) — so one miner works for social media operations and e-commerce SEO teams instead of siloed CN vs. global tools",
           "Supports 2nd-level expansion: take a promising long-tail phrase the miner returns and re-run it as a new seed to branch deeper, building a 200+ phrase pool in 2 minutes instead of the 10–20 words a single autocomplete call gives back",
-          "Browser-first, paywall-free: no monthly Ahrefs/SEMrush/Semrush-style credit burn for small tasks, no account login, works great for internships, indie projects, and teams that only do keyword research 1–2 times a week. The initial suggestion fetch runs through public endpoints and subsequent filtering is fully local."
+          "Browser-first, paywall-free: no monthly Ahrefs/SEMrush-style credit burn for small tasks, no account login, works great for internships, indie projects, and teams that only do keyword research 1–2 times a week."
         ],
         "faqs": [
           {
-            "q": "Does it support Chinese seed keywords for Xiaohongshu / Douyin / Baidu or only English for Google?",
-            "a": "Both. SEO Keyword Miner accepts Chinese or English seeds and has dedicated channels for Baidu autocomplete, Xiaohongshu-style phrases, Douyin short-video title phrases, and Zhihu-style Q&A intents on the CN side, plus Google, YouTube, Bing, and Amazon multi-region on the global side. You can, for example, mine the same product idea in both Xiaohongshu CN and Amazon US to compare domestic content angles vs. overseas listing modifiers."
+            "q": "Does it support Chinese seed keywords for Xiaohongshu / TikTok / Baidu or only English for Google?",
+            "a": "Both. SEO Keyword Miner accepts Chinese or English seeds and has dedicated channels for Baidu autocomplete, Xiaohongshu-style phrases, TikTok short-video title phrases, and Q&A intents on the CN side, plus Google, YouTube, Bing, and Amazon multi-region on the global side. You can, for example, mine the same product idea in both Xiaohongshu CN and Amazon US to compare domestic content angles vs. overseas listing modifiers."
           },
           {
             "q": "Does this tool show exact monthly search volume, keyword difficulty, and CPC like Ahrefs does?",
@@ -1676,7 +1676,7 @@
           },
           {
             "q": "Is there an export button? Can I take the list to Excel or Notion?",
-            "a": "Yes. Once the keyword pool is ready you can one-click copy all phrases as plain text, newline-separated, or in a tabular format that pastes cleanly into Google Sheets, Excel, WPS, or a Notion toggle block. You can also manually favorite specific phrases and copy only the starred ones if you are culling a shortlist for titles."
+            "a": "Yes. Once the keyword pool is ready you can one-click copy all phrases as plain text, newline-separated, or in a tabular format that pastes cleanly into Google Sheets, Excel, or a Notion toggle block. You can also manually favorite specific phrases and copy only the starred ones if you are culling a shortlist for titles."
           },
           {
             "q": "Do I need an API key from Google or Baidu to use it?",
@@ -1684,7 +1684,7 @@
           },
           {
             "q": "How is this different from just looking at Google suggest in my own search bar?",
-            "a": "Two big differences. (1) Depth: you can take any returned phrase and re-run it as a seed instantly, so a single 'blender' input branches 2–3 levels deep into 100+ phrases instead of the ~10 suggestions your address bar shows. (2) Multi-channel: you can mine the SAME seed on Google, Amazon, YouTube, Xiaohongshu, and Douyin side-by-side to see how intent words change between channels — Amazon users add 'quiet' or 'BPA free', Xiaohongshu users add '小红书推荐' or dorm-friendly. That cross-channel diff is invisible inside one single search bar."
+            "a": "Two big differences. (1) Depth: you can take any returned phrase and re-run it as a seed instantly, so a single input branches 2–3 levels deep into 100+ phrases instead of the ~10 suggestions your address bar shows. (2) Multi-channel: you can mine the SAME seed on Google, Amazon, YouTube, Xiaohongshu, and TikTok side-by-side to see how intent words change between channels — Amazon users add 'quiet' or 'BPA free', Xiaohongshu users add 'recommended' or lifestyle keywords. That cross-channel diff is invisible inside one single search bar."
           }
         ]
       }
