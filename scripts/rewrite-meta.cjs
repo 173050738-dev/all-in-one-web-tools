@@ -88,6 +88,12 @@ const ROOT = path.resolve(__dirname, '..');
 const outDir = path.join(ROOT, 'out');
 const appZhToolDir = path.join(ROOT, 'app', 'zh', 'tool');
 
+// Tools that should not be indexed (noindex, nofollow)
+const NOINDEX_TOOLS = [
+  'seo-keyword-miner',
+  'keyword-spinoff-generator'
+];
+
 const slugs = fs
   .readdirSync(appZhToolDir, { withFileTypes: true })
   .filter(
@@ -180,9 +186,13 @@ function buildHreflang(pathWithoutLocale) {
   return lines.join('\n') + '\n';
 }
 
-function buildRobotsMeta() {
-  const standard = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
-  const bing = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, notranslate';
+function buildRobotsMeta(noindex = false) {
+  const standard = noindex
+    ? 'noindex, nofollow'
+    : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+  const bing = noindex
+    ? 'noindex, nofollow'
+    : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, notranslate';
   let out = `<meta name="robots" content="${standard}">\n`;
   out += `<meta name="googlebot" content="${standard}">\n`;
   out += `<meta name="bingbot" content="${bing}">\n`;
@@ -566,7 +576,7 @@ function buildBlogPostingJsonLd({ locale, slug, canonical, post }) {
   };
 }
 
-function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, ogType }) {
+function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, ogType, noindex = false }) {
   let title, desc;
   if (titleMode === 'plain') {
     const siteName = SITE_META[locale]?.siteName || 'Korelyy Tools';
@@ -582,7 +592,7 @@ function buildInjection({ locale, name, description, canonical, pathWithoutLocal
   const c = escapeForHtml(canonical);
   const alt = escapeForHtml((ogImageAlt || name) + OG_IMAGE_ALT_SUFFIX);
   const hfl = pathWithoutLocale ? buildHreflang(pathWithoutLocale) : '';
-  const robotsBlock = buildRobotsMeta();
+  const robotsBlock = buildRobotsMeta(noindex);
   const globalLd = buildGlobalOrgAndWebSiteJsonLd();
   const webpageLd = buildWebPageJsonLd({ locale: locale || 'en', name: title, description: desc, canonical });
   const breadcrumbLd = pathWithoutLocale
@@ -670,6 +680,7 @@ function replaceHead(html, injection) {
 let written = 0;
 let skippedNoFile = 0;
 let skippedNoTranslation = 0;
+let noindexApplied = 0;
 
 for (const l of SUPPORTED_LOCALES) {
   for (const slug of slugs) {
@@ -687,6 +698,8 @@ for (const l of SUPPORTED_LOCALES) {
     const seoFaqs = tool && tool.seo && Array.isArray(tool.seo.faqs) ? tool.seo.faqs : null;
     const faqItems = resolveFaqItems(l, tool.name, seoFaqs);
     const canonical = BASE_URL.replace(/\/$/, '') + '/' + l + '/tool/' + slug + '/';
+    const noindex = NOINDEX_TOOLS.includes(slug);
+    if (noindex) noindexApplied++;
     const injection = buildInjection({
       locale: l,
       slug,
@@ -697,6 +710,7 @@ for (const l of SUPPORTED_LOCALES) {
       ogImageAlt: tool.name,
       toolInfo,
       faqs: faqItems,
+      noindex,
     });
     let html = fs.readFileSync(file, 'utf8');
     let next = replaceHead(html, injection);
@@ -774,7 +788,9 @@ console.log(
     ' skippedNoFile=' +
     skippedNoFile +
     ' skippedNoTranslation=' +
-    skippedNoTranslation
+    skippedNoTranslation +
+    ' noindexApplied=' +
+    noindexApplied
 );
 
 // ===================== Non-tool pages (home, /tools/, about, blog, contact, etc.) =====================

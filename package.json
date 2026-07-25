@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/build-data-bundles.cjs ; node scripts/generate-blog-routes.cjs ; node scripts/build-sitemap-robots.mjs ; node scripts/pre-push-self-check.cjs",
-    "build": "next build && node scripts/inject-noindex.js",
+    "build": "next build",
     "build:legacy": "set USE_STATIC_EXPORT=true&& next build",
     "build:cf": "node scripts/pre-push-self-check.cjs && node scripts/run-next-on-pages.cjs && node scripts/inject-noindex.js",
     "deploy:check": "node scripts/pre-push-self-check.cjs",
