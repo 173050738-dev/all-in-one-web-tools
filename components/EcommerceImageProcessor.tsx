@@ -245,7 +245,7 @@ export default function EcommerceImageProcessor({ locale = 'zh' }: Props) {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
         {/* Left sidebar - Platform selection */}
-        <aside className="lg:col-span-3 order-2 lg:order-1">
+        <aside className="lg:col-span-4 order-2 lg:order-1">
           <div className="card p-4 space-y-4">
             <div>
               <button
@@ -284,7 +284,7 @@ export default function EcommerceImageProcessor({ locale = 'zh' }: Props) {
                               }`}
                             >
                               <span className="text-lg">{p.icon}</span>
-                              <span className="flex-1 truncate">{p.name[locale as Locale] || p.name.en}</span>
+                              <span className="flex-1 text-sm leading-tight">{p.name[locale as Locale] || p.name.en}</span>
                             </button>
                           ))}
                         </div>
@@ -460,7 +460,7 @@ export default function EcommerceImageProcessor({ locale = 'zh' }: Props) {
         </aside>
 
         {/* Main content */}
-        <main className="lg:col-span-6 order-1 lg:order-2 space-y-4">
+        <main className="lg:col-span-5 order-1 lg:order-2 space-y-4">
           {/* Upload area */}
           <div
             className={`card p-6 border-2 border-dashed transition-all min-h-[200px] ${
