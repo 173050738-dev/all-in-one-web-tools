@@ -75,6 +75,12 @@ export default function LocaleShell({
   }, []);
 
   useEffect(() => {
+    if (typeof document === 'undefined') return;
+    document.documentElement.lang = locale;
+    document.documentElement.dir = dir;
+  }, [locale, dir]);
+
+  useEffect(() => {
     if (typeof window === 'undefined') {
       setAutoLocaleReady(true);
       return;
