@@ -29,6 +29,35 @@
     "isSelfHosted": true
   },
   {
+    "id": "ecommerce-image-processor",
+    "slug": "ecommerce-image-processor",
+    "name": "电商图片批量处理",
+    "description": "全球主流电商平台图片一键合规处理，支持Amazon、淘宝、Shopify等，批量裁剪、压缩、加水印、ZIP打包下载，100%本地处理。",
+    "category": "image-tools",
+    "tags": [
+      "电商",
+      "图片处理",
+      "批量",
+      "压缩",
+      "水印"
+    ],
+    "nameEn": "Ecommerce Image Batch Processor",
+    "descriptionEn": "One-click image compliance for global ecommerce platforms (Amazon, Taobao, Shopify, etc.). Batch crop, compress, watermark, ZIP download. 100% local processing.",
+    "tagsEn": [
+      "Ecommerce",
+      "Image Processing",
+      "Batch",
+      "Compress",
+      "Watermark"
+    ],
+    "isFree": true,
+    "icon": "ShoppingCart",
+    "likes": 0,
+    "accessTag": "direct",
+    "localProcessing": true,
+    "isSelfHosted": true
+  },
+  {
     "id": "password-generator",
     "slug": "password-generator",
     "name": "密码生成器",

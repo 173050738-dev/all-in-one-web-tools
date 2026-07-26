@@ -8846,6 +8846,50 @@
           }
         ]
       }
+    },
+    "ecommerce-image-processor": {
+      "name": "Procesador de Imágenes Ecommerce — Cumplimiento Global",
+      "description": "Cumplimiento de imágenes para Amazon, eBay, Shopify, Etsy, Walmart, Taobao, JD, Shopee y más. Recorte, compresión, marca de agua, descarga ZIP. 100% local.",
+      "seo": {
+        "intro": "Este procesador de imágenes ecommerce gratuito ayuda a vendedores a redimensionar, recortar, comprimir y añadir marcas de agua a las imágenes de productos para cumplir con los requisitos de las principales plataformas ecommerce mundiales. Incluye Amazon, eBay, Shopify, Etsy, Walmart, TikTok Shop, Taobao, JD, Pinduoduo, RedNote, Shopee, Lazada, Mercado Libre y más. Procesamiento 100% local.",
+        "scenarios": [
+          "Preparar imágenes de productos para múltiples plataformas ecommerce simultáneamente",
+          "Comprimir imágenes de productos por lotes para cumplir con los límites de tamaño",
+          "Añadir marcas de agua para proteger las imágenes de productos",
+          "Redimensionar y recortar imágenes para adaptarse a plantillas específicas",
+          "Convertir imágenes entre formatos JPG, PNG y WebP"
+        ],
+        "advantages": [
+          "Soporta más de 14 plataformas ecommerce globales",
+          "Procesamiento por lotes con descarga ZIP con un clic",
+          "Compresión inteligente que se ajusta a los límites de la plataforma",
+          "Marca de agua personalizable con posición, tamaño, opacidad y color",
+          "100% procesamiento local — las imágenes nunca se suben",
+          "Gratis para siempre, sin marcas de agua ni límites de uso"
+        ],
+        "faqs": [
+          {
+            "q": "¿Qué plataformas ecommerce son compatibles?",
+            "a": "Soportamos más de 14 plataformas: Amazon, eBay, Shopify, Etsy, Walmart, TikTok Shop, Taobao, JD.com, Pinduoduo, RedNote, Shopee, Lazada, Mercado Libre y una opción personalizada."
+          },
+          {
+            "q": "¿Mis imágenes se subirán a un servidor?",
+            "a": "No. Todo el procesamiento se realiza localmente en tu navegador usando HTML5 Canvas."
+          },
+          {
+            "q": "¿Cómo funciona la compresión inteligente?",
+            "a": "La herramienta ajusta automáticamente la calidad JPEG mediante búsqueda binaria para encontrar el mejor nivel que cumple con el límite de tamaño."
+          },
+          {
+            "q": "¿Puedo añadir mi propia marca de agua?",
+            "a": "Sí. Puedes añadir marcas de agua de texto personalizadas con posición, tamaño, opacidad y color ajustables."
+          },
+          {
+            "q": "¿Qué formatos de imagen son compatibles?",
+            "a": "Puedes subir imágenes JPG, PNG y WebP. El formato de salida se establece automáticamente según la plantilla."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

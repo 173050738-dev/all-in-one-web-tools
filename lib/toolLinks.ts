@@ -83,6 +83,7 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'ai-resume-experience-optimize',
   'ai-xiaohongshu-title-generator',
   'watermark-remover',
+  'ecommerce-image-processor',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

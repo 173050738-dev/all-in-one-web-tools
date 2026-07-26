@@ -126,6 +126,12 @@
 4. 关注同赛道 18 个号（levelsio/theo/swyx/shadcn/rauchg/arvidkahl/tibo_maker 等 indie hacker 圈）
 5. 发了 4 条针对性留言（tibo_maker/arvidkahl/gregisenberg/theo），含 1 条抛问题钩子
 
+### 已完成（2026-07-26 D+1）
+1. 第2条养号推已发：building the tools was the fun part... getting anyone to actually use them is way harder... how do you all get your first real users without spamming?（口语风、无链接、结尾抛钩子）
+2. 发这条推时 X 弹出 You unlocked more on X 确认页 —— 曝光权限本次正式激活（可被更多人看到/出现在搜索/可 DM 非关注者）
+3. 留 2 条针对性评论蹭曝光：@arvidkahl(客服辛酸帖-情绪共鸣)、@tibo_maker(Revid自动出片帖-抛问题)，均落地
+4. 现状诚实记录：粉丝0/关注18，第1条推截至今仅8次浏览 —— 0粉新号冷启动自然曝光极低，靠持续评论蹭流量慢积累，勿期待单推爆
+
 ### 待办计划（按天推进，Carson 来了就提醒）
 - 【待办·D+1 明天】发第2条养号推（口语风、无链接）+ 可选再留 2-3 条评论。
   第2条草稿参考：building a tool site is easy. getting people to actually use it is the hard part 类，口语化重写。
@@ -141,3 +147,28 @@
 - BGM：Python 合成的无版权音乐 public/bgm.wav
 - 下一步可扩：六语言配音版、横版 YouTube 版、给第2个自研工具套模板出片
 
+## 十三、Reddit / Indie Hackers 引流进度（新增，每次会话读）
+> 【AI 自我指令】读到此节若有待办，主动提醒 Carson 推进。Carson 不懂英文，所有对外内容必须附中文翻译给他看。
+
+### 账号
+- Reddit：u/Tricky-Dealer-605（绑 173050738@qq.com + Google 登录），注册约27天，【1 post karma / 0 comment karma】——极低白号。已在 Edge 调试端口登录态。
+- Indie Hackers：账号 Carson 说有，但【实测未登录】（首页顶部仍是 Join）。需 Carson 手动登录（走邮箱密码/Google OAuth，Codex 无法替输密码）。待办：Carson 手动登录 IH 后 Codex 接手。
+
+### 2026-07-26 实测踩坑（重要）
+- 在 r/webdev 发3条纯有用评论(无链接)：仅第1条进自己历史，第2/3条提交后显示 removed。comment karma 纹丝不动=0。
+- 判断：r/webdev 等优质技术版块有 automod，对 0-karma/新号评论直接过滤/仅作者可见。低 karma 号在严格版块【发什么都被吃掉】。
+- 匿名 headless 抓 Reddit 会被 403 Blocked（反爬），无法用匿名视角验证可见性。
+
+### 正确养号策略（Reddit）
+1. 低 karma 号先去【无 automod 门槛的宽松版块】攒 comment karma：r/AskReddit、r/CasualConversation、r/NoStupidQuestions 等。
+2. 一天 1-2 条、间隔拉开（勿连发，连发被静默限流且像机器人）。
+3. comment karma 养到【50+】、账龄过1个月后，再回 r/webdev / r/SideProject / r/InternetIsBeautiful 等精准但严格的版块。
+4. 全程 0 链接 0 推广，等 karma 够了再软推 korelyy（Reddit 封域名很狠，9:1 贡献比原则）。
+
+### 可复用脚本（D:\\codex-tools）
+- reddit-feed.js 抓子版块新帖；reddit-comment.js/comment2.js 发评论(old.reddit)；reddit-myhist.js 查自己评论历史+karma；reddit-anon.js 匿名验证(会被403)。
+- IH：ih-notif.js/ih-login.js 查登录态。
+
+### 待办
+- 【Reddit D+1 起】每天去宽松版块发 1-2 条评论攒 karma（Codex 起草+附中文翻译+发+核验）。
+- 【IH 待 Carson 手动登录】登录后 Codex 做参与讨论/评论。

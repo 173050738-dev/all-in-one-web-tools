@@ -565,8 +565,7 @@ export const RootJsonLd = React.memo(function RootJsonLd() {
     },
     foundingDate: '2025',
     sameAs: [
-      'https://x.com/Korelyybusiness',
-      'https://github.com/173050738-dev/all-in-one-web-tools',
+      'https://twitter.com/korelyy',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -1277,66 +1276,11 @@ export function BlogPostJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     })),
   } : null;
 
-  /* ===========================================================
-     HowTo Schema for GEO optimization
-     Extract step-by-step instructions from content blocks
-     (h2 with how-to title followed by ol blocks)
-     =========================================================== */
-  const howTo = (() => {
-    const content = post.content || [];
-    const steps: Array<{ name: string; text: string }> = [];
-    let inHowToSection = false;
-
-    for (const block of content) {
-      if (block.type === 'h2') {
-        const text = String(getLocalizedText(block.text, l, '')).toLowerCase();
-        inHowToSection = text.includes('how to') || text.includes('step') || text.includes('步骤') || text.includes('教程') || text.includes('方法') || text.includes('指南') || text.includes('guide');
-        continue;
-      }
-      if (!inHowToSection || block.type !== 'ol') continue;
-
-      const olItems = (block.items || []).map(item => {
-        const itemText = String(getLocalizedText(item, l, '')).trim();
-        return itemText;
-      }).filter(Boolean);
-
-      for (const itemText of olItems) {
-        steps.push({
-          name: `Step ${steps.length + 1}`,
-          text: itemText,
-        });
-      }
-    }
-
-    if (steps.length === 0) return null;
-
-    const howToName = getLocalizedText(post.title, l, `How to: ${slug}`);
-    const howToDesc = getLocalizedText(post.description, l, '');
-    const readMin = getBlogReadingTime(post, l);
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: howToName,
-      description: howToDesc,
-      url: postCanonical,
-      step: steps.map((s, i) => ({
-        '@type': 'HowToStep',
-        position: i + 1,
-        name: s.name,
-        text: s.text,
-      })),
-      totalTime: `PT${readMin}M`,
-      isAccessibleForFree: true,
-    };
-  })();
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPosting) }} />
       {faqPage && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }} />}
-      {howTo && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }} />}
     </>
   );
 }

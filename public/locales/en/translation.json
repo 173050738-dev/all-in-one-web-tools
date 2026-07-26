@@ -8846,6 +8846,50 @@
           }
         ]
       }
+    },
+    "ecommerce-image-processor": {
+      "name": "Ecommerce Image Batch Processor — Global Platform Compliance",
+      "description": "One-click image compliance for Amazon, eBay, Shopify, Etsy, Walmart, Taobao, JD, Shopee and more. Batch crop, compress, watermark, ZIP download. 100% local processing.",
+      "seo": {
+        "intro": "This free online ecommerce image batch processor helps sellers quickly resize, crop, compress and watermark product images to meet the requirements of major ecommerce platforms worldwide — including Amazon, eBay, Shopify, Etsy, Walmart, TikTok Shop, Taobao, JD, Pinduoduo, RedNote, Shopee, Lazada, Mercado Libre, and more. Select your platform, upload images, and get perfectly compliant product photos ready to list in seconds. All processing happens locally in your browser.",
+        "scenarios": [
+          "Prepare product images for multiple ecommerce platforms simultaneously — different sizes and requirements handled automatically",
+          "Batch compress product photos to meet platform file size limits without sacrificing quality",
+          "Add watermarks to protect product images from being stolen by competitors",
+          "Resize and crop images to fit specific platform templates (main image, thumbnail, banner, etc.)",
+          "Convert product images between different formats (JPG, PNG, WebP) as required by each platform"
+        ],
+        "advantages": [
+          "Supports 14+ global ecommerce platforms including Amazon, Taobao, Shopify, eBay, and more",
+          "Batch process multiple images at once with one-click ZIP download",
+          "Smart compression automatically fits images within platform file size limits",
+          "Customizable watermark with adjustable position, size, opacity, and color",
+          "100% local processing — images never uploaded to any server",
+          "Free forever, no watermarks, no usage limits"
+        ],
+        "faqs": [
+          {
+            "q": "Which ecommerce platforms are supported?",
+            "a": "We support 14+ major platforms worldwide: Amazon, eBay, Shopify, Etsy, Walmart, TikTok Shop, Taobao, JD.com, Pinduoduo, RedNote (Xiaohongshu), Shopee, Lazada, Mercado Libre, plus a Custom option for any size you need."
+          },
+          {
+            "q": "Will my images be uploaded to a server?",
+            "a": "No. All processing — cropping, resizing, compression, watermarking — happens entirely in your browser using HTML5 Canvas. Your images never leave your device."
+          },
+          {
+            "q": "How does the smart compression work?",
+            "a": "The tool automatically adjusts JPEG quality using binary search to find the highest quality level that still fits within each platform's file size limit. This ensures your images meet requirements while maintaining the best possible visual quality."
+          },
+          {
+            "q": "Can I add my own watermark?",
+            "a": "Yes. You can add custom text watermarks with adjustable position (5 positions), size (8-100px), opacity (10-100%), and color. Watermarks are applied after cropping and resizing for perfect placement."
+          },
+          {
+            "q": "What image formats are supported?",
+            "a": "You can upload JPG, PNG, and WebP images. Output format is automatically set based on the platform template (most use JPEG for photos), but you can choose PNG or WebP in the Custom template."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

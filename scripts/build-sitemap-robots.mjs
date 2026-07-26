@@ -50,17 +50,6 @@ while ((mb = blogSlugRegex.exec(blogSrc)) !== null) {
 }
 console.log(`[sitemap-build] Found ${blogSlugs.size} blog slugs (pre-filter)`);
 
-// ---------------- Extract blog publish/update dates for sitemap lastmod ----------------
-const blogDateRegex = /"slug"\s*:\s*"([^"]+)"[\s\S]*?"publishedAt"\s*:\s*"([^"]+)"[\s\S]*?(?:"updatedAt"\s*:\s*"([^"]+)")?/g;
-const blogDates = {};
-let bd;
-while ((bd = blogDateRegex.exec(blogSrc)) !== null) {
-  const slug = bd[1];
-  const publishedAt = bd[2];
-  const updatedAt = bd[3] || publishedAt;
-  blogDates[slug] = updatedAt;
-}
-
 // FIX(2026-07-14 codex): 排除与"在线工具"主题无关的运动健身内容，避免稀释站点主题权威度。
 // 页面本身仍在线（不删除），仅不进 sitemap、不主动推送给搜索引擎。可随时移除本清单恢复。
 const OFF_TOPIC_BLOG_PATTERNS = [
@@ -109,7 +98,6 @@ const blogEntries = [...blogSlugs].map((slug) => ({
   path: `/blog/${slug}`,
   changeFreq: 'weekly',
   priority: 0.9,
-  lastmod: blogDates[slug] || now,
 }));
 
 const newsEntries = [...newsSlugs].map((slug) => ({
@@ -118,26 +106,7 @@ const newsEntries = [...newsSlugs].map((slug) => ({
   priority: 0.9,
 }));
 
-// ---------------- Compare pages (high-intent commercial keywords) ----------------
-const COMPARE_SLUGS = [
-  'watermark-remover-vs-image-compressor',
-  'pdf-merger-vs-document-formatter',
-  'image-compressor-vs-grid-cutter',
-  'text-to-speech-vs-caption-generator',
-  'password-generator-vs-uuid-generator',
-  'qr-code-generator-vs-avatar-decorator',
-  'regex-tester-vs-json-formatter',
-  'emoji-mixer-vs-copy-cleaner',
-  'markdown-preview-vs-case-converter',
-  'sentiment-analyzer-vs-seo-keyword-miner',
-];
-const compareEntries = COMPARE_SLUGS.map((slug) => ({
-  path: `/compare/${slug}`,
-  changeFreq: 'monthly',
-  priority: 0.85,
-}));
-
-const allPages = [...staticPages, ...toolEntries, ...blogEntries, ...newsEntries, ...compareEntries];
+const allPages = [...staticPages, ...toolEntries, ...blogEntries, ...newsEntries];
 console.log(`[sitemap-build] ${allPages.length} page entries (×${KNOWN_LOCALES.length} locales = ${allPages.length * KNOWN_LOCALES.length} URLs)`);
 
 // ---------------- Generate sitemap.xml ----------------
@@ -148,7 +117,6 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset ${XMLNS}>\n`;
 
 for (const page of allPages) {
   const base = page.path === '/' ? '' : page.path;
-  const pageLastmod = page.lastmod || now;
   for (const l of KNOWN_LOCALES) {
     const url = `${SITE_URL}/${l}${base}/`;
     const priority = (l === DEFAULT_LOCALE ? page.priority : page.priority * 0.9).toFixed(2);
@@ -158,7 +126,7 @@ for (const page of allPages) {
     const xDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}/${DEFAULT_LOCALE}${base}/"/>`;
     xml += `  <url>\n`;
     xml += `    <loc>${url}</loc>\n`;
-    xml += `    <lastmod>${pageLastmod}</lastmod>\n`;
+    xml += `    <lastmod>${now}</lastmod>\n`;
     xml += `    <changefreq>${page.changeFreq}</changefreq>\n`;
     xml += `    <priority>${priority}</priority>\n`;
     xml += `${alternates}\n${xDefault}\n`;
@@ -182,10 +150,9 @@ function buildLocaleSitemap(locale) {
     const base = page.path === '/' ? '' : page.path;
     const url = `${SITE_URL}/${locale}${base}/`;
     const priority = (locale === DEFAULT_LOCALE ? page.priority : page.priority * 0.92).toFixed(2);
-    const pageLastmod = page.lastmod || now;
     lxml += `  <url>\n`;
     lxml += `    <loc>${url}</loc>\n`;
-    lxml += `    <lastmod>${pageLastmod}</lastmod>\n`;
+    lxml += `    <lastmod>${now}</lastmod>\n`;
     lxml += `    <changefreq>${page.changeFreq}</changefreq>\n`;
     lxml += `    <priority>${priority}</priority>\n`;
     lxml += `  </url>\n`;

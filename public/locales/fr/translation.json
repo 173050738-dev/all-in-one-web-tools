@@ -8846,6 +8846,50 @@
           }
         ]
       }
+    },
+    "ecommerce-image-processor": {
+      "name": "Proceseur d'Images Ecommerce — Conformité Mondiale",
+      "description": "Conformité des images pour Amazon, eBay, Shopify, Etsy, Walmart, Taobao, JD, Shopee et plus. Recadage, compression, filigrane, téléchargement ZIP. 100% local.",
+      "seo": {
+        "intro": "Ce proceseur d'images ecommerce gratuit aide les vendeurs à redimensionner, recadrer, compresser et ajouter des filigranes aux images de produits pour répondre aux exigences des principales plateformes ecommerce mondiales. Comprend Amazon, eBay, Shopify, Etsy, Walmart, TikTok Shop, Taobao, JD, Pinduoduo, RedNote, Shopee, Lazada, Mercado Libre et plus. Traitement 100% local.",
+        "scenarios": [
+          "Préparer les images de produits pour plusieurs plateformes simultanément",
+          "Compresser par lots pour respecter les limites de taille des plateformes",
+          "Ajouter des filigranes pour protéger les images",
+          "Redimensionner et recadrer selon les modèles spécifiques",
+          "Convertir entre les formats JPG, PNG et WebP"
+        ],
+        "advantages": [
+          "Prend en charge plus de 14 plateformes ecommerce mondiales",
+          "Traitement par lots avec téléchargement ZIP en un clic",
+          "Compression intelligente adaptée aux limites des plateformes",
+          "Filigrane personnalisable (position, taille, opacité, couleur)",
+          "100% local — les images ne sont jamais téléchargées",
+          "Gratuit à vie, sans filigrane ni limite d'utilisation"
+        ],
+        "faqs": [
+          {
+            "q": "Quelles plateformes sont prises en charge ?",
+            "a": "Nous prenons en charge plus de 14 plateformes majeures : Amazon, eBay, Shopify, Etsy, Walmart, TikTok Shop, Taobao, JD.com, Pinduoduo, RedNote, Shopee, Lazada, Mercado Libre et une option personnalisée."
+          },
+          {
+            "q": "Mes images seront-elles téléchargées sur un serveur ?",
+            "a": "Non. Tout le traitement se fait localement dans votre navigateur."
+          },
+          {
+            "q": "Comment fonctionne la compression intelligente ?",
+            "a": "L'outil ajuste automatiquement la qualité JPEG par recherche binaire pour trouver le meilleur niveau respectant la limite de taille."
+          },
+          {
+            "q": "Puis-je ajouter mon propre filigrane ?",
+            "a": "Oui. Vous pouvez ajouter des filigranes de texte personnalisés avec position, taille, opacité et couleur réglables."
+          },
+          {
+            "q": "Quels formats d'image sont pris en charge ?",
+            "a": "Vous pouvez télécharger des images JPG, PNG et WebP. Le format de sortie est défini automatiquement."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

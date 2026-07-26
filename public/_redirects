@@ -13,11 +13,16 @@ http://www.korelyy.com/*     https://korelyy.com/:splat    308
 /ByteDanceVerify*    /ByteDanceVerify.html    200
 
 # ---------- Legacy dead links (6 languages) ----------
-# go 是旧外链跳转入口，已下线，转到工具列表
-# compare 路由已启用真实对比页面，不再重定向
+# compare / go 是旧外链跳转入口，已下线，转到工具列表
+/zh/compare*   /zh/tools/          301
 /zh/go*        /zh/tools/          301
+/en/compare*   /en/tools/          301
 /en/go*        /en/tools/          301
+/es/compare*   /es/tools/          301
 /es/go*        /es/tools/          301
+/fr/compare*   /fr/tools/          301
 /fr/go*        /fr/tools/          301
+/hi/compare*   /hi/tools/          301
 /hi/go*        /hi/tools/          301
+/ar/compare*   /ar/tools/          301
 /ar/go*        /ar/tools/          301
