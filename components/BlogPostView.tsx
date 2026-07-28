@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import type { SeoLocale } from '@/components/seo';
 import { getLocalizedText, getBlogReadingTime } from '@/data/blog-shared';
 import type { BlogPost, BlogContentBlock } from '@/data/blog-shared';
+import { getBlogPostIndexBySlug } from '@/data/blog-index';
 import BlogContentRenderer from '@/components/BlogContentRenderer';
 import BlogPostCard from '@/components/BlogPostCard';
 import BlogToc from '@/components/BlogToc';
@@ -38,6 +39,7 @@ function buildPost(
 }
 
 export default function BlogPostView({ locale, slug, title: titleProp }: Props) {
+  const computedTitle = titleProp || getBlogPostIndexBySlug(slug)?.title?.[locale] || 'Korelyy Blog';
   const [post, setPost] = useState<BlogPost | null>(null);
   const [helpers, setHelpers] = useState<Helpers | null>(null);
   const [sortedIndex, setSortedIndex] = useState<any[]>([]);
@@ -225,9 +227,9 @@ export default function BlogPostView({ locale, slug, title: titleProp }: Props) 
           <div className="min-w-0">
             <div className="border-b border-gray-200/70 dark:border-gray-800/70 pb-6 sm:pb-8 mb-6 sm:mb-8">
               <div className="h-5 w-40 rounded-full bg-gray-200 dark:bg-gray-800 animate-pulse mb-4" />
-              {titleProp ? (
+              {computedTitle ? (
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-3 break-words">
-                  {titleProp}
+                  {computedTitle}
                 </h1>
               ) : (
                 <div className="h-7 sm:h-9 w-11/12 rounded bg-gray-300 dark:bg-gray-700 animate-pulse mb-3" />
