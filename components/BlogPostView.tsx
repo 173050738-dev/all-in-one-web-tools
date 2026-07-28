@@ -24,7 +24,7 @@ const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default
 interface Props {
   locale: SeoLocale;
   slug: string;
-  title?: string;
+  title: string;
 }
 
 type Helpers = typeof import('@/data/blog-shared');

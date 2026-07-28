@@ -29,7 +29,7 @@ export async function generateMetadata({
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const idx = getBlogPostIndexBySlug(params.slug);
-  const title = idx?.title?.[LOCALE] || '';
+  const title = idx?.title?.[LOCALE] || 'कोरेली ब्लॉग';
   return (
     <>
       <BlogPostJsonLd locale={LOCALE} slug={params.slug} />
