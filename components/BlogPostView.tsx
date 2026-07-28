@@ -24,6 +24,7 @@ const AdSlot = dynamic(() => import('@/components/AdSlot').then((m) => m.default
 interface Props {
   locale: SeoLocale;
   slug: string;
+  title?: string;
 }
 
 type Helpers = typeof import('@/data/blog-shared');
@@ -36,7 +37,7 @@ function buildPost(
   return { ...idx, content: content || [] };
 }
 
-export default function BlogPostView({ locale, slug }: Props) {
+export default function BlogPostView({ locale, slug, title: titleProp }: Props) {
   const [post, setPost] = useState<BlogPost | null>(null);
   const [helpers, setHelpers] = useState<Helpers | null>(null);
   const [sortedIndex, setSortedIndex] = useState<any[]>([]);
@@ -224,7 +225,13 @@ export default function BlogPostView({ locale, slug }: Props) {
           <div className="min-w-0">
             <div className="border-b border-gray-200/70 dark:border-gray-800/70 pb-6 sm:pb-8 mb-6 sm:mb-8">
               <div className="h-5 w-40 rounded-full bg-gray-200 dark:bg-gray-800 animate-pulse mb-4" />
-              <div className="h-7 sm:h-9 w-11/12 rounded bg-gray-300 dark:bg-gray-700 animate-pulse mb-3" />
+              {titleProp ? (
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-3 break-words">
+                  {titleProp}
+                </h1>
+              ) : (
+                <div className="h-7 sm:h-9 w-11/12 rounded bg-gray-300 dark:bg-gray-700 animate-pulse mb-3" />
+              )}
               <div className="h-5 w-9/12 rounded bg-gray-200 dark:bg-gray-800 animate-pulse mb-5" />
               <div className="h-10 w-72 rounded-full bg-gray-200 dark:bg-gray-800 animate-pulse" />
             </div>

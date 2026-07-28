@@ -5,6 +5,7 @@ import {
   type SeoLocale,
 } from '@/components/seo';
 import { getAllBlogSlugs } from '@/data/blog';
+import { getBlogPostIndexBySlug } from '@/data/blog-index';
 import { TOP_BLOG_SLUGS } from '@/lib/topSlugs';
 import BlogPostView from '@/components/BlogPostView';
 
@@ -27,10 +28,12 @@ export async function generateMetadata({
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const idx = getBlogPostIndexBySlug(params.slug);
+  const title = idx?.title?.[LOCALE] || '';
   return (
     <>
       <BlogPostJsonLd locale={LOCALE} slug={params.slug} />
-      <BlogPostView locale={LOCALE} slug={params.slug} />
+      <BlogPostView locale={LOCALE} slug={params.slug} title={title} />
     </>
   );
 }

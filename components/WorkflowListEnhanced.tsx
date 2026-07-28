@@ -711,7 +711,7 @@ export default function WorkflowListEnhanced({ locale }: { locale: string }) {
   const [showCreator, setShowCreator] = useState(false);
   const [showCreatorCanvas, setShowCreatorCanvas] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(true);
 
   const [difficulty, setDifficulty] = useState<DifficultyFilter>('all');
   const [time, setTime] = useState<TimeFilter>('all');

@@ -34,7 +34,7 @@ const SITE_META = {
     siteName: 'Korelyy Tools',
     homeTitle: 'Korelyy Tool Hub — Online Tools',
     homeDescription:
-      'Discover 100+ free online tools for developers, creators and businesses: image editing, PDF, QR codes, AI prompts, passwords, text utilities and more. No signup, private, works on all devices. 6 languages supported.',
+      'Free online tools: Regex Tester, Emoji Mixer, Password Generator, QR Code, JSON Formatter. No signup, secure, works instantly in your browser.',
   },
   zh: {
     siteName: 'Korelyy 工具库',
@@ -46,7 +46,7 @@ const SITE_META = {
     siteName: 'Korelyy Herramientas',
     homeTitle: 'Korelyy — Herramientas en línea',
     homeDescription:
-      'Más de 100 herramientas en línea gratuitas: edición de imágenes, PDF, códigos QR, IA, contraseñas, utilidades de texto y más. Sin registro, privado, funciona en todos los dispositivos. 6 idiomas.',
+      'Herramientas online gratis: Mezclador de Emojis, Prueba de Regex, Generador de Contraseñas, QR, Formateador JSON. Sin registro, seguro.',
   },
   hi: {
     siteName: 'Korelyy टूल हब',
@@ -58,7 +58,7 @@ const SITE_META = {
     siteName: 'Korelyy Outils',
     homeTitle: 'Korelyy — Outils en ligne',
     homeDescription:
-      "Plus de 100 outils en ligne gratuits : retouche d'images, PDF, QR codes, IA, mots de passe, utilitaires texte, etc. Sans inscription, privé, compatible tous appareils. 6 langues.",
+      '100+ outils en ligne gratuits : image, PDF, QR codes, IA, mots de passe, texte. Sans inscription, privé, tous appareils.',
   },
   ar: {
     siteName: 'كورلي لأدوات الويب',
@@ -599,7 +599,7 @@ function buildInjection({ locale, name, description, canonical, pathWithoutLocal
   const alt = escapeForHtml((ogImageAlt || name) + OG_IMAGE_ALT_SUFFIX);
   const hfl = pathWithoutLocale ? buildHreflang(pathWithoutLocale) : '';
   const robotsBlock = buildRobotsMeta(noindex);
-  const globalLd = buildGlobalOrgAndWebSiteJsonLd();
+  const globalLd = '';
   const webpageLd = buildWebPageJsonLd({ locale: locale || 'en', name: title, description: desc, canonical });
   const breadcrumbLd = (!skipBreadcrumb && !skipToolJsonLd && pathWithoutLocale)
     ? buildBreadcrumbList(locale || 'en', pathWithoutLocale, name)

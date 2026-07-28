@@ -106,7 +106,7 @@ export const SITE_META_BAREMAP: Record<
     siteName: 'Korelyy Tools',
     homeTitle: 'Free Online Tools — Regex Tester, Emoji Mixer & More | Korelyy',
     homeDescription:
-      'Free online tools for developers: Regex Tester, Emoji Mixer, Password Generator, QR Code Creator, JSON Formatter and more. No signup, private & secure, works instantly in your browser.',
+      'Free online tools: Regex Tester, Emoji Mixer, Password Generator, QR Code, JSON Formatter. No signup, secure, works instantly in your browser.',
     homeKeywords: [
       'free online tools',
       'web tools',
@@ -150,7 +150,7 @@ export const SITE_META_BAREMAP: Record<
     siteName: 'Korelyy Herramientas',
     homeTitle: 'Herramientas en línea gratuitas — Mezclador de Emojis, Prueba de Regex | Korelyy',
     homeDescription:
-      'Herramientas en línea gratuitas: Mezclador de Emojis, Prueba de Regex, Generador de Contraseñas, Creador de QR, Formateador JSON y más. Sin registro, privado y seguro.',
+      'Herramientas online gratis: Mezclador de Emojis, Prueba de Regex, Generador de Contraseñas, QR, Formateador JSON. Sin registro, seguro.',
     homeKeywords: [
       'herramientas online gratis',
       'herramientas web',
@@ -189,7 +189,7 @@ export const SITE_META_BAREMAP: Record<
     siteName: 'Korelyy Outils',
     homeTitle: 'Korelyy — Outils en ligne',
     homeDescription:
-      'Plus de 100 outils en ligne gratuits : retouche d\u2019images, PDF, QR codes, IA, mots de passe, utilitaires texte, etc. Sans inscription, privé, compatible tous appareils. 6 langues.',
+      '100+ outils en ligne gratuits : image, PDF, QR codes, IA, mots de passe, texte. Sans inscription, privé, tous appareils.',
     homeKeywords: [
       'outils en ligne gratuits',
       'outils web',
