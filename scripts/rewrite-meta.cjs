@@ -528,13 +528,6 @@ function buildSoftwareApplicationJsonLd({ locale, slug, name, description, canon
     applicationSubCategory: toolInfo?.category || 'Utilities',
     screenshot: OG_IMAGE_ABS,
     thumbnailUrl: OG_IMAGE_ABS,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: toolInfo?.likes ? Math.min(5, 4.0 + Math.log10(toolInfo.likes) * 0.2).toFixed(1) : '4.7',
-      ratingCount: toolInfo?.likes || 1000,
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 }
 

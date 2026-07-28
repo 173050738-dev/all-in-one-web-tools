@@ -885,12 +885,6 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     featureList,
     audience: { '@type': 'Audience', audienceType: audienceText },
     targetAudience: { '@type': 'Audience', audienceType: audienceText },
-    contentRating: {
-      '@type': 'Rating',
-      ratingValue: 'All ages',
-      bestRating: 'General audience',
-      author: { '@type': 'Organization', name: 'Korelyy Safety' },
-    },
     brand: {
       '@type': 'Brand',
       name: brandName,
@@ -912,14 +906,6 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     privacyPolicy: `${SITE_URL}/${l}/privacy/`,
     termsOfService: `${SITE_URL}/${l}/terms/`,
     isFamilyFriendly: true,
-    aggregateRating: tool.likes && tool.likes > 0
-      ? {
-          '@type': 'AggregateRating',
-          ratingValue: '4.7',
-          bestRating: '5',
-          ratingCount: tool.likes,
-        }
-      : undefined,
     softwareVersion: '2026.7',
     screenshot: OG_IMAGE_ABS,
   };
