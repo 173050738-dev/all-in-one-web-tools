@@ -774,7 +774,7 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
       { '@type': 'ListItem', position: 2, name: categoryName, item: `${SITE_URL}/${l}/tools/` },
-      { '@type': 'ListItem', position: 3, name, item: canonical },
+      { '@type': 'ListItem', position: 3, name },
     ],
   };
 
@@ -1140,7 +1140,7 @@ export function BlogIndexJsonLd(props: { locale: SeoLocale }): React.ReactElemen
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
-      { '@type': 'ListItem', position: 2, name: blogBreadcrumbName, item: canonical },
+      { '@type': 'ListItem', position: 2, name: blogBreadcrumbName },
     ],
   };
 
@@ -1210,7 +1210,7 @@ export function BlogPostJsonLd(props: { locale: SeoLocale; slug: string }): Reac
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
       { '@type': 'ListItem', position: 2, name: blogBreadcrumbName, item: `${SITE_URL}/${l}/blog/` },
-      { '@type': 'ListItem', position: 3, name: postTitle, item: postCanonical },
+      { '@type': 'ListItem', position: 3, name: postTitle },
     ],
   };
 
@@ -1385,7 +1385,7 @@ export function WorkflowsIndexJsonLd(props: { locale: SeoLocale }): React.ReactE
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
-      { '@type': 'ListItem', position: 2, name: workflowsBreadcrumbName, item: canonical },
+      { '@type': 'ListItem', position: 2, name: workflowsBreadcrumbName },
     ],
   };
 
@@ -1563,7 +1563,7 @@ export function WorkflowDetailJsonLd(props: {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
       { '@type': 'ListItem', position: 2, name: indexBreadcrumbName, item: `${SITE_URL}/${l}/workflows/` },
-      { '@type': 'ListItem', position: 3, name: wfTitle, item: canonical },
+      { '@type': 'ListItem', position: 3, name: wfTitle },
     ],
   };
 
@@ -2090,7 +2090,7 @@ export function NewsIndexJsonLd(props: { locale: SeoLocale }): React.ReactElemen
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
-      { '@type': 'ListItem', position: 2, name: newsBreadcrumbName, item: canonical },
+      { '@type': 'ListItem', position: 2, name: newsBreadcrumbName },
     ],
   };
 
@@ -2162,7 +2162,7 @@ export function NewsIssueJsonLd(props: { locale: SeoLocale; slug: string }): Rea
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: homeBreadcrumbName, item: `${SITE_URL}/${l}/` },
       { '@type': 'ListItem', position: 2, name: newsBreadcrumbName, item: `${SITE_URL}/${l}/news/` },
-      { '@type': 'ListItem', position: 3, name: issueTitle, item: issueCanonical },
+      { '@type': 'ListItem', position: 3, name: issueTitle },
     ],
   };
 

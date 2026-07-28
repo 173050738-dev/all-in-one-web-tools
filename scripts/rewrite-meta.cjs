@@ -238,14 +238,27 @@ function buildBreadcrumbList(locale, pathWithoutLocale, finalName) {
     name: map.home || 'Home',
     item: `${base}/${locale}/`,
   });
+  // Special segment mapping: segment -> { labelKey, href }
+  const SPECIAL_MAP = {
+    tool:     { label: map.tools     || 'Tools',     href: `${base}/${locale}/tools/` },
+    workflow: { label: map.workflows || 'Workflows', href: `${base}/${locale}/workflows/` },
+    blog:     { label: map.blog      || 'Blog',      href: `${base}/${locale}/blog/` },
+    news:     { label: map.news      || 'News',      href: `${base}/${locale}/news/` },
+    about:    { label: map.about     || 'About',     href: `${base}/${locale}/about/` },
+    contact:  { label: map.contact   || 'Contact',   href: `${base}/${locale}/contact/` },
+    privacy:  { label: map.privacy   || 'Privacy',   href: `${base}/${locale}/privacy/` },
+    terms:    { label: map.terms     || 'Terms',     href: `${base}/${locale}/terms/` },
+    templates:{ label: map.templates || 'Templates', href: `${base}/${locale}/templates/` },
+    ideas:    { label: map.ideas     || 'Ideas',     href: `${base}/${locale}/ideas/` },
+  };
   // intermediate segments
   let acc = '';
   for (let i = 0; i < segments.length - 1; i++) {
     const seg = segments[i];
     acc += '/' + seg;
-    const name = slugToLabel(locale, seg);
-    // if segment is 'tool' -> link to /tools/ 更合理
-    const href = seg === 'tool' ? `${base}/${locale}/tools/` : `${base}/${locale}${acc}/`;
+    const special = SPECIAL_MAP[seg];
+    const name = special ? special.label : slugToLabel(locale, seg);
+    const href = special ? special.href : `${base}/${locale}${acc}/`;
     items.push({
       '@type': 'ListItem',
       position: items.length + 1,
@@ -253,20 +266,19 @@ function buildBreadcrumbList(locale, pathWithoutLocale, finalName) {
       item: href,
     });
   }
-  // final position
+  // final position — no item URL for last item (current page)
   const finalSegment = segments[segments.length - 1];
   if (segments.length === 0) {
-    // Home page: 只有一条 Home（不重复）
+    // Home page: only Home (no duplicate)
   } else {
     const last = items.length + 1;
     const name = (finalName && typeof finalName === 'string' && finalName.trim()) || slugToLabel(locale, finalSegment || '');
-    const href = `${base}/${locale}/${segments.join('/')}/`;
-    items.push({
+    const lastItem = {
       '@type': 'ListItem',
       position: last,
       name,
-      item: href,
-    });
+    };
+    items.push(lastItem);
   }
   const jsonld = {
     '@context': 'https://schema.org',
@@ -576,7 +588,7 @@ function buildBlogPostingJsonLd({ locale, slug, canonical, post }) {
   };
 }
 
-function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, ogType, noindex = false }) {
+function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, ogType, noindex = false, skipBreadcrumb = false }) {
   let title, desc;
   if (titleMode === 'plain') {
     const siteName = SITE_META[locale]?.siteName || 'Korelyy Tools';
@@ -595,7 +607,7 @@ function buildInjection({ locale, name, description, canonical, pathWithoutLocal
   const robotsBlock = buildRobotsMeta(noindex);
   const globalLd = buildGlobalOrgAndWebSiteJsonLd();
   const webpageLd = buildWebPageJsonLd({ locale: locale || 'en', name: title, description: desc, canonical });
-  const breadcrumbLd = pathWithoutLocale
+  const breadcrumbLd = (!skipBreadcrumb && pathWithoutLocale)
     ? buildBreadcrumbList(locale || 'en', pathWithoutLocale, name)
     : '';
   let softwareLd = '';
@@ -700,6 +712,8 @@ for (const l of SUPPORTED_LOCALES) {
     const canonical = BASE_URL.replace(/\/$/, '') + '/' + l + '/tool/' + slug + '/';
     const noindex = NOINDEX_TOOLS.includes(slug);
     if (noindex) noindexApplied++;
+    let html = fs.readFileSync(file, 'utf8');
+    const hasExistingBreadcrumb = html.includes('"@type":"BreadcrumbList"');
     const injection = buildInjection({
       locale: l,
       slug,
@@ -711,8 +725,8 @@ for (const l of SUPPORTED_LOCALES) {
       toolInfo,
       faqs: faqItems,
       noindex,
+      skipBreadcrumb: hasExistingBreadcrumb,
     });
-    let html = fs.readFileSync(file, 'utf8');
     let next = replaceHead(html, injection);
 
     // ===== Visible text i18n patch (prerender fallback: prerender renders ZH
@@ -896,6 +910,8 @@ for (const l of SUPPORTED_LOCALES) {
     const canonical = BASE_URL.replace(/\/$/, '') + '/' + l + relPath;
     // pathWithoutLocale for hreflang
     const pathForHreflang = relPath === '/' ? '/' : relPath;
+    const html = fs.readFileSync(filePath, 'utf8');
+    const hasExistingBreadcrumb = html.includes('"@type":"BreadcrumbList"');
     const injection = buildInjection({
       locale: l,
       name: meta.title.replace(/\s*\|[^|]*$/, '').trim() || SITE_META[l].siteName,
@@ -903,8 +919,8 @@ for (const l of SUPPORTED_LOCALES) {
       canonical,
       pathWithoutLocale: pathForHreflang,
       ogImageAlt: SITE_META[l].siteName,
+      skipBreadcrumb: hasExistingBreadcrumb,
     });
-    const html = fs.readFileSync(filePath, 'utf8');
     const next = replaceHead(html, injection);
     fs.writeFileSync(filePath, next, 'utf8');
     nonToolWritten++;
@@ -941,6 +957,8 @@ for (const l of SUPPORTED_LOCALES) {
     const blogLd = blogPosting
       ? `<script type="application/ld+json">${JSON.stringify(blogPosting)}</script>\n`
       : '';
+    let html = fs.readFileSync(filePath, 'utf8');
+    const hasExistingBreadcrumb = html.includes('"@type":"BreadcrumbList"');
     const injection = buildInjection({
       locale: l,
       slug: post.slug,
@@ -951,8 +969,8 @@ for (const l of SUPPORTED_LOCALES) {
       ogImageAlt: title,
       titleMode: 'plain',
       ogType: 'article',
+      skipBreadcrumb: hasExistingBreadcrumb,
     });
-    let html = fs.readFileSync(filePath, 'utf8');
     let next = replaceHead(html, injection);
     if (blogLd) {
       next = next.replace('<!-- /SEO:static-injected -->', blogLd + '<!-- /SEO:static-injected -->');
