@@ -277,6 +277,7 @@ function buildBreadcrumbList(locale, pathWithoutLocale, finalName) {
       '@type': 'ListItem',
       position: last,
       name,
+      item: `${base}/${locale}${pathWithoutLocale}/`,
     };
     items.push(lastItem);
   }
@@ -581,7 +582,7 @@ function buildBlogPostingJsonLd({ locale, slug, canonical, post }) {
   };
 }
 
-function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, ogType, noindex = false, skipBreadcrumb = false }) {
+function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, ogType, noindex = false, skipBreadcrumb = false, skipToolJsonLd = false }) {
   let title, desc;
   if (titleMode === 'plain') {
     const siteName = SITE_META[locale]?.siteName || 'Korelyy Tools';
@@ -600,16 +601,16 @@ function buildInjection({ locale, name, description, canonical, pathWithoutLocal
   const robotsBlock = buildRobotsMeta(noindex);
   const globalLd = buildGlobalOrgAndWebSiteJsonLd();
   const webpageLd = buildWebPageJsonLd({ locale: locale || 'en', name: title, description: desc, canonical });
-  const breadcrumbLd = (!skipBreadcrumb && pathWithoutLocale)
+  const breadcrumbLd = (!skipBreadcrumb && !skipToolJsonLd && pathWithoutLocale)
     ? buildBreadcrumbList(locale || 'en', pathWithoutLocale, name)
     : '';
   let softwareLd = '';
   let faqLd = '';
-  if (toolInfo) {
+  if (toolInfo && !skipToolJsonLd) {
     const sa = buildSoftwareApplicationJsonLd({ locale, slug, name, description: desc, canonical, toolInfo });
     softwareLd = `<script type="application/ld+json">${JSON.stringify(sa)}</script>\n`;
   }
-  if (faqs && Array.isArray(faqs) && faqs.length > 0) {
+  if (faqs && Array.isArray(faqs) && faqs.length > 0 && !skipToolJsonLd) {
     const f = buildFaqJsonLd(faqs);
     faqLd = `<script type="application/ld+json">${JSON.stringify(f)}</script>\n`;
   }
@@ -707,6 +708,8 @@ for (const l of SUPPORTED_LOCALES) {
     if (noindex) noindexApplied++;
     let html = fs.readFileSync(file, 'utf8');
     const hasExistingBreadcrumb = html.includes('"@type":"BreadcrumbList"');
+    const hasExistingSoftwareApp = html.includes('"@type":"SoftwareApplication"');
+    const skipToolJsonLd = hasExistingBreadcrumb && hasExistingSoftwareApp;
     const injection = buildInjection({
       locale: l,
       slug,
@@ -719,6 +722,7 @@ for (const l of SUPPORTED_LOCALES) {
       faqs: faqItems,
       noindex,
       skipBreadcrumb: hasExistingBreadcrumb,
+      skipToolJsonLd,
     });
     let next = replaceHead(html, injection);
 
