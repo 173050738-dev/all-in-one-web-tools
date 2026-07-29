@@ -33,36 +33,42 @@ const SITE_META = {
   en: {
     siteName: 'Korelyy Tools',
     homeTitle: 'Korelyy Tool Hub — Online Tools',
+    toolsTitle: 'All Online Tools - Korelyy Tools',
     homeDescription:
       'Free online tools: Regex Tester, Emoji Mixer, Password Generator, QR Code, JSON Formatter. No signup, secure, works instantly in your browser.',
   },
   zh: {
     siteName: 'Korelyy 工具库',
     homeTitle: 'Korelyy 工具库 - 在线工具聚合平台',
+    toolsTitle: '全部在线工具 - Korelyy 工具库',
     homeDescription:
       '100+ 免费在线工具：开发工具、图片处理、PDF 合并、二维码生成、AI 提示词、密码生成、文本处理、世界杯主题工具等。本地处理，隐私安全，无需注册，6 种语言全端适配。',
   },
   es: {
     siteName: 'Korelyy Herramientas',
     homeTitle: 'Korelyy — Herramientas en línea',
+    toolsTitle: 'Todas las herramientas en línea - Korelyy',
     homeDescription:
       'Herramientas online gratis: Mezclador de Emojis, Prueba de Regex, Generador de Contraseñas, QR, Formateador JSON. Sin registro, seguro.',
   },
   hi: {
     siteName: 'Korelyy टूल हब',
     homeTitle: 'ऑनलाइन टूल्स | Korelyy',
+    toolsTitle: 'सभी ऑनलाइन टूल्स - Korelyy टूल हब',
     homeDescription:
       'डेवलपर्स, क्रिएटर्स और व्यवसायों के लिए 100+ मुफ्त ऑनलाइन टूल्स: इमेज एडिटिंग, PDF, QR कोड, AI प्रॉम्प्ट, पासवर्ड, टेक्स्ट यूटिलिटीज और बहुत कुछ। बिना साइनअप के, 6 भाषाएं।',
   },
   fr: {
     siteName: 'Korelyy Outils',
     homeTitle: 'Korelyy — Outils en ligne',
+    toolsTitle: 'Tous les outils en ligne - Korelyy',
     homeDescription:
       '100+ outils en ligne gratuits : image, PDF, QR codes, IA, mots de passe, texte. Sans inscription, privé, tous appareils.',
   },
   ar: {
     siteName: 'كورلي لأدوات الويب',
     homeTitle: 'كورلي — أدوات عبر الإنترنت',
+    toolsTitle: 'جميع الأدوات عبر الإنترنت - كورلي',
     homeDescription:
       'أكثر من 100 أداة مجانية عبر الإنترنت لمطوّري البرمجيات والمبدعين والشركات: تحرير الصور، PDF، أكواد QR، ذكاء اصطناعي، كلمات مرور، أدوات نصية والمزيد. بدون تسجيل. 6 لغات.',
   },
@@ -582,9 +588,12 @@ function buildBlogPostingJsonLd({ locale, slug, canonical, post }) {
   };
 }
 
-function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, ogType, noindex = false, skipBreadcrumb = false, skipToolJsonLd = false }) {
+function buildInjection({ locale, name, description, canonical, pathWithoutLocale, ogImageAlt, toolInfo, faqs, slug, titleMode, titleOverride, ogType, noindex = false, skipBreadcrumb = false, skipToolJsonLd = false }) {
   let title, desc;
-  if (titleMode === 'plain') {
+  if (titleOverride) {
+    title = titleOverride;
+    desc = description || SITE_META[locale]?.homeDescription || '';
+  } else if (titleMode === 'plain') {
     const siteName = SITE_META[locale]?.siteName || 'Korelyy Tools';
     title = name + ' | ' + siteName;
     desc = description || SITE_META[locale]?.homeDescription || '';
@@ -871,10 +880,11 @@ function resolveNonToolMeta(locale, p) {
     const fullTrans = JSON.parse(
       fs.readFileSync(path.join(ROOT, 'public', 'locales', locale, 'translation.json'), 'utf8')
     );
-    if (p === '/' || p === '/tools/') {
-      title = base.homeTitle;
-      description = base.homeDescription;
-      return { title, description };
+    if (p === '/') {
+      return { title: base.homeTitle, description: base.homeDescription };
+    }
+    if (p === '/tools/') {
+      return { title: base.toolsTitle, description: base.homeDescription };
     }
     if (keyPath) {
       title = readJsonPath(fullTrans, keyPath.join('.'));
@@ -912,6 +922,7 @@ for (const l of SUPPORTED_LOCALES) {
     const injection = buildInjection({
       locale: l,
       name: meta.title.replace(/\s*\|[^|]*$/, '').trim() || SITE_META[l].siteName,
+      titleOverride: meta.title,
       description: meta.description,
       canonical,
       pathWithoutLocale: pathForHreflang,
