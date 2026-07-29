@@ -950,10 +950,6 @@ for (const l of SUPPORTED_LOCALES) {
     const siteName = SITE_META[l]?.siteName || 'Korelyy Tools';
     const fullTitle = title + ' | ' + siteName;
     const canonical = BASE_URL.replace(/\/$/, '') + '/' + l + '/blog/' + post.slug + '/';
-    const blogPosting = buildBlogPostingJsonLd({ locale: l, slug: post.slug, canonical, post });
-    const blogLd = blogPosting
-      ? `<script type="application/ld+json">${JSON.stringify(blogPosting)}</script>\n`
-      : '';
     let html = fs.readFileSync(filePath, 'utf8');
     const hasExistingBreadcrumb = html.includes('"@type":"BreadcrumbList"');
     const injection = buildInjection({
@@ -969,9 +965,6 @@ for (const l of SUPPORTED_LOCALES) {
       skipBreadcrumb: hasExistingBreadcrumb,
     });
     let next = replaceHead(html, injection);
-    if (blogLd) {
-      next = next.replace('<!-- /SEO:static-injected -->', blogLd + '<!-- /SEO:static-injected -->');
-    }
     fs.writeFileSync(filePath, next, 'utf8');
     blogWritten++;
   }

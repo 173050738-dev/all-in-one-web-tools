@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import {
   workflowsIndexGenerateMetadataSync,
   WorkflowsIndexJsonLd,
-  PageBreadcrumbJsonLd,
   type SeoLocale,
 } from '@/components/seo';
 import ClientPage from './client';
@@ -29,13 +28,6 @@ export function generateMetadata(): Metadata {
 export default function StaticPage() {
   return (
     <>
-      <PageBreadcrumbJsonLd
-        locale={LOCALE}
-        segments={[
-          { name: HOME_BREADCRUMB[LOCALE], path: '/' },
-          { name: SELF_BREADCRUMB_NAME, path: '/workflows' },
-        ]}
-      />
       <WorkflowsIndexJsonLd locale={LOCALE} />
       <ClientPage />
     </>
