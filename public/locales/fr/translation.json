@@ -8890,6 +8890,156 @@
           }
         ]
       }
+    },
+    "wave-art": {
+      "name": "Générateur d'Art d'Onde Vocale",
+      "description": "Transformez n'importe quel nom ou phrase en une pièce unique d'art visuel d'onde sonore. Chaque caractère correspond à sa propre fréquence, amplitude et phase. Choisissez entre lignes minimalistes, lueur néon et spectre radio. Superposez plusieurs noms, sélectionnez une palette et exportez en PNG — parfait pour avatars, tatouages, cadeaux de couple ou décor mural.",
+      "seo": {
+        "intro": "Le Générateur d'Art d'Onde Vocale est un outil gratuit basé sur le navigateur qui convertit un texte — un nom, un mot, une date ou une phrase complète — en un art visuel unique de type onde sonore. Comme chaque caractère produit une forme d'onde distincte, aucune pièce n'est identique à une autre. Tout s'exécute entièrement sur votre appareil : rien n'est téléchargé vers un serveur et aucun compte n'est requis.",
+        "scenarios": [
+          "Avatars personnalisés et photos de profil pour les réseaux sociaux, applications de rencontre ou comptes professionnels.",
+          "Cadeaux de couple ou en famille — superposez deux ou trois noms sur une même toile et imprimez-la comme tableau, mug ou référence pour un bijou.",
+          "Référence artistique pour tatouage : imprimez le motif d'onde produit par votre nom et emportez-le chez votre artiste.",
+          "Identité visuelle pour créateurs indépendants, podcasteurs ou musiciens — une identité visuelle façonnée à partir de votre propre slogan.",
+          "Cadeaux chargés de sens pour anniversaires, mariages, diplômes ou naissances, avec un nom ou une date de naissance en entrée."
+        ],
+        "tutorial": [
+          "Étape 1 : Saisissez le nom, le mot ou la phrase à transformer en art d'onde dans le champ de saisie principal.",
+          "Étape 2 : Choisissez un style — Minimaliste (lignes fines épurées), Néon (lueur sur fond sombre) ou Spectre (barres de radiofréquence).",
+          "Étape 3 : Sélectionnez l'une des palettes de couleurs prédéfinies. Chaque style dispose de ses propres palettes soignées.",
+          "Étape 4 (facultatif) : Activez le mode Superposition et ajoutez un deuxième ou troisième nom pour combiner plusieurs ondes sur une même toile. Ajustez l'opacité indépendante de chaque couche.",
+          "Étape 5 : Cliquez sur Exporter PNG pour télécharger une image haute résolution, transparente ou opaque, prête à imprimer, publier ou partager."
+        ],
+        "advantages": [
+          "100 % côté client. Votre texte et l'œuvre générée ne quittent jamais votre navigateur — aucun envoi, aucun suivi, aucun filigrane.",
+          "Déterministe par caractère. Le même nom produit toujours la même onde, donc la pièce est reproductible et partageable.",
+          "Trois styles artistiques distincts et cinq palettes soignées, offrant plus de 15 directions visuelles par saisie.",
+          "Superposition de jusqu'à trois noms avec contrôle d'opacité indépendant pour des pièces de couple, de famille ou d'équipe.",
+          "Export PNG haute résolution aux tailles adaptées à l'impression. Aucun abonnement payant pour débloquer la qualité de téléchargement."
+        ],
+        "faqs": [
+          {
+            "q": "Le Générateur d'Art d'Onde Vocale est-il gratuit ?",
+            "a": "Oui. Toutes les fonctions essentielles — tous les styles, toutes les palettes, le mode superposition et l'export PNG — sont définitivement gratuits, sans inscription, sans filigrane, sans mur de paiement caché."
+          },
+          {
+            "q": "Dois-je créer un compte ?",
+            "a": "Non. Vous pouvez utiliser l'outil complet instantanément depuis n'importe quel navigateur moderne sur téléphone, tablette ou ordinateur. Pas d'e-mail, pas de connexion, pas de cookie de suivi."
+          },
+          {
+            "q": "Mon texte et mes données restent-ils privés ?",
+            "a": "Oui. Le Générateur d'Art d'Onde Vocale s'exécute entièrement dans votre navigateur lorsque c'est techniquement possible. Tout le traitement du texte, du rendu et de l'export se fait sur votre propre appareil. Rien n'est envoyé à nos serveurs et il n'y a aucun cookie de suivi."
+          },
+          {
+            "q": "Quels appareils et navigateurs sont pris en charge ?",
+            "a": "Fonctionne sur tous les navigateurs modernes (Chrome, Edge, Safari, Firefox) sous Windows, macOS, iOS et Android. L'export PNG est pris en charge sur l'ensemble. Les commandes tactiles sont optimisées pour le mobile."
+          },
+          {
+            "q": "Le même nom donnera-t-il toujours un rendu identique ?",
+            "a": "Oui. La mathématique de la forme d'onde est déterministe par caractère. Tant que le texte d'entrée, le style et la palette sont identiques, le résultat est reproductible partout — parfait pour des cadeaux assortis ou des références de tatouage."
+          }
+        ]
+      }
+    },
+    "life-weeks": {
+      "name": "Visualiseur de Vie en Semaines",
+      "description": "Entrez votre date de naissance et découvrez une grille de 4 000 semaines qui représente toute votre vie. Les semaines déjà vécues sont coloriées, celles qui restent sont vides. Ajustez l'espérance de vie, choisissez une couleur de remplissage, exportez en PNG. Une visualisation simple qui frappe l'esprit et se partage énormément.",
+      "seo": {
+        "intro": "Le Visualiseur de Vie en Semaines est un outil gratuit pour navigateur qui vous montre toute l'étendue de votre vie sous forme d'une seule grille d'environ 4 000 cellules — une case par semaine. Beaucoup la décrivent à la fois comme un coup de gueule salutaire, un puissant moteur de motivation et une source de calme étrange. Comme tous les outils Korelyy, il fonctionne localement dans votre navigateur, sans envoi de données et sans inscription.",
+        "scenarios": [
+          "Réflexion personnelle et définition d'objectifs : voyez les semaines restantes comme un budget concret, pas comme un chiffre abstrait.",
+          "Publications d'anniversaire et partages sociaux — particulièrement pour les anniversaires de décennie (30, 40, 50 ans), quand la grille prend tout son sens.",
+          "Rentrée ou début d'année : utilisez la visualisation pour planifier ce que vous voulez faire des N prochaines semaines.",
+          "Cadeau à de jeunes diplômés ou à toute personne à la croisée des chemins : un petit coup de pouce pour réfléchir à ses priorités.",
+          "Support de thérapie et d'écriture intime : voir côte à côte les semaines vécues et celles qui restent est un excellent point de départ à la discussion."
+        ],
+        "tutorial": [
+          "Étape 1 : Sélectionnez votre date de naissance à l'aide du sélecteur de dates. La grille se recalcule instantanément.",
+          "Étape 2 : Ajustez l'espérance de vie si vous souhaitez une grille totale plus longue ou plus courte. Par défaut, 80 ans ≈ 4 160 semaines.",
+          "Étape 3 : Choisissez une couleur de remplissage pour les semaines déjà vécues. Les semaines restantes restent intentionnellement vides pour le contraste.",
+          "Étape 4 (facultatif) : Marquez une date jalon future (mariage, diplôme, départ à la retraite) pour la voir mise en évidence sur la grille.",
+          "Étape 5 : Cliquez sur Exporter PNG pour enregistrer la grille complète sous forme d'image, à publier, imprimer ou garder pour vous."
+        ],
+        "advantages": [
+          "Fonctionne 100 % en local. Votre date de naissance et vos jalons ne sont jamais envoyés nulle part. Confidentialité par conception.",
+          "Calcul précis : les semaines vécues sont calculées à partir des millisecondes réellement écoulées, et non par une simple multiplication années × 52, donc le compte est exact, y compris aujourd'hui.",
+          "Espérance de vie ajustable. La valeur par défaut est 80 ans en bonne santé, mais vous pouvez fixer toute valeur réaliste adaptée aux tables actuarielles ou à votre planification personnelle.",
+          "Marqueurs de jalons. Épinglez des dates futures sur la grille pour voir à quel point elles sont proches — ou lointaines — en réalité.",
+          "Export épuré et imprimable. Pas de marque Korelyy, pas de filigrane, rien qui n'obstrue le message porté par la grille."
+        ],
+        "faqs": [
+          {
+            "q": "Le Visualiseur de Vie en Semaines est-il gratuit ?",
+            "a": "Oui. L'outil complet — comptage précis des semaines, curseur d'espérance de vie, sélecteur de couleur, marqueurs de jalons et export PNG — est définitivement gratuit, sans inscription, sans filigrane et sans mur de paiement caché."
+          },
+          {
+            "q": "Dois-je créer un compte ou me connecter ?",
+            "a": "Non. Ouvrez la page et utilisez tout l'outil instantanément depuis n'importe quel navigateur moderne, sur tout appareil. Pas d'e-mail, pas de compte, pas de cookie de suivi."
+          },
+          {
+            "q": "Ma date de naissance ou mes données sont-elles stockées ou envoyées ?",
+            "a": "Non. Tout — saisie des dates, calcul et rendu — s'exécute à l'intérieur de votre propre navigateur lorsque c'est techniquement possible. Rien n'est envoyé à nos serveurs et nous n'utilisons pas de cookies de suivi."
+          },
+          {
+            "q": "Sur quels appareils fonctionne-t-il ?",
+            "a": "Sur tous les navigateurs modernes, bureau comme mobile, sous Windows, macOS, Linux, iOS et Android. La mise en page est responsive et la grille est entièrement défilable sur téléphone."
+          },
+          {
+            "q": "Pourquoi 4 000 semaines ? Est-ce exact ?",
+            "a": "4 000 semaines est une approximation très répandue, légèrement arrondie, pour une espérance de vie d'environ 77 ans. Nous utilisons par défaut 80 ans (≈ 4 160 semaines) et vous laissons ajuster le total entre 60 et 100 ans. Le décompte des semaines vécues est, quant à lui, calculé précisément à partir de votre date de naissance exacte et de la date réelle du jour."
+          }
+        ]
+      }
+    },
+    "excuse-generator": {
+      "name": "Carte Générateur d'Excuses",
+      "description": "Choisissez une situation — retard au travail, absence, annulation de plans, dépassement de délai — et générez instantanément une excuse qui sonne juste. Basculez entre le mode Sérieux (vous l'utiliseriez vraiment) et le mode Ridicule (vous l'envoyez à votre meilleur pote). Téléchargez le résultat sous forme de carte partageable en PNG.",
+      "seo": {
+        "intro": "La Carte Générateur d'Excuses est un outil gratuit pour navigateur, à la fois drôle et vraiment utile, qui rédige pour vous des excuses adaptées au contexte. Le mode Sérieux puise dans une base soignée de formulations réalistes et appropriées à chaque situation. Le mode Ridicule, lui, sert juste à faire rire. Dans les deux cas, une pression permet de partager le résultat sous forme d'une carte image parfaitement mise en page.",
+        "scenarios": [
+          "Texter votre patron le matin pour dire que vous serez en retard — mode Sérieux, scénario Retard.",
+          "Annuler un rendez-vous décontracté avec des amis — passez en mode Ridicule pour un maximum d'humour.",
+          "Prévenir un client ou un collègue quand une livraison glisse réellement — mode Sérieux pour rester professionnel et proactif.",
+          "Blagues dans le chat de groupe : générez une excuse farfelue et balancez-la quand quelqu'un demande pourquoi vous n'êtes pas encore arrivé.",
+          "Partages sociaux et memes : enregistrez la plus drôle en PNG et publiez-la — le format est fait pour ça."
+        ],
+        "tutorial": [
+          "Étape 1 : Sélectionnez le scénario qui correspond le mieux à ce dont vous avez besoin : Retard, Absence, Annuler des plans ou Dépassement de délai.",
+          "Étape 2 : Choisissez votre ton — Sérieux pour des formulations vraiment utilisables, ou Ridicule quand c'est juste pour rigoler.",
+          "Étape 3 : Appuyez sur Générer. Une nouvelle excuse aléatoire issue de la base soignée apparaît instantanément.",
+          "Étape 4 (facultatif) : Appuyez à nouveau sur Générer autant de fois que vous voulez — chaque pression fait apparaître une nouvelle ligne.",
+          "Étape 5 : Quand vous tombez sur celle qui convient, cliquez sur Télécharger la carte pour enregistrer un PNG formaté, prêt à être envoyé par message ou publié."
+        ],
+        "advantages": [
+          "Bases de phrases soignées à la main, pas de remplissage générique. Chaque combinaison scénario × ton dispose de sa propre liste de lignes, rédigées pour sonner naturel, pas comme du texte généré.",
+          "Génération en un clic, zéro friction. Aucun formulaire à remplir, aucune page de paramètres : choisissez un scénario et c'est parti.",
+          "Export de carte partageable parfaitement mis en page. Le PNG téléchargé est déjà dimensionné pour les messages et les réseaux sociaux.",
+          "S'exécute entièrement dans le navigateur. Aucun aller-retour serveur, aucune latence, et rien de ce que vous saisissez n'est jamais collecté.",
+          "Six langues. Les noms de scénario, les étiquettes des boutons et les lignes sont disponibles en anglais, chinois, espagnol, français, hindi et arabe."
+        ],
+        "faqs": [
+          {
+            "q": "La Carte Générateur d'Excuses est-elle gratuite ?",
+            "a": "Oui. Tous les scénarios, tous les tons, les tirages illimités et l'export de la carte PNG partageable — tout est définitivement gratuit, sans inscription, sans filigrane et sans mur de paiement caché."
+          },
+          {
+            "q": "Dois-je m'inscrire ?",
+            "a": "Non. Ouvrez la page et commencez à générer immédiatement depuis n'importe quel navigateur moderne, sur téléphone, tablette ou ordinateur. Pas d'e-mail, pas de connexion, pas de cookie de suivi."
+          },
+          {
+            "q": "Ce que je génère est-il privé ?",
+            "a": "Oui. L'outil s'exécute entièrement dans votre navigateur lorsque c'est techniquement possible. Toute la génération, le rendu et l'export se font sur votre propre appareil. Rien n'est envoyé à nos serveurs et aucun cookie de suivi n'est utilisé."
+          },
+          {
+            "q": "Ça fonctionne sur mon téléphone ?",
+            "a": "Oui. La mise en page est entièrement responsive, les boutons ont des cibles tactiles de 44 px ou plus, et le téléchargement de la carte fonctionne sur les navigateurs mobiles (Chrome, Safari, Edge)."
+          },
+          {
+            "q": "Puis-je suggérer ou ajouter de nouvelles phrases ?",
+            "a": "Les bases de lignes sont soignées par l'équipe Korelyy pour garantir une qualité élevée. Si vous avez une excellente idée, écrivez-nous via l'e-mail de contact du site ; nous l'ajouterons peut-être (avec mention) dans une prochaine mise à jour."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

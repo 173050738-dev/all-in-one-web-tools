@@ -8890,6 +8890,156 @@
           }
         ]
       }
+    },
+    "wave-art": {
+      "name": "Generador de Arte de Ondas de Voz",
+      "description": "Convierte cualquier nombre o frase en una pieza única de arte visual de onda sonora. Cada carácter se mapea a su propia frecuencia, amplitud y fase. Elige entre estilos de líneas minimalistas, brillo neón y espectro de radio. Superpon varios nombres, elige una paleta y exporta en PNG: ideal para avatares, tatuajes, regalos de pareja o cuadros.",
+      "seo": {
+        "intro": "El Generador de Arte de Ondas de Voz es una herramienta gratuita basada en el navegador que convierte texto —un nombre, una palabra, una fecha o una frase completa— en un arte visual único estilo onda sonora. Como cada carácter produce una onda distinta, no hay dos piezas iguales. Funciona íntegramente en tu dispositivo: no se sube nada al servidor y no necesitas crear una cuenta.",
+        "scenarios": [
+          "Avatares personalizados y fotos de perfil para redes sociales, apps de citas o cuentas de trabajo.",
+          "Regalos de pareja o familiares: superpon dos o tres nombres en un mismo lienzo e imprímelo como cuadro, taza o referencia para joyas.",
+          "Referencia artística para tatuajes: imprime el patrón de ondas de tu nombre y llévaselo a tu artista.",
+          "Identidad visual para creadores independientes, podcasters o músicos: una identidad hecha a partir de tu propio eslogan.",
+          "Regalos significativos para cumpleaños, aniversarios, graduaciones o recién nacidos usando un nombre o la fecha de nacimiento."
+        ],
+        "tutorial": [
+          "Paso 1: Escribe el nombre, palabra o frase que quieres convertir en arte de ondas en el cuadro de entrada principal.",
+          "Paso 2: Elige un estilo: Minimalista (líneas finas limpias), Neón (brillo sobre fondo oscuro) o Espectro (barras de radiofrecuencia).",
+          "Paso 3: Selecciona una de las paletas de colores predefinidas. Cada estilo tiene sus propias paletas cuidadas.",
+          "Paso 4 (opcional): Activa el modo Superposición y añade un segundo o tercer nombre para combinar varias ondas en un mismo lienzo. Ajusta la opacidad independiente de cada capa.",
+          "Paso 5: Haz clic en Exportar PNG para descargar una imagen de alta resolución, transparente u opaca, lista para imprimir, publicar o compartir."
+        ],
+        "advantages": [
+          "100% en el cliente. Tu texto y la obra generada nunca abandonan tu navegador: sin subidas, sin seguimiento, sin marcas de agua.",
+          "Determinista por carácter. El mismo nombre siempre produce la misma onda, por lo que la pieza es reproducible y compartible.",
+          "Tres estilos artísticos distintos y cinco paletas cuidadas, lo que te ofrece más de 15 direcciones visuales por entrada.",
+          "Superposición de hasta tres nombres con control de opacidad independiente para piezas de pareja, familia o equipo.",
+          "Exportación en PNG de alta resolución con tamaños aptos para impresión. No hay nivel de pago para desbloquear calidad de descarga."
+        ],
+        "faqs": [
+          {
+            "q": "¿El Generador de Arte de Ondas de Voz es gratuito?",
+            "a": "Sí. Todas las funciones principales —todos los estilos, todas las paletas, el modo superposición y la exportación PNG— son permanentemente gratuitos, sin registro, sin marcas de agua y sin muros de pago ocultos."
+          },
+          {
+            "q": "¿Necesito crear una cuenta?",
+            "a": "No. Puedes usar la herramienta completa al instante desde cualquier navegador moderno en móvil, tableta u ordenador. Sin correo, sin inicio de sesión, sin cookies de seguimiento."
+          },
+          {
+            "q": "¿Mi texto y mis datos se mantienen privados?",
+            "a": "Sí. El Generador de Arte de Ondas de Voz se ejecuta íntegramente en tu navegador cuando técnicamente es posible. Todo el texto, el renderizado y la exportación se procesan en tu propio dispositivo. No se sube nada a nuestros servidores y no hay cookies de seguimiento."
+          },
+          {
+            "q": "¿Qué dispositivos y navegadores son compatibles?",
+            "a": "Funciona en cualquier navegador moderno (Chrome, Edge, Safari, Firefox) en Windows, macOS, iOS y Android. La exportación PNG está soportada en todos ellos. Los controles táctiles están optimizados para móviles."
+          },
+          {
+            "q": "¿El mismo nombre siempre tendrá el mismo aspecto?",
+            "a": "Sí. La matemática de la onda es determinista por carácter, así que siempre que el texto, el estilo y la paleta sean iguales, el resultado es reproducible en cualquier lugar —ideal para regalos a juego o referencias de tatuaje."
+          }
+        ]
+      }
+    },
+    "life-weeks": {
+      "name": "Visualizador de Vida en Semanas",
+      "description": "Introduce tu fecha de nacimiento y verás una cuadrícula de 4000 semanas que representa toda tu vida. Las semanas que ya has vivido aparecen rellenas, las que quedan en blanco. Ajusta la esperanza de vida, elige un color de relleno y exporta en PNG. Una visualización sencilla, impactante y muy compartible.",
+      "seo": {
+        "intro": "El Visualizador de Vida en Semanas es una herramienta gratuita para el navegador que te muestra todo el recorrido de tu vida como una sola cuadrícula de 4000 celdas —un cuadro por cada semana. Mucha gente lo describe como humilde, motivador y extrañamente tranquilizador a la vez. Como todas las herramientas de Korelyy, se ejecuta localmente en tu navegador, sin subidas y sin registro.",
+        "scenarios": [
+          "Reflexión personal y establecimiento de metas: mira las semanas que te quedan como un presupuesto concreto, no como un número abstracto.",
+          "Publicaciones de cumpleaños y compartidos en redes —especialmente en cumpleaños de década (30, 40, 50), cuando la cuadrícula cobra mucho sentido.",
+          "Reinicio de año nuevo o vuelta al cole: usa la visualización para planificar cómo quieres que sean las próximas N semanas.",
+          "Regalo para recién graduados o cualquiera en un momento de cambio: un empujón suave para pensar en qué priorizar.",
+          "Disparador en terapia y diarios: ver las semanas vividas y las restantes juntas es un excelente punto de partida para conversaciones y escritura."
+        ],
+        "tutorial": [
+          "Paso 1: Selecciona tu fecha de nacimiento con el selector de fechas. La cuadrícula se recalcula al instante.",
+          "Paso 2: Ajusta la esperanza de vida si quieres ver una cuadrícula total más larga o más corta. El valor por defecto son 80 años ≈ 4160 semanas.",
+          "Paso 3: Elige un color de relleno para las semanas ya vividas. Las semanas restantes se quedan vacías a propósito para generar contraste.",
+          "Paso 4 (opcional): Marca una fecha de hito futura (boda, graduación, jubilación) para verla resaltada en la cuadrícula.",
+          "Paso 5: Haz clic en Exportar PNG para guardar la cuadrícula completa como imagen; puedes publicarla, imprimirla o quedártela."
+        ],
+        "advantages": [
+          "Se ejecuta 100% de forma local. Tu fecha de nacimiento y tus hitos no se envían a ningún sitio. Privacidad por diseño.",
+          "Cálculo preciso: las semanas vividas se computan usando los milisegundos reales transcurridos, no solo años × 52, así que el recuento es exacto incluso hoy.",
+          "Esperanza de vida ajustable. El valor por defecto son 80 años saludables, pero puedes poner cualquier valor realista para tablas actuariales o planificación personal.",
+          "Marcadores de hitos. Fija fechas futuras en la cuadrícula para ver qué tan cerca —o qué tan lejos— están realmente.",
+          "Exportación limpia y apta para impresión. Sin marca Korelyy, sin marca de agua, nada que interrumpa el mensaje que la cuadrícula transmite."
+        ],
+        "faqs": [
+          {
+            "q": "¿El Visualizador de Vida en Semanas es gratuito?",
+            "a": "Sí. Toda la herramienta —recuento exacto de semanas, deslizador de esperanza de vida, selector de color, marcadores de hitos y exportación PNG— es permanentemente gratuita, sin registro, sin marcas de agua y sin muros de pago ocultos."
+          },
+          {
+            "q": "¿Necesito crear una cuenta o iniciar sesión?",
+            "a": "No. Abre la página y usa toda la herramienta al instante desde cualquier navegador moderno en cualquier dispositivo. Sin correo, sin cuenta, sin cookies de seguimiento."
+          },
+          {
+            "q": "¿Mi fecha de nacimiento o mis datos se almacenan o suben?",
+            "a": "No. Todo —introducción de fechas, cálculo y renderizado— se ejecuta dentro de tu propio navegador cuando técnicamente es posible. No se envía nada a nuestros servidores y no usamos cookies de seguimiento."
+          },
+          {
+            "q": "¿En qué dispositivos funciona?",
+            "a": "En todos los navegadores modernos de escritorio y móvil en Windows, macOS, Linux, iOS y Android. El diseño es adaptativo y la cuadrícula es completamente desplazable en teléfonos."
+          },
+          {
+            "q": "¿Por qué 4000 semanas? ¿Es preciso?",
+            "a": "4000 semanas es una abreviatura muy usada, ligeramente redondeada, para una vida de ~77 años. Por defecto usamos 80 años (≈4160 semanas) y te permitimos ajustar el total entre 60 y 100 años. El recuento de semanas vividas se calcula con precisión a partir de tu fecha exacta de nacimiento y la fecha real de hoy."
+          }
+        ]
+      }
+    },
+    "excuse-generator": {
+      "name": "Tarjeta Generadora de Excusas",
+      "description": "Elige una situación —llegar tarde, faltar al trabajo, cancelar planes, perder una fecha límite— y genera al instante una excusa creíble. Alterna entre el modo Serio (dirías esto de verdad) y el modo Ridículo (esto se lo mandas a tu mejor amigo). Descarga el resultado como una tarjeta compartible en PNG.",
+      "seo": {
+        "intro": "Tarjeta Generadora de Excusas es una herramienta gratuita para el navegador, a la vez absurda y genuinamente útil, que escribe excusas adecuadas al contexto bajo demanda. El modo Serio extrae líneas realistas y situacionalmente correctas de una base curada. El modo Ridículo es para cuando solo quieres hacer reír a alguien. De cualquiera de las dos formas, con un toque puedes compartir el resultado como una imagen de tarjeta bien presentada.",
+        "scenarios": [
+          "Enviar un mensaje a tu jefe diciendo que llegarás tarde por la mañana —modo Serio, escenario Llegar tarde.",
+          "Cancelar una quedada casual con amigos —cambia al modo Ridículo para máxima comedia.",
+          "Mensajear a un cliente o compañero cuando una fecha límite realmente se está retrasando —modo Serio para sonar profesional y proactivo.",
+          "Bromas en el chat grupal: genera una excusa ridícula y suéltala cuando alguien te pregunte por qué aún no has llegado.",
+          "Compartidos en redes y memes: guarda una graciosa como tarjeta PNG y publícala —el formato compartible está hecho para eso."
+        ],
+        "tutorial": [
+          "Paso 1: Elige el escenario que mejor se ajuste a lo que necesitas: Llegar tarde, Faltar al trabajo, Cancelar planes o Perder fecha límite.",
+          "Paso 2: Elige el tono: Serio para frases que puedes usar de verdad, o Ridículo cuando es solo para reír.",
+          "Paso 3: Toca Generar. Una nueva excusa aleatoria de la base curada aparece al instante.",
+          "Paso 4 (opcional): Toca Generar otra vez todas las veces que quieras —cada pulsación saca una línea nueva.",
+          "Paso 5: Cuando te guste alguna, haz clic en Descargar tarjeta para guardar un PNG formateado que puedes enviar por mensaje o publicar."
+        ],
+        "advantages": [
+          "Bases curadas a mano, no relleno genérico. Cada combinación de escenario × tono tiene su propia lista de líneas escritas para sonar naturales, no de plástico.",
+          "Generación con un toque y cero fricción. Sin formularios que rellenar, sin página de ajustes, solo elige un escenario y listo.",
+          "Exportación de tarjeta compartible bien presentada. El PNG descargado tiene el tamaño justo para mensajes y redes sociales.",
+          "Se ejecuta totalmente en el navegador. Sin viajes al servidor, sin latencia, y nada de lo que escribas se recopila jamás.",
+          "Seis idiomas. Los nombres de escenario, las etiquetas de los botones y las líneas están disponibles en inglés, chino, español, francés, hindi y árabe."
+        ],
+        "faqs": [
+          {
+            "q": "¿Tarjeta Generadora de Excusas es gratuita?",
+            "a": "Sí. Todos los escenarios, todos los tonos, los relanzamientos ilimitados y la tarjeta PNG compartible —todo es permanentemente gratuito, sin registro, sin marcas de agua y sin muros de pago ocultos."
+          },
+          {
+            "q": "¿Necesito registrarme?",
+            "a": "No. Abre la página y empieza a generar inmediatamente desde cualquier navegador moderno, en cualquier móvil, tableta u ordenador. Sin correo, sin inicio de sesión, sin cookies de seguimiento."
+          },
+          {
+            "q": "¿Lo que genero es privado?",
+            "a": "Sí. La herramienta se ejecuta totalmente en tu navegador cuando técnicamente es posible. Toda la generación, el renderizado y la exportación ocurren en tu propio dispositivo. No se envía nada a nuestros servidores y no se usan cookies de seguimiento."
+          },
+          {
+            "q": "¿Funciona en mi móvil?",
+            "a": "Sí. El diseño es totalmente adaptativo, los botones tienen zonas táctiles de 44px o más, y la descarga de tarjetas funciona en navegadores móviles (Chrome, Safari, Edge)."
+          },
+          {
+            "q": "¿Puedo sugerir o añadir nuevas líneas de excusas?",
+            "a": "Las bases de líneas son curadas por el equipo de Korelyy para mantener la calidad alta. Si tienes una frase genial, escríbenos al correo de contacto del sitio y quizás la añadamos (con crédito) en una actualización futura."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

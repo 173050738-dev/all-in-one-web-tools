@@ -8890,6 +8890,156 @@
           }
         ]
       }
+    },
+    "wave-art": {
+      "name": "Voice Wave Art Generator",
+      "description": "Turn any name or phrase into a unique visual soundwave art piece. Each character maps to its own frequency, amplitude and phase. Choose from minimal line, neon glow, and radio spectrum styles. Overlay multiple names, pick a palette, export as PNG — perfect for avatars, tattoos, couple gifts, or wall art.",
+      "seo": {
+        "intro": "Voice Wave Art Generator is a free, browser-based tool that converts text — a name, a word, a date, or a full phrase — into one-of-a-kind soundwave-style visual art. Because every character produces a unique waveform, no two pieces are ever the same. It runs entirely on your device: nothing is uploaded to a server, and no account is needed.",
+        "scenarios": [
+          "Personalized avatars and profile pictures for social media, dating apps, or work accounts.",
+          "Couple or family gifts — overlay two or three names on a single canvas and print as wall art, mugs, or jewelry references.",
+          "Tattoo reference artwork: print the wave pattern your name produces and take it to your artist.",
+          "Branding assets for indie creators, podcasters, or musicians — a visual identity made from your own tagline.",
+          "Meaningful gifts for birthdays, anniversaries, graduation, or newborns using a name or birth date as input."
+        ],
+        "tutorial": [
+          "Step 1: Type the name, word, or phrase you want to turn into wave art in the main input box.",
+          "Step 2: Choose a style — Minimal (clean thin lines), Neon (glow on dark background), or Spectrum (radio-frequency bars).",
+          "Step 3: Pick one of the preset color palettes. Each style has its own curated palettes.",
+          "Step 4 (optional): Turn on Overlay mode and add a second or third name to combine multiple waveforms on one canvas. Adjust the individual opacity of each layer.",
+          "Step 5: Click Export PNG to download a high-resolution transparent or opaque image you can print, post, or share."
+        ],
+        "advantages": [
+          "100% client-side. Your text and generated artwork never leave your browser — no uploads, no tracking, no watermarks.",
+          "Deterministic per character. The same name always produces the same wave, so the piece is reproducible and shareable.",
+          "Three distinct art styles and five curated palettes, giving you 15+ visual directions per input.",
+          "Overlay up to three names with independent opacity control for couple / family / team pieces.",
+          "High-resolution PNG export at print-friendly sizes. No paid tier to unlock download quality."
+        ],
+        "faqs": [
+          {
+            "q": "Is Voice Wave Art Generator free to use?",
+            "a": "Yes. All core features — every style, every palette, overlay mode, and PNG export — are permanently free, no sign-up, no watermarks, no hidden paywalls."
+          },
+          {
+            "q": "Do I need to create an account?",
+            "a": "No. You can use the full tool instantly from any modern browser on phone, tablet, or desktop. No email, no login, no cookie tracking."
+          },
+          {
+            "q": "Is my text and data kept private?",
+            "a": "Yes. Voice Wave Art Generator runs entirely in your browser when technically possible. All text input, rendering, and export are processed on your own device. Nothing is uploaded to our servers, and there are no tracking cookies."
+          },
+          {
+            "q": "Which devices and browsers are supported?",
+            "a": "It works on any modern browser (Chrome, Edge, Safari, Firefox) on Windows, macOS, iOS, and Android. Export as PNG is supported on all of them. Touch controls are optimized for mobile."
+          },
+          {
+            "q": "Will the same name always look identical?",
+            "a": "Yes. Waveform math is deterministic per character, so as long as the input text, style, and palette are the same, the result is reproducible anywhere — perfect for matching gifts or tattoo references."
+          }
+        ]
+      }
+    },
+    "life-weeks": {
+      "name": "Life in Weeks Visualizer",
+      "description": "Enter your birthday and see a grid of 4,000 weeks that represents your whole life. Weeks you have already lived are filled in, weeks that remain are blank. Adjust your life expectancy, pick a fill color, export as PNG. A simple visualization that hits hard and gets shared.",
+      "seo": {
+        "intro": "Life in Weeks Visualizer is a free browser tool that shows you the whole sweep of your life as a single 4,000-cell grid — one square per week. People often describe it as humbling, motivating, and strangely calming at the same time. Like every Korelyy tool, it runs locally in your browser, no uploads and no signup.",
+        "scenarios": [
+          "Personal reflection and goal-setting: look at the remaining weeks as a concrete budget, not an abstract number.",
+          "Birthday posts and social shares — especially at decade birthdays (30th, 40th, 50th) when the grid really hits.",
+          "New Year or back-to-school reset: use the visual to plan what you want the next N weeks to look like.",
+          "Gift to recent graduates or anyone at a crossroads: a gentle nudge to think about what to prioritize.",
+          "Therapy and journaling prompts: seeing lived and remaining weeks side by side is a powerful conversation starter."
+        ],
+        "tutorial": [
+          "Step 1: Select your date of birth using the date picker. The grid instantly recalculates.",
+          "Step 2: Adjust the expected life span if you want to see a longer or shorter total grid. Default is 80 years ≈ 4,160 weeks.",
+          "Step 3: Pick a fill color for the weeks already lived. The remaining weeks stay empty by design for contrast.",
+          "Step 4 (optional): Mark a future milestone date (wedding, graduation, retirement target) to see it highlighted on the grid.",
+          "Step 5: Click Export PNG to save the full grid as an image you can post, print, or keep for yourself."
+        ],
+        "advantages": [
+          "Runs 100% locally. Your birthday and milestones are never sent anywhere. Privacy by design.",
+          "Precise calculation: weeks-lived is computed using real elapsed milliseconds, not just years × 52, so the count is accurate even today.",
+          "Adjustable life expectancy. The default is a healthy 80 years, but you can set any realistic value to match actuarial tables or personal planning.",
+          "Milestone markers. Pin future dates onto the grid so you can see how close — or far — they really are.",
+          "Clean, print-friendly export. No Korelyy branding, no watermark, nothing in the way of the message the grid carries."
+        ],
+        "faqs": [
+          {
+            "q": "Is Life in Weeks Visualizer free to use?",
+            "a": "Yes. The full tool — exact week counting, life-expectancy slider, color picker, milestone markers, and PNG export — is permanently free, no signup, no watermarks, no hidden paywalls."
+          },
+          {
+            "q": "Do I need to create an account or log in?",
+            "a": "No. You can open the page and use the whole tool instantly from any modern browser on any device. No email, no account, no cookie tracking."
+          },
+          {
+            "q": "Will my birthday or data be stored or uploaded?",
+            "a": "No. Everything — date input, calculation, and rendering — runs inside your own browser when technically possible. Nothing is sent to our servers, and we do not use tracking cookies."
+          },
+          {
+            "q": "Which devices does it work on?",
+            "a": "All modern desktop and mobile browsers on Windows, macOS, Linux, iOS, and Android. The layout is responsive and the grid is fully scrollable on phones."
+          },
+          {
+            "q": "Why 4,000 weeks? Is that accurate?",
+            "a": "4,000 weeks is a widely-used, slightly rounded shorthand for a ~77-year lifespan. We default to 80 years (≈4,160 weeks) and let you adjust the total anywhere from 60 to 100 years. The count of lived weeks is computed precisely from your exact birth date and today's real date."
+          }
+        ]
+      }
+    },
+    "excuse-generator": {
+      "name": "Excuse Generator Card",
+      "description": "Pick a situation — running late, skipping work, canceling plans, missing a deadline — and instantly generate a plausible-sounding excuse. Toggle between Serious mode (you would actually say this) and Ridiculous mode (you send it to your best friend). Download the result as a shareable card PNG.",
+      "seo": {
+        "intro": "Excuse Generator Card is a silly-but-genuinely-useful free browser tool that writes context-appropriate excuses on demand. Serious mode pulls from a curated pool of realistic, situationally correct lines. Ridiculous mode is for when you just want to make someone laugh. Either way, one tap and you can share the result as a polished card image.",
+        "scenarios": [
+          "Texting your boss you are running late in the morning — Serious mode, Late scenario.",
+          "Bailing on a casual meetup with friends — flip to Ridiculous mode for maximum comedy.",
+          "Messaging a client or teammate when a deadline actually is slipping — Serious mode to sound professional and proactive.",
+          "Group chat banter: generate a ludicrous excuse and drop it when someone asks why you are not there yet.",
+          "Social shares and memes: save a funny one as a card PNG and post it — the shareable format is built for that."
+        ],
+        "tutorial": [
+          "Step 1: Pick the scenario that best matches what you need: Late, Skip Work, Cancel Plans, or Missed Deadline.",
+          "Step 2: Choose your tone — Serious for lines you can actually use, or Ridiculous when it is just for laughs.",
+          "Step 3: Tap Generate. A new random excuse from the curated pool appears instantly.",
+          "Step 4 (optional): Tap Generate again as many times as you want — each press rolls a new line.",
+          "Step 5: When you land on one you like, click Download Card to save a formatted card PNG you can text or post."
+        ],
+        "advantages": [
+          "Hand-curated pools, not generic filler. Each scenario × tone combination has its own dedicated list of lines written to sound natural, not AI-plastic.",
+          "One-tap generation with zero friction. No form to fill, no settings page, just pick a scenario and go.",
+          "Polished shareable card export. The PNG download is sized for texting and social feeds out of the box.",
+          "Runs fully in the browser. No server round-trips, no latency, and nothing you type is ever collected.",
+          "Six languages. Scenario names, button labels, and line pools are available in English, Chinese, Spanish, French, Hindi, and Arabic."
+        ],
+        "faqs": [
+          {
+            "q": "Is Excuse Generator Card free?",
+            "a": "Yes. Every scenario, every tone, unlimited re-rolls, and the shareable PNG card export — all are permanently free, no signup, no watermarks, no hidden paywalls."
+          },
+          {
+            "q": "Do I need to sign up?",
+            "a": "No. Open the page and start generating immediately from any modern browser, on any phone, tablet, or desktop. No email, no login, no tracking cookies."
+          },
+          {
+            "q": "Is what I generate private?",
+            "a": "Yes. The tool runs fully in your browser when technically possible. All generation, rendering, and export happen on your own device. Nothing is sent to our servers, and no tracking cookies are used."
+          },
+          {
+            "q": "Will it work on my phone?",
+            "a": "Yes. The layout is fully responsive, buttons have 44px+ touch targets, and card download works on mobile browsers (Chrome, Safari, Edge)."
+          },
+          {
+            "q": "Can I suggest or add new excuse lines?",
+            "a": "Line pools are curated by the Korelyy team to keep quality high. If you have a great line, reach out via the site contact email and we may add it (credited) in a future update."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {
