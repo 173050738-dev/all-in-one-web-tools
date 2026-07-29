@@ -84,6 +84,9 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'ai-xiaohongshu-title-generator',
   'watermark-remover',
   'ecommerce-image-processor',
+  'wave-art',
+  'life-weeks',
+  'excuse-generator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {
