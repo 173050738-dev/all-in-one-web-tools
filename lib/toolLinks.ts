@@ -88,6 +88,10 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'life-weeks',
   'excuse-generator',
   'name-constellation',
+  'image-converter',
+  'image-pdf-converter',
+  'unit-converter',
+  'json-csv-converter',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

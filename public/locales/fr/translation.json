@@ -9090,6 +9090,98 @@
           }
         ]
       }
+    },
+    "image-pdf-converter": {
+      "name": "Convertisseur Image ↔ PDF",
+      "description": "Assemblez plusieurs images en un PDF ou exportez chaque page d'un PDF en PNG/JPG, localement dans votre navigateur.",
+      "seo": {
+        "intro": "Cet outil fait deux choses en un : fusionne plusieurs images JPG/PNG/WebP dans un même PDF, avec taille, orientation et marges de page personnalisables ; et peut aussi prendre un PDF pour exporter chacune de ses pages en PNG ou JPG. Tout fonctionne localement, donc ni vos images ni vos PDFs — contrats, pièces d'identité, factures — ne sont jamais envoyés vers le cloud.",
+        "scenarios": [
+          "Rassembler des photos de pièces ou de contrats dans un seul PDF à joindre ou envoyer",
+          "Exporter chaque page d'une brochure ou thèse sous forme d'images pour les réseaux ou un diaporama",
+          "Créer un album PDF imprimable à partir de photos de voyage avec un format papier standard",
+          "Extraire des graphiques d'un rapport PDF pour les coller dans un document ou une présentation"
+        ],
+        "tutorial": [
+          "Choisissez le mode : Images vers PDF ou PDF vers Images.",
+          "Images → PDF : chargez des photos, réordonnez par glisser-déposer, paramétrez taille/orientation/marges.",
+          "PDF → Images : chargez un PDF, choisissez le format (PNG/JPG) et la qualité de rendu.",
+          "Générez, prévisualisez puis téléchargez un par un ou en lot."
+        ],
+        "advantages": [
+          "Entièrement local : ni images ni PDF ne passent par un serveur distant.",
+          "Double fonctionnalité dans un seul outil.",
+          "Formats standards (A4, Letter, A5) et portrait/paysage pour les usages courants."
+        ],
+        "faqs": [
+          {
+            "q": "Mes fichiers sont-ils envoyés sur le cloud ?",
+            "a": "Non. Lecture, rendu et composition se font tous dans le navigateur."
+          },
+          {
+            "q": "Comment choisir la taille de la page ?",
+            "a": "A4, Letter, A5, dimensions originales et autres options selon votre usage."
+          },
+          {
+            "q": "Le texte exporté risque-t-il d'être flou ?",
+            "a": "La qualité par défaut est équilibrée ; augmentez DPI/qualité pour plus de netteté au prix de fichiers plus lourds."
+          },
+          {
+            "q": "Puis-je exporter plusieurs pages PDF en plusieurs images ?",
+            "a": "Oui, une image par page ; téléchargement individuel ou groupé."
+          },
+          {
+            "q": "Différence avec le fusionneur PDF ?",
+            "a": "Le fusionneur travaille de PDF à PDF. Celui-ci convertit entre images et PDF. Ils se complètent."
+          }
+        ]
+      }
+    },
+    "json-csv-converter": {
+      "name": "Convertisseur JSON ↔ CSV",
+      "description": "Conversion bidirectionnelle JSON/CSV dans le navigateur. Aplatissement JSON imbriqué, séparateur personnalisé, copie et téléchargement.",
+      "seo": {
+        "intro": "Ce convertisseur JSON ↔ CSV bascule rapidement un tableau JSON en table CSV, et inversement, directement dans votre navigateur. Les objets JSON profondément imbriqués peuvent être automatiquement aplatis via un séparateur de clés personnalisé ; dans l'autre sens, le même séparateur reconstruit les colonnes pointées (style address.city) en structures imbriquées. L'analyse et l'export restent locaux, donc vos listes clients, exports utilisateurs, réponses API et toutes données sensibles ne quittent jamais votre machine.",
+        "scenarios": [
+          "Transformer une réponse API JSON en CSV pour tableaux croisés dans Excel ou Sheets",
+          "Importer un CSV marketing ou opérations sous forme JSON structurée pour vos scripts",
+          "Aplatir un JSON complexe en un CSV simple à charger en base ou outil BI",
+          "Déboguer une API : coller le JSON et exporter une table partageable avec l'équipe"
+        ],
+        "tutorial": [
+          "Choisissez le sens : JSON → CSV ou CSV → JSON. Des exemples se chargent.",
+          "Collez votre entrée dans l'éditeur de gauche.",
+          "Ajustez les options : aplatissement, séparateur CSV, séparateur de clés.",
+          "Le panneau droit se met à jour en temps réel ; copiez ou téléchargez le résultat."
+        ],
+        "advantages": [
+          "Bidirectionnel, avec aplatissement et reconstruction des structures imbriquées.",
+          "Tout dans le navigateur : vos données ne quittent pas votre ordinateur.",
+          "Plusieurs séparateurs CSV : virgule, point-virgule, tabulation, barre verticale."
+        ],
+        "faqs": [
+          {
+            "q": "Mes données sortent-elles de mon ordinateur ?",
+            "a": "Non. Analyse, conversion et export se déroulent entièrement dans le navigateur."
+          },
+          {
+            "q": "Comment le JSON imbriqué est-il traité ?",
+            "a": "Par défaut aplati en colonnes du type address.city ; le séparateur inverse reconstruit la structure."
+          },
+          {
+            "q": "Et les tableaux dans les champs ?",
+            "a": "Ils sont sérialisés en chaînes JSON dans la cellule pour ne rien perdre."
+          },
+          {
+            "q": "Quels séparateurs CSV sont pris en charge ?",
+            "a": "Virgule, point-virgule, tabulation et barre verticale."
+          },
+          {
+            "q": "Différence avec le formateur JSON ?",
+            "a": "Le formateur embellit, valide et minifie. Celui-ci fait de la conversion bidirectionnelle avec CSV. Ils se complètent."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

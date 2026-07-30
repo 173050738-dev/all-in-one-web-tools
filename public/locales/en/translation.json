@@ -9090,6 +9090,98 @@
           }
         ]
       }
+    },
+    "image-pdf-converter": {
+      "name": "Image to PDF / PDF to Image Converter",
+      "description": "Combine multiple images into a PDF or export each PDF page as PNG/JPG locally in your browser.",
+      "seo": {
+        "intro": "This browser-based image and PDF converter does two things in one place: it merges multiple JPG/PNG/WebP images into a single PDF, with customizable page size, orientation and margins; and it can also take a PDF and render every page into a PNG or JPG image for individual export. Everything runs locally on your device, so neither your images nor your PDFs — contracts, IDs, invoices or any sensitive documents — are ever uploaded to the cloud.",
+        "scenarios": [
+          "Combine photos of IDs, licenses or contracts into a single PDF for submission or email attachment",
+          "Export each page of a product brochure or research paper PDF as images for sharing, slides or social media posts",
+          "Build a printable album PDF from travel photos using a standard paper size",
+          "Extract charts and figures from a report PDF as images to paste into documents or decks"
+        ],
+        "tutorial": [
+          "Pick the mode: Images to PDF, or PDF to Images.",
+          "For Images to PDF: upload several pictures, reorder them by dragging, then set page size, orientation and margins.",
+          "For PDF to Images: upload a PDF and choose the output format (PNG or JPG) and render quality.",
+          "Generate, preview, then download files individually or in bulk."
+        ],
+        "advantages": [
+          "Fully local execution: neither your images nor the PDF ever touch a remote server.",
+          "Two-way capability in a single tool: assemble PDFs from images, and explode PDFs back into images.",
+          "Supports common paper sizes (A4, Letter, A5) and landscape/portrait to fit standard printing and submission workflows."
+        ],
+        "faqs": [
+          {
+            "q": "Are my PDFs and images uploaded to the cloud?",
+            "a": "No. All reading, rendering and composing happen inside your browser; nothing leaves your device."
+          },
+          {
+            "q": "How do I choose a page size for the generated PDF?",
+            "a": "Choose between A4, Letter, A5, the original image dimensions, and a few other options depending on your paper or workflow."
+          },
+          {
+            "q": "Will text in the exported PDF pages look blurry?",
+            "a": "The default quality is a balanced medium; raise the DPI/quality slider for sharper renders if you are willing to accept larger file sizes."
+          },
+          {
+            "q": "Can I export a multi-page PDF into multiple images?",
+            "a": "Yes. The tool generates one image per page; download them one by one or all at once."
+          },
+          {
+            "q": "How is this different from the PDF merger?",
+            "a": "The PDF merger works with PDFs on both sides. This tool specializes in converting between image formats and PDF. They complement each other nicely."
+          }
+        ]
+      }
+    },
+    "json-csv-converter": {
+      "name": "JSON to CSV / CSV to JSON Converter",
+      "description": "Two-way JSON ↔ CSV conversion in your browser. Supports nested JSON flattening, custom delimiters, copy and file download.",
+      "seo": {
+        "intro": "This online JSON ↔ CSV converter quickly transforms a JSON array into a CSV table, or a CSV table back into a standard JSON array of objects, all inside your browser. Deeply nested JSON objects can be automatically flattened using a custom key separator of your choice, and the same separator can un-flatten dotted column names (like address.city) back into nested objects on the way back. Parsing and export are fully local, so customer lists, user exports, API responses and other sensitive data never get sent to a remote server.",
+        "scenarios": [
+          "Turn an API JSON response into CSV for pivot tables and charts in Excel, Numbers or Sheets",
+          "Import a marketing or operations CSV export into scripts and pipelines as structured JSON",
+          "Flatten complex nested JSON into a simple CSV so it loads into relational databases or BI tools",
+          "Grab a JSON payload while debugging a backend, paste it here and export a shareable table for teammates"
+        ],
+        "tutorial": [
+          "Choose the direction: JSON → CSV or CSV → JSON. Default sample contents are swapped for you.",
+          "Paste your input into the left editor.",
+          "Tune the options: flatten nested JSON, pick a CSV delimiter, and set the key separator for nesting.",
+          "The right panel updates in real time; copy the output or download it as a file."
+        ],
+        "advantages": [
+          "Two-way conversion with nested flattening and un-flattening, all in one place.",
+          "Everything runs in the browser. Your CSV and JSON data never leave your machine.",
+          "Multiple CSV delimiters out of the box (comma, semicolon, Tab, pipe), including the formats used in German-speaking regions."
+        ],
+        "faqs": [
+          {
+            "q": "Will my data leave my computer?",
+            "a": "No. Parsing, conversion and export happen completely in the browser; nothing is posted over the network."
+          },
+          {
+            "q": "How do you handle nested JSON?",
+            "a": "By default the flattening option is on, so deep keys become dotted columns like address.city. On the reverse direction the same separator rebuilds the nested structure."
+          },
+          {
+            "q": "What about array fields?",
+            "a": "Arrays are serialized as JSON strings inside the cell by default, so information is not lost. Expand them manually into columns if you need a wider table."
+          },
+          {
+            "q": "Which CSV delimiters are supported?",
+            "a": "Comma, semicolon, Tab and the pipe symbol — covering the most common spreadsheet export variants."
+          },
+          {
+            "q": "How is this different from the JSON formatter?",
+            "a": "The JSON formatter focuses on pretty-printing, validation and minification. This tool focuses on bidirectional conversion between JSON and tabular CSV. Use them together."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

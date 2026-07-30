@@ -9090,6 +9090,98 @@
           }
         ]
       }
+    },
+    "image-pdf-converter": {
+      "name": "Convertidor Imagen a PDF / PDF a Imagen",
+      "description": "Combina varias imágenes en un PDF o exporta cada página de un PDF como PNG/JPG, localmente en tu navegador.",
+      "seo": {
+        "intro": "Esta herramienta hace dos cosas en un solo lugar: combina varias imágenes JPG/PNG/WebP en un solo PDF con tamaño de página, orientación y márgenes personalizables; y también puede tomar un PDF y exportar cada página a PNG o JPG. Todo se ejecuta localmente en tu dispositivo, por lo que ni tus imágenes ni tus PDFs — contratos, identificaciones, facturas — se suben nunca a la nube.",
+        "scenarios": [
+          "Reunir fotos de documentos, contratos o carnets en un solo PDF para presentarlo o enviarlo por correo",
+          "Exportar cada página de un folleto o artículo como imagen para redes o presentaciones",
+          "Crear un PDF imprimible de fotos de viaje usando un tamaño de papel estándar",
+          "Extraer gráficos de un PDF como imágenes para pegar en documentos o diapositivas"
+        ],
+        "tutorial": [
+          "Elige el modo: Imágenes a PDF o PDF a Imágenes.",
+          "En Imágenes a PDF: sube fotos, ordénalas arrastrando, elige tamaño de página, orientación y márgenes.",
+          "En PDF a Imágenes: sube un PDF, elige formato (PNG/JPG) y calidad de renderizado.",
+          "Genera, previsualiza y descarga de forma individual o por lotes."
+        ],
+        "advantages": [
+          "Todo en local: ni imágenes ni PDFs tocan nunca un servidor remoto.",
+          "Capacidad bidireccional en una sola herramienta.",
+          "Soporta tamaños habituales (A4, Letter, A5) y horizontal/vertical."
+        ],
+        "faqs": [
+          {
+            "q": "¿Mis archivos se suben a la nube?",
+            "a": "No. Lectura, renderizado y composición ocurren en tu navegador."
+          },
+          {
+            "q": "¿Cómo elijo el tamaño de página?",
+            "a": "Dispones de A4, Letter, A5, dimensiones originales y otras opciones según el flujo de trabajo."
+          },
+          {
+            "q": "¿Se verá borroso el texto al exportar páginas?",
+            "a": "La calidad por defecto es equilibrada; aumenta el control DPI/calidad para imágenes más nítidas y pesadas."
+          },
+          {
+            "q": "¿Puedo exportar un PDF de varias páginas en múltiples imágenes?",
+            "a": "Sí, se genera una imagen por página; descarga una por una o todas juntas."
+          },
+          {
+            "q": "¿En qué se diferencia del fusionador de PDFs?",
+            "a": "El fusionador trabaja de PDF a PDF. Esta herramienta convierte entre imágenes y PDF. Se complementan bien."
+          }
+        ]
+      }
+    },
+    "json-csv-converter": {
+      "name": "Convertidor JSON ↔ CSV",
+      "description": "Conversión bidireccional JSON y CSV en el navegador. Aplanado de JSON anidado, delimitador personalizado, copia y descarga.",
+      "seo": {
+        "intro": "Este convertidor online pasa rápidamente de un array JSON a una tabla CSV, y viceversa, directamente en tu navegador. Los objetos JSON profundamente anidados pueden aplanarse automáticamente con un separador de claves personalizado; en el sentido inverso, el mismo separador reconstruye nombres de columnas con puntos (como address.city) de nuevo en estructuras anidadas. Tanto el análisis como la exportación son locales, así que listados de clientes, exportaciones de usuarios, respuestas de API y otros datos sensibles nunca salen de tu equipo.",
+        "scenarios": [
+          "Convertir la respuesta JSON de una API en CSV para tablas dinámicas en Excel o Sheets",
+          "Importar un CSV de marketing u operaciones como JSON estructurado para scripts",
+          "Aplanar JSON complejo en un CSV simple para cargarlo en bases de datos o BI",
+          "Depurar una API: pegar el JSON y exportar una tabla para compartir con el equipo"
+        ],
+        "tutorial": [
+          "Elige la dirección: JSON → CSV o CSV → JSON. Se cargan contenidos de ejemplo.",
+          "Pega tu entrada en el editor izquierdo.",
+          "Ajusta las opciones: aplanar JSON anidado, delimitador CSV y separador de claves.",
+          "El panel derecho se actualiza al instante; copia o descarga el resultado."
+        ],
+        "advantages": [
+          "Bidireccional, con aplanado y reconstrucción de estructuras anidadas.",
+          "Todo en el navegador: tus archivos nunca abandonan tu máquina.",
+          "Varios delimitadores CSV integrados: coma, punto y coma, tabulador, barra vertical."
+        ],
+        "faqs": [
+          {
+            "q": "¿Mis datos salen de mi ordenador?",
+            "a": "No. Análisis, conversión y exportación ocurren íntegramente en el navegador."
+          },
+          {
+            "q": "¿Cómo tratan el JSON anidado?",
+            "a": "Por defecto se aplana; las claves profundas pasan a columnas tipo address.city. En sentido inverso se reconstruye la estructura."
+          },
+          {
+            "q": "¿Y los campos de tipo array?",
+            "a": "Se serializan como cadenas JSON dentro de la celda para no perder información."
+          },
+          {
+            "q": "¿Qué delimitadores se soportan?",
+            "a": "Coma, punto y coma, tabulador y barra vertical, cubriendo los formatos más comunes."
+          },
+          {
+            "q": "¿En qué se diferencia del formateador JSON?",
+            "a": "El formateador se centra en embellecer, validar y minificar. Esta herramienta en la conversión bidireccional con CSV. Se complementan."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

@@ -46976,5 +46976,57 @@
     "accessTag": "direct",
     "localProcessing": true,
     "isSelfHosted": true
-  }
+  },
+    {
+      "id": "image-converter",
+      "slug": "image-converter",
+      "name": "图片格式转换器",
+      "description": "PNG / JPG / WebP / GIF 多格式互转。支持批量、拖拽上传、质量调节，100% 本地浏览器处理，不上传。",
+      "category": "image-tools",
+      "tags": ["图片格式转换", "PNG转JPG", "WebP转PNG", "批量转格式"],
+      "nameEn": "Image Format Converter",
+      "descriptionEn": "Convert images between PNG, JPG, WebP and GIF formats. Batch processing, drag & drop, quality adjustment. 100% local in browser, nothing uploaded.",
+      "tagsEn": ["image converter", "png to jpg", "webp to png", "jpg to webp"],
+      "localProcessing": true,
+      "isInternalTool": true
+    },
+    {
+      "id": "image-pdf-converter",
+      "slug": "image-pdf-converter",
+      "name": "图片 PDF 互转工具",
+      "description": "多张图片合成一个 PDF（可调页面尺寸/方向）；PDF 每页导出为 PNG/JPG 图片。纯前端处理，零上传。",
+      "category": "pdf-tools",
+      "tags": ["JPG转PDF", "图片转PDF", "PDF转图片", "PDF导出"],
+      "nameEn": "Image PDF Converter",
+      "descriptionEn": "Combine multiple images into one PDF with adjustable page size and orientation; or export every PDF page as PNG/JPG images. 100% browser-based, no upload.",
+      "tagsEn": ["jpg to pdf", "image to pdf", "pdf to jpg", "pdf to image"],
+      "localProcessing": true,
+      "isInternalTool": true
+    },
+    {
+      "id": "unit-converter",
+      "slug": "unit-converter",
+      "name": "万能单位换算器",
+      "description": "长度、重量、温度、面积、体积、速度、数据存储、时间 八类常用单位实时双向换算。纯前端零依赖。",
+      "category": "productivity",
+      "tags": ["单位换算", "厘米转英寸", "公斤转磅", "摄氏度转华氏度"],
+      "nameEn": "Unit Converter",
+      "descriptionEn": "Real-time two-way unit converter for 8 categories: length, weight, temperature, area, volume, speed, data storage and time. Fully client-side, zero dependencies.",
+      "tagsEn": ["unit converter", "cm to inches", "kg to lbs", "celsius to fahrenheit"],
+      "localProcessing": true,
+      "isInternalTool": true
+    },
+    {
+      "id": "json-csv-converter",
+      "slug": "json-csv-converter",
+      "name": "JSON CSV 互转工具",
+      "description": "JSON ↔ CSV 双向转换。支持嵌套 JSON 扁平化、自定义分隔符、复制/下载，纯前端处理。",
+      "category": "dev-tools",
+      "tags": ["JSON转CSV", "CSV转JSON", "数据转换", "扁平化JSON"],
+      "nameEn": "JSON CSV Converter",
+      "descriptionEn": "Two-way JSON ↔ CSV converter with nested JSON flattening, custom delimiter, copy & download. All processing in the browser.",
+      "tagsEn": ["json to csv", "csv to json", "data converter", "flatten json"],
+      "localProcessing": true,
+      "isInternalTool": true
+    }
 ]
