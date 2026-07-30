@@ -41393,5 +41393,864 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
         "ar": "استكشف المزيد من أدلة كسب المال →"
       }
     }
-  ]
+  ],
+"polyphonic-pinyin-annotation-guide": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "Why Polyphonic Pinyin Matters",
+      "zh": "为什么多音字拼音很重要"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "If you've ever heard a student mispronounce 银行 as xíngháng instead of yínháng, or 重庆 as zhòngqìng instead of chóngqìng, you've witnessed the polyphonic challenge. Chinese has over 3,500 polyphonic characters with pronunciations that change based on context. Correct annotation isn't just about pronunciation — it's about literacy.",
+      "zh": "如果你听过学生把银行读成xíngháng而非yínháng，或把重庆读成zhòngqìng而非chóngqìng，你就见过多音字的挑战。中文有3500多个多音字，读音随语境变化。正确标注不只是发音问题，更是识字问题。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    "text": {
+      "en": "💡 The character 行 has 5 pronunciations and 乐 has 6! Context is everything.",
+      "zh": "💡 「行」字有5种读音，「乐」字有6种！语境决定一切。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Manual vs. AI-Powered Annotation",
+      "zh": "手动 vs AI 驱动标注"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Manual annotation takes 15+ minutes per 300 words and is prone to errors. Modern tools use statistical models and context analysis to determine correct pronunciations automatically, processing 1,000+ characters in seconds with 95%+ accuracy.",
+      "zh": "手动标注每300字需要15分钟以上且易出错。现代工具使用统计模型和上下文分析自动确定正确读音，几秒内处理1000+字，准确率95%+。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "polyphonic-pinyin-annotator",
+    "text": {
+      "en": "Try Polyphonic Pinyin Annotator — Free",
+      "zh": "试试多音字拼音标注器——免费"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "How the Detection Works",
+      "zh": "检测工作原理"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "The process has three steps: (1) Identify polyphonic characters by cross-referencing a dictionary, (2) Analyze surrounding context to determine the most likely pronunciation, (3) Generate pinyin with proper tone marks. Advanced tools support multiple annotation styles and export formats.",
+      "zh": "过程分三步：(1) 通过字典交叉索引识别多音字，(2) 分析周围语境确定最可能的读音，(3) 生成带正确声调的拼音。先进工具支持多种标注样式和导出格式。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Who Benefits Most?",
+      "zh": "谁受益最多？"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Chinese Language Teachers",
+      "zh": "对外汉语教师"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Prepare reading materials for different levels — full pinyin for beginners, selective for intermediate, specialized for advanced. The tool adapts to your curriculum.",
+      "zh": "为不同水平准备阅读材料——初学者全文注音，中级选择性注音，高级专业注音。工具可按需适配课程。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Children's Book Authors",
+      "zh": "儿童绘本作者"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Create pinyin-annotated storybooks. Control which characters get annotated — only annotate ones your target age hasn't learned yet. Export to PDF for printing.",
+      "zh": "创建带拼音的故事书。控制哪些字需注音——只给目标年龄段尚未学过的字注音。导出PDF打印。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Translators and Editors",
+      "zh": "翻译和编辑"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Ensure consistent pinyin across your entire publication. No more manually checking every 行/重/乐 character. Focus on translation quality, not mechanical annotation.",
+      "zh": "确保整个出版物的拼音标注一致。不用再手动检查每个行/重/乐字。专注于翻译质量，而非机械标注。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "polyphonic-pinyin-annotator",
+    "text": {
+      "en": "Start Annotating Now",
+      "zh": "开始标注"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Export Options",
+      "zh": "导出选项"
+    }
+  },
+  {
+    "type": "ul",
+    "items": [
+      {
+        "en": "PDF: Print-ready flashcards and worksheets",
+        "zh": "PDF：可打印的识字卡和练习册"
+      },
+      {
+        "en": "Word (.docx): Editable documents",
+        "zh": "Word(.docx)：可编辑文档"
+      },
+      {
+        "en": "HTML: Web-based learning materials",
+        "zh": "HTML：网络教学材料"
+      },
+      {
+        "en": "Plain text: Simple and universal",
+        "zh": "纯文本：简单通用"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Annotating polyphonic pinyin doesn't have to be tedious. With modern AI-powered tools, you process 1,000+ characters in seconds. The remaining 5% edge cases need quick manual review. Whether you're a teacher, student, or translator, the right tool saves hours while ensuring accuracy.",
+      "zh": "标注多音字拼音不必繁琐。用现代AI工具，几秒内处理1000+字。剩下5%边缘情况需快速手动审查。无论你是教师、学生还是翻译，合适的工具节省数小时同时保证准确。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "polyphonic-pinyin-annotator",
+    "text": {
+      "en": "Try It Free — Annotate Pinyin in Seconds",
+      "zh": "免费试用——秒级标注拼音"
+    }
+  }
+],
+"markdown-conversion-notion-obsidian-github": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "Why Your Markdown Looks Different on Every Platform",
+      "zh": "为什么你的 Markdown 在每个平台上看起来都不一样"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "You spend 3 hours writing a perfect Markdown document in Obsidian with callouts, wikilinks, and LaTeX math. Paste it into GitHub and the callouts become raw HTML, wikilinks break, and math disappears. Each platform has its own Markdown flavor.",
+      "zh": "你花3小时在Obsidian写了完美的Markdown文档，有callout、wikilink和LaTeX数学公式。粘到GitHub后callout变成原始HTML，wikilink断了，数学消失了。每个平台都有自己的Markdown方言。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "markdown-platform-converter",
+    "text": {
+      "en": "Try Markdown Platform Converter — Free",
+      "zh": "试试 Markdown 平台转换器——免费"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "The 5 Common Markdown Flavors",
+      "zh": "5 种常见 Markdown 方言"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "1. GitHub Flavored Markdown (GFM)",
+      "zh": "1. GitHub 风味 Markdown (GFM)"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "The most widely used dialect. Adds tables, task lists, strikethrough, autolinks, and alert blocks. Used by GitHub, GitLab, and developer platforms.",
+      "zh": "最广泛使用的方言。增加了表格、任务列表、删除线、自动链接和警告块。被GitHub、GitLab和开发者平台使用。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "2. Notion Markdown",
+      "zh": "2. Notion Markdown"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "A proprietary extension with /-commands, inline database properties, toggle blocks, and callouts. Notion's copy-paste works for simple content but breaks on complex structures.",
+      "zh": "专有扩展，有/-commands、行内数据库属性、折叠块和callout。Notion的复制粘贴对简单内容有效，但对复杂结构会出错。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "3. Obsidian Markdown",
+      "zh": "3. Obsidian Markdown"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Based on CommonMark with wikilinks for internal linking and YAML frontmatter. The graph view depends heavily on wikilinks which don't translate to other platforms.",
+      "zh": "基于CommonMark，用wikilinks做内部链接，YAML frontmatter存元数据。图谱视图严重依赖wikilinks，无法转换到其他平台。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Real-World Conversion Scenarios",
+      "zh": "真实转换场景"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Obsidian → GitHub",
+      "zh": "Obsidian → GitHub"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Developer writes docs in Obsidian with wikilinks and callouts. The converter translates wikilinks to standard markdown links, Obsidian callouts to GFM alert blocks, and preserves code highlighting.",
+      "zh": "开发者在Obsidian写文档，用wikilinks和callout。转换器将wikilinks翻译为标准markdown链接，Obsidian callout转GFM警告块，保留代码高亮。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Notion → WeChat",
+      "zh": "Notion → 微信公众号"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Content marketer writes in Notion with database properties and toggles. The converter handles image migration to WeChat CDN, converts toggles to collapsible sections, and adapts callouts.",
+      "zh": "内容营销人员在Notion写文章，用数据库属性和折叠块。转换器将图片迁移到微信CDN，折叠块转可折叠段落，适配callout。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Multi-Platform Publishing",
+      "zh": "多平台发布"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "A tech blogger publishes the same article across Juejin, CSDN, Zhihu, Medium, and GitHub. Each needs slightly different formatting. Batch conversion gets 5 platform-specific versions in seconds.",
+      "zh": "技术博主在掘金、CSDN、知乎、Medium、GitHub发布同一篇文章。每个平台格式略有不同。批量转换在几秒内生成5个平台专属版本。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "markdown-platform-converter",
+    "text": {
+      "en": "Convert Your Markdown — 18+ Platforms",
+      "zh": "转换 Markdown — 支持 18+ 平台"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Key Features to Look For",
+      "zh": "选择转换器的关键特性"
+    }
+  },
+  {
+    "type": "ul",
+    "items": [
+      {
+        "en": "Source and target platform selection",
+        "zh": "源和目标平台选择"
+      },
+      {
+        "en": "Image migration to platform CDNs",
+        "zh": "图片迁移到平台CDN"
+      },
+      {
+        "en": "Wiki-link to standard link conversion",
+        "zh": "Wiki-link转标准链接"
+      },
+      {
+        "en": "Callout/alert block translation",
+        "zh": "Callout/警告块翻译"
+      },
+      {
+        "en": "Batch file processing",
+        "zh": "批量文件处理"
+      },
+      {
+        "en": "TOC auto-generation",
+        "zh": "目录自动生成"
+      },
+      {
+        "en": "Mermaid and math formula support",
+        "zh": "Mermaid和数学公式支持"
+      },
+      {
+        "en": "Client-side privacy",
+        "zh": "客户端隐私保护"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Markdown fragmentation isn't going away. But with the right converter, you write once and publish everywhere without manual reformatting. The key is finding a tool that understands each platform's specific quirks.",
+      "zh": "Markdown碎片化不会消失。但用合适的转换器，你可以写一次发所有平台，不用手动调整格式。关键是找到理解每个平台特定quirks的工具。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "markdown-platform-converter",
+    "text": {
+      "en": "Try It Free — No Signup Needed",
+      "zh": "免费试用——无需注册"
+    }
+  }
+],
+"long-tail-seo-keyword-mining-guide": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "Why Long-Tail Keywords Are Your SEO Secret Weapon",
+      "zh": "为什么长尾关键词是你的 SEO 秘密武器"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "If you're struggling to rank for broad keywords, it's because you're competing against Amazon, Wikipedia, and established tools. The solution? Long-tail keywords — specific 3-7 word phrases that users search when close to a decision.",
+      "zh": "如果你在为泛词排名挣扎，那是因为你在跟亚马逊、维基百科竞争。解决方案是长尾关键词——用户即将做决策时搜索的3-7词具体短语。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    "text": {
+      "en": "💡 Long-tail keywords have 3x higher CTR and 5x higher conversion than broad keywords. They're also 10x easier to rank for.",
+      "zh": "💡 长尾关键词的点击率是泛词的3倍，转化率是5倍。排名难度仅为泛词的1/10。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "5 Free Sources for Long-Tail Keywords",
+      "zh": "5 个免费长尾关键词来源"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "1. Google Autocomplete",
+      "zh": "1. Google 自动补全"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Start typing in Google and watch suggestions. These are real searches users type right now. Use different prefixes (how, what, best, free) to uncover the full list.",
+      "zh": "在Google输入并观察建议。这些是用户现在正在搜索的真实查询。用不同前缀(how/what/best/free)挖掘完整列表。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "2. YouTube & Amazon Autocomplete",
+      "zh": "2. YouTube 和 Amazon 自动补全"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "YouTube suggests video search terms (great for video SEO). Amazon shows buyer-intent keywords — users ready to purchase. Gold for e-commerce sites.",
+      "zh": "YouTube建议视频搜索词（视频SEO利器）。Amazon显示购买意图关键词——准备下单的用户。电商网站的金矿。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "3. People Also Ask (PAA)",
+      "zh": "3. People Also Ask (PAA)"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Google's PAA box shows related questions users ask. These make excellent FAQ content and long-tail keyword targets.",
+      "zh": "Google的PAA框显示用户会问的相关问题。这些是极好的FAQ内容和长尾关键词目标。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "seo-keyword-miner",
+    "text": {
+      "en": "Mine 60+ Long-Tail Keywords Free",
+      "zh": "免费挖掘 60+ 长尾关键词"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "How to Use a Keyword Miner",
+      "zh": "如何使用关键词挖掘工具"
+    }
+  },
+  {
+    "type": "ol",
+    "items": [
+      {
+        "en": "Enter a seed keyword (e.g., 'pinyin')",
+        "zh": "输入种子关键词（如'pinyin'）"
+      },
+      {
+        "en": "Select sources: Google, YouTube, Amazon, or all three",
+        "zh": "选择来源：Google、YouTube、Amazon或全部"
+      },
+      {
+        "en": "Filter by relevance, search intent, and competition",
+        "zh": "按相关性、搜索意图和竞争筛选"
+      },
+      {
+        "en": "Group keywords by topic and create content",
+        "zh": "按主题分组关键词并创建内容"
+      },
+      {
+        "en": "Track rankings in GSC and iterate",
+        "zh": "在GSC中追踪排名并迭代"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Turning Keywords into Content",
+      "zh": "将关键词转化为内容"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Once you have your keyword list, create content that ranks. Group by topic, create one piece per group, include keywords naturally in title/H1/first paragraph/FAQ, add internal links, and track in GSC.",
+      "zh": "拿到关键词列表后，创建能排名的内容。按主题分组，每组创建一篇，在title/H1/首段/FAQ中自然包含关键词，添加内链，在GSC中追踪。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Long-tail keywords are the fastest path to SEO traction for new sites. They're easier to rank for, have higher conversion rates, and give you real user data. Start by mining 60+ keywords, then create targeted content for each group. Within 30 days, you'll see a significant lift in organic traffic.",
+      "zh": "长尾关键词是新站获得SEO牵引力的最快路径。排名容易、转化率高、提供真实用户数据。从挖掘60+关键词开始，为每组创建针对性内容。30天内你将看到自然流量的显著提升。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "seo-keyword-miner",
+    "text": {
+      "en": "Start Mining Long-Tail Keywords",
+      "zh": "开始挖掘长尾关键词"
+    }
+  }
+],
+"keyword-spinoffs-viral-social-titles": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "Why Your Social Media Titles Get Zero Clicks",
+      "zh": "为什么你的社交媒体标题零点击"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "You create a beautiful post, add a generic title like 'Check this out!' or 'New video!', and post it. Result? 12 views, 2 likes, zero shares. The problem isn't your content — it's your title. On social media, your title is 80% of the battle.",
+      "zh": "你创建了精美的帖子，加了'看看这个！'或'新视频！'这类普通标题，发布后结果呢？12次观看、2个赞、零分享。问题不在内容——在标题。在社交媒体上，标题是80%的胜负手。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    "text": {
+      "en": "💡 Posts with emotional or curiosity-driven titles get 2-3x more clicks than descriptive titles. Numbers, questions, and contrast are the most powerful patterns.",
+      "zh": "💡 带情感或好奇心驱动标题的帖子比描述性标题的点击高2-3倍。数字、提问和对比是最有力的模式。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "5 Patterns of Viral Titles That Work",
+      "zh": "真正有效的5种爆款标题模式"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "1. The Number List",
+      "zh": "1. 数字清单"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Numbers create specificity and promise a clear takeaway. '7 Tools That Save Me 2 Hours Every Day' works better than 'Time-Saving Tools'.",
+      "zh": "数字创造具体性，承诺清晰收获。'每天省2小时的7个工具'比'省时工具'效果好。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "2. The Curiosity Gap",
+      "zh": "2. 好奇心缺口"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Create a gap between what the reader knows and what they want to know. 'What 99% of Content Creators Don't Know' makes people want to click.",
+      "zh": "在读者已知和想知之间创造缺口。'99%的内容创作者不知道的事'让人们想点击。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "3. The Homophone Pun",
+      "zh": "3. 谐音梗"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Homophone puns work especially well on Chinese social media. They're memorable, shareable, and stop the scroll. The keyword spinoff generator creates hundreds from one seed word.",
+      "zh": "谐音梗在中国社交媒体上特别有效。好记、易分享、能阻止滑动。关键词裂变生成器能从一个种子词生成数百个。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "4. The Contrast / Before-After",
+      "zh": "4. 对比/前后"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Show transformation: 'Before vs After: How I Changed My Workflow in 7 Days' or 'I Tried 10 Tools So You Don't Have To — #7 Blew My Mind'.",
+      "zh": "展示转变：'7天改变工作流的前后对比'或'我试了10个工具帮你避坑——第7个让我震惊'。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "5. The Direct Question",
+      "zh": "5. 直接提问"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Questions engage the brain. 'Why Your Tool Is Not Working' or 'Are You Making These 5 Mistakes?'",
+      "zh": "提问让大脑参与。'为什么你的工具不工作'或'你犯了这5个错误吗？'"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "keyword-spinoff-generator",
+    "text": {
+      "en": "Generate 500+ Viral Title Variants",
+      "zh": "生成 500+ 爆款标题变体"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Platform-Specific Tips",
+      "zh": "平台特定技巧"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "For Xiaohongshu",
+      "zh": "小红书"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Use square images (3:4), emotional titles with emojis, and trending hashtags. Users prefer practical, lifestyle content with relatable pain points.",
+      "zh": "用竖版图片(3:4)、带emoji的情感标题、趋势标签。用户偏好实用的生活内容和共鸣痛点。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "For TikTok / 抖音",
+      "zh": "抖音"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Hook in the first 3 seconds. Use trending sounds, quick cuts, and text overlays. TikTok rewards authenticity and trends over polish.",
+      "zh": "前3秒抓眼球。用趋势音乐、快速剪辑、文字覆盖。TikTok奖励真实性和趋势而非精修。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Great titles aren't about being clever — they're about understanding psychology. Curiosity, emotion, specificity, and pattern interruption are the four pillars. Combine them with the keyword spinoff generator, and you'll never run out of title ideas.",
+      "zh": "好标题不是耍聪明——是理解心理。好奇心、情感、具体性和模式打断是四大支柱。结合关键词裂变生成器，你再也不会缺标题创意。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "keyword-spinoff-generator",
+    "text": {
+      "en": "Try the Generator Free",
+      "zh": "免费试用生成器"
+    }
+  }
+],
+"add-pinyin-chinese-text-teachers-guide": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "The Complete Guide to Adding Pinyin to Chinese Text",
+      "zh": "为中文文本添加拼音完整指南"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Whether you're a teacher creating lesson materials, a translator preparing a bilingual edition, or a learner studying independently, adding pinyin to Chinese text is essential. This guide shows you the fastest, most accurate way to annotate pinyin with tone marks.",
+      "zh": "无论你是创建教学材料的教师、准备双语版的翻译，还是自学的学生，为中文文本添加拼音都是必备技能。本指南展示最快最准的带调拼音标注方法。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Why Pinyin Annotation Matters",
+      "zh": "为什么拼音标注重要"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Pinyin uses the Latin alphabet plus four tone marks to represent Chinese pronunciation. Correct annotation is crucial for teaching beginners, creating accessible materials, publishing bilingual books, and preparing for HSK exams.",
+      "zh": "拼音使用拉丁字母加四个声调符号表示中文发音。正确标注对教初学者、创建易读材料、出版双语书籍和准备HSK考试至关重要。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "pinyin-annotator",
+    "text": {
+      "en": "Try Pinyin Annotator — Free, No Signup",
+      "zh": "试试拼音标注器——免费免注册"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Step-by-Step Tutorial",
+      "zh": "分步教程"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Step 1: Paste Your Chinese Text",
+      "zh": "第一步：粘贴中文文本"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Copy and paste your Chinese text into the input area. Supports simplified, traditional, and mixed text with English, numbers, and punctuation.",
+      "zh": "将中文文本复制粘贴到输入区。支持简体、繁体及与英文、数字、标点混合的文本。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Step 2: Choose Annotation Settings",
+      "zh": "第二步：选择标注设置"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Select style: pinyin above each character, beside characters, or inline in brackets. Choose whether to annotate polyphonic characters with correct readings. Set pinyin font size.",
+      "zh": "选择样式：字上方、字旁边或括号内。选择是否按正确读音标注多音字。设置拼音字号。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Step 3: Generate and Preview",
+      "zh": "第三步：生成并预览"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Click generate. The tool processes your text in seconds, auto-identifying polyphonic characters and selecting correct pronunciation based on context. Preview and adjust if needed.",
+      "zh": "点击生成。工具在几秒内处理文本，自动识别多音字并根据上下文选择正确读音。预览并按需调整。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Step 4: Export to Your Format",
+      "zh": "第四步：导出为偏好格式"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Export to PDF for printing, Word for editing, HTML for web publishing, or plain text for universal compatibility. Each format preserves pinyin positioning correctly.",
+      "zh": "导出为PDF打印、Word编辑、HTML网页发布或纯文本通用格式。每种格式都正确保留拼音位置。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Advanced Features for Teachers",
+      "zh": "面向教师的高级功能"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Selective Annotation",
+      "zh": "选择性标注"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Instead of annotating every character, annotate only characters below a certain HSK level or specific marked characters. Perfect for progressive learning.",
+      "zh": "不用标注每个字，只标注低于某个HSK等级的字或特定标记的字。非常适合循序渐进的学习。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Batch Processing",
+      "zh": "批量处理"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Process multiple texts or chapters at once. Upload several .txt files and get annotated versions in a single batch. Saves hours for semester materials.",
+      "zh": "一次处理多个文本或章节。上传多个.txt文件，一次性获得全部标注版本。准备一学期材料时节省数小时。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Tips and Best Practices",
+      "zh": "技巧和最佳实践"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    "text": {
+      "en": "🎯 Start with a 100-char test to verify correct handling before longer documents.",
+      "zh": "🎯 先用100字测试，确认正确处理后再处理长文档。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    "text": {
+      "en": "🎯 For classical Chinese, manually verify polyphonic readings — some archaic pronunciations may not be in the dictionary.",
+      "zh": "🎯 对古文，手动验证多音字读音——一些古音可能不在词典中。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Adding pinyin to Chinese text doesn't have to be slow and painful. With modern browser-based tools, you annotate 1,000+ characters in seconds with high accuracy. Smart polyphonic detection ensures correct readings, and multiple export formats fit any workflow.",
+      "zh": "为中文文本添加拼音不必缓慢痛苦。用现代浏览器工具，你可以几秒内高准确率标注1000+字。智能多音字检测确保正确读音，多种导出格式适配任何工作流。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "pinyin-annotator",
+    "text": {
+      "en": "Try It Free — Add Pinyin in Seconds",
+      "zh": "免费试用——秒级添加拼音"
+    }
+  }
+]
 };

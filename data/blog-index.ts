@@ -12252,6 +12252,487 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "title": {"en": "The Ultimate Guide to AI Content Creator Monetization in 2026", "zh": "2026 年 AI 内容创作者变现实战终极指南", "es": "La Guía Definitiva para Monetización de Creadores de Contenido con IA en 2026", "fr": "Le Guide Ultime de la Monétisation des Créateurs de Contenu IA en 2026", "hi": "2026 में AI कंटेंट क्रिएटर मोनेटाइज़ेशन के लिए अल्टीमेट गाइड", "ar": "الدليل الشامل لتحقيق الدخل من منشئي المحتوى بالذكاء الاصطناعي في 2026"},
 "description": {"en": "Learn 7 proven strategies to monetize your AI content creation skills. From niche blogs to SaaS products, discover how creators are turning AI tools into sustainable income in 2026.", "zh": "学习 7 种已验证的 AI 内容创作变现策略。从垂直博客到 SaaS 产品，探索创作者如何在 2026 年将 AI 工具转化为可持续收入。", "es": "Aprende 7 estrategias comprobadas para monetizar tus habilidades de creación de contenido con IA. Desde blogs de nicho hasta productos SaaS, descubre cómo los creadores están convirtiendo las herramientas de IA en ingresos sostenibles en 2026.", "fr": "Apprenez 7 stratégies éprouvées pour monétiser vos compétences en création de contenu IA. Des blogs de niche aux produits SaaS, découvrez comment les créateurs transforment les outils d'IA en revenus durables en 2026.", "hi": "अपने AI कंटेंट क्रिएशन कौशल का मोनेटाइज़ेशन करने के 7 सिद्ध रणनीतियाँ सीखें। niche ब्लॉग्स से SaaS उत्पादों तक, यह जानें कि क्रिएटर्स कैसे AI टूल्स को 2026 में सतत आय में बदल रहे हैं।", "ar": "تعلم 7 استراتيجيات مجربة لتحقيق الدخل من مهاراتك في إنشاء المحتوى بالذكاء الاصطناعي. من المدونات المتخصصة إلى منتجات SaaS، اكتشف كيف يحول المبدعون أدوات الذكاء الاصطناعي إلى دخل مستدام في 2026."},
 "keywords": {"en": ["ai content creator", "ai monetization", "content creator income", "ai business ideas", "blogging with ai", "make money creating content"], "zh": ["AI内容创作者", "AI变现", "内容创作者收入", "AI创业点子", "AI博客", "内容创作赚钱"], "es": ["creador de contenido ia", "monetización ia", "ingresos de creador de contenido", "ideas de negocio ia", "blog con ia", "ganar dinero creando contenido"], "fr": ["créateur de contenu ia", "monétisation ia", "revenus de créateur de contenu", "idées business ia", "bloguer avec ia", "gagner de l'argent en créant du contenu"], "hi": ["AI कंटेंट क्रिएटर", "AI मोनेटाइज़ेशन", "कंटेंट क्रिएटर आय", "AI बिजनेस आइडियास", "AI के साथ ब्लॉगिंग", "कंटेंट बनाकर पैसा कमाएं"], "ar": ["منشئ محتوى بالذكاء الاصطناعي", "تحقيق الدخل بالذكاء الاصطناعي", "دخل منشئ المحتوى", "أفكار أعمال ذكاء اصطناعي", "التدوين بالذكاء الاصطناعي", "كسب المال بإنشاء المحتوى"]}
+},
+{
+  "slug": "polyphonic-pinyin-annotation-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=polyphonic-pinyin&grayscale=false",
+  "tags": [
+    {
+      "en": "Chinese Learning",
+      "zh": "中文学习",
+      "es": "Chino",
+      "fr": "Chinois",
+      "hi": "चीनी शिक्षा",
+      "ar": "تعلم الصينية"
+    },
+    {
+      "en": "Pinyin",
+      "zh": "拼音",
+      "es": "Pinyin",
+      "fr": "Pinyin",
+      "hi": "पिनयिन",
+      "ar": "بينين"
+    },
+    {
+      "en": "EdTech",
+      "zh": "教育科技",
+      "es": "Tecnología Educativa",
+      "fr": "EdTech",
+      "hi": "शिक्षा तकनीक",
+      "ar": "تقنية تعليمية"
+    }
+  ],
+  "relatedToolSlugs": [
+    "polyphonic-pinyin-annotator",
+    "pinyin-annotator",
+    "text-counter"
+  ],
+  "readingMinutes": {
+    "en": 8,
+    "zh": 9,
+    "es": 9,
+    "fr": 9,
+    "hi": 10,
+    "ar": 9
+  },
+  "title": {
+    "en": "How to Annotate Polyphonic Pinyin Correctly: A Complete Guide for Teachers and Learners",
+    "zh": "多音字拼音标注完整指南：教师和学生必备的正确注音方法",
+    "es": "Cómo Anotar Pinyin Polifónico Correctamente: Guía Completa para Profesores y Estudiantes",
+    "fr": "Comment Annoter le Pinyin Polyphonique Correctement : Guide Complet pour Professeurs et Apprenants",
+    "hi": "बहुध्वनि पिनयिन को सही तरीके से कैसे चिह्नित करें: शिक्षकों और शिक्षार्थियों के लिए पूरी गाइड",
+    "ar": "كيفية تعليم بينين متعدد القراءات بشكل صحيح: دليل كامل للمعلمين والمتعلمين"
+  },
+  "description": {
+    "en": "Polyphonic Chinese characters have multiple pronunciations based on context. Learn how to correctly annotate pinyin with tone marks for 行/重/乐 and other common polyphonic chars. Perfect for teachers, students, and publishers.",
+    "zh": "多音字根据上下文有不同读音。学会正确为行/重/乐等常见多音字标注带调拼音，适合教师、学生和出版编辑使用。",
+    "es": "Los caracteres chinos polifónicos tienen múltiples pronunciaciones según el contexto. Aprende a anotar pinyin correctamente con marcas de tono.",
+    "fr": "Les caractères chinois polyphoniques ont plusieurs prononciations selon le contexte. Apprenez à annoter le pinyin correctement.",
+    "hi": "बहुध्वनि चीनी अक्षरों के उच्चारण संदर्भ के अनुसार बदलते हैं। सही टोन अंकन के साथ पिनयिन चिह्नित करना सीखें।",
+    "ar": "الأحرف الصينية متعددة القراءات لها نطقات متعددة حسب السياق. تعلم كيفية تعليم بينين بشكل صحيح."
+  },
+  "keywords": {
+    "en": [
+      "polyphonic pinyin",
+      "chinese pinyin annotation",
+      "polyphonic characters",
+      "pinyin with tone marks",
+      "chinese learning tool"
+    ],
+    "zh": [
+      "多音字拼音",
+      "拼音标注",
+      "多音字注音",
+      "带调拼音",
+      "中文学习工具"
+    ],
+    "es": [
+      "pinyin polifónico",
+      "anotación pinyin",
+      "caracteres polifónicos",
+      "pinyin con tonos"
+    ],
+    "fr": [
+      "pinyin polyphonique",
+      "annotation pinyin",
+      "caractères polyphoniques",
+      "pinyin avec tons"
+    ],
+    "hi": [
+      "बहुध्वनि पिनयिन",
+      "पिनयिन एनोटेशन",
+      "बहुध्वनि अक्षर",
+      "टोन मार्क्स के साथ पिनयिन"
+    ],
+    "ar": [
+      "بينين متعدد القراءات",
+      "تعليم بينين",
+      "أحرف متعددة القراءات",
+      "بينين مع علامات النغمة"
+    ]
+  }
+},
+{
+  "slug": "markdown-conversion-notion-obsidian-github",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=markdown-convert&grayscale=false",
+  "tags": [
+    {
+      "en": "Markdown",
+      "zh": "Markdown",
+      "es": "Markdown",
+      "fr": "Markdown",
+      "hi": "मार्कडाउन",
+      "ar": "ماركداون"
+    },
+    {
+      "en": "Productivity",
+      "zh": "效率工具",
+      "es": "Productividad",
+      "fr": "Productivité",
+      "hi": "उत्पादकता",
+      "ar": "إنتاجية"
+    },
+    {
+      "en": "Writing Tools",
+      "zh": "写作工具",
+      "es": "Herramientas de Escritura",
+      "fr": "Outils d'Écriture",
+      "hi": "लेखन उपकरण",
+      "ar": "أدوات الكتابة"
+    }
+  ],
+  "relatedToolSlugs": [
+    "markdown-platform-converter",
+    "markdown-preview",
+    "regex-tester"
+  ],
+  "readingMinutes": {
+    "en": 7,
+    "zh": 8,
+    "es": 8,
+    "fr": 8,
+    "hi": 9,
+    "ar": 8
+  },
+  "title": {
+    "en": "Convert Markdown Between Notion, Obsidian, and GitHub: The Complete Guide for 2026",
+    "zh": "Notion / Obsidian / GitHub Markdown 互转完整指南：2026 年不再踩坑的转换手册",
+    "es": "Convertir Markdown entre Notion, Obsidian y GitHub: Guía Completa para 2026",
+    "fr": "Convertir Markdown entre Notion, Obsidian et GitHub : Le Guide Complet pour 2026",
+    "hi": "Notion, Obsidian, GitHub के बीच मार्कडाउन कन्वर्ट करें: 2026 की पूरी गाइड",
+    "ar": "تحويل ماركداون بين Notion و Obsidian و GitHub: الدليل الكامل لعام ٢٠٢٦"
+  },
+  "description": {
+    "en": "Tired of your Markdown looking different on every platform? Learn how to convert Notion to GitHub MDM, handle Obsidian wikilinks, and migrate between 18+ platforms.",
+    "zh": "还在为每个平台 Markdown 格式不同而头疼？学会 Notion 转 GitHub 风味 Markdown、处理 Obsidian 双链、18+ 平台无损迁移。",
+    "es": "¿Cansado de que tu Markdown se vea diferente en cada plataforma? Aprende a convertir entre 18+ plataformas.",
+    "fr": "Fatigué que votre Markdown soit différent sur chaque plateforme ? Apprenez à convertir entre plus de 18 plateformes.",
+    "hi": "हर प्लेटफ़ॉर्म पर अपना मार्कडाउन अलग दिखने से थक गए? 18+ प्लेटफ़ॉर्म के बीच कन्वर्ट करना सीखें।",
+    "ar": "هل أنت متعب من اختلاف ماركداون الخاص بك على كل منصة؟ تعلم كيفية التحويل بين أكثر من ١٨ منصة."
+  },
+  "keywords": {
+    "en": [
+      "markdown converter",
+      "notion to markdown",
+      "obsidian to github",
+      "markdown platform converter"
+    ],
+    "zh": [
+      "markdown转换器",
+      "notion转markdown",
+      "obsidian转github",
+      "markdown平台转换"
+    ],
+    "es": [
+      "convertidor markdown",
+      "notion a markdown",
+      "obsidian a github"
+    ],
+    "fr": [
+      "convertisseur markdown",
+      "notion a markdown",
+      "obsidian a github"
+    ],
+    "hi": [
+      "मार्कडाउन कनवर्टर",
+      "नोशन टू मार्कडाउन",
+      "ओब्सीडियन टू गिटहब"
+    ],
+    "ar": [
+      "محوّل ماركداون",
+      "نوشن إلى ماركداون",
+      "أوبسيديان إلى جيت هاب"
+    ]
+  }
+},
+{
+  "slug": "long-tail-seo-keyword-mining-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=seo-keyword&grayscale=false",
+  "tags": [
+    {
+      "en": "SEO",
+      "zh": "SEO",
+      "es": "SEO",
+      "fr": "SEO",
+      "hi": "SEO",
+      "ar": "SEO"
+    },
+    {
+      "en": "Keywords",
+      "zh": "关键词",
+      "es": "Palabras Clave",
+      "fr": "Mots-clés",
+      "hi": "कीवर्ड",
+      "ar": "كلمات مفتاحية"
+    },
+    {
+      "en": "Content Marketing",
+      "zh": "内容营销",
+      "es": "Marketing de Contenido",
+      "fr": "Marketing de Contenu",
+      "hi": "सामग्री विपणन",
+      "ar": "تسويق المحتوى"
+    }
+  ],
+  "relatedToolSlugs": [
+    "seo-keyword-miner",
+    "keyword-spinoff-generator",
+    "regex-tester"
+  ],
+  "readingMinutes": {
+    "en": 9,
+    "zh": 10,
+    "es": 10,
+    "fr": 10,
+    "hi": 11,
+    "ar": 10
+  },
+  "title": {
+    "en": "Long-Tail SEO Keyword Mining: How to Find 60+ Low-Competition Keywords from Google Autocomplete",
+    "zh": "SEO 长尾关键词挖掘：如何从 Google 自动补全找到 60+ 低竞争高价值词",
+    "es": "Minería de Palabras Clave SEO Long-Tail: Cómo Encontrar más de 60 Palabras de Baja Competencia",
+    "fr": "Extraction de Mots-clés SEO Longue Traîne : Comment Trouver plus de 60 Mots-clés à Basse Concurrence",
+    "hi": "लॉन्ग-टेल SEO कीवर्ड माइनिंग: Google ऑटोकंप्लीट से 60+ कम-प्रतिस्पर्धा कीवर्ड कैसे खोजें",
+    "ar": "استخراج الكلمات المفتاحية طويلة الذيل SEO: كيف تجد أكثر من ٦٠ كلمة مفتاحية منخفضة المنافسة"
+  },
+  "description": {
+    "en": "Google Autocomplete is a goldmine of low-competition keywords. Learn how to extract 60+ long-tail keywords from Google, YouTube, and Amazon autocomplete with free tools.",
+    "zh": "Google 自动补全是低竞争关键词的金矿。学会用免费工具从 Google、YouTube、Amazon 自动补全提取 60+ 长尾关键词。",
+    "es": "Google Autocomplete es una mina de oro de palabras clave de baja competencia. Aprende a extraer más de 60 palabras clave.",
+    "fr": "Google Autocomplete est une mine d'or de mots-clés à faible concurrence. Apprenez à extraire plus de 60 mots-clés.",
+    "hi": "Google ऑटोकंप्लीट कम-प्रतिस्पर्धा कीवर्ड की खान है। 60+ लॉन्ग-टेल कीवर्ड निकालना सीखें।",
+    "ar": "يعد Google Autocomplete منجم ذهب للكلمات المفتاحية منخفضة المنافسة. تعلم كيفية استخراج أكثر من ٦٠ كلمة مفتاحية."
+  },
+  "keywords": {
+    "en": [
+      "long-tail keywords",
+      "seo keyword research",
+      "google autocomplete",
+      "keyword miner",
+      "free keyword tool"
+    ],
+    "zh": [
+      "长尾关键词",
+      "seo关键词研究",
+      "google自动补全",
+      "关键词挖掘",
+      "免费关键词工具"
+    ],
+    "es": [
+      "palabras clave long-tail",
+      "investigación de palabras clave",
+      "google autocomplete"
+    ],
+    "fr": [
+      "mots-clés longue traîne",
+      "recherche de mots-clés",
+      "google autocomplete"
+    ],
+    "hi": [
+      "लॉन्ग-टेल कीवर्ड",
+      "SEO कीवर्ड रिसर्च",
+      "गूगल ऑटोकंप्लीट"
+    ],
+    "ar": [
+      "كلمات مفتاحية طويلة الذيل",
+      "بحث عن الكلمات المفتاحية",
+      "google autocomplete"
+    ]
+  }
+},
+{
+  "slug": "keyword-spinoffs-viral-social-titles",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=keyword-spinoff&grayscale=false",
+  "tags": [
+    {
+      "en": "Content Creation",
+      "zh": "内容创作",
+      "es": "Creación de Contenido",
+      "fr": "Création de Contenu",
+      "hi": "सामग्री निर्माण",
+      "ar": "إنشاء المحتوى"
+    },
+    {
+      "en": "Social Media",
+      "zh": "社交媒体",
+      "es": "Redes Sociales",
+      "fr": "Réseaux Sociaux",
+      "hi": "सोशल मीडिया",
+      "ar": "وسائل التواصل الاجتماعي"
+    },
+    {
+      "en": "Copywriting",
+      "zh": "文案写作",
+      "es": "Copywriting",
+      "fr": "Copywriting",
+      "hi": "कॉपीराइटिंग",
+      "ar": "كتابة الإعلانات"
+    }
+  ],
+  "relatedToolSlugs": [
+    "keyword-spinoff-generator",
+    "caption-generator",
+    "seo-keyword-miner"
+  ],
+  "readingMinutes": {
+    "en": 7,
+    "zh": 8,
+    "es": 8,
+    "fr": 8,
+    "hi": 9,
+    "ar": 8
+  },
+  "title": {
+    "en": "500+ Viral Keyword Spinoffs: How to Generate Catchy Titles for Social Media",
+    "zh": "500+ 爆款关键词裂变：小红书 / 抖音 / Instagram 吸睛标题生成技巧",
+    "es": "Más de 500 Spinoffs de Palabras Clave Virales: Títulos Atractivos para Redes Sociales",
+    "fr": "Plus de 500 Spinoffs de Mots-clés Viraux : Titres Accrocheurs pour les Réseaux",
+    "hi": "500+ वायरल कीवर्ड स्पिनऑफ: सोशल मीडिया के लिए आकर्षक टाइटल",
+    "ar": "أكثر من ٥٠٠ اشتقاق كلمات مفتاحية فيروسية: عناوين جذابة لوسائل التواصل"
+  },
+  "description": {
+    "en": "Homophone puns, rhymes, idiom reworks — learn how to generate 500+ catchy title variations from a single seed word for Xiaohongshu, TikTok, and Instagram.",
+    "zh": "谐音梗、押韵、成语改编——学会从一个种子词生成 500+ 吸睛标题变体，适合小红书、抖音和 Instagram。",
+    "es": "Juegos de palabras, rimas, refranes adaptados — genera más de 500 variantes de títulos atractivos.",
+    "fr": "Jeux de mots, rimes, détournements d'idiomes — générez plus de 500 variantes de titres accrocheurs.",
+    "hi": "होमोफोन पन, तुकबंदी — 500+ आकर्षक टाइटल वेरिएंट बनाएं।",
+    "ar": "جناس homophone، طباق — أنشئ أكثر من ٥٠٠ متغير عنوان جذاب."
+  },
+  "keywords": {
+    "en": [
+      "keyword spinoff",
+      "viral title generator",
+      "xiaohongshu titles",
+      "tiktok title ideas",
+      "catchy titles"
+    ],
+    "zh": [
+      "关键词裂变",
+      "爆款标题生成",
+      "小红书标题",
+      "抖音标题",
+      "吸睛标题"
+    ],
+    "es": [
+      "spinoff de palabras clave",
+      "generador de títulos virales"
+    ],
+    "fr": [
+      "spinoff de mots-clés",
+      "générateur de titres viraux"
+    ],
+    "hi": [
+      "कीवर्ड स्पिनऑफ",
+      "वायरल टाइटल जनरेटर"
+    ],
+    "ar": [
+      "اشتقاق الكلمات المفتاحية",
+      "مولّد العناوين الفيروسية"
+    ]
+  }
+},
+{
+  "slug": "add-pinyin-chinese-text-teachers-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=pinyin-teachers&grayscale=false",
+  "tags": [
+    {
+      "en": "Chinese Learning",
+      "zh": "中文学习",
+      "es": "Chino",
+      "fr": "Chinois",
+      "hi": "चीनी शिक्षा",
+      "ar": "تعلم الصينية"
+    },
+    {
+      "en": "Teaching Tools",
+      "zh": "教学工具",
+      "es": "Herramientas de Enseñanza",
+      "fr": "Outils d'Enseignement",
+      "hi": "शिक्षण उपकरण",
+      "ar": "أدوات التدريس"
+    },
+    {
+      "en": "EdTech",
+      "zh": "教育科技",
+      "es": "Tecnología Educativa",
+      "fr": "EdTech",
+      "hi": "शिक्षा तकनीक",
+      "ar": "تقنية تعليمية"
+    }
+  ],
+  "relatedToolSlugs": [
+    "pinyin-annotator",
+    "polyphonic-pinyin-annotator",
+    "text-counter"
+  ],
+  "readingMinutes": {
+    "en": 8,
+    "zh": 9,
+    "es": 9,
+    "fr": 9,
+    "hi": 10,
+    "ar": 9
+  },
+  "title": {
+    "en": "Add Pinyin to Chinese Text: The Ultimate Guide for Teachers and Learners",
+    "zh": "为中文文本添加拼音：教师、翻译和学习者的终极指南",
+    "es": "Agregar Pinyin al Texto Chino: Guía Definitiva para Profesores y Estudiantes",
+    "fr": "Ajouter du Pinyin au Texte Chinois : Le Guide Ultime pour Professeurs et Apprenants",
+    "hi": "चीनी पाठ में पिनयिन जोड़ें: शिक्षकों और शिक्षार्थियों के लिए अंतिम गाइड",
+    "ar": "إضافة بينين إلى النص الصيني: الدليل النهائي للمعلمين والمتعلمين"
+  },
+  "description": {
+    "en": "Add pinyin with tone marks to any Chinese text in seconds. Smart polyphonic detection, batch processing, export to PDF/Word/HTML. Free for teachers and students.",
+    "zh": "秒级为任意中文文本添加带调拼音。智能多音字检测，批量处理，导出PDF/Word/HTML。教师学生免费。",
+    "es": "Agrega pinyin con marcas de tono a cualquier texto chino en segundos. Detección inteligente de polifónicos.",
+    "fr": "Ajoutez du pinyin avec marques de ton en quelques secondes. Détection intelligente des polyphoniques.",
+    "hi": "किसी भी चीनी पाठ में सेकंडों में टोन अंकन के साथ पिनयिन जोड़ें। स्मार्ट बहुध्वनि पहचान।",
+    "ar": "أضف بينين مع علامات النغمة في ثوانٍ. كشف ذكي متعدد القراءات."
+  },
+  "keywords": {
+    "en": [
+      "add pinyin to chinese",
+      "pinyin annotator",
+      "chinese pinyin generator",
+      "pinyin with tone marks"
+    ],
+    "zh": [
+      "中文加拼音",
+      "拼音标注器",
+      "拼音生成器",
+      "带调拼音"
+    ],
+    "es": [
+      "agregar pinyin",
+      "anotador de pinyin",
+      "generador de pinyin chino"
+    ],
+    "fr": [
+      "ajouter du pinyin",
+      "annotateur de pinyin",
+      "générateur de pinyin chinois"
+    ],
+    "hi": [
+      "पिनयिन जोड़ें",
+      "पिनयिन एनोटेटर",
+      "चीनी पिनयिन जनरेटर"
+    ],
+    "ar": [
+      "إضافة بينين",
+      "مدون بينين",
+      "مولّد بينين صيني"
+    ]
+  }
 }
 ];
 
