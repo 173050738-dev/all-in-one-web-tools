@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
-import { Download, Calendar, Clock, AlertCircle } from 'lucide-react';
+import { Download, Calendar, Clock, AlertCircle, Sparkles, RefreshCw, Copy, Check } from 'lucide-react';
 
 interface LifeWeeksProps {
   locale?: string;
@@ -16,6 +16,14 @@ const i18n: Record<string, Record<string, string>> = {
     empty: '请选择你的生日', totalWeeks: '总周数', passed: '已过', left: '剩余',
     reflect: '每一格都是真实的一周。好好珍惜剩下的格子。',
     months: '月', days: '日',
+    aiAdvice: 'AI人生建议',
+    aiAdviceDesc: '根据你的年龄阶段，AI为你生成专属的反思和建议',
+    aiSuggest: 'AI分析',
+    aiPrompts: '反思提示',
+    aiFail: 'AI暂时不可用，请稍后重试',
+    copied: '已复制',
+    copy: '复制',
+    stageLabel: '人生阶段',
   },
   en: {
     title: 'Your Life in Weeks', subtitle: '4,000 weeks of life — see how many you have lived',
@@ -25,6 +33,14 @@ const i18n: Record<string, Record<string, string>> = {
     empty: 'Please select your birthday', totalWeeks: 'Total weeks', passed: 'Passed', left: 'Remaining',
     reflect: 'Each cell is a real week. Make the remaining ones count.',
     months: 'months', days: 'days',
+    aiAdvice: 'AI Life Advice',
+    aiAdviceDesc: 'AI-generated reflection and advice based on your life stage',
+    aiSuggest: 'AI Analyze',
+    aiPrompts: 'Reflection Prompts',
+    aiFail: 'AI temporarily unavailable, please retry',
+    copied: 'Copied',
+    copy: 'Copy',
+    stageLabel: 'Life Stage',
   },
   es: {
     title: 'Tu Vida en Semanas', subtitle: '4.000 semanas de vida — mira cuántas has vivido',
@@ -34,6 +50,14 @@ const i18n: Record<string, Record<string, string>> = {
     empty: 'Selecciona tu cumpleaños', totalWeeks: 'Semanas totales', passed: 'Pasadas', left: 'Restantes',
     reflect: 'Cada celda es una semana real. Aprovecha las que quedan.',
     months: 'meses', days: 'días',
+    aiAdvice: 'Consejo de Vida IA',
+    aiAdviceDesc: 'Reflexión y consejo generados por IA según tu etapa de vida',
+    aiSuggest: 'IA Analizar',
+    aiPrompts: 'Preguntas de Reflexión',
+    aiFail: 'IA temporalmente no disponible, reintenta',
+    copied: 'Copiado',
+    copy: 'Copiar',
+    stageLabel: 'Etapa de Vida',
   },
   fr: {
     title: 'Votre Vie en Semaines', subtitle: '4 000 semaines de vie — voyez combien vous en avez vécu',
@@ -43,6 +67,14 @@ const i18n: Record<string, Record<string, string>> = {
     empty: 'Veuillez sélectionner votre anniversaire', totalWeeks: 'Semaines totales', passed: 'Passées', left: 'Restantes',
     reflect: 'Chaque case est une vraie semaine. Profitez de celles qui restent.',
     months: 'mois', days: 'jours',
+    aiAdvice: 'Conseil de Vie IA',
+    aiAdviceDesc: 'Réflexion et conseil générés par IA selon votre étape de vie',
+    aiSuggest: 'IA Analyser',
+    aiPrompts: 'Questions de Réflexion',
+    aiFail: 'IA temporairement indisponible, réessayez',
+    copied: 'Copié',
+    copy: 'Copier',
+    stageLabel: 'Étape de Vie',
   },
   hi: {
     title: 'सप्ताहों में आपका जीवन', subtitle: 'जीवन के 4,000 सप्ताह — देखें आप कितने जी चुके हैं',
@@ -52,6 +84,14 @@ const i18n: Record<string, Record<string, string>> = {
     empty: 'कृपया अपना जन्मदिन चुनें', totalWeeks: 'कुल सप्ताह', passed: 'बीते', left: 'शेष',
     reflect: 'प्रत्येक कक्ष एक वास्तविक सप्ताह है। बाकी को महत्व दें।',
     months: 'महीने', days: 'दिन',
+    aiAdvice: 'AI जीवन सलाह',
+    aiAdviceDesc: 'आपके जीवन चरण के आधार पर AI-जनरेटेड प्रतिबिंब और सलाह',
+    aiSuggest: 'AI विश्लेषण',
+    aiPrompts: 'प्रतिबिंब प्रश्न',
+    aiFail: 'AI अस्थायी रूप से अनुपलब्ध, पुनः प्रयास करें',
+    copied: 'कॉपी हुआ',
+    copy: 'कॉपी',
+    stageLabel: 'जीवन चरण',
   },
   ar: {
     title: 'حياتك في أسابيع', subtitle: '4000 أسبوع من الحياة — انظر كم عشت منها',
@@ -61,6 +101,14 @@ const i18n: Record<string, Record<string, string>> = {
     empty: 'يرجى اختيار تاريخ ميلادك', totalWeeks: 'إجمالي الأسابيع', passed: 'مرت', left: 'متبقية',
     reflect: 'كل خانة هي أسبوع حقيقي. استغل ما تبقى.',
     months: 'شهر', days: 'يوم',
+    aiAdvice: 'نصيحة الحياة بالذكاء الاصطناعي',
+    aiAdviceDesc: 'تأمل ونصيحة مولدة بالذكاء الاصطناعي بناءً على مرحلة حياتك',
+    aiSuggest: 'تحليل بالذكاء الاصطناعي',
+    aiPrompts: 'أسئلة للتأمل',
+    aiFail: 'الذكاء الاصطناعي غير متاح مؤقتاً، حاول مرة أخرى',
+    copied: 'تم النسخ',
+    copy: 'نسخ',
+    stageLabel: 'مرحلة الحياة',
   },
 };
 
@@ -77,6 +125,12 @@ export default function LifeWeeks({ locale = 'zh' }: LifeWeeksProps) {
   const [dateStr, setDateStr] = useState('');
   const [lifespan, setLifespan] = useState(80);
   const [colorIdx, setColorIdx] = useState(5);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [stage, setStage] = useState('');
+  const [advice, setAdvice] = useState('');
+  const [prompts, setPrompts] = useState<string[]>([]);
+  const [aiError, setAiError] = useState(false);
+  const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const birthDate = useMemo(() => {
@@ -142,6 +196,41 @@ export default function LifeWeeks({ locale = 'zh' }: LifeWeeksProps) {
   useEffect(() => {
     draw();
   }, [draw]);
+
+  useEffect(() => {
+    if (!birthDate) {
+      setStage('');
+      setAdvice('');
+      setPrompts([]);
+      setAiError(false);
+      return;
+    }
+    const age = (Date.now() - birthDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+    setAiLoading(true);
+    setAiError(false);
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch('/api/life-weeks-ai/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ age, lifespan, locale, weeksLived, totalWeeks }),
+          signal: AbortSignal.timeout(8000),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setStage(data.stage || '');
+          setAdvice(data.advice || '');
+          setPrompts(data.prompts || []);
+        } else {
+          setAiError(true);
+        }
+      } catch {
+        setAiError(true);
+      }
+      setAiLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [birthDate, lifespan, locale, weeksLived, totalWeeks]);
 
   const handleDownload = () => {
     const canvas = canvasRef.current;
@@ -235,6 +324,62 @@ export default function LifeWeeks({ locale = 'zh' }: LifeWeeksProps) {
           </div>
         )}
       </div>
+
+      {/* AI Advice Section */}
+      {birthDate && (aiLoading || stage || advice || prompts.length > 0 || aiError) && (
+        <div className="mb-4 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles size={18} className="text-sky-500" />
+            <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-100">{t.aiAdvice}</h3>
+          </div>
+          {aiLoading && (
+            <div className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
+              <RefreshCw size={14} className="animate-spin" />
+              {t.aiSuggest}...
+            </div>
+          )}
+          {!aiLoading && aiError && (
+            <div className="text-sm text-amber-600 dark:text-amber-400">{t.aiFail}</div>
+          )}
+          {!aiLoading && stage && (
+            <div className="mb-3">
+              <span className="text-xs text-gray-500 dark:text-gray-400">{t.stageLabel}</span>
+              <p className="text-sm font-medium text-sky-600 dark:text-sky-400 mt-0.5" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+                {stage}
+              </p>
+            </div>
+          )}
+          {!aiLoading && advice && (
+            <div className="mb-3">
+              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+                {advice}
+              </p>
+            </div>
+          )}
+          {!aiLoading && prompts.length > 0 && (
+            <div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{t.aiPrompts}</p>
+              <ul className="space-y-2">
+                {prompts.map((p, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-700 rounded-lg px-3 py-2 min-h-[36px] cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+                    onClick={() => {
+                      navigator.clipboard.writeText(p);
+                      setCopiedIdx(idx);
+                      setTimeout(() => setCopiedIdx(null), 1500);
+                    }}
+                    dir={locale === 'ar' ? 'rtl' : 'ltr'}
+                  >
+                    <span className="flex-shrink-0 text-sky-500">•</span>
+                    <span>{copiedIdx === idx ? `✓ ${t.copied}` : p}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
 
       {birthDate && (
         <>

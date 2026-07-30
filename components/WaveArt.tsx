@@ -15,6 +15,13 @@ const i18n: Record<string, Record<string, string>> = {
     palette: '配色', inputTip: '支持中文、英文、数字，每个字符映射为独特频率',
     empty: '在上方输入文字，生成你的专属波形艺术', combined: '叠加模式',
     combinedTip: '把多个名字的波形叠加在一起（用 / 分隔）',
+    aiReading: 'AI波形解读',
+    aiReadingDesc: 'AI生成这段波形的象征含义、能量解读和社交配文',
+    aiAnalyze: 'AI解读',
+    aiCaptions: '社交配文',
+    aiFail: 'AI暂时不可用，请稍后重试',
+    copiedCaption: '已复制',
+    copy: '复制',
   },
   en: {
     title: 'Voice Wave Art', subtitle: 'Turn your name or a phrase into a unique visual totem',
@@ -23,6 +30,13 @@ const i18n: Record<string, Record<string, string>> = {
     palette: 'Palette', inputTip: 'Supports any language, numbers, symbols — each character maps to a unique frequency',
     empty: 'Enter text above to generate your wave art', combined: 'Overlay Mode',
     combinedTip: 'Overlay multiple name waves (separate with /)',
+    aiReading: 'AI Wave Reading',
+    aiReadingDesc: 'AI-generated symbolic meaning, energy reading, and social captions for this waveform',
+    aiAnalyze: 'AI Analyze',
+    aiCaptions: 'Social Captions',
+    aiFail: 'AI temporarily unavailable, please retry',
+    copiedCaption: 'Copied',
+    copy: 'Copy',
   },
   es: {
     title: 'Arte de Onda de Voz', subtitle: 'Convierte tu nombre o frase en un tótem visual único',
@@ -31,6 +45,13 @@ const i18n: Record<string, Record<string, string>> = {
     palette: 'Paleta', inputTip: 'Soporta cualquier idioma, números, símbolos — cada carácter se asigna a una frecuencia única',
     empty: 'Ingresa texto arriba para generar tu arte de onda', combined: 'Modo Superposición',
     combinedTip: 'Superpón ondas de múltiples nombres (separa con /)',
+    aiReading: 'Lectura de Onda IA',
+    aiReadingDesc: 'Significado simbólico generado por IA, lectura de energía y subtítulos sociales',
+    aiAnalyze: 'IA Analizar',
+    aiCaptions: 'Subtítulos Sociales',
+    aiFail: 'IA temporalmente no disponible, reintenta',
+    copiedCaption: 'Copiado',
+    copy: 'Copiar',
   },
   fr: {
     title: 'Art d\'Onde Vocale', subtitle: 'Transformez votre nom ou une phrase en un totem visuel unique',
@@ -39,6 +60,13 @@ const i18n: Record<string, Record<string, string>> = {
     palette: 'Palette', inputTip: 'Prend en charge toutes les langues, chiffres, symboles — chaque caractère correspond à une fréquence unique',
     empty: 'Entrez du texte ci-dessus pour générer votre art d\'onde', combined: 'Mode Superposition',
     combinedTip: 'Superposez les ondes de plusieurs noms (séparez par /)',
+    aiReading: 'Lecture d\'Onde IA',
+    aiReadingDesc: 'Signification symbolique générée par IA, lecture d\'énergie et légendes sociales',
+    aiAnalyze: 'IA Analyser',
+    aiCaptions: 'Légendes Sociales',
+    aiFail: 'IA temporairement indisponible, réessayez',
+    copiedCaption: 'Copié',
+    copy: 'Copier',
   },
   hi: {
     title: 'वॉइस वेव आर्ट', subtitle: 'अपने नाम या वाक्य को एक अनोखे दृश्य प्रतीक में बदलें',
@@ -47,6 +75,13 @@ const i18n: Record<string, Record<string, string>> = {
     palette: 'पैलेट', inputTip: 'किसी भी भाषा, संख्या, प्रतीक का समर्थन — प्रत्येक अक्षर एक अद्वितीय आवृत्ति से मैप होता है',
     empty: 'अपनी वेव आर्ट बनाने के लिए ऊपर टेक्स्ट दर्ज करें', combined: 'ओवरले मोड',
     combinedTip: 'कई नामों की तरंगों को ओवरले करें (/ से अलग करें)',
+    aiReading: 'AI वेव रीडिंग',
+    aiReadingDesc: 'AI-जनरेटेड प्रतीकात्मक अर्थ, ऊर्जा रीडिंग और सोशल कैप्शन',
+    aiAnalyze: 'AI विश्लेषण',
+    aiCaptions: 'सोशल कैप्शन',
+    aiFail: 'AI अस्थायी रूप से अनुपलब्ध, पुनः प्रयास करें',
+    copiedCaption: 'कॉपी हुआ',
+    copy: 'कॉपी',
   },
   ar: {
     title: 'فن الموجة الصوتية', subtitle: 'حوّل اسمك أو جملة إلى رمز بصري فريد',
@@ -55,6 +90,13 @@ const i18n: Record<string, Record<string, string>> = {
     palette: 'لوحة الألوان', inputTip: 'يدعم جميع اللغات والأرقام والرموز — كل حرف يرتبط بتردد فريد',
     empty: 'أدخل نصًا أعلاه لإنشاء فن الموجة', combined: 'وضع التراكب',
     combinedTip: 'تراكب موجات أسماء متعددة (افصل بـ /)',
+    aiReading: 'قراءة الموجة بالذكاء الاصطناعي',
+    aiReadingDesc: 'معنى رمزي مولد بالذكاء الاصطناعي، قراءة طاقة، وتعليقات اجتماعية',
+    aiAnalyze: 'تحليل بالذكاء الاصطناعي',
+    aiCaptions: 'تعليقات اجتماعية',
+    aiFail: 'الذكاء الاصطناعي غير متاح مؤقتاً، حاول مرة أخرى',
+    copiedCaption: 'تم النسخ',
+    copy: 'نسخ',
   },
 };
 
@@ -83,6 +125,11 @@ export default function WaveArt({ locale = 'zh' }: WaveArtProps) {
   const [paletteIdx, setPaletteIdx] = useState(0);
   const [seed, setSeed] = useState(0);
   const [combined, setCombined] = useState(false);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [reading, setReading] = useState('');
+  const [captions, setCaptions] = useState<string[]>([]);
+  const [aiError, setAiError] = useState(false);
+  const [copiedCaptionIdx, setCopiedCaptionIdx] = useState<number | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const draw = useCallback(() => {
@@ -176,6 +223,38 @@ export default function WaveArt({ locale = 'zh' }: WaveArtProps) {
   useEffect(() => {
     draw();
   }, [draw]);
+
+  useEffect(() => {
+    if (!text.trim()) {
+      setReading('');
+      setCaptions([]);
+      setAiError(false);
+      return;
+    }
+    setAiLoading(true);
+    setAiError(false);
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch('/api/wave-art-ai/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, style, locale }),
+          signal: AbortSignal.timeout(8000),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setReading(data.reading || '');
+          setCaptions(data.captions || []);
+        } else {
+          setAiError(true);
+        }
+      } catch {
+        setAiError(true);
+      }
+      setAiLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [text, style, locale]);
 
   const handleDownload = () => {
     const canvas = canvasRef.current;
@@ -280,6 +359,57 @@ export default function WaveArt({ locale = 'zh' }: WaveArtProps) {
           </div>
         )}
       </div>
+
+      {/* AI Reading Section */}
+      {text.trim() && (aiLoading || reading || captions.length > 0 || aiError) && (
+        <div className="mb-4 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles size={18} className="text-sky-500" />
+            <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-100">{t.aiReading}</h3>
+          </div>
+          {aiLoading && (
+            <div className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
+              <RefreshCw size={14} className="animate-spin" />
+              {t.aiAnalyze}...
+            </div>
+          )}
+          {!aiLoading && aiError && (
+            <div className="text-sm text-amber-600 dark:text-amber-400">{t.aiFail}</div>
+          )}
+          {!aiLoading && reading && (
+            <div className="mb-3">
+              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+                {reading}
+              </p>
+            </div>
+          )}
+          {!aiLoading && captions.length > 0 && (
+            <div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{t.aiCaptions}</p>
+              <div className="flex flex-wrap gap-2">
+                {captions.map((cap, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      navigator.clipboard.writeText(cap);
+                      setCopiedCaptionIdx(idx);
+                      setTimeout(() => setCopiedCaptionIdx(null), 1500);
+                    }}
+                    className={`text-xs px-3 py-1.5 rounded-full border transition min-h-[36px] ${
+                      copiedCaptionIdx === idx
+                        ? 'bg-sky-100 border-sky-300 text-sky-700 dark:bg-sky-900/30 dark:border-sky-700 dark:text-sky-300'
+                        : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300'
+                    }`}
+                    dir={locale === 'ar' ? 'rtl' : 'ltr'}
+                  >
+                    {copiedCaptionIdx === idx ? `✓ ${t.copiedCaption}` : cap}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Actions */}
       {text.trim() && (

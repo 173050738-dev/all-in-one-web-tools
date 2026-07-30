@@ -831,6 +831,52 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           return json({ success: true, cleaned, remaining: rateLimitResult.remaining });
         }
 
+        case '/api/excuse-gen':
+        case '/api/excuse-gen/': {
+          const scenario = (payload.scenario as string) || 'late';
+          const mode = (payload.mode as string) || 'serious';
+          const customScenario = payload.customScenario as string;
+          const scenarioLabel = (
+            locale === 'zh' ? { late: '迟到', 'skip-work': '不想上班', 'cancel-plans': '不想赴约', deadline: 'deadline拖了' }
+            : locale === 'es' ? { late: 'llegar tarde', 'skip-work': 'faltar al trabajo', 'cancel-plans': 'cancelar planes', deadline: 'plazo vencido' }
+            : locale === 'fr' ? { late: 'en retard', 'skip-work': 'rater le travail', 'cancel-plans': 'annuler un plan', deadline: 'deadline manquée' }
+            : locale === 'hi' ? { late: 'देर से पहुंचना', 'skip-work': 'काम छोड़ना', 'cancel-plans': 'योजना रद्द', deadline: 'समयसीमा छूटी' }
+            : locale === 'ar' ? { late: 'تأخرت', 'skip-work': 'غياب عن العمل', 'cancel-plans': 'إلغاء خطة', deadline: 'فات الموعد' }
+            : { late: 'running late', 'skip-work': 'skip work', 'cancel-plans': 'cancel plans', deadline: 'missed deadline' }
+          )[scenario] || scenario;
+          const actualScenario = customScenario?.trim() || scenarioLabel;
+          const modeDesc = mode === 'serious'
+            ? (locale === 'zh' ? '真实可信的借口' : locale === 'en' ? 'plausible realistic excuse' : locale === 'es' ? 'excusa creíble' : locale === 'fr' ? 'excuse crédible' : locale === 'hi' ? 'विश्वसनीय बहाना' : 'عذر واقعي')
+            : (locale === 'zh' ? '荒诞搞笑的借口' : locale === 'en' ? 'absurd hilarious excuse' : locale === 'es' ? 'excusa absurda' : locale === 'fr' ? 'excuse absurde' : locale === 'hi' ? 'बेतुका मज़ेदार बहाना' : 'عذر سخيف مضحك');
+          const systemPrompt = `你是一个借口生成器。生成${modeDesc}。只返回JSON：{"excuse":"借口内容","explanation":"一句话解释"}。用${langLabel(locale)}输出。简短口语化，不要违法内容。`;
+          const userPrompt = `场景：${actualScenario}\n模式：${mode}\n生成1条借口。`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          try { const r = JSON.parse(content); return json({ excuse: r.excuse, explanation: r.explanation || '', source: 'ai' }); }
+          catch { return json({ excuse: content, explanation: '', source: 'ai' }); }
+        }
+
+        case '/api/wave-art-ai':
+        case '/api/wave-art-ai/': {
+          const text = payload.text as string;
+          if (!text?.trim()) return errJson('Text is required', 400);
+          const systemPrompt = `你是声波艺术解读师。根据文字生成趣味波形解读（像星座解读那样有趣但无害）+3条社交配文。只返回JSON：{"reading":"解读80-150字","captions":["配文1","配文2","配文3"]}。用${langLabel(locale)}输出。积极正面，不涉及负面判断或诊断。`;
+          const userPrompt = `输入文字：${text}\n生成波形解读和3条社交配文。`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          try { const r = JSON.parse(content); return json({ reading: r.reading, captions: r.captions || [], source: 'ai' }); }
+          catch { return json({ reading: content, captions: [], source: 'ai' }); }
+        }
+
+        case '/api/life-weeks-ai':
+        case '/api/life-weeks-ai/': {
+          const age = payload.age as number;
+          if (typeof age !== 'number') return errJson('Age required', 400);
+          const systemPrompt = `你是人生规划顾问。根据年龄生成个性化建议+反思提示。只返回JSON：{"stage":"阶段名","advice":["建议1","建议2","建议3"],"prompts":["问题1","问题2","问题3","问题4","问题5"]}。用${langLabel(locale)}输出。积极具体，不说教，不涉及医疗诊断。`;
+          const userPrompt = `年龄：${age}岁\n生成人生阶段建议和5个反思提示。`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          try { const r = JSON.parse(content); return json({ stage: r.stage || '', advice: (r.advice || []).join('\n'), prompts: r.prompts || [], source: 'ai' }); }
+          catch { return json({ stage: '', advice: content, prompts: [], source: 'ai' }); }
+        }
+
         default:
           return errJson('Not found', 404);
       }

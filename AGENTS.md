@@ -228,3 +228,31 @@
   - 累计 PR: #61(已合)/#98/#181/#331，共4个(1合3待)
 - 【踩坑】命令行连 api.github.com 极不稳(TUN梯子首包易被reset)，gh api 脚本务必加【重试5次+间隔4s】；create PR 若脚本内失败，等8s在PS里直接重跑 gh pr create 常能成
 - 查合并: gh pr view <num> --repo <owner/repo> --json state,mergedAt
+
+### 导航站/外链推广进度补记（2026-07-30）
+- 【新提】PR #83 @ nafasebra/awesome-webdesign-tools (★156, 2026-07 极活跃常合并 Add xxx 类外部PR) —— 目前最优目标
+  - 放入 ## Utils 段, 按字母序插在 KeyboardTester(Ke) 之后 Lorem Ipsum(L) 之前
+  - 条目(守红线-无假数字/无free forever): - [Korelyy](https://korelyy.com/en/) - A growing collection of browser-based online tools for developers and everyday tasks: JSON, Base64, color, QR codes, image and PDF utilities. Runs client-side, no signup.
+  - diff干净: +1行/-0行只改README。查: gh pr view 83 --repo nafasebra/awesome-webdesign-tools --json state,mergedAt
+- PR汇总: #61(YSGStudyHards★1142)已合并 / #98(yaolifeng0629★2430) / #181(atakanaltok★1220) / #331(devtoolsd★673) / #83(nafasebra★156) —— 1合4待(07-30核验#98/#181/#331仍OPEN无维护者留言,#98那条review是cubic-dev-ai机器人自动审无需回应)
+
+### Dev.to 引流进度（新增 2026-07-30）
+- Dev.to 账号已登录：用户名 CarsonJ，个人页 dev.to/korelyy（此前已有4篇历史文章，其中几篇标题踩红线-1000tools/19free tools/privacy-first,属历史遗留暂不动）
+- 【新发布】文章《Why I Only Build Tools That Run in Your Browser》已公开发布：https://dev.to/korelyy/why-i-only-build-tools-that-run-in-your-browser-2ke
+  - 内容=桌面《引导文章-为什么做浏览器工具.md》英文版(2062字),零硬广,结尾自然带出korelyy.com引流句,标签 webdev/indiehackers/privacy
+  - 【踩坑】Dev.to 编辑器 tag-input 逐字符输入易拼成一坨脏chip;发布是脚本Enter键误触发的(本想先存草稿),好在内容是审过定稿。以后填tag后避免在tag框按Enter,改点Save Draft按钮
+- 【待办·SEO】korelyy.com 上目前【没有】这篇对应blog(测过/en/blog/why-i-build-browser-only-tools/=404)。等Trae把这篇也上korelyy blog后,回Dev.to编辑该文设canonical指向korelyy原文,让SEO权重回流主站。编辑入口: dev.to/korelyy/why-i-only-build-tools-that-run-in-your-browser-2ke/edit → Advanced Options → Canonical URL
+- 【浏览器】以后统一用 Chrome(不用Edge,Edge无cookie)。启动:先 Get-Process msedge,chrome 全 Stop-Process,再 cmd /c D:\pw-temp\open-chrome.cmd (内含 start chrome --remote-debugging-port=9222 --profile-directory=Default)。注意别让旧Edge占着9222端口
+
+### IH 养号补记（2026-07-30）
+- 新发1条评论到 Aproov《The Product Hunt problem nobody warns you about》帖(product聚合页 url带?post=)：讲自己因没hunter干脆没上PH、走搜索慢积累的路,结尾追问作者"没hunter拿到流量的人靠产品还是靠提前刷社区"。已核验LANDED。累计约15条评论
+- 【关键踩坑】IH 的 /product/xxx?post=yyy 这类帖的评论框是 [contenteditable=true] 不是 textarea！老脚本 ih-comments-0726.js 只找 textarea 会 NO comment box。新脚本 ih-comment-0730b.js 已改用 waitForSelector('[contenteditable=true]') + keyboard.type + 点 button:has-text("POST COMMENT")。/post/xxx 独立帖页才是 textarea
+- IH history/notifications 页是 Ember SPA 懒加载,抓取常只拿到顶部名言,二次核验不稳;以帖子页 LANDED(正文出现自己评论)为准即可
+
+### 外链PR补记（2026-07-30 第二个）
+- 【新提】PR #126 @ mathewlewallen/awesome-free-tools (★89, 合并过DevTools/ImgTools等同类client-side工具PR,对口)
+  - 格式特殊: 表格 [Site] | \Category\ | Desc + 底部reference-style链接定义 [name]: url(小写)。放Utilities分类字母序(Documenso后Mailtolink前),底部reference加在[imgtools]定义后
+  - 条目守红线: [Korelyy] | \Utilities\ | A growing set of browser-based tools: JSON, Base64, color, QR codes, image and PDF utilities. Runs client-side, no signup.
+  - diff干净 +2/-0 (表格行+ref定义)。查: gh pr view 126 --repo mathewlewallen/awesome-free-tools --json state,mergedAt
+- 【放弃】anondotli/awesome-privacy-tools(★63): 隐私专业清单有Selection Criteria,korelyy只是本地运行非隐私专用工具,硬塞会被拒/视为spam
+- PR总账(截至0730): #61(YSGStudyHards★1142)已合 / #98 #181 #331 #83 #126 待合(5个OPEN)。注意:一天已提#83+#126两个,达每日上限,别再提以免被判推广灌水

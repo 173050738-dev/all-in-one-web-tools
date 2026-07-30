@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback } from 'react';
-import { Shuffle, Copy, Check, Download, MessageCircle, Briefcase, CalendarX, Clock4 } from 'lucide-react';
+import { Shuffle, Copy, Check, Download, MessageCircle, Briefcase, CalendarX, Clock4, Sparkles, RefreshCw } from 'lucide-react';
 
 interface ExcuseGeneratorProps {
   locale?: string;
@@ -17,6 +17,11 @@ const i18n: Record<string, Record<string, string>> = {
     generate: '生成借口', copy: '复制', copied: '已复制', download: '下载卡片',
     sLate: '迟到了', sSkipWork: '不想上班', sCancelPlans: '不想赴约', sDeadline: 'deadline 拖了',
     empty: '选择场景和模式，点击下方按钮生成借口',
+    aiLoading: 'AI生成中...',
+    sourceAI: 'AI生成',
+    sourceLocal: '经典库',
+    customPlaceholder: '或输入自定义场景...',
+    aiFail: 'AI暂时不可用，已切换经典库',
   },
   en: {
     title: 'Excuse Generator', subtitle: 'Need an excuse? Generate a plausible-sounding one instantly',
@@ -24,6 +29,11 @@ const i18n: Record<string, Record<string, string>> = {
     generate: 'Generate Excuse', copy: 'Copy', copied: 'Copied', download: 'Download Card',
     sLate: 'Running Late', sSkipWork: 'Skip Work', sCancelPlans: 'Cancel Plans', sDeadline: 'Missed Deadline',
     empty: 'Select a scenario and mode, then click the button below',
+    aiLoading: 'AI generating...',
+    sourceAI: 'AI',
+    sourceLocal: 'Classic',
+    customPlaceholder: 'Or type a custom scenario...',
+    aiFail: 'AI unavailable, switched to classic pool',
   },
   es: {
     title: 'Generador de Excusas', subtitle: '¿Necesitas una excusa? Genera una creíble al instante',
@@ -31,6 +41,11 @@ const i18n: Record<string, Record<string, string>> = {
     generate: 'Generar Excusa', copy: 'Copiar', copied: 'Copiado', download: 'Descargar Tarjeta',
     sLate: 'Llego Tarde', sSkipWork: 'Faltar al Trabajo', sCancelPlans: 'Cancelar Planes', sDeadline: 'Plazo Vencido',
     empty: 'Selecciona un escenario y modo, luego haz clic abajo',
+    aiLoading: 'Generando con IA...',
+    sourceAI: 'IA',
+    sourceLocal: 'Clásico',
+    customPlaceholder: 'O escribe un escenario personalizado...',
+    aiFail: 'IA no disponible, cambiado a grupo clásico',
   },
   fr: {
     title: 'Generateur d\'Excuses', subtitle: 'Besoin d\'une excuse ? Generez-en une croyable instantanement',
@@ -38,6 +53,11 @@ const i18n: Record<string, Record<string, string>> = {
     generate: 'Generer', copy: 'Copier', copied: 'Copie', download: 'Telecharger Carte',
     sLate: 'En Retard', sSkipWork: 'Rater le Travail', sCancelPlans: 'Annuler un Plan', sDeadline: 'Deadline Manquee',
     empty: 'Selectionnez un scenario et un mode, puis cliquez',
+    aiLoading: 'Generation IA...',
+    sourceAI: 'IA',
+    sourceLocal: 'Classique',
+    customPlaceholder: 'Ou tapez un scenario personnalise...',
+    aiFail: 'IA indisponible, bascule vers la bibliotheque classique',
   },
   hi: {
     title: 'बहाना जनरेटर', subtitle: 'बहाना चाहिए? तुरंत एक विश्वसनीय बहाना बनाएं',
@@ -45,6 +65,11 @@ const i18n: Record<string, Record<string, string>> = {
     generate: 'बहाना बनाएं', copy: 'कॉपी', copied: 'कॉपी हुआ', download: 'कार्ड डाउनलोड',
     sLate: 'देर से पहुंचना', sSkipWork: 'काम छोड़ना', sCancelPlans: 'योजना रद्द', sDeadline: 'समयसीमा छूटी',
     empty: 'परिदृश्य और मोड चुनें, फिर नीचे बटन दबाएं',
+    aiLoading: 'AI जनरेट हो रहा है...',
+    sourceAI: 'AI',
+    sourceLocal: 'क्लासिक',
+    customPlaceholder: 'या कस्टम परिदृश्य टाइप करें...',
+    aiFail: 'AI उपलब्ध नहीं, क्लासिक पूल में स्विच किया गया',
   },
   ar: {
     title: 'مولد الأعذار', subtitle: 'تحتاج عذراً؟ أنشئ واحداً مقنعاً على الفور',
@@ -52,6 +77,11 @@ const i18n: Record<string, Record<string, string>> = {
     generate: 'إنشاء عذر', copy: 'نسخ', copied: 'تم النسخ', download: 'تحميل البطاقة',
     sLate: 'تأخرت', sSkipWork: 'غياب عن العمل', sCancelPlans: 'إلغاء خطة', sDeadline: 'فات الموعد',
     empty: 'اختر موقفاً ووضعاً، ثم اضغط الزر أدناه',
+    aiLoading: 'يقوم الذكاء الاصطناعي بالتوليد...',
+    sourceAI: 'ذكاء اصطناعي',
+    sourceLocal: 'كلاسيكي',
+    customPlaceholder: 'أو اكتب سيناريو مخصص...',
+    aiFail: 'الذكاء الاصطناعي غير متاح، تم التبديل إلى المجموعة الكلاسيكية',
   },
 };
 
@@ -144,15 +174,44 @@ export default function ExcuseGenerator({ locale = 'zh' }: ExcuseGeneratorProps)
   const [mode, setMode] = useState<Mode>('serious');
   const [excuse, setExcuse] = useState('');
   const [copied, setCopied] = useState(false);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [source, setSource] = useState<'ai' | 'local' | null>(null);
+  const [customScenario, setCustomScenario] = useState('');
+  const [aiFailMsg, setAiFailMsg] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const generate = useCallback(() => {
-    const pool = EXCUSES[scenario]?.[mode]?.[locale] || EXCUSES[scenario]?.[mode]?.en || [];
-    if (pool.length === 0) return;
-    const idx = Math.floor(Math.random() * pool.length);
-    setExcuse(pool[idx]);
+  const generate = useCallback(async () => {
+    setAiLoading(true);
     setCopied(false);
-  }, [scenario, mode, locale]);
+    setAiFailMsg(false);
+    try {
+      const res = await fetch('/api/excuse-gen/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ scenario, mode, locale, customScenario }),
+        signal: AbortSignal.timeout(8000),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.excuse) {
+          setExcuse(data.excuse);
+          setSource('ai');
+          setAiLoading(false);
+          return;
+        }
+      }
+      throw new Error('AI failed');
+    } catch {
+      const pool = EXCUSES[scenario]?.[mode]?.[locale] || EXCUSES[scenario]?.[mode]?.en || [];
+      if (pool.length > 0) {
+        const idx = Math.floor(Math.random() * pool.length);
+        setExcuse(pool[idx]);
+        setSource('local');
+        setAiFailMsg(true);
+      }
+    }
+    setAiLoading(false);
+  }, [scenario, mode, locale, customScenario]);
 
   const handleCopy = () => {
     if (!excuse) return;
@@ -271,6 +330,16 @@ export default function ExcuseGenerator({ locale = 'zh' }: ExcuseGeneratorProps)
         </div>
       </div>
 
+      {/* Custom scenario input */}
+      <input
+        type="text"
+        value={customScenario}
+        onChange={e => setCustomScenario(e.target.value)}
+        placeholder={t.customPlaceholder}
+        className="w-full px-4 py-3 mb-3 text-base rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 min-h-[44px] text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-300 dark:focus:ring-sky-700 transition"
+        dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      />
+
       {/* Mode toggle */}
       <div className="mb-4">
         <span className="block text-sm text-gray-500 dark:text-gray-400 mb-2">{t.mode}</span>
@@ -299,11 +368,27 @@ export default function ExcuseGenerator({ locale = 'zh' }: ExcuseGeneratorProps)
       {/* Generate button */}
       <button
         onClick={generate}
-        className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-sky-500 text-white hover:bg-sky-600 transition min-h-[44px] font-medium shadow-md mb-4"
+        disabled={aiLoading}
+        className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-sky-500 text-white hover:bg-sky-600 transition min-h-[44px] font-medium shadow-md mb-4 disabled:opacity-60"
       >
-        <Shuffle size={20} />
-        {t.generate}
+        {aiLoading ? (
+          <>
+            <RefreshCw size={20} className="animate-spin" />
+            {t.aiLoading}
+          </>
+        ) : (
+          <>
+            <Sparkles size={20} />
+            {t.generate}
+          </>
+        )}
       </button>
+
+      {aiFailMsg && (
+        <div className="mb-3 text-xs text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 rounded-lg px-3 py-2">
+          {t.aiFail}
+        </div>
+      )}
 
       {/* Result card */}
       {excuse ? (
@@ -316,10 +401,21 @@ export default function ExcuseGenerator({ locale = 'zh' }: ExcuseGeneratorProps)
                 : 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
             }`}
           >
-            <div className={`text-xs font-bold uppercase tracking-wider mb-3 ${
-              mode === 'serious' ? 'text-blue-500 dark:text-blue-400' : 'text-purple-500 dark:text-purple-400'
-            }`}>
-              {t['s' + scenario.charAt(0).toUpperCase() + scenario.slice(1).replace('-', '')]}
+            <div className="flex items-center gap-2 mb-3">
+              <span className={`text-xs font-bold uppercase tracking-wider ${
+                mode === 'serious' ? 'text-blue-500 dark:text-blue-400' : 'text-purple-500 dark:text-purple-400'
+              }`}>
+                {t['s' + scenario.charAt(0).toUpperCase() + scenario.slice(1).replace('-', '')]}
+              </span>
+              {source && (
+                <span className={`text-xs px-2 py-0.5 rounded-full ${
+                  source === 'ai'
+                    ? 'bg-sky-100 text-sky-600 dark:bg-sky-900/30 dark:text-sky-400'
+                    : 'bg-gray-100 text-gray-500 dark:bg-gray-800'
+                }`}>
+                  {source === 'ai' ? t.sourceAI : t.sourceLocal}
+                </span>
+              )}
             </div>
             <p className="text-lg text-gray-800 dark:text-gray-100 leading-relaxed" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
               "{excuse}"
