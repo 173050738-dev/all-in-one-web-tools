@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { buildToolFaqsFromTranslator, resolveToolNameClient, resolveToolDescriptionClient, type FaqItem, type ToolLike } from '@/lib/toolFaqs';
+import { buildToolFaqsFromTranslator, hasToolSpecificFaqs, resolveToolNameClient, resolveToolDescriptionClient, type FaqItem, type ToolLike } from '@/lib/toolFaqs';
 import { getToolBySlug } from '@/data/tools';
 
 export default function ToolSeoContent({ locale, slug }: { locale: string; slug: string }) {
@@ -37,9 +37,11 @@ export default function ToolSeoContent({ locale, slug }: { locale: string; slug:
       } catch { /* ignore */ }
     }
 
-    /* faqs：有专属就用专属（保证是 FaqItem[]），否则 buildToolFaqsFromTranslator */
+    /* faqs：有工具特定FAQ(toolFaqs.ts)就用 buildToolFaqsFromTranslator(通用+特定)，否则用 translation.json 的专属 FAQ */
     let items: FaqItem[];
-    if (Array.isArray(seoRaw?.faqs) && seoRaw.faqs.length > 0) {
+    if (hasToolSpecificFaqs(slug, locale)) {
+      items = buildToolFaqsFromTranslator(locale, baseTool, toolsT);
+    } else if (Array.isArray(seoRaw?.faqs) && seoRaw.faqs.length > 0) {
       items = seoRaw.faqs
         .filter((x: any) => x && typeof x.q === 'string' && typeof x.a === 'string')
         .map((x: any) => ({ q: String(x.q), a: String(x.a) }));

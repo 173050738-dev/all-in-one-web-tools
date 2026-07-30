@@ -265,3 +265,16 @@
   - diff干净 +2/-0 (表格行+ref定义)。查: gh pr view 126 --repo mathewlewallen/awesome-free-tools --json state,mergedAt
 - 【放弃】anondotli/awesome-privacy-tools(★63): 隐私专业清单有Selection Criteria,korelyy只是本地运行非隐私专用工具,硬塞会被拒/视为spam
 - PR总账(截至0730): #61(YSGStudyHards★1142)已合 / #98 #181 #331 #83 #126 待合(5个OPEN)。注意:一天已提#83+#126两个,达每日上限,别再提以免被判推广灌水
+
+### 推广进度补记（2026-07-30 晚间 · 本轮）
+- 【浏览器登录态全恢复】核验四平台均真登录可用：X(@Korelyybusiness)、Reddit(u/Tricky-Dealer-605)、IH、Dev.to。之前记录 X/Dev.to 过期，现已恢复(Carson 重登过)。启动 Chrome 端口正常(Get-Process msedge,chrome 全 Stop 后 cmd /c D:\pw-temp\open-chrome.cmd)
+- 【X 发2条评论·均核验落地】(去 with_replies 确认时间戳13:32)：
+  1. 回 @levelsio 热帖(AI 淘汰独立开发者/独立黑客第一个灭绝)：套路会死但人不会,AI 抄不走【发现没人做工具的真实古怪问题】,still building small browser tools solo
+  2. 回 @dickiebush 写作帖：先发丑陋初稿、打磨不重要发出去才重要+抛问题勾互动
+  脚本 x-scan-0730.js(抓大V主页最新帖,waitForSelector article+等2.5s)、x-reply-0730.js(REPLIES数组复用,composer=[data-testid=tweetTextarea_0],提交btn=tweetButtonInline)、x-verify-0730.js
+  发现 07-29 上个会话X已很活跃(蹭 software-is-dead 话题多条),X 号最近节奏好
+- 【Reddit 发1条·核验进历史(未被automod吃)】r/CasualConversation【random memory 占据一整天】帖：共鸣+随手记笔记后变成想做的东西(隐约人设)+抛问题。白号今天1条额度用完。脚本 reddit-scan-0730.js(抓宽松版块/new)、reddit-post-0730.js(old.reddit textarea .usertext-edit)、reddit-hist-0730.js(查历史确认落地)
+- 【GitHub PR】5个仍全OPEN无新合并(不催)：#98/#181/#331/#83/#126。#61 已合并(唯一到手外链)
+- 【今日达上限·按铁律停手】X 2条+Reddit 1条+IH今天已满+GitHub今天已提2PR。再密像机器人伤号
+- 【SEO 体检成果·已交Carson转Trae】本会话做完 korelyy 全站 SEO 体检(抓77自研工具页+GSC 30天数据)。桌面文档：Trae任务-SEO修复-1改页面.md(修sitemap漏277工作流/去满屏Free标题/修13个中文空H1/清超长重复描述) + Trae任务-SEO补工具-2新建.md(补 图片转换/图片PDF互转/单位换算/JSON-CSV 4个高频工具)。Carson 说带后端的AI工具是有意让Trae深化的,不动。GSC真相:站上线1月总曝光1545/点击22,属新站冷启动早期,无快招,唯一正路=补通用高频工具+扩收录+耐心3-6月
+- 【FAQ强化文档中止】起草到一半超6000字符(11918)被Carson喊停,他说已让Trae自己改,文档已删,不用管

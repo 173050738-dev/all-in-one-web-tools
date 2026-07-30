@@ -42252,5 +42252,464 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
       "zh": "免费试用——秒级添加拼音"
     }
   }
+],
+"audio-bpm-detector-guide": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "What Exactly Is BPM?",
+      "zh": "BPM 到底是什么？"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "BPM stands for Beats Per Minute — it measures the tempo or speed of a song. A slow ballad might sit around 60-80 BPM, while a high-energy EDM track could reach 140-180 BPM. Knowing BPM is essential for DJs mixing tracks, producers aligning instrument loops, and dancers matching choreography to the beat.",
+      "zh": "BPM 全称 Beats Per Minute（每分钟节拍数），衡量歌曲的速度或节奏。慢情歌约60-80 BPM，高能电子舞曲可达140-180 BPM。知道 BPM 对 DJ 混音、制作人对齐乐器循环、舞者匹配编舞都至关重要。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    "text": {
+      "en": "🎵 The average pop song sits around 100-120 BPM. Classical music ranges from 60 (Adagio) to 180 (Presto).",
+      "zh": "🎵 流行歌曲平均约100-120 BPM。古典音乐范围从60（柔板）到180（急板）。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "How to Detect BPM from Any Audio Source",
+      "zh": "如何检测任意音频源的 BPM"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Method 1: Upload a File",
+      "zh": "方法一：上传文件"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "The most accurate method. Upload MP3, WAV, or any audio file directly. The tool analyzes the waveform and detects beats using signal processing algorithms. Results are typically 99%+ accurate.",
+      "zh": "最准确的方法。直接上传 MP3、WAV 或任意音频文件。工具使用信号处理算法分析波形并检测节拍。结果通常 99%+ 准确。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "audio-bpm-detector",
+    "text": {
+      "en": "Try BPM Detector — Free Online",
+      "zh": "试试 BPM 检测器——免费在线"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Method 2: Use Your Microphone",
+      "zh": "方法二：使用麦克风"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Play any audio source near your device's microphone — YouTube, Spotify, vinyl records, or a live performance. The tool listens and analyzes BPM in real-time. Best for quick checks when you can't download the file.",
+      "zh": "在设备麦克风旁播放任何音频源——YouTube、Spotify、黑胶唱片或现场演出。工具实时监听并分析 BPM。当你无法下载文件时，最适合快速检测。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "BPM by Genre: Quick Reference Chart",
+      "zh": "各曲风 BPM 速查表"
+    }
+  },
+  {
+    "type": "ul",
+    "items": {
+      "en": ["Pop: 100-130 BPM", "Rock: 110-140 BPM", "Electronic/Dance: 120-150 BPM", "Hip-Hop: 80-100 BPM (slow) / 140-170 BPM (fast)", "Classical: 60-180 BPM depending on era", "Jazz: 100-160 BPM"],
+      "zh": ["流行: 100-130 BPM", "摇滚: 110-140 BPM", "电子/舞曲: 120-150 BPM", "嘻哈: 80-100 BPM（慢）/ 140-170 BPM（快）", "古典: 60-180 BPM（因时代而异）", "爵士: 100-160 BPM"]
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Practical Use Cases",
+      "zh": "实际应用场景"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "DJ Mixing",
+      "zh": "DJ 混音"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Match BPM between tracks for seamless transitions. Most DJs aim for ±2 BPM difference to avoid noticeable pitch shifts during mixing.",
+      "zh": "匹配两首歌的 BPM 实现无缝过渡。大多数 DJ 追求 ±2 BPM 的差异以避免混音时出现明显的音高变化。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Music Production",
+      "zh": "音乐制作"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Set your project tempo accurately by analyzing reference tracks. Align drum loops, vocal samples, and instruments to the same BPM grid.",
+      "zh": "通过分析参考曲目准确设置项目速度。将鼓循环、人声采样和乐器对齐到相同的 BPM 网格。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    "text": {
+      "en": "💡 Pro tip: For the most accurate results, use the file upload method. Mic detection works but can be affected by room acoustics and background noise.",
+      "zh": "💡 专业技巧：要获得最准确的结果，请使用文件上传方式。麦克风检测虽可用，但会受房间声学和背景噪音影响。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "BPM detection is a fundamental skill for anyone working with music. Whether you're a DJ, producer, teacher, or enthusiast, understanding tempo unlocks better mixing, production, and appreciation. Our free online BPM detector works entirely in your browser — no uploads to servers, no sign-up required.",
+      "zh": "BPM 检测是任何与音乐打交道的人的基本技能。无论你是 DJ、制作人、教师还是爱好者，理解节奏能带来更好的混音、制作和欣赏。我们的免费在线 BPM 检测器完全在浏览器中运行——不上传服务器、无需注册。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "audio-bpm-detector",
+    "text": {
+      "en": "Start Detecting BPM — Free, No Signup",
+      "zh": "开始检测 BPM——免费，无需注册"
+    }
+  }
+],
+"regex-tester-guide": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "Why Every Developer Needs a Regex Tester",
+      "zh": "为什么每个开发者都需要正则测试器"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Regular expressions are powerful but notoriously hard to debug. A single misplaced dot or unescaped character can break an entire pattern. Without a visual tester, you're stuck in a cycle of write → guess → run → fail. A good regex tester shows matches in real-time, explains each part of your pattern, and helps you catch errors before they reach production.",
+      "zh": "正则表达式功能强大但以难以调试著称。一个放错的点或未转义的字符都可能破坏整个模式。没有可视化测试器，你就陷入了写→猜→跑→失败的循环。好的正则测试器实时显示匹配，解释模式的每个部分，帮你在上线前捕获错误。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "regex-tester",
+    "text": {
+      "en": "Try Regex Tester — Live Pattern Testing",
+      "zh": "试试正则测试器——实时模式测试"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Core Regex Concepts You Must Know",
+      "zh": "你必须知道的核心理念"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Character Classes",
+      "zh": "字符类"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Character classes match one character from a set. Common examples: [a-z] (lowercase letters), [0-9] (digits), [^abc] (anything except a, b, c). Build custom classes to match specific patterns.",
+      "zh": "字符类匹配集合中的一个字符。常见示例：[a-z]（小写字母）、[0-9]（数字）、[^abc]（除 a、b、c 外的任何字符）。构建自定义类来匹配特定模式。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Quantifiers",
+      "zh": "量词"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Quantifiers specify how many times a pattern should match. ? (0 or 1), * (0 or more), + (1 or more), {n} (exactly n), {n,} (n or more), {n,m} (between n and m). Use sparingly — greedy vs lazy matching can cause unexpected results.",
+      "zh": "量词指定模式应匹配多少次。?（0或1）、*（0或更多）、+（1或更多）、{n}（恰好n次）、{n,}（n次以上）、{n,m}（n到m次）。谨慎使用——贪婪 vs 懒惰匹配可能导致意外结果。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Capture Groups",
+      "zh": "捕获组"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Parentheses create capture groups that extract specific parts of a match. Use () for numbered groups, (?<name>...) for named groups, and (?:...) for non-capturing groups when you don't need the value.",
+      "zh": "括号创建捕获组，用于提取匹配的特定部分。用 () 编号组，用 (?<name>...) 命名组，用 (?:...) 非捕获组（当不需要值时）。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    "text": {
+      "en": "⚠️ Always test regex with real data. Edge cases like empty strings, special characters, and Unicode can break even well-tested patterns.",
+      "zh": "⚠️ 始终用真实数据测试正则。空字符串、特殊字符和 Unicode 等边缘情况可能破坏即使经过充分测试的模式。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "5 Practical Regex Examples",
+      "zh": "5 个实用正则示例"
+    }
+  },
+  {
+    "type": "ul",
+    "items": {
+      "en": ["Email validation: /^[\\w.+-]+@[\\w-]+\\.[\\w.]+$/", "URL extraction: /https?:\\/\\/[\\w.-]+(?:\\/[\\w./?%&=-]*)?/g", "Phone numbers: /\\+?[\\d\\s-]{7,15}/", "HTML tags: /<([a-z]+)([^<]+)*(?:>(.*)<\\/\\1>|\\s+\\/>)/g", "Duplicate words: /\\b(\\w+)\\s+\\1\\b/i"],
+      "zh": ["邮箱验证: /^[\\w.+-]+@[\\w-]+\\.[\\w.]+$/", "URL 提取: /https?:\\/\\/[\\w.-]+(?:\\/[\\w./?%&=-]*)?/g", "电话号码: /\\+?[\\d\\s-]{7,15}/", "HTML 标签: /<([a-z]+)([^<]+)*(?:>(.*)<\\/\\1>|\\s+\\/>)/g", "重复单词: /\\b(\\w+)\\s+\\1\\b/i"]
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Debugging Like a Pro",
+      "zh": "像专家一样调试"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Start Simple",
+      "zh": "从简单开始"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Build your regex incrementally. Start with the simplest pattern that matches your target, then add complexity one feature at a time. Test each step before proceeding.",
+      "zh": "逐步构建正则。从匹配目标的最简模式开始，然后逐次添加复杂度。每步测试后再继续。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Use Verbose Mode",
+      "zh": "使用详细模式"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "The /x flag (verbose mode) lets you add whitespace and comments to your regex, making it readable. This is invaluable for complex patterns with multiple groups and conditions.",
+      "zh": "/x 标志（详细模式）允许在正则中添加空白和注释，使其可读。这对具有多个组和条件的复杂模式非常有价值。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    "text": {
+      "en": "🎯 Test with 3-5 different inputs: a valid case, an edge case, and an invalid case. Never rely on a single test string.",
+      "zh": "🎯 用 3-5 个不同输入测试：有效案例、边缘案例和无效案例。永远不要只依赖单个测试字符串。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Regex is one of those skills that pays dividends throughout your career. By mastering the core concepts and using a reliable tester, you'll write cleaner, more maintainable patterns. Our browser-based regex tester supports JavaScript/ECMAScript syntax with real-time highlighting, capture group display, and shareable URLs.",
+      "zh": "正则是那种在整个职业生涯中都会带来回报的技能。通过掌握核心理念并使用可靠的测试器，你会写出更清晰、更易维护的模式。我们的浏览器正则测试器支持 JavaScript/ECMAScript 语法，实时高亮、捕获组显示和可分享 URL。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "regex-tester",
+    "text": {
+      "en": "Test Your Regex — Free, In Browser",
+      "zh": "测试你的正则——免费，浏览器内运行"
+    }
+  }
+],
+"json-formatter-guide": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "Why JSON Formatting Matters",
+      "zh": "为什么 JSON 格式化很重要"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Minified JSON is great for production APIs — compact, fast, efficient. But for humans? It's unreadable. A single-line JSON response with 500+ properties is a nightmare to debug. Proper formatting with indentation, line breaks, and syntax highlighting transforms JSON from a wall of text into a navigable structure.",
+      "zh": "压缩的 JSON 对生产 API 很好——紧凑、快速、高效。但对人类来说？完全不可读。一个包含500+属性的单行 JSON 响应是调试的噩梦。通过缩进、换行和语法高亮的正确格式化，将 JSON 从一堵文字墙转变为可导航的结构。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "json-formatter",
+    "text": {
+      "en": "Try JSON Formatter — Pretty Print & Validate",
+      "zh": "试试 JSON 格式化器——美化与验证"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Key Features of a Good JSON Formatter",
+      "zh": "优秀 JSON 格式化器的关键特性"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Real-time Validation",
+      "zh": "实时验证"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "The moment you paste or type JSON, the validator checks for syntax errors. Missing commas, unclosed brackets, and invalid string escapes are highlighted with exact line and column numbers. This saves hours of debugging.",
+      "zh": "粘贴或输入 JSON 的那一刻，验证器就检查语法错误。缺少逗号、未闭合的括号、无效的字符串转义都用精确的行号和列号高亮。这节省数小时的调试时间。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Tree View Navigation",
+      "zh": "树形视图导航"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Collapsible tree view lets you navigate deeply nested structures. Click to expand/collapse objects and arrays, making it easy to focus on specific parts of large JSON documents.",
+      "zh": "可折叠的树形视图让你导航深层嵌套结构。点击展开/折叠对象和数组，轻松聚焦大型 JSON 文档的特定部分。"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Multiple Format Options",
+      "zh": "多种格式选项"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Choose indentation (2, 4, or tab), sort keys alphabetically, minify for production, or convert to other formats like YAML. A good formatter adapts to your workflow.",
+      "zh": "选择缩进（2、4 或 tab），按字母顺序排序键，压缩用于生产，或转换为 YAML 等其他格式。优秀的格式化器会适配你的工作流。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    "text": {
+      "en": "💡 JSON is the most common data interchange format on the web. Every API, config file, and modern app uses it. Mastering JSON formatting is essential for every developer.",
+      "zh": "💡 JSON 是 Web 上最常见的数据交换格式。每个 API、配置文件和现代应用都使用它。掌握 JSON 格式化对每个开发者都至关重要。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Common JSON Mistakes to Avoid",
+      "zh": "需要避免的常见 JSON 错误"
+    }
+  },
+  {
+    "type": "ul",
+    "items": {
+      "en": ["Trailing commas after the last element (not valid in JSON)", "Single quotes instead of double quotes for strings", "Unescaped special characters inside strings", "Comments (JSON doesn't support them natively)", "Mismatched brackets or braces"],
+      "zh": ["最后一个元素后的尾随逗号（JSON 中不合法）", "字符串使用单引号而非双引号", "字符串内未转义的特殊字符", "注释（JSON 原生不支持）", "不匹配的方括号或花括号"]
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Working with Large JSON Files",
+      "zh": "处理大型 JSON 文件"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Large JSON files (10MB+) can crash browser tabs if not handled properly. Modern tools use virtualized rendering — only visible portions are rendered in the DOM. This lets you navigate files with 100,000+ keys without performance issues.",
+      "zh": "大 JSON 文件（10MB+）如果处理不当可能导致浏览器标签崩溃。现代工具使用虚拟化渲染——只有可见部分在 DOM 中渲染。这让你可以导航具有 100,000+ 键的文件而不会出现性能问题。"
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "tip",
+    "text": {
+      "en": "🎯 For very large files, use the minify feature to validate without rendering the full tree view. Then format in chunks if needed.",
+      "zh": "🎯 对于非常大的文件，使用压缩功能在不渲染完整树形视图的情况下验证。如有需要，再分块格式化。"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Practical Workflow",
+      "zh": "实际工作流"
+    }
+  },
+  {
+    "type": "ol",
+    "items": {
+      "en": ["Paste your raw JSON (minified or not) into the editor", "Click 'Format' to pretty print with proper indentation", "Check for validation errors — fix any issues highlighted", "Use tree view to navigate and understand the structure", "Copy the formatted JSON for documentation or sharing", "Use 'Minify' when deploying to production"],
+      "zh": ["将原始 JSON（压缩或未压缩）粘贴到编辑器", "点击“格式化”以正确缩进美化", "检查验证错误——修复高亮显示的问题", "使用树形视图导航和理解结构", "复制格式化后的 JSON 用于文档或分享", "部署到生产环境时使用“压缩”功能"]
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "JSON formatting is a foundational skill that saves you time every single day. With real-time validation, tree navigation, and format options, a good formatter transforms JSON from a chore into a useful tool. Our browser-based JSON formatter processes everything client-side — your data never leaves your device.",
+      "zh": "JSON 格式化是一项基础技能，每天都为你节省时间。通过实时验证、树形导航和格式选项，优秀的格式化器将 JSON 从苦差事变成有用的工具。我们的浏览器 JSON 格式化器完全在客户端处理——你的数据永远不会离开你的设备。"
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "json-formatter",
+    "text": {
+      "en": "Format & Validate JSON — Free, Client-Side",
+      "zh": "格式化与验证 JSON——免费，客户端处理"
+    }
+  }
 ]
 };

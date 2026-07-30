@@ -343,6 +343,102 @@ const TOOL_FAQ_I18N: Record<string, Record<SeoLocale, Array<{ q: string; a: stri
       { q: 'هل يقلل الضغط من جودة الصورة بشكل كبير؟', a: 'تتيح لك الأداة التحكم في مستوى الجودة (من 0-100%). في الإعدادات المتوسطة (70-80%)، يتم تقليل حجم الملف عادة بنسبة 50-70% مع الحد الأدنى من فقدان الجودة البصرية. يمكنك معاينة النتيجة قبل الحفظ.' },
     ],
   },
+  'image-converter': {
+    en: [
+      { q: 'What image formats can I convert between?', a: 'Convert between JPEG, PNG, WebP, AVIF, BMP, GIF, and TIFF. Each format has different use cases — WebP/AVIF for web, JPEG for photos, PNG for graphics with transparency.' },
+      { q: 'Can I convert multiple images at once?', a: 'Yes, batch conversion is supported. Upload multiple images and convert them all to the same format at once. Download individually or as a ZIP archive.' },
+      { q: 'Does the conversion affect image quality?', a: 'For lossless formats like PNG/WebP, quality is preserved perfectly. For lossy formats like JPEG, you can control the quality slider (0-100%) to balance file size vs quality.' },
+    ],
+    zh: [
+      { q: '支持哪些图片格式互转？', a: '支持 JPEG、PNG、WebP、AVIF、BMP、GIF 和 TIFF 互转。每种格式有不同用途——WebP/AVIF 适合网页，JPEG 适合照片，PNG 适合带透明的图形。' },
+      { q: '可以同时转换多张图片吗？', a: '可以，支持批量转换。上传多张图片，一键全部转为同一格式。可单独下载或打包成 ZIP。' },
+      { q: '转换会影响图片质量吗？', a: 'PNG/WebP 等无损格式质量完全保留。JPEG 等有损格式可通过质量滑块（0-100%）平衡文件大小与画质。' },
+    ],
+    es: [
+      { q: '¿Entre qué formatos de imagen puedo convertir?', a: 'Convierte entre JPEG, PNG, WebP, AVIF, BMP, GIF y TIFF. Cada formato tiene diferentes casos de uso.' },
+      { q: '¿Puedo convertir varias imágenes a la vez?', a: 'Sí, se admite la conversión por lotes. Sube varias imágenes y conviértelas todas al mismo formato.' },
+      { q: '¿La conversión afecta la calidad de la imagen?', a: 'Para formatos sin pérdida como PNG/WebP, la calidad se conserva perfectamente. Para formatos con pérdida como JPEG, controla el deslizador de calidad.' },
+    ],
+    fr: [
+      { q: 'Quels formats d\'image puis-je convertir ?', a: 'Convertissez entre JPEG, PNG, WebP, AVIF, BMP, GIF et TIFF. Chaque format a des cas d\'utilisation différents.' },
+      { q: 'Puis-je convertir plusieurs images à la fois ?', a: 'Oui, la conversion par lots est prise en charge. Téléchargez plusieurs images et convertissez-les toutes au même format.' },
+      { q: 'La conversion affecte-t-elle la qualité de l\'image ?', a: 'Les formats sans perte comme PNG/WebP préservent parfaitement la qualité. Pour les formats avec perte comme JPEG, utilisez le curseur de qualité.' },
+    ],
+    hi: [
+      { q: 'मैं किन छवि प्रारूपों के बीच कन्वर्ट कर सकता हूँ?', a: 'JPEG, PNG, WebP, AVIF, BMP, GIF और TIFF के बीच कन्वर्ट करें।' },
+      { q: 'क्या मैं एक बार में कई छवियों को कन्वर्ट कर सकता हूँ?', a: 'हाँ, बैच रूपांतरण समर्थित है। कई छवियों को अपलोड करें और एक ही प्रारूप में कन्वर्ट करें।' },
+      { q: 'क्या रूपांतरण छवि की गुणवत्ता को प्रभावित करता है?', a: 'PNG/WebP जैसे हानिरहित प्रारूपों में गुणवत्ता पूरी तरह संरक्षित रहती है। JPEG जैसे हानिकारक प्रारूपों के लिए क्वालिटी स्लाइडर का उपयोग करें।' },
+    ],
+    ar: [
+      { q: 'ما هي تنسيقات الصور التي يمكنني التحويل بينها؟', a: 'حوّل بين JPEG و PNG و WebP و AVIF و BMP و GIF و TIFF.' },
+      { q: 'هل يمكنني تحويل عدة صور في وقت واحد؟', a: 'نعم، يتم دعم التحويل الدفعي. قم بتحميل عدة صور وحوّلها جميعاً إلى نفس التنسيق.' },
+      { q: 'هل يؤثر التحويل على جودة الصورة؟', a: 'تُحافظ التنسيقات غير المفقودة مثل PNG/WebP على الجودة تماماً. بالنسبة للتنسيقات المفقودة مثل JPEG، استخدم شريط الجودة.' },
+    ],
+  },
+  'unit-converter': {
+    en: [
+      { q: 'What categories of units can I convert?', a: 'Length (mm, cm, m, km, inches, feet, miles), weight (g, kg, lbs, oz), temperature (Celsius, Fahrenheit, Kelvin), area, volume, time, speed, and data storage (KB, MB, GB, TB).' },
+      { q: 'Is the conversion accurate?', a: 'Yes, all conversions use internationally agreed standards. The tool uses exact conversion factors from NIST (National Institute of Standards and Technology) for length, weight, and temperature.' },
+      { q: 'Can I convert currency here?', a: 'No, this tool handles physical and digital units only. Currency conversion requires live exchange rates which change constantly.' },
+    ],
+    zh: [
+      { q: '支持哪些单位类别转换？', a: '长度（mm/cm/m/km/英寸/英尺/英里）、重量（g/kg/磅/盎司）、温度（摄氏度/华氏度/开尔文）、面积、体积、时间、速度、数据存储（KB/MB/GB/TB）。' },
+      { q: '转换结果准确吗？', a: '准确。所有转换采用国际公认标准，使用 NIST（美国国家标准与技术研究院）的精确换算因子。' },
+      { q: '可以转换货币吗？', a: '不行。本工具仅处理物理和数字单位。货币转换需要实时汇率，汇率随时变动。' },
+    ],
+    es: [
+      { q: '¿Qué categorías de unidades puedo convertir?', a: 'Longitud (mm, cm, m, km, pulgadas, pies, millas), peso (g, kg, lbs, oz), temperatura (Celsius, Fahrenheit, Kelvin), área, volumen, tiempo, velocidad y almacenamiento de datos.' },
+      { q: '¿La conversión es precisa?', a: 'Sí, todas las conversiones utilizan estándares acordados internacionalmente.' },
+      { q: '¿Puedo convertir moneda aquí?', a: 'No, esta herramienta solo maneja unidades físicas y digitales.' },
+    ],
+    fr: [
+      { q: 'Quelles catégories d\'unités puis-je convertir ?', a: 'Longueur (mm, cm, m, km, pouces, pieds, miles), poids (g, kg, lbs, oz), température (Celsius, Fahrenheit, Kelvin), superficie, volume, temps, vitesse et stockage de données.' },
+      { q: 'La conversion est-elle précise ?', a: 'Oui, toutes les conversions utilisent des normes internationalement reconnues.' },
+      { q: 'Puis-je convertir des devises ici ?', a: 'Non, cet outil gère uniquement les unités physiques et numériques.' },
+    ],
+    hi: [
+      { q: 'मैं इकाइयों की कौन सी श्रेणियाँ कन्वर्ट कर सकता हूँ?', a: 'लंबाई (mm, cm, m, km, इंच, फीट, मील), वजन (g, kg, lbs, oz), तापमान (Celsius, Fahrenheit, Kelvin), क्षेत्रफल, आयतन, समय, गति और डेटा संग्रह।' },
+      { q: 'क्या रूपांतरण सटीक है?', a: 'हाँ, सभी रूपांतरण अंतरराष्ट्रीय रूप से स्वीकृत मानकों का उपयोग करते हैं।' },
+      { q: 'क्या मैं यहाँ मुद्रा कन्वर्ट कर सकता हूँ?', a: 'नहीं, यह टूल केवल भौतिक और डिजिटल इकाइयों को संभालता है।' },
+    ],
+    ar: [
+      { q: 'ما هي فئات الوحدات التي يمكنني تحويلها؟', a: 'الطول (mm, cm, m, km, بوصة, قدم, ميل)، الوزن (g, kg, lbs, oz)، درجة الحرارة (Celsius, Fahrenheit, Kelvin)، المساحة، الحجم، الوقت، السرعة وتخزين البيانات.' },
+      { q: 'هل التحويل دقيق؟', a: 'نعم، تستخدم جميع التحويلات المعايير المتفق عليها دولياً.' },
+      { q: 'هل يمكنني تحويل العملات هنا؟', a: 'لا، تتعامل هذه الأداة فقط مع الوحدات المادية والرقمية.' },
+    ],
+  },
+  'json-csv-converter': {
+    en: [
+      { q: 'How do I convert JSON to CSV and vice versa?', a: 'Paste your JSON or CSV text into the input area and click the convert button. For JSON to CSV, the tool flattens nested objects into dot-notation columns. For CSV to JSON, each row becomes a JSON object with the header row as keys.' },
+      { q: 'How are nested JSON objects handled in CSV?', a: 'Nested objects are flattened using dot notation (e.g., address.city, address.zipcode). Arrays are joined with commas or you can choose to expand them into separate columns.' },
+      { q: 'Is my data safe during conversion?', a: 'Yes, all processing happens in your browser. No data is sent to our servers. The tool works entirely client-side for privacy-sensitive data.' },
+    ],
+    zh: [
+      { q: '如何将 JSON 转为 CSV 或反向转换？', a: '将 JSON 或 CSV 文本粘贴到输入区域，点击转换按钮。JSON 转 CSV 时，嵌套对象会被扁平化为点号分隔的列（如 address.city）。CSV 转 JSON 时，每行变为一个 JSON 对象，表头作为键。' },
+      { q: '嵌套 JSON 对象在 CSV 中如何处理？', a: '嵌套对象使用点号表示法扁平化（如 address.city、address.zipcode）。数组用逗号连接，或可展开为独立列。' },
+      { q: '转换过程中数据安全吗？', a: '安全。所有处理在浏览器本地完成，数据不上传服务器。完全客户端处理，适合隐私敏感数据。' },
+    ],
+    es: [
+      { q: '¿Cómo convierto JSON a CSV y viceversa?', a: 'Pega tu texto JSON o CSV en el área de entrada y haz clic en el botón de convertir. Para JSON a CSV, las objetos anidados se aplanan en columnas con notación de puntos.' },
+      { q: '¿Cómo se manejan los objetos JSON anidados en CSV?', a: 'Los objetos anidados se aplanan usando notación de puntos (ej: address.city). Las matrices se unen con comas.' },
+      { q: '¿Mis datos están seguros durante la conversión?', a: 'Sí, todo el procesamiento ocurre en tu navegador. Ningún dato se envía a nuestros servidores.' },
+    ],
+    fr: [
+      { q: 'Comment convertir JSON en CSV et inversement ?', a: 'Collez votre texte JSON ou CSV dans la zone d\'entrée et cliquez sur le bouton de conversion. Pour JSON vers CSV, les objets imbriqués sont aplatis en colonnes à notation par points.' },
+      { q: 'Comment les objets JSON imbriqués sont-ils gérés en CSV ?', a: 'Les objets imbriqués sont aplatis avec la notation par points (ex: address.city). Les tableaux sont joints par des virgules.' },
+      { q: 'Mes données sont-elles sûres pendant la conversion ?', a: 'Oui, tout le traitement se fait dans votre navigateur. Aucune donnée n\'est envoyée à nos serveurs.' },
+    ],
+    hi: [
+      { q: 'मैं JSON को CSV में और विपरीत कैसे कन्वर्ट करूँ?', a: 'अपने JSON या CSV टेक्स्ट को इनपुट एरिया में पेस्ट करें और कन्वर्ट बटन पर क्लिक करें।' },
+      { q: 'CSV में नेस्टेड JSON ऑब्जेक्ट्स कैसे हैंडल किए जाते हैं?', a: 'नेस्टेड ऑब्जेक्ट्स को डॉट नोटेशन (जैसे address.city) का उपयोग करके फ्लैट किया जाता है। Arrays को अल्पविराम से जोड़ा जाता है।' },
+      { q: 'क्या रूपांतरण के दौरान मेरा डेटा सुरक्षित है?', a: 'हाँ, सभी प्रोसेसिंग आपके ब्राउज़र में होती है। कोई डेटा हमारे सर्वर पर नहीं भेजा जाता है।' },
+    ],
+    ar: [
+      { q: 'كيف يمكنني تحويل JSON إلى CSV والعكس؟', a: 'الصق نص JSON أو CSV في منطقة الإدخال وانقر على زر التحويل.' },
+      { q: 'كيف يتم التعامل مع كائنات JSON المتداخلة في CSV؟', a: 'يتم تسطيح الكائنات المتداخلة باستخدام تدوين النقطة (مثل address.city). يتم ضم المصفوفات بفواصل.' },
+      { q: 'هل بياناتي آمنة أثناء التحويل؟', a: 'نعم، تتم جميع المعالجة في متصفحك. لا يتم إرسال أي بيانات إلى خوادمنا.' },
+    ],
+  },
 };
 
 const FAQ_I18N: Record<SeoLocale, Record<FaqKey, { q: string; a: string }>> = {

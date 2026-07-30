@@ -12733,6 +12733,309 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
       "مولّد بينين صيني"
     ]
   }
+},
+{
+  "slug": "audio-bpm-detector-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=audio-bpm&grayscale=false",
+  "tags": [
+    {
+      "en": "Music",
+      "zh": "音乐",
+      "es": "Música",
+      "fr": "Musique",
+      "hi": "संगीत",
+      "ar": "الموسيقى"
+    },
+    {
+      "en": "Audio Tools",
+      "zh": "音频工具",
+      "es": "Herramientas de Audio",
+      "fr": "Outils Audio",
+      "hi": "ऑडियो उपकरण",
+      "ar": "أدوات الصوت"
+    },
+    {
+      "en": "Creativity",
+      "zh": "创意",
+      "es": "Creatividad",
+      "fr": "Créativité",
+      "hi": "रचनात्मकता",
+      "ar": "الإبداع"
+    }
+  ],
+  "relatedToolSlugs": [
+    "audio-bpm-detector",
+    "audio-to-text",
+    "text-counter"
+  ],
+  "readingMinutes": {
+    "en": 7,
+    "zh": 8,
+    "es": 8,
+    "fr": 8,
+    "hi": 9,
+    "ar": 8
+  },
+  "title": {
+    "en": "What Is BPM in Music? A Practical Guide to Detecting Song Tempo for DJs, Producers, and Listeners",
+    "zh": "音乐 BPM 是什么？DJ、制作人与乐迷的歌曲速度检测实用指南",
+    "es": "¿Qué es el BPM en la música? Guía Práctica para Detectar el Tempo de Canciones",
+    "fr": "Qu'est-ce que le BPM en musique ? Guide Pratique pour Détecter le Tempo",
+    "hi": "संगीत में BPM क्या है? गाने की गति का पता लगाने के लिए व्यावहारिक गाइड",
+    "ar": "ما هو BPM في الموسيقى؟ دليل عملي لاكتشاف وتيرة الأغاني"
+  },
+  "description": {
+    "en": "Learn how to detect BPM (beats per minute) from any song. From DJ mixing to music production, understand tempo measurement across genres with our free online BPM detector.",
+    "zh": "学会如何检测任意歌曲的 BPM（每分钟节拍数）。从 DJ 混音到音乐制作，跨越曲风理解节奏测量。",
+    "es": "Aprende a detectar el BPM de cualquier canción. Desde mezclas de DJ hasta producción musical.",
+    "fr": "Apprenez à détecter le BPM de n'importe quelle chanson. Du mixage DJ à la production musicale.",
+    "hi": "किसी भी गाने से BPM का पता लगाना सीखें। DJ मिक्सिंग से संगीत निर्माण तक।",
+    "ar": "تعلم كيفية اكتشاف BPM من أي أغنية. من خلط DJ إلى إنتاج الموسيقى."
+  },
+  "keywords": {
+    "en": [
+      "BPM detector",
+      "beats per minute",
+      "song tempo",
+      "BPM counter online",
+      "DJ tools"
+    ],
+    "zh": [
+      "BPM检测",
+      "每分钟节拍",
+      "歌曲速度",
+      "在线BPM计数器",
+      "DJ工具"
+    ],
+    "es": [
+      "detector BPM",
+      "beats por minuto",
+      "tempo canción",
+      "contador BPM online"
+    ],
+    "fr": [
+      "détecteur BPM",
+      "battements par minute",
+      "tempo chanson",
+      "compteur BPM en ligne"
+    ],
+    "hi": [
+      "BPM डिटेक्टर",
+      "प्रति मिनट बीट्स",
+      "गाने की गति",
+      "ऑनलाइन BPM काउंटर"
+    ],
+    "ar": [
+      "كاشف BPM",
+      "نبضات في الدقيقة",
+      "وتيرة الأغنية",
+      "عداد BPM عبر الإنترنت"
+    ]
+  }
+},
+{
+  "slug": "regex-tester-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=regex-tester&grayscale=false",
+  "tags": [
+    {
+      "en": "Development",
+      "zh": "开发",
+      "es": "Desarrollo",
+      "fr": "Développement",
+      "hi": "विकास",
+      "ar": "التطوير"
+    },
+    {
+      "en": "Regex",
+      "zh": "正则表达式",
+      "es": "Expresiones Regulares",
+      "fr": "Expressions Régulières",
+      "hi": "रेगेक्स",
+      "ar": "التعبيرات النظامية"
+    },
+    {
+      "en": "Programming",
+      "zh": "编程",
+      "es": "Programación",
+      "fr": "Programmation",
+      "hi": "प्रोग्रामिंग",
+      "ar": "البرمجة"
+    }
+  ],
+  "relatedToolSlugs": [
+    "regex-tester",
+    "json-formatter",
+    "markdown-platform-converter"
+  ],
+  "readingMinutes": {
+    "en": 9,
+    "zh": 10,
+    "es": 10,
+    "fr": 10,
+    "hi": 11,
+    "ar": 10
+  },
+  "title": {
+    "en": "Regex Tester Guide: How to Build, Test, and Debug Regular Expressions Like a Pro",
+    "zh": "正则表达式测试器指南：如何像专家一样构建、测试和调试正则",
+    "es": "Guía de Probador de Regex: Cómo Construir, Probar y Depurar Expresiones Regulares",
+    "fr": "Guide du Testeur Regex : Comment Construire, Tester et Déboguer les Expressions Régulières",
+    "hi": "रेगेक्स टेस्टर गाइड: नियमित अभिव्यक्तियों को कैसे बनाएं, परीक्षण करें और डीबग करें",
+    "ar": "دليل اختبار Regex: كيفية بناء واختبار وتصحيح التعبيرات النظامية"
+  },
+  "description": {
+    "en": "Master regex with practical examples for email validation, URL extraction, and complex pattern matching. Learn to use lookaheads, capture groups, and flags effectively.",
+    "zh": "通过电子邮件验证、URL 提取和复杂模式匹配的实战示例掌握正则。学会有效使用预查、捕获组和标志位。",
+    "es": "Domina regex con ejemplos prácticos para validación de correo, extracción de URLs y coincidencia de patrones complejos.",
+    "fr": "Maîtrisez regex avec des exemples pratiques pour la validation d'emails et l'extraction d'URLs.",
+    "hi": "Email वैलिडेशन, URL निकासी और जटिल पैटर्न मैचिंग के व्यावहारिक उदाहरणों के साथ regex मास्टर करें।",
+    "ar": "أتقن regex مع أمثلة عملية للتحقق من البريد الإلكتروني واستخراج الروابط."
+  },
+  "keywords": {
+    "en": [
+      "regex tester",
+      "regular expression",
+      "regex tutorial",
+      "pattern matching",
+      "regex debugger"
+    ],
+    "zh": [
+      "正则测试器",
+      "正则表达式",
+      "正则教程",
+      "模式匹配",
+      "正则调试"
+    ],
+    "es": [
+      "probador regex",
+      "expresión regular",
+      "tutorial regex",
+      "coincidencia de patrones"
+    ],
+    "fr": [
+      "testeur regex",
+      "expression régulière",
+      "tutoriel regex",
+      "correspondance de motifs"
+    ],
+    "hi": [
+      "रेगेक्स टेस्टर",
+      "नियमित अभिव्यक्ति",
+      "रेगेक्स ट्यूटोरियल",
+      "पैटर्न मैचिंग"
+    ],
+    "ar": [
+      "اختبار regex",
+      "تعبير نظامي",
+      "دليل regex",
+      "مطابقة الأنماط"
+    ]
+  }
+},
+{
+  "slug": "json-formatter-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=json-formatter&grayscale=false",
+  "tags": [
+    {
+      "en": "Development",
+      "zh": "开发",
+      "es": "Desarrollo",
+      "fr": "Développement",
+      "hi": "विकास",
+      "ar": "التطوير"
+    },
+    {
+      "en": "JSON",
+      "zh": "JSON",
+      "es": "JSON",
+      "fr": "JSON",
+      "hi": "JSON",
+      "ar": "JSON"
+    },
+    {
+      "en": "Data Tools",
+      "zh": "数据工具",
+      "es": "Herramientas de Datos",
+      "fr": "Outils de Données",
+      "hi": "डेटा उपकरण",
+      "ar": "أدوات البيانات"
+    }
+  ],
+  "relatedToolSlugs": [
+    "json-formatter",
+    "json-csv-converter",
+    "regex-tester"
+  ],
+  "readingMinutes": {
+    "en": 8,
+    "zh": 9,
+    "es": 9,
+    "fr": 9,
+    "hi": 10,
+    "ar": 9
+  },
+  "title": {
+    "en": "JSON Formatter Guide: How to Pretty Print, Validate, and Navigate Large JSON Files",
+    "zh": "JSON 格式化指南：如何美化、验证和导航大型 JSON 文件",
+    "es": "Guía de Formateador JSON: Cómo Embellecer, Validar y Navegar Archivos JSON Grandes",
+    "fr": "Guide du Formateur JSON : Comment Embellir, Valider et Naviguer dans les Fichiers JSON",
+    "hi": "JSON फॉर्मेटर गाइड: बड़ी JSON फ़ाइलों को कैसे प्रिटी प्रिंट, वैलिडेट और नेविगेट करें",
+    "ar": "دليل منسق JSON: كيفية تجميل والتحقق من ملفات JSON الكبيرة والتنقل فيها"
+  },
+  "description": {
+    "en": "From minified API responses to deeply nested config files, learn to format, validate, and navigate JSON with tree view, line numbers, and real-time error highlighting.",
+    "zh": "从压缩的 API 响应到深层嵌套的配置文件，学会格式化、验证和导航 JSON，支持树形视图、行号和实时错误高亮。",
+    "es": "Desde respuestas de API minificadas hasta archivos de configuración profundamente anidados.",
+    "fr": "Des réponses API minimisées aux fichiers de configuration profondément imbriqués.",
+    "hi": "मिनिफाइड API प्रतिक्रियाओं से लेकर deeply nested config फ़ाइलों तक।",
+    "ar": "من استجابات API المصغرة إلى ملفات التكوين المتداخلة بعمق."
+  },
+  "keywords": {
+    "en": [
+      "json formatter",
+      "json validator",
+      "json pretty print",
+      "json tree viewer",
+      "json lint"
+    ],
+    "zh": [
+      "JSON格式化",
+      "JSON验证器",
+      "JSON美化",
+      "JSON树形视图",
+      "JSON检查"
+    ],
+    "es": [
+      "formateador JSON",
+      "validador JSON",
+      "JSON pretty print",
+      "visor de árbol JSON"
+    ],
+    "fr": [
+      "formateur JSON",
+      "validateur JSON",
+      "JSON pretty print",
+      "visionneuse d'arbre JSON"
+    ],
+    "hi": [
+      "JSON फॉर्मेटर",
+      "JSON वैलिडेटर",
+      "JSON प्रिटी प्रिंट",
+      "JSON ट्री व्यूअर"
+    ],
+    "ar": [
+      "منسق JSON",
+      "التحقق من JSON",
+      "طباعة JSON الجميلة",
+      "عارض شجرة JSON"
+    ]
+  }
 }
 ];
 
