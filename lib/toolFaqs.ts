@@ -575,6 +575,12 @@ export function buildToolFaqsFromTranslator(locale: string, tool: ToolLike, tran
   return [...generalFaqs, ...toolSpecificFaqs];
 }
 
+export function hasToolSpecificFaqs(slug: string, locale: string): boolean {
+  const l = resolveLocale(locale);
+  const arr = TOOL_FAQ_I18N[slug]?.[l];
+  return Array.isArray(arr) && arr.length > 0;
+}
+
 export function buildFaqJsonLd(faqs: FaqItem[]) {
   return {
     '@context': 'https://schema.org',

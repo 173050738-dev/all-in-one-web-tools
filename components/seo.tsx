@@ -16,7 +16,7 @@ import {
 } from '@/data/news';
 import { categories } from '@/data/categories';
 import { workflows, getWorkflowBySlug, type Workflow, type WorkflowStep } from '@/data/workflows';
-import { buildToolFaqsFromJson, buildFaqJsonLd, type ToolLike, type FaqItem } from '@/lib/toolFaqs';
+import { buildToolFaqsFromJson, hasToolSpecificFaqs, buildFaqJsonLd, type ToolLike, type FaqItem } from '@/lib/toolFaqs';
 
 export const SITE_URL = 'https://korelyy.com';
 export const KNOWN_LOCALES = ['en', 'zh', 'es', 'hi', 'fr', 'ar'] as const;
@@ -853,7 +853,9 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
         seoObj = toolsNs[idKey].seo;
       }
     }
-    if (Array.isArray(seoObj?.faqs) && seoObj.faqs.length > 0) {
+    if (hasToolSpecificFaqs(slugKey, l)) {
+      faqs = buildToolFaqsFromJson(l, tool as ToolLike, json as any);
+    } else if (Array.isArray(seoObj?.faqs) && seoObj.faqs.length > 0) {
       faqs = seoObj.faqs
         .filter((x: any) => x && typeof x.q === 'string' && typeof x.a === 'string')
         .map((x: any) => ({ q: String(x.q), a: String(x.a) }));
