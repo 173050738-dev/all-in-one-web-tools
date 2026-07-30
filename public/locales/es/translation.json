@@ -9040,6 +9040,56 @@
           }
         ]
       }
+    },
+    "name-constellation": {
+      "name": "Constelación de Nombre",
+      "description": "Transforma tu nombre en un mapa estelar de personalidad único. Cada letra se convierte en una estrella. La IA revela tus rasgos de personalidad, color de suerte y número de suerte. Arrastra, haz zoom, exporta PNG.",
+      "seo": {
+        "intro": "Constelación de Nombre es una herramienta creativa gratuita basada en el navegador que transforma tu nombre en un mapa estelar de personalidad único. Cada letra brilla como una estrella en tu constelación personal. La IA descubre el significado energético de cada letra, tus rasgos de personalidad, color de suerte y número de suerte.",
+        "scenarios": [
+          "Avatares personales y tarjetas de redes sociales.",
+          "Regalos de cumpleaños y aniversarios.",
+          "Rompehielos sociales en plataformas.",
+          "Autoexploración y meditación.",
+          "Comparación de parejas o mejores amigos."
+        ],
+        "tutorial": [
+          "Paso 1: Ingresa tu nombre en el cuadro de entrada.",
+          "Paso 2: Elige un estilo de galaxia.",
+          "Paso 3: Haz clic en \"Generar Mapa Estelar\".",
+          "Paso 4: Arrastra, haz clic en estrellas para ver significados.",
+          "Paso 5: Descarga PNG o regenera para una nueva lectura."
+        ],
+        "advantages": [
+          "100% basado en navegador. Tus datos nunca salen de tu dispositivo.",
+          "Lectura profunda con IA — rasgos de personalidad, color y número de suerte.",
+          "Cuatro estilos hermosos. Cada nombre genera una constelación única.",
+          "Completamente gratis con generaciones ilimitadas.",
+          "Compatible con seis idiomas."
+        ],
+        "faqs": [
+          {
+            "q": "¿Es gratis?",
+            "a": "Sí, completamente gratis. Sin pagos ocultos."
+          },
+          {
+            "q": "¿Necesito registrarme?",
+            "a": "No. Funciona al instante en cualquier navegador."
+          },
+          {
+            "q": "¿Mis datos se suben?",
+            "a": "No. Todo se procesa localmente."
+          },
+          {
+            "q": "¿Qué dispositivos?",
+            "a": "Todos los navegadores modernos en PC, tableta y móvil."
+          },
+          {
+            "q": "¿Puedo generar varias veces?",
+            "a": "Sí. Cada generación es única."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

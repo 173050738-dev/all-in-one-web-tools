@@ -87,6 +87,7 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'wave-art',
   'life-weeks',
   'excuse-generator',
+  'name-constellation',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {

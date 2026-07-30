@@ -9040,6 +9040,56 @@
           }
         ]
       }
+    },
+    "name-constellation": {
+      "name": "Name Constellation",
+      "description": "Transform your name into a unique star-map personality profile. Each letter becomes a star. AI reveals your personality traits, lucky color, and lucky number. Drag, zoom, export PNG. Perfect for sharing, gifts, and social cards.",
+      "seo": {
+        "intro": "Name Constellation is a free, browser-based creative tool that transforms your name into a one-of-a-kind star-map personality profile. Each letter shines as a star in your personal constellation. AI uncovers the energy meaning of each letter, your personality traits, lucky color, and lucky number. Everything runs locally in your browser — no data uploads, no account needed.",
+        "scenarios": [
+          "Personal avatars and social media cards — use your unique star map as a distinctive profile picture.",
+          "Birthday and anniversary gifts — generate star maps for friends or loved ones, pair with a frame for a meaningful gift.",
+          "Social icebreaker — share your constellation on social platforms and spark conversations with personality readings.",
+          "Self-exploration and meditation — understand your personality traits and energy distribution through your star map.",
+          "Couple / best-friend comparison — overlay two star maps to see if your energies complement each other."
+        ],
+        "tutorial": [
+          "Step 1: Enter your name in the input box (supports any language).",
+          "Step 2: Choose a galaxy style — Milky Way, Aurora, Twilight, or Dreamscape.",
+          "Step 3: Click \"Generate Star Map\" and AI will create your unique constellation.",
+          "Step 4: Drag to pan, scroll to zoom, click individual stars to see letter meanings.",
+          "Step 5: Click \"Download PNG\" to save your star map, or \"Regenerate\" for a new reading."
+        ],
+        "advantages": [
+          "100% browser-based. Your name and star map data never leave your device.",
+          "AI-powered deep reading — not just visuals, but personality traits, lucky color, and lucky number analysis.",
+          "Four beautiful styles. Every name generates a unique constellation, never repeated.",
+          "Completely free with unlimited generations. No sign-up, no watermarks.",
+          "Supports six languages for input and interface — built for global users."
+        ],
+        "faqs": [
+          {
+            "q": "Is Name Constellation free?",
+            "a": "Yes, completely free. All features — AI reading, four styles, PNG export — are permanently free with no hidden paywalls."
+          },
+          {
+            "q": "Do I need to create an account?",
+            "a": "No. Works instantly in any browser. No email, no login, no tracking cookies."
+          },
+          {
+            "q": "Is my name data uploaded?",
+            "a": "No. Core rendering happens locally in your browser. AI reading requests are anonymous and don't store personal information."
+          },
+          {
+            "q": "What devices are supported?",
+            "a": "Works on all modern browsers (Chrome, Edge, Safari, Firefox) across PC, tablet, and mobile. Touch controls are optimized for mobile."
+          },
+          {
+            "q": "Can I generate the same name multiple times?",
+            "a": "Yes. Each generation is unique — AI creates different readings and star layouts for the same name."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {

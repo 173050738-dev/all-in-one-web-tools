@@ -46844,6 +46844,41 @@
     "isSelfHosted": true
   },
   {
+    "id": "name-constellation",
+    "slug": "name-constellation",
+    "name": "名字星图",
+    "description": "把你的名字变成独一无二的星空人格图谱。每个字母化作星辰，AI 解读你的性格特质、幸运色和幸运数字。支持拖拽、缩放、导出 PNG。适合分享、生日礼、社交名片。",
+    "category": "content-tools",
+    "tags": [
+      "名字",
+      "星图",
+      "星座",
+      "人格",
+      "AI",
+      "创意",
+      "PNG"
+    ],
+    "nameEn": "Name Constellation",
+    "descriptionEn": "Transform your name into a unique star-map personality profile. Each letter becomes a star. AI reveals your personality traits, lucky color, and lucky number. Drag, zoom, export PNG. Perfect for sharing, gifts, and social cards.",
+    "tagsEn": [
+      "name",
+      "constellation",
+      "stars",
+      "personality",
+      "AI",
+      "creative",
+      "PNG"
+    ],
+    "isFree": true,
+    "icon": "Star",
+    "likes": 5000,
+    "difficulty": "easy",
+    "complianceLevel": "green",
+    "accessTag": "direct",
+    "localProcessing": true,
+    "isSelfHosted": true
+  },
+  {
     "id": "wave-art",
     "slug": "wave-art",
     "name": "声音波形艺术图生成器",

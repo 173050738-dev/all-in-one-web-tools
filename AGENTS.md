@@ -189,6 +189,15 @@
 - 脚本 reddit-comments-0728.js（改 COMMENTS 数组复用）、reddit-hist2.js（查历史+score）、reddit-karma.js（查karma）
 - 【下一步】明天错开时段再发1条攒 karma；comment karma 到 50+ 才回精准版块。全程0链接
 
+### IH 养号进度补记（2026-07-30）
+- 【重要发现】浏览器 session：Chrome(9222) 单 context 含 1434 cookie，IH 已登录可用；但【X 和 Dev.to 登录态已过期】(打开都跳登录页)，需 Carson 手动重登。Hashnode/Substack 经实测【均未真登录】(上会话误判)，Medium/HN/ProductHunt/Quora 有 Cloudflare/Vercel 验证墙，自动化受阻
+- 今天 IH 发 3 条(全部核验 LANDED)，累计约 18 条：
+  1. 回 Kitzo 帖(作者 aracoool 回复了我谈浏览器扩展)：认同扩展思路+抛【按意图而非名字呈现工具/命令面板式启动器】的问题
+  2. amonyne(Needly)创始人致谢我评论：想再跟评但该层已无 reply 按钮(嵌套到顶)，放弃
+  3. 新顶层评论 @【How to rank #1 on ChatGPT】(GEO帖)：贡献【AI引擎更爱引用干净回答单一问题的页面而非终极指南】+问 FAQ/HowTo schema 是否真提升被引用率
+- 【IH DOM 关键笔记(复用)】：帖内嵌套回复按钮是【div.footer__action--reply】(不是 a.footer__action)。定位:找评论文本 leaf→climb 到最近祖先 div.comment→querySelector div.footer__action--reply→click→取距该评论最近可见 editor(dist<1200)。顶层评论框是【textarea】ph【Say something nice to xxx】,用 getByPlaceholder 定位 fill 后点 button:has-text(Post Comment)。页面有 honeypot input(ph 含 detect spam bots)别碰。跨节点文本用 Playwright getByText 比 evaluate 找 leaf 稳
+- 【下一步】明天继续 1-2 条;回看这 3 条有无新回复做跟评
+
 ### IH 养号进度补记（2026-07-26）
 - 又发 3 条有料评论（全部确认 landed，ok:3/fail:0），累计 IH 评论约 12 条：
   1. Needly 帖（验证工具/砍坏点子）：讲【最强 kill 信号=承认问题真实但不改现有替代做法】+ 推荐单一测试但要给理由

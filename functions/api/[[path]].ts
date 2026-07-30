@@ -877,6 +877,80 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           catch { return json({ stage: '', advice: content, prompts: [], source: 'ai' }); }
         }
 
+        case '/api/name-constellation-ai':
+        case '/api/name-constellation-ai/': {
+          const name = (payload.name as string) || '';
+          const style = (payload.style as number) || 0;
+          if (!name.trim()) return errJson('Name is required', 400);
+          const styleNames = ['milky-way', 'aurora', 'twilight', 'dreamscape'];
+          const styleName = styleNames[style] || 'milky-way';
+          const palettes: Record<string, string[]> = {
+            'milky-way': ['#ffffff', '#ffd700', '#87ceeb', '#dda0dd', '#fffacd'],
+            'aurora': ['#7df9ff', '#0077b6', '#caf0f8', '#90e0ef', '#ade8f4'],
+            'twilight': ['#e0aaff', '#c77dff', '#9d4edd', '#7b2cbf', '#ffd6ff'],
+            'dreamscape': ['#f5e6ff', '#da8fff', '#b388ff', '#e1bee7', '#f8bbd0'],
+          };
+          const palette = palettes[styleName] || palettes['milky-way'];
+          const systemPrompt = `你是名字星图分析师。将名字的每个字母转化为星图数据。
+
+风格：${styleName}
+调色板：${palette.join(', ')}
+
+返回严格JSON格式：
+{"stars":[{"id":0,"letter":"A","x":200,"y":200,"color":"#fff","size":5,"brightness":0.8,"meaning":"creative","energy":0.7}],"connections":[{"from":0,"to":1,"strength":0.8}],"description":"2-3 sentence personality profile","traits":["trait1","trait2"],"luckyColor":"#ffd700","luckyNumber":5}
+
+规则：
+- 使用名字中的实际字母
+- x,y围绕400,300分布，散布在200px范围
+- 连线只连能量兼容的字母（30-70%比例）
+- description和traits用${langLabel(locale)}
+- meaning可用${langLabel(locale)}或英文，保持简短
+- 每个名字要独特`;
+          const userPrompt = `名字："${name}"\n风格：${styleName}\n请生成星图。`;
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          try {
+            const r = JSON.parse(content);
+            if (!r.stars || r.stars.length === 0) return errJson('No stars generated', 500);
+            // Normalize positions to nice constellation
+            const stars = r.stars.map((s: any, i: number) => ({
+              id: i,
+              letter: String(s.letter || '?'),
+              x: typeof s.x === 'number' ? s.x : 200 + i * 30,
+              y: typeof s.y === 'number' ? s.y : 200 + (i % 3) * 40,
+              color: String(s.color || palette[i % palette.length]),
+              size: Math.min(12, Math.max(2, Number(s.size) || 5)),
+              brightness: Math.min(1, Math.max(0.3, Number(s.brightness) || 0.7)),
+              meaning: String(s.meaning || ''),
+              energy: Math.min(1, Math.max(0, Number(s.energy) || 0.5)),
+            }));
+            // Fix positions into constellation pattern
+            const cx = 400, cy = 300;
+            const n = stars.length;
+            stars.forEach((s: any, i: number) => {
+              const angle = (i / Math.max(n, 1)) * Math.PI * 2 - Math.PI / 2;
+              const r = 80 + (i % 3) * 60 + (i * 7 % 30);
+              s.x = Math.round(cx + Math.cos(angle) * r + (i * 11 % 20) - 10);
+              s.y = Math.round(cy + Math.sin(angle) * r + (i * 13 % 20) - 10);
+            });
+            const connections = (r.connections || []).map((c: any) => ({
+              from: Number(c.from) || 0,
+              to: Number(c.to) || 0,
+              strength: Math.min(1, Math.max(0.1, Number(c.strength) || 0.5)),
+            }));
+            return json({
+              stars,
+              connections,
+              description: String(r.description || ''),
+              traits: Array.isArray(r.traits) ? r.traits : [],
+              luckyColor: String(r.luckyColor || '#ffffff'),
+              luckyNumber: Math.min(9, Math.max(1, Number(r.luckyNumber) || 5)),
+              source: 'ai',
+            });
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+        }
+
         default:
           return errJson('Not found', 404);
       }

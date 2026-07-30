@@ -9040,6 +9040,56 @@
           }
         ]
       }
+    },
+    "name-constellation": {
+      "name": "Constellation du Nom",
+      "description": "Transformez votre nom en une carte stellaire de personnalité unique. Chaque lettre devient une étoile. L'IA révèle vos traits de personnalité, couleur et numéro porte-bonheur.",
+      "seo": {
+        "intro": "Constellation du Nom est un outil créatif gratuit basé sur le navigateur qui transforme votre nom en une carte stellaire de personnalité unique. Chaque lettre brille comme une étoile dans votre constellation personnelle.",
+        "scenarios": [
+          "Avatars personnels et cartes de médias sociaux.",
+          "Cadeaux d'anniversaire et d'anniversaire de mariage.",
+          "Brise-glace social sur les plateformes.",
+          "Auto-exploration et méditation.",
+          "Comparaison de couples ou meilleurs amis."
+        ],
+        "tutorial": [
+          "Étape 1: Entrez votre nom.",
+          "Étape 2: Choisissez un style de galaxie.",
+          "Étape 3: Cliquez sur \"Générer la Carte\".",
+          "Étape 4: Glissez, cliquez sur les étoiles pour voir les significations.",
+          "Étape 5: Téléchargez en PNG ou régénérez."
+        ],
+        "advantages": [
+          "100% basé sur le navigateur. Vos données restent sur votre appareil.",
+          "Lecture IA profonde — traits, couleur et numéro porte-bonheur.",
+          "Quatre styles magnifiques. Chaque nom génère une constellation unique.",
+          "Complètement gratuit avec générations illimitées.",
+          "Compatible avec six langues."
+        ],
+        "faqs": [
+          {
+            "q": "Est-ce gratuit ?",
+            "a": "Oui, complètement gratuit. Sans paiements cachés."
+          },
+          {
+            "q": "Besoin de s'inscrire ?",
+            "a": "Non. Fonctionne instantanément."
+          },
+          {
+            "q": "Mes données sont-elles téléchargées ?",
+            "a": "Non. Tout est traité localement."
+          },
+          {
+            "q": "Quels appareils ?",
+            "a": "Tous les navigateurs modernes sur PC, tablette et mobile."
+          },
+          {
+            "q": "Puis-je régénérer ?",
+            "a": "Oui. Chaque génération est unique."
+          }
+        ]
+      }
     }
   },
   "sidebar2": {
