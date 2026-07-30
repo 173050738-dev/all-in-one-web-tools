@@ -42711,5 +42711,317 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
       "zh": "格式化与验证 JSON——免费，客户端处理"
     }
   }
+],
+"markdown-platform-converter-guide": [
+  {
+    "type": "h2",
+    "text": {
+      "en": "Why Markdown Looks Different on Every Platform",
+      "zh": "为什么 Markdown 在每个平台上看起来都不一样",
+      "es": "Por qué Markdown se ve diferente en cada plataforma",
+      "fr": "Pourquoi Markdown a l'air différent sur chaque plateforme",
+      "hi": "Markdown हर प्लेटफ़ॉर्म पर अलग क्यों दिखता है",
+      "ar": "لماذا يبدو ماركداون مختلفًا على كل منصة"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "You wrote a clean README in GitHub, pasted it into Notion, and the tables collapsed. You copied an Obsidian wiki-link like [[Page Name]] into Reddit and saw literal brackets. Markdown was sold as a universal format, but every platform ships its own dialect: GitHub adds task lists and strikethrough, Notion rewrites blocks into its own model, Obsidian adds wikilinks and footnotes, Reddit strips raw HTML. A platform converter translates between these dialects so your formatting survives the trip.",
+      "zh": "你在 GitHub 写了干净的 README，粘贴到 Notion 后表格全塌了。你把 Obsidian 的 wiki 链接 [[页面名]] 复制到 Reddit，结果看到字面方括号。Markdown 本被宣传为通用格式，但每个平台都自带方言：GitHub 加了任务列表和删除线，Notion 把块重写成自己的模型，Obsidian 加了 wiki 链接和脚注，Reddit 剥离了原始 HTML。平台转换器在这些方言之间翻译，让你的格式在传输中存活。",
+      "es": "Escribiste un README limpio en GitHub, lo pegaste en Notion y las tablas colapsaron. Copiaste un enlace wiki de Obsidian como [[Nombre de Página]] en Reddit y viste corchetes literales. Markdown se vendió como formato universal, pero cada plataforma tiene su propio dialecto. Un convertidor traduce entre estos dialectos para que tu formato sobreviva.",
+      "fr": "Vous avez écrit un README propre sur GitHub, collé dans Notion, et les tableaux se sont effondrés. Markdown était vendu comme format universel, mais chaque plateforme a son propre dialecte. Un convertisseur traduit entre ces dialectes pour que votre formatage survive.",
+      "hi": "आपने GitHub में साफ README लिखा, Notion में पेस्ट किया, और टेबल ढह गए। आपने Obsidian विकि-लिंक [[Page Name]] को Reddit में कॉपी किया और शाब्दिक कोष्ठक देखे। Markdown सार्वभौमिक प्रारूप के रूप में बेचा गया, लेकिन हर प्लेटफ़ॉर्म का अपना बोली है। प्लेटफ़ॉर्म कन्वर्टर इन बोलियों के बीच अनुवाद करता है।",
+      "ar": "كتبت README نظيفًا على GitHub، ولصقته في Notion، فانهارت الجداول. تم تسويق ماركداون كصيغة عالمية، لكن كل منصة لها لهجتها الخاصة. محول المنصة يترجم بين هذه اللهجات ليبقى تنسيقك حيًا."
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "markdown-platform-converter",
+    "text": {
+      "en": "Try Markdown Platform Converter — Free & Client-Side",
+      "zh": "试试 Markdown 平台转换器——免费，客户端处理",
+      "es": "Prueba el Conversor de Markdown — Gratis y del Lado del Cliente",
+      "fr": "Essayez le Convertisseur Markdown — Gratuit et Côté Client",
+      "hi": "मार्कडाउन प्लेटफ़ॉर्म कन्वर्टर आज़माएं — मुफ़्त और क्लाइंट-साइड",
+      "ar": "جرب محول ماركداون — مجاني ومن جانب العميل"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "The Markdown Dialect Problem",
+      "zh": "Markdown 方言问题",
+      "es": "El Problema de los Dialectos de Markdown",
+      "fr": "Le Problème des Dialectes Markdown",
+      "hi": "Markdown बोली समस्या",
+      "ar": "مشكلة لهجات ماركداون"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "GitHub Flavored Markdown (GFM)",
+      "zh": "GitHub 风味 Markdown (GFM)",
+      "es": "Markdown con Sabor a GitHub (GFM)",
+      "fr": "Markdown Saveur GitHub (GFM)",
+      "hi": "GitHub फ्लेवर्ड Markdown (GFM)",
+      "ar": "ماركداون بنكهة GitHub (GFM)"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "GFM is the de facto standard for developers. It adds tables, task lists (- [x] done), strikethrough (~~text~~), auto-linking of URLs, and fenced code blocks with language hints. Most static site generators and README files expect GFM. If you write elsewhere and paste into GitHub, you usually gain features — but going the other way often loses them.",
+      "zh": "GFM 是开发者事实上的标准。它加了表格、任务列表（- [x] done）、删除线（~~text~~）、URL 自动链接和带语言提示的围栏代码块。大多数静态站点生成器和 README 文件都期望 GFM。如果你在别处写再粘到 GitHub，通常会获得功能——但反向通常会丢失。",
+      "es": "GFM es el estándar de facto para desarrolladores. Añade tablas, listas de tareas (- [x] done), tachado (~~text~~), auto-enlace de URLs y bloques de código cercados con indicaciones de idioma. La mayoría de los generadores de sitios estáticos y archivos README esperan GFM.",
+      "fr": "GFM est le standard de facto pour les développeurs. Il ajoute tableaux, listes de tâches (- [x] done), barré (~~text~~), lien automatique des URLs et blocs de code clôturés avec indications de langage. La plupart des générateurs de sites statiques attendent GFM.",
+      "hi": "GFM डेवलपर्स के लिए वस्तुतः मानक है। यह टेबल, कार्य सूचियाँ (- [x] done), स्ट्राइकथ्रू (~~text~~), URL ऑटो-लिंकिंग और भाषा संकेत के साथ बाड़ कोड ब्लॉक जोड़ता है। अधिकांश स्टैटिक साइट जनरेटर और README फ़ाइलें GFM की अपेक्षा करती हैं।",
+      "ar": "GFM هو المعيار الفعلي للمطورين. يضيف الجداول وقوائم المهام (- [x] done) والشطب (~~text~~) والربط التلقائي لعناوين URL وكتل الكود المسورة بتلميحات اللغة. تتوقع معظم مولدات المواقع الثابتة تنسيق GFM."
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Notion Markdown",
+      "zh": "Notion Markdown",
+      "es": "Markdown de Notion",
+      "fr": "Markdown de Notion",
+      "hi": "Notion Markdown",
+      "ar": "ماركداون Notion"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Notion's Markdown import is lossy. It accepts basic syntax but rewrites blocks into its own database model on save. Tables become Notion databases, callouts become special blocks, and wikilinks don't round-trip. Exporting Markdown out of Notion often produces quirky syntax like nested checkboxes and colon-prefixed callouts that break on other platforms.",
+      "zh": "Notion 的 Markdown 导入是有损的。它接受基本语法但在保存时把块重写成自己的数据库模型。表格变成 Notion 数据库，标注变成特殊块，wiki 链接不能往返。从 Notion 导出 Markdown 常产生怪异语法，如嵌套复选框和冒号前缀的标注，在其他平台上会坏。",
+      "es": "La importación de Markdown de Notion tiene pérdida. Acepta sintaxis básica pero reescribe bloques en su propio modelo de base de datos al guardar. Las tablas se convierten en bases de datos de Notion y los wikilinks no hacen ida y vuelta. Exportar Markdown de Notion a menudo produce sintaxis peculiar.",
+      "fr": "L'import Markdown de Notion est avec perte. Il accepte la syntaxe de base mais réécrit les blocs dans son propre modèle de base de données lors de l'enregistrement. Les tableaux deviennent des bases de données Notion et les wikiliens ne font pas l'aller-retour. Exporter Markdown de Notion produit souvent une syntaxe particulière.",
+      "hi": "Notion का Markdown आयात हानिपूर्ण है। यह बुनियादी सिंटैक्स स्वीकार करता है लेकिन सहेजने पर ब्लॉक्स को अपने डेटाबेस मॉडल में फिर से लिखता है। टेबल Notion डेटाबेस बन जाते हैं और wikilinks राउंड-ट्रिप नहीं करते।",
+      "ar": "استيراد ماركداون في Notion به خسارة. يقبل الصيغة الأساسية لكنه يعيد كتابة الكتل في نموذج قاعدة البيانات الخاص به عند الحفظ. تصبح الجداول قواعد بيانات Notion ولا تدور روابط الويكي."
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Obsidian",
+      "zh": "Obsidian",
+      "es": "Obsidian",
+      "fr": "Obsidian",
+      "hi": "Obsidian",
+      "ar": "Obsidian"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Obsidian extends Markdown with wikilinks ([[Page Name]]), block references (^block-id), embeds (![[image.png]]), and footnotes ([^1]). These are powerful for personal knowledge management but break completely when pasted into GitHub, Reddit, or Medium, which treat the brackets as literal text. Obsidian also supports tags (#tag) inline, which most platforms don't recognize.",
+      "zh": "Obsidian 用 wiki 链接（[[页面名]]）、块引用（^block-id）、嵌入（![[image.png]]）和脚注（[^1]）扩展了 Markdown。这些对个人知识管理很强大，但粘贴到 GitHub、Reddit 或 Medium 时会完全坏掉，因为那些平台把方括号当字面文本。Obsidian 还支持内联标签（#tag），大多数平台不识别。",
+      "es": "Obsidian extiende Markdown con enlaces wiki ([[Nombre de Página]]), referencias de bloque (^block-id), incrustaciones (![[image.png]]) y notas al pie ([^1]). Son potentes para la gestión de conocimiento personal pero se rompen completamente al pegarlos en GitHub, Reddit o Medium.",
+      "fr": "Obsidian étend Markdown avec des wikiliens ([[Nom de Page]]), références de bloc (^block-id), intégrations (![[image.png]]) et notes de bas de page ([^1]). Ils sont puissants pour la gestion des connaissances personnelles mais se cassent complètement lorsqu'ils sont collés dans GitHub, Reddit ou Medium.",
+      "hi": "Obsidian Markdown को wikilinks ([[Page Name]]), ब्लॉक संदर्भ (^block-id), embeds (![[image.png]]), और footnotes ([^1]) के साथ विस्तारित करता है। ये व्यक्तिगत ज्ञान प्रबंधन के लिए शक्तिशाली हैं लेकिन GitHub, Reddit या Medium में पेस्ट करने पर पूरी तरह टूट जाते हैं।",
+      "ar": "يوسع Obsidian ماركداون بروابط الويكي ([[اسم الصفحة]]) ومراجع الكتلة (^block-id) والتضمينات (![[image.png]]) والحواشي ([^1]). هذه قوية لإدارة المعرفة الشخصية لكنها تنكسر تمامًا عند لصقها في GitHub أو Reddit أو Medium."
+    }
+  },
+  {
+    "type": "callout",
+    "kind": "info",
+    "text": {
+      "en": "⚠️ Never assume Markdown will round-trip perfectly. Always test-paste a snippet into the target platform before committing to a full migration.",
+      "zh": "⚠️ 永远不要假设 Markdown 能完美往返。在全面迁移前，先测试粘贴一小段到目标平台。",
+      "es": "⚠️ Nunca asumas que Markdown hará ida y vuelta perfecta. Siempre prueba pegando un fragmento en la plataforma de destino antes de una migración completa.",
+      "fr": "⚠️ Ne supposez jamais que Markdown fera un aller-retour parfait. Testez toujours en collant un extrait sur la plateforme cible avant une migration complète.",
+      "hi": "⚠️ कभी न मानें कि Markdown पूरी तरह राउंड-ट्रिप करेगा। पूर्ण माइग्रेशन से पहले हमेशा लक्षित प्लेटफ़ॉर्म पर एक स्निपेट पेस्ट करके टेस्ट करें।",
+      "ar": "⚠️ لا تفترض أبدًا أن ماركداون سيدور بشكل مثالي. اختبر دائمًا بلصق مقتطف في المنصة المستهدفة قبل الترحيل الكامل."
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Common Conversion Challenges",
+      "zh": "常见转换挑战",
+      "es": "Desafíos Comunes de Conversión",
+      "fr": "Défis Courants de Conversion",
+      "hi": "सामान्य रूपांतरण चुनौतियाँ",
+      "ar": "تحديات التحويل الشائعة"
+    }
+  },
+  {
+    "type": "ul",
+    "items": {
+      "en": [
+        "Tables: GFM tables break in Notion; Notion databases export as awkward nested lists",
+        "Task lists: GitHub - [x] syntax becomes checkboxes in Notion but plain text in Reddit",
+        "Wikilinks: [[Page]] works in Obsidian only — everywhere else shows literal brackets",
+        "Code blocks: Language hints work in GitHub but are stripped in many platforms",
+        "Footnotes: Obsidian [^1] syntax is not supported in GFM, Notion, or Reddit",
+        "Images: Obsidian ![[file]] embeds need rewriting to standard ![alt](url) syntax"
+      ],
+      "zh": [
+        "表格：GFM 表格在 Notion 中会坏；Notion 数据库导出为尴尬的嵌套列表",
+        "任务列表：GitHub 的 - [x] 语法在 Notion 变成复选框，在 Reddit 变成纯文本",
+        "Wiki 链接：[[页面]] 只在 Obsidian 有效——其他地方显示字面方括号",
+        "代码块：语言提示在 GitHub 有效但在很多平台被剥离",
+        "脚注：Obsidian 的 [^1] 语法在 GFM、Notion 或 Reddit 中不支持",
+        "图片：Obsidian 的 ![[file]] 嵌入需要重写为标准 ![alt](url) 语法"
+      ],
+      "es": [
+        "Tablas: las tablas GFM se rompen en Notion; las bases de datos de Notion se exportan como listas anidadas",
+        "Listas de tareas: la sintaxis - [x] de GitHub se convierte en casillas en Notion pero texto plano en Reddit",
+        "Wikilinks: [[Page]] solo funciona en Obsidian — en otros lugares muestra corchetes literales",
+        "Bloques de código: las indicaciones de idioma funcionan en GitHub pero se eliminan en muchas plataformas",
+        "Notas al pie: la sintaxis [^1] de Obsidian no es compatible con GFM, Notion o Reddit",
+        "Imágenes: las inserciones ![[file]] de Obsidian necesitan reescribirse a sintaxis ![alt](url)"
+      ],
+      "fr": [
+        "Tableaux : les tableaux GFM se cassent dans Notion ; les bases de données Notion s'exportent en listes imbriquées",
+        "Listes de tâches : la syntaxe - [x] de GitHub devient des cases à cocher dans Notion mais du texte simple dans Reddit",
+        "Wikiliens : [[Page]] ne fonctionne que dans Obsidian — partout ailleurs affiche des crochets littéraux",
+        "Blocs de code : les indications de langage fonctionnent dans GitHub mais sont supprimées dans de nombreuses plateformes",
+        "Notes de bas de page : la syntaxe [^1] d'Obsidian n'est pas prise en charge par GFM, Notion ou Reddit",
+        "Images : les intégrations ![[file]] d'Obsidian doivent être réécrites en syntaxe ![alt](url)"
+      ],
+      "hi": [
+        "टेबल: GFM टेबल Notion में टूट जाते हैं; Notion डेटाबेस नेस्टेड सूचियों के रूप में निर्यात होते हैं",
+        "कार्य सूचियाँ: GitHub की - [x] सिंटैक्स Notion में चेकबॉक्स बन जाती है लेकिन Reddit में सादा टेक्स्ट",
+        "Wikilinks: [[Page]] केवल Obsidian में काम करता है — बाकी जगहों पर शाब्दिक कोष्ठक दिखाता है",
+        "कोड ब्लॉक: भाषा संकेत GitHub में काम करते हैं लेकिन कई प्लेटफ़ॉर्म पर हटा दिए जाते हैं",
+        "फुटनोट: Obsidian की [^1] सिंटैक्स GFM, Notion या Reddit में समर्थित नहीं है",
+        "छवियाँ: Obsidian के ![[file]] embeds को ![alt](url) सिंटैक्स में फिर से लिखना होगा"
+      ],
+      "ar": [
+        "الجداول: جداول GFM تنكسر في Notion؛ قواعد بيانات Notion تُصدّر كقوائم متداخلة",
+        "قوائم المهام: صيغة - [x] في GitHub تصبح مربعات اختيار في Notion ولكن نصًا عاديًا في Reddit",
+        "روابط الويكي: [[Page]] يعمل فقط في Obsidian — في كل مكان آخر يظهر أقواس حرفية",
+        "كتل الكود: تلميحات اللغة تعمل في GitHub لكن تُزال في العديد من المنصات",
+        "الحواشي: صيغة [^1] في Obsidian غير مدعومة في GFM أو Notion أو Reddit",
+        "الصور: تضمينات ![[file]] في Obsidian تحتاج إعادة كتابة إلى صيغة ![alt](url)"
+      ]
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "How Platform Conversion Works",
+      "zh": "平台转换如何工作",
+      "es": "Cómo Funciona la Conversión de Plataforma",
+      "fr": "Comment Fonctionne la Conversion de Plateforme",
+      "hi": "प्लेटफ़ॉर्म रूपांतरण कैसे काम करता है",
+      "ar": "كيف يعمل تحويل المنصة"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "A good Markdown platform converter parses your source text into an abstract syntax tree (AST), identifies dialect-specific features, then re-emits the content in the target dialect. Wikilinks become standard links, Obsidian embeds become image tags, Notion callouts become blockquotes, and GFM task lists adapt to whatever the destination supports. The best converters run entirely in your browser — no server upload, no data leakage, instant results.",
+      "zh": "好的 Markdown 平台转换器会把你的源文本解析成抽象语法树（AST），识别方言特定功能，然后以目标方言重新输出内容。Wiki 链接变成标准链接，Obsidian 嵌入变成图片标签，Notion 标注变成引用块，GFM 任务列表适配目标平台支持的形式。最好的转换器完全在浏览器中运行——无需服务器上传，无数据泄露，即时结果。",
+      "es": "Un buen convertidor de Markdown analiza tu texto fuente en un árbol de sintaxis abstracta (AST), identifica características específicas del dialecto y luego reemite el contenido en el dialecto de destino. Los wikilinks se convierten en enlaces estándar y las inserciones de Obsidian se convierten en etiquetas de imagen.",
+      "fr": "Un bon convertisseur Markdown analyse votre texte source en un arbre de syntaxe abstraite (AST), identifie les fonctionnalités spécifiques au dialecte, puis réémet le contenu dans le dialecte cible. Les wikiliens deviennent des liens standards et les intégrations Obsidian deviennent des balises d'image.",
+      "hi": "एक अच्छा Markdown प्लेटफ़ॉर्म कन्वर्टर आपके स्रोत टेक्स्ट को abstract syntax tree (AST) में पार्स करता है, बोली-विशिष्ट सुविधाओं की पहचान करता है, फिर सामग्री को लक्षित बोली में फिर से उत्सर्जित करता है। Wikilinks मानक लिंक बन जाते हैं और Obsidian embeds इमेज टैग बन जाते हैं।",
+      "ar": "محول ماركداون الجيد يحلل نصك المصدر إلى شجرة بناء الجملة المجردة (AST)، ويحدد الميزات الخاصة باللهجة، ثم يعيد إرسال المحتوى في اللهجة المستهدفة. تصبح روابط الويكي روابط قياسية وتصبح تضمينات Obsidian علامات صور."
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "markdown-platform-converter",
+    "text": {
+      "en": "Convert Markdown Between Platforms — Free Tool",
+      "zh": "在平台间转换 Markdown——免费工具",
+      "es": "Convierte Markdown Entre Plataformas — Herramienta Gratis",
+      "fr": "Convertir Markdown Entre Plateformes — Outil Gratuit",
+      "hi": "प्लेटफ़ॉर्म के बीच Markdown कन्वर्ट करें — मुफ़्त टूल",
+      "ar": "حوّل ماركداون بين المنصات — أداة مجانية"
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Tips for Cross-Platform Writing",
+      "zh": "跨平台写作技巧",
+      "es": "Consejos para Escritura Multiplataforma",
+      "fr": "Conseils pour l'Écriture Multiplateforme",
+      "hi": "क्रॉस-प्लेटफ़ॉर्म लेखन के लिए सुझाव",
+      "ar": "نصائح للكتابة عبر المنصات"
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Write to the Lowest Common Denominator",
+      "zh": "面向最低公共标准写作",
+      "es": "Escribe para el Mínimo Común Denominador",
+      "fr": "Écrire pour le Plus Petit Dénominateur Commun",
+      "hi": "सबसे कम सामान्य हर के लिए लिखें",
+      "ar": "اكتب للقاسم المشترك الأصغر"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "If you need content to work everywhere, stick to CommonMark: headings, paragraphs, bold, italic, lists, standard links, standard images, and fenced code blocks without language hints. Avoid wikilinks, footnotes, task lists, and tables unless you're sure the target supports them. Use a converter to bridge the gap when you must use advanced syntax.",
+      "zh": "如果你需要内容在所有地方都可用，坚持用 CommonMark：标题、段落、粗体、斜体、列表、标准链接、标准图片和不含语言提示的围栏代码块。避免 wiki 链接、脚注、任务列表和表格，除非你确定目标支持它们。必须用高级语法时，用转换器来桥接差距。",
+      "es": "Si necesitas que el contenido funcione en todas partes, quédate con CommonMark: encabezados, párrafos, negrita, cursiva, listas, enlaces estándar, imágenes estándar y bloques de código cercados sin indicaciones de idioma. Evita wikilinks, notas al pie, listas de tareas y tablas.",
+      "fr": "Si vous avez besoin que le contenu fonctionne partout, restez sur CommonMark : titres, paragraphes, gras, italique, listes, liens standards, images standards et blocs de code clôturés sans indications de langage. Évitez wikiliens, notes de bas de page, listes de tâches et tableaux.",
+      "hi": "यदि आपको सामग्री को हर जगह काम करने की आवश्यकता है, तो CommonMark पर टिके रहें: शीर्षक, पैराग्राफ, बोल्ड, इटैलिक, सूचियाँ, मानक लिंक, मानक छवियाँ, और भाषा संकेत के बिना बाड़ कोड ब्लॉक। Wikilinks, footnotes, कार्य सूचियाँ और टेबल से बचें।",
+      "ar": "إذا كنت بحاجة إلى المحتوى للعمل في كل مكان، التزم بـ CommonMark: العناوين والفقرات والخط العريض والمائل والقوائم والروابط القياسية والصور القياسية وكتل الكود المسورة بدون تلميحات اللغة. تجنب روابط الويكي والحواشي وقوائم المهام والجداول."
+    }
+  },
+  {
+    "type": "h3",
+    "text": {
+      "en": "Test Before You Paste",
+      "zh": "粘贴前先测试",
+      "es": "Prueba Antes de Pegar",
+      "fr": "Tester Avant de Coller",
+      "hi": "पेस्ट करने से पहले टेस्ट करें",
+      "ar": "اختبر قبل اللصق"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Always paste a small test snippet before migrating an entire document. Different platforms silently strip unknown syntax, and what looks fine in your editor may render as garbage on the destination. A 30-second test saves an hour of reformatting. Keep a converter handy for quick dialect checks.",
+      "zh": "在迁移整篇文档前，先粘贴一小段测试。不同平台会静默剥离未知语法，在你编辑器里看起来好的内容可能在目标平台渲染成垃圾。30 秒的测试能省一小时的重新格式化。随手备一个转换器做快速方言检查。",
+      "es": "Siempre pega un pequeño fragmento de prueba antes de migrar un documento completo. Diferentes plataformas eliminan silenciosamente la sintaxis desconocida. Una prueba de 30 segundos ahorra una hora de reformateo.",
+      "fr": "Collez toujours un petit extrait de test avant de migrer un document entier. Différentes plateformes suppriment silencieusement la syntaxe inconnue. Un test de 30 secondes économise une heure de reformatage.",
+      "hi": "पूरे दस्तावेज़ को माइग्रेट करने से पहले हमेशा एक छोटा टेस्ट स्निपेट पेस्ट करें। अलग प्लेटफ़ॉर्म चुपचाप अज्ञात सिंटैक्स को हटा देते हैं। 30-सेकंड का टेस्ट एक घंटे के reformateing को बचाता है।",
+      "ar": "الصق دائمًا مقتطف اختبار صغير قبل ترحيل مستند كامل. منصات مختلفة تزيل بصمت بناء الجملة غير المعروف. اختبار 30 ثانية يوفر ساعة من إعادة التنسيق."
+    }
+  },
+  {
+    "type": "h2",
+    "text": {
+      "en": "Conclusion",
+      "zh": "总结",
+      "es": "Conclusión",
+      "fr": "Conclusion",
+      "hi": "निष्कर्ष",
+      "ar": "الخلاصة"
+    }
+  },
+  {
+    "type": "p",
+    "text": {
+      "en": "Markdown fragmentation is a pain every technical writer and developer hits eventually. Once you understand which dialect features each platform supports, you can write defensively and use a converter to bridge the gaps. Our browser-based Markdown platform converter runs entirely client-side — your notes, docs, and drafts never leave your device. Paste in, pick a target, get clean output.",
+      "zh": "Markdown 碎片化是每个技术作者和开发者最终都会遇到的痛点。一旦你理解每个平台支持哪些方言功能，你就可以防御性地写作，用转换器来桥接差距。我们的浏览器 Markdown 平台转换器完全在客户端运行——你的笔记、文档和草稿永远不会离开你的设备。粘贴进来，选个目标，得到干净输出。",
+      "es": "La fragmentación de Markdown es un dolor que todo escritor técnico y desarrollador enfrenta eventualmente. Una vez que entiendes qué características de dialecto soporta cada plataforma, puedes escribir defensivamente. Nuestro convertidor funciona enteramente del lado del cliente — tus notas nunca abandonan tu dispositivo.",
+      "fr": "La fragmentation de Markdown est une douleur que chaque rédacteur technique et développeur finit par rencontrer. Une fois que vous comprenez quelles fonctionnalités de dialecte chaque plateforme prend en charge, vous pouvez écrire défensivement. Notre convertisseur fonctionne entièrement côté client — vos notes ne quittent jamais votre appareil.",
+      "hi": "Markdown विखंडन एक दर्द है जो हर तकनीकी लेखक और डेवलपर अंततः झेलता है। एक बार जब आप समझ जाते हैं कि प्रत्येक प्लेटफ़ॉर्म कौन सी बोली सुविधाओं का समर्थन करता है, तो आप रक्षात्मक रूप से लिख सकते हैं। हमारा कन्वर्टर पूरी तरह क्लाइंट-साइड चलता है — आपके नोट्स कभी आपका डिवाइस नहीं छोड़ते।",
+      "ar": "تفتت ماركداون هو ألم يواجهه كل كاتب تقني ومطور في النهاية. بمجرد أن تفهم الميزات اللهجية التي تدعمها كل منصة، يمكنك الكتابة دفاعيًا. يعمل محولنا بالكامل من جانب العميل — ملاحظاتك لا تغادر جهازك أبدًا."
+    }
+  },
+  {
+    "type": "cta",
+    "toolSlug": "markdown-platform-converter",
+    "text": {
+      "en": "Convert Markdown Now — Free, Private, Client-Side",
+      "zh": "立即转换 Markdown——免费，私密，客户端处理",
+      "es": "Convierte Markdown Ahora — Gratis, Privado, del Lado del Cliente",
+      "fr": "Convertir Markdown Maintenant — Gratuit, Privé, Côté Client",
+      "hi": "अभी Markdown कन्वर्ट करें — मुफ़्त, निजी, क्लाइंट-साइड",
+      "ar": "حوّل ماركداون الآن — مجاني، خاص، من جانب العميل"
+    }
+  }
 ]
 };

@@ -13036,6 +13036,107 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
       "عارض شجرة JSON"
     ]
   }
+},
+{
+  "slug": "markdown-platform-converter-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-30T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=markdown-converter&grayscale=false",
+  "tags": [
+    {
+      "en": "Development",
+      "zh": "开发",
+      "es": "Desarrollo",
+      "fr": "Développement",
+      "hi": "विकास",
+      "ar": "التطوير"
+    },
+    {
+      "en": "Markdown",
+      "zh": "Markdown",
+      "es": "Markdown",
+      "fr": "Markdown",
+      "hi": "मार्कडाउन",
+      "ar": "ماركداون"
+    },
+    {
+      "en": "Writing",
+      "zh": "写作",
+      "es": "Escritura",
+      "fr": "Écriture",
+      "hi": "लेखन",
+      "ar": "الكتابة"
+    }
+  ],
+  "relatedToolSlugs": [
+    "markdown-platform-converter",
+    "markdown-preview",
+    "text-counter"
+  ],
+  "readingMinutes": {
+    "en": 9,
+    "zh": 10,
+    "es": 10,
+    "fr": 10,
+    "hi": 11,
+    "ar": 10
+  },
+  "title": {
+    "en": "Markdown Platform Converter Guide: Sync Docs Between Notion, GitHub, and Obsidian",
+    "zh": "Markdown 平台转换器指南：在 Notion、GitHub、Obsidian 间同步文档",
+    "es": "Guía del Conversor de Markdown: Sincroniza Docs Entre Notion, GitHub y Obsidian",
+    "fr": "Guide du Convertisseur Markdown : Synchroniser Docs Entre Notion, GitHub et Obsidian",
+    "hi": "मार्कडाउन प्लेटफ़ॉर्म कन्वर्टर गाइड: Notion, GitHub, और Obsidian के बीच डॉक्स सिंक करें",
+    "ar": "دليل محول ماركداون: مزامنة المستندات بين Notion و GitHub و Obsidian"
+  },
+  "description": {
+    "en": "Stop fixing broken Markdown when copying between Notion, GitHub, Obsidian, and Reddit. Learn dialect differences, syntax conversion, and how to keep formatting intact across platforms.",
+    "zh": "不再为在 Notion、GitHub、Obsidian、Reddit 之间复制时损坏的 Markdown 烦恼。了解方言差异、语法转换，以及如何保持跨平台格式完整。",
+    "es": "Deja de arreglar Markdown roto al copiar entre Notion, GitHub, Obsidian y Reddit. Aprende diferencias de dialectos, conversión de sintaxis y cómo mantener el formato intacto entre plataformas.",
+    "fr": "Arrêtez de réparer le Markdown cassé lors de la copie entre Notion, GitHub, Obsidian et Reddit. Apprenez les différences de dialecte, la conversion de syntaxe et comment garder le formatage intact entre plateformes.",
+    "hi": "Notion, GitHub, Obsidian और Reddit के बीच कॉपी करते समय टूटे हुए Markdown को ठीक करना बंद करें। बोलियों के अंतर, सिंटैक्स रूपांतरण और प्लेटफ़ॉर्म पर फ़ॉर्मेटिंग बनाए रखना सीखें।",
+    "ar": "توقف عن إصلاح ماركداون المعطل عند النسخ بين Notion و GitHub و Obsidian و Reddit. تعرف على اختلافات اللهجات وتحويل الصيغة وكيفية الحفاظ على التنسيق عبر المنصات."
+  },
+  "keywords": {
+    "en": [
+      "markdown converter",
+      "markdown platform",
+      "notion markdown",
+      "obsidian markdown",
+      "github flavored markdown"
+    ],
+    "zh": [
+      "markdown 转换器",
+      "markdown 平台",
+      "notion markdown",
+      "obsidian markdown",
+      "github markdown"
+    ],
+    "es": [
+      "convertidor markdown",
+      "markdown plataforma",
+      "notion markdown",
+      "obsidian markdown"
+    ],
+    "fr": [
+      "convertisseur markdown",
+      "markdown plateforme",
+      "notion markdown",
+      "obsidian markdown"
+    ],
+    "hi": [
+      "मार्कडाउन कन्वर्टर",
+      "मार्कडाउन प्लेटफ़ॉर्म",
+      "notion markdown",
+      "obsidian markdown"
+    ],
+    "ar": [
+      "محول ماركداون",
+      "ماركداون منصة",
+      "notion markdown",
+      "obsidian markdown"
+    ]
+  }
 }
 ];
 
