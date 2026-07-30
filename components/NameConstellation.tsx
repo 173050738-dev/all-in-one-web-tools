@@ -121,22 +121,29 @@ const i18n: Record<string, Record<string, string>> = {
   },
 };
 
-const PALETTES: Record<string, { bg: string; star: string[]; line: string; accent: string }[]> = {
+interface Palette {
+  bgColor: string;
+  star: string[];
+  lineColor: string;
+  accent: string;
+}
+
+const PALETTES: Record<string, Palette[]> = {
   zh: [
-    { bg: 'radial-gradient(ellipse at center, #0a0a2e 0%, #000000 100%)', star: ['#ffffff', '#ffd700', '#87ceeb', '#dda0dd', '#fffacd'], line: 'rgba(255,215,0,0.3)', accent: '#ffd700' },
-    { bg: 'radial-gradient(ellipse at center, #0d1b2a 0%, #1b263b 50%, #000000 100%)', star: ['#7df9ff', '#0077b6', '#caf0f8', '#90e0ef', '#ade8f4'], line: 'rgba(125,249,255,0.3)', accent: '#7df9ff' },
-    { bg: 'radial-gradient(ellipse at center, #1a0a2e 0%, #16213e 50%, #0f3460 100%)', star: ['#e0aaff', '#c77dff', '#9d4edd', '#7b2cbf', '#ffd6ff'], line: 'rgba(224,170,255,0.3)', accent: '#e0aaff' },
-    { bg: 'radial-gradient(ellipse at center, #0f0c29 0%, #302b63 50%, #24243e 100%)', star: ['#f5e6ff', '#da8fff', '#b388ff', '#e1bee7', '#f8bbd0'], line: 'rgba(245,230,255,0.3)', accent: '#f5e6ff' },
+    { bgColor: '#0a0a2e', star: ['#ffffff', '#ffd700', '#87ceeb', '#dda0dd', '#fffacd'], lineColor: 'rgba(255,215,0,0.3)', accent: '#ffd700' },
+    { bgColor: '#0d1b2a', star: ['#7df9ff', '#0077b6', '#caf0f8', '#90e0ef', '#ade8f4'], lineColor: 'rgba(125,249,255,0.3)', accent: '#7df9ff' },
+    { bgColor: '#1a0a2e', star: ['#e0aaff', '#c77dff', '#9d4edd', '#7b2cbf', '#ffd6ff'], lineColor: 'rgba(224,170,255,0.3)', accent: '#e0aaff' },
+    { bgColor: '#0f0c29', star: ['#f5e6ff', '#da8fff', '#b388ff', '#e1bee7', '#f8bbd0'], lineColor: 'rgba(245,230,255,0.3)', accent: '#f5e6ff' },
   ],
   en: [
-    { bg: 'radial-gradient(ellipse at center, #0a0a2e 0%, #000000 100%)', star: ['#ffffff', '#ffd700', '#87ceeb', '#dda0dd', '#fffacd'], line: 'rgba(255,215,0,0.3)', accent: '#ffd700' },
-    { bg: 'radial-gradient(ellipse at center, #0d1b2a 0%, #1b263b 50%, #000000 100%)', star: ['#7df9ff', '#0077b6', '#caf0f8', '#90e0ef', '#ade8f4'], line: 'rgba(125,249,255,0.3)', accent: '#7df9ff' },
-    { bg: 'radial-gradient(ellipse at center, #1a0a2e 0%, #16213e 50%, #0f3460 100%)', star: ['#e0aaff', '#c77dff', '#9d4edd', '#7b2cbf', '#ffd6ff'], line: 'rgba(224,170,255,0.3)', accent: '#e0aaff' },
-    { bg: 'radial-gradient(ellipse at center, #0f0c29 0%, #302b63 50%, #24243e 100%)', star: ['#f5e6ff', '#da8fff', '#b388ff', '#e1bee7', '#f8bbd0'], line: 'rgba(245,230,255,0.3)', accent: '#f5e6ff' },
+    { bgColor: '#0a0a2e', star: ['#ffffff', '#ffd700', '#87ceeb', '#dda0dd', '#fffacd'], lineColor: 'rgba(255,215,0,0.3)', accent: '#ffd700' },
+    { bgColor: '#0d1b2a', star: ['#7df9ff', '#0077b6', '#caf0f8', '#90e0ef', '#ade8f4'], lineColor: 'rgba(125,249,255,0.3)', accent: '#7df9ff' },
+    { bgColor: '#1a0a2e', star: ['#e0aaff', '#c77dff', '#9d4edd', '#7b2cbf', '#ffd6ff'], lineColor: 'rgba(224,170,255,0.3)', accent: '#e0aaff' },
+    { bgColor: '#0f0c29', star: ['#f5e6ff', '#da8fff', '#b388ff', '#e1bee7', '#f8bbd0'], lineColor: 'rgba(245,230,255,0.3)', accent: '#f5e6ff' },
   ],
 };
 
-function getPalette(locale: string, idx: number) {
+function getPalette(locale: string, idx: number): Palette {
   const palettes = PALETTES[locale] || PALETTES.en;
   return palettes[idx % palettes.length];
 }
@@ -149,7 +156,9 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
   const [aiLoading, setAiLoading] = useState(false);
   const [aiError, setAiError] = useState(false);
   const [selectedStar, setSelectedStar] = useState<Star | null>(null);
-  const [viewState, setViewState] = useState({ offsetX: 0, offsetY: 0, scale: 1 });
+  const [, forceUpdate] = useState(0);
+
+  const viewStateRef = useRef({ offsetX: 0, offsetY: 0, scale: 1 });
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<{ startX: number; startY: number; dragging: boolean }>({ startX: 0, startY: 0, dragging: false });
@@ -157,10 +166,21 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
   const starsRef = useRef<Star[]>([]);
   const connectionsRef = useRef<Connection[]>([]);
   const timeRef = useRef(0);
+  const styleIdxRef = useRef(styleIdx);
+  const localeRef = useRef(locale);
+  const nameRef = useRef(name);
+  const dataRef = useRef<ConstellationData | null>(null);
+  const selectedStarRef = useRef<Star | null>(null);
+
+  useEffect(() => { styleIdxRef.current = styleIdx; }, [styleIdx]);
+  useEffect(() => { localeRef.current = locale; }, [locale]);
+  useEffect(() => { nameRef.current = name; }, [name]);
+  useEffect(() => { dataRef.current = data; }, [data]);
+  useEffect(() => { selectedStarRef.current = selectedStar; }, [selectedStar]);
 
   const generateLocalFallback = useCallback((inputName: string): ConstellationData => {
     const chars = inputName.replace(/\s/g, '').split('');
-    const pal = getPalette(locale, styleIdx);
+    const pal = getPalette(localeRef.current, styleIdxRef.current);
     const stars: Star[] = [];
     const connections: Connection[] = [];
 
@@ -174,7 +194,8 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
       const y = cy + Math.sin(angle) * r + (i * 13 % 30) - 15;
       const meaningKeys = ['独特', '智慧', '勇气', '温柔', '创造', '坚韧', '直觉', '热情', '稳重', '梦想'];
       const meaningEn = ['unique', 'wise', 'brave', 'gentle', 'creative', 'resilient', 'intuitive', 'passionate', 'steady', 'dreamy'];
-      const meaning = locale === 'zh' ? meaningKeys[i % meaningKeys.length] : meaningEn[i % meaningEn.length];
+      const loc = localeRef.current;
+      const meaning = loc === 'zh' ? meaningKeys[i % meaningKeys.length] : meaningEn[i % meaningEn.length];
       stars.push({
         id: i,
         letter: ch.toUpperCase(),
@@ -196,6 +217,7 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
       }
     }
 
+    const loc = localeRef.current;
     const descZh = `你的名字「${inputName}」蕴含着独特的星辰能量。${chars.length}个字母如同${chars.length}颗星辰，在你的人格星图中各自闪耀。它们之间的连线构成了你独一无二的性格图谱——既有${stars[0]?.meaning || ''}的底色，又融合了${stars[stars.length - 1]?.meaning || ''}的光芒。`;
     const descEn = `Your name "${inputName}" contains unique stellar energy. Each of the ${chars.length} letters shines as a star in your personality constellation. Their connections form your one-of-a-kind character map — grounded in ${stars[0]?.meaning || ''} and radiating ${stars[stars.length - 1]?.meaning || ''}.`;
 
@@ -205,15 +227,15 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
     return {
       stars,
       connections,
-      description: locale === 'zh' ? descZh : descEn,
-      traits: locale === 'zh' ? traitsZh : traitsEn,
+      description: loc === 'zh' ? descZh : descEn,
+      traits: loc === 'zh' ? traitsZh : traitsEn,
       luckyColor: pal.accent,
       luckyNumber: chars.reduce((s, c) => s + c.toUpperCase().charCodeAt(0), 0) % 9 + 1,
     };
-  }, [locale, styleIdx]);
+  }, []);
 
   const generate = useCallback(async () => {
-    if (!name.trim()) return;
+    if (!nameRef.current.trim()) return;
     setAiLoading(true);
     setAiError(false);
     setSelectedStar(null);
@@ -221,30 +243,33 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
       const res = await fetch('/api/name-constellation-ai/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name.trim(), locale, style: styleIdx }),
+        body: JSON.stringify({ name: nameRef.current.trim(), locale: localeRef.current, style: styleIdxRef.current }),
         signal: AbortSignal.timeout(15000),
       });
       if (res.ok) {
         const json = await res.json();
         if (json.stars && json.stars.length > 0) {
           setData(json);
+          dataRef.current = json;
           starsRef.current = json.stars;
           connectionsRef.current = json.connections || [];
-          setViewState({ offsetX: 0, offsetY: 0, scale: 1 });
+          viewStateRef.current = { offsetX: 0, offsetY: 0, scale: 1 };
+          setAiLoading(false);
           return;
         }
       }
       throw new Error('AI failed');
     } catch {
       setAiError(true);
-      const fallback = generateLocalFallback(name.trim());
+      const fallback = generateLocalFallback(nameRef.current.trim());
       setData(fallback);
+      dataRef.current = fallback;
       starsRef.current = fallback.stars;
       connectionsRef.current = fallback.connections;
-      setViewState({ offsetX: 0, offsetY: 0, scale: 1 });
+      viewStateRef.current = { offsetX: 0, offsetY: 0, scale: 1 };
     }
     setAiLoading(false);
-  }, [name, locale, styleIdx, generateLocalFallback]);
+  }, [generateLocalFallback]);
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
@@ -254,30 +279,30 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
 
     const w = canvas.width;
     const h = canvas.height;
-    const pal = getPalette(locale, styleIdx);
+    const pal = getPalette(localeRef.current, styleIdxRef.current);
 
     ctx.clearRect(0, 0, w, h);
 
     const grd = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, Math.max(w, h) / 2);
-    grd.addColorStop(0, pal.bg.match(/center,\s*([^0]+)/)?.[1]?.trim() || '#0a0a2e');
+    grd.addColorStop(0, pal.bgColor);
     grd.addColorStop(1, '#000000');
     ctx.fillStyle = grd;
     ctx.fillRect(0, 0, w, h);
 
     const stars = starsRef.current;
     const connections = connectionsRef.current;
-    const { offsetX, offsetY, scale } = viewState;
+    const vs = viewStateRef.current;
     const t = timeRef.current;
 
     ctx.save();
-    ctx.translate(offsetX, offsetY);
-    ctx.scale(scale, scale);
+    ctx.translate(vs.offsetX, vs.offsetY);
+    ctx.scale(vs.scale, vs.scale);
 
     // Background stars
     const bgStars = 80;
     for (let i = 0; i < bgStars; i++) {
-      const sx = (Math.sin(i * 127.1 + timeRef.current * 0.0001) * 0.5 + 0.5) * w;
-      const sy = (Math.cos(i * 311.7 + timeRef.current * 0.0001) * 0.5 + 0.5) * h;
+      const sx = (Math.sin(i * 127.1 + t * 0.0001) * 0.5 + 0.5) * w;
+      const sy = (Math.cos(i * 311.7 + t * 0.0001) * 0.5 + 0.5) * h;
       const twinkle = 0.3 + 0.7 * Math.abs(Math.sin(t * 0.002 + i));
       ctx.fillStyle = `rgba(255,255,255,${0.15 * twinkle})`;
       ctx.beginPath();
@@ -291,7 +316,7 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
       const s2 = stars[conn.to];
       if (!s1 || !s2) return;
       const alpha = conn.strength * (0.6 + 0.4 * Math.sin(t * 0.003 + conn.from + conn.to));
-      ctx.strokeStyle = pal.line.replace(/[\d.]+\)$/, `${alpha})`);
+      ctx.strokeStyle = pal.lineColor.replace(/[\d.]+\)$/, `${alpha})`);
       ctx.lineWidth = 0.5 + conn.strength * 1.5;
       ctx.beginPath();
       ctx.moveTo(s1.x, s1.y);
@@ -302,10 +327,11 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
     });
 
     // Stars
+    const selStar = selectedStarRef.current;
     stars.forEach(star => {
       const twinkle = 0.7 + 0.3 * Math.sin(t * 0.004 + star.id * 1.5);
       const size = star.size * twinkle;
-      const isSelected = selectedStar?.id === star.id;
+      const isSelected = selStar?.id === star.id;
 
       // Glow
       const glow = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, size * 4);
@@ -340,25 +366,30 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
     });
 
     // Title
-    if (data) {
+    if (dataRef.current) {
       ctx.fillStyle = '#ffffff';
       ctx.font = 'bold 22px sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
-      ctx.fillText(name.toUpperCase(), w / 2, 20);
+      ctx.fillText(nameRef.current.toUpperCase(), w / 2, 20);
     }
 
     ctx.restore();
-  }, [data, locale, name, selectedStar, styleIdx, viewState]);
+  }, []);
 
   useEffect(() => {
+    let running = true;
     const animate = () => {
+      if (!running) return;
       timeRef.current += 16;
       draw();
       animRef.current = requestAnimationFrame(animate);
     };
     animRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animRef.current);
+    return () => {
+      running = false;
+      cancelAnimationFrame(animRef.current);
+    };
   }, [draw]);
 
   useEffect(() => {
@@ -390,7 +421,9 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
     const dy = e.clientY - dragRef.current.startY;
     dragRef.current.startX = e.clientX;
     dragRef.current.startY = e.clientY;
-    setViewState(prev => ({ ...prev, offsetX: prev.offsetX + dx, offsetY: prev.offsetY + dy }));
+    viewStateRef.current.offsetX += dx;
+    viewStateRef.current.offsetY += dy;
+    forceUpdate(n => n + 1);
   };
 
   const handleMouseUp = () => {
@@ -398,19 +431,19 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
   };
 
   const handleCanvasClick = (e: React.MouseEvent<HTMLCanvasElement>) => {
-    if (!data) return;
+    if (!dataRef.current) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();
     const mx = ((e.clientX - rect.left) / rect.width) * canvas.width;
     const my = ((e.clientY - rect.top) / rect.height) * canvas.height;
-    const { offsetX, offsetY, scale } = viewState;
-    const wx = (mx - offsetX) / scale;
-    const wy = (my - offsetY) / scale;
+    const vs = viewStateRef.current;
+    const wx = (mx - vs.offsetX) / vs.scale;
+    const wy = (my - vs.offsetY) / vs.scale;
 
     const stars = starsRef.current;
     let closest: Star | null = null;
-    let minDist = 30 * scale;
+    let minDist = 30 * vs.scale;
     for (const s of stars) {
       const d = Math.hypot(s.x - wx, s.y - wy);
       if (d < minDist) { minDist = d; closest = s; }
@@ -421,21 +454,32 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
   const handleWheel = (e: React.WheelEvent) => {
     e.preventDefault();
     const delta = e.deltaY > 0 ? 0.9 : 1.1;
-    setViewState(prev => ({ ...prev, scale: Math.max(0.3, Math.min(3, prev.scale * delta)) }));
+    viewStateRef.current.scale = Math.max(0.3, Math.min(3, viewStateRef.current.scale * delta));
+    forceUpdate(n => n + 1);
   };
 
   const handleDownload = () => {
     const canvas = canvasRef.current;
-    if (!canvas || !data) return;
+    if (!canvas || !dataRef.current) return;
     const link = document.createElement('a');
-    link.download = `name-constellation-${name || 'star'}.png`;
+    link.download = `name-constellation-${nameRef.current || 'star'}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
   };
 
   const handleReset = () => {
-    setViewState({ offsetX: 0, offsetY: 0, scale: 1 });
+    viewStateRef.current = { offsetX: 0, offsetY: 0, scale: 1 };
     setSelectedStar(null);
+  };
+
+  const zoomIn = () => {
+    viewStateRef.current.scale = Math.min(3, viewStateRef.current.scale * 1.2);
+    forceUpdate(n => n + 1);
+  };
+
+  const zoomOut = () => {
+    viewStateRef.current.scale = Math.max(0.3, viewStateRef.current.scale / 1.2);
+    forceUpdate(n => n + 1);
   };
 
   return (
@@ -472,7 +516,7 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
         </div>
 
         {/* Style selector */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs text-gray-500 dark:text-gray-400">{t.style}:</span>
           {t.styles.map((s, i) => (
             <button
@@ -526,13 +570,13 @@ export default function NameConstellation({ locale = 'zh' }: NameConstellationPr
           <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
             <div className="text-xs text-white/60 bg-black/30 px-2 py-1 rounded">{t.hint}</div>
             <div className="flex gap-2 pointer-events-auto">
-              <button onClick={() => setViewState(p => ({ ...p, scale: Math.min(3, p.scale * 1.2) }))} className="p-1.5 bg-black/40 hover:bg-black/60 rounded text-white">
+              <button onClick={zoomIn} className="p-1.5 bg-black/40 hover:bg-black/60 rounded text-white" aria-label="zoom in">
                 <ZoomIn size={16} />
               </button>
-              <button onClick={() => setViewState(p => ({ ...p, scale: Math.max(0.3, p.scale / 1.2) }))} className="p-1.5 bg-black/40 hover:bg-black/60 rounded text-white">
+              <button onClick={zoomOut} className="p-1.5 bg-black/40 hover:bg-black/60 rounded text-white" aria-label="zoom out">
                 <ZoomOut size={16} />
               </button>
-              <button onClick={handleReset} className="p-1.5 bg-black/40 hover:bg-black/60 rounded text-white">
+              <button onClick={handleReset} className="p-1.5 bg-black/40 hover:bg-black/60 rounded text-white" aria-label="reset view">
                 <Move size={16} />
               </button>
             </div>
