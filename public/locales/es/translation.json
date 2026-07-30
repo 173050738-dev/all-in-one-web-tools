@@ -323,8 +323,8 @@
       "description": "en línea 163 news for news, portal, email, games. Works right in your navegador — gratuito, seguro, and No install required."
     },
     "avatar-decorator": {
-      "name": "Decorador de Avatares",
-      "description": "Añade insignias V, bordes degradados y accesorios bonitos a tu avatar con un clic. Exportación sencilla.",
+      "name": "Decorador de Fotos de Perfil",
+      "description": "Agrega insignias verificadas, bordes de degradado, marcos y stickers a tu foto de perfil. Sube, decora, descarga PNG. Gratis, sin registro.",
       "seo": {
         "intro": "Decorador de Avatares es una herramienta gratuita dentro del navegador para decorar fotos de perfil que superpone insignias de estilo verificado, bordes circulares con degradado, chinchetas decorativas en las esquinas, marcos de temporada y formas de máscara circular o hexagonal sobre cualquier foto de selfie cuadrada — todo íntegramente en el navegador y sin enviar la imagen a un servidor. Sube una foto de perfil y superponle una insignia V de verificación azul estilo X/Twitter, una insignia dorada de creador, marcos circulares con degradado, bordes festivos y pegatinas de emoji o accesorios. Todo el procesamiento se ejecuta en el cliente mediante Canvas puro, así que el retrato original nunca sale de tu dispositivo, no hace falta registrarse y no se añade ninguna marca de agua al PNG exportado.",
         "scenarios": [
@@ -413,8 +413,8 @@
       }
     },
     "caption-generator": {
-      "name": "Pies de foto Sociales",
-      "description": "¡Adiós al bloqueo creativo! 8 categorías: viajes, comida, amor, trabajo… Cientos de textos listos con un clic.",
+      "name": "Generador de Subtítulos para Redes Sociales",
+      "description": "Genera subtítulos para Instagram, TikTok, Xiaohongshu. 8 categorías: viajes, comida, romance, trabajo. Cientos de subtítulos listos para usar. Gratis, sin registro.",
       "seo": {
         "intro": "Generador de Pies de Foto para Redes es un tablero de ideas online gratuito con textos listos para publicar en redes sobre viajes, comida, romance, trabajo, motivación y estilo de vida. Navega entre cientos de frases cortas, pies de foto y citas escogidas a mano y agrupadas por tono y caso de uso, y copia tu favorita con un clic para WeChat Moments, Instagram, TikTok o Xiaohongshu. Todos los textos se sirven con la página web: ninguna suscripción, ninguna petición para superar el bloqueo del escritor, ninguna llamada a red para cargar o buscar la biblioteca.",
         "scenarios": [
@@ -1063,8 +1063,8 @@
       }
     },
     "keyword-spinoff-generator": {
-      "name": "Generador de Juegos de Palabras",
-      "description": "5 industrias, bancos palabras clave, 4 tipos títulos virales. 100% local, sin IA en nube.",
+      "name": "Generador de Palabras Clave Derivadas",
+      "description": "Genera más de 500 palabras clave derivadas y variantes de títulos virales desde una palabra semilla. Juegos de palabras, rimas, refranes adaptados para Xiaohongshu, Douyin, e-commerce. Gratis, sin registro.",
       "seo": {
         "intro": "Keyword Spinoff & Homophone Title Generator es una herramienta gratuita de ideación de titulares dentro del navegador, destinada a equipos de vídeos cortos, creadores de Xiaohongshu / Douyin / Bilibili, compradores de medios de comercio electrónico y cualquier usuario que necesite ideas para nombres. Introduce una palabra clave central (nombre de producto, término del sector, palabra de marca, nombre propio), elige un estilo (juego de palabras homófono, rima, reelaboración de modismo, reduplicación, homófono en inglés, juego con números, jerga dialectal), y la herramienta genera automáticamente decenas de variantes de titular y derivados de palabras clave, con etiquetas de sentimiento, estimaciones aproximadas de CTR y sugerencias de escenario de uso: ideal para agotar en una sola pasada todas las variantes de una palabra que pueden atraer tráfico, en lugar de darle vueltas todo el día y sacar solo 3 ideas.",
         "scenarios": [
@@ -1333,8 +1333,8 @@
       }
     },
     "pinyin-annotator": {
-      "name": "Anotador de Pinyin Chino — Agrega Pinyin al Texto",
-      "description": "Agrega pinyin con marcas de tono al texto chino automáticamente. Detección polifónica inteligente, procesamiento local. Gratis para profesores, autores y...",
+      "name": "Anotador de Pinyin Chino",
+      "description": "Agregue pinyin con marcas de tono al texto chino al instante. Detección inteligente de polifónicos, pegado por lotes, exporte a PDF, Word, HTML. Gratis para profesores y estudiantes, sin registro.",
       "seo": {
         "intro": "Pinyin Annotator es una herramienta gratuita de pronunciación de caracteres hanzi dentro del navegador, destinada a profesores de chino mandarín, profesores de lengua china en primaria, autores de libros ilustrados infantiles, autores de contenido autoeditado y personal editorial. Pega un artículo en chino que contenga caracteres raros o caracteres polifónicos (con varias lecturas), y la herramienta coloca automáticamente el pinyin con tono encima (o al lado) de cada hanzi. Identifica de forma inteligente las lecturas polifónicas (p. ej. «重» como zhòng en 重要 «importante», pero como chóng en 重复 «repetir», eligiendo la pronunciación más probable mediante la frecuencia léxica contextual), permite omitir caracteres ya anotados y elegir la posición de la anotación (superíndice encima / glosa lateral en línea / paréntesis al final). Exporta texto enriquecido copiable, PDF, Word o imagen con pinyin: ideal para tarjetas didácticas infantiles, materiales de lectura de chino como segunda lengua o borradores de chino clásico anotados con caracteres raros.",
         "scenarios": [
@@ -1646,7 +1646,7 @@
     },
     "seo-keyword-miner": {
       "name": "Minero de Palabras Clave SEO",
-      "description": "Minero de palabras clave long-tail basado en Google Autocomplete + DeepSeek. Introduce una palabra semilla y genera más de 60 términos long-tail altamente...",
+      "description": "Extrae más de 60 palabras clave long-tail de Google, YouTube, Amazon. Ingresa una palabra semilla y obtén búsquedas relacionadas, preguntas y términos de intención de compra. Gratis, sin registro.",
       "seo": {
         "intro": "SEO Keyword Miner es una herramienta gratuita de investigación de palabras clave en el navegador, pensada para creadores de contenido chinos y globales, propietarios independientes de sitios web y redactores de Amazon y comercio electrónico. Escribe una palabra clave semilla o un tema (chino o inglés, corto o de cola larga), elige un canal (Baidu, Google, YouTube, Amazon, TikTok/Douyin, Xiaohongshu, Bing) y el minero la expande en decenas de verdaderas intenciones de búsqueda de usuarios: frases de autocompletado, búsquedas relacionadas, preguntas al estilo ‘la gente también pregunta’ y modificadores de intención de compra que puedes meter directamente en H1s, H2s, textos alternativos, títulos de fichas de producto y títulos de vídeos cortos. 100 % cliente tras recibir las sugerencias, sin registro.",
         "scenarios": [
@@ -5739,8 +5739,8 @@
       "description": "en línea aleatorio ruleta generador. Opciones personalizadas, animación de giro y selección aleatoria justa. Perfecto para juegos, decisiones y rifas."
     },
     "markdown-platform-converter": {
-      "name": "Markdown Convertidor",
-      "description": "Editor Markdown Convertidor en línea. Personaliza Markdown, ajusta Convertidor, exporta al instante. Multiplataforma, sin registro.",
+      "name": "Convertidor de Markdown Multiplataforma",
+      "description": "Convierte Markdown entre Notion, Obsidian, GitHub, Juejin, CSDN, WeChat y más de 18 plataformas. Conversión por lotes, migración automática de imágenes. Gratis, en el navegador.",
       "seo": {
         "intro": "Multi-Platform Markdown Converter es una herramienta gratuita de interconversión de formatos Markdown entre plataformas, que funciona enteramente dentro del navegador. Está pensada para blogueros técnicos, usuarios de gestión del conocimiento, operadores de medios propios y desarrolladores independientes. Pega un documento Markdown (o texto enriquecido copiado directamente de la Plataforma A) escrito en cualquier plataforma de origen, y con un clic conviértelo al formato nativo / al dialecto Markdown específico de la Plataforma B. Cubre más de 18 plataformas de contenido chinas principales: Cuentas Oficiales WeChat (WOA), Zhihu, Juejin, CSDN, Yuque, Notion, Obsidian, Feishu Docs, GitBook, README de GitHub, Hexo, Hugo, Jekyll, Xiaohongshu, Jike, WordPress, Medium, Confluence. Soporta conversión bidireccional, procesamiento por lotes, migración automática de imágenes al almacén de la plataforma destino, generación automática de índice y compatibilidad diferenciada por plataforma para más de 60 elementos sintácticos: enlaces internos / externos, notas al pie, listas de tareas, fórmulas matemáticas, resaltado de bloques de código, tablas, citas, tarjetas y bloques Callout. Resuelve el mayor dolor de la publicación multiplataforma: «el mismo borrador publicado en 8 sitios requiere 8 pases de formateo distintos».",
         "scenarios": [
@@ -5784,8 +5784,8 @@
       }
     },
     "polyphonic-pinyin-annotator": {
-      "name": "Polifónico Pinyin Anotador",
-      "description": "Anota caracteres polifónicos con el pinyin contextual correcto. Detección inteligente con CRF para 银行/行走/重庆. Procesamiento local 100%, gratis — sin registro.",
+      "name": "Anotador de Pinyin Polifónico",
+      "description": "Agregue automáticamente pinyin con marcas de tono correctas a caracteres chinos polifónicos. Detección inteligente por contexto para caracteres de múltiples lecturas. Exporte a Word, PDF, HTML. Gratis, sin registro.",
       "seo": {
         "intro": "Polyphonic Pinyin Annotator es una herramienta gratuita dentro del navegador para anotación automática de pinyin en caracteres hanzi polifónicos (de varias lecturas), pensada para profesores de chino de primaria, educadores de ELE chino como lengua extranjera / segunda lengua, editores de libros ilustrados infantiles, narradores de audiolibros, correctores de textos clásicos y equipos de subtítulos de Fansub. Pega cualquier texto chino que contenga caracteres polifónicos (simplificado, tradicional, con mucha puntuación, chino clásico — todo admitido) dentro. La herramienta usa segmentación léxica CRF + etiquetado de categorías gramaticales + un léxico curado de más de 14 000 entradas de colocaciones polifónicas (no es una simple búsqueda carácter por carácter) para escribir el pinyin con tonos encima de cada carácter. Las lecturas polifónicas se resaltan en NARANJA (los caracteres monofónicos en gris claro) junto al fundamento de decisión para cada polifonía (palabra de colocación, categoría gramatical, frase hecha); exporta con un clic a HTML, PDF, DOCX, CSV, TXT, resolviendo el verdadero problema práctico de «¿qué lectura es la correcta aquí para la docencia / los guiones de doblaje?».",
         "scenarios": [
@@ -5920,8 +5920,8 @@
       }
     },
     "multi-timezone-publish-time": {
-      "name": "Calculadora de Mejor Hora para Publicar — Programador Multihuso",
-      "description": "Encuentra la hora óptima de publicación global en 12+ zonas horarias (LA, NYC, Londres, Tokio, Sídney). Ajusta automáticamente para DST, visualiza la...",
+      "name": "Calculadora de Hora de Publicación Multi-Zona Horaria",
+      "description": "Encuentra la mejor hora para publicar en más de 12 zonas horarias. Elige las horas activas de tu audiencia, obtén horas locales exactas. Gratis, sin registro.",
       "seo": {
         "intro": "Calculadora Multi-Zona Horaria para Publicaciones (Timezone Timer) es una herramienta gratuita basada en el navegador para creadores transfronterizos y equipos sociales de marcas, que convierte una única franja horaria ideal de publicación en la hora exacta del reloj local para más de doce husos horarios y ciudades mundiales habituales, incluyendo corrección automática del horario de verano/ invierno. Elige un huso horario de origen, selecciona la hora de mayor audiencia activa y el temporizador te mostrará cuándo pulsar «publicar» para seguidores en Los Ángeles, Nueva York, Londres, París, Berlín, Dubái, Bombay, Singapur, Tokio, Seúl, Pekín, Sídney y São Paulo — sin llamadas a API ni registro.",
         "scenarios": [
@@ -5965,8 +5965,8 @@
       }
     },
     "wc-2026-schedule": {
-      "name": "Calendario Copa Mundial 2026 — Horarios de Todos los partidos",
-      "description": "Calendario gratuito de la Copa Mundial FIFA 2026: los 104 partidos en EE.UU., Canadá y México, horarios en 9 zonas horarias, tablas de grupos, llave de...",
+      "name": "Calendario Mundial 2026 y Horarios de Partidos",
+      "description": "Calendario completo de la Copa Mundial FIFA 2026: los 104 partidos en EE.UU., Canadá, México. Horarios en tu zona horaria, tablas de grupos, llave eliminatoria. Gratis, sin registro.",
       "seo": {
         "intro": "2026 FIFA World Cup Schedule Browser es una herramienta gratuita dentro del navegador para ver los 104 partidos completos, horarios, sedes, entradas, tabla de grupos y cuadro de eliminatorias del Mundial 2026 EE.UU.–Canadá–México, pensada para aficionados al fútbol, casas de apuestas, gerentes de bares deportivos, organizadores de fiestas del Mundial y equipos administrativos de empresas que organizan verbenas y meriendas temáticas. Sin VPN para entrar a FIFA.com, sin aplicación que instalar, ábrela y úsala. Soporta las 16 ciudades sedes, las 48 selecciones, 9 cambios de huso horario (ET / PT / tu zona local + Londres / Berlín / Shanghái / Tokio / Nueva Delhi / El Cairo / Ciudad de México / Toronto), filtros por fase (grupos / octavos / cuartos / semifinal / 3er puesto / Final), tablas de grupos instantáneas, favoritos «Mis selecciones», exportación iCal con un clic al calendario del teléfono y exportación CSV/Markdown a Notion o Excel — resuelve el auténtico flujo del aficionado: «cuándo / dónde juega mi partido, a qué hora empieza en mi país, ¿debo pedir el día libre?».",
         "scenarios": [
@@ -6153,8 +6153,8 @@
       }
     },
     "wc-fan-avatar": {
-      "name": "Avatar World Cup Generador",
-      "description": "Avatar World Cup Generador gratuita: admite Avatar, World cup y más. Procesamiento 100% local en tu dispositivo para máxima privacidad.",
+      "name": "Creador de Avatar de Fan del Mundial 2026",
+      "description": "Crea tu avatar de fan del Mundial 2026 con banderas, colores y marcos de equipos. Sube tu foto, elige equipo, descarga PNG. Gratis, sin registro.",
       "seo": {
         "intro": "2026 World Cup Fan Avatar Maker es una herramienta gratuita dentro del navegador para marcos de foto de perfil «apoyo a mi selección» de un clic en redes sociales, para aficionados de las 48 selecciones participantes, avatares de teambuilding empresarial en departamentos / RR. HH., identidad unificada de peñas de aficionados, avatares de comunidades de clientes en casas de apuestas, y pandillas de residencia universitaria que cambian la foto de perfil por las noches de partido. Sin aplicación que instalar, sin registrarse. Sube tu propia foto de perfil real (procesamiento 100% local, cero subida, privacidad absoluta). Elige 1-2 selecciones de apoyo (marco principal + «marco en pareja» secundario, 2 selecciones máximo). Aplica 16 tipos de marcos de banderas nacionales, 144 variantes de marcos geométricos con paletas oficiales de las selecciones (círculo / cuadrado / hexágono × 48 selecciones = 144), marca de agua Trofeo del Mundial, calcomanías de pintura facial de hincha, marco conmemorativo de campeón en lámina de oro, marco paleta desierto de Catar, marca de agua de texto personalizada con nombre / apodo / lema (12 familias tipográficas). Tres efectos de renderizado (esquinas redondeadas / sombra paralela / trazo). Exporta PNG transparente de alta resolución 400×400 / 800×800 / 2048×2048 en un clic, listo para WeChat / QQ / X / Discord / Instagram — sin desenfoque por compresión JPEG de ninguna plataforma.",
         "scenarios": [

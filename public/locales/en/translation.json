@@ -323,8 +323,8 @@
       "description": "Online 163 news for news, portal, email, games. Works right in your browser — free, secure, and no install required."
     },
     "avatar-decorator": {
-      "name": "Avatar Decorator",
-      "description": "Add V badges, gradient borders and cute accessories to your avatar in one click. Stand out from the crowd with easy export.",
+      "name": "Profile Picture Decorator",
+      "description": "Add verified badges, gradient borders, frames and stickers to your profile picture. Upload, decorate, download PNG. Free, no signup, runs in browser.",
       "seo": {
         "intro": "Avatar Decorator is a free in-browser profile picture decoration tool that overlays verified-style badges, gradient circular borders, decorative corner pins, seasonal frames, and circle or hexagon mask shapes onto any square selfie photo — entirely in the browser and without sending the image to a server. Upload a profile photo then layer on a blue Twitter/X-style V verified badge, gold creator badge, round gradient frames, holiday borders, and emoji or accessory stickers. All compositing runs client-side through pure Canvas, so the original headshot never leaves your device, no signup is required, and no watermark is added to the exported PNG.",
         "scenarios": [
@@ -413,8 +413,8 @@
       }
     },
     "caption-generator": {
-      "name": "Social Captions",
-      "description": "Beat writer's block! 8 categories including travel, food, romance and work. Hundreds of handpicked captions, one-click copy.",
+      "name": "Social Media Caption Generator",
+      "description": "Generate captions for Instagram, TikTok, Xiaohongshu posts. 8 categories: travel, food, romance, work. Hundreds of ready-to-use captions, one-click copy. Free, no signup.",
       "seo": {
         "intro": "Social Captions Generator is a free online idea board for copy-ready social media posts across travel, food, romance, work, motivation, and lifestyle themes. Browse hundreds of hand-curated one-liners, captions, and quotes grouped by mood and use case, then copy your favorite with one click for WeChat Moments, Instagram, TikTok, or Xiaohongshu. All captions ship with the browser page — no subscription, no writer's-block prompts, and no network call is needed to fetch or search the library.",
         "scenarios": [
@@ -1063,8 +1063,8 @@
       }
     },
     "keyword-spinoff-generator": {
-      "name": "Pun & Viral Keyword Spinoff",
-      "description": "5 industries (beauty/food/home/digital/baby) keyword banks. Input core word → pun/paradox/question/number 4 classes viral titles. 100% local, no cloud AI,...",
+      "name": "Keyword Spinoff Generator",
+      "description": "Generate 500+ keyword spinoffs and viral title variants from one seed word. Homophone puns, rhymes, idiom reworks for Xiaohongshu, Douyin, e-commerce. Free, no signup.",
       "seo": {
         "intro": "Keyword Spinoff & Homophone Title Generator is a free in-browser copy-title ideation tool for short-video operators, Xiaohongshu / Douyin / Bilibili creators, e-commerce media buyers, and naming-needs users. Type one core keyword (product name, industry term, brand word, person name), pick a style (homophone pun, rhyme, idiom rework, reduplication, English homophone, number pun, dialect slang), and the tool automatically generates dozens of title variants and related keyword spinoffs, with sentiment tags, rough CTR estimates, and usage-scene suggestions — perfect for exhausting every traffic-leveraging variant of a word in one pass instead of brainstorming all day and only producing 3 ideas.",
         "scenarios": [
@@ -1333,8 +1333,8 @@
       }
     },
     "pinyin-annotator": {
-      "name": "Chinese Pinyin Annotator — Add Pinyin to Text",
-      "description": "Add pinyin with tone marks to Chinese text automatically. Smart polyphonic detection, browser-local. Free for teachers, authors, and learners — no signup...",
+      "name": "Chinese Pinyin Annotator",
+      "description": "Add pinyin with tone marks to Chinese text instantly. Smart polyphonic detection, batch paste, export to PDF, Word, HTML. Free for teachers and learners, no signup.",
       "seo": {
         "intro": "Pinyin Annotator is a free in-browser Hanzi pronunciation tool for Mandarin teachers, primary-school Chinese-language teachers, children's picture-book authors, self-publishers and editorial staff. Paste a Chinese article containing rare characters or polyphonic (multi-read) characters, and the tool automatically places toned pinyin above (or next to) each Hanzi. It intelligently identifies polyphonic readings (e.g. '重' as zhòng in 重要 'important' but as chóng in 重复 'repeat', choosing the most likely pronunciation via contextual word frequency), optionally skips already-annotated characters, and lets you pick annotation position (superscript above / side gloss inline / trailing parentheses). Outputs copyable rich text, PDF, Word, or pinyin-on-image — perfect for children's flashcards, CSL reading materials, or rare-character annotated classical-Chinese drafts.",
         "scenarios": [
@@ -1646,7 +1646,7 @@
     },
     "seo-keyword-miner": {
       "name": "SEO Keyword Miner",
-      "description": "Long-tail keyword miner based on Google Autocomplete + DeepSeek. Enter a seed keyword and generate 60+ highly-related long-tail terms with estimated heat /...",
+      "description": "Mine 60+ long-tail keywords from Google, YouTube, Amazon autocomplete. Enter one seed word and get related searches, questions, and buying-intent terms. Free, no signup.",
       "seo": {
         "intro": "SEO Keyword Miner is a free in-browser keyword research tool for content creators, solo site owners, and e-commerce copywriters. Type one core seed keyword or topic, pick a channel (Google, YouTube, Amazon, TikTok, Xiaohongshu, Bing), and the miner expands it into dozens of real user search intents — autocomplete phrases, related searches, people-also-ask style questions, and buying-intent modifiers you can plug into H1s, H2s, alt text, product listing titles, and short-video titles. 100% client-side after the suggestions come back, no signup.",
         "scenarios": [
@@ -5739,8 +5739,8 @@
       "description": "Online random wheel generator. Custom options, spinning animation, and fair random picking powered by Spinwheel. Perfect for games, decisions, and raffles."
     },
     "markdown-platform-converter": {
-      "name": "Markdown Converter",
-      "description": "Free Markdown Converter: supports markdown, converter, and more. 100% local processing on your device for maximum privacy.",
+      "name": "Markdown Platform Converter",
+      "description": "Convert Markdown between Notion, Obsidian, GitHub, Juejin, CSDN, WeChat and 18+ platforms. Batch convert, auto image migration, TOC generation. Free, runs in browser.",
       "seo": {
         "intro": "Multi-Platform Markdown Converter is a free in-browser cross-platform Markdown format-interop tool for technical bloggers, knowledge-management users, self-media operators, and indie developers. Paste a Markdown document (or rich text copied directly from Platform A) written on any source platform, then one-click convert it to the native format / platform-specific Markdown dialect of Platform B. Coverage spans 18+ major Chinese-internet content platforms: WeChat Official Accounts (WOA), Zhihu, Juejin, CSDN, Yuque, Notion, Obsidian, Feishu Docs, GitBook, GitHub README, Hexo, Hugo, Jekyll, Xiaohongshu, Jike, WordPress, Medium, Confluence. Supports bidirectional conversion, batch processing, auto image migration to target-platform image beds, TOC auto-generation, and platform-differentiated compatibility for 60+ syntax elements including internal/external links, footnotes, task lists, math formulas, code-block highlighting, tables, blockquotes, cards, and Callouts. It solves the single biggest cross-platform publishing pain point: 'the same draft posted to 8 sites takes 8 separate formatting passes.'",
         "scenarios": [
@@ -5785,7 +5785,7 @@
     },
     "polyphonic-pinyin-annotator": {
       "name": "Polyphonic Pinyin Annotator",
-      "description": "Annotate polyphonic characters with correct contextual pinyin. Smart CRF-based detection for 银行/行走/重庆/音乐. 100% browser-local, free — no signup.",
+      "description": "Automatically add correct pinyin with tone marks to polyphonic Chinese characters. Smart context-based detection handles multi-read chars like 行/重/乐. Export to Word, PDF, HTML. Free, no signup.",
       "seo": {
         "intro": "Polyphonic Pinyin Annotator is a free in-browser automatic pinyin annotation tool for polyphonic (multi-read) Hanzi, built for primary-school Mandarin teachers, TCFL / CSL (Teaching Chinese as a Foreign / Second Language) educators, children's picture-book editors, audiobook narrators, classical-text proofreaders, and fansub teams. Paste any Chinese text containing polyphonic characters (simplified, traditional, punctuation-heavy, classical Chinese — all supported) in. The tool uses CRF word-segmentation + part-of-speech tagging + a curated 14 000+ entry polyphonic-collocation dictionary (not naive per-character lookup) to output toned pinyin above every character. Polyphonic readings are highlighted in ORANGE (monophonic characters = faint grey) alongside the decision rationale for each polyphonic reading (collocation word, POS, fixed phrase) ; one-click export to HTML, PDF, DOCX, CSV, TXT, solving the real annotation pain point of 'which reading is correct here for teaching / dubbing scripts'.",
         "scenarios": [
@@ -5920,8 +5920,8 @@
       }
     },
     "multi-timezone-publish-time": {
-      "name": "Best Time to Post Calculator — Multi-Timezone Scheduler",
-      "description": "Find the optimal global publish time across 12+ timezones (LA, NYC, London, Tokyo, Sydney). Auto-adjusts for DST, visualizes audience overlap. Free, no signup.",
+      "name": "Multi-Timezone Publish Time Calculator",
+      "description": "Find the best time to post across 12+ timezones. Pick your audience's active hours, get exact local times for LA, NYC, London, Tokyo, Sydney. Free, no signup.",
       "seo": {
         "intro": "Timezone Timer (Multi-Timezone Publish Time Calculator) is a free browser-based tool for cross-border creators and brand social teams that converts a single ideal posting time slot into the exact wall-clock hour for 12+ common global timezones and major cities — including DST/夏令时 auto-correction. Pick a home timezone, choose your best-performing audience active hour, and the timer will show you when to press 'post' for followers in Los Angeles, New York, London, Paris, Berlin, Dubai, Mumbai, Singapore, Tokyo, Seoul, Beijing, Sydney, and São Paulo — with no API calls and no signup.",
         "scenarios": [
@@ -5966,7 +5966,7 @@
     },
     "wc-2026-schedule": {
       "name": "World Cup 2026 Schedule & Kick-off Times",
-      "description": "Free FIFA World Cup 2026 schedule: all 104 matches across USA, Canada and Mexico, kick-off times in 9 time zones, group tables, knockout bracket and team...",
+      "description": "Full FIFA World Cup 2026 schedule: all 104 matches in USA, Canada, Mexico. Kick-off times in your timezone, group tables, knockout bracket. Free, no signup.",
       "seo": {
         "intro": "2026 FIFA World Cup Schedule Browser is a free in-browser full 104-match fixture, kick-off time, venue, ticket, group-table and knockout bracket tool for the 2026 USA–Canada–Mexico World Cup, built for football fans, sports bettors, sports-bar managers, World Cup party planners and corporate office admin teams organising watch-parties & themed afternoon teas. No VPN to reach FIFA.com, no app to install, open-and-use. Supports all 16 host cities, all 48 teams, 9 time-zone toggles (ET / PT / your local zone + London / Berlin / Shanghai / Tokyo / New Delhi / Cairo / Mexico City / Toronto), stage filters (group / R16 / QF / SF / 3rd / Final), instant group tables, 'Save My Teams' favourites, one-click iCal export to phone calendar, and CSV/Markdown export to Notion or Excel — solving the real 'when/where is the match I care about, what's my local kick-off, should I book a day off' fan workflow.",
         "scenarios": [
@@ -6153,8 +6153,8 @@
       }
     },
     "wc-fan-avatar": {
-      "name": "World Cup Fan Avatar Maker",
-      "description": "Free World Cup fan avatar maker: create personalized national-team avatars with flags & colors. Download PNG, no signup, 100% in-browser.",
+      "name": "World Cup 2026 Fan Avatar Maker",
+      "description": "Create your 2026 World Cup fan avatar with national team flags, colors and frames. Upload your photo, pick a team, download PNG. Free, no signup, runs in browser.",
       "seo": {
         "intro": "2026 World Cup Fan Avatar Maker is a free in-browser one-click frame tool for 'I support this team' social-media profile pictures, for fans of all 48 participating nations, corporate HR/dept team-building avatars, fan-club unified branding, betting-shop customer community avatars, and student-dorm watch-party squads matching profile pics. No app install, no registration. Upload your own real profile photo (100% local processing, zero upload, absolute privacy). Pick 1–2 supported teams (main frame + secondary 'CP' couple frame max 2 teams). Apply 16 types of national-flag borders, 144 variants of official-team-colour geometric frames (circle / square / hex × 48 teams = 144), WC Trophy watermark, fan face-paint decals, gold-foil champion commemorative frame, Qatar-desert palette frame, custom name / nickname / slogan text watermark (12 font families). Three render effects (rounded corners / drop-shadow / stroke). One-click export 400×400 / 800×800 / 2048×2048 hi-res transparent PNG, ready for WeChat / QQ / X / Discord / Instagram — no JPEG compression blurring from any platform.",
         "scenarios": [
