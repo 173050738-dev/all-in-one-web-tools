@@ -241,6 +241,172 @@ const TOOL_FAQ_I18N: Record<string, Record<SeoLocale, Array<{ q: string; a: stri
       { q: 'هل التسميات التوضيحية أصلية أم معاد تدويرها من القوالب؟', a: 'يتم إنشاء كل تسمية توضيحية حديثاً بناءً على موضوع الإدخال الخاص بك والنغمة المختارة. تستخدم الأداة مجموعة مفردات كبيرة وأنماط جمل لضمان التنوع، وليس قوالب قطع بسكويت.' },
     ],
   },
+  'audio-bpm-detector': {
+    en: [
+      { q: 'What is BPM in music?', a: 'BPM stands for Beats Per Minute, which measures the tempo of a song. It indicates how many beats occur in one minute. A slow ballad might have 60 BPM, while an upbeat dance track can reach 140 BPM or higher.' },
+      { q: 'Can I detect BPM from a YouTube video or streaming audio?', a: 'Yes, you can play any audio source near your device microphone and the detector will analyze the BPM in real-time. For best results, use a direct audio file upload for the most accurate reading.' },
+      { q: 'Is this tool accurate for different music genres?', a: 'Yes, the BPM detector works accurately across genres including pop, rock, hip-hop, electronic, classical, and jazz. The algorithm is trained on a wide range of musical styles and handles tempo changes within a song well.' },
+    ],
+    zh: [
+      { q: '音乐的 BPM 是什么？', a: 'BPM 是每分钟节拍数（Beats Per Minute），衡量歌曲速度。慢节奏情歌可能 60 BPM，快节奏舞曲可达 140 BPM 以上。' },
+      { q: '可以检测 YouTube 视频或流媒体音频的 BPM 吗？', a: '可以，将任何音频源靠近设备麦克风，检测器会实时分析 BPM。如需最准确结果，直接上传音频文件效果最好。' },
+      { q: '不同音乐类型都能准确检测吗？', a: '是的，BPM 检测器在流行、摇滚、嘻哈、电子、古典和爵士等类型中都能准确工作。算法经过多种音乐风格训练，也能较好地处理歌曲内的速度变化。' },
+    ],
+    es: [
+      { q: '¿Qué es el BPM en la música?', a: 'BPM significa Beats Per Minute (pulsos por minuto), que mide el tempo de una canción. Indica cuántos pulsos ocurren en un minuto. Una balada lenta podría tener 60 BPM, mientras que una pista de baile alegre puede alcanzar 140 BPM o más.' },
+      { q: '¿Puedo detectar el BPM de un video de YouTube o audio en streaming?', a: 'Sí, puedes reproducir cualquier fuente de audio cerca del micrófono de tu dispositivo y el detector analizará el BPM en tiempo real. Para obtener mejores resultados, usa una carga directa de archivo de audio para la lectura más precisa.' },
+      { q: '¿Esta herramienta es precisa para diferentes géneros musicales?', a: 'Sí, el detector de BPM funciona con precisión en géneros que incluyen pop, rock, hip-hop, electrónica, clásica y jazz. El algoritmo está entrenado en una amplia gama de estilos musicales y maneja bien los cambios de tempo dentro de una canción.' },
+    ],
+    fr: [
+      { q: 'Qu\'est-ce que le BPM en musique ?', a: 'BPM signifie Beats Per Minute (battements par minute), qui mesure le tempo d\'une chanson. Il indique combien de battements se produisent en une minute. Une ballade lente pourrait avoir 60 BPM, tandis qu\'un morceau de danse entraînant peut atteindre 140 BPM ou plus.' },
+      { q: 'Puis-je détecter le BPM d\'une vidéo YouTube ou d\'un audio en streaming ?', a: 'Oui, vous pouvez lire n\'importe quelle source audio près du microphone de votre appareil et le détecteur analysera le BPM en temps réel. Pour de meilleurs résultats, utilisez un téléchargement direct de fichier audio pour la lecture la plus précise.' },
+      { q: 'Cet outil est-il précis pour différents genres musicaux ?', a: 'Oui, le détecteur de BPM fonctionne avec précision dans les genres incluant pop, rock, hip-hop, électronique, classique et jazz. L\'algorithme est entraîné sur un large éventail de styles musicaux et gère bien les changements de tempo au sein d\'une chanson.' },
+    ],
+    hi: [
+      { q: 'संगीत में BPM क्या है?', a: 'BPM का मतलब Beats Per Minute (प्रति मिनट बीट्स) है, जो किसी गीत की गति को मापता है। यह इंगित करता है कि एक मिनट में कितने बीट्स होते हैं। एक धीमी गाथा में 60 BPM हो सकता है, जबकि एक उत्साही नृत्य ट्रैक 140 BPM या अधिक तक पहुंच सकता है।' },
+      { q: 'क्या मैं YouTube वीडियो या स्ट्रीमिंग ऑडियो से BPM का पता लगा सकता हूँ?', a: 'हाँ, आप अपने डिवाइस के माइक्रोफोन के पास कोई भी ऑडियो सोर्स चला सकते हैं और डिटेक्टर वास्तविक समय में BPM का विश्लेषण करेगा। सबसे सटीक परिणामों के लिए, सीधी ऑडियो फ़ाइल अपलोड का उपयोग करें।' },
+      { q: 'क्या यह टूल विभिन्न संगीत शैलियों के लिए सटीक है?', a: 'हाँ, BPM डिटेक्टर पॉप, रॉक, हिप-हॉप, इलेक्ट्रॉनिक, शास्त्रीय और जैज़ सहित शैलियों में सटीक रूप से काम करता है। एल्गोरिदम विभिन्न संगीत शैलियों पर प्रशिक्षित है और गीत के भीतर गति परिवर्तनों को अच्छी तरह से संभालता है।' },
+    ],
+    ar: [
+      { q: 'ما هو BPM في الموسيقى؟', a: 'BPM تعني Beats Per Minute (نبضات في الدقيقة)، التي تقيس وتيرة الأغنية. تشير إلى عدد النبضات التي تحدث في الدقيقة الواحدة. قد تحتوي القصيدة البطيئة على 60 BPM، بينما يمكن أن يصل مسار الرقص السريع إلى 140 BPM أو أكثر.' },
+      { q: 'هل يمكنني اكتشاف BPM من فيديو YouTube أو صوت بث مباشر؟', a: 'نعم، يمكنك تشغيل أي مصدر صوت بالقرب من ميكروفون جهازك وسيقوم الكاشف بتحليل BPM في الوقت الفعلي. للحصول على أفضل النتائج، استخدم تحميل ملف صوت مباشر للحصول على القراءة الأكثر دقة.' },
+      { q: 'هل هذه الأداة دقيقة لأنواع الموسيقى المختلفة؟', a: 'نعم، يعمل كاشف BPM بدقة عبر الأنواع بما في ذلك البوب والروك والهيب هوب والإلكترونية والكلاسيكية والجاز. تم تدريب الخوارزمية على مجموعة واسعة من الأساليب الموسيقية وتتعامل مع تغييرات السرعة داخل الأغنية بشكل جيد.' },
+    ],
+  },
+  'regex-tester': {
+    en: [
+      { q: 'How do I test a regex pattern against multiple strings?', a: 'Enter your regex pattern in the top field and add multiple test strings separated by new lines in the test area. The tool highlights matches in real-time and shows capture groups. You can also toggle flags like global (/g), case-insensitive (/i), and multiline (/m).' },
+      { q: 'What regex flavors does this tester support?', a: 'This tester uses JavaScript/ECMAScript regex syntax, which covers most common patterns used in web development. It supports lookahead/lookbehind assertions, named capture groups, and Unicode property escapes.' },
+      { q: 'Can I save and share my regex patterns?', a: 'Yes, you can save patterns to your browser local storage and come back to them later. You can also copy the regex as a shareable URL to send to colleagues.' },
+    ],
+    zh: [
+      { q: '如何测试一个正则表达式对多个字符串的匹配？', a: '在顶部输入框输入正则表达式，在测试区域逐行输入多个测试字符串。工具会实时高亮匹配结果并显示捕获组。你也可以切换全局（/g）、不区分大小写（/i）、多行（/m）等标志。' },
+      { q: '这个测试器支持哪些正则风格？', a: '本工具使用 JavaScript/ECMAScript 正则语法，涵盖 Web 开发中最常用的模式。支持正向/反向预查、命名捕获组和 Unicode 属性转义。' },
+      { q: '可以保存和分享正则表达式吗？', a: '可以，将模式保存到浏览器本地存储，稍后可回来继续使用。也可以将正则复制为可分享的 URL 发送给同事。' },
+    ],
+    es: [
+      { q: '¿Cómo pruebo un patrón regex contra múltiples cadenas?', a: 'Ingresa tu patrón regex en el campo superior y agrega múltiples cadenas de prueba separadas por líneas nuevas en el área de prueba. La herramienta resalta las coincidencias en tiempo real y muestra los grupos de captura. También puedes activar banderas como global (/g), sin distinguir mayúsculas (/i) y multilinea (/m).' },
+      { q: '¿Qué variantes de regex admite este probador?', a: 'Este probador usa sintaxis regex de JavaScript/ECMAScript, que cubre la mayoría de los patrones comunes usados en desarrollo web. Admite aserciones de mira hacia adelante/mira hacia atrás, grupos de captura con nombre y escapes de propiedades Unicode.' },
+      { q: '¿Puedo guardar y compartir mis patrones regex?', a: 'Sí, puedes guardar patrones en el almacenamiento local de tu navegador y volver a ellos más tarde. También puedes copiar el regex como URL compartible para enviar a colegas.' },
+    ],
+    fr: [
+      { q: 'Comment tester un modèle regex contre plusieurs chaînes ?', a: 'Entrez votre modèle regex dans le champ supérieur et ajoutez plusieurs chaînes de test séparées par des sauts de ligne dans la zone de test. L\'outil met en évidence les correspondances en temps réel et affiche les groupes de capture. Vous pouvez également activer les drapeaux comme global (/g), insensible à la casse (/i) et multiligne (/m).' },
+      { q: 'Quelles variantes de regex ce testeur prend-il en charge ?', a: 'Ce testeur utilise la syntaxe regex JavaScript/ECMAScript, qui couvre la plupart des modèles courants utilisés dans le développement web. Il prend en charge les assertions lookahead/lookbehind, les groupes de capture nommés et les échappements de propriétés Unicode.' },
+      { q: 'Puis-je enregistrer et partager mes modèles regex ?', a: 'Oui, vous pouvez enregistrer les modèles dans le stockage local de votre navigateur et y revenir plus tard. Vous pouvez également copier le regex sous forme d\'URL partageable à envoyer à vos collègues.' },
+    ],
+    hi: [
+      { q: 'मैं कई स्ट्रिंग्स के खिलाफ regex पैटर्न का परीक्षण कैसे करूँ?', a: 'ऊपरी फ़ील्ड में अपना regex पैटर्न दर्ज करें और टेस्ट एरिया में नई लाइनों से अलग किए गए कई टेस्ट स्ट्रिंग्स जोड़ें। टूल वास्तविक समय में मैचों को हाइलाइट करता है और कैप्चर ग्रुप दिखाता है। आप ग्लोबल (/g), केस-असंवेदी (/i), और मल्टीलाइन (/m) जैसे फ्लैग भी टॉगल कर सकते हैं।' },
+      { q: 'यह टेस्टर कौन से regex फ्लेवर्स का समर्थन करता है?', a: 'यह टेस्टर JavaScript/ECMAScript regex सिंटैक्स का उपयोग करता है, जो वेब डेवलपमेंट में उपयोग किए जाने वाले अधिकांश सामान्य पैटर्न को कवर करता है। यह lookahead/lookbehind assertions, नामित कैप्चर ग्रुप और Unicode प्रॉपर्टी एस्केप का समर्थन करता है।' },
+      { q: 'क्या मैं अपने regex पैटर्न को सहेज और साझा कर सकता हूँ?', a: 'हाँ, आप पैटर्न को अपने ब्राउज़र के लोकल स्टोरेज में सहेज सकते हैं और बाद में उन पर वापस आ सकते हैं। आप regex को साझा करने योग्य URL के रूप में भी कॉपी कर सकते हैं ताकि सहकर्मियों को भेज सकें।' },
+    ],
+    ar: [
+      { q: 'كيف أختبر نمط regex مقابل سلاسل متعددة؟', a: 'أدخل نمط regex الخاص بك في الحقل العلوي وأضف سلاسل اختبار متعددة مفصولة بأسطر جديدة في منطقة الاختبار. تقوم الأداة بتسليط الضوء على المطابقات في الوقت الفعلي وتعرض مجموعات الالتقاط. يمكنك أيضاً تبديل الإعلامات مثل global (/g) و case-insensitive (/i) و multilinea (/m).' },
+      { q: 'ما أنماط regex التي يدعمها هذا المختبر؟', a: 'يستخدم هذا المختبر صياغة regex لـ JavaScript/ECMAScript، التي تغطي معظم الأنماط الشائعة المستخدمة في تطوير الويب. يدعم تأكيدات lookahead/lookbehind ومجموعات الالتقاط المسماة وهروب خصائص Unicode.' },
+      { q: 'هل يمكنني حفظ ومشاركة أنماط regex الخاصة بي؟', a: 'نعم، يمكنك حفظ الأنماط في التخزين المحلي لمتصفحك والعودة إليها لاحقاً. يمكنك أيضاً نسخ regex كعنوان URL قابل للمشاركة لإرساله إلى الزملاء.' },
+    ],
+  },
+  'case-converter': {
+    en: [
+      { q: 'What text case formats are available?', a: 'The converter supports uppercase, lowercase, title case, sentence case, camelCase, PascalCase, kebab-case, snake_case, and alternating case. Each format is explained with examples so you can pick the right one for your use case.' },
+      { q: 'Can I convert a list of words or lines at once?', a: 'Yes, paste multiple lines and each line is converted independently. This is useful for converting variable names, file names, or list items in bulk.' },
+      { q: 'Is this tool useful for programming variable naming?', a: 'Absolutely. Developers often need to convert between camelCase (JavaScript variables), snake_case (Python/PHP), and kebab-case (CSS class names/URLs). Our tool makes this conversion instant.' },
+    ],
+    zh: [
+      { q: '支持哪些文本格式转换？', a: '支持大写、小写、标题首字母大写、句首大写、驼峰式（camelCase）、帕斯卡式（PascalCase）、连字符式（kebab-case）、下划线式（snake_case）和交替大小写。每种格式都有示例说明。' },
+      { q: '可以批量转换多行文本吗？', a: '可以，粘贴多行文本，每行会独立转换。这对批量转换变量名、文件名或列表项非常有用。' },
+      { q: '这个工具对编程变量命名有用吗？', a: '非常有用。开发者经常需要在 camelCase（JavaScript 变量）、snake_case（Python/PHP）和 kebab-case（CSS 类名/URL）之间转换。本工具让转换瞬间完成。' },
+    ],
+    es: [
+      { q: '¿Qué formatos de mayúsculas/minúsculas de texto están disponibles?', a: 'El conversor admite mayúsculas, minúsculas, formato título, formato oración, camelCase, PascalCase, kebab-case, snake_case y formato alterno. Cada formato se explica con ejemplos para que puedas elegir el adecuado para tu caso de uso.' },
+      { q: '¿Puedo convertir una lista de palabras o líneas a la vez?', a: 'Sí, pega varias líneas y cada línea se convierte independientemente. Esto es útil para convertir nombres de variables, nombres de archivos o elementos de lista en masa.' },
+      { q: '¿Esta herramienta es útil para nombrar variables de programación?', a: 'Absolutamente. Los desarrolladores a menudo necesitan convertir entre camelCase (variables JavaScript), snake_case (Python/PHP) y kebab-case (nombres de clases CSS/URLs). Nuestra herramienta hace esta conversión al instante.' },
+    ],
+    fr: [
+      { q: 'Quels formats de casse de texte sont disponibles ?', a: 'Le convertisseur prend en charge les majuscules, les minuscules, la casse titre, la casse phrase, camelCase, PascalCase, kebab-case, snake_case et la casse alternée. Chaque format est expliqué avec des exemples pour que vous puissiez choisir le bon pour votre cas d\' utilisation.' },
+      { q: 'Puis-je convertir une liste de mots ou de lignes à la fois ?', a: 'Oui, collez plusieurs lignes et chaque ligne est convertie indépendamment. Ceci est utile pour convertir en masse des noms de variables, des noms de fichiers ou des éléments de liste.' },
+      { q: 'Cet outil est-il utile pour la nomination de variables de programmation ?', a: 'Absolument. Les développeurs ont souvent besoin de convertir entre camelCase (variables JavaScript), snake_case (Python/PHP) et kebab-case (noms de classe CSS/URL). Notre outil rend cette conversion instantanée.' },
+    ],
+    hi: [
+      { q: 'कौन से टेक्स्ट केस फ़ॉर्मेट उपलब्ध हैं?', a: 'कनवर्टर uppercase, lowercase, title case, sentence case, camelCase, PascalCase, kebab-case, snake_case, और alternating case को सपोर्ट करता है। प्रत्येक फ़ॉर्मेट को उदाहरणों के साथ समझाया जाता है ताकि आप अपने उपयोग के लिए सही चुन सकें।' },
+      { q: 'क्या मैं एक बार में शब्दों या लाइनों की सूची कनवर्ट कर सकता हूँ?', a: 'हाँ, कई लाइनें पेस्ट करें और प्रत्येक लाइन स्वतंत्र रूप से कनवर्ट होती है। यह वेरिएबल नाम, फ़ाइल नाम, या लिस्ट आइटम को बल्क में कनवर्ट करने के लिए उपयोगी है।' },
+      { q: 'क्या यह टूल प्रोग्रामिंग वेरिएबल नामकरण के लिए उपयोगी है?', a: 'बिल्कुल। डेवलपर्स को अक्सर camelCase (JavaScript वेरिएबल्स), snake_case (Python/PHP), और kebab-case (CSS क्लास नेम/URLs) के बीच कनवर्ट करने की आवश्यकता होती है। हमारा टूल इस रूपांतरण को तुरंत कर देता है।' },
+    ],
+    ar: [
+      { q: 'ما هي تنسيقات حالة النص المتاحة؟', a: 'يدعم المحول الأحرف الكبيرة، والأحرف الصغيرة، وحالة العنوان، وحالة الجملة، و camelCase، و PascalCase، و kebab-case، و snake_case، والحالة المتنوعة. يتم شرح كل تنسيق مع أمثلة حتى تتمكن من اختيار المناسب لحالة الاستخدام الخاصة بك.' },
+      { q: 'هل يمكنني تحويل قائمة الكلمات أو الأسطر في وقت واحد؟', a: 'نعم، الصق عدة أسطر وسيتم تحويل كل سطر بشكل مستقل. هذا مفيد لتحويل أسماء المتغيرات أو أسماء الملفات أو عناصر القائمة بكميات كبيرة.' },
+      { q: 'هل هذه الأداة مفيدة لتسمية متغيرات البرمجة؟', a: 'بالتأكيد. يحتاج المطورون غالباً إلى التحويل بين camelCase (متغيرات JavaScript) و snake_case (Python/PHP) و kebab-case (أسماء فئات CSS/URLs). تجعل أداتنا هذا التحويل فورياً.' },
+    ],
+  },
+  'json-formatter': {
+    en: [
+      { q: 'Is my JSON data ever sent to a server?', a: 'No. All JSON parsing, formatting, and validation happens entirely in your browser. Nothing is uploaded to any server. Your data stays private on your machine.' },
+      { q: 'What is the maximum JSON file size I can format?', a: 'The tool can handle files up to several megabytes, limited only by your browser memory. For very large files, we recommend using the tree view instead of full syntax highlighting for better performance.' },
+      { q: 'Can I collapse and expand nested JSON objects?', a: 'Yes, the tree view allows you to collapse or expand nested objects and arrays with a single click. This makes it easy to navigate complex JSON structures with hundreds of nested fields.' },
+      { q: 'Does this tool validate JSON while I type?', a: 'Yes, real-time validation with error highlighting. If your JSON is invalid, the tool shows the exact line and character position of the error, along with a helpful error message.' },
+    ],
+    zh: [
+      { q: '我的 JSON 数据会被发送到服务器吗？', a: '不会。所有 JSON 解析、格式化和验证完全在浏览器本地完成，不上传任何数据到服务器。你的数据安全地留在自己的设备上。' },
+      { q: '最多可以格式化多大的 JSON 文件？', a: '工具可以处理数 MB 的文件，仅受限于浏览器内存。对于超大文件，建议使用树状视图代替完整语法高亮以获得更好性能。' },
+      { q: '可以折叠/展开嵌套的 JSON 对象吗？', a: '可以，树状视图支持一键折叠或展开嵌套的对象和数组，方便浏览有数百个嵌套字段的复杂 JSON 结构。' },
+      { q: '输入时能实时验证 JSON 格式吗？', a: '可以，实时验证并高亮显示错误。如果 JSON 格式无效，工具会显示错误的具体行号和字符位置，并附带友好的错误提示信息。' },
+    ],
+    es: [
+      { q: '¿Mis datos JSON se envían alguna vez a un servidor?', a: 'No. Todo el análisis, formateo y validación de JSON se realizan completamente en tu navegador. No se carga nada en ningún servidor. Tus datos permanecen privados en tu máquina.' },
+      { q: '¿Cuál es el tamaño máximo de archivo JSON que puedo formatear?', a: 'La herramienta puede manejar archivos de hasta varios megabytes, limitada solo por la memoria de tu navegador. Para archivos muy grandes, recomendamos usar la vista de árbol en lugar del resaltado de sintaxis completo para un mejor rendimiento.' },
+      { q: '¿Puedo contraer y expandir objetos JSON anidados?', a: 'Sí, la vista de árbol te permite contraer o expandir objetos y arreglos anidados con un solo clic. Esto facilita la navegación por estructuras JSON complejas con cientos de campos anidados.' },
+      { q: '¿Esta herramienta valida JSON mientras escribo?', a: 'Sí, validación en tiempo real con resaltado de errores. Si tu JSON es inválido, la herramienta muestra la línea y posición exacta del carácter del error, junto con un mensaje de error útil.' },
+    ],
+    fr: [
+      { q: 'Mes données JSON sont-elles jamais envoyées à un serveur ?', a: 'Non. Tout l\'analyse, le formatage et la validation de JSON se font entièrement dans votre navigateur. Rien n\'est téléversé sur un serveur. Vos données restent privées sur votre machine.' },
+      { q: 'Quelle est la taille maximale de fichier JSON que je peux formater ?', a: 'L\'outil peut gérer des fichiers jusqu\'à plusieurs mégaoctets, limité uniquement par la mémoire de votre navigateur. Pour les très grands fichiers, nous recommandons d\'utiliser la vue arbre au lieu de la coloration syntaxique complète pour de meilleures performances.' },
+      { q: 'Puis-je réduire et développer les objets JSON imbriqués ?', a: 'Oui, la vue arbre vous permet de réduire ou développer les objets et tableaux imbriqués en un seul clic. Cela facilite la navigation dans les structures JSON complexes avec des centaines de champs imbriqués.' },
+      { q: 'Cet outil valide-t-il JSON pendant que je tape ?', a: 'Oui, validation en temps réel avec mise en évidence des erreurs. Si votre JSON est invalide, l\'outil affiche la ligne et la position exacte du caractère de l\'erreur, avec un message d\'erreur utile.' },
+    ],
+    hi: [
+      { q: 'क्या मेरा JSON डेटा कभी सर्वर को भेजा जाता है?', a: 'नहीं। सभी JSON पार्सिंग, फ़ॉर्मेटिंग और वैलिडेशन पूरी तरह से आपके ब्राउज़र में होते हैं। कुछ भी किसी सर्वर पर अपलोड नहीं होता। आपका डेटा आपकी मशीन पर ही गोपनीय रहता है।' },
+      { q: 'मैं अधिकतम कितने बड़े JSON फ़ाइल को फ़ॉर्मेट कर सकता हूँ?', a: 'टूल कई मेगाबाइट तक की फ़ाइलों को संभाल सकता है, केवल आपके ब्राउज़र मेमोरी तक सीमित है। बहुत बड़ी फ़ाइलों के लिए, बेहतर प्रदर्शन के लिए पूर्ण सिंटैक्स हाइलाइटिंग के बजाय ट्री व्यू का उपयोग करने की सलाह देते हैं।' },
+      { q: 'क्या मैं नेस्टेड JSON ऑब्जेक्ट्स को कोलैप्स और एक्सपैंड कर सकता हूँ?', a: 'हाँ, ट्री व्यू आपको एक क्लिक के साथ नेस्टेड ऑब्जेक्ट्स और एरेज़ को कोलैप्स या एक्सपैंड करने की अनुमति देता है। यह सैकड़ों नेस्टेड फ़ील्ड्स के साथ जटिल JSON संरचनाओं को नेविगेट करना आसान बनाता है।' },
+      { q: 'क्या यह टूल मेरे टाइप करते समय JSON को वैलिडेट करता है?', a: 'हाँ, एरर हाइलाइटिंग के साथ रियल-टाइम वैलिडेशन। यदि आपका JSON अमान्य है, तो टूल एरर की सटीक लाइन और कैरेक्टर पोजीशन दिखाता है, साथ ही एक सहायक एरर मैसेज भी देता है।' },
+    ],
+    ar: [
+      { q: 'هل يتم إرسال بيانات JSON الخاصة بي إلى خادم؟', a: 'لا. يتم كل تحليل وتنسيق والتحقق من JSON بالكامل في متصفحك. لا يتم تحميل أي شيء على أي خادم. تبقى بياناتك خاصة على جهازك.' },
+      { q: 'ما هو الحد الأقصى لحجم ملف JSON الذي يمكنني تنسيقه؟', a: 'يمكن للأداة التعامل مع ملفات حتى عدة ميغابايت، محدودة فقط بذاكرة متصفحك. للملفات الكبيرة جداً، نوصي باستخدام عرض الشجرة بدلاً من إبراز الصياغة الكامل لأداء أفضل.' },
+      { q: 'هل يمكنني طي وتوسيع كائنات JSON المتداخلة؟', a: 'نعم، يتيح لك عرض الشجرة طي أو توسيع الكائنات والمصفوفات المتداخلة بنقرة واحدة. هذا يجعل من السهل التنقل في هياكل JSON المعقدة مع مئات الحقول المتداخلة.' },
+      { q: 'هل هذه الأداة تتحقق من JSON أثناء الكتابة؟', a: 'نعم، تحقق في الوقت الفعلي مع إبراز الأخطاء. إذا كان JSON الخاص بك غير صالح، ستعرض الأداة السطر والموضع الدقيق للخطأ، مع رسالة خطأ مفيدة.' },
+    ],
+  },
+  'image-compressor': {
+    en: [
+      { q: 'What image formats are supported for compression?', a: 'JPEG, PNG, WebP, and AVIF are supported. Each format uses different compression algorithms optimized for photos vs graphics vs web images. The tool shows the visual quality preview so you can compare before downloading.' },
+      { q: 'Can I compress multiple images at once?', a: 'Yes, batch processing is supported. Upload multiple images and the tool compresses them all in parallel. You can download them individually or as a ZIP archive.' },
+      { q: 'Does the compression reduce image quality significantly?', a: 'The tool lets you control the quality level (from 0-100%). At moderate settings (70-80%), the file size is typically reduced by 50-70% with minimal visible quality loss. You can preview the result before saving.' },
+    ],
+    zh: [
+      { q: '支持哪些图片格式压缩？', a: '支持 JPEG、PNG、WebP 和 AVIF。每种格式使用不同的压缩算法，分别针对照片、图形和网络图片进行优化。工具显示视觉质量预览，方便下载前对比。' },
+      { q: '可以同时压缩多张图片吗？', a: '可以，支持批量处理。上传多张图片，工具会并行压缩所有图片。可以单独下载或打包成 ZIP 文件下载。' },
+      { q: '压缩会明显降低图片质量吗？', a: '工具允许你控制质量等级（0-100%）。在中等设置（70-80%）下，文件大小通常减少 50-70%，视觉质量损失最小。保存前可以预览效果。' },
+    ],
+    es: [
+      { q: '¿Qué formatos de imagen se admiten para compresión?', a: 'Se admiten JPEG, PNG, WebP y AVIF. Cada formato utiliza diferentes algoritmos de compresión optimizados para fotos, gráficos e imágenes web. La herramienta muestra una vista previa de calidad visual para que puedas comparar antes de descargar.' },
+      { q: '¿Puedo comprimir varias imágenes a la vez?', a: 'Sí, se admite el procesamiento por lotes. Sube varias imágenes y la herramienta las comprimirá todas en paralelo. Puedes descargarlas individualmente o como un archivo ZIP.' },
+      { q: '¿La compresión reduce significativamente la calidad de la imagen?', a: 'La herramienta te permite controlar el nivel de calidad (de 0-100%). En ajustes moderados (70-80%), el tamaño del archivo se reduce típicamente en un 50-70% con una pérdida de calidad visual mínima. Puedes previsualizar el resultado antes de guardar.' },
+    ],
+    fr: [
+      { q: 'Quels formats d\'image sont pris en charge pour la compression ?', a: 'JPEG, PNG, WebP et AVIF sont pris en charge. Chaque format utilise différents algorithmes de compression optimisés pour les photos, les graphiques et les images web. L\'outil affiche un aperçu de la qualité visuelle pour que vous puissiez comparer avant de télécharger.' },
+      { q: 'Puis-je compresser plusieurs images à la fois ?', a: 'Oui, le traitement par lots est pris en charge. Téléchargez plusieurs images et l\'outil les compressera toutes en parallèle. Vous pouvez les télécharger individuellement ou sous forme d\'archive ZIP.' },
+      { q: 'La compression réduit-elle significativement la qualité de l\'image ?', a: 'L\'outil vous permet de contrôler le niveau de qualité (de 0-100%). À des réglages modérés (70-80%), la taille du fichier est généralement réduite de 50-70% avec une perte de qualité visuelle minimale. Vous pouvez prévisualiser le résultat avant d\'enregistrer.' },
+    ],
+    hi: [
+      { q: 'कौन से छवि प्रारूप संपीड़न के लिए समर्थित हैं?', a: 'JPEG, PNG, WebP और AVIF समर्थित हैं। प्रत्येक प्रारूप फोटो, ग्राफिक्स और वेब छवियों के लिए अनुकूलित विभिन्न संपीड़न एल्गोरिदम का उपयोग करता है। टूल विज़ुअल क्वालिटी प्रीव्यू दिखाता है ताकि आप डाउनलोड से पहले तुलना कर सकें।' },
+      { q: 'क्या मैं एक बार में कई छवियों को संपीड़ित कर सकता हूँ?', a: 'हाँ, बैच प्रोसेसिंग समर्थित है। कई छवियों को अपलोड करें और टूल उन सभी को समानांतर में संपीड़ित करेगा। आप उन्हें व्यक्तिगत रूप से या ZIP आर्काइव के रूप में डाउनलोड कर सकते हैं।' },
+      { q: 'क्या संपीड़न छवि की गुणवत्ता को काफी हद तक कम करता है?', a: 'टूल आपको गुणवत्ता स्तर (0-100%) को नियंत्रित करने देता है। मध्यम सेटिंग्स (70-80%) पर, फ़ाइल आकार आमतौर पर 50-70% तक कम हो जाता है जिसमें न्यूनतम दृश्य गुणवत्ता हानि होती है। आप सहेजने से पहले परिणाम का पूर्वावलोकन कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'ما هي تنسيقات الصور التي تدعمها للضغط؟', a: 'يتم دعم JPEG و PNG و WebP و AVIF. يستخدم كل تنسيق خوارزميات ضغط مختلفة محسّنة للصور الفوتوغرافية والرسومات وصور الويب. تعرض الأداة معاينة جودة بصرية حتى تتمكن من المقارنة قبل التنزيل.' },
+      { q: 'هل يمكنني ضغط عدة صور في وقت واحد؟', a: 'نعم، تتم معالجة الدفعي. قم بتحميل عدة صور وسيقوم الضغط عليها جميعاً بالتوازي. يمكنك تنزيلها بشكل فردي أو كملف ZIP.' },
+      { q: 'هل يقلل الضغط من جودة الصورة بشكل كبير؟', a: 'تتيح لك الأداة التحكم في مستوى الجودة (من 0-100%). في الإعدادات المتوسطة (70-80%)، يتم تقليل حجم الملف عادة بنسبة 50-70% مع الحد الأدنى من فقدان الجودة البصرية. يمكنك معاينة النتيجة قبل الحفظ.' },
+    ],
+  },
 };
 
 const FAQ_I18N: Record<SeoLocale, Record<FaqKey, { q: string; a: string }>> = {
