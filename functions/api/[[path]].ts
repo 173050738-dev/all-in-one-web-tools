@@ -38,9 +38,9 @@ const toneMap: Record<string, Record<string, string>> = {
 };
 
 async function callDeepseek(env: Env, systemPrompt: string, userPrompt: string, jsonResponse = false): Promise<string> {
-  const apiKey = env.DEEPSEEK_API_KEY;
-  const apiUrl = env.DEEPSEEK_API_URL || 'https://api.deepseek.com/v1/chat/completions';
-  const model = env.DEEPSEEK_MODEL || 'deepseek-chat';
+  const apiKey = env.DEEPSEEK_API_KEY || (typeof process !== 'undefined' ? process.env?.DEEPSEEK_API_KEY : undefined);
+  const apiUrl = env.DEEPSEEK_API_URL || 'https://token.sensenova.cn/v1/chat/completions';
+  const model = env.DEEPSEEK_MODEL || 'deepseek-v4-flash';
 
   if (!apiKey) throw new Error('API key not configured');
 
