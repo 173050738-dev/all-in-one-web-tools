@@ -23,9 +23,14 @@ export function isTopWorkflowSlug(slug: string): boolean {
   return TOP_WORKFLOW_SET.has(slug);
 }
 
-export const TOP_BLOG_SLUGS: string[] = BLOG_POSTS_INDEX
-  .slice(0, 20)
-  .map((p) => p.slug);
+export const TOP_BLOG_SLUGS: string[] = [
+  ...BLOG_POSTS_INDEX.slice(0, 20).map((p) => p.slug),
+  'audio-bpm-detector-guide',
+  'regex-tester-guide',
+  'json-formatter-guide',
+  'polyphonic-pinyin-annotation-guide',
+  'markdown-platform-converter-guide',
+];
 
 const TOP_BLOG_SET = new Set(TOP_BLOG_SLUGS);
 export function isTopBlogSlug(slug: string): boolean {
