@@ -504,7 +504,7 @@
     },
     "color-picker": {
       "name": "Color Picker",
-      "description": "Free online color picker with eyedropper, HEX/RGB/HSL/HSV/CMYK conversion, color palette generator, gradient builder, contrast checker (WCAG AA/AAA) and Tailwind/Material design swatches — all in the browser.",
+      "description": "Free online color picker with eyedropper, HEX/RGB/HSL/HSV/CMYK conversion, color palette generator, gradient builder, contrast checker (WCAG AA/AAA) and...",
       "seo": {
         "intro": "Color Picker is a free online color tool that lets you pick, convert, and combine colors from a single visual workspace. Move an eyedropper across a palette, paste any HEX, RGB, HSL, or HSV code to see its matches, build multi-stop gradients, and export curated palettes ready for CSS, design tools, or brand guidelines. All conversion and rendering happens locally in your browser — brand colors and client artwork values never touch a server.",
         "scenarios": [
@@ -549,7 +549,7 @@
     },
     "copy-cleaner": {
       "name": "Copy Redundancy Cleaner & Annotator",
-      "description": "Local parse only. Auto detect repetitive preambles, meaningless adjectives, repeated golden lines, filler nonsense. Colored highlight redundant segments, one-click compress, keep core. Perfect for带货/dry/plot copy washing.",
+      "description": "Local parse only. Auto detect repetitive preambles, meaningless adjectives, repeated golden lines, filler nonsense. Colored highlight redundant segments,...",
       "seo": {
         "intro": "Copy Redundancy Cleaner & Annotator is a free in-browser text tool for Xiaohongshu, WeChat Official, short-video voiceover, and e-commerce PDP copy operators. Paste your raw draft, and the tool automatically finds redundant fluff (double intensifiers like 'very very', repeated phrasing, empty marketing filler), absolute-expression risk words, and over-long sentences, then outputs a compressed version, line-by-line replacement suggestions, and per-sentence scores, typically cutting 20%–50% of characters without changing meaning — perfect for squeezing a wordy first draft into platform-sized short copy.",
         "scenarios": [
@@ -729,7 +729,7 @@
     },
     "emoji-mixer": {
       "name": "Emoji Mixer — Combine & Create New Emojis",
-      "description": "Blend any two emojis into a unique hybrid sticker. Real-time Canvas rendering, transparent PNG export. Perfect for social media, chats, and custom reactions. Free — no signup.",
+      "description": "Blend any two emojis into a unique hybrid sticker. Real-time Canvas rendering, transparent PNG export. Perfect for social media, chats, and custom...",
       "seo": {
         "intro": "Emoji Mixer is a free fun in-browser creative tool that combines two standard emojis into a brand-new blended hybrid emoji sticker you can share as a transparent PNG. Pick any two emojis from the built-in picker — for example cat + 🎂 cake or 🐶 dog + 🚀 rocket — and the mixer will render a fused hybrid emoji mashup combining colors, shapes, and iconography of both inputs. The whole render happens client-side in Canvas, so no sign-in or upload needed and every new mashup is generated instantly right in the page.",
         "scenarios": [
@@ -864,7 +864,7 @@
     },
     "image-compressor": {
       "name": "Free Online Image Compressor — JPG, PNG, WebP",
-      "description": "Compress images up to 90% without quality loss. Batch processing, real-time preview, 100% in-browser. No uploads, privacy guaranteed. Free tool.",
+      "description": "Compress JPG, PNG and WebP images right in your browser. Adjustable quality, batch processing, nothing uploaded.",
       "seo": {
         "intro": "Image Compressor is a free online tool that lets you shrink JPG, PNG, and WebP photos directly in your browser. Adjust quality and size sliders per image, preview the compressed result side-by-side, and download smaller files individually or as a batch ZIP. Everything runs locally inside your browser — your images never leave your device and are never uploaded to any server, so private or sensitive photos stay fully under your control.",
         "scenarios": [
@@ -1064,7 +1064,7 @@
     },
     "keyword-spinoff-generator": {
       "name": "Pun & Viral Keyword Spinoff",
-      "description": "5 industries (beauty/food/home/digital/baby) keyword banks. Input core word → pun/paradox/question/number 4 classes viral titles. 100% local, no cloud AI, for Xiaohongshu/Douyin bloggers.",
+      "description": "5 industries (beauty/food/home/digital/baby) keyword banks. Input core word → pun/paradox/question/number 4 classes viral titles. 100% local, no cloud AI,...",
       "seo": {
         "intro": "Keyword Spinoff & Homophone Title Generator is a free in-browser copy-title ideation tool for short-video operators, Xiaohongshu / Douyin / Bilibili creators, e-commerce media buyers, and naming-needs users. Type one core keyword (product name, industry term, brand word, person name), pick a style (homophone pun, rhyme, idiom rework, reduplication, English homophone, number pun, dialect slang), and the tool automatically generates dozens of title variants and related keyword spinoffs, with sentiment tags, rough CTR estimates, and usage-scene suggestions — perfect for exhausting every traffic-leveraging variant of a word in one pass instead of brainstorming all day and only producing 3 ideas.",
         "scenarios": [
@@ -1109,7 +1109,7 @@
     },
     "markdown-platform-adapter": {
       "name": "All-Platform Markdown Adapter",
-      "description": "Built-in 5 platforms rules: Xiaohongshu #hashtag/WeChat head-tail blank/Bilibili blockquotes/Douyin image wrap/Zhihu; image link fix; table/code downgrade. One-click copy each platform text, most tools only do 1-2.",
+      "description": "Built-in 5 platforms rules: Xiaohongshu #hashtag/WeChat head-tail blank/Bilibili blockquotes/Douyin image wrap/Zhihu; image link fix; table/code downgrade....",
       "seo": {
         "intro": "Markdown Multi-Platform Formatter is a free in-browser document format adapter for tech bloggers, WeChat Official editors, paid-knowledge authors, and indie developers. Paste your one canonical Markdown source, pick a target platform (WeChat Official, Zhihu, Juejin, Xiaohongshu, Notion, Feishu/Lark, Yuque, WordPress), and the tool automatically converts image links, code-block syntax highlighting, heading sizes, quote / list / table rendering, and each platform's specific format quirks — for example, it converts external images to base64 / image-bed uploads for WeChat Official (which blocks external image URLs), and auto-splits paragraphs with leading emoji for Xiaohongshu. Then copy with one click into the target editor: images and styles rarely need manual touch-up.",
         "scenarios": [
@@ -1244,7 +1244,7 @@
     },
     "password-generator": {
       "name": "Password Generator",
-      "description": "Secure password generator, custom length and complexity.",
+      "description": "Create strong, random passwords with customizable length and character types. Copy with one click, all in your browser.",
       "seo": {
         "intro": "Password Generator is a free online tool that creates strong, cryptographically random passwords for accounts, Wi-Fi and encryption keys. Choose a length between 4 and 128 characters, toggle uppercase letters, lowercase letters, numbers, symbols or the full ASCII set, and it instantly outputs one or more secure passwords you can copy to the clipboard. It also calculates estimated crack time and shows strength colour bars so you can tell at a glance whether a password is weak or strong. Everything runs locally in your browser with JavaScript crypto APIs — passwords are never transmitted or stored on any server.",
         "scenarios": [
@@ -1289,7 +1289,7 @@
     },
     "pdf-merger": {
       "name": "PDF Merger",
-      "description": "Combine multiple PDFs right in your browser. Drag-and-drop reordering. Nothing is uploaded to servers — 100% private.",
+      "description": "Merge multiple PDFs into a single file. Reorder, rotate, delete pages before combining. 100% browser-based, no upload needed.",
       "seo": {
         "intro": "This free online PDF merger combines multiple PDF files into a single document, right inside your browser. Add the files you want, drag them into the order you need, and download the merged PDF in one click. Because the merging happens locally on your device, your documents are never uploaded to any server — which matters when the files are invoices, contracts, or anything private. There is no watermark and no sign-up.",
         "scenarios": [
@@ -1334,7 +1334,7 @@
     },
     "pinyin-annotator": {
       "name": "Chinese Pinyin Annotator — Add Pinyin to Text",
-      "description": "Add pinyin with tone marks to Chinese text automatically. Smart polyphonic detection, browser-local. Free for teachers, authors, and learners — no signup needed.",
+      "description": "Add pinyin with tone marks to Chinese text automatically. Smart polyphonic detection, browser-local. Free for teachers, authors, and learners — no signup...",
       "seo": {
         "intro": "Pinyin Annotator is a free in-browser Hanzi pronunciation tool for Mandarin teachers, primary-school Chinese-language teachers, children's picture-book authors, self-publishers and editorial staff. Paste a Chinese article containing rare characters or polyphonic (multi-read) characters, and the tool automatically places toned pinyin above (or next to) each Hanzi. It intelligently identifies polyphonic readings (e.g. '重' as zhòng in 重要 'important' but as chóng in 重复 'repeat', choosing the most likely pronunciation via contextual word frequency), optionally skips already-annotated characters, and lets you pick annotation position (superscript above / side gloss inline / trailing parentheses). Outputs copyable rich text, PDF, Word, or pinyin-on-image — perfect for children's flashcards, CSL reading materials, or rare-character annotated classical-Chinese drafts.",
         "scenarios": [
@@ -1420,7 +1420,7 @@
     },
     "excel-formula-generator": {
       "name": "Excel Formula Generator",
-      "description": "Turn natural language into Excel / Google Sheets formulas instantly. Paste a plain-English request, get the exact formula, step-by-step explanation and usage notes — free, no sign-up.",
+      "description": "Turn natural language into Excel / Google Sheets formulas instantly. Paste a plain-English request, get the exact formula, step-by-step explanation and...",
       "seo": {
         "intro": "Excel Formula Generator is a free browser-based spreadsheet assistant that turns a plain-English description of what you want to calculate into working formulas for Microsoft Excel, Google Sheets, WPS Spreadsheets, Apple Numbers, and LibreOffice Calc. Describe a task in 1-2 sentences, pick your target spreadsheet app, and the tool will draft matching formulas including VLOOKUP, XLOOKUP, INDEX/MATCH, SUMIF/SUMIFS, COUNTIF/COUNTIFS, IF + nested IF, IFS, CONCAT, TEXTJOIN, SUBTOTAL, and conditional logic patterns — all generated locally without sending your prompt to a server.",
         "scenarios": [
@@ -1555,7 +1555,7 @@
     },
     "script-splitter": {
       "name": "Video Script Duration Splitter",
-      "description": "Distinguish narration/dialogue/pause captions. Custom speaking rate 180/220/260 wpm. Auto split 15s/30s/60s/3min segments + per-sentence captions + cue markers, for short video editing.",
+      "description": "Distinguish narration/dialogue/pause captions. Custom speaking rate 180/220/260 wpm. Auto split 15s/30s/60s/3min segments + per-sentence captions + cue...",
       "seo": {
         "intro": "Video Script Duration Splitter is a free browser tool for short-video creators, live-read hosts, video directors, and editors: paste a whole voiceover script (Chinese, English, numbers), set either a target total duration in seconds or a WPM speech pace, and the tool auto-splits the script into dozens of small clauses by punctuation + natural speech pauses, giving each clause an estimated duration, cumulative timestamps, and exports you can drop straight into JianYing / CapCut / Premiere for subtitle alignment or as a teleprompter shot list.",
         "scenarios": [
@@ -1600,7 +1600,7 @@
     },
     "sentiment-analyzer": {
       "name": "Copy Sentiment Visualizer",
-      "description": "Local sentiment word bank (1500+). Split positive/种草-urge/pain/neutral/negative. Pie + bar chart ratio. Direct visualize 种草 intensity & pain points density, optimize conversion.",
+      "description": "Local sentiment word bank (1500+). Split positive/种草-urge/pain/neutral/negative. Pie + bar chart ratio. Direct visualize 种草 intensity & pain points density,...",
       "seo": {
         "intro": "Copy Sentiment Visualizer is a free in-browser intelligent sentiment / attitude / tone recognition tool for Chinese-language copy, built for new-media editors, copywriters, HR interview note-takers, psychological counselors, customer-service QA teams, and student thesis writers. Paste 50–10,000 characters of Chinese text in and — using a purely local lexicon + rule-based engine (no cloud API calls ever) — it analyzes sentence-by-sentence and outputs: an overall sentiment score (-100 extremely negative → 0 neutral → +100 extremely positive), a 7-dimension emotion radar chart (Joy / Anger / Sadness / Fear / Surprise / Disgust / Anticipation), a sentence-level sentiment heatmap with color highlighting, extraction + statistics for keywords / sentiment words / degree adverbs / negations, plus 5 categories of standardized risk warnings aligned with Chinese Ministry of HR counselor guidelines (self-harm ideation, aggressive tendency, severe anxiety, severe depression, PTSD flashback triggers). It answers the three most common real-world judgment questions: 'Will this post get me roasted in comments?', 'Does this candidate's tone actually read positive?', and 'Is my CS agent coming off too cold on chat?'",
         "scenarios": [
@@ -1646,7 +1646,7 @@
     },
     "seo-keyword-miner": {
       "name": "SEO Keyword Miner",
-      "description": "Long-tail keyword miner based on Google Autocomplete + DeepSeek. Enter a seed keyword and generate 60+ highly-related long-tail terms with estimated heat / competition, search intent, and content topic suggestions. Copy and CSV export supported.",
+      "description": "Long-tail keyword miner based on Google Autocomplete + DeepSeek. Enter a seed keyword and generate 60+ highly-related long-tail terms with estimated heat /...",
       "seo": {
         "intro": "SEO Keyword Miner is a free in-browser keyword research tool for content creators, solo site owners, and e-commerce copywriters. Type one core seed keyword or topic, pick a channel (Google, YouTube, Amazon, TikTok, Xiaohongshu, Bing), and the miner expands it into dozens of real user search intents — autocomplete phrases, related searches, people-also-ask style questions, and buying-intent modifiers you can plug into H1s, H2s, alt text, product listing titles, and short-video titles. 100% client-side after the suggestions come back, no signup.",
         "scenarios": [
@@ -1871,7 +1871,7 @@
     },
     "title-weight-checker": {
       "name": "Multi-Platform Title Weight Checker",
-      "description": "Built-in 4-platform keyword banks (Xiaohongshu/Douyin/Video accounts/WeChat Official). Score per platform, detect banned words, chars limits, newline adaptation; suggest numbers/pain/emoji tips, distinguish short/long form.",
+      "description": "Built-in 4-platform keyword banks (Xiaohongshu/Douyin/Video accounts/WeChat Official). Score per platform, detect banned words, chars limits, newline...",
       "seo": {
         "intro": "Multi-Platform Title Weight Checker is a free browser tool for operators and creators on Xiaohongshu (RED), Douyin / WeChat Video Channels, WeChat Official Accounts, Zhihu, Bilibili columns, YouTube, and Instagram. Paste a title or short-video cover headline, and it scores it against each platform's distinct sensitive-word, boost-word, and cold-start rules, highlighting risky / low-weight dead words and high-weight recommended hits so you can tune the title before publishing for better pass rates and algorithmic love.",
         "scenarios": [
@@ -2006,7 +2006,7 @@
     },
     "vertical-chinese-generator": {
       "name": "Vertical Chinese Vertical Layout Generator",
-      "description": "Traditional right-to-left vertical Chinese. Custom spacing/font size/flower decorative symbols. Xiaohongshu Guofeng cover notes. Export pure text + transparent SVG vector.",
+      "description": "Traditional right-to-left vertical Chinese. Custom spacing/font size/flower decorative symbols. Xiaohongshu Guofeng cover notes. Export pure text +...",
       "seo": {
         "intro": "Vertical Chinese Text Generator is a free in-browser layout tool for Xiaohongshu creators, classical-Chinese poster designers, Hanfu photographers, guofeng cultural-goods makers, and calligraphy enthusiasts. Paste horizontal Chinese text (classical poetry, song lyrics, quotations, product titles, verses), choose vertical direction (right-to-left traditional / left-to-right modern), column dividers, punctuation position (trailing / cell-top), line spacing, number of columns, and whether to keep English / digits in horizontal mixed-layout (half-width chars auto-rotated 90°). The tool instantly renders copyable vertical rich text / image / SVG to paste straight into Xiaohongshu notes, ancient-style poster PSDs, Hanfu shoot captions, or guofeng cultural materials — no more laying out each character by hand column-by-column in Photoshop.",
         "scenarios": [
@@ -2440,7 +2440,7 @@
     },
     "evernote": {
       "name": "Evernote",
-      "description": "Cross-platform note-taking app to capture ideas, web clips, photos, and documents. Organize with notebooks and tags, search across everything, and sync to all devices."
+      "description": "Cross-platform note-taking app to capture ideas, web clips, photos, and documents. Organize with notebooks and tags, search across everything, and sync to..."
     },
     "smashing-magazine": {
       "name": "Smashing Magazine",
@@ -4104,7 +4104,7 @@
     },
     "zoom": {
       "name": "Zoom",
-      "description": "Video conferencing platform for meetings, webinars, and virtual events. Host HD calls, share screens, record sessions, and collaborate with chat and whiteboards."
+      "description": "Video conferencing platform for meetings, webinars, and virtual events. Host HD calls, share screens, record sessions, and collaborate with chat and..."
     },
     "teams": {
       "name": "Teams Collaboration",
@@ -5966,7 +5966,7 @@
     },
     "wc-2026-schedule": {
       "name": "World Cup 2026 Schedule & Kick-off Times",
-      "description": "Free FIFA World Cup 2026 schedule: all 104 matches across USA, Canada and Mexico, kick-off times in 9 time zones, group tables, knockout bracket and team fixtures. Export to iCal/CSV, no signup.",
+      "description": "Free FIFA World Cup 2026 schedule: all 104 matches across USA, Canada and Mexico, kick-off times in 9 time zones, group tables, knockout bracket and team...",
       "seo": {
         "intro": "2026 FIFA World Cup Schedule Browser is a free in-browser full 104-match fixture, kick-off time, venue, ticket, group-table and knockout bracket tool for the 2026 USA–Canada–Mexico World Cup, built for football fans, sports bettors, sports-bar managers, World Cup party planners and corporate office admin teams organising watch-parties & themed afternoon teas. No VPN to reach FIFA.com, no app to install, open-and-use. Supports all 16 host cities, all 48 teams, 9 time-zone toggles (ET / PT / your local zone + London / Berlin / Shanghai / Tokyo / New Delhi / Cairo / Mexico City / Toronto), stage filters (group / R16 / QF / SF / 3rd / Final), instant group tables, 'Save My Teams' favourites, one-click iCal export to phone calendar, and CSV/Markdown export to Notion or Excel — solving the real 'when/where is the match I care about, what's my local kick-off, should I book a day off' fan workflow.",
         "scenarios": [
@@ -6293,7 +6293,7 @@
     },
     "wevideo": {
       "name": "WeVideo Cloud Editor",
-      "description": "Cloud-based online video editor with multi-track audio and video, green screen, and dynamic text. Fully responsive on mobile and desktop with seamless device sync."
+      "description": "Cloud-based online video editor with multi-track audio and video, green screen, and dynamic text. Fully responsive on mobile and desktop with seamless..."
     },
     "clipchamp": {
       "name": "Clipchamp Light Editor",
@@ -6353,11 +6353,11 @@
     },
     "headliner": {
       "name": "Headliner Podcast to Video",
-      "description": "Turn podcast audio into videos with one click. Auto-generates waveform animations, captions, and avatars sized for short-video platforms. Free tier adds watermark."
+      "description": "Turn podcast audio into videos with one click. Auto-generates waveform animations, captions, and avatars sized for short-video platforms. Free tier adds..."
     },
     "postman-api": {
       "name": "Postman API Debugger",
-      "description": "The industry-leading API debugging and collaboration platform. Test REST and GraphQL endpoints, spin up mock services, automate tests, and sync across your team."
+      "description": "The industry-leading API debugging and collaboration platform. Test REST and GraphQL endpoints, spin up mock services, automate tests, and sync across your..."
     },
     "swagger-ui": {
       "name": "Swagger API Docs",
@@ -6401,7 +6401,7 @@
     },
     "pdf24-tools": {
       "name": "PDF24 Toolbox",
-      "description": "German-made toolbox of 30+ PDF utilities. Merge, split, compress, convert, sign, OCR, and unlock PDFs for free with no watermarks. Privacy-first local processing."
+      "description": "German-made toolbox of 30+ PDF utilities. Merge, split, compress, convert, sign, OCR, and unlock PDFs for free with no watermarks. Privacy-first local..."
     },
     "pdf-cafe": {
       "name": "PDF Candy Toolkit",
@@ -6417,7 +6417,7 @@
     },
     "bilibili-creator": {
       "name": "Bilibili Creator Hub",
-      "description": "Bilibili's official creator management center. Upload works, analyze viewer data, engage with fans, and manage monetization — the daily command center for Bilibili creators."
+      "description": "Bilibili's official creator management center. Upload works, analyze viewer data, engage with fans, and manage monetization — the daily command center for..."
     },
     "9gag": {
       "name": "9GAG Funny Community",
@@ -6433,23 +6433,23 @@
     },
     "crello": {
       "name": "VistaCreate Graphic Designer",
-      "description": "Vista family online graphic design tool. Tens of millions of stock assets and templates for posters and social media images — zero experience drag-and-drop design."
+      "description": "Vista family online graphic design tool. Tens of millions of stock assets and templates for posters and social media images — zero experience drag-and-drop..."
     },
     "placeit": {
       "name": "Placeit Mockup Generator",
-      "description": "One-stop shop for logo design and product mockups. Apply your art to T-shirts, phones, books, and packaging right in the browser — the e-commerce designer's best friend."
+      "description": "One-stop shop for logo design and product mockups. Apply your art to T-shirts, phones, books, and packaging right in the browser — the e-commerce designer's..."
     },
     "designrr": {
       "name": "Designrr eBook Creator",
-      "description": "Turn blog posts, podcasts, and PDFs into polished eBooks and lead magnets instantly. Built-in templates, cover art, and auto table-of-contents for content marketers."
+      "description": "Turn blog posts, podcasts, and PDFs into polished eBooks and lead magnets instantly. Built-in templates, cover art, and auto table-of-contents for content..."
     },
     "logaster": {
       "name": "Logaster Logo Maker",
-      "description": "Enter your brand name and instantly generate multiple logo concepts. Download vector source files plus full business card, letterhead, and social media branding kits."
+      "description": "Enter your brand name and instantly generate multiple logo concepts. Download vector source files plus full business card, letterhead, and social media..."
     },
     "shopee-seller": {
       "name": "Shopee Seller Center",
-      "description": "Shopee's official seller dashboard for Southeast Asian cross-border e-commerce. Manage listings, orders, logistics, marketing campaigns, and analytics all in one place."
+      "description": "Shopee's official seller dashboard for Southeast Asian cross-border e-commerce. Manage listings, orders, logistics, marketing campaigns, and analytics all..."
     },
     "prowritingaid": {
       "name": "ProWritingAid Deep Grammar Check",
@@ -6465,7 +6465,7 @@
     },
     "getresponse": {
       "name": "GetResponse Marketing Funnel",
-      "description": "Four-in-one email marketing, automation funnel, landing page, and webinar builder. Covers the entire independent-store customer acquisition and conversion chain."
+      "description": "Four-in-one email marketing, automation funnel, landing page, and webinar builder. Covers the entire independent-store customer acquisition and conversion..."
     },
     "semrush-free": {
       "name": "Semrush SEO Suite",
@@ -6473,11 +6473,11 @@
     },
     "mangools": {
       "name": "Mangools SEO Bundle",
-      "description": "The cleanest UI in SEO tooling. Bundle includes KWFinder for keywords, SERPChecker for rankings, and SERPWatcher for tracking — simple, effective, and affordable."
+      "description": "The cleanest UI in SEO tooling. Bundle includes KWFinder for keywords, SERPChecker for rankings, and SERPWatcher for tracking — simple, effective, and..."
     },
     "seo-review-tools": {
       "name": "SEO Review Toolbox",
-      "description": "Veteran free Dutch SEO audit toolkit. Page weight checks, keyword density, broken link scans, robots.txt validation, and Google Search Console integration — 100% free."
+      "description": "Veteran free Dutch SEO audit toolkit. Page weight checks, keyword density, broken link scans, robots.txt validation, and Google Search Console integration —..."
     },
     "later-app": {
       "name": "Later Social Scheduler",
@@ -6497,7 +6497,7 @@
     },
     "webmd": {
       "name": "WebMD Health Guide",
-      "description": "America's largest health and medical information portal. Symptom checker, drug information, doctor finder, and authoritative trusted content from medical experts."
+      "description": "America's largest health and medical information portal. Symptom checker, drug information, doctor finder, and authoritative trusted content from medical..."
     },
     "meetup": {
       "name": "Meetup Event Finder",
@@ -6505,7 +6505,7 @@
     },
     "imdb": {
       "name": "IMDb Movie Bible",
-      "description": "The global authority for film and TV ratings and information. Credits, cast lists, box office numbers, critic reviews, and the daily Top Charts for what to watch next."
+      "description": "The global authority for film and TV ratings and information. Credits, cast lists, box office numbers, critic reviews, and the daily Top Charts for what to..."
     },
     "rottentomatoes": {
       "name": "Rotten Tomatoes Reviews",
@@ -6513,11 +6513,11 @@
     },
     "audacity-tutorial": {
       "name": "Audacity Audio Editor",
-      "description": "The free, open-source, cross-platform veteran audio editor. Recording, noise reduction, multi-track mixing, and a mature plugin ecosystem built up over 20+ years."
+      "description": "The free, open-source, cross-platform veteran audio editor. Recording, noise reduction, multi-track mixing, and a mature plugin ecosystem built up over 20+..."
     },
     "audio-mass": {
       "name": "AudioMass Browser DAW",
-      "description": "A lightweight digital audio workstation that runs entirely in the browser. Multi-track waveform editing, real-time effects, and WAV export — zero downloads required."
+      "description": "A lightweight digital audio workstation that runs entirely in the browser. Multi-track waveform editing, real-time effects, and WAV export — zero downloads..."
     },
     "twisted-wave": {
       "name": "TwistedWave Online Audio",
@@ -6525,15 +6525,15 @@
     },
     "sketchfab": {
       "name": "Sketchfab 3D Community",
-      "description": "The world's largest 3D model sharing and viewing platform. View, download, and buy GLB/USDZ/WebGL models straight in the browser with creator marketplace transactions."
+      "description": "The world's largest 3D model sharing and viewing platform. View, download, and buy GLB/USDZ/WebGL models straight in the browser with creator marketplace..."
     },
     "vectary": {
       "name": "Vectary Online 3D Modeler",
-      "description": "The no-barrier browser-based 3D modeling and rendering platform. Figma-style drag and drop, PBR materials, lighting, and AR preview — designer-friendly workflow."
+      "description": "The no-barrier browser-based 3D modeling and rendering platform. Figma-style drag and drop, PBR materials, lighting, and AR preview — designer-friendly..."
     },
     "spline-3d": {
       "name": "Spline Interactive 3D",
-      "description": "The real-time browser 3D tool for designers and front-end devs. Scene events, interactive states, React integration, and direct Web-exportable production-ready assets."
+      "description": "The real-time browser 3D tool for designers and front-end devs. Scene events, interactive states, React integration, and direct Web-exportable..."
     },
     "flourish-studio": {
       "name": "Flourish Animated Charts",
@@ -6573,15 +6573,15 @@
     },
     "promo-video-maker": {
       "name": "Promo Social Video Maker",
-      "description": "A huge library of pro video templates and licensed stock footage. Quickly create social ads, promos, and product videos with AI-powered one-click subtitles. Edit seamlessly from phone or desktop."
+      "description": "A huge library of pro video templates and licensed stock footage. Quickly create social ads, promos, and product videos with AI-powered one-click subtitles...."
     },
     "magisto-ai-video": {
       "name": "Magisto AI Video Editor",
-      "description": "Smart AI picks shots, adds music, and assembles polished short videos automatically. Great for travel vlogs, marketing, weddings, and family memories. Works on iOS, Android, and PC."
+      "description": "Smart AI picks shots, adds music, and assembles polished short videos automatically. Great for travel vlogs, marketing, weddings, and family memories. Works..."
     },
     "dropbox-paper": {
       "name": "Dropbox Paper Collaborative Docs",
-      "description": "Lightweight real-time collaborative docs. Embed code, tables, to-dos, videos, and file previews with deep Dropbox cloud integration. Editing is smooth on any mobile device."
+      "description": "Lightweight real-time collaborative docs. Embed code, tables, to-dos, videos, and file previews with deep Dropbox cloud integration. Editing is smooth on..."
     },
     "dezeen": {
       "name": "Dezeen",
@@ -8323,7 +8323,7 @@
     },
     "email-template-generator": {
       "name": "Email Template Generator",
-      "description": "E-commerce email marketing template generator. Supports welcome emails, promotional emails, reminder emails and more. Generate ready-to-use email content in one click.",
+      "description": "E-commerce email marketing template generator. Supports welcome emails, promotional emails, reminder emails and more. Generate ready-to-use email content in...",
       "seo": {
         "intro": "Email Template Generator is a free online tool that produces ready-to-send e-commerce email content in one click. Pick from welcome emails, promotional blasts, cart-abandonment reminders, post-purchase follow-ups, or re-engagement campaigns — fill in a few fields about your product and offer, and the tool generates a polished, on-brand email body with subject line, preview text, and call-to-action. Everything runs locally in your browser; no sign-up, no email service connection, no data leaves your device.",
         "scenarios": [
@@ -8364,7 +8364,7 @@
     },
     "review-generator": {
       "name": "Review Generator",
-      "description": "E-commerce product review generator. Input product name and features, automatically generate multiple user reviews in different styles to optimize product page content.",
+      "description": "E-commerce product review generator. Input product name and features, automatically generate multiple user reviews in different styles to optimize product...",
       "seo": {
         "intro": "Review Generator is a free online tool that produces realistic product reviews for e-commerce listings. Enter the product name and a few key features, choose the review style (positive, neutral, critical, or mixed lengths), and the tool generates multiple review drafts that you can use to seed product page content, train review analysis models, or benchmark sentiment. All generation runs in your browser — no product data is uploaded.",
         "scenarios": [
@@ -8405,7 +8405,7 @@
     },
     "document-formatter": {
       "name": "Document Formatter — Auto Layout for APA, MLA, Reports & Resumes",
-      "description": "Free online document formatter: paste your content, switch between APA, MLA, party-government official, business report and resume templates, preview layout in real time, export to Word/PDF. Runs in your browser, no upload.",
+      "description": "Free online document formatter: paste your content, switch between APA, MLA, party-government official, business report and resume templates, preview layout...",
       "seo": {
         "intro": "Document Formatter is a free online tool that auto-formats pasted content into structured document templates. Switch between APA and MLA paper formats, party-government official documents, business reports, or resume templates, preview the layout in real time, then export to Word or PDF. All formatting runs locally in your browser — your draft, contract, or manuscript never leaves your device.",
         "scenarios": [
@@ -8446,7 +8446,7 @@
     },
     "screen-recorder-subtitle": {
       "name": "Screen Recorder with AI Subtitles — Record & Export MP4/SRT",
-      "description": "Free in-browser screen recorder with AI auto-generated subtitles. Record screen + mic, burn captions into MP4, export SRT. 100% local processing, zero upload, full privacy.",
+      "description": "Record your screen with AI auto-generated subtitles. Capture screen plus mic, burn captions into MP4, export SRT. All local, no upload.",
       "seo": {
         "intro": "Screen Recorder with AI Subtitles is a free online tool that captures your screen and microphone, auto-generates captions using on-device speech recognition, and exports both an MP4 with burned-in subtitles and a separate SRT file. All processing — recording, transcription, and export — happens locally in your browser, so sensitive walkthroughs, meetings, and demos never leave your device.",
         "scenarios": [
@@ -8487,7 +8487,7 @@
     },
     "ai-prompt-generator": {
       "name": "AI Prompt Generator — Midjourney, Sora & Universal Prompts",
-      "description": "Free AI prompt generator: pick model and options, auto-build high-quality image and video prompts for Midjourney, Sora and more. One-click copy, AI polish, six-language UI. Runs in browser, no signup.",
+      "description": "Free AI prompt generator: pick model and options, auto-build high-quality image and video prompts for Midjourney, Sora and more. One-click copy, AI polish,...",
       "seo": {
         "intro": "AI Prompt Generator is a free online tool that auto-builds high-quality prompts for AI image and video models. Pick the target model (Midjourney, Sora,通用 video), choose subject, style, lighting, composition and parameters, then copy the assembled prompt or use the AI polish button to refine it further. The tool runs in your browser with a six-language interface — no signup, no API key required.",
         "scenarios": [
@@ -8529,7 +8529,7 @@
     },
     "sora-prompt-generator": {
       "name": "Sora Prompt Generator — OpenAI Sora Video Prompts",
-      "description": "Free Sora prompt generator: pick subject, motion, camera, lighting and style, auto-build professional OpenAI Sora video prompts. One-click copy, AI polish, six-language UI. Runs in browser, no signup.",
+      "description": "Free Sora prompt generator: pick subject, motion, camera, lighting and style, auto-build professional OpenAI Sora video prompts. One-click copy, AI polish,...",
       "seo": {
         "intro": "Sora Prompt Generator is a free online tool that builds professional prompts for OpenAI Sora text-to-video model. Choose subject, motion, camera move, lighting, style and duration, then copy the assembled prompt or use AI polish to refine it. Six-language UI, no signup, runs entirely in your browser.",
         "scenarios": [
@@ -8575,7 +8575,7 @@
     },
     "midjourney-prompt-generator": {
       "name": "Midjourney Prompt Generator — MJ Image Prompts with --ar --v",
-      "description": "Free Midjourney prompt generator: pick subject, style, lighting, composition, auto-build MJ prompts with --ar --v 6 parameters. One-click copy, AI polish, six-language UI. Runs in browser, no signup.",
+      "description": "Free Midjourney prompt generator: pick subject, style, lighting, composition, auto-build MJ prompts with --ar --v 6 parameters. One-click copy, AI polish,...",
       "seo": {
         "intro": "Midjourney Prompt Generator is a free online tool that builds professional prompts for Midjourney v6 image model. Choose subject, art style, lighting, composition and aspect ratio, then copy the assembled prompt with --ar --v parameters or use AI polish to refine it. Six-language UI, no signup, runs entirely in your browser.",
         "scenarios": [
@@ -8621,7 +8621,7 @@
     },
     "video-prompt-generator": {
       "name": "AI Video Prompt Generator — Runway, Pika, Kling Prompts",
-      "description": "Free AI video prompt generator: pick subject, motion, camera, lighting, style and duration, auto-build prompts for Runway, Pika, Kling and Sora. One-click copy, AI polish, six-language UI. Runs in browser, no signup.",
+      "description": "Free AI video prompt generator: pick subject, motion, camera, lighting, style and duration, auto-build prompts for Runway, Pika, Kling and Sora. One-click...",
       "seo": {
         "intro": "AI Video Prompt Generator is a free online tool that builds professional prompts for text-to-video AI models including Runway, Pika, Kling and Sora. Choose subject, motion, camera move, lighting, style and duration, then copy the assembled prompt or use AI polish to refine it. Six-language UI, no signup, runs entirely in your browser.",
         "scenarios": [
@@ -8667,7 +8667,7 @@
     },
     "ai-review-generator": {
       "name": "AI Review Generator — Product & Food Delivery Reviews",
-      "description": "Free AI review generator: enter product name and experience, AI generates authentic positive, neutral or negative reviews for e-commerce and food delivery platforms. Six-language UI, runs in browser, no signup.",
+      "description": "Free AI review generator: enter product name and experience, AI generates authentic positive, neutral or negative reviews for e-commerce and food delivery...",
       "seo": {
         "intro": "AI Review Generator is a free online tool that writes authentic-style product and service reviews. Enter the product name and your experience, choose tone (positive, neutral, negative), and the AI generates a review you can copy. Six-language UI, no signup, runs entirely in your browser.",
         "scenarios": [
@@ -8713,7 +8713,7 @@
     },
     "ai-resume-experience-optimize": {
       "name": "Resume Experience AI Optimizer — Job Description Polisher",
-      "description": "Free resume experience AI optimizer: paste your job info and work experience, AI polishes bullet points, highlights achievements with metrics, and boosts interview callbacks. Six-language UI, runs in browser, no signup.",
+      "description": "Free resume experience AI optimizer: paste your job info and work experience, AI polishes bullet points, highlights achievements with metrics, and boosts...",
       "seo": {
         "intro": "Resume Experience AI Optimizer is a free online tool that refines resume work experience bullets. Paste your job title, company and original experience, the AI rewrites it with action verbs, quantified achievements and impact-focused phrasing to boost recruiter callbacks. Six-language UI, no signup, runs in your browser.",
         "scenarios": [
@@ -8759,7 +8759,7 @@
     },
     "ai-xiaohongshu-title-generator": {
       "name": "Xiaohongshu Title AI Generator — Viral Note Titles",
-      "description": "Free Xiaohongshu title AI generator: enter your note topic, AI generates viral titles in multiple styles and tones to boost note impressions. Six-language UI, runs in browser, no signup.",
+      "description": "Free Xiaohongshu title AI generator: enter your note topic, AI generates viral titles in multiple styles and tones to boost note impressions. Six-language...",
       "seo": {
         "intro": "Xiaohongshu Title AI Generator is a free online tool that writes viral-style titles for Xiaohongshu (Little Red Book) notes. Enter your note topic, choose tone (informative, emotional, clickbait, comparison), and the AI generates multiple title options designed to boost impressions. Six-language UI, no signup, runs in your browser.",
         "scenarios": [
@@ -8805,7 +8805,7 @@
     },
     "watermark-remover": {
       "name": "Free Watermark Remover — Smart Inpainting",
-      "description": "Remove watermarks from images with smart inpainting. Brush to remove, batch processing, ZIP download, 100% browser-based, no upload needed. Free tool",
+      "description": "Remove watermarks from images with smart inpainting. Brush to erase, batch processing, ZIP download. All browser-based, no upload.",
       "seo": {
         "intro": "This is a free online watermark remover tool that quickly removes text watermarks, logo watermarks, and more from images. Using smart image inpainting technology, simply brush over the area you want to remove, and the algorithm automatically fills in surrounding pixels for a natural result. Supports batch upload, batch processing, and one-click ZIP download. All processing happens locally in your browser — images are never uploaded to any server, keeping your data private and secure.",
         "scenarios": [
@@ -8849,7 +8849,7 @@
     },
     "ecommerce-image-processor": {
       "name": "Ecommerce Image Batch Processor — Global Platform Compliance",
-      "description": "One-click image compliance for Amazon, eBay, Shopify, Etsy, Walmart, Taobao, JD, Shopee and more. Batch crop, compress, watermark, ZIP download. 100% local processing.",
+      "description": "One-click image compliance for Amazon, eBay, Shopify, Etsy, Walmart, Taobao, JD, Shopee and more. Batch crop, compress, watermark, ZIP download. 100% local...",
       "seo": {
         "intro": "This free online ecommerce image batch processor helps sellers quickly resize, crop, compress and watermark product images to meet the requirements of major ecommerce platforms worldwide — including Amazon, eBay, Shopify, Etsy, Walmart, TikTok Shop, Taobao, JD, Pinduoduo, RedNote, Shopee, Lazada, Mercado Libre, and more. Select your platform, upload images, and get perfectly compliant product photos ready to list in seconds. All processing happens locally in your browser.",
         "scenarios": [
@@ -8893,7 +8893,7 @@
     },
     "wave-art": {
       "name": "Voice Wave Art Generator",
-      "description": "Turn any name or phrase into a unique visual soundwave art piece. Each character maps to its own frequency, amplitude and phase. Choose from minimal line, neon glow, and radio spectrum styles. Overlay multiple names, pick a palette, export as PNG — perfect for avatars, tattoos, couple gifts, or wall art.",
+      "description": "Turn any name or phrase into a unique visual soundwave art piece. Choose styles, pick a palette, export PNG for avatars, tattoos, or gifts.",
       "seo": {
         "intro": "Voice Wave Art Generator is a free, browser-based tool that converts text — a name, a word, a date, or a full phrase — into one-of-a-kind soundwave-style visual art. Because every character produces a unique waveform, no two pieces are ever the same. It runs entirely on your device: nothing is uploaded to a server, and no account is needed.",
         "scenarios": [
@@ -8943,7 +8943,7 @@
     },
     "life-weeks": {
       "name": "Life in Weeks Visualizer",
-      "description": "Enter your birthday and see a grid of 4,000 weeks that represents your whole life. Weeks you have already lived are filled in, weeks that remain are blank. Adjust your life expectancy, pick a fill color, export as PNG. A simple visualization that hits hard and gets shared.",
+      "description": "Enter your birthday and see a grid of 4,000 weeks representing your life. Fill in lived weeks, leave future blank. Adjust expectancy, export PNG.",
       "seo": {
         "intro": "Life in Weeks Visualizer is a free browser tool that shows you the whole sweep of your life as a single 4,000-cell grid — one square per week. People often describe it as humbling, motivating, and strangely calming at the same time. Like every Korelyy tool, it runs locally in your browser, no uploads and no signup.",
         "scenarios": [
@@ -8993,7 +8993,7 @@
     },
     "excuse-generator": {
       "name": "Excuse Generator Card",
-      "description": "Pick a situation — running late, skipping work, canceling plans, missing a deadline — and instantly generate a plausible-sounding excuse. Toggle between Serious mode (you would actually say this) and Ridiculous mode (you send it to your best friend). Download the result as a shareable card PNG.",
+      "description": "Pick a situation and instantly generate a plausible excuse. Toggle Serious or Ridiculous mode, download as a shareable card PNG.",
       "seo": {
         "intro": "Excuse Generator Card is a silly-but-genuinely-useful free browser tool that writes context-appropriate excuses on demand. Serious mode pulls from a curated pool of realistic, situationally correct lines. Ridiculous mode is for when you just want to make someone laugh. Either way, one tap and you can share the result as a polished card image.",
         "scenarios": [
@@ -9043,7 +9043,7 @@
     },
     "name-constellation": {
       "name": "Name Constellation",
-      "description": "Transform your name into a unique star-map personality profile. Each letter becomes a star. AI reveals your personality traits, lucky color, and lucky number. Drag, zoom, export PNG. Perfect for sharing, gifts, and social cards.",
+      "description": "Transform your name into a unique star-map personality profile. Each letter becomes a star. AI reveals your personality traits, lucky color, and lucky...",
       "seo": {
         "intro": "Name Constellation is a free, browser-based creative tool that transforms your name into a one-of-a-kind star-map personality profile. Each letter shines as a star in your personal constellation. AI uncovers the energy meaning of each letter, your personality traits, lucky color, and lucky number. Everything runs locally in your browser — no data uploads, no account needed.",
         "scenarios": [

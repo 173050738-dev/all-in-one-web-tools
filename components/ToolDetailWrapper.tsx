@@ -167,6 +167,12 @@ export default function ToolDetailWrapper({ locale, slug, children }: ToolDetail
         </ol>
       </nav>
 
+      {toolName && (
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 sm:mb-5">
+          {toolName}
+        </h1>
+      )}
+
       {/* ===== Main + Sidebar (2-col on desktop) ===== */}
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
         {/* 左：工具主体 */}

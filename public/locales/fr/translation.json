@@ -729,7 +729,7 @@
     },
     "emoji-mixer": {
       "name": "Mélangeur d'Emojis — Combinez et Créez de Nouveaux Emojis",
-      "description": "Mélangez deux emojis en un sticker hybride unique. Rendu en temps réel, export PNG transparent. Parfait pour réseaux sociaux et chats. Gratuit — sans inscription.",
+      "description": "Mélangez deux emojis en un sticker hybride unique. Rendu en temps réel, export PNG transparent. Parfait pour réseaux sociaux et chats. Gratuit — sans...",
       "seo": {
         "intro": "Mixeur d'Emojis est un outil créatif gratuit et ludique, directement dans le navigateur, qui combine deux emojis standard en un tout nouvel autocollant d'emoji hybride fusionné partageable au format PNG transparent. Choisissez deux emojis quelconques dans le sélecteur intégré — par exemple chat + gâteau 🎂 ou chien 🐶 + fusée 🚀 — et le mixeur génère un mashup d'emoji hybride qui fusionne les couleurs, les formes et l'iconographie des deux entrées. Tout le rendu s'effectue côté client via Canvas : aucune connexion, aucun téléversement, et chaque nouvelle combinaison apparaît instantanément dans la page.",
         "scenarios": [
@@ -864,7 +864,7 @@
     },
     "image-compressor": {
       "name": "Compresseur d'Images en Ligne Gratuit — JPG, PNG, WebP",
-      "description": "Compressez les images jusqu'à 90 % sans perte de qualité. Traitement par lots, aperçu en temps réel, 100 % dans le navigateur. Aucun téléchargement, confidentialité garantie. Outil gratuit.",
+      "description": "Compressez les images JPG, PNG et WebP dans votre navigateur. Qualité réglable, traitement par lots, aucun téléchargement.",
       "seo": {
         "intro": "Compresseur d'Images est un outil en ligne gratuit qui réduit le poids de vos photos JPG, PNG et WebP directement dans le navigateur. Réglez la qualité et les dimensions maximales pour chaque image individuellement, comparez le résultat compressé côte à côte avec l'original et téléchargez les fichiers réduits un par un ou sous forme d'archive ZIP. L'intégralité du traitement s'exécute localement dans votre navigateur : aucune photo n'est envoyée sur un serveur, vos clichés privés ou sensibles restent donc sous votre contrôle total.",
         "scenarios": [
@@ -974,7 +974,7 @@
     },
     "image-to-base64": {
       "name": "Image vers Base64",
-      "description": "Glissez-déposez des images locales et convertissez-les immédiatement en Base64, traitement frontal uniquement sans téléchargement serveur, conversion par lots JPG/PNG/WebP/SVG.",
+      "description": "Glissez-déposez des images locales et convertissez-les immédiatement en Base64, traitement frontal uniquement sans téléchargement serveur, conversion par...",
       "seo": {
         "intro": "Image vers Base64 est un outil en ligne gratuit qui transforme des fichiers locaux JPG, PNG, WebP et SVG en URI de données Base64 directement dans votre navigateur. Glissez des fichiers dans la zone de dépôt, choisissez le format de sortie et les limites de dimension maximale, puis copiez la chaîne obtenue ou l'extrait CSS url() directement dans un modèle d'e-mail, un CMS ou une feuille de style. Chaque pixel reste sur votre appareil : aucun téléchargement, aucun journal côté serveur, aucune file d'attente.",
         "scenarios": [
@@ -1154,7 +1154,7 @@
     },
     "markdown-preview": {
       "name": "Aperçu Markdown",
-      "description": "Éditeur d'aperçu Markdown en temps réel en ligne, vue à panneaux divisés, prise en charge des tableaux, surlignage du code, liste des tâches, exportation HTML en un clic.",
+      "description": "Éditeur d'aperçu Markdown en temps réel en ligne, vue à panneaux divisés, prise en charge des tableaux, surlignage du code, liste des tâches, exportation...",
       "seo": {
         "intro": "Aperçu Markdown est un éditeur en ligne gratuit qui transforme le Markdown en HTML stylisé en temps réel grâce à une vue partagée. Collez votre document : tableaux, blocs de code avec coloration syntaxique, listes de tâches, titres et blocs d'avertissement se mettent à jour instantanément pendant que vous écrivez. Tout s'exécute en local dans votre navigateur : notes, documentation produit et fichiers Markdown internes restent sur votre appareil et ne sont jamais envoyés sur un serveur.",
         "scenarios": [
@@ -1334,7 +1334,7 @@
     },
     "pinyin-annotator": {
       "name": "Annotateur de Pinyin Chinois — Ajoutez du Pinyin au Texte",
-      "description": "Ajoutez automatiquement le pinyin avec tons au texte chinois. Détection polyphonique intelligente, traitement local. Gratuit pour enseignants, auteurs et apprenants — sans inscription.",
+      "description": "Ajoutez automatiquement le pinyin avec tons au texte chinois. Détection polyphonique intelligente, traitement local. Gratuit pour enseignants, auteurs et...",
       "seo": {
         "intro": "Pinyin Annotator est un outil gratuit de prononciation des hanzi dans le navigateur, destiné aux professeurs de mandarin, enseignants de chinois en primaire, auteurs d'albums jeunesse, autoéditeurs et équipes éditoriales. Collez un article en chinois contenant des caractères rares ou polyphoniques (plusieurs lectures), et l'outil place automatiquement le pinyin tonique au-dessus (ou à côté) de chaque hanzi. Il identifie intelligemment les lectures polyphoniques (par ex. « 重 » en zhòng dans 重要 « important », mais en chóng dans 重复 « répéter », en choisissant la prononciation la plus probable via la fréquence lexicale contextuelle), permet d'ignorer les caractères déjà annotés, et de choisir la position de l'annotation (exposant au-dessus / glose latérale dans le texte / parenthèses en fin). Exporte du texte enrichi copiable, PDF, Word ou une image avec pinyin : parfait pour des cartes flash enfants, des supports de lecture de chinois L2, ou des brouillons de chinois classique annotés en caractères rares.",
         "scenarios": [
@@ -1420,7 +1420,7 @@
     },
     "excel-formula-generator": {
       "name": "Générateur de Formules Excel",
-      "description": "Transformez du langage naturel en formules Excel / Google Sheets instantanément. Décrivez votre besoin, obtenez la formule exacte, une explication étape par étape et des notes d'utilisation — gratuit, sans inscription.",
+      "description": "Transformez du langage naturel en formules Excel / Google Sheets instantanément. Décrivez votre besoin, obtenez la formule exacte, une explication étape par...",
       "seo": {
         "intro": "Générateur de Formules Excel est un assistant gratuit pour tableurs, basé sur le navigateur, qui transforme une description en langage simple de ce que vous voulez calculer en formules opérationnelles pour Microsoft Excel, Google Sheets, WPS Spreadsheets, Apple Numbers et LibreOffice Calc. Décrivez la tâche en 1 ou 2 phrases, choisissez votre tableur cible et l'outil élabore des formules équivalentes avec VLOOKUP, XLOOKUP, INDEX/MATCH, SUMIF/SUMIFS, COUNTIF/COUNTIFS, IF et IF imbriqués, IFS, CONCAT, TEXTJOIN, SUBTOTAL ainsi que des schémas de logique conditionnelle — le tout généré localement, sans envoyer votre demande à un serveur.",
         "scenarios": [
@@ -1465,7 +1465,7 @@
     },
     "random-number": {
       "name": "Générateur de nombres aléatoires",
-      "description": "Générez des entiers/décimaux aléatoires dans une plage personnalisée, prenez en charge des numéros uniques par lots, parfait pour le groupement de loteries, les tirages au sort, les chiffres de mot de passe.",
+      "description": "Générez des entiers/décimaux aléatoires dans une plage personnalisée, prenez en charge des numéros uniques par lots, parfait pour le groupement de loteries,...",
       "seo": {
         "intro": "Générateur de Nombres Aléatoires est un outil en ligne gratuit pour produire des entiers, des décimales ou des séquences uniques aléatoires dans des plages personnalisées. Définissez une borne inférieure et une borne supérieure, choisissez si les doublons sont autorisés, réglez la précision entière ou décimale et générez des valeurs isolées ou de longues listes pour des tirages au sort, des loteries, des échantillonnages statistiques ou des parties numériques de mots de passe. Toute l'aléatoire est calculée en local dans votre navigateur via l'API Web Crypto : aucune requête serveur, aucune trace de journal, aucun stockage.",
         "scenarios": [
@@ -1510,7 +1510,7 @@
     },
     "regex-tester": {
       "name": "Testeur de Regex — Testez les Expressions Régulières en Ligne",
-      "description": "Testez et déboguez les expressions régulières avec mise en correspondance en temps réel. Compatible JavaScript, Python, Go. Gratuit, instantané, sans inscription.",
+      "description": "Testez et déboguez les expressions régulières avec mise en correspondance en temps réel. Compatible JavaScript, Python, Go. Gratuit, instantané, sans...",
       "seo": {
         "intro": "Testeur d'Expressions Régulières est un outil en ligne gratuit pour construire, déboguer et valider des expressions régulières sur du texte d'exemple en temps réel. Collez ou saisissez votre motif, activez les drapeaux g, i ou m, et observez toutes les correspondances se surligner instantanément avec leurs groupes de capture et leurs indices affichés dans le panneau latéral. Une galerie de modèles courants vous permet d'appliquer en un clic des motifs éprouvés pour les e-mails, URL, dates, numéros de téléphone et mots de passe, afin de déployer vos regex en toute confiance dans n'importe quel langage ou pile technique.",
         "scenarios": [
@@ -1646,7 +1646,7 @@
     },
     "seo-keyword-miner": {
       "name": "Mineur de Mots-clés SEO",
-      "description": "Mineur de mots-clés long-tail basé sur Google Autocomplete + DeepSeek. Saisissez un mot de départ et générez 60+ termes long-tail très pertinents avec intérêt / concurrence estimés, intention de recherche et suggestions de sujets de contenu. Copie et export CSV pris en charge.",
+      "description": "Mineur de mots-clés long-tail basé sur Google Autocomplete + DeepSeek. Saisissez un mot de départ et générez 60+ termes long-tail très pertinents avec...",
       "seo": {
         "intro": "SEO Keyword Miner est un outil gratuit de recherche de mots-clés dans le navigateur, destiné aux créateurs de contenu chinois et internationaux, aux propriétaires indépendants de sites et aux rédacteurs de fiches Amazon et e-commerce. Saisissez un mot-clé de départ ou un thème (en chinois ou en anglais, court ou longue traîne), choisissez un canal (Baidu, Google, YouTube, Amazon, TikTok / Douyin, Xiaohongshu, Bing), et le mineur l'étend en des dizaines d'intentions de recherche réelles d'utilisateurs : phrases d'autocomplétion, recherches associées, questions style « les internautes posent aussi » et modificateurs d'intention d'achat, que vous pouvez réutiliser directement dans vos H1, H2, textes alternatifs, titres de fiches produit et titres de vidéos courtes. Tout se passe côté client une fois les suggestions chargées, sans inscription.",
         "scenarios": [
@@ -3004,7 +3004,7 @@
     },
     "freshbooks": {
       "name": "Freshbooks Comptabilité",
-      "description": "en ligne freshbooks accounting for accounting, freelancer, invoicing, time tracking. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne freshbooks accounting for accounting, freelancer, invoicing, time tracking. Works right in your navigateur — gratuit, sécurisé, and Non install..."
     },
     "wave": {
       "name": "Wave gratuit",
@@ -3356,7 +3356,7 @@
     },
     "bitwarden": {
       "name": "Bitwarden mot de passe",
-      "description": "en ligne bitwarden mot de passe for mot de passe, Open-source, gratuit, self-hosted. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne bitwarden mot de passe for mot de passe, Open-source, gratuit, self-hosted. Works right in your navigateur — gratuit, sécurisé, and Non install..."
     },
     "dashlane": {
       "name": "Dashlane mot de passe",
@@ -4228,7 +4228,7 @@
     },
     "calculator": {
       "name": "calculatrice calculatrice",
-      "description": "en ligne calculatrice calculatrice for calculatrice, scientific, unit conversion, en ligne. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne calculatrice calculatrice for calculatrice, scientific, unit conversion, en ligne. Works right in your navigateur — gratuit, sécurisé, and Non..."
     },
     "unit-converter": {
       "name": "Convertisseur Unité",
@@ -5300,15 +5300,15 @@
     },
     "randomgenerator-org": {
       "name": "Générateur Aléa. Org",
-      "description": "en ligne randomgenerator org for aléatoire, générateur, mot de passe, nom, couleur. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne randomgenerator org for aléatoire, générateur, mot de passe, nom, couleur. Works right in your navigateur — gratuit, sécurisé, and Non install..."
     },
     "online-password-generator": {
       "name": "en ligne mot de passe générateur",
-      "description": "en ligne en ligne mot de passe générateur for mot de passe, sécurité, générateur, crypto. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne en ligne mot de passe générateur for mot de passe, sécurité, générateur, crypto. Works right in your navigateur — gratuit, sécurisé, and Non..."
     },
     "better-password-generator": {
       "name": "Better mot de passe générateur",
-      "description": "en ligne better mot de passe générateur for mot de passe, sécurité, générateur, privacy. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne better mot de passe générateur for mot de passe, sécurité, générateur, privacy. Works right in your navigateur — gratuit, sécurisé, and Non install..."
     },
     "roller-dice": {
       "name": "lanceur dés",
@@ -5336,7 +5336,7 @@
     },
     "gospinwheel-decision": {
       "name": "décision roue",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "wheelpick": {
       "name": "Wheelpick roue",
@@ -5344,7 +5344,7 @@
     },
     "spinwheel-app": {
       "name": "App roue",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "yes-or-no-wheel": {
       "name": "Oui Or Non roue",
@@ -5448,11 +5448,11 @@
     },
     "thepasswordgenerator": {
       "name": "Thepasswordgenerator mot de passe",
-      "description": "en ligne thepasswordgenerator mot de passe for mot de passe, sécurité, générateur, batch. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne thepasswordgenerator mot de passe for mot de passe, sécurité, générateur, batch. Works right in your navigateur — gratuit, sécurisé, and Non..."
     },
     "safepasswordgenerator": {
       "name": "Safepasswordgenerator mot de passe",
-      "description": "en ligne safepasswordgenerator mot de passe for mot de passe, sécurité, Open source, générateur. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne safepasswordgenerator mot de passe for mot de passe, sécurité, Open source, générateur. Works right in your navigateur — gratuit, sécurisé, and Non..."
     },
     "dicerolleronline": {
       "name": "Dicerolleronline dés",
@@ -5464,7 +5464,7 @@
     },
     "gospinwheel-dice": {
       "name": "dés lanceur",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "miniwebtool-emoji": {
       "name": "émoji émoji",
@@ -5604,7 +5604,7 @@
     },
     "randomgenerator-password": {
       "name": "Randomgenerator mot de passe",
-      "description": "en ligne randomgenerator mot de passe for mot de passe, sécurité, générateur, config. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne randomgenerator mot de passe for mot de passe, sécurité, générateur, config. Works right in your navigateur — gratuit, sécurisé, and Non install..."
     },
     "randomgenerator-name": {
       "name": "Randomgenerator nom",
@@ -5644,7 +5644,7 @@
     },
     "randomgenerator-movie": {
       "name": "Générateur Aléa. Film",
-      "description": "en ligne randomgenerator movie for movie, aléatoire, recommendation, entertainment. Works right in your navigateur — gratuit, sécurisé, and Non install required."
+      "description": "en ligne randomgenerator movie for movie, aléatoire, recommendation, entertainment. Works right in your navigateur — gratuit, sécurisé, and Non install..."
     },
     "randomgenerator-email": {
       "name": "Générateur Aléa. E-mail",
@@ -5712,31 +5712,31 @@
     },
     "gospinwheel-yesno": {
       "name": "Oui/Non décision roue",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "gospinwheel-randompicker": {
       "name": "aléatoire sélecteur",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "gospinwheel-teamgenerator": {
       "name": "équipe générateur",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "wheelspinnerx-yesno": {
       "name": "Oui/Non décision roue",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "wheelspinnerx-randomnumber": {
       "name": "aléatoire nombre roue",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "wheelspinnerx-namepicker": {
       "name": "nom sélecteur roue",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "spinwheel-usecases": {
       "name": "Cas d'Utilis. Cases",
-      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages au sort."
+      "description": "en ligne aléatoire roue générateur. Options personnalisées, animation de rotation et tirage aléatoire équitable. Idéal pour les jeux, décisions et tirages..."
     },
     "markdown-platform-converter": {
       "name": "Markdown Convertisseur",
@@ -5785,7 +5785,7 @@
     },
     "polyphonic-pinyin-annotator": {
       "name": "Polyphonique Pinyin Annotateur",
-      "description": "Annotez les caractères polyphoniques avec le pinyin contextuel correct. Détection CRF intelligente pour 银行/行走/重庆. Traitement local 100%, gratuit — sans inscription.",
+      "description": "Annotez les caractères polyphoniques avec le pinyin contextuel correct. Détection CRF intelligente pour 银行/行走/重庆. Traitement local 100%, gratuit — sans...",
       "seo": {
         "intro": "Le Polyphonic Pinyin Annotator est un outil gratuit d'annotation automatique de pinyin pour caractères hanzi polyphoniques (à plusieurs lectures) dans le navigateur, conçu pour les professeurs de chinois du primaire, les éducateurs en chinois langue étrangère / seconde langue (CLE / CSL), les éditeurs de livres illustrés pour enfants, les narrateurs de livres audio, les correcteurs de textes classiques et les équipes de fansub. Collez n'importe quel texte chinois contenant des polyphonies (simplifié, traditionnel, très ponctué, chinois classique — tout est pris en charge). L'outil utilise une segmentation lexicale CRF + étiquetage grammatical + un lexique curé de plus de 14 000 entrées de collocations polyphoniques (ce n'est PAS une simple recherche caractère par caractère) pour sortir le pinyin toné au-dessus de chaque caractère. Les lectures polyphoniques sont surlignées en ORANGE (monophoniques en gris pâle) avec, pour chacune, le motif de décision (mot de collocation, catégorie grammaticale, phrase figée) ; export en un clic vers HTML, PDF, DOCX, CSV, TXT — il résout le vrai problème concret : « quelle lecture est correcte ici pour l'enseignement / les scripts de doublage ? ».",
         "scenarios": [
@@ -5876,7 +5876,7 @@
     },
     "srt-subtitle-generator": {
       "name": "Subtitle Srt Éditeur",
-      "description": "Outil Subtitle Srt Éditeur en ligne avec fonctionnalités : Subtitle, Srt, Caption. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise.",
+      "description": "Outil Subtitle Srt Éditeur en ligne avec fonctionnalités : Subtitle, Srt, Caption. Fonctionne directement dans votre navigateur — gratuit, sécurisé et...",
       "seo": {
         "intro": "Générateur de Sous-titres SRT est un outil local gratuit qui transforme tout script ou texte de sous-titres collé en fichiers .srt standard, directement dans votre navigateur. Choisissez de couper les lignes selon la ponctuation, le nombre de caractères ou de façon équilibrée sur une durée totale personnalisable, puis affinez le décalage horaire de départ, le nombre maximum de mots par ligne et le format d'horodatage en millisecondes. Tout le traitement s'exécute sur l'appareil : aucun fichier audio, contenu de script ni donnée de temporel n'est envoyé à un serveur, donc les montages inédits et les voix off internes restent totalement privés.",
         "scenarios": [
@@ -5921,7 +5921,7 @@
     },
     "multi-timezone-publish-time": {
       "name": "Calculateur de Meilleure Heure de Publication — Planificateur Multizones",
-      "description": "Trouvez l'heure de publication optimale à l'échelle mondiale dans plus de 12 fuseaux horaires (LA, NYC, Londres, Tokyo, Sydney). Ajuste automatiquement pour l'heure d'été, visualise le chevauchement du public. Gratuit, sans inscription.",
+      "description": "Trouvez l'heure de publication optimale à l'échelle mondiale dans plus de 12 fuseaux horaires (LA, NYC, Londres, Tokyo, Sydney). Ajuste automatiquement pour...",
       "seo": {
         "intro": "Calculateur Multi-Fuseaux Horaires de Publication (Timezone Timer) est un outil gratuit, basé sur le navigateur, à l'usage des créateurs transfrontaliers et des équipes sociales de marques : il convertit un créneau de publication idéal en heures locales précises pour plus de douze fuseaux et grandes villes mondiales — avec ajustement automatique du passage à l'heure d'été et d'hiver. Choisissez votre fuseau de référence et l'heure de plus forte audience, puis le calculateur vous indique à quelle heure appuyer sur « publier » pour vos abonnés de Los Angeles, New York, Londres, Paris, Berlin, Dubaï, Bombay, Singapour, Tokyo, Séoul, Pékin, Sydney et São Paulo — aucun appel API, aucune inscription.",
         "scenarios": [
@@ -5966,7 +5966,7 @@
     },
     "wc-2026-schedule": {
       "name": "Calendrier Coupe du Monde 2026 — Horaires de tous les matchs",
-      "description": "Calendrier gratuit de la Coupe du Monde FIFA 2026 : les 104 matchs aux USA, Canada et Mexique, horaires dans 9 fuseaux horaires, tableaux de groupes, tableau final et matchs par équipe. Export iCal/CSV, sans inscription.",
+      "description": "Calendrier gratuit de la Coupe du Monde FIFA 2026 : les 104 matchs aux USA, Canada et Mexique, horaires dans 9 fuseaux horaires, tableaux de groupes,...",
       "seo": {
         "intro": "2026 FIFA World Cup Schedule Browser est un outil gratuit dans le navigateur pour consulter l'intégralité des 104 matchs, horaires, stades, billets, tableaux de groupes et arbre éliminatoires de la Coupe du Monde 2026 États-Unis–Canada–Mexique, conçu pour les fans de football, parieurs sportifs, gérants de bars à sports, organisateurs de soirées Coupe du Monde et services administratifs d'entreprises qui organisent des soirées « foot » et goûters thématiques. Pas de VPN pour accéder à FIFA.com, aucune application à installer, il suffit de l'ouvrir. Prend en charge les 16 villes hôtes, les 48 sélections, 9 changements de fuseau horaire (ET / PT / fuseau local + Londres / Berlin / Shanghai / Tokyo / New Delhi / Le Caire / Mexico / Toronto), filtres par phase (poules / 8es / 4es / demies / match pour la 3e place / Finale), classements de groupe en temps réel, favoris « Mes sélections », export iCal en un clic vers le calendrier du téléphone et export CSV/Markdown vers Notion ou Excel — résout le vrai parcours du fan : « quand / où se joue mon match, à quelle heure locale, dois-je poser un congé ? ».",
         "scenarios": [
@@ -6013,7 +6013,7 @@
     },
     "wc-champion-predictor": {
       "name": "World Cup Predictor",
-      "description": "Outil World Cup Predictor en ligne avec fonctionnalités : World cup, Predictor, Champion. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise.",
+      "description": "Outil World Cup Predictor en ligne avec fonctionnalités : World cup, Predictor, Champion. Fonctionne directement dans votre navigateur — gratuit, sécurisé...",
       "seo": {
         "intro": "2026 World Cup Champion Predictor Logbook est un outil gratuit dans le navigateur pour archiver vos pronostics (vainqueur / demi-finalistes / Soulier d'Or) et les comparer ensuite, conçu pour les fans de foot, parieurs, pools et pronostics internes d'entreprise, événements de bars sportifs et créateurs de contenu football sur réseaux sociaux qui veulent conserver une trace de leurs picks. Pas d'application à installer, pas d'inscription, 100 % local. Créez jusqu'à 5 instantanés de pronostic (avant poules / après poules / avant 8es / avant quarts), remplissez vainqueur, finaliste, 3e / 4e, 4 demi-finalistes, 8 quart-de-finalistes, Soulier d'Or, Ballon d'Or, Gant d'Or, Surprise, équipe la plus buteuse, moins de buts encaissés et plus grande surprise des poules. Génère un HASH infalsifiable (pas de triche a posteriori), un QR partageable et un score final (Vainqueur 30 pts, Finaliste 20, chaque demi-finaliste 10, Soulier 10, parfait 12/12 +20). Résout les classiques de la CDM : « Qui avais-je dit qui gagnerait en juin ? », « Qui a vraiment bon dans le pool de l'entreprise ? » et « On va pas me traiter de cheater après le coup d'envoi pour avoir modifié mes pronostics ? ».",
         "scenarios": [
@@ -6201,7 +6201,7 @@
     },
     "wc-scoreboard-simulator": {
       "name": "CM Tableau de Bord Simulateur",
-      "description": "Outil Wc Scoreboard Simulator en ligne avec fonctionnalités : Scoreboard, Score, World cup. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise.",
+      "description": "Outil Wc Scoreboard Simulator en ligne avec fonctionnalités : Scoreboard, Score, World cup. Fonctionne directement dans votre navigateur — gratuit, sécurisé...",
       "seo": {
         "intro": "2026 World Cup Scoreboard Simulator est un outil gratuit dans le navigateur de simulateur de tableau de score football 16:9 look retransmission VRAI, pour les créateurs de vidéos courtes foot sur les réseaux, les grands écrans en direct des bars à sports, les simulations de matchs dans les maisons de paris, les blagues de score « en direct factice » entre colocataires étudiants et les grands écrans d'événements Coupe du Monde en entreprise. Pas de plugin OBS à installer, pas de licence SaaS de scoreboard en direct à 30k CNY / an. Ouvrir le navigateur → choisir un template (style officiel FIFA retransmission, ESPN US, BBC UK, BeIN MENA, CCTV Chine, template vertical 9:16 Douyin / Kuaishou) → remplir domicile / extérieur, buts, minutes, cartons jaunes/rouges, remplacements, prolongations, séance de tirs au but → affichage en direct en un toggle. Export PNG / SVG 4K 16:9 / vertical 1080×1920 temps réel. Mode plein écran pour sortie HDMI sur écrans de bar ; export PNG transparent pour incrustation OBS / CapCut / Premiere. Typographie et couleurs CDM 2026, zéro risque atteinte aux droits.",
         "scenarios": [
@@ -6293,7 +6293,7 @@
     },
     "wevideo": {
       "name": "Éditeur Cloud WeVideo",
-      "description": "Éditeur vidéo en ligne basé sur le cloud, avec pistes audio/vidéo multiples, fond vert et textes dynamiques. Entièrement réactif sur mobile et ordinateur, synchronisation fluide."
+      "description": "Éditeur vidéo en ligne basé sur le cloud, avec pistes audio/vidéo multiples, fond vert et textes dynamiques. Entièrement réactif sur mobile et ordinateur,..."
     },
     "clipchamp": {
       "name": "Éditeur Léger Clipchamp",
@@ -6301,7 +6301,7 @@
     },
     "hippo-video": {
       "name": "Plateforme Hippo Video",
-      "description": "Plateforme vidéo tout-en-un pour équipes vente et support. Enregistrement d'écran, montage, courriels vidéo personnalisés et analyses riches dans un tableau de bord unifié."
+      "description": "Plateforme vidéo tout-en-un pour équipes vente et support. Enregistrement d'écran, montage, courriels vidéo personnalisés et analyses riches dans un tableau..."
     },
     "renderforest": {
       "name": "Usine Vidéo Renderforest",
@@ -6321,15 +6321,15 @@
     },
     "biteable": {
       "name": "Vidéos Entreprise Biteable",
-      "description": "Des milliers de modèles pour formations RH, communication interne et explications professionnelles. Assemblage par glisser-déposer pour une identité visuelle cohérente."
+      "description": "Des milliers de modèles pour formations RH, communication interne et explications professionnelles. Assemblage par glisser-déposer pour une identité..."
     },
     "playplay": {
       "name": "Créateur Vidéo Marque PlayPlay",
-      "description": "Plateforme vidéo de niveau entreprise avec modèles professionnels pour rédactions, RP et lancements produits. Couleurs, polices et assets de marque automatiques."
+      "description": "Plateforme vidéo de niveau entreprise avec modèles professionnels pour rédactions, RP et lancements produits. Couleurs, polices et assets de marque..."
     },
     "powtoon": {
       "name": "Animateur Présentation Powtoon",
-      "description": "Transformez des diaporamas en vidéos animées instantanément. Mouvements de personnages, doublage vocal et sous-titres animés pour des formations plus engageantes qu'un PPT."
+      "description": "Transformez des diaporamas en vidéos animées instantanément. Mouvements de personnages, doublage vocal et sous-titres animés pour des formations plus..."
     },
     "rawshorts": {
       "name": "Texte vers Vidéo RawShorts",
@@ -6341,7 +6341,7 @@
     },
     "vidyard": {
       "name": "Marketing Vidéo Vidyard",
-      "description": "Plateforme d'hébergement et d'analyse vidéo marketing B2B. Envoyez des vidéos 1:1 personnalisées, voyez qui a regardé combien de temps, intégrez des CTA pour suivre les conversions."
+      "description": "Plateforme d'hébergement et d'analyse vidéo marketing B2B. Envoyez des vidéos 1:1 personnalisées, voyez qui a regardé combien de temps, intégrez des CTA..."
     },
     "typito": {
       "name": "Sous-titres Animés Typito",
@@ -6349,23 +6349,23 @@
     },
     "movavi": {
       "name": "Suite Vidéo Movavi",
-      "description": "Suite tout-en-un légère : éditeur, enregistreur et convertisseur vidéo. Interface claire pour débutants avec enregistrement d'écran, conversion et montage temporel."
+      "description": "Suite tout-en-un légère : éditeur, enregistreur et convertisseur vidéo. Interface claire pour débutants avec enregistrement d'écran, conversion et montage..."
     },
     "headliner": {
       "name": "Podcast vers Vidéo Headliner",
-      "description": "Transformez l'audio d'un podcast en vidéo en un clic. Génération automatique d'animations d'ondes, sous-titres et avatars pour plateformes de courtes vidéos. Palier gratuit avec filigrane."
+      "description": "Transformez l'audio d'un podcast en vidéo en un clic. Génération automatique d'animations d'ondes, sous-titres et avatars pour plateformes de courtes..."
     },
     "postman-api": {
       "name": "Débogueur API Postman",
-      "description": "Plateforme leader de débogage et collaboration API. Testez des endpoints REST et GraphQL, créez des services mock, automatisez les tests et synchronisez toute votre équipe."
+      "description": "Plateforme leader de débogage et collaboration API. Testez des endpoints REST et GraphQL, créez des services mock, automatisez les tests et synchronisez..."
     },
     "swagger-ui": {
       "name": "Documentation API Swagger",
-      "description": "Outil de visualisation OpenAPI et d'essai pour API REST. Génère automatiquement une documentation interactive des endpoints pour que front et back livrent plus vite."
+      "description": "Outil de visualisation OpenAPI et d'essai pour API REST. Génère automatiquement une documentation interactive des endpoints pour que front et back livrent..."
     },
     "sentry-io": {
       "name": "Surveillance Erreurs Sentry",
-      "description": "SaaS de surveillance erreurs et performance multi-applications. Capture en temps réel des stacks de crash front/back, goulets d'étranglement et distribution d'alertes."
+      "description": "SaaS de surveillance erreurs et performance multi-applications. Capture en temps réel des stacks de crash front/back, goulets d'étranglement et distribution..."
     },
     "apidog": {
       "name": "Bureau API Apifox",
@@ -6373,7 +6373,7 @@
     },
     "baidu-ocr": {
       "name": "Service OCR Baidu",
-      "description": "Service OCR officiel de la plateforme Baidu AI. Reconnaît texte général, reçus, cartes d'identité, écriture manuscrite et contenus multilingues, conforme en Chine."
+      "description": "Service OCR officiel de la plateforme Baidu AI. Reconnaît texte général, reçus, cartes d'identité, écriture manuscrite et contenus multilingues, conforme en..."
     },
     "tencent-ai": {
       "name": "Plateforme IA Tencent",
@@ -6381,7 +6381,7 @@
     },
     "aliyun-ai": {
       "name": "Plateforme IA Alibaba Cloud",
-      "description": "Plateforme PAI machine learning et vision/voix d'Alibaba Cloud, fournissant la famille de modèles Tongyi en tant que services d'entreprise enregistrés pour la Chine."
+      "description": "Plateforme PAI machine learning et vision/voix d'Alibaba Cloud, fournissant la famille de modèles Tongyi en tant que services d'entreprise enregistrés pour..."
     },
     "squoosh-app": {
       "name": "Compresseur Images Squoosh",
@@ -6393,31 +6393,31 @@
     },
     "lunapic": {
       "name": "Éditeur Photos LunaPic",
-      "description": "Éditeur de photos en ligne gratuit légendaire avec 100+ effets et filtres, suppression d'arrière-plan transparent et édition GIF animés. Toutes les fonctions 100% gratuites."
+      "description": "Éditeur de photos en ligne gratuit légendaire avec 100+ effets et filtres, suppression d'arrière-plan transparent et édition GIF animés. Toutes les..."
     },
     "befunky": {
       "name": "Studio Photo BeFunky",
-      "description": "Combine retouche photo, collages et design graphique sur une même plateforme. Retouches portraits, traitement par lots et modèles d'affiches pour livrer vite sans compétences."
+      "description": "Combine retouche photo, collages et design graphique sur une même plateforme. Retouches portraits, traitement par lots et modèles d'affiches pour livrer..."
     },
     "pdf24-tools": {
       "name": "Boîte Outils PDF24",
-      "description": "Boîte à outils allemande de 30+ utilitaires PDF. Fusionner, diviser, compresser, convertir, signer, OCR et déverrouiller gratuitement sans filigrane. Traitement local respectueux de la vie privée."
+      "description": "Boîte à outils allemande de 30+ utilitaires PDF. Fusionner, diviser, compresser, convertir, signer, OCR et déverrouiller gratuitement sans filigrane...."
     },
     "pdf-cafe": {
       "name": "Boîte Outils PDF Candy",
-      "description": "Boîte à outils PDF gratuite sur le thème Candy, UI colorée et épurée. 47 outils de traitement PDF fonctionnent sur navigateur et mobile, 100% gratuits sans pub intrusive."
+      "description": "Boîte à outils PDF gratuite sur le thème Candy, UI colorée et épurée. 47 outils de traitement PDF fonctionnent sur navigateur et mobile, 100% gratuits sans..."
     },
     "dopdf": {
       "name": "Imprimante Virtuelle doPDF",
-      "description": "Pilote d'imprimante virtuelle gratuit classique. Imprimez en PDF depuis n'importe quelle application comme sur papier, avec résolution personnalisable et polices intégrées."
+      "description": "Pilote d'imprimante virtuelle gratuit classique. Imprimez en PDF depuis n'importe quelle application comme sur papier, avec résolution personnalisable et..."
     },
     "pdfexpert": {
       "name": "Lecteur PDF Expert",
-      "description": "Lecteur et éditeur PDF phare de l'écosystème Apple. Lecture fluide, signatures, remplissage de formulaires et reconnaissance OCR sur iPhone, iPad et Mac en toute fluidité."
+      "description": "Lecteur et éditeur PDF phare de l'écosystème Apple. Lecture fluide, signatures, remplissage de formulaires et reconnaissance OCR sur iPhone, iPad et Mac en..."
     },
     "bilibili-creator": {
       "name": "Hub Créateurs Bilibili",
-      "description": "Centre officiel de gestion des créateurs Bilibili. Téléversez vos œuvres, analysez les données spectateurs, interagissez avec les fans et gérez la monétisation au quotidien."
+      "description": "Centre officiel de gestion des créateurs Bilibili. Téléversez vos œuvres, analysez les données spectateurs, interagissez avec les fans et gérez la..."
     },
     "9gag": {
       "name": "Communauté Humour 9GAG",
@@ -6425,71 +6425,71 @@
     },
     "ted-talks": {
       "name": "Bibliothèque TED Talks",
-      "description": "Le site officiel des conférences TED de renommée mondiale. Des milliers de conférences de qualité de moins de 18 minutes avec sous-titres multilingues — plongez dans les meilleures idées."
+      "description": "Le site officiel des conférences TED de renommée mondiale. Des milliers de conférences de qualité de moins de 18 minutes avec sous-titres multilingues —..."
     },
     "obsidian-md": {
       "name": "Notes Liées Obsidian",
-      "description": "Base de connaissances Markdown local-first avec liens bidirectionnels. Visualisation graphique puissante et écosystème de plugins riche — le choix des passionnés de PKM."
+      "description": "Base de connaissances Markdown local-first avec liens bidirectionnels. Visualisation graphique puissante et écosystème de plugins riche — le choix des..."
     },
     "crello": {
       "name": "Designer Graphique VistaCreate",
-      "description": "Outil de design graphique en ligne de la famille Vista. Des dizaines de millions d'assets et modèles pour affiches et images sociales — conception par glisser-déposer sans expérience."
+      "description": "Outil de design graphique en ligne de la famille Vista. Des dizaines de millions d'assets et modèles pour affiches et images sociales — conception par..."
     },
     "placeit": {
       "name": "Générateur Maquettes Placeit",
-      "description": "Guichet unique pour design de logos et maquettes produits. Appliquez votre création à t-shirts, téléphones, livres et emballages directement dans le navigateur — l'ami du designer e-commerce."
+      "description": "Guichet unique pour design de logos et maquettes produits. Appliquez votre création à t-shirts, téléphones, livres et emballages directement dans le..."
     },
     "designrr": {
       "name": "Créateur Ebook Designrr",
-      "description": "Transformez articles, podcasts et PDF en eBooks soignés et lead magnets instantanément. Modèles intégrés, couvertures et sommaire automatique pour marketeurs de contenu."
+      "description": "Transformez articles, podcasts et PDF en eBooks soignés et lead magnets instantanément. Modèles intégrés, couvertures et sommaire automatique pour..."
     },
     "logaster": {
       "name": "Générateur Logo Logaster",
-      "description": "Saisissez votre nom de marque et générez instantanément plusieurs concepts de logo. Téléchargez fichiers vectoriels + kits complets : cartes de visite, en-têtes, branding social."
+      "description": "Saisissez votre nom de marque et générez instantanément plusieurs concepts de logo. Téléchargez fichiers vectoriels + kits complets : cartes de visite,..."
     },
     "shopee-seller": {
       "name": "Centre Vendeur Shopee",
-      "description": "Tableau de bord officiel vendeurs Shopee pour le e-commerce cross-border Asie du Sud-Est. Gérez annonces, commandes, logistique, campagnes marketing et analyses au même endroit."
+      "description": "Tableau de bord officiel vendeurs Shopee pour le e-commerce cross-border Asie du Sud-Est. Gérez annonces, commandes, logistique, campagnes marketing et..."
     },
     "prowritingaid": {
       "name": "Correcteur Approfondi ProWritingAid",
-      "description": "Correcteur d'écriture anglais approfondi de niveau auteur. Plus de 20 rapports détaillés, analyse de cohérence stylistique et détection de mots répétés — aussi minutieux qu'un éditeur humain."
+      "description": "Correcteur d'écriture anglais approfondi de niveau auteur. Plus de 20 rapports détaillés, analyse de cohérence stylistique et détection de mots répétés —..."
     },
     "scribens": {
       "name": "Correcteur Grammaire Scribens",
-      "description": "Correcteur gratuit bilingue (anglais/français) de grammaire, orthographe et style. Collez votre texte pour des suggestions mises en évidence, avec plugins Office et Chrome."
+      "description": "Correcteur gratuit bilingue (anglais/français) de grammaire, orthographe et style. Collez votre texte pour des suggestions mises en évidence, avec plugins..."
     },
     "hubspot-free": {
       "name": "Hub Marketing HubSpot",
-      "description": "La plateforme CRM et automatisation marketing mondialement connue. Le palier gratuit généreux inclut formulaires, landing pages et automatisation email — tout pour commencer."
+      "description": "La plateforme CRM et automatisation marketing mondialement connue. Le palier gratuit généreux inclut formulaires, landing pages et automatisation email —..."
     },
     "getresponse": {
       "name": "Entonnoir Marketing GetResponse",
-      "description": "Marketing email, entonnoir d'automatisation, landing page et webinaire 4-en-1. Couvre toute la chaîne d'acquisition et de conversion client pour boutiques indépendantes."
+      "description": "Marketing email, entonnoir d'automatisation, landing page et webinaire 4-en-1. Couvre toute la chaîne d'acquisition et de conversion client pour boutiques..."
     },
     "semrush-free": {
       "name": "Suite SEO Semrush",
-      "description": "Le couteau suisse des marketeurs SEO. Analyse full-stack mots-clés, concurrents, backlinks, trafic et publicités — données couvrant 190+ pays à travers le monde."
+      "description": "Le couteau suisse des marketeurs SEO. Analyse full-stack mots-clés, concurrents, backlinks, trafic et publicités — données couvrant 190+ pays à travers le..."
     },
     "mangools": {
       "name": "Bundle SEO Mangools",
-      "description": "L'interface la plus épurée des outils SEO. Le bundle regroupe KWFinder (mots-clés), SERPChecker (classements) et SERPWatcher (suivi) — simple, efficace et abordable."
+      "description": "L'interface la plus épurée des outils SEO. Le bundle regroupe KWFinder (mots-clés), SERPChecker (classements) et SERPWatcher (suivi) — simple, efficace et..."
     },
     "seo-review-tools": {
       "name": "Boîte Outils SEO Review",
-      "description": "Boîte à outils audit SEO gratuite et vétérane des Pays-Bas. Vérifications poids page, densité mots-clés, liens cassés, validation robots.txt et intégration GSC — 100% gratuite."
+      "description": "Boîte à outils audit SEO gratuite et vétérane des Pays-Bas. Vérifications poids page, densité mots-clés, liens cassés, validation robots.txt et intégration..."
     },
     "later-app": {
       "name": "Planificateur Social Later",
-      "description": "Partenaire officiel de planification Instagram. Calendrier visuel par glisser-déposer pour planifier les posts, plus la landing page LinkinBio chérie des créateurs."
+      "description": "Partenaire officiel de planification Instagram. Calendrier visuel par glisser-déposer pour planifier les posts, plus la landing page LinkinBio chérie des..."
     },
     "planoly": {
       "name": "Planificateur Visuel Planoly",
-      "description": "Le principal planificateur visuel de réseaux sociaux. Prévisualisez grilles Instagram et Pinterest avant publication, plus gestion des commentaires et collecte UGC dans un outil."
+      "description": "Le principal planificateur visuel de réseaux sociaux. Prévisualisez grilles Instagram et Pinterest avant publication, plus gestion des commentaires et..."
     },
     "lever-co": {
       "name": "ATS Recrutement Lever",
-      "description": "Le système de suivi des candidatures moderne préféré de la Silicon Valley. Entonnoir de recrutement visuel, parrainages et solides intégrations de gestion relations candidats."
+      "description": "Le système de suivi des candidatures moderne préféré de la Silicon Valley. Entonnoir de recrutement visuel, parrainages et solides intégrations de gestion..."
     },
     "zoho-people": {
       "name": "SIRH Zoho People",
@@ -6497,71 +6497,71 @@
     },
     "webmd": {
       "name": "Guide Santé WebMD",
-      "description": "Le plus grand portail américain d'informations santé et médicales. Vérificateur de symptômes, infos médicaments, annuaire médecins et contenu de confiance rédigé par experts médicaux."
+      "description": "Le plus grand portail américain d'informations santé et médicales. Vérificateur de symptômes, infos médicaments, annuaire médecins et contenu de confiance..."
     },
     "meetup": {
       "name": "Trouveur Événements Meetup",
-      "description": "La plus grande plateforme mondiale d'événements par centres d'intérêt en présentiel. Rencontres tech, clubs de lecture, groupes de randonnée, soirées jeux — rencontrez des gens dans votre ville."
+      "description": "La plus grande plateforme mondiale d'événements par centres d'intérêt en présentiel. Rencontres tech, clubs de lecture, groupes de randonnée, soirées jeux —..."
     },
     "imdb": {
       "name": "Bible Cinéma IMDb",
-      "description": "L'autorité mondiale pour les notes et infos cinéma et TV. Génériques, distributions, chiffres de box-office, critiques et Top Charts quotidiens pour savoir quoi regarder."
+      "description": "L'autorité mondiale pour les notes et infos cinéma et TV. Génériques, distributions, chiffres de box-office, critiques et Top Charts quotidiens pour savoir..."
     },
     "rottentomatoes": {
       "name": "Critiques Rotten Tomatoes",
-      "description": "Le site agrégateur de critiques référence en Amérique du Nord. Le célèbre Tomatometer (fraîcheur) et le score Popcorn (spectateurs) vous aident à éviter les films mauvais. Classements mis à jour quotidiennement."
+      "description": "Le site agrégateur de critiques référence en Amérique du Nord. Le célèbre Tomatometer (fraîcheur) et le score Popcorn (spectateurs) vous aident à éviter les..."
     },
     "audacity-tutorial": {
       "name": "Éditeur Audio Audacity",
-      "description": "L'éditeur audio historique gratuit, open-source et multi-plateforme. Enregistrement, réduction de bruit, mixage multipiste et écosystème de plugins mûri depuis 20+ ans."
+      "description": "L'éditeur audio historique gratuit, open-source et multi-plateforme. Enregistrement, réduction de bruit, mixage multipiste et écosystème de plugins mûri..."
     },
     "audio-mass": {
       "name": "DAW Navigateur AudioMass",
-      "description": "Station audionumérique légère fonctionnant entièrement dans le navigateur. Édition d'ondes multipistes, effets en temps réel et export WAV — aucun téléchargement requis."
+      "description": "Station audionumérique légère fonctionnant entièrement dans le navigateur. Édition d'ondes multipistes, effets en temps réel et export WAV — aucun..."
     },
     "twisted-wave": {
       "name": "Audio en Ligne TwistedWave",
-      "description": "Éditeur audio professionnel mono-piste fonctionnant dans votre navigateur. Aucun téléchargement, annulations illimitées, traitement par lots et fichiers projet sauvegardés dans le cloud."
+      "description": "Éditeur audio professionnel mono-piste fonctionnant dans votre navigateur. Aucun téléchargement, annulations illimitées, traitement par lots et fichiers..."
     },
     "sketchfab": {
       "name": "Communauté 3D Sketchfab",
-      "description": "La plus grande plateforme mondiale de partage et visualisation de modèles 3D. Visualisez, téléchargez et achetez des modèles GLB/USDZ/WebGL directement dans le navigateur via marketplace créateurs."
+      "description": "La plus grande plateforme mondiale de partage et visualisation de modèles 3D. Visualisez, téléchargez et achetez des modèles GLB/USDZ/WebGL directement dans..."
     },
     "vectary": {
       "name": "Modeleur 3D Vectary",
-      "description": "Plateforme de modélisation et rendu 3D sans barrières dans le navigateur. Glisser-déposer style Figma, matériaux PBR, éclairage et prévisualisation AR — flux pensé pour designers."
+      "description": "Plateforme de modélisation et rendu 3D sans barrières dans le navigateur. Glisser-déposer style Figma, matériaux PBR, éclairage et prévisualisation AR —..."
     },
     "spline-3d": {
       "name": "3D Interactif Spline",
-      "description": "L'outil 3D temps réel pour designers et développeurs front-end. Événements de scène, états interactifs, intégration React et assets prêts pour la production exportables pour le Web."
+      "description": "L'outil 3D temps réel pour designers et développeurs front-end. Événements de scène, états interactifs, intégration React et assets prêts pour la production..."
     },
     "flourish-studio": {
       "name": "Graphiques Animés Flourish",
-      "description": "La plateforme préférée des journalistes de données pour animations de graphiques interactifs. Créez courses à barres, nuages de points sur cartes et visuels narratifs en un clic."
+      "description": "La plateforme préférée des journalistes de données pour animations de graphiques interactifs. Créez courses à barres, nuages de points sur cartes et visuels..."
     },
     "datawrapper": {
       "name": "Créateur Graphiques DataWrapper",
-      "description": "Constructeur de graphiques et cartes en ligne de niveau journalistique, fabriqué en Allemagne. Palettes pro, intégrations réactives et choix des meilleurs médias mondiaux."
+      "description": "Constructeur de graphiques et cartes en ligne de niveau journalistique, fabriqué en Allemagne. Palettes pro, intégrations réactives et choix des meilleurs..."
     },
     "virus-total": {
       "name": "Scan Multi-Moteurs VirusTotal",
-      "description": "Scanner multi-antivirus appartenant à Google. Analysez fichiers, URLs, IPs et hash avec 70+ moteurs simultanément et agréguez les renseignements sur les menaces."
+      "description": "Scanner multi-antivirus appartenant à Google. Analysez fichiers, URLs, IPs et hash avec 70+ moteurs simultanément et agréguez les renseignements sur les..."
     },
     "urlscan-io": {
       "name": "Scanneur Liens URLscan",
-      "description": "Analyseur de sécurité de type bac à sable pour URLs. Capture captures d'écran, arbres DOM, chaînes de requêtes et indicateurs malveillants pour tout lien soumis."
+      "description": "Analyseur de sécurité de type bac à sable pour URLs. Capture captures d'écran, arbres DOM, chaînes de requêtes et indicateurs malveillants pour tout lien..."
     },
     "miro-board": {
       "name": "Tableau Blanc Miro",
-      "description": "La référence des tableaux blancs collaboratifs à distance. Bibliothèque de modèles riche, notes adhésives, cartes mentales et toile infinie au rendu fluide sur tous supports."
+      "description": "La référence des tableaux blancs collaboratifs à distance. Bibliothèque de modèles riche, notes adhésives, cartes mentales et toile infinie au rendu fluide..."
     },
     "basecamp": {
       "name": "Espace Basecamp",
-      "description": "Le célèbre outil de collaboration pour entreprises à distance, aux opinions tranchées. Tableaux de messages, tâches, docs et chat de projet — les meilleures pratiques pour petites équipes."
+      "description": "Le célèbre outil de collaboration pour entreprises à distance, aux opinions tranchées. Tableaux de messages, tâches, docs et chat de projet — les meilleures..."
     },
     "zip-extractor": {
       "name": "Extracteur Extract.me",
-      "description": "Décompresseur de fichiers 100% local dans le navigateur. Prend en charge 7z, RAR, ZIP, TAR et 50+ formats — aucun fichier ne sort de votre machine, vie privée garantie."
+      "description": "Décompresseur de fichiers 100% local dans le navigateur. Prend en charge 7z, RAR, ZIP, TAR et 50+ formats — aucun fichier ne sort de votre machine, vie..."
     },
     "cloudconvert-extra": {
       "name": "Convertisseur CloudConvert",
@@ -6569,19 +6569,19 @@
     },
     "online-ocr": {
       "name": "Reconnaissance Texte OnlineOCR",
-      "description": "Service OCR en ligne gratuit et historique. Convertissez images et PDF en Word, Excel ou texte brut modifiables en plusieurs langues — petits fichiers sans inscription."
+      "description": "Service OCR en ligne gratuit et historique. Convertissez images et PDF en Word, Excel ou texte brut modifiables en plusieurs langues — petits fichiers sans..."
     },
     "promo-video-maker": {
       "name": "Promo Créateur de Vidéos Ads",
-      "description": "Une vaste bibliothèque de modèles vidéo pro et de médias sous licence officielle. Créez rapidement des publicités sociales, des présentations et des vidéos produits avec sous-titres IA en un clic, synchronisés mobile et bureau."
+      "description": "Une vaste bibliothèque de modèles vidéo pro et de médias sous licence officielle. Créez rapidement des publicités sociales, des présentations et des vidéos..."
     },
     "magisto-ai-video": {
       "name": "Magisto Éditeur Vidéo IA",
-      "description": "Une IA intelligente sélectionne les plans, ajoute la musique et assemble automatiquement de magnifiques courtes vidéos. Idéal pour vlogs de voyage, marketing, mariages et souvenirs familiaux. iOS, Android et PC."
+      "description": "Une IA intelligente sélectionne les plans, ajoute la musique et assemble automatiquement de magnifiques courtes vidéos. Idéal pour vlogs de voyage,..."
     },
     "dropbox-paper": {
       "name": "Dropbox Paper Docs Collaboratifs",
-      "description": "Des documents collaboratifs en temps réel ultra-légers. Intégrez code, tableaux, tâches, vidéos et aperçus de fichiers avec une intégration profonde du cloud Dropbox. Édition fluide sur mobile."
+      "description": "Des documents collaboratifs en temps réel ultra-légers. Intégrez code, tableaux, tâches, vidéos et aperçus de fichiers avec une intégration profonde du..."
     },
     "dezeen": {
       "name": "Magazine Dezeen",
@@ -6589,7 +6589,7 @@
     },
     "nike-run-club": {
       "name": "Nike Course Club",
-      "description": "Outil Nike Run Club en ligne avec fonctionnalités : Nike, Run, Club. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Nike Run Club en ligne avec fonctionnalités : Nike, Run, Club. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "adidas-running-runtastic": {
       "name": "Adidas Course Runtastic",
@@ -6601,7 +6601,7 @@
     },
     "garmin-connect": {
       "name": "Garmin Connecter",
-      "description": "Outil Garmin Connect en ligne avec fonctionnalités : Garmin, Connect, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Garmin Connect en ligne avec fonctionnalités : Garmin, Connect, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "coros": {
       "name": "Coros",
@@ -6625,15 +6625,15 @@
     },
     "final-surge": {
       "name": "Final Surge",
-      "description": "Outil Final Surge en ligne avec fonctionnalités : Final, Surge, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Final Surge en ligne avec fonctionnalités : Final, Surge, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "runalyze": {
       "name": "Runalyze",
-      "description": "Outil Runalyze en ligne avec fonctionnalités : Runalyze, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Runalyze en ligne avec fonctionnalités : Runalyze, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "stryd-power": {
       "name": "Stryd Puissance",
-      "description": "Outil Stryd Power en ligne avec fonctionnalités : Stryd, Power, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Stryd Power en ligne avec fonctionnalités : Stryd, Power, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "racewow": {
       "name": "Racewow",
@@ -6645,11 +6645,11 @@
     },
     "find-a-marathon": {
       "name": "Trouver A Marathon",
-      "description": "Outil Find A Marathon en ligne avec fonctionnalités : Find, A, Marathon. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Find A Marathon en ligne avec fonctionnalités : Find, A, Marathon. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "running2win": {
       "name": "Running2win",
-      "description": "Outil Running2win en ligne avec fonctionnalités : Running2win, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Running2win en ligne avec fonctionnalités : Running2win, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "mcmillan-calculator": {
       "name": "Mcmillan Calculateur",
@@ -6685,7 +6685,7 @@
     },
     "race-predictor": {
       "name": "Course Predictor",
-      "description": "Outil Race Predictor en ligne avec fonctionnalités : Race, Predictor, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Race Predictor en ligne avec fonctionnalités : Race, Predictor, 跑步. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "ride-with-gps": {
       "name": "Trajet Avec Gps",
@@ -6701,7 +6701,7 @@
     },
     "wahoo-systm": {
       "name": "Wahoo Systm",
-      "description": "Outil Wahoo Systm en ligne avec fonctionnalités : Wahoo, Systm, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Wahoo Systm en ligne avec fonctionnalités : Wahoo, Systm, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "trainerroad": {
       "name": "TrainerRoad",
@@ -6729,19 +6729,19 @@
     },
     "best-bike-split": {
       "name": "Best Bike Séparateur",
-      "description": "Outil Best Bike Séparateur en ligne avec fonctionnalités : Best, Bike, Split. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Best Bike Séparateur en ligne avec fonctionnalités : Best, Bike, Split. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "golden-cheetah": {
       "name": "Golden Cheetah",
-      "description": "Outil Golden Cheetah en ligne avec fonctionnalités : Golden, Cheetah, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Golden Cheetah en ligne avec fonctionnalités : Golden, Cheetah, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "cyclestreets": {
       "name": "Cyclestreets",
-      "description": "Outil Cyclestreets en ligne avec fonctionnalités : Cyclestreets, 骑行, 公路车. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Cyclestreets en ligne avec fonctionnalités : Cyclestreets, 骑行, 公路车. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "open-cycle-map": {
       "name": "Open Cycle Carte",
-      "description": "Outil Open Cycle Map en ligne avec fonctionnalités : Open, Cycle, Map. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Open Cycle Map en ligne avec fonctionnalités : Open, Cycle, Map. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "bikeradar": {
       "name": "Bikeradar",
@@ -6765,7 +6765,7 @@
     },
     "todays-plan": {
       "name": "Todays Forfait",
-      "description": "Outil Todays Plan en ligne avec fonctionnalités : Todays, Plan, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Todays Plan en ligne avec fonctionnalités : Todays, Plan, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "fullgaz": {
       "name": "Fullgaz",
@@ -6777,7 +6777,7 @@
     },
     "bike-insurance-check": {
       "name": "Bike Insurance Vérificateur",
-      "description": "Outil Bike Insurance Vérificateur en ligne avec fonctionnalités : Bike, Insurance, Check. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Bike Insurance Vérificateur en ligne avec fonctionnalités : Bike, Insurance, Check. Fonctionne directement dans votre navigateur — gratuit, sécurisé..."
     },
     "sram-shift-calc": {
       "name": "Sram Shift Calculatrice",
@@ -6785,7 +6785,7 @@
     },
     "project-4321": {
       "name": "Projet 4321",
-      "description": "Outil Project 4321 en ligne avec fonctionnalités : Project, 4321, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Project 4321 en ligne avec fonctionnalités : Project, 4321, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "nike-training-club": {
       "name": "Nike Entraînement Club",
@@ -6801,15 +6801,15 @@
     },
     "centr-chris-hemsworth": {
       "name": "Centr Chris Hemsworth",
-      "description": "Outil Centr Chris Hemsworth en ligne avec fonctionnalités : Centr, Chris, Hemsworth. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Centr Chris Hemsworth en ligne avec fonctionnalités : Centr, Chris, Hemsworth. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "ob-fitness": {
       "name": "Ob Forme",
-      "description": "Outil Ob Fitness en ligne avec fonctionnalités : Ob, Fitness, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Ob Fitness en ligne avec fonctionnalités : Ob, Fitness, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "fitbit-premium": {
       "name": "Fitbit Premium",
-      "description": "Outil Fitbit Premium en ligne avec fonctionnalités : Fitbit, Premium, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Fitbit Premium en ligne avec fonctionnalités : Fitbit, Premium, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "strong-lifts": {
       "name": "Fort Lifts",
@@ -6825,7 +6825,7 @@
     },
     "bodybuilding-guides": {
       "name": "Bodybuilding Guides",
-      "description": "Outil Bodybuilding Guides en ligne avec fonctionnalités : Bodybuilding, Guides, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Bodybuilding Guides en ligne avec fonctionnalités : Bodybuilding, Guides, 运动. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "fitocracy": {
       "name": "Fitocracy",
@@ -6833,15 +6833,15 @@
     },
     "habit-nest": {
       "name": "Habitude Nest",
-      "description": "Outil Habit Nest en ligne avec fonctionnalités : Habit, Nest, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Habit Nest en ligne avec fonctionnalités : Habit, Nest, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "workout-labs": {
       "name": "Entraînement Labs",
-      "description": "Outil Workout Labs en ligne avec fonctionnalités : Workout, Labs, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Workout Labs en ligne avec fonctionnalités : Workout, Labs, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "freedom-strong": {
       "name": "Freedom Fort",
-      "description": "Outil Freedom Strong en ligne avec fonctionnalités : Freedom, Strong, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Freedom Strong en ligne avec fonctionnalités : Freedom, Strong, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "darebee": {
       "name": "Darebee",
@@ -6861,7 +6861,7 @@
     },
     "p90x-schedule": {
       "name": "P90x Calendrier",
-      "description": "Outil P90x Schedule en ligne avec fonctionnalités : P90x, Schedule, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil P90x Schedule en ligne avec fonctionnalités : P90x, Schedule, 健身. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "insanity-workout": {
       "name": "Insanity Entraînement",
@@ -6897,7 +6897,7 @@
     },
     "my-yoga-works": {
       "name": "My Yoga Works",
-      "description": "Outil My Yoga Works en ligne avec fonctionnalités : My, Yoga, Works. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil My Yoga Works en ligne avec fonctionnalités : My, Yoga, Works. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "pilates-anytime": {
       "name": "Pilates Anytime",
@@ -6925,7 +6925,7 @@
     },
     "yoga-journal": {
       "name": "Yoga Journal",
-      "description": "Outil Yoga Journal en ligne avec fonctionnalités : Yoga, Journal, 瑜伽. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Yoga Journal en ligne avec fonctionnalités : Yoga, Journal, 瑜伽. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "medito": {
       "name": "Medito",
@@ -6953,7 +6953,7 @@
     },
     "progressive-muscle-relaxation": {
       "name": "Progressive Muscle Séance de relaxation",
-      "description": "Outil Progressive Muscle Relaxation en ligne avec fonctionnalités : Progressive, Muscle, Relaxation. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Progressive Muscle Relaxation en ligne avec fonctionnalités : Progressive, Muscle, Relaxation. Fonctionne directement dans votre navigateur — gratuit,..."
     },
     "swim-com": {
       "name": "Swim Com",
@@ -6973,11 +6973,11 @@
     },
     "trainerroad-swim": {
       "name": "TrainerRoad Swim",
-      "description": "Outil Trainerroad Swim en ligne avec fonctionnalités : Trainerroad, Swim, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Trainerroad Swim en ligne avec fonctionnalités : Trainerroad, Swim, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "slowtwitch": {
       "name": "Slowtwitch",
-      "description": "Outil Slowtwitch en ligne avec fonctionnalités : Slowtwitch, 运动, 健康. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Slowtwitch en ligne avec fonctionnalités : Slowtwitch, 运动, 健康. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "tridot": {
       "name": "Tridot",
@@ -7029,7 +7029,7 @@
     },
     "summitpost": {
       "name": "Summitpost",
-      "description": "Outil Summitpost en ligne avec fonctionnalités : Summitpost, 徒步, 登山. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Summitpost en ligne avec fonctionnalités : Summitpost, 徒步, 登山. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "peakbagger": {
       "name": "Peakbagger",
@@ -7081,7 +7081,7 @@
     },
     "wildsafe-bear": {
       "name": "Wildsafe Bear",
-      "description": "Outil Wildsafe Bear en ligne avec fonctionnalités : Wildsafe, Bear, 装备评测. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Wildsafe Bear en ligne avec fonctionnalités : Wildsafe, Bear, 装备评测. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "sotaventos-mountain": {
       "name": "Sotaventos Montagne",
@@ -7101,7 +7101,7 @@
     },
     "hoopshype-salaries": {
       "name": "Hoopshype Salaries",
-      "description": "Outil Hoopshype Salaries en ligne avec fonctionnalités : Hoopshype, Salaries, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Hoopshype Salaries en ligne avec fonctionnalités : Hoopshype, Salaries, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "fifa-ratings": {
       "name": "Fifa Ratings",
@@ -7125,7 +7125,7 @@
     },
     "tennis-atp-tour": {
       "name": "Tennis Atp Circuit",
-      "description": "Outil Tennis Atp Tour en ligne avec fonctionnalités : Tennis, Atp, Tour. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Tennis Atp Tour en ligne avec fonctionnalités : Tennis, Atp, Tour. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "tennis-wta": {
       "name": "Tennis Wta",
@@ -7141,7 +7141,7 @@
     },
     "bwf-badminton": {
       "name": "Bwf Badminton",
-      "description": "Outil Bwf Badminton en ligne avec fonctionnalités : Bwf, Badminton, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Bwf Badminton en ligne avec fonctionnalités : Bwf, Badminton, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "badminton-warehouse": {
       "name": "Badminton Warehouse",
@@ -7153,7 +7153,7 @@
     },
     "tabletennis-reference": {
       "name": "Tabletennis Référence",
-      "description": "Outil Tabletennis Reference en ligne avec fonctionnalités : Tabletennis, Reference, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Tabletennis Reference en ligne avec fonctionnalités : Tabletennis, Reference, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé..."
     },
     "revspin": {
       "name": "Revspin",
@@ -7185,7 +7185,7 @@
     },
     "golfshake-handicap": {
       "name": "Golfshake Handicap sportif",
-      "description": "Outil Golfshake Handicap en ligne avec fonctionnalités : Golfshake, Handicap, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Golfshake Handicap en ligne avec fonctionnalités : Golfshake, Handicap, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "ski-resort-stats": {
       "name": "Ski Resort Statistiques",
@@ -7193,7 +7193,7 @@
     },
     "on-the-snow": {
       "name": "On Le Snow",
-      "description": "Outil On The Snow en ligne avec fonctionnalités : On, The, Snow. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil On The Snow en ligne avec fonctionnalités : On, The, Snow. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "snow-forecast": {
       "name": "Snow Prévisions",
@@ -7201,7 +7201,7 @@
     },
     "powder-forecast": {
       "name": "Powder Prévisions",
-      "description": "Outil Powder Forecast en ligne avec fonctionnalités : Powder, Forecast, 滑雪. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Powder Forecast en ligne avec fonctionnalités : Powder, Forecast, 滑雪. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "zrankings-ski": {
       "name": "Zrankings Ski",
@@ -7209,7 +7209,7 @@
     },
     "skiers-tracker": {
       "name": "Skiers Traqueur",
-      "description": "Outil Skiers Tracker en ligne avec fonctionnalités : Skiers, Tracker, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Skiers Tracker en ligne avec fonctionnalités : Skiers, Tracker, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "snowboard-encyc": {
       "name": "Snowboard Encyc",
@@ -7225,7 +7225,7 @@
     },
     "skatepark-directory": {
       "name": "Skatepark Directory",
-      "description": "Outil Skatepark Directory en ligne avec fonctionnalités : Skatepark, Directory, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Skatepark Directory en ligne avec fonctionnalités : Skatepark, Directory, 体育数据. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "concretedisciples": {
       "name": "Concretedisciples",
@@ -7237,15 +7237,15 @@
     },
     "inline-skate-buyers-guide": {
       "name": "Inline Skate Buyers Guide pratique",
-      "description": "Outil Inline Skate Buyers Guide en ligne avec fonctionnalités : Inline, Skate, Buyers. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Inline Skate Buyers Guide en ligne avec fonctionnalités : Inline, Skate, Buyers. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "bouldering-grade-converter": {
       "name": "Bouldering Grade Convertisseur",
-      "description": "Outil Bouldering Grade Convertisseur en ligne avec fonctionnalités : Bouldering, Grade, Convertisseur. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Bouldering Grade Convertisseur en ligne avec fonctionnalités : Bouldering, Grade, Convertisseur. Fonctionne directement dans votre navigateur —..."
     },
     "climbfinder": {
       "name": "Climbfinder",
-      "description": "Outil Climbfinder en ligne avec fonctionnalités : Climbfinder, 体育数据, 实时比分. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Climbfinder en ligne avec fonctionnalités : Climbfinder, 体育数据, 实时比分. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "macro-calculator": {
       "name": "Macro Calculateur",
@@ -7253,7 +7253,7 @@
     },
     "tdee-calculator": {
       "name": "Tdee Calculateur",
-      "description": "Outil Tdee Calculateur en ligne avec fonctionnalités : Tdee, Calculateur, 营养. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Tdee Calculateur en ligne avec fonctionnalités : Tdee, Calculateur, 营养. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "bmr-calculator": {
       "name": "Bmr Calculateur",
@@ -7277,15 +7277,15 @@
     },
     "bmi-calc-health": {
       "name": "Bmi Calc Santé",
-      "description": "Outil Bmi Calc Health en ligne avec fonctionnalités : Bmi, Calc, Health. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Bmi Calc Health en ligne avec fonctionnalités : Bmi, Calc, Health. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "vo2max-calc": {
       "name": "Vo2max Calculatrice",
-      "description": "Outil Vo2max Calc en ligne avec fonctionnalités : Vo2max, Calc, 计算器. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Vo2max Calc en ligne avec fonctionnalités : Vo2max, Calc, 计算器. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "one-rm-1rep-max": {
       "name": "Un Rm 1rep Max",
-      "description": "Outil One Rm 1rep Max en ligne avec fonctionnalités : One, Rm, 1rep. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil One Rm 1rep Max en ligne avec fonctionnalités : One, Rm, 1rep. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "meal-prep-planner": {
       "name": "Plan Prépar. Repas",
@@ -7305,7 +7305,7 @@
     },
     "raceroster": {
       "name": "Raceroster",
-      "description": "Outil Raceroster en ligne avec fonctionnalités : Raceroster, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Raceroster en ligne avec fonctionnalités : Raceroster, 跑步, 马拉松. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "ticketmaster-sports": {
       "name": "Ticketmaster Activités sportives",
@@ -7313,11 +7313,11 @@
     },
     "sporting-news-scores": {
       "name": "Sporting Actualités Scores",
-      "description": "Outil Sporting News Scores en ligne avec fonctionnalités : Sporting, News, Scores. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Sporting News Scores en ligne avec fonctionnalités : Sporting, News, Scores. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "gearbrain": {
       "name": "Gearbrain",
-      "description": "Outil Gearbrain en ligne avec fonctionnalités : Gearbrain, 装备评测, 对比. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Gearbrain en ligne avec fonctionnalités : Gearbrain, 装备评测, 对比. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation..."
     },
     "wirecutter-fitness": {
       "name": "Wirecutter Forme",
@@ -7329,7 +7329,7 @@
     },
     "switchback-travel-gear": {
       "name": "Switchback Voyages Gear",
-      "description": "Outil Switchback Travel Gear en ligne avec fonctionnalités : Switchback, Travel, Gear. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Switchback Travel Gear en ligne avec fonctionnalités : Switchback, Travel, Gear. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "rotten-wire": {
       "name": "Rotten Wire",
@@ -7337,23 +7337,23 @@
     },
     "strava-stats-dashboard": {
       "name": "Strava Statistiques Tableau de Bord",
-      "description": "Outil Strava Stats Dashboard en ligne avec fonctionnalités : Strava, Stats, Dashboard. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Strava Stats Dashboard en ligne avec fonctionnalités : Strava, Stats, Dashboard. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "athlinks-race-results": {
       "name": "Athlinks Course Résultats",
-      "description": "Outil Athlinks Race Results en ligne avec fonctionnalités : Athlinks, Race, Results. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Athlinks Race Results en ligne avec fonctionnalités : Athlinks, Race, Results. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "sporttracks": {
       "name": "Sporttracks",
-      "description": "Outil Sporttracks en ligne avec fonctionnalités : Sporttracks, 运动, 健康. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Sporttracks en ligne avec fonctionnalités : Sporttracks, 运动, 健康. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune..."
     },
     "trainerroad-announcer": {
       "name": "TrainerRoad Announcer",
-      "description": "Outil Trainerroad Announcer en ligne avec fonctionnalités : Trainerroad, Announcer, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Trainerroad Announcer en ligne avec fonctionnalités : Trainerroad, Announcer, 骑行. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "sport-psychology-today": {
       "name": "Sport Psychology Aujourd'hui",
-      "description": "Outil Sport Psychology Today en ligne avec fonctionnalités : Sport, Psychology, Today. Fonctionne directement dans votre navigateur — gratuit, sécurisé et aucune installation requise."
+      "description": "Outil Sport Psychology Today en ligne avec fonctionnalités : Sport, Psychology, Today. Fonctionne directement dans votre navigateur — gratuit, sécurisé et..."
     },
     "canva-video": {
       "name": "Canva Video Éditeur",
@@ -7741,7 +7741,7 @@
     },
     "product-hunt": {
       "name": "Produit Hunt Launches",
-      "description": "Le lieu de découverte des nouveaux produits. Lancements SaaS, outils, apps, IA chaque jour. Les indiehackers étudient la concurrence et y lancent leurs produits."
+      "description": "Le lieu de découverte des nouveaux produits. Lancements SaaS, outils, apps, IA chaque jour. Les indiehackers étudient la concurrence et y lancent leurs..."
     },
     "hunt-webflow": {
       "name": "Webflow Constructeur No-Code",
@@ -8241,7 +8241,7 @@
     },
     "competitor-analyzer": {
       "name": "Analyseur de Concurrents",
-      "description": "Outil d'analyse de concurrence e-commerce. Saisissez les informations du concurrent, analysez les prix, les mots-clés, les forces/faiblesses et générez des suggestions d'optimisation.",
+      "description": "Outil d'analyse de concurrence e-commerce. Saisissez les informations du concurrent, analysez les prix, les mots-clés, les forces/faiblesses et générez des...",
       "seo": {
         "intro": "Competitor Analyzer est un outil en ligne gratuit pour les vendeurs e-commerce qui étudie les produits et boutiques concurrents. Saisissez le lien d'un produit concurrent ou les infos de la boutique, et l'outil vous guide dans l'analyse de la stratégie de prix, de la couverture de mots-clés, des forces et faiblesses du listing et du sentiment des avis — puis produit des suggestions d'optimisation concrètes pour vos propres listings. Tout s'exécute dans votre navigateur, les données sensibles de votre boutique ne quittent jamais votre appareil.",
         "scenarios": [
@@ -8282,7 +8282,7 @@
     },
     "keyword-analyzer": {
       "name": "Analyseur de Mots-Clés",
-      "description": "Outil d'analyse de mots-clés e-commerce. Analyse le volume de recherche, la concurrence, les enchères suggérées pour optimiser le référencement et les campagnes publicitaires.",
+      "description": "Outil d'analyse de mots-clés e-commerce. Analyse le volume de recherche, la concurrence, les enchères suggérées pour optimiser le référencement et les...",
       "seo": {
         "intro": "Keyword Analyzer est un outil en ligne gratuit qui aide les vendeurs e-commerce et créateurs de contenu à évaluer les mots-clés de recherche avant d'engager un budget. Saisissez une liste de mots-clés cibles et l'outil analyse le volume de recherche, le niveau de concurrence et l'enchère suggérée pour révéler les opportunités à fort ROI et filtrer les termes saturés. Les résultats sont renvoyés dans un tableau triable que vous pouvez exporter pour votre flux SEO ou planning publicitaire. Tout le traitement est local — pas de compte, pas de clé API, pas d'upload.",
         "scenarios": [
@@ -8323,7 +8323,7 @@
     },
     "email-template-generator": {
       "name": "Générateur de Modèles Email",
-      "description": "Générateur de modèles d'email marketing e-commerce. Prend en charge les emails de bienvenue, emails promotionnels, rappels et plus. Générez du contenu email prêt à l'emploi en un clic.",
+      "description": "Générateur de modèles d'email marketing e-commerce. Prend en charge les emails de bienvenue, emails promotionnels, rappels et plus. Générez du contenu email...",
       "seo": {
         "intro": "Email Template Generator est un outil en ligne gratuit qui produit du contenu d'email e-commerce prêt à envoyer en un clic. Choisissez parmi emails de bienvenue, blasts promotionnels, rappels de panier abandonné, follow-ups post-achat ou campagnes de ré-engagement — remplissez quelques champs sur votre produit et offre, et l'outil génère un corps d'email soigné et aligné à la marque avec objet, texte de prévisualisation et appel à l'action. Tout s'exécute localement dans votre navigateur ; pas d'inscription, pas de connexion ESP, pas de données qui quittent votre appareil.",
         "scenarios": [
@@ -8364,7 +8364,7 @@
     },
     "review-generator": {
       "name": "Générateur d'Avis",
-      "description": "Générateur d'avis produits e-commerce. Saisissez le nom et les caractéristiques du produit, générez automatiquement plusieurs avis utilisateurs dans différents styles pour optimiser le contenu de la page produit.",
+      "description": "Générateur d'avis produits e-commerce. Saisissez le nom et les caractéristiques du produit, générez automatiquement plusieurs avis utilisateurs dans...",
       "seo": {
         "intro": "Review Generator est un outil en ligne gratuit qui produit des avis produit réalistes pour les listings e-commerce. Saisissez le nom du produit et quelques caractéristiques clés, choisissez le style d'avis (positif, neutre, critique, ou longueurs mixtes), et l'outil génère plusieurs brouillons d'avis que vous pouvez utiliser pour amorcer le contenu d'une page produit, entraîner des modèles d'analyse d'avis ou comparer le sentiment. Toute la génération s'exécute dans votre navigateur — aucune donnée produit n'est uploadée.",
         "scenarios": [
@@ -8405,7 +8405,7 @@
     },
     "document-formatter": {
       "name": "Formateur de Document — Mise en page APA, MLA, Rapports & CV",
-      "description": "Formateur de document en ligne gratuit : collez votre contenu, basculez entre modèles APA, MLA, document officiel, rapport commercial et CV, prévisualisez la mise en page en temps réel, exportez en Word/PDF. S'exécute dans votre navigateur, sans upload.",
+      "description": "Formateur de document en ligne gratuit : collez votre contenu, basculez entre modèles APA, MLA, document officiel, rapport commercial et CV, prévisualisez...",
       "seo": {
         "intro": "Document Formatter est un outil en ligne gratuit qui formate automatiquement le contenu collé en modèles structurés. Basculez entre formats APA et MLA, documents officiels, rapports commerciaux ou modèles de CV, prévisualisez la mise en page en temps réel, puis exportez en Word ou PDF. Tout le formatage s'exécute localement dans votre navigateur — votre brouillon, contrat ou manuscrit ne quitte jamais votre appareil.",
         "scenarios": [
@@ -8446,7 +8446,7 @@
     },
     "screen-recorder-subtitle": {
       "name": "Enregistreur d'Écran avec Sous-titres IA — Export MP4/SRT",
-      "description": "Enregistreur d'écran gratuit dans le navigateur avec sous-titres auto-générés par IA. Enregistre écran + micro, grave les sous-titres en MP4, exporte SRT. Traitement 100% local, zéro upload, confidentialité totale.",
+      "description": "Enregistreur d'écran gratuit dans le navigateur avec sous-titres auto-générés par IA. Enregistre écran + micro, grave les sous-titres en MP4, exporte SRT....",
       "seo": {
         "intro": "Screen Recorder with AI Subtitles est un outil en ligne gratuit qui capture votre écran et microphone, génère automatiquement des sous-titres avec reconnaissance vocale sur l'appareil, et exporte à la fois un MP4 avec sous-titres incrustés et un fichier SRT séparé. Tout le traitement — enregistrement, transcription et export — s'exécute localement dans votre navigateur, donc les démos sensibles, réunions et walkthroughs ne quittent jamais votre appareil.",
         "scenarios": [
@@ -8487,7 +8487,7 @@
     },
     "ai-prompt-generator": {
       "name": "Générateur de Prompts IA — Midjourney, Sora et Universel",
-      "description": "Générateur de prompts IA gratuit : choisissez modèle et options, construisez automatiquement des prompts d'image et vidéo de haute qualité pour Midjourney, Sora et plus. Copie en un clic, polish IA, UI en six langues. S'exécute dans le navigateur, sans inscription.",
+      "description": "Générateur de prompts IA gratuit : choisissez modèle et options, construisez automatiquement des prompts d'image et vidéo de haute qualité pour Midjourney,...",
       "seo": {
         "intro": "AI Prompt Generator est un outil en ligne gratuit qui construit automatiquement des prompts de haute qualité pour les modèles d'image et vidéo IA. Choisissez le modèle cible (Midjourney, Sora, vidéo universelle), sélectionnez sujet, style, éclairage, composition et paramètres, puis copiez le prompt assemblé ou utilisez le bouton AI Polish pour le raffiner. L'outil s'exécute dans votre navigateur avec interface en six langues — sans inscription, sans clé API.",
         "scenarios": [
@@ -8529,7 +8529,7 @@
     },
     "sora-prompt-generator": {
       "name": "Générateur de Prompts Sora — Prompts Vidéo OpenAI Sora",
-      "description": "Générateur gratuit de prompts Sora : choisissez sujet, mouvement, caméra, éclairage et style, générez des prompts professionnels pour OpenAI Sora. Copie en un clic, polissage IA, interface en 6 langues. Fonctionne dans le navigateur, sans inscription.",
+      "description": "Générateur gratuit de prompts Sora : choisissez sujet, mouvement, caméra, éclairage et style, générez des prompts professionnels pour OpenAI Sora. Copie en...",
       "seo": {
         "intro": "Le Générateur de Prompts Sora est un outil en ligne gratuit qui crée des prompts professionnels pour le modèle texte-vers-vidéo Sora d'OpenAI. Choisissez sujet, mouvement, caméra, éclairage, style et durée, copiez le prompt ou utilisez le polissage IA. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
         "scenarios": [
@@ -8575,7 +8575,7 @@
     },
     "midjourney-prompt-generator": {
       "name": "Générateur de Prompts Midjourney — avec paramètres --ar --v",
-      "description": "Générateur gratuit de prompts Midjourney : choisissez sujet, style, éclairage, composition, générez des prompts MJ avec paramètres --ar --v 6. Copie en un clic, polissage IA, interface en 6 langues. Fonctionne dans le navigateur, sans inscription.",
+      "description": "Générateur gratuit de prompts Midjourney : choisissez sujet, style, éclairage, composition, générez des prompts MJ avec paramètres --ar --v 6. Copie en un...",
       "seo": {
         "intro": "Le Générateur de Prompts Midjourney est un outil en ligne gratuit qui crée des prompts professionnels pour le modèle d'image Midjourney v6. Choisissez sujet, style artistique, éclairage, composition et ratio d'aspect, copiez le prompt avec paramètres --ar --v ou utilisez le polissage IA. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
         "scenarios": [
@@ -8621,7 +8621,7 @@
     },
     "video-prompt-generator": {
       "name": "Générateur de Prompts Vidéo IA — Runway, Pika, Kling",
-      "description": "Générateur gratuit de prompts vidéo IA : choisissez sujet, mouvement, caméra, éclairage, style et durée, générez des prompts pour Runway, Pika, Kling et Sora. Copie en un clic, polissage IA, interface en 6 langues. Fonctionne dans le navigateur, sans inscription.",
+      "description": "Générateur gratuit de prompts vidéo IA : choisissez sujet, mouvement, caméra, éclairage, style et durée, générez des prompts pour Runway, Pika, Kling et...",
       "seo": {
         "intro": "Le Générateur de Prompts Vidéo IA est un outil en ligne gratuit qui crée des prompts professionnels pour les modèles texte-vers-vidéo dont Runway, Pika, Kling et Sora. Choisissez sujet, mouvement, caméra, éclairage, style et durée, copiez le prompt ou utilisez le polissage IA. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
         "scenarios": [
@@ -8667,7 +8667,7 @@
     },
     "ai-review-generator": {
       "name": "Générateur d'Avis IA — Produit et Livraison de Repas",
-      "description": "Générateur gratuit d'avis IA : entrez le nom du produit et votre expérience, l'IA génère des avis positifs, neutres ou négatifs pour plateformes e-commerce et livraison de repas. Interface en 6 langues, fonctionne dans le navigateur, sans inscription.",
+      "description": "Générateur gratuit d'avis IA : entrez le nom du produit et votre expérience, l'IA génère des avis positifs, neutres ou négatifs pour plateformes e-commerce...",
       "seo": {
         "intro": "Le Générateur d'Avis IA est un outil en ligne gratuit qui rédige des avis authentiques sur des produits et services. Entrez le nom du produit et votre expérience, choisissez le ton (positif, neutre, négatif) et l'IA génère un avis que vous pouvez copier. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
         "scenarios": [
@@ -8713,7 +8713,7 @@
     },
     "ai-resume-experience-optimize": {
       "name": "Optimisateur de CV IA — Expérience Professionnelle",
-      "description": "Optimisateur gratuit d'expérience professionnelle IA : collez vos informations professionnelles et expérience, l'IA polit les points, met en valeur les réalisations avec métriques et améliore les retours d'entretien. Interface en 6 langues, fonctionne dans le navigateur, sans inscription.",
+      "description": "Optimisateur gratuit d'expérience professionnelle IA : collez vos informations professionnelles et expérience, l'IA polit les points, met en valeur les...",
       "seo": {
         "intro": "L'Optimisateur de CV IA est un outil en ligne gratuit qui affine les puces d'expérience professionnelle du CV. Collez votre poste, entreprise et expérience originale, l'IA réécrit avec verbes d'action, réalisations quantifiées et formulations axées sur l'impact pour améliorer les retours de recruteurs. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
         "scenarios": [
@@ -8759,7 +8759,7 @@
     },
     "ai-xiaohongshu-title-generator": {
       "name": "Générateur de Titres Xiaohongshu — Titres Viraux",
-      "description": "Générateur gratuit de titres Xiaohongshu avec IA : entrez le sujet de votre note, l'IA génère des titres viraux dans plusieurs styles et tons pour augmenter les impressions. Interface en 6 langues, fonctionne dans le navigateur, sans inscription.",
+      "description": "Générateur gratuit de titres Xiaohongshu avec IA : entrez le sujet de votre note, l'IA génère des titres viraux dans plusieurs styles et tons pour augmenter...",
       "seo": {
         "intro": "Le Générateur de Titres Xiaohongshu est un outil en ligne gratuit qui rédige des titres de style viral pour les notes Xiaohongshu (Little Red Book). Entrez le sujet de votre note, choisissez le ton (informatif, émotionnel, clickbait, comparaison) et l'IA génère plusieurs options de titre conçues pour augmenter les impressions. Interface en 6 langues, sans inscription, fonctionne dans votre navigateur.",
         "scenarios": [
@@ -8805,7 +8805,7 @@
     },
     "watermark-remover": {
       "name": "Supprimer Filigrane Gratuit — Retouche Intelligente",
-      "description": "Supprimez les filigranes des images avec retouche intelligente. Peignez pour supprimer, traitement par lots, téléchargement ZIP, 100% dans le navigateur. Outil gratuit",
+      "description": "Supprimez les filigranes des images avec retouche intelligente. Peignez pour supprimer, traitement par lots, téléchargement ZIP, 100% dans le navigateur....",
       "seo": {
         "intro": "Ceci est un outil en ligne gratuit pour supprimer les filigranes des images. Éliminez rapidement les filigranes de texte, les logos et plus encore. Grâce à la technologie de retouche intelligente, il suffit de peindre sur la zone à supprimer, et l'algorithme remplit automatiquement avec les pixels environnants pour un résultat naturel. Prend en charge le téléchargement par lots, le traitement par lots et le téléchargement ZIP en un clic. Tout le traitement se fait localement dans votre navigateur — les images ne sont jamais téléchargées sur un serveur, gardant vos données privées et sécurisées.",
         "scenarios": [
@@ -8893,7 +8893,7 @@
     },
     "wave-art": {
       "name": "Générateur d'Art d'Onde Vocale",
-      "description": "Transformez n'importe quel nom ou phrase en une pièce unique d'art visuel d'onde sonore. Chaque caractère correspond à sa propre fréquence, amplitude et phase. Choisissez entre lignes minimalistes, lueur néon et spectre radio. Superposez plusieurs noms, sélectionnez une palette et exportez en PNG — parfait pour avatars, tatouages, cadeaux de couple ou décor mural.",
+      "description": "Transformez n'importe quel nom ou phrase en une pièce unique d'art visuel d'onde sonore. Chaque caractère correspond à sa propre fréquence, amplitude et...",
       "seo": {
         "intro": "Le Générateur d'Art d'Onde Vocale est un outil gratuit basé sur le navigateur qui convertit un texte — un nom, un mot, une date ou une phrase complète — en un art visuel unique de type onde sonore. Comme chaque caractère produit une forme d'onde distincte, aucune pièce n'est identique à une autre. Tout s'exécute entièrement sur votre appareil : rien n'est téléchargé vers un serveur et aucun compte n'est requis.",
         "scenarios": [
@@ -8943,7 +8943,7 @@
     },
     "life-weeks": {
       "name": "Visualiseur de Vie en Semaines",
-      "description": "Entrez votre date de naissance et découvrez une grille de 4 000 semaines qui représente toute votre vie. Les semaines déjà vécues sont coloriées, celles qui restent sont vides. Ajustez l'espérance de vie, choisissez une couleur de remplissage, exportez en PNG. Une visualisation simple qui frappe l'esprit et se partage énormément.",
+      "description": "Entrez votre date de naissance et découvrez une grille de 4 000 semaines qui représente toute votre vie. Les semaines déjà vécues sont coloriées, celles qui...",
       "seo": {
         "intro": "Le Visualiseur de Vie en Semaines est un outil gratuit pour navigateur qui vous montre toute l'étendue de votre vie sous forme d'une seule grille d'environ 4 000 cellules — une case par semaine. Beaucoup la décrivent à la fois comme un coup de gueule salutaire, un puissant moteur de motivation et une source de calme étrange. Comme tous les outils Korelyy, il fonctionne localement dans votre navigateur, sans envoi de données et sans inscription.",
         "scenarios": [
@@ -8993,7 +8993,7 @@
     },
     "excuse-generator": {
       "name": "Carte Générateur d'Excuses",
-      "description": "Choisissez une situation — retard au travail, absence, annulation de plans, dépassement de délai — et générez instantanément une excuse qui sonne juste. Basculez entre le mode Sérieux (vous l'utiliseriez vraiment) et le mode Ridicule (vous l'envoyez à votre meilleur pote). Téléchargez le résultat sous forme de carte partageable en PNG.",
+      "description": "Choisissez une situation — retard au travail, absence, annulation de plans, dépassement de délai — et générez instantanément une excuse qui sonne juste....",
       "seo": {
         "intro": "La Carte Générateur d'Excuses est un outil gratuit pour navigateur, à la fois drôle et vraiment utile, qui rédige pour vous des excuses adaptées au contexte. Le mode Sérieux puise dans une base soignée de formulations réalistes et appropriées à chaque situation. Le mode Ridicule, lui, sert juste à faire rire. Dans les deux cas, une pression permet de partager le résultat sous forme d'une carte image parfaitement mise en page.",
         "scenarios": [
@@ -9043,7 +9043,7 @@
     },
     "name-constellation": {
       "name": "Constellation du Nom",
-      "description": "Transformez votre nom en une carte stellaire de personnalité unique. Chaque lettre devient une étoile. L'IA révèle vos traits de personnalité, couleur et numéro porte-bonheur.",
+      "description": "Transformez votre nom en une carte stellaire de personnalité unique. Chaque lettre devient une étoile. L'IA révèle vos traits de personnalité, couleur et...",
       "seo": {
         "intro": "Constellation du Nom est un outil créatif gratuit basé sur le navigateur qui transforme votre nom en une carte stellaire de personnalité unique. Chaque lettre brille comme une étoile dans votre constellation personnelle.",
         "scenarios": [

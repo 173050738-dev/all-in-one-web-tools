@@ -115,6 +115,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           </>
         )}
       </div>
+      <h1 className='text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 sm:mb-5'>{__i18nName}</h1>
       <EmojiMixer />
     </div>
   );

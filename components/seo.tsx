@@ -438,8 +438,7 @@ export function toolGenerateMetadataSync(
     : `${description} ${intent.tag}`.trim().slice(0, 300);
   const categoryName = translateFromJson(json, 'sidebar', tool.category, categories.find((c) => c.id === tool.category)?.name || tool.category);
   const baseTitle = `${name} ${intent.online} ${intent.dash} ${categoryName} | ${baseMeta.siteName}`;
-  const freeTitle = `${intent.free} ${name} ${intent.online} ${intent.dash} ${categoryName} | ${baseMeta.siteName}`;
-  const title = freeTitle.length <= 62 ? freeTitle : (baseTitle.length <= 66 ? baseTitle : `${name} | ${baseMeta.siteName}`);
+  const title = baseTitle.length <= 62 ? baseTitle : `${name} | ${baseMeta.siteName}`;
   const keywords = Array.from(
     new Set([
       ...baseMeta.homeKeywords.slice(0, 4),

@@ -76,14 +76,23 @@ while ((mn = newsSlugRegex.exec(newsSrc)) !== null) {
 }
 console.log(`[sitemap-build] Found ${newsSlugs.size} news slugs`);
 
+// ---------------- Extract workflow slugs from data/workflows.ts ----------------
+const workflowsPath = path.join(ROOT, 'data', 'workflows.ts');
+const workflowsSrc = fs.readFileSync(workflowsPath, 'utf-8');
+const workflowSlugRegex = /slug:\s*['"`]([a-z0-9-]+)['"`]/g;
+const workflowSlugs = new Set();
+let mw;
+while ((mw = workflowSlugRegex.exec(workflowsSrc)) !== null) {
+  if (mw[1]) workflowSlugs.add(mw[1]);
+}
+console.log(`[sitemap-build] Found ${workflowSlugs.size} workflow slugs`);
+
 // ---------------- Page entries ----------------
 const staticPages = [
   { path: '/', changeFreq: 'daily', priority: 1.0 },
   { path: '/about', changeFreq: 'monthly', priority: 0.4 },
   { path: '/compliance', changeFreq: 'weekly', priority: 0.5 },
   { path: '/workflows', changeFreq: 'weekly', priority: 0.6 },
-  { path: '/workflow/canvas', changeFreq: 'monthly', priority: 0.4 },
-  { path: '/workflow/custom', changeFreq: 'monthly', priority: 0.4 },
   { path: '/blog', changeFreq: 'daily', priority: 0.85 },
   { path: '/news', changeFreq: 'weekly', priority: 0.85 },
 ];
@@ -106,7 +115,13 @@ const newsEntries = [...newsSlugs].map((slug) => ({
   priority: 0.9,
 }));
 
-const allPages = [...staticPages, ...toolEntries, ...blogEntries, ...newsEntries];
+const workflowEntries = [...workflowSlugs].map((slug) => ({
+  path: `/workflow/${slug}`,
+  changeFreq: 'weekly',
+  priority: 0.5,
+}));
+
+const allPages = [...staticPages, ...toolEntries, ...blogEntries, ...newsEntries, ...workflowEntries];
 console.log(`[sitemap-build] ${allPages.length} page entries (×${KNOWN_LOCALES.length} locales = ${allPages.length * KNOWN_LOCALES.length} URLs)`);
 
 // ---------------- Generate sitemap.xml ----------------
