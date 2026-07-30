@@ -2636,32 +2636,6 @@
     "isSelfHosted": false
   },
   {
-    "id": "image-converter",
-    "slug": "image-converter",
-    "name": "图片转换器",
-    "description": "在线图片格式转换，支持JPG、PNG、WebP等。",
-    "category": "image-tools",
-    "tags": [
-      "图片",
-      "转换",
-      "格式",
-      "在线"
-    ],
-    "nameEn": "Image Converter",
-    "descriptionEn": "Online image converter for image, convert, format, online. Works right in your browser — free, secure, and no install required.",
-    "tagsEn": [
-      "Image",
-      "Convert",
-      "Format",
-      "Online"
-    ],
-    "isFree": true,
-    "icon": "Image",
-    "externalUrl": "https://image.online-convert.com/",
-    "likes": 3097,
-    "isSelfHosted": false
-  },
-  {
     "id": "video-converter",
     "slug": "video-converter",
     "name": "视频转换器",
@@ -14577,32 +14551,6 @@
     "icon": "Zap",
     "externalUrl": "https://www.calculator.net/",
     "likes": 4678,
-    "isSelfHosted": false
-  },
-  {
-    "id": "unit-converter",
-    "slug": "unit-converter",
-    "name": "单位转换器",
-    "description": "在线单位转换工具，长度、重量、温度等多种单位。",
-    "category": "productivity",
-    "tags": [
-      "单位",
-      "转换",
-      "长度",
-      "重量"
-    ],
-    "nameEn": "Unit Converter",
-    "descriptionEn": "Online unit converter for unit, conversion, length, weight. Works right in your browser — free, secure, and no install required.",
-    "tagsEn": [
-      "单位",
-      "Convert",
-      "长度",
-      "重量"
-    ],
-    "isFree": true,
-    "icon": "Zap",
-    "externalUrl": "https://www.unitconverters.net/",
-    "likes": 4567,
     "isSelfHosted": false
   },
   {
