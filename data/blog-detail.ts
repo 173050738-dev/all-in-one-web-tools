@@ -43023,5 +43023,978 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
       "ar": "حوّل ماركداون الآن — مجاني، خاص، من جانب العميل"
     }
   }
-]
+],
+  "how-to-write-acrostic-poem-guide": [
+    {
+      "type": "h2",
+      "text": {
+        "en": "What Is an Acrostic Poem?",
+        "zh": "什么是藏头诗？"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "An acrostic poem is a poem where the first letter of each line spells out a word, name, or phrase when read vertically. The hidden message can be a name, a theme, a tribute, or even a clever puzzle for the reader to discover. Acrostics have been used for over two thousand years to embed meaning inside verse that, on the surface, may seem to be about something else entirely.",
+        "zh": "藏头诗是一种诗，每行的首字母竖向读时会拼出一个单词、名字或短语。隐藏的信息可以是一个名字、一个主题、一份致敬，甚至是一个留给读者发现的巧妙谜题。两千多年来，藏头诗一直被用来在看似讲述别的事物的诗句中嵌入深意。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "The simplest acrostic uses only the first letter of each line, but poets have developed many variations over the centuries: the last letters of each line, the first letters of each word in a line, or even letters placed at specific positions to spell hidden words. The result is a poem that works on two levels at once — the visible poem and the concealed message.",
+        "zh": "最简单的藏头诗仅使用每行的第一个字母，但几个世纪以来诗人发展出许多变体：每行末字母、行中每个词的首字母，甚至将字母放在特定位置以拼出隐藏单词。结果是诗作同时在两个层面运作——可见的诗句与隐藏的信息。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "info",
+      "text": {
+        "en": "Quick definition: An acrostic is any poem or text where certain letters — usually the first of each line — form a word or message when read in sequence.",
+        "zh": "快速定义：藏头诗是指某些字母（通常是每行首字母）按顺序阅读时组成一个词或信息的任何诗歌或文本。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "A Brief History of Acrostics",
+        "zh": "藏头诗简史"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Acrostics are among the oldest literary forms in the world. The technique appears in the Hebrew Bible — several Psalms (notably Psalm 119) follow a strict alphabetical acrostic pattern where each section begins with a successive letter of the Hebrew alphabet. Greek and Roman poets used acrostics as both devotional exercises and intellectual puzzles, and medieval monks embedded them in hymns and illuminated manuscripts.",
+        "zh": "藏头诗是世界上最古老的文学形式之一。这种技巧出现在希伯来圣经中——多首诗篇（尤其是第119篇）遵循严格的字母藏头模式，每段以希伯来字母表中的连续字母开头。希腊和罗马诗人将藏头诗既用作灵修练习，也用作智力谜题，中世纪的修道士则将其嵌入赞美诗和彩绘手抄本中。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "In East Asia, the form flourished as Chinese 藏头诗 (cángtóushī) — literally hidden-head poems — where the first characters of each line combined into a phrase. The form later spread to Japan and became a popular teaching tool. Lewis Carroll, Edgar Allan Poe, and many other Western poets used acrostics to encode names of friends or patrons inside their verse, sometimes as public homage and sometimes as private jokes.",
+        "zh": "在东亚，这种形式以中文藏头诗之名繁盛——字面意思是隐藏首字之诗——每行的首字组合成一个短语。该形式后传入日本，成为流行的教学工具。刘易斯·卡罗尔、爱伦·坡及许多其他西方诗人用藏头诗在诗句中编码朋友或赞助人的名字，有时是公开致敬，有时是私人玩笑。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Common Forms of Acrostic Poetry",
+        "zh": "藏头诗的常见形式"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Once you start writing acrostics, you'll find there are several distinct patterns to choose from. Each one creates a different reading experience, so it's worth understanding them before you commit to one.",
+        "zh": "一旦开始写藏头诗，你会发现有几种不同的模式可供选择。每种都创造不同的阅读体验，所以在确定之前值得先了解它们。"
+      }
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "en": "Single-letter acrostic: The first letter of each line spells a word or name. Easiest to write and the most common modern form.",
+          "zh": "单字母藏头：每行首字母拼出一个词或名字。最容易写，也是最常见的现代形式。"
+        },
+        {
+          "en": "Double acrostic: Both the first and last letters of each line form messages — sometimes the same message, sometimes two complementary ones.",
+          "zh": "双重藏头：每行的首字母和末字母都形成信息——有时是同一信息，有时是两条互补的信息。"
+        },
+        {
+          "en": "Mesostich: The hidden word runs down the middle of the poem, with letters positioned within each line rather than at the edges.",
+          "zh": "中藏诗：隐藏的词沿诗的中间纵向排列，字母位于每行内部而非边缘。"
+        },
+        {
+          "en": "Telestich: The last letter of each line spells the hidden word — useful when you want the surface poem to feel finished before the message is revealed.",
+          "zh": "尾藏诗：每行末字母拼出隐藏的词——当你希望表面诗作在信息揭示前已觉完整时很有用。"
+        },
+        {
+          "en": "Word acrostic: The first word of each line spells a phrase, allowing for longer hidden messages without awkward letter constraints.",
+          "zh": "词藏头：每行首词拼出一个短语，可在不受别扭字母约束的情况下嵌入更长的隐藏信息。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Step-by-Step: How to Write an Acrostic Poem",
+        "zh": "分步指南：如何写藏头诗"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Writing an acrostic is simple in concept but surprisingly tricky in execution. The constraint of starting every line with a specific letter forces creative decisions you wouldn't otherwise make. Follow these steps to keep the process manageable.",
+        "zh": "写藏头诗概念简单但执行出人意料地棘手。每行须以特定字母开头的约束会迫使你做出平时不会做的创意决定。按以下步骤操作可让过程更易掌控。"
+      }
+    },
+    {
+      "type": "ol",
+      "items": [
+        {
+          "en": "Pick your hidden word or phrase. Keep it short for your first attempt — four to seven letters works well. A name, a season, or an emotion makes a good starting point.",
+          "zh": "选定隐藏的词或短语。首次尝试保持简短——四到七个字母为佳。名字、季节或情感都是不错的起点。"
+        },
+        {
+          "en": "Write the letters vertically. This is your skeleton. Each letter will start one line, so you can see the structure you need to fill in.",
+          "zh": "将字母竖向写出。这是你的骨架。每个字母将作为一行的开头，这样你能看到需要填补的结构。"
+        },
+        {
+          "en": "Choose a theme that fits both the word and the surface poem. If your hidden word is OCEAN, writing about the sea keeps the surface and the secret working together — but writing about longing can create a more interesting tension.",
+          "zh": "选择既契合隐藏词又适合表面诗作的主题。若隐藏词是OCEAN，写海可以让表面与秘密协同——但写思念能创造更有趣的张力。"
+        },
+        {
+          "en": "Draft each line without forcing the meaning. Start with the required letter and let the line develop naturally. Don't try to spell out the hidden word inside the lines themselves — that defeats the purpose.",
+          "zh": "不强行牵合含义地起草每行。以必需的字母开头，让该行自然发展。不要试图在行内拼出隐藏的词——那会破坏藏头诗的意义。"
+        },
+        {
+          "en": "Read the poem aloud, ignoring the acrostic. Does the surface poem work? If a line feels forced, rewrite it. The acrostic should feel like a hidden gift, not a visible constraint.",
+          "zh": "大声朗读全诗，忽略藏头结构。表面诗作成立吗？若某行显得牵强，重写它。藏头应当像一份隐藏的礼物，而非可见的束缚。"
+        },
+        {
+          "en": "Revise for rhythm and image. Tighten weak lines, sharpen vague images, and check that the poem flows as a poem first and an acrostic second.",
+          "zh": "为节奏与意象修订。收紧薄弱的诗行，锐化模糊的意象，并确保诗作首先作为诗流畅，其次才是藏头。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Tips to Elevate Your Acrostic",
+        "zh": "提升藏头诗的技巧"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "A mediocre acrostic often reads like a sentence chopped into pieces — the surface poem has no life of its own. A great acrostic works first as a poem; the hidden message is the reward for the careful reader, not the only point.",
+        "zh": "平庸的藏头诗往往读起来像被切碎的句子——表面诗作缺乏自己的生命。优秀的藏头诗首先是一首好诗；隐藏的信息是给细心读者的奖赏，而非唯一的重点。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Pay attention to line breaks: ending a line on a strong image or verb makes the surface poem more vivid and keeps the reader moving naturally to the next line. Use enjambment — where a sentence flows across line breaks — so the reader doesn't pause at every first letter.",
+        "zh": "注意换行：在强烈的意象或动词处结束一行能让表面诗作更生动，并使读者自然地移到下一行。使用跨行——让句子跨过行末——这样读者不会在每个首字母处停顿。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "tip",
+      "text": {
+        "en": "Pro tip: Avoid the temptation to start every line with a boring word like And or The just to satisfy the letter constraint. Force yourself to find a vivid verb, noun, or sensory detail that begins with the required letter.",
+        "zh": "高手技巧：避免为满足字母约束而让每行都以And或The这类乏味词开头。强迫自己找到以所需字母开头的生动动词、名词或感官细节。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Common Pitfalls to Avoid",
+        "zh": "常见误区"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "The most common mistake beginners make is letting the constraint show. If the reader can sense the acrostic structure before they discover the hidden word, the surprise is lost. A second pitfall is choosing a hidden word so long that the surface poem becomes exhausting — eight to ten lines is usually the comfortable limit for a single acrostic.",
+        "zh": "初学者最常犯的错误是让束缚感外露。如果读者在发现隐藏词之前就察觉到藏头结构，惊喜就丧失了。第二个陷阱是选择过长的隐藏词，使表面诗作令人疲惫——一首藏头诗通常以八到十行为舒适的极限。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "A third pitfall is picking a hidden word whose letters offer no interesting starting points. Words heavy in X, Z, or Q will force awkward openings. If your chosen name has difficult letters, consider using a nickname, a translation, or a related word instead.",
+        "zh": "第三个陷阱是选择首字母无趣的隐藏词。含大量X、Z或Q的词会迫使别扭的开头。若所选名字包含难处理的字母，可考虑用昵称、译名或相关词代替。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Conclusion",
+        "zh": "总结"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Acrostic poetry is one of the most accessible forms of wordplay — easy enough for a child to attempt, deep enough to occupy a lifetime. By choosing a meaningful hidden word, drafting naturally, and revising the surface poem until it stands on its own, you create a piece that rewards the careful reader twice over. If you want to skip the brainstorming and generate a starting point in seconds, an acrostic poem generator can give you a draft to refine.",
+        "zh": "藏头诗是最易上手的文字游戏形式之一——简单到孩子也能尝试，深邃到能穷尽一生。通过选择有意义的隐藏词、自然地起草，并把表面诗作修订到能独立成立，你将创造出一首让细心读者获得双重奖赏的作品。若想跳过头脑风暴，几秒内得到起点，藏头诗生成器可以为你生成可打磨的草稿。"
+      }
+    },
+    {
+      "type": "cta",
+      "toolSlug": "acrostic-poem-generator",
+      "text": {
+        "en": "Try Our Free Acrostic Poem Generator — Runs in Your Browser",
+        "zh": "试试我们的免费藏头诗生成器——在浏览器中运行"
+      }
+    }
+  ],
+  "dream-meanings-interpretation-guide": [
+    {
+      "type": "h2",
+      "text": {
+        "en": "Why Do We Dream? (And Why We Want to Decode Them)",
+        "zh": "人为什么会做梦？（以及我们为何想要破译梦境）"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Dreams are among the most universal and most mysterious human experiences. Every night, almost everyone on Earth slips into a parallel world of images, emotions, and stories — and every morning, almost everyone tries to make sense of what they just experienced. The desire to interpret dreams is as old as language itself: ancient Babylonians inscribed dream dictionaries on clay tablets, and countless cultures have treated dreams as messages from gods, ancestors, or the deeper self.",
+        "zh": "梦是人类最普遍也最神秘的体验之一。每晚，地球上几乎每个人都潜入一个由图像、情感和故事构成的平行世界——每个清晨，几乎每个人都试图理解自己刚刚经历的事。破译梦的渴望与语言本身一样古老：古巴比伦人将梦词典刻在泥板上，无数文化都把梦视为来自神、祖先或更深层自我的讯息。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Modern neuroscience has shown that dreams are produced by the brain during REM sleep, when memory consolidation, emotional processing, and creative recombination of recent experiences appear to happen at once. But knowing the mechanism does not diminish the meaning — most of us still wake up wondering why a particular dream felt so charged with significance, and that curiosity is what dream interpretation tries to satisfy.",
+        "zh": "现代神经科学已表明，梦是大脑在快速眼动睡眠（REM）期间产生的，当时记忆巩固、情绪处理与对近期经历的创造性重组似乎同时发生。但了解机制并不会削弱意义——我们大多数人醒来时仍会想，为什么某个梦感觉如此意味深长，而这份好奇正是梦解析试图满足的。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "info",
+      "text": {
+        "en": "Key insight: There is no universal dream dictionary. The same image — say, falling, flying, or losing teeth — can mean very different things to different people depending on their life, memories, and emotional state.",
+        "zh": "关键洞察：不存在通用的梦词典。同一个意象——例如坠落、飞翔或掉牙——对不同人可能意味着截然不同的事，取决于他们的生活、记忆与情绪状态。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "A Short History of Dream Interpretation",
+        "zh": "梦解析简史"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "The earliest written dream interpretations come from Mesopotamia, around 3000 BCE. The Epic of Gilgamesh, the oldest surviving work of literature, contains a dream sequence that is explicitly interpreted. The ancient Egyptians produced formal dream books listing images and their meanings. Greek and Roman temples hosted ritual dream incubation, where worshippers slept in sacred spaces in the hope of receiving healing dreams from the gods.",
+        "zh": "最早的书面梦解析约出现于公元前3000年的美索不达米亚。《吉尔伽美什史诗》——现存最古老的文学作品——就包含一段被明确解释的梦境。古埃及人编纂了正式的梦书，列出意象及其含义。希腊和罗马神庙举办仪式性的梦孵化，信众在神圣空间入睡，希望获得来自神灵的疗愈之梦。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "In the modern era, two figures shaped how the West thinks about dreams. Sigmund Freud's 1899 book The Interpretation of Dreams argued that dreams are disguised fulfillments of repressed wishes, encoded in symbols to protect sleep. Carl Jung broke with Freud and proposed that dreams are the unconscious speaking directly — not disguising, but compensating for what the conscious mind ignores. Most contemporary dream workers draw from both traditions, treating dreams as meaningful material to be explored rather than decoded.",
+        "zh": "在近代，两位人物塑造了西方对梦的看法。西格蒙德·弗洛伊德1899年的《梦的解析》主张，梦是被压抑欲望的伪装实现，以符号编码以保护睡眠。卡尔·荣格与弗洛伊德决裂，提出梦是无意识的直接表达——并非伪装，而是对意识忽略之物的补偿。当代大多数梦工作者兼采两派，将梦视为有待探索的有意义素材，而非待破译的密文。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Common Dream Symbols and Their Meanings",
+        "zh": "常见梦境符号及其含义"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "While no single symbol carries universal meaning, certain dream motifs appear with surprising frequency across cultures and individuals. These patterns are useful starting points for interpretation — not endings. Treat them as questions to ask yourself rather than answers you must accept.",
+        "zh": "尽管没有单一符号具有普世含义，但某些梦境母题在不同文化与个体间出现的频率惊人。这些模式是有用的解读起点——而非终点。把它们当作向自己提出的问题，而非必须接受的答案。"
+      }
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "en": "Falling: Often linked to a sense of losing control, insecurity, or fear of failure in waking life. Sometimes appears during physical transitions in sleep.",
+          "zh": "坠落：常与失控感、不安全感或对现实生活中失败的恐惧有关。有时出现在睡眠中的身体过渡阶段。"
+        },
+        {
+          "en": "Flying: Frequently associated with freedom, ambition, or a sense of expanded possibility — but can also signal a wish to escape current responsibilities.",
+          "zh": "飞翔：常与自由、抱负或可能性扩展感有关——但也可暗示希望逃离当前的责任。"
+        },
+        {
+          "en": "Teeth falling out: One of the most universal dream motifs, often tied to concerns about appearance, communication, or major life transitions.",
+          "zh": "掉牙：最普遍的梦境母题之一，常与对外貌、沟通或重大人生转变的担忧有关。"
+        },
+        {
+          "en": "Being chased: Typically reflects avoidance — something in waking life the dreamer is not confronting. The pursuer is often symbolic, not literal.",
+          "zh": "被追赶：通常反映逃避——现实生活中梦者未面对的某事。追赶者往往是象征性的，而非字面的。"
+        },
+        {
+          "en": "Water: The state of water (calm, turbulent, deep, shallow) frequently mirrors emotional states rather than external events.",
+          "zh": "水：水的状态（平静、湍急、深邃、浅显）常常映射情绪状态而非外部事件。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "A Step-by-Step Method for Interpreting Your Dreams",
+        "zh": "解读梦境的分步方法"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Most contemporary dream workers agree that the dreamer is the ultimate authority on what their dream means. A symbol dictionary can offer possibilities, but only the dreamer knows which interpretation resonates. A simple, structured method works better than reaching for a fixed dictionary.",
+        "zh": "当代大多数梦工作者都同意，梦者本人是其梦境含义的最终权威。符号词典可提供可能性，但只有梦者知道哪种解读产生共鸣。一种简单、结构化的方法比翻阅固定词典更有效。"
+      }
+    },
+    {
+      "type": "ol",
+      "items": [
+        {
+          "en": "Record the dream immediately on waking. Keep a notebook or app by the bed. Memory of dreams fades within minutes; details lost cannot be recovered.",
+          "zh": "醒来后立即记录梦境。在床头放笔记本或App。梦的记忆在几分钟内就会消退；遗失的细节无法找回。"
+        },
+        {
+          "en": "Write the dream in the present tense. I am walking through a forest and the trees are talking. Present tense keeps the dream emotionally alive instead of turning it into a faded report.",
+          "zh": "用现在时写下梦境。\"我正穿过一片森林，树木在说话\"。现在时让梦保持情感鲜活，而非变成褪色的报告。"
+        },
+        {
+          "en": "List every distinct image, character, and emotion. Note odd details — the colour of a stranger's coat, an unusual word spoken, a strange object. The bizarre elements are often the most meaningful.",
+          "zh": "列出每个独立的意象、人物与情绪。留意古怪的细节——陌生人外套的颜色、一句不寻常的话、一个奇怪物件。荒诞的元素往往最有意义。"
+        },
+        {
+          "en": "Ask what each image evokes in your personal life. What does the locked door remind you of? What recent situation involved feeling shut out or facing a barrier?",
+          "zh": "追问每个意象在你的个人生活中唤起什么。\"那扇锁上的门\"让你想起什么？最近哪种情境让你感到被拒之门外或面对障碍？"
+        },
+        {
+          "en": "Find the emotional thread. Most dreams carry one dominant emotion — fear, longing, surprise, grief. Following that thread will lead you closer to the dream's core meaning than any individual symbol.",
+          "zh": "找到情感主线。大多数梦承载一种主导情绪——恐惧、思念、惊讶、悲伤。顺着这条线走会比任何单一符号更接近梦的核心含义。"
+        },
+        {
+          "en": "Watch for patterns across multiple dreams. A single dream is hard to read; three dreams over a week that share a motif tell a story your unconscious is trying to surface.",
+          "zh": "留意多个梦之间的模式。单个梦难以解读；一周内三个共享母题的梦讲述着你无意识正试图浮出水面的事。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "The Science Behind Dreaming",
+        "zh": "梦境背后的科学"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Modern sleep research has clarified when and how dreams happen. The clearest dreams occur during REM sleep, a phase in which the brain becomes nearly as active as it is during waking, while the body's voluntary muscles are temporarily paralysed to prevent us from acting out our dreams. A typical night includes four or five REM cycles, with the longest and most dream-rich REM periods occurring in the final hours of sleep.",
+        "zh": "现代睡眠研究已厘清梦发生的时间与机制。最清晰的梦出现在REM睡眠期，此时大脑几乎与清醒时一样活跃，而身体的随意肌暂时瘫痪，以防我们将梦境演出来。一个典型的夜晚包含四到五个REM周期，最长、最富梦境的REM期出现在睡眠的最后几小时。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Several theories attempt to explain why we dream at all. The continuity hypothesis suggests dreams help consolidate memories and integrate new experiences with old ones. The emotional regulation theory proposes that dreams process difficult feelings in a safe simulated environment. The activation-synthesis theory argues dreams are the brain's attempt to make sense of random neural firing during sleep. None of these theories excludes the others, and none prevents us from also finding personal meaning in dreams.",
+        "zh": "有数种理论试图解释人为何做梦。连续性假说认为梦帮助巩固记忆，将新经历与旧经历整合。情绪调节理论认为梦在安全的模拟环境中处理困难情绪。激活-合成理论认为梦是大脑试图理解睡眠中随机神经放电的结果。这些理论彼此并不排斥，也都不妨碍我们在梦中寻找个人意义。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "tip",
+      "text": {
+        "en": "Try this: If you want to remember more dreams, drink a glass of water before bed and tell yourself you'll remember them. The mild interruption of waking to use the bathroom often lands you in a REM period — and you'll catch a dream you'd otherwise forget.",
+        "zh": "试试这个：若想记住更多梦，睡前喝一杯水，并告诉自己会记住。起夜时这种轻微的打断常让你正好处于REM期——你会捕捉到一个本会被遗忘的梦。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Conclusion",
+        "zh": "总结"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Dream interpretation sits at the intersection of science, art, and self-knowledge. There is no universal key, no single correct meaning for any symbol — but there is a reliable method: record your dreams, attend to the emotions they carry, and connect their images to your waking life. Over time, patterns emerge that can reveal concerns your conscious mind has been overlooking. If you want a structured prompt to help you start unpacking a dream, an online dream interpreter can offer symbol suggestions and reflection prompts.",
+        "zh": "梦解析处于科学、艺术与自我认知的交汇处。没有通用的钥匙，任何符号都没有唯一正确的含义——但存在可靠的方法：记录梦境，留意其承载的情绪，将其意象与你的现实生活相连。久而久之，模式会浮现，揭示意识层面一直忽略的关切。若想要一个结构化提示来帮你开始拆解一个梦，在线梦境解析器可提供符号建议与反思提示。"
+      }
+    },
+    {
+      "type": "cta",
+      "toolSlug": "dream-interpreter",
+      "text": {
+        "en": "Try Our Free Dream Interpreter — Runs in Your Browser",
+        "zh": "试试我们的免费梦境解析器——在浏览器中运行"
+      }
+    }
+  ],
+  "design-signature-online-guide": [
+    {
+      "type": "h2",
+      "text": {
+        "en": "What Makes a Signature Good?",
+        "zh": "什么样的签名才算好？"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "A signature is more than a way to make a document legal — it is a personal mark that you will repeat thousands of times across your life. A good signature is recognisable at a glance, reproducible under pressure, distinctive enough to resist forgery, and aesthetically pleasing to the signer. These four qualities often pull against each other: the most distinctive signature is usually harder to reproduce quickly, and the simplest signature is the easiest to forge.",
+        "zh": "签名不仅是让文件生效的方式——它是一个会在你一生中被重复千万次的个人印记。好的签名一眼可辨、压力下可复现、足够独特以抵御伪造、对签署者而言美观。这四种品质常常互相牵制：最独特的签名通常更难快速复现，最简单的签名最容易伪造。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Most people inherit their signature by accident — they sign their name the way they were taught in school, never revisit it, and end up with a mark that is neither secure nor satisfying. Designing a signature deliberately, even once, can give you a personal mark you actually like using for decades to come.",
+        "zh": "大多数人的签名是意外继承的——他们用学校里教的方式签自己的名字，从不重新审视，最终得到一个既不安全也不令人满意的印记。哪怕只设计一次签名，也能让你拥有未来数十年真正喜欢使用的个人印记。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "info",
+      "text": {
+        "en": "Did you know? In many legal systems, a signature does not need to look any particular way — it can be a scribble, a mark, initials, or even a stamped symbol. What matters is the intent to sign and the consistency of use.",
+        "zh": "你知道吗？在许多法律体系中，签名无需呈现特定形式——可以是涂鸦、记号、缩写，甚至盖印的符号。重要的是签署意图与使用的一致性。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "The Anatomy of a Signature",
+        "zh": "签名的解剖结构"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Well-designed signatures tend to share a small set of structural choices. Understanding these elements lets you decide what you want yours to look like instead of accepting whatever your hand produces on autopilot.",
+        "zh": "设计精良的签名往往共享一组结构选择。理解这些元素让你能决定自己想要的样子，而非接受手在自动驾驶下产生的结果。"
+      }
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "en": "Baseline: Whether the signature sits flat on the line, rises, or falls. A rising signature tends to read as optimistic; a falling one as tired or reluctant.",
+          "zh": "基线：签名是平贴行线、上扬还是下倾。上扬的签名常被读作乐观；下倾的常显得疲惫或勉强。"
+        },
+        {
+          "en": "Slant: Forward-slanted signatures read as outgoing and assertive; upright signatures read as composed; back-slanted ones as reserved.",
+          "zh": "倾斜度：前倾签名显得外向果断；竖直显得从容；后倾显得内敛。"
+        },
+        {
+          "en": "Flourish: A loop, underline, or sweeping stroke at the end. Flourishes add distinctiveness but increase the time needed to sign.",
+          "zh": "花饰：末端的环、下划线或扫掠笔画。花饰增加独特性但拉长签名时间。"
+        },
+        {
+          "en": "Compression: How tightly the letters are packed. Tight signatures look deliberate; loose ones look relaxed and confident.",
+          "zh": "紧密度：字母排列的疏密。紧凑显得刻意；宽松显得放松自信。"
+        },
+        {
+          "en": "Ligature: How letters connect. Strong ligatures (continuous strokes between letters) make a signature harder to forge and faster to write.",
+          "zh": "连笔：字母之间的连接方式。强连笔（字母间连续笔画）使签名更难伪造、书写更快。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Design Principles for a Memorable Signature",
+        "zh": "设计独特签名的原则"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "A signature is a small piece of typography that you will write by hand thousands of times. The same principles that make a logotype memorable apply, condensed to a single word or set of initials.",
+        "zh": "签名是一段会被你手写上千次的小型字体设计。让标志字 memorable 的原则同样适用，只是浓缩到一个词或一组缩写上。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "First, choose a focal point — one letter or stroke that anchors the signature and that your eye lands on first. For most people this is the first initial or the capital of the surname. Second, simplify the rest: anything that does not serve the focal point should be reduced to a quick, legible gesture. Third, decide on a flourish — or deliberately skip one. A signature with no flourish can look more confident than one with an unnecessary curl.",
+        "zh": "首先选定焦点——一个锚定签名、眼睛首先落到的字母或笔画。对大多数人这是首字母或姓氏的大写。其次，简化其余：凡不服务于焦点的部分都应缩减为快速、可辨的手势。第三，决定是否加花饰——或刻意不加。无花饰的签名常比带不必要卷曲的更显自信。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "tip",
+      "text": {
+        "en": "Pro tip: Sign with a slight forward slant and a single flourish at the end of your surname. This combination reads as confident and distinctive without being theatrical.",
+        "zh": "高手技巧：以轻微前倾的角度签名，并在姓氏末尾加单一花饰。这种组合读作自信独特，而不过分戏剧化。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "How to Design a Signature Online",
+        "zh": "如何在线设计签名"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Designing a signature online lets you experiment with dozens of variations in the time it would take to hand-draw three. A typical online generator lets you type your name, choose a handwriting style, adjust slant and size, and then export the result as an image you can use for digital documents.",
+        "zh": "在线设计签名让你能在手写三个变体的时间里实验数十种变化。典型的在线生成器允许你输入名字、选择手写风格、调整倾斜与大小，然后将结果导出为可用于数字文档的图像。"
+      }
+    },
+    {
+      "type": "ol",
+      "items": [
+        {
+          "en": "Type your full name. Try both your full legal name and shortened versions — many people sign with first initial plus surname for speed.",
+          "zh": "输入你的全名。同时尝试完整法定姓名与简短版本——许多人为了速度只签首字母加姓氏。"
+        },
+        {
+          "en": "Choose a handwriting style that matches the impression you want to convey: classic, modern, casual, or formal.",
+          "zh": "选择与你希望传达的印象相符的手写风格：古典、现代、休闲或正式。"
+        },
+        {
+          "en": "Adjust slant and size. Try several variations — small differences in slant completely change how the signature feels.",
+          "zh": "调整倾斜与大小。尝试数种变体——倾斜的微小差异会完全改变签名的感觉。"
+        },
+        {
+          "en": "Pick a flourish style. Most generators offer underlines, loops, or sweeping end strokes; pick one and see how it changes the whole composition.",
+          "zh": "挑选花饰风格。多数生成器提供下划线、环或扫掠收笔；选一个看看它如何改变整体构图。"
+        },
+        {
+          "en": "Export the signature as a transparent PNG. This format lets you place the signature over any document without an ugly background rectangle.",
+          "zh": "将签名导出为透明PNG。这种格式让你能将签名叠加到任何文档上，而不会出现难看的背景矩形。"
+        },
+        {
+          "en": "Practice signing by hand to match. The digital signature is your starting point — your goal is to be able to reproduce a similar mark on paper.",
+          "zh": "练习手写以匹配。数字签名是你的起点——目标是能在纸上复现相似的印记。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Practical Use Cases for a Designed Signature",
+        "zh": "设计签名的实际用途"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "A designed signature has more uses than you might expect. Beyond the obvious case of signing legal documents, a clean digital signature is useful for email sign-offs, invoice approvals, contract attachments, and any context where you need to add a personal mark to a digital file without printing it.",
+        "zh": "设计签名的用途比你预想的更多。除了显而易见的签署法律文件，干净的数字签名还可用于邮件落款、发票审批、合同附件，以及任何需要在数字文件上加个人印记而不必打印的场景。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "For business owners and freelancers, a consistent signature across invoices and correspondence projects professionalism. For job seekers, signing a cover letter with a designed signature (rather than a typed name) adds a personal touch that can stand out. For artists and creators, a distinctive signature becomes part of the brand — visible on artwork, prints, and merchandise.",
+        "zh": "对企业主与自由职业者而言，发票与通信中一致的签名彰显专业。对求职者而言，用设计签名（而非打字姓名）签署求职信能增添个人触感，引人注目。对艺术家与创作者而言，独特签名成为品牌的一部分——可见于作品、印刷品与周边商品。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "warn",
+      "text": {
+        "en": "Important: A digital signature image is not the same as a cryptographically signed document. For legal or financial documents that require verified identity, use the signing platform built into the service (e.g., DocuSign, Adobe Sign) — image signatures are for casual use only.",
+        "zh": "重要提示：数字签名图像不同于加密签名的文档。对于需要验证身份的法律或财务文件，请使用服务自带的签名平台（如DocuSign、Adobe Sign）——图像签名仅供日常使用。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Conclusion",
+        "zh": "总结"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Your signature is one of the few personal marks you will use for the rest of your life, and most people accept whatever their hand produces by default. Designing a signature deliberately — choosing a focal point, simplifying the rest, picking a flourish that fits — gives you a mark that feels like your own. An online signature generator lets you explore dozens of variations in minutes and export the result for use on digital documents.",
+        "zh": "签名是你余生都会使用的少数个人印记之一，而大多数人接受手在默认状态下产生的任何结果。刻意设计签名——选择焦点、简化其余、挑选合适花饰——能给你一个真正属于自己的印记。在线签名生成器让你几分钟内探索数十种变体，并导出结果用于数字文档。"
+      }
+    },
+    {
+      "type": "cta",
+      "toolSlug": "handwritten-signature-generator",
+      "text": {
+        "en": "Design Your Signature Online — Free Tool",
+        "zh": "在线设计你的签名——免费工具"
+      }
+    }
+  ],
+  "classical-chinese-translation-guide": [
+    {
+      "type": "h2",
+      "text": {
+        "en": "What Is Classical Chinese?",
+        "zh": "什么是文言文？"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Classical Chinese (文言文, wényánwén) is the written language of Chinese literature from roughly the 5th century BCE through the early 20th century. Unlike vernacular Chinese, which mirrors the way people speak, classical Chinese is a condensed, allusive written register that was used across millennia and across regions where spoken Chinese was mutually unintelligible. A scholar in Tang-dynasty Chang'an and a scholar in Edo-period Japan could correspond in classical Chinese without sharing a single spoken word.",
+        "zh": "文言文是大约公元前5世纪至20世纪初中国文学的书面语。与反映口语的白话文不同，文言文是一种凝练、富于典故的书面语体，被使用数千年，并跨越口语互不相通的地区。唐代长安的学者与江户时代日本的学者可用文言文通信，而无需共享任何口语。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Classical Chinese compresses enormous meaning into very few characters. A typical sentence may have three to six characters where modern Chinese would use fifteen or twenty. This compression is achieved through grammatical particles, allusion to canonical texts, and a shared literary culture that every educated reader was expected to know. Translating classical Chinese well means reconstructing the layers of meaning that the original compressed away.",
+        "zh": "文言文以极少的字承载大量含义。一个典型句子可能有三到六字，而现代汉语需十五到二十字。这种凝练通过语法虚词、对经典的典故，以及每位受教育读者被期待共享的文学文化来实现。把文言文译好意味着重建原文压缩掉的层层含义。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "info",
+      "text": {
+        "en": "Did you know? Classical Chinese was the lingua franca of East Asian scholarship for over 1500 years. Vietnamese, Korean, and Japanese scholars all wrote in it — meaning classical Chinese texts can be read (in their original characters) by readers across the region today.",
+        "zh": "你知道吗？文言文是东亚学术界的通用语超过1500年。越南、朝鲜与日本学者都用它写作——这意味着文言文文本至今可被该地区的读者（用原汉字）阅读。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Why Translate Classical Chinese Today?",
+        "zh": "今天为何要翻译文言文？"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Classical Chinese is not a dead language. Chinese students still read Confucius, Mencius, and the great Tang and Song poets in the original, and major universities continue to produce scholarship in classical Chinese studies. Translating these texts into modern Chinese or English lets contemporary readers — and increasingly, AI systems — engage with two thousand years of literature, philosophy, history, and poetry that would otherwise remain inaccessible.",
+        "zh": "文言文并非死语言。中国学生仍读孔子、孟子及唐宋大家原作，主要大学仍产出文言文研究。将这些文本译为现代汉语或英文，让当代读者——以及越来越多AI系统——得以接触两千年来的文学、哲学、历史与诗歌，否则它们将一直难以触及。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Translation is also the single most effective way to truly understand a classical text. The discipline of choosing modern equivalents for ancient particles forces you to decide what you think a sentence actually means — there is no room for vague appreciation. For students of Chinese, regular translation practice is one of the fastest ways to deepen both classical reading and modern writing skills.",
+        "zh": "翻译也是真正理解文言文本最有效的方法。为古老虚词选择现代对应物的训练迫使你确定自己对一句含义的看法——不容许模糊的欣赏。对汉语学习者而言，定期翻译练习是同时加深古文阅读与现代写作能力的最快途径之一。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Common Grammar Patterns You Must Recognize",
+        "zh": "必须识别的常见语法模式"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Classical Chinese grammar is far smaller than modern Chinese grammar, but its few patterns carry enormous weight. Most ambiguities in translation come from misreading one of these patterns. The following list covers the patterns a translator encounters in nearly every sentence.",
+        "zh": "文言文语法远比现代汉语精简，但少数模式承载巨大分量。翻译中的大多数歧义都源于对某一模式的误读。以下清单涵盖译者在几乎每句话中都会遇到的模式。"
+      }
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "en": "之 (zhī): Possessive marker (modern 的), or a pronoun (him/her/it), or a particle that inverts subject-verb order. The single most common character in classical Chinese.",
+          "zh": "之：表所属（相当于现代的\"的\"），或作代词（他/她/它），或为宾语前置的标志。文言文中出现频率最高的字。"
+        },
+        {
+          "en": "其 (qí): Possessive pronoun (his/her/its/their) or a modal meaning probably / should.",
+          "zh": "其：表所属代词（他的/她的/它的/他们的），或表推测\"大概\"/\"应该\"。"
+        },
+        {
+          "en": "者 (zhě): Marks the topic of a sentence — is one who. Usually paired with 也 at the end of the clause.",
+          "zh": "者：标示句子的话题——\"……是……的人/物\"。常与句末的\"也\"配对。"
+        },
+        {
+          "en": "也 (yě): Sentence-final particle marking judgement or assertion. Often untranslatable directly into English.",
+          "zh": "也：句末语气词，表判断或断言。常难以直接译成英文。"
+        },
+        {
+          "en": "矣 (yǐ): Sentence-final particle marking completed action or new information. Roughly equivalent to modern 了.",
+          "zh": "矣：句末语气词，表动作完成或新信息。大致相当于现代的\"了\"。"
+        },
+        {
+          "en": "于 (yú): Preposition meaning in, at, to, from, or than — depending on context.",
+          "zh": "于：介词，意为\"在\"、\"于\"、\"到\"、\"从\"或\"比\"——视语境而定。"
+        },
+        {
+          "en": "以 (yǐ): By means of, with, because of, or in order to. One of the most versatile particles.",
+          "zh": "以：\"用\"、\"以\"、\"因为\"或\"为了\"。最通用的虚词之一。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "A Practical Method for Translating Classical Texts",
+        "zh": "翻译文言文本的实用方法"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Translation is not a single act — it is a sequence of decisions, each of which narrows the meaning. A structured method keeps you from drifting into guesses and forces you to defend each choice you make.",
+        "zh": "翻译不是单一动作——它是一连串决定，每一项都在收窄含义。结构化的方法可防止你滑入臆测，并迫使你为每个选择辩护。"
+      }
+    },
+    {
+      "type": "ol",
+      "items": [
+        {
+          "en": "Read the entire passage first, without translating. Get the overall sense — who is speaking, what is happening, what argument is being made. Do not get stuck on the first difficult character.",
+          "zh": "先通读全段，不翻译。把握整体含义——谁在说话、发生了什么、在论证什么。不要卡在第一个难字上。"
+        },
+        {
+          "en": "Identify the verbs. Classical Chinese often omits the verb to be and lets nouns stand as predicates, so finding the action is harder than in modern Chinese. Mark every verb you can identify.",
+          "zh": "找出动词。文言文常省略\"是\"动词，让名词直接作谓语，所以比现代汉语更难找到动作。标出你能识别的每个动词。"
+        },
+        {
+          "en": "Mark the particles. Underline 之, 其, 者, 也, 矣, 于, 以. Once these are placed, the sentence structure becomes much clearer.",
+          "zh": "标记虚词。在之、其、者、也、矣、于、之下划线。一旦这些位置确定，句子结构就清晰得多。"
+        },
+        {
+          "en": "Parse the sentence into subject-verb-object. Classical Chinese word order is generally SVO, but particles can invert it (e.g., 之 inverting subject and verb to mark an object fronted for emphasis).",
+          "zh": "将句子分析为主-谓-宾。文言文词序通常是SVO，但虚词可倒装（如\"之\"将主谓倒装以强调前置的宾语）。"
+        },
+        {
+          "en": "Draft a literal translation first. Don't aim for beauty — aim for accuracy. Literal translation exposes ambiguities you would otherwise paper over with smooth modern Chinese.",
+          "zh": "先草拟直译。不追求优美——追求准确。直译会暴露那些原本会被流畅现代汉语掩盖的歧义。"
+        },
+        {
+          "en": "Check allusions. If a phrase seems oddly specific or oddly placed, search the canonical texts — Confucius, Mencius, the Book of Songs, Zhuangzi. Most odd phrases in classical Chinese are allusions whose meaning depends on the source text.",
+          "zh": "查证典故。若某短语显得异常具体或异常生硬，检索经典——《论语》《孟子》《诗经》《庄子》。文言文中大多数异常短语都是典故，其含义依赖出处文本。"
+        },
+        {
+          "en": "Revise for fluency in the target language. Only after the meaning is settled should you smooth the translation for readability. If a sentence reads beautifully but you cannot defend every choice, you have written an interpretation, not a translation.",
+          "zh": "为目标语言的流畅度修订。只有在含义确定后才润色译文以求可读。若句子读来优美但你无法为每个选择辩护，你写的不是翻译，是诠释。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Common Pitfalls and How to Avoid Them",
+        "zh": "常见陷阱与规避方法"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "The most common error in translating classical Chinese is imposing modern meanings on ancient characters. Many characters have shifted meaning over two thousand years — for instance, 走 meant to run in classical Chinese and to walk today, while 汤 meant boiling water and today means soup. Using modern meanings without checking produces confident-sounding nonsense.",
+        "zh": "翻译文言文最常见的错误是用现代含义套古字。许多字在两千年中含义已变——例如\"走\"在文言文中意为\"跑\"，现代意为\"行走\"；\"汤\"古意为\"沸水\"，现代意为\"汤羹\"。不查证就用现代含义会产生听起来自信的胡话。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "A second common error is ignoring the parallelism that classical Chinese prose uses heavily. Many sentences come in pairs — the second clause mirrors the first in structure, and decoding one often unlocks the other. Translators who treat each clause in isolation miss half the meaning.",
+        "zh": "第二个常见错误是忽略文言散文大量使用的对仗。许多句子成对出现——第二分句在结构上镜像第一分句，破译一个常解锁另一个。孤立处理每个分句的译者会错过一半含义。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "warn",
+      "text": {
+        "en": "Warning: Classical Chinese annotation traditions sometimes disagree with each other. Two respected commentaries on the same passage can produce completely different readings. When in doubt, consult multiple sources and choose the reading that best fits the surrounding context.",
+        "zh": "警告：文言文的注解传统有时彼此分歧。同一段落的两种权威注本可能给出完全不同的解读。存疑时，参考多个来源，选择最契合上下文的解读。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Conclusion",
+        "zh": "总结"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Classical Chinese is a doorway into two thousand years of literature, philosophy, and history. Translating it well demands patience with particles, respect for allusion, and a willingness to draft a literal version before polishing. The reward is access to texts that have shaped East Asian thought for centuries — and a much sharper understanding of how modern Chinese came to be. If you are working with a classical passage and want a fast first draft to refine, an online classical Chinese converter can give you a starting point in seconds.",
+        "zh": "文言文是通往两千年文学、哲学与历史的门径。译好它需要耐心对待虚词、尊重典故，并愿意先写出直译稿再润色。回报是得以接触塑造东亚思想数百年的文本，并更深刻地理解现代汉语的来由。若你正处理某段古文并希望快速得到可打磨的初稿，在线文言文转换器可在几秒内给你起点。"
+      }
+    },
+    {
+      "type": "cta",
+      "toolSlug": "classical-chinese-converter",
+      "text": {
+        "en": "Convert Classical Chinese to Modern Chinese — Free Tool",
+        "zh": "将文言文转换为现代汉语——免费工具"
+      }
+    }
+  ],
+  "personality-test-types-guide": [
+    {
+      "type": "h2",
+      "text": {
+        "en": "What Is a Personality Test?",
+        "zh": "什么是人格测试？"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "A personality test is any structured instrument designed to measure patterns in how a person thinks, feels, and behaves. Some tests are grounded in decades of academic research; others are popular frameworks built for self-discovery or workplace use. The range is wide, and not every test that calls itself a personality test is built on solid science. Knowing what a test actually measures — and what it does not — is the first step toward using it well.",
+        "zh": "人格测试是任何旨在测量一个人思考、感受与行为模式的结构化工具。有些测试扎根于数十年的学术研究；有些是为自我探索或职场使用而建立的流行框架。范围很广，并非每个自称\"人格测试\"的工具都建立在扎实科学之上。理解一个测试究竟测量什么——以及不测量什么——是善用它的第一步。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Personality tests serve three broad purposes: self-understanding, communication within teams, and structured hiring decisions. The same test can serve all three, but each purpose calls for a different level of skepticism. A test used to spark a conversation about working styles needs only to be plausible; a test used to reject a job candidate needs to be substantially validated.",
+        "zh": "人格测试服务于三大目的：自我理解、团队内部沟通、结构化的招聘决策。同一个测试可三者兼顾，但每种目的要求的怀疑程度不同。用于引发工作风格对话的测试只需听起来合理；用于淘汰求职者的测试则需有实质性的效度验证。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "info",
+      "text": {
+        "en": "Quick context: Psychologists distinguish between personality (long-term stable traits) and state (temporary feelings). Most personality tests aim at traits — patterns that stay relatively stable across years and situations.",
+        "zh": "快速背景：心理学家区分人格（长期稳定的特质）与状态（暂时性的情绪）。大多数人格测试瞄准特质——跨年与跨情境相对稳定的模式。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "The Major Personality Test Frameworks",
+        "zh": "主要的人格测试框架"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Five frameworks dominate popular and academic use of personality tests today. They differ in their scientific standing, their purpose, and the language they use to describe personality — but each has shaped how millions of people think about themselves and others.",
+        "zh": "当今流行与学术使用中有五大框架占主导。它们在科学地位、目的以及描述人格的语言上各不相同——但每一种都塑造了数百万人如何看待自己与他人。"
+      }
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "en": "Big Five (OCEAN): Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism. The most scientifically validated model. Used in academic psychology and increasingly in hiring, though critics note it describes rather than explains.",
+          "zh": "大五人格（OCEAN）：开放性、尽责性、外向性、宜人性、神经质。科学验证最充分的模型。用于学术心理学，也越来越多地用于招聘，尽管批评者指出它描述而非解释。"
+        },
+        {
+          "en": "MBTI (Myers-Briggs Type Indicator): Sorts people into 16 types based on four dichotomies (Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, Judging/Perceiving). Widely used in corporate training despite limited scientific support.",
+          "zh": "MBTI（迈尔斯-布里格斯类型指标）：基于四个二元维度（外向/内向、感觉/直觉、思考/情感、判断/感知）将人分为16种类型。尽管科学支持有限，仍广泛用于企业培训。"
+        },
+        {
+          "en": "Enneagram: Nine types organised around core fears and motivations. Emphasises inner drivers rather than behaviour. Popular in coaching and spiritual contexts; scientific validation is thin.",
+          "zh": "九型人格：围绕核心恐惧与动机组织的九种类型。强调内在驱动力而非行为。在教练与灵性语境中流行；科学验证薄弱。"
+        },
+        {
+          "en": "DISC: Four behavioural styles — Dominance, Influence, Steadiness, Conscientiousness. Commonly used in sales training and team building because of its simplicity and accessibility.",
+          "zh": "DISC：四种行为风格——支配、影响、稳健、谨慎。因简洁易懂，常用于销售培训与团队建设。"
+        },
+        {
+          "en": "HEXACO: An extension of the Big Five adding Honesty-Humility as a sixth dimension. Used primarily in academic research; less common in popular use.",
+          "zh": "HEXACO：在大五基础上增加第六维度\"诚实-谦逊\"。主要用于学术研究；流行使用较少。"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "kind": "tip",
+      "text": {
+        "en": "If you only try one test: take a Big Five assessment. It is the most validated model, gives you a spectrum (not a box), and the results are useful across contexts from career planning to relationship communication.",
+        "zh": "若只试一个测试：做大五人格测评。它是验证最充分的模型，给你一个谱系（而非盒子），结果在职业规划、关系沟通等多种场景中都有用。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "How to Choose the Right Test for You",
+        "zh": "如何选择适合自己的测试"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Different tests suit different questions. Who am I at my best? calls for a different instrument than Why does my team keep clashing on deadlines? Picking a test that matches your actual question will get you more useful results than picking the most popular one.",
+        "zh": "不同测试适合不同问题。\"我在最佳状态下是什么样的人？\"需要的工具不同于\"为什么我的团队总在截止日期前起冲突？\"选择与你实际问题相匹配的测试，比选最流行的一个更有用。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "If your goal is self-understanding and you want scientifically grounded results, start with the Big Five. If your goal is conversational — talking with a partner or friend about how you each see the world — the Enneagram or MBTI may give you more emotionally resonant language, even if the science is weaker. If your goal is workplace communication, DISC's simplicity makes it useful for teams that need a shared vocabulary fast.",
+        "zh": "若你的目标是自我理解并想要有科学依据的结果，从大五开始。若你的目标是对话——与伴侣或朋友谈论你们各自如何看世界——九型人格或MBTI可能给你更具情感共鸣的语言，即便科学性较弱。若你的目标是职场沟通，DISC的简洁性让它适合需要快速建立共同词汇的团队。"
+      }
+    },
+    {
+      "type": "ol",
+      "items": [
+        {
+          "en": "Identify your question. What career suits me? Why do I burn out? How should my team communicate? Each question maps to a different test.",
+          "zh": "明确你的问题。\"什么职业适合我？\"\"我为何会倦怠？\"\"我的团队该如何沟通？\"每个问题对应不同的测试。"
+        },
+        {
+          "en": "Check the test's evidence base. The Big Five has decades of peer-reviewed research; MBTI has far less. If you will use the results for important decisions, this matters.",
+          "zh": "核查测试的证据基础。大五有数十年的同行评议研究；MBTI则少得多。若你将结果用于重要决定，这很重要。"
+        },
+        {
+          "en": "Take the full version, not the free shortcut. Shortened versions of tests are less reliable. A free online Big Five with ten questions is not the same instrument as the validated NEO-PI-R.",
+          "zh": "做完整版而非免费快捷版。缩短版的测试信度较低。在线十题的大五人格与经过验证的NEO-PI-R不是同一工具。"
+        },
+        {
+          "en": "Be honest. Personality tests only work if you answer truthfully — and most people subtly fudge their answers to look better. The results then describe who you wish you were, not who you are.",
+          "zh": "诚实作答。人格测试只有在你真实作答时才有效——而大多数人会不自觉地美化答案。结果描述的就成了你希望成为的样子，而非你真实的样子。"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "How to Interpret Your Results Responsibly",
+        "zh": "如何负责任地解读结果"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Personality test results are descriptions, not destinies. A high Neuroticism score does not mean you are doomed to anxiety — it means your nervous system is more sensitive to threat signals than average, which is information you can act on. Treat scores as tendencies that interact with context, not as fixed predictions.",
+        "zh": "人格测试结果描述的是倾向，不是命运。神经质高分不意味着你注定焦虑——它意味着你的神经系统对威胁信号比常人更敏感，这是可付诸行动的信息。把分数当作与情境相互作用的倾向，而非固定预测。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "The most useful interpretation is comparative, not absolute. Knowing you are more introverted than 80% of people is more informative than knowing you are an introvert. Many tests now report percentile scores, which give a clearer picture of where you sit relative to others rather than reducing you to a label.",
+        "zh": "最有用的解读是相对的，而非绝对的。知道你比80%的人更内向，比知道你\"是内向者\"信息量大。许多测试如今报告百分位分数，这比贴标签更清晰地呈现你相对他人的位置。"
+      }
+    },
+    {
+      "type": "callout",
+      "kind": "warn",
+      "text": {
+        "en": "Important: Be careful with how you share results. Telling a colleague they are low Agreeableness can become a self-fulfilling label. Frame results as observations about tendencies, not as fixed character assessments — and never use personality test results as a weapon in conflict.",
+        "zh": "重要提示：谨慎分享结果。告诉同事\"你的宜人性低\"可能变成自我实现的标签。把结果表述为对倾向的观察，而非对品格的固定判断——绝不要在冲突中把人格测试结果当武器。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Using Personality Tests in Teams and Hiring",
+        "zh": "在团队与招聘中使用人格测试"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Personality tests have a legitimate place in workplace settings — but only when used carefully. In teams, a shared personality vocabulary can help members name their differences in working style without judgement, which often defuses long-standing tension. In hiring, the picture is more complicated: tests can surface useful patterns, but using them to filter candidates raises serious legal and ethical concerns in many jurisdictions.",
+        "zh": "人格测试在职场有其正当位置——但只在谨慎使用时。在团队中，共同的人格词汇能帮助成员不带评判地命名工作风格差异，常能化解长期紧张。在招聘中情况更复杂：测试可呈现有用的模式，但用它们筛选求职者在许多司法管辖区会引发严重的法律与伦理问题。"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "The most defensible workplace use is for development, not selection. A team that takes a Big Five or DISC assessment together and then discusses what they learned about each other's working styles tends to communicate more openly afterwards. Using tests to reject candidates, by contrast, is risky — tests can carry cultural bias, and even validated instruments have meaningful error rates at the individual level.",
+        "zh": "最站得住脚的职场用途是用于发展，而非选拔。一起做大五或DISC测评、随后讨论彼此学到的团队，往往在之后沟通更开放。反之，用测试淘汰求职者风险很大——测试可能带有文化偏见，即便经过验证的工具在个体层面也有显著的错误率。"
+      }
+    },
+    {
+      "type": "h2",
+      "text": {
+        "en": "Conclusion",
+        "zh": "总结"
+      }
+    },
+    {
+      "type": "p",
+      "text": {
+        "en": "Personality tests are tools, not oracles. Used well, they give you a vocabulary for patterns you have sensed but could not name — and that vocabulary can unlock conversations, decisions, and self-knowledge that would otherwise stay out of reach. Used poorly, they become labels that limit rather than liberate. If you want to start with a quick, structured assessment that runs in your browser, an online personality test can give you a starting point in minutes.",
+        "zh": "人格测试是工具，不是神谕。用得好，它给你一套词汇来描述那些你感知到却叫不出名字的模式——而这套词汇能解锁原本难以触及的对话、决定与自我认知。用得差，它就变成限制而非解放的标签。若想从一个快速、结构化、在浏览器中运行的测评开始，在线人格测试可在几分钟内给你起点。"
+      }
+    },
+    {
+      "type": "cta",
+      "toolSlug": "personality-test",
+      "text": {
+        "en": "Take a Free Personality Test — Runs in Your Browser",
+        "zh": "做一个免费人格测试——在浏览器中运行"
+      }
+    }
+  ]
 };

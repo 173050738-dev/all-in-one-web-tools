@@ -13137,6 +13137,461 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
       "obsidian markdown"
     ]
   }
+},
+{
+  "slug": "how-to-write-acrostic-poem-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-31T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=acrostic-poem&grayscale=false",
+  "tags": [
+    {
+      "en": "Poetry",
+      "zh": "诗歌",
+      "es": "Poesía",
+      "fr": "Poésie",
+      "hi": "कविता",
+      "ar": "شعر"
+    },
+    {
+      "en": "Writing",
+      "zh": "写作",
+      "es": "Escritura",
+      "fr": "Écriture",
+      "hi": "लेखन",
+      "ar": "الكتابة"
+    }
+  ],
+  "relatedToolSlugs": [
+    "acrostic-poem-generator"
+  ],
+  "readingMinutes": {
+    "en": 7,
+    "zh": 8,
+    "es": 8,
+    "fr": 8,
+    "hi": 9,
+    "ar": 8
+  },
+  "title": {
+    "en": "How to Write an Acrostic Poem: Complete Guide for Beginners",
+    "zh": "如何写藏头诗：初学者完全指南",
+    "es": "Cómo Escribir un Poema Acróstico: Guía Completa para Principiantes",
+    "fr": "Comment Écrire un Poème Acrostiche : Guide Complet pour Débutants",
+    "hi": "अक्रोस्टिक कविता कैसे लिखें: शुरुआती लोगों के लिए संपूर्ण गाइड",
+    "ar": "كيفية كتابة قصيدة أكروستيك: دليل كامل للمبتدئين"
+  },
+  "description": {
+    "en": "Learn how to write an acrostic poem step by step. Discover structure, examples, creative prompts, and tips to craft meaningful poems where the first letters spell a word.",
+    "zh": "学会一步步写藏头诗。掌握结构、示例、创意提示和技巧，创作出首字母拼出特定单词的有意义诗歌。",
+    "es": "Aprende a escribir un poema acróstico paso a paso. Descubre estructura, ejemplos y consejos para crear poemas donde las primeras letras forman una palabra.",
+    "fr": "Apprenez à écrire un poème acrostiche étape par étape. Découvrez la structure, des exemples et des conseils pour créer des poèmes où les premières lettres forment un mot.",
+    "hi": "अक्रोस्टिक कविता लिखना सीखें। संरचना, उदाहरण और सुझाव खोजें ताकि पहले अक्षर एक शब्द बनाएं।",
+    "ar": "تعلم كيفية كتابة قصيدة أكروستيك خطوة بخطوة. اكتشف الهيكل والأمثلة والنصائح لإنشاء قصائد تكون فيها الحروف الأولى كلمة."
+  },
+  "keywords": {
+    "en": [
+      "acrostic poem",
+      "how to write acrostic poem",
+      "poem generator",
+      "acrostic poetry",
+      "poetry writing"
+    ],
+    "zh": [
+      "藏头诗",
+      "如何写藏头诗",
+      "诗歌生成器",
+      "藏头诗写法",
+      "诗歌创作"
+    ],
+    "es": [
+      "poema acróstico",
+      "cómo escribir poema acróstico",
+      "generador de poemas",
+      "poesía acróstica"
+    ],
+    "fr": [
+      "poème acrostiche",
+      "comment écrire poème acrostiche",
+      "générateur de poèmes",
+      "poésie acrostiche"
+    ],
+    "hi": [
+      "अक्रोस्टिक कविता",
+      "अक्रोस्टिक कविता कैसे लिखें",
+      "कविता जनरेटर",
+      "अक्रोस्टिक पोएट्री"
+    ],
+    "ar": [
+      "قصيدة أكروستيك",
+      "كيفية كتابة قصيدة أكروستيك",
+      "مولد القصائد",
+      "شعر أكروستيك"
+    ]
+  }
+},
+{
+  "slug": "dream-meanings-interpretation-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-31T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=dream-meanings&grayscale=false",
+  "tags": [
+    {
+      "en": "Psychology",
+      "zh": "心理学",
+      "es": "Psicología",
+      "fr": "Psychologie",
+      "hi": "मनोविज्ञान",
+      "ar": "علم النفس"
+    },
+    {
+      "en": "Dreams",
+      "zh": "梦境",
+      "es": "Sueños",
+      "fr": "Rêves",
+      "hi": "सपने",
+      "ar": "الأحلام"
+    }
+  ],
+  "relatedToolSlugs": [
+    "dream-interpreter"
+  ],
+  "readingMinutes": {
+    "en": 8,
+    "zh": 9,
+    "es": 9,
+    "fr": 9,
+    "hi": 10,
+    "ar": 9
+  },
+  "title": {
+    "en": "Dream Meanings: How to Interpret Your Dreams (Psychology Guide)",
+    "zh": "梦境解析：如何解读你的梦（心理学指南）",
+    "es": "Significado de los Sueños: Cómo Interpretar Tus Sueños (Guía de Psicología)",
+    "fr": "Signification des Rêves : Comment Interpréter Vos Rêves (Guide de Psychologie)",
+    "hi": "सपनों का अर्थ: अपने सपनों की व्याख्या कैसे करें (मनोविज्ञान गाइड)",
+    "ar": "معاني الأحلام: كيف تفسر أحلامك (دليل علم النفس)"
+  },
+  "description": {
+    "en": "Decode common dream symbols and themes with this psychology-based guide. Learn what falling, flying, teeth, and water dreams really mean and how to interpret your own.",
+    "zh": "用这本心理学指南解读常见梦境符号和主题。了解坠落、飞行、掉牙和水梦的真正含义，学会解读自己的梦境。",
+    "es": "Decodifica símbolos y temas comunes de sueños con esta guía basada en psicología. Aprende qué significan sueños de caer, volar, dientes y agua.",
+    "fr": "Décodez les symboles et thèmes de rêves courants avec ce guide basé sur la psychologie. Apprenez la signification des rêves de chute, vol, dents et eau.",
+    "hi": "इस मनोविज्ञान आधारित गाइड से सामान्य सपनों के प्रतीकों को समझें। गिरने, उड़ने, दांत और पानी के सपनों का अर्थ जानें।",
+    "ar": "فك رموز ومواضيع الأحلام الشائعة مع هذا الدليل القائم على علم النفس. تعرف على معنى أحلام السقوط والطيران والأسنان والماء."
+  },
+  "keywords": {
+    "en": [
+      "dream meaning",
+      "dream interpretation",
+      "dream analysis",
+      "dream psychology",
+      "dream symbols"
+    ],
+    "zh": [
+      "梦境含义",
+      "梦境解析",
+      "梦境分析",
+      "梦境心理学",
+      "梦境符号"
+    ],
+    "es": [
+      "significado de los sueños",
+      "interpretación de sueños",
+      "análisis de sueños",
+      "psicología de sueños"
+    ],
+    "fr": [
+      "signification des rêves",
+      "interprétation des rêves",
+      "analyse des rêves",
+      "psychologie des rêves"
+    ],
+    "hi": [
+      "सपनों का अर्थ",
+      "सपनों की व्याख्या",
+      "सपनों का विश्लेषण",
+      "सपनों का मनोविज्ञान"
+    ],
+    "ar": [
+      "معنى الأحلام",
+      "تفسير الأحلام",
+      "تحليل الأحلام",
+      "علم نفس الأحلام"
+    ]
+  }
+},
+{
+  "slug": "design-signature-online-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-31T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=signature-design&grayscale=false",
+  "tags": [
+    {
+      "en": "Design",
+      "zh": "设计",
+      "es": "Diseño",
+      "fr": "Design",
+      "hi": "डिज़ाइन",
+      "ar": "تصميم"
+    },
+    {
+      "en": "Signature",
+      "zh": "签名",
+      "es": "Firma",
+      "fr": "Signature",
+      "hi": "हस्ताक्षर",
+      "ar": "توقيع"
+    }
+  ],
+  "relatedToolSlugs": [
+    "handwritten-signature-generator"
+  ],
+  "readingMinutes": {
+    "en": 7,
+    "zh": 8,
+    "es": 8,
+    "fr": 8,
+    "hi": 9,
+    "ar": 8
+  },
+  "title": {
+    "en": "How to Design Your Signature: Style Guide for Personal Signatures",
+    "zh": "如何设计你的签名：个人签名风格指南",
+    "es": "Cómo Diseñar tu Firma: Guía de Estilo para Firmas Personales",
+    "fr": "Comment Designer Votre Signature : Guide de Style pour Signatures Personnelles",
+    "hi": "अपना हस्ताक्षर कैसे डिज़ाइन करें: व्यक्तिगत हस्ताक्षर के लिए स्टाइल गाइड",
+    "ar": "كيفية تصميم توقيعك: دليل أسلوب للتوقيعات الشخصية"
+  },
+  "description": {
+    "en": "Discover how to design a signature that reflects your identity. Explore styles, flourishes, legibility tips, and how to practice and personalize your own handwritten signature.",
+    "zh": "学会设计反映你身份的签名。探索风格、装饰、可读性技巧，以及如何练习和个性化你的手写签名。",
+    "es": "Descubre cómo diseñar una firma que refleje tu identidad. Explora estilos, florituras, consejos de legibilidad y cómo personalizar tu firma manuscrita.",
+    "fr": "Découvrez comment designer une signature qui reflète votre identité. Explorez les styles, les embellissements, la lisibilité et comment personnaliser votre signature.",
+    "hi": "अपनी पहचान दर्शाने वाला हस्ताक्षर डिज़ाइन करना सीखें। शैलियों, सजावट और पठनीयता सुझाव खोजें।",
+    "ar": "اكتشف كيفية تصميم توقيع يعكس هويتك. استكشف الأنماط والزخارف ونصائح القراءة وكيفية تخصيص توقيعك."
+  },
+  "keywords": {
+    "en": [
+      "signature design",
+      "signature maker",
+      "create signature",
+      "signature style",
+      "handwritten signature"
+    ],
+    "zh": [
+      "签名设计",
+      "签名生成器",
+      "创建签名",
+      "签名风格",
+      "手写签名"
+    ],
+    "es": [
+      "diseño de firma",
+      "creador de firma",
+      "crear firma",
+      "estilo de firma"
+    ],
+    "fr": [
+      "design de signature",
+      "créateur de signature",
+      "créer signature",
+      "style de signature"
+    ],
+    "hi": [
+      "हस्ताक्षर डिज़ाइन",
+      "हस्ताक्षर निर्माता",
+      "हस्ताक्षर बनाएं",
+      "हस्ताक्षर शैली"
+    ],
+    "ar": [
+      "تصميم التوقيع",
+      "منشئ التوقيع",
+      "إنشاء توقيع",
+      "أسلوب التوقيع"
+    ]
+  }
+},
+{
+  "slug": "classical-chinese-translation-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-31T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=classical-chinese&grayscale=false",
+  "tags": [
+    {
+      "en": "Language",
+      "zh": "语言",
+      "es": "Idioma",
+      "fr": "Langue",
+      "hi": "भाषा",
+      "ar": "لغة"
+    },
+    {
+      "en": "Chinese",
+      "zh": "中文",
+      "es": "Chino",
+      "fr": "Chinois",
+      "hi": "चीनी",
+      "ar": "صيني"
+    }
+  ],
+  "relatedToolSlugs": [
+    "classical-chinese-converter"
+  ],
+  "readingMinutes": {
+    "en": 9,
+    "zh": 10,
+    "es": 10,
+    "fr": 10,
+    "hi": 11,
+    "ar": 10
+  },
+  "title": {
+    "en": "Modern to Classical Chinese: Translation Guide with Examples",
+    "zh": "现代文转文言文：翻译指南与实例",
+    "es": "Chino Moderno a Clásico: Guía de Traducción con Ejemplos",
+    "fr": "Chinois Moderne vers Classique : Guide de Traduction avec Exemples",
+    "hi": "आधुनिक चीनी से शास्त्रीय चीनी: उदाहरणों के साथ अनुवाद गाइड",
+    "ar": "الصينية الحديثة إلى الكلاسيكية: دليل الترجمة مع أمثلة"
+  },
+  "description": {
+    "en": "Master modern-to-classical Chinese translation. Learn grammar rules, vocabulary shifts, literary devices, and study real examples of wenyanwen to elevate your writing.",
+    "zh": "掌握现代文转文言文翻译。学习语法规则、词汇变化、修辞手法，研读文言文实例提升你的写作水平。",
+    "es": "Domina la traducción del chino moderno al clásico. Aprende reglas gramaticales, cambios de vocabulario y estudia ejemplos reales de wenyanwen.",
+    "fr": "Maîtrisez la traduction du chinois moderne vers le chinois classique. Apprenez les règles grammaticales, les changements de vocabulaire et étudiez des exemples.",
+    "hi": "आधुनिक से शास्त्रीय चीनी अनुवाद में महारत हासिल करें। व्याकरण नियम, शब्दावली परिवर्तन और वास्तविक उदाहरण जानें।",
+    "ar": "أتقن الترجمة من الصينية الحديثة إلى الكلاسيكية. تعرف على قواعد النحو وتغييرات المفردات وادرس أمثلة حقيقية."
+  },
+  "keywords": {
+    "en": [
+      "classical chinese",
+      "wenyanwen",
+      "chinese translation",
+      "ancient chinese",
+      "literary chinese"
+    ],
+    "zh": [
+      "文言文",
+      "现代文转文言文",
+      "中文翻译",
+      "古文",
+      "文言文翻译"
+    ],
+    "es": [
+      "chino clásico",
+      "wenyanwen",
+      "traducción al chino",
+      "chino antiguo"
+    ],
+    "fr": [
+      "chinois classique",
+      "wenyanwen",
+      "traduction chinoise",
+      "chinois ancien"
+    ],
+    "hi": [
+      "शास्त्रीय चीनी",
+      "wenyanwen",
+      "चीनी अनुवाद",
+      "प्राचीन चीनी"
+    ],
+    "ar": [
+      "الصينية الكلاسيكية",
+      "wenyanwen",
+      "الترجمة الصينية",
+      "الصينية القديمة"
+    ]
+  }
+},
+{
+  "slug": "personality-test-types-guide",
+  "author": "Korelyy Team",
+  "publishedAt": "2026-07-31T00:00:00.000Z",
+  "coverImage": "https://picsum.photos/800/450?random=personality-test&grayscale=false",
+  "tags": [
+    {
+      "en": "Psychology",
+      "zh": "心理学",
+      "es": "Psicología",
+      "fr": "Psychologie",
+      "hi": "मनोविज्ञान",
+      "ar": "علم النفس"
+    },
+    {
+      "en": "Personality",
+      "zh": "性格",
+      "es": "Personalidad",
+      "fr": "Personnalité",
+      "hi": "व्यक्तित्व",
+      "ar": "الشخصية"
+    }
+  ],
+  "relatedToolSlugs": [
+    "personality-test"
+  ],
+  "readingMinutes": {
+    "en": 8,
+    "zh": 9,
+    "es": 9,
+    "fr": 9,
+    "hi": 10,
+    "ar": 9
+  },
+  "title": {
+    "en": "Personality Test Types Explained: MBTI, Big Five & More",
+    "zh": "性格测试类型详解：MBTI、大五人格等",
+    "es": "Tipos de Test de Personalidad Explicados: MBTI, Big Five y Más",
+    "fr": "Types de Tests de Personnalité Expliqués : MBTI, Big Five et Plus",
+    "hi": "व्यक्तित्व परीक्षण प्रकार समझाए गए: MBTI, Big Five और अधिक",
+    "ar": "أنواع اختبارات الشخصية مشروحة: MBTI و Big Five والمزيد"
+  },
+  "description": {
+    "en": "Compare the major personality tests: MBTI, Big Five, Enneagram, DISC. Learn their origins, what they measure, reliability, and which personality test best fits your needs.",
+    "zh": "对比主流性格测试：MBTI、大五人格、九型人格、DISC。了解它们的起源、测量内容、可靠性，选择最适合你的测试。",
+    "es": "Compara los principales tests de personalidad: MBTI, Big Five, Eneagrama, DISC. Aprende sus orígenes, lo que miden y cuál se adapta mejor a ti.",
+    "fr": "Comparez les principaux tests de personnalité : MBTI, Big Five, Ennéagramme, DISC. Apprenez leurs origines, ce qu'ils mesurent et lequel vous convient.",
+    "hi": "प्रमुख व्यक्तित्व परीक्षणों की तुलना करें: MBTI, Big Five, Enneagram, DISC। उनकी उत्पत्ति और विश्वसनीयता जानें।",
+    "ar": "قارن اختبارات الشخصية الرئيسية: MBTI و Big Five و Enneagram و DISC. تعرف على أصولها وموثوقيتها وأيها يناسبك."
+  },
+  "keywords": {
+    "en": [
+      "personality test",
+      "mbti test",
+      "personality types",
+      "personality quiz",
+      "big five personality"
+    ],
+    "zh": [
+      "性格测试",
+      "MBTI测试",
+      "性格类型",
+      "性格测验",
+      "大五人格"
+    ],
+    "es": [
+      "test de personalidad",
+      "test MBTI",
+      "tipos de personalidad",
+      "quiz de personalidad"
+    ],
+    "fr": [
+      "test de personnalité",
+      "test MBTI",
+      "types de personnalité",
+      "quiz de personnalité"
+    ],
+    "hi": [
+      "व्यक्तित्व परीक्षण",
+      "MBTI परीक्षण",
+      "व्यक्तित्व प्रकार",
+      "व्यक्तित्व प्रश्नोत्तरी"
+    ],
+    "ar": [
+      "اختبار الشخصية",
+      "اختبار MBTI",
+      "أنواع الشخصية",
+      "اختبار الشخصية"
+    ]
+  }
 }
 ];
 
