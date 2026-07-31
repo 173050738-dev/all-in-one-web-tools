@@ -115,7 +115,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           </>
         )}
       </div>
-      <FortuneSticks />
+      <FortuneSticks locale={resolvedLocale as any} />
     </div>
   );
 }

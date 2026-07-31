@@ -317,7 +317,7 @@ const WcAsciiArt: React.FC<Props> = ({ locale = 'zh' }) => {
       <div className="card-base p-5 sm:p-6 mb-5">
         <div className="flex items-center gap-2 mb-2">
           <Type className="w-5 h-5 text-[color:var(--color-primary)]" />
-          <h2 className="text-[18px] font-bold">{locale === 'zh' ? '球员国旗字符画生成器' : 'Football ASCII Art'}</h2>
+          <h1 className="text-[18px] font-bold">{locale === 'zh' ? '球员国旗字符画生成器' : 'Football ASCII Art'}</h1>
         </div>
         <p className="text-[13px] text-[color:var(--color-text-secondary)] mb-4">{t.subtitle}</p>
         <textarea

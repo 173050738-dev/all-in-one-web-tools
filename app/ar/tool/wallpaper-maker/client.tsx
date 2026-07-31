@@ -115,7 +115,7 @@ const resolvedLocale = (resolvedParams?.locale && VALID_LOCALES.includes(resolve
           </>
         )}
       </div>
-      <WallpaperMaker />
+      <WallpaperMaker locale={resolvedLocale as any} />
     </div>
   );
 }

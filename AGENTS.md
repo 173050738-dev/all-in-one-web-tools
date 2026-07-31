@@ -28,6 +28,15 @@
 - 模式：用户当【信使 + 最终决策者】。Codex 出方案/文档/审查 → 用户转交 Trae → Trae 改 → Codex 复验
 - 决策流程：Codex 先出方案(不执行) → 用户拍板 → 交 Trae 改 → Codex 复验
 
+
+### 2.1 用户交付偏好（一站式，禁止拆分）
+- 任何对外可发内容（邮件 outreach、文章、社交帖草稿、爬虫清单等），**必须**合并到一个文件交付，禁止拆 .md + .txt + .csv 多个文件让用户自己拼
+- 文件位置：**真实桌面** `D:\360MoveData\Users\Administrator\Desktop\`（不是 C 盘系统桌面）
+- 文件命名：单一主题名（如 `korelyy-mass-outreach.md`、`korelyy-blog-xxx.md`），不要批量加 batch4/5 这种内部编号
+- 群发类内容：包含「主题 4 选 1 + 通用正文 + 邮箱清单（多格式）+ 完整列表 + 已发剔除」5 大块，让用户打开一个文件就发
+- Carson 不懂英文，所有英文正文/主题必须同步附中文摘要（≥3 行解释 + 翻译要点）
+- 例：korelyy-mass-outreach.md = 主题 4 选 1 + 群发正文 + 61 邮箱 3 种格式 + 步骤指引
+
 ## 四、网络现状
 - 命令行默认连不了外网（GitHub/Google 超时），国内网可用（百度/korelyy.com 可连）
 - 用户梯子 = Anycast VPN（TUN 虚拟网卡模式，不开本地代理端口）。开梯子后命令行可走外网，但 github 首包慢

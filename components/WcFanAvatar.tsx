@@ -374,7 +374,7 @@ const WcFanAvatar: React.FC<Props> = ({ locale = 'zh' }) => {
         <div className="lg:col-span-2 card-base p-5">
           <div className="flex items-center gap-2 mb-2">
             <UserCircle className="w-5 h-5 text-[color:var(--color-primary)]" />
-            <h2 className="text-[18px] font-bold">{locale === 'zh' ? '世界杯专属球迷头像生成器' : 'World Cup Fan Avatar'}</h2>
+            <h1 className="text-[18px] font-bold">{locale === 'zh' ? '世界杯专属球迷头像生成器' : 'World Cup Fan Avatar'}</h1>
           </div>
           <p className="text-[13px] text-[color:var(--color-text-secondary)] mb-4">{t.subtitle}</p>
 

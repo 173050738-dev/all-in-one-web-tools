@@ -705,7 +705,7 @@ const Wc2026Schedule: React.FC<Props> = ({ locale = 'zh' }) => {
       <div className="card-base p-5 sm:p-6 mb-5">
         <div className="flex items-center gap-2 mb-1">
           <CalendarDays className="w-5 h-5 text-[color:var(--color-primary)]" />
-          <h2 className="text-[18px] font-bold">{locale === 'zh' ? '2026 世界杯赛程查询器' : 'World Cup 2026 Schedule'}</h2>
+          <h1 className="text-[18px] font-bold">{locale === 'zh' ? '2026 世界杯赛程查询器' : 'World Cup 2026 Schedule'}</h1>
         </div>
         <p className="text-[13px] text-[color:var(--color-text-secondary)] mb-3">{t.subtitle}</p>
         <div className="text-[12px] inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 mb-4">

@@ -90,7 +90,7 @@ export default function TextCounter({ locale = 'zh' }: TextCounterProps) {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [stats, locale]);
+  }, [locale]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleShare = async () => {
     if (!text.trim()) return;

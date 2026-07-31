@@ -321,7 +321,7 @@ const WcNameDecorator: React.FC<Props> = ({ locale = 'zh' }) => {
       <div className="card-base p-5 sm:p-6 mb-5">
         <div className="flex items-center gap-2 mb-2">
           <Sparkles className="w-5 h-5 text-[color:var(--color-primary)]" />
-          <h2 className="text-[18px] font-bold">{t.title}</h2>
+          <h1 className="text-[18px] font-bold">{t.title}</h1>
         </div>
         <p className="text-[13px] text-[color:var(--color-text-secondary)] mb-4">{t.subtitle}</p>
         <textarea

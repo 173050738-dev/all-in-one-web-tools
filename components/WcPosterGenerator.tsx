@@ -676,7 +676,7 @@ const WcPosterGenerator: React.FC<Props> = ({ locale = 'zh' }) => {
         <div className="lg:col-span-2 card-base p-5 space-y-4">
           <div className="flex items-center gap-2 mb-1">
             <Palette className="w-5 h-5 text-[color:var(--color-primary)]" />
-            <h2 className="text-[18px] font-bold">{locale === 'zh' ? '世界杯赛事封面海报生成器' : 'World Cup Match Poster'}</h2>
+            <h1 className="text-[18px] font-bold">{locale === 'zh' ? '世界杯赛事封面海报生成器' : 'World Cup Match Poster'}</h1>
           </div>
           <p className="text-[13px] text-[color:var(--color-text-secondary)]">{t.subtitle}</p>
 

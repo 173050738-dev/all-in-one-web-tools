@@ -1961,7 +1961,7 @@
     },
     "uuid-generator": {
       "name": "UUID Generator",
-      "description": "Generate UUIDs online, support v1/v4/v7, batch generate, one-click copy, pure local processing.",
+      "description": "Free online UUID generator creates v1, v4, and v7 GUIDs in your browser. Batch generate, one-click copy, with or without hyphens. Runs locally, no signup.",
       "seo": {
         "intro": "This UUID generator creates version 4 (random) UUIDs — also called GUIDs — instantly in your browser. Generate one or many at once, with or without hyphens, and in upper or lower case. UUIDs are 128-bit identifiers used as database keys, request IDs and unique references where a central counter isn't practical. Generation happens locally, so the values are produced on your device and not fetched from a server.",
         "scenarios": [
@@ -7944,7 +7944,7 @@
     },
     "task-breakdown": {
       "name": "Task Breaker",
-      "description": "Break down vague goals into actionable steps with AI-powered analysis.",
+      "description": "Free AI task breaker turns vague goals into clear, actionable steps. Enter your goal and get a structured execution plan with priorities. No signup.",
       "seo": {
         "intro": "Task Breaker is an intelligent task planning tool that automatically breaks down any vague goal or complex task into clear, actionable steps. Simply enter your goal, and AI will analyze various dimensions of the task, generating a structured execution plan to help you move from ideation to action.",
         "scenarios": [
@@ -7989,7 +7989,7 @@
     },
     "tone-changer": {
       "name": "Tone Shifter",
-      "description": "Change text tone instantly, supports formal, friendly, concise, humorous tones.",
+      "description": "Free online tone changer rewrites text in formal, friendly, concise, humorous, or professional tones. Adjust style for any occasion. No signup, runs in browser.",
       "seo": {
         "intro": "Tone Shifter is a text style adjustment tool that can instantly convert your text to different tone styles. Supports formal, friendly, concise, humorous, persuasive, professional and other tones, helping you convey appropriate emotions and attitudes on different occasions.",
         "scenarios": [
@@ -8034,7 +8034,7 @@
     },
     "focus-timer": {
       "name": "Focus Timer",
-      "description": "Pomodoro technique timer with customizable work/rest intervals for better focus.",
+      "description": "Free Pomodoro focus timer with customizable work and rest intervals. Stay productive with the classic 25/5 technique, track sessions, boost focus. No signup.",
       "seo": {
         "intro": "Focus Timer adopts the classic Pomodoro Technique to help you maintain efficient focus. Set work duration and rest duration, focus on work for 25 minutes, rest for 5 minutes, and repeat. This keeps your brain in optimal condition between focus and relaxation.",
         "scenarios": [
@@ -8079,7 +8079,7 @@
     },
     "concept-explain": {
       "name": "Concept Simplifier",
-      "description": "Explain complex concepts in simple terms with analogies and examples.",
+      "description": "Free AI concept explainer breaks down complex ideas in simple terms with analogies and examples. Understand programming, science, and business. No signup.",
       "seo": {
         "intro": "Concept Simplifier is a knowledge popularization tool that explains complex concepts in easy-to-understand language. Whether it is programming terminology, scientific theories or business concepts, after input, AI will use life analogies and practical examples to help you understand.",
         "scenarios": [
@@ -8124,7 +8124,7 @@
     },
     "idea-to-action": {
       "name": "Idea Activator",
-      "description": "Turn ideas into actionable plans with priority-based action lists.",
+      "description": "Free AI idea activator turns your ideas into actionable plans with priority-based step lists and feasibility analysis. Move from concept to action. No signup.",
       "seo": {
         "intro": "Idea Activator helps you turn ideas in your mind into concrete action plans. Enter your creative idea, and AI will analyze feasibility, break it down into executable steps, and sort by priority, so your ideas no longer stay at the imagination stage.",
         "scenarios": [
@@ -8169,7 +8169,7 @@
     },
     "time-estimator": {
       "name": "Time Estimator",
-      "description": "Estimate task duration with optimistic, realistic, and pessimistic scenarios.",
+      "description": "Free time estimator uses three-point estimation to predict task duration with optimistic, realistic, and pessimistic scenarios. Plan projects better. No signup.",
       "seo": {
         "intro": "Time Estimator helps you estimate task completion time more accurately. Based on the three-point estimation method, it provides optimistic, most likely, and pessimistic time estimates, and calculates a weighted average, helping you make more reasonable plans and expectations.",
         "scenarios": [
@@ -8214,7 +8214,7 @@
     },
     "ai-copywriter": {
       "name": "AI Copywriter",
-      "description": "Generate high-quality marketing copy with AI",
+      "description": "Free AI copywriter generates high-quality marketing copy in seconds. Get ad copy, product descriptions, and headlines for your brand. No signup, in browser.",
       "seo": {
         "intro": "AI Copywriter is a powerful copywriting tool that leverages advanced artificial intelligence to help you quickly generate professional marketing copy. Whether you need ad headlines, product descriptions, social media posts, or email subjects, simply enter your product name and selling points, and you will receive 3 optimized high-quality copy suggestions. AI will generate the most suitable copy based on your chosen tone style and target platform, making your marketing more persuasive and engaging.",
         "scenarios": [
@@ -8259,7 +8259,7 @@
     },
     "ai-grammar-checker": {
       "name": "AI Grammar & Writing Checker",
-      "description": "Check grammar, spelling, and wording with AI, get rewrite suggestions and readability score",
+      "description": "Free AI grammar and writing checker finds grammar, spelling, and wording issues, rewrites for flow, and scores readability. Supports 6 languages. No signup.",
       "seo": {
         "intro": "AI Grammar & Writing Checker is your intelligent writing coach that goes beyond simple grammar checking. It detects grammar, spelling, punctuation, and wording issues with clear explanations, rewrites the entire passage to improve flow, scores readability, analyzes tone, and adapts to your writing goals. Whether you're writing academic papers, business emails, social media posts, resumes, or casual messages, this tool helps you communicate more effectively in 6 languages.",
         "scenarios": [
