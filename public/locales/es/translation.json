@@ -9248,6 +9248,46 @@
           }
         ]
       }
+    },
+    "rainbow-compliment-generator": {
+      "name": "Generador de Cumplidos de Arcoíris",
+      "description": "Genera cumplidos divertidos y personalizados en 4 estilos (sincero, divertido, poético, exagerado). Perfecto para compartir."
+    },
+    "acrostic-poem-generator": {
+      "name": "Generador de Poemas Acrósticos",
+      "description": "Genera poemas acrósticos chinos (7 o 5 caracteres) a partir de palabras clave. Múltiples temas: bendición, amor, negocios, paisaje, motivación."
+    },
+    "dream-interpreter": {
+      "name": "Intérprete de Sueños",
+      "description": "Ingresa palabras clave de sueños para una doble interpretación: psicología freudiana + diccionario de sueños tradicional de Zhougong."
+    },
+    "handwritten-signature-generator": {
+      "name": "Generador de Firmas Manuscritas",
+      "description": "Crea firmas manuscritas en más de 5 estilos. Grosor del trazo e inclinación ajustables. Exporta como PNG/SVG."
+    },
+    "life-timeline": {
+      "name": "Línea de Tiempo de la Vida",
+      "description": "Visualiza tu vida como una cuadrícula donde cada celda = 1 semana. Marca fechas importantes. Aprecia el tiempo."
+    },
+    "personality-test": {
+      "name": "Test de Personalidad",
+      "description": "Test de personalidad de 16 tipos al estilo MBTI. 10 preguntas para resultados rápidos con descripciones divertidas."
+    },
+    "fortune-drawing": {
+      "name": "Sorteo de Fortuna",
+      "description": "Sorteo de fortuna tradicional chino. Haz una pregunta, obtén una fortuna numerada con poesía clásica e interpretación."
+    },
+    "love-letter-generator": {
+      "name": "Generador de Cartas de Amor",
+      "description": "Genera cartas de amor personalizadas según la personalidad del destinatario, duración de la relación y estilo. Incluye opción acróstica."
+    },
+    "color-mood-board": {
+      "name": "Tablero de Color y Estado de Ánimo",
+      "description": "Ingresa una palabra de estado de ánimo o emoción. Genera una paleta de colores basada en asociaciones de psicología del color."
+    },
+    "classical-chinese-converter": {
+      "name": "Conversor de Chino Clásico",
+      "description": "Convierte chino moderno a chino clásico/literario (wenyan). Admite múltiples estilos clásicos."
     }
   },
   "sidebar2": {

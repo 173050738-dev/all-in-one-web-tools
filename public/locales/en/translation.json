@@ -9248,6 +9248,46 @@
           }
         ]
       }
+    },
+    "rainbow-compliment-generator": {
+      "name": "Rainbow Compliment Generator",
+      "description": "Generate fun, personalized compliments in 4 styles (sincere, funny, poetic, over-the-top). Perfect for sharing."
+    },
+    "acrostic-poem-generator": {
+      "name": "Acrostic Poem Generator",
+      "description": "Generate Chinese acrostic poems (7-char or 5-char) from keywords. Multiple themes: blessing, love, business, scenery, motivation."
+    },
+    "dream-interpreter": {
+      "name": "Dream Interpreter",
+      "description": "Enter dream keywords for dual interpretation: Freudian psychology + traditional Zhougong dream dictionary."
+    },
+    "handwritten-signature-generator": {
+      "name": "Handwritten Signature Generator",
+      "description": "Create handwritten signatures in 5+ styles. Adjustable stroke width and slant. Export as PNG/SVG."
+    },
+    "life-timeline": {
+      "name": "Life Timeline",
+      "description": "Visualize your life as a grid where each cell = 1 week. Mark important dates. Appreciate time."
+    },
+    "personality-test": {
+      "name": "Personality Test",
+      "description": "MBTI-style 16-personality test. 10 questions for quick results with fun personality descriptions."
+    },
+    "fortune-drawing": {
+      "name": "Fortune Drawing",
+      "description": "Traditional Chinese fortune drawing. Ask a question, get a numbered fortune with classical poetry and interpretation."
+    },
+    "love-letter-generator": {
+      "name": "Love Letter Generator",
+      "description": "Generate personalized love letters based on recipient's personality, relationship length, and style. Includes acrostic option."
+    },
+    "color-mood-board": {
+      "name": "Color Mood Board",
+      "description": "Enter a mood or emotion word. Generate a color palette based on color psychology associations."
+    },
+    "classical-chinese-converter": {
+      "name": "Classical Chinese Converter",
+      "description": "Convert modern Chinese to classical/literary Chinese (wenyan). Multiple classical styles supported."
     }
   },
   "sidebar2": {

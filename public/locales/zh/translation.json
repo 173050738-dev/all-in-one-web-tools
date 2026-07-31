@@ -9248,6 +9248,46 @@
           }
         ]
       }
+    },
+    "rainbow-compliment-generator": {
+      "name": "彩虹屁生成器",
+      "description": "一键生成夸张有趣的赞美文案，多种风格（真诚/搞笑/诗意/夸张），可分享截图"
+    },
+    "acrostic-poem-generator": {
+      "name": "藏头诗生成器",
+      "description": "输入关键字生成七言/五言藏头诗，支持祝福/表白/商务/风景/励志主题"
+    },
+    "dream-interpreter": {
+      "name": "梦境解析器",
+      "description": "输入梦境关键词，基于弗洛伊德心理学+周公解梦传统生成双重解读"
+    },
+    "handwritten-signature-generator": {
+      "name": "手写签名生成器",
+      "description": "5种艺术签名风格，可调笔画粗细和倾斜度，导出PNG/SVG"
+    },
+    "life-timeline": {
+      "name": "人生时间轴",
+      "description": "将人生可视化为网格，每格代表1周，标记重要日期，思考时间的珍贵"
+    },
+    "personality-test": {
+      "name": "性格测试",
+      "description": "16型MBTI简化版，10道题快速测试，生成有趣的性格描述"
+    },
+    "fortune-drawing": {
+      "name": "抽签占卜",
+      "description": "仿寺庙签文，输入问题抽取签文，含文言文签诗和解读"
+    },
+    "love-letter-generator": {
+      "name": "情书生成器",
+      "description": "根据对象性格/相处时长/风格，生成专属情书，可含藏头诗"
+    },
+    "color-mood-board": {
+      "name": "色彩情绪板",
+      "description": "输入心情/情绪词，基于色彩心理学生成对应调色板"
+    },
+    "classical-chinese-converter": {
+      "name": "古文转换器",
+      "description": "现代文转文言文/半文半白，支持不同古文风格"
     }
   },
   "sidebar2": {

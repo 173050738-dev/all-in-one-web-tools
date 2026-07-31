@@ -9248,6 +9248,46 @@
           }
         ]
       }
+    },
+    "rainbow-compliment-generator": {
+      "name": "Générateur de Compliments Arc-en-Ciel",
+      "description": "Générez des compliments amusants et personnalisés en 4 styles (sincère, drôle, poétique, exagéré). Parfait pour partager."
+    },
+    "acrostic-poem-generator": {
+      "name": "Générateur de Poèmes Acrostiches",
+      "description": "Générez des poèmes acrostiches chinois (7 ou 5 caractères) à partir de mots-clés. Thèmes multiples : bénédiction, amour, affaires, paysage, motivation."
+    },
+    "dream-interpreter": {
+      "name": "Interpréteur de Rêves",
+      "description": "Entrez des mots-clés de rêve pour une double interprétation : psychologie freudienne + dictionnaire des rêves traditionnel de Zhougong."
+    },
+    "handwritten-signature-generator": {
+      "name": "Générateur de Signatures Manuscrites",
+      "description": "Créez des signatures manuscrites dans plus de 5 styles. Épaisseur du trait et inclinaison réglables. Exportez en PNG/SVG."
+    },
+    "life-timeline": {
+      "name": "Chronologie de la Vie",
+      "description": "Visualisez votre vie sous forme de grille où chaque cellule = 1 semaine. Marquez les dates importantes. Appréciez le temps."
+    },
+    "personality-test": {
+      "name": "Test de Personnalité",
+      "description": "Test de personnalité 16 types style MBTI. 10 questions pour des résultats rapides avec descriptions amusantes."
+    },
+    "fortune-drawing": {
+      "name": "Tirage de Fortune",
+      "description": "Tirage de fortune traditionnel chinois. Posez une question, obtenez une fortune numérotée avec poésie classique et interprétation."
+    },
+    "love-letter-generator": {
+      "name": "Générateur de Lettres d'Amour",
+      "description": "Générez des lettres d'amour personnalisées selon la personnalité du destinataire, la durée de la relation et le style. Inclut l'option acrostiche."
+    },
+    "color-mood-board": {
+      "name": "Tableau de Couleurs et Humeur",
+      "description": "Entrez un mot d'humeur ou d'émotion. Générez une palette de couleurs basée sur les associations de psychologie des couleurs."
+    },
+    "classical-chinese-converter": {
+      "name": "Convertisseur de Chinois Classique",
+      "description": "Convertissez le chinois moderne en chinois classique/littéraire (wenyan). Prend en charge plusieurs styles classiques."
     }
   },
   "sidebar2": {

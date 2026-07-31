@@ -483,48 +483,324 @@ const TOOL_FAQ_I18N: Record<string, Record<SeoLocale, Array<{ q: string; a: stri
       { q: 'هل CSS الذي تم إنشاؤه متوافق مع جميع المتصفحات؟', a: 'نعم، يتبع CSS الذي تم إنشاؤه صياغة تدرجات CSS3 القياسية. بالنسبة للمتصفحات القديمة، يمكنك تمكين بادئات البائعين (-webkit- و -moz- وغيرها) لضمان التوافق.' },
     ],
   },
-  'hash-generator': {
+  'rainbow-compliment-generator': {
     en: [
-      { q: 'What hash algorithms are supported?', a: 'We support MD5, SHA-1, SHA-256, SHA-384, SHA-512, and several other variants. Each algorithm produces a different hash length and security level.' },
-      { q: 'Can I generate hashes for both text and files?', a: 'Yes, you can hash any text string or upload files for hashing. File hashing supports all common formats and processes locally in your browser.' },
-      { q: 'Is hash generation done locally or on a server?', a: 'All hash computation runs locally in your browser using the Web Crypto API. Your data never leaves your device, ensuring complete privacy.' },
-      { q: 'What is the difference between MD5 and SHA-256?', a: 'MD5 produces a 128-bit hash (32 hex characters) and is faster but less secure. SHA-256 produces a 256-bit hash (64 hex characters) and provides better collision resistance for security-sensitive applications.' },
-      { q: 'Can I compare two hash values?', a: 'Yes, the tool includes a hash comparison feature. Paste two hash values and it will tell you if they match or differ, useful for file integrity verification.' },
+      { q: 'What compliment styles are available?', a: 'We offer 4 styles: sincere (heartfelt and genuine), funny (silly and lighthearted), poetic (literary and romantic), and over-the-top (exaggerated and hilarious). Pick the one that fits your relationship with the recipient.' },
+      { q: 'Can I customize the compliment?', a: 'Yes, enter the recipient\'s name and optional context (e.g., "my coworker", "my best friend") to make the compliment more personal and relevant.' },
+      { q: 'Is there a limit to how many compliments I can generate?', a: 'No, generate as many as you want. Each click produces a unique compliment, so you can keep trying until you find the perfect one.' },
     ],
     zh: [
-      { q: '支持哪些哈希算法？', a: '支持 MD5、SHA-1、SHA-256、SHA-384、SHA-512 等多种算法。每种算法产生不同长度和安全级别的哈希值。' },
-      { q: '可以对文本和文件生成哈希吗？', a: '可以，支持对任意文本字符串或上传文件进行哈希计算。文件哈希支持所有常见格式，在浏览器本地处理。' },
-      { q: '哈希计算在本地还是服务器上进行？', a: '所有哈希计算都在浏览器本地使用 Web Crypto API 完成。你的数据永远不会离开你的设备，确保完全隐私。' },
-      { q: 'MD5 和 SHA-256 有什么区别？', a: 'MD5 产生 128 位哈希（32 个十六进制字符），速度较快但安全性较低。SHA-256 产生 256 位哈希（64 个十六进制字符），提供更好的抗碰撞性能，适合安全敏感应用。' },
-      { q: '可以比较两个哈希值吗？', a: '可以，工具内置哈希比较功能。粘贴两个哈希值，会告诉你它们是否匹配，方便验证文件完整性。' },
+      { q: '有哪些赞美风格可选？', a: '我们提供4种风格：真诚型（发自内心）、搞笑型（轻松幽默）、诗意型（文学浪漫）、夸张型（极度夸张好笑）。选择适合你和对方关系的风格即可。' },
+      { q: '可以自定义赞美内容吗？', a: '可以，输入对方的名字和可选的背景信息（如「我的同事」「我的闺蜜」），让赞美更加个性化。' },
+      { q: '生成次数有限制吗？', a: '没有限制，想生成多少次就生成多少次。每次点击都会产生独特的赞美文案，直到你找到最满意的那条。' },
     ],
     es: [
-      { q: '¿Qué algoritmos de hash se admiten?', a: 'Admitimos MD5, SHA-1, SHA-256, SHA-384, SHA-512 y varias otras variantes. Cada algoritmo produce una longitud de hash y un nivel de seguridad diferentes.' },
-      { q: '¿Puedo generar hashes tanto para texto como para archivos?', a: 'Sí, puedes crear hashes de cualquier cadena de texto o subir archivos para su hash. El hash de archivos admite todos los formatos comunes y se procesa localmente en tu navegador.' },
-      { q: '¿La generación de hash se hace localmente o en un servidor?', a: 'Todo el cálculo de hash se ejecuta localmente en tu navegador utilizando la Web Crypto API. Tus datos nunca salen de tu dispositivo, lo que garantiza una privacidad completa.' },
-      { q: '¿Cuál es la diferencia entre MD5 y SHA-256?', a: 'MD5 produce un hash de 128 bits (32 caracteres hexadecimales) y es más rápido pero menos seguro. SHA-256 produce un hash de 256 bits (64 caracteres hexadecimales) y ofrece una mejor resistencia a las colisiones para aplicaciones sensibles a la seguridad.' },
-      { q: '¿Puedo comparar dos valores de hash?', a: 'Sí, la herramienta incluye una función de comparación de hashes. Pega dos valores de hash y te dirá si coinciden o difieren, útil para la verificación de integridad de archivos.' },
+      { q: '¿Qué estilos de cumplidos están disponibles?', a: 'Ofrecemos 4 estilos: sincero (corazón y genuino), divertido (tonto y ligero), poético (literario y romántico) y exagerado (exagerado e hilarante). Elige el que mejor se adapte a tu relación con el destinatario.' },
+      { q: '¿Puedo personalizar el cumplido?', a: 'Sí, ingresa el nombre del destinatario y un contexto opcional (ej: "mi compañero de trabajo", "mi mejor amigo") para que el cumplido sea más personal y relevante.' },
+      { q: '¿Hay un límite de cumplidos que puedo generar?', a: 'No, genera tantos como quieras. Cada clic produce un cumplido único, así que puedes seguir intentando hasta encontrar el perfecto.' },
     ],
     fr: [
-      { q: 'Quels algorithmes de hash sont pris en charge ?', a: 'Nous prenons en charge MD5, SHA-1, SHA-256, SHA-384, SHA-512 et plusieurs autres variantes. Chaque algorithme produit une longueur de hash et un niveau de sécurité différents.' },
-      { q: 'Puis-je générer des hashes pour le texte et les fichiers ?', a: 'Oui, vous pouvez hacher n\'importe quelle chaîne de texte ou télécharger des fichiers pour les hacher. Le hachage de fichiers prend en charge tous les formats courants et se traite localement dans votre navigateur.' },
-      { q: 'La génération de hash se fait-elle localement ou sur un serveur ?', a: 'Tout le calcul de hash s\'exécute localement dans votre navigateur en utilisant la Web Crypto API. Vos données ne quittent jamais votre appareil, garantissant une confidentialité totale.' },
-      { q: 'Quelle est la différence entre MD5 et SHA-256 ?', a: 'MD5 produit un hash de 128 bits (32 caractères hexadécimaux) et est plus rapide mais moins sûr. SHA-256 produit un hash de 256 bits (64 caractères hexadécimaux) et offre une meilleure résistance aux collisions pour les applications sensibles à la sécurité.' },
-      { q: 'Puis-je comparer deux valeurs de hash ?', a: 'Oui, l\'outil inclut une fonctionnalité de comparaison de hashes. Collez deux valeurs de hash et il vous dira si elles correspondent ou diffèrent, utile pour la vérification de l\'intégrité des fichiers.' },
+      { q: 'Quels styles de compliments sont disponibles ?', a: 'Nous proposons 4 styles : sincère (cœur et authentique), drôle (silly et léger), poétique (littéraire et romantique) et exagéré (exagéré et hilarant). Choisissez celui qui convient le mieux à votre relation avec le destinataire.' },
+      { q: 'Puis-je personnaliser le compliment ?', a: 'Oui, entrez le nom du destinataire et un contexte facultatif (ex : "mon collègue", "mon meilleur ami") pour rendre le compliment plus personnel et pertinent.' },
+      { q: 'Y a-t-il une limite au nombre de compliments que je peux générer ?', a: 'Non, générez autant que vous voulez. Chaque clic produit un compliment unique, donc vous pouvez continuer jusqu\'à trouver le parfait.' },
     ],
     hi: [
-      { q: 'कौन से हैश एल्गोरिदम समर्थित हैं?', a: 'हम MD5, SHA-1, SHA-256, SHA-384, SHA-512 और कई अन्य वेरिएंट का समर्थन करते हैं। प्रत्येक एल्गोरिदम अलग हैश लंबाई और सुरक्षा स्तर उत्पन्न करता है।' },
-      { q: 'क्या मैं टेक्स्ट और फ़ाइलों दोनों के लिए हैश बना सकता हूँ?', a: 'हाँ, आप किसी भी टेक्स्ट स्ट्रिंग को हैश कर सकते हैं या हैशिंग के लिए फ़ाइलें अपलोड कर सकते हैं। फ़ाइल हैशिंग सभी सामान्य फ़ॉर्मेट का समर्थन करती है और आपके ब्राउज़र में स्थानीय रूप से प्रोसेस होती है।' },
-      { q: 'क्या हैश जनरेशन स्थानीय रूप से या सर्वर पर की जाती है?', a: 'सभी हैश गणना आपके ब्राउज़र में Web Crypto API का उपयोग करके स्थानीय रूप से चलती है। आपका डेटा कभी भी आपके डिवाइस को नहीं छोड़ता, जिससे पूर्ण गोपनीयता सुनिश्चित होती है।' },
-      { q: 'MD5 और SHA-256 में क्या अंतर है?', a: 'MD5 एक 128-बिट हैश (32 हेक्स कैरेक्टर) उत्पन्न करता है और तेज़ है लेकिन कम सुरक्षित है। SHA-256 एक 256-बिट हैश (64 हेक्स कैरेक्टर) उत्पन्न करता है और सुरक्षा-संवेदी अनुप्रयोगों के लिए बेहतर टक्कर प्रतिरोध प्रदान करता है।' },
-      { q: 'क्या मैं दो हैश मानों की तुलना कर सकता हूँ?', a: 'हाँ, टूल में हैश तुलना सुविधा शामिल है। दो हैश मान पेस्ट करें और यह आपको बताएगा कि वे मेल खाते हैं या भिन्न हैं, जो फ़ाइल अखंडता सत्यापन के लिए उपयोगी है।' },
+      { q: 'कौन सी तारीफ शैलियाँ उपलब्ध हैं?', a: 'हम 4 शैलियाँ प्रदान करते हैं: ईमानदार (दिल से और असली), मज़ेदार (मूर्खतापूर्ण और हल्का), काव्यात्मक (साहित्यिक और रोमांटिक), और अतिशयोक्तिपूर्ण (अतिशयोक्तिपूर्ण और मज़ेदार)।' },
+      { q: 'क्या मैं तारीफ को अनुकूलित कर सकता हूँ?', a: 'हाँ, प्राप्तकर्ता का नाम और वैकल्पिक संदर्भ दर्ज करें (जैसे "मेरा सहकर्मी", "मेरा सबसे अच्छा दोस्त") ताकि तारीफ अधिक व्यक्तिगत हो।' },
+      { q: 'क्या मैं जितनी चाहें उतनी तारीफें बना सकता हूँ?', a: 'हाँ, कोई सीमा नहीं है। हर क्लिक एक अनोखी तारीफ बनाता है।' },
     ],
     ar: [
-      { q: 'ما خوارزميات التجزئة المدعومة؟', a: 'ندعم MD5 و SHA-1 و SHA-256 و SHA-384 و SHA-512 وعدة متغيرات أخرى. كل خوارزمية تنتج طول تجزئة ومستوى أمان مختلفين.' },
-      { q: 'هل يمكنني إنشاء تجزئات للنص والملفات على حد سواء؟', a: 'نعم، يمكنك تجزئة أي سلسلة نصية أو تحميل ملفات لتجزئتها. تدعم تجزئة الملفات جميع التنسيقات الشائعة وتتم معالجتها محلياً في متصفحك.' },
-      { q: 'هل يتم إنشاء التجزئة محلياً أم على خادم؟', a: 'تعمل جميع عمليات حساب التجزئة محلياً في متصفحك باستخدام Web Crypto API. لا تترك بياناتك جهازك أبداً، مما يضمن خصوصية كاملة.' },
-      { q: 'ما الفرق بين MD5 و SHA-256؟', a: 'ينتج MD5 تجزئة 128 بت (32 حرفاً سداسياً عشرية) وهو أسرع ولكنه أقل أماناً. ينتج SHA-256 تجزئة 256 بت (64 حرفاً سداسياً عشرية) ويوفر مقاومة تصادم أفضل للتطبيقات الحساسة للأمان.' },
-      { q: 'هل يمكنني مقارنة قيمتي تجزئة؟', a: 'نعم، تتضمن الأداة ميزة مقارنة التجزئات. الصق قيمتي تجزئة وستخبرك ما إذا كانتا تتطابقان أم تختلفان، وهو أمر مفيد للتحقق من سلامة الملفات.' },
+      { q: 'ما هي أساليب الثناء المتاحة؟', a: 'نقدم 4 أساليب: صادق (من القلب والحقيقي)، مضحك (سخيف وخفيف)، شعري (أدبي ورومانسي)، ومبالغ فيه (مبالغ فيه ومضحك).' },
+      { q: 'هل يمكنني تخصيص المديح؟', a: 'نعم، أدخل اسم المتلقي وسياقاً اختيارياً (مثل "زميلي في العمل"، "صديقي المفضل") لجعل المديح أكثر شخصية.' },
+      { q: 'هل هناك حد لعدد المديحات التي يمكنني إنشاؤها؟', a: 'لا، أنشئ بقدر ما تشاء. كل نقرة تنتج مديحاً فريداً.' },
+    ],
+  },
+  'acrostic-poem-generator': {
+    en: [
+      { q: 'What is an acrostic poem?', a: 'An acrostic poem is a poem where the first character of each line spells out a word or phrase. For Chinese, we use the first character of each line to form the hidden word.' },
+      { q: 'Can I use any keyword for the acrostic?', a: 'Yes, enter any Chinese word or phrase (2-8 characters). The generator creates a poem where each line\'s first character matches your keyword in sequence.' },
+      { q: 'What poem styles are supported?', a: 'We support 7-character (七言) and 5-character (五言) classical Chinese poetry forms, with themes like blessing, love, business, scenery, and motivation.' },
+    ],
+    zh: [
+      { q: '什么是藏头诗？', a: '藏头诗是一种将每行首字连起来组成一个词或短语的诗歌形式。中文藏头诗通常使用每行第一个字组成隐藏的关键词。' },
+      { q: '可以用任意关键词生成吗？', a: '可以，输入任意中文词或短语（2-8个字），生成器会创作一首诗，每行首字依次对应你的关键词。' },
+      { q: '支持哪些诗体？', a: '支持七言和五言两种古诗体，以及祝福、表白、商务、风景、励志等多种主题。' },
+    ],
+    es: [
+      { q: '¿Qué es un poema acróstico?', a: 'Un poema acróstico es un poema donde el primer carácter de cada línea forma una palabra o frase. Para chino, usamos el primer carácter de cada línea para formar la palabra oculta.' },
+      { q: '¿Puedo usar cualquier palabra clave para el acróstico?', a: 'Sí, ingresa cualquier palabra o frase china (2-8 caracteres). El generador crea un poema donde el primer carácter de cada línea coincide con tu palabra clave en secuencia.' },
+      { q: '¿Qué estilos de poema se admiten?', a: 'Admitimos formas de poesía clásica china de 7 caracteres (七言) y 5 caracteres (五言), con temas como bendición, amor, negocios, paisaje y motivación.' },
+    ],
+    fr: [
+      { q: 'Qu\'est-ce qu\'un poème acrostiche ?', a: 'Un poème acrostiche est un poème où le premier caractère de chaque ligne forme un mot ou une phrase. Pour le chinois, nous utilisons le premier caractère de chaque ligne pour former le mot caché.' },
+      { q: 'Puis-je utiliser n\'importe quel mot-clé pour l\'acrostiche ?', a: 'Oui, entrez n\'importe quel mot ou phrase chinois (2-8 caractères). Le générateur crée un poème où le premier caractère de chaque ligne correspond à votre mot-clé en séquence.' },
+      { q: 'Quels styles de poèmes sont pris en charge ?', a: 'Nous prenons en charge les formes de poésie classique chinoise de 7 caractères (七言) et 5 caractères (五言), avec des thèmes comme la bénédiction, l\'amour, les affaires, le paysage et la motivation.' },
+    ],
+    hi: [
+      { q: 'एक व्यंजना कविता क्या है?', a: 'एक व्यंजना कविता वह कविता है जहाँ प्रत्येक पंक्ति का पहला अक्षर एक शब्द या वाक्यांश बनाता है।' },
+      { q: 'क्या मैं व्यंजना के लिए किसी भी कीवर्ड का उपयोग कर सकता हूँ?', a: 'हाँ, कोई भी चीनी शब्द या वाक्यांश (2-8 अक्षर) दर्ज करें।' },
+      { q: 'कौन सी कविता शैलियाँ समर्थित हैं?', a: 'हम 7-अक्षर (七言) और 5-अक्षर (五言) शास्त्रीय चीनी कविता रूपों का समर्थन करते हैं।' },
+    ],
+    ar: [
+      { q: 'ما هي القصيدة الأخفائية؟', a: 'القصيدة الأخفائية هي قصيدة حيث تشكل الحرف الأول من كل سطر كلمة أو عبارة.' },
+      { q: 'هل يمكنني استخدام أي كلمة مفتاحية للأخفائية؟', a: 'نعم، أدخل أي كلمة أو عبارة صينية (2-8 أحرف).' },
+      { q: 'ما هي أنماط القصيدة المدعومة؟', a: 'ندعم أشكال الشعر الصيني الكلاسيكي المكون من 7 أحرف (七言) و 5 أحرف (五言).' },
+    ],
+  },
+  'dream-interpreter': {
+    en: [
+      { q: 'How does the dream interpretation work?', a: 'The tool provides dual interpretation: a psychological analysis based on Freud\'s theories and a traditional Chinese interpretation based on the Zhougong dream dictionary (周公解梦).' },
+      { q: 'Is dream interpretation scientifically accurate?', a: 'Dream interpretation is subjective and not a science. Our tool provides two different frameworks for understanding your dreams — one from Western psychology and one from Chinese traditional culture — for reflection and entertainment purposes only.' },
+      { q: 'Can I interpret dreams in languages other than Chinese?', a: 'Yes, enter your dream keywords in any language. The Freudian analysis works universally, and the Zhougong dictionary interpretation is available for Chinese-related dream symbols.' },
+    ],
+    zh: [
+      { q: '梦境解析是如何工作的？', a: '工具提供双重解读：基于弗洛伊德理论的心理学分析，以及基于周公解梦的中国传统解读。' },
+      { q: '梦境解析有科学依据吗？', a: '梦境解析是主观的，不是科学。仅供反思和娱乐之用。' },
+      { q: '可以用中文以外的语言解析梦境吗？', a: '可以，用任意语言输入你的梦境关键词。弗洛伊德分析具有普遍性。' },
+    ],
+    es: [
+      { q: '¿Cómo funciona la interpretación de sueños?', a: 'La herramienta proporciona una doble interpretación: un análisis psicológico basado en las teorías de Freud y una interpretación tradicional china basada en el diccionario de sueños de Zhougong (周公解梦).' },
+      { q: '¿La interpretación de sueños es científicamente precisa?', a: 'La interpretación de sueños es subjetiva y no es una ciencia. Es solo para fines de reflexión y entretenimiento.' },
+      { q: '¿Puedo interpretar sueños en otros idiomas además del chino?', a: 'Sí, ingresa tus palabras clave de sueño en cualquier idioma.' },
+    ],
+    fr: [
+      { q: 'Comment fonctionne l\'interprétation des rêves ?', a: 'L\'outil fournit une double interprétation : une analyse psychologique basée sur les théories de Freud et une interprétation traditionnelle chinoise basée sur le dictionnaire des rêves de Zhougong (周公解梦).' },
+      { q: 'L\'interprétation des rêves est-elle scientifiquement précise ?', a: 'L\'interprétation des rêves est subjective et n\'est pas une science. À des fins de réflexion et de divertissement uniquement.' },
+      { q: 'Puis-je interpréter les rêves dans des langues autres que le chinois ?', a: 'Oui, entrez vos mots-clés de rêve dans n\'importe quelle langue.' },
+    ],
+    hi: [
+      { q: 'सपना व्याख्या कैसे काम करती है?', a: 'यह उपकरण दोहरी व्याख्या प्रदान करता है: फ्रायड के सिद्धांतों पर आधारित मनोवैज्ञानिक विश्लेषण और झोउगोंग सपना शब्दकोश पर आधारित पारंपरिक चीनी व्याख्या।' },
+      { q: 'क्या सपना व्याख्या वैज्ञानिक रूप से सटीक है?', a: 'सपना व्याख्या व्यक्तिपरक है और विज्ञान नहीं है। केवल चिंतन और मनोरंजन उद्देश्यों के लिए।' },
+      { q: 'क्या मैं चीनी के अलावा अन्य भाषाओं में सपनों की व्याख्या कर सकता हूँ?', a: 'हाँ, किसी भी भाषा में अपने सपने के कीवर्ड दर्ज करें।' },
+    ],
+    ar: [
+      { q: 'كيف يعمل تفسير الأحلام؟', a: 'توفر الأداة تفسيراً مزدوجاً: تحليلاً نفسياً يعتمد على نظريات فرويد وتفسيراً صينياً تقليدياً يعتمد على قاموس أحلام تشو غونغ (周公解梦).' },
+      { q: 'هل تفسير الأحلام دقيق علمياً؟', a: 'تفسير الأحلام ذاتي وليس علماً. لأغراض التأمل والترفيه فقط.' },
+      { q: 'هل يمكنني تفسير الأحلام بلغات أخرى غير الصينية؟', a: 'نعم، أدخل كلمات مفتاحية لأحلامك بأي لغة.' },
+    ],
+  },
+  'handwritten-signature-generator': {
+    en: [
+      { q: 'What signature styles are available?', a: 'We offer 5+ handwritten signature styles, ranging from elegant and formal to casual and artistic.' },
+      { q: 'Can I adjust the stroke width and slant?', a: 'Yes, use the sliders to adjust stroke thickness and slant angle in real-time.' },
+      { q: 'What export formats are supported?', a: 'Export your signature as PNG (with transparent background) or SVG (vector format, scalable without quality loss).' },
+    ],
+    zh: [
+      { q: '有哪些签名风格可选？', a: '我们提供5种以上手写签名风格，从优雅正式到休闲艺术。' },
+      { q: '可以调整笔画粗细和倾斜度吗？', a: '可以，使用滑块实时调整笔画粗细和倾斜角度。' },
+      { q: '支持哪些导出格式？', a: '支持导出为 PNG（透明背景）或 SVG（矢量格式）。' },
+    ],
+    es: [
+      { q: '¿Qué estilos de firma están disponibles?', a: 'Ofrecemos más de 5 estilos de firma manuscrita, desde elegantes y formales hasta casuales y artísticos.' },
+      { q: '¿Puedo ajustar el grosor del trazo y la inclinación?', a: 'Sí, usa los controles deslizantes para ajustar el grosor del trazo y el ángulo de inclinación en tiempo real.' },
+      { q: '¿Qué formatos de exportación se admiten?', a: 'Exporta tu firma como PNG (con fondo transparente) o SVG (formato vectorial).' },
+    ],
+    fr: [
+      { q: 'Quels styles de signature sont disponibles ?', a: 'Nous proposons plus de 5 styles de signature manuscrite, allant de l\'élégant et formel au décontracté et artistique.' },
+      { q: 'Puis-je ajuster l\'épaisseur du trait et l\'inclinaison ?', a: 'Oui, utilisez les curseurs pour ajuster l\'épaisseur du trait et l\'angle d\'inclinaison en temps réel.' },
+      { q: 'Quels formats d\'exportation sont pris en charge ?', a: 'Exportez votre signature en PNG (avec fond transparent) ou SVG (format vectoriel).' },
+    ],
+    hi: [
+      { q: 'कौन सी हस्ताक्षर शैलियाँ उपलब्ध हैं?', a: 'हम 5+ हस्तलिखित हस्ताक्षर शैलियाँ प्रदान करते हैं।' },
+      { q: 'क्या मैं स्ट्रोक की चौड़ाई और झुकाव समायोजित कर सकता हूँ?', a: 'हाँ, स्लाइडर का उपयोग करें।' },
+      { q: 'कौन से निर्यात प्रारूप समर्थित हैं?', a: 'PNG (पारदर्शी बैकग्राउंड) या SVG (वेक्टर प्रारूप)।' },
+    ],
+    ar: [
+      { q: 'ما هي أنماط التوقيع المتاحة؟', a: 'نقدم أكثر من 5 أنماط توقيع مكتوب بخط اليد.' },
+      { q: 'هل يمكنني ضبط سماكة الخط والميل؟', a: 'نعم، استخدم المنزلقات.' },
+      { q: 'ما هي تنسيقات التصدير المدعومة؟', a: 'PNG (مع خلفية شفافة) أو SVG (تنسيق متجه).' },
+    ],
+  },
+  'life-timeline': {
+    en: [
+      { q: 'How does the life timeline work?', a: 'Enter your birth date and life expectancy. The tool creates a grid where each cell represents one week of your life. Lived weeks are colored, remaining weeks are blank.' },
+      { q: 'Can I mark important dates on the timeline?', a: 'Yes, click on any cell to mark important events like birthdays, anniversaries, or milestones.' },
+      { q: 'Is my data stored online?', a: 'No, all data is stored locally in your browser. Your timeline never leaves your device.' },
+    ],
+    zh: [
+      { q: '人生时间轴是如何工作的？', a: '输入你的出生日期和预期寿命，工具会创建一个网格，每格代表你生命中的一周。' },
+      { q: '可以在时间轴上标记重要日期吗？', a: '可以，点击任意格子标记重要事件。' },
+      { q: '我的数据存在网上吗？', a: '不，所有数据都存储在浏览器本地。' },
+    ],
+    es: [
+      { q: '¿Cómo funciona la línea de tiempo de la vida?', a: 'Ingresa tu fecha de nacimiento y expectativa de vida. La herramienta crea una cuadrícula donde cada celda representa una semana de tu vida.' },
+      { q: '¿Puedo marcar fechas importantes en la línea de tiempo?', a: 'Sí, haz clic en cualquier celda para marcar eventos importantes.' },
+      { q: '¿Mis datos se almacenan en línea?', a: 'No, todos los datos se almacenan localmente en tu navegador.' },
+    ],
+    fr: [
+      { q: 'Comment fonctionne la chronologie de la vie ?', a: 'Entrez votre date de naissance et votre espérance de vie. L\'outil crée une grille où chaque cellule représente une semaine de votre vie.' },
+      { q: 'Puis-je marquer des dates importantes sur la chronologie ?', a: 'Oui, cliquez sur n\'importe quelle cellule pour marquer des événements importants.' },
+      { q: 'Mes données sont-elles stockées en ligne ?', a: 'Non, toutes les données sont stockées localement dans votre navigateur.' },
+    ],
+    hi: [
+      { q: 'जीवन समयरेखा कैसे काम करती है?', a: 'अपनी जन्मतिथि और जीवन प्रत्याशा दर्ज करें। उपकरण एक ग्रिड बनाता है जहाँ प्रत्येक सेल आपके जीवन के एक सप्ताह का प्रतिनिधित्व करता है।' },
+      { q: 'क्या मैं समयरेखा पर महत्वपूर्ण तिथियों को चिह्नित कर सकता हूँ?', a: 'हाँ, किसी भी सेल पर क्लिक करें।' },
+      { q: 'क्या मेरा डेटा ऑनलाइन संग्रहीत है?', a: 'नहीं, सभी डेटा आपके ब्राउज़र में स्थानीय रूप से संग्रहीत है।' },
+    ],
+    ar: [
+      { q: 'كيف يعمل الخط الزمني للحياة؟', a: 'أدخل تاريخ ميلادك ومتوسط العمر المتوقع. تنشئ الأداة شبكة حيث تمثل كل خلية أسبوعاً من حياتك.' },
+      { q: 'هل يمكنني تحديد تواريخ مهمة على الخط الزمني؟', a: 'نعم، انقر على أي خلية.' },
+      { q: 'هل يتم تخزين بياناتي عبر الإنترنت؟', a: 'لا، يتم تخزين جميع البيانات محلياً في متصفحك.' },
+    ],
+  },
+  'personality-test': {
+    en: [
+      { q: 'What is the personality test based on?', a: 'The test is inspired by the MBTI framework but simplified to 10 quick questions. It covers 4 dimensions: Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, and Judging/Perceiving.' },
+      { q: 'How long does the test take?', a: 'About 2-3 minutes. Each question is designed to be answered quickly with your first impression.' },
+      { q: 'Is the test scientifically validated?', a: 'This is a simplified version for entertainment and self-reflection purposes only.' },
+    ],
+    zh: [
+      { q: '性格测试的依据是什么？', a: '测试基于 MBTI 框架，但简化为10道快速题目。涵盖4个维度：外向/内向、感觉/直觉、思考/情感、判断/感知。' },
+      { q: '测试需要多长时间？', a: '大约2-3分钟。' },
+      { q: '测试有科学依据吗？', a: '这是一个简化版本，仅供娱乐和自我反思。' },
+    ],
+    es: [
+      { q: '¿En qué se basa la prueba de personalidad?', a: 'La prueba se inspira en el marco MBTI pero se simplifica a 10 preguntas rápidas.' },
+      { q: '¿Cuánto tarda la prueba?', a: 'Aproximadamente 2-3 minutos.' },
+      { q: '¿La prueba está validada científicamente?', a: 'Esta es una versión simplificada con fines de entretenimiento y autorreflexión.' },
+    ],
+    fr: [
+      { q: 'Sur quoi se base le test de personnalité ?', a: 'Le test s\'inspire du cadre MBTI mais est simplifié en 10 questions rapides.' },
+      { q: 'Combien de temps dure le test ?', a: 'Environ 2-3 minutes.' },
+      { q: 'Le test est-il scientifiquement validé ?', a: 'Il s\'agit d\'une version simplifiée à des fins de divertissement et d\'autoréflexion.' },
+    ],
+    hi: [
+      { q: 'व्यक्तित्व परीक्षण किस पर आधारित है?', a: 'परीक्षण MBTI फ्रेमवर्क से प्रेरित है लेकिन 10 त्वरित प्रश्नों में सरलीकृत है।' },
+      { q: 'परीक्षण में कितना समय लगता है?', a: 'लगभग 2-3 मिनट।' },
+      { q: 'क्या परीक्षण वैज्ञानिक रूप से मान्य है?', a: 'यह मनोरंजन और आत्म-चिंतन उद्देश्यों के लिए एक सरलीकृत संस्करण है।' },
+    ],
+    ar: [
+      { q: 'ما هو اختبار الشخصية القائم على؟', a: 'الاختبار مستوحى من إطار عمل MBTI ولكن تم تبسيطه إلى 10 أسئلة سريعة.' },
+      { q: 'كم من الوقت يستغرق الاختبار؟', a: 'حوالي 2-3 دقائق.' },
+      { q: 'هل الاختبار صالح علمياً؟', a: 'هذه نسخة مبسطة لأغراض الترفيه والتأمل الذاتي.' },
+    ],
+  },
+  'fortune-drawing': {
+    en: [
+      { q: 'How does the fortune drawing work?', a: 'Think of a question, then click the fortune stick to draw a numbered fortune (签文). Each fortune includes a classical Chinese poem (签诗) and a detailed interpretation.' },
+      { q: 'What do the fortune numbers mean?', a: 'Fortunes are numbered from 1 to 100, with traditional rankings like 上上 (most auspicious), 上 (auspicious), 中 (middle), 下 (below).' },
+      { q: 'Is fortune drawing a form of divination?', a: 'Fortune drawing is a traditional Chinese cultural practice for guidance and reflection. It is not a science and should be used for entertainment purposes only.' },
+    ],
+    zh: [
+      { q: '抽签占卜是如何工作的？', a: '心中默念一个问题，然后点击签文抽取编号签文。每支签都包含一首文言文签诗和详细的吉凶解读。' },
+      { q: '签号代表什么？', a: '签文编号从1到100，有传统的吉凶等级：上上、上、中、下。' },
+      { q: '抽签占卜是一种占卜形式吗？', a: '抽签是中国传统文化中的一种寻求指引和反思的方式。它不是科学，仅供娱乐。' },
+    ],
+    es: [
+      { q: '¿Cómo funciona la extracción de fortuna?', a: 'Piensa en una pregunta, luego haz clic en el palo de fortuna para extraer una fortuna numerada (签文).' },
+      { q: '¿Qué significan los números de fortuna?', a: 'Las fortunas están numeradas del 1 al 100, con clasificaciones tradicionales como 上上 (más auspicioso), 上 (auspicioso), 中 (medio), 下 (inferior).' },
+      { q: '¿La extracción de fortuna es una forma de adivinación?', a: 'Es una práctica cultural tradicional china para orientación y reflexión. No es una ciencia.' },
+    ],
+    fr: [
+      { q: 'Comment fonctionne le tirage de fortune ?', a: 'Pensez à une question, puis cliquez sur le bâton de fortune pour tirer une fortune numérotée (签文).' },
+      { q: 'Que signifient les numéros de fortune ?', a: 'Les fortunes sont numérotées de 1 à 100, avec des classements traditionnels comme 上上 (le plus auspice), 上 (auspice), 中 (milieu), 下 (inférieur).' },
+      { q: 'Le tirage de fortune est-il une forme de divination ?', a: 'C\'est une pratique culturelle traditionnelle chinoise. Ce n\'est pas une science.' },
+    ],
+    hi: [
+      { q: 'भाग्य रेखांकन कैसे काम करता है?', a: 'एक प्रश्न पर सोचें, फिर एक क्रमांकित भाग्य (签文) निकालने के लिए भाग्य छड़ी पर क्लिक करें।' },
+      { q: 'भाग्य संख्याओं का क्या मतलब है?', a: 'भाग्य 1 से 100 तक क्रमांकित हैं, पारंपरिक रैंकिंग के साथ।' },
+      { q: 'क्या भाग्य रेखांकन भविष्यवाणी का एक रूप है?', a: 'यह एक पारंपरिक चीनी सांस्कृतिक अभ्यास है। यह विज्ञान नहीं है।' },
+    ],
+    ar: [
+      { q: 'كيف يعمل سحب الحظ؟', a: 'فكر في سؤال، ثم انقر على عصا الحظ لسحب حظ مرقم (签文).' },
+      { q: 'ما معنى أرقام الحظ؟', a: 'الأحظار مرقمة من 1 إلى 100 مع تصنيفات تقليدية.' },
+      { q: 'هل سحب الحظ هو شكل من أشكال العرافة؟', a: 'إنها ممارسة ثقافية صينية تقليدية. إنه ليس علماً.' },
+    ],
+  },
+  'love-letter-generator': {
+    en: [
+      { q: 'How personalized is the love letter?', a: 'The generator takes into account the recipient\'s personality type, relationship duration, and your preferred letter style (romantic, poetic, funny, or sincere).' },
+      { q: 'Can I include an acrostic in the letter?', a: 'Yes, enable the acrostic option and enter a keyword (like your partner\'s name). The first letter of each line will spell out your chosen word.' },
+      { q: 'Is there a limit to how many letters I can generate?', a: 'No, generate as many versions as you want until you find the perfect one.' },
+    ],
+    zh: [
+      { q: '情书的个性化程度如何？', a: '生成器会考虑对方的性格类型、相处时长和你偏好的情书风格。' },
+      { q: '可以在信中藏头诗吗？', a: '可以，开启藏头诗选项并输入关键词（如对方名字）。' },
+      { q: '生成次数有限制吗？', a: '没有限制，想生成多少版本就生成多少。' },
+    ],
+    es: [
+      { q: '¿Qué tan personalizada es la carta de amor?', a: 'El generador toma en cuenta el tipo de personalidad del destinatario, la duración de la relación y tu estilo de carta preferido.' },
+      { q: '¿Puedo incluir un acróstico en la carta?', a: 'Sí, activa la opción de acróstico e ingresa una palabra clave.' },
+      { q: '¿Hay un límite de cartas que puedo generar?', a: 'No, genera tantas versiones como quieras.' },
+    ],
+    fr: [
+      { q: 'La lettre d\'amour est-elle personnalisée ?', a: 'Le générateur prend en compte le type de personnalité du destinataire, la durée de la relation et votre style préféré.' },
+      { q: 'Puis-je inclure un acrostiche dans la lettre ?', a: 'Oui, activez l\'option acrostiche et entrez un mot-clé.' },
+      { q: 'Y a-t-il une limite au nombre de lettres que je peux générer ?', a: 'Non, générez autant de versions que vous voulez.' },
+    ],
+    hi: [
+      { q: 'प्रेम पत्र कितना व्यक्तिगत है?', a: 'जनरेटर प्राप्तकर्ता के व्यक्तित्व प्रकार, रिश्ते की अवधि, और आपकी पसंदीदा शैली को ध्यान में रखता है।' },
+      { q: 'क्या मैं पत्र में व्यंजना शामिल कर सकता हूँ?', a: 'हाँ, व्यंजना विकल्प को सक्षम करें और एक कीवर्ड दर्ज करें।' },
+      { q: 'क्या मैं जितने चाहें उतने पत्र बना सकता हूँ?', a: 'हाँ, कोई सीमा नहीं है।' },
+    ],
+    ar: [
+      { q: 'ما مدى تخصيص رسالة الحب؟', a: 'يأخذ المنشئ في الاعتبار نوع شخصية المتلقي ومدة العلاقة وأسلوبك المفضل.' },
+      { q: 'هل يمكنني تضمين أخفائية في الرسالة؟', a: 'نعم، قم بتمكين خيار الأخفائية وأدخل كلمة مفتاحية.' },
+      { q: 'هل هناك حد لعدد الرسائل التي يمكنني إنشاؤها؟', a: 'لا، أنشئ بقدر ما تشاء.' },
+    ],
+  },
+  'color-mood-board': {
+    en: [
+      { q: 'How does color psychology work?', a: 'Color psychology studies how colors affect our emotions and behavior. Different colors are associated with different moods.' },
+      { q: 'Can I use custom mood keywords?', a: 'Yes, enter any mood or emotion word in any language. The tool matches your input to color psychology associations.' },
+      { q: 'How many colors are in each palette?', a: 'Each palette contains 5 carefully chosen colors that harmonize with your input mood.' },
+    ],
+    zh: [
+      { q: '色彩心理学是如何工作的？', a: '色彩心理学研究颜色如何影响我们的情绪和行为。不同颜色与不同情绪相关联。' },
+      { q: '可以使用自定义情绪关键词吗？', a: '可以，用任意语言输入心情或情绪词。' },
+      { q: '每个调色板包含多少颜色？', a: '每个调色板包含5种精心挑选的颜色。' },
+    ],
+    es: [
+      { q: '¿Cómo funciona la psicología del color?', a: 'La psicología del color estudia cómo los colores afectan nuestras emociones y comportamiento.' },
+      { q: '¿Puedo usar palabras clave de estado de ánimo personalizadas?', a: 'Sí, ingresa cualquier palabra de estado de ánimo o emoción en cualquier idioma.' },
+      { q: '¿Cuántos colores hay en cada paleta?', a: 'Cada paleta contiene 5 colores cuidadosamente elegidos.' },
+    ],
+    fr: [
+      { q: 'Comment fonctionne la psychologie des couleurs ?', a: 'La psychologie des couleurs étudie comment les couleurs affectent nos émotions et notre comportement.' },
+      { q: 'Puis-je utiliser des mots-clés d\'humeur personnalisés ?', a: 'Oui, entrez n\'importe quel mot d\'humeur ou d\'émotion dans n\'importe quelle langue.' },
+      { q: 'Combien de couleurs contient chaque palette ?', a: 'Chaque palette contient 5 couleurs soigneusement choisies.' },
+    ],
+    hi: [
+      { q: 'रंग मनोविज्ञान कैसे काम करता है?', a: 'रंग मनोविज्ञान अध्ययन करता है कि रंग हमारी भावनाओं और व्यवहार को कैसे प्रभावित करते हैं।' },
+      { q: 'क्या मैं कस्टम मूड कीवर्ड का उपयोग कर सकता हूँ?', a: 'हाँ, किसी भी भाषा में कोई भी मूड या भावना शब्द दर्ज करें।' },
+      { q: 'प्रत्येक पैलेट में कितने रंग होते हैं?', a: 'प्रत्येक पैलेट में 5 सावधानी से चुने गए रंग होते हैं।' },
+    ],
+    ar: [
+      { q: 'كيف يعمل علم نفس الألوان؟', a: 'يدرس علم نفس الألوان كيف تؤثر الألوان على عواطفنا وسلوكنا.' },
+      { q: 'هل يمكنني استخدام كلمات مفتاحية للحالة المزاجية المخصصة؟', a: 'نعم، أدخل أي كلمة حالة مزاجية أو عاطفة بأي لغة.' },
+      { q: 'كم عدد الألوان في كل لوحة؟', a: 'تحتوي كل لوحة على 5 ألوان مختارة بعناية.' },
+    ],
+  },
+  'classical-chinese-converter': {
+    en: [
+      { q: 'What styles of classical Chinese are supported?', a: 'We support multiple classical Chinese styles including 文言文 (wenyan), 半文半白 (semi-classical), and various literary periods.' },
+      { q: 'How accurate is the conversion?', a: 'The tool uses rule-based conversion with a classical Chinese dictionary. It handles common patterns well but may not perfectly capture the nuances of classical literature.' },
+      { q: 'Can I convert classical Chinese back to modern Chinese?', a: 'The tool currently converts modern to classical Chinese only. For reverse conversion, we recommend using a classical Chinese dictionary.' },
+    ],
+    zh: [
+      { q: '支持哪些古文风格？', a: '我们支持多种古文风格，包括文言文、半文半白等不同时期的文言文风格。' },
+      { q: '转换的准确性如何？', a: '工具使用基于规则的转换和古文字典，能很好地处理常见模式，但可能无法完全捕捉古典文学的微妙之处。' },
+      { q: '可以将古文转回现代文吗？', a: '工具目前只支持现代文转文言文。如需反向转换，建议使用古文字典。' },
+    ],
+    es: [
+      { q: '¿Qué estilos de chino clásico se admiten?', a: 'Admitimos múltiples estilos de chino clásico, incluidos 文言文 (wenyan), 半文半白 (semi-clásico) y varios períodos literarios.' },
+      { q: '¿Qué tan precisa es la conversión?', a: 'La herramienta utiliza conversión basada en reglas con un diccionario de chino clásico.' },
+      { q: '¿Puedo convertir el chino clásico de vuelta a chino moderno?', a: 'La herramienta actualmente solo convierte de moderno a clásico.' },
+    ],
+    fr: [
+      { q: 'Quels styles de chinois classique sont pris en charge ?', a: 'Nous prenons en charge plusieurs styles de chinois classique, notamment 文言文 (wenyan), 半文半白 (semi-classique) et diverses périodes littéraires.' },
+      { q: 'La conversion est-elle précise ?', a: 'L\'outil utilise une conversion basée sur des règles avec un dictionnaire de chinois classique.' },
+      { q: 'Puis-je reconvertir le chinois classique en chinois moderne ?', a: 'L\'outil convertit actuellement uniquement du moderne au classique.' },
+    ],
+    hi: [
+      { q: 'कौन सी शास्त्रीय चीनी शैलियाँ समर्थित हैं?', a: 'हम 文言文 (wenyan), 半文半白 (अर्ध-शास्त्रीय) और विभिन्न साहित्यिक काल सहित कई शास्त्रीय चीनी शैलियों का समर्थन करते हैं।' },
+      { q: 'रूपांतरण कितना सटीक है?', a: 'उपकरण एक शास्त्रीय चीनी शब्दकोश के साथ नियम-आधारित रूपांतरण का उपयोग करता है।' },
+      { q: 'क्या मैं शास्त्रीय चीनी को वापस आधुनिक चीनी में बदल सकता हूँ?', a: 'उपकरण वर्तमान में केवल आधुनिक से शास्त्रीय चीनी में रूपांतरित करता है।' },
+    ],
+    ar: [
+      { q: 'ما هي أنماط الصينية الكلاسيكية المدعومة؟', a: 'ندعم أنماطاً متعددة من الصينية الكلاسيكية، بما في ذلك 文言文 (wenyan)، 半文半白 (شبه كلاسيكي) وفترات أدبية مختلفة.' },
+      { q: 'ما مدى دقة التحويل؟', a: 'تستخدم الأداة التحويل القائم على القواعد مع قاموس صيني كلاسيكي.' },
+      { q: 'هل يمكنني تحويل الصينية الكلاسيكية مرة أخرى إلى الصينية الحديثة؟', a: 'تقوم الأداة حالياً بالتحويل فقط من الحديثة إلى الكلاسيكية.' },
     ],
   },
 };
