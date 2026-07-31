@@ -592,13 +592,28 @@ jobs:
           echo "  Functions: $DEPLOY_DIR/functions/api/"
           echo "================================================================"
           # [HARD] pipefail 防止 wrangler 失败被 tail 吞掉 exit code
-          set +e
-          pnpm exec wrangler pages deploy "$DEPLOY_DIR" \
-            --project-name="$PROJECT" \
-            --branch="$BRANCH" \
-            --commit-dirty=true > /tmp/wrangler_deploy.log 2>&1
-          W_EXIT=$?
-          set -e
+          # [RETRY] Cloudflare API 偶发 504/523 → 最多重试 4 次，间隔 30s
+          W_EXIT=1
+          for attempt in 1 2 3 4; do
+            echo "  📤 Deploy attempt $attempt/4..."
+            set +e
+            pnpm exec wrangler pages deploy "$DEPLOY_DIR" \
+              --project-name="$PROJECT" \
+              --branch="$BRANCH" \
+              --commit-dirty=true > /tmp/wrangler_deploy.log 2>&1
+            W_EXIT=$?
+            set -e
+            if [ "$W_EXIT" -eq 0 ]; then
+              echo "  ✅ Deploy attempt $attempt succeeded"
+              break
+            fi
+            echo "  ⚠️  Attempt $attempt failed (exit=$W_EXIT), log tail:"
+            tail -20 /tmp/wrangler_deploy.log || true
+            if [ "$attempt" -lt 4 ]; then
+              echo "  ⏳ Waiting 30s before retry..."
+              sleep 30
+            fi
+          done
           tail -80 /tmp/wrangler_deploy.log || true
           echo ""
           if [ "$W_EXIT" -ne 0 ]; then
