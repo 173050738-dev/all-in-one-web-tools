@@ -92,6 +92,8 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'image-pdf-converter',
   'unit-converter',
   'json-csv-converter',
+  'css-gradient-generator',
+  'hash-generator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {
@@ -176,6 +178,12 @@ export const SLUG_ALIAS: Record<string, string> = {
   'countdown-timer': 'countdown',
   'deadline': 'countdown',
   'figma-json-exporter': 'figma-json-exporter',
+  'css-gradient': 'css-gradient-generator',
+  'gradient-generator': 'css-gradient-generator',
+  'css-gradient-tool': 'css-gradient-generator',
+  'hash': 'hash-generator',
+  'hash-tool': 'hash-generator',
+  'checksum-generator': 'hash-generator',
 };
 
 export const EXTERNAL_TOOL_URLS: Record<string, string> = {

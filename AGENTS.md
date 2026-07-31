@@ -278,3 +278,30 @@
 - 【今日达上限·按铁律停手】X 2条+Reddit 1条+IH今天已满+GitHub今天已提2PR。再密像机器人伤号
 - 【SEO 体检成果·已交Carson转Trae】本会话做完 korelyy 全站 SEO 体检(抓77自研工具页+GSC 30天数据)。桌面文档：Trae任务-SEO修复-1改页面.md(修sitemap漏277工作流/去满屏Free标题/修13个中文空H1/清超长重复描述) + Trae任务-SEO补工具-2新建.md(补 图片转换/图片PDF互转/单位换算/JSON-CSV 4个高频工具)。Carson 说带后端的AI工具是有意让Trae深化的,不动。GSC真相:站上线1月总曝光1545/点击22,属新站冷启动早期,无快招,唯一正路=补通用高频工具+扩收录+耐心3-6月
 - 【FAQ强化文档中止】起草到一半超6000字符(11918)被Carson喊停,他说已让Trae自己改,文档已删,不用管
+
+
+### 推广进度补记（2026-07-31 上午 · YouTube 上线 + 多平台分发）
+- 【YouTube 频道"江僖"登录态确认】用 Carson Google 账号登录,频道ID=UCpWfmlbKRGAUUTqGJbjm91A,繁体中文界面
+- 【YouTube Shorts 2 条已公开发布】
+  1. life-weeks: https://www.youtube.com/shorts/BzDwx2gFe5w (10 views,标题"Your life in 4000 squares (try it in your browser)")
+  2. emoji-mixer: https://www.youtube.com/shorts/riFG3Jq8-7c (标题"I combined 4 random emojis - what came out is wild")
+  验证方法:uploads playlist(https://www.youtube.com/playlist?list=UUpWfmlbKRGAUUTqGJbjm91A) 列出全部2条
+- 【Dev.to 新文章已公开发布】https://dev.to/korelyy/i-built-a-free-emoji-mixer-that-runs-entirely-in-your-browser-5488
+  - 标题《I built a free emoji mixer that runs entirely in your browser》
+  - 内容纯客户端工具的思考+技术细节+嵌入 YouTube 视频链接+korelyy 链接(自然带出)
+  - 流程踩坑:#article_body 选错(欢迎弹窗的p),正确是 #article_body_markdown(textarea,name="body_markdown")
+  - 第一次 Save Draft 拿到 temp slug URL,要从 dashboard 找 Edit 链接去 publish(预览URL无 Publish 按钮)
+- 【IH 2 条评论均 landed】累计约17条：
+  1. 回《local memory forest》帖:讲工具也走 local-first 硬约束(本就不能上传)、吐槽 Mac-only 错过跨平台
+  2. 回《How to rank #1 on ChatGPT》帖:讲 ChatGPT 更爱引用答单一问题的短页而非终极指南,FAQ schema 强加反降权
+- 【Reddit 1 条评论 landed】r/CasualConversation《comfort movie》帖(关于 Grand Budapest Hotel),进历史得 1 point。脚本 reddit-retry.js(用.usertext-edit textarea,点 save)
+- 【踩坑·YouTube 上传】关键DOM笔记(给后续复用):
+  - input[type="file"] 在上传页直接存在(不需可见)→ setInputFiles
+  - 等"详细资讯"步骤:waitForSelector ytcp-video-title #textbox(不是 #title——那个是欢迎弹窗的 p)
+  - 标题描述字段都是 contenteditable div,直接 keyboard.type 不要 evaluate(value 会 Illegal invocation)
+  - 必须先答"兒童專屬"问题(选"否"),否则"下一步"disabled
+  - 视频处理完才能继续(waitForSelector 下一步 不再 disabled + 文字"检查完毕,未发现任何问题")
+  - visibility 选 公开(默认private),點"儲存"=发布
+  - 频道上传历史看不见(sidebar /content 路径被重定向到 /videos/upload),唯一验证方式:uploads playlist 列出 video ID
+- 【踩坑·YouTube DOM selectors】#title / #description 在上传页被欢迎弹窗的 ytcp-warm-welcome-dialog p 占用,真正字段在 ytcp-video-title / ytcp-video-description 内的 #textbox
+- 【脚本汇总】D:\codex-tools\yt-upload-lw-final.js / yt-finish-lw.js / yt-upload-emoji.js / yt-emoji-2.js / yt-pub-final.js / yt-verify.js / yt-emoji-verify-final.js / yt-pl.js(playlist查video ID)

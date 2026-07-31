@@ -2094,6 +2094,72 @@
         ]
       }
     },
+    "css-gradient-generator": {
+      "name": "CSS Gradient Generator",
+      "description": "Visual CSS gradient generator supporting linear, radial, and conic gradients with real-time preview and CSS code export.",
+      "seo": {
+        "intro": "This CSS gradient generator lets you create beautiful gradients directly in your browser with zero coding. Choose from linear, radial, or conic gradients, customize colors, positions, and angles, and export clean CSS code instantly. Whether you are designing a website, creating a landing page, or building a modern UI, this tool helps you craft professional gradient backgrounds without writing a single line of code.",
+        "scenarios": [
+          "Design a modern landing page with eye-catching gradient backgrounds.",
+          "Create CSS gradients for buttons, cards, and UI elements.",
+          "Experiment with color combinations before implementing in code."
+        ],
+        "tutorial": [
+          "Select a gradient type (linear, radial, or conic).",
+          "Add and adjust color stops using the color picker or hex input.",
+          "Fine-tune the direction, angle, and position parameters.",
+          "Copy the generated CSS code and paste it into your project."
+        ],
+        "advantages": [
+          "Real-time preview as you adjust parameters.",
+          "Multiple gradient types supported.",
+          "One-click copy with optional vendor prefixes for browser compatibility."
+        ],
+        "faqs": [
+          {
+            "q": "What types of CSS gradients can I generate?",
+            "a": "You can generate linear, radial, and conic gradients. Each type supports full customization including color stops, direction, angle, and position."
+          },
+          {
+            "q": "Can I preview the gradient in real-time?",
+            "a": "Yes, the gradient updates in real-time as you adjust colors, positions, and parameters. You can see the final result instantly before exporting."
+          }
+        ]
+      }
+    },
+    "hash-generator": {
+      "name": "Hash Generator",
+      "description": "Generate MD5, SHA-1, SHA-256, SHA-384, SHA-512 hashes for text and files. Local processing, privacy-first.",
+      "seo": {
+        "intro": "This hash generator computes cryptographic hashes directly in your browser using the Web Crypto API. Supports MD5, SHA-1, SHA-256, SHA-384, and SHA-512 algorithms for text and file inputs. All processing happens locally, so your data never leaves your device — perfect for developers, security researchers, and anyone who needs hash computation without server dependency.",
+        "scenarios": [
+          "Verify file integrity by comparing hash checksums.",
+          "Generate hash values for passwords, tokens, or data validation.",
+          "Compute hashes for API signatures and digital forensics."
+        ],
+        "tutorial": [
+          "Select your preferred hash algorithm.",
+          "Enter text or upload a file to hash.",
+          "Click generate to compute the hash value.",
+          "Copy the result for your use case."
+        ],
+        "advantages": [
+          "Multiple hash algorithms supported (MD5, SHA-1, SHA-256, SHA-384, SHA-512).",
+          "100% local processing — data never leaves your browser.",
+          "Supports both text and file inputs with instant results."
+        ],
+        "faqs": [
+          {
+            "q": "What hash algorithms are supported?",
+            "a": "We support MD5, SHA-1, SHA-256, SHA-384, SHA-512, and several other variants. Each algorithm produces a different hash length and security level."
+          },
+          {
+            "q": "Is hash generation done locally or on a server?",
+            "a": "All hash computation runs locally in your browser using the Web Crypto API. Your data never leaves your device, ensuring complete privacy."
+          }
+        ]
+      }
+    },
     "danmaku-handheld": {
       "name": "Danmaku Handheld",
       "description": "Online danmaku handheld for utility. Works right in your browser — free, secure, and no install required."

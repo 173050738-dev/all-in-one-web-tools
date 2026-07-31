@@ -8011,5 +8011,25 @@
     "signup": [
       "no-signup"
     ]
+  },
+  "css-gradient-generator": {
+    "relatedTools": [
+      "color-picker",
+      "coolors",
+      "image-compressor"
+    ],
+    "signup": [
+      "no-signup"
+    ]
+  },
+  "hash-generator": {
+    "relatedTools": [
+      "base64-tool",
+      "uuid-generator",
+      "random-number"
+    ],
+    "signup": [
+      "no-signup"
+    ]
   }
 }

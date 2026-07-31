@@ -46976,5 +46976,39 @@
       "tagsEn": ["json to csv", "csv to json", "data converter", "flatten json"],
       "localProcessing": true,
       "isInternalTool": true
+    },
+    {
+      "id": "css-gradient-generator",
+      "slug": "css-gradient-generator",
+      "name": "CSS 渐变生成器",
+      "description": "可视化 CSS 渐变生成工具，支持线性、径向、锥形渐变，实时预览并导出 CSS 代码。",
+      "category": "design",
+      "tags": ["CSS渐变", "渐变生成", "线性渐变", "径向渐变", "锥形渐变"],
+      "nameEn": "CSS Gradient Generator",
+      "descriptionEn": "Visual CSS gradient generator supporting linear, radial, and conic gradients with real-time preview and CSS code export.",
+      "tagsEn": ["CSS gradient", "gradient generator", "linear gradient", "radial gradient", "conic gradient"],
+      "localProcessing": true,
+      "isFree": true,
+      "difficulty": "easy",
+      "complianceLevel": "green",
+      "icon": "Palette",
+      "isInternalTool": true
+    },
+    {
+      "id": "hash-generator",
+      "slug": "hash-generator",
+      "name": "哈希生成器",
+      "description": "在线生成 MD5、SHA-1、SHA-256、SHA-512 等多种哈希值，支持文本和文件，纯本地处理。",
+      "category": "developer",
+      "tags": ["哈希", "MD5", "SHA", "加密", "校验"],
+      "nameEn": "Hash Generator",
+      "descriptionEn": "Generate MD5, SHA-1, SHA-256, SHA-512 and more hash algorithms online. Supports text and file hashing, fully local processing.",
+      "tagsEn": ["hash", "MD5", "SHA", "encryption", "checksum"],
+      "localProcessing": true,
+      "isFree": true,
+      "difficulty": "easy",
+      "complianceLevel": "green",
+      "icon": "Hash",
+      "isInternalTool": true
     }
 ]

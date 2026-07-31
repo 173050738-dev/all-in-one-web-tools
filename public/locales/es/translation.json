@@ -2094,6 +2094,72 @@
         ]
       }
     },
+    "css-gradient-generator": {
+      "name": "Generador de Gradientes CSS",
+      "description": "Generador visual de gradientes CSS que admite gradientes lineales, radiales y cónicos con vista previa en tiempo real y exportación de código CSS.",
+      "seo": {
+        "intro": "Este generador de gradientes CSS te permite crear hermosos gradientes directamente en tu navegador sin escribir código. Elige entre gradientes lineales, radiales o cónicos, personaliza colores, posiciones y ángulos, y exporta código CSS limpio al instante. Ya sea que estés diseñando un sitio web, creando una página de destino o construyendo una interfaz moderna, esta herramienta te ayuda a crear fondos de gradiente profesionales fácilmente.",
+        "scenarios": [
+          "Diseñar una página de destino moderna con fondos de gradiente llamativos.",
+          "Crear gradientes CSS para botones, tarjetas y elementos de interfaz.",
+          "Experimentar con combinaciones de colores antes de implementar en código."
+        ],
+        "tutorial": [
+          "Selecciona un tipo de gradiente (lineal, radial o cónico).",
+          "Agrega y ajusta puntos de parada de color usando el selector de colores o entrada hexadecimal.",
+          "Ajusta la dirección, ángulo y posición.",
+          "Copia el código CSS generado y pégalo en tu proyecto."
+        ],
+        "advantages": [
+          "Vista previa en tiempo real al ajustar parámetros.",
+          "Varios tipos de gradiente admitidos.",
+          "Copia con un clic con prefijos de proveedor opcionales para compatibilidad con navegadores."
+        ],
+        "faqs": [
+          {
+            "q": "¿Qué tipos de gradientes CSS puedo generar?",
+            "a": "Puedes generar gradientes lineales, radiales y cónicos. Cada tipo admite personalización completa, incluidos puntos de parada de color, dirección, ángulo y posición."
+          },
+          {
+            "q": "¿Puedo ver el gradiente en tiempo real?",
+            "a": "Sí, el gradiente se actualiza en tiempo real a medida que ajustas colores, posiciones y parámetros. Puedes ver el resultado final al instante antes de exportar."
+          }
+        ]
+      }
+    },
+    "hash-generator": {
+      "name": "Generador de Hash",
+      "description": "Genera hashes MD5, SHA-1, SHA-256, SHA-384, SHA-512 para texto y archivos. Procesamiento local, privacidad primero.",
+      "seo": {
+        "intro": "Este generador de hash calcula hashes criptográficos directamente en tu navegador utilizando la Web Crypto API. Admite algoritmos MD5, SHA-1, SHA-256, SHA-384 y SHA-512 para entradas de texto y archivos. Todo el procesamiento se realiza localmente, por lo que tus datos nunca salen de tu dispositivo — perfecto para desarrolladores, investigadores de seguridad y cualquier persona que necesite cálculo de hash sin dependencia de servidor.",
+        "scenarios": [
+          "Verificar la integridad de archivos comparando sumas de verificación de hash.",
+          "Generar valores de hash para contraseñas, tokens o validación de datos.",
+          "Calcular hashes para firmas de API y análisis forense digital."
+        ],
+        "tutorial": [
+          "Selecciona tu algoritmo de hash preferido.",
+          "Ingresa texto o carga un archivo para hacer hash.",
+          "Haz clic en generar para calcular el valor de hash.",
+          "Copia el resultado para tu caso de uso."
+        ],
+        "advantages": [
+          "Varios algoritmos de hash admitidos (MD5, SHA-1, SHA-256, SHA-384, SHA-512).",
+          "Procesamiento 100% local — los datos nunca salen de tu navegador.",
+          "Admite entradas de texto y archivos con resultados instantáneos."
+        ],
+        "faqs": [
+          {
+            "q": "¿Qué algoritmos de hash se admiten?",
+            "a": "Admitimos MD5, SHA-1, SHA-256, SHA-384, SHA-512 y varias otras variantes. Cada algoritmo produce una longitud de hash y un nivel de seguridad diferentes."
+          },
+          {
+            "q": "¿La generación de hash se hace localmente o en un servidor?",
+            "a": "Todo el cálculo de hash se ejecuta localmente en tu navegador utilizando la Web Crypto API. Tus datos nunca salen de tu dispositivo, lo que garantiza una privacidad completa."
+          }
+        ]
+      }
+    },
     "danmaku-handheld": {
       "name": "danmaku portátil",
       "description": "en línea danmaku portátil for utility. Works right in your navegador — gratuito, seguro, and No install required."

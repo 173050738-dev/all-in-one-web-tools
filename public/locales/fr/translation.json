@@ -2094,6 +2094,72 @@
         ]
       }
     },
+    "css-gradient-generator": {
+      "name": "Générateur de Gradients CSS",
+      "description": "Générateur de gradients CSS visuel prenant en charge les gradients linéaires, radiaux et coniques avec prévisualisation en temps réel et export de code CSS.",
+      "seo": {
+        "intro": "Ce générateur de gradients CSS vous permet de créer de magnifiques gradients directement dans votre navigateur sans écrire de code. Choisissez parmi les gradients linéaires, radiaux ou coniques, personnalisez les couleurs, positions et angles, et exportez un code CSS propre instantanément. Que vous conceviez un site web, créiez une page de destination ou construisiez une interface moderne, cet outil vous aide à créer facilement des fonds de gradient professionnels.",
+        "scenarios": [
+          "Concevoir une page de destination moderne avec des fonds de gradient accrocheurs.",
+          "Créer des gradients CSS pour les boutons, cartes et éléments d'interface.",
+          "Expérimenter avec des combinaisons de couleurs avant la mise en œuvre du code."
+        ],
+        "tutorial": [
+          "Sélectionnez un type de gradient (linéaire, radial ou conique).",
+          "Ajoutez et ajustez les arrêts de couleur à l'aide du sélecteur de couleurs ou de la saisie hexadécimale.",
+          "Ajustez la direction, l'angle et la position.",
+          "Copiez le code CSS généré et collez-le dans votre projet."
+        ],
+        "advantages": [
+          "Prévisualisation en temps réel lors de l'ajustement des paramètres.",
+          "Plusieurs types de gradients pris en charge.",
+          "Copie en un clic avec préfixes fournisseurs optionnels pour la compatibilité des navigateurs."
+        ],
+        "faqs": [
+          {
+            "q": "Quels types de dégradés CSS puis-je générer ?",
+            "a": "Vous pouvez générer des dégradés linéaires, radiaux et coniques. Chaque type prend en charge une personnalisation complète, y compris les arrêts de couleur, la direction, l'angle et la position."
+          },
+          {
+            "q": "Puis-je prévisualiser le dégradé en temps réel ?",
+            "a": "Oui, le dégradé se met à jour en temps réel lorsque vous ajustez les couleurs, les positions et les paramètres. Vous pouvez voir le résultat final instantanément avant l'exportation."
+          }
+        ]
+      }
+    },
+    "hash-generator": {
+      "name": "Générateur de Hash",
+      "description": "Génère des hashes MD5, SHA-1, SHA-256, SHA-384, SHA-512 pour le texte et les fichiers. Traitement local, priorité à la confidentialité.",
+      "seo": {
+        "intro": "Ce générateur de hash calcule des hashes cryptographiques directement dans votre navigateur à l'aide de la Web Crypto API. Prend en charge les algorithmes MD5, SHA-1, SHA-256, SHA-384 et SHA-512 pour les entrées de texte et de fichiers. Tout le traitement se fait localement, donc vos données ne quittent jamais votre appareil — parfait pour les développeurs, les chercheurs en sécurité et toute personne ayant besoin de calcul de hash sans dépendance serveur.",
+        "scenarios": [
+          "Vérifier l'intégrité des fichiers en comparant les sommes de contrôle de hash.",
+          "Générer des valeurs de hash pour les mots de passe, jetons ou la validation de données.",
+          "Calculer des hashes pour les signatures API et la criminalistique numérique."
+        ],
+        "tutorial": [
+          "Sélectionnez votre algorithme de hash préféré.",
+          "Entrez du texte ou téléchargez un fichier à hacher.",
+          "Cliquez sur générer pour calculer la valeur de hash.",
+          "Copiez le résultat pour votre cas d'utilisation."
+        ],
+        "advantages": [
+          "Plusieurs algorithmes de hash pris en charge (MD5, SHA-1, SHA-256, SHA-384, SHA-512).",
+          "Traitement 100% local — les données ne quittent jamais votre navigateur.",
+          "Prend en charge les entrées de texte et de fichiers avec des résultats instantanés."
+        ],
+        "faqs": [
+          {
+            "q": "Quels algorithmes de hash sont pris en charge ?",
+            "a": "Nous prenons en charge MD5, SHA-1, SHA-256, SHA-384, SHA-512 et plusieurs autres variantes. Chaque algorithme produit une longueur de hash et un niveau de sécurité différents."
+          },
+          {
+            "q": "La génération de hash se fait-elle localement ou sur un serveur ?",
+            "a": "Tout le calcul de hash s'exécute localement dans votre navigateur à l'aide de la Web Crypto API. Vos données ne quittent jamais votre appareil, garantissant une confidentialité totale."
+          }
+        ]
+      }
+    },
     "danmaku-handheld": {
       "name": "danmaku portable",
       "description": "en ligne danmaku portable for utility. Works right in your navigateur — gratuit, sécurisé, and Non install required."
