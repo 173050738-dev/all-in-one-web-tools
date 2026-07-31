@@ -803,6 +803,870 @@ const TOOL_FAQ_I18N: Record<string, Record<SeoLocale, Array<{ q: string; a: stri
       { q: 'هل يمكنني تحويل الصينية الكلاسيكية مرة أخرى إلى الصينية الحديثة؟', a: 'تقوم الأداة حالياً بالتحويل فقط من الحديثة إلى الكلاسيكية.' },
     ],
   },
+  'password-generator': {
+    en: [
+      { q: 'Is this password generator secure?', a: 'Yes, all passwords are generated locally in your browser using the Web Crypto API. Nothing is transmitted or stored on a server.' },
+      { q: 'What types of passwords can I generate?', a: 'You can generate alphanumeric passwords, passwords with symbols, numeric PIN codes, and memorable passphrases with customizable length and character sets.' },
+      { q: 'Are generated passwords stored anywhere?', a: 'No, generated passwords are never stored or logged. They exist only in your current browser session and disappear when you close the tab.' },
+    ],
+    zh: [
+      { q: '这个密码生成器安全吗？', a: '是的，所有密码都在你的浏览器中使用 Web Crypto API 本地生成，不会传输或存储到任何服务器。' },
+      { q: '可以生成哪些类型的密码？', a: '你可以生成字母数字密码、含符号密码、数字 PIN 码以及易记的密码短语，并可自定义长度和字符集。' },
+      { q: '生成的密码会被存储吗？', a: '不会，生成的密码从不存储或记录，仅存在于当前浏览器会话中，关闭标签页即消失。' },
+    ],
+    es: [
+      { q: '¿Es seguro este generador de contraseñas?', a: 'Sí, todas las contraseñas se generan localmente en tu navegador usando la API Web Crypto. Nada se transmite ni almacena.' },
+      { q: '¿Qué tipos de contraseñas puedo generar?', a: 'Puedes generar contraseñas alfanuméricas, con símbolos, códigos PIN numéricos y frases de contraseña memorables con longitud y conjuntos de caracteres personalizables.' },
+      { q: '¿Se almacenan las contraseñas generadas?', a: 'No, las contraseñas generadas nunca se almacenan ni registran. Solo existen en tu sesión actual del navegador.' },
+    ],
+    fr: [
+      { q: 'Ce générateur de mots de passe est-il sécurisé ?', a: 'Oui, tous les mots de passe sont générés localement dans votre navigateur via l\'API Web Crypto. Rien n\'est transmis ni stocké.' },
+      { q: 'Quels types de mots de passe puis-je générer ?', a: 'Vous pouvez générer des mots de passe alphanumériques, avec symboles, des codes PIN numériques et des phrases de passe mémorisables avec longueur et jeux de caractères personnalisables.' },
+      { q: 'Les mots de passe générés sont-ils stockés ?', a: 'Non, les mots de passe générés ne sont jamais stockés ni enregistrés. Ils n\'existent que dans votre session de navigateur actuelle.' },
+    ],
+    hi: [
+      { q: 'क्या यह पासवर्ड जनरेटर सुरक्षित है?', a: 'हाँ, सभी पासवर्ड आपके ब्राउज़र में Web Crypto API का उपयोग करके स्थानीय रूप से उत्पन्न होते हैं। कुछ भी ट्रांसमिट या स्टोर नहीं किया जाता।' },
+      { q: 'मैं किस प्रकार के पासवर्ड उत्पन्न कर सकता हूँ?', a: 'आप अल्फ़ान्यूमेरिक, सिंबल वाले, न्यूमेरिक PIN कोड और याद रखने योग्य पासफ़्रेज़ उत्पन्न कर सकते हैं, जिनकी लंबाई और कैरेक्टर सेट कस्टमाइज़ कर सकते हैं।' },
+      { q: 'क्या उत्पन्न पासवर्ड कहीं संग्रहीत होते हैं?', a: 'नहीं, उत्पन्न पासवर्ड कभी संग्रहीत या लॉग नहीं किए जाते। वे केवल आपके वर्तमान ब्राउज़र सत्र में मौजूद रहते हैं।' },
+    ],
+    ar: [
+      { q: 'هل مولد كلمات المرور هذا آمن؟', a: 'نعم، يتم توليد جميع كلمات المرور محلياً في متصفحك باستخدام Web Crypto API. لا يتم نقل أو تخزين أي شيء.' },
+      { q: 'ما أنواع كلمات المرور التي يمكنني توليدها؟', a: 'يمكنك توليد كلمات مرور أبجدية رقمية، ورموز، وأكواد PIN رقمية، وعبارات مرور يسهل تذكرها مع طول ومجموعات أحرف قابلة للتخصيص.' },
+      { q: 'هل يتم تخزين كلمات المرور المولدة؟', a: 'لا، لا يتم تخزين أو تسجيل كلمات المرور المولدة أبداً. وهي موجودة فقط في جلسة المتصفح الحالية وتختفي عند إغلاق التبويب.' },
+    ],
+  },
+  'uuid-generator': {
+    en: [
+      { q: 'What UUID versions are supported?', a: 'We support UUID v4 (fully random) and UUID v7 (time-sortable), the most commonly used versions in modern applications and databases.' },
+      { q: 'Are generated UUIDs truly unique?', a: 'Yes, UUID v4 uses 122 bits of randomness, making accidental collisions practically impossible even when generating millions of IDs.' },
+      { q: 'Can I generate bulk UUIDs at once?', a: 'Yes, you can generate up to thousands of UUIDs in a single click and copy them as a newline-separated list.' },
+    ],
+    zh: [
+      { q: '支持哪些 UUID 版本？', a: '我们支持 UUID v4（完全随机）和 UUID v7（可按时间排序），是现代应用和数据库中最常用的版本。' },
+      { q: '生成的 UUID 真的唯一吗？', a: '是的，UUID v4 使用 122 位随机数，即使生成数百万个 ID，意外碰撞的概率也几乎为零。' },
+      { q: '可以一次批量生成 UUID 吗？', a: '可以，你可以一键生成多达数千个 UUID，并以换行分隔的列表形式复制。' },
+    ],
+    es: [
+      { q: '¿Qué versiones de UUID se admiten?', a: 'Admitimos UUID v4 (totalmente aleatorio) y UUID v7 (ordenable por tiempo), las versiones más utilizadas en aplicaciones y bases de datos modernas.' },
+      { q: '¿Los UUID generados son realmente únicos?', a: 'Sí, UUID v4 usa 122 bits de aleatoriedad, lo que hace que las colisiones accidentales sean prácticamente imposibles incluso generando millones de IDs.' },
+      { q: '¿Puedo generar UUIDs en lote a la vez?', a: 'Sí, puedes generar hasta miles de UUIDs con un solo clic y copiarlos como una lista separada por saltos de línea.' },
+    ],
+    fr: [
+      { q: 'Quelles versions d\'UUID sont prises en charge ?', a: 'Nous prenons en charge UUID v4 (entièrement aléatoire) et UUID v7 (triable par temps), les versions les plus utilisées dans les applications et bases de données modernes.' },
+      { q: 'Les UUID générés sont-ils vraiment uniques ?', a: 'Oui, UUID v4 utilise 122 bits d\'aléatoire, ce qui rend les collisions accidentelles pratiquement impossibles même en générant des millions d\'ID.' },
+      { q: 'Puis-je générer des UUID en lot à la fois ?', a: 'Oui, vous pouvez générer jusqu\'à des milliers d\'UUID en un clic et les copier sous forme de liste séparée par des sauts de ligne.' },
+    ],
+    hi: [
+      { q: 'कौन से UUID संस्करण समर्थित हैं?', a: 'हम UUID v4 (पूरी तरह यादृच्छिक) और UUID v7 (समय-क्रमबद्ध) का समर्थन करते हैं, जो आधुनिक अनुप्रयोगों और डेटाबेस में सबसे अधिक उपयोग किए जाते हैं।' },
+      { q: 'क्या उत्पन्न UUID वास्तव में अद्वितीय हैं?', a: 'हाँ, UUID v4 122 बिट्स की यादृच्छिकता का उपयोग करता है, जिससे लाखों ID उत्पन्न करने पर भी टकराव लगभग असंभव हो जाता है।' },
+      { q: 'क्या मैं एक बार में बल्क UUID उत्पन्न कर सकता हूँ?', a: 'हाँ, आप एक क्लिक में हजारों UUID उत्पन्न कर सकते हैं और उन्हें नई लाइन से अलग सूची के रूप में कॉपी कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'ما هي إصدارات UUID المدعومة؟', a: 'ندعم UUID v4 (عشوائي بالكامل) و UUID v7 (قابل للفرز زمنياً)، وهي الإصدارات الأكثر استخداماً في التطبيقات وقواعد البيانات الحديثة.' },
+      { q: 'هل معرفات UUID المولدة فريدة حقاً؟', a: 'نعم، يستخدم UUID v4 122 بت من العشوائية، مما يجعل التصادمات العرضية مستحيلة عملياً حتى عند توليد ملايين المعرفات.' },
+      { q: 'هل يمكنني توليد UUIDs بالجملة دفعة واحدة؟', a: 'نعم، يمكنك توليد حتى آلاف UUIDs بنقرة واحدة ونسخها كقائمة مفصولة بأسطر جديدة.' },
+    ],
+  },
+  'image-to-base64': {
+    en: [
+      { q: 'What image formats are supported?', a: 'We support PNG, JPEG, GIF, WebP, SVG, BMP, and ICO images for instant Base64 conversion.' },
+      { q: 'Is there a file size limit?', a: 'Since all processing happens in your browser, very large images may slow down. We recommend keeping images under 10MB for best performance.' },
+      { q: 'Does the tool upload my images?', a: 'No, images are processed entirely in your browser and never uploaded to any server, ensuring complete privacy.' },
+    ],
+    zh: [
+      { q: '支持哪些图片格式？', a: '我们支持 PNG、JPEG、GIF、WebP、SVG、BMP 和 ICO 图片的即时 Base64 转换。' },
+      { q: '有文件大小限制吗？', a: '由于所有处理都在浏览器中完成，过大的图片可能会变慢。建议图片保持在 10MB 以下以获得最佳性能。' },
+      { q: '工具会上传我的图片吗？', a: '不会，图片完全在你的浏览器中处理，从不上传到任何服务器，确保完全隐私。' },
+    ],
+    es: [
+      { q: '¿Qué formatos de imagen se admiten?', a: 'Admitimos imágenes PNG, JPEG, GIF, WebP, SVG, BMP e ICO para conversión instantánea a Base64.' },
+      { q: '¿Hay un límite de tamaño de archivo?', a: 'Como todo el procesamiento ocurre en tu navegador, las imágenes muy grandes pueden ralentizarlo. Recomendamos mantener las imágenes por debajo de 10MB.' },
+      { q: '¿La herramienta sube mis imágenes?', a: 'No, las imágenes se procesan completamente en tu navegador y nunca se suben a ningún servidor, garantizando total privacidad.' },
+    ],
+    fr: [
+      { q: 'Quels formats d\'image sont pris en charge ?', a: 'Nous prenons en charge les images PNG, JPEG, GIF, WebP, SVG, BMP et ICO pour une conversion Base64 instantanée.' },
+      { q: 'Y a-t-il une limite de taille de fichier ?', a: 'Comme tout le traitement se fait dans votre navigateur, les très grandes images peuvent ralentir. Nous recommandons de garder les images sous 10 Mo.' },
+      { q: 'L\'outil télécharge-t-il mes images ?', a: 'Non, les images sont traitées entièrement dans votre navigateur et ne sont jamais téléchargées vers un serveur, garantissant une confidentialité totale.' },
+    ],
+    hi: [
+      { q: 'कौन से इमेज प्रारूप समर्थित हैं?', a: 'हम तत्काल Base64 रूपांतरण के लिए PNG, JPEG, GIF, WebP, SVG, BMP और ICO छवियों का समर्थन करते हैं।' },
+      { q: 'क्या कोई फ़ाइल आकार सीमा है?', a: 'चूंकि सभी प्रोसेसिंग आपके ब्राउज़र में होती है, बहुत बड़ी छवियां धीमी हो सकती हैं। सर्वोत्तम प्रदर्शन के लिए छवियों को 10MB से नीचे रखने की सिफारिश की जाती है।' },
+      { q: 'क्या यह टूल मेरी छवियां अपलोड करता है?', a: 'नहीं, छवियां पूरी तरह से आपके ब्राउज़र में प्रोसेस होती हैं और कभी किसी सर्वर पर अपलोड नहीं होतीं, जिससे पूर्ण गोपनीयता सुनिश्चित होती है।' },
+    ],
+    ar: [
+      { q: 'ما تنسيقات الصور المدعومة؟', a: 'ندعم صور PNG و JPEG و GIF و WebP و SVG و BMP و ICO للتحويل الفوري إلى Base64.' },
+      { q: 'هل هناك حد لحجم الملف؟', a: 'نظراً لأن كل المعالجة تتم في متصفحك، فإن الصور الكبيرة جداً قد تبطئ الأداء. نوصي بإبقاء الصور أقل من 10 ميجابايت.' },
+      { q: 'هل تقوم الأداة برفع صوري؟', a: 'لا، تتم معالجة الصور بالكامل في متصفحك ولا يتم رفعها أبداً إلى أي خادم، مما يضمن خصوصية كاملة.' },
+    ],
+  },
+  'markdown-preview': {
+    en: [
+      { q: 'What markdown flavors are supported?', a: 'We support GitHub Flavored Markdown (GFM) including tables, task lists, strikethrough, autolinks, and fenced code blocks.' },
+      { q: 'Can I export the preview?', a: 'Yes, you can export the rendered preview as a standalone HTML file or copy the formatted HTML to your clipboard.' },
+      { q: 'Does it support syntax highlighting?', a: 'Yes, code blocks are highlighted with syntax coloring for over 180 programming languages and themes.' },
+    ],
+    zh: [
+      { q: '支持哪些 Markdown 风格？', a: '我们支持 GitHub Flavored Markdown（GFM），包括表格、任务列表、删除线、自动链接和围栏代码块。' },
+      { q: '可以导出预览吗？', a: '可以，你可以将渲染后的预览导出为独立的 HTML 文件，或将格式化后的 HTML 复制到剪贴板。' },
+      { q: '支持语法高亮吗？', a: '是的，代码块支持超过 180 种编程语言和主题的语法着色高亮。' },
+    ],
+    es: [
+      { q: '¿Qué sabores de Markdown se admiten?', a: 'Admitimos GitHub Flavored Markdown (GFM) incluyendo tablas, listas de tareas, tachado, enlaces automáticos y bloques de código cercados.' },
+      { q: '¿Puedo exportar la vista previa?', a: 'Sí, puedes exportar la vista previa renderizada como un archivo HTML independiente o copiar el HTML formateado al portapapeles.' },
+      { q: '¿Admite resaltado de sintaxis?', a: 'Sí, los bloques de código se resaltan con coloración de sintaxis para más de 180 lenguajes de programación y temas.' },
+    ],
+    fr: [
+      { q: 'Quelles variantes de Markdown sont prises en charge ?', a: 'Nous prenons en charge GitHub Flavored Markdown (GFM) incluant tableaux, listes de tâches, barré, liens automatiques et blocs de code délimités.' },
+      { q: 'Puis-je exporter l\'aperçu ?', a: 'Oui, vous pouvez exporter l\'aperçu rendu sous forme de fichier HTML autonome ou copier le HTML formaté dans le presse-papiers.' },
+      { q: 'Prend-il en charge la coloration syntaxique ?', a: 'Oui, les blocs de code sont colorés avec une coloration syntaxique pour plus de 180 langages de programmation et thèmes.' },
+    ],
+    hi: [
+      { q: 'कौन से Markdown स्वाद समर्थित हैं?', a: 'हम GitHub Flavored Markdown (GFM) का समर्थन करते हैं जिसमें टेबल, कार्य सूचियाँ, स्ट्राइकथ्रू, ऑटोलिंक और फेंस्ड कोड ब्लॉक शामिल हैं।' },
+      { q: 'क्या मैं पूर्वावलोकन निर्यात कर सकता हूँ?', a: 'हाँ, आप रेंडर किए गए पूर्वावलोकन को स्टैंडअलोन HTML फ़ाइल के रूप में निर्यात कर सकते हैं या स्वरूपित HTML को क्लिपबोर्ड पर कॉपी कर सकते हैं।' },
+      { q: 'क्या यह सिंटैक्स हाइलाइटिंग का समर्थन करता है?', a: 'हाँ, कोड ब्लॉक को 180 से अधिक प्रोग्रामिंग भाषाओं और थीम के लिए सिंटैक्स कलरिंग के साथ हाइलाइट किया जाता है।' },
+    ],
+    ar: [
+      { q: 'ما أنواع Markdown المدعومة؟', a: 'ندعم GitHub Flavored Markdown (GFM) بما في ذلك الجداول وقوائم المهام والشطب والروابط التلقائية وكتل التعليمات البرمجية المسوّرة.' },
+      { q: 'هل يمكنني تصدير المعاينة؟', a: 'نعم، يمكنك تصدير المعاينة المعروضة كملف HTML مستقل أو نسخ HTML المنسق إلى الحافظة.' },
+      { q: 'هل يدعم تمييز بناء الجملة؟', a: 'نعم، يتم تمييز كتل التعليمات البرمجية بألوان بناء الجملة لأكثر من 180 لغة برمجة وسمات.' },
+    ],
+  },
+  'url-encode-decode': {
+    en: [
+      { q: 'What is URL encoding?', a: 'URL encoding converts special characters into a percent-encoded format (like %20 for space) so they can be safely transmitted in a URL.' },
+      { q: 'Which encoding standard is used?', a: 'We use percent-encoding per RFC 3986, the official standard for URI encoding used across the modern web.' },
+      { q: 'Can it handle Unicode characters?', a: 'Yes, it correctly encodes Unicode characters including emoji and CJK characters using UTF-8 percent-encoding.' },
+    ],
+    zh: [
+      { q: '什么是 URL 编码？', a: 'URL 编码将特殊字符转换为百分号编码格式（如空格变为 %20），以便在 URL 中安全传输。' },
+      { q: '使用哪种编码标准？', a: '我们使用 RFC 3986 标准的百分号编码，这是现代网络 URI 编码的官方标准。' },
+      { q: '能处理 Unicode 字符吗？', a: '可以，它能使用 UTF-8 百分号编码正确处理包括 emoji 和中日韩字符在内的 Unicode 字符。' },
+    ],
+    es: [
+      { q: '¿Qué es la codificación URL?', a: 'La codificación URL convierte caracteres especiales en formato de codificación porcentual (como %20 para espacio) para transmitirlos de forma segura en una URL.' },
+      { q: '¿Qué estándar de codificación se usa?', a: 'Usamos codificación porcentual según RFC 3986, el estándar oficial para codificación URI utilizado en la web moderna.' },
+      { q: '¿Puede manejar caracteres Unicode?', a: 'Sí, codifica correctamente caracteres Unicode incluyendo emoji y caracteres CJK usando codificación porcentual UTF-8.' },
+    ],
+    fr: [
+      { q: 'Qu\'est-ce que l\'encodage URL ?', a: 'L\'encodage URL convertit les caractères spéciaux en format pourcent-encodé (comme %20 pour l\'espace) afin de les transmettre en toute sécurité dans une URL.' },
+      { q: 'Quelle norme d\'encodage est utilisée ?', a: 'Nous utilisons l\'encodage pourcentage selon RFC 3986, la norme officielle d\'encodage URI utilisée sur le Web moderne.' },
+      { q: 'Peut-il gérer les caractères Unicode ?', a: 'Oui, il encode correctement les caractères Unicode y compris les emoji et les caractères CJK avec l\'encodage UTF-8.' },
+    ],
+    hi: [
+      { q: 'URL एन्कोडिंग क्या है?', a: 'URL एन्कोडिंग विशेष वर्णों को प्रतिशत-एन्कोडेड प्रारूप (जैसे स्पेस के लिए %20) में परिवर्तित करता है ताकि उन्हें URL में सुरक्षित रूप से प्रसारित किया जा सके।' },
+      { q: 'कौन सा एन्कोडिंग मानक उपयोग किया जाता है?', a: 'हम RFC 3986 के अनुसार प्रतिशत-एन्कोडिंग का उपयोग करते हैं, जो आधुनिक वेब पर URI एन्कोडिंग के लिए आधिकारिक मानक है।' },
+      { q: 'क्या यह Unicode वर्णों को संभाल सकता है?', a: 'हाँ, यह UTF-8 प्रतिशत-एन्कोडिंग का उपयोग करके emoji और CJK वर्णों सहित Unicode वर्णों को सही ढंग से एन्कोड करता है।' },
+    ],
+    ar: [
+      { q: 'ما هو ترميز URL؟', a: 'ترميز URL يحول الأحرف الخاصة إلى صيغة مرمزة بنسبة مئوية (مثل %20 للمسافة) بحيث يمكن نقلها بأمان في عنوان URL.' },
+      { q: 'ما معيار الترميز المستخدم؟', a: 'نستخدم الترميز بنسبة مئوية وفقاً لـ RFC 3986، المعيار الرسمي لترميز URI المستخدم في الويب الحديث.' },
+      { q: 'هل يمكنه التعامل مع أحرف Unicode؟', a: 'نعم، يقوم بترميز أحرف Unicode بشكل صحيح بما في ذلك الإيموجي وأحرف CJK باستخدام ترميز UTF-8.' },
+    ],
+  },
+  'text-counter': {
+    en: [
+      { q: 'What metrics does it count?', a: 'It counts characters, words, sentences, paragraphs, reading time, and estimated speaking time in real time as you type.' },
+      { q: 'Does it count CJK characters correctly?', a: 'Yes, it correctly counts Chinese, Japanese, and Korean characters as individual words, unlike many counters that miscount them.' },
+      { q: 'Is my text uploaded anywhere?', a: 'No, all counting happens locally in your browser. Your text never leaves your device.' },
+    ],
+    zh: [
+      { q: '它能统计哪些指标？', a: '它在你输入时实时统计字符数、单词数、句子数、段落数、阅读时间和预计演讲时间。' },
+      { q: '能正确统计中日韩字符吗？', a: '可以，它能将中文、日文和韩文字符作为单独的单词正确统计，不像许多计数器会错误统计。' },
+      { q: '我的文本会被上传吗？', a: '不会，所有统计都在浏览器本地完成，你的文本永远不会离开你的设备。' },
+    ],
+    es: [
+      { q: '¿Qué métricas cuenta?', a: 'Cuenta caracteres, palabras, oraciones, párrafos, tiempo de lectura y tiempo estimado de habla en tiempo real mientras escribes.' },
+      { q: '¿Cuenta correctamente los caracteres CJK?', a: 'Sí, cuenta correctamente los caracteres chinos, japoneses y coreanos como palabras individuales, a diferencia de muchos contadores que los cuentan mal.' },
+      { q: '¿Se sube mi texto a algún lugar?', a: 'No, todo el conteo ocurre localmente en tu navegador. Tu texto nunca sale de tu dispositivo.' },
+    ],
+    fr: [
+      { q: 'Quelles métriques compte-t-il ?', a: 'Il compte les caractères, mots, phrases, paragraphes, le temps de lecture et le temps de parole estimé en temps réel pendant que vous tapez.' },
+      { q: 'Compte-t-il correctement les caractères CJK ?', a: 'Oui, il compte correctement les caractères chinois, japonais et coréens comme des mots individuels, contrairement à de nombreux compteurs qui les comptent mal.' },
+      { q: 'Mon texte est-il téléchargé quelque part ?', a: 'Non, tout le comptage se fait localement dans votre navigateur. Votre texte ne quitte jamais votre appareil.' },
+    ],
+    hi: [
+      { q: 'यह कौन से मेट्रिक्स गिनता है?', a: 'यह आपके टाइप करते समय वर्ण, शब्द, वाक्य, पैराग्राफ, पढ़ने का समय और अनुमानित बोलने का समय वास्तविक समय में गिनता है।' },
+      { q: 'क्या यह CJK वर्णों को सही ढंग से गिनता है?', a: 'हाँ, यह चीनी, जापानी और कोरियाई वर्णों को व्यक्तिगत शब्दों के रूप में सही ढंग से गिनता है, कई काउंटरों के विपरीत जो उन्हें गलत गिनते हैं।' },
+      { q: 'क्या मेरा टेक्स्ट कहीं अपलोड होता है?', a: 'नहीं, सभी गिनती आपके ब्राउज़र में स्थानीय रूप से होती है। आपका टेक्स्ट कभी आपके डिवाइस से बाहर नहीं जाता।' },
+    ],
+    ar: [
+      { q: 'ما المقاييس التي يحسبها؟', a: 'يحسب الأحرف والكلمات والجمل والفقرات ووقت القراءة ووقت التحدث المقدر في الوقت الفعلي أثناء الكتابة.' },
+      { q: 'هل يحسب أحرف CJK بشكل صحيح؟', a: 'نعم، يحسب الأحرف الصينية واليابانية والكورية بشكل صحيح ككلمات فردية، على عكس العديد من العدادات التي تحسبها بشكل خاطئ.' },
+      { q: 'هل يتم رفع نصي إلى أي مكان؟', a: 'لا، تتم جميع العمليات الحسابية محلياً في متصفحك. لا يغادر نصك جهازك أبداً.' },
+    ],
+  },
+  'title-weight-checker': {
+    en: [
+      { q: 'What does title weight mean?', a: 'Title weight measures the SEO strength of a page title based on length, keyword placement, and relevance signals that affect search ranking.' },
+      { q: 'How is the score calculated?', a: 'Titles are scored against best practices for length (50-60 characters), keyword position, power words, and click-through appeal.' },
+      { q: 'What is a good title score?', a: 'A score above 80 indicates a well-optimized title. Below 60 suggests you should revise length, keyword placement, or wording.' },
+    ],
+    zh: [
+      { q: '标题权重是什么意思？', a: '标题权重衡量页面标题的 SEO 强度，基于影响搜索排名的长度、关键词位置和相关性信号。' },
+      { q: '分数是如何计算的？', a: '标题根据长度（50-60 字符）、关键词位置、力量词和点击吸引力的最佳实践进行评分。' },
+      { q: '多少分算是好标题？', a: '80 分以上表示标题优化良好。低于 60 分建议修改长度、关键词位置或措辞。' },
+    ],
+    es: [
+      { q: '¿Qué significa el peso del título?', a: 'El peso del título mide la fuerza SEO de un título de página según longitud, ubicación de palabras clave y señales de relevancia que afectan el ranking.' },
+      { q: '¿Cómo se calcula la puntuación?', a: 'Los títulos se puntúan según mejores prácticas de longitud (50-60 caracteres), posición de palabras clave, palabras de poder y atractivo de clics.' },
+      { q: '¿Cuál es una buena puntuación de título?', a: 'Una puntuación superior a 80 indica un título bien optimizado. Por debajo de 60 sugiere que debes revisar longitud, palabras clave o redacción.' },
+    ],
+    fr: [
+      { q: 'Que signifie le poids du titre ?', a: 'Le poids du titre mesure la force SEO d\'un titre de page selon la longueur, le placement des mots-clés et les signaux de pertinence affectant le classement.' },
+      { q: 'Comment le score est-il calculé ?', a: 'Les titres sont notés selon les bonnes pratiques de longueur (50-60 caractères), position des mots-clés, mots puissants et attrait de clic.' },
+      { q: 'Qu\'est-ce qu\'un bon score de titre ?', a: 'Un score supérieur à 80 indique un titre bien optimisé. En dessous de 60, vous devriez réviser la longueur, les mots-clés ou la formulation.' },
+    ],
+    hi: [
+      { q: 'टाइटल वेट का क्या अर्थ है?', a: 'टाइटल वेट लंबाई, कीवर्ड प्लेसमेंट और प्रासंगिकता संकेतों के आधार पर पेज शीर्षक की SEO ताकत को मापता है जो खोज रैंकिंग को प्रभावित करते हैं।' },
+      { q: 'स्कोर की गणना कैसे की जाती है?', a: 'शीर्षकों को लंबाई (50-60 वर्ण), कीवर्ड स्थिति, पावर शब्दों और क्लिक-थ्रू आकर्षण की सर्वोत्तम प्रथाओं के विरुद्ध स्कोर किया जाता है।' },
+      { q: 'एक अच्छा टाइटल स्कोर क्या है?', a: '80 से ऊपर का स्कोर एक अच्छी तरह से अनुकूलित शीर्षक दर्शाता है। 60 से नीचे लंबाई, कीवर्ड स्थिति या शब्दावली संशोधन का सुझाव देता है।' },
+    ],
+    ar: [
+      { q: 'ماذا يعني وزن العنوان؟', a: 'يقيس وزن العنوان قوة SEO لعنوان الصفحة بناءً على الطول وموضع الكلمات الرئيسية وإشارات الصلة التي تؤثر على الترتيب.' },
+      { q: 'كيف يتم حساب النتيجة؟', a: 'يتم تقييم العناوين وفقاً لأفضل الممارسات للطول (50-60 حرفاً) وموضع الكلمات الرئيسية والكلمات القوية وجاذبية النقر.' },
+      { q: 'ما هي نتيجة العنوان الجيدة؟', a: 'النتيجة فوق 80 تشير إلى عنوان محسّن جيداً. أقل من 60 يقترح مراجعة الطول أو موضع الكلمات الرئيسية أو الصياغة.' },
+    ],
+  },
+  'script-splitter': {
+    en: [
+      { q: 'What script formats are supported?', a: 'We support plain text scripts, teleprompter scripts, and structured screenplay formats for splitting into readable segments.' },
+      { q: 'How does it split the script?', a: 'You can split by sentence, by word count, by character count, or by natural pauses for smooth teleprompter reading.' },
+      { q: 'Can I customize the segments?', a: 'Yes, you can set custom segment length, adjust font size, and control scrolling speed for teleprompter mode.' },
+    ],
+    zh: [
+      { q: '支持哪些脚本格式？', a: '我们支持纯文本脚本、提词器脚本和结构化剧本格式，可拆分为可读的段落。' },
+      { q: '它是如何拆分脚本的？', a: '你可以按句子、按字数、按字符数或按自然停顿进行拆分，便于流畅的提词器阅读。' },
+      { q: '可以自定义段落吗？', a: '可以，你可以设置自定义段落长度、调整字体大小，并控制提词器模式的滚动速度。' },
+    ],
+    es: [
+      { q: '¿Qué formatos de guion se admiten?', a: 'Admitimos guiones de texto plano, guiones de teleprompter y formatos de guion estructurado para dividirlos en segmentos legibles.' },
+      { q: '¿Cómo divide el guion?', a: 'Puedes dividir por oración, por recuento de palabras, por recuento de caracteres o por pausas naturales para una lectura fluida en teleprompter.' },
+      { q: '¿Puedo personalizar los segmentos?', a: 'Sí, puedes establecer longitud de segmento personalizada, ajustar el tamaño de fuente y controlar la velocidad de desplazamiento.' },
+    ],
+    fr: [
+      { q: 'Quels formats de script sont pris en charge ?', a: 'Nous prenons en charge les scripts en texte brut, les scripts pour prompteur et les formats de scénario structuré pour un découpage en segments lisibles.' },
+      { q: 'Comment divise-t-il le script ?', a: 'Vous pouvez diviser par phrase, par nombre de mots, par nombre de caractères ou par pauses naturelles pour une lecture fluide au prompteur.' },
+      { q: 'Puis-je personnaliser les segments ?', a: 'Oui, vous pouvez définir une longueur de segment personnalisée, ajuster la taille de police et contrôler la vitesse de défilement.' },
+    ],
+    hi: [
+      { q: 'कौन से स्क्रिप्ट प्रारूप समर्थित हैं?', a: 'हम पठनीय खंडों में विभाजन के लिए सादे टेक्स्ट स्क्रिप्ट, टेलीप्रॉम्प्टर स्क्रिप्ट और संरचित स्क्रीनप्ले प्रारूपों का समर्थन करते हैं।' },
+      { q: 'यह स्क्रिप्ट को कैसे विभाजित करता है?', a: 'आप वाक्य, शब्द संख्या, वर्ण संख्या या टेलीप्रॉम्प्टर पठन के लिए प्राकृतिक विरामों द्वारा विभाजित कर सकते हैं।' },
+      { q: 'क्या मैं खंडों को कस्टमाइज़ कर सकता हूँ?', a: 'हाँ, आप कस्टम खंड लंबाई सेट कर सकते हैं, फ़ॉन्ट आकार समायोजित कर सकते हैं और टेलीप्रॉम्प्टर मोड के लिए स्क्रॉलिंग गति नियंत्रित कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'ما تنسيقات النصوص المدعومة؟', a: 'ندعم نصوص النص العادي ونصوص الموجه وأساليب السيناريو المنظمة لتقسيمها إلى مقاطع قابلة للقراءة.' },
+      { q: 'كيف يقسم النص؟', a: 'يمكنك التقسيم حسب الجملة أو عدد الكلمات أو عدد الأحرف أو الوقفات الطبيعية لقراءة سلسة على الموجه.' },
+      { q: 'هل يمكنني تخصيص المقاطع؟', a: 'نعم، يمكنك تعيين طول مقطع مخصص وضبط حجم الخط والتحكم في سرعة التمرير لوضع الموجه.' },
+    ],
+  },
+  'copy-cleaner': {
+    en: [
+      { q: 'What formatting does it remove?', a: 'It strips fonts, colors, sizes, backgrounds, bold, italics, and other inline formatting from copied text, leaving clean plain text.' },
+      { q: 'Does it preserve hyperlinks?', a: 'Yes, you can choose to keep hyperlinks as plain text URLs or strip them entirely, depending on your needs.' },
+      { q: 'Is it private and secure?', a: 'Yes, all cleaning happens locally in your browser. Your text is never sent to any server.' },
+    ],
+    zh: [
+      { q: '它会移除哪些格式？', a: '它会去除复制文本中的字体、颜色、大小、背景、加粗、斜体和其他内联格式，留下干净的纯文本。' },
+      { q: '会保留超链接吗？', a: '会，你可以选择将超链接保留为纯文本 URL，或完全去除，取决于你的需要。' },
+      { q: '它隐私安全吗？', a: '是的，所有清理都在浏览器本地完成，你的文本永远不会发送到任何服务器。' },
+    ],
+    es: [
+      { q: '¿Qué formato elimina?', a: 'Elimina fuentes, colores, tamaños, fondos, negrita, cursiva y otro formato en línea del texto copiado, dejando texto plano limpio.' },
+      { q: '¿Conserva los hipervínculos?', a: 'Sí, puedes elegir mantener los hipervínculos como URLs de texto plano o eliminarlos por completo.' },
+      { q: '¿Es privado y seguro?', a: 'Sí, toda la limpieza ocurre localmente en tu navegador. Tu texto nunca se envía a ningún servidor.' },
+    ],
+    fr: [
+      { q: 'Quelle mise en forme supprime-t-il ?', a: 'Il supprime les polices, couleurs, tailles, arrière-plans, gras, italiques et autres mises en forme en ligne du texte copié, laissant un texte brut propre.' },
+      { q: 'Préserve-t-il les hyperliens ?', a: 'Oui, vous pouvez choisir de conserver les hyperliens sous forme d\'URL en texte brut ou de les supprimer entièrement.' },
+      { q: 'Est-il privé et sécurisé ?', a: 'Oui, tout le nettoyage se fait localement dans votre navigateur. Votre texte n\'est jamais envoyé à un serveur.' },
+    ],
+    hi: [
+      { q: 'यह कौन सा फ़ॉर्मेटिंग हटाता है?', a: 'यह कॉपी किए गए टेक्स्ट से फ़ॉन्ट, रंग, आकार, बैकग्राउंड, बोल्ड, इटैलिक्स और अन्य इनलाइन फ़ॉर्मेटिंग हटाता है, साफ़ प्लेन टेक्स्ट छोड़ता है।' },
+      { q: 'क्या यह हाइपरलिंक संरक्षित रखता है?', a: 'हाँ, आप हाइपरलिंक को प्लेन टेक्स्ट URL के रूप में रखने या पूरी तरह हटाने का विकल्प चुन सकते हैं।' },
+      { q: 'क्या यह निजी और सुरक्षित है?', a: 'हाँ, सभी सफाई आपके ब्राउज़र में स्थानीय रूप से होती है। आपका टेक्स्ट कभी किसी सर्वर पर नहीं भेजा जाता।' },
+    ],
+    ar: [
+      { q: 'ما التنسيق الذي يزيله؟', a: 'يزيل الخطوط والألوان والأحجام والخلفيات والعريض والمائل والتنسيقات المضمنة الأخرى من النص المنسوخ، تاركاً نصاً عادياً نظيفاً.' },
+      { q: 'هل يحافظ على الارتباطات التشعبية؟', a: 'نعم، يمكنك اختيار الاحتفاظ بالارتباطات التشعبية كعناوين URL نصية عادية أو إزالتها بالكامل.' },
+      { q: 'هل هو خاص وآمن؟', a: 'نعم، تتم جميع عمليات التنظيف محلياً في متصفحك. لا يتم إرسال نصك أبداً إلى أي خادم.' },
+    ],
+  },
+  'markdown-platform-adapter': {
+    en: [
+      { q: 'What platforms are supported?', a: 'We adapt markdown for GitHub, Notion, Obsidian, Dev.to, Hashnode, Medium, and other popular writing platforms.' },
+      { q: 'Does it convert tables correctly?', a: 'Yes, it converts tables to the syntax each platform supports, including HTML fallbacks where markdown tables are not supported.' },
+      { q: 'Can it batch process multiple documents?', a: 'Yes, you can convert a document and copy platform-specific versions, adapting syntax for each target platform.' },
+    ],
+    zh: [
+      { q: '支持哪些平台？', a: '我们为 GitHub、Notion、Obsidian、Dev.to、Hashnode、Medium 及其他热门写作平台适配 Markdown。' },
+      { q: '能正确转换表格吗？', a: '可以，它将表格转换为各平台支持的语法，在不支持 Markdown 表格的地方提供 HTML 回退。' },
+      { q: '可以批量处理多个文档吗？', a: '可以，你可以转换文档并复制平台特定版本，为每个目标平台适配语法。' },
+    ],
+    es: [
+      { q: '¿Qué plataformas se admiten?', a: 'Adaptamos markdown para GitHub, Notion, Obsidian, Dev.to, Hashnode, Medium y otras plataformas populares de escritura.' },
+      { q: '¿Convierte las tablas correctamente?', a: 'Sí, convierte las tablas a la sintaxis que admite cada plataforma, incluidas alternativas HTML cuando no se admiten tablas markdown.' },
+      { q: '¿Puede procesar varios documentos en lote?', a: 'Sí, puedes convertir un documento y copiar versiones específicas de cada plataforma, adaptando la sintaxis.' },
+    ],
+    fr: [
+      { q: 'Quelles plateformes sont prises en charge ?', a: 'Nous adaptons le markdown pour GitHub, Notion, Obsidian, Dev.to, Hashnode, Medium et d\'autres plateformes d\'écriture populaires.' },
+      { q: 'Convertit-il correctement les tableaux ?', a: 'Oui, il convertit les tableaux vers la syntaxe prise en charge par chaque plateforme, y compris des replis HTML lorsque les tableaux markdown ne sont pas supportés.' },
+      { q: 'Peut-il traiter plusieurs documents par lot ?', a: 'Oui, vous pouvez convertir un document et copier des versions spécifiques à chaque plateforme, en adaptant la syntaxe.' },
+    ],
+    hi: [
+      { q: 'कौन से प्लेटफ़ॉर्म समर्थित हैं?', a: 'हम GitHub, Notion, Obsidian, Dev.to, Hashnode, Medium और अन्य लोकप्रिय लेखन प्लेटफ़ॉर्म के लिए markdown अनुकूलित करते हैं।' },
+      { q: 'क्या यह तालिकाओं और कोड ब्लॉकों को सही ढंग से परिवर्तित करता है?', a: 'हाँ, यह GFM तालिकाओं को प्लेटफ़ॉर्म-संगत समकक्षों में बदलता है और बाड़ वाले कोड ब्लॉक सिंटैक्स को समायोजित करता है ताकि वह प्रत्येक लक्ष्य प्लेटफ़ॉर्म पर सही ढंग से रेंडर हो।' },
+      { q: 'क्या मैं कई दस्तावेज़ों को बैच प्रोसेस कर सकता हूँ?', a: 'हाँ, आप कई Markdown फ़ाइलें पेस्ट या अपलोड कर सकते हैं और उन सभी को एक ही बार में चुने हुए प्लेटफ़ॉर्म के प्रारूप में परिवर्तित कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'لأي منصات يمكنني تكييف Markdown؟', a: 'تقوم الأداة بتكييف Markdown لـ GitHub و Notion و Obsidian و Medium و Dev.to و Hashnode ومنصات كتابة شائعة أخرى مع خصوصيات بناء الجملة الخاصة بها.' },
+      { q: 'هل يحول الجداول وكتل الكود بشكل صحيح؟', a: 'نعم، يحول جداول GFM إلى ما يعادلها المتوافق مع المنصة ويضبط بناء جملة كتل الكود المسورة بحيث يتم عرضها بشكل صحيح على كل منصة مستهدفة.' },
+      { q: 'هل يمكنني معالجة مستندات متعددة دفعة واحدة؟', a: 'نعم، يمكنك لصق أو تحميل ملفات Markdown متعددة وتحويلها جميعاً إلى تنسيق المنصة المختارة في عملية واحدة.' },
+    ],
+  },
+  'vertical-chinese-generator': {
+    en: [
+      { q: 'What is vertical Chinese text?', a: 'Vertical Chinese is the traditional top-to-bottom, right-to-left writing direction used in classical Chinese books, calligraphy, and traditional publications.' },
+      { q: 'Can I customize the layout?', a: 'Yes, you can adjust column count, character spacing, font style, and add traditional decorative borders to match your design needs.' },
+      { q: 'Does it support traditional Chinese characters?', a: 'Yes, it fully supports both simplified and traditional Chinese characters, and can auto-convert between them for authentic vertical layouts.' },
+    ],
+    zh: [
+      { q: '什么是竖排中文？', a: '竖排中文是古籍、书法和传统出版物中使用的从上到下、从右到左的传统书写方向。' },
+      { q: '可以自定义布局吗？', a: '可以，调整列数、字间距、字体样式，并添加传统装饰边框，满足设计需求。' },
+      { q: '支持繁体中文字符吗？', a: '支持，全面支持简体和繁体中文，并可在两者间自动转换，呈现地道的竖排效果。' },
+    ],
+    es: [
+      { q: '¿Qué es el texto chino vertical?', a: 'El chino vertical es la dirección de escritura tradicional de arriba a abajo y de derecha a izquierda utilizada en libros clásicos chinos, caligrafía y publicaciones tradicionales.' },
+      { q: '¿Puedo personalizar el diseño?', a: 'Sí, puedes ajustar el recuento de columnas, el espaciado de caracteres, el estilo de fuente y añadir bordes decorativos tradicionales para satisfacer tus necesidades de diseño.' },
+      { q: '¿Admite caracteres chinos tradicionales?', a: 'Sí, es totalmente compatible con caracteres chinos simplificados y tradicionales, y puede convertir automáticamente entre ellos para diseños verticales auténticos.' },
+    ],
+    fr: [
+      { q: 'Qu\'est-ce que le texte chinois vertical ?', a: 'Le chinois vertical est la direction d\'écriture traditionnelle de haut en bas et de droite à gauche utilisée dans les livres classiques chinois, la calligraphie et les publications traditionnelles.' },
+      { q: 'Puis-je personnaliser la mise en page ?', a: 'Oui, vous pouvez ajuster le nombre de colonnes, l\'espacement des caractères, le style de police et ajouter des bordures décoratives traditionnelles pour répondre à vos besoins de conception.' },
+      { q: 'Prend-il en charge les caractères chinois traditionnels ?', a: 'Oui, il prend entièrement en charge les caractères chinois simplifiés et traditionnels, et peut convertir automatiquement entre les deux pour des mises en page verticales authentiques.' },
+    ],
+    hi: [
+      { q: 'ऊर्ध्वाधर चीनी पाठ क्या है?', a: 'ऊर्ध्वाधर चीनी पारंपरिक शीर्ष-से-नीचे, दाएं-से-बाएं लेखन दिशा है जो शास्त्रीय चीनी पुस्तकों, सुलेख और पारंपरिक प्रकाशनों में उपयोग होती है।' },
+      { q: 'क्या मैं लेआउट को अनुकूलित कर सकता हूँ?', a: 'हाँ, आप अपनी डिज़ाइन आवश्यकताओं को पूरा करने के लिए कॉलम संख्या, वर्ण रिक्ति, फ़ॉन्ट शैली समायोजित कर सकते हैं और पारंपरिक आलंकृत बॉर्डर जोड़ सकते हैं।' },
+      { q: 'क्या यह पारंपरिक चीनी वर्णों का समर्थन करता है?', a: 'हाँ, यह सरलीकृत और पारंपरिक चीनी वर्णों दोनों का पूर्ण रूप से समर्थन करता है, और प्रामाणिक ऊर्ध्वाधर लेआउट के लिए उनके बीच स्वतः रूपांतरण कर सकता है।' },
+    ],
+    ar: [
+      { q: 'ما هو النص الصيني العمودي؟', a: 'الصينية العمودية هي اتجاه الكتابة التقليدي من أعلى إلى أسفل ومن اليمين إلى اليسار المستخدم في الكتب الصينية الكلاسيكية والخط والمنشورات التقليدية.' },
+      { q: 'هل يمكنني تخصيص التخطيط؟', a: 'نعم، يمكنك ضبط عدد الأعمدة، والمسافة بين الأحرف، ونمط الخط، وإضافة حدود زخرفية تقليدية لتلبية احتياجات التصميم الخاصة بك.' },
+      { q: 'هل يدعم الأحرف الصينية التقليدية؟', a: 'نعم، يدعم بالكامل الأحرف الصينية المبسطة والتقليدية، ويمكن التحويل تلقائياً بينهما للتخطيطات العمودية الأصيلة.' },
+    ],
+  },
+  'pinyin-annotator': {
+    en: [
+      { q: 'What is pinyin annotation?', a: 'Pinyin annotation adds ruby-style phonetic guides above Chinese characters showing the Romanized pronunciation with tone marks, helping learners read Chinese aloud.' },
+      { q: 'Does it handle polyphonic characters?', a: 'Yes, the tool uses context-aware dictionaries to choose the correct pronunciation for polyphonic characters (多音字) that change sound based on usage.' },
+      { q: 'Can I export the annotated text?', a: 'Yes, you can export annotated text as HTML with ruby tags, plain text with pinyin in parentheses, or as a printable PDF study sheet.' },
+    ],
+    zh: [
+      { q: '什么是拼音标注？', a: '拼音标注在中文字符上方添加 ruby 样式的注音指南，显示带声调的罗马化发音，帮助学习者朗读中文。' },
+      { q: '能处理多音字吗？', a: '能，工具使用上下文字典为多音字选择正确读音，根据用法变化判断声调。' },
+      { q: '可以导出标注文本吗？', a: '可以，导出为带 ruby 标签的 HTML、括号内带拼音的纯文本，或可打印的 PDF 学习单。' },
+    ],
+    es: [
+      { q: '¿Qué es la anotación pinyin?', a: 'La anotación pinyin añade guías fonéticas estilo ruby sobre los caracteres chinos que muestran la pronunciación romanizada con marcas de tono, ayudando a los estudiantes a leer chino en voz alta.' },
+      { q: '¿Maneja caracteres polifónicos?', a: 'Sí, la herramienta utiliza diccionarios contextuales para elegir la pronunciación correcta de los caracteres polifónicos (多音字) que cambian de sonido según el uso.' },
+      { q: '¿Puedo exportar el texto anotado?', a: 'Sí, puedes exportar el texto anotado como HTML con etiquetas ruby, texto plano con pinyin entre paréntesis, o como una hoja de estudio PDF imprimible.' },
+    ],
+    fr: [
+      { q: 'Qu\'est-ce que l\'annotation pinyin ?', a: 'L\'annotation pinyin ajoute des guides phonétiques de style ruby au-dessus des caractères chinois montrant la prononciation romanisée avec marques de ton, aidant les apprenants à lire le chinois à voix haute.' },
+      { q: 'Gère-t-il les caractères polyphoniques ?', a: 'Oui, l\'outil utilise des dictionnaires contextuels pour choisir la bonne prononciation des caractères polyphoniques (多音字) qui changent de son selon l\'usage.' },
+      { q: 'Puis-je exporter le texte annoté ?', a: 'Oui, vous pouvez exporter le texte annoté en HTML avec balises ruby, en texte brut avec pinyin entre parenthèses, ou en feuille d\'étude PDF imprimable.' },
+    ],
+    hi: [
+      { q: 'पिनयिन एनोटेशन क्या है?', a: 'पिनयिन एनोटेशन चीनी वर्णों के ऊपर रूबी-शैली के ध्वन्यात्मक गाइड जोड़ता है जो टोन चिह्नों के साथ रोमनकृत उच्चारण दिखाते हैं, जो शिक्षार्थियों को चीनी पढ़ने में मदद करते हैं।' },
+      { q: 'क्या यह बहुस्वरी वर्णों को संभालता है?', a: 'हाँ, उपकरण संदर्भ-जागरूक शब्दकोशों का उपयोग बहुस्वरी वर्णों (多音字) के लिए सही उच्चारण चुनने के लिए करता है जो उपयोग के आधार पर ध्वनि बदलते हैं।' },
+      { q: 'क्या मैं एनोटेटेड पाठ निर्यात कर सकता हूँ?', a: 'हाँ, आप एनोटेटेड पाठ को रूबी टैग के साथ HTML, कोष्ठक में पिनयिन के साथ सादा पाठ, या प्रिंट करने योग्य PDF अध्ययन पत्र के रूप में निर्यात कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'ما هو التعليق الصوتي pinyin؟', a: 'يضيف التعليق الصوتي pinyin أدلة نطق صوتية بنمط ruby فوق الأحرف الصينية توضح النطق بالحروف اللاتينية مع علامات النبرة، مما يساعد المتعلمين على قراءة الصينية بصوت عالٍ.' },
+      { q: 'هل يتعامل مع الأحرف متعددة الأصوات؟', a: 'نعم، تستخدم الأداة قواميس سياقية لاختيار النطق الصحيح للأحرف متعددة الأصوات (多音字) التي تتغير أصواتها بناءً على الاستخدام.' },
+      { q: 'هل يمكنني تصدير النص المُعلَّق؟', a: 'نعم، يمكنك تصدير النص المُعلَّق كـ HTML مع وسوم ruby، أو نص عادي مع pinyin بين قوسين، أو كورقة دراسة PDF قابلة للطباعة.' },
+    ],
+  },
+  'sentiment-analyzer': {
+    en: [
+      { q: 'What is sentiment analysis?', a: 'Sentiment analysis evaluates text to determine whether the emotional tone is positive, negative, or neutral, useful for reviews, feedback, and social media monitoring.' },
+      { q: 'What languages does it support?', a: 'The analyzer supports English, Chinese, Spanish, French, Hindi, and Arabic, processing each with language-specific lexicons and rules.' },
+      { q: 'How accurate is the sentiment scoring?', a: 'Accuracy is typically 80-90% for clear sentiment text using lexicon-based scoring; sarcasm and mixed-emotion text may score lower and need human review.' },
+    ],
+    zh: [
+      { q: '什么是情感分析？', a: '情感分析评估文本，判断情绪倾向为正面、负面或中性，适用于评论、反馈和社交媒体监测。' },
+      { q: '支持哪些语言？', a: '分析器支持英语、中文、西班牙语、法语、印地语和阿拉伯语，各自使用专属词库和规则处理。' },
+      { q: '情感评分准确度如何？', a: '基于词库的评分对明确情感文本准确率通常为 80-90%；讽刺和混合情感文本评分较低，需人工复核。' },
+    ],
+    es: [
+      { q: '¿Qué es el análisis de sentimiento?', a: 'El análisis de sentimiento evalúa el texto para determinar si el tono emocional es positivo, negativo o neutral, útil para reseñas, comentarios y monitoreo de redes sociales.' },
+      { q: '¿Qué idiomas admite?', a: 'El analizador admite inglés, chino, español, francés, hindi y árabe, procesando cada uno con léxicos y reglas específicas del idioma.' },
+      { q: '¿Qué tan precisa es la puntuación de sentimiento?', a: 'La precisión suele ser del 80-90% para texto de sentimiento claro usando puntuación basada en léxico; el sarcasmo y el texto de emociones mixtas pueden puntuar más bajo y necesitar revisión humana.' },
+    ],
+    fr: [
+      { q: 'Qu\'est-ce que l\'analyse de sentiment ?', a: 'L\'analyse de sentiment évalue le texte pour déterminer si le ton émotionnel est positif, négatif ou neutre, utile pour les avis, les retours et la surveillance des réseaux sociaux.' },
+      { q: 'Quelles langues prend-elle en charge ?', a: 'L\'analyseur prend en charge l\'anglais, le chinois, l\'espagnol, le français, l\'hindi et l\'arabe, en traitant chacun avec des lexiques et des règles spécifiques à la langue.' },
+      { q: 'Quelle est la précision de la notation de sentiment ?', a: 'La précision est généralement de 80-90 % pour les textes à sentiment clair utilisant une notation basée sur le lexique ; le sarcasme et les textes à émotions mixtes peuvent être notés plus bas et nécessiter une révision humaine.' },
+    ],
+    hi: [
+      { q: 'भावना विश्लेषण क्या है?', a: 'भावना विश्लेषण पाठ का मूल्यांकन करता है यह निर्धारित करने के लिए कि भावनात्मक स्वर सकारात्मक, नकारात्मक या तटस्थ है, समीक्षाओं, प्रतिक्रिया और सोशल मीडिया निगरानी के लिए उपयोगी।' },
+      { q: 'यह किन भाषाओं का समर्थन करता है?', a: 'विश्लेषक अंग्रेज़ी, चीनी, स्पेनिश, फ़्रेंच, हिंदी और अरबी का समर्थन करता है, प्रत्येक को भाषा-विशिष्ट शब्दावली और नियमों के साथ संसाधित करता है।' },
+      { q: 'भावना स्कोरिंग कितनी सटीक है?', a: 'शब्दावली-आधारित स्कोरिंग का उपयोग करके स्पष्ट भावना पाठ के लिए सटीकता आमतौर पर 80-90% है; व्यंग्य और मिश्रित-भावना पाठ कम स्कोर कर सकते हैं और मानव समीक्षा की आवश्यकता हो सकती है।' },
+    ],
+    ar: [
+      { q: 'ما هو تحليل المشاعر؟', a: 'يقيّم تحليل المشاعر النص لتحديد ما إذا كان النبرة العاطفية إيجابية أو سلبية أو محايدة، مفيد للمراجعات والملاحظات ومراقبة وسائل التواصل الاجتماعي.' },
+      { q: 'ما اللغات التي يدعمها؟', a: 'يدعم المحلل الإنجليزية والصينية والإسبانية والفرنسية والهندية والعربية، معالجاً كل منها بقواميس وقواعد خاصة باللغة.' },
+      { q: 'ما مدى دقة تسجيل المشاعر؟', a: 'الدقة عادة 80-90% للنصوص ذات المشاعر الواضحة باستخدام التسجيل القائم على القاموس؛ قد يسجل السخرية والنصوص ذات المشاعر المختلطة أقل ويحتاج إلى مراجعة بشرية.' },
+    ],
+  },
+  'srt-subtitle-generator': {
+    en: [
+      { q: 'What subtitle formats does it support?', a: 'The tool generates SRT (SubRip) subtitles and can export to VTT, ASS, and plain text transcript formats for use across video platforms.' },
+      { q: 'Can I adjust subtitle timing?', a: 'Yes, you can shift all subtitles by a set offset, split or merge entries, and fine-tune individual start and end timestamps.' },
+      { q: 'Does it support multiple languages?', a: 'Yes, you can create subtitles in any language including CJK and RTL scripts, with optional bilingual dual-language subtitle output.' },
+    ],
+    zh: [
+      { q: '支持哪些字幕格式？', a: '工具生成 SRT（SubRip）字幕，并可导出为 VTT、ASS 和纯文本转录格式，适用于各种视频平台。' },
+      { q: '可以调整字幕时间吗？', a: '可以，按设定偏移量平移所有字幕，拆分或合并条目，并精细调整各条目的开始和结束时间戳。' },
+      { q: '支持多种语言吗？', a: '支持，可创建任意语言字幕，包括中日韩和 RTL 文字，还可选输出双语对照字幕。' },
+    ],
+    es: [
+      { q: '¿Qué formatos de subtítulos admite?', a: 'La herramienta genera subtítulos SRT (SubRip) y puede exportar a formatos VTT, ASS y transcripción de texto plano para su uso en plataformas de video.' },
+      { q: '¿Puedo ajustar el tiempo de los subtítulos?', a: 'Sí, puedes desplazar todos los subtítulos por un desplazamiento establecido, dividir o fusionar entradas y ajustar finamente las marcas de tiempo de inicio y fin individuales.' },
+      { q: '¿Admite varios idiomas?', a: 'Sí, puedes crear subtítulos en cualquier idioma, incluidos scripts CJK y RTL, con salida opcional de subtítulos bilingües de doble idioma.' },
+    ],
+    fr: [
+      { q: 'Quels formats de sous-titres prend-il en charge ?', a: 'L\'outil génère des sous-titres SRT (SubRip) et peut exporter aux formats VTT, ASS et transcription en texte brut pour une utilisation sur les plateformes vidéo.' },
+      { q: 'Puis-je ajuster le minutage des sous-titres ?', a: 'Oui, vous pouvez décaler tous les sous-titres d\'un décalage défini, diviser ou fusionner des entrées, et affiner individuellement les horodatages de début et de fin.' },
+      { q: 'Prend-il en charge plusieurs langues ?', a: 'Oui, vous pouvez créer des sous-titres dans n\'importe quelle langue, y compris les écritures CJK et RTL, avec une sortie optionnelle de sous-titres bilingues.' },
+    ],
+    hi: [
+      { q: 'यह कौन से उपशीर्षक प्रारूपों का समर्थन करता है?', a: 'यह उपकरण SRT (SubRip) उपशीर्षक उत्पन्न करता है और वीडियो प्लेटफ़ॉर्म पर उपयोग के लिए VTT, ASS और सादे पाठ प्रतिलेख प्रारूपों में निर्यात कर सकता है।' },
+      { q: 'क्या मैं उपशीर्षक समय को समायोजित कर सकता हूँ?', a: 'हाँ, आप सभी उपशीर्षकों को एक निर्धारित ऑफ़सेट से विस्थापित कर सकते हैं, प्रविष्टियों को विभाजित या विलय कर सकते हैं, और व्यक्तिगत प्रारंभ और समाप्ति टाइमस्टैम्प को ठीक कर सकते हैं।' },
+      { q: 'क्या यह कई भाषाओं का समर्थन करता है?', a: 'हाँ, आप CJK और RTL स्क्रिप्ट सहित किसी भी भाषा में उपशीर्षक बना सकते हैं, वैकल्पिक द्विभाषी दोहरी-भाषा उपशीर्षक आउटपुट के साथ।' },
+    ],
+    ar: [
+      { q: 'ما تنسيقات الترجمة التي يدعمها؟', a: 'تنشئ الأداة ترجمات SRT (SubRip) ويمكن تصديرها إلى تنسيقات VTT و ASS ونص عادي للاستخدام عبر منصات الفيديو.' },
+      { q: 'هل يمكنني ضبط توقيت الترجمة؟', a: 'نعم، يمكنك إزاحة جميع الترجمات بإزاحة محددة، وتقسيم أو دمج الإدخالات، وضبط الطوابع الزمنية الفردية للبداية والنهاية بدقة.' },
+      { q: 'هل يدعم لغات متعددة؟', a: 'نعم، يمكنك إنشاء ترجمات بأي لغة بما في ذلك الكتابة CJK و RTL، مع إخراج ترجمة ثنائية اللغة اختياري.' },
+    ],
+  },
+  'multi-timezone-publish-time': {
+    en: [
+      { q: 'What timezones are supported?', a: 'The tool supports all IANA timezones (UTC and every regional zone), covering all countries worldwide.' },
+      { q: 'Can I schedule posts across multiple timezones?', a: 'Yes, set one reference time and instantly see the equivalent publish time in up to 12 timezones at once.' },
+      { q: 'How does it handle daylight saving time (DST)?', a: 'The tool uses live IANA timezone data, so DST transitions are applied automatically based on each region\'s rules.' },
+    ],
+    zh: [
+      { q: '支持哪些时区？', a: '支持所有 IANA 时区（UTC 及各地区的区域时区），覆盖全球所有国家。' },
+      { q: '可以跨多个时区排期发布吗？', a: '可以，设定一个参考时间即可同时查看最多 12 个时区的对应发布时间。' },
+      { q: '如何处理夏令时？', a: '工具使用实时 IANA 时区数据，会根据各地区的规则自动应用夏令时切换。' },
+    ],
+    es: [
+      { q: '¿Qué zonas horarias se admiten?', a: 'La herramienta admite todas las zonas horarias de IANA (UTC y todas las regionales), cubriendo todos los países del mundo.' },
+      { q: '¿Puedo programar publicaciones en varias zonas horarias?', a: 'Sí, establece una hora de referencia y ve al instante la hora de publicación equivalente en hasta 12 zonas horarias.' },
+      { q: '¿Cómo maneja el horario de verano (DST)?', a: 'La herramienta utiliza datos de zonas horarias de IANA en vivo, por lo que las transiciones de DST se aplican automáticamente según las reglas de cada región.' },
+    ],
+    fr: [
+      { q: 'Quels fuseaux horaires sont pris en charge ?', a: 'L\'outil prend en charge tous les fuseaux horaires IANA (UTC et toutes les zones régionales), couvrant tous les pays du monde.' },
+      { q: 'Puis-je planifier des publications dans plusieurs fuseaux horaires ?', a: 'Oui, définissez une heure de référence et voyez instantanément l\'heure de publication équivalente dans jusqu\'à 12 fuseaux horaires.' },
+      { q: 'Comment gère-t-il l\'heure d\'été (DST) ?', a: 'L\'outil utilise les données IANA en direct, donc les transitions DST sont appliquées automatiquement selon les règles de chaque région.' },
+    ],
+    hi: [
+      { q: 'कौन से समय क्षेत्र समर्थित हैं?', a: 'यह उपकरण सभी IANA समय क्षेत्रों (UTC और सभी क्षेत्रीय क्षेत्रों) का समर्थन करता है, दुनिया भर के सभी देशों को कवर करता है।' },
+      { q: 'क्या मैं कई समय क्षेत्रों में पोस्ट शेड्यूल कर सकता हूँ?', a: 'हाँ, एक संदर्भ समय सेट करें और एक साथ 12 समय क्षेत्रों में समान प्रकाशन समय देखें।' },
+      { q: 'यह डेलाइट सेविंग टाइम (DST) को कैसे संभालता है?', a: 'यह उपकरण लाइव IANA समय क्षेत्र डेटा का उपयोग करता है, इसलिए DST परिवर्तन प्रत्येक क्षेत्र के नियमों के अनुसार स्वचालित रूप से लागू होते हैं।' },
+    ],
+    ar: [
+      { q: 'ما المناطق الزمنية المدعومة؟', a: 'تدعم الأداة جميع المناطق الزمنية IANA (UTC وجميع المناطق الإقليمية)، وتغطي جميع دول العالم.' },
+      { q: 'هل يمكنني جدولة المنشورات عبر مناطق زمنية متعددة؟', a: 'نعم، عيّن وقتًا مرجعيًا ورَ الوقت المكافئ للنشر فورًا في ما يصل إلى 12 منطقة زمنية.' },
+      { q: 'كيف يتعامل مع التوقيت الصيفي (DST)؟', a: 'تستخدم الأداة بيانات IANA المباشرة، لذا يتم تطبيق تحويلات DST تلقائيًا وفقًا لقواعد كل منطقة.' },
+    ],
+  },
+  'excel-formula-generator': {
+    en: [
+      { q: 'What Excel formulas are supported?', a: 'The generator covers common categories including lookup (VLOOKUP, XLOOKUP), logical (IF, IFS), text, date, math, and array formulas.' },
+      { q: 'Can it explain how a formula works?', a: 'Yes, each generated formula includes a plain-language breakdown of every argument and how the result is computed.' },
+      { q: 'Does it work with Google Sheets?', a: 'Most generated formulas are compatible with Google Sheets, and the tool flags functions that are Excel-only.' },
+    ],
+    zh: [
+      { q: '支持哪些 Excel 公式？', a: '生成器涵盖常见类别，包括查找（VLOOKUP、XLOOKUP）、逻辑（IF、IFS）、文本、日期、数学和数组公式。' },
+      { q: '可以解释公式的原理吗？', a: '可以，每个生成的公式都附带通俗的参数说明和结果计算方式解析。' },
+      { q: '可以用于 Google Sheets 吗？', a: '大多数生成的公式与 Google Sheets 兼容，工具会标注仅 Excel 支持的函数。' },
+    ],
+    es: [
+      { q: '¿Qué fórmulas de Excel se admiten?', a: 'El generador cubre categorías comunes como búsqueda (VLOOKUP, XLOOKUP), lógicas (IF, IFS), texto, fecha, matemáticas y fórmulas de matriz.' },
+      { q: '¿Puede explicar cómo funciona una fórmula?', a: 'Sí, cada fórmula generada incluye una explicación en lenguaje sencillo de cada argumento y cómo se calcula el resultado.' },
+      { q: '¿Funciona con Google Sheets?', a: 'La mayoría de las fórmulas generadas son compatibles con Google Sheets, y la herramienta marca las funciones exclusivas de Excel.' },
+    ],
+    fr: [
+      { q: 'Quelles formules Excel sont prises en charge ?', a: 'Le générateur couvre les catégories courantes, notamment la recherche (VLOOKUP, XLOOKUP), logiques (IF, IFS), texte, date, mathématiques et formules matricielles.' },
+      { q: 'Peut-il expliquer le fonctionnement d\'une formule ?', a: 'Oui, chaque formule générée est accompagnée d\'une explication claire de chaque argument et du calcul du résultat.' },
+      { q: 'Fonctionne-t-il avec Google Sheets ?', a: 'La plupart des formules générées sont compatibles avec Google Sheets, et l\'outil signale les fonctions exclusives à Excel.' },
+    ],
+    hi: [
+      { q: 'कौन सी Excel सूत्र समर्थित हैं?', a: 'जनरेटर VLOOKUP, XLOOKUP, IF, IFS, टेक्स्ट, दिनांक, गणित और सरणी सूत्र जैसी सामान्य श्रेणियों को कवर करता है।' },
+      { q: 'क्या यह सूत्र कैसे काम करता है यह समझा सकता है?', a: 'हाँ, प्रत्येक उत्पन्न सूत्र में प्रत्येक तर्क की सरल व्याख्या और परिणाम की गणना का तरीका शामिल है।' },
+      { q: 'क्या यह Google Sheets के साथ काम करता है?', a: 'अधिकांश उत्पन्न सूत्र Google Sheets के साथ संगत हैं, और उपकरण Excel-विशिष्ट फ़ंक्शन को चिह्नित करता है।' },
+    ],
+    ar: [
+      { q: 'ما صيغ Excel المدعومة؟', a: 'يغطي المولد الفئات الشائعة بما في ذلك البحث (VLOOKUP، XLOOKUP)، والمنطقية (IF، IFS)، والنص، والتاريخ، والرياضيات، وصيغ المصفوفات.' },
+      { q: 'هل يمكنه شرح كيفية عمل صيغة؟', a: 'نعم، كل صيغة تم إنشاؤها تأتي مع شرح بسيط لكل وسيطة وكيفية حساب النتيجة.' },
+      { q: 'هل يعمل مع Google Sheets؟', a: 'معظم الصيغ التي تم إنشاؤها متوافقة مع Google Sheets، وتقوم الأداة بتمييز الوظائف الحصرية لـ Excel.' },
+    ],
+  },
+  'ai-prompt-generator': {
+    en: [
+      { q: 'What AI models does it support?', a: 'The prompts are designed to work with major models including ChatGPT, Claude, Gemini, and other mainstream LLMs.' },
+      { q: 'Can I customize the generated prompts?', a: 'Yes, you can edit any generated prompt, add context, and refine it before copying it to your AI tool.' },
+      { q: 'Are the prompts free to use?', a: 'Yes, all prompts are generated locally in your browser and are completely free with no usage limits.' },
+    ],
+    zh: [
+      { q: '支持哪些 AI 模型？', a: '提示词适用于主流模型，包括 ChatGPT、Claude、Gemini 等通用大语言模型。' },
+      { q: '可以自定义生成的提示词吗？', a: '可以，您可以编辑任何生成的提示词、添加上下文，并在复制到 AI 工具前进行优化。' },
+      { q: '提示词免费使用吗？', a: '是的，所有提示词均在浏览器本地生成，完全免费且无使用限制。' },
+    ],
+    es: [
+      { q: '¿Qué modelos de IA admite?', a: 'Los prompts están diseñados para funcionar con modelos principales como ChatGPT, Claude, Gemini y otros LLM convencionales.' },
+      { q: '¿Puedo personalizar los prompts generados?', a: 'Sí, puedes editar cualquier prompt generado, añadir contexto y refinarlo antes de copiarlo a tu herramienta de IA.' },
+      { q: '¿Los prompts son gratuitos?', a: 'Sí, todos los prompts se generan localmente en tu navegador y son completamente gratuitos sin límites de uso.' },
+    ],
+    fr: [
+      { q: 'Quels modèles d\'IA sont pris en charge ?', a: 'Les prompts sont conçus pour fonctionner avec les principaux modèles, notamment ChatGPT, Claude, Gemini et autres LLM courants.' },
+      { q: 'Puis-je personnaliser les prompts générés ?', a: 'Oui, vous pouvez modifier tout prompt généré, ajouter du contexte et l\'affiner avant de le copier dans votre outil d\'IA.' },
+      { q: 'Les prompts sont-ils gratuits ?', a: 'Oui, tous les prompts sont générés localement dans votre navigateur et sont entièrement gratuits sans limite d\'utilisation.' },
+    ],
+    hi: [
+      { q: 'यह कौन से AI मॉडल का समर्थन करता है?', a: 'प्रॉम्प्ट्स ChatGPT, Claude, Gemini और अन्य मुख्यधारा के LLM सहित प्रमुख मॉडलों के साथ काम करने के लिए डिज़ाइन किए गए हैं।' },
+      { q: 'क्या मैं उत्पन्न प्रॉम्प्ट्स को कस्टमाइज़ कर सकता हूँ?', a: 'हाँ, आप किसी भी उत्पन्न प्रॉम्प्ट को संपादित कर सकते हैं, संदर्भ जोड़ सकते हैं और इसे अपने AI टूल में कॉपी करने से पहले परिष्कृत कर सकते हैं।' },
+      { q: 'क्या प्रॉम्प्ट्स उपयोग करने के लिए स्वतंत्र हैं?', a: 'हाँ, सभी प्रॉम्प्ट्स आपके ब्राउज़र में स्थानीय रूप से उत्पन्न होते हैं और पूरी तरह से निःशुल्क हैं।' },
+    ],
+    ar: [
+      { q: 'ما نماذج الذكاء الاصطناعي المدعومة؟', a: 'تم تصميم المطالبات للعمل مع النماذج الرئيسية بما في ذلك ChatGPT و Claude و Gemini وغيرها من نماذج LLM السائدة.' },
+      { q: 'هل يمكنني تخصيص المطالبات التي تم إنشاؤها؟', a: 'نعم، يمكنك تحرير أي مطالبة تم إنشاؤها، وإضافة سياق، وتحسينها قبل نسخها إلى أداة الذكاء الاصطناعي الخاصة بك.' },
+      { q: 'هل المطالبات مجانية؟', a: 'نعم، يتم إنشاء جميع المطالبات محليًا في متصفحك وهي مجانية تمامًا دون قيود على الاستخدام.' },
+    ],
+  },
+  'sora-prompt-generator': {
+    en: [
+      { q: 'What is Sora?', a: 'Sora is OpenAI\'s text-to-video AI model that generates short videos from natural language descriptions.' },
+      { q: 'How do I write a good Sora prompt?', a: 'Be specific about scene, camera movement, lighting, duration, and style; concrete details produce more controllable results.' },
+      { q: 'Can I save my generated prompts?', a: 'Yes, you can copy prompts to your clipboard or export them as a text file for later reuse.' },
+    ],
+    zh: [
+      { q: 'Sora 是什么？', a: 'Sora 是 OpenAI 的文本转视频 AI 模型，可根据自然语言描述生成短视频。' },
+      { q: '如何写出好的 Sora 提示词？', a: '详细描述场景、镜头运动、光线、时长和风格，具体细节能产生更可控的结果。' },
+      { q: '可以保存生成的提示词吗？', a: '可以，您可以将提示词复制到剪贴板或导出为文本文件以便日后复用。' },
+    ],
+    es: [
+      { q: '¿Qué es Sora?', a: 'Sora es el modelo de IA de texto a vídeo de OpenAI que genera vídeos cortos a partir de descripciones en lenguaje natural.' },
+      { q: '¿Cómo escribo un buen prompt de Sora?', a: 'Sé específico sobre la escena, el movimiento de cámara, la iluminación, la duración y el estilo; los detalles concretos producen resultados más controlables.' },
+      { q: '¿Puedo guardar mis prompts generados?', a: 'Sí, puedes copiar los prompts al portapapeles o exportarlos como archivo de texto para reutilizarlos más tarde.' },
+    ],
+    fr: [
+      { q: 'Qu\'est-ce que Sora ?', a: 'Sora est le modèle d\'IA texte-vers-vidéo d\'OpenAI qui génère des vidéos courtes à partir de descriptions en langage naturel.' },
+      { q: 'Comment écrire un bon prompt Sora ?', a: 'Soyez précis sur la scène, le mouvement de caméra, l\'éclairage, la durée et le style ; les détails concrets produisent des résultats plus contrôlables.' },
+      { q: 'Puis-je sauvegarder mes prompts générés ?', a: 'Oui, vous pouvez copier les prompts dans le presse-papiers ou les exporter en fichier texte pour les réutiliser.' },
+    ],
+    hi: [
+      { q: 'Sora क्या है?', a: 'Sora OpenAI का टेक्स्ट-टू-वीडियो AI मॉडल है जो प्राकृतिक भाषा विवरण से लघु वीडियो उत्पन्न करता है।' },
+      { q: 'मैं अच्छा Sora प्रॉम्प्ट कैसे लिखूँ?', a: 'दृश्य, कैमरा मूवमेंट, लाइटिंग, अवधि और शैली के बारे में विशिष्ट रहें; ठोस विवरण अधिक नियंत्रणीय परिणाम देते हैं।' },
+      { q: 'क्या मैं अपने उत्पन्न प्रॉम्प्ट्स को सहेज सकता हूँ?', a: 'हाँ, आप प्रॉम्प्ट्स को क्लिपबोर्ड पर कॉपी कर सकते हैं या टेक्स्ट फ़ाइल के रूप में निर्यात कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'ما هو Sora؟', a: 'Sora هو نموذج الذكاء الاصطناعي للنص إلى فيديو من OpenAI الذي ينشئ مقاطع فيديو قصيرة من أوصاف اللغة الطبيعية.' },
+      { q: 'كيف أكتب مطالبة Sora جيدة؟', a: 'كن محددًا بشأن المشهد وحركة الكاميرا والإضاءة والمدة والأسلوب؛ التفاصيل الملموسة تنتج نتائج أكثر قابلية للتحكم.' },
+      { q: 'هل يمكنني حفظ المطالبات التي تم إنشاؤها؟', a: 'نعم، يمكنك نسخ المطالبات إلى الحافظة أو تصديرها كملف نصي لإعادة استخدامها لاحقًا.' },
+    ],
+  },
+  'midjourney-prompt-generator': {
+    en: [
+      { q: 'What Midjourney versions are supported?', a: 'The generator supports prompts compatible with Midjourney v5, v6, and v7, including version-specific parameters and styling flags.' },
+      { q: 'Can I add style parameters like --ar and --stylize?', a: 'Yes, you can configure aspect ratio, stylize, chaos, quality, and other parameters through the UI and they will be appended correctly.' },
+      { q: 'How do I copy prompts to Midjourney?', a: 'Click the copy button to put the full prompt with parameters on your clipboard, then paste it into the Midjourney Discord or web app.' },
+    ],
+    zh: [
+      { q: '支持哪些 Midjourney 版本？', a: '生成器支持与 Midjourney v5、v6、v7 兼容的提示词，包括各版本专属参数和风格标记。' },
+      { q: '可以添加 --ar 和 --stylize 等风格参数吗？', a: '可以，通过界面配置宽高比、风格化、混乱度、质量等参数，系统会正确追加。' },
+      { q: '如何将提示词复制到 Midjourney？', a: '点击复制按钮，将带参数的完整提示词放入剪贴板，然后粘贴到 Midjourney Discord 或网页应用。' },
+    ],
+    es: [
+      { q: '¿Qué versiones de Midjourney se admiten?', a: 'El generador admite prompts compatibles con Midjourney v5, v6 y v7, incluidos parámetros y banderas de estilo específicos de cada versión.' },
+      { q: '¿Puedo añadir parámetros de estilo como --ar y --stylize?', a: 'Sí, puedes configurar la relación de aspecto, stylize, chaos, quality y otros parámetros a través de la interfaz.' },
+      { q: '¿Cómo copio los prompts a Midjourney?', a: 'Haz clic en el botón de copiar para poner el prompt completo con parámetros en el portapapeles, luego pégalo en Discord o la web de Midjourney.' },
+    ],
+    fr: [
+      { q: 'Quelles versions de Midjourney sont prises en charge ?', a: 'Le générateur prend en charge les prompts compatibles avec Midjourney v5, v6 et v7, y compris les paramètres spécifiques à chaque version.' },
+      { q: 'Puis-je ajouter des paramètres de style comme --ar et --stylize ?', a: 'Oui, vous pouvez configurer le ratio d\'aspect, stylize, chaos, quality et d\'autres paramètres via l\'interface.' },
+      { q: 'Comment copier les prompts vers Midjourney ?', a: 'Cliquez sur le bouton copier pour mettre le prompt complet avec paramètres dans le presse-papiers, puis collez-le dans Discord ou l\'application web Midjourney.' },
+    ],
+    hi: [
+      { q: 'कौन से Midjourney संस्करण समर्थित हैं?', a: 'जनरेटर Midjourney v5, v6 और v7 के साथ संगत प्रॉम्प्ट्स का समर्थन करता है, जिसमें संस्करण-विशिष्ट पैरामीटर शामिल हैं।' },
+      { q: 'क्या मैं --ar और --stylize जैसे स्टाइल पैरामीटर जोड़ सकता हूँ?', a: 'हाँ, आप इंटरफ़ेस के माध्यम से पहलू अनुपात, stylize, chaos, quality और अन्य पैरामीटर कॉन्फ़िगर कर सकते हैं।' },
+      { q: 'मैं प्रॉम्प्ट्स को Midjourney में कैसे कॉपी करूँ?', a: 'कॉपी बटन पर क्लिक करें और पूर्ण प्रॉम्प्ट को क्लिपबोर्ड पर रखें, फिर इसे Midjourney Discord में पेस्ट करें।' },
+    ],
+    ar: [
+      { q: 'ما إصدارات Midjourney المدعومة؟', a: 'يدعم المولد المطالبات المتوافقة مع Midjourney v5 و v6 و v7، بما في ذلك المعلمات الخاصة بكل إصدار.' },
+      { q: 'هل يمكنني إضافة معلمات النمط مثل --ar و --stylize؟', a: 'نعم، يمكنك تكوين نسبة العرض إلى الارتفاع و stylize و chaos و quality ومعلمات أخرى عبر الواجهة.' },
+      { q: 'كيف أنسخ المطالبات إلى Midjourney؟', a: 'انقر على زر النسخ لوضع المطالبة الكاملة مع المعلمات في الحافظة، ثم الصقها في Discord أو تطبيق ويب Midjourney.' },
+    ],
+  },
+  'video-prompt-generator': {
+    en: [
+      { q: 'What video AI tools does it support?', a: 'The tool creates prompts compatible with Sora, Runway, Pika, Kling, Veo, and other popular text-to-video models.' },
+      { q: 'How should I structure a video prompt?', a: 'Start with subject and action, then add scene, camera, lighting, mood, and technical specs like resolution and duration.' },
+      { q: 'Can I batch generate multiple prompts?', a: 'Yes, you can generate several prompt variations at once and export them as a list for testing different video models.' },
+    ],
+    zh: [
+      { q: '支持哪些视频 AI 工具？', a: '工具生成与 Sora、Runway、Pika、Kling、Veo 等主流文本转视频模型兼容的提示词。' },
+      { q: '视频提示词应如何组织？', a: '先写主体和动作，再添加场景、镜头、光线、氛围以及分辨率、时长等技术规格。' },
+      { q: '可以批量生成多个提示词吗？', a: '可以，一次生成多个提示词变体并导出为列表，用于测试不同视频模型。' },
+    ],
+    es: [
+      { q: '¿Qué herramientas de IA de vídeo admite?', a: 'La herramienta crea prompts compatibles con Sora, Runway, Pika, Kling, Veo y otros modelos populares de texto a vídeo.' },
+      { q: '¿Cómo debo estructurar un prompt de vídeo?', a: 'Comienza con el sujeto y la acción, luego añade escena, cámara, iluminación, ambiente y especificaciones técnicas como resolución y duración.' },
+      { q: '¿Puedo generar varios prompts en lote?', a: 'Sí, puedes generar varias variaciones de prompts a la vez y exportarlas como lista para probar diferentes modelos de vídeo.' },
+    ],
+    fr: [
+      { q: 'Quels outils d\'IA vidéo sont pris en charge ?', a: 'L\'outil crée des prompts compatibles avec Sora, Runway, Pika, Kling, Veo et autres modèles populaires texte-vers-vidéo.' },
+      { q: 'Comment structurer un prompt vidéo ?', a: 'Commencez par le sujet et l\'action, puis ajoutez la scène, la caméra, l\'éclairage, l\'ambiance et les specs techniques comme la résolution et la durée.' },
+      { q: 'Puis-je générer plusieurs prompts en lot ?', a: 'Oui, vous pouvez générer plusieurs variantes de prompts à la fois et les exporter sous forme de liste pour tester différents modèles vidéo.' },
+    ],
+    hi: [
+      { q: 'यह कौन से वीडियो AI टूल का समर्थन करता है?', a: 'यह उपकरण Sora, Runway, Pika, Kling, Veo और अन्य लोकप्रिय टेक्स्ट-टू-वीडियो मॉडल के साथ संगत प्रॉम्प्ट्स बनाता है।' },
+      { q: 'मैं वीडियो प्रॉम्प्ट को कैसे संरचित करूँ?', a: 'विषय और क्रिया से शुरू करें, फिर दृश्य, कैमरा, लाइटिंग, मूड और रिज़ॉल्यूशन तथा अवधि जैसे तकनीकी विनिर्देश जोड़ें।' },
+      { q: 'क्या मैं कई प्रॉम्प्ट्स बैच जनरेट कर सकता हूँ?', a: 'हाँ, आप एक बार में कई प्रॉम्प्ट वेरिएशन जनरेट कर सकते हैं और उन्हें सूची के रूप में निर्यात कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'ما أدوات ذكاء الفيديو الاصطناعي المدعومة؟', a: 'تنشئ الأداة مطالبات متوافقة مع Sora و Runway و Pika و Kling و Veo وغيرها من نماذج النص إلى فيديو الشائعة.' },
+      { q: 'كيف يجب أن أهيكل مطالبة الفيديو؟', a: 'ابدأ بالموضوع والإجراء، ثم أضف المشهد والكاميرا والإضاءة والمزاج والمواصفات الفنية مثل الدقة والمدة.' },
+      { q: 'هل يمكنني إنشاء مطالبات متعددة دفعة واحدة؟', a: 'نعم، يمكنك إنشاء عدة تنويعات للمطالبات مرة واحدة وتصديرها كقائمة لاختبار نماذج فيديو مختلفة.' },
+    ],
+  },
+  'wc-2026-schedule': {
+    en: [
+      { q: 'Is the World Cup 2026 schedule accurate?', a: 'Yes, the schedule is based on the official FIFA match calendar, including dates, times, venues, and group stage assignments.' },
+      { q: 'Can I filter matches by team?', a: 'Yes, you can select any of the 48 participating teams to see only their group and knockout matches.' },
+      { q: 'Can I export matches to my calendar?', a: 'Yes, you can download an .ics file for selected matches or teams and import it into Google Calendar, Outlook, or Apple Calendar.' },
+    ],
+    zh: [
+      { q: '2026 世界杯赛程准确吗？', a: '是的，赛程基于 FIFA 官方比赛日历，包括日期、时间、场馆和小组赛分组。' },
+      { q: '可以按球队筛选比赛吗？', a: '可以，您可以选择 48 支参赛球队中的任意一支，仅查看其小组赛和淘汰赛。' },
+      { q: '可以将比赛导出到日历吗？', a: '可以，您可以为选定比赛或球队下载 .ics 文件，并导入到 Google 日历、Outlook 或 Apple 日历。' },
+    ],
+    es: [
+      { q: '¿Es preciso el calendario del Mundial 2026?', a: 'Sí, el calendario se basa en el calendario oficial de partidos de la FIFA, incluyendo fechas, horarios, sedes y asignaciones de fase de grupos.' },
+      { q: '¿Puedo filtrar los partidos por equipo?', a: 'Sí, puedes seleccionar cualquiera de las 48 equipos participantes para ver solo sus partidos de fase de grupos y eliminatorias.' },
+      { q: '¿Puedo exportar los partidos a mi calendario?', a: 'Sí, puedes descargar un archivo .ics para los partidos o equipos seleccionados e importarlo a Google Calendar, Outlook o Apple Calendar.' },
+    ],
+    fr: [
+      { q: 'Le calendrier de la Coupe du Monde 2026 est-il exact ?', a: 'Oui, le calendrier est basé sur le calendrier officiel des matchs de la FIFA, incluant dates, horaires, stades et attributions de la phase de groupes.' },
+      { q: 'Puis-je filtrer les matchs par équipe ?', a: 'Oui, vous pouvez sélectionner n\'importe laquelle des 48 équipes participantes pour ne voir que ses matchs de poule et à élimination directe.' },
+      { q: 'Puis-je exporter les matchs vers mon calendrier ?', a: 'Oui, vous pouvez télécharger un fichier .ics pour les matchs ou équipes sélectionnés et l\'importer dans Google Calendar, Outlook ou Apple Calendar.' },
+    ],
+    hi: [
+      { q: 'क्या विश्व कप 2026 कार्यक्रम सटीक है?', a: 'हाँ, कार्यक्रम आधिकारिक FIFA मैच कैलेंडर पर आधारित है, जिसमें तिथियां, समय, स्थान और ग्रुप चरण असाइनमेंट शामिल हैं।' },
+      { q: 'क्या मैं टीम के अनुसार मैच फ़िल्टर कर सकता हूँ?', a: 'हाँ, आप 48 भाग लेने वाली टीमों में से किसी को भी चुन सकते हैं और केवल उनके ग्रुप और नॉकआउट मैच देख सकते हैं।' },
+      { q: 'क्या मैं मैचों को अपने कैलेंडर में निर्यात कर सकता हूँ?', a: 'हाँ, आप चयनित मैचों या टीमों के लिए .ics फ़ाइल डाउनलोड कर सकते हैं और इसे Google Calendar, Outlook या Apple Calendar में आयात कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'هل جدول كأس العالم 2026 دقيق؟', a: 'نعم، الجدول مبني على التقويم الرسمي لمباريات FIFA، بما في ذلك التواريخ والأوقات والملاعب وتعيينات دور المجموعات.' },
+      { q: 'هل يمكنني تصفية المباريات حسب الفريق؟', a: 'نعم، يمكنك اختيار أي من الفرق الـ 48 المشاركة لرؤية مبارياتها في دور المجموعات والأدوار الإقصائية فقط.' },
+      { q: 'هل يمكنني تصدير المباريات إلى تقويمي؟', a: 'نعم، يمكنك تنزيل ملف .ics للمباريات أو الفرق المحددة واستيراده إلى Google Calendar أو Outlook أو Apple Calendar.' },
+    ],
+  },
+  'wc-champion-predictor': {
+    en: [
+      { q: 'How does the champion prediction work?', a: 'You fill in your predicted finishing positions for each group and knockout round, and the tool simulates the bracket to determine your champion.' },
+      { q: 'Can I share my predictions?', a: 'Yes, you can export your bracket as an image or share a unique link to show your picks to friends.' },
+      { q: 'Is this just for fun or based on real stats?', a: 'It is primarily a fan engagement tool for fun; results are driven by your picks, not statistical forecasting.' },
+    ],
+    zh: [
+      { q: '冠军预测如何工作？', a: '您填写每个小组和淘汰轮次的预测排名，工具模拟对阵图来确定您的冠军。' },
+      { q: '可以分享我的预测吗？', a: '可以，您可以将对阵图导出为图片或分享唯一链接，向朋友展示您的选择。' },
+      { q: '这只是娱乐还是基于真实数据？', a: '这主要是面向球迷的娱乐工具，结果由您的选择驱动，而非统计预测。' },
+    ],
+    es: [
+      { q: '¿Cómo funciona la predicción de campeón?', a: 'Rellenas las posiciones previstas para cada grupo y ronda eliminatoria, y la herramienta simula el cuadro para determinar tu campeón.' },
+      { q: '¿Puedo compartir mis predicciones?', a: 'Sí, puedes exportar tu cuadro como imagen o compartir un enlace único para mostrar tus selecciones a tus amigos.' },
+      { q: '¿Es solo por diversión o se basa en estadísticas reales?', a: 'Es principalmente una herramienta de participación para fans; los resultados dependen de tus selecciones, no de pronósticos estadísticos.' },
+    ],
+    fr: [
+      { q: 'Comment fonctionne la prédiction du champion ?', a: 'Vous remplissez les positions prévues pour chaque groupe et tour à élimination directe, et l\'outil simule le tableau pour déterminer votre champion.' },
+      { q: 'Puis-je partager mes prédictions ?', a: 'Oui, vous pouvez exporter votre tableau sous forme d\'image ou partager un lien unique pour montrer vos choix à vos amis.' },
+      { q: 'Est-ce juste pour le fun ou basé sur des statistiques réelles ?', a: 'C\'est principalement un outil d\'engagement pour les fans ; les résultats sont déterminés par vos choix, pas par des prévisions statistiques.' },
+    ],
+    hi: [
+      { q: 'चैंपियन पूर्वानुमान कैसे काम करता है?', a: 'आप प्रत्येक ग्रुप और नॉकआउट राउंड के लिए अपनी अनुमानित स्थिति भरते हैं, और उपकरण आपके चैंपियन को निर्धारित करने के लिए ब्रैकेट का अनुकरण करता है।' },
+      { q: 'क्या मैं अपनी भविष्यवाणियाँ साझा कर सकता हूँ?', a: 'हाँ, आप अपने ब्रैकेट को छवि के रूप में निर्यात कर सकते हैं या अपने दोस्तों को दिखाने के लिए एक अद्वितीय लिंक साझा कर सकते हैं।' },
+      { q: 'क्या यह केवल मनोरंजन के लिए है या वास्तविक आँकड़ों पर आधारित है?', a: 'यह मुख्य रूप से प्रशंसकों के लिए मनोरंजन उपकरण है; परिणाम आपके चुनाव द्वारा निर्धारित होते हैं, न कि सांख्यिकीय पूर्वानुमान द्वारा।' },
+    ],
+    ar: [
+      { q: 'كيف يعمل توقع البطل؟', a: 'تقوم بملء المراكز المتوقعة لكل مجموعة وجولة خروج المغلوب، وتقوم الأداة بمحاكاة القرعة لتحديد بطلك.' },
+      { q: 'هل يمكنني مشاركة توقعاتي؟', a: 'نعم، يمكنك تصدير القرعة كصورة أو مشاركة رابط فريد لإظهار اختياراتك لأصدقائك.' },
+      { q: 'هل هذا للترفيه فقط أم مبني على إحصائيات حقيقية؟', a: 'إنه في المقام الأول أداة تفاعل للمشجعين للمرح؛ النتائج مدفوعة باختياراتك، وليس بالتنبؤ الإحصائي.' },
+    ],
+  },
+  'wc-poster-generator': {
+    en: [
+      { q: 'What poster templates are available?', a: 'The tool offers multiple templates themed for group stage, knockout, final, and customizable team-vs-team match formats.' },
+      { q: 'Can I customize text on the poster?', a: 'Yes, you can edit team names, match date, time, venue, and add your own tagline or hashtag.' },
+      { q: 'Can I download the poster as an image?', a: 'Yes, you can download the finished poster as a high-resolution PNG suitable for social media or printing.' },
+    ],
+    zh: [
+      { q: '有哪些海报模板？', a: '工具提供多个主题模板，包括小组赛、淘汰赛、决赛和可自定义的对阵格式。' },
+      { q: '可以自定义海报文字吗？', a: '可以，您可以编辑球队名称、比赛日期、时间、场馆，并添加自己的标语或话题标签。' },
+      { q: '可以下载海报为图片吗？', a: '可以，您可以将完成的海报下载为高分辨率 PNG，适合社交媒体或打印。' },
+    ],
+    es: [
+      { q: '¿Qué plantillas de póster están disponibles?', a: 'La herramienta ofrece varias plantillas con temas de fase de grupos, eliminatoria, final y formatos personalizables de partido entre equipos.' },
+      { q: '¿Puedo personalizar el texto del póster?', a: 'Sí, puedes editar nombres de equipos, fecha del partido, hora, sede y añadir tu propio eslogan o hashtag.' },
+      { q: '¿Puedo descargar el póster como imagen?', a: 'Sí, puedes descargar el póster terminado como PNG de alta resolución, apto para redes sociales o impresión.' },
+    ],
+    fr: [
+      { q: 'Quels modèles d\'affiche sont disponibles ?', a: 'L\'outil propose plusieurs modèles thématisés pour la phase de groupes, les éliminatoires, la finale et des formats de match personnalisables.' },
+      { q: 'Puis-je personnaliser le texte de l\'affiche ?', a: 'Oui, vous pouvez modifier les noms d\'équipes, la date du match, l\'heure, le stade et ajouter votre propre slogan ou hashtag.' },
+      { q: 'Puis-je télécharger l\'affiche comme image ?', a: 'Oui, vous pouvez télécharger l\'affiche finie en PNG haute résolution, adapté aux réseaux sociaux ou à l\'impression.' },
+    ],
+    hi: [
+      { q: 'कौन से पोस्टर टेम्पलेट उपलब्ध हैं?', a: 'यह उपकरण ग्रुप चरण, नॉकआउट, फाइनल और अनुकूलन योग्य टीम-बनाम-टीम मैच प्रारूपों के लिए थीम वाले कई टेम्पलेट प्रदान करता है।' },
+      { q: 'क्या मैं पोस्टर पर टेक्स्ट को कस्टमाइज़ कर सकता हूँ?', a: 'हाँ, आप टीम के नाम, मैच की तारीख, समय, स्थान संपादित कर सकते हैं और अपना स्लोगन या हैशटैग जोड़ सकते हैं।' },
+      { q: 'क्या मैं पोस्टर को छवि के रूप में डाउनलोड कर सकता हूँ?', a: 'हाँ, आप समाप्त पोस्टर को सोशल मीडिया या प्रिंटिंग के लिए उपयुक्त उच्च-रिज़ॉल्यूशन PNG के रूप में डाउनलोड कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'ما قوالب الملصقات المتاحة؟', a: 'تقدم الأداة قوالب متعددة بموضوعات مرحلة المجموعات، خروج المغلوب، النهائي، وتنسيقات مباريات قابلة للتخصيص.' },
+      { q: 'هل يمكنني تخصيص النص على الملصق؟', a: 'نعم، يمكنك تعديل أسماء الفرق وتاريخ المباراة والوقت والمكان وإضافة شعارك الخاص أو هاشتاغ.' },
+      { q: 'هل يمكنني تنزيل الملصق كصورة؟', a: 'نعم، يمكنك تنزيل الملصق النهائي كملف PNG عالي الدقة مناسب لوسائل التواصل الاجتماعي أو الطباعة.' },
+    ],
+  },
+  'wc-ascii-art': {
+    en: [
+      { q: 'What is ASCII art?', a: 'ASCII art is images created using only text characters, letting you share football-themed graphics in any text field that supports monospace fonts.' },
+      { q: 'Can I customize the characters used?', a: 'Yes, you can change the character set, density, and width to control how detailed or compact your ASCII art appears.' },
+      { q: 'Does it support national flags?', a: 'Yes, you can generate ASCII representations of national flags and team logos for the 48 World Cup participating nations.' },
+    ],
+    zh: [
+      { q: 'ASCII 艺术是什么？', a: 'ASCII 艺术是仅使用文本字符创作的图像，可在任何支持等宽字体的文本区域分享足球主题图形。' },
+      { q: '可以自定义使用的字符吗？', a: '可以，您可以更改字符集、密度和宽度，控制 ASCII 艺术的细节和紧凑程度。' },
+      { q: '支持国旗吗？', a: '支持，您可以为 48 个世界杯参赛国家生成国旗和球队标志的 ASCII 图形。' },
+    ],
+    es: [
+      { q: '¿Qué es el arte ASCII?', a: 'El arte ASCII son imágenes creadas usando solo caracteres de texto, lo que te permite compartir gráficos con temática de fútbol en cualquier campo de texto que admita fuentes monoespaciadas.' },
+      { q: '¿Puedo personalizar los caracteres utilizados?', a: 'Sí, puedes cambiar el conjunto de caracteres, la densidad y el ancho para controlar qué tan detallado o compacto aparece tu arte ASCII.' },
+      { q: '¿Admite banderas nacionales?', a: 'Sí, puedes generar representaciones ASCII de banderas nacionales y logotipos de equipos para las 48 naciones participantes en la Copa del Mundo.' },
+    ],
+    fr: [
+      { q: 'Qu\'est-ce que l\'art ASCII ?', a: 'L\'art ASCII consiste en des images créées uniquement avec des caractères texte, vous permettant de partager des graphismes sur le thème du football dans tout champ texte prenant en charge les polices à chasse fixe.' },
+      { q: 'Puis-je personnaliser les caractères utilisés ?', a: 'Oui, vous pouvez modifier le jeu de caractères, la densité et la largeur pour contrôler le niveau de détail ou de compacité de votre art ASCII.' },
+      { q: 'Prend-il en charge les drapeaux nationaux ?', a: 'Oui, vous pouvez générer des représentations ASCII des drapeaux nationaux et logos d\'équipes pour les 48 nations participantes à la Coupe du Monde.' },
+    ],
+    hi: [
+      { q: 'ASCII कला क्या है?', a: 'ASCII कला केवल टेक्स्ट वर्णों का उपयोग करके बनाई गई छवियां हैं, जिससे आप किसी भी टेक्स्ट फ़ील्ड में फुटबॉल-थीम वाले ग्राफिक्स साझा कर सकते हैं।' },
+      { q: 'क्या मैं उपयोग किए गए वर्णों को कस्टमाइज़ कर सकता हूँ?', a: 'हाँ, आप वर्ण सेट, घनत्व और चौड़ाई बदल सकते हैं ताकि आपकी ASCII कला कितनी विस्तृत या कॉम्पैक्ट दिखे, इसे नियंत्रित कर सकें।' },
+      { q: 'क्या यह राष्ट्रीय झंडे का समर्थन करता है?', a: 'हाँ, आप 48 विश्व कप भागीदार राष्ट्रों के लिए राष्ट्रीय झंडों और टीम लोगो का ASCII प्रतिनिधित्व उत्पन्न कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'ما هو فن ASCII؟', a: 'فن ASCII هو صور تم إنشاؤها باستخدام أحرف نصية فقط، مما يسمح لك بمشاركة رسومات بكرة القدم في أي حقل نصي يدعم الخطوط ثابتة العرض.' },
+      { q: 'هل يمكنني تخصيص الأحرف المستخدمة؟', a: 'نعم، يمكنك تغيير مجموعة الأحرف والكثافة والعرض للتحكم في مدى تفصيل أو إحكام فن ASCII الخاص بك.' },
+      { q: 'هل يدعم الأعلام الوطنية؟', a: 'نعم، يمكنك إنشاء تمثيلات ASCII للأعلام الوطنية وشعارات الفرق لـ 48 دولة مشاركة في كأس العالم.' },
+    ],
+  },
+  'wc-fan-avatar': {
+    en: [
+      { q: 'How do I make a fan avatar?', a: 'Pick a template, choose your team, add your name or message, and the tool generates a downloadable avatar instantly.' },
+      { q: 'Can I use my own photo?', a: 'Yes, you can upload a photo from your device and the tool will frame it with team colors and badges.' },
+      { q: 'What team badges are available?', a: 'All 48 participating World Cup nations\' badges and color schemes are available for customization.' },
+    ],
+    zh: [
+      { q: '如何制作球迷头像？', a: '选择模板、选择球队、添加您的名字或信息，工具会即时生成可下载的头像。' },
+      { q: '可以使用我的照片吗？', a: '可以，您可以从设备上传照片，工具会用球队颜色和徽章为其加框。' },
+      { q: '有哪些球队徽章？', a: '提供 48 个世界杯参赛国家的徽章和配色方案供自定义。' },
+    ],
+    es: [
+      { q: '¿Cómo creo un avatar de aficionado?', a: 'Elige una plantilla, selecciona tu equipo, añade tu nombre o mensaje y la herramienta genera un avatar descargable al instante.' },
+      { q: '¿Puedo usar mi propia foto?', a: 'Sí, puedes subir una foto desde tu dispositivo y la herramienta la enmarcará con los colores y escudos del equipo.' },
+      { q: '¿Qué escudos de equipos están disponibles?', a: 'Están disponibles los escudos y esquemas de colores de las 48 naciones participantes en la Copa del Mundo.' },
+    ],
+    fr: [
+      { q: 'Comment créer un avatar de supporter ?', a: 'Choisissez un modèle, sélectionnez votre équipe, ajoutez votre nom ou message, et l\'outil génère un avatar téléchargeable instantanément.' },
+      { q: 'Puis-je utiliser ma propre photo ?', a: 'Oui, vous pouvez télécharger une photo depuis votre appareil et l\'outil l\'encadrera avec les couleurs et écussons de l\'équipe.' },
+      { q: 'Quels écussons d\'équipe sont disponibles ?', a: 'Les écussons et schémas de couleurs des 48 nations participantes à la Coupe du Monde sont disponibles pour la personnalisation.' },
+    ],
+    hi: [
+      { q: 'मैं फैन अवतार कैसे बनाऊँ?', a: 'टेम्पलेट चुनें, अपनी टीम चुनें, अपना नाम या संदेश जोड़ें, और उपकरण तुरंत एक डाउनलोड करने योग्य अवतार उत्पन्न करता है।' },
+      { q: 'क्या मैं अपनी खुद की फ़ोटो का उपयोग कर सकता हूँ?', a: 'हाँ, आप अपने डिवाइस से एक फ़ोटो अपलोड कर सकते हैं और उपकरण इसे टीम रंगों और बैज के साथ फ़्रेम करेगा।' },
+      { q: 'कौन से टीम बैज उपलब्ध हैं?', a: 'सभी 48 भाग लेने वाले विश्व कप राष्ट्रों के बैज और रंग योजनाएँ अनुकूलन के लिए उपलब्ध हैं।' },
+    ],
+    ar: [
+      { q: 'كيف أصنع avatar مشجع؟', a: 'اختر قالبًا، اختر فريقك، أضف اسمك أو رسالتك، وستنشئ الأداة avatar قابل للتنزيل فورًا.' },
+      { q: 'هل يمكنني استخدام صورتي الخاصة؟', a: 'نعم، يمكنك تحميل صورة من جهازك وستقوم الأداة بتأطيرها بألوان الفريق وشاراته.' },
+      { q: 'ما شارات الفرق المتاحة؟', a: 'شارات وأنظمة ألوان جميع الدول الـ 48 المشاركة في كأس العالم متاحة للتخصيص.' },
+    ],
+  },
+  'wc-scoreboard-simulator': {
+    en: [
+      { q: 'Can I simulate match scores?', a: 'Yes, you can input scores for any group or knockout match and the simulator updates the standings and bracket accordingly.' },
+      { q: 'Does it track group standings live?', a: 'Yes, as you enter scores the tool recalculates points, goal difference, and rankings in real time using official tiebreaker rules.' },
+      { q: 'Can I share my simulated results?', a: 'Yes, you can export the final standings and bracket as an image or share a link with your predicted outcomes.' },
+    ],
+    zh: [
+      { q: '可以模拟比赛比分吗？', a: '可以，您可以为任意小组或淘汰赛输入比分，模拟器会相应更新积分和对阵图。' },
+      { q: '可以实时追踪小组积分吗？', a: '可以，输入比分时，工具会使用官方排名规则实时重新计算积分、净胜球和排名。' },
+      { q: '可以分享模拟结果吗？', a: '可以，您可以将最终积分和对阵图导出为图片或分享带预测结果的链接。' },
+    ],
+    es: [
+      { q: '¿Puedo simular resultados de partidos?', a: 'Sí, puedes introducir resultados de cualquier partido de grupo o eliminatoria y el simulador actualiza la clasificación y el cuadro en consecuencia.' },
+      { q: '¿Realiza un seguimiento de las clasificaciones de grupo en vivo?', a: 'Sí, al introducir los resultados la herramienta recalcula puntos, diferencia de goles y clasificaciones en tiempo real usando las reglas oficiales de desempate.' },
+      { q: '¿Puedo compartir mis resultados simulados?', a: 'Sí, puedes exportar la clasificación final y el cuadro como imagen o compartir un enlace con tus resultados previstos.' },
+    ],
+    fr: [
+      { q: 'Puis-je simuler des scores de match ?', a: 'Oui, vous pouvez saisir les scores de n\'importe quel match de groupe ou à élimination directe et le simulateur met à jour le classement et le tableau.' },
+      { q: 'Suit-il les classements de groupe en direct ?', a: 'Oui, à mesure que vous saisissez les scores, l\'outil recalcule les points, la différence de buts et les classements en temps réel selon les règles officielles de départage.' },
+      { q: 'Puis-je partager mes résultats simulés ?', a: 'Oui, vous pouvez exporter le classement final et le tableau sous forme d\'image ou partager un lien avec vos résultats prévus.' },
+    ],
+    hi: [
+      { q: 'क्या मैं मैच स्कोर का अनुकरण कर सकता हूँ?', a: 'हाँ, आप किसी भी ग्रुप या नॉकआउट मैच के लिए स्कोर इनपुट कर सकते हैं और सिम्युलेटर तदनुसार स्टैंडिंग और ब्रैकेट को अपडेट करता है।' },
+      { q: 'क्या यह ग्रुप स्टैंडिंग को लाइव ट्रैक करता है?', a: 'हाँ, जैसे ही आप स्कोर दर्ज करते हैं, उपकरण आधिकारिक टाईब्रेकर नियमों का उपयोग करके अंक, गोल अंतर और रैंकिंग को वास्तविक समय में पुनर्गणना करता है।' },
+      { q: 'क्या मैं अपने अनुकरणित परिणाम साझा कर सकता हूँ?', a: 'हाँ, आप अंतिम स्टैंडिंग और ब्रैकेट को छवि के रूप में निर्यात कर सकते हैं या अपने अनुमानित परिणामों के साथ लिंक साझा कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'هل يمكنني محاكاة نتائج المباريات؟', a: 'نعم، يمكنك إدخال النتائج لأي مباراة في المجموعات أو خروج المغلوب ويقوم المحاكي بتحديث الترتيب والقرعة وفقًا لذلك.' },
+      { q: 'هل يتتبع ترتيب المجموعات مباشرة؟', a: 'نعم، أثناء إدخال النتائج تعيد الأداة حساب النقاط وفارق الأهداف والترتيب في الوقت الفعلي باستخدام قواعد كسر التعادل الرسمية.' },
+      { q: 'هل يمكنني مشاركة نتائجي المحاكاة؟', a: 'نعم، يمكنك تصدير الترتيب النهائي والقرعة كصورة أو مشاركة رابط بنتائجك المتوقعة.' },
+    ],
+  },
+  'wc-name-decorator': {
+    en: [
+      { q: 'How does the name decorator work?', a: 'Enter your name, choose a team theme, and the tool applies team colors, badges, and decorative elements around your text.' },
+      { q: 'Can I choose my team\'s colors?', a: 'Yes, you can pick from all 48 participating nations\' official color palettes or set custom colors manually.' },
+      { q: 'Can I download the decorated image?', a: 'Yes, you can export the decorated name as a PNG image for use as a profile picture, wallpaper, or social media post.' },
+    ],
+    zh: [
+      { q: '名字装饰器如何工作？', a: '输入您的名字、选择球队主题，工具会在文字周围应用球队颜色、徽章和装饰元素。' },
+      { q: '可以选择球队颜色吗？', a: '可以，您可以从 48 个参赛国家的官方配色中选择，或手动设置自定义颜色。' },
+      { q: '可以下载装饰后的图片吗？', a: '可以，您可以将装饰后的名字导出为 PNG 图片，用作头像、壁纸或社交媒体帖子。' },
+    ],
+    es: [
+      { q: '¿Cómo funciona el decorador de nombres?', a: 'Introduce tu nombre, elige un tema de equipo y la herramienta aplica colores, escudos y elementos decorativos alrededor de tu texto.' },
+      { q: '¿Puedo elegir los colores de mi equipo?', a: 'Sí, puedes elegir entre las paletas oficiales de los 48 países participantes o configurar colores personalizados manualmente.' },
+      { q: '¿Puedo descargar la imagen decorada?', a: 'Sí, puedes exportar el nombre decorado como imagen PNG para usarla como foto de perfil, fondo o publicación en redes sociales.' },
+    ],
+    fr: [
+      { q: 'Comment fonctionne le décorateur de noms ?', a: 'Entrez votre nom, choisissez un thème d\'équipe, et l\'outil applique les couleurs, écussons et éléments décoratifs autour de votre texte.' },
+      { q: 'Puis-je choisir les couleurs de mon équipe ?', a: 'Oui, vous pouvez choisir parmi les palettes officielles des 48 pays participants ou définir des couleurs personnalisées manuellement.' },
+      { q: 'Puis-je télécharger l\'image décorée ?', a: 'Oui, vous pouvez exporter le nom décoré en image PNG pour l\'utiliser comme photo de profil, fond d\'écran ou publication sur les réseaux sociaux.' },
+    ],
+    hi: [
+      { q: 'नाम डेकोरेटर कैसे काम करता है?', a: 'अपना नाम दर्ज करें, टीम थीम चुनें, और उपकरण आपके टेक्स्ट के चारों ओर टीम रंग, बैज और सजावटी तत्व लागू करता है।' },
+      { q: 'क्या मैं अपनी टीम के रंग चुन सकता हूँ?', a: 'हाँ, आप सभी 48 भाग लेने वाले देशों के आधिकारिक रंग पैलेट में से चुन सकते हैं या कस्टम रंग मैन्युअल रूप से सेट कर सकते हैं।' },
+      { q: 'क्या मैं सजाई गई छवि डाउनलोड कर सकता हूँ?', a: 'हाँ, आप सजाए गए नाम को PNG छवि के रूप में निर्यात कर सकते हैं और इसे प्रोफ़ाइल चित्र, वॉलपेपर या सोशल मीडिया पोस्ट के रूप में उपयोग कर सकते हैं।' },
+    ],
+    ar: [
+      { q: 'كيف يعمل مزين الأسماء؟', a: 'أدخل اسمك، اختر سمة فريق، وتقوم الأداة بتطبيق ألوان الفريق والشارات والعناصر الزخرفية حول نصك.' },
+      { q: 'هل يمكنني اختيار ألوان فريقي؟', a: 'نعم، يمكنك الاختيار من بين لوحات الألوان الرسمية لجميع الدول الـ 48 المشاركة أو تعيين ألوان مخصصة يدويًا.' },
+      { q: 'هل يمكنني تنزيل الصورة المزينة؟', a: 'نعم، يمكنك تصدير الاسم المزين كصورة PNG لاستخدامها كصورة ملف شخصي أو خلفية أو منشور على وسائل التواصل الاجتماعي.' },
+    ],
+  },
 };
 
 const FAQ_I18N: Record<SeoLocale, Record<FaqKey, { q: string; a: string }>> = {
