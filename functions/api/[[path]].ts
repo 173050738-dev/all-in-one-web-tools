@@ -66,13 +66,13 @@ async function callDeepseek(env: Env, systemPrompt: string, userPrompt: string, 
   return data.choices?.[0]?.message?.content || '';
 }
 
-async function checkRateLimit(env: Env, request: Request, limit: number = 5): Promise<{ remaining: number | null; blocked: boolean; message: string }> {
+async function checkRateLimit(env: Env, request: Request, limit: number = 5, toolName: string = 'default'): Promise<{ remaining: number | null; blocked: boolean; message: string }> {
   if (!env.DB) return { remaining: null, blocked: false, message: '' };
-  
+
   try {
     const ip = request.headers.get('cf-connecting-ip') || 'unknown';
     const day = new Date().toISOString().split('T')[0];
-    const key = `${ip}:${day}`;
+    const key = `${ip}:${toolName}:${day}`;
 
     const result = await env.DB.prepare('SELECT count FROM ai_usage WHERE k = ?')
       .bind(key)
@@ -180,7 +180,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const platform = (payload.platform as string) || 'general';
           if (!product?.trim() || !selling?.trim()) return errJson('Product and selling points are required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-copywriter');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -254,7 +254,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           if (!text?.trim()) return errJson('Text is required', 400);
           if (text.length > 4000) return errJson('Text too long (max 4000 chars)', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 10);
+          const rateLimitResult = await checkRateLimit(env, request, 10, 'ai-grammar-checker');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -303,7 +303,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           if (!prompt?.trim()) return errJson('Prompt is required', 400);
           if (prompt.length > 2000) return errJson('Prompt too long (max 2000 chars)', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 10);
+          const rateLimitResult = await checkRateLimit(env, request, 10, 'prompt-refine');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -348,7 +348,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const platform = (payload.platform as string) || 'general';
           if (!product?.trim() || !selling?.trim()) return errJson('Product name and feelings are required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-review-generator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -411,7 +411,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const tone = (payload.tone as string) || 'professional';
           if (!experience?.trim()) return errJson('Experience description is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-resume-experience-optimize');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -469,7 +469,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const tone = (payload.tone as string) || 'friendly';
           if (!content?.trim()) return errJson('Content description is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-xiaohongshu-title-generator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -526,7 +526,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const competitors = payload.competitors as any[];
           if (!competitors || !Array.isArray(competitors) || competitors.length === 0) return errJson('Competitors data is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'competitor-analyzer');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -595,7 +595,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const keywords = payload.keywords as string[];
           if (!keywords || !Array.isArray(keywords) || keywords.length === 0) return errJson('Keywords data is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'keyword-analyzer');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -660,7 +660,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const { subject, product, audience, tone } = payload;
           if (!subject || !product) return errJson('Subject and product are required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'email-template-generator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -713,7 +713,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const experience = (payload.experience as string) || 'medium';
           if (!task?.trim()) return errJson('Task description is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'time-estimator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -776,7 +776,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const keywords = (payload.keywords as string[]) || [];
           if (!theme?.trim()) return errJson('Theme is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'caption-generator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -806,7 +806,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const level = (payload.level as string) || 'mid';
           if (!text?.trim()) return errJson('Text is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'copy-cleaner');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -959,7 +959,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const style = (payload.style as string) || 'classic';
           if (!surname?.trim()) return errJson('Surname is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-name-generator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1034,7 +1034,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const tone = (payload.tone as string) || 'warm';
           if (!recipient?.trim()) return errJson('Recipient is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-greeting-generator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1107,7 +1107,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const plans = (payload.plans as string) || '';
           if (!role?.trim() || !tasks?.trim()) return errJson('Role and tasks are required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-weekly-report');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1174,7 +1174,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const diet = (payload.diet as string) || 'none';
           if (!ingredients?.trim()) return errJson('Ingredients are required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-recipe-generator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1251,7 +1251,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const testString = (payload.testString as string) || '';
           if (!description?.trim()) return errJson('Description is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-regex-generator');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1322,7 +1322,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const platform = (payload.platform as string) || 'general';
           if (!game?.trim() || !situation?.trim()) return errJson('Game and situation are required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-game-guide');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1369,7 +1369,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const daysPerWeek = (payload.daysPerWeek as string) || '3';
           if (!goal?.trim()) return errJson('Goal is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-workout-plan');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1442,7 +1442,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const mood = (payload.mood as string) || '';
           if (!scene?.trim()) return errJson('Scene description is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-moments-caption');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1495,7 +1495,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const goal = (payload.goal as string) || 'reply';
           if (!incomingText?.trim()) return errJson('Incoming message is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-smart-reply');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }
@@ -1557,7 +1557,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const interest = (payload.interest as string) || '';
           if (!recipient?.trim()) return errJson('Recipient is required', 400);
 
-          const rateLimitResult = await checkRateLimit(env, request, 5);
+          const rateLimitResult = await checkRateLimit(env, request, 5, 'ai-gift-recommender');
           if (rateLimitResult.blocked) {
             return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
           }

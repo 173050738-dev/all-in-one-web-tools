@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { Gift, RefreshCw, Copy, Check, Sparkles, ShoppingBag } from 'lucide-react';
+import { Gift, RefreshCw, Copy, Check, Sparkles, ShoppingBag, RotateCcw } from 'lucide-react';
 
 interface AiGiftRecommenderProps {
   locale?: string;
@@ -31,6 +31,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: '生成失败，请重试',
     rateLimit: '今日免费次数已用完（5次/天）',
     remaining: '今日剩余：',
+    reset: '清空',
     required: '请填写送礼对象',
   },
   en: {
@@ -54,6 +55,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'Generation failed, please retry',
     rateLimit: 'Daily free limit exceeded (5/day)',
     remaining: 'Remaining today: ',
+    reset: 'Clear',
     required: 'Please enter recipient',
   },
   hi: {
@@ -77,6 +79,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'विफल, पुनः प्रयास करें',
     rateLimit: 'दैनिक सीमा (5/दिन)',
     remaining: 'शेष: ',
+    reset: 'साफ़ करें',
     required: 'प्राप्तकर्ता दर्ज करें',
   },
   fr: {
@@ -100,6 +103,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'Échec, réessayez',
     rateLimit: 'Limite (5/jour)',
     remaining: 'Restant: ',
+    reset: 'Effacer',
     required: 'Entrez le destinataire',
   },
   es: {
@@ -123,6 +127,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'Error, intenta de nuevo',
     rateLimit: 'Límite (5/día)',
     remaining: 'Restante: ',
+    reset: 'Limpiar',
     required: 'Ingresa destinatario',
   },
   ar: {
@@ -146,6 +151,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'فشل، حاول مرة أخرى',
     rateLimit: 'الحد (5/يوم)',
     remaining: 'المتبقي: ',
+    reset: 'مسح',
     required: 'أدخل المستلم',
   },
 };
@@ -222,6 +228,18 @@ export default function AiGiftRecommender({ locale = 'zh' }: AiGiftRecommenderPr
     setTimeout(() => setCopiedIndex(null), 2000);
   }, []);
 
+  const handleReset = useCallback(() => {
+    setRecipient('');
+    setOccasion('birthday');
+    setBudget('');
+    setInterest('');
+    setItems([]);
+    setError(false);
+    setRateLimitError(false);
+    setRemaining(null);
+    setCopiedIndex(null);
+  }, []);
+
   return (
     <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
       <div className='card p-4 sm:p-6'>
@@ -273,6 +291,13 @@ export default function AiGiftRecommender({ locale = 'zh' }: AiGiftRecommenderPr
             {loading ? <RefreshCw className='h-5 w-5 animate-spin' /> : <Sparkles className='h-5 w-5' />}
             {loading ? t('loading') : t('generate')}
           </button>
+
+          {(items.length > 0 || recipient || budget || interest) && (
+            <button onClick={handleReset} className='w-full flex items-center justify-center gap-2 min-h-[44px] px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 text-sm font-medium transition-all'>
+              <RotateCcw className='h-4 w-4' />
+              {t('reset')}
+            </button>
+          )}
 
           {error && !rateLimitError && (
             <div className='p-3 sm:p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50'>

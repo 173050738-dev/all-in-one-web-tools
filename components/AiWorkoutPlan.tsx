@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { Dumbbell, RefreshCw, Copy, Check, Sparkles, Apple } from 'lucide-react';
+import { Dumbbell, RefreshCw, Copy, Check, Sparkles, Apple, RotateCcw } from 'lucide-react';
 
 interface AiWorkoutPlanProps {
   locale?: string;
@@ -31,6 +31,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: '生成失败，请重试',
     rateLimit: '今日免费次数已用完（5次/天）',
     remaining: '今日剩余：',
+    reset: '清空',
   },
   en: {
     title: 'AI Workout Plan Generator',
@@ -53,6 +54,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'Generation failed, please retry',
     rateLimit: 'Daily free limit exceeded (5/day)',
     remaining: 'Remaining today: ',
+    reset: 'Clear',
   },
   hi: {
     title: 'AI वर्कआउट प्लान जनरेटर',
@@ -75,6 +77,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'विफल, पुनः प्रयास करें',
     rateLimit: 'दैनिक सीमा पूरी (5/दिन)',
     remaining: 'शेष: ',
+    reset: 'साफ़ करें',
   },
   fr: {
     title: 'Générateur de plan d\'entraînement IA',
@@ -97,6 +100,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'Échec, réessayez',
     rateLimit: 'Limite atteinte (5/jour)',
     remaining: 'Restant: ',
+    reset: 'Effacer',
   },
   es: {
     title: 'Generador de plan de entrenamiento IA',
@@ -119,6 +123,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'Error, intenta de nuevo',
     rateLimit: 'Límite alcanzado (5/día)',
     remaining: 'Restante: ',
+    reset: 'Limpiar',
   },
   ar: {
     title: 'مولد خطط التمرين بالذكاء الاصطناعي',
@@ -141,6 +146,7 @@ const i18n: Record<string, Record<string, string>> = {
     error: 'فشل، حاول مرة أخرى',
     rateLimit: 'الحد (5/يوم)',
     remaining: 'المتبقي: ',
+    reset: 'مسح',
   },
 };
 
@@ -236,6 +242,20 @@ export default function AiWorkoutPlan({ locale = 'zh' }: AiWorkoutPlanProps) {
     setTimeout(() => setCopied(false), 2000);
   }, [summary, items, nutritionTips]);
 
+  const handleReset = useCallback(() => {
+    setGoal('fat_loss');
+    setLevel('beginner');
+    setEquipment('bodyweight');
+    setDays('3');
+    setSummary('');
+    setItems([]);
+    setNutritionTips('');
+    setError(false);
+    setRateLimitError(false);
+    setRemaining(null);
+    setCopied(false);
+  }, []);
+
   const renderOptions = (key: 'goal' | 'level' | 'equipment', value: string, setter: (v: string) => void) => (
     <div className='grid grid-cols-2 sm:grid-cols-4 gap-2'>
       {OPTIONS[key].map((opt) => (
@@ -299,6 +319,13 @@ export default function AiWorkoutPlan({ locale = 'zh' }: AiWorkoutPlanProps) {
             {loading ? <RefreshCw className='h-5 w-5 animate-spin' /> : <Sparkles className='h-5 w-5' />}
             {loading ? t('loading') : t('generate')}
           </button>
+
+          {(items.length > 0 || summary || nutritionTips) && (
+            <button onClick={handleReset} className='w-full flex items-center justify-center gap-2 min-h-[44px] px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 text-sm font-medium transition-all'>
+              <RotateCcw className='h-4 w-4' />
+              {t('reset')}
+            </button>
+          )}
 
           {error && !rateLimitError && (
             <div className='p-3 sm:p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50'>

@@ -75,6 +75,40 @@ function pathWithoutLocaleAndSuffix(fileAbs, rootOut) {
   return '/' + parts.join('/') + (parts.length === 0 ? '/' : '/');
 }
 
+// 从文件相对路径提取 locale 前缀（如 ar/en/zh）
+function getLocaleFromPath(fileAbs, rootOut) {
+  const rel = path.relative(rootOut, fileAbs).split(path.sep).join('/');
+  const parts = rel.split('/').filter(Boolean);
+  if (parts.length >= 1 && KNOWN_LOCALES.includes(parts[0])) {
+    return parts[0];
+  }
+  return null;
+}
+
+// 改写 <html lang="..." dir="..."> 标签，按 locale 设置正确的 lang 和 dir
+// 静态导出时 root layout 的 detectLocaleFromPath() 依赖 headers() 不可用，
+// fallback 到 'en'/'ltr'，导致所有页面 html 标签都是 lang="en" dir="ltr"。
+// 这里在构建产物上按目录前缀修正。
+function fixHtmlLangDir(html, locale) {
+  if (!locale) return html;
+  const dir = locale === 'ar' ? 'rtl' : 'ltr';
+  // 匹配 <html lang="..." dir="..." 或 <html dir="..." lang="..." 两种顺序
+  let changed = html.replace(
+    /<html\s+lang="[^"]*"\s+dir="[^"]*"/,
+    `<html lang="${locale}" dir="${dir}"`
+  );
+  changed = changed.replace(
+    /<html\s+dir="[^"]*"\s+lang="[^"]*"/,
+    `<html lang="${locale}" dir="${dir}"`
+  );
+  // 兜底：只有 lang 没有 dir，或只有 dir 没有 lang
+  changed = changed.replace(
+    /<html\s+lang="[^"]*"(?!\s+dir=)/,
+    `<html lang="${locale}" dir="${dir}"`
+  );
+  return changed;
+}
+
 function buildHreflangBlock(pathWithoutLocale) {
   const canonical = pathWithoutLocale.startsWith('/') ? pathWithoutLocale : `/${pathWithoutLocale}`;
   const norm = canonical.endsWith('/') ? canonical : `${canonical}/`;
@@ -105,12 +139,18 @@ function runInjectHreflang(target) {
   const htmlFiles = listHtmlFiles(target);
   let injected = 0;
   let skipped = 0;
+  let langFixed = 0;
   for (const file of htmlFiles) {
     try {
       const original = fs.readFileSync(file, 'utf8');
+      const locale = getLocaleFromPath(file, target);
+      // 1. 先修正 <html lang="..." dir="...">
+      let next = fixHtmlLangDir(original, locale);
+      if (next !== original) langFixed++;
+      // 2. 再注入 hreflang
       const restPath = pathWithoutLocaleAndSuffix(file, target);
       const block = buildHreflangBlock(restPath);
-      const next = injectHreflangToHtml(original, block);
+      next = injectHreflangToHtml(next, block);
       if (next !== original) {
         fs.writeFileSync(file, next, 'utf8');
         injected++;
@@ -122,7 +162,7 @@ function runInjectHreflang(target) {
     }
   }
   console.log(
-    `[post-build] SEO hreflang injected for ${injected} files (skipped ${skipped}) → ${path.relative(ROOT, target)}`
+    `[post-build] SEO hreflang injected for ${injected} files (skipped ${skipped}), html lang/dir fixed for ${langFixed} files → ${path.relative(ROOT, target)}`
   );
 }
 for (const target of targets) {
