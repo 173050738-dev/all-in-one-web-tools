@@ -47190,5 +47190,70 @@
       "icon": "Mouse",
       "isInternal": true,
       "popularity": 76
+    },
+    {
+      "id": "ai-name-generator",
+      "slug": "ai-name-generator",
+      "name": "AI取名器",
+      "description": "AI取名器，根据姓氏、性别和风格生成好听有寓意的名字，适合宝宝、宠物、网名取名",
+      "descriptionEn": "AI name generator that creates meaningful, beautiful names from surname, gender and style — great for babies, pets and usernames.",
+      "category": "text",
+      "tags": ["ai", "name", "naming", "baby", "username"],
+      "icon": "Sparkles",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 75
+    },
+    {
+      "id": "ai-greeting-generator",
+      "slug": "ai-greeting-generator",
+      "name": "AI祝福语生成器",
+      "description": "AI祝福语生成器，为生日、婚礼、新年等场景生成真挚动人的祝福语",
+      "descriptionEn": "AI greeting generator that crafts heartfelt wishes for birthdays, weddings, New Year and other occasions.",
+      "category": "text",
+      "tags": ["ai", "greeting", "wishes", "birthday", "blessing"],
+      "icon": "Heart",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 74
+    },
+    {
+      "id": "ai-weekly-report",
+      "slug": "ai-weekly-report",
+      "name": "AI周报生成器",
+      "description": "AI周报生成器，输入工作要点自动生成结构化周报，包含总结、成果、问题和计划",
+      "descriptionEn": "AI weekly report generator that turns your work bullets into a structured report with summary, achievements, issues and plans.",
+      "category": "text",
+      "tags": ["ai", "weekly-report", "work", "summary", "office"],
+      "icon": "FileText",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 73
+    },
+    {
+      "id": "ai-recipe-generator",
+      "slug": "ai-recipe-generator",
+      "name": "AI菜谱生成器",
+      "description": "AI菜谱生成器，根据食材和偏好生成详细菜谱，含配料、步骤和营养信息",
+      "descriptionEn": "AI recipe generator that creates detailed recipes from your ingredients and preferences, with ingredients, steps and nutrition info.",
+      "category": "text",
+      "tags": ["ai", "recipe", "cooking", "food", "nutrition"],
+      "icon": "UtensilsCrossed",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 74
+    },
+    {
+      "id": "ai-regex-generator",
+      "slug": "ai-regex-generator",
+      "name": "AI正则表达式生成器",
+      "description": "AI正则表达式生成器，用自然语言描述需求自动生成正则，附带解释和测试代码",
+      "descriptionEn": "AI regex generator that turns natural-language descriptions into regular expressions, with explanations and test code.",
+      "category": "developer",
+      "tags": ["ai", "regex", "regular-expression", "developer", "coding"],
+      "icon": "Regex",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 75
     }
 ]

@@ -8212,6 +8212,26 @@
         ]
       }
     },
+    "ai-name-generator": {
+      "name": "Générateur de Noms IA",
+      "description": "Générateur de noms IA qui crée des noms signés et mélodieux à partir du nom de famille, du genre et du style — idéal pour les bébés, animaux et pseudonymes."
+    },
+    "ai-greeting-generator": {
+      "name": "Générateur de Vœux IA",
+      "description": "Générateur de vœux IA qui rédige des messages sincères pour les anniversaires, mariages, Nouvel An et autres occasions."
+    },
+    "ai-weekly-report": {
+      "name": "Générateur de Rapport Hebdomadaire IA",
+      "description": "Générateur de rapport hebdomadaire IA qui transforme vos tâches en rapport structuré avec résumé, réalisations, problèmes et plan."
+    },
+    "ai-recipe-generator": {
+      "name": "Générateur de Recettes IA",
+      "description": "Générateur de recettes IA qui crée des recettes détaillées à partir de vos ingrédients et préférences, avec ingrédients, étapes et informations nutritionnelles."
+    },
+    "ai-regex-generator": {
+      "name": "Générateur de Regex IA",
+      "description": "Générateur de regex IA qui transforme les descriptions en langage naturel en expressions régulières, avec explications et code de test."
+    },
     "ai-copywriter": {
       "name": "Rédacteur AI",
       "description": "Générez du contenu marketing de haute qualité avec AI",

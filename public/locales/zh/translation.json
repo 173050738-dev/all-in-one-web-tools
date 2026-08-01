@@ -8212,6 +8212,26 @@
         ]
       }
     },
+    "ai-name-generator": {
+      "name": "AI取名器",
+      "description": "AI取名器，根据姓氏、性别和风格生成好听有寓意的名字，适合宝宝、宠物、网名取名"
+    },
+    "ai-greeting-generator": {
+      "name": "AI祝福语生成器",
+      "description": "AI祝福语生成器，为生日、婚礼、新年等场景生成真挚动人的祝福语"
+    },
+    "ai-weekly-report": {
+      "name": "AI周报生成器",
+      "description": "AI周报生成器，输入工作要点自动生成结构化周报，包含总结、成果、问题和计划"
+    },
+    "ai-recipe-generator": {
+      "name": "AI菜谱生成器",
+      "description": "AI菜谱生成器，根据食材和偏好生成详细菜谱，含配料、步骤和营养信息"
+    },
+    "ai-regex-generator": {
+      "name": "AI正则表达式生成器",
+      "description": "AI正则表达式生成器，用自然语言描述需求自动生成正则，附带解释和测试代码"
+    },
     "ai-copywriter": {
       "name": "AI 营销文案生成器",
       "description": "输入产品信息，AI 一键生成高质量营销文案",

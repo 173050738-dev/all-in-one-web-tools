@@ -109,6 +109,11 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'daily-tarot',
   'id-photo-bg-changer',
   'game-sensitivity-converter',
+  'ai-name-generator',
+  'ai-greeting-generator',
+  'ai-weekly-report',
+  'ai-recipe-generator',
+  'ai-regex-generator',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {
@@ -244,6 +249,19 @@ export const SLUG_ALIAS: Record<string, string> = {
   'sensitivity-converter': 'game-sensitivity-converter',
   'sens-converter': 'game-sensitivity-converter',
   'game-sens': 'game-sensitivity-converter',
+  'name-generator': 'ai-name-generator',
+  'baby-name': 'ai-name-generator',
+  'naming': 'ai-name-generator',
+  'greeting-generator': 'ai-greeting-generator',
+  'greeting': 'ai-greeting-generator',
+  'blessing-generator': 'ai-greeting-generator',
+  'weekly-report': 'ai-weekly-report',
+  'work-report': 'ai-weekly-report',
+  'recipe-generator': 'ai-recipe-generator',
+  'recipe': 'ai-recipe-generator',
+  'ai-regex': 'ai-regex-generator',
+  'regex-ai': 'ai-regex-generator',
+  'regex-builder': 'ai-regex-generator',
 };
 
 export const EXTERNAL_TOOL_URLS: Record<string, string> = {

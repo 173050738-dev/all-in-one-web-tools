@@ -7002,6 +7002,472 @@ export const WORKFLOW_TRANSLATIONS: Record<WorkflowSlug, Record<Locale, Workflow
       ],
     },
   },
+  'social-media-chat-content': {
+    zh: {
+      title: '社媒聊天截图创作',
+      description: '生成聊天截图、制作表情包、压缩图片、生成分享二维码，一站式搞定社媒内容创作',
+      steps: [
+        { title: '生成聊天截图', description: '制作逼真的微信风格聊天截图，自定义头像昵称消息' },
+        { title: '制作表情包', description: '上传图片添加上下文字，生成趣味表情包' },
+        { title: '压缩图片', description: '无损压缩截图和表情包体积，方便上传社交平台' },
+        { title: '生成分享二维码', description: '将内容链接生成二维码，便于扫码传播' },
+      ],
+    },
+    en: {
+      title: 'Social Media Chat Content Creation',
+      description: 'Generate chat screenshots, make memes, compress images, and create sharing QR codes — all your social media content creation in one place',
+      steps: [
+        { title: 'Generate Chat Screenshots', description: 'Create realistic WeChat-style chat screenshots with custom avatars, nicknames, and messages' },
+        { title: 'Create Memes', description: 'Upload images and add text to generate fun memes' },
+        { title: 'Compress Images', description: 'Losslessly compress screenshots and memes for easy upload to social platforms' },
+        { title: 'Generate Sharing QR Codes', description: 'Create QR codes from content links for easy scanning and sharing' },
+      ],
+    },
+    fr: {
+      title: 'Création de contenu de chat pour réseaux sociaux',
+      description: 'Générez des captures d\'écran de chat, créez des mèmes, compressez des images et des QR codes de partage — tout votre contenu pour les réseaux sociaux au même endroit',
+      steps: [
+        { title: 'Générer des captures de chat', description: 'Créez des captures d\'écran de chat de style WeChat réalistes avec avatars, surnoms et messages personnalisés' },
+        { title: 'Créer des mèmes', description: 'Téléchargez des images et ajoutez du texte pour générer des mèmes amusants' },
+        { title: 'Compresser les images', description: 'Compressez sans perte les captures d\'écran et les mèmes pour un téléversement facile sur les plateformes sociales' },
+        { title: 'Générer des QR codes de partage', description: 'Créez des QR codes à partir de liens de contenu pour un partage facile par scan' },
+      ],
+    },
+    es: {
+      title: 'Creación de contenido de chat para redes sociales',
+      description: 'Genera capturas de pantalla de chat, crea memes, comprime imágenes y genera códigos QR para compartir — todo tu contenido para redes sociales en un solo lugar',
+      steps: [
+        { title: 'Generar capturas de chat', description: 'Crea capturas de pantalla de chat estilo WeChat realistas con avatares, apodos y mensajes personalizados' },
+        { title: 'Crear memes', description: 'Sube imágenes y añade texto para generar memes divertidos' },
+        { title: 'Comprimir imágenes', description: 'Comprime sin pérdida capturas de pantalla y memes para subirlos fácilmente a las plataformas sociales' },
+        { title: 'Generar códigos QR de compartir', description: 'Crea códigos QR a partir de enlaces de contenido para compartirlos fácilmente al escanear' },
+      ],
+    },
+    hi: {
+      title: 'सोशल मीडिया चैट सामग्री निर्माण',
+      description: 'चैट स्क्रीनशॉट बनाएं, मीम्स तैयार करें, छवियों को संपीड़ित करें और साझा करने वाले QR कोड जनरेट करें — सभी सोशल मीडिया सामग्री निर्माण एक ही जगह पर',
+      steps: [
+        { title: 'चैट स्क्रीनशॉट जनरेट करें', description: 'कस्टम अवतार, उपनाम और संदेशों के साथ यथार्थवादी वीचैट-शैली के चैट स्क्रीनशॉट बनाएं' },
+        { title: 'मीम्स बनाएं', description: 'छवियां अपलोड करें और मजेदार मीम्स बनाने के लिए टेक्स्ट जोड़ें' },
+        { title: 'छवियां संपीड़ित करें', description: 'सोशल प्लेटफॉर्म पर आसानी से अपलोड करने के लिए स्क्रीनशॉट और मीम्स को बिना क्षति के संपीड़ित करें' },
+        { title: 'साझा करने वाले QR कोड जनरेट करें', description: 'आसान स्कैनिंग और साझा करने के लिए सामग्री लिंक से QR कोड बनाएं' },
+      ],
+    },
+    ar: {
+      title: 'إنشاء محتوى دردشة لوسائل التواصل الاجتماعي',
+      description: 'أنشئ لقطات شاشة للمحادثات، وصنع الميمات، وضغط الصور، وتوليد رموز QR للمشاركة — كل إنشاء محتوى وسائل التواصل الاجتماعي في مكان واحد',
+      steps: [
+        { title: 'إنشاء لقطات شاشة للمحادثة', description: 'أنشئ لقطات شاشة لمحادثات بأسلوب WeChat واقعية مع صور رمزية وألقاب ورسائل مخصصة' },
+        { title: 'إنشاء ميمات', description: 'ارفع الصور وأضف النصوص لإنشاء ميمات ممتعة' },
+        { title: 'ضغط الصور', description: 'اضغط لقطات الشاشة والميمات بدون فقدان للجودة لسهولة رفعها على منصات التواصل الاجتماعي' },
+        { title: 'توليد رموز QR للمشاركة', description: 'أنشئ رموز QR من روابط المحتوى لتسهيل مسحها ومشاركتها' },
+      ],
+    },
+  },
+  'meme-creation-flow': {
+    zh: {
+      title: '表情包制作流程',
+      description: '从图片到表情包到 emoji 混搭，快速产出趣味内容',
+      steps: [
+        { title: '制作图片表情包', description: '上传图片添加文字，生成经典表情包格式' },
+        { title: '压缩表情包', description: '压缩表情包图片体积，适配各平台大小限制' },
+        { title: 'Emoji 混搭', description: '将多个 emoji 混合生成新表情，增加趣味性' },
+      ],
+    },
+    en: {
+      title: 'Meme Creation Flow',
+      description: 'From images to memes to emoji mashups — quickly produce fun content',
+      steps: [
+        { title: 'Create Image Memes', description: 'Upload images and add text to generate classic meme formats' },
+        { title: 'Compress Memes', description: 'Compress meme image sizes to fit platform size limits' },
+        { title: 'Emoji Mashup', description: 'Mix multiple emojis to generate new expressions and add fun' },
+      ],
+    },
+    fr: {
+      title: 'Flux de création de mèmes',
+      description: 'Des images aux mèmes en passant par les mashups d\'emojis — produisez rapidement du contenu amusant',
+      steps: [
+        { title: 'Créer des mèmes à partir d\'images', description: 'Téléchargez des images et ajoutez du texte pour générer des mèmes au format classique' },
+        { title: 'Compresser les mèmes', description: 'Compressez la taille des images de mèmes pour respecter les limites de taille des plateformes' },
+        { title: 'Mashup d\'emojis', description: 'Mélangez plusieurs emojis pour générer de nouvelles expressions et ajouter du fun' },
+      ],
+    },
+    es: {
+      title: 'Flujo de creación de memes',
+      description: 'De imágenes a memes y combinaciones de emojis — produce contenido divertido rápidamente',
+      steps: [
+        { title: 'Crear memes de imágenes', description: 'Sube imágenes y añade texto para generar memes en formato clásico' },
+        { title: 'Comprimir memes', description: 'Comprime el tamaño de las imágenes de los memes para ajustarse a los límites de tamaño de las plataformas' },
+        { title: 'Combinación de emojis', description: 'Combina varios emojis para generar nuevas expresiones y añadir diversión' },
+      ],
+    },
+    hi: {
+      title: 'मीम निर्माण प्रवाह',
+      description: 'छवियों से मीम्स तक, इमोजी मैशअप तक — जल्दी से मजेदार सामग्री तैयार करें',
+      steps: [
+        { title: 'छवि मीम्स बनाएं', description: 'क्लासिक मीम प्रारूप में छवियां अपलोड करें और टेक्स्ट जोड़ें' },
+        { title: 'मीम्स संपीड़ित करें', description: 'प्लेटफॉर्म आकार सीमा के अनुसार मीम छवि आकार संपीड़ित करें' },
+        { title: 'इमोजी मैशअप', description: 'मज़ा बढ़ाने के लिए कई इमोजी को मिलाकर नए भाव उत्पन्न करें' },
+      ],
+    },
+    ar: {
+      title: 'تدفق إنشاء الميمات',
+      description: 'من الصور إلى الميمات إلى مزج الإيموجي — أنتج محتوى ممتعًا بسرعة',
+      steps: [
+        { title: 'إنشاء ميمات من الصور', description: 'ارفع الصور وأضف النصوص لإنشاء ميمات بتنسيق كلاسيكي' },
+        { title: 'ضغط الميمات', description: 'اضغط حجم صور الميمات لتناسب حدود حجم المنصات' },
+        { title: 'مزج الإيموجي', description: 'امزج عدة إيموجي لإنشاء تعبيرات جديدة وإضافة المرح' },
+      ],
+    },
+  },
+  'daily-fortune-telling': {
+    zh: {
+      title: '每日运势占卜',
+      description: '塔罗牌抽牌、抽签算命、抽福签，每天测运势三件套',
+      steps: [
+        { title: '抽塔罗牌', description: '每日抽一张大阿卡纳牌，获取正逆位解读' },
+        { title: '抽签算命', description: '抽一支签，查看今日运势箴言' },
+        { title: '抽福签', description: '抽取福签，获取每日好运祝福' },
+      ],
+    },
+    en: {
+      title: 'Daily Fortune Telling',
+      description: 'Tarot draw, fortune sticks, and blessing slips — your three-piece daily fortune toolkit',
+      steps: [
+        { title: 'Draw Tarot Cards', description: 'Draw a Major Arcana card daily for upright or reversed interpretation' },
+        { title: 'Draw Fortune Sticks', description: 'Draw a fortune stick to read today\'s fortune maxim' },
+        { title: 'Draw Blessing Slips', description: 'Draw a blessing slip for daily good luck wishes' },
+      ],
+    },
+    fr: {
+      title: 'Divination quotidienne',
+      description: 'Tirage de tarot, bâtons de fortune et billets de bénédiction — votre trio d\'outils de fortune quotidien',
+      steps: [
+        { title: 'Tirer les cartes de tarot', description: 'Tirez chaque jour une carte d\'Arcane Majeur pour une interprétation à l\'endroit ou à l\'envers' },
+        { title: 'Tirer un bâton de fortune', description: 'Tirez un bâton de fortune pour lire la maxime du jour' },
+        { title: 'Tirer un billet de bénédiction', description: 'Tirez un billet de bénédiction pour des vœux de chance quotidiens' },
+      ],
+    },
+    es: {
+      title: 'Adivinación de fortuna diaria',
+      description: 'Tirada de tarot, palillos de la fortuna y papeles de bendición — tu trío de herramientas de fortuna diaria',
+      steps: [
+        { title: 'Sacar cartas del tarot', description: 'Saca cada día una carta del Arcano Mayor para una interpretación al derecho o al revés' },
+        { title: 'Sacar palillo de la fortuna', description: 'Saca un palillo de la fortuna para leer la máxima de tu suerte del día' },
+        { title: 'Sacar papel de bendición', description: 'Saca un papel de bendición para deseos de buena suerte diarios' },
+      ],
+    },
+    hi: {
+      title: 'दैनिक भाग्य बताना',
+      description: 'टैरो कार्ड निकालना, भाग्य छड़ी, और आशीर्वाद पर्ची — आपका दैनिक भाग्य टूलकिट तिकड़ी',
+      steps: [
+        { title: 'टैरो कार्ड निकालें', description: 'उलटे या सीधे अर्थ के लिए रोज़ एक मेजर आर्केना कार्ड निकालें' },
+        { title: 'भाग्य छड़ी निकालें', description: 'आज के भाग्य वचन को पढ़ने के लिए एक भाग्य छड़ी निकालें' },
+        { title: 'आशीर्वाद पर्ची निकालें', description: 'दैनिक सौभाग्य शुभकामनाओं के लिए एक आशीर्वाद पर्ची निकालें' },
+      ],
+    },
+    ar: {
+      title: 'عرافة الحظ اليومي',
+      description: 'سحب التاروت وعصي الحظ وأوراق البركة — ثلاثيتك اليومية لأدوات الحظ',
+      steps: [
+        { title: 'سحب بطاقات التاروت', description: 'اسحب بطاقة من الأركانا الكبرى يوميًا للحصول على تفسير بالوضعية الصحيحة أو المقلوبة' },
+        { title: 'سحب عصا الحظ', description: 'اسحب عصا الحظ لقراءة حكمة حظك اليوم' },
+        { title: 'سحب أوراق البركة', description: 'اسحب ورقة بركة للحصول على أمنيات الحظ السعيد اليومي' },
+      ],
+    },
+  },
+  'id-photo-self-service': {
+    zh: {
+      title: '证件照自助制作',
+      description: '换背景色、压缩体积、转PDF打印，在家自助制作证件照',
+      steps: [
+        { title: '替换背景色', description: '上传照片，一键替换蓝底/红底/白底' },
+        { title: '压缩照片', description: '压缩证件照体积，满足网上报名大小要求' },
+        { title: '转PDF打印', description: '将证件照转为PDF格式，方便打印店冲印' },
+      ],
+    },
+    en: {
+      title: 'ID Photo Self-Service',
+      description: 'Change background color, compress file size, and convert to PDF for printing — make ID photos at home',
+      steps: [
+        { title: 'Replace Background Color', description: 'Upload a photo and one-click replace blue/red/white background' },
+        { title: 'Compress Photo', description: 'Compress ID photo size to meet online registration size requirements' },
+        { title: 'Convert to PDF for Printing', description: 'Convert ID photos to PDF format for easy photo shop printing' },
+      ],
+    },
+    fr: {
+      title: 'Création de photos d\'identité en libre-service',
+      description: 'Changez la couleur de fond, compressez la taille du fichier et convertissez en PDF pour l\'impression — créez vos photos d\'identité à la maison',
+      steps: [
+        { title: 'Remplacer la couleur de fond', description: 'Téléchargez une photo et remplacez en un clic le fond bleu/rouge/blanc' },
+        { title: 'Compresser la photo', description: 'Compressez la taille de la photo d\'identité pour répondre aux exigences de taille des inscriptions en ligne' },
+        { title: 'Convertir en PDF pour impression', description: 'Convertissez les photos d\'identité en format PDF pour une impression facile en magasin' },
+      ],
+    },
+    es: {
+      title: 'Autoservicio de fotos de identificación',
+      description: 'Cambia el color de fondo, comprime el tamaño del archivo y convierte a PDF para imprimir — haz fotos de identificación en casa',
+      steps: [
+        { title: 'Reemplazar el color de fondo', description: 'Sube una foto y reemplaza con un clic el fondo azul/rojo/blanco' },
+        { title: 'Comprimir foto', description: 'Comprime el tamaño de la foto de identificación para cumplir con los requisitos de tamaño de inscripción en línea' },
+        { title: 'Convertir a PDF para imprimir', description: 'Convierte las fotos de identificación a formato PDF para imprimir fácilmente en una tienda' },
+      ],
+    },
+    hi: {
+      title: 'पहचान फोटो स्व-सेवा',
+      description: 'बैकग्राउंड रंग बदलें, फ़ाइल आकार संपीड़ित करें और प्रिंटिंग के लिए PDF में बदलें — घर पर पहचान फोटो बनाएं',
+      steps: [
+        { title: 'बैकग्राउंड रंग बदलें', description: 'एक फोटो अपलोड करें और एक क्लिक में नीले/लाल/सफेद बैकग्राउंड को बदलें' },
+        { title: 'फोटो संपीड़ित करें', description: 'ऑनलाइन पंजीकरण आकार आवश्यकताओं को पूरा करने के लिए पहचान फोटो आकार संपीड़ित करें' },
+        { title: 'प्रिंटिंग के लिए PDF में बदलें', description: 'आसान फोटो शॉप प्रिंटिंग के लिए पहचान फोटो को PDF प्रारूप में बदलें' },
+      ],
+    },
+    ar: {
+      title: 'خدمة ذاتية لصور الهوية',
+      description: 'غيّر لون الخلفية، وضغط حجم الملف، وحوّل إلى PDF للطباعة — أنشئ صور الهوية في المنزل',
+      steps: [
+        { title: 'استبدال لون الخلفية', description: 'ارفع صورة واستبدل بنقرة واحدة الخلفية الزرقاء/الحمراء/البيضاء' },
+        { title: 'ضغط الصورة', description: 'اضغط حجم صورة الهوية لتلبية متطلبات حجم التسجيل عبر الإنترنت' },
+        { title: 'التحويل إلى PDF للطباعة', description: 'حوّل صور الهوية إلى تنسيق PDF لسهولة طباعتها في متجر الصور' },
+      ],
+    },
+  },
+  'fps-game-setup': {
+    zh: {
+      title: 'FPS游戏配置',
+      description: '灵敏度转换、选角色、训练计时，FPS玩家上手配置三件套',
+      steps: [
+        { title: '转换灵敏度', description: '在不同FPS游戏间转换灵敏度，保持手感一致' },
+        { title: '选角色/武器', description: '用转盘随机选择角色或武器，增加游戏乐趣' },
+        { title: '训练计时', description: '设置专注训练计时器，科学安排练枪时间' },
+      ],
+    },
+    en: {
+      title: 'FPS Game Setup',
+      description: 'Sensitivity conversion, character selection, and training timer — three-piece setup kit for FPS players',
+      steps: [
+        { title: 'Convert Sensitivity', description: 'Convert sensitivity between different FPS games to maintain consistent feel' },
+        { title: 'Pick Character/Weapon', description: 'Use a spinning wheel to randomly pick characters or weapons and add fun to your game' },
+        { title: 'Training Timer', description: 'Set a focused training timer to scientifically plan your aim practice time' },
+      ],
+    },
+    fr: {
+      title: 'Configuration de jeu FPS',
+      description: 'Conversion de sensibilité, sélection de personnage et minuteur d\'entraînement — trio d\'outils de configuration pour les joueurs FPS',
+      steps: [
+        { title: 'Convertir la sensibilité', description: 'Convertissez la sensibilité entre différents jeux FPS pour garder une sensation cohérente' },
+        { title: 'Choisir personnage/arme', description: 'Utilisez une roue pour choisir aléatoirement un personnage ou une arme et ajouter du fun au jeu' },
+        { title: 'Minuteur d\'entraînement', description: 'Réglez un minuteur d\'entraînement concentré pour planifier scientifiquement votre temps de pratique de visée' },
+      ],
+    },
+    es: {
+      title: 'Configuración de juegos FPS',
+      description: 'Conversión de sensibilidad, selección de personajes y temporizador de entrenamiento — trío de configuración para jugadores de FPS',
+      steps: [
+        { title: 'Convertir sensibilidad', description: 'Convierte la sensibilidad entre diferentes juegos FPS para mantener una sensación consistente' },
+        { title: 'Elegir personaje/arma', description: 'Usa una ruleta para elegir al azar personajes o armas y añadir diversión al juego' },
+        { title: 'Temporizador de entrenamiento', description: 'Configura un temporizador de entrenamiento enfocado para planificar científicamente tu tiempo de práctica de puntería' },
+      ],
+    },
+    hi: {
+      title: 'FPS गेम सेटअप',
+      description: 'संवेदनशीलता रूपांतरण, चरित्र चयन, और प्रशिक्षण टाइमर — FPS खिलाड़ियों के लिए तीन-टुकड़ा सेटअप किट',
+      steps: [
+        { title: 'संवेदनशीलता रूपांतरित करें', description: 'सुसंगत अनुभव बनाए रखने के लिए विभिन्न FPS गेम के बीच संवेदनशीलता रूपांतरित करें' },
+        { title: 'चरित्र/हथियार चुनें', description: 'गेम में मज़ा बढ़ाने के लिए स्पिनिंग व्हील का उपयोग करके बेतरतीब ढंग से चरित्र या हथियार चुनें' },
+        { title: 'प्रशिक्षण टाइमर', description: 'अपने निशानेबाजी अभ्यास समय की वैज्ञानिक रूप से योजना के लिए एक केंद्रित प्रशिक्षण टाइमर सेट करें' },
+      ],
+    },
+    ar: {
+      title: 'إعداد ألعاب FPS',
+      description: 'تحويل الحساسية، اختيار الشخصية، ومؤقت التدريب — ثلاثية أدوات الإعداد للاعبي FPS',
+      steps: [
+        { title: 'تحويل الحساسية', description: 'حوّل الحساسية بين ألعاب FPS المختلفة للحفاظ على إحساس متناسق' },
+        { title: 'اختيار شخصية/سلاح', description: 'استخدم عجلة دوارة لاختيار شخصيات أو أسلحة عشوائيًا وإضافة المرح للعبتك' },
+        { title: 'مؤقت التدريب', description: 'اضبط مؤقت تدريب مركّز لتنظيم وقت تدريب التصويب علميًا' },
+      ],
+    },
+  },
+  'romantic-writing-suite': {
+    zh: {
+      title: '浪漫文案创作',
+      description: '情书、夸夸语、藏头诗、情绪色板，浪漫内容创作四件套',
+      steps: [
+        { title: '生成情书', description: '输入关键词，自动生成浪漫情书' },
+        { title: '生成夸夸语', description: '生成彩虹屁般的夸赞文案，温暖人心' },
+        { title: '作藏头诗', description: '输入名字，生成专属藏头诗' },
+        { title: '配色情绪板', description: '根据情绪生成配色方案，搭配浪漫文案' },
+      ],
+    },
+    en: {
+      title: 'Romantic Writing Suite',
+      description: 'Love letters, compliments, acrostic poems, and mood color palettes — four-piece romantic content creation kit',
+      steps: [
+        { title: 'Generate Love Letters', description: 'Enter keywords to automatically generate romantic love letters' },
+        { title: 'Generate Compliments', description: 'Generate praise copy that warms hearts like rainbow flattery' },
+        { title: 'Compose Acrostic Poems', description: 'Enter a name to generate a personalized acrostic poem' },
+        { title: 'Mood Color Palette', description: 'Generate color schemes based on mood to pair with romantic copy' },
+      ],
+    },
+    fr: {
+      title: 'Suite d\'écriture romantique',
+      description: 'Lettres d\'amour, compliments, poèmes acrostiches et palettes de couleurs d\'humeur — kit de création de contenu romantique en quatre pièces',
+      steps: [
+        { title: 'Générer des lettres d\'amour', description: 'Saisissez des mots-clés pour générer automatiquement des lettres d\'amour romantiques' },
+        { title: 'Générer des compliments', description: 'Générez des textes de louanges qui réchauffent les cœurs comme des flatteries arc-en-ciel' },
+        { title: 'Composer des poèmes acrostiches', description: 'Saisissez un nom pour générer un poème acrostiche personnalisé' },
+        { title: 'Palette de couleurs d\'humeur', description: 'Générez des palettes de couleurs selon l\'humeur pour les assortir à des textes romantiques' },
+      ],
+    },
+    es: {
+      title: 'Suite de escritura romántica',
+      description: 'Cartas de amor, halagos, poemas acrósticos y paletas de colores de humor — kit de creación de contenido romántico en cuatro piezas',
+      steps: [
+        { title: 'Generar cartas de amor', description: 'Introduce palabras clave para generar automáticamente cartas de amor románticas' },
+        { title: 'Generar halagos', description: 'Genera textos de elogio que calientan el corazón como adulaciones arcoíris' },
+        { title: 'Componer poemas acrósticos', description: 'Introduce un nombre para generar un poema acróstico personalizado' },
+        { title: 'Paleta de colores de humor', description: 'Genera esquemas de colores según el humor para combinar con textos románticos' },
+      ],
+    },
+    hi: {
+      title: 'रोमांटिक लेखन सूट',
+      description: 'प्रेम पत्र, प्रशंसा, अक्रोस्टिक कविताएं, और मूड रंग पैलेट — चार-टुकड़ा रोमांटिक सामग्री निर्माण किट',
+      steps: [
+        { title: 'प्रेम पत्र जनरेट करें', description: 'रोमांटिक प्रेम पत्र स्वचालित रूप से जनरेट करने के लिए कीवर्ड दर्ज करें' },
+        { title: 'प्रशंसा जनरेट करें', description: 'इंद्रधनुष चापलस्य की तरह दिलों को गर्म करने वाले प्रशंसा टेक्स्ट जनरेट करें' },
+        { title: 'अक्रोस्टिक कविता बनाएं', description: 'व्यक्तिगत अक्रोस्टिक कविता जनरेट करने के लिए एक नाम दर्ज करें' },
+        { title: 'मूड रंग पैलेट', description: 'रोमांटिक टेक्स्ट के साथ जोड़ने के लिए मूड के आधार पर रंग योजनाएं जनरेट करें' },
+      ],
+    },
+    ar: {
+      title: 'مجموعة الكتابة الرومانسية',
+      description: 'رسائل حب، مجاملات، قصائد أكروستيك، ولوحات ألوان مزاج — أداة من أربع قطع لإنشاء المحتوى الرومانسي',
+      steps: [
+        { title: 'توليد رسائل الحب', description: 'أدخل الكلمات الرئيسية لتوليد رسائل حب رومانسية تلقائيًا' },
+        { title: 'توليد المجاملات', description: 'أنشئ نصوص مديح تُدفيء القلوب كالمجاملة القوس قزحية' },
+        { title: 'تأليف قصائد أكروستيك', description: 'أدخل اسمًا لتوليد قصيدة أكروستيك مخصصة' },
+        { title: 'لوحة ألوان المزاج', description: 'أنشئ أنظمة ألوان بناءً على المزاج لتنسيقها مع النصوص الرومانسية' },
+      ],
+    },
+  },
+  'dream-analysis-journal': {
+    zh: {
+      title: '梦境解析记录',
+      description: '解梦、人生时间线、字数统计，记录与分析梦境三件套',
+      steps: [
+        { title: '解析梦境', description: '输入梦境内容，获取梦境解析与象征含义' },
+        { title: '人生时间线', description: '以周为单位可视化人生，记录重要节点' },
+        { title: '统计字数', description: '统计梦境记录的字数词数，方便整理归档' },
+      ],
+    },
+    en: {
+      title: 'Dream Analysis Journal',
+      description: 'Dream interpretation, life timeline, and word count — three-piece kit for recording and analyzing dreams',
+      steps: [
+        { title: 'Analyze Dreams', description: 'Enter dream content to get dream interpretation and symbolic meanings' },
+        { title: 'Life Timeline', description: 'Visualize your life in weeks and record important milestones' },
+        { title: 'Count Words', description: 'Count words and characters of dream records for easy organization and archiving' },
+      ],
+    },
+    fr: {
+      title: 'Journal d\'analyse des rêves',
+      description: 'Interprétation des rêves, chronologie de vie et comptage de mots — trio d\'outils pour enregistrer et analyser les rêves',
+      steps: [
+        { title: 'Analyser les rêves', description: 'Saisissez le contenu du rêve pour obtenir une interprétation et des significations symboliques' },
+        { title: 'Chronologie de vie', description: 'Visualisez votre vie en semaines et enregistrez les étapes importantes' },
+        { title: 'Compter les mots', description: 'Comptez les mots et caractères des enregistrements de rêves pour une organisation et un archivage faciles' },
+      ],
+    },
+    es: {
+      title: 'Diario de análisis de sueños',
+      description: 'Interpretación de sueños, línea de tiempo de vida y conteo de palabras — trío de herramientas para registrar y analizar sueños',
+      steps: [
+        { title: 'Analizar sueños', description: 'Introduce el contenido del sueño para obtener una interpretación y significados simbólicos' },
+        { title: 'Línea de tiempo de vida', description: 'Visualiza tu vida en semanas y registra los hitos importantes' },
+        { title: 'Contar palabras', description: 'Cuenta palabras y caracteres de los registros de sueños para organizar y archivar fácilmente' },
+      ],
+    },
+    hi: {
+      title: 'स्वप्न विश्लेषण जर्नल',
+      description: 'स्वप्न व्याख्या, जीवन समयरेखा, और शब्द गणना — स्वप्न रिकॉर्ड करने और विश्लेषण के लिए तीन-टुकड़ा किट',
+      steps: [
+        { title: 'स्वप्न विश्लेषण करें', description: 'स्वप्न व्याख्या और प्रतीकात्मक अर्थ प्राप्त करने के लिए स्वप्न सामग्री दर्ज करें' },
+        { title: 'जीवन समयरेखा', description: 'सप्ताहों में अपने जीवन को विज़ुअलाइज़ करें और महत्वपूर्ण मील के पत्थर रिकॉर्ड करें' },
+        { title: 'शब्द गणना करें', description: 'आसान व्यवस्थापन और संग्रह के लिए स्वप्न रिकॉर्ड के शब्दों और वर्णों की गणना करें' },
+      ],
+    },
+    ar: {
+      title: 'مذكرات تحليل الأحلام',
+      description: 'تفسير الأحلام، الجدول الزمني للحياة، وعد الكلمات — ثلاثية أدوات لتسجيل وتحليل الأحلام',
+      steps: [
+        { title: 'تحليل الأحلام', description: 'أدخل محتوى الحلم للحصول على تفسير الحلم والمعاني الرمزية' },
+        { title: 'الجدول الزمني للحياة', description: 'تصور حياتك بالأسابيع وسجّل المعالم المهمة' },
+        { title: 'عد الكلمات', description: 'اعد كلمات وحروف سجلات الأحلام لسهولة التنظيم والأرشفة' },
+      ],
+    },
+  },
+  'chinese-writing-toolkit': {
+    zh: {
+      title: '中文创作套件',
+      description: '文言文转换、拼音标注、竖排文字、藏头诗，中文创作四件套',
+      steps: [
+        { title: '转文言文', description: '将现代文转换为文言文风格，增添古韵' },
+        { title: '标注拼音', description: '为中文文本标注拼音，方便朗读与学习' },
+        { title: '生成竖排文字', description: '将文字转为竖排古风排版，适合古风设计' },
+        { title: '作藏头诗', description: '输入主题字，生成专属藏头诗' },
+      ],
+    },
+    en: {
+      title: 'Chinese Writing Toolkit',
+      description: 'Classical Chinese conversion, pinyin annotation, vertical text, and acrostic poems — four-piece Chinese writing kit',
+      steps: [
+        { title: 'Convert to Classical Chinese', description: 'Convert modern Chinese to classical style to add ancient charm' },
+        { title: 'Annotate Pinyin', description: 'Add pinyin annotations to Chinese text for easy reading and learning' },
+        { title: 'Generate Vertical Text', description: 'Convert text to vertical classical layout, suitable for vintage designs' },
+        { title: 'Compose Acrostic Poems', description: 'Enter theme characters to generate personalized acrostic poems' },
+      ],
+    },
+    fr: {
+      title: 'Kit d\'écriture chinoise',
+      description: 'Conversion en chinois classique, annotation pinyin, texte vertical et poèmes acrostiches — kit d\'écriture chinoise en quatre pièces',
+      steps: [
+        { title: 'Convertir en chinois classique', description: 'Convertissez le chinois moderne en style classique pour ajouter une touche ancienne' },
+        { title: 'Annoter le pinyin', description: 'Ajoutez des annotations pinyin au texte chinois pour faciliter la lecture et l\'apprentissage' },
+        { title: 'Générer du texte vertical', description: 'Convertissez le texte en mise en page verticale classique, adaptée aux designs vintage' },
+        { title: 'Composer des poèmes acrostiches', description: 'Saisissez des caractères thématiques pour générer des poèmes acrostiches personnalisés' },
+      ],
+    },
+    es: {
+      title: 'Kit de escritura china',
+      description: 'Conversión a chino clásico, anotación pinyin, texto vertical y poemas acrósticos — kit de escritura china en cuatro piezas',
+      steps: [
+        { title: 'Convertir a chino clásico', description: 'Convierte el chino moderno al estilo clásico para añadir un encanto antiguo' },
+        { title: 'Anotar pinyin', description: 'Añade anotaciones pinyin al texto chino para facilitar la lectura y el aprendizaje' },
+        { title: 'Generar texto vertical', description: 'Convierte el texto a un diseño vertical clásico, adecuado para diseños vintage' },
+        { title: 'Componer poemas acrósticos', description: 'Introduce caracteres temáticos para generar poemas acrósticos personalizados' },
+      ],
+    },
+    hi: {
+      title: 'चीनी लेखन किट',
+      description: 'शास्त्रीय चीनी रूपांतरण, पिनयिन एनोटेशन, लंबवर्ती पाठ, और अक्रोस्टिक कविताएं — चार-टुकड़ा चीनी लेखन किट',
+      steps: [
+        { title: 'शास्त्रीय चीनी में बदलें', description: 'प्राचीन आकर्षण जोड़ने के लिए आधुनिक चीनी को शास्त्रीय शैली में बदलें' },
+        { title: 'पिनयिन एनोटेट करें', description: 'आसान पठन और सीखने के लिए चीनी पाठ में पिनयिन एनोटेशन जोड़ें' },
+        { title: 'लंबवर्ती पाठ जनरेट करें', description: 'पाठ को लंबवर्ती शास्त्रीय लेआउट में बदलें, विंटेज डिज़ाइन के लिए उपयुक्त' },
+        { title: 'अक्रोस्टिक कविता बनाएं', description: 'व्यक्तिगत अक्रोस्टिक कविताएं जनरेट करने के लिए थीम अक्षर दर्ज करें' },
+      ],
+    },
+    ar: {
+      title: 'مجموعة الكتابة الصينية',
+      description: 'التحويل إلى الصينية الكلاسيكية، الترقيم البيني، النص العمودي، والقصائد الأكروستيكية — مجموعة من أربع قطع للكتابة الصينية',
+      steps: [
+        { title: 'التحويل إلى الصينية الكلاسيكية', description: 'حوّل الصينية الحديثة إلى النمط الكلاسيكي لإضافة سحر قديم' },
+        { title: 'إضافة الترقيم البيني', description: 'أضف تعليقات البينين إلى النص الصيني لتسهيل القراءة والتعلم' },
+        { title: 'توليد النص العمودي', description: 'حوّل النص إلى تخطيط كلاسيكي عمودي، مناسب للتصاميم الكلاسيكية' },
+        { title: 'تأليف قصائد أكروستيك', description: 'أدخل أحرف الموضوع لتوليد قصائد أكروستيك مخصصة' },
+      ],
+    },
+  },
 };
 
 const SUFFIX_MAP: Record<Locale, string> = {

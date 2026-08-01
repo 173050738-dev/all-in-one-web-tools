@@ -8212,6 +8212,26 @@
         ]
       }
     },
+    "ai-name-generator": {
+      "name": "Generador de Nombres con IA",
+      "description": "Generador de nombres con IA que crea nombres hermosos y con significado a partir de apellido, género y estilo, ideal para bebés, mascotas y usuarios en línea."
+    },
+    "ai-greeting-generator": {
+      "name": "Generador de Felicitaciones con IA",
+      "description": "Generador de felicitaciones con IA que crea deseos sinceros para cumpleaños, bodas, Año Nuevo y otras ocasiones."
+    },
+    "ai-weekly-report": {
+      "name": "Generador de Informe Semanal con IA",
+      "description": "Generador de informe semanal con IA que convierte tus tareas en un informe estructurado con resumen, logros, problemas y plan."
+    },
+    "ai-recipe-generator": {
+      "name": "Generador de Recetas con IA",
+      "description": "Generador de recetas con IA que crea recetas detalladas a partir de tus ingredientes y preferencias, con ingredientes, pasos e información nutricional."
+    },
+    "ai-regex-generator": {
+      "name": "Generador de Regex con IA",
+      "description": "Generador de regex con IA que convierte descripciones en lenguaje natural en expresiones regulares, con explicaciones y código de prueba."
+    },
     "ai-copywriter": {
       "name": "Redactor AI",
       "description": "Genera contenido marketing de alta calidad con AI",

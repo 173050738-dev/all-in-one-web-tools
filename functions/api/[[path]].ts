@@ -951,6 +951,369 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           }
         }
 
+        case '/api/ai-name-generator':
+        case '/api/ai-name-generator/': {
+          const type = (payload.type as string) || 'baby';
+          const surname = (payload.surname as string) || '';
+          const gender = (payload.gender as string) || 'neutral';
+          const style = (payload.style as string) || 'classic';
+          if (!surname?.trim()) return errJson('Surname is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const typeMap: Record<string, string> = {
+            baby: locale === 'zh' ? '宝宝名字' : locale === 'es' ? 'nombre de bebé' : locale === 'fr' ? 'nom de bébé' : locale === 'hi' ? 'बेबी नाम' : locale === 'ar' ? 'اسم طفل' : 'baby name',
+            pet: locale === 'zh' ? '宠物名字' : locale === 'es' ? 'nombre de mascota' : locale === 'fr' ? 'nom d\'animal' : locale === 'hi' ? 'पालतू नाम' : locale === 'ar' ? 'اسم حيوان أليف' : 'pet name',
+            nickname: locale === 'zh' ? '网名/昵称' : locale === 'es' ? 'apodo' : locale === 'fr' ? 'pseudo' : locale === 'hi' ? 'उपनाम' : locale === 'ar' ? 'اسم مستعار' : 'nickname',
+            english: locale === 'zh' ? '英文名' : locale === 'es' ? 'nombre en inglés' : locale === 'fr' ? 'nom anglais' : locale === 'hi' ? 'अंग्रेजी नाम' : locale === 'ar' ? 'اسم إنجليزي' : 'English name',
+          };
+          const genderMap: Record<string, string> = {
+            male: locale === 'zh' ? '男' : locale === 'es' ? 'masculino' : locale === 'fr' ? 'masculin' : locale === 'hi' ? 'पुरुष' : locale === 'ar' ? 'ذكر' : 'male',
+            female: locale === 'zh' ? '女' : locale === 'es' ? 'femenino' : locale === 'fr' ? 'féminin' : locale === 'hi' ? 'महिला' : locale === 'ar' ? 'أنثى' : 'female',
+            neutral: locale === 'zh' ? '中性' : locale === 'es' ? 'neutral' : locale === 'fr' ? 'neutre' : locale === 'hi' ? 'तटस्थ' : locale === 'ar' ? 'محايد' : 'neutral',
+          };
+          const nameStyleMap: Record<string, string> = {
+            classic: locale === 'zh' ? '古风/传统' : locale === 'es' ? 'clásico' : locale === 'fr' ? 'classique' : locale === 'hi' ? 'पारंपरिक' : locale === 'ar' ? 'كلاسيكي' : 'classic/traditional',
+            modern: locale === 'zh' ? '现代/简约' : locale === 'es' ? 'moderno' : locale === 'fr' ? 'moderne' : locale === 'hi' ? 'आधुनिक' : locale === 'ar' ? 'حديث' : 'modern',
+            cute: locale === 'zh' ? '可爱/俏皮' : locale === 'es' ? 'lindo' : locale === 'fr' ? 'mignon' : locale === 'hi' ? 'प्यारा' : locale === 'ar' ? 'لطيف' : 'cute',
+            powerful: locale === 'zh' ? '霸气/豪迈' : locale === 'es' ? 'poderoso' : locale === 'fr' ? 'puissant' : locale === 'hi' ? 'शक्तिशाली' : locale === 'ar' ? 'قوي' : 'powerful',
+            poetic: locale === 'zh' ? '诗意/文雅' : locale === 'es' ? 'poético' : locale === 'fr' ? 'poétique' : locale === 'hi' ? 'काव्यात्मक' : locale === 'ar' ? 'شاعري' : 'poetic',
+          };
+          const targetType = typeMap[type] || typeMap.baby;
+          const targetGender = genderMap[gender] || genderMap.neutral;
+          const targetStyle = nameStyleMap[style] || nameStyleMap.classic;
+
+          const systemPrompt = `你是一个专业的起名专家。根据用户提供的姓氏、性别和风格偏好，生成好听有寓意的名字。每个名字附带寓意解释和出处。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "name": "名字",
+      "meaning": "寓意解释",
+      "origin": "出处/典故"
+    }
+  ]
+}
+
+请生成【5个】名字。用 ${langLabel(locale)} 输出。寓意要真实可信，出处准确，不编造典故。`;
+
+          const userPrompt = locale === 'zh'
+            ? `类型：${targetType}\n姓氏：${surname}\n性别：${targetGender}\n风格：${targetStyle}\n\n请生成5个有寓意的名字。`
+            : locale === 'es'
+            ? `Tipo: ${targetType}\nApellido: ${surname}\nGénero: ${targetGender}\nEstilo: ${targetStyle}\n\nGenera 5 nombres con significado.`
+            : locale === 'fr'
+            ? `Type: ${targetType}\nNom de famille: ${surname}\nGenre: ${targetGender}\nStyle: ${targetStyle}\n\nGénérez 5 noms avec signification.`
+            : locale === 'hi'
+            ? `प्रकार: ${targetType}\nउपनाम: ${surname}\nलिंग: ${targetGender}\nशैली: ${targetStyle}\n\n5 अर्थपूर्ण नाम बनाएं।`
+            : locale === 'ar'
+            ? `النوع: ${targetType}\nاسم العائلة: ${surname}\nالجنس: ${targetGender}\nالأسلوب: ${targetStyle}\n\nأنشئ 5 أسماء ذات معنى.`
+            : `Type: ${targetType}\nSurname: ${surname}\nGender: ${targetGender}\nStyle: ${targetStyle}\n\nGenerate 5 meaningful names.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.items || !Array.isArray(result.items)) {
+            return errJson('No names generated', 500);
+          }
+          return json({ items: result.items.slice(0, 5), remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-greeting-generator':
+        case '/api/ai-greeting-generator/': {
+          const occasion = (payload.occasion as string) || 'birthday';
+          const recipient = (payload.recipient as string) || '';
+          const message = (payload.message as string) || '';
+          const tone = (payload.tone as string) || 'warm';
+          if (!recipient?.trim()) return errJson('Recipient is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const occasionMap: Record<string, string> = {
+            birthday: locale === 'zh' ? '生日' : locale === 'es' ? 'cumpleaños' : locale === 'fr' ? 'anniversaire' : locale === 'hi' ? 'जन्मदिन' : locale === 'ar' ? 'عيد ميلاد' : 'birthday',
+            wedding: locale === 'zh' ? '婚礼' : locale === 'es' ? 'boda' : locale === 'fr' ? 'mariage' : locale === 'hi' ? 'शादी' : locale === 'ar' ? 'زفاف' : 'wedding',
+            newyear: locale === 'zh' ? '新年' : locale === 'es' ? 'año nuevo' : locale === 'fr' ? 'nouvel an' : locale === 'hi' ? 'नया साल' : locale === 'ar' ? 'رأس السنة' : 'new year',
+            springfestival: locale === 'zh' ? '春节' : locale === 'es' ? 'fiesta de primavera' : locale === 'fr' ? 'fête du printemps' : locale === 'hi' ? 'वसंत उत्सव' : locale === 'ar' ? 'مهرجان الربيع' : 'spring festival',
+            midautumn: locale === 'zh' ? '中秋' : locale === 'es' ? 'medio otoño' : locale === 'fr' ? 'mi-automne' : locale === 'hi' ? 'मध्य शरद' : locale === 'ar' ? 'منتصف الخريف' : 'mid-autumn',
+            housewarming: locale === 'zh' ? '乔迁' : locale === 'es' ? 'inauguración' : locale === 'fr' ? 'emménagement' : locale === 'hi' ? 'गृह प्रवेश' : locale === 'ar' ? 'انتقال منزل' : 'housewarming',
+            graduation: locale === 'zh' ? '毕业' : locale === 'es' ? 'graduación' : locale === 'fr' ? 'diplôme' : locale === 'hi' ? 'स्नातक' : locale === 'ar' ? 'تخرج' : 'graduation',
+            promotion: locale === 'zh' ? '升职' : locale === 'es' ? 'ascenso' : locale === 'fr' ? 'promotion' : locale === 'hi' ? 'पदोन्नति' : locale === 'ar' ? 'ترقية' : 'promotion',
+          };
+          const greetingToneMap: Record<string, string> = {
+            warm: locale === 'zh' ? '温馨' : locale === 'es' ? 'cálido' : locale === 'fr' ? 'chaleureux' : locale === 'hi' ? 'गर्मजनक' : locale === 'ar' ? 'دافئ' : 'warm',
+            formal: locale === 'zh' ? '正式' : locale === 'es' ? 'formal' : locale === 'fr' ? 'formel' : locale === 'hi' ? 'औपचारिक' : locale === 'ar' ? 'رسمي' : 'formal',
+            humorous: locale === 'zh' ? '幽默' : locale === 'es' ? 'humorístico' : locale === 'fr' ? 'humoristique' : locale === 'hi' ? 'हास्यपूर्ण' : locale === 'ar' ? 'مزاح' : 'humorous',
+            creative: locale === 'zh' ? '创意' : locale === 'es' ? 'creativo' : locale === 'fr' ? 'créatif' : locale === 'hi' ? 'रचनात्मक' : locale === 'ar' ? 'إبداعي' : 'creative',
+          };
+          const targetOccasion = occasionMap[occasion] || occasionMap.birthday;
+          const targetTone = greetingToneMap[tone] || greetingToneMap.warm;
+
+          const systemPrompt = `你是一个专业的祝福语创作专家。根据场景和收件人，生成真挚动人的祝福语。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "greeting": "祝福语内容",
+      "tips": "送出建议（如何送出、何时送、搭配什么礼物等）"
+    }
+  ]
+}
+
+请生成【3条】祝福语。用 ${langLabel(locale)} 输出。祝福语要真挚动人、避免套话，每条不超过150字。`;
+
+          const extraMsg = message?.trim() ? `\n${locale === 'zh' ? '附加留言' : locale === 'es' ? 'Mensaje adicional' : locale === 'fr' ? 'Message supplémentaire' : locale === 'hi' ? 'अतिरिक्त संदेश' : locale === 'ar' ? 'رسالة إضافية' : 'Additional message'}: ${message.trim()}` : '';
+
+          const userPrompt = locale === 'zh'
+            ? `场景：${targetOccasion}\n收件人：${recipient}\n语气：${targetTone}${extraMsg}\n\n请生成3条祝福语。`
+            : locale === 'es'
+            ? `Ocasión: ${targetOccasion}\nDestinatario: ${recipient}\nTono: ${targetTone}${extraMsg}\n\nGenera 3 felicitaciones.`
+            : locale === 'fr'
+            ? `Occasion: ${targetOccasion}\nDestinataire: ${recipient}\nTon: ${targetTone}${extraMsg}\n\nGénérez 3 félicitations.`
+            : locale === 'hi'
+            ? `अवसर: ${targetOccasion}\nप्राप्तकर्ता: ${recipient}\nटोन: ${targetTone}${extraMsg}\n\n3 शुभकामनाएं बनाएं।`
+            : locale === 'ar'
+            ? `المناسبة: ${targetOccasion}\nالمستلم: ${recipient}\nالنبرة: ${targetTone}${extraMsg}\n\nأنشئ 3 تهنئات.`
+            : `Occasion: ${targetOccasion}\nRecipient: ${recipient}\nTone: ${targetTone}${extraMsg}\n\nGenerate 3 greetings.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.items || !Array.isArray(result.items)) {
+            return errJson('No greetings generated', 500);
+          }
+          return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-weekly-report':
+        case '/api/ai-weekly-report/': {
+          const role = (payload.role as string) || '';
+          const tasks = (payload.tasks as string) || '';
+          const achievements = (payload.achievements as string) || '';
+          const plans = (payload.plans as string) || '';
+          if (!role?.trim() || !tasks?.trim()) return errJson('Role and tasks are required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const sectionLabels = {
+            summary: locale === 'zh' ? '本周总结' : locale === 'es' ? 'Resumen de la semana' : locale === 'fr' ? 'Résumé de la semaine' : locale === 'hi' ? 'इस सप्ताह का सारांश' : locale === 'ar' ? 'ملخص الأسبوع' : 'This Week Summary',
+            achievements: locale === 'zh' ? '主要成果' : locale === 'es' ? 'Logros principales' : locale === 'fr' ? 'Principaux résultats' : locale === 'hi' ? 'मुख्य उपलब्धियां' : locale === 'ar' ? 'الإنجازات الرئيسية' : 'Main Achievements',
+            issues: locale === 'zh' ? '问题与风险' : locale === 'es' ? 'Problemas y riesgos' : locale === 'fr' ? 'Problèmes et risques' : locale === 'hi' ? 'समस्याएं और जोखिम' : locale === 'ar' ? 'المشكلات والمخاطر' : 'Issues & Risks',
+            plans: locale === 'zh' ? '下周计划' : locale === 'es' ? 'Plan de la próxima semana' : locale === 'fr' ? 'Plan de la semaine prochaine' : locale === 'hi' ? 'अगले सप्ताह की योजना' : locale === 'ar' ? 'خطة الأسبوع القادم' : 'Next Week Plan',
+          };
+
+          const systemPrompt = `你是一个职场写作助手。根据用户提供的工作内容，生成结构化的周报。包含：本周总结、主要成果、问题与风险、下周计划。
+
+输出要求：
+- 使用 markdown 格式
+- 使用一级标题 # 周报标题
+- 使用二级标题 ## 划分以下四个固定章节：
+  ## ${sectionLabels.summary}
+  ## ${sectionLabels.achievements}
+  ## ${sectionLabels.issues}
+  ## ${sectionLabels.plans}
+- 每个章节内容要充实具体，可用列表 - 呈现
+- 用 ${langLabel(locale)} 输出
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "report": "周报全文（markdown 格式字符串）"
+}`;
+
+          const achievementsSection = achievements?.trim() ? `\n${locale === 'zh' ? '已取得成果' : locale === 'es' ? 'Logros obtenidos' : locale === 'fr' ? 'Résultats obtenus' : locale === 'hi' ? 'प्राप्त उपलब्धियां' : locale === 'ar' ? 'الإنجازات المحققة' : 'Achievements made'}: ${achievements.trim()}` : '';
+          const plansSection = plans?.trim() ? `\n${locale === 'zh' ? '下周计划' : locale === 'es' ? 'Plan de próxima semana' : locale === 'fr' ? 'Plan de la semaine prochaine' : locale === 'hi' ? 'अगले सप्ताह की योजना' : locale === 'ar' ? 'خطة الأسبوع القادم' : 'Next week plan'}: ${plans.trim()}` : '';
+
+          const userPrompt = locale === 'zh'
+            ? `职位：${role}\n本周工作内容：\n${tasks}${achievementsSection}${plansSection}\n\n请生成结构化周报。`
+            : locale === 'es'
+            ? `Puesto: ${role}\nTareas de esta semana:\n${tasks}${achievementsSection}${plansSection}\n\nGenera un informe semanal estructurado.`
+            : locale === 'fr'
+            ? `Poste: ${role}\nTâches de cette semaine:\n${tasks}${achievementsSection}${plansSection}\n\nGénérez un rapport hebdomadaire structuré.`
+            : locale === 'hi'
+            ? `पद: ${role}\nइस सप्ताह के कार्य:\n${tasks}${achievementsSection}${plansSection}\n\nएक संरचित साप्ताहिक रिपोर्ट बनाएं।`
+            : locale === 'ar'
+            ? `المنصب: ${role}\nمهام هذا الأسبوع:\n${tasks}${achievementsSection}${plansSection}\n\nأنشئ تقريراً أسبوعياً منظماً.`
+            : `Role: ${role}\nThis week's tasks:\n${tasks}${achievementsSection}${plansSection}\n\nGenerate a structured weekly report.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.report || typeof result.report !== 'string') {
+            return errJson('No report generated', 500);
+          }
+          return json({ report: result.report, remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-recipe-generator':
+        case '/api/ai-recipe-generator/': {
+          const ingredients = (payload.ingredients as string) || '';
+          const cuisine = (payload.cuisine as string) || 'any';
+          const difficulty = (payload.difficulty as string) || 'easy';
+          const servings = (payload.servings as string) || '2';
+          const diet = (payload.diet as string) || 'none';
+          if (!ingredients?.trim()) return errJson('Ingredients are required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const cuisineMap: Record<string, string> = {
+            chinese: locale === 'zh' ? '中式' : locale === 'es' ? 'china' : locale === 'fr' ? 'chinoise' : locale === 'hi' ? 'चीनी' : locale === 'ar' ? 'صيني' : 'Chinese',
+            western: locale === 'zh' ? '西式' : locale === 'es' ? 'occidental' : locale === 'fr' ? 'occidental' : locale === 'hi' ? 'पश्चिमी' : locale === 'ar' ? 'غربي' : 'Western',
+            japanese: locale === 'zh' ? '日式' : locale === 'es' ? 'japonesa' : locale === 'fr' ? 'japonaise' : locale === 'hi' ? 'जापानी' : locale === 'ar' ? 'ياباني' : 'Japanese',
+            korean: locale === 'zh' ? '韩式' : locale === 'es' ? 'coreana' : locale === 'fr' ? 'coréenne' : locale === 'hi' ? 'कोरियाई' : locale === 'ar' ? 'كوري' : 'Korean',
+            southeast: locale === 'zh' ? '东南亚' : locale === 'es' ? 'sudeste asiático' : locale === 'fr' ? 'sud-est asiatique' : locale === 'hi' ? 'दक्षिण पूर्व एशियाई' : locale === 'ar' ? 'جنوب شرق آسيوي' : 'Southeast Asian',
+            any: locale === 'zh' ? '不限' : locale === 'es' ? 'cualquiera' : locale === 'fr' ? 'toute' : locale === 'hi' ? 'कोई भी' : locale === 'ar' ? 'أي' : 'Any',
+          };
+          const difficultyMap: Record<string, string> = {
+            easy: locale === 'zh' ? '简单' : locale === 'es' ? 'fácil' : locale === 'fr' ? 'facile' : locale === 'hi' ? 'आसान' : locale === 'ar' ? 'سهل' : 'easy',
+            medium: locale === 'zh' ? '中等' : locale === 'es' ? 'media' : locale === 'fr' ? 'moyenne' : locale === 'hi' ? 'मध्यम' : locale === 'ar' ? 'متوسط' : 'medium',
+            hard: locale === 'zh' ? '复杂' : locale === 'es' ? 'difícil' : locale === 'fr' ? 'difficile' : locale === 'hi' ? 'कठिन' : locale === 'ar' ? 'صعب' : 'hard',
+          };
+          const dietMap: Record<string, string> = {
+            none: locale === 'zh' ? '无限制' : locale === 'es' ? 'sin restricción' : locale === 'fr' ? 'aucune' : locale === 'hi' ? 'कोई नहीं' : locale === 'ar' ? 'بدون' : 'none',
+            vegetarian: locale === 'zh' ? '素食' : locale === 'es' ? 'vegetariano' : locale === 'fr' ? 'végétarien' : locale === 'hi' ? 'शाकाहारी' : locale === 'ar' ? 'نباتي' : 'vegetarian',
+            lowcalorie: locale === 'zh' ? '低卡' : locale === 'es' ? 'bajo en calorías' : locale === 'fr' ? 'faible calorie' : locale === 'hi' ? 'कम कैलोरी' : locale === 'ar' ? 'منخفض السعرات' : 'low-calorie',
+            glutenfree: locale === 'zh' ? '无麸质' : locale === 'es' ? 'sin gluten' : locale === 'fr' ? 'sans gluten' : locale === 'hi' ? 'ग्लूटेन मुक्त' : locale === 'ar' ? 'خالٍ من الغلوتين' : 'gluten-free',
+          };
+          const targetCuisine = cuisineMap[cuisine] || cuisineMap.any;
+          const targetDifficulty = difficultyMap[difficulty] || difficultyMap.easy;
+          const targetDiet = dietMap[diet] || dietMap.none;
+
+          const systemPrompt = `你是一个专业厨师和营养师。根据用户提供的食材和偏好，生成详细菜谱。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "recipes": [
+    {
+      "name": "菜名",
+      "ingredients": ["材料1（用量）", "材料2（用量）"],
+      "steps": ["步骤1", "步骤2", "步骤3"],
+      "tips": "烹饪小贴士",
+      "nutrition": "营养信息（含热量/蛋白质/脂肪等）"
+    }
+  ]
+}
+
+请生成【2个】菜谱。用 ${langLabel(locale)} 输出。菜谱要切实可行，步骤清晰可执行，营养信息要真实合理。`;
+
+          const userPrompt = locale === 'zh'
+            ? `食材：${ingredients}\n菜系：${targetCuisine}\n难度：${targetDifficulty}\n人数：${servings}人份\n饮食限制：${targetDiet}\n\n请生成2个菜谱。`
+            : locale === 'es'
+            ? `Ingredientes: ${ingredients}\nCocina: ${targetCuisine}\nDificultad: ${targetDifficulty}\nPorciones: ${servings}\nDieta: ${targetDiet}\n\nGenera 2 recetas.`
+            : locale === 'fr'
+            ? `Ingrédients: ${ingredients}\nCuisine: ${targetCuisine}\nDifficulté: ${targetDifficulty}\nPortions: ${servings}\nRégime: ${targetDiet}\n\nGénérez 2 recettes.`
+            : locale === 'hi'
+            ? `सामग्री: ${ingredients}\nभोजन: ${targetCuisine}\nकठिनाई: ${targetDifficulty}\nहिस्से: ${servings}\nआहार: ${targetDiet}\n\n2 रेसिपी बनाएं।`
+            : locale === 'ar'
+            ? `المكونات: ${ingredients}\nالمطبخ: ${targetCuisine}\nالصعوبة: ${targetDifficulty}\nالحصص: ${servings}\nالحمية: ${targetDiet}\n\nأنشئ وصفتين.`
+            : `Ingredients: ${ingredients}\nCuisine: ${targetCuisine}\nDifficulty: ${targetDifficulty}\nServings: ${servings}\nDiet: ${targetDiet}\n\nGenerate 2 recipes.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.recipes || !Array.isArray(result.recipes)) {
+            return errJson('No recipes generated', 500);
+          }
+          return json({ recipes: result.recipes.slice(0, 2), remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-regex-generator':
+        case '/api/ai-regex-generator/': {
+          const description = (payload.description as string) || '';
+          const language = (payload.language as string) || 'general';
+          const testString = (payload.testString as string) || '';
+          if (!description?.trim()) return errJson('Description is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const languageMap: Record<string, string> = {
+            javascript: 'JavaScript',
+            python: 'Python',
+            java: 'Java',
+            go: 'Go',
+            general: locale === 'zh' ? '通用（PCRE 风格）' : locale === 'es' ? 'general (estilo PCRE)' : locale === 'fr' ? 'général (style PCRE)' : locale === 'hi' ? 'सामान्य (PCRE शैली)' : locale === 'ar' ? 'عام (نمط PCRE)' : 'general (PCRE style)',
+          };
+          const targetLanguage = languageMap[language] || languageMap.general;
+
+          const systemPrompt = `你是一个正则表达式专家。根据用户的自然语言描述，生成正确的正则表达式，并解释每个部分的含义。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "regex": "正则表达式（仅模式本身，不含语言特定分隔符/标志）",
+  "explanation": "逐段解释每个部分的作用，例如：^ 表示开头，[a-z] 匹配小写字母等",
+  "matches": ["在测试字符串中匹配到的字符串列表，如无测试字符串则为空数组"],
+  "testCode": "对应语言的测试代码片段（字符串）"
+}
+
+注意：
+- regex 字段只输出纯正则模式本身（如 ^[a-z]+$），不要包含 /.../ 分隔符或标志
+- 如果提供了测试字符串，必须在 matches 数组中列出所有匹配到的子串
+- testCode 要根据目标语言生成可运行的示例代码
+- 用 ${langLabel(locale)} 输出 explanation，regex/testCode 保持代码形式`;
+
+          const testStrSection = testString?.trim() ? `\n${locale === 'zh' ? '测试字符串' : locale === 'es' ? 'Cadena de prueba' : locale === 'fr' ? 'Chaîne de test' : locale === 'hi' ? 'परीक्षण स्ट्रिंग' : locale === 'ar' ? 'سلسلة الاختبار' : 'Test string'}: ${testString.trim()}` : '';
+
+          const userPrompt = locale === 'zh'
+            ? `需求描述：${description}\n目标语言：${targetLanguage}${testStrSection}\n\n请生成正则表达式并解释。`
+            : locale === 'es'
+            ? `Descripción: ${description}\nLenguaje: ${targetLanguage}${testStrSection}\n\nGenera la expresión regular y explícala.`
+            : locale === 'fr'
+            ? `Description: ${description}\nLangage: ${targetLanguage}${testStrSection}\n\nGénérez l'expression régulière et expliquez-la.`
+            : locale === 'hi'
+            ? `विवरण: ${description}\nभाषा: ${targetLanguage}${testStrSection}\n\nरेगुलर एक्सप्रेशन बनाएं और समझाएं।`
+            : locale === 'ar'
+            ? `الوصف: ${description}\nاللغة: ${targetLanguage}${testStrSection}\n\nأنشئ التعبير النمطي واشرحه.`
+            : `Description: ${description}\nLanguage: ${targetLanguage}${testStrSection}\n\nGenerate the regex and explain it.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try {
+            result = JSON.parse(content);
+          } catch {
+            return errJson('Failed to parse AI response', 500);
+          }
+          if (!result.regex || typeof result.regex !== 'string') {
+            return errJson('No regex generated', 500);
+          }
+          return json({
+            regex: result.regex,
+            explanation: result.explanation || '',
+            matches: Array.isArray(result.matches) ? result.matches : [],
+            testCode: result.testCode || '',
+            remaining: rateLimitResult.remaining,
+          });
+        }
+
         default:
           return errJson('Not found', 404);
       }

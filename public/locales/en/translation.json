@@ -8212,6 +8212,26 @@
         ]
       }
     },
+    "ai-name-generator": {
+      "name": "AI Name Generator",
+      "description": "AI name generator that creates meaningful, beautiful names from surname, gender and style — great for babies, pets and usernames."
+    },
+    "ai-greeting-generator": {
+      "name": "AI Greeting Generator",
+      "description": "AI greeting generator that crafts heartfelt wishes for birthdays, weddings, New Year and other occasions."
+    },
+    "ai-weekly-report": {
+      "name": "AI Weekly Report Generator",
+      "description": "AI weekly report generator that turns your work bullets into a structured report with summary, achievements, issues and plans."
+    },
+    "ai-recipe-generator": {
+      "name": "AI Recipe Generator",
+      "description": "AI recipe generator that creates detailed recipes from your ingredients and preferences, with ingredients, steps and nutrition info."
+    },
+    "ai-regex-generator": {
+      "name": "AI Regex Generator",
+      "description": "AI regex generator that turns natural-language descriptions into regular expressions, with explanations and test code."
+    },
     "ai-copywriter": {
       "name": "AI Copywriter",
       "description": "Free AI copywriter generates high-quality marketing copy in seconds. Get ad copy, product descriptions, and headlines for your brand. No signup, in browser.",
