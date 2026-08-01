@@ -2,9 +2,10 @@
 
 export interface Env {
   DB?: D1Database;
-  DEEPSEEK_API_KEY?: string;
-  DEEPSEEK_API_URL?: string;
-  DEEPSEEK_MODEL?: string;
+  // 2026-08-02 迁移: DeepSeek → 火山方舟 (ByteDance ARK) - Carson 授权
+  ARK_API_KEY?: string;
+  ARK_API_URL?: string;
+  ARK_MODEL?: string;
 }
 
 function json(data: unknown, status = 200): Response {
@@ -38,9 +39,10 @@ const toneMap: Record<string, Record<string, string>> = {
 };
 
 async function callDeepseek(env: Env, systemPrompt: string, userPrompt: string, jsonResponse = false): Promise<string> {
-  const apiKey = env.DEEPSEEK_API_KEY || (typeof process !== 'undefined' ? process.env?.DEEPSEEK_API_KEY : undefined);
-  const apiUrl = env.DEEPSEEK_API_URL || 'https://api.deepseek.com/v1/chat/completions';
-  const model = env.DEEPSEEK_MODEL || 'deepseek-chat';
+  // 2026-08-02 迁移: 调用层从 DeepSeek 切到火山方舟 (OpenAI 兼容协议)
+  const apiKey = env.ARK_API_KEY || (typeof process !== 'undefined' ? process.env?.ARK_API_KEY : undefined);
+  const apiUrl = env.ARK_API_URL || 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
+  const model = env.ARK_MODEL || 'doubao-seed-2-0-pro-260215';
 
   if (!apiKey) throw new Error('API key not configured');
 
@@ -58,8 +60,8 @@ async function callDeepseek(env: Env, systemPrompt: string, userPrompt: string, 
 
   if (!response.ok) {
     const errorText = await response.text();
-    console.error('DeepSeek API error:', response.status, errorText);
-    throw new Error('AI service unavailable');
+    console.error('ARK API error:', response.status, errorText);
+    throw new Error('AI service unavailable: HTTP ' + response.status + ' | ' + errorText.replace(/[\r\n]/g, ' ').slice(0, 300));
   }
 
   const data = await response.json();

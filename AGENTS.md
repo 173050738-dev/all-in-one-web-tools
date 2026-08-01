@@ -118,6 +118,23 @@
 
 ---
 
+### 硬约束【数据必须实时】（2026-08-02 新增，Carson 拍板）
+- 任何关于 Korelyy 数据/数字的发言，**必须先跑** `node D:\codex-tools\korelyy-data-snapshot.js` 取实时数据
+- **禁止**用 AGENTS.md 缓存数字（49/78/109/280/128 等均已漂移过）
+- 脚本输出以下关键数（2026-08-01 19:47 实测基线）：
+  - `deployed_tools` = **109** ← 前端实际部署工具数（Carson 线上看到的口径，唯一对外口径）
+  - `isSelfHosted_true` = 78 ← 数据文件 isSelfHosted=true 字段值
+  - `total` = 1594 ← 工具站总规模（外链 1516 + 自研 78）
+  - `api_routes` = 28 ← 后端端点
+  - `workflows` = 288 ← data/workflows.ts
+  - `blog_posts` = 157 ← data/blog-index.ts
+  - `locales` = 6 ← en/zh/es/fr/hi/ar
+  - `not_marked_self_in_index` = 31 个 slug ← 前端有 page 但 index 字段未标 isSelfHosted=true
+- 口径定死：
+  - 对外/对外汇报/引流话术/给 Trae 改文档 → 用 `deployed_tools`（109）
+  - 数据字段补全/迁移 → 用 `isSelfHosted_true`（78）
+  - 两者差额 31 个 = 待 Trae 批量补 isSelfHosted=true 字段
+- 上次漂移事故：自研工具数 49→78→109；工作流 280→288；blog 128→157。**任何数字都不能凭记忆或 handoff 报**，必须现跑
 ## 十二、X（Twitter）引流运营进度与计划（每次会话读此节，主动提醒 Carson 推进）
 > 【AI 自我指令】每个新会话读到此节，若发现有【待办】未完成，主动提醒 Carson：现在该做哪一步。Codex 无定时能力，靠此节做跨会话记忆。
 
