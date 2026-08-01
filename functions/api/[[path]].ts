@@ -1314,6 +1314,297 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           });
         }
 
+        case '/api/ai-game-guide':
+        case '/api/ai-game-guide/': {
+          const game = (payload.game as string) || '';
+          const situation = (payload.situation as string) || '';
+          const level = (payload.level as string) || '';
+          const platform = (payload.platform as string) || 'general';
+          if (!game?.trim() || !situation?.trim()) return errJson('Game and situation are required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const systemPrompt = `你是一位资深的游戏攻略专家，熟悉各类热门游戏的关卡、BOSS、角色养成和操作技巧。根据玩家提供的游戏名、卡点描述和关卡信息，生成实用的通关攻略。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "title": "攻略标题",
+      "strategy": "详细通关思路（200-300字，分步骤说明）",
+      "tips": "避坑要点/小技巧（50-100字）"
+    }
+  ]
+}
+
+请生成【3条】不同思路的攻略。用 ${langLabel(locale)} 输出。攻略要具体可操作，不编造不存在的技能/道具名。`;
+
+          const userPrompt = locale === 'zh'
+            ? `游戏名：${game}\n关卡/角色/BOSS：${level || '未指定'}\n平台：${platform}\n卡点描述：${situation}\n\n请生成3条通关攻略。`
+            : locale === 'es'
+            ? `Juego: ${game}\nNivel/personaje/jefe: ${level || 'no especificado'}\nPlataforma: ${platform}\nDescripción del problema: ${situation}\n\nGenera 3 guías.`
+            : locale === 'fr'
+            ? `Jeu: ${game}\nNiveau/personnage/boss: ${level || 'non spécifié'}\nPlateforme: ${platform}\nDescription du blocage: ${situation}\n\nGénérez 3 guides.`
+            : locale === 'hi'
+            ? `गेम: ${game}\nस्तर/चरित्र/बॉस: ${level || 'अनिर्दिष्ट'}\nप्लेटफ़ॉर्म: ${platform}\nसमस्या विवरण: ${situation}\n\n3 गाइड बनाएं।`
+            : locale === 'ar'
+            ? `اللعبة: ${game}\nالمستوى/الشخصية/الزعيم: ${level || 'غير محدد'}\nالمنصة: ${platform}\nوصف المشكلة: ${situation}\n\nأنشئ 3 أدلة.`
+            : `Game: ${game}\nLevel/character/boss: ${level || 'unspecified'}\nPlatform: ${platform}\nBlocker description: ${situation}\n\nGenerate 3 guides.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try { result = JSON.parse(content); } catch { return errJson('Failed to parse AI response', 500); }
+          if (!result.items || !Array.isArray(result.items)) return errJson('No guides generated', 500);
+          return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-workout-plan':
+        case '/api/ai-workout-plan/': {
+          const goal = (payload.goal as string) || 'fitness';
+          const level = (payload.level as string) || 'beginner';
+          const equipment = (payload.equipment as string) || 'bodyweight';
+          const daysPerWeek = (payload.daysPerWeek as string) || '3';
+          if (!goal?.trim()) return errJson('Goal is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const goalMap: Record<string, string> = {
+            fat_loss: locale === 'zh' ? '减脂' : locale === 'es' ? 'pérdida de grasa' : locale === 'fr' ? 'perte de graisse' : locale === 'hi' ? 'वसा हानि' : locale === 'ar' ? 'فقدان الدهون' : 'fat loss',
+            muscle: locale === 'zh' ? '增肌' : locale === 'es' ? 'ganancia muscular' : locale === 'fr' ? 'prise de muscle' : locale === 'hi' ? 'मांसपेशी वृद्धि' : locale === 'ar' ? 'بناء العضلات' : 'muscle gain',
+            shaping: locale === 'zh' ? '塑形' : locale === 'es' ? 'tonificación' : locale === 'fr' ? 'tonification' : locale === 'hi' ? 'शेपिंग' : locale === 'ar' ? 'نحت الجسم' : 'body shaping',
+            fitness: locale === 'zh' ? '提升体能' : locale === 'es' ? 'mejorar condición física' : locale === 'fr' ? 'améliorer la condition' : locale === 'hi' ? 'फिटनेस' : locale === 'ar' ? 'لياقة بدنية' : 'general fitness',
+          };
+          const levelMap: Record<string, string> = {
+            beginner: locale === 'zh' ? '初学者' : locale === 'es' ? 'principiante' : locale === 'fr' ? 'débutant' : locale === 'hi' ? 'शुरुआती' : locale === 'ar' ? 'مبتدئ' : 'beginner',
+            intermediate: locale === 'zh' ? '中级' : locale === 'es' ? 'intermedio' : locale === 'fr' ? 'intermédiaire' : locale === 'hi' ? 'मध्यवर्ती' : locale === 'ar' ? 'متوسط' : 'intermediate',
+            advanced: locale === 'zh' ? '高级' : locale === 'es' ? 'avanzado' : locale === 'fr' ? 'avancé' : locale === 'hi' ? 'उन्नत' : locale === 'ar' ? 'متقدم' : 'advanced',
+          };
+          const equipMap: Record<string, string> = {
+            bodyweight: locale === 'zh' ? '徒手/自重' : locale === 'es' ? 'peso corporal' : locale === 'fr' ? 'poids du corps' : locale === 'hi' ? 'शारीरिक भार' : locale === 'ar' ? 'وزن الجسم' : 'bodyweight',
+            dumbbell: locale === 'zh' ? '哑铃' : locale === 'es' ? 'mancuernas' : locale === 'fr' ? 'haltères' : locale === 'hi' ? 'डम्बल' : locale === 'ar' ? 'دمبل' : 'dumbbells',
+            gym: locale === 'zh' ? '健身房全套' : locale === 'es' ? 'gimnasio completo' : locale === 'fr' ? 'salle de sport' : locale === 'hi' ? 'जिम' : locale === 'ar' ? 'صالة رياضية' : 'full gym',
+            home: locale === 'zh' ? '家用简单器械' : locale === 'es' ? 'equipo casero' : locale === 'fr' ? 'équipement maison' : locale === 'hi' ? 'घर का उपकरण' : locale === 'ar' ? 'معدات منزلية' : 'home equipment',
+          };
+
+          const systemPrompt = `你是一位专业的健身教练，持有认证资格，擅长根据用户目标、体能水平、可用器械和时间安排制定科学的训练计划。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "summary": "计划总览（100-150字，说明思路和预期效果）",
+  "items": [
+    {
+      "day": "第1天",
+      "focus": "训练重点（如：胸部+三头）",
+      "exercises": "具体动作清单（含组数×次数，如：俯卧撑 4×12）",
+      "duration": "预计时长（如：45分钟）",
+      "notes": "注意事项（50字内）"
+    }
+  ],
+  "nutritionTips": "饮食建议（100字内）"
+}
+
+根据用户每周训练天数生成对应数量的天数安排（${daysPerWeek}天）。用 ${langLabel(locale)} 输出。动作要安全可行，适合该体能水平。`;
+
+          const userPrompt = locale === 'zh'
+            ? `目标：${goalMap[goal] || goalMap.fitness}\n体能水平：${levelMap[level] || levelMap.beginner}\n可用器械：${equipMap[equipment] || equipMap.bodyweight}\n每周训练天数：${daysPerWeek}\n\n请生成训练计划。`
+            : locale === 'es'
+            ? `Objetivo: ${goalMap[goal] || goalMap.fitness}\nNivel: ${levelMap[level] || levelMap.beginner}\nEquipo: ${equipMap[equipment] || equipMap.bodyweight}\nDías por semana: ${daysPerWeek}\n\nGenera un plan.`
+            : locale === 'fr'
+            ? `Objectif: ${goalMap[goal] || goalMap.fitness}\nNiveau: ${levelMap[level] || levelMap.beginner}\nÉquipement: ${equipMap[equipment] || equipMap.bodyweight}\nJours par semaine: ${daysPerWeek}\n\nGénérez un plan.`
+            : locale === 'hi'
+            ? `लक्ष्य: ${goalMap[goal] || goalMap.fitness}\nस्तर: ${levelMap[level] || levelMap.beginner}\nउपकरण: ${equipMap[equipment] || equipMap.bodyweight}\nसप्ताह के दिन: ${daysPerWeek}\n\nएक योजना बनाएं।`
+            : locale === 'ar'
+            ? `الهدف: ${goalMap[goal] || goalMap.fitness}\nالمستوى: ${levelMap[level] || levelMap.beginner}\nالمعدات: ${equipMap[equipment] || equipMap.bodyweight}\nأيام الأسبوع: ${daysPerWeek}\n\nأنشئ خطة.`
+            : `Goal: ${goalMap[goal] || goalMap.fitness}\nLevel: ${levelMap[level] || levelMap.beginner}\nEquipment: ${equipMap[equipment] || equipMap.bodyweight}\nDays per week: ${daysPerWeek}\n\nGenerate a plan.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try { result = JSON.parse(content); } catch { return errJson('Failed to parse AI response', 500); }
+          if (!result.items || !Array.isArray(result.items)) return errJson('No plan generated', 500);
+          return json({
+            summary: result.summary || '',
+            items: result.items,
+            nutritionTips: result.nutritionTips || '',
+            remaining: rateLimitResult.remaining,
+          });
+        }
+
+        case '/api/ai-moments-caption':
+        case '/api/ai-moments-caption/': {
+          const scene = (payload.scene as string) || '';
+          const style = (payload.style as string) || 'mixed';
+          const mood = (payload.mood as string) || '';
+          if (!scene?.trim()) return errJson('Scene description is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const styleMap: Record<string, string> = {
+            literary: locale === 'zh' ? '文艺清新' : locale === 'es' ? 'literario' : locale === 'fr' ? 'littéraire' : locale === 'hi' ? 'साहित्यिक' : locale === 'ar' ? 'أدبي' : 'literary',
+            humorous: locale === 'zh' ? '幽默搞笑' : locale === 'es' ? 'humorístico' : locale === 'fr' ? 'humoristique' : locale === 'hi' ? 'हास्यपूर्ण' : locale === 'ar' ? 'فكاهي' : 'humorous',
+            minimal: locale === 'zh' ? '简约留白' : locale === 'es' ? 'minimalista' : locale === 'fr' ? 'minimaliste' : locale === 'hi' ? 'न्यूनतम' : locale === 'ar' ? 'بسيط' : 'minimal',
+            emotional: locale === 'zh' ? '走心情感' : locale === 'es' ? 'emocional' : locale === 'fr' ? 'émotionnel' : locale === 'hi' ? 'भावनात्मक' : locale === 'ar' ? 'عاطفي' : 'emotional',
+            mixed: locale === 'zh' ? '混合三种风格' : locale === 'es' ? 'tres estilos mixtos' : locale === 'fr' ? 'trois styles mélangés' : locale === 'hi' ? 'तीन शैलियाँ' : locale === 'ar' ? 'ثلاثة أساليب' : 'three mixed styles',
+          };
+
+          const systemPrompt = `你是一位社交媒体文案专家，擅长写朋友圈/微信动态文案。文案要有"人味"，避免AI腔和营销腔，像真人发的朋友圈。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "caption": "文案内容（20-80字，可带emoji，不要#话题#）",
+      "vibe": "风格标签（如：文艺/幽默/走心）"
+    }
+  ]
+}
+
+请生成【3条】文案。${style === 'mixed' ? '3条分别用文艺、幽默、走心三种不同风格。' : `统一用${styleMap[style] || styleMap.mixed}风格。`}用 ${langLabel(locale)} 输出。文案要真实自然，不夸大不做作。`;
+
+          const userPrompt = locale === 'zh'
+            ? `照片/场景描述：${scene}\n心情：${mood || '随意'}\n风格：${styleMap[style] || styleMap.mixed}\n\n请生成3条朋友圈文案。`
+            : locale === 'es'
+            ? `Descripción de la escena: ${scene}\nEstado de ánimo: ${mood || 'casual'}\nEstilo: ${styleMap[style] || styleMap.mixed}\n\nGenera 3 textos.`
+            : locale === 'fr'
+            ? `Description de la scène: ${scene}\nHumeur: ${mood || 'décontractée'}\nStyle: ${styleMap[style] || styleMap.mixed}\n\nGénérez 3 légendes.`
+            : locale === 'hi'
+            ? `दृश्य विवरण: ${scene}\nमूड: ${mood || 'सामान्य'}\nशैली: ${styleMap[style] || styleMap.mixed}\n\n3 कैप्शन बनाएं।`
+            : locale === 'ar'
+            ? `وصف المشهد: ${scene}\nالمزاج: ${mood || 'عادي'}\nالأسلوب: ${styleMap[style] || styleMap.mixed}\n\nأنشئ 3 تعليقات.`
+            : `Scene description: ${scene}\nMood: ${mood || 'casual'}\nStyle: ${styleMap[style] || styleMap.mixed}\n\nGenerate 3 captions.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try { result = JSON.parse(content); } catch { return errJson('Failed to parse AI response', 500); }
+          if (!result.items || !Array.isArray(result.items)) return errJson('No captions generated', 500);
+          return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-smart-reply':
+        case '/api/ai-smart-reply/': {
+          const incomingText = (payload.incomingText as string) || '';
+          const relation = (payload.relation as string) || 'friend';
+          const goal = (payload.goal as string) || 'reply';
+          if (!incomingText?.trim()) return errJson('Incoming message is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const relationMap: Record<string, string> = {
+            partner: locale === 'zh' ? '情侣/另一半' : locale === 'es' ? 'pareja' : locale === 'fr' ? 'partenaire' : locale === 'hi' ? 'साथी' : locale === 'ar' ? 'شريك' : 'partner',
+            boss: locale === 'zh' ? '领导/上司' : locale === 'es' ? 'jefe' : locale === 'fr' ? 'patron' : locale === 'hi' ? 'बॉस' : locale === 'ar' ? 'مدير' : 'boss',
+            client: locale === 'zh' ? '客户' : locale === 'es' ? 'cliente' : locale === 'fr' ? 'client' : locale === 'hi' ? 'ग्राहक' : locale === 'ar' ? 'عميل' : 'client',
+            friend: locale === 'zh' ? '朋友' : locale === 'es' ? 'amigo' : locale === 'fr' ? 'ami' : locale === 'hi' ? 'दोस्त' : locale === 'ar' ? 'صديق' : 'friend',
+            family: locale === 'zh' ? '家人' : locale === 'es' ? 'familia' : locale === 'fr' ? 'famille' : locale === 'hi' ? 'परिवार' : locale === 'ar' ? 'عائلة' : 'family',
+            crush: locale === 'zh' ? '暗恋对象' : locale === 'es' ? 'interés romántico' : locale === 'fr' ? 'craquage' : locale === 'hi' ? 'क्रश' : locale === 'ar' ? 'إعجاب' : 'crush',
+          };
+          const goalMap: Record<string, string> = {
+            reply: locale === 'zh' ? '得体回复' : locale === 'es' ? 'respuesta apropiada' : locale === 'fr' ? 'réponse appropriée' : locale === 'hi' ? 'उचित उत्तर' : locale === 'ar' ? 'رد مناسب' : 'appropriate reply',
+            refuse: locale === 'zh' ? '委婉拒绝' : locale === 'es' ? 'rechazar educadamente' : locale === 'fr' ? 'refuser poliment' : locale === 'hi' ? 'विनम्र अस्वीकृति' : locale === 'ar' ? 'رفض مهذب' : 'polite refusal',
+            accept: locale === 'zh' ? '欣然答应' : locale === 'es' ? 'aceptar con gusto' : locale === 'fr' ? 'accepter avec plaisir' : locale === 'hi' ? 'खुशी से स्वीकार' : locale === 'ar' ? 'قبول بسرور' : 'gladly accept',
+            icebreak: locale === 'zh' ? '破冰搭话' : locale === 'es' ? 'romper el hielo' : locale === 'fr' ? 'briser la glace' : locale === 'hi' ? 'बर्फ तोड़ना' : locale === 'ar' ? 'كسر الجليد' : 'break the ice',
+            negotiate: locale === 'zh' ? '谈判斡旋' : locale === 'es' ? 'negociar' : locale === 'fr' ? 'négocier' : locale === 'hi' ? 'बातचीत' : locale === 'ar' ? 'تفاوض' : 'negotiate',
+          };
+
+          const systemPrompt = `你是一位高情商沟通专家，擅长在复杂人际关系中给出得体、自然、不尴尬的回复话术。回复要像真人说的话，不要像客服模板，要考虑对方感受和关系亲疏。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "reply": "回复话术（30-100字）",
+      "reasoning": "为什么这么说（50字内，说明这样回复的考量）"
+    }
+  ]
+}
+
+请生成【3条】不同风格的回复。用 ${langLabel(locale)} 输出。话术要真实可用，不油腻不套路。`;
+
+          const userPrompt = locale === 'zh'
+            ? `对方身份：${relationMap[relation] || relationMap.friend}\n沟通目标：${goalMap[goal] || goalMap.reply}\n对方消息：${incomingText}\n\n请生成3条高情商回复。`
+            : locale === 'es'
+            ? `Relación: ${relationMap[relation] || relationMap.friend}\nObjetivo: ${goalMap[goal] || goalMap.reply}\nMensaje recibido: ${incomingText}\n\nGenera 3 respuestas.`
+            : locale === 'fr'
+            ? `Relation: ${relationMap[relation] || relationMap.friend}\nObjectif: ${goalMap[goal] || goalMap.reply}\nMessage reçu: ${incomingText}\n\nGénérez 3 réponses.`
+            : locale === 'hi'
+            ? `संबंध: ${relationMap[relation] || relationMap.friend}\nलक्ष्य: ${goalMap[goal] || goalMap.reply}\nप्राप्त संदेश: ${incomingText}\n\n3 उत्तर बनाएं।`
+            : locale === 'ar'
+            ? `العلاقة: ${relationMap[relation] || relationMap.friend}\nالهدف: ${goalMap[goal] || goalMap.reply}\nالرسالة الواردة: ${incomingText}\n\nأنشئ 3 ردود.`
+            : `Relationship: ${relationMap[relation] || relationMap.friend}\nGoal: ${goalMap[goal] || goalMap.reply}\nIncoming message: ${incomingText}\n\nGenerate 3 replies.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try { result = JSON.parse(content); } catch { return errJson('Failed to parse AI response', 500); }
+          if (!result.items || !Array.isArray(result.items)) return errJson('No replies generated', 500);
+          return json({ items: result.items.slice(0, 3), remaining: rateLimitResult.remaining });
+        }
+
+        case '/api/ai-gift-recommender':
+        case '/api/ai-gift-recommender/': {
+          const recipient = (payload.recipient as string) || '';
+          const occasion = (payload.occasion as string) || 'birthday';
+          const budget = (payload.budget as string) || '';
+          const interest = (payload.interest as string) || '';
+          if (!recipient?.trim()) return errJson('Recipient is required', 400);
+
+          const rateLimitResult = await checkRateLimit(env, request, 5);
+          if (rateLimitResult.blocked) {
+            return json({ error: 'RATE_LIMIT', message: rateLimitResult.message }, 429);
+          }
+
+          const occasionMap: Record<string, string> = {
+            birthday: locale === 'zh' ? '生日' : locale === 'es' ? 'cumpleaños' : locale === 'fr' ? 'anniversaire' : locale === 'hi' ? 'जन्मदिन' : locale === 'ar' ? 'عيد ميلاد' : 'birthday',
+            anniversary: locale === 'zh' ? '纪念日' : locale === 'es' ? 'aniversario' : locale === 'fr' ? 'anniversaire de couple' : locale === 'hi' ? 'वर्षगांठ' : locale === 'ar' ? 'ذكرى سنوية' : 'anniversary',
+            festival: locale === 'zh' ? '节日' : locale === 'es' ? 'fiesta' : locale === 'fr' ? 'fête' : locale === 'hi' ? 'त्योहार' : locale === 'ar' ? 'عطلة' : 'festival',
+            thanks: locale === 'zh' ? '答谢' : locale === 'es' ? 'agradecimiento' : locale === 'fr' ? 'remerciement' : locale === 'hi' ? 'धन्यवाद' : locale === 'ar' ? 'شكر' : 'thank you',
+            apology: locale === 'zh' ? '道歉' : locale === 'es' ? 'disculpa' : locale === 'fr' ? 'excuse' : locale === 'hi' ? 'माफ़ी' : locale === 'ar' ? 'اعتذار' : 'apology',
+          };
+
+          const systemPrompt = `你是一位贴心的礼物推荐顾问，了解不同人群的喜好和各类场合的送礼礼仪。推荐要具体、可买到、不踩雷，避开烂大街的礼物。
+
+返回格式要求（必须是有效的 JSON）：
+{
+  "items": [
+    {
+      "gift": "礼物名称",
+      "reason": "推荐理由（80字内，说明为什么适合）",
+      "priceRange": "大致价位（如：100-300元）",
+      "whereToBuy": "购买渠道（如：天猫/京东/线下礼品店）"
+    }
+  ]
+}
+
+请生成【5个】不同价位的礼物建议。用 ${langLabel(locale)} 输出。礼物要真实存在、可购买，不编造品牌。`;
+
+          const userPrompt = locale === 'zh'
+            ? `送礼对象：${recipient}\n场合：${occasionMap[occasion] || occasionMap.birthday}\n预算：${budget || '不限'}\n对方兴趣：${interest || '未指定'}\n\n请推荐5个礼物。`
+            : locale === 'es'
+            ? `Destinatario: ${recipient}\nOcasión: ${occasionMap[occasion] || occasionMap.birthday}\nPresupuesto: ${budget || 'sin límite'}\nIntereses: ${interest || 'no especificado'}\n\nRecomienda 5 regalos.`
+            : locale === 'fr'
+            ? `Destinataire: ${recipient}\nOccasion: ${occasionMap[occasion] || occasionMap.birthday}\nBudget: ${budget || 'illimité'}\nIntérêts: ${interest || 'non spécifié'}\n\nRecommandez 5 cadeaux.`
+            : locale === 'hi'
+            ? `प्राप्तकर्ता: ${recipient}\nअवसर: ${occasionMap[occasion] || occasionMap.birthday}\nबजट: ${budget || 'असीमित'}\nरुचि: ${interest || 'अनिर्दिष्ट'}\n\n5 उपहार सुझाएं।`
+            : locale === 'ar'
+            ? `المستلم: ${recipient}\nالمناسبة: ${occasionMap[occasion] || occasionMap.birthday}\nالميزانية: ${budget || 'غير محدد'}\nالاهتمامات: ${interest || 'غير محدد'}\n\nاقترح 5 هدايا.`
+            : `Recipient: ${recipient}\nOccasion: ${occasionMap[occasion] || occasionMap.birthday}\nBudget: ${budget || 'unlimited'}\nInterests: ${interest || 'unspecified'}\n\nRecommend 5 gifts.`;
+
+          const content = await callDeepseek(env, systemPrompt, userPrompt, true);
+          let result;
+          try { result = JSON.parse(content); } catch { return errJson('Failed to parse AI response', 500); }
+          if (!result.items || !Array.isArray(result.items)) return errJson('No gifts generated', 500);
+          return json({ items: result.items.slice(0, 5), remaining: rateLimitResult.remaining });
+        }
+
         default:
           return errJson('Not found', 404);
       }

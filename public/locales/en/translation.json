@@ -8232,6 +8232,26 @@
       "name": "AI Regex Generator",
       "description": "AI regex generator that turns natural-language descriptions into regular expressions, with explanations and test code."
     },
+    "ai-game-guide": {
+      "name": "AI Game Guide Generator",
+      "description": "AI game guide generator that creates 3 strategies from game name and blocker description, with anti-pit tips."
+    },
+    "ai-workout-plan": {
+      "name": "AI Workout Plan Generator",
+      "description": "AI workout plan generator that builds a personalized plan from goal, level, equipment and training days, with daily routines."
+    },
+    "ai-moments-caption": {
+      "name": "AI Moments Caption Generator",
+      "description": "AI moments caption generator that creates 3 captions from a scene description, supporting literary, humorous and minimal styles."
+    },
+    "ai-smart-reply": {
+      "name": "AI Smart Reply Assistant",
+      "description": "AI smart reply assistant that generates 3 high-EQ replies from the other person's message and relationship type — refuse, accept or break the ice."
+    },
+    "ai-gift-recommender": {
+      "name": "AI Gift Recommender",
+      "description": "AI gift recommender that suggests 3 gifts from recipient, occasion, budget and interests, with reasons for each pick."
+    },
     "ai-copywriter": {
       "name": "AI Copywriter",
       "description": "Free AI copywriter generates high-quality marketing copy in seconds. Get ad copy, product descriptions, and headlines for your brand. No signup, in browser.",

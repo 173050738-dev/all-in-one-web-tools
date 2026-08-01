@@ -114,6 +114,11 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'ai-weekly-report',
   'ai-recipe-generator',
   'ai-regex-generator',
+  'ai-game-guide',
+  'ai-workout-plan',
+  'ai-moments-caption',
+  'ai-smart-reply',
+  'ai-gift-recommender',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {
@@ -262,6 +267,21 @@ export const SLUG_ALIAS: Record<string, string> = {
   'ai-regex': 'ai-regex-generator',
   'regex-ai': 'ai-regex-generator',
   'regex-builder': 'ai-regex-generator',
+  'game-guide': 'ai-game-guide',
+  'game-walkthrough': 'ai-game-guide',
+  'game-strategy': 'ai-game-guide',
+  'workout-plan': 'ai-workout-plan',
+  'fitness-plan': 'ai-workout-plan',
+  'training-plan': 'ai-workout-plan',
+  'moments-caption': 'ai-moments-caption',
+  'wechat-caption': 'ai-moments-caption',
+  'friend-circle': 'ai-moments-caption',
+  'smart-reply': 'ai-smart-reply',
+  'high-eq-reply': 'ai-smart-reply',
+  'reply-helper': 'ai-smart-reply',
+  'gift-recommender': 'ai-gift-recommender',
+  'gift-ideas': 'ai-gift-recommender',
+  'gift-picker': 'ai-gift-recommender',
 };
 
 export const EXTERNAL_TOOL_URLS: Record<string, string> = {

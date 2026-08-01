@@ -8232,6 +8232,26 @@
       "name": "AI正则表达式生成器",
       "description": "AI正则表达式生成器，用自然语言描述需求自动生成正则，附带解释和测试代码"
     },
+    "ai-game-guide": {
+      "name": "AI游戏攻略生成器",
+      "description": "AI游戏攻略生成器，输入游戏名和卡点描述，生成3条不同思路的通关攻略，附避坑要点"
+    },
+    "ai-workout-plan": {
+      "name": "AI健身计划生成器",
+      "description": "AI健身计划生成器，根据目标、水平、装备和训练天数生成个性化健身计划，含每日训练安排"
+    },
+    "ai-moments-caption": {
+      "name": "AI朋友圈文案生成器",
+      "description": "AI朋友圈文案生成器，根据场景描述生成3条朋友圈文案，支持文艺、幽默、简约等多种风格"
+    },
+    "ai-smart-reply": {
+      "name": "AI高情商回复助手",
+      "description": "AI高情商回复助手，根据对方消息和关系类型生成3条高情商回复，得体拒绝、委婉答应、破冰均可"
+    },
+    "ai-gift-recommender": {
+      "name": "AI礼物推荐器",
+      "description": "AI礼物推荐器，根据收礼人、场合、预算和兴趣生成3个礼物推荐，附送礼理由"
+    },
     "ai-copywriter": {
       "name": "AI 营销文案生成器",
       "description": "输入产品信息，AI 一键生成高质量营销文案",

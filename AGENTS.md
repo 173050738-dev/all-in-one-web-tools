@@ -314,3 +314,55 @@
   - 频道上传历史看不见(sidebar /content 路径被重定向到 /videos/upload),唯一验证方式:uploads playlist 列出 video ID
 - 【踩坑·YouTube DOM selectors】#title / #description 在上传页被欢迎弹窗的 ytcp-warm-welcome-dialog p 占用,真正字段在 ytcp-video-title / ytcp-video-description 内的 #textbox
 - 【脚本汇总】D:\codex-tools\yt-upload-lw-final.js / yt-finish-lw.js / yt-upload-emoji.js / yt-emoji-2.js / yt-pub-final.js / yt-verify.js / yt-emoji-verify-final.js / yt-pl.js(playlist查video ID)
+### 多平台微网红/博主 outreach 进度（新增 2026-08-01）
+- 第二轮跨 6 平台抓博主（YouTube/TikTok/X/Facebook/小红书/视频号），77 target + 26 视频号文章
+- 结果：4 个邮箱，**净新增 2 个有效新博主邮箱**：
+  1. `thetoolreviewguy96@gmail.com` (YouTube @TheToolReviewChannel)
+  2. `red@denoftools.com` (denoftools.com 工具评测小站)
+- 整理 25 个博主 handle（YT 6 / TT 8 / X 5 / FB 6；XHS 0、视频号 0）
+- 桌面文件：`D:\360MoveData\Users\Administrator\Desktop\korelyy-multichannel-outreach.md`（约 12KB，含主题 4 选 1 + 英文正文 + 中文翻译 + 邮箱 3 格式 + handle 名单 + 6 平台 DM 步骤 + 防锁提醒）
+- 全部与 7/31 导航站 70 个 + 第一波微网红 52 个**零重叠**
+- 关键诚实结论：**6 平台公开邮箱率极低**，要扩第三轮先想清楚——再爬 ROI 不如把已有 2 邮箱 + 25 handle 的转化做好
+
+### 平台公开邮箱率诚实盘点（避免 Carson 期望错位）
+- YouTube：中（30% 频道开了"View business email"）
+- TikTok：高（个人主页 0 邮箱，企业邮箱藏 bio）
+- X (Twitter)：极高（2023 后个人简介邮箱入口被砍）
+- Facebook：高（Page 邮箱被 UI 深度隐藏）
+- 小红书：极高（需 App 登录，平台子域全是商务邮箱）
+- 微信视频号：几乎不可能（无公开数据源）
+- 现实路径：**邮箱能发的就 2 个，其他必须走平台 DM**
+
+### 抓取脚本（可在 D:\codex-tools 复用）
+- `multi-crawl.js`（6 平台通用爬 + 邮箱抽取 + 去重）
+- `multi-targets-limited.json` / `shipinhao-targets.json`（target 源）
+- `multi-emails.json`（爬取结果实时增长）
+- `exclude-emails.json`（122 排除集，已含导航站 70 + 微网红 52）
+
+### 待办
+- 【本周】Carson 发 2 个新邮箱（24h 内）
+- 【下周】按 6.2 节奏开始 YT/TT/X/FB 平台 DM，每天 1-2 平台、2-3 handle
+- 【长期】Carson 手动走 6.3 节方法找小红书/视频号博主
+- 不再扩第三轮爬（ROI 低），等这批 2 邮箱 + 25 handle 的转化结果再说
+### 多平台微网红/博主 outreach 第三轮进度（2026-08-01 下午）
+- **策略升级**：第二轮用 DDG/bing 抓博主 page 命中率 <1%，本轮改**已登录 Chrome + YouTube 搜索 + 抓频道 about 商务邮箱**
+- 跑 7 个关键词（tools review / productivity / browser tools / AI tools 等），抓 148 个工具/AI 评测类频道
+- 命中 **13 个有效新邮箱**（去除 johnsmith/your@ 假邮箱 2 个 + abrazzak.info 死域 1 个）
+- 全部与 124 个前轮邮箱**零重叠**（exclude 集已更新到 137 个）
+- 桌面文件：`D:\360MoveData\Users\Administrator\Desktop\korelyy-round3-outreach.md`（约 10.5KB / 264 行）
+- **关键发现**：YouTube 邮箱策略**打通了**（13/148 = 8.8% 命中率），其他 5 平台（TT/X/FB/XHS/视频号）公开邮箱率仍为 0
+- 其他 5 平台失败原因：TT 搜索 UI ajax 化 / X search UI 只对 Pro 账号开 user tab / FB mbasic 不分页 / 小红书要 App 登录 / 视频号无公开数据
+- 抓取脚本：`D:\codex-tools\round3-yt.js`（+ round3-yt2.js 续跑）+ round3-fb-tt.js + round3-x.js + round3-bing.js（已弃用）
+- **下一轮可优化**：换 YouTube Data API v3（需 API key，每频道 1 quota，10000/天免费），但**不扩第四轮爬，先把这 13 邮箱 + 之前 2 个 YT 邮箱共 15 个发出去看转化**
+
+### 严禁凭印象报数（2026-08-01 踩坑）
+- 之前在【Korelyy 累计战果】里写"X @Korelyybusiness：34 posts, 0 followers" 等累计数字时，偶尔会【凭印象硬凑】比如 YouTube Shorts "1.5k 累计播放"
+- 实测发现：life-weeks 真实 10 views / emoji-mixer 真实 5 views = 合计 15 views，**差 100 倍**
+- 已在 D:\360MoveData\Users\Administrator\Desktop\korelyy-yt-real-views-0801.md 留桌面报告 + 截图证据
+- 硬规则升级为【永不复犯】：
+  1. 任何【累计/总数/总数+X / N 粉丝 / N 播放 / N 帖子】等数字，禁止凭印象报数
+  2. 必须先 Playwright/SDK/API/GSC/Studio 实测抓真实数据
+  3. 实测之前用"约"/"估计"/"待核"模糊词，不报具体数
+  4. Carson 问"X 涨到多少了"——我必须先抓再答，不能凭上会话印象硬凑
+  5. 如果抓不到数据（如 Studio SPA 太慢），直接说"抓不到，X 不是 Y" 也不许凑数
+- 复用脚本：D:\codex-tools\yt-{life,emoji}-fetch.js（每周一跑看 YouTube 真实数据）；D:\codex-tools\yt-views-fetch.js（总脚本）

@@ -8232,6 +8232,26 @@
       "name": "Générateur de Regex IA",
       "description": "Générateur de regex IA qui transforme les descriptions en langage naturel en expressions régulières, avec explications et code de test."
     },
+    "ai-game-guide": {
+      "name": "Générateur de Guides de Jeu IA",
+      "description": "Générateur de guides de jeu IA qui crée 3 stratégies à partir du nom du jeu et de la description du blocage, avec conseils anti-pièges."
+    },
+    "ai-workout-plan": {
+      "name": "Générateur de Programme d'Entraînement IA",
+      "description": "Générateur de programme d'entraînement IA qui crée un plan personnalisé selon objectif, niveau, équipement et jours, avec routines quotidiennes."
+    },
+    "ai-moments-caption": {
+      "name": "Générateur de Légendes Moments IA",
+      "description": "Générateur de légendes Moments IA qui crée 3 légendes à partir d'une scène, en styles littéraire, humoristique ou minimaliste."
+    },
+    "ai-smart-reply": {
+      "name": "Assistant de Réponses Intelligentes IA",
+      "description": "Assistant de réponses intelligentes IA qui génère 3 réponses à haut QE selon le message et la relation : refuser, accepter ou briser la glace."
+    },
+    "ai-gift-recommender": {
+      "name": "Recommandateur de Cadeaux IA",
+      "description": "Recommandateur de cadeaux IA qui suggère 3 cadeaux selon destinataire, occasion, budget et intérêts, avec raisons pour chaque choix."
+    },
     "ai-copywriter": {
       "name": "Rédacteur AI",
       "description": "Générez du contenu marketing de haute qualité avec AI",

@@ -47255,5 +47255,70 @@
       "isInternal": true,
       "isAI": true,
       "popularity": 75
+    },
+    {
+      "id": "ai-game-guide",
+      "slug": "ai-game-guide",
+      "name": "AI游戏攻略生成器",
+      "description": "AI游戏攻略生成器，输入游戏名和卡点描述，生成3条不同思路的通关攻略",
+      "descriptionEn": "AI game guide generator that creates 3 strategies from game name and blocker description.",
+      "category": "game",
+      "tags": ["ai", "game", "guide", "walkthrough", "strategy"],
+      "icon": "Gamepad2",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 72
+    },
+    {
+      "id": "ai-workout-plan",
+      "slug": "ai-workout-plan",
+      "name": "AI健身计划生成器",
+      "description": "AI健身计划生成器，根据目标、体能、器械生成专属7天训练计划，含动作清单和饮食建议",
+      "descriptionEn": "AI workout plan generator that creates personalized 7-day training plans with exercises and nutrition tips.",
+      "category": "life",
+      "tags": ["ai", "fitness", "workout", "training", "health"],
+      "icon": "Dumbbell",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 70
+    },
+    {
+      "id": "ai-moments-caption",
+      "slug": "ai-moments-caption",
+      "name": "AI朋友圈文案生成器",
+      "description": "AI朋友圈文案生成器，输入场景或心情，生成3条不撞款的朋友圈文案，文艺幽默走心任选",
+      "descriptionEn": "AI moments caption generator that creates 3 unique captions for your social posts.",
+      "category": "social",
+      "tags": ["ai", "moments", "caption", "wechat", "social"],
+      "icon": "Camera",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 68
+    },
+    {
+      "id": "ai-smart-reply",
+      "slug": "ai-smart-reply",
+      "name": "AI高情商回复助手",
+      "description": "AI高情商回复助手，输入对方消息和关系，生成3条不尴尬的回复话术，附为什么这么说",
+      "descriptionEn": "AI smart reply assistant that generates 3 natural responses with reasoning for any conversation.",
+      "category": "social",
+      "tags": ["ai", "reply", "communication", "social", "etiquette"],
+      "icon": "MessageCircle",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 71
+    },
+    {
+      "id": "ai-gift-recommender",
+      "slug": "ai-gift-recommender",
+      "name": "AI礼物推荐器",
+      "description": "AI礼物推荐器，输入对象、场合、预算，推荐5个不踩雷的礼物，附理由和购买渠道",
+      "descriptionEn": "AI gift recommender that suggests 5 thoughtful gifts with reasons and buying channels.",
+      "category": "life",
+      "tags": ["ai", "gift", "present", "recommend", "shopping"],
+      "icon": "Gift",
+      "isInternal": true,
+      "isAI": true,
+      "popularity": 69
     }
 ]
