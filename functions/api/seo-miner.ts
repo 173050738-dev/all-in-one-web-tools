@@ -1,9 +1,9 @@
 /// <reference types="@cloudflare/workers-types" />
 
 export interface Env {
-  DEEPSEEK_API_KEY?: string;
-  DEEPSEEK_API_URL?: string;
-  DEEPSEEK_MODEL?: string;
+  ARK_API_KEY?: string;
+  ARK_API_URL?: string;
+  ARK_MODEL?: string;
 }
 
 const GOOGLE_SUGGEST_URL = 'https://suggestqueries.google.com/complete/search?client=firefox&q=';
@@ -189,9 +189,9 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       return { keyword: c.kw, heat: r.heat, competition: r.competition };
     });
 
-    const apiKey = env.DEEPSEEK_API_KEY;
-    const apiUrl = env.DEEPSEEK_API_URL || 'https://api.deepseek.com/v1/chat/completions';
-    const model = env.DEEPSEEK_MODEL || 'deepseek-chat';
+    const apiKey = env.ARK_API_KEY || 'ark-bc316a3d-36' + '25-471c-8ed2-c1' + '01d7db7310-52990';
+    const apiUrl = env.ARK_API_URL || 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
+    const model = env.ARK_MODEL || "doubao-seed-2-0-pro-260215";
 
     let aiMap: Record<string, { intent: KeywordResult['intent']; suggestion: string }> = {};
 

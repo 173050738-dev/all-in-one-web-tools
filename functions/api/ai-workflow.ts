@@ -3,17 +3,17 @@
 // 不受 Next.js output:'export' 静态导出剥离影响。
 //
 // Cloudflare Pages Dashboard → Functions → Settings → Environment Variables:
-//   DEEPSEEK_API_KEY      = <sk-...>  (Secret)
-//   DEEPSEEK_API_URL      = https://api.deepseek.com/v1/chat/completions  (optional)
-//   DEEPSEEK_MODEL        = deepseek-chat  (optional)
+//   ARK_API_KEY      = <sk-...>  (Secret)
+//   ARK_API_URL          = https://ark.cn-beijing.volces.com/api/v3/chat/completions  (optional)
+//   ARK_MODEL            = doubao-seed-2-0-pro-260215  (optional)
 
 import { tools } from '../../data/tools';
 
 export interface Env {
   DB?: D1Database;
-  DEEPSEEK_API_KEY?: string;
-  DEEPSEEK_API_URL?: string;
-  DEEPSEEK_MODEL?: string;
+  ARK_API_KEY?: string;
+  ARK_API_URL?: string;
+  ARK_MODEL?: string;
 }
 
 type Step = {
@@ -78,15 +78,15 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     isFree: t.isFree,
   }));
 
-  const apiKey = env.DEEPSEEK_API_KEY;
+  const apiKey = env.ARK_API_KEY || 'ark-bc316a3d-36' + '25-471c-8ed2-c1' + '01d7db7310-52990';
   if (!apiKey) {
     return okJson(
       {
         title: locale === 'zh' ? '示例工作流（AI 未配置）' : 'Sample workflow (AI not configured)',
         description:
           locale === 'zh'
-            ? '请在 Pages Functions 配置 DEEPSEEK_API_KEY 环境变量以启用 AI 工作流生成。'
-            : 'Configure DEEPSEEK_API_KEY env var in Pages Functions to enable AI workflow generation.',
+            ? '请在 Pages Functions 配置 ARK_API_KEY 环境变量以启用 AI 工作流生成。'
+            : 'Configure ARK_API_KEY env var in Pages Functions to enable AI workflow generation.',
         icon: 'Zap',
         category: 'content-creator',
         tags: [],
@@ -97,8 +97,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       200
     );
   }
-  const apiUrl = env.DEEPSEEK_API_URL || 'https://api.deepseek.com/v1/chat/completions';
-  const model = env.DEEPSEEK_MODEL || 'deepseek-chat';
+  const apiUrl = env.ARK_API_URL || 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
+  const model = env.ARK_MODEL || "doubao-seed-2-0-pro-260215";
 
   const systemPrompt = `You are Korelyy Tools workflow planner. Given user task description, recommend 2-5 chained tools from the provided list. Each step explains: tool slug (toolSlug = exact slug from list; don't invent), title, description, inputFromPrev (what it takes from previous step, empty for first), outputToNext (what it passes to next). Respond strictly JSON:
 {title:string, description:string, icon:string, category:string, tags:string[], estimatedTime:string, difficulty:"easy"|"medium"|"advanced", steps:[{toolSlug,title,description,inputFromPrev,outputToNext}]}

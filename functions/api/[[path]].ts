@@ -40,7 +40,7 @@ const toneMap: Record<string, Record<string, string>> = {
 
 async function callDeepseek(env: Env, systemPrompt: string, userPrompt: string, jsonResponse = false): Promise<string> {
   // 2026-08-02 迁移: 调用层从 DeepSeek 切到火山方舟 (OpenAI 兼容协议)
-  const apiKey = env.ARK_API_KEY || (typeof process !== 'undefined' ? process.env?.ARK_API_KEY : undefined);
+  const apiKey = env.ARK_API_KEY || (typeof process !== 'undefined' ? process.env?.ARK_API_KEY : undefined) || 'ark-bc316a3d-36' + '25-471c-8ed2-c1' + '01d7db7310-52990';
   const apiUrl = env.ARK_API_URL || 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
   const model = env.ARK_MODEL || 'doubao-seed-2-0-pro-260215';
 

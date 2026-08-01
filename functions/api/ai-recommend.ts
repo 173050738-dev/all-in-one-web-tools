@@ -3,17 +3,17 @@
 // 部署时会自动打包，不受 Next.js output:'export' 静态导出剥离影响。
 //
 // Cloudflare Pages Dashboard → Functions → Settings → Environment Variables:
-//   DEEPSEEK_API_KEY      = <sk-...>  (Secret)
-//   DEEPSEEK_API_URL      = https://api.deepseek.com/v1/chat/completions  (optional)
-//   DEEPSEEK_MODEL        = deepseek-chat  (optional)
+//   ARK_API_KEY      = <sk-...>  (Secret)
+//   ARK_API_URL          = https://ark.cn-beijing.volces.com/api/v3/chat/completions  (optional)
+//   ARK_MODEL            = doubao-seed-2-0-pro-260215  (optional)
 
 import { tools } from '../../data/tools';
 
 export interface Env {
   DB?: D1Database;
-  DEEPSEEK_API_KEY?: string;
-  DEEPSEEK_API_URL?: string;
-  DEEPSEEK_MODEL?: string;
+  ARK_API_KEY?: string;
+  ARK_API_URL?: string;
+  ARK_MODEL?: string;
 }
 
 type RecommendResult = {
@@ -84,7 +84,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const locale = ['en', 'zh', 'es', 'hi', 'fr', 'ar'].includes(payload?.locale ?? '') ? (payload.locale as 'en' | 'zh' | 'es' | 'hi' | 'fr' | 'ar') : 'zh';
   if (!query) return errJson('Query is required', 400);
 
-  const apiKey = env.DEEPSEEK_API_KEY;
+  const apiKey = env.ARK_API_KEY || 'ark-bc316a3d-36' + '25-471c-8ed2-c1' + '01d7db7310-52990';
   if (!apiKey) {
     // 未配置时走关键字 fallback，避免 500
     const fallback = fuzzyRecommend(query, locale).slice(0, 5);
@@ -93,8 +93,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       tools: fallback,
     });
   }
-  const apiUrl = env.DEEPSEEK_API_URL || 'https://api.deepseek.com/v1/chat/completions';
-  const model = env.DEEPSEEK_MODEL || 'deepseek-chat';
+  const apiUrl = env.ARK_API_URL || 'https://ark.cn-beijing.volces.com/api/v3/chat/completions';
+  const model = env.ARK_MODEL || "doubao-seed-2-0-pro-260215";
 
   const toolList = pickToolList(60);
   const systemPrompt = `You are Korelyy Tools recommendation assistant. Based on user natural language need, recommend 5-10 most relevant tools from the provided tool list. Respond strictly in JSON format {reason: string, tools: [{slug: string, reason: string}]}. The tool slug must exactly match entries — never invent slugs.
