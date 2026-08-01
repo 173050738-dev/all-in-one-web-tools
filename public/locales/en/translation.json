@@ -9288,6 +9288,26 @@
     "classical-chinese-converter": {
       "name": "Classical Chinese Converter",
       "description": "Convert modern Chinese to classical/literary Chinese (wenyan). Multiple classical styles supported."
+    },
+    "chat-screenshot-generator": {
+      "name": "Chat Screenshot Generator",
+      "description": "Generate realistic WeChat-style chat screenshots. Customize avatars, nicknames, messages and download as PNG."
+    },
+    "meme-generator": {
+      "name": "Meme Generator",
+      "description": "Create memes by adding text to images. Classic top-bottom text format and free text layers. Download as PNG."
+    },
+    "daily-tarot": {
+      "name": "Daily Tarot Reading",
+      "description": "Draw three tarot cards daily (past/present/future). Full interpretations of 22 Major Arcana cards. One reading per day."
+    },
+    "id-photo-bg-changer": {
+      "name": "ID Photo Background Changer",
+      "description": "Upload ID photo and automatically change background color. Supports blue/white/red backgrounds with adjustable tolerance. Fully client-side."
+    },
+    "game-sensitivity-converter": {
+      "name": "Game Sensitivity Converter",
+      "description": "Convert mouse sensitivity between 7 FPS games including CS2, Valorant, Apex, Overwatch. Includes cm/360 calculation."
     }
   },
   "sidebar2": {

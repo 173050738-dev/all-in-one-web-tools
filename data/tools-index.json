@@ -47130,5 +47130,65 @@
       "icon": "Languages",
       "isInternal": true,
       "popularity": 81
+    },
+    {
+      "id": "chat-screenshot-generator",
+      "slug": "chat-screenshot-generator",
+      "name": "聊天记录生成器",
+      "description": "生成逼真的微信风格聊天截图，自定义头像、昵称、消息内容，下载为PNG图片。",
+      "descriptionEn": "Generate realistic WeChat-style chat screenshots. Customize avatars, nicknames, messages and download as PNG.",
+      "category": "image",
+      "tags": ["聊天", "截图", "微信", "生成器", "图片"],
+      "icon": "MessageCircle",
+      "isInternal": true,
+      "popularity": 85
+    },
+    {
+      "id": "meme-generator",
+      "slug": "meme-generator",
+      "name": "表情包生成器",
+      "description": "上传图片添加文字生成表情包，支持经典上下文字格式和自由文字层，下载为PNG。",
+      "descriptionEn": "Create memes by adding text to images. Classic top-bottom text format and free text layers supported. Download as PNG.",
+      "category": "image",
+      "tags": ["表情包", "meme", "图片", "生成器", "搞笑"],
+      "icon": "Image",
+      "isInternal": true,
+      "popularity": 88
+    },
+    {
+      "id": "daily-tarot",
+      "slug": "daily-tarot",
+      "name": "每日塔罗牌占卜",
+      "description": "每日抽取三张塔罗牌（过去/现在/未来），22张大阿卡纳牌完整解读，每天一次专属占卜。",
+      "descriptionEn": "Draw three tarot cards daily (past/present/future). Full interpretations of 22 Major Arcana cards. One reading per day.",
+      "category": "lifestyle",
+      "tags": ["塔罗牌", "占卜", "运势", "塔罗", "每日"],
+      "icon": "Sparkles",
+      "isInternal": true,
+      "popularity": 82
+    },
+    {
+      "id": "id-photo-bg-changer",
+      "slug": "id-photo-bg-changer",
+      "name": "证件照背景替换器",
+      "description": "上传证件照自动替换背景颜色，支持蓝底/白底/红底，可调容差，纯前端处理保护隐私。",
+      "descriptionEn": "Upload ID photo and automatically change background color. Supports blue/white/red backgrounds with adjustable tolerance. Fully client-side.",
+      "category": "image",
+      "tags": ["证件照", "背景", "替换", "抠图", "照片"],
+      "icon": "User",
+      "isInternal": true,
+      "popularity": 79
+    },
+    {
+      "id": "game-sensitivity-converter",
+      "slug": "game-sensitivity-converter",
+      "name": "游戏灵敏度转换器",
+      "description": "CS2、Valorant、Apex、Overwatch等7款FPS游戏鼠标灵敏度一键转换，附带cm/360计算。",
+      "descriptionEn": "Convert mouse sensitivity between 7 FPS games including CS2, Valorant, Apex, Overwatch. Includes cm/360 calculation.",
+      "category": "gaming",
+      "tags": ["游戏", "灵敏度", "FPS", "鼠标", "转换器"],
+      "icon": "Mouse",
+      "isInternal": true,
+      "popularity": 76
     }
 ]

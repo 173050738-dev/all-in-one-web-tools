@@ -104,6 +104,11 @@ export const INTERNAL_TOOL_SLUGS = new Set<string>([
   'love-letter-generator',
   'color-mood-board',
   'classical-chinese-converter',
+  'chat-screenshot-generator',
+  'meme-generator',
+  'daily-tarot',
+  'id-photo-bg-changer',
+  'game-sensitivity-converter',
 ]);
 
 export const SLUG_ALIAS: Record<string, string> = {
@@ -224,6 +229,21 @@ export const SLUG_ALIAS: Record<string, string> = {
   'wenyan': 'classical-chinese-converter',
   'classical-chinese': 'classical-chinese-converter',
   'modern-to-classical': 'classical-chinese-converter',
+  'chat-screenshot': 'chat-screenshot-generator',
+  'chat-generator': 'chat-screenshot-generator',
+  'fake-chat': 'chat-screenshot-generator',
+  'meme-maker': 'meme-generator',
+  'meme-creator': 'meme-generator',
+  'image-meme': 'meme-generator',
+  'tarot': 'daily-tarot',
+  'tarot-reading': 'daily-tarot',
+  'tarot-cards': 'daily-tarot',
+  'id-photo': 'id-photo-bg-changer',
+  'photo-bg-changer': 'id-photo-bg-changer',
+  'passport-photo': 'id-photo-bg-changer',
+  'sensitivity-converter': 'game-sensitivity-converter',
+  'sens-converter': 'game-sensitivity-converter',
+  'game-sens': 'game-sensitivity-converter',
 };
 
 export const EXTERNAL_TOOL_URLS: Record<string, string> = {

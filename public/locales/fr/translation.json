@@ -9288,6 +9288,26 @@
     "classical-chinese-converter": {
       "name": "Convertisseur de Chinois Classique",
       "description": "Convertissez le chinois moderne en chinois classique/littéraire (wenyan). Prend en charge plusieurs styles classiques."
+    },
+    "chat-screenshot-generator": {
+      "name": "Générateur de capture de chat",
+      "description": "Générez des captures de chat style WeChat réalistes. Personnalisez avatars, surnoms et messages. Téléchargez en PNG."
+    },
+    "meme-generator": {
+      "name": "Générateur de mèmes",
+      "description": "Créez des mèmes en ajoutant du texte aux images. Format classique haut-bas et calques de texte libres. Téléchargez en PNG."
+    },
+    "daily-tarot": {
+      "name": "Tirage quotidien du Tarot",
+      "description": "Tire trois cartes du Tarot quotidiennement (passé/présent/futur). Interprétations complètes des 22 Arcanes Majeurs. Un tirage par jour."
+    },
+    "id-photo-bg-changer": {
+      "name": "Changeur de fond de photo d'identité",
+      "description": "Téléchargez votre photo d'identité et changez automatiquement la couleur de fond. Supports bleu/blanc/rouge avec tolérance réglable. 100% côté client."
+    },
+    "game-sensitivity-converter": {
+      "name": "Convertisseur de sensibilité de jeu",
+      "description": "Convertit la sensibilité de la souris entre 7 jeux FPS dont CS2, Valorant, Apex, Overwatch. Inclut le calcul cm/360."
     }
   },
   "sidebar2": {
