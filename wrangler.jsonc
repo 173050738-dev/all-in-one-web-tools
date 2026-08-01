@@ -15,7 +15,7 @@
   "vars": {
     "JWT_ISSUER": "korelyy.com",
     "ACCESS_TOKEN_TTL_SEC": "604800",
-    "DEEPSEEK_API_URL": "https://token.sensenova.cn/v1/chat/completions",
-    "DEEPSEEK_MODEL": "deepseek-v4-flash"
+    "DEEPSEEK_API_URL": "https://api.deepseek.com/v1/chat/completions",
+    "DEEPSEEK_MODEL": "deepseek-chat"
   }
 }
