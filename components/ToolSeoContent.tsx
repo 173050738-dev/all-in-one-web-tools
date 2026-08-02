@@ -114,6 +114,15 @@ export default function ToolSeoContent({ locale, slug }: { locale: string; slug:
           <p className="mb-4 sm:mb-5 text-gray-600 dark:text-gray-400">
             {introText}
           </p>
+          <p className="mb-4 sm:mb-5 text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">
+            {(() => {
+              try {
+                const v = (seo as any)?.firstSentence;
+                if (typeof v === 'string' && v.trim()) return v;
+              } catch { /* ignore */ }
+              return '';
+            })()}
+          </p>
         </>
       )}
 
@@ -150,10 +159,81 @@ export default function ToolSeoContent({ locale, slug }: { locale: string; slug:
               <li key={'tu-' + i}>{s}</li>
             ))}
           </ol>
+        {Array.isArray((seo as any)?.howtoSteps) && (seo as any).howtoSteps.length > 0 && (
+          <>
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 sm:mb-3 mt-6 sm:mt-7">
+              {sectionTitleKey('section-howto')}
+            </h2>
+            {hintKey('howto-hint') && (
+              <p className="mb-2 text-[12px] sm:text-xs text-gray-500 dark:text-gray-500">
+                {hintKey('howto-hint')}
+              </p>
+            )}
+            <ol className="mb-4 sm:mb-5 space-y-3 list-decimal list-inside pl-1">
+              {((seo as any).howtoSteps as Array<{name?: string; text?: string}>)
+                .filter((x) => x && typeof x.name === 'string' && typeof x.text === 'string')
+                .map((x, i) => (
+                  <li key={'ht-' + i}>
+                    <span className="font-semibold text-gray-900 dark:text-gray-100">{x.name}.</span>{' '}
+                    <span>{x.text}</span>
+                  </li>
+                ))}
+            </ol>
+          </>
+        )}
+
         </>
       )}
 
-      {advantages.length > 0 && (
+              {Array.isArray((seo as any)?.stats) && (seo as any).stats.length > 0 && (
+          <>
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 sm:mb-3 mt-6 sm:mt-7">
+              {sectionTitleKey('section-stats')}
+            </h2>
+            <dl className="mb-4 sm:mb-5 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+              {((seo as any).stats as Array<{k?: string; v?: string}>)
+                .filter((x) => x && typeof x.k === 'string' && typeof x.v === 'string')
+                .map((x, i) => (
+                  <div key={'st-' + i} className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/60 px-3 py-2.5">
+                    <dt className="text-[12px] uppercase tracking-wide text-gray-500 dark:text-gray-400">{x.k}</dt>
+                    <dd className="text-sm font-semibold text-gray-900 dark:text-gray-100 mt-0.5">{x.v}</dd>
+                  </div>
+                ))}
+            </dl>
+          </>
+        )}
+
+        {Array.isArray((seo as any)?.comparison) && (seo as any).comparison.length > 0 && (
+          <>
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 sm:mb-3 mt-6 sm:mt-7">
+              {sectionTitleKey('section-comparison')}
+            </h2>
+            <div className="mb-4 sm:mb-5 overflow-x-auto">
+              <table className="w-full text-xs sm:text-sm border-collapse">
+                <thead>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <th className="text-start py-2 pe-2 font-semibold text-gray-900 dark:text-gray-100">{sectionTitleKey('comparison-us')}</th>
+                    <th className="text-start py-2 px-2 font-semibold text-gray-900 dark:text-gray-100">{sectionTitleKey('comparison-them')}</th>
+                    <th className="text-start py-2 ps-2 font-semibold text-gray-900 dark:text-gray-100">{sectionTitleKey('comparison-feature')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {((seo as any).comparison as Array<{name?: string; us?: string; them?: string; feature?: string}>)
+                    .filter((x) => x && typeof x.name === 'string')
+                    .map((x, i) => (
+                      <tr key={'cp-' + i} className="border-b border-gray-100 dark:border-gray-800 align-top">
+                        <td className="py-2 pe-2 font-medium text-gray-900 dark:text-gray-100">{x.us}</td>
+                        <td className="py-2 px-2 text-gray-700 dark:text-gray-300">{x.them}</td>
+                        <td className="py-2 ps-2 text-gray-500 dark:text-gray-400">{x.feature}</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+        )}
+
+        {advantages.length > 0 && (
         <>
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 sm:mb-3 mt-6 sm:mt-7">
             {sectionTitleKey('section-advantages')}

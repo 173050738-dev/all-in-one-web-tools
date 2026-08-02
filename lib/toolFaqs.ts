@@ -49,6 +49,45 @@ const TOOL_FAQ_I18N: Record<string, Record<SeoLocale, Array<{ q: string; a: stri
       { q: 'هل يمكنني تنزيل مزيج الأيموجي الخاص بي؟', a: 'نعم، يمكنك تنزيل الأيموجي المخصص الخاص بك بصيغة PNG مع خلفية شفافة، مثالي لأجهزة المراسلة والوسائط الاجتماعية.' },
     ],
   },
+  'meme-generator': {
+    en: [
+      { q: 'Is the meme generator really free?', a: 'Yes. 100% free, no signup, no watermark. Everything runs in your browser, not on a server.' },
+      { q: 'Do I need to create an account to make memes?', a: 'No. No account, no email, no password. Open the page and start making memes immediately.' },
+      { q: 'Are my images uploaded to a server?', a: 'No. Every step - upload, text overlay, PNG export - happens locally in your browser. Your images never leave your device.' },
+      { q: 'Can I use the memes I make commercially?', a: 'Yes. You own the output. Use them for client work, products, social media, newsletters - any commercial use is fine.' },
+    ],
+    zh: [
+      { q: '表情包生成器真的免费吗？', a: '是的。100% 免费，无需注册，无水印。所有处理都在浏览器中完成，不在服务器上。' },
+      { q: '需要注册账号才能做表情包吗？', a: '不需要。无需账号、邮箱、密码。打开页面即可开始做。' },
+      { q: '我的图片会上传到服务器吗？', a: '不会。每一个步骤 - 上传、文字叠加、PNG 导出 - 都在你的浏览器本地完成。' },
+      { q: '生成的表情包可以商用吗？', a: '可以。输出归你所有。可用于客户工作、产品、社交媒体、Newsletter 等任何商业用途。' },
+    ],
+    es: [
+      { q: '¿El generador de memes es realmente gratis?', a: 'Sí. 100% gratis, sin registro, sin marca de agua. Todo se ejecuta en tu navegador, no en un servidor.' },
+      { q: '¿Necesito crear una cuenta?', a: 'No. Sin cuenta, sin email, sin contraseña. Abre la página y empieza a hacer memes al instante.' },
+      { q: '¿Mis imágenes se suben a un servidor?', a: 'No. Cada paso - subida, superposición de texto, exportación PNG - ocurre localmente en tu navegador.' },
+      { q: '¿Puedo usar los memes comercialmente?', a: 'Sí. Tú eres dueño del resultado. Úsalos para trabajo de clientes, productos, redes sociales o newsletters.' },
+    ],
+    fr: [
+      { q: 'Le générateur de memes est-il vraiment gratuit ?', a: 'Oui. 100% gratuit, sans inscription, sans filigrane. Tout fonctionne dans votre navigateur, pas sur un serveur.' },
+      { q: 'Dois-je créer un compte ?', a: 'Non. Pas de compte, pas d\'email, pas de mot de passe. Ouvrez la page et commencez à faire des memes immédiatement.' },
+      { q: 'Mes images sont-elles téléchargées sur un serveur ?', a: 'Non. Chaque étape - téléchargement, superposition de texte, export PNG - se fait localement dans votre navigateur.' },
+      { q: 'Puis-je utiliser les memes commercialement ?', a: 'Oui. Vous êtes propriétaire du résultat. Utilisez-les pour le travail client, les produits, les réseaux sociaux, les newsletters.' },
+    ],
+    hi: [
+      { q: 'क्या मीम जेनरेटर वाकई में मुफ्त है?', a: 'हाँ। 100% मुफ्त, कोई साइनअप नहीं, कोई वॉटरमार्क नहीं। सब कुछ आपके ब्राउज़र में चलता है, सर्वर पर नहीं।' },
+      { q: 'क्या मुझे खाता बनाना होगा?', a: 'नहीं। कोई खाता नहीं, कोई ईमेल नहीं, कोई पासवर्ड नहीं। पेज खोलें और तुरंत मीम बनाना शुरू करें।' },
+      { q: 'क्या मेरी छवियाँ सर्वर पर अपलोड होती हैं?', a: 'नहीं। हर कदम - अपलोड, टेक्स्ट ओवरले, PNG निर्यात - आपके ब्राउज़र में स्थानीय रूप से होता है।' },
+      { q: 'क्या मैं मीम का व्यावसायिक रूप से उपयोग कर सकता हूँ?', a: 'हाँ। आउटपुट आपका है। क्लाइंट कार्य, उत्पादों, सोशल मीडिया, न्यूज़लेटर के लिए उपयोग करें।' },
+    ],
+    ar: [
+      { q: 'هل مولد الميمات مجاني فعلاً؟', a: 'نعم. مجاني 100%، بدون تسجيل، بدون علامة مائية. كل شيء يعمل في متصفحك، وليس على خادم.' },
+      { q: 'هل أحتاج لإنشاء حساب؟', a: 'لا. بدون حساب، بدون بريد إلكتروني، بدون كلمة مرور. افتح الصفحة وابدأ في عمل الميمات فوراً.' },
+      { q: 'هل يتم رفع صوري إلى خادم؟', a: 'لا. كل خطوة - الرفع، تراكب النص، تصدير PNG - تحدث محلياً في متصفحك. صورك لا تغادر جهازك أبداً.' },
+      { q: 'هل يمكنني استخدام الميمات تجارياً؟', a: 'نعم. أنت تملك الناتج. استخدمها لأعمال العملاء أو المنتجات أو وسائل التواصل الاجتماعي أو النشرات الإخبارية.' },
+    ],
+  },
+
   'markdown-platform-converter': {
     en: [
       { q: 'What is the difference between Markdown on Notion vs Obsidian vs GitHub?', a: 'Notion uses a proprietary Markdown variant with /-commands and inline database properties. Obsidian follows CommonMark closely with wiki-style [[links]]. GitHub uses GitHub Flavored Markdown (GFM) which adds task lists, tables, and strikethrough. Our converter handles all these differences, so you can move content between platforms without broken formatting.' },

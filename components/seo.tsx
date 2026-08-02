@@ -868,6 +868,20 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
 
   const faqPage = buildFaqJsonLd(faqs);
 
+  /* HowTo JSON-LD for GEO (AEO/LLM 检索偏好) */
+  let howto = null;
+  try {
+    const _k = String(tool.slug || tool.id || "");
+    const _ns = (json && json.tools) || {};
+    const _so = _ns[_k] && _ns[_k].seo ? _ns[_k].seo : (tool.id && _ns[String(tool.id)] && _ns[String(tool.id)].seo);
+    if (_so && Array.isArray(_so.howtoSteps) && _so.howtoSteps.length > 0) {
+      const steps = _so.howtoSteps.filter(function (x) { return x && typeof x.name === "string" && typeof x.text === "string"; }).map(function (x, i) { return { "@type": "HowToStep", position: i + 1, name: String(x.name), text: String(x.text) }; });
+      if (steps.length > 0) {
+        howto = { "@context": "https://schema.org", "@type": "HowTo", name: name, description: description, inLanguage: LOCALE_OPEN_GRAPH[l], totalTime: "PT2M", estimatedCost: { "@type": "MonetaryAmount", currency: "USD", value: "0" }, tool: [{ "@type": "HowToTool", name: "Web browser (Chrome / Safari / Edge / Firefox)" }], step: steps };
+      }
+    }
+  } catch (e) { howto = null; }
+
   const softwareApp = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -925,6 +939,12 @@ export function ToolPageJsonLd(props: { locale: SeoLocale; slug: string }): Reac
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }}
       />
+      {howto && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}
+        />
+      )}
     </>
   );
 }
@@ -1268,6 +1288,7 @@ export function BlogPostJsonLd(props: { locale: SeoLocale; slug: string }): Reac
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPosting) }} />
       {faqPage && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }} />}
+
     </>
   );
 }
