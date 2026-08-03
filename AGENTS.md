@@ -237,8 +237,15 @@
 - 关键 DOM 笔记：帖内嵌套回复按钮是 `div.footer__action--reply`；顶层评论框是 `textarea` ph `Say something nice to xxx`
 - 跨节点文本用 Playwright getByText 比 evaluate 找 leaf 稳
 - /product/xxx?post=yyy 帖评论框是 `[contenteditable=true]` 不是 textarea
-- 脚本：ih-comments-*.js / ih-comment-0730b.js
+- 脚本：ih-comments-*.js / ih-comment-0730b.js / ih-comment-0803.js / ih-comment-0803b.js
 - 待办：继续 1-2 条/天；回看这几天评论有无新回复做跟评
+
+**2026-08-03 进度**：
+- IH 2 条评论均 landed（达成 2/2 日上限）
+  1. /post/i-shipped-v2-with-zero-paying-customers-... → commentId=-Oz6mNp348RMKpTHKb2Z（讨论 shipping + second-wave feedback）
+  2. /post/i-built-a-startup-idea-scanner-... → commentId=-Oz6n4mhDpqR6H9Gpsf6（讨论 easy-wins 思维 + 2h vs 2w 工具）
+- 全部独立开发者人设、零链接、抛问题钩子
+- 累计 IH 评论约 19 条（仍 <50 链接门槛，遵守不导流铁律）
 
 ### 8.4 YouTube 上线
 - 频道"江僖"已登录（Google 账号，频道ID UCpWfmlbKRGAUUTqGJbjm91A）
