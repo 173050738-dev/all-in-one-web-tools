@@ -1,385 +1,306 @@
-# AGENTS.md — Korelyy 项目常驻说明（每个新会话必读）
+# AGENTS.md → Codex 常驻说明（每个新会话必读）
 
 > 【AI 自我指令】每个新会话开始时，我（Codex）必须先完整读本文件恢复上下文，然后用一句话向用户声明【已读 AGENTS.md】并复述当前最关键的硬约束，再动手。维护本文件是我的职责：有新进展/新约束/新踩坑要主动提醒用户更新，无需用户提醒。
-> 用户 = Carson。沟通用中文。诚实、不画饼、强成本意识、讨厌返工、下结论前必须先查证实测。
+> 用户 = Carson。沟通用中文。诚实、不画饼、强成本意识、讨厌返工、下结论前必须先查证/实测。
+> 本文件 2026-08-03 重构：硬约束分成两层【Codex 通用】所有项目生效 / 【Korelyy 特定】仅 D:\projects\工具独立站 生效。
 
 ---
 
-## 一、项目基本信息
+## 〇、文件结构（本文件有两套硬约束，必须看清分界）
+
+| 章节 | 约束类型 | 生效范围 |
+|---|---|---|
+| 二、Codex 通用硬约束 | 强约束 | 所有项目都遵守 |
+| 三、Korelyy 项目特定硬约束 | 强约束 | 仅 D:\projects\工具独立站 生效 |
+| 五-九 | 纯信息记录 | Korelyy 上下文 |
+| 十、跨会话记忆 | Codex 自我指令 | 自身行为 |
+
+**重要**：新会话看到"硬约束"先看清是【通用】还是【Korelyy 特定】，不要把 Korelyy 约束套到非 Korelyy 项目上。
+
+---
+
+## 一、项目基本信息（Korelyy 特定）
 - 项目：Korelyy 工具独立站（korelyy.com），全球独立站定位
 - 目录：D:\projects\工具独立站
 - 技术栈：Next.js 15 + next-intl 六语言(en/zh/es/fr/hi/ar) + Tailwind + Cloudflare Pages
 - 部署：push GitHub 后自动部署（GitHub Actions），命令行 push 通常由 Trae/用户做
-- 环境：Windows / PowerShell 5.1（多命令用【;】不用【&&】）
+- 环境：Windows / PowerShell 5.1（多命令用 ; 不用 &&）
 - 桌面路径：D:\360MoveData\Users\Administrator\Desktop
 - 临时目录：D:\pw-temp
 
-## 二、核心硬约束（最重要，违反会造成返工）
-1. 【禁止在 C 盘生成任何文件】
-2. 【Codex 只审核/诊断/写文档/查证，不改 Korelyy 业务代码】——代码改动一律交 Trae
-3. 【禁改】：首页 / Header / Footer / 主题色 / GitHub Actions 部署配置
-4. 【下结论前必须先查证/实测】，不许凭记忆下断言
-5. 给 Trae 的文档【必须 ≤6000 字符】（Trae 读不了超过 6000 字符），超了就拆分或压缩，但不删关键细节
-6. 给 Trae 喂任务要【拆小、一次一步】，一次喂太多 Trae 易出错
-7. Codex 回复尽量做成【可直接转交 Trae】的格式，需用户决策处单独标出
+---
 
-## 三、协作模式（Codex 与 Trae 无法直接打通）
-- Codex 和 Trae 是两个隔离程序，无数据通道，不能互相指挥
-- 模式：用户当【信使 + 最终决策者】。Codex 出方案/文档/审查 → 用户转交 Trae → Trae 改 → Codex 复验
-- 决策流程：Codex 先出方案(不执行) → 用户拍板 → 交 Trae 改 → Codex 复验
+## 二、Codex 通用硬约束（所有项目都遵守）
 
+### 2.1 写代码能力（2026-08-03 解除旧约束）
+- 旧约束已解除：原"Codex 只审核/诊断/写文档/查证，不改 Korelyy 业务代码"自本日起作废
+- 新规则：Codex 现在起主动写代码（含 Korelyy 业务代码），但仍按"方案-用户拍板-执行-复验"流程走
+- 仍未解除的：Codex 不替 Trae 改首页/Header/Footer/主题色/GitHub Actions 部署配置（这些是 Korelyy 特定约束，详见三）
 
-### 2.1 用户交付偏好（一站式，禁止拆分）
-- 任何对外可发内容（邮件 outreach、文章、社交帖草稿、爬虫清单等），**必须**合并到一个文件交付，禁止拆 .md + .txt + .csv 多个文件让用户自己拼
-- 文件位置：**真实桌面** `D:\360MoveData\Users\Administrator\Desktop\`（不是 C 盘系统桌面）
-- 文件命名：单一主题名（如 `korelyy-mass-outreach.md`、`korelyy-blog-xxx.md`），不要批量加 batch4/5 这种内部编号
-- 群发类内容：包含「主题 4 选 1 + 通用正文 + 邮箱清单（多格式）+ 完整列表 + 已发剔除」5 大块，让用户打开一个文件就发
-- Carson 不懂英文，所有英文正文/主题必须同步附中文摘要（≥3 行解释 + 翻译要点）
-- 例：korelyy-mass-outreach.md = 主题 4 选 1 + 群发正文 + 61 邮箱 3 种格式 + 步骤指引
+### 2.2 全局铁律（所有项目）
+1. 禁在 C 盘生成任何 Korelyy 业务文件（skill 系统 plugin 装在 ~/.codex/ 不算违反，这是 Codex 自己的事）
+2. 下结论前必须先查证/实测，不许凭记忆下断言
+3. 写含中文文件的可靠方法：PS here-string + [System.IO.File]::WriteAllText + UTF-8 无 BOM，禁用中文双引号
+4. PS 控制台显示中文/emoji 乱码是 GBK 渲染假象，用 node fs.readFileSync(path,utf8) 读回验证
+5. 读大文件/复杂正则：写 node 脚本到 D:\pw-temp\xxx.js 再执行（PS 内联正则含 [...] 会冲突）
+6. 递归扫描项目慢（.next 目录巨大） 限定目录/深度，别全盘 Get-ChildItem -Recurse
 
-## 四、网络现状
+### 2.3 网络现状
 - 命令行默认连不了外网（GitHub/Google 超时），国内网可用（百度/korelyy.com 可连）
 - 用户梯子 = Anycast VPN（TUN 虚拟网卡模式，不开本地代理端口）。开梯子后命令行可走外网，但 github 首包慢
 - git clone 走梯子常低速卡死 → 改用 codeload tarball 下载：
   https://codeload.github.com/{owner}/{repo}/tar.gz/refs/heads/main 然后 tar -xzf
-- 抓 korelyy.com 线上页面用 Invoke-WebRequest（注意：站点启用 trailingSlash，URL 结尾必须带 / 否则 308）
+- 抓 korelyy.com 线上页面用 Invoke-WebRequest（站点启用 trailingSlash，URL 结尾必须带 / 否则 308）
 
-## 五、写含中文文件的可靠方法（踩过坑）
-- 用 PS here-string + [System.IO.File]::WriteAllText(path, doc, (New-Object System.Text.UTF8Encoding $false))
-- here-string 里【禁用中文双引号】（破坏语法），中文引号用【】代替
-- PS 控制台显示中文/emoji 乱码是 GBK 渲染假象，用 node -e "fs.readFileSync(path,'utf8')" 读回验证真实内容
-- 读大文件/复杂正则：写 node 脚本到 D:\pw-temp\xxx.js 再执行（PS 内联正则含 [...] 会冲突报错）
-- 递归扫描项目慢（.next 目录巨大）→ 限定目录/深度，别全盘 Get-ChildItem -Recurse
+### 2.4 协作模式（Codex 与 Trae 无法直接打通）
+- Codex 和 Trae 是两个隔离程序，无数据通道，不能互相指挥
+- 模式：用户当信使 + 最终决策者。Codex 出方案/文档/审查 → 用户转交 Trae → Trae 改 → Codex 复验
+- 决策流程：Codex 先出方案(不执行) → 用户拍板 → 交 Trae 改 → Codex 复验
+- 本规则已调整：Codex 写代码能力已解锁（见 2.1），但 Korelyy 业务代码仍可走 Trae 路径（视用户决定）
 
-## 六、关键账号 / 配置
-- GitHub: github.com/173050738-dev/all-in-one-web-tools.git
-- Cloudflare Pages: 项目 korelyy-tools，account b650d5d21bddb5d98b5dcadcb2723522
-- GSC: sc-domain:korelyy.com
-- AdSense: pub-7235824755389632（ads.txt 已配；Google Ads/AdSense 曾拒审，暂搁置）
-- 用户邮箱: 173050738@qq.com
+### 2.5 用户交付偏好（一站式，禁止拆分）
+- 任何对外可发内容（邮件 outreach、文章、社交帖草稿、爬虫清单等），必须合并到一个文件交付，禁止拆 .md + .txt + .csv 多个文件让用户自己拼
+- 文件位置：真实桌面 D:\360MoveData\Users\Administrator\Desktop\（不是 C 盘系统桌面）
+- 文件命名：单一主题名（如 korelyy-mass-outreach.md、korelyy-blog-xxx.md），不要批量加 batch4/5 这种内部编号
+- 群发类内容：包含主题 4 选 1 + 通用正文 + 邮箱清单（多格式）+ 完整列表 + 已发剔除 5 大块，让用户打开一个文件就发
+- Carson 不懂英文，所有英文正文/主题必须同步附中文摘要（3 行解释 + 翻译要点）
+- 例：korelyy-mass-outreach.md = 主题 4 选 1 + 群发正文 + 61 邮箱 3 种格式 + 步骤指引
 
-## 七、关键数据文件与体系
-- data/tools-index.json：1537 个工具（自研约49 + 外链约1488）
-- data/tools-detail.json、data/workflows.ts（280 工作流）
+---
+
+## 三、Korelyy 项目特定硬约束（仅 D:\projects\工具独立站 生效）
+
+### 3.1 禁改文件（绝对不碰）
+- 首页（app/[locale]/page.tsx 及首页直接引用的组件）
+- Header 组件（components/header* / layout 顶部导航相关）
+- Footer 组件
+- 主题色（tailwind.config / 全局 CSS 颜色变量）
+- GitHub Actions 部署配置（.github/workflows/）
+
+### 3.2 数据必须实时（2026-08-02 新增）
+- 任何关于 Korelyy 数据/数字的发言，必须先跑 `node D:\codex-tools\korelyy-data-snapshot.js` 取实时数据
+- 禁止用 AGENTS.md 缓存数字（49/78/109/280/128 等均已漂移过）
+- 脚本输出关键数（2026-08-03 现状，可能再漂移）：
+  - `deployed_tools` → 109 → 前端实际部署工具数（唯一对外口径）
+  - `isSelfHosted_true` → 78 → 数据文件 isSelfHosted=true 字段值
+  - `total` → 1594 → 工具站总规模（外链 + 自研）
+  - `workflows` → 288 → data/workflows.ts
+  - `blog_posts` → 157 → data/blog-index.ts
+  - `locales` = 6 → en/zh/es/fr/hi/ar
+- 口径定死：
+  - 对外/汇报/引流话术/给 Trae 文档 → 用 `deployed_tools`
+  - 数据字段补全/迁移 → 用 `isSelfHosted_true`
+  - 两者差额 → 31 个 = 待 Trae 批量补 isSelfHosted=true 字段
+- 新会话前必跑 snapshot，禁止凭记忆报数
+
+### 3.3 给 Trae 文档 6000 字符
+- Trae 读不了超过 6000 字符
+- 超了就拆分或压缩，但不删关键细节
+- 给 Trae 喂任务要拆小、一次一步
+
+### 3.4 UI 设计规范（工具页美化用）
+- 只用于工具页/工具箱，不碰首页/Header/Footer/主题色
+- 已装 3 个设计 skill 参考：taste-skill(营销页)、frontend-design(选1个视觉锚点)、garden-skills/web-design-engineer(做工具页/dashboard)
+- 工具页建议：Swiss 风格锚点(白底+单一无衬线+网格+单强调色)；低视觉方差、轻 hover 动效、中密度
+- 硬约束：六语言完整适配(含SEO)、ar 的 RTL 必须翻转正确(用 ms-/me-/text-start，禁 ml-/mr-/left/right)、
+  全端适配(触控热区44px、窄屏面板折叠、手机端点击选文件)、复用现有 seo.tsx/ToolSeoContent.tsx
+- 禁止：假数据占位、无意义 mono 大写副标题、unicode 字符当图标、花哨动效
+
+---
+
+## 四、Codex 装备现状（每次会话读此节恢复认知）
+
+### 4.1 已打通能力
+- 【网页自动化】Playwright + Chromium 内核：装在 D:\codex-tools（内核在 D:\codex-tools\playwright-browsers，环境变量 PLAYWRIGHT_BROWSERS_PATH 指向它）
+  - 用法：cd D:\codex-tools; $env:PLAYWRIGHT_BROWSERS_PATH='D:\codex-tools\playwright-browsers'; 写 node 脚本 require('playwright') 跑
+  - 能做：自动打开页面/点击/填表/抓动态渲染内容/批量截图/线上部署核验
+- 【写/跑脚本】PowerShell 5.1、Node v24、Python 3.14、Git 均可用
+- 【网页抓取/查证】Invoke-WebRequest + Playwright 双路可用（korelyy 记得带尾斜杠）
+
+### 4.2 已装的 Codex skill plugin（2026-08-03 新增）
+- **obra/superpowers** v6.2.0（13 skills）：
+  - 入口水 using-superpowers（bootstrap 自动注入）
+  - 完整开发流：brainstorming / writing-plans / executing-plans / subagent-driven-development / dispatching-parallel-agents
+  - 质量保证：test-driven-development / systematic-debugging / verification-before-completion
+  - 工作树：using-git-worktrees / finishing-a-development-branch
+  - 评审：requesting-code-review / receiving-code-review
+  - 扩展：writing-skills
+- **DietrichGebert/ponytail** v4.8.4（6 skills + session-start hooks）：
+  - ponytail（懒人开发主哲学）/ ponytail-review / ponytail-audit / ponytail-debt / ponytail-gain / ponytail-help
+  - hooks 自动激活 lazy 模式（SessionStart 事件）
+- 装法记录：`codex plugin add <name>@<marketplace>`；marketplace 加 `codex plugin marketplace add <github-url>`
+- superpowers 在 `openai-api-curated` marketplace，直接 `codex plugin add superpowers@openai-api-curated`
+- ponytail 需先加 marketplace：`codex plugin marketplace add DietrichGebert/ponytail`
+
+### 4.3 已装的 CLI / MCP 工具
+- **codegraph** v1.5.0（@colbymchenry/codegraph，Rust 内核）：全局 npm 装
+  - 给任何项目做语义代码图 + 手术式上下文
+  - Korelyy 项目可用 `codegraph init` 试
+  - Windows 装法：`npm i -g @colbymchenry/codegraph`（不走 irm | iex，因 GitHub API un-auth 限速）
+- **firecrawl-mcp** v3.23.0：MCP server，已配 `~/.codex/config.toml` 的 `[mcp_servers.firecrawl]`
+  - keyless 模式：`firecrawl_scrape` + `firecrawl_search` 走 Firecrawl cloud 免费按 IP 限速
+  - 需 API key 的工具：crawl/extract/agent（暂未配 key）
+
+### 4.4 差一步就能用
+- 【AI 生图】imagegen CLI 脚本齐全：C:\Users\Administrator\.codex\skills\.system\imagegen\scripts\image_gen.py（模型 gpt-image-2），openai SDK 2.38 + Pillow 已装
+  - 唯一缺口：环境变量 OPENAI_API_KEY 未配
+  - 启用：开梯子 + 配 OPENAI_API_KEY 后，python image_gen.py generate 即可出图/去背景
+  - 付费 API 按图计费，需 Carson 确认成本
+
+### 4.5 环境注意
+- 外网需开梯子（Anycast VPN）才能连 OpenAI/海外站；不开则超时
+- 一律不在 C 盘生成 Korelyy 业务文件；工具/产物放 D:\codex-tools 或 D:\pw-temp
+
+### 4.6 诚实边界（不画饼）
+- 【自动赚钱工具】不是一个能力，是产品+流量+变现的完整生意，任何 AI 都无法一键生成
+- Korelyy 的 SEO+AdSense 才是真路子
+
+---
+
+## 五、Korelyy 关键数据文件与体系
+- data/tools-index.json：1594 个工具（自研 78 + 外链 1516）
+- data/tools-detail.json、data/workflows.ts（288 工作流）
 - SEO 体系：components/seo.tsx（JSON-LD 全套）、components/ToolSeoContent.tsx（读 translation.json seo段）、lib/toolFaqs.ts
 - 六语言翻译：public/locales/{locale}/translation.json
 - RTL：app/layout.tsx 已支持 <html dir>，RTL_LOCALES 含 ar
 - 工作流路由：/{locale}/workflow/[slug]（单数），静态导出只预生成 lib/topSlugs.ts 里前10个，其余靠 ISR
 - 备用 skill（D盘，非korelyy用）：D:\download\skill\（含 taste-skill、frontend-design、garden-skills、obscura、dashiai-ppt 等）
 
-## 八、用户产品方向与战略
+## 六、用户产品方向与战略
 - 全球独立站；工具题材贴近普通人日常高频刚需；对游戏工具(易变现)、运动工具有兴趣
-- 当前战略：放弃纠结 1488 外链，专心做【自研工具 + 工作流对齐】（工作流步骤从外链跳出改为站内闭环）
-- 引流靠 blog(约128篇) + 外链；核心做能赚钱的；收费/会员搁置(先全免费，流量起来再收费)
+- 当前战略：放弃纠结 1516 外链，专心做自研工具 + 工作流对齐（工作流步骤从外链跳出改为站内闭环）
+- 引流靠 blog(157篇) + 外链；核心做能赚钱的；收费/会员搁置(先全免费，流量起来再收费)
 
-## 九、UI 设计规范（工具页美化用）
-- 只用于【工具页/工具箱】，不碰首页/Header/Footer/主题色
-- 已装 3 个设计 skill 参考：taste-skill(营销页)、frontend-design(选1个视觉锚点)、garden-skills/web-design-engineer(做工具页/dashboard)
-- 工具页建议：Swiss 风格锚点(白底+单一无衬线+网格+单强调色)；低视觉方差、轻 hover 动效、中密度
-- 硬约束：六语言完整适配(含SEO)、ar 的 RTL 必须翻转正确(用 ms-/me-/text-start，禁 ml-/mr-/left/right)、
-  全端适配(触控热区≥44px、窄屏面板折叠、手机端点击选文件)、复用现有 seo.tsx/ToolSeoContent.tsx
-- 禁止：假数据占位、无意义 mono 大写副标题、unicode 字符当图标、花哨动效
-
-## 十、验收工具页/功能的 10 条清单
+## 七、验收工具页/功能的 10 条清单
 1. 六语言 UI + SEO 都完整（非机翻占位）
 2. ar RTL 翻转正确
-3. 三端适配(PC/平板/手机)，触控热区≥44px
+3. 三端适配(PC/平板/手机)，触控热区44px
 4. 无假数据/填充文案
-5. 功能【实测】输入→输出可用，不是只有界面
+5. 功能实测输入输出可用，不是只有界面
 6. 复用现有 SEO 组件，未另造轮子
 7. 未改动首页/Header/Footer/主题色
-8. 未在 C 盘生成文件
+8. 未在 C 盘生成 Korelyy 业务文件
 9. 线上验证(带尾斜杠抓 korelyy.com)已确认部署
 10. git 已 push + Cloudflare 部署完成
 
 ---
 
-## 十一、Codex 的能力与装备现状（每次会话读此节恢复认知）
-> 我（Codex）不是只会写文档。已在本机实测打通以下能力，新会话务必按此认知行事，别再说【做不到】。
+## 八、外站引流进度（按平台，每次会话读此节，主动提醒 Carson 推进）
 
-### 已打通（可直接用）
-- 【网页自动化】Playwright + Chromium 内核已装在 D:\codex-tools（内核在 D:\codex-tools\playwright-browsers，环境变量 PLAYWRIGHT_BROWSERS_PATH 指向它）。
-  - 用法：cd D:\codex-tools; $env:PLAYWRIGHT_BROWSERS_PATH='D:\codex-tools\playwright-browsers'; 写 node 脚本 require('playwright') 跑。
-  - 能做：自动打开页面/点击/填表/抓动态渲染内容/批量截图/线上部署核验。已实测打开 korelyy.com 抓标题+截图成功。
-- 【写/跑脚本】PowerShell、Node v24、Python 3.14、Git 均可用。
-- 【网页抓取/查证】Invoke-WebRequest + Playwright 双路可用（korelyy 记得带尾斜杠）。
+### 8.1 X（Twitter）引流
+- X 账号：@Korelyybusiness（展示名 Carson | Korelyy），2026年6月注册
+- 人设：工具/独立开发者（走 #buildinpublic #indiehackers）
+- 连号方式：Node 脚本用 chromium.connectOverCDP('http://127.0.0.1:9222') 连 Carson 真实 Edge
+  - 启动：node -e 用 cmd 执行 'start msedge --remote-debugging-port=9222 --profile-directory=Default'，Carson 手动登录
+  - 脚本放 D:\codex-tools（playwright 模块在那），不能放 D:\pw-temp
 
-### 差一步就能用（缺钥匙/需授权）
-- 【AI 生图】imagegen CLI 脚本齐全：C:\Users\Administrator\.codex\skills\.system\imagegen\scripts\image_gen.py（模型 gpt-image-2），openai SDK 2.38 + Pillow 已装。
-  - 唯一缺口：环境变量 OPENAI_API_KEY 未配（脚本只认此变量，无自定义 base_url，第三方中转接不上，需真 OpenAI key）。
-  - 启用：开梯子 + 配 OPENAI_API_KEY 后，python image_gen.py generate 即可出图/去背景（remove_chroma_key.py 也在）。付费 API 按图计费，需 Carson 确认成本。
+**已完成（2026-07-25/26/28/30）**：
+- 简介改造完成
+- 第1条养号推已发（口语风、无链接）
+- 账号已解锁曝光权限
+- 累计发 4+ 条针对性评论蹭大V曝光
+- 07-30 节奏好（X 已活跃）
 
-### 环境注意
-- 外网需开梯子（Anycast VPN）才能连 OpenAI/海外站；不开则超时。
-- 一律不在 C 盘生成产物；工具/产物放 D:\codex-tools 或 D:\pw-temp。
+**待办（每次会话读后提醒）**：
+- 发第2条养号推（口语风、无链接）+ 1-2 条评论
+- D+2 计划发 emoji-mixer 引流视频（用 Jenny 版 D:\codex-tools\videos\emoji-mixer-jenny.mp4）
+  - 硬规则：正文不放链接，链接 korelyy.com 放第一条评论，正文写 link in replies
+  - 发布时间选北京时间晚9点-凌晨（美国白天）
+- 每次发完隔几小时看互动，互动多的风格后续多用
 
-### 诚实边界（不画饼）
-- 【自动赚钱工具】不是一个能力，是产品+流量+变现的完整生意，任何 AI 都无法一键生成。Korelyy 的 SEO+AdSense 才是真路子。
+### 8.2 Reddit 养号
+- 账号：u/Tricky-Dealer-605（绑 173050738@qq.com + Google 登录），注册约1个月
+- 现状（2026-07-30）：post karma 1 / comment karma 极低，白号
+- 踩坑：低 karma 号在 r/webdev 等严格版块易被 automod 吃掉
+- 正确养号策略：先去 r/CasualConversation / r/AskReddit / r/NoStupidQuestions 攒 karma，1 天 1-2 条
+- 全程 0 链接 0 推广，等 karma 50+ 再回精准版块
+- 待办：每天 1 条宽松版块评论攒 karma
+- 可复用脚本：reddit-feed.js / reddit-comment.js / reddit-myhist.js / reddit-karma.js（D:\codex-tools\）
+
+### 8.3 Indie Hackers 养号
+- 账号已登录（Chrome 9222 端口），累计约 17 条评论
+- 关键 DOM 笔记：帖内嵌套回复按钮是 `div.footer__action--reply`；顶层评论框是 `textarea` ph `Say something nice to xxx`
+- 跨节点文本用 Playwright getByText 比 evaluate 找 leaf 稳
+- /product/xxx?post=yyy 帖评论框是 `[contenteditable=true]` 不是 textarea
+- 脚本：ih-comments-*.js / ih-comment-0730b.js
+- 待办：继续 1-2 条/天；回看这几天评论有无新回复做跟评
+
+### 8.4 YouTube 上线
+- 频道"江僖"已登录（Google 账号，频道ID UCpWfmlbKRGAUUTqGJbjm91A）
+- 已发 2 条 Shorts：
+  1. life-weeks: https://www.youtube.com/shorts/BzDwx2gFe5w
+  2. emoji-mixer: https://www.youtube.com/shorts/riFG3Jq8-7c
+- 验证：uploads playlist 列出全部
+- 关键 DOM 笔记（复用）：
+  - input[type="file"] 在上传页直接存在 → setInputFiles
+  - 等"详细资讯"步骤：waitForSelector ytcp-video-title #textbox
+  - 标题描述字段是 contenteditable div，keyboard.type 不要 evaluate
+  - 必须先答"兒童專屬"问题（选"否"），否则"下一步" disabled
+
+### 8.5 Dev.to
+- 账号已登录：用户名 CarsonJ，个人页 dev.to/korelyy
+- 历史 4 篇文章（几篇标题踩红线-1000tools/19free tools/privacy-first，属历史遗留暂不动）
+- 新发布文章 1：https://dev.to/korelyy/why-i-only-build-tools-that-run-in-your-browser-2ke
+- 新发布文章 2：https://dev.to/korelyy/i-built-a-free-emoji-mixer-that-runs-entirely-in-your-browser-5488
+- 待办 SEO：korelyy.com 上目前没有这两篇对应 blog（测过 404），等 Trae 上 blog 后回 Dev.to 编辑设 canonical
+- 编辑入口：dev.to/korelyy/<slug>/edit → Advanced Options → Canonical URL
+
+### 8.6 GitHub Awesome-list PR
+- 装好的 gh CLI 走纯 API 路线（无需 clone）
+- **已合并**：PR #61 @ YSGStudyHards/Awesome-Tools (★1142)
+- **待合并**：#98(yaolifeng0629★2430) / #181(atakanaltok★1220) / #331(devtoolsd★673) / #83(nafasebra★156) / #126(mathewlewallen★89)
+- 提 PR 标准流程（已跑通 6 次）：forkgh api 拉 README（UTF-16LE 读）node 插行写回 UTF-8建分支PUT contents 提交gh pr create
+- 踩坑：命令行连 api.github.com 不稳（TUN 梯子首包易被 reset），gh api 脚本务必加重试 5 次+间隔 4s
+- 查合并命令：`gh pr view <num> --repo <owner/repo> --json state,mergedAt`
+- 判过对口但放弃的(不够对口)：XiaomingX/indie-hacker-tools-plus、iAmCorey/awesome-indie-hacker-tools、anondotli/awesome-privacy-tools
+- 待办：过几天查 5 个待合 PR 状态；不催、别再提（每日 2 个上限避免被判推广灌水）
+
+### 8.7 导航站外链（AlternativeTo/SaaSHub/Uneed 等）
+- 受阻：全部上 Cloudflare 反自动化验证（403/人机挑战/封禁），无法自动提交
+- 需 Carson 坐电脑前手动过验证后 Codex 半自动填表，暂缓
+- 素材包存 D:\codex-tools\korelyy-directory-submit.md
 
 ---
 
-### 硬约束【数据必须实时】（2026-08-02 新增，Carson 拍板）
-- 任何关于 Korelyy 数据/数字的发言，**必须先跑** `node D:\codex-tools\korelyy-data-snapshot.js` 取实时数据
-- **禁止**用 AGENTS.md 缓存数字（49/78/109/280/128 等均已漂移过）
-- 脚本输出以下关键数（2026-08-01 19:47 实测基线）：
-  - `deployed_tools` = **109** ← 前端实际部署工具数（Carson 线上看到的口径，唯一对外口径）
-  - `isSelfHosted_true` = 78 ← 数据文件 isSelfHosted=true 字段值
-  - `total` = 1594 ← 工具站总规模（外链 1516 + 自研 78）
-  - `api_routes` = 28 ← 后端端点
-  - `workflows` = 288 ← data/workflows.ts
-  - `blog_posts` = 157 ← data/blog-index.ts
-  - `locales` = 6 ← en/zh/es/fr/hi/ar
-  - `not_marked_self_in_index` = 31 个 slug ← 前端有 page 但 index 字段未标 isSelfHosted=true
-- 口径定死：
-  - 对外/对外汇报/引流话术/给 Trae 改文档 → 用 `deployed_tools`（109）
-  - 数据字段补全/迁移 → 用 `isSelfHosted_true`（78）
-  - 两者差额 31 个 = 待 Trae 批量补 isSelfHosted=true 字段
-- 上次漂移事故：自研工具数 49→78→109；工作流 280→288；blog 128→157。**任何数字都不能凭记忆或 handoff 报**，必须现跑
-## 十二、X（Twitter）引流运营进度与计划（每次会话读此节，主动提醒 Carson 推进）
-> 【AI 自我指令】每个新会话读到此节，若发现有【待办】未完成，主动提醒 Carson：现在该做哪一步。Codex 无定时能力，靠此节做跨会话记忆。
-
-### 账号
-- X 账号：@Korelyybusiness（展示名 Carson | Korelyy），2026年6月注册的新号
-- 人设：工具/独立开发者（走 #buildinpublic #indiehackers），已定死
-- 连号方式：Node 脚本用 chromium.connectOverCDP('http://127.0.0.1:9222') 连 Carson 真实 Edge。
-  启动：node -e 用 cmd 执行 'start msedge --remote-debugging-port=9222 --profile-directory=Default'，Carson 手动登录。
-  脚本放 D:\codex-tools（playwright 模块在那），不能放 D:\pw-temp（无模块）。
-
-### 已完成（2026-07-25）
-1. 简介改造：Building free online tools for everyone；外链 korelyy.com/en/；城市 Guangzhou —— 已生效
-2. 第1条养号推已发：【made 50 free tools on my site so far lol...】（口语风、去AI味、无链接）
-3. 账号已【解锁曝光权限】(graduated-access)，新号限流期已过
-4. 关注同赛道 18 个号（levelsio/theo/swyx/shadcn/rauchg/arvidkahl/tibo_maker 等 indie hacker 圈）
-5. 发了 4 条针对性留言（tibo_maker/arvidkahl/gregisenberg/theo），含 1 条抛问题钩子
-
-### 已完成（2026-07-26 D+1）
-1. 第2条养号推已发：building the tools was the fun part... getting anyone to actually use them is way harder... how do you all get your first real users without spamming?（口语风、无链接、结尾抛钩子）
-2. 发这条推时 X 弹出 You unlocked more on X 确认页 —— 曝光权限本次正式激活（可被更多人看到/出现在搜索/可 DM 非关注者）
-3. 留 2 条针对性评论蹭曝光：@arvidkahl(客服辛酸帖-情绪共鸣)、@tibo_maker(Revid自动出片帖-抛问题)，均落地
-4. 现状诚实记录：粉丝0/关注18，第1条推截至今仅8次浏览 —— 0粉新号冷启动自然曝光极低，靠持续评论蹭流量慢积累，勿期待单推爆
-
-### 已完成（2026-07-28 D+3）
-1. X 评论共 4 条已发+核验落地（去 with_replies 二次确认）：
-   - 回 @theo（stash 快捷键帖）：muscle memory / tiny keybind decisions
-   - 回 @dickiebush（Harsh reminder 帖）：shipping tools solo, tolerate good enough, compounding both ways
-   - 回 @arvidkahl（ask-another-agent 提效帖）：second pass catches what im too close to see, cheap insurance for solo builders
-   - 回 @gregisenberg（营销agent帖）：the loop/feedback part is what solo builders never have time to run manually
-   - 全部无链接、带独立开发者人设、蹭大V曝光。脚本 x-reply-arvid.js / x-reply-greg.js / x-verify.js（复用改 URL+TEXT）
-2. 抓热点脚本升级：x-feed-scan.js(home feed)、x-profiles3.js(抓大V主页最新帖,须 waitForSelector article + 等2.5s)。搜 hashtag 常空,抓大V主页更稳
-
-### 待办计划（按天推进，Carson 来了就提醒）
-- 【待办·D+1 明天】发第2条养号推（口语风、无链接）+ 可选再留 2-3 条评论。
-  第2条草稿参考：building a tool site is easy. getting people to actually use it is the hard part 类，口语化重写。
-- 【待办·D+2 后天】发 emoji-mixer 引流视频（用 Jenny 版 D:\codex-tools\videos\emoji-mixer-jenny.mp4）。
-  硬规则：正文【不放链接】(X 打压站外链)，链接 korelyy.com 放【第一条评论】，正文写 link in replies。
-  文案已备好（趣味钩子版），发布时间选北京时间晚9点-凌晨（美国白天）。
-- 每次发完隔几小时看互动（赞/评/涨粉），有互动的风格就是对的，后续多用。养号忌一天动作太密。
-
-### 引流视频资产（已产出，D:\codex-tools\remotion-studio + videos）
+## 九、Korelyy 引流视频资产
 - 通用模板 ToolPromo.tsx（配置表驱动，加新工具只改 Root.tsx 的 CONFIGS 数组）
-- 已出片：emoji-mixer-ARIA版.mp4 / emoji-mixer-JENNY版.mp4（1080x1920/18s/带女声配音+BGM）
+- 已出片：emoji-mixer-ARIA 版 / emoji-mixer-JENNY 版（1080x1920/18s/带女声配音+BGM）
 - 配音：Edge-TTS（免费神经女声，en-US-JennyNeural / AriaNeural），支持六语言女声
 - BGM：Python 合成的无版权音乐 public/bgm.wav
-- 下一步可扩：六语言配音版、横版 YouTube 版、给第2个自研工具套模板出片
+- 下一步可扩：六语言配音版、横版 YouTube 版、给第 2 个自研工具套模板出片
+- 资产路径：D:\codex-tools\remotion-studio + videos
 
-## 十三、Reddit / Indie Hackers 引流进度（新增，每次会话读）
-> 【AI 自我指令】读到此节若有待办，主动提醒 Carson 推进。Carson 不懂英文，所有对外内容必须附中文翻译给他看。
+## 十、Korelyy 当前待办（按优先级）
 
-### 账号
-- Reddit：u/Tricky-Dealer-605（绑 173050738@qq.com + Google 登录），注册约27天，【1 post karma / 0 comment karma】——极低白号。已在 Edge 调试端口登录态。
-- Indie Hackers：账号 Carson 说有，但【实测未登录】（首页顶部仍是 Join）。需 Carson 手动登录（走邮箱密码/Google OAuth，Codex 无法替输密码）。待办：Carson 手动登录 IH 后 Codex 接手。
+### 10.1 给 Trae 的 SEO 任务（已交 Carson 转 Trae）
+- Trae 任务 - SEO 修复 - 1 改页面.md（修 sitemap 漏 277 工作流/去满屏 Free 标题/修 13 个中文空 H1/清超长重复描述）
+- Trae 任务 - SEO 补工具 - 2 新建.md（补图片转换/图片 PDF 互转/单位换算/JSON-CSV 4 个高频工具）
+- 带后端的 AI 工具是有意让 Trae 深化的，不动
 
-### 2026-07-26 实测踩坑（重要）
-- 在 r/webdev 发3条纯有用评论(无链接)：仅第1条进自己历史，第2/3条提交后显示 removed。comment karma 纹丝不动=0。
-- 判断：r/webdev 等优质技术版块有 automod，对 0-karma/新号评论直接过滤/仅作者可见。低 karma 号在严格版块【发什么都被吃掉】。
-- 匿名 headless 抓 Reddit 会被 403 Blocked（反爬），无法用匿名视角验证可见性。
+### 10.2 GSC 体检结论
+- 站上线 1 月总曝光 1545 / 点击 22，属新站冷启动早期
+- 无快招，唯一正路=补通用高频工具+扩收录+耐心 3-6 月
 
-### 正确养号策略（Reddit）
-1. 低 karma 号先去【无 automod 门槛的宽松版块】攒 comment karma：r/AskReddit、r/CasualConversation、r/NoStupidQuestions 等。
-2. 一天 1-2 条、间隔拉开（勿连发，连发被静默限流且像机器人）。
-3. comment karma 养到【50+】、账龄过1个月后，再回 r/webdev / r/SideProject / r/InternetIsBeautiful 等精准但严格的版块。
-4. 全程 0 链接 0 推广，等 karma 够了再软推 korelyy（Reddit 封域名很狠，9:1 贡献比原则）。
+### 10.3 跨会话待办（每次会话读后主动提醒 Carson）
+- 【D+1 明天】发第 2 条养号推（口语风、无链接）+ 1-2 条评论
+- 【D+2 后天】发 emoji-mixer 引流视频（Jenny 版，链接放评论区）
+- 【Reddit 每天 1 条】宽松版块攒 karma，comment karma 50+ 才回精准版块
+- 【IH 每天 1-2 条】继续评论 + 回看跟评
+- 【过几天查】5 个待合 PR 状态，不催
+- 【SEO 修复】等 Trae 改完复验
 
-### 可复用脚本（D:\\codex-tools）
-- reddit-feed.js 抓子版块新帖；reddit-comment.js/comment2.js 发评论(old.reddit)；reddit-myhist.js 查自己评论历史+karma；reddit-anon.js 匿名验证(会被403)。
-- IH：ih-notif.js/ih-login.js 查登录态。
+---
 
-### 待办
-- 【Reddit D+1 起】每天去宽松版块发 1-2 条评论攒 karma（Codex 起草+附中文翻译+发+核验）。
-- 【IH 待 Carson 手动登录】登录后 Codex 做参与讨论/评论。
+## 十一、跨会话记忆：Codex 自我指令
 
-### Reddit 养号补记（2026-07-28）
-- 账号现状核验：post karma 1 / comment karma 0，账龄29天（白号）
-- 今天发 2 条宽松版块评论：r/CasualConversation「hobby」帖=已落地进历史✅；r/CasualConversation「scuba」帖=被 automod 吃掉（未进历史）
-- 再次印证：白号短时间连发2条，第2条易被静默过滤。教训=一天只发1条、且时间错开，别连发
-- 脚本 reddit-comments-0728.js（改 COMMENTS 数组复用）、reddit-hist2.js（查历史+score）、reddit-karma.js（查karma）
-- 【下一步】明天错开时段再发1条攒 karma；comment karma 到 50+ 才回精准版块。全程0链接
+每个新会话开始：
+1. **第一件事**：读本文件全部章节恢复上下文
+2. **第二件事**：用一句话向用户声明【已读 AGENTS.md】并复述当前最关键的硬约束
+   - 关键硬约束（按优先级）： 通用铁律 → Korelyy 禁改文件 → 数据必跑 snapshot → 给 Trae 6000 字符
+3. **第三件事**：判断当前是【通用项目】还是【Korelyy 项目】，对应使用相应硬约束
+4. **执行中**：有新进展/新约束/新踩坑主动提醒用户更新本文件
+5. **数据发言前**：必跑 `node D:\codex-tools\korelyy-data-snapshot.js`（仅 Korelyy 项目）
 
-### IH 养号进度补记（2026-07-30）
-- 【重要发现】浏览器 session：Chrome(9222) 单 context 含 1434 cookie，IH 已登录可用；但【X 和 Dev.to 登录态已过期】(打开都跳登录页)，需 Carson 手动重登。Hashnode/Substack 经实测【均未真登录】(上会话误判)，Medium/HN/ProductHunt/Quora 有 Cloudflare/Vercel 验证墙，自动化受阻
-- 今天 IH 发 3 条(全部核验 LANDED)，累计约 18 条：
-  1. 回 Kitzo 帖(作者 aracoool 回复了我谈浏览器扩展)：认同扩展思路+抛【按意图而非名字呈现工具/命令面板式启动器】的问题
-  2. amonyne(Needly)创始人致谢我评论：想再跟评但该层已无 reply 按钮(嵌套到顶)，放弃
-  3. 新顶层评论 @【How to rank #1 on ChatGPT】(GEO帖)：贡献【AI引擎更爱引用干净回答单一问题的页面而非终极指南】+问 FAQ/HowTo schema 是否真提升被引用率
-- 【IH DOM 关键笔记(复用)】：帖内嵌套回复按钮是【div.footer__action--reply】(不是 a.footer__action)。定位:找评论文本 leaf→climb 到最近祖先 div.comment→querySelector div.footer__action--reply→click→取距该评论最近可见 editor(dist<1200)。顶层评论框是【textarea】ph【Say something nice to xxx】,用 getByPlaceholder 定位 fill 后点 button:has-text(Post Comment)。页面有 honeypot input(ph 含 detect spam bots)别碰。跨节点文本用 Playwright getByText 比 evaluate 找 leaf 稳
-- 【下一步】明天继续 1-2 条;回看这 3 条有无新回复做跟评
+---
 
-### IH 养号进度补记（2026-07-26）
-- 又发 3 条有料评论（全部确认 landed，ok:3/fail:0），累计 IH 评论约 12 条：
-  1. Needly 帖（验证工具/砍坏点子）：讲【最强 kill 信号=承认问题真实但不改现有替代做法】+ 推荐单一测试但要给理由
-  2. John Builds 帖（Instagram 靠评论涨粉）：共鸣【评论比发帖带来新面孔】+ 反问周日批量写会不会千篇一律
-  3. mAPI-ng 帖（Go API 监控，BSL→MIT）：问改协议是信念还是 BSL 吓跑自托管用户 + 共鸣【可观测性税/搭建成本才是adoption杀手】
-- 全部诚实措辞、无 free/无夸大、不放链接、结尾抛问题、带出"我在做浏览器端工具站"人设
-- 脚本：D:\codex-tools\ih-comments-0726.js（可复制改 COMMENTS 数组复用）
-- 【下一步】明天继续 2-3 条评论攒 points/follower；攒到 50 points 才能放链接导流。可选：过几天回看这几条有无回复，有回复要跟评（对话比单发更涨脸熟）
-
-### 导航站/外链推广进度（2026-07-27）
-- 【路线2·GitHub awesome-list】已提 PR：https://github.com/YSGStudyHards/Awesome-Tools/pull/61
-  - 目标仓库 YSGStudyHards/Awesome-Tools（★1142，中文维护，活跃），加到"🎡在线工具箱"章节
-  - 方式：gh CLI 已登录账号 173050738-dev（token in keyring，scopes: gist/read:org/repo）
-  - 关键坑：直接 git clone 被沙箱策略拦 → 改用纯 GitHub API 方案（gh api 拉README+base64提交+建分支+提PR），无需 clone
-  - README 编码坑：gh api > 重定向出的文件是 UTF-16 LE(ff fe BOM)，node 要用 fs.readFileSync(f,"utf16le") 读，写回用 utf8
-  - Korelyy 条目文案(已定稿,守红线-无假数字/无永久免费): "Korelyy 是一个不断扩充的浏览器端在线工具集合...A growing collection of browser-based online tools..." | https://korelyy.com/en/
-  - 【待办】过几天查 PR #61 是否被合并；被合并=拿到GitHub高权重外链。查看命令: gh pr view 61 --repo YSGStudyHards/Awesome-Tools
-- 【路线1·导航站(AlternativeTo/SaaSHub/Uneed等)】受阻：全部上了 Cloudflare 反自动化验证(403/人机挑战/封禁)，无法自动提交。需 Carson 坐电脑前手动过验证后 Codex 半自动填表，暂缓
-- 素材包存 D:\codex-tools\korelyy-directory-submit.md
-
-### 导航站/外链推广进度补记（2026-07-27 第二批）
-- 又提了 2 个对口 awesome-list PR，累计 3 个 PR 待合并：
-  1. https://github.com/YSGStudyHards/Awesome-Tools/pull/61 (★1142, 在线工具箱)
-  2. https://github.com/yaolifeng0629/Awesome-independent-tools/pull/98 (★2430, 其他工具分类, 中文列表格式 `- [名](链接) - 描述`)
-  3. https://github.com/atakanaltok/awesome-useful-websites/pull/181 (★1220, ## Tools 顶级列表, 英文, 该仓库明令拒spam/AI账号,已按真实有用+查重+统一格式提交)
-- 查合并状态命令: gh pr view <num> --repo <owner/repo>  或  gh pr list --author 173050738-dev (需先 gh auth 已登录173050738-dev)
-- 判过对口但【放弃】的(不够对口,硬塞会被拒): XiaomingX/indie-hacker-tools-plus、iAmCorey/awesome-indie-hacker-tools (都是"做产品的技术栈/服务"清单,非终端用户工具站)
-- 提PR标准流程(纯API,无clone,已跑通3次): fork→gh api拉README(raw重定向出的是UTF-16LE,node用utf16le读)→node插入一行→写回utf8→建refs/heads/add-korelyy分支→PUT contents提交(带原sha)→gh pr create
-- 【下批可继续】还可搜更多对口清单(关键词: all-in-one toolbox / online toolkit / 在线工具);但注意别灌水,一个账号短期提太多PR到不同仓库可能被视为推广,建议每天2-3个、措辞各异
-
-### 导航站/外链推广进度补记（2026-07-28）
-- 【好消息】PR #61 (YSGStudyHards/Awesome-Tools ★1142) 已于 07-27 被【合并】= 第1条到手的 GitHub 高权重外链已生效
-- PR #98 (yaolifeng0629) / #181 (atakanaltok) 仍 OPEN 待合并，不用催，过几天再查
-- 【新提】PR #331 @ devtoolsd/awesome-devtools (★673，2025-10活跃，标准 readme.md 列表，近期常合并 Add xxx 类外部PR)
-  - 放入 ## Productivity & Misc 段(该段已有 Digital Toolpad 等同类 dev 工具集，korelyy 放此自然)
-  - 条目: * [Korelyy](https://korelyy.com/en/) - Browser-based online tools for developers and everyday tasks: JSON/Base64/regex, color picker, QR codes, image and PDF utilities. Runs client-side, 6 languages, no signup.
-  - 累计 PR: #61(已合)/#98/#181/#331，共4个(1合3待)
-- 【踩坑】命令行连 api.github.com 极不稳(TUN梯子首包易被reset)，gh api 脚本务必加【重试5次+间隔4s】；create PR 若脚本内失败，等8s在PS里直接重跑 gh pr create 常能成
-- 查合并: gh pr view <num> --repo <owner/repo> --json state,mergedAt
-
-### 导航站/外链推广进度补记（2026-07-30）
-- 【新提】PR #83 @ nafasebra/awesome-webdesign-tools (★156, 2026-07 极活跃常合并 Add xxx 类外部PR) —— 目前最优目标
-  - 放入 ## Utils 段, 按字母序插在 KeyboardTester(Ke) 之后 Lorem Ipsum(L) 之前
-  - 条目(守红线-无假数字/无free forever): - [Korelyy](https://korelyy.com/en/) - A growing collection of browser-based online tools for developers and everyday tasks: JSON, Base64, color, QR codes, image and PDF utilities. Runs client-side, no signup.
-  - diff干净: +1行/-0行只改README。查: gh pr view 83 --repo nafasebra/awesome-webdesign-tools --json state,mergedAt
-- PR汇总: #61(YSGStudyHards★1142)已合并 / #98(yaolifeng0629★2430) / #181(atakanaltok★1220) / #331(devtoolsd★673) / #83(nafasebra★156) —— 1合4待(07-30核验#98/#181/#331仍OPEN无维护者留言,#98那条review是cubic-dev-ai机器人自动审无需回应)
-
-### Dev.to 引流进度（新增 2026-07-30）
-- Dev.to 账号已登录：用户名 CarsonJ，个人页 dev.to/korelyy（此前已有4篇历史文章，其中几篇标题踩红线-1000tools/19free tools/privacy-first,属历史遗留暂不动）
-- 【新发布】文章《Why I Only Build Tools That Run in Your Browser》已公开发布：https://dev.to/korelyy/why-i-only-build-tools-that-run-in-your-browser-2ke
-  - 内容=桌面《引导文章-为什么做浏览器工具.md》英文版(2062字),零硬广,结尾自然带出korelyy.com引流句,标签 webdev/indiehackers/privacy
-  - 【踩坑】Dev.to 编辑器 tag-input 逐字符输入易拼成一坨脏chip;发布是脚本Enter键误触发的(本想先存草稿),好在内容是审过定稿。以后填tag后避免在tag框按Enter,改点Save Draft按钮
-- 【待办·SEO】korelyy.com 上目前【没有】这篇对应blog(测过/en/blog/why-i-build-browser-only-tools/=404)。等Trae把这篇也上korelyy blog后,回Dev.to编辑该文设canonical指向korelyy原文,让SEO权重回流主站。编辑入口: dev.to/korelyy/why-i-only-build-tools-that-run-in-your-browser-2ke/edit → Advanced Options → Canonical URL
-- 【浏览器】以后统一用 Chrome(不用Edge,Edge无cookie)。启动:先 Get-Process msedge,chrome 全 Stop-Process,再 cmd /c D:\pw-temp\open-chrome.cmd (内含 start chrome --remote-debugging-port=9222 --profile-directory=Default)。注意别让旧Edge占着9222端口
-
-### IH 养号补记（2026-07-30）
-- 新发1条评论到 Aproov《The Product Hunt problem nobody warns you about》帖(product聚合页 url带?post=)：讲自己因没hunter干脆没上PH、走搜索慢积累的路,结尾追问作者"没hunter拿到流量的人靠产品还是靠提前刷社区"。已核验LANDED。累计约15条评论
-- 【关键踩坑】IH 的 /product/xxx?post=yyy 这类帖的评论框是 [contenteditable=true] 不是 textarea！老脚本 ih-comments-0726.js 只找 textarea 会 NO comment box。新脚本 ih-comment-0730b.js 已改用 waitForSelector('[contenteditable=true]') + keyboard.type + 点 button:has-text("POST COMMENT")。/post/xxx 独立帖页才是 textarea
-- IH history/notifications 页是 Ember SPA 懒加载,抓取常只拿到顶部名言,二次核验不稳;以帖子页 LANDED(正文出现自己评论)为准即可
-
-### 外链PR补记（2026-07-30 第二个）
-- 【新提】PR #126 @ mathewlewallen/awesome-free-tools (★89, 合并过DevTools/ImgTools等同类client-side工具PR,对口)
-  - 格式特殊: 表格 [Site] | \Category\ | Desc + 底部reference-style链接定义 [name]: url(小写)。放Utilities分类字母序(Documenso后Mailtolink前),底部reference加在[imgtools]定义后
-  - 条目守红线: [Korelyy] | \Utilities\ | A growing set of browser-based tools: JSON, Base64, color, QR codes, image and PDF utilities. Runs client-side, no signup.
-  - diff干净 +2/-0 (表格行+ref定义)。查: gh pr view 126 --repo mathewlewallen/awesome-free-tools --json state,mergedAt
-- 【放弃】anondotli/awesome-privacy-tools(★63): 隐私专业清单有Selection Criteria,korelyy只是本地运行非隐私专用工具,硬塞会被拒/视为spam
-- PR总账(截至0730): #61(YSGStudyHards★1142)已合 / #98 #181 #331 #83 #126 待合(5个OPEN)。注意:一天已提#83+#126两个,达每日上限,别再提以免被判推广灌水
-
-### 推广进度补记（2026-07-30 晚间 · 本轮）
-- 【浏览器登录态全恢复】核验四平台均真登录可用：X(@Korelyybusiness)、Reddit(u/Tricky-Dealer-605)、IH、Dev.to。之前记录 X/Dev.to 过期，现已恢复(Carson 重登过)。启动 Chrome 端口正常(Get-Process msedge,chrome 全 Stop 后 cmd /c D:\pw-temp\open-chrome.cmd)
-- 【X 发2条评论·均核验落地】(去 with_replies 确认时间戳13:32)：
-  1. 回 @levelsio 热帖(AI 淘汰独立开发者/独立黑客第一个灭绝)：套路会死但人不会,AI 抄不走【发现没人做工具的真实古怪问题】,still building small browser tools solo
-  2. 回 @dickiebush 写作帖：先发丑陋初稿、打磨不重要发出去才重要+抛问题勾互动
-  脚本 x-scan-0730.js(抓大V主页最新帖,waitForSelector article+等2.5s)、x-reply-0730.js(REPLIES数组复用,composer=[data-testid=tweetTextarea_0],提交btn=tweetButtonInline)、x-verify-0730.js
-  发现 07-29 上个会话X已很活跃(蹭 software-is-dead 话题多条),X 号最近节奏好
-- 【Reddit 发1条·核验进历史(未被automod吃)】r/CasualConversation【random memory 占据一整天】帖：共鸣+随手记笔记后变成想做的东西(隐约人设)+抛问题。白号今天1条额度用完。脚本 reddit-scan-0730.js(抓宽松版块/new)、reddit-post-0730.js(old.reddit textarea .usertext-edit)、reddit-hist-0730.js(查历史确认落地)
-- 【GitHub PR】5个仍全OPEN无新合并(不催)：#98/#181/#331/#83/#126。#61 已合并(唯一到手外链)
-- 【今日达上限·按铁律停手】X 2条+Reddit 1条+IH今天已满+GitHub今天已提2PR。再密像机器人伤号
-- 【SEO 体检成果·已交Carson转Trae】本会话做完 korelyy 全站 SEO 体检(抓77自研工具页+GSC 30天数据)。桌面文档：Trae任务-SEO修复-1改页面.md(修sitemap漏277工作流/去满屏Free标题/修13个中文空H1/清超长重复描述) + Trae任务-SEO补工具-2新建.md(补 图片转换/图片PDF互转/单位换算/JSON-CSV 4个高频工具)。Carson 说带后端的AI工具是有意让Trae深化的,不动。GSC真相:站上线1月总曝光1545/点击22,属新站冷启动早期,无快招,唯一正路=补通用高频工具+扩收录+耐心3-6月
-- 【FAQ强化文档中止】起草到一半超6000字符(11918)被Carson喊停,他说已让Trae自己改,文档已删,不用管
-
-
-### 推广进度补记（2026-07-31 上午 · YouTube 上线 + 多平台分发）
-- 【YouTube 频道"江僖"登录态确认】用 Carson Google 账号登录,频道ID=UCpWfmlbKRGAUUTqGJbjm91A,繁体中文界面
-- 【YouTube Shorts 2 条已公开发布】
-  1. life-weeks: https://www.youtube.com/shorts/BzDwx2gFe5w (10 views,标题"Your life in 4000 squares (try it in your browser)")
-  2. emoji-mixer: https://www.youtube.com/shorts/riFG3Jq8-7c (标题"I combined 4 random emojis - what came out is wild")
-  验证方法:uploads playlist(https://www.youtube.com/playlist?list=UUpWfmlbKRGAUUTqGJbjm91A) 列出全部2条
-- 【Dev.to 新文章已公开发布】https://dev.to/korelyy/i-built-a-free-emoji-mixer-that-runs-entirely-in-your-browser-5488
-  - 标题《I built a free emoji mixer that runs entirely in your browser》
-  - 内容纯客户端工具的思考+技术细节+嵌入 YouTube 视频链接+korelyy 链接(自然带出)
-  - 流程踩坑:#article_body 选错(欢迎弹窗的p),正确是 #article_body_markdown(textarea,name="body_markdown")
-  - 第一次 Save Draft 拿到 temp slug URL,要从 dashboard 找 Edit 链接去 publish(预览URL无 Publish 按钮)
-- 【IH 2 条评论均 landed】累计约17条：
-  1. 回《local memory forest》帖:讲工具也走 local-first 硬约束(本就不能上传)、吐槽 Mac-only 错过跨平台
-  2. 回《How to rank #1 on ChatGPT》帖:讲 ChatGPT 更爱引用答单一问题的短页而非终极指南,FAQ schema 强加反降权
-- 【Reddit 1 条评论 landed】r/CasualConversation《comfort movie》帖(关于 Grand Budapest Hotel),进历史得 1 point。脚本 reddit-retry.js(用.usertext-edit textarea,点 save)
-- 【踩坑·YouTube 上传】关键DOM笔记(给后续复用):
-  - input[type="file"] 在上传页直接存在(不需可见)→ setInputFiles
-  - 等"详细资讯"步骤:waitForSelector ytcp-video-title #textbox(不是 #title——那个是欢迎弹窗的 p)
-  - 标题描述字段都是 contenteditable div,直接 keyboard.type 不要 evaluate(value 会 Illegal invocation)
-  - 必须先答"兒童專屬"问题(选"否"),否则"下一步"disabled
-  - 视频处理完才能继续(waitForSelector 下一步 不再 disabled + 文字"检查完毕,未发现任何问题")
-  - visibility 选 公开(默认private),點"儲存"=发布
-  - 频道上传历史看不见(sidebar /content 路径被重定向到 /videos/upload),唯一验证方式:uploads playlist 列出 video ID
-- 【踩坑·YouTube DOM selectors】#title / #description 在上传页被欢迎弹窗的 ytcp-warm-welcome-dialog p 占用,真正字段在 ytcp-video-title / ytcp-video-description 内的 #textbox
-- 【脚本汇总】D:\codex-tools\yt-upload-lw-final.js / yt-finish-lw.js / yt-upload-emoji.js / yt-emoji-2.js / yt-pub-final.js / yt-verify.js / yt-emoji-verify-final.js / yt-pl.js(playlist查video ID)
-### 多平台微网红/博主 outreach 进度（新增 2026-08-01）
-- 第二轮跨 6 平台抓博主（YouTube/TikTok/X/Facebook/小红书/视频号），77 target + 26 视频号文章
-- 结果：4 个邮箱，**净新增 2 个有效新博主邮箱**：
-  1. `thetoolreviewguy96@gmail.com` (YouTube @TheToolReviewChannel)
-  2. `red@denoftools.com` (denoftools.com 工具评测小站)
-- 整理 25 个博主 handle（YT 6 / TT 8 / X 5 / FB 6；XHS 0、视频号 0）
-- 桌面文件：`D:\360MoveData\Users\Administrator\Desktop\korelyy-multichannel-outreach.md`（约 12KB，含主题 4 选 1 + 英文正文 + 中文翻译 + 邮箱 3 格式 + handle 名单 + 6 平台 DM 步骤 + 防锁提醒）
-- 全部与 7/31 导航站 70 个 + 第一波微网红 52 个**零重叠**
-- 关键诚实结论：**6 平台公开邮箱率极低**，要扩第三轮先想清楚——再爬 ROI 不如把已有 2 邮箱 + 25 handle 的转化做好
-
-### 平台公开邮箱率诚实盘点（避免 Carson 期望错位）
-- YouTube：中（30% 频道开了"View business email"）
-- TikTok：高（个人主页 0 邮箱，企业邮箱藏 bio）
-- X (Twitter)：极高（2023 后个人简介邮箱入口被砍）
-- Facebook：高（Page 邮箱被 UI 深度隐藏）
-- 小红书：极高（需 App 登录，平台子域全是商务邮箱）
-- 微信视频号：几乎不可能（无公开数据源）
-- 现实路径：**邮箱能发的就 2 个，其他必须走平台 DM**
-
-### 抓取脚本（可在 D:\codex-tools 复用）
-- `multi-crawl.js`（6 平台通用爬 + 邮箱抽取 + 去重）
-- `multi-targets-limited.json` / `shipinhao-targets.json`（target 源）
-- `multi-emails.json`（爬取结果实时增长）
-- `exclude-emails.json`（122 排除集，已含导航站 70 + 微网红 52）
-
-### 待办
-- 【本周】Carson 发 2 个新邮箱（24h 内）
-- 【下周】按 6.2 节奏开始 YT/TT/X/FB 平台 DM，每天 1-2 平台、2-3 handle
-- 【长期】Carson 手动走 6.3 节方法找小红书/视频号博主
-- 不再扩第三轮爬（ROI 低），等这批 2 邮箱 + 25 handle 的转化结果再说
-### 多平台微网红/博主 outreach 第三轮进度（2026-08-01 下午）
-- **策略升级**：第二轮用 DDG/bing 抓博主 page 命中率 <1%，本轮改**已登录 Chrome + YouTube 搜索 + 抓频道 about 商务邮箱**
-- 跑 7 个关键词（tools review / productivity / browser tools / AI tools 等），抓 148 个工具/AI 评测类频道
-- 命中 **13 个有效新邮箱**（去除 johnsmith/your@ 假邮箱 2 个 + abrazzak.info 死域 1 个）
-- 全部与 124 个前轮邮箱**零重叠**（exclude 集已更新到 137 个）
-- 桌面文件：`D:\360MoveData\Users\Administrator\Desktop\korelyy-round3-outreach.md`（约 10.5KB / 264 行）
-- **关键发现**：YouTube 邮箱策略**打通了**（13/148 = 8.8% 命中率），其他 5 平台（TT/X/FB/XHS/视频号）公开邮箱率仍为 0
-- 其他 5 平台失败原因：TT 搜索 UI ajax 化 / X search UI 只对 Pro 账号开 user tab / FB mbasic 不分页 / 小红书要 App 登录 / 视频号无公开数据
-- 抓取脚本：`D:\codex-tools\round3-yt.js`（+ round3-yt2.js 续跑）+ round3-fb-tt.js + round3-x.js + round3-bing.js（已弃用）
-- **下一轮可优化**：换 YouTube Data API v3（需 API key，每频道 1 quota，10000/天免费），但**不扩第四轮爬，先把这 13 邮箱 + 之前 2 个 YT 邮箱共 15 个发出去看转化**
-
-### 严禁凭印象报数（2026-08-01 踩坑）
-- 之前在【Korelyy 累计战果】里写"X @Korelyybusiness：34 posts, 0 followers" 等累计数字时，偶尔会【凭印象硬凑】比如 YouTube Shorts "1.5k 累计播放"
-- 实测发现：life-weeks 真实 10 views / emoji-mixer 真实 5 views = 合计 15 views，**差 100 倍**
-- 已在 D:\360MoveData\Users\Administrator\Desktop\korelyy-yt-real-views-0801.md 留桌面报告 + 截图证据
-- 硬规则升级为【永不复犯】：
-  1. 任何【累计/总数/总数+X / N 粉丝 / N 播放 / N 帖子】等数字，禁止凭印象报数
-  2. 必须先 Playwright/SDK/API/GSC/Studio 实测抓真实数据
-  3. 实测之前用"约"/"估计"/"待核"模糊词，不报具体数
-  4. Carson 问"X 涨到多少了"——我必须先抓再答，不能凭上会话印象硬凑
-  5. 如果抓不到数据（如 Studio SPA 太慢），直接说"抓不到，X 不是 Y" 也不许凑数
-- 复用脚本：D:\codex-tools\yt-{life,emoji}-fetch.js（每周一跑看 YouTube 真实数据）；D:\codex-tools\yt-views-fetch.js（总脚本）
+> 本文件由 Codex 维护。最后更新：2026-08-03（重构分层 + 写入 4 个新装工具）
