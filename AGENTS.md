@@ -201,12 +201,22 @@
 - 累计发 4+ 条针对性评论蹭大V曝光
 - 07-30 节奏好（X 已活跃）
 
+**已完成（2026-08-03 · D+1 后节奏转向）**：
+- 第3条养号推：content audit / 142 篇 blog 缺 FAQ / shipping tonight 主题，270 字符无链接，permalink https://x.com/Korelyybusiness/status/2084248543087529997
+- 第1条带链接的回复：korelyy.com/en/ 引导，正文无链接放第一条评论是 X 抗打压硬规则
+- Reddit 今天跳过（IP 级别被反爬拦，老 reddit 报 blocked by network security，新 reddit 同样拦）
+- 桌面简报：korelyy养号-0803.md（含英文原文+中文翻译+踩坑记录）
+
+**踩坑（2026-08-03 新增）**：
+- X 翻译限额弹窗 `data-modal-id="translation_usage_limit_hard"` 会拦截 reply 按钮点击 → 解决：进页后 `document.querySelectorAll("[data-modal-id]").forEach(el=>el.remove())`
+- X 多个 textarea 冲突：回复模态框同时有可见和 offscreen 两个 `[data-testid=tweetTextarea_0]` → 必须 `.first()` 限定
+- Reddit anti-bot 严：登录态 Chrome 也被 IP 拦，过几天再试或换 VPN 节点
+
 **待办（每次会话读后提醒）**：
-- 发第2条养号推（口语风、无链接）+ 1-2 条评论
-- D+2 计划发 emoji-mixer 引流视频（用 Jenny 版 D:\codex-tools\videos\emoji-mixer-jenny.mp4）
-  - 硬规则：正文不放链接，链接 korelyy.com 放第一条评论，正文写 link in replies
-  - 发布时间选北京时间晚9点-凌晨（美国白天）
-- 每次发完隔几小时看互动，互动多的风格后续多用
+- D+1 之后每 1-2 天发 1 条养号推 + 1-2 条评论蹭大V（节奏不再密集）
+- Reddit 隔几天再试 IP 拦截有没有解
+- IH 一天 1-2 条评论（保持隔天节奏）
+- 每次发完隔几小时看互动（赞/评/涨粉），有互动的风格后续多用
 
 ### 8.2 Reddit 养号
 - 账号：u/Tricky-Dealer-605（绑 173050738@qq.com + Google 登录），注册约1个月
@@ -216,6 +226,11 @@
 - 全程 0 链接 0 推广，等 karma 50+ 再回精准版块
 - 待办：每天 1 条宽松版块评论攒 karma
 - 可复用脚本：reddit-feed.js / reddit-comment.js / reddit-myhist.js / reddit-karma.js（D:\codex-tools\）
+
+**2026-08-03 进度**：
+- Reddit 抓 r/CasualConversation/new 被反爬拦（老/新 reddit 都返回 "blocked by network security"）
+- 登录态 Chrome 也过不去 → 判定为 IP 级别封锁，非脚本/cookie 问题
+- 今天跳过不硬冲（硬冲可能触发更严封控），等几天再试或换 VPN 节点
 
 ### 8.3 Indie Hackers 养号
 - 账号已登录（Chrome 9222 端口），累计约 17 条评论
