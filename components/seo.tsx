@@ -554,6 +554,7 @@ export const RootJsonLd = React.memo(function RootJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Korelyy',
+    description: 'Korelyy is a free, privacy-first online tools hub with 100+ tools for developers, creators, and everyday users. All tools run 100% in the browser — no upload, no signup, no data leaves your device. Available in 6 languages.',
     alternateName: ['Korelyy Tools', 'Korelyy 工具库', 'كورلي'],
     url: SITE_URL,
     logo: {
@@ -576,6 +577,7 @@ export const RootJsonLd = React.memo(function RootJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Korelyy Tools',
+    description: 'Free online tools hub with 100+ utilities: password generator, image compressor, JSON formatter, regex tester, and more. No signup, no upload — all processing happens locally in your browser.',
     alternateName: ['Korelyy', 'Korelyy 工具库'],
     url: SITE_URL,
     inLanguage: 'en',

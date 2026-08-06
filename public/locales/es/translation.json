@@ -322,7 +322,9 @@
     "money-making-hint": "Convierte esta herramienta en una fuente de ingresos extra",
     "fallback-money-making-1": "Usa esta herramienta para acelerar tu trabajo freelance y aceptar más clientes",
     "fallback-money-making-2": "Crea contenido pulido más rápido para tu blog, canal de YouTube o redes sociales",
-    "fallback-money-making-3": "Ofrece las capacidades de esta herramienta como servicio en Fiverr, Upwork o a clientes locales"
+    "fallback-money-making-3": "Ofrece las capacidades de esta herramienta como servicio en Fiverr, Upwork o a clientes locales",
+    "section-related-tools": "También te puede interesar",
+    "related-tools-hint": "Más usados juntos en la misma categoría"
   },
   "tools": {
     "163": {
@@ -9298,16 +9300,56 @@
     },
     "rainbow-compliment-generator": {
       "name": "Generador de Cumplidos de Arcoíris",
-      "description": "Genera cumplidos divertidos y personalizados en 4 estilos (sincero, divertido, poético, exagerado). Perfecto para compartir."
-    ,"seo":{"howtoSteps":[{"name":"Abre la herramienta","text":"Abre el generador de cumplidos arcoíris en esta página, sin instalar ni registrarte."},{"name":"Elige un tono","text":"Elige dulce, juguetón, poético o intenso según el momento."},{"name":"Generar","text":"Pulsa Generar. Aparece un cumplido arcoíris nuevo en menos de un segundo."},{"name":"Copiar o compartir","text":"Copia el texto, haz captura o compártelo directamente en tu app favorita."}]}},
+      "description": "Genera cumplidos divertidos y personalizados en 4 estilos (sincero, divertido, poético, exagerado). Perfecto para compartir.",
+      "seo": {
+        "howtoSteps": [
+          {
+            "name": "Abre la herramienta",
+            "text": "Abre el generador de cumplidos arcoíris en esta página, sin instalar ni registrarte."
+          },
+          {
+            "name": "Elige un tono",
+            "text": "Elige dulce, juguetón, poético o intenso según el momento."
+          },
+          {
+            "name": "Generar",
+            "text": "Pulsa Generar. Aparece un cumplido arcoíris nuevo en menos de un segundo."
+          },
+          {
+            "name": "Copiar o compartir",
+            "text": "Copia el texto, haz captura o compártelo directamente en tu app favorita."
+          }
+        ]
+      }
+    },
     "acrostic-poem-generator": {
       "name": "Generador de Poemas Acrósticos",
       "description": "Genera poemas acrósticos chinos (7 o 5 caracteres) a partir de palabras clave. Múltiples temas: bendición, amor, negocios, paisaje, motivación."
     },
     "dream-interpreter": {
       "name": "Intérprete de Sueños",
-      "description": "Ingresa palabras clave de sueños para una doble interpretación: psicología freudiana + diccionario de sueños tradicional de Zhougong."
-    ,"seo":{"howtoSteps":[{"name":"Abre la herramienta","text":"Abre el intérprete de sueños en esta página, sin instalar ni registrarte."},{"name":"Escribe el sueño","text":"Escribe o pega tu sueño en 1 a 3 frases mientras aún está fresco."},{"name":"Pulsa Interpretar","text":"Pulsa Interpretar. Aparece una lectura breve en menos de 30 segundos."},{"name":"Reflexiona y guarda","text":"Lee los temas y la pregunta de reflexión. Copia o haz captura si quieres conservarlo."}]}},
+      "description": "Ingresa palabras clave de sueños para una doble interpretación: psicología freudiana + diccionario de sueños tradicional de Zhougong.",
+      "seo": {
+        "howtoSteps": [
+          {
+            "name": "Abre la herramienta",
+            "text": "Abre el intérprete de sueños en esta página, sin instalar ni registrarte."
+          },
+          {
+            "name": "Escribe el sueño",
+            "text": "Escribe o pega tu sueño en 1 a 3 frases mientras aún está fresco."
+          },
+          {
+            "name": "Pulsa Interpretar",
+            "text": "Pulsa Interpretar. Aparece una lectura breve en menos de 30 segundos."
+          },
+          {
+            "name": "Reflexiona y guarda",
+            "text": "Lee los temas y la pregunta de reflexión. Copia o haz captura si quieres conservarlo."
+          }
+        ]
+      }
+    },
     "handwritten-signature-generator": {
       "name": "Generador de Firmas Manuscritas",
       "description": "Crea firmas manuscritas en más de 5 estilos. Grosor del trazo e inclinación ajustables. Exporta como PNG/SVG."
@@ -9322,8 +9364,28 @@
     },
     "fortune-drawing": {
       "name": "Sorteo de Fortuna",
-      "description": "Sorteo de fortuna tradicional chino. Haz una pregunta, obtén una fortuna numerada con poesía clásica e interpretación."
-    ,"seo":{"howtoSteps":[{"name":"Abre la herramienta","text":"Abre la herramienta de tirage de fortuna en esta página, sin registrarte."},{"name":"Elige una categoría","text":"Elige hoy, decisión, amor, trabajo o aleatorio, o sáltalo y deja al azar decidir."},{"name":"Saca una fortuna","text":"Pulsa Sacar. Aparece al instante una fortuna y una breve línea de reflexión."},{"name":"Guarda o vuelve a sacar","text":"Copia la frase, haz captura o vuelve a sacar para refrescar la lectura."}]}},
+      "description": "Sorteo de fortuna tradicional chino. Haz una pregunta, obtén una fortuna numerada con poesía clásica e interpretación.",
+      "seo": {
+        "howtoSteps": [
+          {
+            "name": "Abre la herramienta",
+            "text": "Abre la herramienta de tirage de fortuna en esta página, sin registrarte."
+          },
+          {
+            "name": "Elige una categoría",
+            "text": "Elige hoy, decisión, amor, trabajo o aleatorio, o sáltalo y deja al azar decidir."
+          },
+          {
+            "name": "Saca una fortuna",
+            "text": "Pulsa Sacar. Aparece al instante una fortuna y una breve línea de reflexión."
+          },
+          {
+            "name": "Guarda o vuelve a sacar",
+            "text": "Copia la frase, haz captura o vuelve a sacar para refrescar la lectura."
+          }
+        ]
+      }
+    },
     "love-letter-generator": {
       "name": "Generador de Cartas de Amor",
       "description": "Genera cartas de amor personalizadas según la personalidad del destinatario, duración de la relación y estilo. Incluye opción acróstica."
@@ -9342,8 +9404,32 @@
     },
     "meme-generator": {
       "name": "Generador de memes",
-      "description": "Crea memes añadiendo texto a imágenes. Formato clásico de texto superior-inferior y capas de texto libres. Descarga en PNG."
-    ,"seo":{"howtoSteps":[{"name":"Abre el generador de memes","text":"Abre el generador de memes en tu navegador, sin instalar nada ni registrarte."},{"name":"Elige una plantilla o sube una imagen","text":"Elige entre 6 plantillas integradas o sube tu propia imagen como fondo del meme."},{"name":"Añade texto arriba y abajo","text":"Escribe el texto superior e inferior. Ajusta tamaño, color, alineación y contorno."},{"name":"Genera y previsualiza","text":"Pulsa Generar. La vista previa se actualiza al instante para iterar rápido."},{"name":"Descarga o comparte","text":"Descarga el meme terminado en PNG o compártelo directamente en tu red social."}]}},
+      "description": "Crea memes añadiendo texto a imágenes. Formato clásico de texto superior-inferior y capas de texto libres. Descarga en PNG.",
+      "seo": {
+        "howtoSteps": [
+          {
+            "name": "Abre el generador de memes",
+            "text": "Abre el generador de memes en tu navegador, sin instalar nada ni registrarte."
+          },
+          {
+            "name": "Elige una plantilla o sube una imagen",
+            "text": "Elige entre 6 plantillas integradas o sube tu propia imagen como fondo del meme."
+          },
+          {
+            "name": "Añade texto arriba y abajo",
+            "text": "Escribe el texto superior e inferior. Ajusta tamaño, color, alineación y contorno."
+          },
+          {
+            "name": "Genera y previsualiza",
+            "text": "Pulsa Generar. La vista previa se actualiza al instante para iterar rápido."
+          },
+          {
+            "name": "Descarga o comparte",
+            "text": "Descarga el meme terminado en PNG o compártelo directamente en tu red social."
+          }
+        ]
+      }
+    },
     "daily-tarot": {
       "name": "Lectura diaria de Tarot",
       "description": "Extrae tres cartas de Tarot diariamente (pasado/presente/futuro). Interpretaciones completas de los 22 Arcanos Mayores. Una lectura por día."

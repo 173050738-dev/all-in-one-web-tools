@@ -322,7 +322,9 @@
     "money-making-hint": "Transformez cet outil en source de revenus complémentaire",
     "fallback-money-making-1": "Utilisez cet outil pour accélérer votre travail freelance et prendre plus de clients payants",
     "fallback-money-making-2": "Créez du contenu de qualité plus rapidement pour votre blog, chaîne YouTube ou réseaux sociaux",
-    "fallback-money-making-3": "Proposez les capacités de cet outil en tant que service sur Fiverr, Upwork ou à vos clients locaux"
+    "fallback-money-making-3": "Proposez les capacités de cet outil en tant que service sur Fiverr, Upwork ou à vos clients locaux",
+    "section-related-tools": "Vous pourriez aussi avoir besoin",
+    "related-tools-hint": "Les plus utilisés ensemble dans la même catégorie"
   },
   "tools": {
     "163": {
@@ -9298,16 +9300,56 @@
     },
     "rainbow-compliment-generator": {
       "name": "Générateur de Compliments Arc-en-Ciel",
-      "description": "Générez des compliments amusants et personnalisés en 4 styles (sincère, drôle, poétique, exagéré). Parfait pour partager."
-    ,"seo":{"howtoSteps":[{"name":"Ouvrir l’outil","text":"Ouvrez le générateur de compliments arc-en-ciel sur cette page, sans installation ni inscription."},{"name":"Choisir un ton","text":"Choisissez doux, espiègle, poétique ou fougueux selon le moment."},{"name":"Générer","text":"Cliquez sur Générer. Un nouveau compliment arc-en-ciel apparaît en moins d’une seconde."},{"name":"Copier ou partager","text":"Copiez le texte, faites une capture d’écran ou partagez-le directement dans votre appli préférée."}]}},
+      "description": "Générez des compliments amusants et personnalisés en 4 styles (sincère, drôle, poétique, exagéré). Parfait pour partager.",
+      "seo": {
+        "howtoSteps": [
+          {
+            "name": "Ouvrir l’outil",
+            "text": "Ouvrez le générateur de compliments arc-en-ciel sur cette page, sans installation ni inscription."
+          },
+          {
+            "name": "Choisir un ton",
+            "text": "Choisissez doux, espiègle, poétique ou fougueux selon le moment."
+          },
+          {
+            "name": "Générer",
+            "text": "Cliquez sur Générer. Un nouveau compliment arc-en-ciel apparaît en moins d’une seconde."
+          },
+          {
+            "name": "Copier ou partager",
+            "text": "Copiez le texte, faites une capture d’écran ou partagez-le directement dans votre appli préférée."
+          }
+        ]
+      }
+    },
     "acrostic-poem-generator": {
       "name": "Générateur de Poèmes Acrostiches",
       "description": "Générez des poèmes acrostiches chinois (7 ou 5 caractères) à partir de mots-clés. Thèmes multiples : bénédiction, amour, affaires, paysage, motivation."
     },
     "dream-interpreter": {
       "name": "Interpréteur de Rêves",
-      "description": "Entrez des mots-clés de rêve pour une double interprétation : psychologie freudienne + dictionnaire des rêves traditionnel de Zhougong."
-    ,"seo":{"howtoSteps":[{"name":"Ouvrir l’outil","text":"Ouvrez l’interprète de rêves sur cette page, sans installation ni inscription."},{"name":"Écrire le rêve","text":"Saisissez ou collez votre rêve en 1 à 3 phrases tant qu’il est encore frais."},{"name":"Cliquer sur Interpréter","text":"Cliquez sur Interpréter. Une lecture courte apparaît en moins de 30 secondes."},{"name":"Réfléchir et enregistrer","text":"Lisez les thèmes et la question de réflexion. Copiez ou faites une capture si vous voulez la garder."}]}},
+      "description": "Entrez des mots-clés de rêve pour une double interprétation : psychologie freudienne + dictionnaire des rêves traditionnel de Zhougong.",
+      "seo": {
+        "howtoSteps": [
+          {
+            "name": "Ouvrir l’outil",
+            "text": "Ouvrez l’interprète de rêves sur cette page, sans installation ni inscription."
+          },
+          {
+            "name": "Écrire le rêve",
+            "text": "Saisissez ou collez votre rêve en 1 à 3 phrases tant qu’il est encore frais."
+          },
+          {
+            "name": "Cliquer sur Interpréter",
+            "text": "Cliquez sur Interpréter. Une lecture courte apparaît en moins de 30 secondes."
+          },
+          {
+            "name": "Réfléchir et enregistrer",
+            "text": "Lisez les thèmes et la question de réflexion. Copiez ou faites une capture si vous voulez la garder."
+          }
+        ]
+      }
+    },
     "handwritten-signature-generator": {
       "name": "Générateur de Signatures Manuscrites",
       "description": "Créez des signatures manuscrites dans plus de 5 styles. Épaisseur du trait et inclinaison réglables. Exportez en PNG/SVG."
@@ -9322,8 +9364,28 @@
     },
     "fortune-drawing": {
       "name": "Tirage de Fortune",
-      "description": "Tirage de fortune traditionnel chinois. Posez une question, obtenez une fortune numérotée avec poésie classique et interprétation."
-    ,"seo":{"howtoSteps":[{"name":"Ouvrir l’outil","text":"Ouvrez l’outil de tirage de fortune sur cette page, sans inscription."},{"name":"Choisir une catégorie","text":"Choisissez aujourd’hui, décision, amour, travail ou aléatoire, ou passez et laissez le hasard décider."},{"name":"Tirer une fortune","text":"Cliquez sur Tirer. Une fortune et un court message de réflexion apparaissent instantanément."},{"name":"Enregistrer ou tirer à nouveau","text":"Copiez la phrase, faites une capture ou tirez à nouveau pour repartir à zéro."}]}},
+      "description": "Tirage de fortune traditionnel chinois. Posez une question, obtenez une fortune numérotée avec poésie classique et interprétation.",
+      "seo": {
+        "howtoSteps": [
+          {
+            "name": "Ouvrir l’outil",
+            "text": "Ouvrez l’outil de tirage de fortune sur cette page, sans inscription."
+          },
+          {
+            "name": "Choisir une catégorie",
+            "text": "Choisissez aujourd’hui, décision, amour, travail ou aléatoire, ou passez et laissez le hasard décider."
+          },
+          {
+            "name": "Tirer une fortune",
+            "text": "Cliquez sur Tirer. Une fortune et un court message de réflexion apparaissent instantanément."
+          },
+          {
+            "name": "Enregistrer ou tirer à nouveau",
+            "text": "Copiez la phrase, faites une capture ou tirez à nouveau pour repartir à zéro."
+          }
+        ]
+      }
+    },
     "love-letter-generator": {
       "name": "Générateur de Lettres d'Amour",
       "description": "Générez des lettres d'amour personnalisées selon la personnalité du destinataire, la durée de la relation et le style. Inclut l'option acrostiche."
@@ -9342,8 +9404,32 @@
     },
     "meme-generator": {
       "name": "Générateur de mèmes",
-      "description": "Créez des mèmes en ajoutant du texte aux images. Format classique haut-bas et calques de texte libres. Téléchargez en PNG."
-    ,"seo":{"howtoSteps":[{"name":"Ouvrir le générateur de mèmes","text":"Ouvrez le générateur de mèmes dans votre navigateur, sans installation ni inscription."},{"name":"Choisir un modèle ou importer une image","text":"Choisissez parmi 6 modèles intégrés ou importez votre propre image comme fond."},{"name":"Ajouter le texte haut et bas","text":"Saisissez le texte du haut et du bas. Ajustez la taille, la couleur, l’alignement et le contour."},{"name":"Générer et prévisualiser","text":"Cliquez sur Générer. L’aperçu se met à jour instantanément pour itérer rapidement."},{"name":"Télécharger ou partager","text":"Téléchargez le mème fini en PNG ou partagez-le directement sur votre réseau social."}]}},
+      "description": "Créez des mèmes en ajoutant du texte aux images. Format classique haut-bas et calques de texte libres. Téléchargez en PNG.",
+      "seo": {
+        "howtoSteps": [
+          {
+            "name": "Ouvrir le générateur de mèmes",
+            "text": "Ouvrez le générateur de mèmes dans votre navigateur, sans installation ni inscription."
+          },
+          {
+            "name": "Choisir un modèle ou importer une image",
+            "text": "Choisissez parmi 6 modèles intégrés ou importez votre propre image comme fond."
+          },
+          {
+            "name": "Ajouter le texte haut et bas",
+            "text": "Saisissez le texte du haut et du bas. Ajustez la taille, la couleur, l’alignement et le contour."
+          },
+          {
+            "name": "Générer et prévisualiser",
+            "text": "Cliquez sur Générer. L’aperçu se met à jour instantanément pour itérer rapidement."
+          },
+          {
+            "name": "Télécharger ou partager",
+            "text": "Téléchargez le mème fini en PNG ou partagez-le directement sur votre réseau social."
+          }
+        ]
+      }
+    },
     "daily-tarot": {
       "name": "Tirage quotidien du Tarot",
       "description": "Tire trois cartes du Tarot quotidiennement (passé/présent/futur). Interprétations complètes des 22 Arcanes Majeurs. Un tirage par jour."
