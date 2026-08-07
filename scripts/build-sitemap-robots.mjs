@@ -198,7 +198,7 @@ User-agent: *
 Allow: /
 Allow: /blog/
 Allow: /news/
-Allow: /tools/
+Allow: /tool/
 Allow: /workflows/
 Disallow: /api/
 Disallow: /_next/

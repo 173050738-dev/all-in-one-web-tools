@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { Home, ChevronRight, ExternalLink, ArrowLeft, ShieldCheck, Star, Heart, Lightbulb, ListChecks, Award, CheckCircle2, Wrench, Rocket } from 'lucide-react';
+import { Home, ChevronRight, ExternalLink, ArrowLeft, ShieldCheck, Star, Heart, Lightbulb, ListChecks, Award, CheckCircle2, Wrench, Rocket, Code } from 'lucide-react';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { getToolBySlug, getRelatedTools } from '@/data/tools';
@@ -345,22 +345,40 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
               </div>
 
               {isInternalTool ? (
-                <a
-                  href={internalToolUrl}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white text-sm sm:text-base font-semibold shadow-lg shadow-primary-600/20 transition-all duration-200 min-h-[52px]"
-                >
-                  <Wrench className="h-5 w-5" />
-                  {isZh ? '立即使用工具' : 'Use Tool Now'}
-                </a>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={internalToolUrl}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white text-sm sm:text-base font-semibold shadow-lg shadow-primary-600/20 transition-all duration-200 min-h-[52px]"
+                  >
+                    <Wrench className="h-5 w-5" />
+                    {isZh ? '立即使用工具' : 'Use Tool Now'}
+                  </a>
+                  <a
+                    href={`/${resolvedLocale}/embed/${tool.id}`}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 active:scale-[0.98] text-primary-700 dark:text-primary-300 text-sm sm:text-base font-semibold border border-primary-200 dark:border-primary-800 shadow-sm transition-all duration-200 min-h-[52px]"
+                  >
+                    <Code className="h-5 w-5" />
+                    {isZh ? '嵌入此工具' : 'Embed Tool'}
+                  </a>
+                </div>
               ) : tool.externalUrl ? (
-                <SafeLink
-                  href={tool.externalUrl}
-                  locale={resolvedLocale}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white text-sm sm:text-base font-semibold shadow-lg shadow-primary-600/20 transition-all duration-200 min-h-[52px]"
-                >
-                  <ExternalLink className="h-5 w-5" />
-                  {isZh ? '访问官方网站' : 'Visit Official Website'}
-                </SafeLink>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <SafeLink
+                    href={tool.externalUrl}
+                    locale={resolvedLocale}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white text-sm sm:text-base font-semibold shadow-lg shadow-primary-600/20 transition-all duration-200 min-h-[52px]"
+                  >
+                    <ExternalLink className="h-5 w-5" />
+                    {isZh ? '访问官方网站' : 'Visit Official Website'}
+                  </SafeLink>
+                  <a
+                    href={`/${resolvedLocale}/embed/${tool.id}`}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 active:scale-[0.98] text-primary-700 dark:text-primary-300 text-sm sm:text-base font-semibold border border-primary-200 dark:border-primary-800 shadow-sm transition-all duration-200 min-h-[52px]"
+                  >
+                    <Code className="h-5 w-5" />
+                    {isZh ? '嵌入此工具' : 'Embed Tool'}
+                  </a>
+                </div>
               ) : (
                 <div className="rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 p-4">
                   <p className="text-sm text-amber-800 dark:text-amber-200">
@@ -487,6 +505,29 @@ export default function ToolFallbackClient({ localeParam, slugParam }: { localeP
               size="banner"
             />
             <ToolSeoContent locale={resolvedLocale} slug={resolvedSlug} />
+
+            {relatedTools.length > 0 && (
+              <section className="mt-7 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-5 sm:p-6">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <div className="w-9 h-9 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center shrink-0">
+                    <Wrench className="w-[18px] h-[18px] text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <div>
+                    <h2 className="text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100 leading-tight">
+                      {t('section-related-tools')}
+                    </h2>
+                    <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5">
+                      {t('related-tools-hint')}
+                    </p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {relatedTools.slice(0, 6).map((rt) => (
+                    <ToolCard key={rt.id} tool={rt} locale={resolvedLocale} />
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         </section>
 

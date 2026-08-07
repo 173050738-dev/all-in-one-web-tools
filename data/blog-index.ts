@@ -13593,6 +13593,102 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
     ]
   }
 }
+,
+{
+"slug": "image-tool-combo",
+"publishedAt": "2026-08-05T00:00:00.000Z",
+"updatedAt": "2026-08-05T00:00:00.000Z",
+"tags": [["image processing","web optimization","SEO","embed tools"], ["图像处理","网页优化","SEO","嵌入工具"], ["procesamiento de imágenes","optimización web","SEO","herramientas de incrustación"], ["traitement d'images","optimisation web","SEO","outils d'intégration"], ["इमेज प्रोसेसिंग","वेब ऑप्टिमाइज़ेशन","SEO","इंबेड टूल्स"], ["معالجة الصور","تحسين الويب","SEO","أدوات التضمين"]],
+"relatedToolSlugs": ["image-compressor","image-converter","image-to-base64"],
+"readingMinutes": {"en":8,"zh":8,"es":8,"fr":8,"hi":8,"ar":8},
+"title": {"en":"Image Processing Combo: Compress, Convert, and Embed in One Workflow","zh":"图像处理组合：压缩、转换、嵌入一站式工作流","es":"Combinación de Procesamiento de Imágenes: Comprimir, Convertir e Incrustar","fr":"Combo Traitement d'Images: Compresser, Convertir et Intégrer","hi":"इमेज प्रोसेसिंग कॉम्बो: कंप्रेस, कनवर्ट और इंबेड","ar":"مجموعة معالجة الصور: ضغط، تحويل، وتضمين"},
+"description": {"en":"Learn how to process images efficiently using Korelyy image tools: compress, convert formats, embed on your site, and optimize for web. Step-by-step workflow with real examples.","zh":"学习如何高效使用 Korelyy 图像工具处理图片：压缩、转换格式、嵌入你的网站、优化网页加载。附带真实案例的逐步工作流。","es":"Aprende a procesar imágenes eficientemente con las herramientas de Korelyy: comprimir, convertir formatos, incrustar en tu sitio y optimizar para web. Flujo de trabajo paso a paso con ejemplos reales.","fr":"Apprenez à traiter les images efficacement avec les outils d'image de Korelyy : comprimer, convertir des formats, intégrer sur votre site et optimiser pour le web. Flux de travail étape par étape avec exemples réels.","hi":"Korelyy के इमेज टूल्स से इमेजेज़ को कुशलता से प्रोसेस करना सीखें: कंप्रेस, फॉर्मेट बदलें, अपनी साइट पर इंबेड करें और वेब के लिए ऑप्टिमाइज़ करें। असली उदाहरणों के साथ चरण-दर-चरण वर्कफ़्लो।","ar":"تعلم كيفية معالجة الصور بكفاءة باستخدام أدوات Korelyy للصور: اضغط، حوّل التنسيقات، ادمج في موقعك، وحسّن للويب. سير عمل خطوة بخطوة مع أمثلة حقيقية."},
+"keywords": [["image processing","web optimization","SEO"], ["图像处理","网页优化","SEO"], ["procesamiento de imágenes","optimización web","SEO"], ["traitement d'images","optimisation web","SEO"], ["इमेज प्रोसेसिंग","वेब ऑप्टिमाइज़ेशन","SEO"], ["معالجة الصور","تحسين الويب","SEO"]],
+"author": "Korelyy Team"
+},
+{
+"slug": "dev-tool-combo",
+"publishedAt": "2026-08-05T00:00:00.000Z",
+"updatedAt": "2026-08-05T00:00:00.000Z",
+"tags": [["developer tools","JSON","regex","UUID","coding"], ["开发者工具","JSON","正则","UUID","编程"], ["herramientas de desarrollo","JSON","regex","UUID","programación"], ["outils développeur","JSON","regex","UUID","codage"], ["डेवलपर टूल्स","JSON","regex","UUID","कोडिंग"], ["أدوات المطورين","JSON","regex","UUID","برمجة"]],
+"relatedToolSlugs": ["json-formatter","regex-tester","hash-generator","uuid-generator"],
+"readingMinutes": {"en":7,"zh":7,"es":7,"fr":7,"hi":7,"ar":7},
+"title": {"en":"Developer Coding Combo: Format, Validate, and Generate IDs","zh":"开发者编码组合：格式化、验证、生成 ID","es":"Combo de Desarrollo: Formatear, Validar y Generar IDs","fr":"Combo Développeur: Formater, Valider et Générer des IDs","hi":"डेवलपर कोडिंग कॉम्बो: फॉर्मेट, वैलिडेट और IDs जनरेट करें","ar":"مجموعة المطورين: تنسيق، التحقق، وتوليد المعرفات"},
+"description": {"en":"A complete workflow for developers: format JSON, validate regex, generate UUIDs and hashes, and clean code instantly. No signup, runs locally in your browser.","zh":"开发者完整工作流：格式化 JSON、验证正则、生成 UUID 和哈希值，一键清理代码。无需注册，在浏览器本地运行。","es":"Flujo completo para desarrolladores: formatear JSON, validar regex, generar UUIDs y hashes y limpiar código al instante. Sin registro, ejecuta localmente en tu navegador.","fr":"Flux complet pour développeurs : formater le JSON, valider le regex, générer des UUID et des hachages et nettoyer le code instantanément. Sans inscription, s'exécute localement dans votre navigateur.","hi":"डेवलपर्स के लिए पूरा वर्कफ़्लो: JSON फॉर्मेट करें, regex वैलिडेट करें, UUID और हैश जनरेट करें और कोड को तुरंत साफ करें। कोई साइनअप नहीं, ब्राउज़र में स्थानीय रूप से चलता है।","ar":"مسار كامل للمطورين: تنسيق JSON، التحقق من regex، توليد UUIDs وهاشات، وتنظيف الكود فوراً. بدون تسجيل، يعمل محلياً في متصفحك."},
+"keywords": [["developer tools","JSON","regex"], ["开发者工具","JSON","正则"], ["herramientas de desarrollo","JSON","regex"], ["outils développeur","JSON","regex"], ["डेवलपर टूल्स","JSON","regex"], ["أدوات المطورين","JSON","regex"]],
+"author": "Korelyy Team"
+},
+{
+"slug": "marketing-combo",
+"publishedAt": "2026-08-05T00:00:00.000Z",
+"updatedAt": "2026-08-05T00:00:00.000Z",
+"tags": [["marketing","social media","AI copy","emoji","content creation"], ["营销","社交媒体","AI 文案","表情包","内容创作"], ["marketing","redes sociales","copia IA","emoji","creación de contenido"], ["marketing","réseaux sociaux","copie IA","emoji","création de contenu"], ["मार्केटिंग","सोशल मीडिया","AI कॉपी","इमोजी","कॉन्टेंट क्रिएशन"], ["التسويق","المنصات الاجتماعية","النسخ الذكي","الإيموجي","إنشاء المحتوى"]],
+"relatedToolSlugs": ["emoji-mixer","ai-copywriter","tone-changer"],
+"readingMinutes": {"en":6,"zh":6,"es":6,"fr":6,"hi":6,"ar":6},
+"title": {"en":"Marketing Content Combo: Mix Emojis, AI Copy, and Tone","zh":"营销内容组合：混搭表情包、AI 文案和语气","es":"Combo de Contenido de Marketing: Mezclar Emojis, Copia IA y Tono","fr":"Combo Contenu Marketing: Mélanger Emojis, Copie IA et Ton","hi":"मार्केटिंग कॉन्टेंट कॉम्बो: इमोजी मिक्स, AI कॉपी और टोन","ar":"مجموعة محتوى التسويق: خلط الإيموجي والنسخ الذكي والنبرة"},
+"description": {"en":"Create engaging marketing content fast: mix emojis with AI-generated copy, adjust tone, and preview across platforms. Perfect for social media, emails, and ads.","zh":"快速创建吸引人的营销内容：混搭表情包和 AI 生成的文案、调整语气、多平台预览。非常适合社交媒体、邮件和广告。","es":"Crea contenido de marketing atractivo rápido: mezcla emojis con copia generada por IA, ajusta el tono y previsualiza en varias plataformas. Perfecto para redes sociales, correos y anuncios.","fr":"Créez du contenu marketing engageant rapidement : mélangez des emojis avec une copie générée par IA, ajustez le ton et prévisualisez sur plusieurs plateformes. Idéal pour les réseaux sociaux, les e-mails et les pubs.","hi":"आकर्षक मार्केटिंग कॉन्टेंट तेज़ी से बनाएं: AI-जनरेटेड कॉपी के साथ इमोजी मिक्स करें, टोन एडजस्ट करें और प्लेटफ़ॉर्म पर प्रीव्यू करें। सोशल मीडिया, ईमेल और विज्ञापनों के लिए बिल्कुल सही।","ar":"أنشئ محتوى تسويقي مثير للاهتمام بسرعة: اخلط الإيموجي مع النسخ المُنشأ بالذكاء الاصطناعي، اضبط النبرة، واعرض المعاينة عبر المنصات. مثالي للمنصات الاجتماعية والرسائل والإعلانات."},
+"keywords": [["marketing","social media","AI copy"], ["营销","社交媒体","AI 文案"], ["marketing","redes sociales","copia IA"], ["marketing","réseaux sociaux","copie IA"], ["मार्केटिंग","सोशल मीडिया","AI कॉपी"], ["التسويق","المنصات الاجتماعية","النسخ الذكي"]],
+"author": "Korelyy Team"
+},
+{
+"slug": "image-compression-guide-2026",
+"publishedAt": "2026-08-05T00:00:00.000Z",
+"updatedAt": "2026-08-05T00:00:00.000Z",
+"tags": [["image compression","web optimization","SEO","image size"], ["图片压缩","网页优化","SEO","图片大小"], ["image compression","web optimization","SEO","image size"], ["image compression","web optimization","SEO","image size"], ["image compression","web optimization","SEO","image size"], ["image compression","web optimization","SEO","image size"]],
+"relatedToolSlugs": ["image-compressor","image-converter","image-to-base64"],
+"readingMinutes": {"en":9,"zh":9,"es":9,"fr":9,"hi":9,"ar":9},
+"title": {"en":"How to Compress Images for Web in 2026 (Without Losing Quality)","zh":"2026 年网页图片压缩完全指南（不损失画质）","es":"Cómo Comprimir Imágenes para Web en 2026 (Sin Perder Calidad)","fr":"Comment Compresser les Images pour le Web en 2026 (Sans Perdre en Qualité)","hi":"2026 में वेब के लिए इमेजेज़ कैसे कंप्रेस करें (गुणवत्ता खोए बिना)","ar":"كيف تضغط الصور للويب في 2026 (بدون فقدان الجودة)"},
+"description": {"en":"Step-by-step guide to compress images for websites in 2026. Reduce file size 60-90% while keeping visual quality. No Photoshop needed.","zh":"2026 年网页图片压缩的逐步指南。在保持画质的同时减小文件体积 60-90%。无需 Photoshop。","es":"Guía paso a paso para comprimir imágenes para sitios web en 2026. Reduce el tamaño del archivo 60-90% manteniendo la calidad visual. Sin Photoshop.","fr":"Guide étape par étape pour compresser les images pour sites web en 2026. Réduisez la taille 60-90% en gardant la qualité visuelle. Sans Photoshop.","hi":"2026 में वेबसाइटों के लिए इमेजेज़ कंप्रेस करने की चरण-दर-चरण गाइड। विज़ुअल गुणवत्ता बनाए रखते हुए फ़ाइल का आकार 60-90% तक कम करें। Photoshop की ज़रूरत नहीं।","ar":"دليل خطوة بخطوة لضغط الصور للمواقع في 2026. قلل حجم الملف 60-90% مع الحفاظ على الجودة البصرية. لا حاجة لـ Photoshop."},
+"keywords": [["image compression","web optimization","SEO"], ["图片压缩","网页优化","SEO"], ["image compression","web optimization","SEO"], ["image compression","web optimization","SEO"], ["image compression","web optimization","SEO"], ["image compression","web optimization","SEO"]],
+"author": "Korelyy Team"
+},
+{
+"slug": "regex-email-validation-guide",
+"publishedAt": "2026-08-05T00:00:00.000Z",
+"updatedAt": "2026-08-05T00:00:00.000Z",
+"tags": [["regex","email validation","form validation","pattern matching"], ["正则表达式","邮箱验证","表单验证","模式匹配"], ["regex","validación de correo","validación de formulario","patrones"], ["regex","validation d'e-mail","validation de formulaire","expressions régulières"], ["रेगेक्स","ईमेल सत्यापन","फ़ॉर्म सत्यापन","पैटर्न मैचिंग"], ["التعبير النمطي","التحقق من البريد","التحقق من النموذج","طابق الأنماط"]],
+"relatedToolSlugs": ["regex-tester","regex-builder","email-validator"],
+"readingMinutes": {"en":8,"zh":8,"es":8,"fr":8,"hi":8,"ar":8},
+"title": {"en":"Regex for Email Validation: A Complete Guide","zh":"正则表达式邮箱验证完全指南","es":"Regex para Validación de Correo Electrónico: Guía Completa","fr":"Regex pour la Validation d'E-mail : Guide Complet","hi":"ईमेल सत्यापन के लिए रेगेक्स: पूर्ण गाइड","ar":"التعبير النمطي للتحقق من البريد الإلكتروني: دليل شامل"},
+"description": {"en":"Learn how to validate email addresses with regular expressions. From basic to advanced regex patterns, with real-world examples.","zh":"学习如何使用正则表达式验证邮箱地址。从基础到高级模式，附真实案例。","es":"Aprende a validar direcciones de correo electrónico con expresiones regulares. Desde patrones básicos hasta avanzados.","fr":"Apprenez à valider les adresses e-mail avec des expressions régulières. Des motifs de base aux avancés.","hi":"रेगेक्स के साथ ईमेल पते का सत्यापन कैसे करें यह सीखें। बुनियादी से उन्नत पैटर्न तक।","ar":"تعلم كيفية التحقق من عناوين البريد الإلكتروني باستخدام التعبيرات النمطية. من الأنماط الأساسية إلى المتقدمة."},
+"keywords": [["regex","email validation","pattern"], ["正则表达式","邮箱验证","模式"], ["regex","validación de correo","patrón"], ["regex","validation d'e-mail","motif"], ["रेगेक्स","ईमेल सत्यापन","पैटर्न"], ["التعبير النمطي","التحقق من البريد","طابع"]],
+"author": "Korelyy Team"
+},
+{
+"slug": "qr-code-website-guide",
+"publishedAt": "2026-08-05T00:00:00.000Z",
+"updatedAt": "2026-08-05T00:00:00.000Z",
+"tags": [["QR code","website","business card","marketing"], ["二维码","网站","名片","营销"], ["QR code","sitio web","tarjeta de visita","marketing"], ["QR code","site web","carte de visite","marketing"], ["QR कोड","वेबसाइट","विजिटिंग कार्ड","मार्केटिंग"], ["رمز QR","موقع ويب","بطاقة عمل","تسويق"]],
+"relatedToolSlugs": ["qr-code-generator","qr-scanner"],
+"readingMinutes": {"en":7,"zh":7,"es":7,"fr":7,"hi":7,"ar":7},
+"title": {"en":"How to Use QR Codes to Drive Traffic to Your Website","zh":"如何用二维码为你的网站引流","es":"Cómo Usar Códigos QR para Atraer Tráfico a tu Sitio Web","fr":"Comment Utiliser les QR Codes pour Générer du Trafic vers Votre Site","hi":"अपनी वेबसाइट पर ट्रैफ़िक बढ़ाने के लिए QR कोड का उपयोग कैसे करें","ar":"كيف تستخدم رموز QR لتوجيه الزوار إلى موقعك"},
+"description": {"en":"Practical guide to using QR codes for website promotion, business cards, menus, and marketing campaigns. Generate and scan QR codes online.","zh":"使用二维码推广网站、名片、菜单和营销活动的实用指南。在线生成和扫描二维码。","es":"Guía práctica para usar códigos QR en la promoción de sitios web, tarjetas de visita, menús y campañas de marketing.","fr":"Guide pratique pour utiliser les QR codes pour promouvoir votre site web, cartes de visite, menus et campagnes marketing.","hi":"वेबसाइट प्रचार, विजिटिंग कार्ड, मेनू और मार्केटिंग अभियानों में QR कोड कਾ उपयोग करनੇ कī ਵਧੀਆ ਗਾਈਡ।","ar":"دليل عملي لاستخدام رموز QR في ترويج المواقع وبطاقات العمل والقوائم وحملات التسويق."},
+"keywords": [["QR code","website","traffic"], ["二维码","网站","引流"], ["QR code","sitio web","tráfico"], ["QR code","site web","trafic"], ["QR कोड","वेबसाइट","ट्रैफ़िਕ"], ["رمز QR","موقع","زوار"]],
+"author": "Korelyy Team"
+},
+{
+"slug": "json-formatting-guide-2026",
+"publishedAt": "2026-08-05T00:00:00.000Z",
+"updatedAt": "2026-08-05T00:00:00.000Z",
+"tags": [["JSON","formatting","developer tools","API"], ["JSON","格式化","开发者工具","API"], ["JSON","formateo","herramientas de desarrollo","API"], ["JSON","formatage","outils de développement","API"], ["JSON","फ़ॉर्मेटिंग","डेवलपर टूल्स","API"], ["JSON","تنسيق","أدوات المطورين","واجهة برمجة التطبيقات"]],
+"relatedToolSlugs": ["json-formatter","json-validator","json-to-csv","json-to-xml"],
+"readingMinutes": {"en":8,"zh":8,"es":8,"fr":8,"hi":8,"ar":8},
+"title": {"en":"JSON Formatting and Validation Guide for Developers","zh":"开发者 JSON 格式化和验证指南","es":"Guía de Formateo y Validación de JSON para Desarrolladores","fr":"Guide de Formatage et de Validation JSON pour Développeurs","hi":"डेवलपर्स कੇ लीए JSON फ़ॉर्मेटिंग और वैलिडेशन गाइड","ar":"دليل تنسيق وتحقق JSON للمطورين"},
+"description": {"en":"Master JSON formatting, validation, conversion, and querying. Learn best practices for working with JSON APIs and data files.","zh":"掌握 JSON 格式化、验证、转换和查询。学习处理 JSON API 和数据文件的最佳实践。","es":"Domina el formateo, validación, conversión y consulta de JSON. Aprende las mejores prácticas para trabajar con APIs JSON.","fr":"Maîtrisez le formatage, la validation, la conversion et l'interrogation JSON. Apprenez les bonnes pratiques pour les APIs JSON.","hi":"JSON फ़ॉर्मेटिंग, वैलिडेशन, कन्वरज़न और क्वेरी में महारत हासिल करें।","ar":"أتقن تنسيق وتحقق وتحويل واستعلام JSON. تعلم أفضل الممارسات للتعامل مع واجهات برمجة التطبيقات وملفات البيانات."},
+"keywords": [["JSON","formatting","validation","API"], ["JSON","格式化","验证","API"], ["JSON","formateo","validación","API"], ["JSON","formatage","validation","API"], ["JSON","फ़ॉर्मेटिंग","वैलिडेशन","API"], ["JSON","تنسيق","تحقق","واجهة برمجة التطبيقات"]],
+"author": "Korelyy Team"
+},
+{
+"slug": "strong-password-guide-2026",
+"publishedAt": "2026-08-05T00:00:00.000Z",
+"updatedAt": "2026-08-05T00:00:00.000Z",
+"tags": [["password security","cybersecurity","privacy","authentication"], ["密码安全","网络安全","隐私","身份验证"], ["seguridad de contraseñas","ciberseguridad","privacidad","autenticación"], ["sécurité des mots de passe","cybersécurité","confidentialité","authentification"], ["पासवर्ड सुरक्षा","साइबर सुरक्षा","गोपनीयता","प्रासंगिकरण"], ["أمان كلمة المرور","الأمن السيبراني","الخصوصية","المصادقة"]],
+"relatedToolSlugs": ["password-generator","uuid-generator"],
+"readingMinutes": {"en":7,"zh":7,"es":7,"fr":7,"hi":7,"ar":7},
+"title": {"en":"How to Create Strong Passwords and Stay Secure Online","zh":"如何创建强密码并保持在线安全","es":"Cómo Crear Contraseñas Fuertes y Mantener la Seguridad en Línea","fr":"Comment Créer des Mots de Passe Forts et Rester en Sécurité en Ligne","hi":"मज़बूत पासवर्ड कैसे बनाएं और ऑनलाइन सुरक्षित रहें","ar":"كيف تنشئ كلمات مرور قوية وتظل آمناً على الإنترنت"},
+"description": {"en":"Learn why strong passwords matter, how password generators work, and how to protect your accounts from breaches and attacks.","zh":"了解为什么强密码很重要，密码生成器如何工作，以及如何保护账户免受泄露和攻击。","es":"Aprende por qué las contraseñas fuertes importan, cómo funcionan los generadores y cómo proteger tus cuentas de filtraciones.","fr":"Apprenez pourquoi les mots de passe forts sont importants, comment fonctionnent les générateurs et comment protéger vos comptes.","hi":"सीखें कि मज़बूत पासवर्ड क्यों मायने रखते हैं।","ar":"تعلم لماذا تعد كلمات المرور القوية مهمة، وكيف تعمل مولدات كلمات المرور، وكيفية حماية حساباتك من الاختراق."},
+"keywords": [["password security","strong password","privacy"], ["密码安全","强密码","隐私"], ["seguridad de contraseñas","contraseña fuerte","privacidad"], ["sécurité des mots de passe","mot de passe fort","confidentialité"], ["पासवर्ड सुरक्षा","मजबूत पासवर्ड","गोपनीयता"], ["أمان كلمة المرور","كلمة مرور قوية","الخصوصية"]],
+"author": "Korelyy Team"
 ];
 
 /* 排序 + 切片缓存：详情页 3 次调用 getBlogPostsList 只 sort 1 次 */

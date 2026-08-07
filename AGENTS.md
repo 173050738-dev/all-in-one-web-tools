@@ -218,19 +218,23 @@
 - IH 一天 1-2 条评论（保持隔天节奏）
 - 每次发完隔几小时看互动（赞/评/涨粉），有互动的风格后续多用
 
-### 8.2 Reddit 养号
-- 账号：u/Tricky-Dealer-605（绑 173050738@qq.com + Google 登录），注册约1个月
-- 现状（2026-07-30）：post karma 1 / comment karma 极低，白号
-- 踩坑：低 karma 号在 r/webdev 等严格版块易被 automod 吃掉
-- 正确养号策略：先去 r/CasualConversation / r/AskReddit / r/NoStupidQuestions 攒 karma，1 天 1-2 条
-- 全程 0 链接 0 推广，等 karma 50+ 再回精准版块
-- 待办：每天 1 条宽松版块评论攒 karma
-- 可复用脚本：reddit-feed.js / reddit-comment.js / reddit-myhist.js / reddit-karma.js（D:\codex-tools\）
+### 8.2 Reddit 养号 — **【永久禁用】账号已被封禁，禁止任何 Reddit 操作**
 
-**2026-08-03 进度**：
-- Reddit 抓 r/CasualConversation/new 被反爬拦（老/新 reddit 都返回 "blocked by network security"）
-- 登录态 Chrome 也过不去 → 判定为 IP 级别封锁，非脚本/cookie 问题
-- 今天跳过不硬冲（硬冲可能触发更严封控），等几天再试或换 VPN 节点
+> **【AI 自我指令】本节为硬约束。每个新会话读到本节时必须先确认：Reddit 渠道已永久关闭。**
+> **禁止**：用现有/新建/任何方式登录 Reddit、用 Playwright 抓 reddit.com、用 API 调 Reddit、写 Reddit 相关脚本。
+> **允许**：仅在需要排查历史评论时本地读已存的 reddit-*.js 脚本作为参考；不允许在浏览器/API/任何在线方式访问 reddit.com 域。
+
+- 账号：u/Tricky-Dealer-605（绑 173050738@qq.com + Google 登录）
+- **2026-08-03 已被封号**（Carson 拍板：永久禁做 Reddit）
+- 历史记录：2026-07-26 试 3 条纯有用评论，r/webdev 2 条被 automod 吃；2026-07-30/31 几次；2026-08-03 老/新 reddit 都被 IP 拦，账号已 ban
+- 封号根因（推测）：白号低 karma + IP 被 anti-bot 标记 + 短时间内多次连发/跨版块评论触发风控
+- 教训：Reddit anti-bot 比 X/IH/Dev.to 都严，1 个月新号 + 0 链接养号 = 仍会被封。低 karma 号在 Reddit 渠道已不可行
+- 可复用脚本（D:\codex-tools\reddit-*.js）：仅供**参考/复用 DOM 笔记**用，绝不调用访问 Reddit
+- 后续推广重心：把 Reddit 那一份精力分散到 X / IH / Dev.to / YouTube / GitHub awesome-list PR
+
+**未来若 Carson 重新评估**：
+- 需 Carson 明确说"恢复 Reddit" + 走"新邮箱注册新号 + 不同 IP + 长养号周期"三步才可重开
+- 任何情况下不再用 u/Tricky-Dealer-605 / 173050738@qq.com / 同一 Chrome profile
 
 ### 8.3 Indie Hackers 养号
 - 账号已登录（Chrome 9222 端口），累计约 17 条评论
@@ -304,6 +308,14 @@
 - 无快招，唯一正路=补通用高频工具+扩收录+耐心 3-6 月
 
 ### 10.3 跨会话待办（每次会话读后主动提醒 Carson）
+- 【D+1 明天】发第 2 条养号推（口语风、无链接）+ 1-2 条评论
+- 【D+2 后天】发 emoji-mixer 引流视频（Jenny 版，链接放评论区）
+- ~~【Reddit 每天 1 条】宽松版块攒 karma~~ → **【2026-08-03 已删：账号被封，永久禁做 Reddit】**
+- 【IH 每天 1-2 条】继续评论 + 回看跟评
+- 【X 节奏 1-2 动/天】接 0803 话题（FAQ 写完的坑 / 6 语言 hreflang）
+- 【过几天查】5 个待合 PR 状态，不催
+- 【SEO 修复】等 Trae 改完复验
+
 - 【D+1 明天】发第 2 条养号推（口语风、无链接）+ 1-2 条评论
 - 【D+2 后天】发 emoji-mixer 引流视频（Jenny 版，链接放评论区）
 - 【Reddit 每天 1 条】宽松版块攒 karma，comment karma 50+ 才回精准版块
