@@ -13689,15 +13689,15 @@ export const BLOG_POSTS_INDEX: BlogPostIndex[] = [
 "description": {"en":"Learn why strong passwords matter, how password generators work, and how to protect your accounts from breaches and attacks.","zh":"了解为什么强密码很重要，密码生成器如何工作，以及如何保护账户免受泄露和攻击。","es":"Aprende por qué las contraseñas fuertes importan, cómo funcionan los generadores y cómo proteger tus cuentas de filtraciones.","fr":"Apprenez pourquoi les mots de passe forts sont importants, comment fonctionnent les générateurs et comment protéger vos comptes.","hi":"सीखें कि मज़बूत पासवर्ड क्यों मायने रखते हैं।","ar":"تعلم لماذا تعد كلمات المرور القوية مهمة، وكيف تعمل مولدات كلمات المرور، وكيفية حماية حساباتك من الاختراق."},
 "keywords": [["password security","strong password","privacy"], ["密码安全","强密码","隐私"], ["seguridad de contraseñas","contraseña fuerte","privacidad"], ["sécurité des mots de passe","mot de passe fort","confidentialité"], ["पासवर्ड सुरक्षा","मजबूत पासवर्ड","गोपनीयता"], ["أمان كلمة المرور","كلمة مرور قوية","الخصوصية"]],
 "author": "Korelyy Team"
-];
+},
 
 /* 排序 + 切片缓存：详情页 3 次调用 getBlogPostsList 只 sort 1 次 */
-let _sortedCache: BlogPostIndex[] | null = null;
+const _sortedCache: { current: BlogPostIndex[] | null } = { current: null };
 function sortedAll(): BlogPostIndex[] {
-if (!_sortedCache) {
-_sortedCache = [...BLOG_POSTS_INDEX].sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+if (!_sortedCache.current) {
+_sortedCache.current = [...BLOG_POSTS_INDEX].sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
 }
-return _sortedCache;
+return _sortedCache.current;
 }
 
 export function getAllBlogSlugs(): string[] {
