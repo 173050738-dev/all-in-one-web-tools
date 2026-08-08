@@ -44076,31 +44076,6 @@ export const BLOG_CONTENT_MAP: Record<string, BlogContentBlock[]> = {
       "type": "callout",
       "kind": "tip",
       "text": {
-        "en": "\ud83d\udcbb All Korelyy tools are 100% free, run in your browser, no signup. Your data never leaves your device. Try \u2018Image Compressor\u2019 free now!",
-        "zh": "\ud83d\udcbb Korelyy \u6240\u6709\u5de5\u5177 100% \u514d\u8d39\uff0c\u5728\u6d4f\u89c8\u5668\u4e2d\u8fd0\u884c\uff0c\u65e0\u9700\u6ce8\u518c\u3002\u7acb\u5373\u514d\u8d39\u4f7f\u7528 \u2018Image Compressor\u2019!",
-        "es": "\ud83d\udcbb Todas las herramientas en Korelyy son 100% gratis, se ejecutan en tu navegador y no requieren registro. \u00a1Prueba \u2018Image Compressor\u2019 gratis ahora!",
-        "fr": "\ud83d\udcbb Tous les outils sur Korelyy sont 100% gratuits, fonctionnent dans votre navigateur et ne n\u00e9cessitent aucune inscription. Essayez \u2018Image Compressor\u2019 maintenant!",
-        "hi": "\ud83d\udcbb Korelyy \u092a\u0930 \u0938\u092d\u0940 \u091f\u0942\u0932\u094d\u0938 100% \u092e\u0941\u092b\u094d\u0930\u0924 \u0939\u0948\u0902\u0964 \u2018Image Compressor\u2019 \u0905\u092d\u0940 \u092e\u0941\u092b\u094d\u0930\u0924 \u092a\u0930 \u0938\u0947\u092d\u0928!",
-        "ar": "\ud83d\udcbb \u062c\u0645\u064a\u0639 \u0627\u0644\u0623\u062f\u0648\u0627\u062a \u0639\u0644\u0649 Korelyy \u0645\u062c\u0627\u0646\u064b\u0627 100%\u060c \u062a\u0639\u0645\u0644 \u0641\u064a \u0645\u062a\u0635\u0641\u062d\u0643 \u0648\u0644\u0627 \u062a\u062a\u0637\u0644\u0628 \u062a\u0633\u062c\u064a\u0644\u064b\u0627. \u062c\u0631\u0651\u0628 \u2018Image Compressor\u2019 \u0645\u062c\u0627\u0646\u064b\u0627!",
-      }
-    }
-    {
-      "type": "cta",
-      "toolSlug": "image-compressor",
-      "text": {
-        "en": "Try \u2018Image Compressor\u2019 Free Online \u2192",
-        "zh": "\u2192 \u514d\u8d39\u4f7f\u7528 \u2018Image Compressor\u2019",
-        "es": "\u2192 Probar \u2018Image Compressor\u2019 gratis",
-        "fr": "\u2192 Essayer \u2018Image Compressor\u2019 gratuitement",
-        "hi": "\u2192 Image Compressor \u092e\u0941\u092b\u094d\u0930\u0924 \u092a\u0930 \u0938\u0947\u092d\u0928",
-        "ar": "\u2192 \u062c\u0631\u0651\u0628 \u2018Image Compressor\u2019 \u0645\u062c\u0627\u0646\u064b\u0627",
-      }
-    }
-  [,
-    {
-      "type": "callout",
-      "kind": "tip",
-      "text": {
         "en": "\ud83d\udcbb All Korelyy tools are 100% free, run in your browser, no signup. Your data never leaves your device. Start using Image Compressor now!",
         "zh": "\ud83d\udcbb Korelyy \u6240\u6709\u5de5\u5177 100% \u514d\u8d39\uff0c\u5728\u6d4f\u89c8\u5668\u4e2d\u8fd0\u884c\uff0c\u65e0\u9700\u6ce8\u518c\u3002\u7acb\u5373\u5f00\u59cb\u4f7f\u7528 Image Compressor!",
         "es": "\ud83d\udcbb Todas las herramientas en Korelyy son 100% gratis, se ejecutan en tu navegador y no requieren registro. \u00a1Empieza a usar Image Compressor ahora!",
